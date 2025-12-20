@@ -1,213 +1,104 @@
 .class public final Ls61;
-.super Lki4;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final b:Ls61;
 
-.field public static final c:Lgi4;
+# instance fields
+.field public final synthetic X:Ld71;
 
-.field public static final d:Lgi4;
-
-.field public static final e:Lgi4;
-
-.field public static final f:Lgi4;
-
-.field public static final g:Lgi4;
-
-.field public static final h:Lgi4;
-
-.field public static final i:Lgi4;
-
-.field public static final j:Lgi4;
-
-.field public static final k:Lgi4;
-
-.field public static final l:Lgi4;
-
-.field public static final m:Lgi4;
-
-.field public static final n:Lgi4;
-
-.field public static final o:Lgi4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ld71;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ls61;->X:Ld71;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lud2;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls61;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls61;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Ls61;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Ls61;
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    iget-object v1, p0, Ls61;->X:Ld71;
 
-    sput-object v0, Ls61;->b:Ls61;
+    invoke-direct {v0, v1, p2}, Ls61;-><init>(Ld71;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "opponent_id"
+    iput-object p1, v0, Ls61;->o:Ljava/lang/Object;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const-string v2, ":call-user"
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/4 v3, 0x0
+    iget-object p1, p0, Ls61;->o:Ljava/lang/Object;
 
-    const/16 v4, 0xe
+    check-cast p1, Lud2;
 
-    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    iget-object v0, p0, Ls61;->X:Ld71;
 
-    move-result-object v1
+    iget-object v1, v0, Ld71;->a:Lxx1;
 
-    sput-object v1, Ls61;->c:Lgi4;
+    iget-object v2, v0, Ld71;->e:Ld68;
 
-    const-string v1, "link"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, ":call-join-link"
-
-    invoke-static {v0, v5, v2, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    sput-object v2, Ls61;->d:Lgi4;
+    check-cast v2, Lbbg;
 
-    const-string v2, "chat_id"
+    check-cast v2, Lb9b;
 
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, ":call-chat"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v5
-
-    sput-object v5, Ls61;->e:Lgi4;
-
-    const-string v5, "call_name"
-
-    filled-new-array {v2, v5}, [Ljava/lang/String;
+    invoke-virtual {v2}, Lb9b;->a()Ltb4;
 
     move-result-object v2
 
-    const-string v5, ":call-incoming"
+    new-instance v3, Lr61;
 
-    invoke-static {v0, v5, v2, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    const/4 v4, 0x0
 
-    move-result-object v2
+    invoke-direct {v3, v0, p1, v4}, Lr61;-><init>(Ld71;Lud2;Lkotlin/coroutines/Continuation;)V
 
-    sput-object v2, Ls61;->f:Lgi4;
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
+    invoke-static {v1, v2, v4, v3, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    new-array v5, v2, [Ljava/lang/String;
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    const-string v6, ":call-active"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v5
-
-    sput-object v5, Ls61;->g:Lgi4;
-
-    const-string v5, ":call-join-preview"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v5, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->h:Lgi4;
-
-    const-string v1, ":call-opponents-list"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->i:Lgi4;
-
-    const-string v1, ":call-admin-settings"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->j:Lgi4;
-
-    const-string v1, ":call-debug-menu"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->k:Lgi4;
-
-    const-string v1, ":call-pip"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->l:Lgi4;
-
-    const-string v1, ":call-admin-waiting-room"
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->m:Lgi4;
-
-    const-string v1, "is_group"
-
-    const-string v2, "is_video"
-
-    const-string v5, "call_id"
-
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":call-rate"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Ls61;->n:Lgi4;
-
-    const-string v1, "caller_id"
-
-    filled-new-array {v5, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":unknown-call"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Ls61;->o:Lgi4;
-
-    return-void
+    return-object p1
 .end method

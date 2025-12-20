@@ -127,7 +127,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;->callInfo:Lru/ok/android/externcalls/sdk/api/CallInfo;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

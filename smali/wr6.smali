@@ -3,90 +3,46 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lycf;
+.implements Ln6;
 
 
 # instance fields
-.field public final a:Ldyg;
-
-.field public final b:Ln2g;
+.field public final a:Lks6;
 
 
 # direct methods
-.method public constructor <init>(Ldyg;Ln2g;)V
+.method public constructor <init>(Lks6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwr6;->a:Ldyg;
-
-    iput-object p2, p0, Lwr6;->b:Ln2g;
+    iput-object p1, p0, Lwr6;->a:Lks6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Exception;)Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lwr6;->b:Ln2g;
+    iget-object v0, p0, Lwr6;->a:Lks6;
 
-    invoke-virtual {v0, p1}, Ln2g;->c(Ljava/lang/Exception;)Z
+    iget-object v0, v0, Lks6;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    check-cast v0, Lpu7;
 
-    return p1
-.end method
+    iget-object v1, v0, Lpu7;->d:Ljy0;
 
-.method public final b(Lab0;)Z
-    .locals 7
+    invoke-virtual {v1, v0}, Ljy0;->f(Ljava/lang/Object;)V
 
-    iget v0, p1, Lab0;->b:I
+    iget-object v0, v0, Lpu7;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lwr6;->a:Ldyg;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    invoke-virtual {v0, p1}, Ldyg;->a(Lab0;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v6, p1, Lab0;->c:Ljava/lang/String;
-
-    if-eqz v6, :cond_0
-
-    iget-wide v2, p1, Lab0;->e:J
-
-    iget-wide v4, p1, Lab0;->f:J
-
-    new-instance v1, Lma0;
-
-    invoke-direct/range {v1 .. v6}, Lma0;-><init>(JJLjava/lang/String;)V
-
-    iget-object p1, p0, Lwr6;->b:Ln2g;
-
-    invoke-virtual {p1, v1}, Ln2g;->b(Ljava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "Null token"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

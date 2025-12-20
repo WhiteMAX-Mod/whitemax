@@ -1,32 +1,53 @@
 .class public final Li37;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
-# interfaces
-.implements Lj37;
+
+# instance fields
+.field public final synthetic X:Lk37;
+
+.field public Y:I
+
+.field public d:I
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lk37;Ll84;)V
+    .locals 0
+
+    iput-object p1, p0, Li37;->X:Lk37;
+
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getId()J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const-wide/16 v0, 0x0
+    iput-object p1, p0, Li37;->o:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Li37;->Y:I
 
-.method public final getTime()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    const-wide/16 v0, 0x0
+    or-int/2addr p1, v0
 
-    return-wide v0
-.end method
+    iput p1, p0, Li37;->Y:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 p1, 0x0
 
-    const-string v0, "HistoryGap"
+    const/4 v0, 0x0
 
-    return-object v0
+    iget-object v1, p0, Li37;->X:Lk37;
+
+    invoke-virtual {v1, p1, v0, p0}, Lk37;->b(Ljava/util/List;ILl84;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

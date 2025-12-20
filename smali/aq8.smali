@@ -1,79 +1,135 @@
-.class public abstract Laq8;
-.super Ljava/lang/Object;
+.class public final Laq8;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Landroid/animation/TimeInterpolator;
+.field public final synthetic X:Lone/me/android/MainActivity;
 
-.field public final b:Landroid/view/View;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public f:Lte0;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 3
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laq8;->X:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Laq8;->b:Landroid/view/View;
+    const/4 p1, 0x2
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Landroid/net/Uri;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Laq8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget v0, Ldvc;->motionEasingStandardDecelerateInterpolator:I
+    check-cast p1, Laq8;
 
-    const/4 v1, 0x0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    invoke-virtual {p1, p2}, Laq8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v1, v1, v2}, Lwob;->b(FFFF)Landroid/view/animation/Interpolator;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    invoke-static {p1, v0, v1}, Lexi;->d(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Laq8;
+
+    iget-object v1, p0, Laq8;->X:Lone/me/android/MainActivity;
+
+    invoke-direct {v0, v1, p2}, Laq8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Laq8;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Laq8;->o:Ljava/lang/Object;
+
+    check-cast p1, Landroid/net/Uri;
+
+    const-class v0, Lone/me/android/MainActivity;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Laq8;->a:Landroid/animation/TimeInterpolator;
+    sget-object v1, Lm4j;->a:Lvcb;
 
-    sget v0, Ldvc;->motionDurationMedium2:I
+    if-nez v1, :cond_0
 
-    const/16 v1, 0x12c
+    goto :goto_0
 
-    invoke-static {v0, v1, p1}, Lexi;->c(IILandroid/content/Context;)I
+    :cond_0
+    sget-object v2, Lxk8;->d:Lxk8;
 
-    move-result v0
+    invoke-virtual {v1, v2}, Lvcb;->b(Lxk8;)Z
 
-    iput v0, p0, Laq8;->c:I
+    move-result v3
 
-    sget v0, Ldvc;->motionDurationShort3:I
+    if-eqz v3, :cond_1
 
-    const/16 v1, 0x96
+    const-string v3, "handle mytracker link "
 
-    invoke-static {v0, v1, p1}, Lexi;->c(IILandroid/content/Context;)I
+    invoke-static {p1, v3}, La3e;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v3
 
-    iput v0, p0, Laq8;->d:I
+    const/4 v4, 0x0
 
-    sget v0, Ldvc;->motionDurationShort2:I
+    invoke-virtual {v1, v2, v0, v3, v4}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/16 v1, 0x64
+    :cond_1
+    :goto_0
+    sget-object v0, Ld8b;->a:Ld8b;
 
-    invoke-static {v0, v1, p1}, Lexi;->c(IILandroid/content/Context;)I
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
 
-    move-result p1
+    move-result-object v0
 
-    iput p1, p0, Laq8;->e:I
+    const/16 v1, 0x2bb
 
-    return-void
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkc8;
+
+    iget-object v0, v0, Lkc8;->b:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljc8;
+
+    invoke-virtual {v0, p1}, Ljc8;->f(Landroid/net/Uri;)Lf76;
+
+    move-result-object p1
+
+    return-object p1
 .end method

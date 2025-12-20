@@ -1,212 +1,188 @@
-.class public final synthetic Loyb;
-.super Ljava/lang/Object;
+.class public final Loyb;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Ljig;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+.field public final b:Landroid/graphics/RectF;
+
+.field public final c:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput p2, p0, Loyb;->a:I
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Loyb;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    new-instance p1, Landroid/graphics/Paint;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
+
+    sget-object v0, Ldc3;->s0:Lole;
+
+    invoke-virtual {v0, p0}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lxf0;->a:Lwf0;
+
+    iget v0, v0, Lwf0;->n:I
+
+    const v1, 0x3e23d70a    # 0.16f
+
+    invoke-static {v0, v1}, Lfij;->b(IF)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iput-object p1, p0, Loyb;->a:Landroid/graphics/Paint;
+
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p1, p0, Loyb;->b:Landroid/graphics/RectF;
+
+    const/16 p1, 0x26
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Ln7j;->c(F)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Loyb;->c:F
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/16 v0, 0x50
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Ln7j;->c(F)I
+
+    move-result v1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v0
+
+    invoke-direct {p1, v1, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    iget v0, p0, Loyb;->a:I
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    iget-object v2, p0, Loyb;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    int-to-float v0, v0
 
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lyy7;
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    new-instance v0, Landroidx/recyclerview/widget/RecyclerView;
+    move-result v1
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    int-to-float v1, v1
 
-    move-result-object v3
+    iget-object v2, p0, Loyb;->b:Landroid/graphics/RectF;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    sget v3, Li1b;->d0:I
+    iget v0, p0, Loyb;->c:F
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    iget-object v1, p0, Loyb;->a:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    invoke-virtual {p1, v2, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setClipToOutline(Z)V
+.method public final onThemeChanged(Lplb;)V
+    .locals 1
 
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luhd;)V
+    invoke-interface {p1}, Lplb;->b()Lxf0;
 
-    const/4 v3, 0x1
+    move-result-object p1
 
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+    iget-object p1, p1, Lxf0;->a:Lwf0;
 
-    new-instance v4, Landroidx/recyclerview/widget/LinearLayoutManager;
+    iget p1, p1, Lwf0;->n:I
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const v0, 0x3e23d70a    # 0.16f
 
-    invoke-direct {v4, v3, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+    invoke-static {p1, v0}, Lfij;->b(IF)I
 
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    move-result p1
 
-    iget-object v1, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->s0:Lzm3;
+    iget-object v0, p0, Loyb;->a:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lphd;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    new-instance v1, Lnyb;
-
-    invoke-direct {v1, v2, v3}, Lnyb;-><init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
-
-    new-instance v4, Lw73;
-
-    new-instance v5, Lvc6;
-
-    invoke-direct {v5, v0, v3}, Lvc6;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    new-instance v3, Lnyb;
-
-    const/4 v6, 0x2
-
-    invoke-direct {v3, v2, v6}, Lnyb;-><init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
-
-    new-instance v6, Ldga;
-
-    const/16 v7, 0x17
-
-    invoke-direct {v6, v7}, Ldga;-><init>(I)V
-
-    invoke-direct {v4, v5, v3, v6, v1}, Lw73;-><init>(Lcm6;Lem6;Lem6;Lem6;)V
-
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
-
-    invoke-virtual {v2, v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    invoke-static {v0}, Lx7j;->c(Landroidx/recyclerview/widget/RecyclerView;)Locg;
-
-    move-result-object v1
-
-    iput-object v1, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->v0:Locg;
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lyy7;
-
-    new-instance v0, Lx3b;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lx3b;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lyud;->K0:I
-
-    invoke-virtual {v0, v1}, Lx3b;->setIcon(I)V
-
-    sget v1, Lavd;->d:I
-
-    new-instance v2, Ln5g;
-
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lx3b;->setTitle(Ls5g;)V
-
-    sget v1, Lavd;->c:I
-
-    new-instance v2, Ln5g;
-
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lx3b;->setSubtitle(Ls5g;)V
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lyy7;
-
-    new-instance v0, Lwyb;
-
-    sget-object v3, Le03;->a:Le03;
-
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v4
-
-    const/16 v5, 0x22c
-
-    invoke-virtual {v4, v5}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lay3;
-
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v5
-
-    const/16 v6, 0x8
-
-    invoke-virtual {v5, v6}, Lw5;->d(I)Lbwf;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v3
-
-    const/16 v6, 0x63
-
-    invoke-virtual {v3, v6}, Lw5;->d(I)Lbwf;
-
-    move-result-object v3
-
-    iget-object v6, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->a:Lhs;
-
-    sget-object v7, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lyy7;
-
-    aget-object v1, v7, v1
-
-    invoke-virtual {v6, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lyg2;
-
-    invoke-direct {v0, v4, v5, v3, v1}, Lwyb;-><init>(Lay3;Lk18;Lk18;Lyg2;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lseg;
+.implements Lhqg;
 
 
 # direct methods

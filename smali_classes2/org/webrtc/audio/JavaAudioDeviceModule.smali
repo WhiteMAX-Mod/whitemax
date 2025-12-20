@@ -112,7 +112,7 @@
     return v0
 .end method
 
-.method private static native nativeCreateAudioDeviceModule(Landroid/content/Context;Landroid/media/AudioManager;Lorg/webrtc/audio/WebRtcAudioRecord;Lorg/webrtc/audio/WebRtcAudioTrack;IIZZ)J
+.method private static native nativeCreateAudioDeviceModule(Landroid/content/Context;Landroid/media/AudioManager;Lorg/webrtc/audio/WebRtcAudioRecord;Lorg/webrtc/audio/WebRtcAudioTrack;JIIZZ)J
 .end method
 
 
@@ -125,8 +125,8 @@
     return-object v0
 .end method
 
-.method public getNativeAudioDeviceModulePointer()J
-    .locals 10
+.method public getNative(J)J
+    .locals 12
 
     iget-object v1, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeLock:Ljava/lang/Object;
 
@@ -149,41 +149,45 @@
 
     iget-object v5, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->audioOutput:Lorg/webrtc/audio/WebRtcAudioTrack;
 
-    iget v6, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->inputSampleRate:I
+    iget v8, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->inputSampleRate:I
 
-    iget v7, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->outputSampleRate:I
+    iget v9, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->outputSampleRate:I
 
-    iget-boolean v8, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->useStereoInput:Z
+    iget-boolean v10, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->useStereoInput:Z
 
-    iget-boolean v9, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->useStereoOutput:Z
+    iget-boolean v11, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->useStereoOutput:Z
 
-    invoke-static/range {v2 .. v9}, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeCreateAudioDeviceModule(Landroid/content/Context;Landroid/media/AudioManager;Lorg/webrtc/audio/WebRtcAudioRecord;Lorg/webrtc/audio/WebRtcAudioTrack;IIZZ)J
+    move-wide v6, p1
 
-    move-result-wide v2
+    invoke-static/range {v2 .. v11}, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeCreateAudioDeviceModule(Landroid/content/Context;Landroid/media/AudioManager;Lorg/webrtc/audio/WebRtcAudioRecord;Lorg/webrtc/audio/WebRtcAudioTrack;JIIZZ)J
 
-    iput-wide v2, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeAudioDeviceModule:J
+    move-result-wide p1
+
+    iput-wide p1, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeAudioDeviceModule:J
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
+    move-object p1, v0
+
     goto :goto_1
 
     :cond_0
     :goto_0
-    iget-wide v2, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeAudioDeviceModule:J
+    iget-wide p1, p0, Lorg/webrtc/audio/JavaAudioDeviceModule;->nativeAudioDeviceModule:J
 
     monitor-exit v1
 
-    return-wide v2
+    return-wide p1
 
     :goto_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v0
+    throw p1
 .end method
 
 .method public release()V
@@ -318,17 +322,21 @@
 .end method
 
 .method public setPreferredInputDevice(Landroid/media/AudioDeviceInfo;)V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Landroid/media/AudioDeviceInfo;->getId()I
 
-    const-string v1, "setPreferredInputDevice: "
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "setPreferredInputDevice: "
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

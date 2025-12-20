@@ -1,94 +1,31 @@
 .class public final Lisb;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lmsb;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lhsb;
+
+.field public final c:J
+
+.field public final d:Ldsb;
 
 
 # direct methods
-.method public constructor <init>(Lmsb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILhsb;JLdsb;)V
     .locals 0
 
-    iput-object p1, p0, Lisb;->X:Lmsb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Lisb;->a:I
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lisb;->b:Lhsb;
+
+    iput-wide p3, p0, Lisb;->c:J
+
+    iput-object p5, p0, Lisb;->d:Ldsb;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lnsb;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lisb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lisb;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lisb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lisb;
-
-    iget-object v1, p0, Lisb;->X:Lmsb;
-
-    invoke-direct {v0, v1, p2}, Lisb;-><init>(Lmsb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lisb;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lisb;->o:Ljava/lang/Object;
-
-    check-cast p1, Lnsb;
-
-    sget-object v0, Lnsb;->a:Lnsb;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object v0, p0, Lisb;->X:Lmsb;
-
-    const-string v1, "gallery"
-
-    invoke-static {v0, v1, p1}, Lmsb;->a(Lmsb;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
 .end method

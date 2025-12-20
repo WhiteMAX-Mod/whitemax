@@ -1,65 +1,85 @@
-.class public final Llh2;
-.super Ljava/lang/Object;
+.class public final enum Llh2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljve;
+# static fields
+.field public static final enum a:Llh2;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public static final enum b:Llh2;
+
+.field public static final enum c:Llh2;
+
+.field public static final synthetic d:[Llh2;
 
 
 # direct methods
-.method public constructor <init>(Ltw0;Llzf;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Llh2;
 
-    const/4 v0, 0x0
+    const-string v1, "SOUND"
 
-    const/4 v1, 0x7
+    const/4 v2, 0x0
 
-    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Llh2;->a:Llh2;
+
+    new-instance v1, Llh2;
+
+    const-string v2, "VIBRATION"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Llh2;->b:Llh2;
+
+    new-instance v2, Llh2;
+
+    const-string v3, "LED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Llh2;->c:Llh2;
+
+    filled-new-array {v0, v1, v2}, [Llh2;
 
     move-result-object v0
 
-    iput-object v0, p0, Llh2;->a:Ljve;
-
-    check-cast p2, Lq2b;
-
-    invoke-virtual {p2}, Lq2b;->c()Lwl8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Llh2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Ltw0;->d(Ljava/lang/Object;)V
+    sput-object v0, Llh2;->d:[Llh2;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Llh2;
+    .locals 1
 
-# virtual methods
-.method public final onEvent(Ljh2;)V
-    .locals 3
-    .annotation runtime Lvnf;
-    .end annotation
+    const-class v0, Llh2;
 
-    new-instance v0, Lkh2;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    invoke-direct {v0, p0, p1, v1}, Lkh2;-><init>(Llh2;Ljh2;Lkotlin/coroutines/Continuation;)V
+    check-cast p0, Llh2;
 
-    const/4 p1, 0x3
+    return-object p0
+.end method
 
-    iget-object v2, p0, Llh2;->b:Lkotlinx/coroutines/internal/ContextScope;
+.method public static values()[Llh2;
+    .locals 1
 
-    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    sget-object v0, Llh2;->d:[Llh2;
 
-    return-void
+    invoke-virtual {v0}, [Llh2;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Llh2;
+
+    return-object v0
 .end method

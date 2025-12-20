@@ -1,76 +1,77 @@
-.class public abstract Lvig;
-.super Ljava/lang/Object;
+.class public final Lvig;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lmy7;
 
 
 # instance fields
-.field public a:[Ljava/lang/Object;
+.field public final synthetic c:I
 
-.field public b:I
-
-.field public c:I
+.field public final synthetic d:Lwig;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Lwig;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lvig;->c:I
 
-    sget-object v0, Luig;->e:Luig;
+    iput-object p2, p0, Lvig;->d:Lwig;
 
-    iget-object v0, v0, Luig;->d:[Ljava/lang/Object;
+    const/16 p2, 0xb
 
-    iput-object v0, p0, Lvig;->a:[Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Lf3;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II[Ljava/lang/Object;)V
-    .locals 0
-
-    iput-object p3, p0, Lvig;->a:[Ljava/lang/Object;
-
-    iput p1, p0, Lvig;->b:I
-
-    iput p2, p0, Lvig;->c:I
-
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 2
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
     iget v0, p0, Lvig;->c:I
 
-    iget v1, p0, Lvig;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    if-ge v0, v1, :cond_0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    return v0
+    if-nez v0, :cond_0
+
+    check-cast p2, Landroid/graphics/drawable/Drawable;
+
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    iget-object p1, p0, Lvig;->d:Lwig;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    const/4 v0, 0x0
+    return-void
 
-    return v0
-.end method
+    :pswitch_0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final remove()V
-    .locals 2
+    move-result p1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    if-nez p1, :cond_1
 
-    const-string v1, "Operation is not supported for read-only collection"
+    iget-object p1, p0, Lvig;->d:Lwig;
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lwig;->a(Lwig;)Lplb;
 
-    throw v0
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lwig;->onThemeChanged(Lplb;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

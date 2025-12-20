@@ -1,51 +1,23 @@
 .class public final Lmhe;
-.super Ldhe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public k:Lxt4;
+.field public final a:Ld68;
+
+.field public final b:Ld68;
 
 
 # direct methods
-.method public constructor <init>(JLd3;)V
+.method public constructor <init>(Ld68;Ld68;)V
     .locals 0
 
-    invoke-static {p3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p3
+    iput-object p1, p0, Lmhe;->a:Ld68;
 
-    invoke-direct {p0, p1, p2, p3}, Ldhe;-><init>(JLjava/util/List;)V
+    iput-object p2, p0, Lmhe;->b:Ld68;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lghe;
-    .locals 2
-
-    new-instance v0, Lnhe;
-
-    invoke-direct {v0, p0}, Lehe;-><init>(Ldhe;)V
-
-    iget-object v1, p0, Lmhe;->k:Lxt4;
-
-    iput-object v1, v0, Lnhe;->x0:Lxt4;
-
-    return-object v0
-.end method
-
-.method public final b()Lehe;
-    .locals 2
-
-    new-instance v0, Lnhe;
-
-    invoke-direct {v0, p0}, Lehe;-><init>(Ldhe;)V
-
-    iget-object v1, p0, Lmhe;->k:Lxt4;
-
-    iput-object v1, v0, Lnhe;->x0:Lxt4;
-
-    return-object v0
 .end method

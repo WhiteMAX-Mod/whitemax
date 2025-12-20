@@ -1,144 +1,156 @@
-.class public abstract Lfaj;
+.class public final Lfaj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lfaj;
+
+.field public static final b:Lez5;
+
+.field public static final c:Lez5;
+
+.field public static final d:Lez5;
+
+.field public static final e:Lez5;
+
 
 # direct methods
-.method public static a()Ljava/util/Set;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 4
 
-    :try_start_0
-    const-string v0, "android.text.EmojiConsistency"
+    new-instance v0, Lfaj;
 
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lfaj;->a:Lfaj;
 
-    const-string v1, "getEmojiConsistencySet"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object v0
-
-    :cond_0
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    instance-of v2, v2, [I
-
-    if-nez v2, :cond_1
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_2
-    return-object v0
-
-    :catchall_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Intent;Ljava/util/ArrayList;)V
-    .locals 7
-
-    const-string v0, "android.intent.extra.TEXT"
-
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    const-string v1, "android.intent.extra.HTML_TEXT"
-
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Landroid/content/ClipData;
-
-    invoke-virtual {p0}, Landroid/content/Intent;->getType()Ljava/lang/String;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Landroid/content/ClipData$Item;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {p1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/net/Uri;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v4, v0, v1, v6, v5}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/content/Intent;Landroid/net/Uri;)V
-
-    invoke-direct {v2, v6, v3, v4}, Landroid/content/ClipData;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;Landroid/content/ClipData$Item;)V
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
+    new-instance v0, Lyyi;
 
     const/4 v1, 0x1
 
-    move v3, v1
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    :goto_0
-    if-ge v3, v0, :cond_0
+    const-class v1, Lqzi;
 
-    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Landroid/net/Uri;
+    new-instance v2, Lez5;
 
-    new-instance v5, Landroid/content/ClipData$Item;
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-direct {v5, v4}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
+    move-result-object v0
 
-    invoke-virtual {v2, v5}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
+    const-string v3, "imageFormat"
 
-    add-int/lit8 v3, v3, 0x1
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    goto :goto_0
+    sput-object v2, Lfaj;->b:Lez5;
 
-    :cond_0
-    invoke-virtual {p0, v2}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
+    new-instance v0, Lyyi;
 
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "originalImageSize"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lfaj;->c:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "compressedImageSize"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lfaj;->d:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "isOdmlImage"
+
+    invoke-direct {v1, v2, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lfaj;->e:Lez5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p1, Lkjj;
+
+    check-cast p2, Lxwa;
+
+    sget-object v0, Lfaj;->b:Lez5;
+
+    iget-object v1, p1, Lkjj;->a:Ljjj;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Lfaj;->c:Lez5;
+
+    iget-object p1, p1, Lkjj;->b:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Lfaj;->d:Lez5;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p1, v0}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Lfaj;->e:Lez5;
+
+    invoke-interface {p2, p1, v0}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
     return-void
 .end method

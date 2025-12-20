@@ -1,390 +1,104 @@
 .class public final Lem1;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
     .locals 0
 
-    iput p3, p0, Lem1;->o:I
+    iput-object p2, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lem1;->o:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/util/Map;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lem1;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lem1;->Y:Ljava/lang/Object;
-
-    iput-boolean p2, v0, Lem1;->X:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lem1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lem1;
 
-    :pswitch_0
-    check-cast p1, Ljava/util/List;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-virtual {p1, p2}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    return-object p2
+.end method
 
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lem1;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lem1;->Y:Ljava/lang/Object;
-
-    iput-boolean p2, v0, Lem1;->X:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast p2, Lvo6;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lem1;
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    const/4 v2, 0x3
+    invoke-direct {v0, p2, v1}, Lem1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
 
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-object p1, v0, Lem1;->o:Ljava/lang/Object;
 
-    iput-boolean p1, v0, Lem1;->X:Z
-
-    iput-object p2, v0, Lem1;->Y:Ljava/lang/Object;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    check-cast p1, Lw68;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lem1;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lem1;->Y:Ljava/lang/Object;
-
-    iput-boolean p2, v0, Lem1;->X:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast p2, Lh17;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lem1;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-boolean p1, v0, Lem1;->X:Z
-
-    iput-object p2, v0, Lem1;->Y:Ljava/lang/Object;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Ldxg;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lem1;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lem1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lem1;->Y:Ljava/lang/Object;
-
-    iput-boolean p2, v0, Lem1;->X:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lem1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 4
 
-    iget v0, p0, Lem1;->o:I
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lem1;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lgm1;
 
-    iget-object p1, p0, Lem1;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lem1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    check-cast p1, Ljava/util/Map;
+    iget-object v1, v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->Y:Ljkd;
 
-    iget-boolean v0, p0, Lem1;->X:Z
+    sget-object v2, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->Z:[Lp38;
 
-    if-eqz v0, :cond_0
+    const/4 v3, 0x2
 
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+    aget-object v2, v2, v3
 
-    move-result-object p1
+    invoke-interface {v1, v0, v2}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-boolean p1, p1, Lgm1;->a:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lhd5;->a:Lhd5;
+    const/16 p1, 0x8
 
     :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
     return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lem1;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-boolean v0, p0, Lem1;->X:Z
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lhd5;->a:Lhd5;
-
-    :goto_1
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lem1;->X:Z
-
-    iget-object v0, p0, Lem1;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lvo6;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    new-instance v1, Limb;
-
-    invoke-direct {v1, p1, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lem1;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lw68;
-
-    iget-boolean v0, p0, Lem1;->X:Z
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    return-object p1
-
-    :pswitch_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lem1;->X:Z
-
-    iget-object v0, p0, Lem1;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lh17;
-
-    if-eqz p1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    sget-object v0, Le17;->c:Le17;
-
-    :goto_3
-    return-object v0
-
-    :pswitch_4
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lem1;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ldxg;
-
-    iget-boolean v0, p0, Lem1;->X:Z
-
-    if-nez v0, :cond_4
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_5
-
-    :cond_4
-    sget-object v0, Ldm1;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    const/4 v0, 0x0
-
-    :goto_4
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    :goto_5
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,136 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lne4;
+.implements Lrdc;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lvgg;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
+# static fields
+.field public static final a:Lhy0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ldk4;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lhy0;
 
-    iput v0, p0, Lel4;->a:I
+    const/4 v1, 0x3
 
-    .line 1
-    new-instance v0, Len4;
+    invoke-direct {v0, v1}, Lhy0;-><init>(I)V
 
-    invoke-direct {v0}, Len4;-><init>()V
-
-    .line 2
-    iput-object p2, v0, Len4;->b:Ljava/lang/String;
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lel4;->c:Ljava/lang/Object;
-
-    .line 5
-    iput-object p3, p0, Lel4;->b:Lvgg;
-
-    .line 6
-    iput-object v0, p0, Lel4;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lsua;Ldk4;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lel4;->a:I
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 9
-    iput-object p1, p0, Lel4;->c:Ljava/lang/Object;
-
-    .line 10
-    const-string p1, "ExoPlayer"
-
-    iput-object p1, p0, Lel4;->d:Ljava/lang/Object;
-
-    .line 11
-    iput-object p2, p0, Lel4;->b:Lvgg;
+    sput-object v0, Lel4;->a:Lhy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqe4;
-    .locals 4
+.method public final a()Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lel4;->a:I
+    sget-object v0, Lel4;->a:Lhy0;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    new-instance v0, La0g;
+    move-result-object v0
 
-    iget-object v1, p0, Lel4;->c:Ljava/lang/Object;
-
-    check-cast v1, Lh01;
-
-    iget-object v2, p0, Lel4;->d:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-object v3, p0, Lel4;->b:Lvgg;
-
-    invoke-direct {v0, v1, v2, v3}, La0g;-><init>(Lh01;Ljava/lang/String;Lvgg;)V
+    check-cast v0, Ljava/nio/ByteBuffer;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lcl4;
+.method public final bridge synthetic e(Ljava/lang/Object;)Z
+    .locals 0
 
-    iget-object v1, p0, Lel4;->c:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    check-cast v1, Landroid/content/Context;
-
-    iget-object v2, p0, Lel4;->d:Ljava/lang/Object;
-
-    check-cast v2, Len4;
-
-    invoke-virtual {v2}, Len4;->a()Lqe4;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Lcl4;-><init>(Landroid/content/Context;Lqe4;)V
-
-    iget-object v1, p0, Lel4;->b:Lvgg;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Lcl4;->S(Lvgg;)V
-
-    :cond_0
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

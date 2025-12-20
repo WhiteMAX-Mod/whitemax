@@ -1,48 +1,19 @@
-.class public final Lqu9;
-.super Lq44;
+.class public interface abstract Lqu9;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Lh28;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lh28;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lqu9;->X:Lh28;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lru9;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()Z
     .locals 1
 
-    iput-object p1, p0, Lqu9;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lqu9;->o:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lqu9;->o:I
-
-    iget-object p1, p0, Lqu9;->X:Lh28;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh28;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract b()Lthh;
 .end method

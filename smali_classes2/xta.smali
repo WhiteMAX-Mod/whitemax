@@ -1,43 +1,25 @@
-.class public abstract Lxta;
-.super Landroid/view/View;
+.class public final Lxta;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract getSpannableText()Ljava/lang/CharSequence;
-.end method
-
-.method public onWindowVisibilityChanged(I)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
-
-    return-void
-.end method
-
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+.method public final serializer()Lq38;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+    sget-object v0, Lyta;->a:Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    move-result-object v0
 
-    move-result p1
+    check-cast v0, Lq38;
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method

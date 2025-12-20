@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public final a:Lx6i;
+.field public final a:Ll5;
 
-.field public final b:Lq85;
+.field public final b:Lfca;
 
-.field public final c:Lv1a;
+.field public final c:Lgfj;
 
-.field public final d:Ldm4;
+.field public final d:Lwp4;
 
-.field public final e:Llcj;
+.field public final e:Lxna;
 
-.field public final f:Ltl4;
+.field public final f:Lh5;
 
-.field public final g:Lrha;
+.field public final g:Lqf3;
 
 .field public final h:Z
 
@@ -26,54 +26,58 @@
 
 
 # direct methods
-.method public constructor <init>(Lne4;)V
+.method public constructor <init>(Lni4;)V
     .locals 2
 
-    new-instance v0, Lx6i;
+    new-instance v0, Ll5;
 
-    const/16 v1, 0xd
+    const/16 v1, 0xc
 
-    invoke-direct {v0, v1, p1}, Lx6i;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ll5;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->a:Lx6i;
+    iput-object v0, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->a:Ll5;
 
-    new-instance p1, Ltl4;
+    new-instance p1, Lh5;
 
-    invoke-direct {p1}, Ltl4;-><init>()V
+    invoke-direct {p1}, Lh5;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->f:Ltl4;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->f:Lh5;
 
-    new-instance p1, Lv1a;
+    new-instance p1, Lgfj;
 
     const/16 v0, 0x12
 
-    invoke-direct {p1, v0}, Lv1a;-><init>(I)V
+    invoke-direct {p1, v0}, Lgfj;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->c:Lv1a;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->c:Lgfj;
 
-    sget-object p1, Lbn4;->z0:Ldm4;
+    sget-object p1, Lxq4;->z0:Lwp4;
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->d:Ldm4;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->d:Lwp4;
 
-    sget-object p1, Lp47;->v:Lq85;
+    sget-object p1, Lb97;->v:Lfca;
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->b:Lq85;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->b:Lfca;
 
-    new-instance p1, Lrha;
+    new-instance p1, Lqf3;
 
-    invoke-direct {p1, v0}, Lrha;-><init>(I)V
+    const/16 v0, 0x13
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->g:Lrha;
+    const/4 v1, 0x0
 
-    new-instance p1, Llcj;
+    invoke-direct {p1, v0, v1}, Lqf3;-><init>(IB)V
 
-    const/16 v0, 0x11
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->g:Lqf3;
 
-    invoke-direct {p1, v0}, Llcj;-><init>(I)V
+    new-instance p1, Lxna;
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->e:Llcj;
+    const/16 v0, 0x12
+
+    invoke-direct {p1, v0}, Lxna;-><init>(I)V
+
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsMediaSource$Factory;->e:Lxna;
 
     const/4 p1, 0x1
 

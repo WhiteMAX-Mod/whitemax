@@ -1,162 +1,156 @@
 .class public final Le3b;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic X:Lone/me/android/OneMeApplication;
 
-.field public final b:Lxs;
-
-.field public final c:Lxs;
-
-.field public final d:Lxs;
-
-.field public final e:Lbwf;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Llk4;)V
-    .locals 1
+.method public constructor <init>(Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Le3b;->X:Lone/me/android/OneMeApplication;
 
-    iput-object p1, p0, Le3b;->a:Landroid/content/Context;
+    const/4 p1, 0x2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p1, "ru.oneme.app.chats"
-
-    const-string p2, "ru.oneme.app.inapp.2"
-
-    const-string v0, "ru.oneme.app.dialogs"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lzri;->a([Ljava/lang/Object;)Lxs;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le3b;->b:Lxs;
-
-    const-string p1, "ru.oneme.app.new.incomingCalls."
-
-    const-string p2, "ru.oneme.app.new.activeCalls"
-
-    filled-new-array {p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lzri;->a([Ljava/lang/Object;)Lxs;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le3b;->c:Lxs;
-
-    const-string p1, "ru.oneme.app.fileUpload"
-
-    const-string p2, "ru.oneme.app.media"
-
-    const-string v0, "ru.oneme.app.misc"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lzri;->a([Ljava/lang/Object;)Lxs;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le3b;->d:Lxs;
-
-    new-instance p1, Lfr7;
-
-    const/16 p2, 0x19
-
-    invoke-direct {p1, p2, p0}, Lfr7;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lbwf;
-
-    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p2, p0, Le3b;->e:Lbwf;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Landroid/app/NotificationChannelGroup;
+    check-cast p1, Lsb5;
 
-    iget-object v1, p0, Le3b;->a:Landroid/content/Context;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p2, p1}, Landroid/app/NotificationChannelGroup;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Le3b;->e:Lbwf;
-
-    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Le3b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Landroid/app/NotificationManager;
+    check-cast p1, Le3b;
 
-    invoke-virtual {p1, v0}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    return-void
+    invoke-virtual {p1, p2}, Le3b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Le3b;->b:Lxs;
+    new-instance v0, Le3b;
 
-    invoke-virtual {v0, p1}, Lxs;->contains(Ljava/lang/Object;)Z
+    iget-object v1, p0, Le3b;->X:Lone/me/android/OneMeApplication;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Le3b;-><init>(Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v0, :cond_0
+    iput-object p1, v0, Le3b;->o:Ljava/lang/Object;
 
-    const-string p1, "ru.oneme.app.notifications.group.chats"
+    return-object v0
+.end method
 
-    return-object p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    :cond_0
-    iget-object v0, p0, Le3b;->d:Lxs;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Lxs;->contains(Ljava/lang/Object;)Z
+    iget-object p1, p0, Le3b;->o:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Lsb5;
 
-    if-eqz v0, :cond_1
-
-    const-string p1, "ru.oneme.app.notifications.group.other"
-
-    return-object p1
-
-    :cond_1
-    iget-object v0, p0, Le3b;->c:Lxs;
-
-    invoke-virtual {v0, p1}, Lxs;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string p1, "ru.oneme.app.notifications.group.calls"
+    const-string v1, "change dynamic font to "
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OneMeDynamicFont"
+
+    invoke-static {v0, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Landroid/content/res/Configuration;
+
+    iget-object v0, p0, Le3b;->X:Lone/me/android/OneMeApplication;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    iget v1, p1, Landroid/content/res/Configuration;->fontScale:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result v1
+
+    sget-object v2, Logd;->b:Lq3;
+
+    invoke-virtual {v2}, Lq3;->h()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x1
+
+    :goto_0
+    add-int/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v1
+
+    iput v1, p1, Landroid/content/res/Configuration;->fontScale:F
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    invoke-virtual {v1, p1, v2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
+
+    invoke-virtual {v0, p1}, Lone/me/android/OneMeApplication;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

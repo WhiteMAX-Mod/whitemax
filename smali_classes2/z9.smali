@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpr9;
+.implements Low9;
 
 
 # instance fields
-.field public final a:Lx8d;
+.field public final a:Ldid;
 
 .field public final b:Ljava/lang/String;
 
@@ -15,12 +15,12 @@
 
 
 # direct methods
-.method public constructor <init>(JLx8d;Ljava/lang/String;)V
+.method public constructor <init>(JLdid;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lz9;->a:Lx8d;
+    iput-object p3, p0, Lz9;->a:Ldid;
 
     iput-object p4, p0, Lz9;->b:Ljava/lang/String;
 
@@ -52,11 +52,11 @@
     :cond_1
     check-cast p1, Lz9;
 
-    iget-object v1, p0, Lz9;->a:Lx8d;
+    iget-object v1, p0, Lz9;->a:Ldid;
 
-    iget-object v3, p1, Lz9;->a:Lx8d;
+    iget-object v3, p1, Lz9;->a:Ldid;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -69,7 +69,7 @@
 
     iget-object v3, p1, Lz9;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -95,9 +95,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lz9;->a:Lx8d;
+    iget-object v0, p0, Lz9;->a:Ldid;
 
-    invoke-virtual {v0}, Lx8d;->hashCode()I
+    invoke-virtual {v0}, Ldid;->hashCode()I
 
     move-result v0
 
@@ -107,7 +107,7 @@
 
     iget-object v2, p0, Lz9;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
 
     move-result v0
 
@@ -131,7 +131,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lz9;->a:Lx8d;
+    iget-object v1, p0, Lz9;->a:Ldid;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -151,7 +151,7 @@
 
     iget-wide v2, p0, Lz9;->c:J
 
-    invoke-static {v0, v2, v3, v1}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

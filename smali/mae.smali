@@ -1,90 +1,129 @@
 .class public final Lmae;
-.super Lsvd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll25;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final Z:Llae;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final s0:Lly0;
+.field public final b:Loae;
 
-.field public final t0:Lkae;
-
-.field public final u0:[B
-
-.field public final v0:Lcz0;
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>(Llae;Lly0;Lkae;[B)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Runnable;Loae;)V
+    .locals 0
 
-    invoke-direct {p0}, Lsvd;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmae;->Z:Llae;
+    iput-object p1, p0, Lmae;->a:Ljava/lang/Runnable;
 
-    iput-object p2, p0, Lmae;->s0:Lly0;
-
-    iput-object p3, p0, Lmae;->t0:Lkae;
-
-    iput-object p4, p0, Lmae;->u0:[B
-
-    new-instance v0, Lcz0;
-
-    iget-object p1, p1, Llae;->b:Lze4;
-
-    invoke-direct {v0, p2, p1, p4, p3}, Lcz0;-><init>(Lly0;Lze4;[BLbz0;)V
-
-    iput-object v0, p0, Lmae;->v0:Lcz0;
+    iput-object p2, p0, Lmae;->b:Loae;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final dispose()V
     .locals 2
 
-    iget-object v0, p0, Lmae;->v0:Lcz0;
+    iget-object v0, p0, Lmae;->c:Ljava/lang/Thread;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lmae;->b:Loae;
+
+    instance-of v1, v0, Lina;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lina;
+
+    iget-boolean v1, v0, Lina;->b:Z
+
+    if-nez v1, :cond_0
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcz0;->j:Z
+    iput-boolean v1, v0, Lina;->b:Z
+
+    iget-object v0, v0, Lina;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lmae;->b:Loae;
+
+    invoke-interface {v0}, Ll25;->dispose()V
 
     return-void
 .end method
 
-.method public final c()Ljava/lang/Object;
-    .locals 8
+.method public final f()Z
+    .locals 1
 
-    iget-object v0, p0, Lmae;->v0:Lcz0;
+    iget-object v0, p0, Lmae;->b:Loae;
 
-    invoke-virtual {v0}, Lcz0;->a()V
+    invoke-interface {v0}, Ll25;->f()Z
 
-    iget-object v0, p0, Lmae;->t0:Lkae;
+    move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    iget v1, v0, Lkae;->o:I
+.method public final run()V
+    .locals 2
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    iput v1, v0, Lkae;->o:I
+    move-result-object v0
 
-    iget-object v2, v0, Lkae;->a:Li25;
+    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
 
-    iget-wide v3, v0, Lkae;->b:J
-
-    iget-wide v5, v0, Lkae;->d:J
-
-    invoke-virtual {v0}, Lkae;->b()F
-
-    move-result v7
-
-    invoke-virtual/range {v2 .. v7}, Li25;->b(JJF)V
-
-    :cond_0
     const/4 v0, 0x0
 
-    return-object v0
+    :try_start_0
+    iget-object v1, p0, Lmae;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Lmae;->dispose()V
+
+    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Lomj;->d(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0}, Lmae;->dispose()V
+
+    iput-object v0, p0, Lmae;->c:Ljava/lang/Thread;
+
+    throw v1
 .end method

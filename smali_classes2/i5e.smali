@@ -1,48 +1,31 @@
-.class public final Li5e;
-.super Lq44;
+.class public abstract Li5e;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Li3e;
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Li3e;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Li5e;->X:Li3e;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Li5e;->d:Ljava/lang/Object;
+    sget v0, Lx9d;->cancel:I
 
-    iget p1, p0, Li5e;->o:I
+    sput v0, Li5e;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lx9d;->presense_accent:I
 
-    or-int/2addr p1, v0
+    sput v0, Li5e;->b:I
 
-    iput p1, p0, Li5e;->o:I
+    sget v0, Lx9d;->presense_bg:I
 
-    iget-object p1, p0, Li5e;->X:Li3e;
+    sput v0, Li5e;->c:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Li3e;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lg84;->a:Lg84;
-
-    return-object p1
+    return-void
 .end method

@@ -1,136 +1,253 @@
 .class public final Lnt8;
-.super Ldtf;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+.field public final a:Landroid/graphics/drawable/GradientDrawable;
 
-.field public final synthetic Y:Landroid/widget/FrameLayout;
-
-.field public synthetic o:Z
+.field public final b:Landroidx/appcompat/widget/AppCompatImageView;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    iput-object p1, p0, Lnt8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lnt8;->Y:Landroid/widget/FrameLayout;
+    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 p1, 0x2
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41a00000    # 20.0f
+
+    mul-float/2addr v1, v2
+
+    const/16 v2, 0x8
+
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x1
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x2
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x3
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x4
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x5
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x6
+
+    aput v1, v2, v3
+
+    const/4 v3, 0x7
+
+    aput v1, v2, v3
+
+    invoke-static {v0, v0, v0, v2}, Lu4g;->f(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lnt8;->a:Landroid/graphics/drawable/GradientDrawable;
+
+    new-instance v2, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-direct {v2, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v0, -0x2
+
+    invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v0, 0x11
+
+    iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iput-object v2, p0, Lnt8;->b:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {p0, v1}, Lnt8;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v1, 0x18
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v1
+
+    invoke-static {v3}, Ln7j;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v4
+
+    invoke-static {v1}, Ln7j;->c(F)I
+
+    move-result v1
+
+    invoke-direct {p1, v3, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setForegroundGravity(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public getBackground()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-super {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {p0, p1, p2}, Lnt8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lnt8;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lnt8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lnt8;
-
-    iget-object v1, p0, Lnt8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
-
-    iget-object v2, p0, Lnt8;->Y:Landroid/widget/FrameLayout;
-
-    invoke-direct {v0, v1, v2, p2}, Lnt8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lnt8;->o:Z
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lnt8;->o:Z
-
-    iget-object v0, p0, Lnt8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lsn0;
-
-    invoke-virtual {p1}, Lsn0;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj02;
-
-    invoke-interface {p1}, Lj02;->getRootView()Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance v1, Lmt8;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2}, Lmt8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
-
-    invoke-static {p1, v1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Lsn0;
+    const/4 v0, 0x0
 
-    sget-object v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lyy7;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x0
+    return-object v0
 
-    aget-object v0, v0, v1
+    :cond_1
+    iget-object v0, p0, Lnt8;->a:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {p1}, Lsn0;->getValue()Ljava/lang/Object;
+    return-object v0
+.end method
+
+.method public setBackground(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/GradientDrawable;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setBackgroundColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lnt8;->a:Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(Landroid/content/res/ColorStateList;)V
 
-    :goto_0
-    iget-object v0, p0, Lnt8;->Y:Landroid/widget/FrameLayout;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+.method public final setIcon(I)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    move-result-object v0
 
-    return-object p1
+    .line 4
+    invoke-static {v0, p1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 5
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 6
+    invoke-virtual {p0, p1}, Lnt8;->setIcon(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public final setIcon(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lnt8;->b:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final setIconColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lnt8;->b:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
 .end method

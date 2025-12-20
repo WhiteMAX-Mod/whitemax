@@ -1,122 +1,67 @@
-.class public final Ly49;
+.class public interface abstract Ly49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Ly49;->a:I
-
-    iput-object p2, p0, Ly49;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
+.implements Lie8;
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public h(Lie8;)Z
+    .locals 4
 
-    iget p1, p0, Ly49;->a:I
+    instance-of v0, p1, Ly49;
 
-    packed-switch p1, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object p1, p0, Ly49;->b:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast p1, Lv59;
+    :cond_0
+    invoke-interface {p0}, Ly49;->j()J
 
-    iget-object p1, p1, Lv59;->w0:Lx59;
+    move-result-wide v0
 
-    const/4 v0, 0x0
+    check-cast p1, Ly49;
 
-    iput-boolean v0, p1, Lx59;->I0:Z
+    invoke-interface {p1}, Ly49;->j()J
 
-    invoke-virtual {p1}, Lx59;->o()V
+    move-result-wide v2
 
-    return-void
+    cmp-long v0, v0, v2
 
-    :pswitch_0
-    iget-object p1, p0, Ly49;->b:Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    check-cast p1, Landroidx/mediarouter/app/d;
+    invoke-interface {p0}, Ly49;->i()J
 
-    const/4 v0, 0x1
+    move-result-wide v0
 
-    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
+    invoke-interface {p1}, Ly49;->i()J
 
-    return-void
+    move-result-wide v2
 
-    nop
+    cmp-long p1, v0, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    iget p1, p0, Ly49;->a:I
-
-    return-void
+.method public abstract i()J
 .end method
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public abstract j()J
+.end method
 
-    iget p1, p0, Ly49;->a:I
+.method public abstract v()Lc10;
+.end method
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Ly49;->b:Ljava/lang/Object;
-
-    check-cast p1, Lv59;
-
-    iget-object p1, p1, Lv59;->w0:Lx59;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lx59;->I0:Z
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract w()Ljava/lang/String;
 .end method

@@ -3,145 +3,118 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljava/util/ArrayList;
+
+
 # instance fields
-.field public final a:Lqei;
+.field public final a:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Lqei;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v1, 0x32
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    sput-object v0, Ln8g;->b:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln8g;->a:Lqei;
+    iput-object p1, p0, Ln8g;->a:Landroid/os/Handler;
 
     return-void
+.end method
+
+.method public static b()Ll8g;
+    .locals 2
+
+    sget-object v0, Ln8g;->b:Ljava/util/ArrayList;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ll8g;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll8g;
+
+    :goto_0
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(ILjava/lang/Object;)Ll8g;
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Ln8g;->a:Lqei;
-
-    check-cast v0, Lkei;
-
-    invoke-virtual {v0}, Loai;->T()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Loai;->V(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Ln8g;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Ln8g;->a:Lqei;
-
-    check-cast p1, Ln8g;
-
-    iget-object p1, p1, Ln8g;->a:Lqei;
-
-    check-cast v0, Lkei;
-
-    invoke-virtual {v0}, Loai;->T()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Lmgi;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v0, v2, p1}, Loai;->S(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ln8g;->a:Lqei;
-
-    check-cast v0, Lkei;
-
-    invoke-virtual {v0}, Loai;->T()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Loai;->S(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-static {}, Ln8g;->b()Ll8g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+    iget-object v1, p0, Ln8g;->a:Landroid/os/Handler;
 
-    move-result v1
+    invoke-virtual {v1, p1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    return v1
+    iput-object p1, v0, Ll8g;->a:Landroid/os/Message;
 
-    :catch_0
-    move-exception v0
+    return-object v0
+.end method
 
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+.method public final c(I)Z
+    .locals 1
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iget-object v0, p0, Ln8g;->a:Landroid/os/Handler;
 
-    throw v1
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    move-result p1
+
+    return p1
 .end method

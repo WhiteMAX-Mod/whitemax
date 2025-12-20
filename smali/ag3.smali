@@ -1,859 +1,645 @@
-.class public final Lag3;
+.class public abstract Lag3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Cloneable;
+.implements Ljava/io/Closeable;
+
+
+# static fields
+.field public static final X:Lwpj;
+
+.field public static final o:Lcmj;
+
 
 # instance fields
-.field public final a:I
+.field public a:Z
 
-.field public b:Laie;
+.field public final b:Lt6f;
 
-.field public c:I
+.field public final c:Lzf3;
 
-.field public final d:I
-
-.field public e:Landroid/net/Uri;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Landroid/os/Bundle;
-
-.field public h:Z
-
-.field public i:Lrg7;
+.field public final d:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcmj;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lcmj;-><init>(I)V
+
+    sput-object v0, Lag3;->o:Lcmj;
+
+    new-instance v0, Lwpj;
+
+    invoke-direct {v0, v1}, Lwpj;-><init>(I)V
+
+    sput-object v0, Lag3;->X:Lwpj;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Lvxd;Lzf3;Ljava/lang/Throwable;Z)V
     .locals 1
 
-    .line 1
-    sget-object v0, Lbg3;->j:Ljava/lang/String;
-
-    sparse-switch p1, :sswitch_data_0
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    goto/16 :goto_0
-
-    .line 2
-    :sswitch_0
-    sget v0, Lixc;->media3_icon_playback_speed_0_8:I
-
-    goto/16 :goto_0
-
-    .line 3
-    :sswitch_1
-    sget v0, Lixc;->media3_icon_playback_speed_1_8:I
-
-    goto/16 :goto_0
-
-    .line 4
-    :sswitch_2
-    sget v0, Lixc;->media3_icon_thumb_up_filled:I
-
-    goto/16 :goto_0
-
-    .line 5
-    :sswitch_3
-    sget v0, Lixc;->media3_icon_thumb_down_filled:I
-
-    goto/16 :goto_0
-
-    .line 6
-    :sswitch_4
-    sget v0, Lixc;->media3_icon_heart_filled:I
-
-    goto/16 :goto_0
-
-    .line 7
-    :sswitch_5
-    sget v0, Lixc;->media3_icon_check_circle_filled:I
-
-    goto/16 :goto_0
-
-    .line 8
-    :sswitch_6
-    sget v0, Lixc;->media3_icon_bookmark_filled:I
-
-    goto/16 :goto_0
-
-    .line 9
-    :sswitch_7
-    sget v0, Lixc;->media3_icon_star_filled:I
-
-    goto/16 :goto_0
-
-    .line 10
-    :sswitch_8
-    sget v0, Lixc;->media3_icon_flag_filled:I
-
-    goto/16 :goto_0
-
-    .line 11
-    :sswitch_9
-    sget v0, Lixc;->media3_icon_minus_circle_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 12
-    :sswitch_a
-    sget v0, Lixc;->media3_icon_minus_circle_filled:I
-
-    goto/16 :goto_0
-
-    .line 13
-    :sswitch_b
-    sget v0, Lixc;->media3_icon_plus_circle_filled:I
-
-    goto/16 :goto_0
-
-    .line 14
-    :sswitch_c
-    sget v0, Lixc;->media3_icon_skip_back_15:I
-
-    goto/16 :goto_0
-
-    .line 15
-    :sswitch_d
-    sget v0, Lixc;->media3_icon_skip_forward_15:I
-
-    goto/16 :goto_0
-
     .line 16
-    :sswitch_e
-    sget v0, Lixc;->media3_icon_shuffle_off:I
-
-    goto/16 :goto_0
+    iput-boolean v0, p0, Lag3;->a:Z
 
     .line 17
-    :sswitch_f
-    sget v0, Lixc;->media3_icon_shuffle_star:I
+    new-instance v0, Lt6f;
 
-    goto/16 :goto_0
+    invoke-direct {v0, p1, p2, p5}, Lt6f;-><init>(Ljava/lang/Object;Lvxd;Z)V
+
+    iput-object v0, p0, Lag3;->b:Lt6f;
 
     .line 18
-    :sswitch_10
-    sget v0, Lixc;->media3_icon_repeat_off:I
-
-    goto/16 :goto_0
+    iput-object p3, p0, Lag3;->c:Lzf3;
 
     .line 19
-    :sswitch_11
-    sget v0, Lixc;->media3_icon_skip_forward:I
-
-    goto/16 :goto_0
-
-    .line 20
-    :sswitch_12
-    sget v0, Lixc;->media3_icon_playback_speed_2_0:I
-
-    goto/16 :goto_0
-
-    .line 21
-    :sswitch_13
-    sget v0, Lixc;->media3_icon_playback_speed_0_5:I
-
-    goto/16 :goto_0
-
-    .line 22
-    :sswitch_14
-    sget v0, Lixc;->media3_icon_playback_speed_1_2:I
-
-    goto/16 :goto_0
-
-    .line 23
-    :sswitch_15
-    sget v0, Lixc;->media3_icon_playback_speed_1_5:I
-
-    goto/16 :goto_0
-
-    .line 24
-    :sswitch_16
-    sget v0, Lixc;->media3_icon_closed_captions_off:I
-
-    goto/16 :goto_0
-
-    .line 25
-    :sswitch_17
-    sget v0, Lixc;->media3_icon_signal:I
-
-    goto/16 :goto_0
-
-    .line 26
-    :sswitch_18
-    sget v0, Lixc;->media3_icon_playback_speed_1_0:I
-
-    goto/16 :goto_0
-
-    .line 27
-    :sswitch_19
-    sget v0, Lixc;->media3_icon_subtitles_off:I
-
-    goto/16 :goto_0
-
-    .line 28
-    :sswitch_1a
-    sget v0, Lixc;->media3_icon_playlist_remove:I
-
-    goto/16 :goto_0
-
-    .line 29
-    :sswitch_1b
-    sget v0, Lixc;->media3_icon_thumb_up_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 30
-    :sswitch_1c
-    sget v0, Lixc;->media3_icon_thumb_down_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 31
-    :sswitch_1d
-    sget v0, Lixc;->media3_icon_settings:I
-
-    goto/16 :goto_0
-
-    .line 32
-    :sswitch_1e
-    sget v0, Lixc;->media3_icon_heart_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 33
-    :sswitch_1f
-    sget v0, Lixc;->media3_icon_check_circle_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 34
-    :sswitch_20
-    sget v0, Lixc;->media3_icon_bookmark_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 35
-    :sswitch_21
-    sget v0, Lixc;->media3_icon_star_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 36
-    :sswitch_22
-    sget v0, Lixc;->media3_icon_share:I
-
-    goto/16 :goto_0
-
-    .line 37
-    :sswitch_23
-    sget v0, Lixc;->media3_icon_sync:I
-
-    goto/16 :goto_0
-
-    .line 38
-    :sswitch_24
-    sget v0, Lixc;->media3_icon_radio:I
-
-    goto/16 :goto_0
-
-    .line 39
-    :sswitch_25
-    sget v0, Lixc;->media3_icon_quality:I
-
-    goto/16 :goto_0
-
-    .line 40
-    :sswitch_26
-    sget v0, Lixc;->media3_icon_minus:I
-
-    goto/16 :goto_0
-
-    .line 41
-    :sswitch_27
-    sget v0, Lixc;->media3_icon_flag_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 42
-    :sswitch_28
-    sget v0, Lixc;->media3_icon_block:I
-
-    goto/16 :goto_0
-
-    .line 43
-    :sswitch_29
-    sget v0, Lixc;->media3_icon_plus_circle_unfilled:I
-
-    goto/16 :goto_0
-
-    .line 44
-    :sswitch_2a
-    sget v0, Lixc;->media3_icon_plus:I
-
-    goto/16 :goto_0
-
-    .line 45
-    :sswitch_2b
-    sget v0, Lixc;->media3_icon_feed:I
-
-    goto/16 :goto_0
-
-    .line 46
-    :sswitch_2c
-    sget v0, Lixc;->media3_icon_playback_speed:I
-
-    goto/16 :goto_0
-
-    .line 47
-    :sswitch_2d
-    sget v0, Lixc;->media3_icon_queue_remove:I
-
-    goto/16 :goto_0
-
-    .line 48
-    :sswitch_2e
-    sget v0, Lixc;->media3_icon_queue_next:I
-
-    goto/16 :goto_0
-
-    .line 49
-    :sswitch_2f
-    sget v0, Lixc;->media3_icon_queue_add:I
-
-    goto :goto_0
-
-    .line 50
-    :sswitch_30
-    sget v0, Lixc;->media3_icon_skip_back_5:I
-
-    goto :goto_0
-
-    .line 51
-    :sswitch_31
-    sget v0, Lixc;->media3_icon_skip_back_30:I
-
-    goto :goto_0
-
-    .line 52
-    :sswitch_32
-    sget v0, Lixc;->media3_icon_skip_back_10:I
-
-    goto :goto_0
-
-    .line 53
-    :sswitch_33
-    sget v0, Lixc;->media3_icon_skip_forward_5:I
-
-    goto :goto_0
-
-    .line 54
-    :sswitch_34
-    sget v0, Lixc;->media3_icon_skip_forward_30:I
-
-    goto :goto_0
-
-    .line 55
-    :sswitch_35
-    sget v0, Lixc;->media3_icon_skip_forward_10:I
-
-    goto :goto_0
-
-    .line 56
-    :sswitch_36
-    sget v0, Lixc;->media3_icon_volume_up:I
-
-    goto :goto_0
-
-    .line 57
-    :sswitch_37
-    sget v0, Lixc;->media3_icon_volume_off:I
-
-    goto :goto_0
-
-    .line 58
-    :sswitch_38
-    sget v0, Lixc;->media3_icon_volume_down:I
-
-    goto :goto_0
-
-    .line 59
-    :sswitch_39
-    sget v0, Lixc;->media3_icon_subtitles:I
-
-    goto :goto_0
-
-    .line 60
-    :sswitch_3a
-    sget v0, Lixc;->media3_icon_stop:I
-
-    goto :goto_0
-
-    .line 61
-    :sswitch_3b
-    sget v0, Lixc;->media3_icon_previous:I
-
-    goto :goto_0
-
-    .line 62
-    :sswitch_3c
-    sget v0, Lixc;->media3_icon_next:I
-
-    goto :goto_0
-
-    .line 63
-    :sswitch_3d
-    sget v0, Lixc;->media3_icon_shuffle_on:I
-
-    goto :goto_0
-
-    .line 64
-    :sswitch_3e
-    sget v0, Lixc;->media3_icon_skip_back:I
-
-    goto :goto_0
-
-    .line 65
-    :sswitch_3f
-    sget v0, Lixc;->media3_icon_repeat_one:I
-
-    goto :goto_0
-
-    .line 66
-    :sswitch_40
-    sget v0, Lixc;->media3_icon_repeat_all:I
-
-    goto :goto_0
-
-    .line 67
-    :sswitch_41
-    sget v0, Lixc;->media3_icon_playlist_add:I
-
-    goto :goto_0
-
-    .line 68
-    :sswitch_42
-    sget v0, Lixc;->media3_icon_play:I
-
-    goto :goto_0
-
-    .line 69
-    :sswitch_43
-    sget v0, Lixc;->media3_icon_pause:I
-
-    goto :goto_0
-
-    .line 70
-    :sswitch_44
-    sget v0, Lixc;->media3_icon_rewind:I
-
-    goto :goto_0
-
-    .line 71
-    :sswitch_45
-    sget v0, Lixc;->media3_icon_fast_forward:I
-
-    goto :goto_0
-
-    .line 72
-    :sswitch_46
-    sget v0, Lixc;->media3_icon_closed_captions:I
-
-    goto :goto_0
-
-    .line 73
-    :sswitch_47
-    sget v0, Lixc;->media3_icon_artist:I
-
-    goto :goto_0
-
-    .line 74
-    :sswitch_48
-    sget v0, Lixc;->media3_icon_album:I
-
-    .line 75
-    :goto_0
-    invoke-direct {p0, p1, v0}, Lag3;-><init>(II)V
+    iput-object p4, p0, Lag3;->d:Ljava/lang/Throwable;
 
     return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0xe019 -> :sswitch_48
-        0xe01a -> :sswitch_47
-        0xe01c -> :sswitch_46
-        0xe01f -> :sswitch_45
-        0xe020 -> :sswitch_44
-        0xe034 -> :sswitch_43
-        0xe037 -> :sswitch_42
-        0xe03b -> :sswitch_41
-        0xe040 -> :sswitch_40
-        0xe041 -> :sswitch_3f
-        0xe042 -> :sswitch_3e
-        0xe043 -> :sswitch_3d
-        0xe044 -> :sswitch_3c
-        0xe045 -> :sswitch_3b
-        0xe047 -> :sswitch_3a
-        0xe048 -> :sswitch_39
-        0xe04d -> :sswitch_38
-        0xe04f -> :sswitch_37
-        0xe050 -> :sswitch_36
-        0xe056 -> :sswitch_35
-        0xe057 -> :sswitch_34
-        0xe058 -> :sswitch_33
-        0xe059 -> :sswitch_32
-        0xe05a -> :sswitch_31
-        0xe05b -> :sswitch_30
-        0xe05c -> :sswitch_2f
-        0xe066 -> :sswitch_2e
-        0xe067 -> :sswitch_2d
-        0xe068 -> :sswitch_2c
-        0xe0e5 -> :sswitch_2b
-        0xe145 -> :sswitch_2a
-        0xe147 -> :sswitch_29
-        0xe14b -> :sswitch_28
-        0xe153 -> :sswitch_27
-        0xe15b -> :sswitch_26
-        0xe429 -> :sswitch_25
-        0xe51e -> :sswitch_24
-        0xe627 -> :sswitch_23
-        0xe80d -> :sswitch_22
-        0xe838 -> :sswitch_21
-        0xe866 -> :sswitch_20
-        0xe86c -> :sswitch_1f
-        0xe87d -> :sswitch_1e
-        0xe8b8 -> :sswitch_1d
-        0xe8db -> :sswitch_1c
-        0xe8dc -> :sswitch_1b
-        0xeb80 -> :sswitch_1a
-        0xef72 -> :sswitch_19
-        0xefcd -> :sswitch_18
-        0xf048 -> :sswitch_17
-        0xf1dc -> :sswitch_16
-        0xf4e0 -> :sswitch_15
-        0xf4e1 -> :sswitch_14
-        0xf4e2 -> :sswitch_13
-        0xf4eb -> :sswitch_12
-        0xf6f4 -> :sswitch_11
-        0xfe040 -> :sswitch_10
-        0xfe043 -> :sswitch_f
-        0xfe044 -> :sswitch_e
-        0xfe056 -> :sswitch_d
-        0xfe059 -> :sswitch_c
-        0xfe147 -> :sswitch_b
-        0xfe148 -> :sswitch_a
-        0xfe149 -> :sswitch_9
-        0xfe153 -> :sswitch_8
-        0xfe838 -> :sswitch_7
-        0xfe866 -> :sswitch_6
-        0xfe86c -> :sswitch_5
-        0xfe87d -> :sswitch_4
-        0xfe8db -> :sswitch_3
-        0xfe8dc -> :sswitch_2
-        0xff4e0 -> :sswitch_1
-        0xff4e2 -> :sswitch_0
-    .end sparse-switch
 .end method
 
-.method public constructor <init>(II)V
-    .locals 0
+.method public constructor <init>(Lt6f;Lzf3;Ljava/lang/Throwable;)V
+    .locals 3
 
-    .line 76
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
-    iput p1, p0, Lag3;->a:I
+    const/4 v0, 0x0
 
-    .line 78
-    iput p2, p0, Lag3;->d:I
+    .line 2
+    iput-boolean v0, p0, Lag3;->a:Z
 
-    .line 79
-    const-string p1, ""
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lag3;->f:Ljava/lang/CharSequence;
+    .line 4
+    iput-object p1, p0, Lag3;->b:Lt6f;
 
-    .line 80
-    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+    .line 5
+    monitor-enter p1
 
-    iput-object p1, p0, Lag3;->g:Landroid/os/Bundle;
+    .line 6
+    :try_start_0
+    monitor-enter p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 p1, -0x1
-
-    .line 81
-    iput p1, p0, Lag3;->c:I
-
-    const/4 p1, 0x1
-
-    .line 82
-    iput-boolean p1, p0, Lag3;->h:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lbg3;
-    .locals 11
-
-    iget-object v0, p0, Lag3;->b:Laie;
-
-    const/4 v1, 0x0
+    .line 7
+    :try_start_1
+    iget v1, p1, Lt6f;->b:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     const/4 v2, 0x1
 
-    if-nez v0, :cond_0
+    if-lez v1, :cond_0
 
     move v0, v2
 
+    :cond_0
+    :try_start_2
+    monitor-exit p1
+
+    if-eqz v0, :cond_1
+
+    add-int/2addr v1, v2
+
+    .line 8
+    iput v1, p1, Lt6f;->b:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 9
+    monitor-exit p1
+
+    .line 10
+    iput-object p2, p0, Lag3;->c:Lzf3;
+
+    .line 11
+    iput-object p3, p0, Lag3;->d:Ljava/lang/Throwable;
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
     goto :goto_0
 
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iget v3, p0, Lag3;->c:I
-
-    const/4 v4, -0x1
-
-    if-ne v3, v4, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
+    .line 12
     :cond_1
-    move v3, v1
+    :try_start_3
+    new-instance p2, Lcom/facebook/common/references/SharedReference$NullReferenceException;
 
-    :goto_1
-    if-eq v0, v3, :cond_2
+    invoke-direct {p2}, Lcom/facebook/common/references/SharedReference$NullReferenceException;-><init>()V
 
-    move v1, v2
+    throw p2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    :cond_2
-    const-string v0, "Exactly one of sessionCommand and playerCommand should be set"
+    :catchall_1
+    move-exception p2
 
-    invoke-static {v0, v1}, Lhsi;->f(Ljava/lang/Object;Z)V
+    .line 13
+    :try_start_4
+    monitor-exit p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    iget-object v0, p0, Lag3;->i:Lrg7;
+    :try_start_5
+    throw p2
 
-    if-nez v0, :cond_8
+    .line 14
+    :goto_0
+    monitor-exit p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    iget v0, p0, Lag3;->c:I
-
-    sget-object v1, Lbg3;->j:Ljava/lang/String;
-
-    if-eq v0, v2, :cond_7
-
-    const v1, 0xe037
-
-    iget v3, p0, Lag3;->a:I
-
-    if-eq v3, v1, :cond_7
-
-    const v1, 0xe034
-
-    if-ne v3, v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    const/16 v1, 0xb
-
-    if-eq v0, v1, :cond_6
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_6
-
-    const/4 v2, 0x6
-
-    if-eq v0, v2, :cond_6
-
-    const v1, 0xe045
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xe020
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xe042
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xe05b
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xe059
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xfe059
-
-    if-eq v3, v1, :cond_6
-
-    const v1, 0xe05a
-
-    if-ne v3, v1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const/16 v1, 0xc
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x9
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_5
-
-    const v0, 0xe044
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xe01f
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xf6f4
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xe058
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xe056
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xfe056
-
-    if-eq v3, v0, :cond_5
-
-    const v0, 0xe057
-
-    if-ne v3, v0, :cond_7
-
-    :cond_5
-    const/4 v2, 0x3
-
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    const/4 v2, 0x2
-
-    :cond_7
-    :goto_3
-    invoke-static {v2}, Lrg7;->b(I)Lrg7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lag3;->i:Lrg7;
-
-    :cond_8
-    new-instance v1, Lbg3;
-
-    iget-object v2, p0, Lag3;->b:Laie;
-
-    iget v3, p0, Lag3;->c:I
-
-    iget-object v6, p0, Lag3;->e:Landroid/net/Uri;
-
-    iget-object v7, p0, Lag3;->f:Ljava/lang/CharSequence;
-
-    iget-object v8, p0, Lag3;->g:Landroid/os/Bundle;
-
-    iget-boolean v9, p0, Lag3;->h:Z
-
-    iget-object v10, p0, Lag3;->i:Lrg7;
-
-    iget v4, p0, Lag3;->a:I
-
-    iget v5, p0, Lag3;->d:I
-
-    invoke-direct/range {v1 .. v10}, Lbg3;-><init>(Laie;IIILandroid/net/Uri;Ljava/lang/CharSequence;Landroid/os/Bundle;ZLrg7;)V
-
-    return-object v1
+    throw p2
 .end method
 
-.method public final b(Landroid/net/Uri;)V
+.method public static A0(Ljava/io/Closeable;)Loo4;
     .locals 2
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    sget-object v0, Lag3;->o:Lcmj;
 
-    move-result-object v0
+    sget-object v1, Lag3;->X:Lwpj;
 
-    const-string v1, "content"
+    invoke-static {p0, v0, v1}, Lag3;->B0(Ljava/lang/Object;Lvxd;Lzf3;)Loo4;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result v0
+    return-object p0
+.end method
+
+.method public static B0(Ljava/lang/Object;Lvxd;Lzf3;)Loo4;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v4
+
+    :cond_0
+    invoke-interface {p2}, Lzf3;->s()V
+
+    instance-of v0, p0, Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    instance-of v0, p0, Lxf3;
 
-    move-result-object v0
+    :cond_1
+    new-instance v0, Loo4;
 
-    const-string v1, "android.resource"
+    const/4 v5, 0x1
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    invoke-direct/range {v0 .. v5}, Lag3;-><init>(Ljava/lang/Object;Lvxd;Lzf3;Ljava/lang/Throwable;Z)V
+
+    return-object v0
+.end method
+
+.method public static E(Lag3;)Lag3;
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lag3;->B()Lag3;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static c0(Lag3;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lag3;->close()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static d0(Ljava/util/ArrayList;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lag3;
+
+    invoke-static {v0}, Lag3;->c0(Lag3;)V
+
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    const-string v1, "Only content or resource Uris are supported for CommandButton"
-
-    invoke-static {v1, v0}, Lhsi;->a(Ljava/lang/Object;Z)V
-
-    iput-object p1, p0, Lag3;->e:Landroid/net/Uri;
-
     return-void
 .end method
 
-.method public final c(I)V
-    .locals 2
+.method public static z0(Lag3;)Z
+    .locals 0
 
-    iget-object v0, p0, Lag3;->b:Laie;
+    if-eqz p0, :cond_0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0}, Lag3;->y0()Z
 
-    const/4 v0, 0x1
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public declared-synchronized B()Lag3;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lag3;->y0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lag3;->l()Lag3;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_0
 
     :cond_0
+    monitor-exit p0
+
     const/4 v0, 0x0
 
+    return-object v0
+
     :goto_0
-    const-string v1, "sessionCommand is already set. Only one of sessionCommand and playerCommand should be set."
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v1, v0}, Lhsi;->a(Ljava/lang/Object;Z)V
+    throw v0
+.end method
 
-    iput p1, p0, Lag3;->c:I
+.method public close()V
+    .locals 5
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lag3;->a:Z
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_5
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lag3;->a:Z
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lag3;->b:Lt6f;
+
+    monitor-enter v0
+
+    :try_start_1
+    monitor-enter v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_3
+
+    :try_start_2
+    iget v1, v0, Lt6f;->b:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-lez v1, :cond_1
+
+    move v4, v3
+
+    goto :goto_0
+
+    :cond_1
+    move v4, v2
+
+    :goto_0
+    :try_start_3
+    monitor-exit v0
+
+    if-eqz v4, :cond_8
+
+    if-lez v1, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    if-eqz v2, :cond_7
+
+    iget v1, v0, Lt6f;->b:I
+
+    sub-int/2addr v1, v3
+
+    iput v1, v0, Lt6f;->b:I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    monitor-exit v0
+
+    if-nez v1, :cond_6
+
+    monitor-enter v0
+
+    :try_start_4
+    iget-object v1, v0, Lt6f;->a:Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lt6f;->a:Ljava/lang/Object;
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    if-eqz v1, :cond_6
+
+    iget-object v0, v0, Lt6f;->c:Lvxd;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, v1}, Lvxd;->e(Ljava/lang/Object;)V
+
+    :cond_3
+    sget-object v0, Lt6f;->d:Ljava/util/IdentityHashMap;
+
+    monitor-enter v0
+
+    :try_start_5
+    invoke-virtual {v0, v1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    if-nez v2, :cond_4
+
+    const-string v2, "SharedReference"
+
+    const-string v3, "No entry in sLiveObjects for value of type %s"
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v2, v3, v1}, Lkt5;->n(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    if-ne v4, v3, :cond_5
+
+    invoke-virtual {v0, v1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sub-int/2addr v2, v3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_1
+    monitor-exit v0
+
+    goto :goto_3
+
+    :goto_2
+    monitor-exit v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    throw v1
+
+    :catchall_2
+    move-exception v1
+
+    :try_start_6
+    monitor-exit v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    throw v1
+
+    :cond_6
+    :goto_3
+    return-void
+
+    :catchall_3
+    move-exception v1
+
+    goto :goto_4
+
+    :cond_7
+    :try_start_7
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v1
+
+    :cond_8
+    new-instance v1, Lcom/facebook/common/references/SharedReference$NullReferenceException;
+
+    invoke-direct {v1}, Lcom/facebook/common/references/SharedReference$NullReferenceException;-><init>()V
+
+    throw v1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    :catchall_4
+    move-exception v1
+
+    :try_start_8
+    monitor-exit v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    :try_start_9
+    throw v1
+
+    :goto_4
+    monitor-exit v0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    throw v1
+
+    :goto_5
+    :try_start_a
+    monitor-exit p0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
+
+    throw v0
+.end method
+
+.method public abstract l()Lag3;
+.end method
+
+.method public final declared-synchronized n0()Ljava/lang/Object;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lag3;->a:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lhjj;->f(Z)V
+
+    iget-object v0, p0, Lag3;->b:Lt6f;
+
+    invoke-virtual {v0}, Lt6f;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized y0()Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lag3;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

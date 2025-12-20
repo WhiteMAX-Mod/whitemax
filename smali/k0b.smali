@@ -1,175 +1,49 @@
-.class public abstract Lk0b;
-.super Ljava/lang/Object;
+.class public final Lk0b;
+.super Lpc5;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final D0:Lau8;
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final q:J
-
-.field public static final r:J
-
-.field public static final s:J
-
-.field public static final t:J
-
-.field public static final synthetic u:I
+.field public final E0:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lau8;F)V
+    .locals 1
 
-    sget v0, Leyc;->call_admin_settings_media_bottom_header:I
+    const/4 v0, 0x0
 
-    int-to-long v0, v0
+    invoke-direct {p0, v0}, Lpc5;-><init>(I)V
 
-    sput-wide v0, Lk0b;->a:J
+    iput-object p1, p0, Lk0b;->D0:Lau8;
 
-    sget v0, Leyc;->call_admin_settings_media_header:I
+    iput p2, p0, Lk0b;->E0:F
 
-    int-to-long v0, v0
+    return-void
+.end method
 
-    sput-wide v0, Lk0b;->b:J
 
-    sget v0, Leyc;->call_context_action_chat:I
+# virtual methods
+.method public final f()Z
+    .locals 1
 
-    int-to-long v0, v0
+    const/4 v0, 0x1
 
-    sput-wide v0, Lk0b;->c:J
+    return v0
+.end method
 
-    sget v0, Leyc;->call_context_action_debug_menu:I
+.method public final h(FFFLe4f;)V
+    .locals 1
 
-    int-to-long v0, v0
+    iget v0, p0, Lk0b;->E0:F
 
-    sput-wide v0, Lk0b;->d:J
+    sub-float/2addr p2, v0
 
-    sget v0, Leyc;->call_context_action_open_profile:I
+    iget-object v0, p0, Lk0b;->D0:Lau8;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->e:J
-
-    sget v0, Leyc;->call_context_action_record_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->f:J
-
-    sget v0, Leyc;->call_context_action_record_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->g:J
-
-    sget v0, Leyc;->call_context_action_record_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->h:J
-
-    sget v0, Leyc;->call_context_action_record_screenin_progress:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->i:J
-
-    sget v0, Leyc;->call_context_action_settings:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->j:J
-
-    sget v0, Leyc;->call_context_action_share_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->k:J
-
-    sget v0, Leyc;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->l:J
-
-    sget v0, Leyc;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->m:J
-
-    sget v0, Leyc;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->n:J
-
-    sget v0, Leyc;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->o:J
-
-    sget v0, Leyc;->call_debug_menu_settings_actions_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->p:J
-
-    sget v0, Leyc;->call_debug_menu_settings_crash:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->q:J
-
-    sget v0, Leyc;->call_debug_menu_settings_nonfatal:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->r:J
-
-    sget v0, Leyc;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->s:J
-
-    sget v0, Leyc;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lk0b;->t:J
+    invoke-virtual {v0, p1, p2, p3, p4}, Lau8;->h(FFFLe4f;)V
 
     return-void
 .end method

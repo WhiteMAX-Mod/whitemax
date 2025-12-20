@@ -1,146 +1,94 @@
 .class public final Len;
-.super Lf0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Len;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:F
+.field public final synthetic a:I
 
-.field public Y:Z
+.field public final synthetic b:Landroid/view/View;
 
-.field public c:Z
+.field public final synthetic c:Landroid/view/View;
 
-.field public d:Z
-
-.field public o:I
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/view/View;Landroid/view/View;I)V
+    .locals 0
 
-    new-instance v0, Le0;
+    iput p4, p0, Len;->a:I
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Len;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Le0;-><init>(I)V
+    iput-object p2, p0, Len;->b:Landroid/view/View;
 
-    sput-object v0, Len;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p3, p0, Len;->c:Landroid/view/View;
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 2
-
-    invoke-direct {p0, p1, p2}, Lf0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    iput-boolean p2, p0, Len;->c:Z
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    move p2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move p2, v0
-
-    :goto_1
-    iput-boolean p2, p0, Len;->d:Z
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p2
-
-    iput p2, p0, Len;->o:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
-
-    move-result p2
-
-    iput p2, p0, Len;->X:F
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    move v0, v1
-
-    :cond_2
-    iput-boolean v0, p0, Len;->Y:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    invoke-super {p0, p1, p2}, Lf0;->writeToParcel(Landroid/os/Parcel;I)V
+    iget v0, p0, Len;->a:I
 
-    iget-boolean p2, p0, Len;->c:Z
+    packed-switch v0, :pswitch_data_0
 
-    int-to-byte p2, p2
+    iget-object v0, p0, Len;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    check-cast v0, Ly9g;
 
-    iget-boolean p2, p0, Len;->d:Z
+    iget-object v1, p0, Len;->c:Landroid/view/View;
 
-    int-to-byte p2, p2
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    move-result p1
 
-    iget p2, p0, Len;->o:I
+    iget-object v2, p0, Len;->b:Landroid/view/View;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Len;->X:F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-boolean p2, p0, Len;->Y:Z
-
-    int-to-byte p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    invoke-virtual {v0, v2, v1, p1}, Ly9g;->c(Landroid/view/View;Landroid/view/View;F)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Len;->d:Ljava/lang/Object;
+
+    check-cast v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    iget-object v1, p0, Len;->b:Landroid/view/View;
+
+    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v2, p0, Len;->c:Landroid/view/View;
+
+    check-cast v2, Lkn;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->K(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

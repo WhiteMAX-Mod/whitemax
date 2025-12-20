@@ -3,84 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfrf;
-.implements Lorf;
+.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic a:Landroid/content/Context;
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Llq;
+
+.field public final synthetic d:Lko4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Llq;Lko4;I)V
     .locals 0
 
-    iput-object p1, p0, Liq;->a:Landroid/content/Context;
+    .line 2
+    iput p4, p0, Liq;->a:I
+
+    iput-object p1, p0, Liq;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Liq;->c:Llq;
+
+    iput-object p3, p0, Liq;->d:Lko4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Llq;Lko4;Landroid/content/Context;)V
+    .locals 1
 
-# virtual methods
-.method public a(Lu73;)Lprf;
-    .locals 7
+    .line 1
+    const/4 v0, 0x2
 
-    iget-object v0, p1, Lu73;->d:Ljava/lang/Object;
+    iput v0, p0, Liq;->a:I
 
-    move-object v3, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v3, Ljava/lang/String;
+    iput-object p2, p0, Liq;->d:Lko4;
 
-    iget-object p1, p1, Lu73;->o:Ljava/lang/Object;
+    iput-object p1, p0, Liq;->c:Llq;
 
-    move-object v4, p1
+    iput-object p3, p0, Liq;->b:Landroid/content/Context;
 
-    check-cast v4, Lggg;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    new-instance v1, Ltk6;
-
-    iget-object v2, p0, Liq;->a:Landroid/content/Context;
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x1
-
-    invoke-direct/range {v1 .. v6}, Ltk6;-><init>(Landroid/content/Context;Ljava/lang/String;Lggg;ZZ)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Must set a non-null database name to a configuration that uses the no backup directory."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method
 
-.method public get()Ljava/lang/Object;
-    .locals 2
 
-    iget-object v0, p0, Liq;->a:Landroid/content/Context;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const-string v1, "audio"
+    iget v0, p0, Liq;->a:I
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance v0, Ls89;
 
-    check-cast v0, Landroid/media/AudioManager;
+    iget-object v1, p0, Liq;->d:Lko4;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljq;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Liq;->c:Llq;
+
+    invoke-direct {v1, v3, v2}, Ljq;-><init>(Llq;I)V
+
+    new-instance v2, Lz7g;
+
+    invoke-direct {v2, v1}, Lz7g;-><init>(Lmq6;)V
+
+    new-instance v1, Lkq;
+
+    iget-object v3, p0, Liq;->b:Landroid/content/Context;
+
+    invoke-direct {v1, v3}, Lkq;-><init>(Landroid/content/Context;)V
+
+    const-string v3, "ru.oneme.app.new.activeCalls"
+
+    invoke-direct {v0, v3, v2, v1}, Ls89;-><init>(Ljava/lang/String;Lz7g;Lkq;)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lkk8;
+
+    iget-object v1, p0, Liq;->c:Llq;
+
+    invoke-virtual {v1}, Llq;->a()Ljeb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Ly8c;
+
+    iget-object v1, p0, Liq;->c:Llq;
+
+    invoke-virtual {v1}, Llq;->a()Ljeb;
+
+    move-result-object v1
+
+    iget-object v2, p0, Liq;->b:Landroid/content/Context;
+
+    iget-object v3, p0, Liq;->d:Lko4;
+
+    invoke-direct {v0, v2, v1, v3}, Ly8c;-><init>(Landroid/content/Context;Ljeb;Lko4;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

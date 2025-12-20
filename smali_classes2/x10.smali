@@ -3,141 +3,135 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final j:Lx10;
+
+
 # instance fields
-.field public a:Ljava/util/List;
+.field public final a:Lpj8;
 
-.field public b:Lyl7;
+.field public final b:J
 
-.field public c:Limd;
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:F
+
+.field public final h:Z
+
+.field public final i:Ly10;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lw10;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0}, Lw10;->a()Lx10;
+
+    move-result-object v0
+
+    sput-object v0, Lx10;->j:Lx10;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw10;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v0, p1, Lw10;->a:Lpj8;
+
+    iput-object v0, p0, Lx10;->a:Lpj8;
+
+    iget-wide v0, p1, Lw10;->b:J
+
+    iput-wide v0, p0, Lx10;->b:J
+
+    iget-wide v0, p1, Lw10;->c:J
+
+    iput-wide v0, p0, Lx10;->c:J
+
+    iget-wide v0, p1, Lw10;->d:J
+
+    iput-wide v0, p0, Lx10;->d:J
+
+    iget-object v0, p1, Lw10;->e:Ljava/util/List;
+
+    iput-object v0, p0, Lx10;->e:Ljava/util/List;
+
+    iget-object v0, p1, Lw10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Lx10;->f:Ljava/lang/String;
+
+    iget v0, p1, Lw10;->g:F
+
+    iput v0, p0, Lx10;->g:F
+
+    iget-boolean v0, p1, Lw10;->h:Z
+
+    iput-boolean v0, p0, Lx10;->h:Z
+
+    iget-object p1, p1, Lw10;->i:Ly10;
+
+    iput-object p1, p0, Lx10;->i:Ly10;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lw10;)V
-    .locals 1
+.method public final a()Lw10;
+    .locals 3
 
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
+    new-instance v0, Lw10;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v1, p0, Lx10;->a:Lpj8;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object v1, v0, Lw10;->a:Lpj8;
 
-    iput-object v0, p0, Lx10;->a:Ljava/util/List;
+    iget-wide v1, p0, Lx10;->b:J
 
-    :cond_0
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
+    iput-wide v1, v0, Lw10;->b:J
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-wide v1, p0, Lx10;->c:J
 
-    return-void
-.end method
+    iput-wide v1, v0, Lw10;->c:J
 
-.method public final b()I
-    .locals 1
+    iget-wide v1, p0, Lx10;->d:J
 
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
+    iput-wide v1, v0, Lw10;->d:J
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lx10;->e:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iput-object v1, v0, Lw10;->e:Ljava/util/List;
 
-    move-result v0
+    iget-object v1, p0, Lx10;->f:Ljava/lang/String;
 
-    return v0
+    iput-object v1, v0, Lw10;->f:Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    iget v1, p0, Lx10;->g:F
 
-    return v0
-.end method
+    iput v1, v0, Lw10;->g:F
 
-.method public final c()Ljdc;
-    .locals 1
+    iget-boolean v1, p0, Lx10;->h:Z
 
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
+    iput-boolean v1, v0, Lw10;->h:Z
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lx10;->i:Ly10;
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lx10;->a:Ljava/util/List;
-
-    :cond_0
-    new-instance v0, Ljdc;
-
-    invoke-direct {v0, p0}, Ljdc;-><init>(Lx10;)V
+    iput-object v1, v0, Lw10;->i:Ly10;
 
     return-object v0
-.end method
-
-.method public final d(I)Lw10;
-    .locals 1
-
-    if-ltz p1, :cond_0
-
-    invoke-virtual {p0}, Lx10;->b()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lw10;
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final e(ILw10;)V
-    .locals 1
-
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lx10;->a:Ljava/util/List;
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-virtual {p0}, Lx10;->b()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_1
-
-    iget-object v0, p0, Lx10;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

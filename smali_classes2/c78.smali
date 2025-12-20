@@ -1,126 +1,116 @@
-.class public final Lc78;
-.super Ldtf;
+.class public final synthetic Lc78;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lmm4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:J
 
-.field public final synthetic Y:Ls78;
+.field public final synthetic b:J
 
-.field public final synthetic Z:Landroid/net/Uri;
+.field public final synthetic c:Lpj8;
 
-.field public o:I
+.field public final synthetic d:F
+
+.field public final synthetic o:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Ls78;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JJLpj8;FLjava/lang/Long;)V
     .locals 0
 
-    iput-object p1, p0, Lc78;->Y:Ls78;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lc78;->Z:Landroid/net/Uri;
+    iput-wide p1, p0, Lc78;->a:J
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Lc78;->b:J
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p5, p0, Lc78;->c:Lpj8;
+
+    iput p6, p0, Lc78;->d:F
+
+    iput-object p7, p0, Lc78;->o:Ljava/lang/Long;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lsac;
+    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v1, p0, Lc78;->a:J
 
-    invoke-virtual {p0, p1, p2}, Lc78;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object v1
 
-    check-cast p1, Lc78;
+    new-instance v2, Lysb;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
 
-    invoke-virtual {p1, p2}, Lc78;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, v3, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-wide v3, p0, Lc78;->b:J
 
-    return-object p1
-.end method
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move-result-object v1
 
-    new-instance v0, Lc78;
+    new-instance v3, Lysb;
 
-    iget-object v1, p0, Lc78;->Y:Ls78;
+    const-string v4, "ru.ok.tamtam.extra.MESSAGE_ID"
 
-    iget-object v2, p0, Lc78;->Z:Landroid/net/Uri;
+    invoke-direct {v3, v4, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, v2, p2}, Lc78;-><init>(Ls78;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+    new-instance v1, Lysb;
 
-    iput-object p1, v0, Lc78;->X:Ljava/lang/Object;
+    const-string v4, "ru.ok.tamtam.extra.LOCATION"
 
-    return-object v0
-.end method
+    iget-object v5, p0, Lc78;->c:Lpj8;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-direct {v1, v4, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget v0, p0, Lc78;->o:I
+    iget v4, p0, Lc78;->d:F
 
-    const/4 v1, 0x1
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    if-eqz v0, :cond_1
+    move-result-object v4
 
-    if-ne v0, v1, :cond_0
+    new-instance v5, Lysb;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const-string v6, "ru.ok.tamtam.extra.ZOOM"
 
-    goto :goto_0
+    invoke-direct {v5, v6, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v4, Lysb;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v6, "ru.ok.tamtam.extra.CONTACT_ID"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v7, p0, Lc78;->o:Ljava/lang/Long;
 
-    throw p1
+    invoke-direct {v4, v6, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    filled-new-array {v2, v3, v1, v5, v4}, [Lysb;
 
-    iget-object p1, p0, Lc78;->X:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast p1, Lsac;
+    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
 
-    iput v1, p0, Lc78;->o:I
+    move-result-object v1
 
-    iget-object v0, p0, Lc78;->Y:Ls78;
+    const v2, 0x7a3a1dca
 
-    iget-object v1, p0, Lc78;->Z:Landroid/net/Uri;
+    const-class v3, Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-static {v0, p1, v1, p0}, Ls78;->a(Ls78;Lsac;Landroid/net/Uri;Lq44;)Ljava/lang/Object;
+    const-string v4, "ru.ok.messages.location.FrgLocationMap"
 
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
+    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
 .end method

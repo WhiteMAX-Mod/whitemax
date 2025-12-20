@@ -1,127 +1,19 @@
-.class public final Lyti;
-.super Ll4;
+.class public abstract Lyti;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyti;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public X:I
-
-.field public Y:Z
-
-.field public Z:Ljava/lang/String;
-
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public o:I
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lk3j;
+    const-class v0, Lyti;
 
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lk3j;-><init>(I)V
-
-    sput-object v0, Lyti;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    iget v0, p0, Lyti;->a:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x4
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lyti;->b:I
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lyti;->c:I
-
-    invoke-static {p1, v2, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lyti;->d:I
-
-    const/4 v1, 0x5
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lyti;->o:I
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lyti;->X:I
-
-    const/4 v1, 0x7
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Lyti;->Y:Z
-
-    const/16 v1, 0x8
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v0, 0x9
-
-    iget-object v1, p0, Lyti;->Z:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method

@@ -15,21 +15,21 @@
         "()V",
         "",
         "viewType",
-        "Lcid;",
+        "Lmrd;",
         "getScrapDataForType",
-        "(I)Lcid;",
+        "(I)Lmrd;",
         "max",
-        "Lqqg;",
+        "Lv2h;",
         "setMaxRecycledViews",
         "(II)V",
-        "Lmid;",
+        "Lwrd;",
         "getRecycledView",
-        "(I)Lmid;",
+        "(I)Lwrd;",
         "getRecycledViewCount",
         "(I)I",
         "scrap",
         "putRecycledView",
-        "(Lmid;)V",
+        "(Lwrd;)V",
         "",
         "createTimeNs",
         "factorInCreateTime",
@@ -43,7 +43,7 @@
         "(IJJ)Z",
         "willBindInTime",
         "Companion",
-        "ax9",
+        "g2a",
         "message-list_release"
     }
     k = 0x1
@@ -57,7 +57,7 @@
 
 
 # static fields
-.field public static final Companion:Lax9;
+.field public static final Companion:Lg2a;
 
 .field private static ENABLED:Z
 
@@ -66,11 +66,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lax9;
+    new-instance v0, Lg2a;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->Companion:Lax9;
+    sput-object v0, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->Companion:Lg2a;
 
     return-void
 .end method
@@ -171,7 +171,7 @@
     return-void
 .end method
 
-.method private final getScrapDataForType(I)Lcid;
+.method private final getScrapDataForType(I)Lmrd;
     .locals 2
 
     const v0, -0x78000001
@@ -184,13 +184,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcid;
+    check-cast v0, Lmrd;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcid;
+    new-instance v0, Lmrd;
 
-    invoke-direct {v0}, Lcid;-><init>()V
+    invoke-direct {v0}, Lmrd;-><init>()V
 
     iget-object v1, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
@@ -205,17 +205,17 @@
 .method public factorInBindTime(IJ)V
     .locals 2
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lcid;->d:J
+    iget-wide v0, p1, Lmrd;->d:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Lcid;->d:J
+    iput-wide p2, p1, Lmrd;->d:J
 
     return-void
 .end method
@@ -223,22 +223,22 @@
 .method public factorInCreateTime(IJ)V
     .locals 2
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lcid;->c:J
+    iget-wide v0, p1, Lmrd;->c:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Lcid;->c:J
+    iput-wide p2, p1, Lmrd;->c:J
 
     return-void
 .end method
 
-.method public getRecycledView(I)Lmid;
+.method public getRecycledView(I)Lwrd;
     .locals 3
 
     const v0, -0x78000001
@@ -251,11 +251,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcid;
+    check-cast p1, Lmrd;
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p1, Lcid;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lmrd;->a:Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
@@ -278,9 +278,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lmid;
+    check-cast v2, Lwrd;
 
-    invoke-virtual {v2}, Lmid;->l()Z
+    invoke-virtual {v2}, Lwrd;->j()Z
 
     move-result v2
 
@@ -290,7 +290,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lmid;
+    check-cast p1, Lwrd;
 
     return-object p1
 
@@ -314,11 +314,11 @@
 .method public getRecycledViewCount(I)I
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcid;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lmrd;->a:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -327,18 +327,18 @@
     return p1
 .end method
 
-.method public putRecycledView(Lmid;)V
+.method public putRecycledView(Lwrd;)V
     .locals 3
 
-    iget v0, p1, Lmid;->X:I
+    iget v0, p1, Lwrd;->X:I
 
-    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcid;->a:Ljava/util/ArrayList;
+    iget-object v0, v0, Lmrd;->a:Ljava/util/ArrayList;
 
-    iget v1, p1, Lmid;->X:I
+    iget v1, p1, Lwrd;->X:I
 
     const v2, -0x78000001
 
@@ -350,9 +350,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcid;
+    check-cast v1, Lmrd;
 
-    iget v1, v1, Lcid;->b:I
+    iget v1, v1, Lmrd;->b:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -374,20 +374,20 @@
 
     const-string v0, "MessagesRecyclerViewPool"
 
-    invoke-static {v0, p1}, Lwqi;->r(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lmid;->v()V
+    invoke-virtual {p1}, Lwrd;->v()V
 
-    instance-of v1, p1, Len9;
+    instance-of v1, p1, Lrr9;
 
     if-eqz v1, :cond_1
 
     move-object v1, p1
 
-    check-cast v1, Len9;
+    check-cast v1, Lrr9;
 
     :cond_1
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -398,13 +398,13 @@
 .method public setMaxRecycledViews(II)V
     .locals 1
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iput p2, p1, Lcid;->b:I
+    iput p2, p1, Lmrd;->b:I
 
-    iget-object p1, p1, Lcid;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lmrd;->a:Ljava/util/ArrayList;
 
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -430,11 +430,11 @@
 .method public willBindInTime(IJJ)Z
     .locals 4
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lcid;->d:J
+    iget-wide v0, p1, Lmrd;->d:J
 
     const-wide/16 v2, 0x0
 
@@ -465,11 +465,11 @@
 .method public willCreateInTime(IJJ)Z
     .locals 4
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lcid;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessagesRecyclerViewPool;->getScrapDataForType(I)Lmrd;
 
     move-result-object p1
 
-    iget-wide v0, p1, Lcid;->c:J
+    iget-wide v0, p1, Lmrd;->c:J
 
     const-wide/16 v2, 0x0
 

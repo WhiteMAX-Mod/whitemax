@@ -1,181 +1,183 @@
 .class public final Lf9f;
-.super Lh9f;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final l:D
+.field public final synthetic X:Lj9f;
 
-.field public final m:D
-
-.field public final n:J
-
-.field public final o:J
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public final s:J
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;DDJLjava/lang/String;JJJJJJLu5i;)V
-    .locals 12
+.method public constructor <init>(Lj9f;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lf9f;->X:Lj9f;
 
-    move-object v0, p0
+    const/4 p1, 0x2
 
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-wide/from16 v8, p11
-
-    move-object/from16 v10, p13
-
-    move-object/from16 v11, p26
-
-    invoke-direct/range {v0 .. v11}, Lh9f;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lu5i;)V
-
-    move-wide/from16 p1, p7
-
-    iput-wide p1, p0, Lf9f;->l:D
-
-    move-wide/from16 p1, p9
-
-    iput-wide p1, p0, Lf9f;->m:D
-
-    move-wide/from16 p1, p14
-
-    iput-wide p1, p0, Lf9f;->n:J
-
-    move-wide/from16 p1, p16
-
-    iput-wide p1, p0, Lf9f;->o:J
-
-    move-wide/from16 p1, p18
-
-    iput-wide p1, p0, Lf9f;->p:J
-
-    move-wide/from16 p1, p20
-
-    iput-wide p1, p0, Lf9f;->q:J
-
-    move-wide/from16 p1, p22
-
-    iput-wide p1, p0, Lf9f;->r:J
-
-    move-wide/from16 p1, p24
-
-    iput-wide p1, p0, Lf9f;->s:J
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lac4;
 
-    const-string v1, "AudioRecv{ssrc="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lf9f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, p0, Ll9f;->c:J
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    check-cast p1, Lf9f;
 
-    const-string v1, ", transportId=\'"
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lf9f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Ll9f;->d:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, "\', trackId=\'"
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lf9f;
 
-    iget-object v1, p0, Ll9f;->e:Ljava/lang/String;
+    iget-object v0, p0, Lf9f;->X:Lj9f;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0, p2}, Lf9f;-><init>(Lj9f;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "\', packetsReceived="
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v1, p0, Lh9f;->h:Ljava/math/BigInteger;
+    iget v0, p0, Lf9f;->o:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x2
 
-    const-string v1, ", packetsLost="
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lf9f;->X:Lj9f;
 
-    iget-object v1, p0, Lh9f;->i:Ljava/math/BigInteger;
+    sget-object v4, Lbc4;->a:Lbc4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
-    const-string v1, ", bytesReceived="
+    if-eq v0, v2, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, p0, Lh9f;->j:Ljava/math/BigInteger;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    const-string v1, ", jitterBufferMs="
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-wide v1, p0, Lh9f;->k:J
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    throw p1
 
-    const-string v1, ", audioLevel="
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    iget-wide v1, p0, Lf9f;->l:D
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    iget-object p1, v3, Lj9f;->X:Ld68;
 
-    const-string v1, ", totalAudioEnergy="
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-wide v1, p0, Lf9f;->m:D
+    check-cast p1, Lxx6;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    iput v2, p0, Lf9f;->o:I
 
-    const-string v1, ", unknown="
+    invoke-virtual {p1, p0}, Lxx6;->a(Lb5g;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Ll9f;->g:Ljava/util/HashMap;
+    if-ne p1, v4, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const/16 v1, 0x7d
+    :cond_3
+    :goto_0
+    check-cast p1, Lpj8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v3, p1}, Lj9f;->s(Lj9f;Lpj8;)V
 
-    move-result-object v0
+    iget-object v0, v3, Lj9f;->B0:Lyl5;
 
-    return-object v0
+    new-instance v1, Lt8f;
+
+    iget-wide v2, p1, Lpj8;->a:D
+
+    iget-wide v4, p1, Lpj8;->b:D
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v1 .. v6}, Lt8f;-><init>(DDLjava/lang/Float;)V
+
+    invoke-static {v0, v1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_4
+    iput v1, p0, Lf9f;->o:I
+
+    iget-object p1, v3, Lj9f;->w0:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbbg;
+
+    check-cast p1, Lb9b;
+
+    invoke-virtual {p1}, Lb9b;->c()Llq8;
+
+    move-result-object p1
+
+    new-instance v0, Li9f;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v3, v1}, Li9f;-><init>(Lj9f;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v0, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_5
+
+    :goto_1
+    return-object v4
+
+    :cond_5
+    :goto_2
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

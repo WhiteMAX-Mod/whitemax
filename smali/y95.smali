@@ -1,204 +1,258 @@
 .class public final Ly95;
-.super Lcyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Leoe;
+.implements Lz95;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
+
+.field public final b:Leoe;
+
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Leoe;II)V
     .locals 0
 
-    iput p1, p0, Ly95;->b:I
+    iput p3, p0, Ly95;->a:I
+
+    packed-switch p3, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Ly95;->b:Leoe;
+
+    iput p2, p0, Ly95;->c:I
+
+    if-ltz p2, :cond_0
+
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p3, "count must be non-negative, but was "
+
+    invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p2, 0x2e
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ly95;->b:Leoe;
+
+    iput p2, p0, Ly95;->c:I
+
+    if-ltz p2, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p3, "count must be non-negative, but was "
+
+    invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p2, 0x2e
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final c(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;Landroid/view/View;FLandroid/graphics/drawable/Drawable;)V
-    .locals 6
+.method public final a(I)Leoe;
+    .locals 3
 
-    iget v0, p0, Ly95;->b:I
+    iget v0, p0, Ly95;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, 0x3f000000    # 0.5f
+    iget v0, p0, Ly95;->c:I
 
-    cmpg-float v1, p4, v0
+    if-lt p1, v0, :cond_0
 
-    if-gez v1, :cond_0
+    move-object v0, p0
 
     goto :goto_0
 
     :cond_0
-    move-object p2, p3
+    new-instance v0, Ly95;
+
+    iget-object v1, p0, Ly95;->b:Leoe;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Ly95;-><init>(Leoe;II)V
 
     :goto_0
-    invoke-static {p1, p2}, Lcyf;->b(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_0
+    iget v0, p0, Ly95;->c:I
 
-    const/4 p2, 0x0
-
-    const/high16 p3, 0x3f800000    # 1.0f
+    add-int v1, v0, p1
 
     if-gez v1, :cond_1
 
-    invoke-static {p3, p2, p2, v0, p4}, Lrg;->b(FFFFF)F
+    new-instance v0, Ly95;
 
-    move-result p2
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Ly95;-><init>(Leoe;II)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p2, p3, v0, p3, p4}, Lrg;->b(FFFFF)F
+    new-instance p1, Lfzf;
 
-    move-result p2
+    iget-object v2, p0, Ly95;->b:Leoe;
+
+    invoke-direct {p1, v2, v0, v1}, Lfzf;-><init>(Leoe;II)V
+
+    move-object v0, p1
 
     :goto_1
-    iget p3, p1, Landroid/graphics/RectF;->left:F
+    return-object v0
 
-    float-to-int p3, p3
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+.method public final b(I)Leoe;
+    .locals 3
 
-    move-result-object p4
+    iget v0, p0, Ly95;->a:I
 
-    iget p4, p4, Landroid/graphics/Rect;->top:I
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p1, Landroid/graphics/RectF;->right:F
+    iget v0, p0, Ly95;->c:I
 
-    float-to-int p1, p1
+    if-lt p1, v0, :cond_0
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    sget-object p1, Llh5;->a:Llh5;
 
-    move-result-object v0
+    goto :goto_0
 
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+    :cond_0
+    new-instance v1, Lfzf;
 
-    invoke-virtual {p5, p3, p4, p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    iget-object v2, p0, Ly95;->b:Leoe;
 
-    const/high16 p1, 0x437f0000    # 255.0f
+    invoke-direct {v1, v2, p1, v0}, Lfzf;-><init>(Leoe;II)V
 
-    mul-float/2addr p2, p1
+    move-object p1, v1
 
-    float-to-int p1, p2
-
-    invoke-virtual {p5, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    return-void
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    invoke-static {p1, p2}, Lcyf;->b(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
+    iget v0, p0, Ly95;->c:I
 
-    move-result-object p2
+    add-int/2addr v0, p1
 
-    invoke-static {p1, p3}, Lcyf;->b(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
+    if-gez v0, :cond_1
 
-    move-result-object p1
+    new-instance v0, Ly95;
 
-    iget p3, p2, Landroid/graphics/RectF;->left:F
+    const/4 v1, 0x0
 
-    iget v0, p1, Landroid/graphics/RectF;->left:F
+    invoke-direct {v0, p0, p1, v1}, Ly95;-><init>(Leoe;II)V
 
-    cmpg-float p3, p3, v0
+    goto :goto_1
 
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
+    :cond_1
+    new-instance p1, Ly95;
 
-    const-wide v2, 0x400921fb54442d18L    # Math.PI
+    iget-object v1, p0, Ly95;->b:Leoe;
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    const/4 v2, 0x0
 
-    if-gez p3, :cond_2
+    invoke-direct {p1, v1, v0, v2}, Ly95;-><init>(Leoe;II)V
 
-    float-to-double p3, p4
+    move-object v0, p1
 
-    mul-double/2addr p3, v2
+    :goto_1
+    return-object v0
 
-    div-double/2addr p3, v0
+    nop
 
-    invoke-static {p3, p4}, Ljava/lang/Math;->cos(D)D
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-wide v0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
 
-    sub-double/2addr v4, v0
+    iget v0, p0, Ly95;->a:I
 
-    double-to-float v0, v4
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p3, p4}, Ljava/lang/Math;->sin(D)D
+    new-instance v0, Lx95;
 
-    move-result-wide p3
+    const/4 v1, 0x0
 
-    double-to-float p3, p3
+    invoke-direct {v0, p0, v1}, Lx95;-><init>(Ly95;B)V
 
-    goto :goto_2
+    return-object v0
 
-    :cond_2
-    float-to-double p3, p4
+    :pswitch_0
+    new-instance v0, Lx95;
 
-    mul-double/2addr p3, v2
+    invoke-direct {v0, p0}, Lx95;-><init>(Ly95;)V
 
-    div-double/2addr p3, v0
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    double-to-float v0, v0
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide p3
-
-    sub-double/2addr v4, p3
-
-    double-to-float p3, v4
-
-    :goto_2
-    iget p4, p2, Landroid/graphics/RectF;->left:F
-
-    float-to-int p4, p4
-
-    iget v1, p1, Landroid/graphics/RectF;->left:F
-
-    float-to-int v1, v1
-
-    invoke-static {p4, v0, v1}, Lrg;->c(IFI)I
-
-    move-result p4
-
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    iget p2, p2, Landroid/graphics/RectF;->right:F
-
-    float-to-int p2, p2
-
-    iget p1, p1, Landroid/graphics/RectF;->right:F
-
-    float-to-int p1, p1
-
-    invoke-static {p2, p3, p1}, Lrg;->c(IFI)I
-
-    move-result p1
-
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {p5, p4, v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-void
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

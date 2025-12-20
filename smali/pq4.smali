@@ -1,126 +1,104 @@
-.class public final Lpq4;
+.class public final synthetic Lpq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llw0;
+.implements Lbp3;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:[I
-
-.field public final c:I
+.field public final synthetic b:Lf1d;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lf1d;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p2, p0, Lpq4;->a:I
 
-.method public constructor <init>(II[I)V
-    .locals 0
+    iput-object p1, p0, Lpq4;->b:Lf1d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lpq4;->a:I
-
-    array-length p1, p3
-
-    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpq4;->b:[I
-
-    iput p2, p0, Lpq4;->c:I
-
-    invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lpq4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lpq4;
-
-    iget v2, p0, Lpq4;->a:I
-
-    iget v3, p1, Lpq4;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lpq4;->b:[I
-
-    iget-object v3, p1, Lpq4;->b:[I
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Lpq4;->c:I
-
-    iget p1, p1, Lpq4;->c:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
+.method public final l(Lzv4;)Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lpq4;->a:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lpq4;->b:[I
+    iget-object v0, p0, Lpq4;->b:Lf1d;
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Lf1d;Lzv4;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    move-result v1
+    move-result-object p1
 
-    add-int/2addr v1, v0
+    return-object p1
 
-    mul-int/lit8 v1, v1, 0x1f
+    :pswitch_0
+    new-instance v0, Lrq4;
 
-    iget v0, p0, Lpq4;->c:I
+    const-class v1, Landroid/content/Context;
 
-    add-int/2addr v1, v0
+    invoke-virtual {p1, v1}, Lzv4;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return v1
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    const-class v2, Lo46;
+
+    invoke-virtual {p1, v2}, Lzv4;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo46;
+
+    invoke-virtual {v2}, Lo46;->c()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-class v3, Lg67;
+
+    invoke-static {v3}, Lf1d;->a(Ljava/lang/Class;)Lf1d;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Lzv4;->b(Lf1d;)Ljava/util/Set;
+
+    move-result-object v3
+
+    const-class v4, Lzu4;
+
+    invoke-virtual {p1, v4}, Lzv4;->c(Ljava/lang/Class;)Lhyc;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lpq4;->b:Lf1d;
+
+    invoke-virtual {p1, v5}, Lzv4;->f(Lf1d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v5, p1
+
+    check-cast v5, Ljava/util/concurrent/Executor;
+
+    invoke-direct/range {v0 .. v5}, Lrq4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lhyc;Ljava/util/concurrent/Executor;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

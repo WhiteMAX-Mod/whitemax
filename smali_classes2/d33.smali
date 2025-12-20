@@ -1,129 +1,348 @@
-.class public final Ld33;
-.super Ldtf;
+.class public final synthetic Ld33;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Loq6;
 
 
 # instance fields
-.field public final synthetic X:Lb43;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lb43;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;)V
+    .locals 1
 
-    iput-object p1, p0, Ld33;->X:Lb43;
+    .line 1
+    const/4 v0, 0x2
 
-    const/4 p1, 0x2
+    iput v0, p0, Ld33;->a:I
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ld33;->b:J
+
+    iput-object p3, p0, Ld33;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Ld33;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Ld33;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lj33;JLmv9;Lg8e;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Ld33;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld33;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Ld33;->b:J
+
+    iput-object p4, p0, Ld33;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Ld33;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lru/ok/messages/media/trim/FrgTrimVideo;Ljava/lang/String;Laq3;J)V
+    .locals 1
+
+    .line 3
+    const/4 v0, 0x1
+
+    iput v0, p0, Ld33;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld33;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Ld33;->d:Ljava/lang/Object;
+
+    iput-object p3, p0, Ld33;->o:Ljava/lang/Object;
+
+    iput-wide p4, p0, Ld33;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Lf84;
+    iget v0, p0, Ld33;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ld33;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ld33;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Ljava/lang/String;
 
-    check-cast p1, Ld33;
+    iget-object v1, p0, Ld33;->d:Ljava/lang/Object;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    check-cast v1, Ljava/lang/Boolean;
 
-    invoke-virtual {p1, p2}, Ld33;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Ld33;->o:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v2, Ljava/lang/Long;
 
-    return-object p1
-.end method
+    check-cast p1, Lhm4;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    const-string v3, ":chats"
 
-    new-instance p1, Ld33;
+    iput-object v3, p1, Lhm4;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Ld33;->X:Lb43;
+    const-string v3, "id"
 
-    invoke-direct {p1, v0, p2}, Ld33;-><init>(Lb43;Lkotlin/coroutines/Continuation;)V
+    iget-wide v4, p0, Ld33;->b:J
 
-    return-object p1
-.end method
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result-object v4
 
-    iget v0, p0, Ld33;->o:I
+    invoke-virtual {p1, v4, v3}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lqqg;->a:Lqqg;
+    const-string v3, "type"
 
-    const/4 v2, 0x1
+    const-string v4, "local"
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, v4, v3}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ne v0, v2, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const-string v3, "payload"
 
-    return-object v1
+    invoke-virtual {p1, v0, v3}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-eqz v1, :cond_1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v0, "highlight_message"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {p1, v1, v0}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    if-eqz v2, :cond_2
 
-    sget-object p1, Lb43;->W0:[Lyy7;
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
 
-    iget-object p1, p0, Ld33;->X:Lb43;
+    move-result-wide v0
 
-    invoke-virtual {p1}, Lb43;->v()Lw63;
+    const-string v2, "message_id"
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput v2, p0, Ld33;->o:I
+    move-result-object v0
 
-    invoke-virtual {p1}, Lw63;->i()Lve2;
+    invoke-virtual {p1, v0, v2}, Lhm4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object p1
+    :cond_2
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object p1
 
-    invoke-static {p1, p0}, Lsi2;->a(Lve2;Lq44;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Ld33;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    move-object v1, v0
 
-    sget-object v0, Lg84;->a:Lg84;
+    check-cast v1, Lru/ok/messages/media/trim/FrgTrimVideo;
 
-    if-ne p1, v0, :cond_2
+    iget-object v0, p0, Ld33;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v2, p0, Ld33;->o:Ljava/lang/Object;
+
+    check-cast v2, Laq3;
+
+    check-cast p1, Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lbn;->c:Lbn;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v3, v0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1b
+
+    iget-wide v4, p0, Ld33;->b:J
+
+    const-wide/16 v6, 0x3e8
+
+    const/4 v8, 0x1
+
+    if-lt v0, v3, :cond_6
+
+    const/16 v0, 0x18
+
+    :try_start_0
+    invoke-virtual {p1, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v3, v0
+
+    move v0, v8
 
     goto :goto_0
 
-    :cond_2
-    move-object p1, v1
+    :catch_0
+    move-exception v0
+
+    const-string v3, "ru.ok.messages.media.trim.FrgTrimVideo"
+
+    const-string v9, "Can\'t extract video rotation"
+
+    invoke-static {v3, v9, v0}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    move v3, v0
 
     :goto_0
-    if-ne p1, v0, :cond_3
+    if-eqz v0, :cond_5
 
-    return-object v0
+    check-cast v2, Ld8b;
+
+    invoke-virtual {v2}, Ld8b;->e()Lgz4;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->v()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Lgz4;->h(Landroid/content/Context;)Landroid/util/Size;
+
+    move-result-object v0
+
+    if-eqz v3, :cond_3
+
+    const/16 v1, 0xb4
+
+    if-ne v3, v1, :cond_4
 
     :cond_3
-    return-object v1
+    new-instance v1, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    invoke-direct {v1, v2, v0}, Landroid/util/Size;-><init>(II)V
+
+    move-object v0, v1
+
+    :cond_4
+    mul-long/2addr v4, v6
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-static {p1, v4, v5, v1, v0}, Lht;->b(Landroid/media/MediaMetadataRetriever;JII)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_5
+    mul-long/2addr v4, v6
+
+    invoke-virtual {p1, v4, v5, v8}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(JI)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_6
+    mul-long/2addr v4, v6
+
+    invoke-virtual {p1, v4, v5, v8}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(JI)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Ld33;->c:Ljava/lang/Object;
+
+    move-object v1, v0
+
+    check-cast v1, Lj33;
+
+    iget-object v0, p0, Ld33;->d:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Lmv9;
+
+    iget-object v0, p0, Ld33;->o:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lg8e;
+
+    move-object v6, p1
+
+    check-cast v6, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v2, p0, Ld33;->b:J
+
+    invoke-static/range {v1 .. v6}, Lj33;->b(Lj33;JLmv9;Lg8e;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

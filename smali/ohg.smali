@@ -1,17 +1,13 @@
-.class public final Lohg;
+.class public abstract Lohg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/view/View;
+# direct methods
+.method public static a(Landroid/widget/TextView;IF)V
+    .locals 0
 
-.field public b:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setLineHeight(IF)V
 
-.field public c:Leig;
-
-.field public d:Landroid/view/WindowId;
-
-.field public e:Lshg;
-
-.field public f:Landroid/animation/Animator;
+    return-void
+.end method

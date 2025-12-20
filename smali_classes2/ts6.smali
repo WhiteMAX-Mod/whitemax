@@ -1,180 +1,126 @@
 .class public final Lts6;
-.super Ldtf;
+.super Li4;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lts6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lf84;
-
-.field public final synthetic Y:Lzs6;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lf84;Lzs6;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lwj4;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lwj4;-><init>(I)V
+
+    sput-object v0, Lts6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lts6;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lts6;->X:Lf84;
-
-    iput-object p4, p0, Lts6;->Y:Lzs6;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lts6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lf84;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lts6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lts6;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lts6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance p1, Lts6;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lts6;->X:Lf84;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lts6;->Y:Lzs6;
+    return v0
 
-    iget-object v2, p0, Lts6;->o:Ljava/lang/Object;
-
-    invoke-direct {p1, v2, p2, v0, v1}, Lts6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lf84;Lzs6;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lts6;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    :try_start_0
-    iget-object p1, p0, Lts6;->Y:Lzs6;
-
-    iget-object p1, p1, Lzs6;->c:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lod8;
+    :cond_0
+    instance-of v1, p1, Lts6;
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, v2}, Lod8;->a(JZ)Leh9;
+    if-nez v1, :cond_1
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v2
 
-    goto :goto_0
+    :cond_1
+    check-cast p1, Lts6;
 
-    :catchall_0
-    move-exception p1
+    iget v1, p0, Lts6;->a:I
 
-    new-instance v0, Lipd;
+    iget p1, p1, Lts6;->a:I
 
-    invoke-direct {v0, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+    if-eq v1, p1, :cond_2
 
-    move-object p1, v0
+    return v2
 
-    :goto_0
-    invoke-static {p1}, Lkpd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lts6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "AsRes(res="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lts6;->a:I
+
+    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    goto :goto_1
+    iget p2, p0, Lts6;->a:I
 
-    :cond_0
-    :try_start_1
-    iget-object p1, p0, Lts6;->X:Lf84;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v2, "failed to get forwardMessage "
-
-    invoke-static {p1, v2, v0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    instance-of p1, v0, Ljava/lang/IllegalStateException;
-
-    if-eqz p1, :cond_1
-
-    move-object p1, v1
-
-    goto :goto_1
-
-    :cond_1
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception p1
-
-    new-instance v0, Lipd;
-
-    invoke-direct {v0, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_1
-    nop
-
-    instance-of v0, p1, Lipd;
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move-object v1, p1
-
-    :goto_2
-    return-object v1
+    return-void
 .end method

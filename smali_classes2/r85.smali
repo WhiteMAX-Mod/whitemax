@@ -3,455 +3,253 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le95;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lr85;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:J
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Lzf3;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
+.field public final b:[F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/String;Lzf3;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwj4;
 
-    iput-object p1, p0, Lr85;->a:Ljava/lang/String;
+    const/4 v1, 0x5
 
-    iput-wide p2, p0, Lr85;->b:J
+    invoke-direct {v0, v1}, Lwj4;-><init>(I)V
 
-    iput-object p4, p0, Lr85;->c:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, Lr85;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lr85;->e:Lzf3;
-
-    iput-object p7, p0, Lr85;->f:Ljava/lang/String;
-
-    iput p8, p0, Lr85;->g:I
+    sput-object v0, Lr85;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static c(Lr85;Ljava/lang/String;Lzf3;Ljava/lang/String;I)Lr85;
-    .locals 9
+.method public constructor <init>(I[F)V
+    .locals 0
 
-    iget-object v1, p0, Lr85;->a:Ljava/lang/String;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v2, p0, Lr85;->b:J
+    .line 2
+    iput p1, p0, Lr85;->a:I
 
-    iget-object v4, p0, Lr85;->c:Ljava/lang/CharSequence;
+    .line 3
+    iput-object p2, p0, Lr85;->b:[F
 
-    and-int/lit8 v0, p4, 0x8
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
 
-    iget-object p1, p0, Lr85;->d:Ljava/lang/String;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    move-object v5, p1
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
 
-    and-int/lit8 p1, p4, 0x10
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    iput-object v0, p0, Lr85;->b:[F
 
-    iget-object p2, p0, Lr85;->e:Lzf3;
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    :cond_1
-    move-object v6, p2
-
-    and-int/lit8 p1, p4, 0x20
+    move-result-object p1
 
     if-eqz p1, :cond_2
 
-    iget-object p3, p0, Lr85;->f:Ljava/lang/String;
+    .line 7
+    const-string v0, "LINE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "CUBIC_BEZIER"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x2
+
+    .line 8
+    :goto_0
+    iput p1, p0, Lr85;->a:I
+
+    return-void
+
+    .line 9
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant ru.ok.tamtam.photoeditor.state.DrawingPrimitive.Type."
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_2
-    move-object v7, p3
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    iget v8, p0, Lr85;->g:I
+    const-string v0, "Name is null"
 
-    new-instance v0, Lr85;
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct/range {v0 .. v8}, Lr85;-><init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/String;Lzf3;Ljava/lang/String;I)V
-
-    return-object v0
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Le95;)Z
-    .locals 2
-
-    if-eqz p1, :cond_2
-
-    instance-of v0, p1, Lr85;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lr85;
-
-    iget-object v0, p1, Lr85;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lr85;->d:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lr85;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lr85;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lr85;->g:I
-
-    iget p1, p1, Lr85;->g:I
-
-    if-eq v0, p1, :cond_2
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final b(Le95;)Z
+.method public final describeContents()I
     .locals 1
 
-    if-eqz p1, :cond_1
+    const/4 v0, 0x0
 
-    instance-of v0, p1, Lr85;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lr85;
-
-    iget p1, p1, Lr85;->g:I
-
-    iget v0, p0, Lr85;->g:I
-
-    if-eq v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v0, p1, Lr85;
+    if-eqz p1, :cond_3
 
-    if-nez v0, :cond_1
+    const-class v0, Lr85;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lr85;
 
-    iget-object v0, p0, Lr85;->a:Ljava/lang/String;
+    iget v0, p0, Lr85;->a:I
 
-    iget-object v1, p1, Lr85;->a:Ljava/lang/String;
+    iget v1, p1, Lr85;->a:I
 
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-wide v0, p0, Lr85;->b:J
+    iget-object v0, p0, Lr85;->b:[F
 
-    iget-wide v2, p1, Lr85;->b:J
+    iget-object p1, p1, Lr85;->b:[F
 
-    cmp-long v0, v0, v2
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
 
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lr85;->c:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lr85;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lr85;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lr85;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lr85;->e:Lzf3;
-
-    iget-object v1, p1, Lr85;->e:Lzf3;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lr85;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lr85;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lr85;->g:I
-
-    iget p1, p1, Lr85;->g:I
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
+    move-result p1
 
     return p1
 
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
+    :cond_3
+    :goto_0
+    const/4 p1, 0x0
 
     return p1
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lr85;->a:I
 
-    iget-object v1, p0, Lr85;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_0
+    invoke-static {v0}, Lc12;->w(I)I
 
-    move v1, v0
+    move-result v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    const/4 v0, 0x0
 
     :goto_0
-    const/16 v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v1, v2
+    iget-object v1, p0, Lr85;->b:[F
 
-    iget-wide v3, p0, Lr85;->b:J
-
-    invoke-static {v1, v2, v3, v4}, La9h;->a(IIJ)I
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
 
     move-result v1
 
-    iget-object v3, p0, Lr85;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v3, v1, v2}, Lu45;->g(Ljava/lang/CharSequence;II)I
-
-    move-result v1
-
-    iget-object v3, p0, Lr85;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lr85;->e:Lzf3;
-
-    if-nez v3, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v3, v3, Lzf3;->a:Ljava/util/List;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lr85;->f:Ljava/lang/String;
-
-    if-nez v3, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_3
     add-int/2addr v1, v0
 
-    mul-int/2addr v1, v2
-
-    iget v0, p0, Lr85;->g:I
-
-    invoke-static {v0}, Laz1;->v(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    const-string v0, "EditChatProfileUiModel(avatarUrl="
+    iget-object p2, p0, Lr85;->b:[F
 
-    const-string v1, ", avatarSourceId="
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    iget-wide v2, p0, Lr85;->b:J
+    const/4 p2, 0x1
 
-    iget-object v4, p0, Lr85;->a:Ljava/lang/String;
+    iget v0, p0, Lr85;->a:I
 
-    invoke-static {v0, v2, v3, v4, v1}, Lxrf;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v0, p2, :cond_1
 
-    move-result-object v0
+    const/4 p2, 0x2
 
-    const-string v1, ", abbreviation="
+    if-ne v0, p2, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p2, "CUBIC_BEZIER"
 
-    iget-object v1, p0, Lr85;->c:Ljava/lang/CharSequence;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 p1, 0x0
 
-    const-string v1, ", title="
+    throw p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    const-string p2, "LINE"
 
-    iget-object v1, p0, Lr85;->d:Ljava/lang/String;
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", titleError="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr85;->e:Lzf3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr85;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr85;->g:I
-
-    invoke-static {v1}, Lwy1;->x(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

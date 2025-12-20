@@ -59,7 +59,7 @@
 
 .field public static final UI_THREAD_EXECUTOR:Ljava/util/concurrent/Executor;
 
-.field private static volatile unobservedExceptionHandler:Lj2g;
+.field private static volatile unobservedExceptionHandler:Ludg;
 
 
 # instance fields
@@ -71,7 +71,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lp44;",
+            "Lk84;",
             ">;"
         }
     .end annotation
@@ -91,26 +91,26 @@
     .end annotation
 .end field
 
-.field private unobservedErrorNotifier:Lsrg;
+.field private unobservedErrorNotifier:La4h;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lar0;->d:Lar0;
+    sget-object v0, Lps0;->d:Lps0;
 
-    iget-object v1, v0, Lar0;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, v0, Lps0;->a:Ljava/util/concurrent/ExecutorService;
 
     sput-object v1, Lbolts/Task;->BACKGROUND_EXECUTOR:Ljava/util/concurrent/ExecutorService;
 
-    iget-object v0, v0, Lar0;->c:Li30;
+    iget-object v0, v0, Lps0;->c:Ly30;
 
     sput-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    sget-object v0, Lod;->b:Lod;
+    sget-object v0, Lrd;->b:Lrd;
 
-    iget-object v0, v0, Lod;->a:Lex4;
+    iget-object v0, v0, Lrd;->a:La15;
 
     sput-object v0, Lbolts/Task;->UI_THREAD_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -239,18 +239,18 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+.method public static synthetic access$000(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lbolts/Task;->completeImmediately(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+    invoke-static {p0, p1, p2, p3, p4}, Lbolts/Task;->completeImmediately(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
 
     return-void
 .end method
 
-.method public static synthetic access$100(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+.method public static synthetic access$100(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lbolts/Task;->completeAfterTask(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+    invoke-static {p0, p1, p2, p3, p4}, Lbolts/Task;->completeAfterTask(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
 
     return-void
 .end method
@@ -274,7 +274,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-static {p0, v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
@@ -300,14 +300,14 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, p1, v0}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-static {p0, p1, v0}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public static call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -317,7 +317,7 @@
             "Ljava/util/concurrent/Callable<",
             "TTResult;>;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTResult;>;"
@@ -325,17 +325,17 @@
     .end annotation
 
     .line 2
-    new-instance p2, Lo2g;
+    new-instance p2, Lzdg;
 
-    invoke-direct {p2}, Lo2g;-><init>()V
+    invoke-direct {p2}, Lzdg;-><init>()V
 
     .line 3
     :try_start_0
-    new-instance v0, Lc5e;
+    new-instance v0, Lis6;
 
-    const/4 v1, 0x5
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, p2, v1, p0}, Lc5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p2, v1, p0}, Lis6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -351,16 +351,16 @@
 
     invoke-direct {p1, p0}, Lbolts/ExecutorException;-><init>(Ljava/lang/Exception;)V
 
-    invoke-virtual {p2, p1}, Lo2g;->b(Ljava/lang/Exception;)V
+    invoke-virtual {p2, p1}, Lzdg;->b(Ljava/lang/Exception;)V
 
     .line 5
     :goto_0
-    iget-object p0, p2, Lo2g;->a:Lbolts/Task;
+    iget-object p0, p2, Lzdg;->a:Lbolts/Task;
 
     return-object p0
 .end method
 
-.method public static call(Ljava/util/concurrent/Callable;Ls42;)Lbolts/Task;
+.method public static call(Ljava/util/concurrent/Callable;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -369,7 +369,7 @@
             ">(",
             "Ljava/util/concurrent/Callable<",
             "TTResult;>;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTResult;>;"
@@ -379,7 +379,7 @@
     .line 7
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-static {p0, v0, p1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-static {p0, v0, p1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
@@ -405,14 +405,14 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-static {p0, v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static callInBackground(Ljava/util/concurrent/Callable;Ls42;)Lbolts/Task;
+.method public static callInBackground(Ljava/util/concurrent/Callable;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -421,7 +421,7 @@
             ">(",
             "Ljava/util/concurrent/Callable<",
             "TTResult;>;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTResult;>;"
@@ -431,7 +431,7 @@
     .line 2
     sget-object v0, Lbolts/Task;->BACKGROUND_EXECUTOR:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {p0, v0, p1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-static {p0, v0, p1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
@@ -455,7 +455,7 @@
     return-object v0
 .end method
 
-.method private static completeAfterTask(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+.method private static completeAfterTask(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -464,22 +464,22 @@
             "TResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lo2g;",
-            "Lp44;",
+            "Lzdg;",
+            "Lk84;",
             "Lbolts/Task<",
             "TTResult;>;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")V"
         }
     .end annotation
 
     :try_start_0
-    new-instance p4, Ld2g;
+    new-instance p4, Lodg;
 
     const/4 v0, 0x1
 
-    invoke-direct {p4, p0, p1, p2, v0}, Ld2g;-><init>(Lo2g;Lp44;Lbolts/Task;I)V
+    invoke-direct {p4, p0, p1, p2, v0}, Lodg;-><init>(Lzdg;Lk84;Lbolts/Task;I)V
 
     invoke-interface {p3, p4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -494,12 +494,12 @@
 
     invoke-direct {p2, p1}, Lbolts/ExecutorException;-><init>(Ljava/lang/Exception;)V
 
-    invoke-virtual {p0, p2}, Lo2g;->b(Ljava/lang/Exception;)V
+    invoke-virtual {p0, p2}, Lzdg;->b(Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method private static completeImmediately(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+.method private static completeImmediately(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -508,22 +508,22 @@
             "TResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lo2g;",
-            "Lp44;",
+            "Lzdg;",
+            "Lk84;",
             "Lbolts/Task<",
             "TTResult;>;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")V"
         }
     .end annotation
 
     :try_start_0
-    new-instance p4, Ld2g;
+    new-instance p4, Lodg;
 
     const/4 v0, 0x0
 
-    invoke-direct {p4, p0, p1, p2, v0}, Ld2g;-><init>(Lo2g;Lp44;Lbolts/Task;I)V
+    invoke-direct {p4, p0, p1, p2, v0}, Lodg;-><init>(Lzdg;Lk84;Lbolts/Task;I)V
 
     invoke-interface {p3, p4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -538,19 +538,19 @@
 
     invoke-direct {p2, p1}, Lbolts/ExecutorException;-><init>(Ljava/lang/Exception;)V
 
-    invoke-virtual {p0, p2}, Lo2g;->b(Ljava/lang/Exception;)V
+    invoke-virtual {p0, p2}, Lzdg;->b(Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method public static create()Li2g;
+.method public static create()Ltdg;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TResult:",
             "Ljava/lang/Object;",
             ">()",
-            "Li2g;"
+            "Ltdg;"
         }
     .end annotation
 
@@ -558,9 +558,9 @@
 
     invoke-direct {v0}, Lbolts/Task;-><init>()V
 
-    new-instance v0, Li2g;
+    new-instance v0, Ltdg;
 
-    invoke-direct {v0}, Lo2g;-><init>()V
+    invoke-direct {v0}, Lzdg;-><init>()V
 
     return-object v0
 .end method
@@ -577,27 +577,27 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lar0;->d:Lar0;
+    sget-object v0, Lps0;->d:Lps0;
 
-    iget-object v0, v0, Lar0;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v0, v0, Lps0;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
     const/4 v1, 0x0
 
     .line 2
-    invoke-static {p0, p1, v0, v1}, Lbolts/Task;->delay(JLjava/util/concurrent/ScheduledExecutorService;Ls42;)Lbolts/Task;
+    invoke-static {p0, p1, v0, v1}, Lbolts/Task;->delay(JLjava/util/concurrent/ScheduledExecutorService;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static delay(JLjava/util/concurrent/ScheduledExecutorService;Ls42;)Lbolts/Task;
+.method public static delay(JLjava/util/concurrent/ScheduledExecutorService;Lw62;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
             "Ljava/util/concurrent/ScheduledExecutorService;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "Ljava/lang/Void;",
@@ -622,33 +622,33 @@
 
     .line 6
     :cond_0
-    new-instance p3, Lo2g;
+    new-instance p3, Lzdg;
 
-    invoke-direct {p3}, Lo2g;-><init>()V
+    invoke-direct {p3}, Lzdg;-><init>()V
 
     .line 7
-    new-instance v0, Lr98;
+    new-instance v0, Lof8;
 
-    const/16 v1, 0x19
+    const/16 v1, 0x17
 
-    invoke-direct {v0, v1, p3}, Lr98;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p3}, Lof8;-><init>(ILjava/lang/Object;)V
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-interface {p2, v0, p0, p1, v1}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     .line 8
-    iget-object p0, p3, Lo2g;->a:Lbolts/Task;
+    iget-object p0, p3, Lzdg;->a:Lbolts/Task;
 
     return-object p0
 .end method
 
-.method public static delay(JLs42;)Lbolts/Task;
+.method public static delay(JLw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "Ljava/lang/Void;",
@@ -657,12 +657,12 @@
     .end annotation
 
     .line 3
-    sget-object v0, Lar0;->d:Lar0;
+    sget-object v0, Lps0;->d:Lps0;
 
-    iget-object v0, v0, Lar0;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v0, v0, Lps0;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
     .line 4
-    invoke-static {p0, p1, v0, p2}, Lbolts/Task;->delay(JLjava/util/concurrent/ScheduledExecutorService;Ls42;)Lbolts/Task;
+    invoke-static {p0, p1, v0, p2}, Lbolts/Task;->delay(JLjava/util/concurrent/ScheduledExecutorService;Lw62;)Lbolts/Task;
 
     move-result-object p0
 
@@ -768,7 +768,7 @@
     throw p0
 .end method
 
-.method public static getUnobservedExceptionHandler()Lj2g;
+.method public static getUnobservedExceptionHandler()Ludg;
     .locals 1
 
     const/4 v0, 0x0
@@ -801,12 +801,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lp44;
+    check-cast v2, Lk84;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    invoke-interface {v2, p0}, Lp44;->a(Lbolts/Task;)Ljava/lang/Object;
+    invoke-interface {v2, p0}, Lk84;->a(Lbolts/Task;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -851,7 +851,7 @@
     throw v1
 .end method
 
-.method public static setUnobservedExceptionHandler(Lj2g;)V
+.method public static setUnobservedExceptionHandler(Ludg;)V
     .locals 0
 
     return-void
@@ -887,9 +887,9 @@
     return-object p0
 
     :cond_0
-    new-instance v5, Lo2g;
+    new-instance v5, Lzdg;
 
-    invoke-direct {v5}, Lo2g;-><init>()V
+    invoke-direct {v5}, Lzdg;-><init>()V
 
     new-instance v2, Ljava/util/ArrayList;
 
@@ -932,16 +932,16 @@
 
     check-cast v6, Lbolts/Task;
 
-    new-instance v0, Lh2g;
+    new-instance v0, Lsdg;
 
-    invoke-direct/range {v0 .. v5}, Lh2g;-><init>(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicInteger;Lo2g;)V
+    invoke-direct/range {v0 .. v5}, Lsdg;-><init>(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicInteger;Lzdg;)V
 
-    invoke-virtual {v6, v0}, Lbolts/Task;->continueWith(Lp44;)Lbolts/Task;
+    invoke-virtual {v6, v0}, Lbolts/Task;->continueWith(Lk84;)Lbolts/Task;
 
     goto :goto_0
 
     :cond_1
-    iget-object p0, v5, Lo2g;->a:Lbolts/Task;
+    iget-object p0, v5, Lzdg;->a:Lbolts/Task;
 
     return-object p0
 .end method
@@ -967,13 +967,13 @@
 
     move-result-object v0
 
-    new-instance v1, Le2g;
+    new-instance v1, Lpdg;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2, p0}, Le2g;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lpdg;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lbolts/Task;->onSuccess(Lp44;)Lbolts/Task;
+    invoke-virtual {v0, v1}, Lbolts/Task;->onSuccess(Lk84;)Lbolts/Task;
 
     move-result-object p0
 
@@ -1010,9 +1010,9 @@
     return-object p0
 
     :cond_0
-    new-instance v0, Lo2g;
+    new-instance v0, Lzdg;
 
-    invoke-direct {v0}, Lo2g;-><init>()V
+    invoke-direct {v0}, Lzdg;-><init>()V
 
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1037,18 +1037,18 @@
 
     check-cast v2, Lbolts/Task;
 
-    new-instance v3, Lg2g;
+    new-instance v3, Lrdg;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v1, v0, v4}, Lg2g;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lo2g;I)V
+    invoke-direct {v3, v1, v0, v4}, Lrdg;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lzdg;I)V
 
-    invoke-virtual {v2, v3}, Lbolts/Task;->continueWith(Lp44;)Lbolts/Task;
+    invoke-virtual {v2, v3}, Lbolts/Task;->continueWith(Lk84;)Lbolts/Task;
 
     goto :goto_0
 
     :cond_1
-    iget-object p0, v0, Lo2g;->a:Lbolts/Task;
+    iget-object p0, v0, Lzdg;->a:Lbolts/Task;
 
     return-object p0
 .end method
@@ -1085,9 +1085,9 @@
     return-object p0
 
     :cond_0
-    new-instance v0, Lo2g;
+    new-instance v0, Lzdg;
 
-    invoke-direct {v0}, Lo2g;-><init>()V
+    invoke-direct {v0}, Lzdg;-><init>()V
 
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1112,18 +1112,18 @@
 
     check-cast v2, Lbolts/Task;
 
-    new-instance v3, Lg2g;
+    new-instance v3, Lrdg;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v1, v0, v4}, Lg2g;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lo2g;I)V
+    invoke-direct {v3, v1, v0, v4}, Lrdg;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lzdg;I)V
 
-    invoke-virtual {v2, v3}, Lbolts/Task;->continueWith(Lp44;)Lbolts/Task;
+    invoke-virtual {v2, v3}, Lbolts/Task;->continueWith(Lk84;)Lbolts/Task;
 
     goto :goto_0
 
     :cond_1
-    iget-object p0, v0, Lo2g;->a:Lbolts/Task;
+    iget-object p0, v0, Lzdg;->a:Lbolts/Task;
 
     return-object p0
 .end method
@@ -1145,7 +1145,7 @@
     return-object p0
 .end method
 
-.method public continueWhile(Ljava/util/concurrent/Callable;Lp44;)Lbolts/Task;
+.method public continueWhile(Ljava/util/concurrent/Callable;Lk84;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1153,7 +1153,7 @@
             "Ljava/util/concurrent/Callable<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lp44;",
+            "Lk84;",
             ")",
             "Lbolts/Task<",
             "Ljava/lang/Void;",
@@ -1166,14 +1166,14 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2, v0, v1}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0, v1}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWhile(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+.method public continueWhile(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1181,7 +1181,7 @@
             "Ljava/util/concurrent/Callable<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
             ")",
             "Lbolts/Task<",
@@ -1193,14 +1193,14 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, p1, p2, p3, v0}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, p3, v0}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWhile(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public continueWhile(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1208,9 +1208,9 @@
             "Ljava/util/concurrent/Callable<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "Ljava/lang/Void;",
@@ -1219,22 +1219,22 @@
     .end annotation
 
     .line 4
-    new-instance p4, Lao6;
+    new-instance p4, Ll5;
 
-    const/16 v0, 0x8
+    const/4 v0, 0x6
 
     const/4 v1, 0x0
 
     .line 5
-    invoke-direct {p4, v0, v1}, Lao6;-><init>(IB)V
+    invoke-direct {p4, v0, v1}, Ll5;-><init>(IZ)V
 
     .line 6
-    new-instance v0, Lox4;
+    new-instance v0, Lk15;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lox4;-><init>(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;Lao6;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lk15;-><init>(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;Ll5;)V
 
     .line 7
-    iput-object v0, p4, Lao6;->b:Ljava/lang/Object;
+    iput-object v0, p4, Ll5;->b:Ljava/lang/Object;
 
     .line 8
     invoke-virtual {p0}, Lbolts/Task;->makeVoid()Lbolts/Task;
@@ -1242,19 +1242,19 @@
     move-result-object p1
 
     .line 9
-    iget-object p2, p4, Lao6;->b:Ljava/lang/Object;
+    iget-object p2, p4, Ll5;->b:Ljava/lang/Object;
 
-    check-cast p2, Lox4;
+    check-cast p2, Lk15;
 
     .line 10
-    invoke-virtual {p1, p2, p3}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    invoke-virtual {p1, p2, p3}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWhile(Ljava/util/concurrent/Callable;Lp44;Ls42;)Lbolts/Task;
+.method public continueWhile(Ljava/util/concurrent/Callable;Lk84;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1262,8 +1262,8 @@
             "Ljava/util/concurrent/Callable<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lp44;",
-            "Ls42;",
+            "Lk84;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "Ljava/lang/Void;",
@@ -1274,21 +1274,21 @@
     .line 2
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, p2, v0, p3}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0, p3}, Lbolts/Task;->continueWhile(Ljava/util/concurrent/Callable;Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWith(Lp44;)Lbolts/Task;
+.method public continueWith(Lk84;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1300,21 +1300,21 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->continueWith(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->continueWith(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWith(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+.method public continueWith(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
             ")",
             "Lbolts/Task<",
@@ -1325,23 +1325,23 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->continueWith(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->continueWith(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWith(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public continueWith(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1349,9 +1349,9 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lo2g;
+    new-instance v0, Lzdg;
 
-    invoke-direct {v0}, Lo2g;-><init>()V
+    invoke-direct {v0}, Lzdg;-><init>()V
 
     .line 3
     iget-object v1, p0, Lbolts/Task;->lock:Ljava/lang/Object;
@@ -1369,11 +1369,11 @@
     .line 5
     iget-object v3, p0, Lbolts/Task;->continuations:Ljava/util/List;
 
-    new-instance v4, Lb2g;
+    new-instance v4, Lmdg;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, v0, p1, p2, v5}, Lb2g;-><init>(Lo2g;Lp44;Ljava/util/concurrent/Executor;I)V
+    invoke-direct {v4, v0, p1, p2, v5}, Lmdg;-><init>(Lzdg;Lk84;Ljava/util/concurrent/Executor;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1394,11 +1394,11 @@
     if-eqz v2, :cond_1
 
     .line 7
-    invoke-static {v0, p1, p0, p2, p3}, Lbolts/Task;->completeImmediately(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+    invoke-static {v0, p1, p0, p2, p3}, Lbolts/Task;->completeImmediately(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
 
     .line 8
     :cond_1
-    iget-object p1, v0, Lo2g;->a:Lbolts/Task;
+    iget-object p1, v0, Lzdg;->a:Lbolts/Task;
 
     return-object p1
 
@@ -1412,15 +1412,15 @@
     throw p1
 .end method
 
-.method public continueWith(Lp44;Ls42;)Lbolts/Task;
+.method public continueWith(Lk84;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
-            "Ls42;",
+            "Lk84;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1430,21 +1430,21 @@
     .line 11
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->continueWith(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->continueWith(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWithTask(Lp44;)Lbolts/Task;
+.method public continueWithTask(Lk84;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1456,21 +1456,21 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWithTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+.method public continueWithTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
             ")",
             "Lbolts/Task<",
@@ -1481,23 +1481,23 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public continueWithTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public continueWithTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1505,9 +1505,9 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lo2g;
+    new-instance v0, Lzdg;
 
-    invoke-direct {v0}, Lo2g;-><init>()V
+    invoke-direct {v0}, Lzdg;-><init>()V
 
     .line 3
     iget-object v1, p0, Lbolts/Task;->lock:Ljava/lang/Object;
@@ -1525,11 +1525,11 @@
     .line 5
     iget-object v3, p0, Lbolts/Task;->continuations:Ljava/util/List;
 
-    new-instance v4, Lb2g;
+    new-instance v4, Lmdg;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, p1, p2, v5}, Lb2g;-><init>(Lo2g;Lp44;Ljava/util/concurrent/Executor;I)V
+    invoke-direct {v4, v0, p1, p2, v5}, Lmdg;-><init>(Lzdg;Lk84;Ljava/util/concurrent/Executor;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1550,11 +1550,11 @@
     if-eqz v2, :cond_1
 
     .line 7
-    invoke-static {v0, p1, p0, p2, p3}, Lbolts/Task;->completeAfterTask(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
+    invoke-static {v0, p1, p0, p2, p3}, Lbolts/Task;->completeAfterTask(Lzdg;Lk84;Lbolts/Task;Ljava/util/concurrent/Executor;Lw62;)V
 
     .line 8
     :cond_1
-    iget-object p1, v0, Lo2g;->a:Lbolts/Task;
+    iget-object p1, v0, Lzdg;->a:Lbolts/Task;
 
     return-object p1
 
@@ -1568,15 +1568,15 @@
     throw p1
 .end method
 
-.method public continueWithTask(Lp44;Ls42;)Lbolts/Task;
+.method public continueWithTask(Lk84;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
-            "Ls42;",
+            "Lk84;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1586,7 +1586,7 @@
     .line 11
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
@@ -1754,25 +1754,25 @@
         }
     .end annotation
 
-    new-instance v0, Lf2g;
+    new-instance v0, Lqdg;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, v0}, Lbolts/Task;->continueWithTask(Lp44;)Lbolts/Task;
+    invoke-virtual {p0, v0}, Lbolts/Task;->continueWithTask(Lk84;)Lbolts/Task;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public onSuccess(Lp44;)Lbolts/Task;
+.method public onSuccess(Lk84;)Lbolts/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1784,21 +1784,21 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->onSuccess(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, v1}, Lbolts/Task;->onSuccess(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccess(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+.method public onSuccess(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
             ")",
             "Lbolts/Task<",
@@ -1809,23 +1809,23 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->onSuccess(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->onSuccess(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccess(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public onSuccess(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1833,28 +1833,28 @@
     .end annotation
 
     .line 2
-    new-instance p3, Lc2g;
+    new-instance p3, Lndg;
 
     const/4 v0, 0x0
 
-    invoke-direct {p3, p1, v0}, Lc2g;-><init>(Lp44;I)V
+    invoke-direct {p3, p1, v0}, Lndg;-><init>(Lk84;I)V
 
-    invoke-virtual {p0, p3, p2}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    invoke-virtual {p0, p3, p2}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccess(Lp44;Ls42;)Lbolts/Task;
+.method public onSuccess(Lk84;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
-            "Ls42;",
+            "Lk84;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1864,21 +1864,21 @@
     .line 4
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->onSuccess(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->onSuccess(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccessTask(Lp44;)Lbolts/Task;
+.method public onSuccessTask(Lk84;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1888,21 +1888,21 @@
     .line 3
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, v0}, Lbolts/Task;->onSuccessTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0}, Lbolts/Task;->onSuccessTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccessTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+.method public onSuccessTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
             ")",
             "Lbolts/Task<",
@@ -1913,23 +1913,23 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->onSuccessTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, p2, v0}, Lbolts/Task;->onSuccessTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccessTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+.method public onSuccessTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
+            "Lk84;",
             "Ljava/util/concurrent/Executor;",
-            "Ls42;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1937,28 +1937,28 @@
     .end annotation
 
     .line 2
-    new-instance p3, Lc2g;
+    new-instance p3, Lndg;
 
     const/4 v0, 0x1
 
-    invoke-direct {p3, p1, v0}, Lc2g;-><init>(Lp44;I)V
+    invoke-direct {p3, p1, v0}, Lndg;-><init>(Lk84;I)V
 
-    invoke-virtual {p0, p3, p2}, Lbolts/Task;->continueWithTask(Lp44;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    invoke-virtual {p0, p3, p2}, Lbolts/Task;->continueWithTask(Lk84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onSuccessTask(Lp44;Ls42;)Lbolts/Task;
+.method public onSuccessTask(Lk84;Lw62;)Lbolts/Task;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TContinuationResult:",
             "Ljava/lang/Object;",
             ">(",
-            "Lp44;",
-            "Ls42;",
+            "Lk84;",
+            "Lw62;",
             ")",
             "Lbolts/Task<",
             "TTContinuationResult;>;"
@@ -1968,7 +1968,7 @@
     .line 4
     sget-object v0, Lbolts/Task;->IMMEDIATE_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->onSuccessTask(Lp44;Ljava/util/concurrent/Executor;Ls42;)Lbolts/Task;
+    invoke-virtual {p0, p1, v0, p2}, Lbolts/Task;->onSuccessTask(Lk84;Ljava/util/concurrent/Executor;Lw62;)Lbolts/Task;
 
     move-result-object p1
 
@@ -2065,7 +2065,7 @@
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lbolts/Task;->getUnobservedExceptionHandler()Lj2g;
+    invoke-static {}, Lbolts/Task;->getUnobservedExceptionHandler()Ludg;
 
     :cond_1
     monitor-exit v0

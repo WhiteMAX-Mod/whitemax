@@ -1,74 +1,59 @@
-.class public abstract Llc4;
-.super Ljava/lang/Object;
+.class public final Llc4;
+.super Ljava/io/FilterOutputStream;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[J
+# instance fields
+.field public a:J
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final close()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    new-array v0, v0, [J
-
-    sput-object v0, Llc4;->a:[J
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/StringBuilder;I)V
-    .locals 2
+.method public final write(I)V
+    .locals 4
 
-    const/4 v0, 0x0
+    .line 3
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    :goto_0
-    if-ge v0, p1, :cond_1
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
 
-    const-string v1, "?"
+    .line 4
+    iget-wide v0, p0, Llc4;->a:J
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x1
 
-    add-int/lit8 v1, p1, -0x1
+    add-long/2addr v0, v2
 
-    if-ge v0, v1, :cond_0
+    iput-wide v0, p0, Llc4;->a:J
 
-    const-string v1, ","
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
-.method public static final b(Lcb8;)Lx26;
+.method public final write([BII)V
     .locals 2
 
-    new-instance v0, Lh66;
+    .line 1
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    invoke-direct {v0, p0, v1}, Lh66;-><init>(Lcb8;Lkotlin/coroutines/Continuation;)V
+    .line 2
+    iget-wide p1, p0, Llc4;->a:J
 
-    invoke-static {v0}, Lgw0;->c(Lsm6;)Lsu1;
+    int-to-long v0, p3
 
-    move-result-object p0
+    add-long/2addr p1, v0
 
-    const/4 v0, -0x1
+    iput-wide p1, p0, Llc4;->a:J
 
-    const/4 v1, 0x2
-
-    invoke-static {p0, v0, v1}, Lgw0;->b(Lx26;II)Lx26;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

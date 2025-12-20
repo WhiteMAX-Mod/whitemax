@@ -3,74 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx74;
+.implements Leoe;
 
 
 # instance fields
-.field public final synthetic a:Lx74;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Throwable;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lx74;Ljava/lang/Throwable;)V
+.method public synthetic constructor <init>(Leoe;Ljava/lang/Object;I)V
     .locals 0
+
+    .line 1
+    iput p3, p0, Lw25;->a:I
+
+    iput-object p1, p0, Lw25;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lw25;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw25;->a:Lx74;
+    return-void
+.end method
 
-    iput-object p2, p0, Lw25;->b:Ljava/lang/Throwable;
+.method public constructor <init>(Lmq6;Loq6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lw25;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    check-cast p1, Ln58;
+
+    iput-object p1, p0, Lw25;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lw25;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lsm6;)Ljava/lang/Object;
-    .locals 1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    iget-object v0, p0, Lw25;->a:Lx74;
+    iget v0, p0, Lw25;->a:I
 
-    invoke-interface {v0, p1, p2}, Lx74;->fold(Ljava/lang/Object;Lsm6;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lw25;->b:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast v0, Lv36;
 
-.method public final get(Lw74;)Lv74;
-    .locals 1
+    new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lw25;->a:Lx74;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-interface {v0, p1}, Lx74;->get(Lw74;)Lv74;
+    invoke-static {v0, v1}, Lpoe;->n(Leoe;Ljava/util/Collection;)V
 
-    move-result-object p1
+    iget-object v0, p0, Lw25;->c:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast v0, Ljava/util/Comparator;
 
-.method public final minusKey(Lw74;)Lx74;
-    .locals 1
+    invoke-static {v0, v1}, Lji3;->p(Ljava/util/Comparator;Ljava/util/List;)V
 
-    iget-object v0, p0, Lw25;->a:Lx74;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {v0, p1}, Lx74;->minusKey(Lw74;)Lx74;
+    move-result-object v0
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
-.end method
+    :pswitch_0
+    new-instance v0, Lpl9;
 
-.method public final plus(Lx74;)Lx74;
-    .locals 1
+    invoke-direct {v0, p0}, Lpl9;-><init>(Lw25;)V
 
-    iget-object v0, p0, Lw25;->a:Lx74;
+    return-object v0
 
-    invoke-interface {v0, p1}, Lx74;->plus(Lx74;)Lx74;
+    :pswitch_1
+    new-instance v0, Lmv6;
 
-    move-result-object p1
+    invoke-direct {v0, p0}, Lmv6;-><init>(Lw25;)V
 
-    return-object p1
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lv25;
+
+    iget-object v1, p0, Lw25;->b:Ljava/lang/Object;
+
+    check-cast v1, Ldt;
+
+    iget-object v1, v1, Ldt;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Iterable;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lw25;->c:Ljava/lang/Object;
+
+    check-cast v2, Lj75;
+
+    invoke-direct {v0, v1, v2}, Lv25;-><init>(Ljava/util/Iterator;Lj75;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

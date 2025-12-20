@@ -166,7 +166,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v1, v1, Landroidx/fragment/app/a;->F0:Lti6;
+    iget-object v1, v1, Landroidx/fragment/app/a;->F0:Len6;
 
     iget-object v1, v1, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -365,7 +365,7 @@
     :cond_2
     const/4 p1, 0x2
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result p1
 
@@ -435,7 +435,7 @@
     :cond_2
     const/4 p1, 0x2
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result p1
 

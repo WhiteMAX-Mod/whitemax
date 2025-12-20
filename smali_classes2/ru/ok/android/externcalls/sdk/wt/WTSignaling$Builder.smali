@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder;
-.super Lqze;
+.super Lnaf;
 .source "SourceFile"
 
 
@@ -19,7 +19,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lqze;"
+        "Lnaf;"
     }
 .end annotation
 
@@ -29,7 +29,7 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder;",
-        "Lqze;",
+        "Lnaf;",
         "<init>",
         "()V",
         "",
@@ -76,7 +76,7 @@
 
 
 # virtual methods
-.method public bridge synthetic build()Loze;
+.method public bridge synthetic build()Llaf;
     .locals 1
 
     .line 1
@@ -88,10 +88,10 @@
 .end method
 
 .method public build()Lru/ok/android/externcalls/sdk/wt/WTSignaling;
-    .locals 17
+    .locals 20
 
     .line 2
-    invoke-virtual/range {p0 .. p0}, Lqze;->getSignalingStat()Lm0f;
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getSignalingStat()Ljbf;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    invoke-virtual/range {p0 .. p0}, Lqze;->getExecutor()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 4
-    invoke-virtual/range {p0 .. p0}, Lqze;->getLog()Ly6d;
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getLog()Lcgd;
 
     move-result-object v0
 
@@ -118,7 +118,16 @@
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 5
-    invoke-virtual/range {p0 .. p0}, Lqze;->getLogConfiguration()Lz6d;
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getTimeProvider()Lnkg;
+
+    move-result-object v0
+
+    const-string v1, "time provider is required"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 6
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getLogConfiguration()Ldgd;
 
     move-result-object v0
 
@@ -126,8 +135,8 @@
 
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
-    invoke-virtual/range {p0 .. p0}, Lqze;->getEndpointParameters()Lag5;
+    .line 7
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getEndpointParameters()Lyj5;
 
     move-result-object v0
 
@@ -135,101 +144,116 @@
 
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
-    invoke-virtual/range {p0 .. p0}, Lqze;->getLog()Ly6d;
+    .line 8
+    invoke-virtual/range {p0 .. p0}, Lnaf;->getLog()Lcgd;
 
     move-result-object v9
 
-    .line 8
+    .line 9
     new-instance v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;
 
-    invoke-direct {v0, v9}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;-><init>(Ly6d;)V
+    invoke-direct {v0, v9}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;-><init>(Lcgd;)V
 
     move-object/from16 v1, p0
 
-    .line 9
+    .line 10
     iget-boolean v2, v1, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder;->isWtTrafficLoggingEnabled:Z
 
     if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
-    .line 10
-    invoke-virtual {v0, v2}, Lwj0;->logRaw(Z)V
-
     .line 11
-    invoke-virtual {v0, v2}, Lwj0;->logDebug(Z)V
+    invoke-virtual {v0, v2}, Lrk0;->logRaw(Z)V
 
     .line 12
-    invoke-virtual {v0, v2}, Lwj0;->logFlowControl(Z)V
+    invoke-virtual {v0, v2}, Lrk0;->logDebug(Z)V
+
+    .line 13
+    invoke-virtual {v0, v2}, Lrk0;->logFlowControl(Z)V
 
     :cond_0
     const-wide/16 v2, 0x5
 
-    .line 13
+    .line 14
     invoke-static {v2, v3}, Ljava/time/Duration;->ofSeconds(J)Ljava/time/Duration;
 
     move-result-object v2
 
-    .line 14
-    new-instance v3, Lv87;
-
-    invoke-direct {v3, v2, v0}, Lv87;-><init>(Ljava/time/Duration;Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;)V
-
     .line 15
-    new-instance v2, Lru/ok/android/externcalls/sdk/wt/WTSignaling;
+    new-instance v3, Lgd7;
+
+    invoke-direct {v3, v2, v0}, Lgd7;-><init>(Ljava/time/Duration;Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;)V
 
     .line 16
-    invoke-virtual {v1}, Lqze;->getTimeoutMS()J
+    new-instance v2, Lru/ok/android/externcalls/sdk/wt/WTSignaling;
+
+    .line 17
+    invoke-virtual {v1}, Lnaf;->getTimeoutMS()J
 
     move-result-wide v4
 
-    .line 17
-    invoke-virtual {v1}, Lqze;->getReconnectTimeoutAction()Ljava/lang/Runnable;
+    .line 18
+    invoke-virtual {v1}, Lnaf;->getReconnectTimeoutAction()Ljava/lang/Runnable;
 
     move-result-object v6
 
-    .line 18
-    invoke-virtual {v1}, Lqze;->getSignalingStat()Lm0f;
+    .line 19
+    invoke-virtual {v1}, Lnaf;->getSignalingStat()Ljbf;
 
     move-result-object v7
 
-    .line 19
-    invoke-virtual {v1}, Lqze;->getExecutor()Ljava/util/concurrent/ExecutorService;
+    .line 20
+    invoke-virtual {v1}, Lnaf;->getExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v8
 
-    .line 20
-    invoke-virtual {v1}, Lqze;->getLogConfiguration()Lz6d;
+    .line 21
+    invoke-virtual {v1}, Lnaf;->getLogConfiguration()Ldgd;
 
     move-result-object v10
 
-    .line 21
-    invoke-virtual {v1}, Lqze;->getServerPingTimeoutMs()J
+    .line 22
+    invoke-virtual {v1}, Lnaf;->getServerPingTimeoutMs()J
 
     move-result-wide v11
 
-    .line 22
-    invoke-virtual {v1}, Lqze;->isFastRecoverEnabled()Z
+    .line 23
+    invoke-virtual {v1}, Lnaf;->isFastRecoverEnabled()Z
 
     move-result v13
 
-    .line 23
-    invoke-virtual {v1}, Lqze;->getEndpointParameters()Lag5;
+    .line 24
+    invoke-virtual {v1}, Lnaf;->getEndpointParameters()Lyj5;
 
     move-result-object v14
 
-    .line 24
-    invoke-virtual {v1}, Lqze;->isReplaceParametersInEndpointEnabled()Z
+    .line 25
+    invoke-virtual {v1}, Lnaf;->isReplaceParametersInEndpointEnabled()Z
 
     move-result v15
 
-    const/16 v16, 0x0
-
-    .line 25
-    invoke-direct/range {v2 .. v16}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lv87;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;ZLtk4;)V
-
     .line 26
+    invoke-virtual {v1}, Lnaf;->getTimeProvider()Lnkg;
+
+    move-result-object v16
+
+    .line 27
+    invoke-virtual {v1}, Lnaf;->isSummaryStatsEnabled()Z
+
+    move-result v17
+
+    .line 28
+    invoke-virtual {v1}, Lnaf;->isSignalingLogThrottlingEnabled()Z
+
+    move-result v18
+
+    const/16 v19, 0x0
+
+    .line 29
+    invoke-direct/range {v2 .. v19}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZLro4;)V
+
+    .line 30
     invoke-static {v2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->access$init(Lru/ok/android/externcalls/sdk/wt/WTSignaling;)V
 
     return-object v2

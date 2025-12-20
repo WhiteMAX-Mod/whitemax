@@ -1,134 +1,93 @@
 .class public final Ljke;
-.super Lfh6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:I
+.field public final a:J
 
-.field public final Y:I
-
-.field public final d:Ljava/lang/Object;
-
-.field public final o:Lqe7;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljf7;Landroid/util/Size;Lqe7;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lfh6;-><init>(Ljf7;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/lang/Object;
+    iput-wide p1, p0, Ljke;->a:J
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljke;->d:Ljava/lang/Object;
-
-    if-nez p2, :cond_0
-
-    iget-object p1, p0, Lfh6;->b:Ljf7;
-
-    invoke-interface {p1}, Ljf7;->getWidth()I
-
-    move-result p1
-
-    iput p1, p0, Ljke;->X:I
-
-    iget-object p1, p0, Lfh6;->b:Ljf7;
-
-    invoke-interface {p1}, Ljf7;->getHeight()I
-
-    move-result p1
-
-    iput p1, p0, Ljke;->Y:I
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
-
-    move-result p1
-
-    iput p1, p0, Ljke;->X:I
-
-    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
-
-    move-result p1
-
-    iput p1, p0, Ljke;->Y:I
-
-    :goto_0
-    iput-object p3, p0, Ljke;->o:Lqe7;
+    iput-wide p3, p0, Ljke;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Landroid/graphics/Rect;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
-
-    iget p1, p0, Ljke;->X:I
-
-    iget v1, p0, Ljke;->Y:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v2, p1, v1}, Landroid/graphics/Rect;->intersect(IIII)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
-
-    :cond_0
-    iget-object p1, p0, Ljke;->d:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public final getHeight()I
-    .locals 1
-
-    iget v0, p0, Ljke;->Y:I
+    if-ne p0, p1, :cond_0
 
     return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Ljke;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljke;
+
+    iget-wide v2, p0, Ljke;->a:J
+
+    iget-wide v4, p1, Ljke;->a:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Ljke;->b:J
+
+    iget-wide v4, p1, Ljke;->b:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final getImageInfo()Lqe7;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Ljke;->o:Lqe7;
+    iget-wide v0, p0, Ljke;->a:J
 
-    return-object v0
-.end method
+    long-to-int v0, v0
 
-.method public final getWidth()I
-    .locals 1
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Ljke;->X:I
+    iget-wide v1, p0, Ljke;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
 
     return v0
 .end method

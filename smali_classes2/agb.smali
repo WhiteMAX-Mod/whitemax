@@ -1,64 +1,67 @@
-.class public final synthetic Lagb;
+.class public abstract Lagb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:F
+.field public static final b:I
 
-.field public final synthetic b:Landroid/view/animation/Interpolator;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(FLandroid/view/animation/LinearInterpolator;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lk8d;->qrscanner_allow_permission:I
 
-    iput p1, p0, Lagb;->a:F
+    sput v0, Lagb;->a:I
 
-    iput-object p2, p0, Lagb;->b:Landroid/view/animation/Interpolator;
+    sget v0, Lk8d;->qrscanner_blackout_view:I
+
+    sput v0, Lagb;->b:I
+
+    sget v0, Lk8d;->qrscanner_camera_preview:I
+
+    sput v0, Lagb;->c:I
+
+    sget v0, Lk8d;->qrscanner_gallery_button_image:I
+
+    sput v0, Lagb;->d:I
+
+    sget v0, Lk8d;->qrscanner_hint_view:I
+
+    sput v0, Lagb;->e:I
+
+    sget v0, Lk8d;->qrscanner_not_allow_permission:I
+
+    sput v0, Lagb;->f:I
+
+    sget v0, Lk8d;->qrscanner_overlay_view:I
+
+    sput v0, Lagb;->g:I
+
+    sget v0, Lk8d;->qrscanner_toolbar:I
+
+    sput v0, Lagb;->h:I
+
+    sget v0, Lk8d;->qrscanner_torch_button_image:I
+
+    sput v0, Lagb;->i:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    check-cast p1, Landroid/view/View;
-
-    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [F
-
-    const/4 v3, 0x0
-
-    aput v1, v2, v3
-
-    const/4 v1, 0x1
-
-    iget v3, p0, Lagb;->a:F
-
-    aput v3, v2, v1
-
-    invoke-static {p1, v0, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lagb;->b:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    return-object p1
 .end method

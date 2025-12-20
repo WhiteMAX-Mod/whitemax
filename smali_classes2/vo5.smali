@@ -1,37 +1,60 @@
-.class public final Lvo5;
-.super Ll1f;
+.class public final synthetic Lvo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi4;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final synthetic a:Lwo5;
 
-.field public final Y:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic b:Lyqd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(Lwo5;Lyqd;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Ll1f;-><init>(ILjava/lang/String;)V
+    iput-object p1, p0, Lvo5;->a:Lwo5;
 
-    iput-object p4, p0, Lvo5;->o:Ljava/lang/String;
-
-    iput p2, p0, Lvo5;->c:I
-
-    iput p3, p0, Lvo5;->d:I
-
-    iput-object p5, p0, Lvo5;->X:Ljava/lang/String;
-
-    iput-object p6, p0, Lvo5;->Y:Ljava/lang/String;
+    iput-object p2, p0, Lvo5;->b:Lyqd;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lsi4;
+    .locals 4
+
+    new-instance v0, Ly46;
+
+    iget-object v1, p0, Lvo5;->a:Lwo5;
+
+    iget-object v1, v1, Lwo5;->a:Landroid/content/Context;
+
+    new-instance v2, Lbr4;
+
+    invoke-direct {v2}, Lbr4;-><init>()V
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v3, Lbp4;
+
+    invoke-interface {v2}, Loi4;->a()Lsi4;
+
+    move-result-object v2
+
+    invoke-direct {v3, v1, v2}, Lbp4;-><init>(Landroid/content/Context;Lsi4;)V
+
+    iget-object v1, p0, Lvo5;->b:Lyqd;
+
+    invoke-direct {v0, v3, v1}, Ly46;-><init>(Lbp4;Lyqd;)V
+
+    return-object v0
 .end method

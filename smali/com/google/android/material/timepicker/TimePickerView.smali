@@ -27,11 +27,11 @@
 
     move-result-object p1
 
-    sget v0, Lk1d;->material_timepicker:I
+    sget v0, Lnad;->material_timepicker:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget p1, Luxc;->material_clock_face:I
+    sget p1, Lw6d;->material_clock_face:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -39,7 +39,7 @@
 
     check-cast p1, Lcom/google/android/material/timepicker/ClockFaceView;
 
-    sget p1, Luxc;->material_clock_period_toggle:I
+    sget p1, Lw6d;->material_clock_period_toggle:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget p1, Luxc;->material_minute_tv:I
+    sget p1, Lw6d;->material_minute_tv:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +63,7 @@
 
     check-cast p1, Lcom/google/android/material/chip/Chip;
 
-    sget v0, Luxc;->material_hour_tv:I
+    sget v0, Lw6d;->material_hour_tv:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -73,7 +73,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->F0:Lcom/google/android/material/chip/Chip;
 
-    sget v1, Luxc;->material_clock_hand:I
+    sget v1, Lw6d;->material_clock_hand:I
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -93,17 +93,17 @@
 
     invoke-direct {v1, v2, v3}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    new-instance v2, Lar5;
+    new-instance v2, Lwu5;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3, v1}, Lar5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lwu5;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    sget v1, Luxc;->selection_type:I
+    sget v1, Lw6d;->selection_type:I
 
     const/16 v2, 0xc
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    sget v1, Luxc;->selection_type:I
+    sget v1, Lw6d;->selection_type:I
 
     const/16 v2, 0xa
 

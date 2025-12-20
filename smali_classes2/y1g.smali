@@ -1,513 +1,371 @@
 .class public final Ly1g;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljavax/net/ssl/X509TrustManager;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lxh2;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lb2g;
 
-.field public final c:Ljavax/net/ssl/X509TrustManager;
+.field public final synthetic Z:Landroid/content/Context;
 
-.field public final d:Lbwf;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 4
+.method public constructor <init>(Lxh2;Lb2g;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly1g;->X:Lxh2;
 
-    iput-object p1, p0, Ly1g;->a:Ljava/lang/String;
+    iput-object p2, p0, Ly1g;->Y:Lb2g;
 
-    const-class p1, Ly1g;
+    iput-object p3, p0, Ly1g;->Z:Landroid/content/Context;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    iput-object p1, p0, Ly1g;->b:Ljava/lang/String;
-
-    new-instance v0, Lkvf;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Lkvf;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lbwf;
-
-    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object v1, p0, Ly1g;->d:Lbwf;
-
-    sget-object v0, Lwqi;->a:Ll6b;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Llg8;->d:Llg8;
-
-    invoke-virtual {v0, v2}, Ll6b;->b(Llg8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "init, useX509Extension=true"
-
-    invoke-virtual {v0, v2, p1, v3, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
-
-    invoke-virtual {p1}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    aget-object p1, p1, v0
-
-    check-cast p1, Ljavax/net/ssl/X509TrustManager;
-
-    iput-object p1, p0, Ly1g;->c:Ljavax/net/ssl/X509TrustManager;
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ly1g;->b:Ljava/lang/String;
+    check-cast p1, Lac4;
 
-    sget-object v1, Lwqi;->a:Ll6b;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v1, :cond_0
+    invoke-virtual {p0, p1, p2}, Ly1g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    sget-object v2, Llg8;->d:Llg8;
+    check-cast p1, Ly1g;
 
-    invoke-virtual {v1, v2}, Ll6b;->b(Llg8;)Z
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result v3
+    invoke-virtual {p1, p2}, Ly1g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v3, :cond_1
+    move-result-object p1
 
-    const-string v3, "checkClientTrusted, authType="
-
-    invoke-static {v3, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Ly1g;->c:Ljavax/net/ssl/X509TrustManager;
-
-    invoke-interface {v0, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 11
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    sget-object v0, Llg8;->d:Llg8;
+    new-instance p1, Ly1g;
 
-    const-string v1, "checkServerTrusted, use X509 extension, host="
+    iget-object v0, p0, Ly1g;->Y:Lb2g;
 
-    iget-object v2, p0, Ly1g;->b:Ljava/lang/String;
+    iget-object v1, p0, Ly1g;->Z:Landroid/content/Context;
 
-    sget-object v3, Lwqi;->a:Ll6b;
+    iget-object v2, p0, Ly1g;->X:Lxh2;
 
-    const/4 v4, 0x0
+    invoke-direct {p1, v2, v0, v1, p2}, Ly1g;-><init>(Lxh2;Lb2g;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v3, :cond_0
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 25
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Ly1g;->Y:Lb2g;
+
+    iget-object v2, v1, Lb2g;->x0:Ld68;
+
+    iget-object v3, v1, Lb2g;->w0:Ld68;
+
+    iget-object v4, v1, Lb2g;->z0:Ld68;
+
+    iget-object v5, v1, Lb2g;->Z:Ld68;
+
+    iget v6, v0, Ly1g;->o:I
+
+    sget-object v7, Lv2h;->a:Lv2h;
+
+    const/4 v8, 0x1
+
+    iget-object v9, v0, Ly1g;->X:Lxh2;
+
+    if-eqz v6, :cond_1
+
+    if-ne v6, v8, :cond_0
+
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    move-object/from16 v6, p1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    move-result v5
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eqz v5, :cond_1
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v5, "checkServerTrusted, authType="
-
-    invoke-static {v5, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v0, v2, v5, v4}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw v1
 
     :cond_1
-    :goto_0
-    :try_start_0
-    iget-object v2, p0, Ly1g;->d:Lbwf;
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lbwf;->getValue()Ljava/lang/Object;
+    if-nez v9, :cond_2
 
-    move-result-object v2
-
-    check-cast v2, Landroid/net/http/X509TrustManagerExtensions;
-
-    if-eqz v2, :cond_6
-
-    iget-object v2, p0, Ly1g;->a:Ljava/lang/String;
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
+    return-object v7
 
     :cond_2
-    iget-object v2, p0, Ly1g;->b:Ljava/lang/String;
+    iget-object v6, v1, Lb2g;->b:Laof;
 
-    sget-object v3, Lwqi;->a:Ll6b;
+    new-instance v10, Li83;
 
-    if-nez v3, :cond_3
+    const/16 v11, 0xc
 
-    goto :goto_1
+    invoke-direct {v10, v6, v11}, Li83;-><init>(Lf76;I)V
+
+    iput v8, v0, Ly1g;->o:I
+
+    invoke-static {v10, v0}, Lqx0;->p(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    sget-object v8, Lbc4;->a:Lbc4;
+
+    if-ne v6, v8, :cond_3
+
+    return-object v8
 
     :cond_3
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    :goto_0
+    move-object v14, v6
 
-    move-result v5
+    check-cast v14, Lud2;
 
-    if-eqz v5, :cond_4
+    new-instance v10, Lm2g;
 
-    iget-object v5, p0, Ly1g;->a:Ljava/lang/String;
+    iget-object v6, v1, Lb2g;->t0:Ld68;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-interface {v6}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v6
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v11, v6
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v11, Lo2b;
 
-    move-result-object v1
+    iget-object v6, v1, Lb2g;->u0:Ld68;
 
-    invoke-virtual {v3, v0, v2, v1, v4}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v6}, Ld68;->getValue()Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v6
 
-    :catch_0
-    move-exception p2
+    move-object v12, v6
 
-    goto :goto_3
+    check-cast v12, Lca3;
 
-    :cond_4
-    :goto_1
-    iget-object v1, p0, Ly1g;->d:Lbwf;
+    iget-object v13, v1, Lb2g;->Y:Ld68;
 
-    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-interface {v5}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v6
 
-    check-cast v1, Landroid/net/http/X509TrustManagerExtensions;
+    move-object v15, v6
 
-    if-eqz v1, :cond_5
+    check-cast v15, Luhe;
 
-    iget-object v2, p0, Ly1g;->a:Ljava/lang/String;
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, p1, p2, v2}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+    move-result-object v6
 
-    :cond_5
-    return-void
+    move-object/from16 v16, v6
 
-    :cond_6
-    :goto_2
-    iget-object v1, p0, Ly1g;->c:Ljavax/net/ssl/X509TrustManager;
+    check-cast v16, Lodb;
 
-    invoke-interface {v1, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v6
 
-    :goto_3
-    iget-object v1, p0, Ly1g;->b:Ljava/lang/String;
+    move-object/from16 v17, v6
 
-    const-string v2, "server certificate chain not trusted"
+    check-cast v17, Lpfc;
 
-    invoke-static {v1, v2, p2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v6
 
-    if-eqz p1, :cond_9
+    move-object/from16 v18, v6
 
-    iget-object v2, p0, Ly1g;->b:Ljava/lang/String;
+    check-cast v18, Lufc;
 
-    sget-object v3, Lwqi;->a:Ll6b;
+    iget-object v6, v1, Lb2g;->y0:Ld68;
 
-    if-nez v3, :cond_7
+    invoke-interface {v6}, Ld68;->getValue()Ljava/lang/Object;
 
-    goto :goto_5
+    move-result-object v6
 
-    :cond_7
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    move-object/from16 v19, v6
 
-    move-result v5
+    check-cast v19, Lute;
 
-    if-eqz v5, :cond_9
+    iget-object v6, v1, Lb2g;->d:Ld68;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    iget-object v8, v1, Lb2g;->c:Ld68;
 
-    const-string v6, "\n"
+    move-object/from16 v24, v2
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, v1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    array-length v6, p1
+    invoke-virtual {v1}, Lb2g;->s()Lbbg;
 
-    move v7, v1
+    move-result-object v23
 
-    :goto_4
-    if-ge v7, v6, :cond_8
+    move-object/from16 v22, v2
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object/from16 v20, v6
 
-    const/16 v8, 0x2e
+    move-object/from16 v21, v8
 
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct/range {v10 .. v23}, Lm2g;-><init>(Lo2b;Lca3;Ld68;Lud2;Luhe;Lodb;Lpfc;Lufc;Lute;Ld68;Ld68;Lkotlinx/coroutines/internal/ContextScope;Lbbg;)V
 
-    const/16 v8, 0x20
+    new-instance v2, Ldc3;
 
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lb2g;->s()Lbbg;
 
-    aget-object v8, p1, v7
+    move-result-object v6
 
-    invoke-static {v5, v8}, Ljib;->a(Ljava/lang/StringBuilder;Ljava/security/cert/X509Certificate;)Ljava/lang/StringBuilder;
+    iget-object v8, v1, Lb2g;->v0:Ld68;
 
-    add-int/lit8 v7, v7, 0x1
+    invoke-interface {v8}, Ld68;->getValue()Ljava/lang/Object;
 
-    goto :goto_4
+    move-result-object v8
 
-    :cond_8
-    new-instance p1, Ljava/lang/StringBuilder;
+    check-cast v8, Lhz3;
 
-    const-string v6, "server certificate chain: "
+    invoke-virtual {v1}, Lb2g;->s()Lbbg;
 
-    invoke-direct {p1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v11
 
-    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v5}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v12
 
-    move-result-object p1
+    move-object v14, v12
 
-    invoke-virtual {v3, v0, v2, p1, v4}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v14, Luhe;
 
-    :cond_9
-    :goto_5
-    :try_start_1
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v4
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    check-cast v4, Lodb;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v3, p0, Ly1g;->c:Ljavax/net/ssl/X509TrustManager;
-
-    invoke-interface {v3}, Ljavax/net/ssl/X509TrustManager;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    move v5, v1
+    move-object/from16 v16, v3
 
-    :goto_6
-    array-length v6, v3
-    :try_end_1
-    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+    check-cast v16, Lpfc;
 
-    if-ge v5, v6, :cond_e
+    invoke-interface/range {v24 .. v24}, Ld68;->getValue()Ljava/lang/Object;
 
-    add-int/lit8 v6, v5, 0x1
+    move-result-object v3
 
-    :try_start_2
-    aget-object v5, v3, v5
-    :try_end_2
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/security/GeneralSecurityException; {:try_start_2 .. :try_end_2} :catch_1
+    move-object/from16 v17, v3
 
-    :try_start_3
-    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
+    check-cast v17, Lufc;
 
-    move-result-object v7
+    iget-object v3, v1, Lb2g;->c:Ld68;
 
-    if-eqz v7, :cond_a
+    iget-object v12, v1, Lb2g;->d:Ld68;
 
-    invoke-interface {v7}, Ljava/security/Principal;->getName()Ljava/lang/String;
+    new-instance v13, Ly3;
 
-    move-result-object v7
+    invoke-direct {v13}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_7
+    iput-object v8, v13, Ly3;->a:Ljava/lang/Object;
 
-    :catch_1
-    move-exception p1
+    iput-object v11, v13, Ly3;->b:Ljava/lang/Object;
 
-    goto :goto_a
+    new-instance v8, Lh1g;
 
-    :cond_a
-    move-object v7, v4
+    iget-object v11, v0, Ly1g;->X:Lxh2;
 
-    :goto_7
-    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+    invoke-direct {v8, v11}, Lh1g;-><init>(Lxh2;)V
 
-    move-result-object v8
+    iput-object v8, v13, Ly3;->c:Ljava/lang/Object;
 
-    if-eqz v8, :cond_b
+    new-instance v8, Lmp2;
 
-    invoke-interface {v8}, Ljava/security/Principal;->getName()Ljava/lang/String;
+    const/16 v11, 0x8
 
-    move-result-object v8
-    :try_end_3
-    .catch Ljava/security/GeneralSecurityException; {:try_start_3 .. :try_end_3} :catch_1
+    invoke-direct {v8, v13, v11, v3}, Lmp2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    goto :goto_8
+    new-instance v3, Lz7g;
 
-    :cond_b
-    move-object v8, v4
+    invoke-direct {v3, v8}, Lz7g;-><init>(Lmq6;)V
 
-    :goto_8
-    const/4 v9, 0x1
+    iput-object v3, v13, Ly3;->d:Ljava/lang/Object;
 
-    const-string v10, "comodo"
+    new-instance v3, La1i;
 
-    if-eqz v7, :cond_c
+    new-instance v15, Lryc;
 
-    :try_start_4
-    invoke-virtual {v7, p1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    const/4 v8, 0x7
 
-    move-result-object v7
+    const/4 v11, 0x0
 
-    invoke-static {v7, v10, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    invoke-direct {v15, v14, v4, v11, v8}, Lryc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    move-result v7
+    new-instance v4, Lxp8;
 
-    if-ne v7, v9, :cond_c
+    invoke-direct {v4, v8, v13}, Lxp8;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_9
+    move-object/from16 v18, v13
 
-    :cond_c
-    if-eqz v8, :cond_d
+    move-object v13, v3
 
-    invoke-virtual {v8, p1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    move-object/from16 v3, v18
 
-    move-result-object v7
+    move-object/from16 v19, v4
 
-    invoke-static {v7, v10, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    move-object/from16 v18, v12
 
-    move-result v7
+    invoke-direct/range {v13 .. v19}, La1i;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    if-ne v7, v9, :cond_d
+    iput-object v13, v3, Ly3;->o:Ljava/lang/Object;
 
-    :goto_9
-    invoke-static {v2, v5}, Ljib;->a(Ljava/lang/StringBuilder;Ljava/security/cert/X509Certificate;)Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    :cond_d
-    move v5, v6
+    iput-object v9, v2, Ldc3;->a:Ljava/lang/Object;
 
-    goto :goto_6
+    iput-object v6, v2, Ldc3;->b:Ljava/lang/Object;
 
-    :catch_2
-    move-exception p1
+    iput-object v10, v2, Ldc3;->c:Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    iput-object v3, v2, Ldc3;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    new-instance v3, Lf1c;
 
-    move-result-object p1
+    iget-object v4, v0, Ly1g;->Z:Landroid/content/Context;
 
-    invoke-direct {v0, p1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4, v9, v5}, Lf1c;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    throw v0
+    iput-object v9, v1, Lb2g;->P0:Lxh2;
 
-    :cond_e
-    iget-object p1, p0, Ly1g;->b:Ljava/lang/String;
+    iput-object v10, v1, Lb2g;->N0:Lm2g;
 
-    sget-object v1, Lwqi;->a:Ll6b;
+    iput-object v2, v1, Lb2g;->O0:Ldc3;
 
-    if-eqz v1, :cond_f
+    iput-object v3, v1, Lb2g;->Q0:Lf1c;
 
-    invoke-virtual {v1, v0}, Ll6b;->b(Llg8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_f
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "trusted store certificates: "
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v0, p1, v2, v4}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_4
-    .catch Ljava/security/GeneralSecurityException; {:try_start_4 .. :try_end_4} :catch_1
-
-    goto :goto_b
-
-    :goto_a
-    iget-object v0, p0, Ly1g;->b:Ljava/lang/String;
-
-    const-string v1, "failed to log trusted store certificates"
-
-    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_f
-    :goto_b
-    throw p2
-.end method
-
-.method public final getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
-    .locals 1
-
-    iget-object v0, p0, Ly1g;->c:Ljavax/net/ssl/X509TrustManager;
-
-    invoke-interface {v0}, Ljavax/net/ssl/X509TrustManager;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
-
-    move-result-object v0
-
-    return-object v0
+    return-object v7
 .end method

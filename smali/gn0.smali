@@ -1,163 +1,262 @@
 .class public final Lgn0;
-.super Lmc7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgn0;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lse8;
 
 
 # instance fields
-.field public final b:[B
+.field public final a:Lse8;
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lse8;)V
+    .locals 1
 
-    new-instance v0, Le8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x9
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Le8;-><init>(I)V
+    iput v0, p0, Lgn0;->b:I
 
-    sput-object v0, Lgn0;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v0, -0x1
 
-    return-void
-.end method
+    iput v0, p0, Lgn0;->c:I
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    iput v0, p0, Lgn0;->d:I
 
-    .line 3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iput-object v0, p0, Lgn0;->o:Ljava/lang/Object;
 
-    sget v1, Lxxg;->a:I
-
-    invoke-direct {p0, v0}, Lmc7;-><init>(Ljava/lang/String;)V
-
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgn0;->b:[B
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;[B)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lmc7;-><init>(Ljava/lang/String;)V
-
-    .line 2
-    iput-object p2, p0, Lgn0;->b:[B
+    iput-object p1, p0, Lgn0;->a:Lse8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgn0;->b:I
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    return-void
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    if-eqz p1, :cond_2
+    iget-object v2, p0, Lgn0;->a:Lse8;
 
-    const-class v2, Lgn0;
+    if-eq v0, v1, :cond_3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v1, 0x2
 
-    move-result-object v3
+    if-eq v0, v1, :cond_2
 
-    if-eq v2, v3, :cond_1
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lgn0;
+    iget v0, p0, Lgn0;->c:I
 
-    iget-object v2, p0, Lmc7;->a:Ljava/lang/String;
+    iget v1, p0, Lgn0;->d:I
 
-    iget-object v3, p1, Lmc7;->a:Ljava/lang/String;
+    iget-object v3, p0, Lgn0;->o:Ljava/lang/Object;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v2, v0, v1, v3}, Lse8;->v(IILjava/lang/Object;)V
 
-    move-result v2
+    goto :goto_0
 
-    if-eqz v2, :cond_2
+    :cond_2
+    iget v0, p0, Lgn0;->c:I
 
-    iget-object v2, p0, Lgn0;->b:[B
+    iget v1, p0, Lgn0;->d:I
 
-    iget-object p1, p1, Lgn0;->b:[B
+    invoke-interface {v2, v0, v1}, Lse8;->q(II)V
 
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lgn0;->c:I
+
+    iget v1, p0, Lgn0;->d:I
+
+    invoke-interface {v2, v0, v1}, Lse8;->i(II)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgn0;->o:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgn0;->b:I
+
+    return-void
+.end method
+
+.method public final b(II)V
+    .locals 1
+
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iget-object v0, p0, Lgn0;->a:Lse8;
+
+    invoke-interface {v0, p1, p2}, Lse8;->b(II)V
+
+    return-void
+.end method
+
+.method public final i(II)V
+    .locals 4
+
+    iget v0, p0, Lgn0;->b:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lgn0;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    iget v2, p0, Lgn0;->d:I
+
+    add-int v3, v0, v2
+
+    if-gt p1, v3, :cond_0
+
+    add-int/2addr v2, p2
+
+    iput v2, p0, Lgn0;->d:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    iput p1, p0, Lgn0;->c:I
 
-    return v0
+    return-void
 
-    :cond_2
-    :goto_0
-    return v1
+    :cond_0
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iput p1, p0, Lgn0;->c:I
+
+    iput p2, p0, Lgn0;->d:I
+
+    iput v1, p0, Lgn0;->b:I
+
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final q(II)V
     .locals 3
 
-    iget-object v0, p0, Lmc7;->a:Ljava/lang/String;
+    iget v0, p0, Lgn0;->b:I
 
-    const/16 v1, 0x1f
+    const/4 v1, 0x2
 
-    const/16 v2, 0x20f
+    if-ne v0, v1, :cond_0
 
-    invoke-static {v2, v1, v0}, Lu45;->e(IILjava/lang/String;)I
+    iget v0, p0, Lgn0;->c:I
 
-    move-result v0
+    if-lt v0, p1, :cond_0
 
-    iget-object v1, p0, Lgn0;->b:[B
+    add-int v2, p1, p2
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+    if-gt v0, v2, :cond_0
 
-    move-result v1
+    iget v0, p0, Lgn0;->d:I
 
-    add-int/2addr v1, v0
+    add-int/2addr v0, p2
 
-    return v1
+    iput v0, p0, Lgn0;->d:I
+
+    iput p1, p0, Lgn0;->c:I
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iput p1, p0, Lgn0;->c:I
+
+    iput p2, p0, Lgn0;->d:I
+
+    iput v1, p0, Lgn0;->b:I
+
+    return-void
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final v(IILjava/lang/Object;)V
+    .locals 5
 
-    iget-object p2, p0, Lmc7;->a:Ljava/lang/String;
+    iget v0, p0, Lgn0;->b:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    const/4 v1, 0x3
 
-    iget-object p2, p0, Lgn0;->b:[B
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    iget v0, p0, Lgn0;->c:I
+
+    iget v2, p0, Lgn0;->d:I
+
+    add-int/2addr v2, v0
+
+    if-gt p1, v2, :cond_0
+
+    add-int v3, p1, p2
+
+    if-lt v3, v0, :cond_0
+
+    iget-object v4, p0, Lgn0;->o:Ljava/lang/Object;
+
+    if-ne v4, p3, :cond_0
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iput p1, p0, Lgn0;->c:I
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iget p2, p0, Lgn0;->c:I
+
+    sub-int/2addr p1, p2
+
+    iput p1, p0, Lgn0;->d:I
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lgn0;->a()V
+
+    iput p1, p0, Lgn0;->c:I
+
+    iput p2, p0, Lgn0;->d:I
+
+    iput-object p3, p0, Lgn0;->o:Ljava/lang/Object;
+
+    iput v1, p0, Lgn0;->b:I
 
     return-void
 .end method

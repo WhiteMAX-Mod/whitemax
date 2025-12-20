@@ -1,34 +1,26 @@
 .class public final Ll9;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-.field public final synthetic Y:Lm9;
-
-.field public final synthetic Z:Ljava/util/Set;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILm9;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
     .locals 0
 
-    iput p1, p0, Ll9;->X:I
+    iput-object p2, p0, Ll9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-    iput-object p2, p0, Ll9;->Y:Lm9;
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Ll9;->Z:Ljava/util/Set;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf84;
+    check-cast p1, Ljava/util/Set;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -48,143 +40,53 @@
 
     check-cast p1, Ll9;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Ll9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
-    new-instance p1, Ll9;
+    new-instance v0, Ll9;
 
-    iget-object v0, p0, Ll9;->Y:Lm9;
+    iget-object v1, p0, Ll9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-    iget-object v1, p0, Ll9;->Z:Ljava/util/Set;
+    invoke-direct {v0, p2, v1}, Ll9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
 
-    iget v2, p0, Ll9;->X:I
+    iput-object p1, v0, Ll9;->o:Ljava/lang/Object;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Ll9;-><init>(ILm9;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    .locals 4
 
-    iget v0, p0, Ll9;->o:I
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/4 v1, 0x2
+    iget-object p1, p0, Ll9;->o:Ljava/lang/Object;
 
-    iget-object v2, p0, Ll9;->Y:Lm9;
+    check-cast p1, Ljava/util/Set;
 
-    const/4 v3, 0x1
-
-    sget-object v4, Lg84;->a:Lg84;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    move-object v8, p0
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    move-object v8, p0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget p1, p0, Ll9;->X:I
-
-    sget v0, Lv8b;->i:I
-
-    if-ne p1, v0, :cond_3
-
-    move v10, v3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p1, 0x0
-
-    move v10, p1
-
-    :goto_0
-    sget-object p1, Lm9;->i:[Lyy7;
-
-    iget-object p1, v2, Lm9;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Lei3;->a0(Ljava/util/Collection;)[J
 
     move-result-object p1
 
-    move-object v5, p1
+    iget-object v0, p0, Ll9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-    check-cast v5, Lw63;
+    iget-object v1, v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->v0:Lks;
 
-    iget-wide v6, v2, Lm9;->a:J
+    sget-object v2, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->y0:[Lp38;
 
-    iget-object p1, p0, Ll9;->Z:Ljava/util/Set;
+    const/4 v3, 0x2
 
-    invoke-static {p1}, Lue3;->d0(Ljava/lang/Iterable;)Ljava/util/List;
+    aget-object v2, v2, v3
 
-    move-result-object v9
+    invoke-virtual {v1, v0, p1}, Lks;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    iput v3, p0, Ll9;->o:I
-
-    move-object v8, p0
-
-    invoke-virtual/range {v5 .. v10}, Lw63;->d(JLq44;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    iget-object p1, v2, Lm9;->e:Ljve;
-
-    sget-object v0, Ljc3;->b:Ljc3;
-
-    iput v1, v8, Ll9;->o:I
-
-    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_5
-
-    :goto_2
-    return-object v4
-
-    :cond_5
-    :goto_3
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

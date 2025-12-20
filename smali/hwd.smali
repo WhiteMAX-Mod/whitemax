@@ -1,187 +1,193 @@
-.class public final synthetic Lhwd;
-.super Ljava/lang/Object;
+.class public final Lhwd;
+.super Llwd;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lth4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Lcke;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lqj6;Lal7;Lcke;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput p1, p0, Lhwd;->a:I
+    invoke-direct {p0, p1, p2, p3, p4}, Llwd;-><init>(Lqj6;Ljava/util/List;Lmke;Ljava/util/List;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lhwd;->X:Lcke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final B()J
+    .locals 2
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    iget-wide v0, v0, Lcke;->d:J
+
+    return-wide v0
+.end method
+
+.method public final C(J)J
+    .locals 1
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    invoke-virtual {v0, p1, p2}, Lcke;->e(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final D(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->c(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b(J)J
+    .locals 1
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    invoke-virtual {v0, p1, p2}, Lcke;->h(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final c()Lth4;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final d()Lugd;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final f(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->f(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final i(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lhwd;->X:Lcke;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->d(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final j(JJ)J
     .locals 3
 
-    iget v0, p0, Lhwd;->a:I
+    iget-object v0, p0, Lhwd;->X:Lcke;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lcke;->f:Ljava/util/List;
 
-    check-cast p1, Lo7g;
+    if-eqz v1, :cond_0
 
-    check-cast p2, Lv74;
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->a(Lo7g;Lv74;)Lo7g;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p2, Lv74;
-
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->b(Ljava/lang/Object;Lv74;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lttg;
-
-    check-cast p2, Lttg;
-
-    iget p2, p2, Lttg;->e:F
-
-    iget p1, p1, Lttg;->e:F
-
-    cmpg-float p1, p2, p1
-
-    if-gtz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
+    return-wide p1
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->d(JJ)J
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-wide v1
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->c(JJ)J
 
-    return-object p1
+    move-result-wide p3
 
-    :pswitch_2
-    check-cast p1, Lxhe;
+    add-long/2addr p3, v1
 
-    check-cast p2, Lxhe;
+    invoke-virtual {v0, p3, p4}, Lcke;->h(J)J
 
-    iget-wide v0, p1, Lxhe;->a:J
+    move-result-wide v1
 
-    iget-wide p1, p2, Lxhe;->a:J
+    invoke-virtual {v0, p3, p4, p1, p2}, Lcke;->f(JJ)J
 
-    cmp-long p1, v0, p1
+    move-result-wide p1
 
-    if-lez p1, :cond_1
+    add-long/2addr p1, v1
 
-    const/4 p1, -0x1
+    iget-wide p3, v0, Lcke;->i:J
 
-    goto :goto_1
+    sub-long/2addr p1, p3
 
-    :cond_1
-    if-nez p1, :cond_2
+    return-wide p1
+.end method
 
-    const/4 p1, 0x0
+.method public final k(J)Lugd;
+    .locals 1
 
-    goto :goto_1
+    iget-object v0, p0, Lhwd;->X:Lcke;
 
-    :cond_2
-    const/4 p1, 0x1
-
-    :goto_1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p0, p1, p2}, Lcke;->i(Lhwd;J)Lugd;
 
     move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_3
-    check-cast p1, Ljava/util/List;
+.method public final u(JJ)J
+    .locals 1
 
-    check-cast p2, Ljava/util/List;
+    iget-object v0, p0, Lhwd;->X:Lcke;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcke;->g(JJ)J
 
-    return-object p1
+    move-result-wide p1
 
-    :pswitch_4
-    check-cast p1, Lj6e;
+    return-wide p1
+.end method
 
-    check-cast p2, Landroid/view/View;
+.method public final z()Z
+    .locals 1
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    iget-object v0, p0, Lhwd;->X:Lcke;
 
-    return-object p1
+    invoke-virtual {v0}, Lcke;->j()Z
 
-    :pswitch_5
-    check-cast p1, Lww3;
+    move-result v0
 
-    check-cast p2, Lww3;
-
-    new-instance v0, Ln8a;
-
-    iget-object p1, p1, Lww3;->a:Ln8a;
-
-    iget v1, p1, Ln8a;->d:I
-
-    iget-object p2, p2, Lww3;->a:Ln8a;
-
-    iget v2, p2, Ln8a;->d:I
-
-    add-int/2addr v1, v2
-
-    invoke-direct {v0, v1}, Ln8a;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Ln8a;->b(Ln8a;)V
-
-    invoke-virtual {v0, p2}, Ln8a;->b(Ln8a;)V
-
-    new-instance p1, Lww3;
-
-    invoke-direct {p1, v0}, Lww3;-><init>(Ln8a;)V
-
-    return-object p1
-
-    :pswitch_6
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lv74;
-
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

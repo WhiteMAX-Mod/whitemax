@@ -3,40 +3,83 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltud;
+.implements Lo8i;
 
 
 # instance fields
-.field public final synthetic a:Ljud;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljud;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr8i;->a:Ljud;
+    iput-boolean p1, p0, Lr8i;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lae4;Z)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Ldj;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x7
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p1, p2, v1}, Ldj;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    return v0
 
-    iget-object p1, p0, Lr8i;->a:Ljud;
+    :cond_0
+    instance-of v1, p1, Lr8i;
 
-    iget-object p1, p1, Ljud;->f:Landroid/os/Handler;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lr8i;
+
+    iget-boolean v1, p0, Lr8i;->a:Z
+
+    iget-boolean p1, p1, Lr8i;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lr8i;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShowWebView(showBackButton="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lr8i;->a:Z
+
+    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

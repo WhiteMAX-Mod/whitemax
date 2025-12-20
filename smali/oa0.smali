@@ -4,44 +4,22 @@
 
 
 # instance fields
-.field public final a:Lj48;
+.field public final a:I
 
-.field public final b:Lp90;
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Lj48;Lp90;)V
+.method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput p1, p0, Loa0;->a:I
 
-    iput-object p1, p0, Loa0;->a:Lj48;
-
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Loa0;->b:Lp90;
+    iput-object p2, p0, Loa0;->b:Ljava/lang/Throwable;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraId"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null lifecycleOwner"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
@@ -60,44 +38,44 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     check-cast p1, Loa0;
 
-    iget-object v1, p0, Loa0;->a:Lj48;
+    iget v1, p1, Loa0;->a:I
 
-    iget-object v3, p1, Loa0;->a:Lj48;
+    iget-object p1, p1, Loa0;->b:Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v3, p0, Loa0;->a:I
 
-    move-result v1
+    if-ne v3, v1, :cond_2
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Loa0;->b:Ljava/lang/Throwable;
 
-    iget-object v1, p0, Loa0;->b:Lp90;
+    if-nez v1, :cond_1
 
-    iget-object p1, p1, Loa0;->b:Lp90;
+    if-nez p1, :cond_2
 
-    invoke-virtual {v1, p1}, Lp90;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
+    :goto_0
     return v0
 
-    :cond_1
+    :cond_2
     return v2
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Loa0;->a:Lj48;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Loa0;->a:I
 
     const v1, 0xf4243
 
@@ -105,12 +83,20 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Loa0;->b:Lp90;
+    iget-object v1, p0, Loa0;->b:Ljava/lang/Throwable;
 
-    invoke-virtual {v1}, Lp90;->hashCode()I
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
@@ -121,19 +107,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Key{lifecycleOwner="
+    const-string v1, "StateError{code="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Loa0;->a:Lj48;
+    iget v1, p0, Loa0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", cameraId="
+    const-string v1, ", cause="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Loa0;->b:Lp90;
+    iget-object v1, p0, Loa0;->b:Ljava/lang/Throwable;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

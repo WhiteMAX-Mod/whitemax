@@ -1,177 +1,82 @@
 .class public final Ld0f;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lone/me/settings/SettingsListScreen;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lc0f;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
 
-    iget-boolean v0, p1, Lc0f;->a:Z
+    const/4 p2, 0x2
 
-    iput-boolean v0, p0, Ld0f;->a:Z
-
-    iget-boolean v0, p1, Lc0f;->b:Z
-
-    iput-boolean v0, p0, Ld0f;->b:Z
-
-    iget-boolean v0, p1, Lc0f;->c:Z
-
-    iput-boolean v0, p0, Ld0f;->c:Z
-
-    iget-boolean v0, p1, Lc0f;->e:Z
-
-    iput-boolean v0, p0, Ld0f;->e:Z
-
-    iget-boolean v0, p1, Lc0f;->d:Z
-
-    iput-boolean v0, p0, Ld0f;->d:Z
-
-    iget-boolean p1, p1, Lc0f;->f:Z
-
-    iput-boolean p1, p0, Ld0f;->f:Z
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ljava/util/List;
 
-    goto :goto_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    if-eqz p1, :cond_7
+    invoke-virtual {p0, p1, p2}, Ld0f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    move-result-object v0
-
-    const-class v1, Ld0f;
-
-    if-eq v1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
     check-cast p1, Ld0f;
 
-    iget-boolean v0, p0, Ld0f;->a:Z
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-boolean v1, p1, Ld0f;->a:Z
+    invoke-virtual {p1, p2}, Ld0f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, p0, Ld0f;->b:Z
-
-    iget-boolean v1, p1, Ld0f;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-boolean v0, p0, Ld0f;->c:Z
-
-    iget-boolean v1, p1, Ld0f;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v0, p0, Ld0f;->d:Z
-
-    iget-boolean v1, p1, Ld0f;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-boolean v0, p0, Ld0f;->f:Z
-
-    iget-boolean v1, p1, Ld0f;->f:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    iget-boolean v0, p0, Ld0f;->e:Z
-
-    iget-boolean p1, p1, Ld0f;->e:Z
-
-    if-ne v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-boolean v0, p0, Ld0f;->a:Z
+    new-instance v0, Ld0f;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
 
-    iget-boolean v1, p0, Ld0f;->b:Z
+    invoke-direct {v0, p2, v1}, Ld0f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
 
-    add-int/2addr v0, v1
+    iput-object p1, v0, Ld0f;->o:Ljava/lang/Object;
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object v0
+.end method
 
-    iget-boolean v1, p0, Ld0f;->c:Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    add-int/2addr v0, v1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Ld0f;->o:Ljava/lang/Object;
 
-    iget-boolean v1, p0, Ld0f;->e:Z
+    check-cast p1, Ljava/util/List;
 
-    add-int/2addr v0, v1
+    iget-object v0, p0, Ld0f;->X:Lone/me/settings/SettingsListScreen;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v0, v0, Lone/me/settings/SettingsListScreen;->y0:Lhze;
 
-    iget-boolean v1, p0, Ld0f;->d:Z
+    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
 
-    add-int/2addr v0, v1
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Ld0f;->f:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object p1
 .end method

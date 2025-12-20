@@ -1,127 +1,51 @@
-.class public final Lsf6;
+.class public abstract Lsf6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+# static fields
+.field public static final a:Lmt7;
 
-.field public final b:Lf1e;
+.field public static final b:Lmt7;
+
+.field public static final c:Lmt7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashSet;Lf1e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmt7;
 
-    iput-object p1, p0, Lsf6;->a:Ljava/util/LinkedHashSet;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lsf6;->b:Lf1e;
+    const/16 v2, 0x13f
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
+
+    sput-object v0, Lsf6;->a:Lmt7;
+
+    new-instance v0, Lmt7;
+
+    const/16 v1, 0x140
+
+    const/16 v2, 0x21b
+
+    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
+
+    sput-object v0, Lsf6;->b:Lmt7;
+
+    new-instance v0, Lmt7;
+
+    const/16 v1, 0x21c
+
+    const v2, 0x7fffffff
+
+    invoke-direct {v0, v1, v2, v3}, Lkt7;-><init>(III)V
+
+    sput-object v0, Lsf6;->c:Lmt7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lsf6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lsf6;
-
-    iget-object v0, p0, Lsf6;->a:Ljava/util/LinkedHashSet;
-
-    iget-object v1, p1, Lsf6;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lsf6;->b:Lf1e;
-
-    iget-object p1, p1, Lsf6;->b:Lf1e;
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lsf6;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lsf6;->b:Lf1e;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ForwardInAppReviewData(triggeredConditions="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lsf6;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", screen="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsf6;->b:Lf1e;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,71 +1,53 @@
 .class public final Lszg;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lk18;
+.field public final synthetic Y:Lyzg;
+
+.field public Z:I
+
+.field public d:Lyzg;
+
+.field public o:Lee8;
 
 
 # direct methods
-.method public constructor <init>(Lw5;)V
-    .locals 1
+.method public constructor <init>(Lyzg;Ll84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lszg;->Y:Lyzg;
 
-    const/16 v0, 0x1f
-
-    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lszg;->a:Lk18;
-
-    const/16 v0, 0x4f
-
-    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lszg;->b:Lk18;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPushTokenGenerated(Ljava/lang/String;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Lszg;->a:Lk18;
+    iput-object p1, p0, Lszg;->X:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    iget p1, p0, Lszg;->Z:I
 
-    move-result-object p1
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Lfxa;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Lfxa;->b()Z
+    iput p1, p0, Lszg;->Z:I
 
-    move-result p1
+    iget-object p1, p0, Lszg;->Y:Lyzg;
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lszg;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lyzg;->s(Lyzg;Lee8;Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lhwa;
-
-    invoke-virtual {p1}, Lhwa;->n()J
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

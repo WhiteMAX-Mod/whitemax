@@ -1,118 +1,156 @@
 .class public final Ltg1;
-.super Lxfh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxg1;
 
-# instance fields
-.field public final X:Lk18;
 
-.field public final Y:Lk18;
+# static fields
+.field public static final a:Ltg1;
 
-.field public final Z:Lk18;
+.field public static final b:J
 
-.field public final b:Llg1;
+.field public static final c:Lbhg;
 
-.field public final c:Lwo1;
+.field public static final d:Ll68;
 
-.field public final d:Lk18;
-
-.field public final o:Lk18;
-
-.field public final s0:Lk18;
-
-.field public final t0:Lk18;
-
-.field public final u0:Lx3;
-
-.field public final v0:Lci5;
+.field public static final o:Leze;
 
 
 # direct methods
-.method public constructor <init>(Llg1;Lwo1;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Lxfh;-><init>()V
+    new-instance v0, Ltg1;
 
-    iput-object p1, p0, Ltg1;->b:Llg1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ltg1;->c:Lwo1;
+    sput-object v0, Ltg1;->a:Ltg1;
 
-    iput-object p3, p0, Ltg1;->d:Lk18;
+    sget-wide v0, Li6b;->a:J
 
-    iput-object p5, p0, Ltg1;->o:Lk18;
+    sput-wide v0, Ltg1;->b:J
 
-    iput-object p6, p0, Ltg1;->X:Lk18;
+    sget v0, Lk6b;->e:I
 
-    iput-object p7, p0, Ltg1;->Y:Lk18;
+    new-instance v1, Lbhg;
 
-    iput-object p4, p0, Ltg1;->Z:Lk18;
+    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
 
-    iput-object p8, p0, Ltg1;->s0:Lk18;
+    sput-object v1, Ltg1;->c:Lbhg;
 
-    iput-object p9, p0, Ltg1;->t0:Lk18;
+    new-instance v0, Ll68;
 
-    invoke-interface {p4}, Lk18;->getValue()Ljava/lang/Object;
+    sget v1, Lg6b;->d:I
 
-    move-result-object p2
+    const/4 v2, 0x0
 
-    check-cast p2, Lu1e;
+    const/4 v3, 0x6
 
-    check-cast p2, Ld2e;
+    invoke-direct {v0, v1, v2, v3}, Ll68;-><init>(III)V
 
-    iget-object p2, p2, Ld2e;->z0:Ltcf;
+    sput-object v0, Ltg1;->d:Ll68;
 
-    new-instance p3, Lx3;
+    sget-object v0, Leze;->a:Leze;
 
-    const/16 p5, 0x9
+    sput-object v0, Ltg1;->o:Leze;
 
-    invoke-direct {p3, p2, p0, p5}, Lx3;-><init>(Lx26;Ljava/lang/Object;I)V
+    return-void
+.end method
 
-    iput-object p3, p0, Ltg1;->u0:Lx3;
 
-    new-instance p2, Lci5;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 p3, 0x0
+    const/4 v0, 0x1
 
-    invoke-direct {p2, p3}, Lci5;-><init>(I)V
+    if-ne p0, p1, :cond_0
 
-    iput-object p2, p0, Ltg1;->v0:Lci5;
-
-    sget-object p2, Llg1;->b:Llg1;
-
-    if-ne p1, p2, :cond_0
-
-    invoke-interface {p4}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lu1e;
-
-    check-cast p1, Ld2e;
-
-    iget-object p1, p1, Ld2e;->t0:Ltcf;
-
-    new-instance p2, Lph0;
-
-    const/16 p3, 0xc
-
-    invoke-direct {p2, p1, p3}, Lph0;-><init>(Lx26;I)V
-
-    new-instance p1, Lqg1;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p0, p3}, Lqg1;-><init>(Ltg1;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lg56;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p2, p1, p4}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    iget-object p1, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Ltg1;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final f()Ln68;
+    .locals 1
+
+    sget-object v0, Ltg1;->d:Ll68;
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Ltg1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lghg;
+    .locals 1
+
+    sget-object v0, Ltg1;->c:Lbhg;
+
+    return-object v0
+.end method
+
+.method public final getType()Leze;
+    .locals 1
+
+    sget-object v0, Ltg1;->o:Leze;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x122eeb95
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Lh6b;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CopyLink"
+
+    return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

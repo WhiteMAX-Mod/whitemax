@@ -1,64 +1,40 @@
-.class public abstract Lgqd;
+.class public final Lgqd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
+.implements Liqd;
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgqd;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final synthetic a:Landroid/content/Context;
+
+.field public final synthetic b:Lhc0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lhc0;Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Lwci;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xf
+    iput-object p1, p0, Lgqd;->b:Lhc0;
 
-    invoke-direct {v0, v1}, Lwci;-><init>(I)V
-
-    sput-object v0, Lgqd;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p2, p0, Lgqd;->a:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final a(Lga0;Ljava/util/concurrent/Executor;)Ls60;
     .locals 2
 
-    move-object p2, p0
+    new-instance v0, Ls60;
 
-    check-cast p2, Lkci;
+    iget-object v1, p0, Lgqd;->a:Landroid/content/Context;
 
-    iget-object v0, p2, Lkci;->a:Landroid/app/PendingIntent;
+    invoke-direct {v0, p1, p2, v1}, Ls60;-><init>(Lga0;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-boolean p2, p2, Lkci;->b:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object v0
 .end method

@@ -20,7 +20,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;",
         "",
-        "Lqqg;",
+        "Lv2h;",
         "onRequestSent",
         "()V",
         "calls-sdk_release"

@@ -1,146 +1,159 @@
 .class public final Lov2;
-.super Ldtf;
+.super Lum;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Lucg;
+.implements Lgzb;
 
 
 # instance fields
-.field public synthetic X:Lf82;
+.field public final d:J
 
-.field public synthetic Y:Lyeb;
-
-.field public final synthetic o:I
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(JJZ)V
     .locals 0
 
-    iput p3, p0, Lov2;->o:I
+    invoke-direct {p0, p1, p2}, Lum;-><init>(J)V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lov2;->d:J
+
+    iput-boolean p5, p0, Lov2;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lov2;->o:I
-
-    check-cast p1, Lf82;
-
-    check-cast p2, Lyeb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lov2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lov2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lov2;->X:Lf82;
-
-    iput-object p2, v0, Lov2;->Y:Lyeb;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lov2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lov2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lov2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lov2;->X:Lf82;
-
-    iput-object p2, v0, Lov2;->Y:Lyeb;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lov2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c()I
     .locals 1
 
-    iget v0, p0, Lov2;->o:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+.method public final d()V
+    .locals 3
 
-    iget-object p1, p0, Lov2;->X:Lf82;
-
-    iget-object v0, p0, Lov2;->Y:Lyeb;
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
+    invoke-virtual {p0}, Lum;->r()Lkeg;
 
     move-result-object v0
 
-    iget v0, v0, Lbf0;->h:I
+    iget-wide v1, p0, Lum;->a:J
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0, v1, v2}, Lkeg;->d(J)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    return-void
+.end method
 
-    return-object p1
+.method public final e(Lxbg;)V
+    .locals 1
 
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lpv2;
 
-    iget-object p1, p0, Lov2;->X:Lf82;
+    iget-object p1, p1, Lpv2;->c:Lvd2;
 
-    iget-object v0, p0, Lov2;->Y:Lyeb;
+    if-eqz p1, :cond_0
 
-    invoke-interface {v0}, Lyeb;->a()Lsy2;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lsy2;->u()Lwcg;
+    invoke-virtual {p0}, Lum;->k()Lch2;
 
     move-result-object v0
 
-    iget-object v0, v0, Lwcg;->a:Ltcg;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    iget-object v0, v0, Ltcg;->a:Lucg;
+    move-result-object p1
 
-    iget v0, v0, Lucg;->d:I
+    invoke-virtual {v0, p1}, Lch2;->j0(Ljava/util/List;)Lwea;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    :cond_0
+    return-void
+.end method
 
-    sget-object p1, Lqqg;->a:Lqqg;
+.method public final f()[B
+    .locals 3
 
-    return-object p1
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;
 
-    nop
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;-><init>()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v1, p0, Lum;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->requestId:J
+
+    iget-wide v1, p0, Lov2;->d:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->chatId:J
+
+    iget-boolean v1, p0, Lov2;->o:Z
+
+    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatPersonalConfig;->hideNonContactBar:Z
+
+    invoke-static {v0}, Lsp9;->toByteArray(Lsp9;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lum;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lhzb;
+    .locals 1
+
+    sget-object v0, Lhzb;->c1:Lhzb;
+
+    return-object v0
+.end method
+
+.method public final h()Lk2;
+    .locals 4
+
+    new-instance v0, Lmj2;
+
+    sget-object v1, Lmob;->l1:Lmob;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v1, v2}, Lmj2;-><init>(Lmob;I)V
+
+    const-string v1, "chatId"
+
+    iget-wide v2, p0, Lov2;->d:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lk2;->v(JLjava/lang/String;)V
+
+    const-string v1, "hideNonContactBar"
+
+    iget-boolean v2, p0, Lov2;->o:Z
+
+    invoke-virtual {v0, v1, v2}, Lk2;->j(Ljava/lang/String;Z)V
+
+    return-object v0
+.end method
+
+.method public final l(Lcbg;)V
+    .locals 0
+
+    iget-object p1, p1, Lcbg;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Lcoj;->a(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lov2;->d()V
+
+    :cond_0
+    return-void
 .end method

@@ -1,156 +1,54 @@
 .class public final Lzjh;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lk18;
+.field public Y:I
+
+.field public final synthetic Z:Lvx;
+
+.field public d:Lvx;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:Lvfa;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
+.method public constructor <init>(Lvx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzjh;->Z:Lvx;
 
-    iput-object p1, p0, Lzjh;->a:Lk18;
-
-    iput-object p2, p0, Lzjh;->b:Lk18;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lnn8;
+    iput-object p1, p0, Lzjh;->X:Ljava/lang/Object;
 
-    invoke-direct {v0}, Lnn8;-><init>()V
+    iget p1, p0, Lzjh;->Y:I
 
-    const-string v1, "UIElementType"
+    const/high16 v0, -0x80000000
 
-    const-string v2, "procced_url_modal_window"
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1, v2}, Lnn8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput p1, p0, Lzjh;->Y:I
 
-    if-eqz p2, :cond_2
+    iget-object p1, p0, Lzjh;->Z:Lvx;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    if-eq p2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-ne p2, v1, :cond_0
-
-    const-string p2, "close"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    const-string p2, "go"
-
-    :goto_0
-    const-string v1, "clickType"
-
-    invoke-virtual {v0, v1, p2}, Lnn8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    invoke-virtual {v0}, Lnn8;->b()Lnn8;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lzjh;->a:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldd;
-
-    new-instance v1, Lxp7;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lxp7;->a:J
-
-    const-string v2, "DANGEROUS_URL_ACTIONS"
-
-    iput-object v2, v1, Lxp7;->c:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    if-eq p1, v2, :cond_4
-
-    const/4 v2, 0x2
-
-    if-ne p1, v2, :cond_3
-
-    const-string p1, "showed"
-
-    goto :goto_1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_4
-    const-string p1, "clicked"
-
-    :goto_1
-    iput-object p1, v1, Lxp7;->d:Ljava/lang/String;
-
-    iget-object p1, p0, Lzjh;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpb3;
-
-    check-cast v2, Lw4e;
-
-    invoke-virtual {v2}, Lw4e;->s()J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lxp7;->b:J
-
-    invoke-virtual {v1, p2}, Lxp7;->c(Ljava/util/Map;)V
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lvx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lpb3;
-
-    check-cast p1, Lpe8;
-
-    invoke-virtual {p1}, Lpe8;->K()J
-
-    move-result-wide p1
-
-    iput-wide p1, v1, Lxp7;->o:J
-
-    invoke-virtual {v1}, Lxp7;->d()Lhg8;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ldd;->h(Lhg8;)V
-
-    return-void
+    return-object p1
 .end method

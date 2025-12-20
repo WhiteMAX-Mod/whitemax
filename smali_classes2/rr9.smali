@@ -1,71 +1,296 @@
-.class public final Lrr9;
-.super Ljava/lang/Object;
+.class public abstract Lrr9;
+.super Ladf;
 .source "SourceFile"
 
 # interfaces
-.implements Lyhd;
+.implements Lh13;
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+.field public final E0:I
 
-.field public final b:Lyu9;
+.field public final F0:I
+
+.field public final G0:I
+
+.field public H0:Lsr9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lyu9;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lwrd;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lrr9;->a:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v0, 0x6
 
-    iput-object p2, p0, Lrr9;->b:Lyu9;
+    int-to-float v0, v0
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lrr9;->E0:I
+
+    const/4 v0, 0x2
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lrr9;->F0:I
+
+    const/16 v0, 0x8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lrr9;->G0:I
+
+    new-instance v0, Lpx;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, p0, p1, v1, v2}, Lpx;-><init>(Ladf;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v0, p1}, Ll5j;->c(Ler6;Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
+.method public abstract F(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
 .end method
 
-.method public final d(Landroid/view/View;)V
-    .locals 2
+.method public final G(Lone/me/messages/list/loader/MessageModel;Landroid/view/View;)V
+    .locals 9
 
-    iget-object v0, p0, Lrr9;->a:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->I(Landroid/view/View;)Landroid/view/View;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-nez v1, :cond_0
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    const/4 v0, 0x0
+    iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    instance-of v3, v0, Lem9;
+
+    if-eqz v3, :cond_0
+
+    move-object v4, v0
+
+    check-cast v4, Lem9;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lmid;
-
-    move-result-object v0
+    const/4 v4, 0x0
 
     :goto_0
-    instance-of v0, v0, Len9;
+    if-eqz v4, :cond_1
 
-    if-eqz v0, :cond_1
+    iget-boolean v4, v4, Lem9;->a:Z
 
-    new-instance v0, Lzn6;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, p1, v1, p0}, Lzn6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
+    goto :goto_1
 
     :cond_1
+    const/4 v4, 0x1
+
+    :goto_1
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
+
+    const/high16 v5, 0x7c000000
+
+    and-int/2addr v5, p1
+
+    const/high16 v6, 0x8000000
+
+    and-int/2addr v6, p1
+
+    iget v7, p0, Lrr9;->E0:I
+
+    if-eqz v6, :cond_2
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_2
+    const/high16 v6, 0x10000000
+
+    and-int/2addr v6, p1
+
+    iget v8, p0, Lrr9;->F0:I
+
+    if-eqz v6, :cond_3
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_3
+    const/high16 v6, 0x20000000
+
+    and-int/2addr v6, p1
+
+    if-eqz v6, :cond_4
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_4
+    const/high16 v6, 0x40000000    # 2.0f
+
+    and-int/2addr v6, p1
+
+    if-eqz v6, :cond_5
+
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_5
+    if-nez p1, :cond_6
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {p1}, Lsr9;->e(I)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    iget v6, p0, Lrr9;->G0:I
+
+    iput v6, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v6, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    :cond_7
+    :goto_2
+    if-nez p1, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    invoke-static {p1}, Lsr9;->e(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    if-eqz v3, :cond_9
+
+    move-object p1, v0
+
+    check-cast p1, Lem9;
+
+    invoke-static {v5}, Lrv0;->a(I)Z
+
+    move-result v5
+
+    iput-boolean v5, p1, Lem9;->a:Z
+
+    :cond_9
+    :goto_3
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    if-ne v1, p1, :cond_b
+
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    if-ne v2, p1, :cond_b
+
+    if-eqz v3, :cond_a
+
+    move-object p1, v0
+
+    check-cast p1, Lem9;
+
+    iget-boolean p1, p1, Lem9;->a:Z
+
+    if-eq v4, p1, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    return-void
+
+    :cond_b
+    :goto_4
+    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public final z(Lie8;)V
+    .locals 1
+
+    check-cast p1, Lone/me/messages/list/loader/MessageModel;
+
+    sget-object v0, Lch5;->a:Lch5;
+
+    invoke-virtual {p0, p1, v0}, Lrr9;->F(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
+
     return-void
 .end method

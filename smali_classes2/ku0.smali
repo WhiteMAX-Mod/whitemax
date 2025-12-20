@@ -1,167 +1,141 @@
-.class public final Lku0;
-.super Ldtf;
+.class public final synthetic Lku0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lmq6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
-
-.field public o:I
+.field public final synthetic b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BottomSheetWidget;I)V
     .locals 0
 
-    iput-wide p1, p0, Lku0;->Y:J
+    iput p2, p0, Lku0;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lku0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    check-cast p1, Lz26;
+    iget v0, p0, Lku0;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {p0, p1, p2}, Lku0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    check-cast p1, Lku0;
+    iget-object v4, p0, Lku0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Lku0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:Lks;
 
-    new-instance v0, Lku0;
+    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
 
-    iget-wide v1, p0, Lku0;->Y:J
+    aget-object v2, v6, v2
 
-    invoke-direct {v0, v1, v2, p2}, Lku0;-><init>(JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v5, v4}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    iput-object p1, v0, Lku0;->X:Ljava/lang/Object;
+    move-result-object v2
 
-    return-object v0
-.end method
+    check-cast v2, Ljava/lang/Boolean;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget v0, p0, Lku0;->o:I
+    move-result v2
 
-    const/4 v1, 0x2
+    if-eqz v2, :cond_0
 
-    const/4 v2, 0x1
-
-    sget-object v3, Lg84;->a:Lg84;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v2, :cond_2
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lku0;->X:Ljava/lang/Object;
-
-    check-cast v0, Lz26;
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lo2j;->l(Landroid/view/View;)V
 
     :cond_0
-    move-object p1, v0
+    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
 
-    goto :goto_0
+    return-object v1
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    iget-object v0, p0, Lku0;->X:Ljava/lang/Object;
-
-    check-cast v0, Lz26;
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lku0;->X:Ljava/lang/Object;
-
-    check-cast p1, Lz26;
-
-    :goto_0
-    iget-object v0, p0, Lq44;->b:Lx74;
-
-    invoke-static {v0}, Leoi;->j(Lx74;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iput-object p1, p0, Lku0;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lku0;->o:I
-
-    iget-wide v4, p0, Lku0;->Y:J
-
-    invoke-static {v4, v5, p0}, Ls8j;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v4}, Lx84;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    if-ne v0, v3, :cond_4
+    if-eqz v0, :cond_2
 
-    goto :goto_2
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    :cond_4
-    move-object v0, p1
+    move-result-object v0
 
-    :goto_1
-    iput-object v0, p0, Lku0;->X:Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    iput v1, p0, Lku0;->o:I
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
 
-    sget-object p1, Lw76;->a:Lw76;
+    move-result-object v0
 
-    invoke-interface {v0, p1, p0}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
 
-    if-ne p1, v3, :cond_0
+    sget v3, Lq48;->a:I
 
-    :goto_2
-    return-object v3
+    sget v3, Lq48;->c:I
 
-    :cond_5
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-static {v3}, Lq48;->b(I)Z
 
-    return-object p1
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0()Z
+
+    move-result v3
+
+    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:Lks;
+
+    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
+
+    aget-object v2, v6, v2
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v5, v4, v2}, Lks;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lo2j;->f(Landroid/view/View;)V
+
+    :cond_1
+    move-object v3, v0
+
+    :cond_2
+    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

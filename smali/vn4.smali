@@ -1,35 +1,29 @@
-.class public interface abstract Lvn4;
+.class public final Lvn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf48;
+
+# instance fields
+.field public final a:Leac;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public d:J
 
 
-# virtual methods
-.method public onDestroy(Lj48;)V
+# direct methods
+.method public constructor <init>(Leac;JJ)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public onPause(Lj48;)V
-    .locals 0
+    iput-object p1, p0, Lvn4;->a:Leac;
 
-    return-void
-.end method
+    iput-wide p2, p0, Lvn4;->b:J
 
-.method public abstract onResume(Lj48;)V
-.end method
-
-.method public onStart(Lj48;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onStop(Lj48;)V
-    .locals 0
+    iput-wide p4, p0, Lvn4;->c:J
 
     return-void
 .end method

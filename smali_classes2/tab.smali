@@ -1,19 +1,17 @@
-.class public abstract Ltab;
+.class public final Ltab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public a:J
 
+.field public b:Ljava/lang/String;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public c:Lxk8;
 
-    sget v0, Lxwc;->sticker_placeholder:I
+.field public d:Ljava/lang/String;
 
-    sput v0, Ltab;->a:I
+.field public e:Ljava/lang/String;
 
-    return-void
-.end method
+.field public f:Ljava/lang/Throwable;

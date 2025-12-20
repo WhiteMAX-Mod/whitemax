@@ -1,42 +1,30 @@
-.class public interface abstract Lsy2;
+.class public final Lsy2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwy2;
 
-# virtual methods
-.method public abstract G()Lth3;
-.end method
 
-.method public abstract g(I)I
-.end method
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
 
-.method public h(Z)Lyt0;
+.field public final b:Ljava/lang/Long;
+
+.field public final c:Ljava/lang/Long;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;)V
     .locals 0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Lsy2;->i()Lyt0;
+    iput-object p1, p0, Lsy2;->a:Ljava/lang/CharSequence;
 
-    move-result-object p1
+    iput-object p2, p0, Lsy2;->b:Ljava/lang/Long;
 
-    return-object p1
+    iput-object p3, p0, Lsy2;->c:Ljava/lang/Long;
 
-    :cond_0
-    invoke-interface {p0}, Lsy2;->r()Lyt0;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract i()Lyt0;
-.end method
-
-.method public abstract k()Lr6i;
-.end method
-
-.method public abstract r()Lyt0;
-.end method
-
-.method public abstract u()Lwcg;
+    return-void
 .end method

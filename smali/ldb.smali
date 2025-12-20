@@ -1,313 +1,148 @@
 .class public final Lldb;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lmdb;
+.field public final b:I
 
-.field public final synthetic Z:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
-
-.field public o:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lmdb;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IJZ)V
     .locals 0
 
-    iput-object p1, p0, Lldb;->Y:Lmdb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lldb;->Z:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
+    iput-wide p2, p0, Lldb;->a:J
 
-    const/4 p1, 0x2
+    iput p1, p0, Lldb;->b:I
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p4, p0, Lldb;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lldb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lldb;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lldb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lldb;
-
-    iget-object v1, p0, Lldb;->Y:Lmdb;
-
-    iget-object v2, p0, Lldb;->Z:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
-
-    invoke-direct {v0, v1, v2, p2}, Lldb;-><init>(Lmdb;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lldb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget v0, p0, Lldb;->o:I
-
-    iget-object v1, p0, Lldb;->Z:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_2
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Lldb;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lldb;
 
-    iget-object p1, p0, Lldb;->X:Ljava/lang/Object;
+    iget-wide v0, p0, Lldb;->a:J
 
-    check-cast p1, Lf84;
+    iget-wide v2, p1, Lldb;->a:J
 
-    iget-object p1, p0, Lldb;->Y:Lmdb;
+    cmp-long v0, v0, v2
 
-    :try_start_1
-    iget-object p1, p1, Lmdb;->a:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v3, p1
-
-    check-cast v3, Lc0b;
-
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->getConversationId()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->getCalleeIds()Ljava/util/List;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v5, 0xa
-
-    invoke-static {p1, v5}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v5
-
-    invoke-direct {v0, v5}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-static {v5}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v5
-
-    new-instance v7, Ljava/lang/Long;
-
-    invoke-direct {v7, v5, v6}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v0}, Lue3;->e0(Ljava/util/Collection;)[J
+    iget v0, p0, Lldb;->b:I
 
-    move-result-object v5
+    iget v1, p1, Lldb;->b:I
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->getChatId()Ljava/lang/Long;
+    if-eq v0, v1, :cond_3
 
-    move-result-object v6
-
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->isVideo()Z
-
-    move-result v7
-
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->getInternalParams()Ljava/lang/String;
-
-    move-result-object v8
-
-    iput v2, p0, Lldb;->o:I
-
-    move-object v9, p0
-
-    invoke-virtual/range {v3 .. v9}, Lc0b;->a(Ljava/lang/String;[JLjava/lang/Long;ZLjava/lang/String;Lldb;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    goto :goto_0
 
     :cond_3
-    :goto_1
-    :try_start_2
-    check-cast p1, Lz1h;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    iget-boolean v0, p0, Lldb;->c:Z
 
-    goto :goto_3
+    iget-boolean p1, p1, Lldb;->c:Z
 
-    :goto_2
-    new-instance v0, Lipd;
+    if-eq v0, p1, :cond_4
 
-    invoke-direct {v0, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+    :goto_0
+    const/4 p1, 0x0
 
-    move-object p1, v0
-
-    :goto_3
-    nop
-
-    instance-of v0, p1, Lipd;
-
-    if-nez v0, :cond_8
-
-    check-cast p1, Lz1h;
-
-    iget-object v0, p1, Lz1h;->o:Ljava/util/List;
-
-    if-eqz v0, :cond_4
-
-    invoke-static {v0}, Lue3;->I(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lx1h;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v0, Lx1h;->b:Ljava/lang/String;
-
-    goto :goto_4
+    return p1
 
     :cond_4
-    const/4 v0, 0x0
+    :goto_1
+    const/4 p1, 0x1
 
-    :goto_4
-    iget-object v2, p1, Lz1h;->d:Ljava/lang/String;
+    return p1
+.end method
 
-    if-eqz v0, :cond_5
+.method public final hashCode()I
+    .locals 3
 
-    new-instance p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
+    iget-wide v0, p0, Lldb;->a:J
 
-    invoke-direct {p1, v0}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    goto :goto_5
+    move-result v0
 
-    :cond_5
-    if-nez v2, :cond_6
+    const/16 v1, 0x1f
 
-    new-instance p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
+    mul-int/2addr v0, v1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v2, p0, Lldb;->b:I
 
-    const-string v1, "internalCallerParams must not be null"
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    invoke-direct {p1, v0}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;-><init>(Ljava/lang/Throwable;)V
+    iget-boolean v1, p0, Lldb;->c:Z
 
-    goto :goto_5
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :cond_6
-    new-instance v0, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;
+    move-result v1
 
-    iget-object p1, p1, Lz1h;->c:Ljava/lang/String;
+    add-int/2addr v1, v0
 
-    if-nez p1, :cond_7
+    return v1
+.end method
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->getConversationId()Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_7
-    invoke-direct {v0, p1, v2}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "Key(animojiId="
 
-    move-object p1, v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_8
-    :goto_5
-    invoke-static {p1}, Lkpd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    iget-wide v1, p0, Lldb;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", size="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lldb;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", overrideAlpha="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lldb;->c:Z
+
+    invoke-static {v0, v1, v3, v2}, Lgg9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    new-instance p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
-
-    invoke-direct {p1, v0}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_6
-    return-object p1
+    return-object v0
 .end method

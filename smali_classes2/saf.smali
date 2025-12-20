@@ -1,91 +1,62 @@
 .class public final Lsaf;
-.super Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqaf;
 
-# static fields
-.field public static final b:Lsaf;
 
-.field public static final c:Lgi4;
+# instance fields
+.field public final a:Labf;
 
-.field public static final d:Lgi4;
+.field public final b:Z
 
-.field public static final e:Lgi4;
-
-.field public static final f:Lgi4;
-
-.field public static final g:Lgi4;
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Labf;ZZ)V
+    .locals 0
 
-    new-instance v0, Lsaf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    iput-object p1, p0, Lsaf;->a:Labf;
 
-    sput-object v0, Lsaf;->b:Lsaf;
+    iput-boolean p2, p0, Lsaf;->b:Z
 
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":start-conversation"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v2
-
-    sput-object v2, Lsaf;->c:Lgi4;
-
-    const-string v2, ":start-conversation/chat"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v2
-
-    sput-object v2, Lsaf;->d:Lgi4;
-
-    const-string v2, ":start-conversation/channel"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v2
-
-    sput-object v2, Lsaf;->e:Lgi4;
-
-    const-string v2, ":chat/add-icon"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Lsaf;->f:Lgi4;
-
-    const-string v1, "id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":start-conversation/add-subscribers"
-
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Lsaf;->g:Lgi4;
+    iput-boolean p3, p0, Lsaf;->c:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lorg/json/JSONObject;
+    .locals 4
+
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "command"
+
+    const-string v2, "change-media-settings"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    iget-boolean v1, p0, Lsaf;->b:Z
+
+    iget-boolean v2, p0, Lsaf;->c:Z
+
+    iget-object v3, p0, Lsaf;->a:Labf;
+
+    invoke-static {v3, v1, v2}, Lsoj;->q(Labf;ZZ)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v2, "mediaSettings"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    return-object v0
 .end method

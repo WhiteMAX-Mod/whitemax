@@ -4,549 +4,674 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;)Ljava/util/ArrayList;
-    .locals 15
+.method public static a(Ljava/util/ArrayDeque;I)[B
+    .locals 6
 
-    new-instance v0, Lorg/json/JSONArray;
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    invoke-direct {v0, p0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    new-instance p0, Ljava/util/ArrayList;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+    new-array p0, v1, [B
 
-    move-result v1
+    return-object p0
 
-    const/4 v2, 0x0
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    array-length v2, v0
+
+    if-ne v2, p1, :cond_1
+
+    return-object v0
+
+    :cond_1
+    array-length v2, v0
+
+    sub-int v2, p1, v2
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
 
     :goto_0
-    if-ge v2, v1, :cond_10
+    if-lez v2, :cond_2
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
     move-result-object v3
 
-    const-string v4, "versionName"
+    check-cast v3, [B
 
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    array-length v4, v3
 
-    move-result-object v8
+    invoke-static {v2, v4}, Ljava/lang/Math;->min(II)I
 
-    const-string v4, "versionCode"
+    move-result v4
 
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+    sub-int v5, p1, v2
 
-    move-result-wide v6
+    invoke-static {v3, v1, v0, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const-string v4, "environment"
+    sub-int/2addr v2, v4
 
-    const-string v5, ""
+    goto :goto_0
 
-    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :cond_2
+    return-object v0
+.end method
 
-    move-result-object v4
+.method public static b(Lgr9;)Leq9;
+    .locals 13
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    const-string v0, ""
 
-    move-result v9
+    const-string v1, "payloadCatching catch error"
 
-    const/4 v10, 0x0
+    const-string v2, "ServerPayload/PayloadCatching"
 
-    if-lez v9, :cond_0
+    invoke-static {p0}, Lisi;->n(Lgr9;)I
 
-    move-object v9, v4
+    move-result v3
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v7, v4
+
+    move v6, v5
+
+    move v8, v6
+
+    :goto_0
+    if-ge v6, v3, :cond_f
+
+    const/4 v9, 0x1
+
+    :try_start_0
+    invoke-static {p0}, Lisi;->p(Lgr9;)Ljava/lang/String;
+
+    move-result-object v10
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v10
+
+    invoke-static {v2, v1, v10}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v11, Lzpe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v11
+
+    :goto_1
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_0
+
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lx2b;
+
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v10}, Lx2b;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     :cond_0
-    move-object v9, v10
+    sget v11, La3e;->a:I
 
-    :goto_1
-    const-string v4, "sessionUuid"
-
-    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    invoke-static {v11}, Lc12;->w(I)I
 
     move-result v11
 
-    if-lez v11, :cond_1
+    if-eqz v11, :cond_2
 
-    goto :goto_2
+    if-eq v11, v9, :cond_1
+
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 
     :cond_1
-    move-object v4, v10
-
-    :goto_2
-    if-nez v4, :cond_2
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v4
+    throw v10
 
     :cond_2
-    const-string v11, "processName"
+    move-object v10, v4
 
-    invoke-virtual {v3, v11, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :goto_2
+    const-string v11, "reaction"
+
+    invoke-static {v10, v11}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_7
+
+    :try_start_1
+    invoke-static {p0}, Lisi;->p(Lgr9;)Ljava/lang/String;
+
+    move-result-object v7
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-nez v7, :cond_6
+
+    goto :goto_4
+
+    :catchall_1
+    move-exception v7
+
+    invoke-static {v2, v1, v7}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v10, Lzpe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v10}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v10
+
+    :goto_3
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_3
+
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v11
 
-    invoke-virtual {v11}, Ljava/lang/String;->length()I
+    check-cast v11, Lx2b;
 
-    move-result v12
+    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-lez v12, :cond_3
+    invoke-static {v7}, Lx2b;->a(Ljava/lang/Throwable;)V
 
     goto :goto_3
 
     :cond_3
-    move-object v11, v10
+    sget v10, La3e;->a:I
 
-    :goto_3
-    const-string v12, "status"
-
-    invoke-virtual {v3, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v12
-
-    if-eqz v12, :cond_f
-
-    const-string v13, "BLANK"
-
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_4
-
-    const/4 v12, 0x1
-
-    goto :goto_4
-
-    :cond_4
-    const-string v13, "CRASH"
-
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_5
-
-    const/4 v12, 0x2
-
-    goto :goto_4
-
-    :cond_5
-    const-string v13, "ANR"
-
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_6
-
-    const/4 v12, 0x3
-
-    goto :goto_4
-
-    :cond_6
-    const-string v13, "NATIVE"
-
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_e
-
-    const/4 v12, 0x4
-
-    :goto_4
-    const-string v13, "maxSeverity"
-
-    invoke-virtual {v3, v13, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v13
-
-    if-lez v13, :cond_7
-
-    goto :goto_5
-
-    :cond_7
-    move-object v5, v10
-
-    :goto_5
-    if-eqz v5, :cond_d
-
-    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+    invoke-static {v10}, Lc12;->w(I)I
 
     move-result v10
 
-    sget-object v13, Lsse;->Z:Lsse;
+    if-eqz v10, :cond_5
 
-    sparse-switch v10, :sswitch_data_0
+    if-eq v10, v9, :cond_4
 
-    goto :goto_8
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    :sswitch_0
-    const-string v10, "WARNING"
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    throw p0
 
-    move-result v5
+    :cond_4
+    throw v7
 
-    if-nez v5, :cond_8
+    :cond_5
+    :goto_4
+    move-object v7, v0
 
-    goto :goto_8
+    :cond_6
+    new-instance v9, Ldq9;
+
+    sget-object v10, Liq9;->b:Liq9;
+
+    invoke-direct {v9, v10, v7}, Ldq9;-><init>(Liq9;Ljava/lang/String;)V
+
+    move-object v7, v9
+
+    goto/16 :goto_8
+
+    :cond_7
+    const-string v11, "count"
+
+    invoke-static {v10, v11}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_b
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    :try_start_2
+    invoke-static {p0, v5}, Lisi;->l(Lgr9;I)I
+
+    move-result v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    goto :goto_6
+
+    :catchall_2
+    move-exception v10
+
+    invoke-static {v2, v1, v10}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v11, Lzpe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v11
+
+    :goto_5
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_8
+
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lx2b;
+
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v10}, Lx2b;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_5
 
     :cond_8
-    sget-object v5, Lsse;->o:Lsse;
+    sget v11, La3e;->a:I
 
-    :goto_6
-    move-object v10, v5
+    invoke-static {v11}, Lc12;->w(I)I
 
-    goto :goto_9
+    move-result v11
 
-    :sswitch_1
-    const-string v10, "FATAL"
+    if-eqz v11, :cond_a
 
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eq v11, v9, :cond_9
 
-    move-result v5
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    if-nez v5, :cond_9
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    goto :goto_8
+    throw p0
 
     :cond_9
-    sget-object v5, Lsse;->c:Lsse;
-
-    goto :goto_6
-
-    :sswitch_2
-    const-string v10, "ERROR"
-
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_a
-
-    goto :goto_8
+    throw v10
 
     :cond_a
-    sget-object v5, Lsse;->d:Lsse;
+    :goto_6
+    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
 
-    goto :goto_6
-
-    :sswitch_3
-    const-string v10, "DEBUG"
-
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    :goto_7
-    move-object v10, v13
-
-    goto :goto_9
-
-    :sswitch_4
-    const-string v10, "INFO"
-
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_b
+    move-result v8
 
     goto :goto_8
 
     :cond_b
-    sget-object v5, Lsse;->Y:Lsse;
+    :try_start_3
+    invoke-virtual {p0}, Lgr9;->y()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    goto :goto_6
+    goto :goto_8
 
-    :sswitch_5
-    const-string v10, "NOTICE"
+    :catchall_3
+    move-exception v10
 
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1, v10}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v5
+    sget-object v11, Lzpe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    if-nez v5, :cond_c
+    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    :goto_8
+    move-result-object v11
+
+    :goto_7
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_c
+
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lx2b;
+
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v10}, Lx2b;->a(Ljava/lang/Throwable;)V
+
     goto :goto_7
 
     :cond_c
-    sget-object v5, Lsse;->X:Lsse;
+    sget v11, La3e;->a:I
 
-    goto :goto_6
+    invoke-static {v11}, Lc12;->w(I)I
+
+    move-result v11
+
+    if-eqz v11, :cond_e
+
+    if-eq v11, v9, :cond_d
+
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 
     :cond_d
-    :goto_9
-    move-object v13, v10
+    throw v10
 
-    const-string v5, "isInBackground"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
-
-    move-result v14
-
-    new-instance v5, Llje;
-
-    move-object v10, v4
-
-    invoke-direct/range {v5 .. v14}, Llje;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILsse;Z)V
-
-    invoke-virtual {p0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
+    :cond_e
+    :goto_8
+    add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_f
+    new-instance p0, Leq9;
+
+    if-eqz v7, :cond_10
+
+    invoke-direct {p0, v7, v8}, Leq9;-><init>(Ldq9;I)V
+
+    return-object p0
+
+    :cond_10
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "No enum constant ru.ok.tracer.session.SessionState.Status."
-
-    invoke-virtual {v0, v12}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "reaction is null"
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
-
-    :cond_f
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "Name is null"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_10
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x76657528 -> :sswitch_5
-        0x225cae -> :sswitch_4
-        0x3de9e33 -> :sswitch_3
-        0x3f2d9e8 -> :sswitch_2
-        0x3f93ce4 -> :sswitch_1
-        0x6dd13b7c -> :sswitch_0
-    .end sparse-switch
 .end method
 
-.method public static b(Ljava/util/List;)Lorg/json/JSONArray;
-    .locals 6
+.method public static c(Llz0;)[B
+    .locals 10
 
-    new-instance v0, Lorg/json/JSONArray;
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
+    const/16 v1, 0x14
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->highestOneBit(I)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    mul-int/2addr v2, v3
+
+    const/16 v4, 0x80
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    const/16 v4, 0x2000
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    move v4, v1
+
+    :goto_0
+    const/4 v5, -0x1
+
+    const v6, 0x7ffffff7
+
+    if-ge v4, v6, :cond_5
+
+    sub-int/2addr v6, v4
+
+    invoke-static {v2, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    new-array v7, v6, [B
+
+    invoke-virtual {v0, v7}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    move v8, v1
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    sub-int v9, v6, v8
+
+    invoke-virtual {p0, v7, v8, v9}, Llz0;->read([BII)I
+
+    move-result v9
+
+    if-ne v9, v5, :cond_0
+
+    invoke-static {v0, v4}, Lu9j;->a(Ljava/util/ArrayDeque;I)[B
 
     move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    add-int/2addr v8, v9
+
+    add-int/2addr v4, v9
+
+    goto :goto_1
+
+    :cond_1
+    int-to-long v5, v2
+
+    const/16 v7, 0x1000
+
+    if-ge v2, v7, :cond_2
+
+    const/4 v2, 0x4
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v3
+
+    :goto_2
+    int-to-long v7, v2
+
+    mul-long/2addr v5, v7
+
+    const-wide/32 v7, 0x7fffffff
+
+    cmp-long v2, v5, v7
+
+    if-lez v2, :cond_3
+
+    const v2, 0x7fffffff
+
+    goto :goto_0
+
+    :cond_3
+    const-wide/32 v7, -0x80000000
+
+    cmp-long v2, v5, v7
+
+    if-gez v2, :cond_4
+
+    const/high16 v2, -0x80000000
+
+    goto :goto_0
+
+    :cond_4
+    long-to-int v2, v5
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p0}, Llz0;->read()I
+
+    move-result p0
+
+    if-ne p0, v5, :cond_6
+
+    invoke-static {v0, v6}, Lu9j;->a(Ljava/util/ArrayDeque;I)[B
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_6
+    new-instance p0, Ljava/lang/OutOfMemoryError;
+
+    const-string v0, "input is too large to fit in a byte array"
+
+    invoke-direct {p0, v0}, Ljava/lang/OutOfMemoryError;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static d(Ljava/util/Set;)I
+    .locals 3
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_a
+    if-eqz v2, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Llje;
+    if-eqz v2, :cond_0
 
-    new-instance v2, Lorg/json/JSONObject;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v3, "versionName"
-
-    iget-object v4, v1, Llje;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v3, "versionCode"
-
-    iget-wide v4, v1, Llje;->a:J
-
-    invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    const-string v3, "environment"
-
-    iget-object v4, v1, Llje;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v3, "sessionUuid"
-
-    iget-object v4, v1, Llje;->d:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v3, "processName"
-
-    iget-object v4, v1, Llje;->e:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    iget v3, v1, Llje;->f:I
-
-    const/4 v4, 0x1
-
-    if-eq v3, v4, :cond_3
-
-    const/4 v4, 0x2
-
-    if-eq v3, v4, :cond_2
-
-    const/4 v4, 0x3
-
-    if-eq v3, v4, :cond_1
-
-    const/4 v4, 0x4
-
-    if-ne v3, v4, :cond_0
-
-    const-string v3, "NATIVE"
+    move-result v2
 
     goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    move v2, v0
 
-    throw p0
+    :goto_1
+    add-int/2addr v1, v2
+
+    goto :goto_0
 
     :cond_1
-    const-string v3, "ANR"
+    return v1
+.end method
 
-    goto :goto_1
+.method public static e(Llue;Ljava/util/Collection;)Z
+    .locals 3
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    instance-of v0, p1, Ljava/util/Set;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    invoke-interface {p0}, Ljava/util/Set;->size()I
+
+    move-result v2
+
+    if-le v0, v2, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->remove()V
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
 
     :cond_2
-    const-string v3, "CRASH"
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p0, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    or-int/2addr v1, v0
 
     goto :goto_1
 
     :cond_3
-    const-string v3, "BLANK"
-
-    :goto_1
-    const-string v4, "status"
-
-    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    iget-object v3, v1, Llje;->g:Lsse;
-
-    if-eqz v3, :cond_9
-
-    sget-object v4, Lsse;->c:Lsse;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    const-string v3, "FATAL"
-
-    goto :goto_2
-
-    :cond_4
-    sget-object v4, Lsse;->d:Lsse;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    const-string v3, "ERROR"
-
-    goto :goto_2
-
-    :cond_5
-    sget-object v4, Lsse;->o:Lsse;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    const-string v3, "WARNING"
-
-    goto :goto_2
-
-    :cond_6
-    sget-object v4, Lsse;->X:Lsse;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    const-string v3, "NOTICE"
-
-    goto :goto_2
-
-    :cond_7
-    sget-object v4, Lsse;->Y:Lsse;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    const-string v3, "INFO"
-
-    goto :goto_2
-
-    :cond_8
-    const-string v3, "DEBUG"
-
-    goto :goto_2
-
-    :cond_9
-    const/4 v3, 0x0
-
-    :goto_2
-    const-string v4, "maxSeverity"
-
-    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v3, "isInBackground"
-
-    iget-boolean v1, v1, Llje;->h:Z
-
-    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto/16 :goto_0
-
-    :cond_a
-    return-object v0
+    return v1
 .end method

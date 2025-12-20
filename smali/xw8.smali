@@ -1,128 +1,210 @@
 .class public final Lxw8;
-.super Ljava/lang/Object;
+.super Law4;
 .source "SourceFile"
+
+# interfaces
+.implements Lqw8;
+.implements Ludf;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic c:I
 
-.field public final b:Z
-
-.field public final c:Z
+.field public d:Ll25;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZ)V
+.method public synthetic constructor <init>(Lc0b;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lxw8;->c:I
 
-    iput-object p1, p0, Lxw8;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lxw8;->b:Z
-
-    iput-boolean p3, p0, Lxw8;->c:Z
+    invoke-direct {p0, p1}, Law4;-><init>(Lc0b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public b()V
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    const-class v3, Lxw8;
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxw8;
-
-    iget-object v2, p0, Lxw8;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lxw8;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-boolean v2, p0, Lxw8;->b:Z
-
-    iget-boolean v3, p1, Lxw8;->b:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Lxw8;->c:Z
-
-    iget-boolean p1, p1, Lxw8;->c:Z
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-object v0, p0, Lxw8;->a:Ljava/lang/String;
-
-    const/16 v1, 0x1f
-
-    invoke-static {v1, v1, v0}, Lu45;->e(IILjava/lang/String;)I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    iget-boolean v2, p0, Lxw8;->b:Z
+    and-int/lit8 v0, v0, 0x36
 
-    const/16 v3, 0x4d5
+    if-eqz v0, :cond_0
 
-    const/16 v4, 0x4cf
+    return-void
 
-    if-eqz v2, :cond_0
+    :cond_0
+    const/4 v0, 0x2
 
-    move v2, v4
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Law4;->a:Lc0b;
+
+    invoke-interface {v0}, Lc0b;->b()V
+
+    return-void
+.end method
+
+.method public final c(Ll25;)V
+    .locals 1
+
+    iget v0, p0, Lxw8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxw8;->d:Ll25;
+
+    invoke-static {v0, p1}, Lp25;->j(Ll25;Ll25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lxw8;->d:Ll25;
+
+    iget-object p1, p0, Law4;->a:Lc0b;
+
+    invoke-interface {p1, p0}, Lc0b;->c(Ll25;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxw8;->d:Ll25;
+
+    invoke-static {v0, p1}, Lp25;->j(Ll25;Ll25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lxw8;->d:Ll25;
+
+    iget-object p1, p0, Law4;->a:Lc0b;
+
+    invoke-interface {p1, p0}, Lc0b;->c(Ll25;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lxw8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Law4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lxw8;->d:Ll25;
+
+    invoke-interface {v0}, Ll25;->dispose()V
+
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Law4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lxw8;->d:Ll25;
+
+    invoke-interface {v0}, Ll25;->dispose()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lxw8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lomj;->d(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Law4;->a:Lc0b;
+
+    invoke-interface {v0, p1}, Lc0b;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
-    add-int/2addr v0, v2
+    return-void
 
-    mul-int/2addr v0, v1
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    iget-boolean v1, p0, Lxw8;->c:Z
+    move-result v0
 
-    if-eqz v1, :cond_1
+    and-int/lit8 v0, v0, 0x36
 
-    move v3, v4
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lomj;->d(Ljava/lang/Throwable;)V
+
+    goto :goto_1
 
     :cond_1
-    add-int/2addr v0, v3
+    const/4 v0, 0x2
 
-    return v0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Law4;->a:Lc0b;
+
+    invoke-interface {v0, p1}, Lc0b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

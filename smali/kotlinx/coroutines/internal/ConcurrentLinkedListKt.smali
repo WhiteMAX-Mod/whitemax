@@ -17,7 +17,7 @@
         "createNewSegment",
         "Lkotlinx/coroutines/internal/SegmentOrClosed;",
         "findSegmentInternal",
-        "(Lkotlinx/coroutines/internal/Segment;JLsm6;)Ljava/lang/Object;",
+        "(Lkotlinx/coroutines/internal/Segment;JLcr6;)Ljava/lang/Object;",
         "Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
         "N",
         "close",
@@ -29,7 +29,7 @@
         "",
         "condition",
         "addConditionally",
-        "(Lkotlinx/atomicfu/AtomicInt;ILem6;)Z",
+        "(Lkotlinx/atomicfu/AtomicInt;ILoq6;)Z",
         "POINTERS_SHIFT",
         "I",
         "Lkotlinx/coroutines/internal/Symbol;",
@@ -76,7 +76,7 @@
     return-object v0
 .end method
 
-.method private static final synthetic addConditionally$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;ILem6;)Z
+.method private static final synthetic addConditionally$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;ILoq6;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -84,7 +84,7 @@
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
             "I",
-            "Lem6;",
+            "Loq6;",
             ")Z"
         }
     .end annotation
@@ -98,7 +98,7 @@
 
     move-result-object v1
 
-    invoke-interface {p3, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -128,14 +128,14 @@
     return p0
 .end method
 
-.method private static final synthetic addConditionally$atomicfu$array(Ljava/util/concurrent/atomic/AtomicIntegerArray;IILem6;)Z
+.method private static final synthetic addConditionally$atomicfu$array(Ljava/util/concurrent/atomic/AtomicIntegerArray;IILoq6;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicIntegerArray;",
             "II",
-            "Lem6;",
+            "Loq6;",
             ")Z"
         }
     .end annotation
@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    invoke-interface {p3, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -222,7 +222,7 @@
     goto :goto_0
 .end method
 
-.method public static final synthetic findSegmentAndMoveForward$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;JLkotlinx/coroutines/internal/Segment;Lsm6;)Ljava/lang/Object;
+.method public static final synthetic findSegmentAndMoveForward$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;JLkotlinx/coroutines/internal/Segment;Lcr6;)Ljava/lang/Object;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -232,14 +232,14 @@
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "JTS;",
-            "Lsm6;",
+            "Lcr6;",
             ")",
             "Ljava/lang/Object;"
         }
     .end annotation
 
     :goto_0
-    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLsm6;)Ljava/lang/Object;
+    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLcr6;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -319,7 +319,7 @@
     return-object v0
 .end method
 
-.method public static final synthetic findSegmentAndMoveForward$atomicfu$array(Ljava/util/concurrent/atomic/AtomicReferenceArray;IJLkotlinx/coroutines/internal/Segment;Lsm6;)Ljava/lang/Object;
+.method public static final synthetic findSegmentAndMoveForward$atomicfu$array(Ljava/util/concurrent/atomic/AtomicReferenceArray;IJLkotlinx/coroutines/internal/Segment;Lcr6;)Ljava/lang/Object;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -328,14 +328,14 @@
             "TS;>;>(",
             "Ljava/util/concurrent/atomic/AtomicReferenceArray;",
             "IJTS;",
-            "Lsm6;",
+            "Lcr6;",
             ")",
             "Ljava/lang/Object;"
         }
     .end annotation
 
     :goto_0
-    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLsm6;)Ljava/lang/Object;
+    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLcr6;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -415,14 +415,14 @@
     return-object v0
 .end method
 
-.method public static final findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLsm6;)Ljava/lang/Object;
+.method public static final findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLcr6;)Ljava/lang/Object;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
             "Lkotlinx/coroutines/internal/Segment<",
             "TS;>;>(TS;J",
-            "Lsm6;",
+            "Lcr6;",
             ")",
             "Ljava/lang/Object;"
         }
@@ -495,7 +495,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0, p0}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0, p0}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -518,14 +518,14 @@
     goto :goto_2
 .end method
 
-.method private static final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lem6;)V
+.method private static final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Loq6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
-            "Lem6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -535,19 +535,19 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
-.method private static final synthetic loop$atomicfu$array(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILem6;)V
+.method private static final synthetic loop$atomicfu$array(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILoq6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceArray;",
             "I",
-            "Lem6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -557,7 +557,7 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method

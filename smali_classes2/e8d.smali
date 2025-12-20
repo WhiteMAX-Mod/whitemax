@@ -1,58 +1,34 @@
-.class public final Le8d;
+.class public abstract Le8d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lgxe;
 
 
-# instance fields
-.field public final a:Ljava/util/HashSet;
+# static fields
+.field public static oneme_messages_settings_container:I = 0x7f0a0726
 
+.field public static oneme_messages_settings_content_recycler:I = 0x7f0a0727
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.field public static oneme_messages_settings_effects:I = 0x7f0a0728
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_messages_settings_fast_reaction_choose:I = 0x7f0a0729
 
-    new-instance v0, Ljava/util/HashSet;
+.field public static oneme_messages_settings_fast_reaction_enable:I = 0x7f0a072a
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+.field public static oneme_messages_settings_header_item:I = 0x7f0a072b
 
-    iput-object v0, p0, Le8d;->a:Ljava/util/HashSet;
+.field public static oneme_messages_settings_highlight:I = 0x7f0a072c
 
-    return-void
-.end method
+.field public static oneme_messages_settings_linear:I = 0x7f0a072d
 
+.field public static oneme_messages_settings_need_divider_above_vh:I = 0x7f0a072e
 
-# virtual methods
-.method public final onRateCall(Lorg/json/JSONObject;)V
-    .locals 2
+.field public static oneme_messages_settings_reaction_image:I = 0x7f0a072f
 
-    iget-object v0, p0, Le8d;->a:Ljava/util/HashSet;
+.field public static oneme_messages_settings_reaction_title:I = 0x7f0a0730
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+.field public static oneme_messages_settings_send_by_enter:I = 0x7f0a0731
 
-    move-result-object v0
+.field public static oneme_messages_settings_setting_item:I = 0x7f0a0732
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+.field public static oneme_messages_settings_stickers:I = 0x7f0a0733
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgxe;
-
-    invoke-interface {v1, p1}, Lgxe;->onRateCall(Lorg/json/JSONObject;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
+.field public static oneme_messages_settings_toolbar:I = 0x7f0a0734

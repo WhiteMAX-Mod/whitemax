@@ -1,65 +1,34 @@
 .class public final Lwpg;
-.super Le9c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:[S
-
-.field public b:I
+# interfaces
+.implements Liqg;
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-    iget-object v0, p0, Lwpg;->a:[S
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v1, p0, Lwpg;->b:I
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([SI)[S
-
-    move-result-object v0
-
-    new-instance v1, Lvpg;
-
-    invoke-direct {v1, v0}, Lvpg;-><init>([S)V
-
-    return-object v1
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lwpg;->a:[S
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([SI)[S
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwpg;->a:[S
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
-    .locals 1
 
-    iget v0, p0, Lwpg;->b:I
+# virtual methods
+.method public final appToken()Ljava/lang/String;
+    .locals 0
 
-    return v0
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final buildUuid()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method

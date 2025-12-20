@@ -3,92 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljava/lang/Boolean;
 
-.field public final synthetic b:Llm7;
+.field public final synthetic a:J
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:I
+
+.field public final synthetic o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llm7;I)V
+.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
     .locals 0
 
-    iput p2, p0, Lp5f;->a:I
-
-    iput-object p1, p0, Lp5f;->b:Llm7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lp5f;->a:J
+
+    iput-wide p3, p0, Lp5f;->b:J
+
+    iput-object p5, p0, Lp5f;->c:Ljava/lang/String;
+
+    iput p6, p0, Lp5f;->d:I
+
+    iput-object p7, p0, Lp5f;->o:Ljava/lang/Integer;
+
+    iput-object p8, p0, Lp5f;->X:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lp5f;->a:I
+    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v1, p0, Lp5f;->a:J
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-wide v3, p0, Lp5f;->b:J
 
-    move-result-object p1
+    iget-object v5, p0, Lp5f;->c:Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/Integer;
+    iget v6, p0, Lp5f;->d:I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object v7, p0, Lp5f;->o:Ljava/lang/Integer;
 
-    move-result p1
+    iget-object v8, p0, Lp5f;->X:Ljava/lang/Boolean;
 
-    iget-object v0, p0, Lp5f;->b:Llm7;
+    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
 
-    check-cast v0, Lj5f;
-
-    iget-object v0, v0, Lj5f;->G0:Lhq3;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lp5f;->b:Llm7;
-
-    check-cast v0, Lj5f;
-
-    iget-object v1, v0, Lj5f;->G0:Lhq3;
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getCurrentTextColor()I
-
-    move-result v1
-
-    invoke-static {v1, p1}, Lv4j;->c(IF)I
-
-    move-result p1
-
-    iget-object v0, v0, Lj5f;->G0:Lhq3;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

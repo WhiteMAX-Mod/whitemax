@@ -1,242 +1,410 @@
 .class public final Lvs7;
-.super Lat7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Lvs7;
+
+.field public static final f:Lvs7;
+
+
 # instance fields
-.field public final X:Lone/me/folders/list/FoldersListScreen;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Lau0;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/folders/list/FoldersListScreen;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, 0x3
+    new-instance v0, Lvs7;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Lat7;-><init>(II)V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lvs7;->X:Lone/me/folders/list/FoldersListScreen;
+    const/16 v3, 0xf
+
+    invoke-direct {v0, v1, v2, v3}, Lvs7;-><init>(ILau0;I)V
+
+    sput-object v0, Lvs7;->e:Lvs7;
+
+    new-instance v0, Lau0;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, v2, v1}, Lau0;-><init>(IIZ)V
+
+    new-instance v1, Lvs7;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v1, v3, v2, v3, v0}, Lvs7;-><init>(IIILau0;)V
+
+    sput-object v1, Lvs7;->f:Lvs7;
 
     return-void
+.end method
+
+.method public constructor <init>(IIILau0;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Lvs7;->a:I
+
+    .line 3
+    iput p2, p0, Lvs7;->b:I
+
+    .line 4
+    iput p3, p0, Lvs7;->c:I
+
+    .line 5
+    iput-object p4, p0, Lvs7;->d:Lau0;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILau0;I)V
+    .locals 2
+
+    and-int/lit8 v0, p3, 0x2
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x8
+
+    if-eqz p3, :cond_1
+
+    const/4 p2, 0x0
+
+    .line 6
+    :cond_1
+    invoke-direct {p0, v1, p1, v1, p2}, Lvs7;-><init>(IIILau0;)V
+
+    return-void
+.end method
+
+.method public static a()Lvs7;
+    .locals 4
+
+    sget-object v0, Lvs7;->f:Lvs7;
+
+    iget-object v0, v0, Lvs7;->d:Lau0;
+
+    new-instance v1, Lvs7;
+
+    const/4 v2, 0x5
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, v2, v0}, Lvs7;-><init>(IIILau0;)V
+
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Lmid;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Lat7;->a(Landroidx/recyclerview/widget/RecyclerView;Lmid;)V
+    if-ne p0, p1, :cond_0
 
-    instance-of p1, p2, Lct7;
-
-    if-eqz p1, :cond_1
-
-    check-cast p2, Lct7;
-
-    check-cast p2, Lhxg;
-
-    iget-object p1, p2, Lmid;->a:Landroid/view/View;
-
-    check-cast p1, Lgxg;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
-
-    iget-object p1, p2, Lhxg;->E0:Lt9f;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lt9f;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/folders/list/FoldersListScreen;
-
-    invoke-virtual {p1}, Lone/me/folders/list/FoldersListScreen;->y0()Loc6;
-
-    move-result-object p1
-
-    invoke-virtual {p2}, Lmid;->f()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, -0x1
-
-    iget-object v0, p1, Loc6;->v0:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    goto :goto_3
 
     :cond_0
-    iget-object v1, p1, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    instance-of v0, p1, Lvs7;
 
-    iget-object v2, p1, Loc6;->c:Llzf;
+    if-nez v0, :cond_1
 
-    check-cast v2, Lq2b;
-
-    invoke-virtual {v2}, Lq2b;->c()Lwl8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lwl8;->getImmediate()Lwl8;
-
-    move-result-object v2
-
-    new-instance v3, Lmc6;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v0, p2, v4}, Lmc6;-><init>(Loc6;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x2
-
-    invoke-static {v1, v2, v4, v3, p2}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    iput-object v4, p1, Loc6;->v0:Ljava/lang/String;
+    goto :goto_4
 
     :cond_1
-    :goto_0
-    return-void
-.end method
+    check-cast p1, Lvs7;
 
-.method public final i(Lmid;Lmid;)Z
-    .locals 5
+    iget v0, p1, Lvs7;->a:I
 
-    invoke-virtual {p1}, Lmid;->g()I
+    iget v1, p0, Lvs7;->a:I
 
-    move-result p1
+    if-nez v1, :cond_2
 
-    invoke-virtual {p2}, Lmid;->g()I
-
-    move-result p2
-
-    iget-object v0, p0, Lvs7;->X:Lone/me/folders/list/FoldersListScreen;
-
-    iget-object v0, v0, Lone/me/folders/list/FoldersListScreen;->o:Ldc6;
-
-    invoke-virtual {v0, p2}, Ll98;->C(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt98;
-
-    check-cast v1, Lfxg;
-
-    iget-object v1, v1, Lfxg;->b:Lexg;
-
-    sget-object v2, Lexg;->b:Lexg;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    move v1, v4
+    if-nez v0, :cond_9
 
     goto :goto_0
-
-    :cond_0
-    move v1, v3
-
-    :goto_0
-    if-lez p2, :cond_1
-
-    invoke-virtual {v0}, Ll98;->j()I
-
-    move-result v2
-
-    if-lt p2, v2, :cond_2
-
-    :cond_1
-    move v3, v4
 
     :cond_2
-    if-eqz v1, :cond_4
+    if-nez v0, :cond_3
 
-    if-eqz v3, :cond_3
+    goto :goto_4
+
+    :cond_3
+    if-ne v1, v0, :cond_9
+
+    :goto_0
+    iget v0, p1, Lvs7;->b:I
+
+    iget v1, p0, Lvs7;->b:I
+
+    if-nez v1, :cond_4
+
+    if-nez v0, :cond_9
 
     goto :goto_1
 
-    :cond_3
-    iget-object v1, v0, Ll98;->d:Liv;
-
-    iget-object v1, v1, Liv;->f:Ljava/util/List;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    invoke-virtual {v2, p2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    new-instance v1, Lmn1;
-
-    invoke-direct {v1, v0, p1, p2, v2}, Lmn1;-><init>(Ldc6;IILjava/util/ArrayList;)V
-
-    invoke-virtual {v0, v2, v1}, Ll98;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
     :cond_4
+    if-nez v0, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    if-ne v1, v0, :cond_9
+
     :goto_1
+    iget v0, p1, Lvs7;->c:I
+
+    iget v1, p0, Lvs7;->c:I
+
+    if-nez v1, :cond_6
+
+    if-nez v0, :cond_9
+
+    goto :goto_2
+
+    :cond_6
+    if-nez v0, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    if-ne v1, v0, :cond_9
+
+    :goto_2
+    iget-object v0, p0, Lvs7;->d:Lau0;
+
+    iget-object p1, p1, Lvs7;->d:Lau0;
+
+    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    :goto_3
     const/4 p1, 0x1
+
+    return p1
+
+    :cond_9
+    :goto_4
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final j(Lmid;I)V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    if-eqz p2, :cond_0
+    const/4 v0, 0x0
 
-    instance-of p2, p1, Lct7;
+    iget v1, p0, Lvs7;->a:I
 
-    if-eqz p2, :cond_0
+    if-nez v1, :cond_0
 
-    check-cast p1, Lct7;
+    move v1, v0
 
-    check-cast p1, Lhxg;
-
-    iget-object p1, p1, Lmid;->a:Landroid/view/View;
-
-    check-cast p1, Lgxg;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41a00000    # 20.0f
-
-    mul-float/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-static {v1}, Lc12;->w(I)I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lvs7;->b:I
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v2}, Lc12;->w(I)I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lvs7;->c:I
+
+    if-nez v2, :cond_2
+
+    move v2, v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static {v2}, Lc12;->w(I)I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lvs7;->d:Lau0;
+
+    if-nez v2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v2}, Lau0;->hashCode()I
+
+    move-result v0
+
+    :goto_3
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    const-string v0, "null"
+
+    const-string v1, ")"
+
+    iget v2, p0, Lvs7;->a:I
+
+    if-nez v2, :cond_0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "LeftInsetConfig(persistentType="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2}, Lgg9;->l(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_0
+    iget v3, p0, Lvs7;->b:I
+
+    if-nez v3, :cond_1
+
+    move-object v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "TopInsetConfig(persistentType="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v3}, Lgg9;->l(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_1
+    iget v4, p0, Lvs7;->c:I
+
+    if-nez v4, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "RightInsetConfig(persistentType="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v4}, Lgg9;->l(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    const-string v4, ", topConfig="
+
+    const-string v5, ", rightInsetConfig="
+
+    const-string v6, "InsetsConfig(leftInsetConfig="
+
+    invoke-static {v6, v2, v4, v3, v5}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", bottomConfig="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lvs7;->d:Lau0;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

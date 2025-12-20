@@ -1,84 +1,108 @@
-.class public final Lkcd;
-.super Ld2f;
-.source "SourceFile"
+.class public abstract Lkcd;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final F(Licd;)V
-    .locals 5
+# static fields
+.field public static audio_record_click_to_cancel:I = 0x7f130088
 
-    iget-boolean v0, p1, Licd;->Y:Z
+.field public static audio_record_swipe_to_cancel:I = 0x7f130098
 
-    iget-object v1, p0, Lmid;->a:Landroid/view/View;
+.field public static chat_screen__leave_chat_action:I = 0x7f130364
 
-    if-eqz v0, :cond_0
+.field public static chat_screen__leave_chat_title:I = 0x7f130365
 
-    move-object v0, v1
+.field public static chat_screen__remove_chat_action:I = 0x7f130366
 
-    check-cast v0, Ljcd;
+.field public static chat_screen__remove_chat_title:I = 0x7f130367
 
-    sget-object v2, Lmxa;->a:Lmxa;
+.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130368
 
-    invoke-virtual {v0, v2}, Ljcd;->setAvatarShape(Lnxa;)V
+.field public static chat_screen__search_result_not_found:I = 0x7f130369
 
-    :cond_0
-    iget-object v0, p1, Licd;->c:Ljava/lang/String;
+.field public static chat_screen__search_result_success:I = 0x7f13036a
 
-    move-object v2, v1
+.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f13036b
 
-    check-cast v2, Ljcd;
+.field public static chat_screen__start_chat_with_bot:I = 0x7f13036c
 
-    invoke-virtual {v2, v0}, Ljcd;->setAvatar(Ljava/lang/String;)V
+.field public static chat_screen_channel_search_hint:I = 0x7f130384
 
-    iget-object v0, p1, Licd;->d:Ljava/lang/CharSequence;
+.field public static chat_screen_error_restricted_send_message_action:I = 0x7f130392
 
-    move-object v2, v1
+.field public static chat_screen_error_restricted_send_message_cancel:I = 0x7f130393
 
-    check-cast v2, Ljcd;
+.field public static chat_screen_error_restricted_send_message_desc:I = 0x7f130394
 
-    iget-wide v3, p0, Lmid;->o:J
+.field public static chat_screen_error_restricted_send_message_title:I = 0x7f130395
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public static chat_screen_file_too_big_caption:I = 0x7f130396
 
-    move-result-object v3
+.field public static chat_screen_file_too_big_title:I = 0x7f130397
 
-    invoke-static {v0, v3}, Lfui;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lmc0;
+.field public static chat_screen_join_channel:I = 0x7f13039e
 
-    move-result-object v0
+.field public static chat_screen_join_chat:I = 0x7f13039f
 
-    invoke-virtual {v2, v0}, Ljcd;->setAbbreviation(Lmc0;)V
+.field public static chat_screen_leave_chat:I = 0x7f1303a0
 
-    iget-object v0, p1, Licd;->b:Ljava/lang/CharSequence;
+.field public static chat_screen_remove_chat:I = 0x7f1303ba
 
-    move-object v2, v1
+.field public static chat_screen_search_hint:I = 0x7f1303c1
 
-    check-cast v2, Ljcd;
+.field public static chat_screen_status_mute_chat:I = 0x7f1303c4
 
-    invoke-virtual {v2, v0}, Ljcd;->setName(Ljava/lang/CharSequence;)V
+.field public static chat_screen_status_subscribe_chat:I = 0x7f1303c5
 
-    iget-boolean v0, p1, Licd;->X:Z
+.field public static chat_screen_status_unmute_chat:I = 0x7f1303c6
 
-    move-object v2, v1
+.field public static chat_screen_unblock_contact:I = 0x7f1303c8
 
-    check-cast v2, Ljcd;
+.field public static media_bar_recent:I = 0x7f130638
 
-    invoke-virtual {v2, v0}, Ljcd;->setVerified(Z)V
+.field public static media_bar_restricted_media_action:I = 0x7f130639
 
-    iget-boolean p1, p1, Licd;->o:Z
+.field public static media_bar_restricted_media_subtitle:I = 0x7f13063a
 
-    check-cast v1, Ljcd;
+.field public static media_bar_restricted_media_title:I = 0x7f13063b
 
-    invoke-virtual {v1, p1}, Ljcd;->setOnline(Z)V
+.field public static media_type_picker__close_dialog__accept:I = 0x7f13067f
 
-    return-void
-.end method
+.field public static media_type_picker__close_dialog__title:I = 0x7f130680
 
-.method public final bridge synthetic z(Lt98;)V
-    .locals 0
+.field public static media_type_picker__contact:I = 0x7f130681
 
-    check-cast p1, Licd;
+.field public static media_type_picker__file:I = 0x7f130682
 
-    invoke-virtual {p0, p1}, Lkcd;->F(Licd;)V
+.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f130683
 
-    return-void
-.end method
+.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f130684
+
+.field public static media_type_picker__file_dialog__title:I = 0x7f130685
+
+.field public static media_type_picker__gallery:I = 0x7f130686
+
+.field public static media_type_picker__input_hint:I = 0x7f130687
+
+.field public static media_type_picker__money:I = 0x7f130688
+
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f130689
+
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f13068a
+
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f13068b
+
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f13068c
+
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f13068d
+
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f13068e
+
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f13068f
+
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f130690
+
+.field public static media_type_picker__place:I = 0x7f130691
+
+.field public static media_type_picker__snack_file:I = 0x7f130692
+
+.field public static media_type_picker__snack_media:I = 0x7f130693

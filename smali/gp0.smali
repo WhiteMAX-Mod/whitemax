@@ -1,14 +1,23 @@
-.class public interface abstract Lgp0;
+.class public final Lgp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e(Landroid/net/Uri;)Lha8;
-.end method
+# instance fields
+.field public final a:Lhp0;
 
-.method public abstract l(Ljava/lang/String;)Z
-.end method
+.field public final b:I
 
-.method public abstract q([B)Lha8;
+
+# direct methods
+.method public constructor <init>(Lhp0;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgp0;->a:Lhp0;
+
+    iput p2, p0, Lgp0;->b:I
+
+    return-void
 .end method

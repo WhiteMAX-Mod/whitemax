@@ -3,27 +3,44 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lm0f;
+.implements Ljbf;
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat$Companion;
+    }
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0003\n\u0002\u0008\u0006\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0006\u0008\u0000\u0018\u00002\u00020\u0001B\u001f\u0012\u000e\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u000f\u0010\n\u001a\u00020\tH\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ#\u0010\u0010\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\u000c2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000eH\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u001f\u0010\u0010\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u0012\u001a\u00020\u000cH\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u0013J\u0017\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0017J\u0017\u0010\u0019\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u0019\u0010\u0017J\u0017\u0010\u001a\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u001a\u0010\u0017J\u0017\u0010\u001b\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u001b\u0010\u0017J\u001f\u0010\u001e\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u001d\u001a\u00020\u001cH\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u0017\u0010 \u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008 \u0010\u0017R\u001c\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0004\u0010!R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\"R\u0016\u0010$\u001a\u00020#8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u0016\u0010\'\u001a\u00020&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(R\u0016\u0010)\u001a\u00020&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008)\u0010(R\u0018\u0010*\u001a\u0004\u0018\u00010&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008*\u0010+\u00a8\u0006,"
+        "\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0003\n\u0002\u0008\t\n\u0002\u0010\t\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0000\u0018\u0000 B2\u00020\u0001:\u0001BB/\u0012\u000e\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u000f\u0010\u000e\u001a\u00020\rH\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\rH\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u000fJ\u000f\u0010\u0011\u001a\u00020\rH\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\u000fJ\u001b\u0010\u0015\u001a\u00020\r*\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0013H\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J#\u0010\u001b\u001a\u00020\r2\u0006\u0010\u0018\u001a\u00020\u00172\n\u0008\u0002\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u001f\u0010\u001b\u001a\u00020\r2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u001d\u001a\u00020\u0017H\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001eJ\u0017\u0010!\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008!\u0010\"J\u0017\u0010#\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008#\u0010\"J\u0017\u0010$\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008$\u0010\"J)\u0010\'\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001f2\u0008\u0010%\u001a\u0004\u0018\u00010\u00172\u0006\u0010&\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\'\u0010(J)\u0010*\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001f2\u0008\u0010%\u001a\u0004\u0018\u00010\u00172\u0006\u0010)\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008*\u0010(J\u0017\u0010+\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008+\u0010\"J\u000f\u0010,\u001a\u00020\rH\u0016\u00a2\u0006\u0004\u0008,\u0010\u000fJ\u0017\u0010-\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008-\u0010\"J\u001f\u00100\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001f2\u0006\u0010/\u001a\u00020.H\u0016\u00a2\u0006\u0004\u00080\u00101J\u0017\u00102\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u00082\u0010\"R\u001c\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0004\u00103R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u00104R\u0014\u0010\u0008\u001a\u00020\u00078\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0008\u00105R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u00106R\u0016\u00107\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00087\u00106R\u0016\u00109\u001a\u0002088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00089\u0010:R\u0016\u0010;\u001a\u0002088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008;\u0010:R\u0018\u0010<\u001a\u0004\u0018\u0001088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008<\u0010=R\u0016\u0010?\u001a\u0004\u0018\u00010>8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008?\u0010@R\u0016\u0010A\u001a\u0004\u0018\u00010>8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008A\u0010@\u00a8\u0006C"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;",
-        "Lm0f;",
+        "Ljbf;",
         "Lkotlin/Function0;",
-        "Lm81;",
+        "Lqa1;",
         "getEventualStatSender",
-        "Ly8g;",
+        "Lnkg;",
         "timeProvider",
+        "Lcgd;",
+        "log",
+        "",
+        "isSummaryStatsEnabled",
         "<init>",
-        "(Lcm6;Ly8g;)V",
-        "Lqqg;",
+        "(Lmq6;Lnkg;Lcgd;Z)V",
+        "Lv2h;",
         "onFailed",
         "()V",
+        "reportCommandSummary",
+        "reportPingSummary",
+        "Lru/ok/android/externcalls/analytics/events/EventItemsMap;",
+        "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;",
+        "info",
+        "addCommonStats",
+        "(Lru/ok/android/externcalls/analytics/events/EventItemsMap;Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;)V",
         "",
         "eventName",
         "",
@@ -32,30 +49,42 @@
         "(Ljava/lang/String;Ljava/lang/Integer;)V",
         "stringValue",
         "(Ljava/lang/String;Ljava/lang/String;)V",
-        "Ll0f;",
+        "Libf;",
         "type",
         "onRestart",
-        "(Ll0f;)V",
+        "(Libf;)V",
         "onConnect",
         "onConnected",
+        "name",
+        "isPing",
         "onMessageReceived",
+        "(Libf;Ljava/lang/String;Z)V",
+        "isPong",
+        "onCommandSent",
+        "onDisconnectedSuccessfully",
+        "onCallFinished",
         "onFailedByPings",
         "",
         "t",
         "onFailedByException",
-        "(Ll0f;Ljava/lang/Throwable;)V",
+        "(Libf;Ljava/lang/Throwable;)V",
         "onTimeout",
-        "Lcm6;",
-        "Ly8g;",
-        "",
-        "connectedAtLeastOnceInCall",
+        "Lmq6;",
+        "Lnkg;",
+        "Lcgd;",
         "Z",
+        "connectedAtLeastOnceInCall",
         "",
         "startConnectTime",
         "J",
         "lastMessageReceived",
         "firstFailTime",
         "Ljava/lang/Long;",
+        "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;",
+        "signalingTracker",
+        "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;",
+        "signalingPingTracker",
+        "Companion",
         "calls-sdk_release"
     }
     k = 0x1
@@ -68,43 +97,204 @@
 .end annotation
 
 
+# static fields
+.field private static final Companion:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat$Companion;
+
+.field public static final LOG_TAG:Ljava/lang/String; = "SignalingTransportStat"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+
 # instance fields
 .field private connectedAtLeastOnceInCall:Z
 
 .field private firstFailTime:Ljava/lang/Long;
 
-.field private final getEventualStatSender:Lcm6;
+.field private final getEventualStatSender:Lmq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcm6;"
+            "Lmq6;"
         }
     .end annotation
 .end field
 
+.field private final isSummaryStatsEnabled:Z
+
 .field private lastMessageReceived:J
+
+.field private final log:Lcgd;
+
+.field private final signalingPingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+.field private final signalingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
 
 .field private startConnectTime:J
 
-.field private final timeProvider:Ly8g;
+.field private final timeProvider:Lnkg;
 
 
 # direct methods
-.method public constructor <init>(Lcm6;Ly8g;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat$Companion;-><init>(Lro4;)V
+
+    sput-object v0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->Companion:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat$Companion;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmq6;Lnkg;Lcgd;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcm6;",
-            "Ly8g;",
-            ")V"
+            "Lmq6;",
+            "Lnkg;",
+            "Lcgd;",
+            "Z)V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lcm6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lmq6;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
+
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->log:Lcgd;
+
+    iput-boolean p4, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->isSummaryStatsEnabled:Z
+
+    const/4 p1, 0x0
+
+    if-eqz p4, :cond_0
+
+    new-instance p3, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    invoke-direct {p3, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;-><init>(Lnkg;)V
+
+    goto :goto_0
+
+    :cond_0
+    move-object p3, p1
+
+    :goto_0
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz p4, :cond_1
+
+    new-instance p1, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;-><init>(Lnkg;)V
+
+    :cond_1
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingPingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    return-void
+.end method
+
+.method private final addCommonStats(Lru/ok/android/externcalls/analytics/events/EventItemsMap;Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;)V
+    .locals 6
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getMinValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "min_value"
+
+    invoke-virtual {p1, v1, v0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getMaxValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "max_value"
+
+    invoke-virtual {p1, v1, v0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getAverage()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "avg_value"
+
+    invoke-virtual {p1, v1, v0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getMedian()Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getQuantile95()Ljava/lang/Long;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "NaN or Inf in statistics tracking "
+
+    const-string v5, " signaling request"
+
+    invoke-static {v4, v3, v5}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->log:Lcgd;
+
+    const-string v4, "SignalingTransportStat"
+
+    const-string v5, "issue with OnlineQuantilesApproximator"
+
+    invoke-interface {v3, v4, v5, v2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    const-string v2, "median_value"
+
+    invoke-virtual {p1, v2, v0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    const-string v0, "p95_value"
+
+    invoke-virtual {p1, v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getCount()I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    const-string v0, "values_count"
+
+    invoke-virtual {p1, v0, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/Integer;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     return-void
 .end method
@@ -116,9 +306,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {v0}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -136,13 +326,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lcm6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lmq6;
 
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lm81;
+    check-cast v0, Lqa1;
 
     if-eqz v0, :cond_1
 
@@ -168,7 +358,7 @@
     const/4 v2, 0x4
 
     .line 3
-    invoke-static {v0, p1, p2, v1, v2}, Lm81;->a(Lm81;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v0, p1, p2, v1, v2}, Lqa1;->a(Lqa1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_1
     return-void
@@ -178,13 +368,13 @@
     .locals 3
 
     .line 4
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lcm6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lmq6;
 
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lm81;
+    check-cast v0, Lqa1;
 
     if-eqz v0, :cond_0
 
@@ -198,7 +388,7 @@
     const/4 v2, 0x4
 
     .line 6
-    invoke-static {v0, p1, p2, v1, v2}, Lm81;->a(Lm81;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v0, p1, p2, v1, v2}, Lqa1;->a(Lqa1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void
@@ -219,14 +409,177 @@
     return-void
 .end method
 
+.method private final reportCommandSummary()V
+    .locals 6
+
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->isSummaryStatsEnabled:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->extractStatistics()Ljava/util/Collection;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;
+
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lmq6;
+
+    invoke-interface {v2}, Lmq6;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lqa1;
+
+    if-eqz v2, :cond_1
+
+    new-instance v3, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-direct {v3}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
+
+    const-string v4, "api_method"
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v4, v5}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-direct {p0, v3, v1}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->addCommonStats(Lru/ok/android/externcalls/analytics/events/EventItemsMap;Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;)V
+
+    const/4 v1, 0x2
+
+    const-string v4, "signaling_command_summary"
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v4, v5, v3, v1}, Lqa1;->a(Lqa1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method private final reportPingSummary()V
+    .locals 5
+
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->isSummaryStatsEnabled:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingPingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->extractStatistics()Ljava/util/Collection;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lei3;->E(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->getEventualStatSender:Lmq6;
+
+    invoke-interface {v1}, Lmq6;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqa1;
+
+    if-eqz v1, :cond_1
+
+    new-instance v2, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-direct {v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
+
+    invoke-direct {p0, v2, v0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->addCommonStats(Lru/ok/android/externcalls/analytics/events/EventItemsMap;Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;)V
+
+    const/4 v0, 0x2
+
+    const-string v3, "signaling_ping_summary"
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v3, v4, v2, v0}, Lqa1;->a(Lqa1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
 
 # virtual methods
-.method public onConnect(Ll0f;)V
+.method public onCallFinished()V
+    .locals 0
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->reportCommandSummary()V
+
+    return-void
+.end method
+
+.method public onCommandSent(Libf;Ljava/lang/String;Z)V
+    .locals 0
+
+    iget-boolean p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->isSummaryStatsEnabled:Z
+
+    if-eqz p1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    if-nez p3, :cond_0
+
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->onRequest(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onConnect(Libf;)V
     .locals 2
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {p1}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {p1}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -235,7 +588,7 @@
     return-void
 .end method
 
-.method public onConnected(Ll0f;)V
+.method public onConnected(Libf;)V
     .locals 4
 
     const/4 v0, 0x0
@@ -246,9 +599,9 @@
 
     iput-wide v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->lastMessageReceived:J
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {v0}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -262,7 +615,7 @@
 
     const/4 v2, 0x3
 
-    invoke-virtual {p1, v2}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -283,7 +636,7 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p1, v2}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -298,7 +651,15 @@
     return-void
 .end method
 
-.method public onFailedByException(Ll0f;Ljava/lang/Throwable;)V
+.method public onDisconnectedSuccessfully(Libf;)V
+    .locals 0
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->reportPingSummary()V
+
+    return-void
+.end method
+
+.method public onFailedByException(Libf;Ljava/lang/Throwable;)V
     .locals 2
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->onFailed()V
@@ -326,27 +687,29 @@
     :cond_0
     const/16 p2, 0x12c
 
-    invoke-static {p2, v0}, Lvmf;->Z(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Liyf;->a0(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const/4 v0, 0x5
 
-    invoke-virtual {p1, v0}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->report(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->reportPingSummary()V
+
     return-void
 .end method
 
-.method public onFailedByPings(Ll0f;)V
+.method public onFailedByPings(Libf;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {v0}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -358,7 +721,7 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {p1, v2}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -370,29 +733,62 @@
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->report(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->reportPingSummary()V
+
     return-void
 .end method
 
-.method public onMessageReceived(Ll0f;)V
+.method public onMessageReceived(Libf;Ljava/lang/String;Z)V
     .locals 2
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {p1}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {p1}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->lastMessageReceived:J
 
+    iget-boolean p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->isSummaryStatsEnabled:Z
+
+    if-eqz p1, :cond_2
+
+    if-eqz p2, :cond_2
+
+    if-eqz p3, :cond_1
+
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingPingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->onAnswer(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingPingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->onRequest(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->signalingTracker:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p2}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->onAnswer(Ljava/lang/String;)V
+
+    :cond_2
     return-void
 .end method
 
-.method public onRestart(Ll0f;)V
+.method public onRestart(Libf;)V
     .locals 2
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -405,7 +801,7 @@
     return-void
 .end method
 
-.method public onTimeout(Ll0f;)V
+.method public onTimeout(Libf;)V
     .locals 6
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->firstFailTime:Ljava/lang/Long;
@@ -418,9 +814,9 @@
 
     move-result-wide v2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Ly8g;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->timeProvider:Lnkg;
 
-    invoke-interface {v0}, Ly8g;->getMsSinceBoot()J
+    invoke-interface {v0}, Lnkg;->getMsSinceBoot()J
 
     move-result-wide v4
 
@@ -438,7 +834,7 @@
     :goto_0
     const/4 v2, 0x6
 
-    invoke-virtual {p1, v2}, Ll0f;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Libf;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -456,6 +852,8 @@
 
     :cond_1
     invoke-direct {p0, p1, v1}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->report(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;->reportPingSummary()V
 
     return-void
 .end method

@@ -1,33 +1,14 @@
-.class public abstract Lli5;
+.class public interface abstract Lli5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
-.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+.method public abstract b()Landroid/media/MediaFormat;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "REMOVED_TASK"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lli5;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSED_EMPTY"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lli5;->b:Lkotlinx/coroutines/internal/Symbol;
-
-    return-void
+.method public abstract c()Lukg;
 .end method

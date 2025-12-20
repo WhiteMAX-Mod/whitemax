@@ -1,27 +1,30 @@
-.class public interface abstract Lrfg;
+.class public final Lrfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lq58;
 
-# virtual methods
-.method public abstract a(Lje4;IZ)I
-.end method
 
-.method public abstract b(JIIILpfg;)V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract c(ILqyg;)V
-.end method
+.field public final b:I
 
-.method public abstract d(Lgf6;)V
-.end method
+.field public final c:I
 
-.method public e(Lje4;IZ)I
+
+# direct methods
+.method public constructor <init>(III)V
     .locals 0
 
-    invoke-interface {p0, p1, p2, p3}, Lrfg;->a(Lje4;IZ)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p1
+    iput p1, p0, Lrfg;->a:I
 
-    return p1
+    iput p2, p0, Lrfg;->b:I
+
+    iput p3, p0, Lrfg;->c:I
+
+    return-void
 .end method

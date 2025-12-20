@@ -1,48 +1,56 @@
-.class public final synthetic Lwi4;
+.class public final Lwi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpa8;
+.implements Lq2g;
 
 
 # instance fields
-.field public final synthetic a:Lid;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lid;ZI)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lwi4;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwi4;->a:Lid;
-
-    iput-boolean p2, p0, Lwi4;->b:Z
-
-    iput p3, p0, Lwi4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 3
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lwi4;->c:I
+    iget v0, p0, Lwi4;->a:I
 
-    check-cast p1, Ljd;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lwi4;->a:Lid;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget-boolean v2, p0, Lwi4;->b:Z
+    return-object v0
 
-    invoke-interface {p1, v1, v2, v0}, Ljd;->N0(Lid;ZI)V
+    :pswitch_0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-void
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lw0;->k:Ljava/lang/NullPointerException;
+
+    invoke-static {v0}, Lilj;->a(Ljava/lang/Exception;)Lecf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

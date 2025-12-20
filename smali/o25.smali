@@ -1,9 +1,8 @@
-.class public final Lo25;
+.class public interface abstract Lo25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public volatile a:J
-
-.field public volatile b:F
+# virtual methods
+.method public abstract dispose()V
+.end method

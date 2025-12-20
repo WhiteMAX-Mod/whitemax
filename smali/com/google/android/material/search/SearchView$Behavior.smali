@@ -1,12 +1,12 @@
 .class public Lcom/google/android/material/search/SearchView$Behavior;
-.super La74;
+.super Lua4;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "La74;"
+        "Lua4;"
     }
 .end annotation
 

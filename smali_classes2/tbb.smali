@@ -1,223 +1,178 @@
-.class public abstract Ltbb;
+.class public final Ltbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final B:I
-
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final b:Lodb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lodb;)V
+    .locals 0
 
-    sget v0, Ld0d;->oneme_settings_storage_item_action_all_cancel:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Ltbb;->a:I
+    iput-object p1, p0, Ltbb;->a:Landroid/content/Context;
 
-    sget v0, Ld0d;->oneme_settings_storage_item_action_all_clear:I
-
-    sput v0, Ltbb;->b:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_audio_cancel:I
-
-    sput v0, Ltbb;->c:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_audio_clear:I
-
-    sput v0, Ltbb;->d:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_files_cancel:I
-
-    sput v0, Ltbb;->e:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_files_clear:I
-
-    sput v0, Ltbb;->f:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_gif_cancel:I
-
-    sput v0, Ltbb;->g:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_gif_clear:I
-
-    sput v0, Ltbb;->h:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_images_cancel:I
-
-    sput v0, Ltbb;->i:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_images_clear:I
-
-    sput v0, Ltbb;->j:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_music_cancel:I
-
-    sput v0, Ltbb;->k:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_music_clear:I
-
-    sput v0, Ltbb;->l:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_stickers_cancel:I
-
-    sput v0, Ltbb;->m:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_stickers_clear:I
-
-    sput v0, Ltbb;->n:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_video_cancel:I
-
-    sput v0, Ltbb;->o:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_action_video_clear:I
-
-    sput v0, Ltbb;->p:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_audio_messages:I
-
-    sput v0, Ltbb;->q:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_clear_cache:I
-
-    sput v0, Ltbb;->r:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_files:I
-
-    sput v0, Ltbb;->s:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_gif:I
-
-    sput v0, Ltbb;->t:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_images:I
-
-    sput v0, Ltbb;->u:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_music:I
-
-    sput v0, Ltbb;->v:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_one_month:I
-
-    sput v0, Ltbb;->w:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_one_week:I
-
-    sput v0, Ltbb;->x:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_six_month:I
-
-    sput v0, Ltbb;->y:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_stickers:I
-
-    sput v0, Ltbb;->z:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_unlimited:I
-
-    sput v0, Ltbb;->A:I
-
-    sget v0, Ld0d;->oneme_settings_storage_item_video:I
-
-    sput v0, Ltbb;->B:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_data_section_header:I
-
-    sput v0, Ltbb;->C:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_list:I
-
-    sput v0, Ltbb;->D:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_preserve_media_section:I
-
-    sput v0, Ltbb;->E:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_settings_button_vh:I
-
-    sput v0, Ltbb;->F:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_settings_header_vh:I
-
-    sput v0, Ltbb;->G:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_settings_item_vh:I
-
-    sput v0, Ltbb;->H:I
-
-    sget v0, Ld0d;->oneme_settings_storage_screen_toolbar:I
-
-    sput v0, Ltbb;->I:I
+    iput-object p2, p0, Ltbb;->b:Lodb;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final varargs a(Ljava/lang/String;Ljava/util/List;Z[Ljava/lang/String;)Ljava/lang/CharSequence;
+    .locals 11
+
+    array-length v0, p4
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x2
+
+    const/4 v4, 0x3
+
+    const-string v5, ""
+
+    const-string v6, "\u00a0"
+
+    iget-object v7, p0, Ltbb;->b:Lodb;
+
+    const/4 v8, 0x1
+
+    if-ge v2, v0, :cond_3
+
+    aget-object v9, p4, v2
+
+    if-eqz v9, :cond_2
+
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
+
+    move-result v10
+
+    if-nez v10, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v9, p2}, Lkdj;->e(Ljava/lang/String;Ljava/util/List;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_2
+
+    iget-object p3, v7, Lodb;->j:Lnf5;
+
+    invoke-virtual {p3, p1}, Lnf5;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p3, p2}, Lkdj;->e(Ljava/lang/String;Ljava/util/List;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    sget-object p4, Ldc3;->s0:Lole;
+
+    iget-object v0, p0, Ltbb;->a:Landroid/content/Context;
+
+    invoke-virtual {p4, v0}, Lole;->i(Landroid/content/Context;)Ldc3;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Ldc3;->k()Lplb;
+
+    move-result-object p4
+
+    sget-object v0, Lefe;->a:Lefe;
+
+    invoke-virtual {v0}, Lefe;->k()Luhe;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2, p2}, Luhe;->d(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-static {p3, p2, p4}, Lkdj;->c(Ljava/lang/CharSequence;Ljava/util/List;Lplb;)Landroid/text/SpannableString;
+
+    move-result-object v5
+
+    :cond_1
+    new-array p2, v4, [Ljava/lang/CharSequence;
+
+    aput-object p1, p2, v1
+
+    aput-object v6, p2, v8
+
+    aput-object v5, p2, v3
+
+    invoke-static {p2}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz p3, :cond_5
+
+    array-length p2, p4
+
+    if-nez p2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-array p2, v4, [Ljava/lang/CharSequence;
+
+    iget-object p3, v7, Lodb;->j:Lnf5;
+
+    invoke-virtual {p3, p1}, Lnf5;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    aput-object p1, p2, v1
+
+    aput-object v6, p2, v8
+
+    invoke-static {p4}, Lbt;->u([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    aput-object p1, p2, v3
+
+    invoke-static {p2}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_5
+    :goto_2
+    return-object v5
 .end method

@@ -1,88 +1,64 @@
 .class public final Lbs1;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcs1;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lbs1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lbs1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    new-instance v0, Lbs1;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lbs1;->a:Lbs1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbs1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbs1;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lbs1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lbs1;
-
-    iget-object v1, p0, Lbs1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    invoke-direct {v0, p2, v1}, Lbs1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
-
-    iput-object p1, v0, Lbs1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lbs1;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljava/lang/Number;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    :cond_0
+    instance-of p1, p1, Lbs1;
 
-    move-result p1
+    if-nez p1, :cond_1
 
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Lyy7;
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lbs1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    return p1
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->y0()Lur1;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object v0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0, p1}, Lur1;->setChatUnreadMessageCount(I)V
+    const v0, -0x42ba2470
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    return v0
+.end method
 
-    return-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Show"
+
+    return-object v0
 .end method

@@ -1,200 +1,35 @@
-.class public final Lasa;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Lasa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvta;
-
-
-# instance fields
-.field public final a:Lbsa;
-
-.field public volatile b:Z
-
-.field public volatile c:Lo1f;
-
-.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lbsa;)V
+.method public static a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->addMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
 
-    iput-object p1, p0, Lasa;->a:Lbsa;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final b()V
+.method public static b(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Landroid/app/Notification$MessagingStyle;
 
-    iput-boolean v0, p0, Lasa;->b:Z
+    invoke-direct {v0, p0}, Landroid/app/Notification$MessagingStyle;-><init>(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {v0}, Lbsa;->g()V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Lpy4;)V
-    .locals 2
+.method public static c(Landroid/app/Notification$MessagingStyle;Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
+    .locals 0
 
-    invoke-static {p0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->setConversationTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
 
-    move-result v0
+    move-result-object p0
 
-    if-eqz v0, :cond_1
-
-    instance-of v0, p1, Losc;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Losc;
-
-    const/4 v0, 0x7
-
-    invoke-interface {p1, v0}, Lpsc;->h(I)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iput v0, p0, Lasa;->d:I
-
-    iput-object p1, p0, Lasa;->c:Lo1f;
-
-    iput-boolean v1, p0, Lasa;->b:Z
-
-    iget-object p1, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {p1}, Lbsa;->g()V
-
-    return-void
-
-    :cond_0
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    iput v0, p0, Lasa;->d:I
-
-    iput-object p1, p0, Lasa;->c:Lo1f;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 3
-
-    iget v0, p0, Lasa;->d:I
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lbsa;->a:Lvta;
-
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lasa;->c:Lo1f;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lr8f;
-
-    iget v2, v0, Lbsa;->d:I
-
-    invoke-direct {v1, v2}, Lr8f;-><init>(I)V
-
-    iput-object v1, p0, Lasa;->c:Lo1f;
-
-    :cond_1
-    invoke-interface {v1, p1}, Lo1f;->offer(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    return-void
-
-    :cond_2
-    invoke-virtual {v0}, Lbsa;->h()V
-
-    return-void
-
-    :cond_3
-    iget-object p1, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {p1}, Lbsa;->g()V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lasa;->a:Lbsa;
-
-    iget-object v0, v0, Lbsa;->Y:Lwy;
-
-    invoke-virtual {v0, p1}, Lwy;->b(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lbsa;->d()Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lasa;->b:Z
-
-    iget-object p1, p0, Lasa;->a:Lbsa;
-
-    invoke-virtual {p1}, Lbsa;->g()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

@@ -1,110 +1,73 @@
 .class public final Lkgi;
-.super Ljava/lang/Object;
+.super Llgi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
-
-# static fields
-.field public static final a:Lkgi;
+# instance fields
+.field public final e:Landroid/view/WindowInsetsAnimation;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/WindowInsetsAnimation;)V
+    .locals 4
 
-    new-instance v0, Lkgi;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v1, 0x0
 
-    sput-object v0, Lkgi;->a:Lkgi;
+    const/4 v3, 0x0
 
-    new-instance v0, Ltci;
+    invoke-direct {p0, v3, v0, v1, v2}, Llgi;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lkgi;->e:Landroid/view/WindowInsetsAnimation;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()J
+    .locals 2
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lkgi;->e:Landroid/view/WindowInsetsAnimation;
 
-    move-result-object p1
+    invoke-static {v0}, Lzrb;->d(Landroid/view/WindowInsetsAnimation;)J
 
-    throw p1
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()F
+    .locals 1
+
+    iget-object v0, p0, Lkgi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lzrb;->a(Landroid/view/WindowInsetsAnimation;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    iget-object v0, p0, Lkgi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lzrb;->c(Landroid/view/WindowInsetsAnimation;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(F)V
+    .locals 1
+
+    iget-object v0, p0, Lkgi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0, p1}, Lzrb;->w(Landroid/view/WindowInsetsAnimation;F)V
+
+    return-void
 .end method

@@ -1,242 +1,85 @@
 .class public final Lhih;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Ldy;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/View;
+.field public final synthetic o:Lmih;
 
 
 # direct methods
-.method public constructor <init>(Ldy;Landroid/view/View;Landroid/view/View;)V
+.method public constructor <init>(Lmih;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhih;->o:Lmih;
 
-    iput-object p1, p0, Lhih;->a:Ldy;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lhih;->b:Landroid/view/View;
-
-    iput-object p3, p0, Lhih;->c:Landroid/view/View;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lhih;->a:Ldy;
+    check-cast p1, Lac4;
 
-    iget-object v1, v0, Ldy;->X:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v1, Ljava/util/ArrayList;
+    invoke-virtual {p0, p1, p2}, Lhih;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget v2, v0, Ldy;->b:I
+    move-result-object p1
 
-    iget-object v3, v0, Ldy;->Y:Ljava/lang/Object;
+    check-cast p1, Lhih;
 
-    check-cast v3, Ljava/lang/ref/WeakReference;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lhih;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    return-object p2
+.end method
 
-    check-cast v3, Landroid/view/View;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 v4, 0x1
+    new-instance p1, Lhih;
 
-    const/4 v5, 0x0
+    iget-object v0, p0, Lhih;->o:Lmih;
 
-    const/4 v6, 0x0
+    invoke-direct {p1, v0, p2}, Lhih;-><init>(Lmih;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v3, :cond_2
+    return-object p1
+.end method
 
-    invoke-virtual {v3}, Landroid/view/View;->getId()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result v7
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    if-ne v7, v2, :cond_0
+    iget-object p1, p0, Lhih;->o:Lmih;
 
-    invoke-virtual {v3}, Landroid/view/View;->isAttachedToWindow()Z
+    iget-object p1, p1, Lmih;->b:Ld68;
 
-    move-result v7
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    if-eqz v7, :cond_0
+    move-result-object p1
 
-    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+    check-cast p1, Lpkh;
 
-    move-result v7
+    iget-object p1, p1, Lpkh;->f:Lwnh;
 
-    if-nez v7, :cond_0
+    if-eqz p1, :cond_0
 
-    goto :goto_0
+    invoke-interface {p1}, Lwnh;->stop()V
 
     :cond_0
-    move-object v3, v5
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    :goto_0
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v7, v6
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    iget-object v3, v0, Ldy;->Y:Ljava/lang/Object;
-
-    check-cast v3, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
-
-    move v7, v4
-
-    move-object v3, v5
-
-    :goto_2
-    if-nez v3, :cond_5
-
-    iget-object v3, p0, Lhih;->b:Landroid/view/View;
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-nez v3, :cond_4
-
-    :cond_3
-    iget-object v3, p0, Lhih;->c:Landroid/view/View;
-
-    invoke-virtual {v3}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    :cond_4
-    if-eqz v3, :cond_6
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    iget-object v8, v0, Ldy;->d:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Class;
-
-    invoke-virtual {v2, v8}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    :cond_5
-    move-object v5, v3
-
-    :cond_6
-    if-eqz v5, :cond_9
-
-    if-eqz v7, :cond_7
-
-    new-instance v2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v2, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v2, v0, Ldy;->Y:Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/View;
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {v2, v4}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_7
-    iput-boolean v4, v0, Ldy;->c:Z
-
-    iget-object v0, v0, Ldy;->o:Ljava/lang/Object;
-
-    check-cast v0, Landroid/graphics/Rect;
-
-    invoke-static {v0, v5}, Lshh;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Leih;
-
-    invoke-interface {v2, v0, v5}, Leih;->c(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    goto :goto_3
-
-    :cond_8
-    return v4
-
-    :cond_9
-    iget-boolean v2, v0, Ldy;->c:Z
-
-    if-eqz v2, :cond_a
-
-    iput-boolean v6, v0, Ldy;->c:Z
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_4
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Leih;
-
-    invoke-interface {v1}, Leih;->a()V
-
-    goto :goto_4
-
-    :cond_a
-    return v4
+    return-object p1
 .end method

@@ -1,73 +1,84 @@
 .class public final Lp8c;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final a:Ls8c;
+
+# instance fields
+.field public synthetic o:Ljava/lang/Object;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Ll16;->c:Ll16;
+    check-cast p1, Ljava/util/Collection;
 
-    sget-object v1, Lbod;->c:Lbod;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v2, Laod;
+    invoke-virtual {p0, p1, p2}, Lp8c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    invoke-direct {v2, v0, v1, v3}, Laod;-><init>(Ll16;Lbod;Lsl6;)V
+    check-cast p1, Lp8c;
 
-    new-instance v0, Lad7;
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lp8c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lp8c;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lad7;-><init>(I)V
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object v1, Lxwg;->l0:Ls90;
+    iput-object p1, v0, Lp8c;->o:Ljava/lang/Object;
 
-    const/4 v3, 0x2
+    return-object v0
+.end method
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object v3
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lad7;->b:Lx8a;
+    iget-object p1, p0, Lp8c;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v3}, Lx8a;->n(Ls90;Ljava/lang/Object;)V
+    check-cast p1, Ljava/util/Collection;
 
-    sget-object v1, Lbf7;->z:Ls90;
+    sget-object v0, Lf71;->a:Lf71;
 
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Lx8a;->n(Ls90;Ljava/lang/Object;)V
-
-    sget-object v1, Lbf7;->H:Ls90;
-
-    invoke-virtual {v0, v1, v2}, Lx8a;->n(Ls90;Ljava/lang/Object;)V
-
-    sget-object v1, Lre7;->y:Ls90;
-
-    sget-object v2, Lu75;->c:Lu75;
-
-    invoke-virtual {v0, v1, v2}, Lx8a;->n(Ls90;Ljava/lang/Object;)V
-
-    new-instance v1, Ls8c;
-
-    invoke-static {v0}, Lfjb;->a(Lao3;)Lfjb;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ls8c;-><init>(Lfjb;)V
+    const/16 v1, 0x19
 
-    sput-object v1, Lp8c;->a:Ls8c;
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lk25;
+
+    iget-object v0, v0, Lk25;->d:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnfa;
+
+    invoke-interface {v0, p1}, Lnfa;->h(Ljava/lang/Object;)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

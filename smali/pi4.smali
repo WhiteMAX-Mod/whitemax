@@ -1,36 +1,14 @@
-.class public final Lpi4;
+.class public interface abstract Lpi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
-
-
-# instance fields
-.field public a:Lcy7;
-
-.field public b:Lkotlin/coroutines/Continuation;
-
-.field public c:Ljava/lang/Object;
-
 
 # virtual methods
-.method public final getContext()Lx74;
-    .locals 1
-
-    sget-object v0, Lbd5;->a:Lbd5;
-
-    return-object v0
+.method public abstract b()Ljava/lang/Object;
 .end method
 
-.method public final resumeWith(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract c()Z
+.end method
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lpi4;->b:Lkotlin/coroutines/Continuation;
-
-    iput-object p1, p0, Lpi4;->c:Ljava/lang/Object;
-
-    return-void
+.method public abstract close()Z
 .end method

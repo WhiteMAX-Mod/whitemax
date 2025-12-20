@@ -1,163 +1,104 @@
 .class public final Lm9;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljzb;
-
-
-# static fields
-.field public static final synthetic i:[Lyy7;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public d:Lf84;
-
-.field public final e:Ljve;
-
-.field public final f:Lgbd;
-
-.field public final g:Lt9f;
-
-.field public final h:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lz8a;
+    iput-object p1, p0, Lm9;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const-string v1, "processActionJob"
+    const/4 p1, 0x2
 
-    const-string v2, "getProcessActionJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lm9;
-
-    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lvid;->a:Lwid;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lyy7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lm9;->i:[Lyy7;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLk18;Lk18;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lm9;->a:J
-
-    iput-object p3, p0, Lm9;->b:Lk18;
-
-    iput-object p4, p0, Lm9;->c:Lk18;
-
-    const p4, 0x7fffffff
-
-    const/4 v0, 0x5
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p4, v0}, Lkve;->b(III)Ljve;
-
-    move-result-object p4
-
-    iput-object p4, p0, Lm9;->e:Ljve;
-
-    new-instance v0, Lgbd;
-
-    invoke-direct {v0, p4}, Lgbd;-><init>(Le9a;)V
-
-    iput-object v0, p0, Lm9;->f:Lgbd;
-
-    invoke-static {}, Lc7j;->c()Lt9f;
-
-    move-result-object p4
-
-    iput-object p4, p0, Lm9;->g:Lt9f;
-
-    invoke-interface {p3}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lw63;
-
-    invoke-virtual {p3, p1, p2}, Lw63;->j(J)Lhbd;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lhbd;->a:Lmcf;
-
-    invoke-interface {p1}, Lmcf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpb2;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lpb2;->M()Z
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    move v1, p2
-
-    :cond_0
-    iput-boolean v1, p0, Lm9;->h:Z
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lm9;->d:Lf84;
-
-    return-void
-.end method
-
-.method public final b(Lyyb;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Ljava/util/Set;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lm9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lm9;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final d(J)V
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance v0, Lm9;
+
+    iget-object v1, p0, Lm9;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-direct {v0, v1, p2}, Lm9;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lm9;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lm9;->d:Lf84;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lm9;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    iget-object v0, p0, Lm9;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    if-nez p1, :cond_0
+
+    const/16 p1, 0x8
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    new-instance v1, Ljava/lang/Integer;
+
+    invoke-direct {v1, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

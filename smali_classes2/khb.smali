@@ -1,55 +1,37 @@
-.class public final Lkhb;
-.super Lr8j;
+.class public abstract Lkhb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final C0:Lsgb;
+# static fields
+.field public static final a:I
 
-.field public final D0:Lsgb;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lsgb;Lsgb;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0xc
+    sget v0, Lpdd;->oneme_stickers_set_add_button:I
 
-    invoke-direct {p0, v0}, Lr8j;-><init>(I)V
+    sput v0, Lkhb;->a:I
 
-    iput-object p1, p0, Lkhb;->C0:Lsgb;
+    sget v0, Lpdd;->oneme_stickers_set_remove_button:I
 
-    iput-object p2, p0, Lkhb;->D0:Lsgb;
+    sput v0, Lkhb;->b:I
+
+    sget v0, Lpdd;->oneme_stickers_set_snackbar_favorite_added:I
+
+    sput v0, Lkhb;->c:I
+
+    sget v0, Lpdd;->oneme_stickers_set_snackbar_favorite_removed:I
+
+    sput v0, Lkhb;->d:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final c(Llfg;[ILdh0;Lwg7;)Le9;
-    .locals 7
-
-    new-instance v0, Llhb;
-
-    sget v1, Lfgg;->a:I
-
-    sget v1, Lfgg;->a:I
-
-    iget-object v1, p1, Llfg;->d:[Lhf6;
-
-    iget-object v5, p0, Lkhb;->C0:Lsgb;
-
-    iget-object v6, p0, Lkhb;->D0:Lsgb;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-direct/range {v0 .. v6}, Llhb;-><init>(Llfg;[ILdh0;Lwg7;Lsgb;Lsgb;)V
-
-    return-object v0
 .end method

@@ -1,104 +1,55 @@
-.class public interface abstract Lg37;
-.super Ljava/lang/Object;
+.class public final Lg37;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Le37;
+# instance fields
+.field public X:Lxgg;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lk37;
+
+.field public d:Lhof;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lk37;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Le37;->a:Le37;
+    iput-object p1, p0, Lg37;->Z:Lk37;
 
-    sput-object v0, Lg37;->a:Le37;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lg37;->Y:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Lg37;->s0:I
 
-.method public b()V
-    .locals 0
+    const/high16 v0, -0x80000000
 
-    return-void
-.end method
+    or-int/2addr p1, v0
 
-.method public c()Ljava/util/Comparator;
-    .locals 1
+    iput p1, p0, Lg37;->s0:I
 
-    sget-object v0, Lg37;->a:Le37;
+    iget-object p1, p0, Lg37;->Z:Lk37;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    sget-object v0, Le37;->b:Ldj3;
-
-    return-object v0
-.end method
-
-.method public d(J)Ld93;
-    .locals 1
-
-    invoke-interface {p0}, Lg37;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {p1, p2, v0}, Lk4j;->e(JLjava/util/List;)Ld93;
+    invoke-static {p1, v0, p0}, Lk37;->a(Lk37;Lysb;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public e()Ljava/util/Comparator;
-    .locals 1
-
-    sget-object v0, Lg37;->a:Le37;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Le37;->c:Lov5;
-
-    return-object v0
-.end method
-
-.method public f(J)Ld93;
-    .locals 1
-
-    invoke-interface {p0}, Lg37;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {p1, p2, v0}, Lk4j;->f(JLjava/util/List;)Ld93;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract g()J
-.end method
-
-.method public abstract h()J
-.end method
-
-.method public i()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public abstract j()Ljava/util/List;
 .end method

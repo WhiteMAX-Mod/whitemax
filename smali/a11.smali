@@ -1,214 +1,312 @@
-.class public final synthetic La11;
+.class public final La11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "La11;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final synthetic b:Lv11;
+.field public final Y:I
 
-.field public final synthetic c:Lzi1;
+.field public final a:Lh8a;
+
+.field public final b:Lh8a;
+
+.field public final c:Luj4;
+
+.field public final d:Lh8a;
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv11;Lzi1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, La11;->a:I
+    new-instance v0, Lc8;
 
-    iput-object p1, p0, La11;->b:Lv11;
+    const/16 v1, 0xa
 
-    iput-object p2, p0, La11;->c:Lzi1;
+    invoke-direct {v0, v1}, Lc8;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, La11;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Lh8a;Lh8a;Luj4;Lh8a;I)V
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, La11;->a:I
+    const-string v0, "start cannot be null"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v0, p0, La11;->b:Lv11;
+    const-string v0, "end cannot be null"
 
-    iget-object v1, p0, La11;->c:Lzi1;
+    invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    sget-object v2, Lwqi;->a:Ll6b;
+    const-string v0, "validator cannot be null"
 
-    if-nez v2, :cond_0
+    invoke-static {p3, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iput-object p1, p0, La11;->a:Lh8a;
+
+    iput-object p2, p0, La11;->b:Lh8a;
+
+    iput-object p4, p0, La11;->d:Lh8a;
+
+    iput p5, p0, La11;->o:I
+
+    iput-object p3, p0, La11;->c:Luj4;
+
+    if-eqz p4, :cond_1
+
+    iget-object p3, p1, Lh8a;->a:Ljava/util/Calendar;
+
+    iget-object v0, p4, Lh8a;->a:Ljava/util/Calendar;
+
+    invoke-virtual {p3, v0}, Ljava/util/Calendar;->compareTo(Ljava/util/Calendar;)I
+
+    move-result p3
+
+    if-gtz p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Llg8;->d:Llg8;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v2, v3}, Ll6b;->b(Llg8;)Z
+    const-string p2, "start Month cannot be after current Month"
 
-    move-result v4
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v4, :cond_1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable camera for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " was success"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_1
     :goto_0
-    iget-object v0, v0, Lv11;->C0:Ljve;
+    if-eqz p4, :cond_3
 
-    new-instance v2, Lgb;
+    iget-object p3, p4, Lh8a;->a:Ljava/util/Calendar;
 
-    const/4 v3, 0x1
+    iget-object p4, p2, Lh8a;->a:Ljava/util/Calendar;
 
-    invoke-direct {v2, v1, v3}, Lgb;-><init>(Lzi1;Z)V
+    invoke-virtual {p3, p4}, Ljava/util/Calendar;->compareTo(Ljava/util/Calendar;)I
 
-    invoke-virtual {v0, v2}, Ljve;->h(Ljava/lang/Object;)Z
+    move-result p3
 
-    :goto_1
-    sget-object v0, Lqqg;->a:Lqqg;
+    if-gtz p3, :cond_2
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, La11;->b:Lv11;
-
-    iget-object v1, p0, La11;->c:Lzi1;
-
-    sget-object v2, Lwqi;->a:Ll6b;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_2
-    sget-object v3, Llg8;->d:Llg8;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v2, v3}, Ll6b;->b(Llg8;)Z
+    const-string p2, "current Month cannot be after end Month"
 
-    move-result v4
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v4, :cond_3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable microphone for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " was success"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_3
-    :goto_2
-    iget-object v0, v0, Lv11;->C0:Ljve;
+    :goto_1
+    if-ltz p5, :cond_4
 
-    new-instance v2, Lhb;
+    const/4 p3, 0x0
 
-    const/4 v3, 0x1
+    invoke-static {p3}, Lmah;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    invoke-direct {v2, v1, v3}, Lhb;-><init>(Lzi1;Z)V
+    move-result-object p3
 
-    invoke-virtual {v0, v2}, Ljve;->h(Ljava/lang/Object;)Z
+    const/4 p4, 0x7
 
-    goto :goto_1
+    invoke-virtual {p3, p4}, Ljava/util/Calendar;->getMaximum(I)I
 
-    :pswitch_1
-    iget-object v0, p0, La11;->b:Lv11;
+    move-result p3
 
-    iget-object v1, p0, La11;->c:Lzi1;
+    if-gt p5, p3, :cond_4
 
-    sget-object v2, Lwqi;->a:Ll6b;
+    invoke-virtual {p1, p2}, Lh8a;->f(Lh8a;)I
 
-    if-nez v2, :cond_4
+    move-result p3
 
-    goto :goto_3
+    add-int/lit8 p3, p3, 0x1
+
+    iput p3, p0, La11;->Y:I
+
+    iget p2, p2, Lh8a;->c:I
+
+    iget p1, p1, Lh8a;->c:I
+
+    sub-int/2addr p2, p1
+
+    add-int/lit8 p2, p2, 0x1
+
+    iput p2, p0, La11;->X:I
+
+    return-void
 
     :cond_4
-    sget-object v3, Llg8;->d:Llg8;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v2, v3}, Ll6b;->b(Llg8;)Z
+    const-string p2, "firstDayOfWeek is not valid"
 
-    move-result v4
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v4, :cond_5
+    throw p1
+.end method
 
-    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v5, "Disable screen sharing for "
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    const-string v5, " was success"
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v4
+    return v0
 
-    const/4 v5, 0x0
+    :cond_0
+    instance-of v1, p1, La11;
 
-    const-string v6, "CallAdminSettingsController"
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v3, v6, v4, v5}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-nez v1, :cond_1
 
-    :cond_5
-    :goto_3
-    iget-object v0, v0, Lv11;->C0:Ljve;
+    return v2
 
-    new-instance v2, Lkb;
+    :cond_1
+    check-cast p1, La11;
 
-    invoke-direct {v2, v1}, Lkb;-><init>(Lzi1;)V
+    iget-object v1, p0, La11;->a:Lh8a;
 
-    invoke-virtual {v0, v2}, Ljve;->h(Ljava/lang/Object;)Z
+    iget-object v3, p1, La11;->a:Lh8a;
 
-    goto :goto_1
+    invoke-virtual {v1, v3}, Lh8a;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, La11;->b:Lh8a;
+
+    iget-object v3, p1, La11;->b:Lh8a;
+
+    invoke-virtual {v1, v3}, Lh8a;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, La11;->d:Lh8a;
+
+    iget-object v3, p1, La11;->d:Lh8a;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, La11;->o:I
+
+    iget v3, p1, La11;->o:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, La11;->c:Luj4;
+
+    iget-object p1, p1, La11;->c:Luj4;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget v0, p0, La11;->o:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, La11;->c:Luj4;
+
+    iget-object v2, p0, La11;->a:Lh8a;
+
+    iget-object v3, p0, La11;->b:Lh8a;
+
+    iget-object v4, p0, La11;->d:Lh8a;
+
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object p2, p0, La11;->a:Lh8a;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, La11;->b:Lh8a;
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, La11;->d:Lh8a;
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, La11;->c:Luj4;
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget p2, p0, La11;->o:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

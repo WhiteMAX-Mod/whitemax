@@ -1,40 +1,26 @@
-.class public interface abstract Lhm;
+.class public abstract Lhm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhm;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public getPriority()I
-    .locals 1
-
-    const/16 v0, 0x10
-
-    return v0
-.end method
-
-.method public abstract getScope()Lnm;
-.end method
-
-.method public abstract getUri()Landroid/net/Uri;
-.end method
-
-.method public shouldGzip()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public shouldPost()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public willWriteParams()Z
+.method public a()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -42,7 +28,7 @@
     return v0
 .end method
 
-.method public willWriteSupplyParams()Z
+.method public b()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -50,11 +36,13 @@
     return v0
 .end method
 
-.method public abstract writeParams(Lgy7;)V
+.method public c()Z
+    .locals 1
+
+    instance-of v0, p0, Lmec;
+
+    return v0
 .end method
 
-.method public writeSupplyParams(Lgy7;)V
-    .locals 0
-
-    return-void
+.method public abstract d(Lx28;)V
 .end method

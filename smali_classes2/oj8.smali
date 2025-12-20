@@ -1,108 +1,179 @@
 .class public final Loj8;
-.super Ldtf;
+.super Lmz;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/CharSequence;
+.field public final X:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final Y:J
+
+.field public final Z:Ljava/util/List;
+
+.field public final d:Lpj8;
+
+.field public final o:J
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:F
+
+.field public final u0:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lpj8;JJJLjava/util/List;Ljava/lang/String;FZZZ)V
+    .locals 1
 
-    iput-object p1, p0, Loj8;->X:Ljava/lang/CharSequence;
+    sget-object v0, Li10;->y0:Li10;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0, p12, p13}, Lmz;-><init>(Li10;ZZ)V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Loj8;->d:Lpj8;
+
+    iput-wide p2, p0, Loj8;->o:J
+
+    iput-wide p4, p0, Loj8;->X:J
+
+    iput-wide p6, p0, Loj8;->Y:J
+
+    iput-object p8, p0, Loj8;->Z:Ljava/util/List;
+
+    iput-object p9, p0, Loj8;->s0:Ljava/lang/String;
+
+    iput-boolean p11, p0, Loj8;->u0:Z
+
+    iput p10, p0, Loj8;->t0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 8
 
-    check-cast p1, Ljava/io/File;
+    invoke-super {p0}, Lmz;->a()Ljava/util/HashMap;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Loj8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Loj8;->d:Lpj8;
 
-    move-result-object p1
+    iget-wide v2, v1, Lpj8;->a:D
 
-    check-cast p1, Loj8;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    move-result-object v2
 
-    invoke-virtual {p1, p2}, Loj8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v3, "latitude"
 
-    move-result-object p1
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
-.end method
+    iget-wide v2, v1, Lpj8;->b:D
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    new-instance v0, Loj8;
+    move-result-object v2
 
-    iget-object v1, p0, Loj8;->X:Ljava/lang/CharSequence;
+    const-string v3, "longitude"
 
-    invoke-direct {v0, v1, p2}, Loj8;-><init>(Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, v0, Loj8;->o:Ljava/lang/Object;
+    const-wide/16 v2, 0x0
 
+    iget-wide v4, p0, Loj8;->o:J
+
+    cmp-long v2, v4, v2
+
+    if-lez v2, :cond_0
+
+    const-string v2, "livePeriod"
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    iget v2, p0, Loj8;->t0:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v4, v2, v3
+
+    if-lez v4, :cond_1
+
+    const-string v4, "zoom"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    iget-wide v4, v1, Lpj8;->c:D
+
+    const-wide/16 v6, 0x0
+
+    cmpl-double v2, v4, v6
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "alt"
+
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    iget v2, v1, Lpj8;->d:F
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_3
+
+    const-string v4, "epu"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    iget v2, v1, Lpj8;->o:F
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "hdn"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    iget v1, v1, Lpj8;->X:F
+
+    cmpl-float v2, v1, v3
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "spd"
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_5
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Loj8;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/io/File;
-
-    new-instance v0, Lssb;
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, p1, v1}, Lssb;-><init>(Ljava/lang/String;I)V
-
-    iget-object p1, p0, Loj8;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v1, Lvyf;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lvyf;-><init>(Lssb;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Lmwd;
-
-    invoke-direct {v0, v1}, Lmwd;-><init>(Lsm6;)V
-
-    new-instance v1, Luxb;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v1, v0, p1, v2}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
-
-    return-object v1
 .end method

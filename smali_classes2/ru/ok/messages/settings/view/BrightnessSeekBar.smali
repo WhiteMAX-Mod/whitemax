@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/settings/view/BrightnessSeekBar;
-.super Lso;
+.super Luo;
 .source "SourceFile"
 
 
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final b:Lrw4;
+.field public final b:Ln05;
 
 .field public final c:I
 
@@ -23,7 +23,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Lso;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Luo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/high16 p1, -0x40800000    # -1.0f
 
@@ -31,13 +31,13 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lrw4;->a()Lrw4;
+    invoke-static {}, Ln05;->a()Ln05;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->b:Lrw4;
+    iput-object p1, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->b:Ln05;
 
-    iget p1, p1, Lrw4;->e:I
+    iget p1, p1, Ln05;->e:I
 
     iput p1, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->c:I
 
@@ -45,23 +45,23 @@
 
     move-result-object p1
 
-    sget-object p2, Lq1g;->a0:Lbwf;
+    sget-object p2, Lbdg;->a0:Lz7g;
 
-    invoke-static {p1}, Lnca;->d(Landroid/content/Context;)Lq1g;
+    invoke-static {p1}, Ldpf;->t(Landroid/content/Context;)Lbdg;
 
     move-result-object p1
 
-    iget p2, p1, Lq1g;->m:I
+    iget p2, p1, Lbdg;->m:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    iget p1, p1, Lq1g;->k:I
+    iget p1, p1, Lbdg;->k:I
 
     const/high16 v0, 0x3f000000    # 0.5f
 
-    invoke-static {p1, v0}, Lzob;->b(IF)I
+    invoke-static {p1, v0}, Lfij;->b(IF)I
 
     move-result p1
 
@@ -69,15 +69,15 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->b:Lrw4;
+    iget-object v0, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->b:Ln05;
 
-    iget v0, v0, Lrw4;->b:I
+    iget v0, v0, Ln05;->b:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-static {p2, p1, v0}, Luga;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {p2, p1, v0}, Lu4g;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-super {p0, p1}, Lso;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Luo;->onDraw(Landroid/graphics/Canvas;)V
 
     iget v0, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->o:F
 
@@ -276,11 +276,11 @@
 
     iput-object p1, p0, Lru/ok/messages/settings/view/BrightnessSeekBar;->s0:Landroid/animation/ValueAnimator;
 
-    new-instance v0, Lq00;
+    new-instance v0, Lg10;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, v1, p0}, Lq00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lg10;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 

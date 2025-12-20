@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onMediaDataReceived(J)V
+.method public abstract a(Lmt8;)V
 .end method

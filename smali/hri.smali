@@ -1,70 +1,82 @@
 .class public final Lhri;
-.super Ljava/lang/Object;
+.super Lwqi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final transient c:Llri;
 
-# static fields
-.field public static final a:Lhri;
+.field public final transient d:Liri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Llri;Liri;)V
+    .locals 0
 
-    new-instance v0, Lhri;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhri;->c:Llri;
 
-    sput-object v0, Lhri;->a:Lhri;
-
-    new-instance v0, Lmli;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lhri;->d:Liri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a([Ljava/lang/Object;)I
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lhri;->d:Liri;
+
+    invoke-virtual {v0, p1}, Ljqi;->a([Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lhri;->c:Llri;
+
+    invoke-virtual {v0, p1}, Llri;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final synthetic iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Lhri;->d:Liri;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljqi;->f(I)Lcqi;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lhri;->c:Llri;
+
+    iget v0, v0, Llri;->X:I
+
+    return v0
 .end method

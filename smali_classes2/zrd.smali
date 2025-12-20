@@ -1,65 +1,70 @@
 .class public final Lzrd;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpb4;
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
-
-.field public Y:Ljava/util/Collection;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lbsd;
-
-.field public o:Ljava/util/Collection;
-
-.field public final synthetic s0:Lbsd;
-
-.field public t0:I
+.field public final a:Lasd;
 
 
 # direct methods
-.method public constructor <init>(Lbsd;Lq44;)V
+.method public constructor <init>(Lasd;)V
     .locals 0
 
-    iput-object p1, p0, Lzrd;->s0:Lbsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzrd;->a:Lasd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lzrd;->Z:Ljava/lang/Object;
+    invoke-interface {p2, p1, p0}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget p1, p0, Lzrd;->t0:I
+    move-result-object p1
 
-    const/high16 v0, -0x80000000
+    return-object p1
+.end method
 
-    or-int/2addr p1, v0
+.method public final get(Lqb4;)Lpb4;
+    .locals 0
 
-    iput p1, p0, Lzrd;->t0:I
+    invoke-static {p0, p1}, Lxjj;->a(Lpb4;Lqb4;)Lpb4;
 
-    const/4 v6, 0x0
+    move-result-object p1
 
-    const/4 v7, 0x0
+    return-object p1
+.end method
 
-    iget-object v0, p0, Lzrd;->s0:Lbsd;
+.method public final getKey()Lqb4;
+    .locals 1
 
-    const-wide/16 v1, 0x0
+    iget-object v0, p0, Lzrd;->a:Lasd;
 
-    const-wide/16 v3, 0x0
+    return-object v0
+.end method
 
-    const/4 v5, 0x0
+.method public final minusKey(Lqb4;)Lrb4;
+    .locals 0
 
-    move-object v8, p0
+    invoke-static {p0, p1}, Lxjj;->b(Lpb4;Lqb4;)Lrb4;
 
-    invoke-virtual/range {v0 .. v8}, Lbsd;->p(JJLjava/util/Set;Ljava/lang/Integer;ZLq44;)Ljava/lang/Object;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final plus(Lrb4;)Lrb4;
+    .locals 0
+
+    invoke-static {p0, p1}, Lwjj;->a(Lrb4;Lrb4;)Lrb4;
 
     move-result-object p1
 

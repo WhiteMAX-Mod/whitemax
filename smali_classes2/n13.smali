@@ -1,120 +1,96 @@
 .class public final Ln13;
-.super Ldtf;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lz13;
-
-.field public final synthetic Y:Lr03;
-
-.field public o:I
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Lz13;Lr03;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    iput-object p1, p0, Ln13;->X:Lz13;
+    const/4 v0, 0x5
 
-    iput-object p2, p0, Ln13;->Y:Lr03;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ln13;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lf84;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ln13;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ln13;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Ln13;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ln13;
-
-    iget-object v0, p0, Ln13;->X:Lz13;
-
-    iget-object v1, p0, Ln13;->Y:Lr03;
-
-    invoke-direct {p1, v0, v1, p2}, Ln13;-><init>(Lz13;Lr03;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ln13;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Ln13;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Ln13;
 
-    iget-object p1, p0, Ln13;->Y:Lr03;
+    iget-object v1, p0, Ln13;->b:Landroid/content/Intent;
 
-    check-cast p1, Lp03;
+    iget-object p1, p1, Ln13;->b:Landroid/content/Intent;
 
-    iput v1, p0, Ln13;->o:I
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Ln13;->X:Lz13;
+    move-result p1
 
-    invoke-static {v0, p1, p0}, Lz13;->a(Lz13;Lp03;Lq44;)Ljava/lang/Object;
+    if-nez p1, :cond_2
 
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ln13;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PickPhotoFromCamera(data="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ln13;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

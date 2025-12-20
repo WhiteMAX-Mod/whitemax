@@ -1,236 +1,164 @@
 .class public final Lmpc;
-.super Lfl9;
+.super Lppc;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:F
+.field public final a:Lbhg;
 
-.field public b:F
+.field public final b:Lbhg;
 
-.field public c:I
+.field public final c:Ljava/util/List;
 
-.field public d:Z
+
+# direct methods
+.method public constructor <init>(Lbhg;Lbhg;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmpc;->a:Lbhg;
+
+    iput-object p2, p0, Lmpc;->b:Lbhg;
+
+    iput-object p3, p0, Lmpc;->c:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lmpc;->a:F
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    goto :goto_1
 
-    move-result v0
+    :cond_0
+    instance-of v0, p1, Lmpc;
 
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lhd3;->e(I)I
-
-    move-result v0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v2, p0, Lmpc;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lhd3;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
     :cond_1
-    iget v1, p0, Lmpc;->c:I
+    check-cast p1, Lmpc;
 
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Lmpc;->a:Lbhg;
 
-    const/4 v2, 0x3
+    iget-object v1, p1, Lmpc;->a:Lbhg;
 
-    invoke-static {v2, v1}, Lhd3;->f(II)I
+    invoke-virtual {v0, v1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    iget-boolean v1, p0, Lmpc;->d:Z
+    iget-object v0, p0, Lmpc;->b:Lbhg;
 
-    if-eqz v1, :cond_3
+    iget-object v1, p1, Lmpc;->b:Lbhg;
 
-    const/4 v1, 0x4
+    invoke-virtual {v0, v1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Lhd3;->a(I)I
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lmpc;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lmpc;->c:Ljava/util/List;
+
+    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lmpc;->a:Lbhg;
+
+    iget v0, v0, Lbhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmpc;->b:Lbhg;
+
+    iget v2, v2, Lbhg;->c:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmpc;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
     add-int/2addr v1, v0
 
     return v1
-
-    :cond_3
-    return v0
 .end method
 
-.method public final mergeFrom(Lgd3;)Lfl9;
-    .locals 2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lgd3;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v1, 0xd
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x20
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lgd3;->f()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lmpc;->d:Z
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lgd3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lmpc;->c:I
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lgd3;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lmpc;->b:F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lgd3;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lmpc;->a:F
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lhd3;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Lmpc;->a:F
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    const-string v1, "ShowBottomSheet(title="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lmpc;->a:Lbhg;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    const-string v1, ", description="
 
-    if-eq v0, v2, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Lmpc;->b:Lbhg;
 
-    iget v2, p0, Lmpc;->a:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, v2}, Lhd3;->v(IF)V
+    const-string v1, ", buttons="
 
-    :cond_0
-    iget v0, p0, Lmpc;->b:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    const-string v1, ")"
 
-    move-result v0
+    iget-object v2, p0, Lmpc;->c:Ljava/util/List;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-static {v0, v2, v1}, Lc12;->k(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v1
+    move-result-object v0
 
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lmpc;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lhd3;->v(IF)V
-
-    :cond_1
-    iget v0, p0, Lmpc;->c:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
-
-    :cond_2
-    iget-boolean v0, p0, Lmpc;->d:Z
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1, v0}, Lhd3;->r(IZ)V
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

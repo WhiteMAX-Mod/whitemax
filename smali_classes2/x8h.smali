@@ -1,132 +1,200 @@
-.class public final enum Lx8h;
-.super Ljava/lang/Enum;
+.class public final Lx8h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz8h;
-
-
-# static fields
-.field public static final synthetic X:[Lx8h;
-
-.field public static final enum b:Lx8h;
-
-.field public static final enum c:Lx8h;
-
-.field public static final enum d:Lx8h;
-
-.field public static final enum o:Lx8h;
+.implements Lv8h;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lz8h;
+
+.field public final b:Lz7g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lz7g;)V
+    .locals 2
 
-    new-instance v0, Lx8h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    new-instance v0, Lz8h;
 
-    const-string v2, "cancel_1s"
+    invoke-direct {v0}, Lz8h;-><init>()V
 
-    const-string v3, "CANCEL_1S"
+    iput-object v0, p0, Lx8h;->a:Lz8h;
 
-    invoke-direct {v0, v3, v1, v2}, Lx8h;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v0, Lhrf;
 
-    sput-object v0, Lx8h;->b:Lx8h;
+    const/16 v1, 0x13
 
-    new-instance v1, Lx8h;
+    invoke-direct {v0, v1, p1}, Lhrf;-><init>(ILjava/lang/Object;)V
 
-    const/4 v2, 0x1
+    new-instance p1, Lz7g;
 
-    const-string v3, "swipe"
+    invoke-direct {p1, v0}, Lz7g;-><init>(Lmq6;)V
 
-    const-string v4, "SWIPE"
-
-    invoke-direct {v1, v4, v2, v3}, Lx8h;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lx8h;->c:Lx8h;
-
-    new-instance v2, Lx8h;
-
-    const/4 v3, 0x2
-
-    const-string v4, "delete_on_preview"
-
-    const-string v5, "DELETE_ON_PREVIEW"
-
-    invoke-direct {v2, v5, v3, v4}, Lx8h;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lx8h;->d:Lx8h;
-
-    new-instance v3, Lx8h;
-
-    const/4 v4, 0x3
-
-    const-string v5, "delete_on_record"
-
-    const-string v6, "DELETE_ON_RECORD"
-
-    invoke-direct {v3, v6, v4, v5}, Lx8h;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lx8h;->o:Lx8h;
-
-    filled-new-array {v0, v1, v2, v3}, [Lx8h;
-
-    move-result-object v0
-
-    sput-object v0, Lx8h;->X:[Lx8h;
+    iput-object p1, p0, Lx8h;->b:Lz7g;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lx8h;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lx8h;
-    .locals 1
-
-    const-class v0, Lx8h;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lx8h;
-
-    return-object p0
-.end method
-
-.method public static values()[Lx8h;
-    .locals 1
-
-    sget-object v0, Lx8h;->X:[Lx8h;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lx8h;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final getTitle()Ljava/lang/String;
+.method public final a(Lk6h;)Lsn3;
+    .locals 2
+
+    new-instance v0, Lq6h;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p0, v1, p1}, Lq6h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lvn3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lvn3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final b(J)Lsn3;
+    .locals 2
+
+    new-instance v0, Ln02;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p0, p1, p2, v1}, Ln02;-><init>(Ljava/lang/Object;JI)V
+
+    new-instance p1, Lvn3;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, v0}, Lvn3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final c(Lu6h;)Lsn3;
+    .locals 2
+
+    new-instance v0, Lw8h;
+
+    invoke-direct {v0, p0, p1}, Lw8h;-><init>(Lx8h;Lu6h;)V
+
+    new-instance p1, Lvn3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lvn3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    const-string v0, "x8h"
+
+    const-string v1, "clear: "
+
+    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lx8h;->a:Lz8h;
+
+    invoke-virtual {v0}, Lz8h;->clear()V
+
+    iget-object v0, p0, Lx8h;->b:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv8h;
+
+    invoke-interface {v0}, Lv8h;->clear()V
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final d(Lu6h;)Ldw8;
     .locals 1
 
-    iget-object v0, p0, Lx8h;->a:Ljava/lang/String;
+    new-instance v0, Lw8h;
 
-    return-object v0
+    invoke-direct {v0, p0, p1}, Lw8h;-><init>(Lx8h;Lu6h;)V
+
+    new-instance p1, Lhw8;
+
+    invoke-direct {p1, v0}, Lhw8;-><init>(Ltw8;)V
+
+    return-object p1
+.end method
+
+.method public final e(Ljava/lang/String;)Lsn3;
+    .locals 2
+
+    new-instance v0, Lq6h;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p0, v1, p1}, Lq6h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lvn3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lvn3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final f(Ljava/lang/String;)Ldw8;
+    .locals 1
+
+    iget-object v0, p0, Lx8h;->b:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv8h;
+
+    invoke-interface {v0, p1}, Lv8h;->f(Ljava/lang/String;)Ldw8;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final g()Ldw8;
+    .locals 2
+
+    sget-object v0, Ln8h;->b:Ln8h;
+
+    new-instance v0, Lr6h;
+
+    invoke-direct {v0, p0}, Lr6h;-><init>(Lx8h;)V
+
+    new-instance v1, Lhw8;
+
+    invoke-direct {v1, v0}, Lhw8;-><init>(Ltw8;)V
+
+    return-object v1
 .end method

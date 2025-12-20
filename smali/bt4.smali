@@ -1,120 +1,80 @@
-.class public final synthetic Lbt4;
-.super Ljava/lang/Object;
+.class public final Lbt4;
+.super Ltae;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Runnable;
-
-.field public final synthetic c:Liv6;
+# static fields
+.field public static final b:Lbt4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Liv6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p3, p0, Lbt4;->a:I
+    new-instance v0, Lbt4;
 
-    iput-object p1, p0, Lbt4;->b:Ljava/lang/Runnable;
+    sget v5, Lqeg;->c:I
 
-    iput-object p2, p0, Lbt4;->c:Liv6;
+    sget v6, Lqeg;->d:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-wide v2, Lqeg;->e:J
+
+    sget-object v4, Lqeg;->a:Ljava/lang/String;
+
+    invoke-direct {v0}, Ltb4;-><init>()V
+
+    new-instance v1, Lzb4;
+
+    invoke-direct/range {v1 .. v6}, Lzb4;-><init>(JLjava/lang/String;II)V
+
+    iput-object v1, v0, Ltae;->a:Lzb4;
+
+    sput-object v0, Lbt4;->b:Lbt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final close()V
     .locals 2
 
-    iget v0, p0, Lbt4;->a:I
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "Dispatchers.Default cannot be closed"
 
-    iget-object v0, p0, Lbt4;->b:Ljava/lang/Runnable;
-
-    iget-object v1, p0, Lbt4;->c:Liv6;
-
-    iget-object v1, v1, Liv6;->b:Ljava/lang/Object;
-
-    check-cast v1, Lht4;
-
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Lk4;->l(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v1, v0}, Lk4;->m(Ljava/lang/Throwable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbt4;->b:Ljava/lang/Runnable;
-
-    :try_start_1
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    iget-object v1, p0, Lbt4;->c:Liv6;
-
-    iget-object v1, v1, Liv6;->b:Ljava/lang/Object;
-
-    check-cast v1, Lht4;
-
-    invoke-virtual {v1, v0}, Lk4;->m(Ljava/lang/Throwable;)Z
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lbt4;->b:Ljava/lang/Runnable;
-
-    :try_start_2
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    return-void
-
-    :catch_2
-    move-exception v0
-
-    iget-object v1, p0, Lbt4;->c:Liv6;
-
-    iget-object v1, v1, Liv6;->b:Ljava/lang/Object;
-
-    check-cast v1, Lht4;
-
-    invoke-virtual {v1, v0}, Lk4;->m(Ljava/lang/Throwable;)Z
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final limitedParallelism(ILjava/lang/String;)Ltb4;
+    .locals 1
+
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+
+    sget v0, Lqeg;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Ltb4;Ljava/lang/String;)Ltb4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Ltb4;->limitedParallelism(ILjava/lang/String;)Ltb4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.Default"
+
+    return-object v0
 .end method

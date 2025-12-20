@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj74;
+.implements Ll74;
 
 
 # instance fields
-.field public final a:Ls5g;
+.field public final a:Lghg;
 
 
 # direct methods
-.method public constructor <init>(Ls5g;)V
+.method public constructor <init>(Lghg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh74;->a:Ls5g;
+    iput-object p1, p0, Lh74;->a:Lghg;
 
     return-void
 .end method
@@ -44,11 +44,11 @@
     :cond_1
     check-cast p1, Lh74;
 
-    iget-object v1, p0, Lh74;->a:Ls5g;
+    iget-object v1, p0, Lh74;->a:Lghg;
 
-    iget-object p1, p1, Lh74;->a:Ls5g;
+    iget-object p1, p1, Lh74;->a:Lghg;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -63,7 +63,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lh74;->a:Ls5g;
+    iget-object v0, p0, Lh74;->a:Lghg;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -77,11 +77,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Failed(message="
+    const-string v1, "Gallery(toolbarTitle="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lh74;->a:Ls5g;
+    iget-object v1, p0, Lh74;->a:Lghg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

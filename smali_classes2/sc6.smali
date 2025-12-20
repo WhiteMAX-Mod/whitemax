@@ -1,116 +1,76 @@
-.class public final synthetic Lsc6;
-.super Ljava/lang/Object;
+.class public final Lsc6;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final synthetic o:Ltc6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+.method public constructor <init>(Ltc6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lsc6;->a:I
+    iput-object p1, p0, Lsc6;->o:Ltc6;
 
-    iput-object p1, p0, Lsc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lsc6;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, p0, Lsc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lsc6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
+    move-result-object p1
 
-    new-instance v0, Lx3b;
+    check-cast p1, Lsc6;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result-object v3
+    invoke-virtual {p1, p2}, Lsc6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v3}, Lx3b;-><init>(Landroid/content/Context;)V
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    sget v1, Lyud;->P:I
+    new-instance p1, Lsc6;
 
-    invoke-virtual {v0, v1}, Lx3b;->setIcon(I)V
+    iget-object v0, p0, Lsc6;->o:Ltc6;
 
-    sget v1, Lf5b;->o:I
+    invoke-direct {p1, v0, p2}, Lsc6;-><init>(Ltc6;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v3, Ln5g;
+    return-object p1
+.end method
 
-    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v3}, Lx3b;->setTitle(Ls5g;)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lsc6;->o:Ltc6;
 
-    move-result-object v1
+    sget-object v0, Ln33;->a:Ln33;
 
-    sget v3, Lf5b;->l:I
+    invoke-virtual {p1, v0}, Lwj0;->a(Lo33;)V
 
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    move-result-object v1
-
-    new-instance v3, Luc6;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v4}, Luc6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-virtual {v0, v1, v3}, Lx3b;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
-
-    new-instance v0, Lgd6;
-
-    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lhs;
-
-    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
-
-    aget-object v1, v4, v1
-
-    invoke-virtual {v3, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, v1, v2}, Lgd6;-><init>(J)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

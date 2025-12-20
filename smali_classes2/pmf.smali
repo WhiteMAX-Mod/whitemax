@@ -1,130 +1,80 @@
-.class public abstract Lpmf;
-.super Ljava/lang/Object;
+.class public final Lpmf;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final a:Ljava/text/DecimalFormat;
+
+# instance fields
+.field public final synthetic X:Lone/me/startconversation/StartConversationScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
+    .locals 0
 
-    new-instance v0, Ljava/text/DecimalFormat;
+    iput-object p2, p0, Lpmf;->X:Lone/me/startconversation/StartConversationScreen;
 
-    const-string v1, "#.#"
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
-
-    sput-object v0, Lpmf;->a:Ljava/text/DecimalFormat;
-
-    new-instance v0, Ljava/text/DecimalFormat;
-
-    const-string v2, "0.0"
-
-    invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(I)Ljava/lang/String;
-    .locals 5
 
-    int-to-long v0, p0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-wide/32 v2, 0x3b9aca00
+    check-cast p1, Lem4;
 
-    cmp-long p0, v0, v2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lpmf;->a:Ljava/text/DecimalFormat;
+    invoke-virtual {p0, p1, p2}, Lpmf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ltz p0, :cond_0
+    move-result-object p1
 
-    long-to-double v0, v0
+    check-cast p1, Lpmf;
 
-    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    div-double/2addr v0, v3
+    invoke-virtual {p1, p2}, Lpmf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    return-object p2
+.end method
 
-    move-result-object p0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string v0, "B"
+    new-instance v0, Lpmf;
 
-    invoke-static {p0, v0}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lpmf;->X:Lone/me/startconversation/StartConversationScreen;
 
-    move-result-object p0
+    invoke-direct {v0, p2, v1}, Lpmf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
 
-    return-object p0
+    iput-object p1, v0, Lpmf;->o:Ljava/lang/Object;
 
-    :cond_0
-    const-wide/32 v3, 0xf4240
+    return-object v0
+.end method
 
-    cmp-long p0, v0, v3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ltz p0, :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    long-to-double v0, v0
+    iget-object p1, p0, Lpmf;->o:Ljava/lang/Object;
 
-    const-wide v3, 0x412e848000000000L    # 1000000.0
+    check-cast p1, Lem4;
 
-    div-double/2addr v0, v3
+    sget-object v0, Lemf;->c:Lemf;
 
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lf3;->s0(Lem4;)V
 
-    move-result-object p0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    const-string v0, "M"
-
-    invoke-static {p0, v0}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const-wide/16 v3, 0x3e8
-
-    cmp-long p0, v0, v3
-
-    if-ltz p0, :cond_2
-
-    long-to-double v0, v0
-
-    const-wide v3, 0x408f400000000000L    # 1000.0
-
-    div-double/2addr v0, v3
-
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "K"
-
-    invoke-static {p0, v0}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

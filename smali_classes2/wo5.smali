@@ -1,51 +1,23 @@
-.class public abstract Lwo5;
+.class public final Lwo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ld68;
+
+
 # direct methods
-.method public static a([B)Lxo5;
-    .locals 10
+.method public constructor <init>(Ld68;Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
+    iput-object p2, p0, Lwo5;->a:Landroid/content/Context;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lfl9;->mergeFrom(Lfl9;[B)Lfl9;
+    iput-object p1, p0, Lwo5;->b:Ld68;
 
-    move-result-object p0
-
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
-    new-instance v0, Lxo5;
-
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
-
-    iget-object v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
-
-    iget-object v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
-
-    iget-wide v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
-
-    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
-
-    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
-
-    invoke-direct/range {v0 .. v9}, Lxo5;-><init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method

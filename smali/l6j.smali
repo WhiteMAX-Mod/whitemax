@@ -1,132 +1,130 @@
-.class public abstract Ll6j;
-.super Ljava/lang/Object;
+.class public final enum Ll6j;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lkqi;
+
+
+# static fields
+.field public static final enum X:Ll6j;
+
+.field public static final synthetic Y:[Ll6j;
+
+.field public static final enum b:Ll6j;
+
+.field public static final enum c:Ll6j;
+
+.field public static final enum d:Ll6j;
+
+.field public static final enum o:Ll6j;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public static b([B)Lpy0;
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 8
 
-    sget-object v0, Lru/ok/tamtam/nano/a;->a:[B
+    new-instance v0, Ll6j;
 
-    :try_start_0
-    invoke-static {p0}, Lru/ok/tamtam/nano/Protos$SelfProfile;->parseFrom([B)Lru/ok/tamtam/nano/Protos$SelfProfile;
-
-    move-result-object p0
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->restrictions:Ljava/util/Map;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->restrictions:Ljava/util/Map;
-
-    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    new-instance v3, Lepd;
-
-    iget-object v4, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->restrictions:Ljava/util/Map;
-
-    invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lru/ok/tamtam/nano/Protos$RestrictionsInfo;
-
-    iget-wide v4, v4, Lru/ok/tamtam/nano/Protos$RestrictionsInfo;->expiration:J
-
-    invoke-direct {v3, v4, v5}, Lepd;-><init>(J)V
-
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v2, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
-
-    if-eqz v2, :cond_1
-
-    array-length v2, v2
-
-    const/4 v3, 0x1
-
-    if-lt v2, v3, :cond_1
+    const-string v1, "SOURCE_UNKNOWN"
 
     const/4 v2, 0x0
 
-    :goto_1
-    iget-object v3, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
+    invoke-direct {v0, v1, v2, v2}, Ll6j;-><init>(Ljava/lang/String;II)V
 
-    array-length v4, v3
+    new-instance v1, Ll6j;
 
-    if-ge v2, v4, :cond_1
+    const-string v2, "BITMAP"
 
-    aget v3, v3, v2
+    const/4 v3, 0x1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v1, v2, v3, v3}, Ll6j;-><init>(Ljava/lang/String;II)V
 
-    move-result-object v3
+    sput-object v1, Ll6j;->b:Ll6j;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v2, Ll6j;
 
-    add-int/lit8 v2, v2, 0x1
+    const-string v3, "BYTEARRAY"
 
-    goto :goto_1
+    const/4 v4, 0x2
 
-    :cond_1
-    new-instance p0, Lpy0;
+    invoke-direct {v2, v3, v4, v4}, Ll6j;-><init>(Ljava/lang/String;II)V
 
-    const/16 v2, 0x1d
+    sput-object v2, Ll6j;->c:Ll6j;
 
-    invoke-direct {p0, v0, v2, v1}, Lpy0;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    new-instance v3, Ll6j;
 
-    return-object p0
+    const-string v4, "BYTEBUFFER"
 
-    :catch_0
-    move-exception p0
+    const/4 v5, 0x3
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    invoke-direct {v3, v4, v5, v5}, Ll6j;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    sput-object v3, Ll6j;->d:Ll6j;
 
-    throw v0
+    new-instance v4, Ll6j;
+
+    const-string v5, "FILEPATH"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Ll6j;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Ll6j;->o:Ll6j;
+
+    new-instance v5, Ll6j;
+
+    const-string v6, "ANDROID_MEDIA_IMAGE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Ll6j;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Ll6j;->X:Ll6j;
+
+    filled-new-array/range {v0 .. v5}, [Ll6j;
+
+    move-result-object v0
+
+    sput-object v0, Ll6j;->Y:[Ll6j;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Ll6j;->a:I
+
+    return-void
+.end method
+
+.method public static values()[Ll6j;
+    .locals 1
+
+    sget-object v0, Ll6j;->Y:[Ll6j;
+
+    invoke-virtual {v0}, [Ll6j;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll6j;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract a(Lgte;FF)V
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Ll6j;->a:I
+
+    return v0
 .end method

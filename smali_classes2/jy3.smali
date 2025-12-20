@@ -1,68 +1,78 @@
-.class public final Ljy3;
-.super Ld2f;
+.class public final synthetic Ljy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
 
-# virtual methods
-.method public final F(Lxx3;)V
-    .locals 5
 
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+# instance fields
+.field public final synthetic a:I
 
-    check-cast v0, Lv0b;
+.field public final synthetic b:Landroid/content/Context;
 
-    iget-wide v1, p1, Lxx3;->a:J
+.field public final synthetic c:Lly3;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v3
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Context;Lly3;I)V
+    .locals 0
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    iput p3, p0, Ljy3;->a:I
 
-    iget-object v3, p1, Lxx3;->b:Ljava/lang/CharSequence;
+    iput-object p1, p0, Ljy3;->b:Landroid/content/Context;
 
-    invoke-virtual {v0, v3}, Lv0b;->setTitle(Ljava/lang/CharSequence;)V
+    iput-object p2, p0, Ljy3;->c:Lly3;
 
-    iget-object v3, p1, Lxx3;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v3}, Lv0b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v3, p1, Lxx3;->s0:Z
-
-    invoke-virtual {v0, v3}, Lv0b;->setVerified(Z)V
-
-    invoke-virtual {v0}, Lv0b;->f()V
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Lv0b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v4, p1, Lxx3;->t0:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lxx3;->Y:Landroid/net/Uri;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    :cond_0
-    invoke-virtual {v0, v1, v2, v4, v3}, Lv0b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lv0b;->setSelectionEnabled(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final bridge synthetic z(Lt98;)V
-    .locals 0
 
-    check-cast p1, Lxx3;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0, p1}, Ljy3;->F(Lxx3;)V
+    iget v0, p0, Ljy3;->a:I
 
-    return-void
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljy3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Ljy3;->c:Lly3;
+
+    invoke-static {v0, v1}, Lly3;->v(Landroid/content/Context;Lly3;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ljy3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Ljy3;->c:Lly3;
+
+    invoke-static {v0, v1}, Lly3;->x(Landroid/content/Context;Lly3;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Ljy3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Ljy3;->c:Lly3;
+
+    invoke-static {v0, v1}, Lly3;->w(Landroid/content/Context;Lly3;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

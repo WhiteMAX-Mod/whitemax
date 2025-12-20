@@ -27,7 +27,7 @@
         "currentTask",
         "<init>",
         "(Lkotlinx/coroutines/internal/LimitedDispatcher;Ljava/lang/Runnable;)V",
-        "Lqqg;",
+        "Lv2h;",
         "run",
         "()V",
         "Ljava/lang/Runnable;",
@@ -89,9 +89,9 @@
     :catchall_0
     move-exception v1
 
-    sget-object v2, Lbd5;->a:Lbd5;
+    sget-object v2, Lwg5;->a:Lwg5;
 
-    invoke-static {v2, v1}, Lb7j;->c(Lx74;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1}, Lkkj;->a(Lrb4;Ljava/lang/Throwable;)V
 
     :goto_0
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
@@ -115,13 +115,13 @@
 
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-static {v1}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Lz74;
+    invoke-static {v1}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Ltb4;
 
     move-result-object v1
 
     iget-object v2, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-virtual {v1, v2}, Lz74;->isDispatchNeeded(Lx74;)Z
+    invoke-virtual {v1, v2}, Ltb4;->isDispatchNeeded(Lrb4;)Z
 
     move-result v1
 
@@ -129,13 +129,13 @@
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-static {v0}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Lz74;
+    invoke-static {v0}, Lkotlinx/coroutines/internal/LimitedDispatcher;->access$getDispatcher$p(Lkotlinx/coroutines/internal/LimitedDispatcher;)Ltb4;
 
     move-result-object v0
 
     iget-object v1, p0, Lkotlinx/coroutines/internal/LimitedDispatcher$Worker;->this$0:Lkotlinx/coroutines/internal/LimitedDispatcher;
 
-    invoke-virtual {v0, v1, p0}, Lz74;->dispatch(Lx74;Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1, p0}, Ltb4;->dispatch(Lrb4;Ljava/lang/Runnable;)V
 
     return-void
 .end method

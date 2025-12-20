@@ -1,342 +1,77 @@
 .class public final Lpg1;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Ljv1;
 
 
 # instance fields
-.field public synthetic X:Landroid/widget/LinearLayout;
-
-.field public final synthetic o:I
+.field public final synthetic a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
     .locals 0
 
-    iput p3, p0, Lpg1;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpg1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final C()V
+    .locals 11
 
-    iget v0, p0, Lpg1;->o:I
+    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lp38;
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lpg1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    check-cast p2, Lyeb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x6
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x5
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x4
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_2
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x3
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_4
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_5
-    new-instance p2, Lpg1;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lpg1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lpg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lpg1;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Llg1;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->y0(Landroid/view/View;Lyeb;)V
+    iget-object v0, v0, Llg1;->w0:Lhof;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    :cond_0
+    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v1
 
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    move-object v2, v1
 
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
+    check-cast v2, Lfg1;
 
-    sget-object v0, La93;->s0:Lv1a;
+    iget-boolean v3, v2, Lfg1;->d:Z
 
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    xor-int/lit8 v6, v3, 0x1
 
-    move-result-object v0
+    const/4 v9, 0x0
 
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
+    const/16 v10, 0x77
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    iget v0, v0, Lbf0;->k:I
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    const/4 v5, 0x0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    const/4 v7, 0x0
 
-    return-object p1
+    const/4 v8, 0x0
 
-    :pswitch_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v10}, Lfg1;->a(Lfg1;Lve0;Lbx8;Lbx8;ZLghg;Ljava/util/ArrayList;Lghg;I)Lfg1;
 
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
+    move-result-object v2
 
-    sget-object v0, La93;->s0:Lv1a;
+    invoke-virtual {v0, v1, v2}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->n:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_4
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_5
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpg1;->X:Landroid/widget/LinearLayout;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->B(Landroid/view/View;)Lh5b;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lh5b;->c:Lyeb;
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->h:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

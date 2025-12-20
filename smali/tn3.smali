@@ -1,59 +1,111 @@
 .class public final Ltn3;
-.super Ljava/lang/Object;
+.super Lsn3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Lpy7;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
 .field public final b:Ljava/lang/Object;
 
+.field public final c:Ljava/lang/Object;
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    iput p2, p0, Ltn3;->a:I
+
+    iput-object p1, p0, Ltn3;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Ltn3;->c:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltn3;->a:Ljava/lang/Object;
-
-    iput-object p2, p0, Ltn3;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
+.method public final f(Lbo3;)V
+    .locals 4
 
-    iget-object v0, p0, Ltn3;->a:Ljava/lang/Object;
+    iget v0, p0, Ltn3;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+    new-instance v0, Lvw1;
 
+    iget-object v1, p0, Ltn3;->c:Ljava/lang/Object;
+
+    check-cast v1, Ldr6;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, p1, v2, v1}, Lvw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lbo3;->c(Ll25;)V
+
+    iget-object p1, p0, Ltn3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lbdf;
+
+    invoke-virtual {p1, v0}, Lbdf;->l(Ludf;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lao3;
+
+    iget-object v1, p0, Ltn3;->b:Ljava/lang/Object;
+
+    check-cast v1, Lsn3;
+
+    invoke-direct {v0, p1, v1}, Lao3;-><init>(Lbo3;Lsn3;)V
+
+    invoke-interface {p1, v0}, Lbo3;->c(Ll25;)V
+
+    iget-object p1, p0, Ltn3;->c:Ljava/lang/Object;
+
+    check-cast p1, Lqae;
+
+    invoke-virtual {p1, v0}, Lqae;->b(Ljava/lang/Runnable;)Ll25;
+
+    move-result-object p1
+
+    iget-object v0, v0, Lao3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lr62;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lp25;->d(Ljava/util/concurrent/atomic/AtomicReference;Ll25;)Z
+
+    return-void
+
+    :pswitch_1
     iget-object v0, p0, Ltn3;->b:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Lsn3;
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    new-instance v1, Lvw1;
 
-    sget-object p1, Lwn3;->a:Lkotlinx/coroutines/internal/Symbol;
+    iget-object v2, p0, Ltn3;->c:Ljava/lang/Object;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    check-cast v2, Lsn3;
 
-    const-string v0, "not implemented"
+    const/4 v3, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1, v3, v2}, Lvw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    throw p1
+    invoke-virtual {v0, v1}, Lsn3;->e(Lbo3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

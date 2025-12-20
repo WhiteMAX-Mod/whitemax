@@ -1,114 +1,134 @@
-.class public final synthetic Lakh;
-.super Ljava/lang/Object;
+.class public final Lakh;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmze;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+.field public final synthetic Y:Lf76;
 
-.field public final synthetic c:Lem6;
+.field public final synthetic Z:Ldkh;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;I)V
+.method public constructor <init>(Lf76;Lkotlin/coroutines/Continuation;Ldkh;)V
     .locals 0
 
-    iput p3, p0, Lakh;->a:I
+    iput-object p1, p0, Lakh;->Y:Lf76;
 
-    iput-object p1, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    iput-object p3, p0, Lakh;->Z:Ldkh;
 
-    iput-object p2, p0, Lakh;->c:Lem6;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lakh;->a:I
+    check-cast p1, Lh76;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    invoke-virtual {p0, p1, p2}, Lakh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    check-cast p1, Lakh;
 
-    return-void
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :pswitch_0
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    invoke-virtual {p1, p2}, Lakh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->g(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    return-object p1
+.end method
 
-    return-void
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    :pswitch_1
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    new-instance v0, Lakh;
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    iget-object v1, p0, Lakh;->Y:Lf76;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->j(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    iget-object v2, p0, Lakh;->Z:Ldkh;
 
-    return-void
+    invoke-direct {v0, v1, p2, v2}, Lakh;-><init>(Lf76;Lkotlin/coroutines/Continuation;Ldkh;)V
 
-    :pswitch_2
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    iput-object p1, v0, Lakh;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    return-object v0
+.end method
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->i(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-void
+    iget v0, p0, Lakh;->o:I
 
-    :pswitch_3
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    if-eqz v0, :cond_1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->m(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    if-ne v0, v1, :cond_0
 
-    return-void
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    :pswitch_4
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    goto :goto_0
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->h(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_5
-    iget-object v0, p0, Lakh;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+    throw p1
 
-    iget-object v1, p0, Lakh;->c:Lem6;
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->k(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    iget-object p1, p0, Lakh;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Lh76;
 
-    nop
+    new-instance v0, Lbsd;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v2, Lvx;
+
+    iget-object v3, p0, Lakh;->Z:Ldkh;
+
+    invoke-direct {v2, v0, p1, v3}, Lvx;-><init>(Lbsd;Lh76;Ldkh;)V
+
+    iput v1, p0, Lakh;->o:I
+
+    iget-object p1, p0, Lakh;->Y:Lf76;
+
+    invoke-interface {p1, v2, p0}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

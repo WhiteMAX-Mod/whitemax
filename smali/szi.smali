@@ -1,100 +1,70 @@
-.class public abstract Lszi;
+.class public final Lszi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lszi;
+
 
 # direct methods
-.method public static final a(Lyeb;)[I
+.method static constructor <clinit>()V
     .locals 3
 
-    invoke-interface {p0}, Lyeb;->h()Lkf3;
+    new-instance v0, Lszi;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    sput-object v0, Lszi;->a:Lszi;
 
-    move-result p0
+    new-instance v0, Ldqi;
 
-    const/4 v0, -0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    if-eqz p0, :cond_2
+    const-class v1, Lrqi;
 
-    const/4 v2, 0x1
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    if-eq p0, v2, :cond_1
+    move-result-object v0
 
     const/4 v2, 0x2
 
-    if-ne p0, v2, :cond_0
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-result-object v0
 
-    throw p0
+    const/4 v2, 0x3
 
-    :cond_1
-    const p0, 0x3e4ccccd    # 0.2f
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    invoke-static {v0, p0}, Lv4j;->c(IF)I
+    move-result-object v0
 
-    move-result p0
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    filled-new-array {p0, v1}, [I
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    return-object p0
-
-    :cond_2
-    :goto_0
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    invoke-static {v0, p0}, Lv4j;->c(IF)I
-
-    move-result p0
-
-    filled-new-array {p0, v1}, [I
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Lpb2;)J
-    .locals 4
 
-    invoke-virtual {p0}, Lpb2;->p()J
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-wide v0
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget-object p0, p0, Lpb2;->c:Leh9;
+    move-result-object p1
 
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Leh9;->a:Lsi9;
-
-    if-eqz p0, :cond_0
-
-    iget-wide v2, p0, Lsi9;->c:J
-
-    goto :goto_0
-
-    :cond_0
-    const-wide v2, 0x7fffffffffffffffL
-
-    :goto_0
-    cmp-long p0, v0, v2
-
-    if-lez p0, :cond_1
-
-    return-wide v2
-
-    :cond_1
-    return-wide v0
+    throw p1
 .end method

@@ -2,211 +2,76 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Ljava/util/ArrayList;
+.field public final b:La60;
 
-.field public final synthetic c:Lun4;
+.field public final c:Lpc2;
+
+.field public final synthetic d:Lpn4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lun4;Ljava/util/ArrayList;I)V
+.method public constructor <init>(Lpn4;La60;Lpc2;J)V
     .locals 0
 
-    iput p3, p0, Lon4;->a:I
-
-    iput-object p1, p0, Lon4;->c:Lun4;
-
-    iput-object p2, p0, Lon4;->b:Ljava/util/ArrayList;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lon4;->d:Lpn4;
+
+    iput-object p2, p0, Lon4;->b:La60;
+
+    iput-wide p4, p0, Lon4;->a:J
+
+    iput-object p3, p0, Lon4;->c:Lpc2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final a(JLjava/nio/ByteBuffer;)V
+    .locals 3
 
-    iget v0, p0, Lon4;->a:I
+    iget-wide v0, p0, Lon4;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    cmp-long v0, p1, v0
 
-    iget-object v0, p0, Lon4;->b:Ljava/util/ArrayList;
+    if-ltz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    iget-object v3, p0, Lon4;->c:Lun4;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmid;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v4, v2, Lmid;->a:Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v5
-
-    iget-object v6, v3, Lun4;->o:Ljava/util/ArrayList;
-
-    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    invoke-virtual {v5, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    iget-wide v7, v3, Luhd;->c:J
-
-    invoke-virtual {v6, v7, v8}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    new-instance v7, Lpn4;
-
-    invoke-direct {v7, v3, v2, v4, v5}, Lpn4;-><init>(Lun4;Lmid;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
-
-    invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    const/4 v0, 0x0
 
-    iget-object v1, v3, Lun4;->l:Ljava/util/ArrayList;
+    :goto_0
+    invoke-static {v0}, Lp5j;->b(Z)V
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iget-wide v0, p0, Lon4;->a:J
 
-    return-void
+    sub-long v0, p1, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lon4;->b:Ljava/util/ArrayList;
+    long-to-int v0, v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
 
-    move-result-object v1
+    move-result v1
 
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v2, p0, Lon4;->b:La60;
 
-    move-result v2
+    iget v2, v2, La60;->d:I
 
-    iget-object v4, p0, Lon4;->c:Lun4;
+    mul-int/2addr v0, v2
 
-    if-eqz v2, :cond_3
+    add-int/2addr v0, v1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    move-result-object v2
-
-    check-cast v2, Ltn4;
-
-    iget-object v5, v2, Ltn4;->a:Lmid;
-
-    iget v3, v2, Ltn4;->b:I
-
-    iget v6, v2, Ltn4;->c:I
-
-    iget v7, v2, Ltn4;->d:I
-
-    iget v2, v2, Ltn4;->e:I
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move v8, v7
-
-    iget-object v7, v5, Lmid;->a:Landroid/view/View;
-
-    sub-int v3, v8, v3
-
-    sub-int v8, v2, v6
-
-    const/4 v2, 0x0
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_1
-    if-eqz v8, :cond_2
-
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_2
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v9
-
-    iget-object v2, v4, Lun4;->p:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v4}, Luhd;->f()J
-
-    move-result-wide v10
-
-    invoke-virtual {v9, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    move v6, v3
-
-    new-instance v3, Lqn4;
-
-    invoke-direct/range {v3 .. v9}, Lqn4;-><init>(Lun4;Lmid;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
-
-    invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v1, v4, Lun4;->m:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iput-wide p1, p0, Lon4;->a:J
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,85 +1,134 @@
-.class public final enum Lef2;
-.super Ljava/lang/Enum;
+.class public final Lef2;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final enum a:Lef2;
 
-.field public static final enum b:Lef2;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final enum c:Lef2;
+.field public final synthetic Y:Lyf2;
 
-.field public static final synthetic d:[Lef2;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lyf2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lef2;
+    iput-object p1, p0, Lef2;->Y:Lyf2;
 
-    const-string v1, "SOUND"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lef2;->a:Lef2;
-
-    new-instance v1, Lef2;
-
-    const-string v2, "VIBRATION"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lef2;->b:Lef2;
-
-    new-instance v2, Lef2;
-
-    const-string v3, "LED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lef2;->c:Lef2;
-
-    filled-new-array {v0, v1, v2}, [Lef2;
-
-    move-result-object v0
-
-    sput-object v0, Lef2;->d:[Lef2;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lef2;
-    .locals 1
 
-    const-class v0, Lef2;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lud2;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lef2;
+    invoke-virtual {p0, p1, p2}, Lef2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lef2;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lef2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lef2;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lef2;->d:[Lef2;
+    new-instance v0, Lef2;
 
-    invoke-virtual {v0}, [Lef2;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lef2;->Y:Lyf2;
 
-    move-result-object v0
+    invoke-direct {v0, v1, p2}, Lef2;-><init>(Lyf2;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lef2;
+    iput-object p1, v0, Lef2;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lef2;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lef2;->X:Ljava/lang/Object;
+
+    check-cast p1, Lud2;
+
+    invoke-virtual {p1}, Lud2;->P()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lud2;->E()Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lef2;->Y:Lyf2;
+
+    iget-object p1, p1, Lma2;->e:Lh6f;
+
+    sget-object v0, Lpf3;->b:Lpf3;
+
+    iput v1, p0, Lef2;->o:I
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

@@ -1,55 +1,80 @@
 .class public final Lpqe;
-.super Lq44;
+.super Ljre;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lxac;
+.field public final synthetic h:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lere;
-
-.field public d:Lere;
-
-.field public o:Ljava/util/List;
-
-.field public s0:I
+.field public final i:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lere;Lq44;)V
+.method public synthetic constructor <init>(JLjava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Lpqe;->Z:Lere;
+    .line 1
+    iput p4, p0, Lpqe;->h:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ljre;-><init>(J)V
+
+    iput-object p3, p0, Lpqe;->i:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldn9;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lpqe;->h:I
+
+    const-wide/16 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, v0, v1}, Ljre;-><init>(J)V
+
+    .line 3
+    iput-object p1, p0, Lpqe;->i:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lkre;
+    .locals 2
 
-    iput-object p1, p0, Lpqe;->Y:Ljava/lang/Object;
+    iget v0, p0, Lpqe;->h:I
 
-    iget p1, p0, Lpqe;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lmre;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, p0}, Lmre;-><init>(Lpqe;)V
 
-    iput p1, p0, Lpqe;->s0:I
+    return-object v0
 
-    iget-object p1, p0, Lpqe;->Z:Lere;
+    :pswitch_0
+    new-instance v0, Lqqe;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p1, v0, p0}, Lere;->t(Lere;Lo98;Lq44;)Ljava/lang/Object;
+    invoke-direct {v0, p0, v1}, Lqqe;-><init>(Lpqe;B)V
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
+    :pswitch_1
+    new-instance v0, Lqqe;
+
+    invoke-direct {v0, p0}, Lqqe;-><init>(Lpqe;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

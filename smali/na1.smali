@@ -1,99 +1,67 @@
-.class public final synthetic Lna1;
-.super Ljava/lang/Object;
+.class public final Lna1;
+.super Lqr4;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic t:Loa1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
-    .locals 0
+.method public constructor <init>(Loa1;)V
+    .locals 2
 
-    iput p1, p0, Lna1;->a:I
+    iput-object p1, p0, Lna1;->t:Loa1;
 
-    iput-object p2, p0, Lna1;->c:Ljava/lang/Object;
+    invoke-direct {p0}, Lqr4;-><init>()V
 
-    iput-boolean p3, p0, Lna1;->b:Z
+    const-wide/16 v0, 0x12c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide v0, p0, Lerd;->d:J
+
+    iput-wide v0, p0, Lerd;->c:J
+
+    iput-wide v0, p0, Lerd;->f:J
+
+    iput-wide v0, p0, Lerd;->e:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final m()V
+    .locals 3
 
-    iget v0, p0, Lna1;->a:I
+    iget-object v0, p0, Lna1;->t:Loa1;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, Loa1;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lna1;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    check-cast v0, Lur1;
-
-    iget-boolean v1, p0, Lna1;->b:Z
-
-    invoke-static {v0, v1}, Lur1;->w(Lur1;Z)V
-
-    :goto_0
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lna1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lo37;
-
-    sget-object v1, Lca1;->c:Lca1;
-
-    check-cast v0, Lm37;
-
-    iget-wide v2, v0, Lm37;->a:J
-
-    invoke-virtual {v1}, Li3;->p0()Lii4;
-
-    move-result-object v0
-
-    const-string v1, ":call-user?opponent_id="
-
-    const-string v4, "&video_enabled="
-
-    iget-boolean v5, p0, Lna1;->b:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    const-string v2, "&microphone_enabled=true"
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, -0x2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    :cond_0
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    goto :goto_0
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
 
-    nop
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
+
+    :cond_1
+    return-void
 .end method

@@ -1,163 +1,70 @@
-.class public abstract Ljui;
+.class public final Ljui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Ljui;
+
 
 # direct methods
-.method public static a(Landroid/os/Bundle;Landroid/os/Bundle;)Z
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Ljui;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return v0
+    sput-object v0, Ljui;->a:Ljui;
 
-    :cond_0
-    const/4 v1, 0x0
+    new-instance v0, Ldqi;
 
-    const-string v2, "android.media.browse.extra.PAGE_SIZE"
+    const/4 v1, 0x1
 
-    const-string v3, "android.media.browse.extra.PAGE"
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    const/4 v4, -0x1
+    const-class v1, Lrqi;
 
-    if-nez p0, :cond_2
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    invoke-virtual {p1, v3, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    move-result-object v0
 
-    move-result p0
+    const/4 v2, 0x2
 
-    if-ne p0, v4, :cond_1
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    invoke-virtual {p1, v2, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    move-result-object v0
 
-    move-result p0
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    if-ne p0, v4, :cond_1
+    move-result-object v0
 
-    return v0
+    const/4 v2, 0x3
 
-    :cond_1
-    return v1
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    :cond_2
-    if-nez p1, :cond_4
+    move-result-object v0
 
-    invoke-virtual {p0, v3, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    move-result p1
+    move-result-object v0
 
-    if-ne p1, v4, :cond_3
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    invoke-virtual {p0, v2, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p0
-
-    if-ne p0, v4, :cond_3
-
-    return v0
-
-    :cond_3
-    return v1
-
-    :cond_4
-    invoke-virtual {p0, v3, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    invoke-virtual {p1, v3, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    if-ne v5, v3, :cond_5
-
-    invoke-virtual {p0, v2, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p0
-
-    invoke-virtual {p1, v2, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p1
-
-    if-ne p0, p1, :cond_5
-
-    return v0
-
-    :cond_5
-    return v1
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;Z)Lof0;
-    .locals 1
 
-    if-eqz p1, :cond_0
-
-    const-string p1, "Dark"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "Light"
-
-    :goto_0
-    new-instance v0, Lof0;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lof0;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/Boolean;)B
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    if-eqz p0, :cond_1
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object p1
 
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public static d(B)Ljava/lang/Boolean;
-    .locals 1
-
-    if-eqz p0, :cond_1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :cond_1
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
+    throw p1
 .end method

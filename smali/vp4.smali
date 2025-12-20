@@ -1,64 +1,19 @@
-.class public final synthetic Lvp4;
-.super Ljava/lang/Object;
+.class public final Lvp4;
+.super Laoa;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltu1;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ltu1;I)V
-    .locals 0
-
-    iput p2, p0, Lvp4;->a:I
-
-    iput-object p1, p0, Lvp4;->b:Ltu1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final s(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    .locals 1
 
-    iget v0, p0, Lvp4;->a:I
+    const/16 v0, 0x40
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    iget-object v0, p0, Lvp4;->b:Ltu1;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    invoke-virtual {v0, v1}, Ltu1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvp4;->b:Ltu1;
-
-    invoke-virtual {v1, v0}, Ltu1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

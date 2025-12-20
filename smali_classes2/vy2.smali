@@ -1,86 +1,69 @@
 .class public final Lvy2;
-.super Lid0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwy2;
 
 
 # instance fields
+.field public final a:J
+
 .field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(IJJLjava/lang/String;)V
+    .locals 3
 
-    const/4 v0, 0x5
+    and-int/lit8 v0, p1, 0x1
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+    const-wide/16 v1, 0x0
 
-    iput-wide p1, p0, Lvy2;->b:J
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    move-wide p2, v1
 
     :cond_0
-    instance-of v1, p1, Lvy2;
+    and-int/lit8 v0, p1, 0x2
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    move-wide p4, v1
 
     :cond_1
-    check-cast p1, Lvy2;
+    and-int/lit8 v0, p1, 0x4
 
-    iget-wide v3, p0, Lvy2;->b:J
+    if-eqz v0, :cond_2
 
-    iget-wide v5, p1, Lvy2;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
+    const/4 p6, 0x0
 
     :cond_2
-    return v0
-.end method
+    and-int/lit8 p1, p1, 0x8
 
-.method public final hashCode()I
-    .locals 2
+    if-eqz p1, :cond_3
 
-    iget-wide v0, p0, Lvy2;->b:J
+    const/4 p1, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    goto :goto_0
 
-    move-result v0
+    :cond_3
+    const/4 p1, 0x1
 
-    return v0
-.end method
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iput-wide p2, p0, Lvy2;->a:J
 
-    const-string v0, "OpenChangeChannelTypeAndUpdateBackstack(chatId="
+    iput-wide p4, p0, Lvy2;->b:J
 
-    const-string v1, ")"
+    iput-object p6, p0, Lvy2;->c:Ljava/lang/String;
 
-    iget-wide v2, p0, Lvy2;->b:J
+    iput-boolean p1, p0, Lvy2;->d:Z
 
-    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

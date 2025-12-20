@@ -1,108 +1,43 @@
-.class public abstract Lwh;
+.class public final Lwh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lv17;
+# instance fields
+.field public final a:J
 
-.field public static final b:Z
+.field public final b:J
 
-.field public static final c:Lvj;
+.field public final c:Ljava/lang/String;
 
-.field public static final d:Ljava/lang/Object;
+.field public final d:J
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object v0, Lth;->a:Lv17;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lwh;->a:Lv17;
+    iput-wide p1, p0, Lwh;->a:J
 
-    const-string v0, "animoji.debug"
+    iput-wide p3, p0, Lwh;->b:J
 
-    const-string v1, "false"
+    iput-object p5, p0, Lwh;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput-wide p6, p0, Lwh;->d:J
 
-    move-result-object v0
+    iput-object p8, p0, Lwh;->e:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    iput-object p9, p0, Lwh;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lvmf;->b0(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lwh;->b:Z
-
-    new-instance v0, Lvj;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v2, Lkk4;->c:Lmi;
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, v0, Lvj;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v1, v0, Lvj;->b:Ljava/util/HashMap;
-
-    sput-object v0, Lwh;->c:Lvj;
-
-    new-instance v0, Ll;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Ll;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    :cond_0
-    sget-object v0, Lwh;->a:Lv17;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput-object p10, p0, Lwh;->g:Ljava/lang/String;
 
     return-void
 .end method

@@ -15,7 +15,7 @@
         "isAsrAvailable",
         "()Z",
         "isEnabled",
-        "Lqqg;",
+        "Lv2h;",
         "enableAsrOnline",
         "(Z)V",
         "Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;",

@@ -1,68 +1,35 @@
-.class public final synthetic Lvz3;
+.class public abstract synthetic Lvz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lwz3;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lwz3;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lvz3;->a:I
+    invoke-static {}, Lvib;->values()[Lvib;
 
-    iput-object p1, p0, Lvz3;->b:Landroid/content/Context;
+    move-result-object v0
 
-    iput-object p2, p0, Lvz3;->c:Lwz3;
+    array-length v0, v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v0, Lvz3;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lvz3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lvz3;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lvz3;->c:Lwz3;
-
-    invoke-static {v0, v1}, Lwz3;->b(Landroid/content/Context;Lwz3;)Landroidx/appcompat/widget/AppCompatImageView;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lvz3;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lvz3;->c:Lwz3;
-
-    invoke-static {v0, v1}, Lwz3;->a(Landroid/content/Context;Lwz3;)Landroidx/appcompat/widget/AppCompatImageView;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,71 +1,103 @@
-.class public final synthetic Lwl5;
+.class public final Lwl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loa8;
-.implements Lfu3;
+.implements Lpzf;
+.implements Lfzc;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final a:Ljava/util/HashMap;
 
-.field public final synthetic b:I
+.field public b:Ljava/util/ArrayDeque;
+
+.field public final c:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(IZ)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lwl5;->b:I
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-boolean p2, p0, Lwl5;->a:Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    return-void
-.end method
+    iput-object v0, p0, Lwl5;->a:Ljava/util/HashMap;
 
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    iput-boolean p1, p0, Lwl5;->a:Z
+    iput-object v0, p0, Lwl5;->b:Ljava/util/ArrayDeque;
 
-    iput p2, p0, Lwl5;->b:I
+    iput-object p1, p0, Lwl5;->c:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Lbx5;)V
+    .locals 4
 
-    iget v0, p0, Lwl5;->b:I
+    const-class v0, Lei4;
 
-    check-cast p1, La5c;
+    iget-object v1, p0, Lwl5;->c:Ljava/util/concurrent/Executor;
 
-    iget-boolean v1, p0, Lwl5;->a:Z
+    monitor-enter p0
 
-    invoke-virtual {p1, v0, v1}, La5c;->e0(IZ)V
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v2, p0, Lwl5;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p0, Lwl5;->a:Ljava/util/HashMap;
+
+    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v2, p0, Lwl5;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
 
     return-void
-.end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 2
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-boolean v0, p0, Lwl5;->a:Z
-
-    check-cast p1, Lq3c;
-
-    iget v1, p0, Lwl5;->b:I
-
-    invoke-interface {p1, v1, v0}, Lq3c;->l(IZ)V
-
-    return-void
+    throw p1
 .end method

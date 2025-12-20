@@ -4,11 +4,11 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x17
+.annotation build La35;
 .end annotation
 
-.annotation build Lez4;
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x17
 .end annotation
 
 
@@ -23,7 +23,7 @@
 
 .method public static getSupportedAbis()[Ljava/lang/String;
     .locals 7
-    .annotation build Lez4;
+    .annotation build La35;
     .end annotation
 
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
@@ -102,7 +102,7 @@
 
 .method public static is64Bit()Z
     .locals 1
-    .annotation build Lez4;
+    .annotation build La35;
     .end annotation
 
     invoke-static {}, Landroid/os/Process;->is64Bit()Z

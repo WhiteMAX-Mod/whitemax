@@ -1,40 +1,99 @@
-.class public final Lrah;
+.class public abstract synthetic Lrah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsy4;
 
-
-# instance fields
-.field public final synthetic a:Ll5h;
-
-.field public final synthetic b:Lpt1;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Ll5h;Lpt1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lqo6;->values()[Lqo6;
 
-    iput-object p1, p0, Lrah;->a:Ll5h;
+    move-result-object v0
 
-    iput-object p2, p0, Lrah;->b:Lpt1;
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    const/4 v1, 0x1
 
-# virtual methods
-.method public final dispose()V
-    .locals 2
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lrah;->a:Ll5h;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, p0, Lrah;->b:Lpt1;
+    :catch_0
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/4 v2, 0x6
+
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    const/4 v1, 0x7
+
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    const/16 v2, 0x8
+
+    :try_start_7
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    const/16 v1, 0x9
+
+    :try_start_8
+    aput v1, v0, v2
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    sput-object v0, Lrah;->a:[I
 
     return-void
 .end method

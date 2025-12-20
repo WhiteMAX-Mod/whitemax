@@ -1,77 +1,43 @@
-.class public final Lk68;
+.class public abstract synthetic Lk68;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw68;
-.implements Lu68;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lk68;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lf18;
+    const/4 v0, 0x2
 
-    const/16 v1, 0xd
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    invoke-direct {v0, v1}, Lf18;-><init>(I)V
+    move-result-object v1
 
-    sput-object v0, Lk68;->CREATOR:Landroid/os/Parcelable$Creator;
+    array-length v1, v1
 
-    return-void
-.end method
+    new-array v1, v1, [I
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    const/4 v2, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x0
 
-    iput-object p1, p0, Lk68;->a:Ljava/lang/String;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-
-# virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final n()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lk68;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p2, p0, Lk68;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :catch_1
+    sput-object v1, Lk68;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

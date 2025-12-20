@@ -3,59 +3,116 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly6d;
+.implements Lmm4;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/os/Bundle;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+    .locals 0
+
+    iput p2, p0, Lr81;->a:I
+
+    iput-object p1, p0, Lr81;->b:Landroid/os/Bundle;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public final a()Ljava/lang/Object;
+    .locals 6
 
-    sget-object v0, Lwqi;->a:Ll6b;
+    iget v0, p0, Lr81;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "call_id"
+
+    iget-object v1, p0, Lr81;->b:Landroid/os/Bundle;
+
+    invoke-static {v0, v1}, Lulj;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "caller_id"
+
+    invoke-static {v2, v1}, Lulj;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v1
+
+    new-instance v3, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+
+    invoke-direct {v3, v0, v1, v2}, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;-><init>(Ljava/lang/String;J)V
+
+    return-object v3
+
+    :pswitch_0
+    const-string v0, "call_id"
+
+    iget-object v1, p0, Lr81;->b:Landroid/os/Bundle;
+
+    invoke-static {v0, v1}, Lulj;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "is_video"
+
+    invoke-static {v2, v1}, Lulj;->e(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result v2
+
+    const-string v3, "is_group"
+
+    invoke-static {v3, v1}, Lulj;->e(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result v3
+
+    const-string v4, "sdk_reasons"
+
+    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-static {v4, v1}, Lulj;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, ","
+
+    filled-new-array {v4}, [Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x4
+
+    invoke-static {v1, v4, v5}, Liyf;->T(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object v1
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Llg8;->d:Llg8;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ll6b;->b(Llg8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "["
-
-    const-string v3, "] "
-
-    invoke-static {v2, p1, v3, p2}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const-string v2, "CallsSdk"
-
-    invoke-virtual {v0, v1, v2, p1, p2}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     :goto_0
-    return-void
-.end method
+    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
 
-    const-string v0, "[%s] %s"
+    return-object v4
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string p2, "CallsSdk"
-
-    invoke-static {p2, p3, v0, p1}, Lwqi;->g(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

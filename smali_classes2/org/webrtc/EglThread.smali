@@ -21,7 +21,18 @@
 
 .field private final handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-.field private final pendingRenderUpdates:Ljava/util/List;
+.field private final pendingRenderUpdates:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/util/UUID;",
+            "Lorg/webrtc/EglThread$RenderUpdate;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final pendingRenderUpdatesQueued:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -44,11 +55,17 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/Map;
+
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iput-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdatesQueued:Ljava/util/List;
 
     const/4 v0, 0x1
 
@@ -135,11 +152,11 @@
     invoke-direct {v1, v0}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;-><init>(Landroid/os/Looper;)V
 
     .line 5
-    new-instance v0, Lu64;
+    new-instance v0, Lpa4;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, p1, v2, p2}, Lu64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v2, p2}, Lpa4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v1, v0}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -156,11 +173,11 @@
 
     .line 7
     :cond_0
-    new-instance p0, Ldm4;
+    new-instance p0, Lwp4;
 
     const/16 v0, 0xf
 
-    invoke-direct {p0, v0}, Ldm4;-><init>(I)V
+    invoke-direct {p0, v0}, Lwp4;-><init>(I)V
 
     :goto_0
     invoke-direct {p2, p0, v1, p1, p3}, Lorg/webrtc/EglThread;-><init>(Lorg/webrtc/EglThread$ReleaseMonitor;Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;Lorg/webrtc/EglBase$EglConnection;Lorg/webrtc/RenderSynchronizer;)V
@@ -225,9 +242,13 @@
 
     iput-boolean v0, p0, Lorg/webrtc/EglThread;->renderWindowOpen:Z
 
-    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/Map;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -235,6 +256,8 @@
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
+
+    const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
@@ -244,14 +267,40 @@
 
     check-cast v1, Lorg/webrtc/EglThread$RenderUpdate;
 
-    const/4 v2, 0x0
-
     invoke-interface {v1, v2}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdatesQueued:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/EglThread$RenderUpdate;
+
+    invoke-interface {v1, v2}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdatesQueued:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -295,11 +344,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Lx95;
+    new-instance v1, Lwd5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lx95;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Lwd5;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -311,11 +360,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Lx95;
+    new-instance v1, Lwd5;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lx95;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Lwd5;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -349,11 +398,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lqj4;
+    new-instance v2, Lop4;
 
-    const/16 v3, 0x13
+    const/16 v3, 0x11
 
-    invoke-direct {v2, v3, v1}, Lqj4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lop4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -378,21 +427,50 @@
     return-void
 .end method
 
-.method public scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
+.method public scheduleRenderUpdate(Ljava/util/UUID;Lorg/webrtc/EglThread$RenderUpdate;)V
     .locals 1
 
+    .line 1
+    iget-boolean v0, p0, Lorg/webrtc/EglThread;->renderWindowOpen:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    .line 2
+    invoke-interface {p2, p1}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 4
     iget-boolean v0, p0, Lorg/webrtc/EglThread;->renderWindowOpen:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 5
     invoke-interface {p1, v0}, Lorg/webrtc/EglThread$RenderUpdate;->update(Z)V
 
     return-void
 
+    .line 6
     :cond_0
-    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdates:Ljava/util/List;
+    iget-object v0, p0, Lorg/webrtc/EglThread;->pendingRenderUpdatesQueued:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

@@ -1,91 +1,66 @@
 .class public final Lm8g;
-.super Ll4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lm8g;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:[B
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwci;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lwci;-><init>(I)V
-
-    sput-object v0, Lm8g;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I[BI)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lm8g;->a:I
-
-    iput p3, p0, Lm8g;->b:I
-
-    iput-object p2, p0, Lm8g;->c:[B
-
-    return-void
-.end method
+.field public a:Landroid/os/Message;
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final a()V
+    .locals 3
 
-    const/16 p2, 0x4f45
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
+    iput-object v0, p0, Lm8g;->a:Landroid/os/Message;
 
-    move-result p2
+    sget-object v0, Lo8g;->b:Ljava/util/ArrayList;
 
-    const/4 v0, 0x2
+    monitor-enter v0
 
-    const/4 v1, 0x4
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-static {p1, v0, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    move-result v1
 
-    iget v0, p0, Lm8g;->a:I
+    const/16 v2, 0x32
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    if-ge v1, v2, :cond_0
 
-    const/4 v0, 0x3
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p1, v0, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    goto :goto_0
 
-    iget v0, p0, Lm8g;->b:I
+    :catchall_0
+    move-exception v1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_1
 
-    iget-object v0, p0, Lm8g;->c:[B
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    invoke-static {p1, v1, v0}, La9j;->c(Landroid/os/Parcel;I[B)V
+    return-void
 
-    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lm8g;->a:Landroid/os/Message;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    invoke-virtual {p0}, Lm8g;->a()V
 
     return-void
 .end method

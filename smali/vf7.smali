@@ -1,35 +1,53 @@
-.class public final Lvf7;
+.class public abstract Lvf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lhl4;
-
-.field public static final b:Lvf7;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a(Ljava/lang/Object;)I
+    .locals 0
 
-    new-instance v0, Lhl4;
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    const-string v1, ""
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
 
-    const/4 v2, 0x1
+    move-result p0
 
-    const-string v3, "MLKitImageUtils"
+    return p0
+.end method
 
-    invoke-direct {v0, v3, v1, v2}, Lhl4;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+.method public static b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
 
-    sput-object v0, Lvf7;->a:Lhl4;
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    new-instance v0, Lvf7;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lvf7;->b:Lvf7;
+    return-object p0
+.end method
 
-    return-void
+.method public static c(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
+    .locals 0
+
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,3 +1,3 @@
-.class public interface abstract Lqm3;
+.class public final Lqm3;
 .super Ljava/lang/Object;
 .source "SourceFile"

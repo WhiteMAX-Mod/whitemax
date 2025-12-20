@@ -28,7 +28,7 @@
 # instance fields
 .field public o1:Landroid/widget/FrameLayout;
 
-.field public p1:Lydg;
+.field public p1:Lnpg;
 
 
 # direct methods
@@ -61,7 +61,7 @@
 
     iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
 
-    new-instance p1, Lydg;
+    new-instance p1, Lnpg;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->p1:Lydg;
+    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->p1:Lnpg;
 
     return-object p1
 .end method

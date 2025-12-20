@@ -1,39 +1,142 @@
 .class public final Lpcg;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final synthetic b:I
 
-.field public b:I
+
+# instance fields
+.field public final a:Ld68;
+
+
+# direct methods
+.method public constructor <init>(Ld68;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpcg;->a:Ld68;
+
+    return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
+
+    iget-object p0, p0, Lcbg;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lcoj;->a(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static d(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
+
+    iget-object p0, p0, Lcbg;->b:Ljava/lang/String;
+
+    const-string v0, "io.exception"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
 
 
 # virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 4
+.method public final b()Lsza;
+    .locals 3
 
-    iget v0, p0, Lpcg;->a:I
+    iget-object v0, p0, Lpcg;->a:Ld68;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    check-cast v0, Lute;
 
-    move-result v2
+    iget-object v0, v0, Lute;->h:Lmn0;
 
-    iget v3, p0, Lpcg;->b:I
+    new-instance v1, Lsrf;
 
-    sub-int/2addr v2, v3
+    const/16 v2, 0xc
 
-    const/4 v3, 0x0
+    invoke-direct {v1, v2}, Lsrf;-><init>(I)V
 
-    invoke-virtual {p2, v3, v0, v1, v2}, Landroid/graphics/Outline;->setRect(IIII)V
+    invoke-virtual {v0, v1}, Lcxa;->g(Ldfc;)Lfxa;
 
-    const/4 p2, 0x1
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    const-wide/16 v1, 0x1
 
-    return-void
+    invoke-virtual {v0, v1, v2}, Lcxa;->p(J)Lsza;
+
+    move-result-object v0
+
+    return-object v0
 .end method

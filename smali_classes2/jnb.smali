@@ -3,121 +3,187 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/VideoSink;
+.implements Lmd;
 
 
 # instance fields
-.field public final a:Ljava/util/Map;
-
-.field public final b:Ly6i;
+.field public final synthetic a:Llnb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ConcurrentHashMap;Ly6i;)V
+.method public constructor <init>(Llnb;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljnb;->a:Ljava/util/Map;
-
-    iput-object p2, p0, Ljnb;->b:Ly6i;
+    iput-object p1, p0, Ljnb;->a:Llnb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 2
+.method public final E(Lld;Ljava/lang/String;)V
+    .locals 0
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedWidth()I
+    iget-object p1, p0, Ljnb;->a:Llnb;
 
-    move-result v0
+    iput-object p2, p1, Lpm0;->h:Ljava/lang/String;
 
-    const/16 v1, 0x10
+    return-void
+.end method
 
-    if-gt v0, v1, :cond_0
+.method public final H(Leg8;Lz59;)V
+    .locals 4
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedHeight()I
+    iget-object v0, p0, Ljnb;->a:Llnb;
 
-    move-result v0
+    iget-object v1, v0, Lpm0;->l:Lkl6;
 
-    if-gt v0, v1, :cond_0
+    iget-object p1, p1, Leg8;->a:Lzi4;
 
-    goto :goto_1
+    invoke-static {p1}, Ljlj;->b(Lzi4;)Lhnb;
 
-    :cond_0
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
+    move-result-object v2
 
-    move-result-object v0
+    sget-object v3, Lbj4;->a:Lizb;
 
-    if-nez v0, :cond_1
+    iget p2, p2, Lz59;->a:I
 
-    goto :goto_1
+    invoke-static {p2}, Lbj4;->a(I)Lrnb;
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    move-result-object p2
 
-    move-result-wide v0
+    invoke-virtual {v1, v0, v2, p2}, Lkl6;->b(Lwnb;Lhnb;Lrnb;)V
 
-    long-to-int v0, v0
+    iget-object p1, p1, Lzi4;->a:Landroid/net/Uri;
 
-    iget-object v1, p0, Ljnb;->b:Ly6i;
+    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
-    iget-object v1, v1, Ly6i;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, v0, Llnb;->L:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final K0(Lld;Ljava/lang/String;)V
+    .locals 0
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Ljnb;->a:Llnb;
 
-    move-result-object v0
+    iput-object p2, p1, Lpm0;->g:Ljava/lang/String;
 
-    check-cast v0, Lnt1;
+    return-void
+.end method
 
-    if-nez v0, :cond_2
+.method public final R(Leg8;Lz59;)V
+    .locals 3
 
-    goto :goto_1
+    iget-object v0, p2, Lz59;->g:Ljava/lang/Object;
 
-    :cond_2
-    iget-object v1, p0, Ljnb;->a:Ljava/util/Map;
+    check-cast v0, Lrj6;
 
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p2, Lz59;->b:I
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    check-cast v0, Ljava/util/List;
+    if-eq v1, v2, :cond_1
 
-    if-nez v0, :cond_3
+    const/4 v2, 0x2
 
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lorg/webrtc/VideoSink;
-
-    invoke-interface {v1, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
+    if-eq v1, v2, :cond_0
 
     goto :goto_0
 
-    :cond_4
-    :goto_1
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lh8j;->c(Lrj6;)Lmgh;
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Ljnb;->a:Llnb;
+
+    iget-object v1, v0, Lpm0;->l:Lkl6;
+
+    iget-object p1, p1, Leg8;->a:Lzi4;
+
+    invoke-static {p1}, Ljlj;->b(Lzi4;)Lhnb;
+
+    move-result-object p1
+
+    sget-object v2, Lbj4;->a:Lizb;
+
+    iget p2, p2, Lz59;->a:I
+
+    invoke-static {p2}, Lbj4;->a(I)Lrnb;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2}, Lkl6;->d(Lwnb;Lhnb;Lrnb;)V
+
+    return-void
+.end method
+
+.method public final d0(Lld;Leg8;Lz59;Ljava/io/IOException;Z)V
+    .locals 1
+
+    iget-object p1, p0, Ljnb;->a:Llnb;
+
+    iget-object p5, p1, Lpm0;->l:Lkl6;
+
+    iget-object p2, p2, Leg8;->a:Lzi4;
+
+    invoke-static {p2}, Ljlj;->b(Lzi4;)Lhnb;
+
+    move-result-object p2
+
+    sget-object v0, Lbj4;->a:Lizb;
+
+    iget p3, p3, Lz59;->a:I
+
+    invoke-static {p3}, Lbj4;->a(I)Lrnb;
+
+    move-result-object p3
+
+    invoke-virtual {p5, p1, p2, p3, p4}, Lkl6;->c(Lwnb;Lhnb;Lrnb;Ljava/io/IOException;)V
+
+    return-void
+.end method
+
+.method public final o0(Lld;Ljava/lang/String;)V
+    .locals 0
+
+    iget-object p1, p0, Ljnb;->a:Llnb;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Lpm0;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final y(Lld;Ljava/lang/String;)V
+    .locals 0
+
+    iget-object p1, p0, Ljnb;->a:Llnb;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Lpm0;->h:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final z0(Lld;IJJ)V
+    .locals 0
+
+    iget-object p1, p0, Ljnb;->a:Llnb;
+
+    iget-object p2, p1, Lpm0;->l:Lkl6;
+
+    invoke-virtual {p2, p1}, Lkl6;->a(Lwnb;)V
+
     return-void
 .end method

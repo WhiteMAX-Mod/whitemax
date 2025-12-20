@@ -1,129 +1,107 @@
-.class public abstract Lcri;
-.super Ljava/lang/Object;
+.class public final Lcri;
+.super Ljqi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final o:Lcri;
+
+
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
+
+.field public final transient d:I
+
+
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x3
+    new-instance v0, Lcri;
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    const/4 v1, 0x0
 
-    move-result v0
+    new-array v2, v1, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, v2}, Lcri;-><init>(I[Ljava/lang/Object;)V
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final b(Landroid/view/View;IIII)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-static {p0}, Lm8j;->d(Landroid/view/View;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v1
-
-    sub-int/2addr v1, p3
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p3
-
-    sub-int/2addr p3, p1
-
-    invoke-virtual {p0, v1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
+    sput-object v0, Lcri;->o:Lcri;
 
     return-void
 .end method
 
-.method public static synthetic c(Landroid/view/View;IIII)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    and-int/lit8 p4, p4, 0x8
-
-    if-eqz p4, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p3
-
-    add-int/2addr p3, p2
-
-    :cond_0
-    invoke-static {p0, p1, p2, v0, p3}, Lcri;->b(Landroid/view/View;IIII)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
+.method public constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lcri;->c:[Ljava/lang/Object;
 
-    if-nez p0, :cond_0
+    iput p1, p0, Lcri;->d:I
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    :goto_0
-    instance-of p1, p0, Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public static e(Ljava/lang/String;Ljava/lang/String;)V
+
+# virtual methods
+.method public final a([Ljava/lang/Object;)I
+    .locals 3
+
+    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lcri;->d:I
+
+    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return v2
+.end method
+
+.method public final b()I
     .locals 1
 
-    const/4 v0, 0x2
+    iget v0, p0, Lcri;->d:I
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    return v0
+.end method
 
-    move-result v0
+.method public final c()I
+    .locals 1
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    return v0
+.end method
 
-    :cond_0
-    return-void
+.method public final d()[Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lcri;->d:I
+
+    invoke-static {p1, v0}, Leaj;->c(II)V
+
+    iget-object v0, p0, Lcri;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lcri;->d:I
+
+    return v0
 .end method

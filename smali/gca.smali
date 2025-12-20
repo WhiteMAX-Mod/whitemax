@@ -2,98 +2,171 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyj7;
+
 
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:Z
-
-.field public final p:I
-
-.field public final q:I
-
-.field public final r:I
-
-.field public final s:I
-
 
 # direct methods
-.method public constructor <init>(IIIIIIFIIZZIIIZIIII)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lgca;->a:I
 
-    iput p2, p0, Lgca;->b:I
-
-    iput p3, p0, Lgca;->c:I
-
-    iput p4, p0, Lgca;->d:I
-
-    iput p5, p0, Lgca;->e:I
-
-    iput p6, p0, Lgca;->f:I
-
-    iput p7, p0, Lgca;->g:F
-
-    iput p8, p0, Lgca;->h:I
-
-    iput p9, p0, Lgca;->i:I
-
-    iput-boolean p10, p0, Lgca;->j:Z
-
-    iput-boolean p11, p0, Lgca;->k:Z
-
-    iput p12, p0, Lgca;->l:I
-
-    iput p13, p0, Lgca;->m:I
-
-    iput p14, p0, Lgca;->n:I
-
-    iput-boolean p15, p0, Lgca;->o:Z
-
-    move/from16 p1, p16
-
-    iput p1, p0, Lgca;->p:I
-
-    move/from16 p1, p17
-
-    iput p1, p0, Lgca;->q:I
-
-    move/from16 p1, p18
-
-    iput p1, p0, Lgca;->r:I
-
-    move/from16 p1, p19
-
-    iput p1, p0, Lgca;->s:I
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final createImageTranscoder(Lqi7;Z)Lxj7;
+    .locals 5
+
+    iget v0, p0, Lgca;->a:I
+
+    const-string v1, "Dependency \':native-imagetranscoder\' is needed to use the default native image transcoder."
+
+    :try_start_0
+    const-class v2, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v3, v4, v4}, [Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyj7;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-interface {v0, p1, p2}, Lyj7;->createImageTranscoder(Lqi7;Z)Lxj7;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Liq3;
+
+    iget v0, p0, Lgca;->a:I
+
+    invoke-direct {p1, p2, v0}, Liq3;-><init>(ZI)V
+
+    :cond_0
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_4
+    move-exception p1
+
+    goto :goto_4
+
+    :catch_5
+    move-exception p1
+
+    goto :goto_5
+
+    :catch_6
+    move-exception p1
+
+    goto :goto_6
+
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_1
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_2
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_5
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_6
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

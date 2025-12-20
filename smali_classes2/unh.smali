@@ -1,57 +1,83 @@
-.class public final Lunh;
-.super Lq44;
+.class public interface abstract Lunh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lglh;
-
-.field public Y:Llo0;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Laoh;
-
-.field public o:Ljnh;
-
-.field public final synthetic s0:Laoh;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Laoh;Lq44;)V
+# virtual methods
+.method public a(Lteh;)V
     .locals 0
-
-    iput-object p1, p0, Lunh;->s0:Laoh;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public b()V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iput-object p1, p0, Lunh;->Z:Ljava/lang/Object;
+.method public c()V
+    .locals 0
 
-    iget p1, p0, Lunh;->t0:I
+    return-void
+.end method
 
-    const/high16 v0, -0x80000000
+.method public d()V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lunh;->t0:I
+.method public e()V
+    .locals 0
 
-    iget-object p1, p0, Lunh;->s0:Laoh;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public f()V
+    .locals 0
 
-    invoke-virtual {p1, v0, p0}, Laoh;->k(Ljava/lang/String;Lq44;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public g(F)V
+    .locals 0
 
-    return-object p1
+    return-void
+.end method
+
+.method public h()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public j()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public r()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public w()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public z(Ljava/lang/Throwable;)V
+    .locals 0
+
+    return-void
 .end method

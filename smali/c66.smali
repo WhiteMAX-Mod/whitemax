@@ -1,130 +1,223 @@
 .class public final Lc66;
-.super Ljava/lang/Object;
+.super Lgxf;
 .source "SourceFile"
-
-# interfaces
-.implements Lx26;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public o:Lf66;
 
-.field public final synthetic b:[Lx26;
-
-.field public final synthetic c:Ldtf;
-
-
-# direct methods
-.method public constructor <init>([Lx26;Lym6;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lc66;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lc66;->b:[Lx26;
-
-    check-cast p2, Ldtf;
-
-    iput-object p2, p0, Lc66;->c:Ldtf;
-
-    return-void
-.end method
-
-.method public constructor <init>([Lx26;Lzm6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lc66;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lc66;->b:[Lx26;
-
-    check-cast p2, Ldtf;
-
-    iput-object p2, p0, Lc66;->c:Ldtf;
-
-    return-void
-.end method
+.field public p:Lru0;
 
 
 # virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final c(Lhbh;)J
     .locals 4
 
-    iget v0, p0, Lc66;->a:I
+    iget-object v0, p1, Lhbh;->a:[B
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    sget-object v0, Lk54;->o:Lk54;
+    aget-byte v2, v0, v1
 
-    new-instance v1, Lb66;
+    const/4 v3, -0x1
 
-    const/4 v2, 0x0
+    if-ne v2, v3, :cond_2
 
-    iget-object v3, p0, Lc66;->c:Ldtf;
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v3}, Lb66;-><init>(Lkotlin/coroutines/Continuation;Lzm6;)V
+    aget-byte v0, v0, v2
 
-    iget-object v2, p0, Lc66;->b:[Lx26;
+    and-int/lit16 v0, v0, 0xff
 
-    invoke-static {p1, v0, v1, p2, v2}, Lx4j;->a(Lz26;Lcm6;Lum6;Lkotlin/coroutines/Continuation;[Lx26;)Ljava/lang/Object;
+    const/4 v2, 0x4
 
-    move-result-object p1
+    shr-int/2addr v0, v2
 
-    sget-object p2, Lg84;->a:Lg84;
+    const/4 v3, 0x6
 
-    if-ne p1, p2, :cond_0
+    if-eq v0, v3, :cond_0
 
-    goto :goto_0
+    const/4 v3, 0x7
+
+    if-ne v0, v3, :cond_1
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {p1, v2}, Lhbh;->F(I)V
 
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    sget-object v0, Lk54;->o:Lk54;
-
-    new-instance v1, Lb66;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lc66;->c:Ldtf;
-
-    invoke-direct {v1, v2, v3}, Lb66;-><init>(Lkotlin/coroutines/Continuation;Lym6;)V
-
-    iget-object v2, p0, Lc66;->b:[Lx26;
-
-    invoke-static {p1, v0, v1, p2, v2}, Lx4j;->a(Lz26;Lcm6;Lum6;Lkotlin/coroutines/Continuation;[Lx26;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
+    invoke-virtual {p1}, Lhbh;->A()J
 
     :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-static {v0, p1}, Llpj;->c(ILhbh;)I
 
-    :goto_1
-    return-object p1
+    move-result v0
 
-    nop
+    invoke-virtual {p1, v1}, Lhbh;->E(I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    int-to-long v0, v0
+
+    return-wide v0
+
+    :cond_2
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final e(Lhbh;JLa6e;)Z
+    .locals 21
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p4
+
+    iget-object v3, v1, Lhbh;->a:[B
+
+    iget-object v4, v0, Lc66;->o:Lf66;
+
+    const/4 v5, 0x1
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Lf66;
+
+    const/16 v6, 0x11
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v3, v6, v7}, Lf66;-><init>([BII)V
+
+    iput-object v4, v0, Lc66;->o:Lf66;
+
+    const/16 v6, 0x9
+
+    iget v1, v1, Lhbh;->c:I
+
+    invoke-static {v3, v6, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v4, v1, v3}, Lf66;->d([BLt4a;)Lqj6;
+
+    move-result-object v1
+
+    iput-object v1, v2, La6e;->b:Ljava/lang/Object;
+
+    return v5
+
+    :cond_0
+    const/4 v6, 0x0
+
+    aget-byte v3, v3, v6
+
+    and-int/lit8 v7, v3, 0x7f
+
+    const/4 v8, 0x3
+
+    if-ne v7, v8, :cond_1
+
+    invoke-static {v1}, Lx7;->h(Lhbh;)Lz39;
+
+    move-result-object v19
+
+    new-instance v9, Lf66;
+
+    iget v10, v4, Lf66;->b:I
+
+    iget v11, v4, Lf66;->c:I
+
+    iget v12, v4, Lf66;->d:I
+
+    iget v13, v4, Lf66;->e:I
+
+    iget v14, v4, Lf66;->f:I
+
+    iget v15, v4, Lf66;->h:I
+
+    iget v1, v4, Lf66;->i:I
+
+    iget-wide v2, v4, Lf66;->k:J
+
+    iget-object v4, v4, Lf66;->m:Ljava/lang/Object;
+
+    move-object/from16 v20, v4
+
+    check-cast v20, Lt4a;
+
+    move/from16 v16, v1
+
+    move-wide/from16 v17, v2
+
+    invoke-direct/range {v9 .. v20}, Lf66;-><init>(IIIIIIIJLz39;Lt4a;)V
+
+    move-object/from16 v1, v19
+
+    iput-object v9, v0, Lc66;->o:Lf66;
+
+    new-instance v2, Lru0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Lru0;-><init>(I)V
+
+    iput-object v9, v2, Lru0;->d:Ljava/lang/Object;
+
+    iput-object v1, v2, Lru0;->o:Ljava/lang/Object;
+
+    const-wide/16 v3, -0x1
+
+    iput-wide v3, v2, Lru0;->b:J
+
+    iput-wide v3, v2, Lru0;->c:J
+
+    iput-object v2, v0, Lc66;->p:Lru0;
+
+    return v5
+
+    :cond_1
+    const/4 v1, -0x1
+
+    if-ne v3, v1, :cond_3
+
+    iget-object v1, v0, Lc66;->p:Lru0;
+
+    if-eqz v1, :cond_2
+
+    move-wide/from16 v3, p2
+
+    iput-wide v3, v1, Lru0;->b:J
+
+    iput-object v1, v2, La6e;->c:Ljava/lang/Object;
+
+    :cond_2
+    iget-object v1, v2, La6e;->b:Ljava/lang/Object;
+
+    check-cast v1, Lqj6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v6
+
+    :cond_3
+    return v5
+.end method
+
+.method public final f(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lgxf;->f(Z)V
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lc66;->o:Lf66;
+
+    iput-object p1, p0, Lc66;->p:Lru0;
+
+    :cond_0
+    return-void
 .end method

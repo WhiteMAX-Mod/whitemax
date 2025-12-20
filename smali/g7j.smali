@@ -3,22 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
+# instance fields
+.field public final a:Lydg;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Ljava/util/HashMap;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lg7j;->a:Ljava/util/HashMap;
+    iput-object v0, p0, Lg7j;->a:Lydg;
 
+    return-void
+.end method
+
+.method public constructor <init>(Lydg;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg7j;->a:Lydg;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public final run()V
+    .locals 2
+
+    :try_start_0
+    invoke-virtual {p0}, Lg7j;->a()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lg7j;->a:Lydg;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v0}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    :cond_0
     return-void
 .end method

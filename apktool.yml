@@ -1,5 +1,5 @@
 version: 2.12.0
-apkFileName: original.apk
+apkFileName: max.apk
 usesFramework:
   ids:
   - 1
@@ -9,8 +9,8 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6468
-  versionName: 25.19.0
+  versionCode: 6478
+  versionName: 25.21.0
 doNotCompress:
 - arsc
 - mp3
@@ -105,9 +105,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
+- META-INF/services/iqg
+- META-INF/services/o18
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/teg
-- META-INF/services/xw7
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
 - okhttp3/internal/publicsuffix/publicsuffixes.gz

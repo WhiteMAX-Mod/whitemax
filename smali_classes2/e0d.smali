@@ -1,60 +1,64 @@
-.class public abstract Le0d;
+.class public final Le0d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lg0d;
 
 
 # static fields
-.field public static oneme_settings_twofa_action:I = 0x7f0a0839
+.field public static final a:Le0d;
 
-.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a083a
 
-.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a083b
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a083c
+    new-instance v0, Le0d;
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a083d
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a083e
+    sput-object v0, Le0d;->a:Le0d;
 
-.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a083f
+    return-void
+.end method
 
-.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a0840
 
-.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a0841
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a0842
+    const/4 v0, 0x1
 
-.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a0843
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a0844
+    return v0
 
-.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a0845
+    :cond_0
+    instance-of p1, p1, Le0d;
 
-.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a0846
+    if-nez p1, :cond_1
 
-.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a0847
+    const/4 p1, 0x0
 
-.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a0848
+    return p1
 
-.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a0849
+    :cond_1
+    return v0
+.end method
 
-.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a084a
+.method public final hashCode()I
+    .locals 1
 
-.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a084b
+    const v0, 0x20f4ed05
 
-.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a084c
+    return v0
+.end method
 
-.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a084d
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a084e
+    const-string v0, "Scanning"
 
-.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a084f
-
-.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a0850
-
-.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a0851
-
-.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a0852
-
-.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a0853
-
-.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a0854
+    return-object v0
+.end method

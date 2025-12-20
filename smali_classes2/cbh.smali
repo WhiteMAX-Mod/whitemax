@@ -3,115 +3,36 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static synthetic l0(Lcbh;Lg2h;ZLbbh;I)V
-    .locals 8
-
-    and-int/lit8 v0, p4, 0x8
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    move v6, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x4
-
-    move v6, v0
-
-    :goto_0
-    and-int/lit8 p4, p4, 0x10
-
-    if-eqz p4, :cond_1
-
-    :goto_1
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move v4, p2
-
-    move-object v5, p3
-
-    move v7, v1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :goto_2
-    invoke-interface/range {v2 .. v7}, Lcbh;->I0(Lg2h;ZLbbh;IZ)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public abstract C(Labh;)V
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract I0(Lg2h;ZLbbh;IZ)V
+.method public abstract b()I
 .end method
 
-.method public O(La3h;)V
-    .locals 0
-
-    return-void
+.method public abstract d()Lik7;
 .end method
 
-.method public abstract O0()J
+.method public abstract equals(Ljava/lang/Object;)Z
 .end method
 
-.method public abstract Q(Z)V
+.method public abstract f()Lwk7;
 .end method
 
-.method public abstract X(Labh;)V
+.method public abstract g()Lhl7;
 .end method
 
-.method public abstract a()F
+.method public abstract l()Lsk7;
 .end method
 
-.method public abstract a0(Landroid/view/Surface;)V
+.method public abstract m()Lnl7;
 .end method
 
-.method public abstract b(F)V
+.method public abstract n()Luk7;
 .end method
 
-.method public abstract clear()V
+.method public abstract o()Lmk7;
 .end method
 
-.method public abstract d()Z
-.end method
-
-.method public abstract e()J
-.end method
-
-.method public abstract getDuration()J
-.end method
-
-.method public abstract isIdle()Z
-.end method
-
-.method public abstract pause()V
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract seekTo(J)V
-.end method
-
-.method public abstract stop()V
-.end method
-
-.method public abstract y0()Z
+.method public abstract q()Lok7;
 .end method

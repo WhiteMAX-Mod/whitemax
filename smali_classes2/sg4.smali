@@ -1,142 +1,155 @@
-.class public final enum Lsg4;
-.super Ljava/lang/Enum;
+.class public final Lsg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lsg4;
-
-.field public static final enum c:Lsg4;
-
-.field public static final d:[Lsg4;
-
-.field public static final synthetic o:[Lsg4;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ld68;
+
+.field public final b:Ld68;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lsg4;
-
-    const-string v1, "DISABLED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lsg4;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lsg4;->b:Lsg4;
-
-    new-instance v1, Lsg4;
-
-    const-string v2, "LOGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lsg4;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lsg4;
-
-    const-string v3, "FILE_LOGS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lsg4;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Lsg4;
-
-    const-string v4, "DEV_OPTIONS_MENU"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lsg4;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lsg4;->c:Lsg4;
-
-    filled-new-array {v0, v1, v2, v3}, [Lsg4;
-
-    move-result-object v0
-
-    sput-object v0, Lsg4;->o:[Lsg4;
-
-    invoke-static {}, Lsg4;->values()[Lsg4;
-
-    move-result-object v0
-
-    sput-object v0, Lsg4;->d:[Lsg4;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ld68;Ld68;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lsg4;->a:I
+    iput-object p1, p0, Lsg4;->a:Ld68;
+
+    iput-object p2, p0, Lsg4;->b:Ld68;
 
     return-void
 .end method
 
-.method public static a(I)Lsg4;
-    .locals 5
 
-    sget-object v0, Lsg4;->d:[Lsg4;
+# virtual methods
+.method public final a(Lgif;I)V
+    .locals 4
 
-    array-length v1, v0
+    iget-object v0, p0, Lsg4;->a:Ld68;
 
-    const/4 v2, 0x0
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    move-result-object v0
 
-    aget-object v3, v0, v2
+    check-cast v0, Lgd;
 
-    iget v4, v3, Lsg4;->a:I
+    iget-wide v1, p1, Lgif;->a:J
 
-    if-ne v4, p0, :cond_0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object v3
+    move-result-object v1
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    new-instance v2, Lysb;
+
+    const-string v3, "source_id"
+
+    invoke-direct {v2, v3, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget p1, p1, Lgif;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance v1, Lysb;
+
+    const-string v3, "source_type"
+
+    invoke-direct {v1, v3, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v2, v1}, [Lysb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lw4j;->a([Lysb;)Lxs;
+
+    move-result-object p1
+
+    new-instance v1, Lqu7;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lqu7;->a:J
+
+    const-string v2, "DANGEROUS_FILE_ACTIONS"
+
+    iput-object v2, v1, Lqu7;->c:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    if-eq p2, v2, :cond_2
+
+    const/4 v2, 0x2
+
+    if-eq p2, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-ne p2, v2, :cond_0
+
+    const-string p2, "not_download_file"
 
     goto :goto_0
 
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
     :cond_1
-    sget-object p0, Lsg4;->b:Lsg4;
+    const-string p2, "download_file"
 
-    return-object p0
-.end method
+    goto :goto_0
 
-.method public static valueOf(Ljava/lang/String;)Lsg4;
-    .locals 1
+    :cond_2
+    const-string p2, "modal_is_shown"
 
-    const-class v0, Lsg4;
+    :goto_0
+    iput-object p2, v1, Lqu7;->d:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object p2, p0, Lsg4;->b:Ld68;
 
-    move-result-object p0
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Lsg4;
+    move-result-object v2
 
-    return-object p0
-.end method
+    check-cast v2, Lte3;
 
-.method public static values()[Lsg4;
-    .locals 1
+    check-cast v2, Lcfe;
 
-    sget-object v0, Lsg4;->o:[Lsg4;
+    invoke-virtual {v2}, Lcfe;->s()J
 
-    invoke-virtual {v0}, [Lsg4;->clone()Ljava/lang/Object;
+    move-result-wide v2
 
-    move-result-object v0
+    iput-wide v2, v1, Lqu7;->b:J
 
-    check-cast v0, [Lsg4;
+    invoke-virtual {v1, p1}, Lqu7;->b(Ljava/util/Map;)V
 
-    return-object v0
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lte3;
+
+    check-cast p1, Ldj8;
+
+    invoke-virtual {p1}, Ldj8;->K()J
+
+    move-result-wide p1
+
+    iput-wide p1, v1, Lqu7;->o:J
+
+    invoke-virtual {v1}, Lqu7;->d()Ltk8;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lgd;->h(Ltk8;)V
+
+    return-void
 .end method

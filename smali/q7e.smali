@@ -1,21 +1,17 @@
-.class public abstract Lq7e;
+.class public interface abstract Lq7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->refreshAutoCompleteResults()V
-
-    return-void
+# virtual methods
+.method public abstract b()V
 .end method
 
-.method public static b(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;I)V
-    .locals 0
+.method public abstract e()Z
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->setInputMethodMode(I)V
+.method public abstract h(J)I
+.end method
 
-    return-void
+.method public abstract s(Lykc;Lpl4;I)I
 .end method

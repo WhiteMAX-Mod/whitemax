@@ -1,298 +1,204 @@
 .class public final Lgpc;
-.super Lfl9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Llpc;
+.field public final a:Ljy0;
 
-.field public b:F
+.field public final b:Lh6f;
 
-.field public c:[F
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+
+
+# direct methods
+.method public constructor <init>(Ljy0;Lbbg;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgpc;->a:Ljy0;
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x7
+
+    invoke-static {p1, p1, v0}, Li6f;->b(III)Lh6f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgpc;->b:Lh6f;
+
+    check-cast p2, Lb9b;
+
+    invoke-virtual {p2}, Lb9b;->c()Llq8;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgpc;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final onEvent(Ljk0;)V
+    .locals 4
+    .annotation runtime Ljzf;
+    .end annotation
 
-    iget-object v0, p0, Lgpc;->a:Llpc;
+    .line 1
+    new-instance v0, Lbpc;
 
-    if-eqz v0, :cond_0
+    iget-wide v1, p1, Lkk0;->a:J
 
-    const/4 v1, 0x1
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v1, v0}, Lhd3;->i(ILfl9;)I
+    move-result-object v1
 
-    move-result v0
+    iget-object p1, p1, Ljk0;->b:Lcbg;
+
+    .line 2
+    iget-object v2, p1, Lcbg;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lcbg;->b:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    .line 3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-nez v3, :cond_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    const/4 v0, 0x0
+    new-instance p1, Lfhg;
 
-    :goto_0
-    iget v1, p0, Lgpc;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lhd3;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget-object v1, p0, Lgpc;->c:[F
-
-    array-length v2, v1
-
-    if-lez v2, :cond_2
-
-    array-length v2, v1
-
-    mul-int/lit8 v2, v2, 0x4
-
-    add-int/2addr v2, v0
-
-    array-length v0, v1
-
-    add-int/2addr v2, v0
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final mergeFrom(Lgd3;)Lfl9;
-    .locals 6
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lgd3;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x1a
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lcoi;->b(Lgd3;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lgpc;->c:[F
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [F
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_3
-
-    invoke-virtual {p1}, Lgd3;->i()F
-
-    move-result v1
-
-    aput v1, v4, v3
-
-    invoke-virtual {p1}, Lgd3;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Lgd3;->i()F
-
-    move-result v0
-
-    aput v0, v4, v3
-
-    iput-object v4, p0, Lgpc;->c:[F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lgd3;->p()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lgd3;->e(I)I
-
-    move-result v1
-
-    div-int/lit8 v0, v0, 0x4
-
-    iget-object v3, p0, Lgpc;->c:[F
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v5, v0, [F
-
-    if-eqz v4, :cond_5
-
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
-
-    invoke-virtual {p1}, Lgd3;->i()F
-
-    move-result v2
-
-    aput v2, v5, v4
-
-    add-int/lit8 v4, v4, 0x1
+    invoke-direct {p1, v2}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
 
     goto :goto_2
 
-    :cond_6
-    iput-object v5, p0, Lgpc;->c:[F
+    .line 5
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Lcoj;->a(Ljava/lang/String;)Z
 
-    invoke-virtual {p1, v1}, Lgd3;->d(I)V
+    move-result v2
 
-    goto :goto_0
+    const-string v3, "io.exception"
 
-    :cond_7
-    invoke-virtual {p1}, Lgd3;->i()F
+    if-eqz v2, :cond_2
 
-    move-result v0
+    invoke-static {p1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput v0, p0, Lgpc;->b:F
+    move-result v2
 
-    goto :goto_0
+    if-eqz v2, :cond_2
 
-    :cond_8
-    iget-object v0, p0, Lgpc;->a:Llpc;
+    .line 6
+    sget p1, Ll5e;->H:I
 
-    if-nez v0, :cond_9
+    .line 7
+    new-instance v2, Lbhg;
 
-    new-instance v0, Llpc;
+    invoke-direct {v2, p1}, Lbhg;-><init>(I)V
 
-    invoke-direct {v0}, Llpc;-><init>()V
+    :goto_1
+    move-object p1, v2
 
-    iput-object v0, p0, Lgpc;->a:Llpc;
+    goto :goto_2
 
-    :cond_9
-    iget-object v0, p0, Lgpc;->a:Llpc;
+    .line 8
+    :cond_2
+    invoke-static {p1}, Lcoj;->a(Ljava/lang/String;)Z
 
-    invoke-virtual {p1, v0}, Lgd3;->j(Lfl9;)V
+    move-result v2
 
-    goto/16 :goto_0
+    if-eqz v2, :cond_3
 
-    :cond_a
-    :goto_3
-    return-object p0
-.end method
+    invoke-static {p1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final writeTo(Lhd3;)V
-    .locals 3
+    move-result p1
 
-    iget-object v0, p0, Lgpc;->a:Llpc;
+    if-nez p1, :cond_3
 
-    if-eqz v0, :cond_0
+    .line 9
+    sget p1, Ll5e;->J:I
 
-    const/4 v1, 0x1
+    .line 10
+    new-instance v2, Lbhg;
 
-    invoke-virtual {p1, v1, v0}, Lhd3;->y(ILfl9;)V
+    invoke-direct {v2, p1}, Lbhg;-><init>(I)V
 
-    :cond_0
-    iget v0, p0, Lgpc;->b:F
+    goto :goto_1
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    .line 11
+    :cond_3
+    sget p1, Ll5e;->G:I
 
-    move-result v0
+    .line 12
+    new-instance v2, Lbhg;
+
+    invoke-direct {v2, p1}, Lbhg;-><init>(I)V
+
+    goto :goto_1
+
+    .line 13
+    :goto_2
+    invoke-direct {v0, v1, p1}, Lbpc;-><init>(Ljava/lang/Long;Lghg;)V
+
+    .line 14
+    new-instance p1, Lfpc;
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-direct {p1, p0, v0, v1}, Lfpc;-><init>(Lgpc;Lepc;Lkotlin/coroutines/Continuation;)V
 
-    move-result v1
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_1
+    iget-object v2, p0, Lgpc;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/4 v0, 0x2
+    invoke-static {v2, v1, v1, p1, v0}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    iget v1, p0, Lgpc;->b:F
+    return-void
+.end method
 
-    invoke-virtual {p1, v0, v1}, Lhd3;->v(IF)V
+.method public final onEvent(Lq23;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
 
-    :cond_1
-    iget-object v0, p0, Lgpc;->c:[F
+    .line 15
+    new-instance v0, Lcpc;
 
-    array-length v0, v0
+    iget-wide v1, p1, Lkk0;->a:J
 
-    if-lez v0, :cond_2
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    :goto_0
-    iget-object v1, p0, Lgpc;->c:[F
+    invoke-direct {v0, p1}, Lcpc;-><init>(Ljava/lang/Long;)V
 
-    array-length v2, v1
+    .line 16
+    new-instance p1, Lfpc;
 
-    if-ge v0, v2, :cond_2
+    const/4 v1, 0x0
 
-    const/4 v2, 0x3
+    invoke-direct {p1, p0, v0, v1}, Lfpc;-><init>(Lgpc;Lepc;Lkotlin/coroutines/Continuation;)V
 
-    aget v1, v1, v0
+    const/4 v0, 0x3
 
-    invoke-virtual {p1, v2, v1}, Lhd3;->v(IF)V
+    iget-object v2, p0, Lgpc;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {v2, v1, v1, p1, v0}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method

@@ -1,119 +1,141 @@
 .class public final Loxb;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lwxb;
+.field public final a:Lpxb;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lwxb;)V
+.method public constructor <init>(Lpxb;J)V
     .locals 0
 
-    iput-object p1, p0, Loxb;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Loxb;->X:Lwxb;
+    iput-object p1, p0, Loxb;->a:Lpxb;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Loxb;->b:J
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Loxb;->c:J
+
+    iput-wide p1, p0, Loxb;->d:J
+
+    iput-wide p1, p0, Loxb;->e:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lf84;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Loxb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Loxb;
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Loxb;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iget-object v0, p0, Loxb;->a:Lpxb;
 
-    invoke-virtual {p1, p2}, Loxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p1, Loxb;->a:Lpxb;
 
-    move-result-object p1
+    if-eq v0, v1, :cond_2
 
-    return-object p1
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Loxb;->b:J
+
+    iget-wide v2, p1, Loxb;->b:J
+
+    cmp-long p1, v0, v2
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 4
 
-    new-instance p1, Loxb;
+    iget-object v0, p0, Loxb;->a:Lpxb;
 
-    iget-object v0, p0, Loxb;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v1, p0, Loxb;->X:Lwxb;
+    move-result v0
 
-    invoke-direct {p1, v0, p2, v1}, Loxb;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lwxb;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object p1
+    iget-wide v1, p0, Loxb;->b:J
+
+    const/16 v3, 0x3c1
+
+    invoke-static {v0, v3, v1, v2}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Loxb;->o:Ljava/lang/Object;
+    const-string v1, "PerfSpan(name="
 
-    check-cast p1, Lu6e;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v0, p1, Lu6e;->a:I
+    iget-object v1, p0, Loxb;->a:Lpxb;
 
-    const/4 v1, 0x4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Loxb;->X:Lwxb;
+    const-string v1, ", startTime="
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v2, Lwxb;->t0:Lbwf;
+    iget-wide v1, p0, Loxb;->b:J
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", parentSpanName=null, prevSpanName=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lmyb;
-
-    iget-object p1, p1, Lu6e;->o:Lku3;
-
-    invoke-virtual {v0, p1}, Lmyb;->a(Lku3;)Lfxb;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, v2, Lwxb;->s0:Lsl7;
-
-    iget-object v0, v0, Lsl7;->a:Ljava/lang/Object;
-
-    check-cast v0, Le23;
-
-    iget-object p1, p1, Lu6e;->d:Lpb2;
-
-    invoke-virtual {v0, p1}, Le23;->a(Lpb2;)Lhs2;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lwxb;->t(Lwxb;Lhs2;)Lfxb;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

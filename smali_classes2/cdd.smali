@@ -1,84 +1,62 @@
-.class public final synthetic Lcdd;
+.class public abstract Lcdd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltm6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static oneme_notifications_and_sounds_settings_toolbar_title:I = 0x7f1308c8
 
-.field public final synthetic b:Lddd;
+.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f1308c9
 
-.field public final synthetic c:Ljava/util/ArrayList;
+.field public static oneme_notifications_settings_chat_enabled_section_title:I = 0x7f1308ca
 
+.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f1308cb
 
-# direct methods
-.method public synthetic constructor <init>(Lddd;Ljava/util/ArrayList;I)V
-    .locals 0
+.field public static oneme_notifications_settings_chat_toolbar_title:I = 0x7f1308cc
 
-    iput p3, p0, Lcdd;->a:I
+.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f1308cd
 
-    iput-object p1, p0, Lcdd;->b:Lddd;
+.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f1308ce
 
-    iput-object p2, p0, Lcdd;->c:Ljava/util/ArrayList;
+.field public static oneme_notifications_settings_default_ringtone_title:I = 0x7f1308cf
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f1308d0
 
-    return-void
-.end method
+.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f1308d1
 
+.field public static oneme_notifications_settings_dialog_toolbar_title:I = 0x7f1308d2
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.field public static oneme_notifications_settings_enable_all_notifications:I = 0x7f1308d3
 
-    iget v0, p0, Lcdd;->a:I
+.field public static oneme_notifications_settings_open_settings_button_description:I = 0x7f1308d4
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_notifications_settings_open_settings_button_ringtone:I = 0x7f1308d5
 
-    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+.field public static oneme_notifications_settings_open_settings_button_title:I = 0x7f1308d6
 
-    new-instance v0, Ladd;
+.field public static oneme_notifications_settings_open_settings_call_ringtone_title:I = 0x7f1308d7
 
-    const/4 v1, 0x0
+.field public static oneme_notifications_settings_open_settings_calls_vibration:I = 0x7f1308d8
 
-    iget-object v2, p0, Lcdd;->b:Lddd;
+.field public static oneme_notifications_settings_other_in_app_push_button_description:I = 0x7f1308d9
 
-    iget-object v3, p0, Lcdd;->c:Ljava/util/ArrayList;
+.field public static oneme_notifications_settings_other_in_app_push_button_title:I = 0x7f1308da
 
-    invoke-direct {v0, v2, p1, v3, v1}, Ladd;-><init>(Lddd;Ljava/lang/Object;Ljava/util/List;I)V
+.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f1308db
 
-    new-instance p1, Lkk3;
+.field public static oneme_notifications_settings_other_settings_button:I = 0x7f1308dc
 
-    const/4 v1, 0x1
+.field public static oneme_notifications_settings_other_toolbar_title:I = 0x7f1308dd
 
-    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_notifications_settings_reset_default_button:I = 0x7f1308de
 
-    return-object p1
+.field public static oneme_notifications_settings_reset_settings_button:I = 0x7f1308df
 
-    :pswitch_0
-    check-cast p1, Locd;
+.field public static oneme_notifications_settings_show_content_button:I = 0x7f1308e0
 
-    new-instance v0, Ladd;
+.field public static oneme_notifications_settings_toolbar_title:I = 0x7f1308e1
 
-    const/4 v1, 0x1
+.field public static oneme_notifications_settings_type_off:I = 0x7f1308e2
 
-    iget-object v2, p0, Lcdd;->b:Lddd;
+.field public static oneme_notifications_settings_type_on:I = 0x7f1308e3
 
-    iget-object v3, p0, Lcdd;->c:Ljava/util/ArrayList;
-
-    invoke-direct {v0, v2, p1, v3, v1}, Ladd;-><init>(Lddd;Ljava/lang/Object;Ljava/util/List;I)V
-
-    new-instance p1, Lkk3;
-
-    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_notifications_settings_type_reply:I = 0x7f1308e4

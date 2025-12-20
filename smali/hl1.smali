@@ -1,214 +1,132 @@
-.class public final Lhl1;
+.class public interface abstract Lhl1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Landroid/view/View;
-
-.field public final synthetic e:Z
-
-.field public final synthetic f:Landroid/view/View;
-
-.field public final synthetic g:Z
-
-.field public final synthetic h:Lih;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lih;Landroid/view/View;ZLandroid/view/View;ZLandroid/view/View;ZI)V
-    .locals 0
-
-    iput p8, p0, Lhl1;->a:I
-
-    iput-object p1, p0, Lhl1;->h:Lih;
-
-    iput-object p2, p0, Lhl1;->b:Landroid/view/View;
-
-    iput-boolean p3, p0, Lhl1;->c:Z
-
-    iput-object p4, p0, Lhl1;->d:Landroid/view/View;
-
-    iput-boolean p5, p0, Lhl1;->e:Z
-
-    iput-object p6, p0, Lhl1;->f:Landroid/view/View;
-
-    iput-boolean p7, p0, Lhl1;->g:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lhl1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lhl1;->h:Lih;
-
-    check-cast p1, Ljq1;
-
-    iget-object v0, p0, Lhl1;->d:Landroid/view/View;
-
-    iget-boolean v1, p0, Lhl1;->e:Z
-
-    invoke-static {p1, v0, v1}, Ljq1;->o(Ljq1;Landroid/view/View;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lhl1;->h:Lih;
-
-    check-cast p1, Lil1;
-
-    iget-object v0, p0, Lhl1;->d:Landroid/view/View;
-
-    iget-boolean v1, p0, Lhl1;->e:Z
-
-    invoke-static {p1, v0, v1}, Lil1;->o(Lil1;Landroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lhl1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lhl1;->h:Lih;
-
-    check-cast p1, Ljq1;
-
-    iget-object v0, p0, Lhl1;->b:Landroid/view/View;
-
-    iget-boolean v1, p0, Lhl1;->c:Z
-
-    invoke-static {p1, v0, v1}, Ljq1;->o(Ljq1;Landroid/view/View;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lhl1;->h:Lih;
-
-    check-cast p1, Lil1;
-
-    iget-object v0, p0, Lhl1;->b:Landroid/view/View;
-
-    iget-boolean v1, p0, Lhl1;->c:Z
-
-    invoke-static {p1, v0, v1}, Lil1;->o(Lil1;Landroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lhl1;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
+.method public a()Z
     .locals 1
 
-    iget p1, p0, Lhl1;->a:I
+    invoke-interface {p0}, Lhl1;->s()Lpph;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v0
 
-    iget-object p1, p0, Lhl1;->f:Landroid/view/View;
+    iget-boolean v0, v0, Lpph;->a:Z
 
-    instance-of v0, p1, Ljn1;
+    return v0
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()Z
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public abstract getId()Lfl1;
+.end method
+
+.method public abstract h()Z
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public abstract isConnected()Z
+.end method
+
+.method public isScreenCaptureEnabled()Z
+    .locals 1
+
+    invoke-interface {p0}, Lhl1;->p()Lpph;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lpph;->a:Z
+
+    return v0
+.end method
+
+.method public abstract k()Z
+.end method
+
+.method public l()Z
+    .locals 1
+
+    invoke-interface {p0}, Lhl1;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Lhl1;->isScreenCaptureEnabled()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
-
-    check-cast p1, Ljn1;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    :goto_0
-    if-eqz p1, :cond_1
-
-    iget-boolean v0, p0, Lhl1;->g:Z
-
-    invoke-interface {p1, v0}, Ljn1;->c(Z)V
+    return v0
 
     :cond_1
-    return-void
+    :goto_0
+    const/4 v0, 0x1
 
-    :pswitch_0
-    iget-object p1, p0, Lhl1;->f:Landroid/view/View;
+    return v0
+.end method
 
-    instance-of v0, p1, Lhn1;
+.method public m()Z
+    .locals 1
 
-    if-eqz v0, :cond_2
+    invoke-interface {p0}, Lhl1;->i()Z
 
-    check-cast p1, Lhn1;
+    move-result v0
 
-    goto :goto_1
+    if-nez v0, :cond_1
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-interface {p0}, Lhl1;->e()Z
 
-    :goto_1
-    if-eqz p1, :cond_3
+    move-result v0
 
-    iget-boolean v0, p0, Lhl1;->g:Z
+    if-eqz v0, :cond_0
 
-    invoke-interface {p1, v0}, Lhn1;->e(Z)V
+    goto :goto_0
 
-    :cond_3
-    return-void
+    :cond_0
+    const/4 v0, 0x0
 
-    nop
+    return v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public abstract n()Z
+.end method
+
+.method public abstract o()Z
+.end method
+
+.method public abstract p()Lpph;
+.end method
+
+.method public abstract r()I
+.end method
+
+.method public abstract s()Lpph;
+.end method
+
+.method public abstract t()Z
 .end method

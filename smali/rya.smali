@@ -1,182 +1,124 @@
 .class public final Lrya;
-.super Ljava/lang/Object;
+.super Lzm0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+.field public X:Z
 
-.field public final b:Lpb3;
+.field public final a:Lc0b;
 
-.field public final c:Lage;
+.field public final b:Ljava/util/Iterator;
 
-.field public final d:Leza;
+.field public volatile c:Z
 
-.field public final e:Ltv1;
+.field public d:Z
 
-.field public final f:Ljava/lang/Object;
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lw5;)V
-    .locals 1
+.method public constructor <init>(Lc0b;Ljava/util/Iterator;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x8
+    iput-object p1, p0, Lrya;->a:Lc0b;
 
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llzf;
-
-    check-cast v0, Lq2b;
-
-    invoke-virtual {v0}, Lq2b;->c()Lwl8;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lrya;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/16 v0, 0x2e
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpb3;
-
-    iput-object v0, p0, Lrya;->b:Lpb3;
-
-    const/16 v0, 0x2f
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lage;
-
-    iput-object v0, p0, Lrya;->c:Lage;
-
-    const/16 v0, 0x51
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leza;
-
-    iput-object v0, p0, Lrya;->d:Leza;
-
-    const/16 v0, 0xf
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltv1;
-
-    iput-object p1, p0, Lrya;->e:Ltv1;
-
-    sget-object p1, Lk54;->s0:Lk54;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lrya;->f:Ljava/lang/Object;
+    iput-object p2, p0, Lrya;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 6
+.method public final clear()V
+    .locals 1
 
-    iget-object v0, p0, Lrya;->c:Lage;
+    const/4 v0, 0x1
 
-    check-cast v0, Ll5c;
+    iput-boolean v0, p0, Lrya;->o:Z
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lrya;->c:Z
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lrya;->c:Z
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lrya;->o:Z
+
+    return v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 4
+
+    iget-boolean v0, p0, Lrya;->o:Z
 
     const/4 v1, 0x0
-
-    int-to-long v2, v1
-
-    sget-object v4, Lg5e;->a:Lg5e;
-
-    invoke-virtual {v0, v4, v2, v3}, Ll5c;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v2
-
-    long-to-int v0, v2
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lrya;->b:Lpb3;
-
-    check-cast v0, Lpe8;
-
-    iget-object v3, v0, Lpe8;->G0:Lfde;
-
-    sget-object v4, Lpe8;->U0:[Lyy7;
-
-    const/16 v5, 0x14
-
-    aget-object v4, v4, v5
-
-    invoke-virtual {v3, v0, v4}, Lfde;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object v3, p0, Lrya;->d:Leza;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v3, "25.19.0"
-
-    invoke-static {v0, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    return v2
+    return-object v1
 
     :cond_0
-    return v1
+    iget-boolean v0, p0, Lrya;->X:Z
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lrya;->b:Ljava/util/Iterator;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-boolean v2, p0, Lrya;->o:Z
+
+    return-object v1
+
+    :cond_1
+    iput-boolean v2, p0, Lrya;->X:Z
+
+    :cond_2
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The iterator returned a null value"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final b()V
-    .locals 4
+.method public final q(I)I
+    .locals 0
 
-    iget-object v0, p0, Lrya;->e:Ltv1;
+    const/4 p1, 0x1
 
-    check-cast v0, Lhw1;
+    iput-boolean p1, p0, Lrya;->d:Z
 
-    invoke-virtual {v0}, Lhw1;->y()V
-
-    new-instance v0, Lqya;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lqya;-><init>(Lrya;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x3
-
-    iget-object v3, p0, Lrya;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v3, v1, v1, v0, v2}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    return-void
+    return p1
 .end method

@@ -1,49 +1,29 @@
 .class public final Lkpf;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Llz9;
+.field public final a:Le1e;
 
-.field public Y:I
-
-.field public d:Llz9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lci;
 
 
 # direct methods
-.method public constructor <init>(Llz9;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lkpf;->X:Llz9;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
     .locals 1
 
-    iput-object p1, p0, Lkpf;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lkpf;->Y:I
+    iput-object p1, p0, Lkpf;->a:Le1e;
 
-    const/high16 v0, -0x80000000
+    new-instance p1, Lci;
 
-    or-int/2addr p1, v0
+    const/16 v0, 0x14
 
-    iput p1, p0, Lkpf;->Y:I
+    invoke-direct {p1, v0}, Lci;-><init>(I)V
 
-    iget-object p1, p0, Lkpf;->X:Llz9;
+    iput-object p1, p0, Lkpf;->b:Lci;
 
-    invoke-virtual {p1, p0}, Llz9;->a(Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

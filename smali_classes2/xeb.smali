@@ -1,55 +1,91 @@
-.class public final Lxeb;
+.class public abstract Lxeb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static final a:I
 
-.field public final b:Lz7c;
+.field public static final b:I
 
-.field public final c:Ljava/lang/String;
+.field public static final c:I
 
-.field public final d:Lk18;
+.field public static final d:I
 
-.field public final e:Lk18;
+.field public static final e:I
 
-.field public final f:Lbwf;
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Landroid/content/Context;Lz7c;Lk18;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lg8d;->pinbars_block_user_confirmation_sheet_cancel:I
 
-    iput-object p2, p0, Lxeb;->a:Landroid/content/Context;
+    sput v0, Lxeb;->a:I
 
-    iput-object p3, p0, Lxeb;->b:Lz7c;
+    sget v0, Lg8d;->pinbars_block_user_confirmation_sheet_confirm:I
 
-    const-class p2, Lxeb;
+    sput v0, Lxeb;->b:I
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v0, Lg8d;->pinbars_group_call_bar:I
 
-    move-result-object p2
+    sput v0, Lxeb;->c:I
 
-    iput-object p2, p0, Lxeb;->c:Ljava/lang/String;
+    sget v0, Lg8d;->pinbars_group_call_bar_button:I
 
-    iput-object p4, p0, Lxeb;->d:Lk18;
+    sput v0, Lxeb;->d:I
 
-    iput-object p1, p0, Lxeb;->e:Lk18;
+    sget v0, Lg8d;->pinbars_group_call_bar_divider:I
 
-    new-instance p1, Lnwa;
+    sput v0, Lxeb;->e:I
 
-    const/16 p2, 0x1c
+    sget v0, Lg8d;->pinbars_group_call_bar_stack:I
 
-    invoke-direct {p1, p2}, Lnwa;-><init>(I)V
+    sput v0, Lxeb;->f:I
 
-    new-instance p2, Lbwf;
+    sget v0, Lg8d;->pinbars_group_call_bar_subtitle:I
 
-    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
+    sput v0, Lxeb;->g:I
 
-    iput-object p2, p0, Lxeb;->f:Lbwf;
+    sget v0, Lg8d;->pinbars_group_call_bar_title:I
+
+    sput v0, Lxeb;->h:I
+
+    sget v0, Lg8d;->pinbars_informer:I
+
+    sput v0, Lxeb;->i:I
+
+    sget v0, Lg8d;->pinbars_message:I
+
+    sput v0, Lxeb;->j:I
+
+    sget v0, Lg8d;->pinbars_miniplayer:I
+
+    sput v0, Lxeb;->k:I
+
+    sget v0, Lg8d;->pinbars_root:I
+
+    sput v0, Lxeb;->l:I
+
+    sget v0, Lg8d;->unknown_contact:I
+
+    sput v0, Lxeb;->m:I
 
     return-void
 .end method

@@ -1,216 +1,105 @@
-.class public final Lmsa;
+.class public abstract Lmsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvta;
-.implements Lpy4;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lvta;
-
-.field public c:Lpy4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lvta;I)V
+.method public static a(Landroid/app/Notification$Builder;Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;
     .locals 0
 
-    iput p2, p0, Lmsa;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addAction(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;
 
-    iput-object p1, p0, Lmsa;->b:Lvta;
+    move-result-object p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return-object p0
 .end method
 
-.method private final a(Ljava/lang/Object;)V
+.method public static b(Landroid/app/Notification$Action$Builder;Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static c(Landroid/app/Notification$Action$Builder;Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-# virtual methods
-.method public final b()V
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
 
-    iget v0, p0, Lmsa;->a:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmsa;->b:Lvta;
-
-    invoke-interface {v0}, Lvta;->b()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->b:Lvta;
-
-    invoke-interface {v0}, Lvta;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final c(Lpy4;)V
-    .locals 1
+.method public static d(Landroid/app/Notification$Action$Builder;)Landroid/app/Notification$Action;
+    .locals 0
 
-    iget v0, p0, Lmsa;->a:I
+    invoke-virtual {p0}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iput-object p1, p0, Lmsa;->c:Lpy4;
-
-    iget-object p1, p0, Lmsa;->b:Lvta;
-
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->c:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lmsa;->c:Lpy4;
-
-    iget-object p1, p0, Lmsa;->b:Lvta;
-
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final dispose()V
+.method public static e(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
     .locals 1
 
-    iget v0, p0, Lmsa;->a:I
+    new-instance v0, Landroid/app/Notification$Action$Builder;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    iget-object v0, p0, Lmsa;->c:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->c:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final e()Z
-    .locals 1
+.method public static f(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    iget v0, p0, Lmsa;->a:I
+    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lmsa;->c:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->c:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+.method public static g(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget v0, p0, Lmsa;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setGroup(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->b:Lvta;
-
-    invoke-interface {v0, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public static h(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget v0, p0, Lmsa;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setGroupSummary(Z)Landroid/app/Notification$Builder;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lmsa;->b:Lvta;
+    return-object p0
+.end method
 
-    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+.method public static i(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLocalOnly(Z)Landroid/app/Notification$Builder;
 
-    :pswitch_0
-    iget-object v0, p0, Lmsa;->b:Lvta;
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    return-object p0
+.end method
 
-    return-void
+.method public static j(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    nop
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setSortKey(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p0
+
+    return-object p0
 .end method

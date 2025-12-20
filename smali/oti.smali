@@ -3,13 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lwwa;
 
 
 # static fields
 .field public static final a:Loti;
-
-.field public static final b:Lwu5;
 
 
 # direct methods
@@ -22,47 +20,51 @@
 
     sput-object v0, Loti;->a:Loti;
 
-    new-instance v0, Lmli;
+    new-instance v0, Ldqi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    const-class v1, Lemi;
+    const-class v1, Lrqi;
 
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lwu5;
-
-    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v2, "format"
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    sput-object v1, Loti;->b:Lwu5;
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast p1, Lsbj;
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    check-cast p2, Lqqa;
+    move-result-object p1
 
-    sget-object v0, Loti;->b:Lwu5;
-
-    iget-object p1, p1, Lsbj;->a:Lcji;
-
-    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
-
-    return-void
+    throw p1
 .end method

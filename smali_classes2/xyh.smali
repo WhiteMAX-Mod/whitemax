@@ -1,33 +1,27 @@
 .class public final Lxyh;
-.super Lq44;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ldzh;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Lqv7;
+.field public final synthetic Y:Lnzh;
 
-.field public Z:Z
+.field public Z:I
 
-.field public d:Lazh;
+.field public d:Lnzh;
 
-.field public o:Lqyh;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lazh;
-
-.field public u0:I
+.field public o:Lmp0;
 
 
 # direct methods
-.method public constructor <init>(Lazh;Lq44;)V
+.method public constructor <init>(Lnzh;Ll84;)V
     .locals 0
 
-    iput-object p1, p0, Lxyh;->t0:Lazh;
+    iput-object p1, p0, Lxyh;->Y:Lnzh;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -35,25 +29,23 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iput-object p1, p0, Lxyh;->s0:Ljava/lang/Object;
+    iput-object p1, p0, Lxyh;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lxyh;->u0:I
+    iget p1, p0, Lxyh;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lxyh;->u0:I
+    iput p1, p0, Lxyh;->Z:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lxyh;->Y:Lnzh;
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lxyh;->t0:Lazh;
-
-    invoke-virtual {v1, p1, v0, p0}, Lazh;->j(Ljava/lang/String;ZLq44;)Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lnzh;->a(Lnzh;Lmp0;Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 

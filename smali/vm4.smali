@@ -1,126 +1,286 @@
-.class public final Lvm4;
+.class public final synthetic Lvm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw17;
-.implements Lx17;
+.implements Ldf8;
+.implements Lef8;
+.implements Lgf8;
+.implements Lff8;
 
 
 # instance fields
-.field public final a:Lul3;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Lrpc;
-
-.field public final d:Ljava/util/Set;
-
-.field public final e:Ljava/util/concurrent/Executor;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lrpc;Ljava/util/concurrent/Executor;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lul3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1, p2}, Lul3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput p1, p0, Lvm4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lvm4;->a:Lul3;
-
-    iput-object p3, p0, Lvm4;->d:Ljava/util/Set;
-
-    iput-object p5, p0, Lvm4;->e:Ljava/util/concurrent/Executor;
-
-    iput-object p4, p0, Lvm4;->c:Lrpc;
-
-    iput-object p1, p0, Lvm4;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lybj;
-    .locals 2
+.method public e(Ljava/lang/Object;Li66;)V
+    .locals 0
 
-    iget-object v0, p0, Lvm4;->b:Landroid/content/Context;
+    check-cast p1, Lmd;
 
-    invoke-static {v0}, Lmxg;->a(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    invoke-static {v0}, Ln5e;->f(Ljava/lang/Object;)Lybj;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lum4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lum4;-><init>(Lvm4;I)V
-
-    iget-object v1, p0, Lvm4;->e:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v1}, Ln5e;->d(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lybj;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b()V
-    .locals 2
+.method public h(Ljava/lang/Object;Lh66;)V
+    .locals 0
 
-    iget-object v0, p0, Lvm4;->d:Ljava/util/Set;
+    check-cast p1, Lap5;
 
-    invoke-interface {v0}, Ljava/util/Set;->size()I
+    return-void
+.end method
 
-    move-result v0
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    iget v0, p0, Lvm4;->a:I
 
-    if-gtz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1}, Ln5e;->f(Ljava/lang/Object;)Lybj;
+    :pswitch_0
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lvm4;->b:Landroid/content/Context;
+    :pswitch_1
+    check-cast p1, Lap5;
 
-    invoke-static {v0}, Lmxg;->a(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {v1}, Ln5e;->f(Ljava/lang/Object;)Lybj;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 
-    :cond_1
-    new-instance v0, Lum4;
+    :pswitch_2
+    check-cast p1, Lmd;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lum4;-><init>(Lvm4;I)V
-
-    iget-object v1, p0, Lvm4;->e:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v1}, Ln5e;->d(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lybj;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
+
+    :pswitch_3
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_4
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_5
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_6
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_7
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_8
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_9
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_a
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_b
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "ap5"
+
+    const-string v0, "onVideoDisabled"
+
+    invoke-static {p1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_c
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_d
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_e
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_f
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_10
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_11
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_12
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_13
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_14
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_15
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_16
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_17
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_18
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_19
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_1a
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_1b
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_0
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

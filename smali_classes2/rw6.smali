@@ -1,124 +1,76 @@
 .class public final Lrw6;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Ltw6;
+.field public volatile a:J
 
-.field public final synthetic Y:Landroid/os/Bundle;
+.field public volatile b:J
 
-.field public o:I
+.field public final synthetic c:Lsw6;
 
 
 # direct methods
-.method public constructor <init>(Ltw6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lsw6;)V
     .locals 0
 
-    iput-object p1, p0, Lrw6;->X:Ltw6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrw6;->Y:Landroid/os/Bundle;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrw6;->c:Lsw6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onEvent(Lek2;)V
+    .locals 4
+    .annotation runtime Ljzf;
+    .end annotation
 
-    check-cast p1, Lf84;
+    iget-wide v0, p1, Lkk0;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v2, p0, Lrw6;->b:J
 
-    invoke-virtual {p0, p1, p2}, Lrw6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    cmp-long v0, v0, v2
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lrw6;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lrw6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lrw6;
-
-    iget-object v0, p0, Lrw6;->X:Ltw6;
-
-    iget-object v1, p0, Lrw6;->Y:Landroid/os/Bundle;
-
-    invoke-direct {p1, v0, v1, p2}, Lrw6;-><init>(Ltw6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lrw6;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v1, "onEvent "
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrw6;->Y:Landroid/os/Bundle;
-
-    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_SMS_MESSAGE"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput v1, p0, Lrw6;->o:I
+    const-string v0, "sw6"
 
-    iget-object v0, p0, Lrw6;->X:Ltw6;
+    invoke-static {v0, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, p0}, Ltw6;->a(Ltw6;Ljava/lang/String;Lq44;)Ljava/lang/Object;
+    iget-object p1, p0, Lrw6;->c:Lsw6;
+
+    iget-object p1, p1, Lsw6;->c:Lch2;
+
+    iget-wide v0, p0, Lrw6;->a:J
+
+    invoke-virtual {p1, v0, v1}, Lch2;->J(J)Lud2;
 
     move-result-object p1
 
-    sget-object v0, Lg84;->a:Lg84;
+    iget-object v0, p0, Lrw6;->c:Lsw6;
 
-    if-ne p1, v0, :cond_2
+    iget-object v0, v0, Lsw6;->d:Lxn3;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lkz7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

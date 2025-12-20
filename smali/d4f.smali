@@ -4,102 +4,41 @@
 
 
 # static fields
-.field public static final a:Landroid/util/Size;
+.field public static final b:Landroid/graphics/Matrix;
 
-.field public static final b:Landroid/util/Size;
 
-.field public static final c:Landroid/util/Size;
-
-.field public static final d:Landroid/util/Size;
-
-.field public static final e:Landroid/util/Size;
-
-.field public static final f:Landroid/util/Size;
-
-.field public static final g:Landroid/util/Size;
+# instance fields
+.field public final a:Landroid/graphics/Matrix;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Landroid/util/Size;
+    new-instance v0, Landroid/graphics/Matrix;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->a:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0x140
-
-    const/16 v2, 0xf0
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->b:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0x280
-
-    const/16 v2, 0x1e0
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->c:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0x2d0
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->d:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v2, 0x500
-
-    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->e:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0x438
-
-    const/16 v2, 0x780
-
-    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->f:Landroid/util/Size;
-
-    new-instance v0, Landroid/util/Size;
-
-    const/16 v1, 0x5a0
-
-    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Ld4f;->g:Landroid/util/Size;
+    sput-object v0, Ld4f;->b:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
-.method public static a(Landroid/util/Size;)I
+.method public constructor <init>()V
     .locals 1
 
-    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    new-instance v0, Landroid/graphics/Matrix;
 
-    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    move-result p0
+    iput-object v0, p0, Ld4f;->a:Landroid/graphics/Matrix;
 
-    mul-int/2addr p0, v0
+    return-void
+.end method
 
-    return p0
+
+# virtual methods
+.method public abstract a(Landroid/graphics/Matrix;Lt3f;ILandroid/graphics/Canvas;)V
 .end method

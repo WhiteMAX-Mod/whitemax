@@ -1,109 +1,211 @@
-.class public final enum Lahb;
-.super Ljava/lang/Enum;
+.class public abstract Lahb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lahb;
+.field public static final A:I
 
-.field public static final enum a:Lahb;
+.field public static final B:I
 
-.field public static final enum b:Lahb;
+.field public static final C:I
 
-.field public static final enum c:Lahb;
+.field public static final D:I
 
-.field public static final enum d:Lahb;
+.field public static final E:I
 
-.field public static final enum o:Lahb;
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    new-instance v0, Lahb;
+    sget v0, Lv8d;->audio_record__action_view:I
 
-    const-string v1, "SOURCE"
+    sput v0, Lahb;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lv8d;->audio_record__action_view_background:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lahb;->b:I
 
-    sput-object v0, Lahb;->a:Lahb;
+    sget v0, Lv8d;->audio_record__action_view_bg_container:I
 
-    new-instance v1, Lahb;
+    sput v0, Lahb;->c:I
 
-    const-string v2, "RENDERER"
+    sget v0, Lv8d;->audio_record__action_view_container:I
 
-    const/4 v3, 0x1
+    sput v0, Lahb;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lv8d;->audio_record__audio_hand_free_record_view:I
 
-    sput-object v1, Lahb;->b:Lahb;
+    sput v0, Lahb;->e:I
 
-    new-instance v2, Lahb;
+    sget v0, Lv8d;->audio_record__audio_record_root:I
 
-    const-string v3, "UNEXPECTED"
+    sput v0, Lahb;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Lv8d;->audio_record__cancel_view:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lahb;->g:I
 
-    sput-object v2, Lahb;->c:Lahb;
+    sget v0, Lv8d;->audio_record__dot_view:I
 
-    new-instance v3, Lahb;
+    sput v0, Lahb;->h:I
 
-    const-string v4, "REMOTE"
+    sget v0, Lv8d;->audio_record__duration_view:I
 
-    const/4 v5, 0x3
+    sput v0, Lahb;->i:I
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lv8d;->audio_record__hand_free_dot_view:I
 
-    sput-object v3, Lahb;->d:Lahb;
+    sput v0, Lahb;->j:I
 
-    new-instance v4, Lahb;
+    sget v0, Lv8d;->audio_record__hand_free_duration_view:I
 
-    const-string v5, "UNKNOWN"
+    sput v0, Lahb;->k:I
 
-    const/4 v6, 0x4
+    sget v0, Lv8d;->audio_record__lock_view:I
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lahb;->l:I
 
-    sput-object v4, Lahb;->o:Lahb;
+    sget v0, Lv8d;->audio_record__pause_recording_button:I
 
-    filled-new-array {v0, v1, v2, v3, v4}, [Lahb;
+    sput v0, Lahb;->m:I
 
-    move-result-object v0
+    sget v0, Lv8d;->audio_record__play_pause_listening_button:I
 
-    sput-object v0, Lahb;->X:[Lahb;
+    sput v0, Lahb;->n:I
+
+    sget v0, Lv8d;->audio_record__play_recording_button:I
+
+    sput v0, Lahb;->o:I
+
+    sget v0, Lv8d;->audio_record__recording_panel:I
+
+    sput v0, Lahb;->p:I
+
+    sget v0, Lv8d;->audio_record__remove_button:I
+
+    sput v0, Lahb;->q:I
+
+    sget v0, Lv8d;->audio_record__swipe_remove_button:I
+
+    sput v0, Lahb;->r:I
+
+    sget v0, Lv8d;->audio_record__wave_container:I
+
+    sput v0, Lahb;->s:I
+
+    sget v0, Lv8d;->audio_record__wave_view:I
+
+    sput v0, Lahb;->t:I
+
+    sget v0, Lv8d;->writebar__add_link_bottom_sheet_button_add:I
+
+    sput v0, Lahb;->u:I
+
+    sget v0, Lv8d;->writebar__add_link_bottom_sheet_input:I
+
+    sput v0, Lahb;->v:I
+
+    sget v0, Lv8d;->writebar__container:I
+
+    sput v0, Lahb;->w:I
+
+    sget v0, Lv8d;->writebar__record_controls:I
+
+    sput v0, Lahb;->x:I
+
+    sget v0, Lv8d;->writebar__root:I
+
+    sput v0, Lahb;->y:I
+
+    sget v0, Lv8d;->writebar__suggestion_close_button:I
+
+    sput v0, Lahb;->z:I
+
+    sget v0, Lv8d;->writebar__suggestion_close_panel:I
+
+    sput v0, Lahb;->A:I
+
+    sget v0, Lv8d;->writebar__suggestion_item:I
+
+    sput v0, Lahb;->B:I
+
+    sget v0, Lv8d;->writebar__suggestion_not_found:I
+
+    sput v0, Lahb;->C:I
+
+    sget v0, Lv8d;->writebar__suggestion_popup_drag_layout:I
+
+    sput v0, Lahb;->D:I
+
+    sget v0, Lv8d;->writebar__suggestion_popup_layout_content:I
+
+    sput v0, Lahb;->E:I
+
+    sget v0, Lv8d;->writebar__suggestion_popup_layout_list:I
+
+    sput v0, Lahb;->F:I
+
+    sget v0, Lv8d;->writebar__suggestion_title:I
+
+    sput v0, Lahb;->G:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lahb;
-    .locals 1
-
-    const-class v0, Lahb;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lahb;
-
-    return-object p0
-.end method
-
-.method public static values()[Lahb;
-    .locals 1
-
-    sget-object v0, Lahb;->X:[Lahb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lahb;
-
-    return-object v0
 .end method

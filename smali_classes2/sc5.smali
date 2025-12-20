@@ -1,50 +1,43 @@
-.class public final Lsc5;
+.class public abstract synthetic Lsc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    and-int/lit8 v0, p4, 0x1
+    const/4 v0, 0x2
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    const/high16 p1, -0x80000000
+    move-result-object v1
 
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
+    array-length v1, v1
 
-    const/4 v1, -0x1
+    new-array v1, v1, [I
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x1
 
-    move p2, v1
+    const/4 v3, 0x0
 
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz p4, :cond_2
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move p3, v1
-
-    :cond_2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lsc5;->a:I
-
-    iput p2, p0, Lsc5;->b:I
-
-    iput p3, p0, Lsc5;->c:I
+    :catch_1
+    sput-object v1, Lsc5;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

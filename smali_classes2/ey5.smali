@@ -1,268 +1,99 @@
 .class public final Ley5;
-.super Lfg5;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lu6g;
+.implements Lcr6;
 
 
 # instance fields
-.field public final X:Landroid/animation/AnimatorSet;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Z
-
-.field public d:I
-
-.field public final o:Landroid/graphics/RectF;
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 9
-
-    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    sget v1, Lcxc;->file_typing:I
-
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, v0}, Lfg5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
-
-    const/16 p1, 0xff
-
-    iput p1, p0, Ley5;->d:I
-
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object v1, p0, Ley5;->o:Landroid/graphics/RectF;
-
-    new-instance v1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-instance v2, Landroid/view/animation/PathInterpolator;
-
-    const v3, 0x3e4ccccd    # 0.2f
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    const v5, 0x3ecccccd    # 0.4f
-
-    const/4 v6, 0x0
-
-    invoke-direct {v2, v5, v6, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    const-string v3, "_R_G_L_4_G_D_0_P_0"
-
-    invoke-virtual {v0, v3}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v3, 0x7a
-
-    filled-new-array {v3, p1}, [I
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    move-result-object v4
-
-    const-wide/16 v5, 0x15e
-
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    invoke-virtual {v4, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance v7, Ldy5;
-
-    const/4 v8, 0x0
-
-    invoke-direct {v7, v0, v8}, Ldy5;-><init>(Lone/me/sdk/richvector/VectorPath;I)V
-
-    invoke-virtual {v4, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    filled-new-array {p1, v3}, [I
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1, v5, v6}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
-
-    invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance v2, Ldy5;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Ldy5;-><init>(Lone/me/sdk/richvector/VectorPath;I)V
-
-    invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Landroid/animation/Animator;
-
-    aput-object v4, v0, v8
-
-    aput-object p1, v0, v3
-
-    invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    :goto_0
-    iput-object v1, p0, Ley5;->X:Landroid/animation/AnimatorSet;
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ley5;->X:Landroid/animation/AnimatorSet;
+    check-cast p1, Lh76;
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-boolean v0, p0, Ley5;->Y:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Ley5;->start()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-boolean v0, p0, Ley5;->Y:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ley5;->X:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lfg5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget-object v2, p0, Ley5;->o:Landroid/graphics/RectF;
-
-    invoke-virtual {v2, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
-    iget v0, p0, Ley5;->d:I
-
-    invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;I)I
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lyeb;)V
-    .locals 2
-
-    invoke-interface {p1}, Lyeb;->getIcon()Lnb7;
-
-    move-result-object v0
-
-    iget v0, v0, Lnb7;->j:I
-
-    shr-int/lit8 v0, v0, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    iput v0, p0, Ley5;->d:I
-
-    invoke-interface {p1}, Lyeb;->getIcon()Lnb7;
+    invoke-virtual {p0, p1, p2}, Ley5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget p1, p1, Lnb7;->j:I
+    check-cast p1, Ley5;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-static {p1, v0}, Lv4j;->c(IF)I
+    invoke-virtual {p1, p2}, Ley5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object p1
 
-    const-string v0, "_R_G_L_3_G_D_0_P_0"
-
-    iget-object v1, p0, Lfg5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-static {v1, v0, p1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
-
-    const-string v0, "_R_G_L_2_G_D_0_P_0"
-
-    invoke-static {v1, v0, p1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
-
-    const-string v0, "_R_G_L_1_G_D_0_P_0"
-
-    invoke-static {v1, v0, p1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
-
-    const-string v0, "_R_G_L_0_G_D_0_P_0"
-
-    invoke-static {v1, v0, p1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
-
-    const-string v0, "_R_G_L_4_G_D_0_P_0"
-
-    invoke-static {v1, v0, p1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final start()V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Ley5;
 
-    iput-boolean v0, p0, Ley5;->Y:Z
+    const/4 v1, 0x2
 
-    invoke-super {p0}, Lfg5;->start()V
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    return-void
+    iput-object p1, v0, Ley5;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final stop()V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Ley5;->o:I
 
-    iput-boolean v0, p0, Ley5;->Y:Z
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-super {p0}, Lfg5;->stop()V
+    const/4 v2, 0x1
 
-    return-void
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ley5;->X:Ljava/lang/Object;
+
+    check-cast p1, Lh76;
+
+    iput v2, p0, Ley5;->o:I
+
+    invoke-interface {p1, v1, p0}, Lh76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object v1
 .end method

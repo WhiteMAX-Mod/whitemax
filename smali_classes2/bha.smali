@@ -1,57 +1,147 @@
 .class public final Lbha;
-.super Lq28;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbha;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final l:Lpga;
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lpga;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct/range {p0 .. p9}, Lq28;-><init>(Lcb3;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
+    new-instance v0, Lev8;
 
-    move-object p2, p1
+    const/16 v1, 0xe
 
-    move-object p1, p0
+    invoke-direct {v0, v1}, Lev8;-><init>(I)V
 
-    iput-object p2, p1, Lbha;->l:Lpga;
+    sput-object v0, Lbha;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Laha;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget v0, p1, Laha;->a:I
+
+    iput v0, p0, Lbha;->a:I
+
+    .line 3
+    iget-boolean v0, p1, Laha;->b:Z
+
+    iput-boolean v0, p0, Lbha;->b:Z
+
+    .line 4
+    iget-boolean p1, p1, Laha;->c:Z
+
+    iput-boolean p1, p0, Lbha;->c:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 3
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lbha;->a:I
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Lbha;->b:Z
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iput-boolean v1, p0, Lbha;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lzhe;
-    .locals 11
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Laha;
+    const/4 v0, 0x0
 
-    new-instance v1, Lbha;
+    return v0
+.end method
 
-    iget-object v9, p0, Lq28;->h:Lvda;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v10, p0, Lq28;->i:Lvya;
+    iget p2, p0, Lbha;->a:I
 
-    iget-object v2, p0, Lbha;->l:Lpga;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v3, p0, Lq28;->b:Lrje;
+    iget-boolean p2, p0, Lbha;->b:Z
 
-    iget-object v4, p0, Lq28;->c:Lk4e;
+    int-to-byte p2, p2
 
-    iget-object v5, p0, Lq28;->d:Lqja;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-object v6, p0, Lq28;->e:Loje;
+    iget-boolean p2, p0, Lbha;->c:Z
 
-    iget-object v7, p0, Lq28;->f:Lhya;
+    int-to-byte p2, p2
 
-    iget-object v8, p0, Lq28;->g:Ltya;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    invoke-direct/range {v1 .. v10}, Lbha;-><init>(Lpga;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
-
-    invoke-direct {v0, v1}, Laha;-><init>(Lbha;)V
-
-    return-object v0
+    return-void
 .end method

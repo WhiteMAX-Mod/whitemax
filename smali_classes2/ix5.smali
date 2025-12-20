@@ -1,61 +1,107 @@
 .class public final Lix5;
-.super Lkx5;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lix5;
+# instance fields
+.field public A0:Ljava/lang/Object;
+
+.field public B0:Ljava/util/Iterator;
+
+.field public C0:Lox5;
+
+.field public D0:Ljava/lang/Comparable;
+
+.field public E0:Ljava/lang/Object;
+
+.field public F0:Ljava/lang/Long;
+
+.field public G0:Ljava/lang/String;
+
+.field public H0:Z
+
+.field public I0:I
+
+.field public J0:I
+
+.field public K0:I
+
+.field public L0:J
+
+.field public M0:J
+
+.field public N0:J
+
+.field public O0:J
+
+.field public P0:J
+
+.field public synthetic Q0:Ljava/lang/Object;
+
+.field public final synthetic R0:Llx5;
+
+.field public S0:I
+
+.field public X:Ljava/lang/Object;
+
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljava/util/Iterator;
+
+.field public d:Llx5;
+
+.field public o:Lc48;
+
+.field public s0:Ljava/lang/Long;
+
+.field public t0:Ljava/util/List;
+
+.field public u0:Ljava/util/ArrayList;
+
+.field public v0:Ljava/util/ArrayList;
+
+.field public w0:Ljava/lang/Object;
+
+.field public x0:Ljava/lang/Object;
+
+.field public y0:Ljava/lang/Object;
+
+.field public z0:Ljava/io/Serializable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llx5;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lix5;
+    iput-object p1, p0, Lix5;->R0:Llx5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lix5;->a:Lix5;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lix5;->Q0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lix5;->S0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lix5;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lix5;->S0:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lix5;->R0:Llx5;
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, v0, p0}, Llx5;->Q0(Ljava/util/ArrayList;Lwea;Ll84;)Ljava/io/Serializable;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, 0x443b70c7
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Failed"
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,19 +1,11 @@
-.class public abstract Lhxb;
+.class public interface abstract Lhxb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Li1b;->a0:I
-
-    sput v0, Lhxb;->a:I
-
-    return-void
+.method public abstract b()Llfa;
 .end method

@@ -24,9 +24,9 @@
 .method public constructor <init>(Lorg/webrtc/NetworkMonitor;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
-
     iput-object p2, p0, Lorg/webrtc/NetworkMonitor$2;->val$fieldTrialsString:Ljava/lang/String;
+
+    iput-object p1, p0, Lorg/webrtc/NetworkMonitor$2;->this$0:Lorg/webrtc/NetworkMonitor;
 
     invoke-direct {p0}, Lorg/webrtc/NetworkChangeDetector$Observer;-><init>()V
 

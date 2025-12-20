@@ -1,22 +1,27 @@
 .class public final Lcmg;
-.super Lq44;
+.super Ll84;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lyjf;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic Y:Lmmg;
 
-.field public o:I
+.field public Z:I
+
+.field public d:Lmmg;
+
+.field public o:Lsfa;
 
 
 # direct methods
-.method public constructor <init>(Lyjf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmmg;Ll84;)V
     .locals 0
 
-    iput-object p1, p0, Lcmg;->X:Lyjf;
+    iput-object p1, p0, Lcmg;->Y:Lmmg;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -26,21 +31,19 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lcmg;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lcmg;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lcmg;->o:I
+    iget p1, p0, Lcmg;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lcmg;->o:I
+    iput p1, p0, Lcmg;->Z:I
 
-    iget-object p1, p0, Lcmg;->X:Lyjf;
+    iget-object p1, p0, Lcmg;->Y:Lmmg;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lyjf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lmmg;->f(Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 

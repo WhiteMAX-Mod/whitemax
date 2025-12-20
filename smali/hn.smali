@@ -2,5 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfn;
+
+# virtual methods
+.method public abstract e0(Lkn;I)V
+.end method

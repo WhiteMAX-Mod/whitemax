@@ -1,119 +1,79 @@
-.class public final Lgkg;
-.super Ldtf;
+.class public abstract Lgkg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# static fields
+.field public static final a:Lz7g;
 
-# instance fields
-.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:Lz7g;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lgkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    new-instance v0, Luxf;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x7
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Luxf;-><init>(I)V
+
+    new-instance v1, Lz7g;
+
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+
+    sput-object v1, Lgkg;->a:Lz7g;
+
+    new-instance v0, Luxf;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Luxf;-><init>(I)V
+
+    new-instance v1, Lz7g;
+
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+
+    sput-object v1, Lgkg;->b:Lz7g;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const/16 v0, 0x100
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {p0, p1, p2}, Lgkg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lgkg;
+    new-instance v1, Landroid/graphics/Canvas;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p1, p2}, Lgkg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    return-object p2
-.end method
+    move-result p0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    new-instance v0, Lgkg;
+    new-instance p0, Ljava/io/ByteArrayOutputStream;
 
-    iget-object v1, p0, Lgkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
-    invoke-direct {v0, p2, v1}, Lgkg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    move-result v1
 
-    iput-object p1, v0, Lgkg;->o:Ljava/lang/Object;
+    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    return-object v0
-.end method
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const/16 v2, 0x64
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    iget-object p1, p0, Lgkg;->o:Ljava/lang/Object;
-
-    check-cast p1, Llog;
-
-    iget-object v0, p0, Lgkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    iget-object v1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Lbbd;
-
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lyy7;
-
-    const/4 v3, 0x0
-
-    aget-object v3, v2, v3
-
-    invoke-interface {v1, v0, v3}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpog;
-
-    invoke-virtual {v1, p1}, Lpog;->f(Llog;)V
-
-    invoke-interface {p1}, Llog;->b()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lbbd;
-
-    const/4 v1, 0x1
-
-    aget-object v1, v2, v1
-
-    invoke-interface {p1, v0, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ScrollView;
-
-    new-instance v1, Lbee;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v1, v2, v0}, Lbee;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object p0
 .end method

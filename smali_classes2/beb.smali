@@ -1,27 +1,85 @@
-.class public final Lbeb;
+.class public abstract Lbeb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lmbd;
+# static fields
+.field public static final a:I
 
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
-.method public constructor <init>(Lmbd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Le8d;->oneme_messages_settings_container:I
 
-    iput-object p1, p0, Lbeb;->a:Lmbd;
+    sput v0, Lbeb;->a:I
 
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Le8d;->oneme_messages_settings_content_recycler:I
 
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    sput v0, Lbeb;->b:I
 
-    iput-object p1, p0, Lbeb;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Le8d;->oneme_messages_settings_effects:I
+
+    sput v0, Lbeb;->c:I
+
+    sget v0, Le8d;->oneme_messages_settings_fast_reaction_choose:I
+
+    sput v0, Lbeb;->d:I
+
+    sget v0, Le8d;->oneme_messages_settings_fast_reaction_enable:I
+
+    sput v0, Lbeb;->e:I
+
+    sget v0, Le8d;->oneme_messages_settings_highlight:I
+
+    sput v0, Lbeb;->f:I
+
+    sget v0, Le8d;->oneme_messages_settings_linear:I
+
+    sput v0, Lbeb;->g:I
+
+    sget v0, Le8d;->oneme_messages_settings_need_divider_above_vh:I
+
+    sput v0, Lbeb;->h:I
+
+    sget v0, Le8d;->oneme_messages_settings_reaction_image:I
+
+    sput v0, Lbeb;->i:I
+
+    sget v0, Le8d;->oneme_messages_settings_send_by_enter:I
+
+    sput v0, Lbeb;->j:I
+
+    sget v0, Le8d;->oneme_messages_settings_stickers:I
+
+    sput v0, Lbeb;->k:I
+
+    sget v0, Le8d;->oneme_messages_settings_toolbar:I
+
+    sput v0, Lbeb;->l:I
 
     return-void
 .end method

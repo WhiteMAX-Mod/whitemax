@@ -1,200 +1,151 @@
-.class public final Lf05;
-.super Ldtf;
+.class public final synthetic Lf05;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lj4e;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public final synthetic Z:Lw10;
-
-.field public o:Z
+.field public final synthetic b:Lg05;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lw10;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lg05;I)V
     .locals 0
 
-    iput-object p1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iput p2, p0, Lf05;->a:I
 
-    iput-object p2, p0, Lf05;->Z:Lw10;
+    iput-object p1, p0, Lf05;->b:Lg05;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lf05;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lf05;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public a(Le4e;Lq4e;)V
     .locals 2
 
-    new-instance p1, Lf05;
+    iget v0, p0, Lf05;->a:I
 
-    iget-object v0, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    check-cast p1, Lk5h;
 
-    iget-object v1, p0, Lf05;->Z:Lw10;
+    check-cast p2, Lm5h;
 
-    invoke-direct {p1, v0, v1, p2}, Lf05;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lw10;Lkotlin/coroutines/Continuation;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
-.end method
+    iget-object p1, p0, Lf05;->b:Lg05;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    iget-object p1, p1, Lg05;->a:Lcgd;
 
-    sget-object v0, Lg84;->a:Lg84;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lf05;->X:I
+    const-string v1, "Stop stream on participant removed response: "
 
-    const/4 v2, 0x3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v3, 0x2
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v1, :cond_3
+    move-result-object p2
 
-    if-eq v1, v4, :cond_2
+    const-string v0, "DisplayLayouts"
 
-    if-eq v1, v3, :cond_1
+    invoke-interface {p1, v0, p2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne v1, v2, :cond_0
+    return-void
 
-    iget-boolean v0, p0, Lf05;->o:Z
+    :pswitch_0
+    iget-object p1, p2, Lm5h;->a:Ljava/util/Map;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->C0:I
-
-    iget-object v1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    add-int/2addr p1, v4
-
-    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->C0:I
-
-    iget-object p1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput v4, p0, Lf05;->X:I
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_0
-    iget-object p1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, p0, Lf05;->Z:Lw10;
-
-    iput v3, p0, Lf05;->X:I
-
-    invoke-static {p1, v1, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lw10;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
 
     move-result p1
 
-    iget-object v1, p0, Lf05;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    if-nez p1, :cond_0
 
-    iput-boolean p1, p0, Lf05;->o:Z
+    iget-object p1, p0, Lf05;->b:Lg05;
 
-    iput v2, p0, Lf05;->X:I
+    iget-object p2, p1, Lg05;->a:Lcgd;
 
-    invoke-virtual {v1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v0, "DisplayLayouts"
 
-    move-result-object v1
+    const-string v1, "Resend next time after response with errors"
 
-    if-ne v1, v0, :cond_6
+    invoke-interface {p2, v0, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_2
-    return-object v0
+    const/4 p2, 0x1
 
-    :cond_6
-    move v0, p1
+    iput-boolean p2, p1, Lg05;->e:Z
 
-    :goto_3
-    if-eqz v0, :cond_7
+    :cond_0
+    return-void
 
-    invoke-static {}, Lla8;->b()Lka8;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public b(Le4e;Ljava/lang/Throwable;)V
+    .locals 2
 
-    return-object p1
+    iget v0, p0, Lf05;->a:I
 
-    :cond_7
-    invoke-static {}, Lla8;->a()Lia8;
+    check-cast p1, Lk5h;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
+    iget-object p1, p0, Lf05;->b:Lg05;
+
+    iget-object p1, p1, Lg05;->a:Lcgd;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Stop stream on participant removed error: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "DisplayLayouts"
+
+    invoke-interface {p1, v0, p2}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lf05;->b:Lg05;
+
+    iget-object p2, p1, Lg05;->a:Lcgd;
+
+    const-string v0, "DisplayLayouts"
+
+    const-string v1, "Resend next time after error"
+
+    invoke-interface {p2, v0, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p1, Lg05;->e:Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

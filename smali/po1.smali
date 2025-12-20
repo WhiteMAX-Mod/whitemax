@@ -1,48 +1,81 @@
-.class public final Lpo1;
-.super Lq44;
+.class public final enum Lpo1;
+.super Ljava/lang/Enum;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lpg0;
+# static fields
+.field public static final enum a:Lpo1;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final enum b:Lpo1;
 
-.field public o:I
+.field public static final synthetic c:[Lpo1;
 
 
 # direct methods
-.method public constructor <init>(Lpg0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lpo1;->X:Lpg0;
+    new-instance v0, Lpo1;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "LOW"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lpo1;->a:Lpo1;
+
+    new-instance v1, Lpo1;
+
+    const-string v2, "MIDDLE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lpo1;->b:Lpo1;
+
+    new-instance v2, Lpo1;
+
+    const-string v3, "HIGH"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lpo1;
+
+    move-result-object v0
+
+    sput-object v0, Lpo1;->c:[Lpo1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lpo1;
     .locals 1
 
-    iput-object p1, p0, Lpo1;->d:Ljava/lang/Object;
+    const-class v0, Lpo1;
 
-    iget p1, p0, Lpo1;->o:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lpo1;
 
-    iput p1, p0, Lpo1;->o:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lpo1;->X:Lpg0;
+.method public static values()[Lpo1;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lpo1;->c:[Lpo1;
 
-    invoke-virtual {p1, v0, p0}, Lpg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lpo1;
+
+    return-object v0
 .end method

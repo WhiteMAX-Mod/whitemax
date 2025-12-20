@@ -1,59 +1,62 @@
 .class public final Lii2;
-.super Lq44;
+.super Ladf;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Object;
+# virtual methods
+.method public final F(Lji2;)V
+    .locals 7
 
-.field public Y:Ln9a;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-.field public Z:J
+    check-cast v0, Lhi2;
 
-.field public d:Lve2;
+    iget-object v1, p1, Lji2;->a:Lghg;
 
-.field public o:Ln8a;
+    invoke-virtual {v0, v1}, Lhi2;->setTitle(Lghg;)V
 
-.field public synthetic s0:Ljava/lang/Object;
+    iget-object v1, p1, Lji2;->b:Lghg;
 
-.field public final synthetic t0:Lsi2;
+    invoke-virtual {v0, v1}, Lhi2;->setSubtitle(Lghg;)V
 
-.field public u0:I
+    iget-object v1, p1, Lji2;->c:Ljava/lang/String;
 
+    iget-object v2, p1, Lji2;->d:Ljava/lang/CharSequence;
 
-# direct methods
-.method public constructor <init>(Lsi2;Lq44;)V
-    .locals 0
+    iget-wide v3, p1, Lji2;->o:J
 
-    iput-object p1, p0, Lii2;->t0:Lsi2;
+    iget-object v5, p1, Lji2;->X:Lxe0;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object v6, v0, Lhi2;->a:La4b;
+
+    invoke-virtual {v6, v5}, La4b;->setCustomOverlay(Lxe0;)V
+
+    iget-object v5, v0, Lhi2;->a:La4b;
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    if-nez v2, :cond_0
+
+    const-string v2, ""
+
+    :cond_0
+    invoke-static {v5, v1, v3, v2}, La4b;->o(La4b;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lji2;->Y:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lhi2;->setDescriptions(Ljava/util/List;)V
 
     return-void
 .end method
 
+.method public final bridge synthetic z(Lie8;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p1, Lji2;
 
-    iput-object p1, p0, Lii2;->s0:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lii2;->F(Lji2;)V
 
-    iget p1, p0, Lii2;->u0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lii2;->u0:I
-
-    iget-object p1, p0, Lii2;->t0:Lsi2;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lsi2;->c(Lsi2;Ljava/util/List;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

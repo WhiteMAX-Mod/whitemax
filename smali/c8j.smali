@@ -1,95 +1,70 @@
-.class public abstract Lc8j;
+.class public final Lc8j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lc8j;
+
 
 # direct methods
-.method public static final a(Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    :try_start_0
-    const-class v0, Lcom/google/firebase/concurrent/ExecutorsRegistrar;
+    new-instance v0, Lc8j;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lc8j;->a:Lc8j;
+
+    new-instance v0, Lyyi;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/reflect/Field;->getModifiers()I
+    const-class v1, Lqzi;
 
-    move-result v1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    and-int/lit8 v1, v1, -0x11
+    move-result-object v0
 
-    invoke-virtual {p0, v0, v1}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x2
 
-    return-object v0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    :catchall_0
-    move-exception p0
+    move-result-object v0
 
-    const-string v0, "fail to fetch executor field "
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ReplaceExecutorRegistrarLogic"
-
-    invoke-static {v0, p1, p0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static final b(Ljava/lang/reflect/Field;Lcm6;)V
-    .locals 3
-
-    new-instance v0, Ll18;
-
-    new-instance v1, Lql3;
+    move-result-object v0
 
     const/4 v2, 0x3
 
-    invoke-direct {v1, v2, p1}, Lql3;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    invoke-direct {v0, v1}, Ll18;-><init>(Lrpc;)V
+    move-result-object v0
 
-    const/4 p1, 0x0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final c(Lze4;)Lrgb;
-    .locals 9
 
-    new-instance v0, Lrgb;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v1, p0, Lze4;->a:Landroid/net/Uri;
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget v2, p0, Lze4;->c:I
+    move-result-object p1
 
-    invoke-static {v2}, Lze4;->b(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lze4;->e:Ljava/util/Map;
-
-    iget-wide v4, p0, Lze4;->f:J
-
-    iget-wide v6, p0, Lze4;->g:J
-
-    iget v8, p0, Lze4;->i:I
-
-    invoke-direct/range {v0 .. v8}, Lrgb;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/util/Map;JJI)V
-
-    return-object v0
+    throw p1
 .end method

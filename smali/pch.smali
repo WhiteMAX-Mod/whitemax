@@ -1,11 +1,19 @@
-.class public interface abstract Lpch;
+.class public abstract Lpch;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract G()V
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract a(J)V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    sput v0, Lpch;->a:I
+
+    return-void
 .end method

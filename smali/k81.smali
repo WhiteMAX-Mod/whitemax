@@ -1,69 +1,67 @@
-.class public final Lk81;
-.super Lun4;
+.class public interface abstract Lk81;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic t:La3b;
-
-
-# direct methods
-.method public constructor <init>(La3b;)V
-    .locals 2
-
-    iput-object p1, p0, Lk81;->t:La3b;
-
-    invoke-direct {p0}, Lun4;-><init>()V
-
-    const-wide/16 v0, 0x12c
-
-    iput-wide v0, p0, Luhd;->d:J
-
-    iput-wide v0, p0, Luhd;->c:J
-
-    iput-wide v0, p0, Luhd;->f:J
-
-    iput-wide v0, p0, Luhd;->e:J
-
-    return-void
-.end method
+# interfaces
+.implements Lfze;
 
 
 # virtual methods
-.method public final m()V
-    .locals 3
+.method public abstract a()I
+.end method
 
-    iget-object v0, p0, Lk81;->t:La3b;
+.method public b()Lghg;
+    .locals 1
 
-    iget-object v0, v0, La3b;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public c()Luye;
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public d()Lghg;
+    .locals 1
 
-    const/4 v2, -0x2
+    const/4 v0, 0x0
 
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.method public e()Lcze;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
 
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    return-object v0
+.end method
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+.method public f()Ln68;
+    .locals 1
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw v0
+    return-object v0
+.end method
 
-    :cond_1
-    return-void
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Leze;
+    .locals 1
+
+    sget-object v0, Leze;->b:Leze;
+
+    return-object v0
 .end method

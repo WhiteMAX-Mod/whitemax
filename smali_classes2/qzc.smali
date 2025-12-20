@@ -1,76 +1,129 @@
-.class public abstract Lqzc;
+.class public final Lqzc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static check_button:I = 0x7f0a029f
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static check_button_parent:I = 0x7f0a02a0
+.field public final b:Landroid/graphics/Bitmap;
 
-.field public static check_button_view_stub:I = 0x7f0a02a1
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a0492
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
+    .locals 0
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a0493
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a0494
+    iput-object p1, p0, Lqzc;->a:Landroid/net/Uri;
 
-.field public static media_bar_view__iv_file:I = 0x7f0a0495
+    iput-object p2, p0, Lqzc;->b:Landroid/graphics/Bitmap;
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a0496
+    return-void
+.end method
 
-.field public static media_bar_view__iv_location:I = 0x7f0a0498
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a0499
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static media_bar_view__iv_video:I = 0x7f0a049b
+    const/4 v0, 0x1
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a049c
+    if-ne p0, p1, :cond_0
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a049d
+    return v0
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a049e
+    :cond_0
+    instance-of v1, p1, Lqzc;
 
-.field public static media_bar_view__ll_file:I = 0x7f0a049f
+    const/4 v2, 0x0
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a04a0
+    if-nez v1, :cond_1
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a04a1
+    return v2
 
-.field public static media_bar_view__ll_location:I = 0x7f0a04a2
+    :cond_1
+    check-cast p1, Lqzc;
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a04a3
+    iget-object v1, p0, Lqzc;->a:Landroid/net/Uri;
 
-.field public static media_bar_view__ll_video:I = 0x7f0a04a4
+    iget-object v3, p1, Lqzc;->a:Landroid/net/Uri;
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a04a5
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a04a6
+    move-result v1
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04a7
+    if-nez v1, :cond_2
 
-.field public static media_bar_view__tv_file:I = 0x7f0a04a8
+    return v2
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04a9
+    :cond_2
+    iget-object v1, p0, Lqzc;->b:Landroid/graphics/Bitmap;
 
-.field public static media_bar_view__tv_location:I = 0x7f0a04ab
+    iget-object p1, p1, Lqzc;->b:Landroid/graphics/Bitmap;
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a04ac
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static media_bar_view__tv_video:I = 0x7f0a04ae
+    move-result p1
 
-.field public static media_permissions_view_button:I = 0x7f0a04b8
+    if-nez p1, :cond_3
 
-.field public static media_permissions_view_title:I = 0x7f0a04b9
+    return v2
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09f4
+    :cond_3
+    return v0
+.end method
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a86
+.method public final hashCode()I
+    .locals 2
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a87
+    iget-object v0, p0, Lqzc;->a:Landroid/net/Uri;
 
-.field public static select_album_content_container:I = 0x7f0a0b2d
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-.field public static simple_drawee_view:I = 0x7f0a0bab
+    move-result v0
 
-.field public static video_info:I = 0x7f0a0c57
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqzc;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QrCode(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqzc;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitmap="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqzc;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

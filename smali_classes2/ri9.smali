@@ -1,297 +1,189 @@
 .class public final Lri9;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public A:J
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
 
-.field public B:I
-
-.field public C:J
-
-.field public D:Ljava/util/List;
-
-.field public E:Lxl9;
-
-.field public F:Lss4;
-
-.field public G:J
-
-.field public H:I
-
-.field public I:I
-
-.field public a:J
-
-.field public b:J
-
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:Ljava/lang/String;
-
-.field public h:J
-
-.field public i:Lxi9;
-
-.field public j:Ljm9;
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Ljdc;
-
-.field public o:I
-
-.field public p:J
-
-.field public q:Lsi9;
-
-.field public r:Ljava/lang/String;
-
-.field public s:Ljava/lang/String;
-
-.field public t:Ljava/lang/String;
-
-.field public u:Z
-
-.field public v:I
-
-.field public w:I
-
-.field public x:J
-
-.field public y:J
-
-.field public z:Lsi9;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lri9;->X:Lone/me/members/list/MembersListWidget;
 
-    const/4 v0, 0x0
+    const/4 p2, 0x2
 
-    iput-object v0, p0, Lri9;->F:Lss4;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsi9;
-    .locals 54
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lsi9;
+    invoke-virtual {p0, p1, p2}, Lri9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, v0, Lri9;->a:J
+    move-result-object p1
 
-    iget-wide v4, v0, Lri9;->b:J
+    check-cast p1, Lri9;
 
-    iget-wide v6, v0, Lri9;->h:J
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-wide v8, v0, Lri9;->c:J
+    invoke-virtual {p1, p2}, Lri9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v10, v0, Lri9;->d:J
+    return-object p2
+.end method
 
-    iget-wide v12, v0, Lri9;->e:J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-wide v14, v0, Lri9;->f:J
+    new-instance v0, Lri9;
 
-    move-object/from16 v16, v1
+    iget-object v1, p0, Lri9;->X:Lone/me/members/list/MembersListWidget;
 
-    iget-object v1, v0, Lri9;->g:Ljava/lang/String;
+    invoke-direct {v0, p2, v1}, Lri9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
 
-    move-object/from16 v17, v1
+    iput-object p1, v0, Lri9;->o:Ljava/lang/Object;
 
-    iget-object v1, v0, Lri9;->i:Lxi9;
+    return-object v0
+.end method
 
-    move-object/from16 v18, v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v1, v0, Lri9;->j:Ljm9;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-wide/from16 v19, v2
+    iget-object p1, p0, Lri9;->o:Ljava/lang/Object;
 
-    move-object v3, v1
+    check-cast p1, Ljava/util/Set;
 
-    iget-wide v1, v0, Lri9;->k:J
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lp38;
 
-    move-wide/from16 v21, v1
+    iget-object p1, p0, Lri9;->X:Lone/me/members/list/MembersListWidget;
 
-    iget-object v1, v0, Lri9;->l:Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->B0()Lei9;
 
-    iget-object v2, v0, Lri9;->m:Ljava/lang/String;
+    move-result-object v0
 
-    move-object/from16 v23, v1
+    invoke-virtual {v0}, Lei9;->t()Z
 
-    iget-object v1, v0, Lri9;->n:Ljdc;
+    move-result v0
 
-    move-object/from16 v24, v1
+    if-eqz v0, :cond_1
 
-    iget v1, v0, Lri9;->o:I
+    iget-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lab3;
 
-    move/from16 v26, v1
+    if-eqz v0, :cond_0
 
-    move-object/from16 v25, v2
+    goto :goto_0
 
-    iget-wide v1, v0, Lri9;->p:J
+    :cond_0
+    new-instance v0, Lb17;
 
-    move-wide/from16 v27, v1
+    const/16 v1, 0x12
 
-    iget-object v1, v0, Lri9;->q:Lsi9;
+    invoke-direct {v0, v1, p1}, Lb17;-><init>(ILjava/lang/Object;)V
 
-    iget-object v2, v0, Lri9;->r:Ljava/lang/String;
+    new-instance v1, Lab3;
 
-    move-object/from16 v29, v1
+    new-instance v2, Loi9;
 
-    iget-object v1, v0, Lri9;->s:Ljava/lang/String;
+    const/4 v3, 0x0
 
-    move-object/from16 v30, v1
+    invoke-direct {v2, p1, v3}, Loi9;-><init>(Lone/me/members/list/MembersListWidget;I)V
 
-    iget-object v1, v0, Lri9;->t:Ljava/lang/String;
+    new-instance v4, Las7;
 
-    move-object/from16 v31, v1
+    const/4 v5, 0x3
 
-    iget v1, v0, Lri9;->H:I
+    invoke-direct {v4, v0, v5, p1}, Las7;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move/from16 v32, v1
+    new-instance v5, Lpi9;
 
-    iget-boolean v1, v0, Lri9;->u:Z
+    invoke-direct {v5, v0, v3}, Lpi9;-><init>(Lb17;I)V
 
-    move/from16 v33, v1
+    new-instance v3, Lpi9;
 
-    iget v1, v0, Lri9;->v:I
+    const/4 v6, 0x1
 
-    move/from16 v34, v1
+    invoke-direct {v3, v0, v6}, Lpi9;-><init>(Lb17;I)V
 
-    iget v1, v0, Lri9;->w:I
+    invoke-direct {v1, v2, v4, v5, v3}, Lab3;-><init>(Lmq6;Loq6;Loq6;Loq6;)V
 
-    move/from16 v35, v1
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget v1, v0, Lri9;->I:I
+    move-result-object v0
 
-    move/from16 v37, v1
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
 
-    move-object/from16 v36, v2
+    iput-object v1, p1, Lone/me/members/list/MembersListWidget;->A0:Lab3;
 
-    iget-wide v1, v0, Lri9;->x:J
+    new-instance v0, Lyl4;
 
-    move-wide/from16 v38, v1
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-wide v1, v0, Lri9;->y:J
+    move-result-object v1
 
-    move-wide/from16 v40, v1
+    invoke-direct {v0, v1}, Lyl4;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    iget-object v1, v0, Lri9;->z:Lsi9;
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-object/from16 v42, v1
+    move-result-object v1
 
-    iget-wide v1, v0, Lri9;->A:J
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->l(Lkrd;)V
 
-    move-wide/from16 v43, v1
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->B0:Lyl4;
 
-    iget v1, v0, Lri9;->B:I
+    goto :goto_0
 
-    move/from16 v45, v1
+    :cond_1
+    iget-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lab3;
 
-    iget-wide v1, v0, Lri9;->C:J
+    if-eqz v0, :cond_2
 
-    move-wide/from16 v46, v1
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-object v1, v0, Lri9;->D:Ljava/util/List;
+    move-result-object v1
 
-    iget-object v2, v0, Lri9;->E:Lxl9;
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lfrd;)V
 
-    move-object/from16 v48, v1
+    :cond_2
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Lri9;->F:Lss4;
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lab3;
 
-    move-object/from16 v50, v1
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->B0:Lyl4;
 
-    move-object/from16 v49, v2
+    if-eqz v1, :cond_3
 
-    iget-wide v1, v0, Lri9;->G:J
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-object/from16 v51, v18
+    move-result-object v2
 
-    move-object/from16 v18, v3
+    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->r0(Lkrd;)V
 
-    move-wide/from16 v52, v1
+    :cond_3
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->B0:Lyl4;
 
-    move-object/from16 v1, v16
+    :goto_0
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-object/from16 v16, v17
+    move-result-object p1
 
-    move-object/from16 v17, v51
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    move-wide/from16 v2, v19
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    move-wide/from16 v19, v21
-
-    move-object/from16 v21, v23
-
-    move-object/from16 v23, v24
-
-    move-object/from16 v22, v25
-
-    move/from16 v24, v26
-
-    move-wide/from16 v25, v27
-
-    move-object/from16 v27, v29
-
-    move-object/from16 v29, v30
-
-    move-object/from16 v30, v31
-
-    move/from16 v31, v32
-
-    move/from16 v32, v33
-
-    move/from16 v33, v34
-
-    move/from16 v34, v35
-
-    move-object/from16 v28, v36
-
-    move/from16 v35, v37
-
-    move-wide/from16 v36, v38
-
-    move-wide/from16 v38, v40
-
-    move-object/from16 v40, v42
-
-    move-wide/from16 v41, v43
-
-    move/from16 v43, v45
-
-    move-wide/from16 v44, v46
-
-    move-object/from16 v46, v48
-
-    move-object/from16 v47, v49
-
-    move-object/from16 v48, v50
-
-    move-wide/from16 v49, v52
-
-    invoke-direct/range {v1 .. v50}, Lsi9;-><init>(JJJJJJJLjava/lang/String;Lxi9;Ljm9;JLjava/lang/String;Ljava/lang/String;Ljdc;IJLsi9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZIIIJJLsi9;JIJLjava/util/List;Lxl9;Lss4;J)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return-object p1
 .end method

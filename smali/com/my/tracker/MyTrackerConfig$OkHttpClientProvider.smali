@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract getOkHttpClient()Lsua;
+.method public abstract getOkHttpClient()La1b;
 .end method

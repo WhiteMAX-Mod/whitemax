@@ -1,11 +1,13 @@
-.class public interface abstract Lb85;
+.class public abstract Lb85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Z)I
-.end method
+# direct methods
+.method public static a(Landroid/graphics/Outline;Landroid/graphics/Path;)V
+    .locals 0
 
-.method public abstract c(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lc5;->y(Landroid/graphics/Outline;Landroid/graphics/Path;)V
+
+    return-void
 .end method

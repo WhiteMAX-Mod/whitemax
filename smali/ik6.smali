@@ -1,57 +1,68 @@
-.class public abstract Lik6;
+.class public final synthetic Lik6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwa4;
+.implements Lmq6;
 
 
-# static fields
-.field public static final a:Z
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnk6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lnk6;I)V
+    .locals 0
 
-    const-string v0, "Amazon"
+    iput p2, p0, Lik6;->a:I
 
-    sget-object v1, Lxxg;->c:Ljava/lang/String;
+    iput-object p1, p0, Lik6;->b:Lnk6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lxxg;->d:Ljava/lang/String;
-
-    const-string v1, "AFTM"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "AFTB"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lik6;->a:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lik6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lik6;->b:Lnk6;
+
+    iget-object v0, v0, Lnk6;->f:Landroid/content/Context;
+
+    sget v1, Lx4e;->J1:I
+
+    invoke-static {v0, v1}, Lpjj;->g(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lik6;->b:Lnk6;
+
+    iget-object v0, v0, Lnk6;->f:Landroid/content/Context;
+
+    sget v1, Lx4e;->I1:I
+
+    invoke-static {v0, v1}, Lpjj;->g(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

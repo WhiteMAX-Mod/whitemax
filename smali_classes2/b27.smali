@@ -4,54 +4,81 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
-
-.field public final e:Lk18;
-
-.field public final f:Lk18;
-
-.field public final g:Lk18;
-
-.field public final h:Lk18;
-
-.field public final i:Lk18;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v0, Lb27;
+    iput p1, p0, Lb27;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lb27;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lb27;
+
+    iget v0, p0, Lb27;->a:I
+
+    iget p1, p1, Lb27;->a:I
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lb27;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "GradientsSkeletonGradientCellColors(staticBackground="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lb27;->a:I
+
+    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lb27;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lb27;->b:Lk18;
-
-    iput-object p2, p0, Lb27;->c:Lk18;
-
-    iput-object p3, p0, Lb27;->d:Lk18;
-
-    iput-object p4, p0, Lb27;->e:Lk18;
-
-    iput-object p5, p0, Lb27;->f:Lk18;
-
-    iput-object p6, p0, Lb27;->g:Lk18;
-
-    iput-object p7, p0, Lb27;->h:Lk18;
-
-    iput-object p8, p0, Lb27;->i:Lk18;
-
-    return-void
+    return-object v0
 .end method

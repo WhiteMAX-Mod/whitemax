@@ -1,30 +1,22 @@
-.class public final Ld4g;
+.class public interface abstract Ld4g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx08;
 
+# virtual methods
+.method public abstract a(Lj4g;)V
+.end method
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-
-# direct methods
-.method public constructor <init>(III)V
+.method public b(II)Lwe8;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object p1, Lek7;->c:Lek7;
 
-    iput p1, p0, Ld4g;->a:I
+    return-object p1
+.end method
 
-    iput p2, p0, Ld4g;->b:I
+.method public abstract c(Lc4g;)V
+.end method
 
-    iput p3, p0, Ld4g;->c:I
-
-    return-void
+.method public abstract release()V
 .end method

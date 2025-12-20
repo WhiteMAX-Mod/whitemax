@@ -1,190 +1,121 @@
-.class public final synthetic Lor5;
+.class public final Lor5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgu3;
-.implements Ltm6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:B
 
-.field public final synthetic b:Lvr5;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvr5;I)V
-    .locals 0
-
-    iput p2, p0, Lor5;->a:I
-
-    iput-object p1, p0, Lor5;->b:Lvr5;
+.method public constructor <init>(IB)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    if-ltz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iput-byte p2, p0, Lor5;->a:B
+
+    iput p1, p0, Lor5;->b:I
+
     return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "length must be >= 0"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lor5;->a:I
+    instance-of v0, p1, Lor5;
 
-    const-string v1, "vr5"
-
-    iget-object v2, p0, Lor5;->b:Lvr5;
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    check-cast p1, Las5;
-
-    iget-wide v3, p1, Las5;->b:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v0, v3, v5
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast p1, Lor5;
 
-    move-result-object v0
+    iget-byte v0, p0, Lor5;->a:B
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    iget-byte v2, p1, Lor5;->a:B
 
-    move-result-object v0
+    if-ne v0, v2, :cond_0
 
-    const-string v3, "loadFromMarker: new marker in response=%d"
+    iget v0, p0, Lor5;->b:I
 
-    invoke-static {v1, v3, v0}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget p1, p1, Lor5;->b:I
 
-    iget-wide v0, p1, Las5;->b:J
+    if-ne v0, p1, :cond_0
 
-    invoke-virtual {v2, v0, v1}, Lvr5;->b(J)V
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    return-void
-
-    :pswitch_1
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "on next favorite sticker sets: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, v2, Lvr5;->Y:Lnm0;
-
-    invoke-virtual {v0, p1}, Lnm0;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "on next favorite ids from obs: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Lvr5;->f(Ljava/util/List;)V
-
-    return-void
-
-    :pswitch_3
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "onNotifUpdated: updated ids: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Lvr5;->f(Ljava/util/List;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return v1
 .end method
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lor5;->a:I
+    iget-byte v0, p0, Lor5;->a:B
 
-    packed-switch v0, :pswitch_data_0
+    add-int/lit8 v0, v0, 0x1f
 
-    check-cast p1, Ljava/util/List;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lor5;->b:Lvr5;
+    iget v1, p0, Lor5;->b:I
 
-    iget-object v0, v0, Lvr5;->a:Lk18;
+    add-int/2addr v0, v1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-byte v0, p0, Lor5;->a:B
+
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v0
 
-    check-cast v0, Lzr5;
+    iget v1, p0, Lor5;->b:I
 
-    invoke-virtual {v0}, Lzr5;->a()Lm2f;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Loh2;
+    const-string v1, "ExtensionTypeHeader(type:%d, length:%,d)"
 
-    const/16 v2, 0xa
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v1, v2, p1}, Loh2;-><init>(ILjava/util/List;)V
+    move-result-object v0
 
-    new-instance p1, Lik3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p1, v0, v2, v1}, Lik3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
-
-    new-instance v0, Lv64;
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lor5;->b:Lvr5;
-
-    invoke-direct {v0, v2, v1, p1}, Lv64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Lkk3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

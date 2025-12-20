@@ -1,69 +1,260 @@
-.class public abstract synthetic Lilb;
+.class public final synthetic Lilb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmlb;
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
+.method public synthetic constructor <init>(Lmlb;I)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
+    iput p2, p0, Lilb;->a:I
 
-    move-result-object p0
+    iput-object p1, p0, Lilb;->b:Lmlb;
 
-    return-object p0
-.end method
-
-.method public static bridge synthetic b(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic c(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_AVAILABLE_STREAM_USE_CASES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static synthetic e(Ljava/lang/String;)Ljava/security/spec/NamedParameterSpec;
-    .locals 1
-
-    new-instance v0, Ljava/security/spec/NamedParameterSpec;
-
-    invoke-direct {v0, p0}, Ljava/security/spec/NamedParameterSpec;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static synthetic f()V
-    .locals 1
-
-    new-instance v0, Ljava/security/spec/NamedParameterSpec;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static bridge synthetic g(Ljava/lang/Object;)Z
-    .locals 0
 
-    instance-of p0, p0, Ljava/security/interfaces/XECPublicKey;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    return p0
+    iget v0, p0, Lilb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lh5e;->x:I
+
+    sget-object v1, Ldc3;->s0:Lole;
+
+    iget-object v2, p0, Lilb;->b:Lmlb;
+
+    invoke-virtual {v1, v2}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lplb;->getIcon()Lsf7;
+
+    move-result-object v1
+
+    iget v1, v1, Lsf7;->f:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    const/16 v1, 0x14
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Ln7j;->c(F)I
+
+    move-result v2
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Ln7j;->c(F)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lh5e;->L1:I
+
+    sget-object v1, Ldc3;->s0:Lole;
+
+    iget-object v2, p0, Lilb;->b:Lmlb;
+
+    invoke-virtual {v1, v2}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lplb;->getIcon()Lsf7;
+
+    move-result-object v1
+
+    iget v1, v1, Lsf7;->f:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    const/16 v1, 0x14
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Ln7j;->c(F)I
+
+    move-result v2
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Ln7j;->c(F)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lx4e;->u0:I
+
+    sget-object v1, Ldc3;->s0:Lole;
+
+    iget-object v2, p0, Lilb;->b:Lmlb;
+
+    invoke-virtual {v1, v2}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lplb;->getIcon()Lsf7;
+
+    move-result-object v1
+
+    iget v1, v1, Lsf7;->j:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    const/16 v1, 0x14
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Ln7j;->c(F)I
+
+    move-result v2
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Ln7j;->c(F)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

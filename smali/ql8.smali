@@ -1,72 +1,38 @@
-.class public final Lql8;
-.super Ldtf;
+.class public interface abstract Lql8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
-
-
-# instance fields
-.field public final synthetic o:Lone/me/android/MainActivity;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lql8;->o:Lone/me/android/MainActivity;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lql8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lql8;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lql8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+.method public abstract a(Ljava/io/IOException;)V
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lql8;
-
-    iget-object v0, p0, Lql8;->o:Lone/me/android/MainActivity;
-
-    invoke-direct {p1, v0, p2}, Lql8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+.method public abstract c(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract d(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+.method public abstract e(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    iget-object p1, p0, Lql8;->o:Lone/me/android/MainActivity;
+.method public abstract e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
 
-    invoke-virtual {p1}, Ld6;->N()V
+.method public abstract f(Ljava/lang/Exception;Ljava/lang/String;)V
+.end method
 
-    sget-object p1, Lqqg;->a:Lqqg;
+.method public abstract h(I)Z
+.end method
 
-    return-object p1
+.method public abstract i(I)V
+.end method
+
+.method public abstract v(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract w(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method

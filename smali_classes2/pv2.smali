@@ -1,70 +1,45 @@
-.class public final synthetic Lpv2;
-.super Ljava/lang/Object;
+.class public final Lpv2;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ly8;
+.field public final c:Lvd2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly8;I)V
+.method public constructor <init>(Lvd2;)V
     .locals 0
 
-    iput p2, p0, Lpv2;->a:I
-
-    iput-object p1, p0, Lpv2;->b:Ly8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpv2;->c:Lvd2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lpv2;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "ChatPersonalConfig.Response(chat="
 
-    iget-object v0, p0, Lpv2;->b:Ly8;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Lfr2;
+    iget-object v1, p0, Lpv2;->c:Lvd2;
 
-    invoke-virtual {v0, p1}, Lfr2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ")"
 
-    :pswitch_0
-    iget-object v0, p0, Lpv2;->b:Ly8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lfr2;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lfr2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lpv2;->b:Ly8;
-
-    check-cast v0, Lfr2;
-
-    invoke-virtual {v0, p1}, Lfr2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

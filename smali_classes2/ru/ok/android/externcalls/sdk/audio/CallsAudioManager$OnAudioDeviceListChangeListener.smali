@@ -23,7 +23,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;",
         "devices",
-        "Lqqg;",
+        "Lv2h;",
         "onAudioDeviceListChanged",
         "(Ljava/util/Collection;)V",
         "calls-audiomanager_release"

@@ -1,132 +1,87 @@
 .class public final Lwmc;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lanc;
 
 
 # instance fields
-.field public final synthetic X:Lpnc;
-
-.field public o:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lpnc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Lwmc;->X:Lpnc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lwmc;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lf84;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lwmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwmc;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lwmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lwmc;
-
-    iget-object v0, p0, Lwmc;->X:Lpnc;
-
-    invoke-direct {p1, v0, p2}, Lwmc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lwmc;->o:I
-
-    iget-object v1, p0, Lwmc;->X:Lpnc;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lwmc;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lwmc;
 
-    iget-object p1, v1, Lpnc;->T0:Lyac;
+    iget-wide v3, p0, Lwmc;->a:J
 
-    iput v2, p0, Lwmc;->o:I
+    iget-wide v5, p1, Lwmc;->a:J
 
-    invoke-virtual {p1, p0}, Lyac;->a(Lwmc;)Lqqg;
+    cmp-long p1, v3, v5
 
-    move-result-object p1
+    if-eqz p1, :cond_2
 
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    iget-object p1, v1, Lpnc;->E0:Lci5;
+    return v0
+.end method
 
-    new-instance v0, Lemc;
+.method public final hashCode()I
+    .locals 2
 
-    sget v2, Lx8b;->H0:I
+    iget-wide v0, p0, Lwmc;->a:J
 
-    new-instance v3, Ln5g;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {v3, v2}, Ln5g;-><init>(I)V
+    move-result v0
 
-    new-instance v2, Liqb;
+    return v0
+.end method
 
-    const/16 v4, 0xe
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-direct {v2, v4, v1}, Liqb;-><init>(ILjava/lang/Object;)V
+    const-string v0, "ChatUpdate(requestId="
 
-    invoke-direct {v0, v3, v2}, Lemc;-><init>(Ls5g;Lem6;)V
+    const-string v1, ")"
 
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    iget-wide v2, p0, Lwmc;->a:J
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

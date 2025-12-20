@@ -1,55 +1,88 @@
-.class public final Llda;
+.class public final synthetic Llda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lnhh;
+.field public final synthetic a:I
 
-.field public final b:Lm9f;
+.field public final synthetic b:J
 
-.field public final c:Lphd;
+.field public final synthetic c:Z
 
-.field public final d:Lan3;
-
-.field public e:I
-
-.field public final f:Lkd5;
+.field public final synthetic d:Lvgh;
 
 
 # direct methods
-.method public constructor <init>(Lphd;Lan3;Lohh;Lm9f;)V
-    .locals 2
+.method public synthetic constructor <init>(Lvgh;JZI)V
+    .locals 0
+
+    iput p5, p0, Llda;->a:I
+
+    iput-object p1, p0, Llda;->d:Lvgh;
+
+    iput-wide p2, p0, Llda;->b:J
+
+    iput-boolean p4, p0, Llda;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lkd5;
+    return-void
+.end method
 
-    const/4 v1, 0x4
 
-    invoke-direct {v0, v1, p0}, Lkd5;-><init>(ILjava/lang/Object;)V
+# virtual methods
+.method public final run()V
+    .locals 4
 
-    iput-object v0, p0, Llda;->f:Lkd5;
+    iget v0, p0, Llda;->a:I
 
-    iput-object p1, p0, Llda;->c:Lphd;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p2, p0, Llda;->d:Lan3;
+    iget-object v0, p0, Llda;->d:Lvgh;
 
-    invoke-interface {p3, p0}, Lohh;->j(Llda;)Lnhh;
+    check-cast v0, Ly52;
 
-    move-result-object p2
+    iget-object v0, v0, Ly52;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Llda;->a:Lnhh;
+    check-cast v0, Lrdf;
 
-    iput-object p4, p0, Llda;->b:Lm9f;
+    iget-object v0, v0, Lrdf;->d:Lkhh;
 
-    invoke-virtual {p1}, Lphd;->j()I
+    iget-wide v1, p0, Llda;->b:J
 
-    move-result p2
+    iget-boolean v3, p0, Llda;->c:Z
 
-    iput p2, p0, Llda;->e:I
-
-    invoke-virtual {p1, v0}, Lphd;->z(Lrhd;)V
+    invoke-interface {v0, v1, v2, v3}, Lkhh;->p(JZ)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llda;->d:Lvgh;
+
+    check-cast v0, Lhg5;
+
+    iget-object v0, v0, Lhg5;->b:Ljava/lang/Object;
+
+    check-cast v0, Loda;
+
+    iget-object v0, v0, Loda;->e:Lkhh;
+
+    iget-wide v1, p0, Llda;->b:J
+
+    iget-boolean v3, p0, Llda;->c:Z
+
+    invoke-interface {v0, v1, v2, v3}, Lkhh;->p(JZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

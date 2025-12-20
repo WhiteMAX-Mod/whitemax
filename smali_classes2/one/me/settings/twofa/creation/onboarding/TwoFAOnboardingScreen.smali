@@ -24,7 +24,7 @@
         "",
         "state",
         "(Ljava/lang/String;)V",
-        "wmg",
+        "czg",
         "settings-twofa_playGoogleRelease"
     }
     k = 0x1
@@ -38,26 +38,26 @@
 
 
 # static fields
-.field public static final synthetic X:[Lyy7;
+.field public static final synthetic X:[Lp38;
 
 
 # instance fields
-.field public final a:Leo7;
+.field public final a:Lvs7;
 
 .field public final b:Ljava/lang/Object;
 
-.field public final c:Lka5;
+.field public final c:Lhj8;
 
-.field public final d:Lk18;
+.field public final d:Ld68;
 
-.field public final o:Lbbd;
+.field public final o:Ljkd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Ltoc;
+    new-instance v0, Lgxc;
 
     const-class v1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
@@ -67,19 +67,19 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v1, Lvid;->a:Lwid;
+    sget-object v1, Lfsd;->a:Lgsd;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lyy7;
+    new-array v1, v1, [Lp38;
 
     aput-object v0, v1, v4
 
-    sput-object v1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->X:[Lyy7;
+    sput-object v1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->X:[Lp38;
 
     return-void
 .end method
@@ -94,24 +94,24 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILro4;)V
 
     .line 6
-    sget-object v0, Leo7;->f:Leo7;
+    sget-object v0, Lvs7;->f:Lvs7;
 
-    iput-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->a:Leo7;
+    iput-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->a:Lvs7;
 
     .line 7
-    new-instance v0, Lwj1;
+    new-instance v0, Lbm1;
 
-    const/16 v1, 0x11
+    const/16 v1, 0x12
 
-    invoke-direct {v0, p1, v1}, Lwj1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v0, p1, v1}, Lbm1;-><init>(Landroid/os/Bundle;I)V
 
     const/4 p1, 0x3
 
     .line 8
-    invoke-static {p1, v0}, Lipi;->b(ILcm6;)Lk18;
+    invoke-static {p1, v0}, Lv2j;->c(ILmq6;)Ld68;
 
     move-result-object p1
 
@@ -119,53 +119,53 @@
     iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->b:Ljava/lang/Object;
 
     .line 10
-    new-instance p1, Lka5;
+    new-instance p1, Lhj8;
 
     .line 11
-    new-instance v0, Lvmg;
+    new-instance v0, Lbzg;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lvmg;-><init>(Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;I)V
+    invoke-direct {v0, p0, v1}, Lbzg;-><init>(Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;I)V
 
     const/4 v1, 0x6
 
     .line 12
-    invoke-direct {p1, v0, v2, v1}, Lka5;-><init>(Lcm6;Lcm6;I)V
+    invoke-direct {p1, v0, v2, v1}, Lhj8;-><init>(Lmq6;Lmq6;I)V
 
-    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->c:Lka5;
+    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->c:Lhj8;
 
     .line 13
-    new-instance p1, Lvmg;
+    new-instance p1, Lbzg;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lvmg;-><init>(Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;I)V
+    invoke-direct {p1, p0, v0}, Lbzg;-><init>(Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;I)V
 
     .line 14
-    new-instance v0, Luif;
+    new-instance v0, Latf;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1, p1}, Luif;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Latf;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lang;
+    const-class p1, Lgzg;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object p1
 
     .line 15
-    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->d:Lk18;
+    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->d:Ld68;
 
     .line 16
-    sget p1, Le0d;->oneme_settings_twofa_action:I
+    sget p1, Lh9d;->oneme_settings_twofa_action:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljkd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->o:Lbbd;
+    iput-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->o:Ljkd;
 
     return-void
 .end method
@@ -174,19 +174,19 @@
     .locals 2
 
     .line 1
-    new-instance v0, Limb;
+    new-instance v0, Lysb;
 
     const-string v1, "onboarding_2fa_state_key"
 
-    invoke-direct {v0, v1, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    filled-new-array {v0}, [Limb;
+    filled-new-array {v0}, [Lysb;
 
     move-result-object p1
 
     .line 3
-    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -198,18 +198,32 @@
 
 
 # virtual methods
-.method public final getInsetsConfig()Leo7;
+.method public final A0()Lczg;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->a:Leo7;
+    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lczg;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lk1e;
+.method public final getInsetsConfig()Lvs7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->c:Lka5;
+    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->a:Lvs7;
+
+    return-object v0
+.end method
+
+.method public final getScreenDelegate()Lrbe;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->c:Lhj8;
 
     return-object v0
 .end method
@@ -217,17 +231,17 @@
 .method public final handleBack()Z
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {p0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v0
 
-    sget-object v1, Lwmg;->b:Lwmg;
+    sget-object v1, Lczg;->b:Lczg;
 
     if-ne v0, v1, :cond_0
 
-    sget-object v0, Lomg;->c:Lomg;
+    sget-object v0, Luyg;->c:Luyg;
 
-    invoke-virtual {v0}, Li3;->p0()Lii4;
+    invoke-virtual {v0}, Lf3;->p0()Lim4;
 
     move-result-object v0
 
@@ -235,14 +249,14 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     const/4 v0, 0x1
 
     return v0
 
     :cond_0
-    invoke-super {p0}, Lc54;->handleBack()Z
+    invoke-super {p0}, Lx84;->handleBack()Z
 
     move-result v0
 
@@ -262,25 +276,25 @@
 
     invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v2, Le0d;->oneme_settings_twofa_onboarding_root:I
+    sget v2, Lh9d;->oneme_settings_twofa_onboarding_root:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    sget-object v2, La93;->s0:Lv1a;
+    sget-object v2, Ldc3;->s0:Lole;
 
-    invoke-virtual {v2, v1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lyeb;->b()Lbf0;
+    invoke-virtual {v2, v1}, Lole;->n(Landroid/view/View;)Lplb;
 
     move-result-object v3
 
-    iget v3, v3, Lbf0;->l:I
+    invoke-interface {v3}, Lplb;->b()Lxf0;
+
+    move-result-object v3
+
+    iget v3, v3, Lxf0;->l:I
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance v3, Lyfb;
+    new-instance v3, Lpmb;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -288,15 +302,15 @@
 
     const/4 v5, 0x6
 
-    invoke-direct {v3, v4, v5}, Lyfb;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v3, v4, v5}, Lpmb;-><init>(Landroid/content/Context;I)V
 
-    sget v4, Le0d;->oneme_settings_twofa_onboarding_toolbar:I
+    sget v4, Lh9d;->oneme_settings_twofa_onboarding_toolbar:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
-    sget-object v4, Lqfb;->a:Lqfb;
+    sget-object v4, Lhmb;->b:Lhmb;
 
-    invoke-virtual {v3, v4}, Lyfb;->setForm(Lqfb;)V
+    invoke-virtual {v3, v4}, Lpmb;->setForm(Lhmb;)V
 
     const/4 v4, 0x0
 
@@ -316,25 +330,25 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setTranslationZ(F)V
 
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v6
 
-    sget-object v9, Lwmg;->a:Lwmg;
+    sget-object v9, Lczg;->a:Lczg;
 
     if-ne v6, v9, :cond_0
 
-    new-instance v6, Lgfb;
+    new-instance v6, Lxlb;
 
-    new-instance v10, Ldse;
+    new-instance v10, Lx1e;
 
-    const/16 v11, 0x9
+    const/16 v11, 0x13
 
-    invoke-direct {v10, v11, v0}, Ldse;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v10, v11, v0}, Lx1e;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v6, v10}, Lgfb;-><init>(Lem6;)V
+    invoke-direct {v6, v10}, Lxlb;-><init>(Loq6;)V
 
-    invoke-virtual {v3, v6}, Lyfb;->setLeftActions(Lmfb;)V
+    invoke-virtual {v3, v6}, Lpmb;->setLeftActions(Ldmb;)V
 
     :cond_0
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -347,7 +361,7 @@
 
     invoke-direct {v3, v6}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
-    sget v6, Le0d;->oneme_settings_twofa_onboarding_scroll_content:I
+    sget v6, Lh9d;->oneme_settings_twofa_onboarding_scroll_content:I
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setId(I)V
 
@@ -373,7 +387,7 @@
 
     invoke-direct {v11, v6}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    sget v12, Le0d;->oneme_settings_twofa_onboarding_content:I
+    sget v12, Lh9d;->oneme_settings_twofa_onboarding_content:I
 
     invoke-virtual {v11, v12}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
@@ -387,17 +401,17 @@
 
     invoke-direct {v12, v6}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    sget v13, Le0d;->oneme_settings_twofa_onboarding_picture_background:I
+    sget v13, Lh9d;->oneme_settings_twofa_onboarding_picture_background:I
 
     invoke-virtual {v12, v13}, Landroid/view/View;->setId(I)V
 
-    new-instance v13, Lkt3;
+    new-instance v13, Lzw3;
 
     const/16 v14, 0xf0
 
     int-to-float v14, v14
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -409,11 +423,11 @@
 
     mul-float/2addr v15, v14
 
-    invoke-static {v15}, Lkti;->d(F)I
+    invoke-static {v15}, Ln7j;->c(F)I
 
     move-result v15
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v16
 
@@ -425,11 +439,11 @@
 
     mul-float/2addr v14, v7
 
-    invoke-static {v14}, Lkti;->d(F)I
+    invoke-static {v14}, Ln7j;->c(F)I
 
     move-result v7
 
-    invoke-direct {v13, v15, v7}, Lkt3;-><init>(II)V
+    invoke-direct {v13, v15, v7}, Lzw3;-><init>(II)V
 
     invoke-virtual {v12, v13}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -437,11 +451,11 @@
 
     invoke-virtual {v12, v4}, Landroid/view/View;->setClipToOutline(Z)V
 
-    new-instance v7, Lnwe;
+    new-instance v7, Ll7f;
 
-    invoke-direct {v7, v6}, Lnwe;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, v6}, Ll7f;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v7, v4}, Lnwe;->d(Z)V
+    invoke-virtual {v7, v4}, Ll7f;->d(Z)V
 
     invoke-virtual {v12, v7}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -451,17 +465,17 @@
 
     invoke-direct {v7, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget v13, Le0d;->oneme_settings_twofa_onboarding_picture:I
+    sget v13, Lh9d;->oneme_settings_twofa_onboarding_picture:I
 
     invoke-virtual {v7, v13}, Landroid/view/View;->setId(I)V
 
-    new-instance v13, Lkt3;
+    new-instance v13, Lzw3;
 
     const/16 v14, 0xd6
 
     int-to-float v14, v14
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -473,7 +487,7 @@
 
     mul-float/2addr v14, v15
 
-    invoke-static {v14}, Lkti;->d(F)I
+    invoke-static {v14}, Ln7j;->c(F)I
 
     move-result v14
 
@@ -481,7 +495,7 @@
 
     int-to-float v15, v15
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v16
 
@@ -493,26 +507,26 @@
 
     mul-float/2addr v15, v5
 
-    invoke-static {v15}, Lkti;->d(F)I
+    invoke-static {v15}, Ln7j;->c(F)I
 
     move-result v5
 
-    invoke-direct {v13, v14, v5}, Lkt3;-><init>(II)V
+    invoke-direct {v13, v14, v5}, Lzw3;-><init>(II)V
 
     invoke-virtual {v7, v13}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v5
 
     if-ne v5, v9, :cond_1
 
-    sget v5, Laxc;->oneme_settings_privacy_cloud_2fa_start_icon:I
+    sget v5, Lc6d;->oneme_settings_privacy_cloud_2fa_start_icon:I
 
     goto :goto_0
 
     :cond_1
-    sget v5, Laxc;->oneme_settings_privacy_cloud_2fa_end_icon:I
+    sget v5, Lc6d;->oneme_settings_privacy_cloud_2fa_end_icon:I
 
     :goto_0
     invoke-virtual {v7, v5}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -523,19 +537,19 @@
 
     invoke-direct {v5, v6}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v13, Le0d;->oneme_settings_twofa_onboarding_title:I
+    sget v13, Lh9d;->oneme_settings_twofa_onboarding_title:I
 
     invoke-virtual {v5, v13}, Landroid/view/View;->setId(I)V
 
-    new-instance v13, Lkt3;
+    new-instance v13, Lzw3;
 
-    invoke-direct {v13, v4, v8}, Lkt3;-><init>(II)V
+    invoke-direct {v13, v4, v8}, Lzw3;-><init>(II)V
 
     const/16 v14, 0x20
 
     int-to-float v14, v14
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -547,13 +561,13 @@
 
     mul-float/2addr v15, v14
 
-    invoke-static {v15}, Lkti;->d(F)I
+    invoke-static {v15}, Ln7j;->c(F)I
 
     move-result v15
 
     invoke-virtual {v13, v15}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -565,7 +579,7 @@
 
     mul-float/2addr v15, v14
 
-    invoke-static {v15}, Lkti;->d(F)I
+    invoke-static {v15}, Ln7j;->c(F)I
 
     move-result v15
 
@@ -583,28 +597,28 @@
 
     invoke-virtual {v5, v10}, Landroid/widget/TextView;->setGravity(I)V
 
-    sget-object v13, Ldpg;->c:Lt5g;
+    sget-object v13, Lj1h;->c:Lhhg;
 
-    invoke-static {v13, v5, v2, v5}, Laz1;->f(Lt5g;Landroid/widget/TextView;Lv1a;Landroid/widget/TextView;)Lu3g;
+    invoke-static {v13, v5, v2, v5}, Lc12;->g(Lhhg;Landroid/widget/TextView;Lole;Landroid/widget/TextView;)Lifg;
 
     move-result-object v13
 
-    iget v13, v13, Lu3g;->e:I
+    iget v13, v13, Lifg;->e:I
 
     invoke-virtual {v5, v13}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v13
 
     if-ne v13, v9, :cond_2
 
-    sget v13, Lr4d;->oneme_settings_twofa_onboarding_title:I
+    sget v13, Lwdd;->oneme_settings_twofa_onboarding_title:I
 
     goto :goto_1
 
     :cond_2
-    sget v13, Lr4d;->oneme_settings_twofa_onboarding_success_title:I
+    sget v13, Lwdd;->oneme_settings_twofa_onboarding_success_title:I
 
     :goto_1
     invoke-virtual {v5, v13}, Landroid/widget/TextView;->setText(I)V
@@ -615,15 +629,15 @@
 
     invoke-direct {v13, v6}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v6, Le0d;->oneme_settings_twofa_onboarding_subtitle:I
+    sget v6, Lh9d;->oneme_settings_twofa_onboarding_subtitle:I
 
     invoke-virtual {v13, v6}, Landroid/view/View;->setId(I)V
 
-    new-instance v6, Lkt3;
+    new-instance v6, Lzw3;
 
-    invoke-direct {v6, v4, v8}, Lkt3;-><init>(II)V
+    invoke-direct {v6, v4, v8}, Lzw3;-><init>(II)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v16
 
@@ -635,13 +649,13 @@
 
     mul-float/2addr v8, v14
 
-    invoke-static {v8}, Lkti;->d(F)I
+    invoke-static {v8}, Ln7j;->c(F)I
 
     move-result v8
 
     invoke-virtual {v6, v8}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -653,7 +667,7 @@
 
     mul-float/2addr v8, v14
 
-    invoke-static {v8}, Lkti;->d(F)I
+    invoke-static {v8}, Ln7j;->c(F)I
 
     move-result v8
 
@@ -665,35 +679,35 @@
 
     invoke-virtual {v13, v10}, Landroid/widget/TextView;->setGravity(I)V
 
-    sget-object v6, Ldpg;->j:Lt5g;
+    sget-object v6, Lj1h;->j:Lhhg;
 
-    invoke-static {v6, v13, v2, v13}, Laz1;->f(Lt5g;Landroid/widget/TextView;Lv1a;Landroid/widget/TextView;)Lu3g;
+    invoke-static {v6, v13, v2, v13}, Lc12;->g(Lhhg;Landroid/widget/TextView;Lole;Landroid/widget/TextView;)Lifg;
 
     move-result-object v2
 
-    iget v2, v2, Lu3g;->g:I
+    iget v2, v2, Lifg;->g:I
 
     invoke-virtual {v13, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v2
 
     if-ne v2, v9, :cond_3
 
-    sget v2, Lr4d;->oneme_settings_twofa_onboarding_description:I
+    sget v2, Lwdd;->oneme_settings_twofa_onboarding_description:I
 
     goto :goto_2
 
     :cond_3
-    sget v2, Lr4d;->oneme_settings_twofa_onboarding_success_description:I
+    sget v2, Lwdd;->oneme_settings_twofa_onboarding_success_description:I
 
     :goto_2
     invoke-virtual {v13, v2}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {v11, v13}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-static {v11}, Ll5j;->g(Landroidx/constraintlayout/widget/ConstraintLayout;)Lut3;
+    invoke-static {v11}, Lvij;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)Lix3;
 
     move-result-object v2
 
@@ -703,17 +717,17 @@
 
     const/4 v8, 0x3
 
-    invoke-virtual {v2, v6, v8, v4, v8}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v8, v4, v8}, Lix3;->d(IIII)V
 
-    invoke-virtual {v2, v6, v15, v4, v15}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v15, v4, v15}, Lix3;->d(IIII)V
 
     const/4 v10, 0x6
 
-    invoke-virtual {v2, v6, v10, v4, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v10, v4, v10}, Lix3;->d(IIII)V
 
     const/4 v15, 0x7
 
-    invoke-virtual {v2, v6, v15, v4, v15}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v15, v4, v15}, Lix3;->d(IIII)V
 
     invoke-virtual {v7}, Landroid/view/View;->getId()I
 
@@ -723,19 +737,19 @@
 
     move-result v4
 
-    invoke-virtual {v2, v6, v8, v4, v8}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v8, v4, v8}, Lix3;->d(IIII)V
 
     invoke-virtual {v12}, Landroid/view/View;->getId()I
 
     move-result v4
 
-    invoke-virtual {v2, v6, v10, v4, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v10, v4, v10}, Lix3;->d(IIII)V
 
     invoke-virtual {v12}, Landroid/view/View;->getId()I
 
     move-result v4
 
-    invoke-virtual {v2, v6, v15, v4, v15}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v15, v4, v15}, Lix3;->d(IIII)V
 
     invoke-virtual {v12}, Landroid/view/View;->getId()I
 
@@ -743,7 +757,7 @@
 
     const/4 v10, 0x4
 
-    invoke-virtual {v2, v6, v10, v4, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v6, v10, v4, v10}, Lix3;->d(IIII)V
 
     invoke-virtual {v5}, Landroid/view/View;->getId()I
 
@@ -753,19 +767,19 @@
 
     move-result v6
 
-    invoke-virtual {v2, v4, v8, v6, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v8, v6, v10}, Lix3;->d(IIII)V
 
-    new-instance v6, Lfua;
+    new-instance v6, Ln0b;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v2, v8, v4, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v8, v4, v7}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
     const/16 v7, 0x44
 
     int-to-float v7, v7
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -775,21 +789,21 @@
 
     iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v10, v6}, Laz1;->q(FFLfua;)V
+    invoke-static {v7, v10, v6}, Lc12;->r(FFLn0b;)V
 
     const/4 v6, 0x0
 
     const/4 v10, 0x6
 
-    invoke-virtual {v2, v4, v10, v6, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v10, v6, v10}, Lix3;->d(IIII)V
 
-    new-instance v7, Lfua;
+    new-instance v7, Ln0b;
 
     const/4 v12, 0x5
 
-    invoke-direct {v7, v2, v10, v4, v12}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v7, v2, v10, v4, v12}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -799,17 +813,17 @@
 
     iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v14, v10, v7}, Laz1;->q(FFLfua;)V
+    invoke-static {v14, v10, v7}, Lc12;->r(FFLn0b;)V
 
-    invoke-virtual {v2, v4, v15, v6, v15}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v15, v6, v15}, Lix3;->d(IIII)V
 
-    new-instance v6, Lfua;
+    new-instance v6, Ln0b;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v2, v15, v4, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v15, v4, v7}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -821,21 +835,21 @@
 
     mul-float/2addr v7, v14
 
-    invoke-static {v7}, Lkti;->d(F)I
+    invoke-static {v7}, Ln7j;->c(F)I
 
     move-result v7
 
-    invoke-virtual {v6, v7}, Lfua;->e(I)V
+    invoke-virtual {v6, v7}, Ln0b;->e(I)V
 
-    invoke-virtual {v2, v4}, Lut3;->g(I)Lpt3;
+    invoke-virtual {v2, v4}, Lix3;->g(I)Ldx3;
 
     move-result-object v4
 
-    iget-object v4, v4, Lpt3;->d:Lqt3;
+    iget-object v4, v4, Ldx3;->d:Lex3;
 
     const/4 v6, 0x1
 
-    iput-boolean v6, v4, Lqt3;->l0:Z
+    iput-boolean v6, v4, Lex3;->l0:Z
 
     invoke-virtual {v13}, Landroid/view/View;->getId()I
 
@@ -847,19 +861,19 @@
 
     const/4 v10, 0x4
 
-    invoke-virtual {v2, v4, v8, v5, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v8, v5, v10}, Lix3;->d(IIII)V
 
-    new-instance v5, Lfua;
+    new-instance v5, Ln0b;
 
     const/4 v6, 0x5
 
-    invoke-direct {v5, v2, v8, v4, v6}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v5, v2, v8, v4, v6}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
     const/16 v6, 0x8
 
     int-to-float v6, v6
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -869,21 +883,21 @@
 
     iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v6, v7, v5}, Laz1;->q(FFLfua;)V
+    invoke-static {v6, v7, v5}, Lc12;->r(FFLn0b;)V
 
     const/4 v6, 0x0
 
     const/4 v10, 0x6
 
-    invoke-virtual {v2, v4, v10, v6, v10}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v10, v6, v10}, Lix3;->d(IIII)V
 
-    new-instance v5, Lfua;
+    new-instance v5, Ln0b;
 
     const/4 v7, 0x5
 
-    invoke-direct {v5, v2, v10, v4, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v5, v2, v10, v4, v7}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -893,17 +907,17 @@
 
     iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v14, v7, v5}, Laz1;->q(FFLfua;)V
+    invoke-static {v14, v7, v5}, Lc12;->r(FFLn0b;)V
 
-    invoke-virtual {v2, v4, v15, v6, v15}, Lut3;->d(IIII)V
+    invoke-virtual {v2, v4, v15, v6, v15}, Lix3;->d(IIII)V
 
-    new-instance v5, Lfua;
+    new-instance v5, Ln0b;
 
     const/4 v6, 0x5
 
-    invoke-direct {v5, v2, v15, v4, v6}, Lfua;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v5, v2, v15, v4, v6}, Ln0b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -915,23 +929,23 @@
 
     mul-float/2addr v14, v6
 
-    invoke-static {v14}, Lkti;->d(F)I
+    invoke-static {v14}, Ln7j;->c(F)I
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Lfua;->e(I)V
+    invoke-virtual {v5, v6}, Ln0b;->e(I)V
 
-    invoke-virtual {v2, v4}, Lut3;->g(I)Lpt3;
+    invoke-virtual {v2, v4}, Lix3;->g(I)Ldx3;
 
     move-result-object v4
 
-    iget-object v4, v4, Lpt3;->d:Lqt3;
+    iget-object v4, v4, Ldx3;->d:Lex3;
 
     const/4 v6, 0x1
 
-    iput-boolean v6, v4, Lqt3;->l0:Z
+    iput-boolean v6, v4, Lex3;->l0:Z
 
-    invoke-virtual {v2, v11}, Lut3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v2, v11}, Lix3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     invoke-virtual {v3, v11}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
 
@@ -947,27 +961,27 @@
 
     invoke-direct {v2, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v4, Le0d;->oneme_settings_twofa_action:I
+    sget v4, Lh9d;->oneme_settings_twofa_action:I
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setId(I)V
 
-    sget-object v4, Ljza;->c:Ljza;
+    sget-object v4, Ls5b;->c:Ls5b;
 
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ljza;)V
+    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ls5b;)V
 
-    sget-object v4, Liza;->a:Liza;
+    sget-object v4, Lr5b;->a:Lr5b;
 
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Liza;)V
+    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lr5b;)V
 
-    sget-object v4, Lgza;->d:Lgza;
+    sget-object v4, Lp5b;->d:Lp5b;
 
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lgza;)V
+    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lp5b;)V
 
     const/16 v4, 0xc
 
     int-to-float v4, v4
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -979,22 +993,22 @@
 
     mul-float/2addr v4, v5
 
-    invoke-static {v4}, Lkti;->d(F)I
+    invoke-static {v4}, Ln7j;->c(F)I
 
     move-result v4
 
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->z0()Lwmg;
+    invoke-virtual {v0}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->A0()Lczg;
 
     move-result-object v5
 
     if-ne v5, v9, :cond_4
 
-    sget v5, Lr4d;->oneme_settings_twofa_onboarding_set_password:I
+    sget v5, Lwdd;->oneme_settings_twofa_onboarding_set_password:I
 
     goto :goto_3
 
     :cond_4
-    sget v5, Lmvd;->f0:I
+    sget v5, Ll5e;->f0:I
 
     :goto_3
     invoke-virtual {v2, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
@@ -1017,21 +1031,21 @@
 
     invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v5, Lpcc;
+    new-instance v5, Lfkc;
 
-    const/16 v6, 0x17
+    const/16 v6, 0x19
 
-    invoke-direct {v5, v6, v0}, Lpcc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v5, v6, v0}, Lfkc;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v2, v5}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v2, v5}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    new-instance v5, Lhp;
+    new-instance v5, Ljp;
 
-    const/4 v6, 0x7
+    const/4 v6, 0x6
 
-    invoke-direct {v5, v2, v3, v4, v6}, Lhp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    invoke-direct {v5, v2, v3, v4, v6}, Ljp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
 
-    invoke-static {v2, v5}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
+    invoke-static {v2, v5}, Lcnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lcnb;
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1041,125 +1055,111 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 6
 
-    new-instance v0, Lqlg;
+    new-instance v0, Lpng;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v2, v1}, Lqlg;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, p0, v2, v1}, Lpng;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v0, p1}, Ltqi;->c(Lum6;Landroid/view/View;)V
+    invoke-static {v0, p1}, Ll5j;->c(Ler6;Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->d:Lk18;
+    iget-object p1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->d:Ld68;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lang;
-
-    iget-object v0, v0, Lang;->X:Lci5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lj48;->p()Ll48;
-
-    move-result-object v1
-
-    sget-object v3, Ll38;->d:Ll38;
-
-    invoke-static {v0, v1, v3}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lxmg;
+    check-cast v0, Lgzg;
 
-    invoke-direct {v1, v2, p0}, Lxmg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+    iget-object v0, v0, Lgzg;->X:Lyl5;
 
-    new-instance v4, Lg56;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
+
+    move-result-object v1
+
+    invoke-interface {v1}, La98;->p()Lc98;
+
+    move-result-object v1
+
+    sget-object v3, Lc88;->d:Lc88;
+
+    invoke-static {v0, v1, v3}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
+
+    move-result-object v0
+
+    new-instance v1, Ldzg;
+
+    invoke-direct {v1, v2, p0}, Ldzg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+
+    new-instance v4, Lo96;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v1, v5}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v4, v0, v1, v5}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    invoke-static {v4, v0}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lang;
+    check-cast p1, Lgzg;
 
-    iget-object p1, p1, Lang;->o:Lci5;
+    iget-object p1, p1, Lgzg;->o:Lyl5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj48;->p()Ll48;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v3}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+    invoke-interface {v0}, La98;->p()Lc98;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v3}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
 
     move-result-object p1
 
-    new-instance v0, Lymg;
+    new-instance v0, Lezg;
 
-    invoke-direct {v0, v2, p0}, Lymg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+    invoke-direct {v0, v2, p0}, Lezg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
 
-    new-instance v1, Lg56;
+    new-instance v1, Lo96;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    invoke-static {v1, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
     return-void
 .end method
 
-.method public final y0()Lone/me/sdk/uikit/common/button/OneMeButton;
+.method public final z0()Lone/me/sdk/uikit/common/button/OneMeButton;
     .locals 2
 
-    sget-object v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->X:[Lyy7;
+    sget-object v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->X:[Lp38;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->o:Lbbd;
+    iget-object v1, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->o:Ljkd;
 
-    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    return-object v0
-.end method
-
-.method public final z0()Lwmg;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwmg;
 
     return-object v0
 .end method

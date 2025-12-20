@@ -1,300 +1,312 @@
 .class public final Le3h;
-.super Ljava/lang/Object;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lgrf;
-
-
-# static fields
-.field public static final Y:Landroid/util/Size;
-
-.field public static final Z:Landroid/util/Range;
 
 
 # instance fields
-.field public final X:Landroid/util/Range;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lf9g;
-
-.field public final c:Lfc0;
-
-.field public final d:Landroid/util/Size;
-
-.field public final o:Lu75;
+.field public a:Lc3h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method private final setBlockReasonButtons(Ljava/util/List;)V
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lb3h;",
+            ">;)V"
+        }
+    .end annotation
 
-    new-instance v0, Landroid/util/Size;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    const/16 v1, 0x500
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    const/16 v2, 0x2d0
+    move-result-object p1
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    sput-object v0, Le3h;->Y:Landroid/util/Size;
+    move-result v0
 
-    new-instance v0, Landroid/util/Range;
+    sget-object v1, Ls5b;->c:Ls5b;
 
-    const/4 v1, 0x1
+    sget-object v2, Lp5b;->c:Lp5b;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v3, -0x2
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lr5b;->c:Lr5b;
+
+    const/4 v7, 0x2
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb3h;
+
+    new-instance v8, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-direct {v8, v9, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iget v5, v0, Lb3h;->a:I
+
+    invoke-virtual {v8, v5}, Landroid/view/View;->setId(I)V
+
+    new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v5, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v8, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v8, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lp5b;)V
+
+    invoke-virtual {v8, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ls5b;)V
+
+    invoke-virtual {v8, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lr5b;)V
+
+    iget-object v1, v0, Lb3h;->b:Lghg;
+
+    invoke-virtual {v1, v8}, Lghg;->d(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    const/16 v2, 0x3c
+    invoke-virtual {v8, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v1, Ldu5;
 
-    move-result-object v2
+    const/4 v2, 0x3
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+    invoke-direct {v1, p0, v0, v7, v2}, Ldu5;-><init>(Landroid/view/View;Ljava/lang/Object;II)V
 
-    sput-object v0, Le3h;->Z:Landroid/util/Range;
+    invoke-static {v8, v1}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lb3h;
+
+    sget v0, Ls6b;->h2:I
+
+    sget v8, Lv6b;->H2:I
+
+    new-instance v9, Lbhg;
+
+    invoke-direct {v9, v8}, Lbhg;-><init>(I)V
+
+    invoke-direct {p1, v0, v9}, Lb3h;-><init>(ILghg;)V
+
+    new-instance v8, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v10
+
+    invoke-direct {v8, v10, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    invoke-virtual {v8, v0}, Landroid/view/View;->setId(I)V
+
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v0, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v8, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v8, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lp5b;)V
+
+    invoke-virtual {v8, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ls5b;)V
+
+    invoke-virtual {v8, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lr5b;)V
+
+    invoke-virtual {v9, v8}, Lghg;->d(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {v8, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Ldu5;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, p1, v7, v1}, Ldu5;-><init>(Landroid/view/View;Ljava/lang/Object;II)V
+
+    invoke-static {v8, v0}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lf9g;Lfc0;Landroid/util/Size;Lu75;Landroid/util/Range;)V
-    .locals 0
+.method private final setCallStatusButtons(Ljava/util/List;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lb3h;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iput-object p1, p0, Le3h;->a:Ljava/lang/String;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    iput-object p2, p0, Le3h;->b:Lf9g;
+    move-result-object p1
 
-    iput-object p3, p0, Le3h;->c:Lfc0;
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Le3h;->d:Landroid/util/Size;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iput-object p5, p0, Le3h;->o:Lu75;
+    move-result v1
 
-    iput-object p6, p0, Le3h;->X:Landroid/util/Range;
+    if-eqz v1, :cond_1
 
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    add-int/lit8 v2, v0, 0x1
+
+    if-ltz v0, :cond_0
+
+    check-cast v1, Lb3h;
+
+    new-instance v3, Lru1;
+
+    const/4 v4, 0x5
+
+    invoke-direct {v3, v0, v4}, Lru1;-><init>(II)V
+
+    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-direct {v0, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iget v4, v1, Lb3h;->a:I
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setId(I)V
+
+    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v5, -0x1
+
+    const/4 v6, -0x2
+
+    invoke-direct {v4, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-interface {v3, v4}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v3, Lp5b;->c:Lp5b;
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lp5b;)V
+
+    sget-object v3, Ls5b;->c:Ls5b;
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ls5b;)V
+
+    sget-object v3, Lr5b;->b:Lr5b;
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lr5b;)V
+
+    iget-object v3, v1, Lb3h;->b:Lghg;
+
+    invoke-virtual {v3, v0}, Lghg;->d(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v3, Ldu5;
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x1
+
+    invoke-direct {v3, p0, v1, v5, v4}, Ldu5;-><init>(Landroid/view/View;Ljava/lang/Object;II)V
+
+    invoke-static {v0, v3}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Lfi3;->m()V
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 13
+.method public final a(ILjava/util/List;)V
+    .locals 1
 
-    sget-object v0, Lmsf;->p:Landroid/util/Range;
+    sget-object v0, Ld3h;->$EnumSwitchMapping$0:[I
 
-    iget-object v1, p0, Le3h;->X:Landroid/util/Range;
+    invoke-static {p1}, Lc12;->w(I)I
 
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v2
+    aget p1, v0, p1
 
-    if-nez v2, :cond_0
+    const/4 v0, 0x1
 
-    invoke-virtual {v1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+    if-eq p1, v0, :cond_1
 
-    move-result-object v2
+    const/4 v0, 0x2
 
-    check-cast v2, Ljava/lang/Integer;
+    if-ne p1, v0, :cond_0
 
-    sget-object v3, Le3h;->Z:Landroid/util/Range;
+    invoke-direct {p0, p2}, Le3h;->setBlockReasonButtons(Ljava/util/List;)V
 
-    invoke-virtual {v3, v2}, Landroid/util/Range;->clamp(Ljava/lang/Comparable;)Ljava/lang/Comparable;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    :goto_0
-    move v6, v2
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    const/16 v2, 0x1e
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    goto :goto_0
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :goto_1
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_2
+    throw p1
 
     :cond_1
-    const-string v1, "<UNSPECIFIED>"
+    invoke-direct {p0, p2}, Le3h;->setCallStatusButtons(Ljava/util/List;)V
 
-    :goto_2
-    filled-new-array {v2, v1}, [Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final setListener(Lc3h;)V
+    .locals 0
 
-    const-string v1, "Default resolved frame rate: %dfps. [Expected operating range: %s]"
+    iput-object p1, p0, Le3h;->a:Lc3h;
 
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "VidEncCfgDefaultRslvr"
-
-    invoke-static {v1, v0}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Resolved VIDEO frame rate: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, "fps"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Le3h;->c:Lfc0;
-
-    iget-object v12, v0, Lfc0;->c:Landroid/util/Range;
-
-    const-string v0, "Using fallback VIDEO bitrate"
-
-    invoke-static {v1, v0}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Le3h;->o:Lu75;
-
-    iget v4, v0, Lu75;->b:I
-
-    iget-object v1, p0, Le3h;->d:Landroid/util/Size;
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v8
-
-    sget-object v2, Le3h;->Y:Landroid/util/Size;
-
-    invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
-
-    move-result v9
-
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
-
-    move-result v10
-
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
-
-    move-result v11
-
-    const v3, 0xd59f80
-
-    const/16 v5, 0x8
-
-    const/16 v7, 0x1e
-
-    invoke-static/range {v3 .. v12}, Le2h;->c(IIIIIIIIILandroid/util/Range;)I
-
-    move-result v2
-
-    sget-object v3, Lx75;->e:Ljava/util/HashMap;
-
-    iget-object v4, p0, Le3h;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map;
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    goto :goto_3
-
-    :cond_2
-    const/4 v0, -0x1
-
-    :goto_3
-    invoke-static {v0, v4}, Le2h;->a(ILjava/lang/String;)Lcc0;
-
-    move-result-object v3
-
-    invoke-static {}, Lbc0;->d()Lj35;
-
-    move-result-object v5
-
-    iput-object v4, v5, Lj35;->b:Ljava/lang/Object;
-
-    iget-object v4, p0, Le3h;->b:Lf9g;
-
-    if-eqz v4, :cond_3
-
-    iput-object v4, v5, Lj35;->d:Ljava/lang/Object;
-
-    iput-object v1, v5, Lj35;->o:Ljava/lang/Object;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iput-object v1, v5, Lj35;->t0:Ljava/lang/Object;
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iput-object v1, v5, Lj35;->Z:Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iput-object v0, v5, Lj35;->c:Ljava/lang/Object;
-
-    iput-object v3, v5, Lj35;->Y:Ljava/lang/Object;
-
-    invoke-virtual {v5}, Lj35;->g()Lbc0;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_3
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Null inputTimebase"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

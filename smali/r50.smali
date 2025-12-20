@@ -1,28 +1,25 @@
-.class public final synthetic Lr50;
+.class public final Lr50;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Z
 
-.field public final synthetic b:Lxo8;
+.field public b:Z
 
-.field public final synthetic c:Lx50;
+.field public c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxo8;Lx50;I)V
+.method public synthetic constructor <init>(ZZZ)V
     .locals 0
 
-    iput p3, p0, Lr50;->a:I
+    iput-boolean p1, p0, Lr50;->a:Z
 
-    iput-object p1, p0, Lr50;->b:Lxo8;
+    iput-boolean p2, p0, Lr50;->b:Z
 
-    iput-object p2, p0, Lr50;->c:Lx50;
+    iput-boolean p3, p0, Lr50;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,74 +28,87 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public a()Ls50;
+    .locals 2
 
-    iget v0, p0, Lr50;->a:I
+    iget-boolean v0, p0, Lr50;->a:Z
 
-    iget-object v1, p0, Lr50;->c:Lx50;
+    if-nez v0, :cond_1
 
-    iget-object v2, p0, Lr50;->b:Lxo8;
+    iget-boolean v0, p0, Lr50;->b:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, v2, Lxo8;->c:Ljava/lang/Object;
+    iget-boolean v0, p0, Lr50;->c:Z
 
-    check-cast v0, Lyl5;
+    if-nez v0, :cond_0
 
-    sget-object v2, Lzxg;->a:Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v0, v0, Lyl5;->a:Lem5;
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object v0, v0, Lem5;->D0:Lnj4;
+    const-string v1, "Secondary offload attribute fields are true but primary isFormatSupported is false"
 
-    invoke-virtual {v0}, Lnj4;->H()Lid;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    throw v0
 
-    new-instance v3, Lij4;
+    :cond_1
+    :goto_0
+    new-instance v0, Ls50;
 
-    const/4 v4, 0x0
+    invoke-direct {v0, p0}, Ls50;-><init>(Lr50;)V
 
-    invoke-direct {v3, v2, v1, v4}, Lij4;-><init>(Lid;Lx50;I)V
+    return-object v0
+.end method
 
-    const/16 v1, 0x408
+.method public b(Ljava/util/ArrayList;)V
+    .locals 1
 
-    invoke-virtual {v0, v2, v1, v3}, Lnj4;->I(Lid;ILpa8;)V
+    iget-boolean v0, p0, Lr50;->a:Z
 
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lr50;->b:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lr50;->c:Z
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-virtual {v0}, Lvv4;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "ForceCloseDeferrableSurface"
+
+    const-string v0, "deferrableSurface closed"
+
+    invoke-static {p1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
     return-void
-
-    :pswitch_0
-    iget-object v0, v2, Lxo8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    sget-object v2, Lzxg;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lyl5;->a:Lem5;
-
-    iget-object v0, v0, Lem5;->D0:Lnj4;
-
-    invoke-virtual {v0}, Lnj4;->H()Lid;
-
-    move-result-object v2
-
-    new-instance v3, Lij4;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v1, v4}, Lij4;-><init>(Lid;Lx50;I)V
-
-    const/16 v1, 0x407
-
-    invoke-virtual {v0, v2, v1, v3}, Lnj4;->I(Lid;ILpa8;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

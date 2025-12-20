@@ -3,77 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loe4;
+.implements Lxy6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Li01;
 
-.field public final b:Loe4;
+.field public final b:Lpi3;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lfn4;
-
-    invoke-direct {v0}, Lfn4;-><init>()V
-
-    invoke-direct {p0, p1, v0}, Lbl4;-><init>(Landroid/content/Context;Loe4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Loe4;)V
+.method public constructor <init>(Li01;Lpi3;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object p1, p0, Lbl4;->a:Li01;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lbl4;->a:Landroid/content/Context;
-
-    .line 4
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    iput-object p2, p0, Lbl4;->b:Loe4;
+    iput-object p2, p0, Lbl4;->b:Lpi3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lse4;
-    .locals 1
+.method public final a(Landroid/content/Context;Z)Lez6;
+    .locals 2
 
-    invoke-virtual {p0}, Lbl4;->b()Ldl4;
+    new-instance p2, Lcl4;
 
-    move-result-object v0
+    iget-object v0, p0, Lbl4;->a:Li01;
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lbl4;->b:Lpi3;
 
-.method public final b()Ldl4;
-    .locals 3
+    invoke-direct {p2, p1, v0, v1}, Lcl4;-><init>(Landroid/content/Context;Li01;Lpi3;)V
 
-    new-instance v0, Ldl4;
-
-    iget-object v1, p0, Lbl4;->b:Loe4;
-
-    invoke-interface {v1}, Loe4;->a()Lse4;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lbl4;->a:Landroid/content/Context;
-
-    invoke-direct {v0, v2, v1}, Ldl4;-><init>(Landroid/content/Context;Lse4;)V
-
-    return-object v0
+    return-object p2
 .end method

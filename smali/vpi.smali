@@ -2,187 +2,70 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnda;
+
+# static fields
+.field public static final a:Ljava/util/HashMap;
+
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public static a(Lu8h;)Ld8h;
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 6
 
-    iget-object v0, p0, Lu8h;->b:Ljava/lang/String;
+    new-instance v0, Ljava/util/HashMap;
 
-    new-instance v1, Lf2;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lvpi;->a:Ljava/util/HashMap;
 
-    sget-object v3, Lgsc;->w0:Lzg5;
+    new-instance v1, Ljava/util/HashMap;
 
-    invoke-direct {v1, v2, v3}, Lf2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    :cond_0
-    invoke-virtual {v1}, Lf2;->hasNext()Z
+    sput-object v1, Lvpi;->b:Ljava/util/HashMap;
 
-    move-result v2
+    const/4 v2, -0x1
 
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    move-object v3, v2
+    const-string v3, "The Play Store app is either not installed or not the official version."
 
-    check-cast v3, Lgsc;
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, v3, Lgsc;->a:Ljava/lang/String;
+    const/4 v3, -0x2
 
-    const/4 v4, 0x0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v3, v0, v4}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    move-result-object v3
 
-    move-result v3
+    const-string v4, "Call first requestReviewFlow to get the ReviewInfo."
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    const/16 v4, -0x64
 
-    :cond_1
-    const/4 v2, 0x0
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :goto_0
-    check-cast v2, Lgsc;
+    move-result-object v4
 
-    if-nez v2, :cond_2
+    const-string v5, "Retry with an exponential backoff. Consider filing a bug if fails consistently."
 
-    sget-object v2, Lgsc;->s0:Lgsc;
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    iget v1, p0, Lu8h;->c:I
+    const-string v0, "PLAY_STORE_NOT_FOUND"
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    const-string v0, "INVALID_REQUEST"
 
-    iget p0, p0, Lu8h;->d:I
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v0, "INTERNAL_ERROR"
 
-    move-result-object p0
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p0}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
-
-    move-result-object p0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    sparse-switch v1, :sswitch_data_0
-
-    goto :goto_1
-
-    :sswitch_0
-    const-string v1, "2160"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Lfb0;->g:Lfb0;
-
-    goto :goto_2
-
-    :sswitch_1
-    const-string v1, "1080"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    sget-object v0, Lfb0;->f:Lfb0;
-
-    goto :goto_2
-
-    :sswitch_2
-    const-string v1, "720"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    sget-object v0, Lfb0;->e:Lfb0;
-
-    goto :goto_2
-
-    :sswitch_3
-    const-string v1, "480"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    :goto_1
-    sget-object v0, Lfb0;->d:Lfb0;
-
-    goto :goto_2
-
-    :cond_6
-    sget-object v0, Lfb0;->d:Lfb0;
-
-    :goto_2
-    new-instance v1, Ld8h;
-
-    invoke-direct {v1, p0, v2, v0}, Ld8h;-><init>(Landroid/util/Range;Lgsc;Lfb0;)V
-
-    return-object v1
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0xca2c -> :sswitch_3
-        0xd4b5 -> :sswitch_2
-        0x170157 -> :sswitch_1
-        0x177939 -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public static final b(Lg56;Lv38;)Lx9f;
-    .locals 2
-
-    new-instance v0, Ls38;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Ls38;-><init>(Lg56;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lu38;
-
-    invoke-direct {p0, p1, v0, v1}, Lu38;-><init>(Lv38;Ls38;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    invoke-static {p1, v1, v1, p0, v0}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

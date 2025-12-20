@@ -1,142 +1,264 @@
 .class public final Lm8i;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:[Z
+.field public final synthetic X:I
 
-.field public b:I
+.field public final synthetic Y:Ln8i;
+
+.field public final synthetic o:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Intent;ILn8i;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm8i;->o:Landroid/content/Intent;
 
-    const/4 v0, 0x0
+    iput p2, p0, Lm8i;->X:I
 
-    iput v0, p0, Lm8i;->b:I
+    iput-object p3, p0, Lm8i;->Y:Ln8i;
 
-    invoke-static {}, Lig0;->values()[Lig0;
+    const/4 p1, 0x2
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Z
-
-    iput-object v0, p0, Lm8i;->a:[Z
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lig0;Z)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, Lac4;
 
-    move-result v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lm8i;->a:[Z
+    invoke-virtual {p0, p1, p2}, Lm8i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    aget-boolean v0, v1, v0
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, Lm8i;
 
-    move-result p1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    aput-boolean p2, v1, p1
+    invoke-virtual {p1, p2}, Lm8i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, p2, :cond_1
-
-    iget p1, p0, Lm8i;->b:I
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, -0x1
-
-    :goto_0
-    add-int/2addr p1, p2
-
-    iput p1, p0, Lm8i;->b:I
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const/4 v0, 0x1
+    new-instance p1, Lm8i;
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lm8i;->X:I
 
-    return v0
+    iget-object v1, p0, Lm8i;->Y:Ln8i;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v2, p0, Lm8i;->o:Landroid/content/Intent;
 
-    if-eqz p1, :cond_2
+    invoke-direct {p1, v2, v0, v1, p2}, Lm8i;-><init>(Landroid/content/Intent;ILn8i;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget-object v0, p0, Lm8i;->Y:Ln8i;
+
+    iget-object v1, v0, Ln8i;->C0:Ld68;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lm8i;->o:Landroid/content/Intent;
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getClipData()Landroid/content/ClipData;
 
     move-result-object v2
 
-    const-class v3, Lm8i;
+    const/4 v3, -0x1
 
-    if-eq v3, v2, :cond_1
+    const/4 v4, 0x0
 
-    goto :goto_0
+    iget v5, p0, Lm8i;->X:I
 
-    :cond_1
-    check-cast p1, Lm8i;
+    if-eq v5, v3, :cond_0
 
-    iget v2, p0, Lm8i;->b:I
+    goto/16 :goto_4
 
-    iget v3, p1, Lm8i;->b:I
+    :cond_0
+    const/4 v3, 0x0
 
-    if-ne v2, v3, :cond_2
+    if-eqz v2, :cond_5
 
-    iget-object v2, p0, Lm8i;->a:[Z
-
-    iget-object p1, p1, Lm8i;->a:[Z
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
+    invoke-virtual {v2}, Landroid/content/ClipData;->getItemCount()I
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    invoke-static {v3, p1}, Lelj;->i(II)Lmt7;
 
-    return v0
+    move-result-object p1
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p1}, Lkt7;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_0
+    move-object v6, p1
+
+    check-cast v6, Llt7;
+
+    iget-boolean v6, v6, Llt7;->c:Z
+
+    if-eqz v6, :cond_4
+
+    move-object v6, p1
+
+    check-cast v6, Llt7;
+
+    invoke-virtual {v6}, Llt7;->nextInt()I
+
+    move-result v6
+
+    invoke-virtual {v2, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_2
+
+    invoke-virtual {v6}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+
+    move-result-object v6
+
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    return v1
-.end method
+    move-object v6, v4
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    if-eqz v6, :cond_3
 
-    iget-object v0, p0, Lm8i;->a:[Z
+    sget-object v7, Ln8i;->q1:[Lp38;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Z)I
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v7
 
-    return v0
+    check-cast v7, Landroid/content/Context;
+
+    invoke-static {v7, v6}, Lh3j;->e(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v6, v4
+
+    :goto_2
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_4
+    new-array p1, v3, [Landroid/net/Uri;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v4, p1
+
+    check-cast v4, [Landroid/net/Uri;
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_8
+
+    invoke-static {v5, p1}, Landroid/webkit/WebChromeClient$FileChooserParams;->parseResult(ILandroid/content/Intent;)[Landroid/net/Uri;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_8
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    array-length v4, p1
+
+    move v5, v3
+
+    :goto_3
+    if-ge v5, v4, :cond_7
+
+    aget-object v6, p1, v5
+
+    sget-object v7, Ln8i;->q1:[Lp38;
+
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/content/Context;
+
+    invoke-static {v7, v6}, Lh3j;->e(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_7
+    new-array p1, v3, [Landroid/net/Uri;
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v4, p1
+
+    check-cast v4, [Landroid/net/Uri;
+
+    :cond_8
+    :goto_4
+    iget-object p1, v0, Ln8i;->b1:Lyl5;
+
+    new-instance v0, Ls7i;
+
+    invoke-direct {v0, v4}, Ls7i;-><init>([Landroid/net/Uri;)V
+
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

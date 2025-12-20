@@ -1,217 +1,213 @@
 .class public final Lmk;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
 
 
 # instance fields
-.field public final synthetic X:Lok;
+.field public final synthetic a:Lpk;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lok;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lpk;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmk;->X:Lok;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lmk;->a:Lpk;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lmk;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
 
-    check-cast p1, Lcjg;
+    iget-object v0, p0, Lmk;->a:Lpk;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lpk;->s0:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lmk;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "Animoji lottie download. Fail"
 
-    move-result-object p1
+    invoke-static {v1, v2, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p1, Lmk;
+    iget-object p1, p0, Lmk;->b:Ljava/lang/String;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p1, p2}, Lmk;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    return-object p2
-.end method
+    move-result v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmk;
-
-    iget-object v1, p0, Lmk;->X:Lok;
-
-    invoke-direct {v0, v1, p2}, Lmk;-><init>(Lok;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmk;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmk;->o:Ljava/lang/Object;
-
-    check-cast p1, Lcjg;
-
-    iget-object v0, p1, Lcjg;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    iget-object v2, p1, Lcjg;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-object p1, p1, Lcjg;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v3, p0, Lmk;->X:Lok;
-
-    iget-object v4, v3, Lok;->s0:Ljava/lang/String;
-
-    sget-object v5, Lwqi;->a:Ll6b;
-
-    if-nez v5, :cond_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v6, Llg8;->d:Llg8;
-
-    invoke-virtual {v5, v6}, Ll6b;->b(Llg8;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    const-string v7, "handleAnimoji #"
-
-    const-string v8, ", "
-
-    invoke-static {v7, v0, v1, v8, v2}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-static {v7, v8, p1}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v5, v6, v4, v7, v8}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_2
+    invoke-virtual {v0, p1}, Lpk;->g(Ljava/lang/String;)V
 
     goto :goto_1
 
+    :cond_1
+    :goto_0
+    sget-object p1, Lkk;->a:Lkk;
+
+    invoke-virtual {v0, p1}, Lpk;->i(Lkk;)V
+
+    :goto_1
+    iget-object p1, v0, Lpk;->w0:Lz7g;
+
+    invoke-virtual {p1}, Lz7g;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc9h;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Landroid/graphics/Rect;
+
+    iget v2, v0, Lpk;->a:I
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3, v3, v2, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
     :cond_2
-    iget-object v4, v3, Lok;->d:Lpi;
+    iget-object p1, v0, Lpk;->x0:Lone/me/rlottie/RLottieDrawable;
 
-    iget v5, v3, Lok;->a:I
+    const/4 v1, 0x0
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p1, :cond_3
 
-    new-instance v6, Loi;
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    invoke-direct {v6, v0, v1, v2, v5}, Loi;-><init>(JLjava/lang/String;I)V
+    :cond_3
+    iput-object v1, v0, Lpk;->x0:Lone/me/rlottie/RLottieDrawable;
 
-    iget-object v0, v4, Lpi;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object p1, v0, Lpk;->A0:Ljava/util/LinkedHashSet;
 
-    new-instance v1, Lp8;
+    invoke-interface {p1}, Ljava/util/Set;->clear()V
 
-    const/4 v4, 0x1
+    return-void
+.end method
 
-    invoke-direct {v1, v2, v5, v4}, Lp8;-><init>(Ljava/lang/Object;II)V
+.method public final onLoaded(Lone/me/rlottie/RLottieDrawable;)V
+    .locals 5
 
-    new-instance v2, Lni;
+    iget-object v0, p0, Lmk;->a:Lpk;
 
-    const/4 v4, 0x0
+    iget-object v1, v0, Lpk;->t0:Lvf;
 
-    invoke-direct {v2, v4, v1}, Lni;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    invoke-virtual {v0, v6, v2}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+    iput-object p1, v0, Lpk;->x0:Lone/me/rlottie/RLottieDrawable;
+
+    sget-object v1, Lkk;->c:Lkk;
+
+    invoke-virtual {v0, v1}, Lpk;->i(Lkk;)V
+
+    iget-object v1, v0, Lpk;->A0:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lone/me/rlottie/ImageReceiver;
+
+    iget-object v4, v0, Lpk;->x0:Lone/me/rlottie/RLottieDrawable;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v4, v3}, Lone/me/rlottie/RLottieDrawable;->addParentView(Lone/me/rlottie/ImageReceiver;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Set;->clear()V
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieDrawable;->isRunning()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Lpk;->B0:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v1}, Lmkj;->e(Lac4;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieDrawable;->start()V
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    check-cast v0, Lone/me/rlottie/RLottieDrawable;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lone/me/rlottie/RLottieDrawable;->scaleByCanvas:Z
-
-    invoke-virtual {v0}, Lone/me/rlottie/RLottieDrawable;->isLoadingFailed()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-static {v0, v1}, Lone/me/rlottie/RLottieDrawableUtils;->restartDownloadFromUrl(Lone/me/rlottie/RLottieDrawable;Z)V
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_3
-    iget-object v1, v3, Lok;->y0:Llk;
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieDrawable;->invalidateInternal()V
 
-    if-eqz v1, :cond_4
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
 
-    invoke-virtual {v0, v1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
-
-    :cond_4
-    new-instance v1, Llk;
-
-    invoke-direct {v1, v3, p1}, Llk;-><init>(Lok;Ljava/lang/String;)V
-
-    iput-object v1, v3, Lok;->y0:Llk;
-
-    invoke-virtual {v0, v1}, Lone/me/rlottie/RLottieDrawable;->addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    if-eqz p1, :cond_7
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v3, p1}, Lok;->g(Ljava/lang/String;)V
-
-    :cond_7
-    :goto_2
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

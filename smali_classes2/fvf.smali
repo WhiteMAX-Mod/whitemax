@@ -1,23 +1,31 @@
-.class public interface abstract Lfvf;
+.class public final Lfvf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract g()I
-.end method
+# instance fields
+.field public final a:Lghg;
 
-.method public abstract h()I
-.end method
+.field public final b:Ljava/lang/String;
 
-.method public abstract j()V
-.end method
+.field public final c:Ljava/lang/String;
 
-.method public abstract m()Landroid/view/View;
-.end method
+.field public final d:Ljava/util/List;
 
-.method public abstract o()I
-.end method
 
-.method public abstract onDismiss()V
+# direct methods
+.method public constructor <init>(Lghg;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfvf;->a:Lghg;
+
+    iput-object p2, p0, Lfvf;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lfvf;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lfvf;->d:Ljava/util/List;
+
+    return-void
 .end method

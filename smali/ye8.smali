@@ -1,29 +1,57 @@
-.class public abstract Lye8;
-.super Ljava/lang/Object;
+.class public final Lye8;
+.super Laf8;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Ljava/lang/Object;)Landroid/os/LocaleList;
-    .locals 0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p0, Landroid/app/LocaleManager;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    return-object p0
+    :cond_0
+    if-eqz p1, :cond_1
+
+    const-class v1, Lye8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    if-ne v1, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/os/LocaleList;
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    check-cast p0, Landroid/app/LocaleManager;
+    const-class v0, Lye8;
 
-    invoke-virtual {p0}, Landroid/app/LocaleManager;->getSystemLocales()Landroid/os/LocaleList;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Retry"
+
+    return-object v0
 .end method

@@ -22,7 +22,7 @@
         "Landroid/os/Handler;",
         "Landroid/os/Message;",
         "msg",
-        "Lqqg;",
+        "Lv2h;",
         "handleMessage",
         "(Landroid/os/Message;)V",
         "calls-audiomanager_release"

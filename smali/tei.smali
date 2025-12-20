@@ -4,982 +4,238 @@
 
 
 # static fields
-.field public static final a:[Ljava/lang/String;
+.field public static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 193
+    .locals 1
 
-    const-string v191, "Garage Rock"
+    const-string v0, "^NOTE([ \t].*)?$"
 
-    const-string v192, "Psybient"
-
-    const-string v1, "Blues"
-
-    const-string v2, "Classic Rock"
-
-    const-string v3, "Country"
-
-    const-string v4, "Dance"
-
-    const-string v5, "Disco"
-
-    const-string v6, "Funk"
-
-    const-string v7, "Grunge"
-
-    const-string v8, "Hip-Hop"
-
-    const-string v9, "Jazz"
-
-    const-string v10, "Metal"
-
-    const-string v11, "New Age"
-
-    const-string v12, "Oldies"
-
-    const-string v13, "Other"
-
-    const-string v14, "Pop"
-
-    const-string v15, "R&B"
-
-    const-string v16, "Rap"
-
-    const-string v17, "Reggae"
-
-    const-string v18, "Rock"
-
-    const-string v19, "Techno"
-
-    const-string v20, "Industrial"
-
-    const-string v21, "Alternative"
-
-    const-string v22, "Ska"
-
-    const-string v23, "Death Metal"
-
-    const-string v24, "Pranks"
-
-    const-string v25, "Soundtrack"
-
-    const-string v26, "Euro-Techno"
-
-    const-string v27, "Ambient"
-
-    const-string v28, "Trip-Hop"
-
-    const-string v29, "Vocal"
-
-    const-string v30, "Jazz+Funk"
-
-    const-string v31, "Fusion"
-
-    const-string v32, "Trance"
-
-    const-string v33, "Classical"
-
-    const-string v34, "Instrumental"
-
-    const-string v35, "Acid"
-
-    const-string v36, "House"
-
-    const-string v37, "Game"
-
-    const-string v38, "Sound Clip"
-
-    const-string v39, "Gospel"
-
-    const-string v40, "Noise"
-
-    const-string v41, "AlternRock"
-
-    const-string v42, "Bass"
-
-    const-string v43, "Soul"
-
-    const-string v44, "Punk"
-
-    const-string v45, "Space"
-
-    const-string v46, "Meditative"
-
-    const-string v47, "Instrumental Pop"
-
-    const-string v48, "Instrumental Rock"
-
-    const-string v49, "Ethnic"
-
-    const-string v50, "Gothic"
-
-    const-string v51, "Darkwave"
-
-    const-string v52, "Techno-Industrial"
-
-    const-string v53, "Electronic"
-
-    const-string v54, "Pop-Folk"
-
-    const-string v55, "Eurodance"
-
-    const-string v56, "Dream"
-
-    const-string v57, "Southern Rock"
-
-    const-string v58, "Comedy"
-
-    const-string v59, "Cult"
-
-    const-string v60, "Gangsta"
-
-    const-string v61, "Top 40"
-
-    const-string v62, "Christian Rap"
-
-    const-string v63, "Pop/Funk"
-
-    const-string v64, "Jungle"
-
-    const-string v65, "Native American"
-
-    const-string v66, "Cabaret"
-
-    const-string v67, "New Wave"
-
-    const-string v68, "Psychadelic"
-
-    const-string v69, "Rave"
-
-    const-string v70, "Showtunes"
-
-    const-string v71, "Trailer"
-
-    const-string v72, "Lo-Fi"
-
-    const-string v73, "Tribal"
-
-    const-string v74, "Acid Punk"
-
-    const-string v75, "Acid Jazz"
-
-    const-string v76, "Polka"
-
-    const-string v77, "Retro"
-
-    const-string v78, "Musical"
-
-    const-string v79, "Rock & Roll"
-
-    const-string v80, "Hard Rock"
-
-    const-string v81, "Folk"
-
-    const-string v82, "Folk-Rock"
-
-    const-string v83, "National Folk"
-
-    const-string v84, "Swing"
-
-    const-string v85, "Fast Fusion"
-
-    const-string v86, "Bebob"
-
-    const-string v87, "Latin"
-
-    const-string v88, "Revival"
-
-    const-string v89, "Celtic"
-
-    const-string v90, "Bluegrass"
-
-    const-string v91, "Avantgarde"
-
-    const-string v92, "Gothic Rock"
-
-    const-string v93, "Progressive Rock"
-
-    const-string v94, "Psychedelic Rock"
-
-    const-string v95, "Symphonic Rock"
-
-    const-string v96, "Slow Rock"
-
-    const-string v97, "Big Band"
-
-    const-string v98, "Chorus"
-
-    const-string v99, "Easy Listening"
-
-    const-string v100, "Acoustic"
-
-    const-string v101, "Humour"
-
-    const-string v102, "Speech"
-
-    const-string v103, "Chanson"
-
-    const-string v104, "Opera"
-
-    const-string v105, "Chamber Music"
-
-    const-string v106, "Sonata"
-
-    const-string v107, "Symphony"
-
-    const-string v108, "Booty Bass"
-
-    const-string v109, "Primus"
-
-    const-string v110, "Porn Groove"
-
-    const-string v111, "Satire"
-
-    const-string v112, "Slow Jam"
-
-    const-string v113, "Club"
-
-    const-string v114, "Tango"
-
-    const-string v115, "Samba"
-
-    const-string v116, "Folklore"
-
-    const-string v117, "Ballad"
-
-    const-string v118, "Power Ballad"
-
-    const-string v119, "Rhythmic Soul"
-
-    const-string v120, "Freestyle"
-
-    const-string v121, "Duet"
-
-    const-string v122, "Punk Rock"
-
-    const-string v123, "Drum Solo"
-
-    const-string v124, "A capella"
-
-    const-string v125, "Euro-House"
-
-    const-string v126, "Dance Hall"
-
-    const-string v127, "Goa"
-
-    const-string v128, "Drum & Bass"
-
-    const-string v129, "Club-House"
-
-    const-string v130, "Hardcore"
-
-    const-string v131, "Terror"
-
-    const-string v132, "Indie"
-
-    const-string v133, "BritPop"
-
-    const-string v134, "Afro-Punk"
-
-    const-string v135, "Polsk Punk"
-
-    const-string v136, "Beat"
-
-    const-string v137, "Christian Gangsta Rap"
-
-    const-string v138, "Heavy Metal"
-
-    const-string v139, "Black Metal"
-
-    const-string v140, "Crossover"
-
-    const-string v141, "Contemporary Christian"
-
-    const-string v142, "Christian Rock"
-
-    const-string v143, "Merengue"
-
-    const-string v144, "Salsa"
-
-    const-string v145, "Thrash Metal"
-
-    const-string v146, "Anime"
-
-    const-string v147, "Jpop"
-
-    const-string v148, "Synthpop"
-
-    const-string v149, "Abstract"
-
-    const-string v150, "Art Rock"
-
-    const-string v151, "Baroque"
-
-    const-string v152, "Bhangra"
-
-    const-string v153, "Big beat"
-
-    const-string v154, "Breakbeat"
-
-    const-string v155, "Chillout"
-
-    const-string v156, "Downtempo"
-
-    const-string v157, "Dub"
-
-    const-string v158, "EBM"
-
-    const-string v159, "Eclectic"
-
-    const-string v160, "Electro"
-
-    const-string v161, "Electroclash"
-
-    const-string v162, "Emo"
-
-    const-string v163, "Experimental"
-
-    const-string v164, "Garage"
-
-    const-string v165, "Global"
-
-    const-string v166, "IDM"
-
-    const-string v167, "Illbient"
-
-    const-string v168, "Industro-Goth"
-
-    const-string v169, "Jam Band"
-
-    const-string v170, "Krautrock"
-
-    const-string v171, "Leftfield"
-
-    const-string v172, "Lounge"
-
-    const-string v173, "Math Rock"
-
-    const-string v174, "New Romantic"
-
-    const-string v175, "Nu-Breakz"
-
-    const-string v176, "Post-Punk"
-
-    const-string v177, "Post-Rock"
-
-    const-string v178, "Psytrance"
-
-    const-string v179, "Shoegaze"
-
-    const-string v180, "Space Rock"
-
-    const-string v181, "Trop Rock"
-
-    const-string v182, "World Music"
-
-    const-string v183, "Neoclassical"
-
-    const-string v184, "Audiobook"
-
-    const-string v185, "Audio theatre"
-
-    const-string v186, "Neue Deutsche Welle"
-
-    const-string v187, "Podcast"
-
-    const-string v188, "Indie-Rock"
-
-    const-string v189, "G-Funk"
-
-    const-string v190, "Dubstep"
-
-    filled-new-array/range {v1 .. v192}, [Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Ltei;->a:[Ljava/lang/String;
+    sput-object v0, Ltei;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public static final a(IILynd;)Z
-    .locals 2
+.method public static a(Lktb;)Z
+    .locals 1
 
-    const v0, 0x3faaaaab
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez p2, :cond_0
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    int-to-float p0, p0
+    invoke-virtual {p0, v0}, Lktb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
 
-    mul-float/2addr p0, v0
+    move-result-object p0
 
-    float-to-int p0, p0
+    if-eqz p0, :cond_0
 
-    int-to-float p0, p0
+    const-string v0, "WEBVTT"
 
-    const/high16 p2, 0x45000000    # 2048.0f
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    cmpl-float p0, p0, p2
+    move-result p0
 
-    if-ltz p0, :cond_1
+    if-eqz p0, :cond_0
 
-    int-to-float p0, p1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    const/16 p1, 0x800
-
-    if-lt p0, p1, :cond_1
-
-    goto :goto_0
-
-    :cond_0
-    int-to-float p0, p0
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    iget v1, p2, Lynd;->a:I
-
-    if-lt p0, v1, :cond_1
-
-    int-to-float p0, p1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    iget p1, p2, Lynd;->b:I
-
-    if-lt p0, p1, :cond_1
-
-    :goto_0
     const/4 p0, 0x1
 
     return p0
 
-    :cond_1
+    :cond_0
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public static final b(Lce5;Lynd;)Z
+.method public static b(Ljava/lang/String;)F
     .locals 2
 
-    if-nez p0, :cond_0
+    const-string v0, "%"
 
-    const/4 p0, 0x0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    return p0
+    move-result v0
 
-    :cond_0
-    invoke-virtual {p0}, Lce5;->i0()V
+    if-eqz v0, :cond_0
 
-    iget v0, p0, Lce5;->c:I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    const/16 v1, 0x5a
+    move-result v0
 
-    if-eq v0, v1, :cond_1
+    add-int/lit8 v0, v0, -0x1
 
-    const/16 v1, 0x10e
+    const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    invoke-virtual {p0}, Lce5;->i0()V
+    move-result-object p0
 
-    iget v0, p0, Lce5;->o:I
-
-    invoke-virtual {p0}, Lce5;->i0()V
-
-    iget p0, p0, Lce5;->X:I
-
-    invoke-static {v0, p0, p1}, Ltei;->a(IILynd;)Z
+    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p0
 
-    return p0
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    :cond_1
-    invoke-virtual {p0}, Lce5;->i0()V
-
-    iget v0, p0, Lce5;->X:I
-
-    invoke-virtual {p0}, Lce5;->i0()V
-
-    iget p0, p0, Lce5;->o:I
-
-    invoke-static {v0, p0, p1}, Ltei;->a(IILynd;)Z
-
-    move-result p0
+    div-float/2addr p0, v0
 
     return p0
-.end method
-
-.method public static c(ILqyg;)Leg3;
-    .locals 3
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v1
-
-    const v2, 0x64617461
-
-    if-ne v1, v2, :cond_0
-
-    const/16 p0, 0x8
-
-    invoke-virtual {p1, p0}, Lqyg;->F(I)V
-
-    add-int/lit8 v0, v0, -0x10
-
-    invoke-virtual {p1, v0}, Lqyg;->o(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Leg3;
-
-    const-string v0, "und"
-
-    invoke-direct {p1, v0, p0, p0}, Leg3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
 
     :cond_0
-    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
+    new-instance p0, Ljava/lang/NumberFormatException;
+
+    const-string v0, "Percentages must end with %"
+
+    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static c(Ljava/lang/String;)J
+    .locals 9
+
+    sget-object v0, Lqah;->a:Ljava/lang/String;
+
+    const-string v0, "\\."
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v0, 0x0
+
+    aget-object v2, p0, v0
+
+    const-string v3, ":"
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    array-length v3, v2
+
+    const-wide/16 v4, 0x0
+
+    :goto_0
+    if-ge v0, v3, :cond_0
+
+    aget-object v6, v2, v0
+
+    const-wide/16 v7, 0x3c
+
+    mul-long/2addr v4, v7
+
+    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x3e8
+
+    mul-long/2addr v4, v2
+
+    array-length v0, p0
+
+    if-ne v0, v1, :cond_2
+
+    const/4 v0, 0x1
+
+    aget-object p0, p0, v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result p1
+    move-result v0
 
-    const-string v0, "Failed to parse comment attribute: "
+    const/4 v1, 0x3
 
-    if-eqz p1, :cond_1
+    if-ne v0, v1, :cond_1
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    add-long/2addr v4, v0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Expected 3 decimal places, got: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    goto :goto_0
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const-string p1, "MetadataUtil"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static d(Lqyg;)Lxm;
-    .locals 5
-
-    invoke-virtual {p0}, Lqyg;->f()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lqyg;->f()I
-
-    move-result v1
-
-    const v2, 0x64617461
-
-    const-string v3, "MetadataUtil"
-
-    const/4 v4, 0x0
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {p0}, Lqyg;->f()I
-
-    move-result v1
-
-    const v2, 0xffffff
-
-    and-int/2addr v1, v2
-
-    const/16 v2, 0xd
-
-    if-ne v1, v2, :cond_0
-
-    const-string v2, "image/jpeg"
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v2, 0xe
-
-    if-ne v1, v2, :cond_1
-
-    const-string v2, "image/png"
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, v4
-
-    :goto_0
-    if-nez v2, :cond_2
-
-    const/16 p0, 0x29
-
-    const-string v0, "Unrecognized cover art flags: "
-
-    invoke-static {v0, p0, v1, v3}, Laz1;->s(Ljava/lang/String;IILjava/lang/String;)V
-
-    return-object v4
+    throw v0
 
     :cond_2
-    const/4 v1, 0x4
+    :goto_1
+    mul-long/2addr v4, v2
 
-    invoke-virtual {p0, v1}, Lqyg;->F(I)V
-
-    add-int/lit8 v0, v0, -0x10
-
-    new-array v1, v0, [B
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v3, v1, v0}, Lqyg;->e(I[BI)V
-
-    new-instance p0, Lxm;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v2, v4, v0, v1}, Lxm;-><init>(Ljava/lang/String;Ljava/lang/String;I[B)V
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "Failed to parse cover art attribute"
-
-    invoke-static {v3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v4
+    return-wide v4
 .end method
 
-.method public static e(ILqyg;Ljava/lang/String;)Lg4g;
-    .locals 4
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v1
-
-    const v2, 0x64617461
-
-    const/4 v3, 0x0
-
-    if-ne v1, v2, :cond_1
-
-    const/16 v1, 0x16
-
-    if-lt v0, v1, :cond_1
-
-    const/16 v0, 0xa
-
-    invoke-virtual {p1, v0}, Lqyg;->F(I)V
-
-    invoke-virtual {p1}, Lqyg;->x()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xb
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Lqyg;->x()I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0xc
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "/"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_0
-    new-instance p1, Lg4g;
-
-    invoke-direct {p1, p2, v3, p0}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-
-    :cond_1
-    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    const-string p2, "Failed to parse index/count attribute: "
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const-string p1, "MetadataUtil"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v3
-.end method
-
-.method public static f(ILqyg;Ljava/lang/String;)Lg4g;
-    .locals 4
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Lqyg;->f()I
-
-    move-result v1
-
-    const v2, 0x64617461
-
-    const/4 v3, 0x0
-
-    if-ne v1, v2, :cond_0
-
-    const/16 p0, 0x8
-
-    invoke-virtual {p1, p0}, Lqyg;->F(I)V
-
-    add-int/lit8 v0, v0, -0x10
-
-    invoke-virtual {p1, v0}, Lqyg;->o(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lg4g;
-
-    invoke-direct {p1, p2, v3, p0}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-
-    :cond_0
-    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    const-string p2, "Failed to parse text attribute: "
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const-string p1, "MetadataUtil"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v3
-.end method
-
-.method public static g(ILjava/lang/String;Lqyg;ZZ)Lmc7;
-    .locals 0
-
-    invoke-static {p2}, Ltei;->h(Lqyg;)I
-
-    move-result p2
-
-    if-eqz p4, :cond_0
-
-    const/4 p4, 0x1
-
-    invoke-static {p4, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p2
-
-    :cond_0
-    const/4 p4, 0x0
-
-    if-ltz p2, :cond_2
-
-    if-eqz p3, :cond_1
-
-    new-instance p0, Lg4g;
-
-    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p0, p1, p4, p2}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p0
-
-    :cond_1
-    new-instance p0, Leg3;
-
-    const-string p3, "und"
-
-    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p0, p3, p1, p2}, Leg3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p0
-
-    :cond_2
-    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    const-string p2, "Failed to parse uint8 attribute: "
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const-string p1, "MetadataUtil"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object p4
-.end method
-
-.method public static h(Lqyg;)I
+.method public static d(Lktb;)V
     .locals 2
 
-    const/4 v0, 0x4
+    iget v0, p0, Lktb;->b:I
 
-    invoke-virtual {p0, v0}, Lqyg;->F(I)V
+    invoke-static {p0}, Ltei;->a(Lktb;)Z
 
-    invoke-virtual {p0}, Lqyg;->f()I
+    move-result v1
 
-    move-result v0
+    if-eqz v1, :cond_0
 
-    const v1, 0x64617461
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Lqyg;->F(I)V
-
-    invoke-virtual {p0}, Lqyg;->s()I
-
-    move-result p0
-
-    return p0
+    return-void
 
     :cond_0
-    const-string p0, "MetadataUtil"
+    invoke-virtual {p0, v0}, Lktb;->J(I)V
 
-    const-string v0, "Failed to parse uint8 attribute value"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, "Expected WEBVTT. Got "
 
-    const/4 p0, -0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p0
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v1}, Lktb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p0}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p0
+
+    throw p0
 .end method

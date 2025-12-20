@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Log9;
+.implements Lal9;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final b(Lvf9;)V
+.method public final b(Lhk9;)V
     .locals 0
 
     return-void

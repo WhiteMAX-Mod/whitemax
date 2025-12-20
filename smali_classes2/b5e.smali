@@ -1,70 +1,25 @@
-.class public final Lb5e;
-.super Lu08;
+.class public abstract Lb5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lha8;
+.field public static final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lha8;I)V
-    .locals 0
-
-    iput p2, p0, Lb5e;->a:I
-
-    iput-object p1, p0, Lb5e;->b:Lha8;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lb5e;->a:I
+    sget v0, Ls9d;->one_chat_reactions_expand_view_type:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lb5e;->a:I
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget v0, Ls9d;->one_chat_reactions_selection_animoji_view_type:I
 
-    iget-object p1, p0, Lb5e;->b:Lha8;
+    sput v0, Lb5e;->b:I
 
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lb5e;->b:Lha8;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

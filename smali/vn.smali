@@ -3,140 +3,222 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lho;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lho;I)V
-    .locals 0
+.method public constructor <init>(La15;)V
+    .locals 1
 
-    iput p2, p0, Lvn;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lvn;->b:Lho;
+    iput v0, p0, Lvn;->a:I
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lvn;->b:Ljava/lang/Object;
+
+    .line 4
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lvn;->c:Ljava/lang/Object;
+
+    .line 5
+    iput-object p1, p0, Lvn;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lqee;Lclf;Lydg;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lvn;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvn;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lvn;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lvn;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lvn;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public a()V
+    .locals 3
+
+    iget-object v0, p0, Lvn;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lvn;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Runnable;
+
+    iput-object v1, p0, Lvn;->o:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lvn;->d:Ljava/lang/Object;
+
+    check-cast v2, La15;
+
+    invoke-virtual {v2, v1}, La15;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 4
 
     iget v0, p0, Lvn;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvn;->b:Lho;
+    iget-object v0, p0, Lvn;->b:Ljava/lang/Object;
 
-    iget-object v1, v0, Lho;->G0:Landroid/widget/PopupWindow;
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    iget-object v2, v0, Lho;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    :try_start_0
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v3, 0x37
+    return-void
 
-    const/4 v4, 0x0
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v1, v2, v3, v4, v4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
+    iget-object v0, p0, Lvn;->c:Ljava/lang/Object;
 
-    iget-object v1, v0, Lho;->I0:Ldhh;
+    check-cast v0, Lqee;
 
-    if-eqz v1, :cond_0
+    iget-object v0, v0, Lqee;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ldhh;->b()V
+    check-cast v0, Ljpj;
 
-    :cond_0
-    iget-boolean v1, v0, Lho;->J0:Z
+    invoke-virtual {v0}, Ljpj;->g()Z
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lho;->K0:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lvn;->d:Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    check-cast v0, Lclf;
 
-    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lho;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object v1, v0, Lho;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-static {v1}, Lhfh;->a(Landroid/view/View;)Ldhh;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ldhh;->a(F)V
-
-    iput-object v1, v0, Lho;->I0:Ldhh;
-
-    new-instance v0, Lwn;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, p0}, Lwn;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v0}, Ldhh;->d(Lehh;)V
+    invoke-virtual {v0}, Lclf;->g()V
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, v0, Lho;->F0:Landroidx/appcompat/widget/ActionBarContextView;
+    :cond_0
+    iget-object v0, p0, Lvn;->o:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+    check-cast v0, Lydg;
 
-    iget-object v0, v0, Lho;->F0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, v4}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+    invoke-virtual {v0, p1}, Lydg;->a(Ljava/lang/Exception;)V
 
     :goto_0
-    return-void
+    throw p1
 
     :pswitch_0
-    iget-object v0, p0, Lvn;->b:Lho;
+    iget-object v0, p0, Lvn;->b:Ljava/lang/Object;
 
-    iget v1, v0, Lho;->j1:I
+    monitor-enter v0
 
-    and-int/lit8 v1, v1, 0x1
+    :try_start_1
+    iget-object v1, p0, Lvn;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v1, Ljava/util/ArrayDeque;
 
-    if-eqz v1, :cond_2
+    new-instance v2, Lxd;
 
-    invoke-virtual {v0, v2}, Lho;->v(I)V
+    const/4 v3, 0x3
 
-    :cond_2
-    iget v1, v0, Lho;->j1:I
+    invoke-direct {v2, p0, v3, p1}, Lxd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    and-int/lit16 v1, v1, 0x1000
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_3
+    iget-object p1, p0, Lvn;->o:Ljava/lang/Object;
 
-    const/16 v1, 0x6c
+    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lho;->v(I)V
+    if-nez p1, :cond_1
 
-    :cond_3
-    iput-boolean v2, v0, Lho;->i1:Z
+    invoke-virtual {p0}, Lvn;->a()V
 
-    iput v2, v0, Lho;->j1:I
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    monitor-exit v0
 
     return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,90 +1,40 @@
 .class public final Lhu9;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lru9;
 
 
 # instance fields
-.field public final synthetic X:Lsi9;
+.field public final a:Lc10;
 
-.field public final synthetic o:Lvu9;
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lvu9;Lsi9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lc10;JLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lhu9;->o:Lvu9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhu9;->X:Lsi9;
+    iput-object p1, p0, Lhu9;->a:Lc10;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lhu9;->b:J
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lhu9;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhu9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhu9;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lhu9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final j()J
     .locals 2
 
-    new-instance p1, Lhu9;
+    iget-wide v0, p0, Lhu9;->b:J
 
-    iget-object v0, p0, Lhu9;->o:Lvu9;
-
-    iget-object v1, p0, Lhu9;->X:Lsi9;
-
-    invoke-direct {p1, v0, v1, p2}, Lhu9;-><init>(Lvu9;Lsi9;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhu9;->X:Lsi9;
-
-    iget-wide v1, p1, Lpj0;->a:J
-
-    sget-object p1, Lvu9;->U1:[Lyy7;
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lhu9;->o:Lvu9;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Lvu9;->P(JZZZ)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-wide v0
 .end method

@@ -1,66 +1,90 @@
-.class public abstract Lq8j;
+.class public final Lq8j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lq8j;
+
 
 # direct methods
-.method public static a(Lms4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-wide/16 v0, 0x0
+    new-instance v0, Lq8j;
 
-    cmp-long v0, p1, v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-gtz v0, :cond_0
+    sput-object v0, Lq8j;->a:Lq8j;
 
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ll42;
-
-    invoke-static {p3}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p3
+    new-instance v0, Lyyi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p3}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-virtual {v0}, Ll42;->o()V
+    const-class v1, Lqzi;
 
-    invoke-interface {p0, p1, p2, v0}, Lms4;->scheduleResumeAfterDelay(JLk42;)V
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x2
 
-    sget-object p1, Lg84;->a:Lg84;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    if-ne p0, p1, :cond_1
+    move-result-object v0
 
-    return-object p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :cond_1
-    :goto_0
-    sget-object p0, Lqqg;->a:Lqqg;
+    move-result-object v0
 
-    return-object p0
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static b(Lsm6;)Lkk3;
-    .locals 2
 
-    new-instance v0, Lz9a;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    sget-object v1, Lbd5;->a:Lbd5;
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-direct {v0, v1, p0}, Lz9a;-><init>(Lx74;Lsm6;)V
+    move-result-object p1
 
-    new-instance p0, Lkk3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
-
-    return-object p0
+    throw p1
 .end method

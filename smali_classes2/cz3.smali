@@ -3,44 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lux3;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic a:I
 
-.field public final synthetic b:Z
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(JZ)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
+    iput p3, p0, Lcz3;->a:I
+
+    iput-object p1, p0, Lcz3;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lcz3;->c:Ljava/lang/String;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lcz3;->a:J
-
-    iput-boolean p3, p0, Lcz3;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Lyy7;
+    iget v0, p0, Lcz3;->a:I
 
-    sget-object v0, Ly14;->c:Ly14;
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lcz3;->a:J
+    iget-object v0, p0, Lcz3;->c:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lcz3;->b:Z
+    check-cast p1, Liz3;
 
-    invoke-virtual {v0, v1, v2, v3}, Ly14;->L0(JZ)V
+    iget-object v1, p0, Lcz3;->b:Ljava/lang/String;
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-static {p1, v1, v0}, Lgjj;->a(Liz3;Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcz3;->c:Ljava/lang/String;
+
+    check-cast p1, Liz3;
+
+    iget-object v1, p0, Lcz3;->b:Ljava/lang/String;
+
+    invoke-static {p1, v1, v0}, Lgjj;->a(Liz3;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

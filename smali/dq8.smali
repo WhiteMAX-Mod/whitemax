@@ -1,97 +1,82 @@
 .class public final Ldq8;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/window/OnBackAnimationCallback;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Lbq8;
-
-.field public final synthetic b:Leq8;
+.field public final synthetic o:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public constructor <init>(Leq8;Lbq8;)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldq8;->o:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Ldq8;->b:Leq8;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ldq8;->a:Lbq8;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBackCancelled()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ldq8;->b:Leq8;
+    check-cast p1, Ljava/lang/Number;
 
-    iget-object v0, v0, Lcq8;->a:Landroid/window/OnBackInvokedCallback;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    if-eqz v0, :cond_0
+    move-result p1
 
-    iget-object v0, p0, Ldq8;->a:Lbq8;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Lbq8;->d()V
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_0
-    return-void
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p2}, Ldq8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldq8;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Ldq8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onBackInvoked()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Ldq8;->a:Lbq8;
+    new-instance p1, Ldq8;
 
-    invoke-interface {v0}, Lbq8;->a()V
+    iget-object v0, p0, Ldq8;->o:Lone/me/android/MainActivity;
 
-    return-void
+    invoke-direct {p1, v0, p2}, Ldq8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final onBackProgressed(Landroid/window/BackEvent;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ldq8;->b:Leq8;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lcq8;->a:Landroid/window/OnBackInvokedCallback;
+    iget-object p1, p0, Ldq8;->o:Lone/me/android/MainActivity;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lone/me/android/MainActivity;->W0:Lif5;
 
-    new-instance v0, Lte0;
+    invoke-interface {v0, p1}, Lif5;->b(Landroid/app/Activity;)V
 
-    invoke-direct {v0, p1}, Lte0;-><init>(Landroid/window/BackEvent;)V
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    iget-object p1, p0, Ldq8;->a:Lbq8;
-
-    invoke-interface {p1, v0}, Lbq8;->b(Lte0;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onBackStarted(Landroid/window/BackEvent;)V
-    .locals 1
-
-    iget-object v0, p0, Ldq8;->b:Leq8;
-
-    iget-object v0, v0, Lcq8;->a:Landroid/window/OnBackInvokedCallback;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lte0;
-
-    invoke-direct {v0, p1}, Lte0;-><init>(Landroid/window/BackEvent;)V
-
-    iget-object p1, p0, Ldq8;->a:Lbq8;
-
-    invoke-interface {p1, v0}, Lbq8;->c(Lte0;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

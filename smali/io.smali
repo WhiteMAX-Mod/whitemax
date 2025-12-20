@@ -1,36 +1,37 @@
-.class public final synthetic Lio;
+.class public final Lio;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldz7;
-
 
 # instance fields
-.field public final synthetic a:Ljo;
+.field public a:I
 
+.field public b:I
 
-# direct methods
-.method public synthetic constructor <init>(Ljo;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:I
 
-    iput-object p1, p0, Lio;->a:Ljo;
+.field public e:Lho;
 
-    return-void
-.end method
+.field public f:Landroid/view/View;
 
+.field public g:Landroid/view/View;
 
-# virtual methods
-.method public final o(Landroid/view/KeyEvent;)Z
-    .locals 1
+.field public h:Lhk9;
 
-    iget-object v0, p0, Lio;->a:Ljo;
+.field public i:Lle8;
 
-    invoke-virtual {v0, p1}, Ljo;->e(Landroid/view/KeyEvent;)Z
+.field public j:Lh84;
 
-    move-result p1
+.field public k:Z
 
-    return p1
-.end method
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:Z
+
+.field public p:Landroid/os/Bundle;

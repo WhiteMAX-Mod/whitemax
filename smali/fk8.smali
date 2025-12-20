@@ -1,67 +1,88 @@
-.class public abstract Lfk8;
-.super Ljava/lang/Object;
+.class public final Lfk8;
+.super Li4;
 .source "SourceFile"
+
+# interfaces
+.implements Lczd;
 
 
 # static fields
-.field public static final a:[B
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfk8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Lcom/google/android/gms/common/api/Status;
+
+.field public final b:Lgk8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
-    const/16 v0, 0x80
+    new-instance v0, Lgqi;
 
-    new-array v0, v0, [B
+    const/16 v1, 0x8
 
-    const/4 v1, -0x1
+    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
+    sput-object v0, Lfk8;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    move v2, v1
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;Lgk8;)V
+    .locals 0
 
-    :goto_0
-    const/16 v3, 0xa
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ge v2, v3, :cond_0
+    iput-object p1, p0, Lfk8;->a:Lcom/google/android/gms/common/api/Status;
 
-    add-int/lit8 v3, v2, 0x30
+    iput-object p2, p0, Lfk8;->b:Lgk8;
 
-    int-to-byte v4, v2
+    return-void
+.end method
 
-    aput-byte v4, v0, v3
 
-    add-int/lit8 v2, v2, 0x1
+# virtual methods
+.method public final a()Lcom/google/android/gms/common/api/Status;
+    .locals 1
 
-    goto :goto_0
+    iget-object v0, p0, Lfk8;->a:Lcom/google/android/gms/common/api/Status;
 
-    :cond_0
-    :goto_1
-    const/16 v2, 0x1a
+    return-object v0
+.end method
 
-    if-ge v1, v2, :cond_1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    add-int/lit8 v2, v1, 0x41
+    const/16 v0, 0x4f45
 
-    add-int/lit8 v3, v1, 0xa
+    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
 
-    int-to-byte v3, v3
+    move-result v0
 
-    aput-byte v3, v0, v2
+    const/4 v1, 0x1
 
-    add-int/lit8 v2, v1, 0x61
+    iget-object v2, p0, Lfk8;->a:Lcom/google/android/gms/common/api/Status;
 
-    aput-byte v3, v0, v2
+    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    add-int/lit8 v1, v1, 0x1
+    const/4 v1, 0x2
 
-    goto :goto_1
+    iget-object v2, p0, Lfk8;->b:Lgk8;
 
-    :cond_1
-    sput-object v0, Lfk8;->a:[B
+    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

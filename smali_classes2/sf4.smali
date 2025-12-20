@@ -1,64 +1,49 @@
-.class public final synthetic Lsf4;
-.super Ljava/lang/Object;
+.class public final Lsf4;
+.super Landroid/text/style/TypefaceSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+.field public final a:Landroid/graphics/Typeface;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p2, p0, Lsf4;->a:I
+    sget-object v0, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
-    iput-object p1, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lsf4;->a:Landroid/graphics/Typeface;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
-    iget v0, p0, Lsf4;->a:I
+    iget-object v0, p0, Lsf4;->a:Landroid/graphics/Typeface;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->w(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
+    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->x(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
+    iget-object v0, p0, Lsf4;->a:Landroid/graphics/Typeface;
 
-    return-void
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    :pswitch_1
-    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->v(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
+    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

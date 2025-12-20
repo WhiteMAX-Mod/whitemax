@@ -3,85 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Lk08;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Landroid/graphics/Rect;
-
-.field public final c:Lg6;
-
-.field public d:I
-
-.field public o:Z
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lg6;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Landroid/graphics/Rect;
+    iput-object p1, p0, Li08;->a:Ljava/lang/String;
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object p1, p0, Li08;->b:Landroid/graphics/Rect;
-
-    const/16 p1, 0x190
-
-    iput p1, p0, Li08;->a:I
-
-    iput-object p2, p0, Li08;->c:Lg6;
+    iput-object p2, p0, Li08;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGlobalLayout()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-object v0, p0, Li08;->c:Lg6;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Li08;->b:Landroid/graphics/Rect;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0, v1}, Lg6;->accept(Ljava/lang/Object;)V
+    return v0
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+    :cond_0
+    instance-of v1, p1, Li08;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Li08;
+
+    iget-object v1, p0, Li08;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Li08;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Li08;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Li08;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Li08;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    iget v1, p0, Li08;->d:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Li08;->b:Ljava/lang/String;
 
-    iget v2, p0, Li08;->a:I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    add-int v3, v0, v2
+    move-result v1
 
-    if-le v1, v3, :cond_0
+    add-int/2addr v1, v0
 
-    const/4 v1, 0x1
+    return v1
+.end method
 
-    iput-boolean v1, p0, Li08;->o:Z
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    goto :goto_0
+    const-string v0, ", data="
 
-    :cond_0
-    add-int/2addr v1, v2
+    const-string v1, ")"
 
-    if-ge v1, v0, :cond_1
+    const-string v2, "JsEvent(name="
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Li08;->a:Ljava/lang/String;
 
-    iput-boolean v1, p0, Li08;->o:Z
+    iget-object v4, p0, Li08;->b:Ljava/lang/String;
 
-    :cond_1
-    :goto_0
-    iput v0, p0, Li08;->d:I
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

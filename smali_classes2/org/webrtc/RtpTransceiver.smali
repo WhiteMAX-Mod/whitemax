@@ -86,13 +86,14 @@
 .method private static native nativeGetSender(J)Lorg/webrtc/RtpSender;
 .end method
 
-.method private static native nativeSetCodecPreferences(JLjava/util/List;)V
+.method private static native nativeSetCodecPreferences(JLjava/util/List;)Lorg/webrtc/RtcError;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
             "Ljava/util/List<",
             "Lorg/webrtc/RtpCapabilities$CodecCapability;",
-            ">;)V"
+            ">;)",
+            "Lorg/webrtc/RtcError;"
         }
     .end annotation
 .end method
@@ -223,14 +224,15 @@
     return v0
 .end method
 
-.method public setCodecPreferences(Ljava/util/List;)V
+.method public setCodecPreferences(Ljava/util/List;)Lorg/webrtc/RtcError;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "Lorg/webrtc/RtpCapabilities$CodecCapability;",
-            ">;)V"
+            ">;)",
+            "Lorg/webrtc/RtcError;"
         }
     .end annotation
 
@@ -238,9 +240,11 @@
 
     iget-wide v0, p0, Lorg/webrtc/RtpTransceiver;->nativeRtpTransceiver:J
 
-    invoke-static {v0, v1, p1}, Lorg/webrtc/RtpTransceiver;->nativeSetCodecPreferences(JLjava/util/List;)V
+    invoke-static {v0, v1, p1}, Lorg/webrtc/RtpTransceiver;->nativeSetCodecPreferences(JLjava/util/List;)Lorg/webrtc/RtcError;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public setDirection(Lorg/webrtc/RtpTransceiver$RtpTransceiverDirection;)Z

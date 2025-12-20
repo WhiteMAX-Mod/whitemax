@@ -2,8 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# instance fields
-.field public a:Landroid/os/Handler;
 
-.field public b:Lm99;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method

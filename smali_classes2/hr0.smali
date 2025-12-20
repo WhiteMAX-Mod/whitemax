@@ -1,64 +1,87 @@
 .class public final Lhr0;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lir0;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public c:Lc88;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhr0;->a:Ljava/lang/String;
-
-    iput p2, p0, Lhr0;->b:I
+    iput-wide p1, p0, Lhr0;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    iget-object v0, p0, Lhr0;->c:Lc88;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lc88;->a:Lh88;
-
-    iget-object v0, v0, Lc88;->b:Ljava/lang/Object;
-
-    sget-object v2, Li88;->c:Li88;
-
-    check-cast v0, Landroid/text/style/ClickableSpan;
-
-    iget-object v3, p0, Lhr0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v3, v2, v0}, Lh88;->b(Landroid/view/View;Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lhr0;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhr0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhr0;
+
+    iget-wide v3, p0, Lhr0;->a:J
+
+    iget-wide v5, p1, Lhr0;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lhr0;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Error(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lhr0;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

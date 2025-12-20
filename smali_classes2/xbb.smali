@@ -14,54 +14,30 @@
 
 .field public static final e:I
 
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ls4d;->share_bottom_button_copy_link:I
+    sget v0, Lscd;->oneme_in_app_review_close:I
 
     sput v0, Lxbb;->a:I
 
-    sget v0, Ls4d;->share_confirm_cancel:I
+    sget v0, Lscd;->oneme_in_app_review_not_now:I
 
     sput v0, Lxbb;->b:I
 
-    sget v0, Ls4d;->share_confirm_close:I
+    sget v0, Lscd;->oneme_in_app_review_send:I
 
     sput v0, Lxbb;->c:I
 
-    sget v0, Ls4d;->share_confirmation_close_title:I
+    sget v0, Lscd;->oneme_in_app_review_subtitle:I
 
     sput v0, Lxbb;->d:I
 
-    sget v0, Ls4d;->share_message_hint:I
+    sget v0, Lscd;->oneme_in_app_review_thanks:I
 
     sput v0, Lxbb;->e:I
-
-    sget v0, Ls4d;->share_search_hint:I
-
-    sput v0, Lxbb;->f:I
-
-    sget v0, Ls4d;->share_toolbar_action_cancel_selection:I
-
-    sput v0, Lxbb;->g:I
-
-    sget v0, Ls4d;->share_toolbar_action_select:I
-
-    sput v0, Lxbb;->h:I
-
-    sget v0, Ls4d;->share_toolbar_title:I
-
-    sput v0, Lxbb;->i:I
 
     return-void
 .end method

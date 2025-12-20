@@ -27,11 +27,11 @@
         "",
         "isOneLoggerEnabled",
         "isObsoleteStatisticsEnabled",
-        "Ly6d;",
+        "Lcgd;",
         "log",
         "Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
         "create",
-        "(Landroid/content/Context;ZZLy6d;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
+        "(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
         "",
         "LOG_TAG",
         "Ljava/lang/String;",
@@ -76,7 +76,7 @@
 
 
 # virtual methods
-.method public final create(Landroid/content/Context;ZZLy6d;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
+.method public final create(Landroid/content/Context;ZZLcgd;)Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;
     .locals 1
 
     if-eqz p2, :cond_1
@@ -84,13 +84,13 @@
     if-eqz p3, :cond_1
 
     :try_start_0
-    sget-object p2, Ldwa;->a:Lrl;
+    sget-object p2, Lk2b;->a:Lsl;
 
     if-eqz p2, :cond_0
 
     new-instance p2, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;
 
-    invoke-direct {p2, p4}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;-><init>(Ly6d;)V
+    invoke-direct {p2, p4}, Lru/ok/android/externcalls/sdk/log/OneLogItemLogger;-><init>(Lcgd;)V
 
     return-object p2
 
@@ -102,7 +102,7 @@
     :cond_0
     new-instance p2, Ljava/lang/IllegalStateException;
 
-    const-class p3, Ldwa;
+    const-class p3, Lk2b;
 
     invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -125,20 +125,20 @@
 
     const-string v0, "Can\'t initialize OneLogger, fallback to native implementation"
 
-    invoke-interface {p4, p3, v0, p2}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p4, p3, v0, p2}, Lcgd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     new-instance p2, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;
 
     const/4 p3, 0x1
 
-    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLy6d;)V
+    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLcgd;)V
 
     return-object p2
 
     :cond_1
     new-instance p2, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;
 
-    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLy6d;)V
+    invoke-direct {p2, p1, p3, p4}, Lru/ok/android/externcalls/sdk/log/ProductStatItemLogger;-><init>(Landroid/content/Context;ZLcgd;)V
 
     return-object p2
 .end method

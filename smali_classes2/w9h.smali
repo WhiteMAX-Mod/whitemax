@@ -1,73 +1,51 @@
 .class public final Lw9h;
-.super Ldtf;
+.super Ladf;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Lux7;
 
 
 # instance fields
-.field public synthetic X:Z
-
-.field public synthetic o:J
+.field public E0:Lc4a;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final E()V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    iput-object v0, p0, Lw9h;->E0:Lc4a;
 
-    move-result-wide v0
+    return-void
+.end method
 
-    check-cast p2, Ljava/lang/Boolean;
+.method public final z(Lie8;)V
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Lu9h;
 
-    move-result p1
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    check-cast v0, Lv9h;
 
-    new-instance p2, Lw9h;
+    iget-object v1, p1, Lu9h;->b:Lt9h;
 
-    const/4 v2, 0x3
+    invoke-virtual {v0, v1}, Lv9h;->setType(Lt9h;)V
 
-    invoke-direct {p2, v2, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object p1, p1, Lu9h;->c:Lghg;
 
-    iput-wide v0, p2, Lw9h;->o:J
-
-    iput-boolean p1, p2, Lw9h;->X:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lw9h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lghg;->a(Ladf;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    if-nez p1, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-wide v0, p0, Lw9h;->o:J
-
-    iget-boolean p1, p0, Lw9h;->X:Z
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    return-object p1
+    const-string p1, ""
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0, p1}, Lv9h;->setTitle(Ljava/lang/CharSequence;)V
 
-    return-object p1
+    return-void
 .end method

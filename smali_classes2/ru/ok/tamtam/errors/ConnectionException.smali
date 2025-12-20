@@ -29,11 +29,11 @@
 .method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lhzf;
+    new-instance v0, Lxag;
 
-    invoke-direct {v0}, Lhzf;-><init>()V
+    invoke-direct {v0}, Lxag;-><init>()V
 
-    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lpzf;)V
+    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lcbg;)V
 
     return-void
 .end method

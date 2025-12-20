@@ -1,56 +1,47 @@
-.class public final Lssa;
-.super Lk3;
+.class public abstract Lssa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lj0e;
-
-.field public final c:I
-
-
 # direct methods
-.method public constructor <init>(Lvqa;Lj0e;I)V
+.method public static a(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
 
-    iput-object p2, p0, Lssa;->b:Lj0e;
+    move-result-object p0
 
-    iput p3, p0, Lssa;->c:I
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final o(Lvta;)V
-    .locals 4
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
 
-    iget-object v0, p0, Lssa;->b:Lj0e;
+    move-result-object p0
 
-    instance-of v1, v0, Lqgg;
+    return-object p0
+.end method
 
-    iget-object v2, p0, Lk3;->a:Llta;
+.method public static c(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
 
-    invoke-interface {v2, p1}, Llta;->a(Lvta;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
+.end method
 
-    :cond_0
-    invoke-virtual {v0}, Lj0e;->a()Lh0e;
+.method public static d(Landroid/app/Notification$Builder;Ljava/lang/Object;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    move-result-object v0
+    check-cast p1, Landroid/content/LocusId;
 
-    new-instance v1, Lrsa;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/app/Notification$Builder;
 
-    iget v3, p0, Lssa;->c:I
+    move-result-object p0
 
-    invoke-direct {v1, p1, v0, v3}, Lrsa;-><init>(Lvta;Lh0e;I)V
-
-    invoke-interface {v2, v1}, Llta;->a(Lvta;)V
-
-    return-void
+    return-object p0
 .end method

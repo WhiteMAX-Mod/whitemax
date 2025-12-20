@@ -1,39 +1,64 @@
 .class public final Lvh7;
-.super Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxh7;
 
 
 # static fields
-.field public static final b:Lvh7;
-
-.field public static final c:Lgi4;
+.field public static final a:Lvh7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
     new-instance v0, Lvh7;
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lvh7;->b:Lvh7;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xe
-
-    const-string v4, ":inAppReview/fake"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Lvh7;->c:Lgi4;
+    sput-object v0, Lvh7;->a:Lvh7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lvh7;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x394a0475
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Downloading"
+
+    return-object v0
 .end method

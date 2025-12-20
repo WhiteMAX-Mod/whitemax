@@ -1,77 +1,73 @@
 .class public final Lgih;
-.super La54;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ldy;
+.field public X:Ljava/lang/String;
 
-.field public final synthetic b:Landroid/view/ViewTreeObserver;
+.field public Y:Lrlh;
 
-.field public final synthetic c:Lhih;
+.field public Z:Lvnh;
 
-.field public final synthetic d:Landroid/view/View;
+.field public d:Lmih;
+
+.field public o:Lud2;
+
+.field public s0:J
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lmih;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>(Ldy;Landroid/view/ViewTreeObserver;Lhih;Landroid/view/View;)V
+.method public constructor <init>(Lmih;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgih;->u0:Lmih;
 
-    iput-object p1, p0, Lgih;->a:Ldy;
-
-    iput-object p2, p0, Lgih;->b:Landroid/view/ViewTreeObserver;
-
-    iput-object p3, p0, Lgih;->c:Lhih;
-
-    iput-object p4, p0, Lgih;->d:Landroid/view/View;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final s(Lc54;Landroid/view/View;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    iget-object p2, p0, Lgih;->a:Ldy;
+    iput-object p1, p0, Lgih;->t0:Ljava/lang/Object;
 
-    iget-object p2, p2, Ldy;->X:Ljava/lang/Object;
+    iget p1, p0, Lgih;->v0:I
 
-    check-cast p2, Ljava/util/ArrayList;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    or-int/2addr p1, v0
 
-    move-result-object p2
+    iput p1, p0, Lgih;->v0:I
 
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v6, 0x0
 
-    move-result v0
+    const/4 v7, 0x0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lgih;->u0:Lmih;
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    check-cast v0, Leih;
+    const/4 v4, 0x0
 
-    invoke-interface {v0}, Leih;->b()V
+    const/4 v5, 0x0
 
-    goto :goto_0
+    move-object v8, p0
 
-    :cond_0
-    invoke-virtual {p1, p0}, Lc54;->removeLifecycleListener(La54;)V
+    invoke-virtual/range {v0 .. v8}, Lmih;->a(Lud2;JLjava/lang/String;Lrlh;Lvnh;Ljava/lang/Float;Ll84;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lgih;->c:Lhih;
+    move-result-object p1
 
-    iget-object p2, p0, Lgih;->d:Landroid/view/View;
-
-    iget-object v0, p0, Lgih;->b:Landroid/view/ViewTreeObserver;
-
-    invoke-static {p1, p2, v0}, Ldy;->c(Lhih;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-
-    return-void
+    return-object p1
 .end method

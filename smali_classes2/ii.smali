@@ -1,19 +1,21 @@
 .class public final Lii;
-.super Lhi;
+.super Lgi;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:Lii;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lii;
 
-    iput p1, p0, Lii;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lii;->a:Lii;
 
     return-void
 .end method

@@ -1,129 +1,80 @@
-.class public abstract Lfbj;
+.class public final Lfbj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lfbj;
+
 
 # direct methods
-.method public static final a(Lpb2;)Lf7f;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p0, Lpb2;->b:Lrf2;
+    new-instance v0, Lfbj;
 
-    invoke-virtual {p0}, Lpb2;->M()Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    sput-object v0, Lfbj;->a:Lfbj;
 
-    if-eqz v1, :cond_0
+    new-instance v0, Lyyi;
 
-    new-instance p0, La7f;
+    const/4 v1, 0x1
 
-    iget-wide v0, v0, Lrf2;->a:J
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-direct {p0, v0, v1}, La7f;-><init>(J)V
+    const-class v1, Lqzi;
 
-    return-object p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :cond_0
-    invoke-virtual {p0}, Lpb2;->K()Z
+    move-result-object v0
 
-    move-result v1
+    const/4 v2, 0x2
 
-    if-eqz v1, :cond_1
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    invoke-virtual {p0}, Lpb2;->n()Lku3;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    if-eqz p0, :cond_2
+    move-result-object v0
 
-    invoke-virtual {p0}, Lku3;->p()J
+    const/4 v2, 0x3
 
-    move-result-wide v0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    new-instance p0, Lc7f;
+    move-result-object v0
 
-    invoke-direct {p0, v0, v1}, Lc7f;-><init>(J)V
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_1
-    invoke-virtual {p0}, Lpb2;->Q()Z
+    const/4 v2, 0x4
 
-    move-result v1
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    if-eqz v1, :cond_3
+    move-result-object v0
 
-    invoke-virtual {p0}, Lpb2;->n()Lku3;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_2
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    invoke-virtual {p0}, Lku3;->p()J
-
-    move-result-wide v0
-
-    new-instance p0, Ld7f;
-
-    invoke-direct {p0, v0, v1}, Ld7f;-><init>(J)V
-
-    return-object p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_3
-    new-instance p0, Lb7f;
-
-    iget-wide v0, v0, Lrf2;->a:J
-
-    invoke-direct {p0, v0, v1}, Lb7f;-><init>(J)V
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Lfv5;
-    .locals 2
 
-    if-eqz p0, :cond_2
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {p0}, Lvmf;->F(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-le v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lfv5;
-
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lfv5;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p0, Lfv5;->c:Lfv5;
-
-    return-object p0
+    throw p1
 .end method

@@ -1,100 +1,50 @@
 .class public final Lo43;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lx26;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lz41;
-
-.field public final synthetic c:Lk53;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lz41;Lk53;I)V
-    .locals 0
-
-    iput p3, p0, Lo43;->a:I
-
-    iput-object p1, p0, Lo43;->b:Lz41;
-
-    iput-object p2, p0, Lo43;->c:Lk53;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lcr6;
 
 
 # virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lo43;->a:I
+    check-cast p1, Lac4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Ln43;
-
-    iget-object v1, p0, Lo43;->c:Lk53;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, p1, v1, v2}, Ln43;-><init>(Lz26;Lk53;I)V
-
-    iget-object p1, p0, Lo43;->b:Lz41;
-
-    invoke-virtual {p1, v0, p2}, Lz41;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lo43;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object p2, Lg84;->a:Lg84;
+    check-cast p1, Lo43;
 
-    if-ne p1, p2, :cond_0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lo43;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    return-object p2
+.end method
 
-    :goto_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lo43;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
     return-object p1
+.end method
 
-    :pswitch_0
-    new-instance v0, Ln43;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v1, p0, Lo43;->c:Lk53;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/4 v2, 0x0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-direct {v0, p1, v1, v2}, Ln43;-><init>(Lz26;Lk53;I)V
-
-    iget-object p1, p0, Lo43;->b:Lz41;
-
-    invoke-virtual {p1, v0, p2}, Lz41;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_1
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,45 +1,21 @@
 .class public final Lhx7;
-.super Ltx7;
+.super Lina;
 .source "SourceFile"
 
 
-# static fields
-.field public static final INSTANCE:Lhx7;
+# instance fields
+.field public c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
+    .locals 2
 
-    new-instance v0, Lhx7;
+    invoke-direct {p0, p1}, Lina;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Lhx7;->INSTANCE:Lhx7;
+    iput-wide v0, p0, Lhx7;->c:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "null"
-
-    return-object v0
-.end method
-
-.method public final serializer()Lzy7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lzy7;"
-        }
-    .end annotation
-
-    sget-object v0, Lix7;->a:Lix7;
-
-    return-object v0
 .end method

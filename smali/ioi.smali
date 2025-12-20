@@ -1,191 +1,106 @@
-.class public abstract Lioi;
+.class public final Lioi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lqt5;
+.field public static final b:Ljava/util/Set;
 
-.field public static final b:[Lqt5;
+
+# instance fields
+.field public final a:Lf07;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Lqt5;
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    const-string v1, "CLIENT_TELEMETRY"
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    const-wide/16 v2, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lqt5;-><init>(Ljava/lang/String;J)V
-
-    sput-object v0, Lioi;->a:Lqt5;
-
-    filled-new-array {v0}, [Lqt5;
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
-    sput-object v0, Lioi;->b:[Lqt5;
+    sput-object v0, Lioi;->b:Ljava/util/Set;
 
     return-void
 .end method
 
-.method public static final a(Lkotlinx/serialization/json/internal/b;)V
-    .locals 3
+.method public constructor <init>(Lf07;)V
+    .locals 0
 
-    instance-of v0, p0, Lkotlinx/serialization/json/internal/b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
+    iput-object p1, p0, Lioi;->a:Lf07;
 
     return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "This serializer can be used only with Json format.Expected Encoder to be JsonEncoder, got "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lvid;->a(Ljava/lang/Class;)Lca3;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public static final b(Llh4;)Lkotlinx/serialization/json/internal/a;
-    .locals 3
 
-    instance-of v0, p0, Lkotlinx/serialization/json/internal/a;
+# virtual methods
+.method public final a(Lm7j;)Lm7j;
+    .locals 5
 
-    if-eqz v0, :cond_0
+    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    move-object v0, p0
+    const/4 v1, 0x1
 
-    check-cast v0, Lkotlinx/serialization/json/internal/a;
+    if-nez v0, :cond_1
 
-    goto :goto_0
+    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lhy0;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "This serializer can be used only with Json format.Expected Decoder to be JsonDecoder, got "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lvid;->a(Ljava/lang/Class;)Lca3;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static final c(Landroid/net/Uri;)Ljava/io/File;
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "file"
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
     if-eqz v0, :cond_0
 
-    new-instance p0, Ljava/io/File;
-
-    invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    const-string v0, "Uri path is null: "
-
-    invoke-static {p0, v0}, Lctd;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    const/4 v1, 0x0
 
     :cond_1
-    const-string v0, "Uri lacks \'file\' scheme: "
+    :goto_0
+    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    invoke-static {p0, v0}, Lctd;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lioi;->a:Lf07;
 
-    move-result-object p0
+    iget-object v1, v0, Lf07;->j:Lk07;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance v2, Lxoi;
 
-    move-result-object p0
+    invoke-direct {v2, p1}, Lxoi;-><init>(Lm7j;)V
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v3, v1, Lk07;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    throw v0
+    new-instance v4, Lpoi;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v3
+
+    invoke-direct {v4, v2, v3, v0}, Lpoi;-><init>(Ljpi;ILf07;)V
+
+    iget-object v0, v1, Lk07;->w0:Lz7a;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-object p1
 .end method

@@ -1,73 +1,100 @@
-.class public abstract Lx9j;
+.class public final Lx9j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lx9j;
+
 
 # direct methods
-.method public static a(Landroid/widget/EdgeEffect;)F
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lx9j;
 
-    const/16 v1, 0x1f
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-lt v0, v1, :cond_0
+    sput-object v0, Lx9j;->a:Lx9j;
 
-    invoke-static {p0}, Lk85;->b(Landroid/widget/EdgeEffect;)F
+    new-instance v0, Lyyi;
 
-    move-result p0
+    const/4 v1, 0x1
 
-    return p0
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    :cond_0
-    const/4 p0, 0x0
+    const-class v1, Lqzi;
 
-    return p0
-.end method
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-.method public static b(Landroid/widget/EdgeEffect;FF)F
-    .locals 2
+    move-result-object v0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v2, 0x2
 
-    const/16 v1, 0x1f
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    if-lt v0, v1, :cond_0
+    move-result-object v0
 
-    invoke-static {p0, p1, p2}, Lk85;->c(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
+    const/4 v2, 0x3
 
-    :cond_0
-    invoke-static {p0, p1, p2}, Lj85;->a(Landroid/widget/EdgeEffect;FF)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    return p1
-.end method
+    move-result-object v0
 
-.method public static final c(Lesg;)V
-    .locals 2
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    new-instance v0, Lb4e;
+    move-result-object v0
 
-    const/16 v1, 0xd
+    const/4 v2, 0x4
 
-    invoke-direct {v0, v1}, Lb4e;-><init>(I)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    const/16 v1, 0x256
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    new-instance v0, Lb4e;
+    move-result-object v0
 
-    const/16 v1, 0xe
+    const/4 v2, 0x5
 
-    invoke-direct {v0, v1}, Lb4e;-><init>(I)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    const/16 v1, 0x257
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

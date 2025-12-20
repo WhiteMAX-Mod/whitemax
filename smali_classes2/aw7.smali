@@ -1,215 +1,156 @@
-.class public abstract Law7;
-.super Ljava/lang/Object;
+.class public final Law7;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/a;)V
-    .locals 1
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/high16 v0, -0x80000000
-
-    .line 6
-    iput v0, p0, Law7;->a:I
-
-    .line 7
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Law7;->c:Ljava/lang/Object;
-
-    .line 8
-    iput-object p1, p0, Law7;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILbw7;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Law7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    .line 2
-    iput-object p1, p0, Law7;->b:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    .line 3
-    iput p2, p0, Law7;->a:I
-
-    .line 4
-    iput-object p3, p0, Law7;->c:Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static b(Landroidx/recyclerview/widget/a;I)Law7;
-    .locals 1
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    new-instance p1, Ljjb;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p0, v0}, Ljjb;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "invalid orientation"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p1, Ljjb;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Ljjb;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Law7;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, "."
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Law7;->l()Lbw7;
+    invoke-virtual {p0, p1, p2}, Law7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    check-cast p1, Law7;
 
-    iget-object p1, p1, Lbw7;->a:Ljava/lang/String;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1, p2}, Law7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
-.method public abstract c(Landroid/view/View;)I
-.end method
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.method public abstract d(Landroid/view/View;)I
-.end method
+    new-instance v0, Law7;
 
-.method public abstract e(Landroid/view/View;)I
-.end method
+    iget-object v1, p0, Law7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-.method public abstract f(Landroid/view/View;)I
-.end method
+    invoke-direct {v0, p2, v1}, Law7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
-.method public abstract g()I
-.end method
-
-.method public abstract h()I
-.end method
-
-.method public abstract i()I
-.end method
-
-.method public abstract j()I
-.end method
-
-.method public abstract k()I
-.end method
-
-.method public l()Lbw7;
-    .locals 1
-
-    iget-object v0, p0, Law7;->c:Ljava/lang/Object;
-
-    check-cast v0, Lbw7;
+    iput-object p1, v0, Law7;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public abstract m()I
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-.method public abstract n()I
-.end method
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public o()I
-    .locals 2
+    iget-object p1, p0, Law7;->o:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Loc4;
 
-    iget v1, p0, Law7;->a:I
+    iget-object v0, p0, Law7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    if-ne v0, v1, :cond_0
+    iget-object v1, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:Lru7;
 
-    const/4 v0, 0x0
+    if-nez v1, :cond_0
 
-    return v0
+    new-instance v1, Lru7;
+
+    iget-object v2, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->v0:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lm0c;
+
+    iget-object v3, p1, Loc4;->a:Lj9b;
+
+    iget-object v4, v3, Lj9b;->a:Ljava/lang/String;
+
+    iget v3, v3, Lj9b;->b:I
+
+    iget v5, p1, Loc4;->b:I
+
+    invoke-direct {v1, v2, v4, v3, v5}, Lru7;-><init>(Lm0c;Ljava/lang/String;II)V
+
+    iput-object v1, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:Lru7;
+
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0()Lweb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lweb;->v0:Landroid/widget/EditText;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Law7;->n()I
+    iget-object v2, p1, Loc4;->a:Lj9b;
 
-    move-result v0
+    iget-object v3, v2, Lj9b;->a:Ljava/lang/String;
 
-    iget v1, p0, Law7;->a:I
+    iget v2, v2, Lj9b;->b:I
 
-    sub-int/2addr v0, v1
+    invoke-virtual {v1, v2, v3}, Lru7;->b(ILjava/lang/String;)V
 
-    return v0
-.end method
+    iget-object v1, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:Lru7;
 
-.method public abstract p(Landroid/view/View;)I
-.end method
+    if-eqz v1, :cond_1
 
-.method public abstract q(Landroid/view/View;)I
-.end method
+    iget v2, p1, Loc4;->b:I
 
-.method public abstract r(I)V
+    iput v2, v1, Lru7;->X:I
+
+    :cond_1
+    :goto_0
+    iget-object v1, p1, Loc4;->c:Lghg;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lghg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, ""
+
+    :cond_2
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0()Lweb;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lweb;->setHint(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Loc4;->a:Lj9b;
+
+    invoke-virtual {v0, p1}, Lweb;->setCountry(Lj9b;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

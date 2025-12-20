@@ -1,80 +1,49 @@
 .class public final Llge;
-.super Lfhe;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:I
+.field public X:I
 
-.field public final h:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lmge;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/Object;I)V
+.method public constructor <init>(Lmge;Ll84;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Llge;->g:I
+    iput-object p1, p0, Llge;->o:Lmge;
 
-    invoke-direct {p0, p1, p2}, Lfhe;-><init>(J)V
-
-    iput-object p3, p0, Llge;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Leh9;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Llge;->g:I
-
-    const-wide/16 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, v0, v1}, Lfhe;-><init>(J)V
-
-    .line 3
-    iput-object p1, p0, Llge;->h:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lghe;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Llge;->g:I
+    iput-object p1, p0, Llge;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Llge;->X:I
 
-    new-instance v0, Lihe;
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, p0}, Lihe;-><init>(Llge;)V
+    or-int/2addr p1, v0
 
-    return-object v0
+    iput p1, p0, Llge;->X:I
 
-    :pswitch_0
-    new-instance v0, Lmge;
+    iget-object p1, p0, Llge;->o:Lmge;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0, v1}, Lmge;-><init>(Llge;B)V
+    invoke-static {p1, v0, p0}, Lmge;->b(Lmge;Ljava/lang/Throwable;Ll84;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_1
-    new-instance v0, Lmge;
-
-    invoke-direct {v0, p0}, Lmge;-><init>(Llge;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

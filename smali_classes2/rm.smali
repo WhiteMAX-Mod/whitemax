@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract getSessionInfo()Lqm;
-.end method
-
-.method public abstract setSessionInfo(Lqm;)V
+.method public abstract e(Lul;)Lul;
 .end method

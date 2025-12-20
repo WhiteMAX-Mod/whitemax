@@ -1,293 +1,476 @@
 .class public final Lie4;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lq9b;
+.field public X:I
 
-.field public final b:Ljrd;
+.field public final synthetic Y:Lvfa;
 
-.field public final c:Lbsd;
+.field public final synthetic Z:Lke4;
 
-.field public final d:Lte8;
+.field public o:Lsfa;
 
-.field public final e:Lcsd;
-
-.field public final f:Lgsd;
-
-.field public final g:Lfsd;
-
-.field public final h:Lenb;
-
-.field public final i:Lw2h;
-
-.field public final j:Lsuf;
-
-.field public final k:Ljwg;
-
-.field public final l:Lbn9;
-
-.field public final m:Ln35;
-
-.field public final n:Lmni;
-
-.field public final o:Lkc3;
-
-.field public final p:Lkgf;
-
-.field public final q:Lzr5;
-
-.field public final r:Lkr5;
-
-.field public final s:Lddd;
-
-.field public final t:Lem4;
-
-.field public final u:Lwj;
+.field public final synthetic s0:Ld68;
 
 
 # direct methods
-.method public constructor <init>(Lq9b;Lyi5;La84;Lm4e;Lpb3;Lk18;Lhwa;Llzf;Lgk;Lk18;Lk18;)V
-    .locals 7
+.method public constructor <init>(Lvfa;Lkotlin/coroutines/Continuation;Lke4;Ld68;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lie4;->Y:Lvfa;
 
-    iput-object p1, p0, Lie4;->a:Lq9b;
+    iput-object p3, p0, Lie4;->Z:Lke4;
 
-    new-instance v0, Ljrd;
+    iput-object p4, p0, Lie4;->s0:Ld68;
 
-    move-object/from16 v2, p10
+    const/4 p1, 0x2
 
-    invoke-direct {v0, p1, v2}, Ljrd;-><init>(Lq9b;Lk18;)V
-
-    iput-object v0, p0, Lie4;->b:Ljrd;
-
-    new-instance v0, Lbsd;
-
-    new-instance v3, Lsl7;
-
-    move-object v6, p8
-
-    invoke-direct {v3, p8}, Lsl7;-><init>(Ljava/lang/Object;)V
-
-    move-object v1, p1
-
-    move-object v2, p4
-
-    move-object v4, p6
-
-    move-object/from16 v5, p11
-
-    invoke-direct/range {v0 .. v5}, Lbsd;-><init>(Lq9b;Lm4e;Lsl7;Lk18;Lk18;)V
-
-    iput-object v0, p0, Lie4;->c:Lbsd;
-
-    new-instance v0, Lte8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v0, Lte8;->a:Ljava/lang/Object;
-
-    new-instance v2, Lffb;
-
-    const/16 v3, 0x1d
-
-    invoke-direct {v2, v3, v0}, Lffb;-><init>(ILjava/lang/Object;)V
-
-    new-instance v3, Lbwf;
-
-    invoke-direct {v3, v2}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object v3, v0, Lte8;->b:Ljava/lang/Object;
-
-    sget-object v2, Lk54;->u0:Lk54;
-
-    new-instance v3, Lbwf;
-
-    invoke-direct {v3, v2}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object v3, v0, Lte8;->c:Ljava/lang/Object;
-
-    iput-object v0, p0, Lie4;->d:Lte8;
-
-    new-instance v0, Lcsd;
-
-    invoke-direct {v0, p1}, Lcsd;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->e:Lcsd;
-
-    new-instance v0, Lgsd;
-
-    invoke-direct {v0, p1, p2}, Lgsd;-><init>(Lq9b;Lyi5;)V
-
-    iput-object v0, p0, Lie4;->f:Lgsd;
-
-    new-instance v0, Lfsd;
-
-    invoke-direct {v0, p1}, Lfsd;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->g:Lfsd;
-
-    new-instance v0, Lenb;
-
-    invoke-direct {v0, p1}, Lenb;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->h:Lenb;
-
-    new-instance v0, Lbn9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v0, Lbn9;->a:Lq9b;
-
-    iput-object v0, p0, Lie4;->l:Lbn9;
-
-    new-instance v0, Ln35;
-
-    invoke-direct {v0, p1}, Ln35;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->m:Ln35;
-
-    new-instance v0, Ljwg;
-
-    new-instance v2, Lhe4;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Lhe4;-><init>(Lq9b;I)V
-
-    new-instance v3, Lbwf;
-
-    invoke-direct {v3, v2}, Lbwf;-><init>(Lcm6;)V
-
-    invoke-direct {v0, v3}, Ljwg;-><init>(Lbwf;)V
-
-    iput-object v0, p0, Lie4;->k:Ljwg;
-
-    new-instance v0, Lw2h;
-
-    invoke-direct {v0, p1}, Lw2h;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->i:Lw2h;
-
-    new-instance v0, Lsuf;
-
-    invoke-direct {v0, p1}, Lsuf;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->j:Lsuf;
-
-    new-instance v0, Lmni;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lie4;->n:Lmni;
-
-    new-instance v0, Lkc3;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v2}, Lkc3;-><init>(I)V
-
-    iput-object v0, p0, Lie4;->o:Lkc3;
-
-    new-instance v0, Lkgf;
-
-    invoke-direct {v0, p1}, Lkgf;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->p:Lkgf;
-
-    new-instance v0, Lzr5;
-
-    invoke-direct {v0, p1}, Lzr5;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->q:Lzr5;
-
-    new-instance v0, Lkr5;
-
-    invoke-direct {v0, p1}, Lkr5;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->r:Lkr5;
-
-    new-instance v0, Lddd;
-
-    invoke-direct {v0, p1, p5}, Lddd;-><init>(Lq9b;Lpb3;)V
-
-    iput-object v0, p0, Lie4;->s:Lddd;
-
-    new-instance v0, Lem4;
-
-    invoke-direct {v0, p1}, Lem4;-><init>(Lq9b;)V
-
-    iput-object v0, p0, Lie4;->t:Lem4;
-
-    new-instance v0, Lwj;
-
-    move-object v2, p1
-
-    move-object v3, p5
-
-    move-object v1, p7
-
-    move-object/from16 v5, p9
-
-    move-object v4, v6
-
-    move-object v6, p3
-
-    invoke-direct/range {v0 .. v6}, Lwj;-><init>(Lhwa;Lq9b;Lpb3;Llzf;Lgk;La84;)V
-
-    iput-object v0, p0, Lie4;->u:Lwj;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lie4;->a:Lq9b;
+    check-cast p1, Lac4;
 
-    invoke-virtual {v0}, Lq9b;->l()Llrd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lie4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    move-result-object p1
 
-    invoke-virtual {v0}, Llrd;->c()V
+    check-cast p1, Lie4;
 
-    return-void
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lie4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Lie4;->a:Lq9b;
+    new-instance p1, Lie4;
 
-    invoke-virtual {v0}, Lq9b;->l()Llrd;
+    iget-object v0, p0, Lie4;->Z:Lke4;
 
-    move-result-object v0
+    iget-object v1, p0, Lie4;->s0:Ld68;
 
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    iget-object v2, p0, Lie4;->Y:Lvfa;
 
-    invoke-virtual {v0}, Llrd;->k()V
+    invoke-direct {p1, v2, p2, v0, v1}, Lie4;-><init>(Lvfa;Lkotlin/coroutines/Continuation;Lke4;Ld68;)V
 
-    return-void
+    return-object p1
 .end method
 
-.method public final c()V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 14
 
-    iget-object v0, p0, Lie4;->a:Lq9b;
+    const-string v0, "Loaded "
 
-    invoke-virtual {v0}, Lq9b;->l()Llrd;
+    sget-object v1, Lbc4;->a:Lbc4;
+
+    iget v2, p0, Lie4;->X:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    if-eqz v2, :cond_3
+
+    if-eq v2, v6, :cond_2
+
+    if-eq v2, v5, :cond_1
+
+    if-ne v2, v4, :cond_0
+
+    iget-object v0, p0, Lie4;->o:Lsfa;
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_7
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_a
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v2, p0, Lie4;->o:Lsfa;
+
+    :try_start_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    move-object v0, v2
+
+    goto/16 :goto_a
+
+    :cond_2
+    iget-object v2, p0, Lie4;->o:Lsfa;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    move-object p1, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lie4;->Y:Lvfa;
+
+    iput-object p1, p0, Lie4;->o:Lsfa;
+
+    iput v6, p0, Lie4;->X:I
+
+    invoke-virtual {p1, p0}, Lvfa;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v2, v1, :cond_4
+
+    goto/16 :goto_6
+
+    :cond_4
+    :goto_0
+    :try_start_2
+    iget-object v2, p0, Lie4;->Z:Lke4;
+
+    invoke-virtual {v2}, Lke4;->i()Lq0e;
+
+    move-result-object v2
+
+    iput-object p1, p0, Lie4;->o:Lsfa;
+
+    iput v5, p0, Lie4;->X:I
+
+    iget-object v2, v2, Lq0e;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    new-instance v5, Latd;
+
+    const/4 v8, 0x7
+
+    invoke-direct {v5, v8}, Latd;-><init>(I)V
+
+    invoke-static {v5, v2, p0, v6, v3}, Lykj;->f(Loq6;Le1e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    if-ne v2, v1, :cond_5
+
+    goto/16 :goto_6
+
+    :cond_5
+    move-object v13, v2
+
+    move-object v2, p1
+
+    move-object p1, v13
+
+    :goto_1
+    :try_start_3
+    check-cast p1, Ljava/util/Map;
+
+    iget-object v5, p0, Lie4;->Z:Lke4;
+
+    iget-object v5, v5, Lke4;->b:Ljava/lang/String;
+
+    sget-object v8, Lm4j;->a:Lvcb;
+
+    if-nez v8, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    sget-object v9, Lxk8;->d:Lxk8;
+
+    invoke-virtual {v8, v9}, Lvcb;->b(Lxk8;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    move-result v10
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " folders from cache"
+
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    invoke-virtual {v8, v9, v5, v0, v7}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0}, Llrd;->q()V
+    :cond_7
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    return-void
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ll0e;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object v8, p0, Lie4;->s0:Ld68;
+
+    invoke-interface {v8}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lndb;
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    const/16 v10, 0xa
+
+    invoke-static {v0, v10}, Lgi3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v10
+
+    invoke-direct {v9, v10}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_8
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Loe2;
+
+    iget-wide v10, v10, Loe2;->a:J
+
+    new-instance v12, Ljava/lang/Long;
+
+    invoke-direct {v12, v10, v11}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-virtual {v9, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4
+
+    :cond_8
+    new-instance v0, Lat;
+
+    invoke-direct {v0, v9}, Lat;-><init>(Ljava/util/Collection;)V
+
+    const/16 v9, 0xc
+
+    invoke-static {v5, v8, v0, v9}, Lwlj;->c(Ll0e;Lndb;Ljava/util/Set;I)Loc6;
+
+    move-result-object v0
+
+    iget-object v8, p0, Lie4;->Z:Lke4;
+
+    iget-object v8, v8, Lke4;->t0:Lffa;
+
+    iget-object v9, v0, Loc6;->a:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Lffa;->g(Ljava/lang/Object;)I
+
+    move-result v8
+
+    if-ltz v8, :cond_9
+
+    move v8, v6
+
+    goto :goto_5
+
+    :cond_9
+    move v8, v3
+
+    :goto_5
+    if-nez v8, :cond_a
+
+    iget-object v8, p0, Lie4;->Z:Lke4;
+
+    iget-object v8, v8, Lke4;->t0:Lffa;
+
+    iget-object v9, v0, Loc6;->a:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Lffa;->b(Ljava/lang/Object;)V
+
+    :cond_a
+    iget-object v8, p0, Lie4;->Z:Lke4;
+
+    iget-object v9, v8, Lke4;->s0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v5, v5, Ll0e;->a:Ljava/lang/String;
+
+    new-instance v10, Lud4;
+
+    invoke-direct {v10, v0, v8}, Lud4;-><init>(Loc6;Lke4;)V
+
+    new-instance v0, Lhe4;
+
+    invoke-direct {v0, v10}, Lhe4;-><init>(Lud4;)V
+
+    invoke-virtual {v9, v5, v0}, Ljava/util/concurrent/ConcurrentHashMap;->compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_b
+    iget-object p1, p0, Lie4;->Z:Lke4;
+
+    iget-object v0, p1, Lke4;->u0:Lh6f;
+
+    iget-object p1, p1, Lke4;->t0:Lffa;
+
+    iput-object v2, p0, Lie4;->o:Lsfa;
+
+    iput v4, p0, Lie4;->X:I
+
+    invoke-virtual {v0, p1, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-ne p1, v1, :cond_c
+
+    :goto_6
+    return-object v1
+
+    :cond_c
+    move-object v0, v2
+
+    :goto_7
+    :try_start_4
+    iget-object p1, p0, Lie4;->Z:Lke4;
+
+    iget-object p1, p1, Lke4;->w0:Lxn3;
+
+    sget-object v1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, v1}, Lkz7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lie4;->Z:Lke4;
+
+    iget-object p1, p1, Lke4;->b:Ljava/lang/String;
+
+    sget-object v2, Lm4j;->a:Lvcb;
+
+    if-nez v2, :cond_d
+
+    goto :goto_8
+
+    :cond_d
+    sget-object v3, Lxk8;->o:Lxk8;
+
+    invoke-virtual {v2, v3}, Lvcb;->b(Lxk8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_e
+
+    const-string v4, "Loaded all cached folders"
+
+    invoke-virtual {v2, v3, p1, v4, v7}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :cond_e
+    :goto_8
+    invoke-interface {v0, v7}, Lsfa;->l(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :goto_9
+    move-object v13, v0
+
+    move-object v0, p1
+
+    move-object p1, v13
+
+    goto :goto_a
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_9
+
+    :goto_a
+    invoke-interface {v0, v7}, Lsfa;->l(Ljava/lang/Object;)V
+
+    throw p1
 .end method

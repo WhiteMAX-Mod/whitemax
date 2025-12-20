@@ -1,189 +1,127 @@
-.class public final synthetic Lnm3;
+.class public abstract Lnm3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:Landroid/view/View;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:I
-
-.field public final synthetic o:I
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;IIIILandroid/view/View;I)V
-    .locals 0
+.method public static a([B)Lom3;
+    .locals 12
 
-    iput p7, p0, Lnm3;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Complain;
 
-    iput-object p1, p0, Lnm3;->b:Landroid/view/View;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Complain;-><init>()V
 
-    iput p2, p0, Lnm3;->c:I
+    :try_start_0
+    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
 
-    iput p3, p0, Lnm3;->d:I
+    move-result-object p0
 
-    iput p4, p0, Lnm3;->o:I
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Complain;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput p5, p0, Lnm3;->X:I
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$Complain;->requestId:J
 
-    iput-object p6, p0, Lnm3;->Y:Landroid/view/View;
+    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->typeId:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    int-to-byte v0, v0
 
-    return-void
-.end method
+    new-instance v3, Lc2;
 
+    const/4 v4, 0x0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    sget-object v5, Lan3;->u0:Lwk5;
 
-    iget v0, p0, Lnm3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v1, p0, Lnm3;->b:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    iget v2, v0, Landroid/graphics/Rect;->left:I
-
-    iget v3, p0, Lnm3;->c:I
-
-    sub-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->left:I
-
-    iget v2, v0, Landroid/graphics/Rect;->top:I
-
-    iget v3, p0, Lnm3;->d:I
-
-    sub-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->top:I
-
-    iget v2, v0, Landroid/graphics/Rect;->right:I
-
-    iget v3, p0, Lnm3;->o:I
-
-    add-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->right:I
-
-    iget v2, v0, Landroid/graphics/Rect;->bottom:I
-
-    iget v3, p0, Lnm3;->X:I
-
-    add-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->bottom:I
-
-    new-instance v2, Landroid/view/TouchDelegate;
-
-    invoke-direct {v2, v0, v1}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    iget-object v0, p0, Lnm3;->Y:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnm3;->Y:Landroid/view/View;
-
-    check-cast v0, Lik9;
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v2, p0, Lnm3;->b:Landroid/view/View;
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    iget v3, v1, Landroid/graphics/Rect;->left:I
-
-    iget v4, p0, Lnm3;->c:I
-
-    sub-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->left:I
-
-    iget v3, v1, Landroid/graphics/Rect;->top:I
-
-    iget v4, p0, Lnm3;->d:I
-
-    sub-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->top:I
-
-    iget v3, v1, Landroid/graphics/Rect;->right:I
-
-    iget v4, p0, Lnm3;->o:I
-
-    add-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->right:I
-
-    iget v3, v1, Landroid/graphics/Rect;->bottom:I
-
-    iget v4, p0, Lnm3;->X:I
-
-    add-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v3
-
-    instance-of v3, v3, Lmm3;
-
-    if-nez v3, :cond_0
-
-    new-instance v3, Lmm3;
-
-    invoke-direct {v3, v0}, Lmm3;-><init>(Lik9;)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
+    invoke-direct {v3, v4, v5}, Lc2;-><init>(ILjava/lang/Object;)V
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
+    invoke-virtual {v3}, Lc2;->hasNext()Z
 
-    move-result-object v0
+    move-result v4
 
-    check-cast v0, Lmm3;
+    const/4 v5, 0x0
 
-    new-instance v3, Landroid/view/TouchDelegate;
+    if-eqz v4, :cond_1
 
-    invoke-direct {v3, v1, v2}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-virtual {v3}, Lc2;->next()Ljava/lang/Object;
 
-    iget-object v0, v0, Lmm3;->a:Ljava/util/ArrayList;
+    move-result-object v4
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object v6, v4
 
-    return-void
+    check-cast v6, Lan3;
 
-    nop
+    iget-byte v6, v6, Lan3;->a:B
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-ne v6, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v4, v5
+
+    :goto_0
+    move-object v3, v4
+
+    check-cast v3, Lan3;
+
+    if-eqz v3, :cond_3
+
+    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->reasonId:I
+
+    int-to-byte v4, v0
+
+    move-object v0, v5
+
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Complain;->ids:[J
+
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Complain;->serverIds:[J
+
+    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$Complain;->parentId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v7, v7, v10
+
+    if-eqz v7, :cond_2
+
+    move-object v7, v9
+
+    goto :goto_1
+
+    :cond_2
+    move-object v7, v0
+
+    :goto_1
+    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$Complain;->details:Ljava/lang/String;
+
+    new-instance v0, Lom3;
+
+    invoke-direct/range {v0 .. v8}, Lom3;-><init>(JLan3;B[J[JLjava/lang/Long;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

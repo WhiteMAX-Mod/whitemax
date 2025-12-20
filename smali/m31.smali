@@ -1,214 +1,65 @@
 .class public final Lm31;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Lb94;
 
 
 # instance fields
-.field public synthetic X:Z
-
-.field public synthetic Y:Z
-
-.field public final synthetic o:I
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
-    iput p3, p0, Lm31;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Lx84;Lx84;Z)V
+    .locals 0
 
-    iget v0, p0, Lm31;->o:I
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lm31;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lm31;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-boolean p1, v0, Lm31;->X:Z
-
-    iput-boolean p2, v0, Lm31;->Y:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lm31;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lm31;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lm31;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-boolean p1, v0, Lm31;->X:Z
-
-    iput-boolean p2, v0, Lm31;->Y:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lm31;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lm31;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lm31;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-boolean p1, v0, Lm31;->X:Z
-
-    iput-boolean p2, v0, Lm31;->Y:Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lm31;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b(Lx84;Lx84;Z)V
+    .locals 0
 
-    iget v0, p0, Lm31;->o:I
+    if-eqz p3, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lp38;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lm31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    iget-boolean p1, p0, Lm31;->X:Z
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lv31;
 
-    iget-boolean v0, p0, Lm31;->Y:Z
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    invoke-virtual {p1}, Lv31;->s()Ln21;
 
-    if-eqz v0, :cond_0
+    move-result-object p2
 
-    goto :goto_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p2, Lj31;
+
+    iget-object p2, p2, Lj31;->F0:Lhof;
+
+    invoke-virtual {p2}, Lhof;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lfa;
+
+    invoke-virtual {p1, p2}, Lv31;->t(Lfa;)V
 
     :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lm31;->X:Z
-
-    iget-boolean v0, p0, Lm31;->Y:Z
-
-    if-eqz p1, :cond_2
-
-    if-nez v0, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lm31;->X:Z
-
-    iget-boolean v0, p0, Lm31;->Y:Z
-
-    if-eqz p1, :cond_3
-
-    if-nez v0, :cond_3
-
-    const/4 p1, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :goto_3
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,295 +1,183 @@
-.class public final Lcn3;
+.class public final synthetic Lcn3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lg2h;
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:Landroid/net/Uri;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
+.field public final synthetic b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
+    .locals 0
+
+    iput p2, p0, Lcn3;->a:I
+
+    iput-object p1, p0, Lcn3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Lcn3;->a:Ljava/util/List;
-
-    iput-wide p1, p0, Lcn3;->b:J
-
-    const/4 v0, 0x0
-
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbn3;
-
-    invoke-virtual {v1}, Lbn3;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    iput-wide v1, p0, Lcn3;->c:J
-
-    iput-wide p1, p0, Lcn3;->d:J
-
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    iput-object p1, p0, Lcn3;->e:Landroid/net/Uri;
-
-    const-string p1, "video/mp4"
-
-    iput-object p1, p0, Lcn3;->f:Ljava/lang/String;
-
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbn3;
-
-    iget p1, p1, Lbn3;->b:I
-
-    iput p1, p0, Lcn3;->g:I
-
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbn3;
-
-    iget p1, p1, Lbn3;->c:I
-
-    iput p1, p0, Lcn3;->h:I
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Lcn3;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lcn3;->e:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public final b()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final c()J
-    .locals 2
-
-    iget-wide v0, p0, Lcn3;->d:J
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcn3;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x2
 
-    return v0
+    iget-object v2, p0, Lcn3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->t0:[Lp38;
+
+    new-instance v0, Ltib;
+
+    invoke-direct {v0, v2}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    iget-object v1, v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->o:Lz7g;
+
+    invoke-virtual {v1}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lkn3;
+
+    iget-object v1, v1, Lkn3;->d:Lhjb;
+
+    invoke-virtual {v0, v1}, Ltib;->e(Lljb;)V
+
+    sget v1, Lr9b;->d:I
+
+    new-instance v2, Lbhg;
+
+    invoke-direct {v2, v1}, Lbhg;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Ltib;->g(Lghg;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->t0:[Lp38;
+
+    new-instance v0, Lzt3;
+
+    sget v3, Lq9b;->a:I
+
+    iget-object v2, v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->o:Lz7g;
+
+    invoke-virtual {v2}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkn3;
+
+    iget-object v2, v2, Lkn3;->c:Lbhg;
+
+    const/16 v4, 0x38
+
+    invoke-direct {v0, v3, v2, v1, v4}, Lzt3;-><init>(ILghg;II)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lks;
+
+    sget-object v1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->t0:[Lp38;
+
+    const/4 v3, 0x1
+
+    aget-object v3, v1, v3
+
+    invoke-virtual {v0, v2}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    iget-object v3, v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->a:Lks;
+
+    const/4 v4, 0x0
+
+    aget-object v1, v1, v4
+
+    invoke-virtual {v3, v2}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [J
+
+    new-instance v2, Lrn3;
+
+    invoke-direct {v2, v1, v0}, Lrn3;-><init>([JLjava/lang/Long;)V
+
+    return-object v2
+
+    :pswitch_2
+    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->t0:[Lp38;
+
+    sget-object v0, Lkn3;->o:Lqf3;
+
+    iget-object v3, v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->c:Lks;
+
+    sget-object v4, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->t0:[Lp38;
+
+    aget-object v1, v4, v1
+
+    invoke-virtual {v3, v2}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "p2g"
+
+    invoke-static {v1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lkn3;->X:Lkn3;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lcn3;
+    const-string v0, "p2p"
 
-    if-nez v1, :cond_1
+    invoke-static {v1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lkn3;->Y:Lkn3;
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lcn3;
-
-    iget-object v1, p0, Lcn3;->a:Ljava/util/List;
-
-    iget-object v2, p1, Lcn3;->a:Ljava/util/List;
-
-    invoke-static {v1, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v1, p0, Lcn3;->b:J
-
-    iget-wide v3, p1, Lcn3;->b:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_3
+    sget-object v0, Lkn3;->X:Lkn3;
 
     :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getContentType()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn3;->f:Ljava/lang/String;
-
     return-object v0
-.end method
 
-.method public final getDuration()J
-    .locals 2
+    nop
 
-    iget-wide v0, p0, Lcn3;->b:J
-
-    return-wide v0
-.end method
-
-.method public final getHeight()I
-    .locals 1
-
-    iget v0, p0, Lcn3;->h:I
-
-    return v0
-.end method
-
-.method public final getType()I
-    .locals 1
-
-    iget v0, p0, Lcn3;->i:I
-
-    return v0
-.end method
-
-.method public final getWidth()I
-    .locals 1
-
-    iget v0, p0, Lcn3;->g:I
-
-    return v0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lcn3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lcn3;->b:J
-
-    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final i()J
-    .locals 2
-
-    iget-wide v0, p0, Lcn3;->c:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ConcatenatedMp4VideoContent(items="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn3;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", duration="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcn3;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMute=true)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

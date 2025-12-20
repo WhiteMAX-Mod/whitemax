@@ -1,107 +1,69 @@
 .class public final Lefg;
-.super Ljava/lang/Object;
+.super Ltlj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lmri;
 
-.field public final b:I
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:Lhf6;
-
-.field public final h:I
-
-.field public final i:[J
-
-.field public final j:[J
-
-.field public final k:I
-
-.field public final l:[Lifg;
+.field public final synthetic b:Lgfg;
 
 
 # direct methods
-.method public constructor <init>(IIJJJJLhf6;I[Lifg;I[J[J)V
+.method public constructor <init>(Lgfg;Lmri;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lefg;->a:I
+    iput-object p1, p0, Lefg;->b:Lgfg;
 
-    iput p2, p0, Lefg;->b:I
-
-    iput-wide p3, p0, Lefg;->c:J
-
-    iput-wide p5, p0, Lefg;->d:J
-
-    iput-wide p7, p0, Lefg;->e:J
-
-    iput-wide p9, p0, Lefg;->f:J
-
-    iput-object p11, p0, Lefg;->g:Lhf6;
-
-    iput p12, p0, Lefg;->h:I
-
-    iput-object p13, p0, Lefg;->l:[Lifg;
-
-    iput p14, p0, Lefg;->k:I
-
-    iput-object p15, p0, Lefg;->i:[J
-
-    move-object/from16 p1, p16
-
-    iput-object p1, p0, Lefg;->j:[J
+    iput-object p2, p0, Lefg;->a:Lmri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhf6;)Lefg;
-    .locals 18
+.method public final b(I)V
+    .locals 2
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lefg;->b:Lgfg;
 
-    new-instance v1, Lefg;
+    const/4 v1, 0x1
 
-    iget-object v2, v0, Lefg;->i:[J
+    iput-boolean v1, v0, Lgfg;->m:Z
 
-    iget-object v3, v0, Lefg;->j:[J
+    iget-object v0, p0, Lefg;->a:Lmri;
 
-    move-object/from16 v16, v2
+    invoke-virtual {v0, p1}, Lmri;->b(I)V
 
-    iget v2, v0, Lefg;->a:I
+    return-void
+.end method
 
-    move-object/from16 v17, v3
+.method public final c(Landroid/graphics/Typeface;)V
+    .locals 2
 
-    iget v3, v0, Lefg;->b:I
+    iget-object v0, p0, Lefg;->b:Lgfg;
 
-    iget-wide v4, v0, Lefg;->c:J
+    iget v1, v0, Lgfg;->c:I
 
-    iget-wide v6, v0, Lefg;->d:J
+    invoke-static {p1, v1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
-    iget-wide v8, v0, Lefg;->e:J
+    move-result-object p1
 
-    iget-wide v10, v0, Lefg;->f:J
+    iput-object p1, v0, Lgfg;->n:Landroid/graphics/Typeface;
 
-    iget v13, v0, Lefg;->h:I
+    const/4 p1, 0x1
 
-    iget-object v14, v0, Lefg;->l:[Lifg;
+    iput-boolean p1, v0, Lgfg;->m:Z
 
-    iget v15, v0, Lefg;->k:I
+    iget-object p1, v0, Lgfg;->n:Landroid/graphics/Typeface;
 
-    move-object/from16 v12, p1
+    const/4 v0, 0x0
 
-    invoke-direct/range {v1 .. v17}, Lefg;-><init>(IIJJJJLhf6;I[Lifg;I[J[J)V
+    iget-object v1, p0, Lefg;->a:Lmri;
 
-    return-object v1
+    invoke-virtual {v1, p1, v0}, Lmri;->c(Landroid/graphics/Typeface;Z)V
+
+    return-void
 .end method

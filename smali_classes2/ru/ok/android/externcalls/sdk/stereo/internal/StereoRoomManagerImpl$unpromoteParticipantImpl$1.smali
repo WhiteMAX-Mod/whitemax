@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;
-.super Lu08;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Loq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->unpromoteParticipantImpl(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lcm6;Lem6;)V
+    value = Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->unpromoteParticipantImpl(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lmq6;Loq6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lu08;",
-        "Lem6;"
+        "Ln58;",
+        "Loq6;"
     }
 .end annotation
 
@@ -28,12 +28,12 @@
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0006\u001a\u00020\u00032\n\u0010\u0002\u001a\u00060\u0000j\u0002`\u0001H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
     d2 = {
-        "Lti1;",
+        "Lzk1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "internalId",
-        "Lqqg;",
+        "Lv2h;",
         "invoke",
-        "(Lti1;)V",
+        "(Lzk1;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -46,18 +46,18 @@
 
 
 # instance fields
-.field final synthetic $onError:Lem6;
+.field final synthetic $onError:Loq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lem6;"
+            "Loq6;"
         }
     .end annotation
 .end field
 
-.field final synthetic $onSuccess:Lcm6;
+.field final synthetic $onSuccess:Lmq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcm6;"
+            "Lmq6;"
         }
     .end annotation
 .end field
@@ -66,27 +66,27 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lcm6;Lem6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lmq6;Loq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;",
-            "Lcm6;",
-            "Lem6;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->this$0:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onSuccess:Lcm6;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onSuccess:Lmq6;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onError:Lem6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onError:Loq6;
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
@@ -97,16 +97,16 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lti1;
+    check-cast p1, Lzk1;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->invoke(Lti1;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->invoke(Lzk1;)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method
 
-.method public final invoke(Lti1;)V
+.method public final invoke(Lzk1;)V
     .locals 3
 
     .line 2
@@ -121,16 +121,16 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;-><init>(Lti1;Z)V
+    invoke-direct {v1, p1, v2}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;-><init>(Lzk1;Z)V
 
     .line 4
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onSuccess:Lcm6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onSuccess:Lmq6;
 
     .line 5
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onError:Lem6;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$unpromoteParticipantImpl$1;->$onError:Loq6;
 
     .line 6
-    invoke-interface {v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor;->promoteParticipant(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Lcm6;Lem6;)V
+    invoke-interface {v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor;->promoteParticipant(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Lmq6;Loq6;)V
 
     return-void
 .end method

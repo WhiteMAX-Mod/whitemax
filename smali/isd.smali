@@ -1,142 +1,159 @@
 .class public final Lisd;
-.super Lcb8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final l:Llrd;
-
-.field public final m:Ls7c;
-
-.field public final n:Z
-
-.field public final o:Ljad;
-
-.field public final p:Ln84;
-
-.field public final q:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final r:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final s:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final t:Lhsd;
-
-.field public final u:Lhsd;
+.field public final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Llrd;Ls7c;Ljad;[Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Lcb8;-><init>()V
+    .line 5
+    invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p1, p0, Lisd;->l:Llrd;
+    move-result-object p1
 
-    iput-object p2, p0, Lisd;->m:Ls7c;
+    invoke-direct {p0, p1}, Lisd;-><init>(Ljava/util/regex/Pattern;)V
 
-    const/4 p1, 0x1
+    return-void
+.end method
 
-    iput-boolean p1, p0, Lisd;->n:Z
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    iput-object p3, p0, Lisd;->o:Ljad;
+    const/4 p2, 0x2
 
-    new-instance p2, Ln84;
+    packed-switch p2, :pswitch_data_0
 
-    const/4 p3, 0x1
+    const/4 p1, 0x0
 
-    invoke-direct {p2, p4, p0, p3}, Ln84;-><init>([Ljava/lang/String;Ljava/lang/Object;I)V
+    .line 1
+    throw p1
 
-    iput-object p2, p0, Lisd;->p:Ln84;
+    :pswitch_0
+    const/16 p2, 0x80
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
+    goto :goto_0
 
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    :pswitch_1
+    const/16 p2, 0x20
 
-    iput-object p2, p0, Lisd;->q:Ljava/util/concurrent/atomic/AtomicBoolean;
+    goto :goto_0
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    :pswitch_2
+    const/4 p2, 0x4
 
-    const/4 p2, 0x0
+    goto :goto_0
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lisd;->r:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lisd;->s:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance p1, Lhsd;
-
-    invoke-direct {p1, p0, p2}, Lhsd;-><init>(Lisd;I)V
-
-    iput-object p1, p0, Lisd;->t:Lhsd;
-
-    new-instance p1, Lhsd;
-
+    :pswitch_3
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Lhsd;-><init>(Lisd;I)V
+    goto :goto_0
 
-    iput-object p1, p0, Lisd;->u:Lhsd;
+    :pswitch_4
+    const/16 p2, 0x10
+
+    goto :goto_0
+
+    :pswitch_5
+    const/16 p2, 0x8
+
+    goto :goto_0
+
+    :pswitch_6
+    const/4 p2, 0x2
+
+    :goto_0
+    and-int/lit8 v0, p2, 0x2
+
+    if-eqz v0, :cond_0
+
+    or-int/lit8 p2, p2, 0x40
+
+    .line 2
+    :cond_0
+    invoke-static {p1, p2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lisd;-><init>(Ljava/util/regex/Pattern;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ljava/util/regex/Pattern;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lisd;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Lisd;->m:Ls7c;
-
-    iget-object v0, v0, Ls7c;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    iget-boolean v0, p0, Lisd;->n:Z
-
-    iget-object v1, p0, Lisd;->l:Llrd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v1, Llrd;->c:Luee;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v1, Llrd;->b:Ljava/util/concurrent/Executor;
-
-    if-nez v0, :cond_1
-
-    :goto_0
-    const/4 v0, 0x0
-
-    :cond_1
-    iget-object v1, p0, Lisd;->t:Lhsd;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final h()V
+.method public final a(Ljava/lang/CharSequence;)Z
     .locals 1
 
-    iget-object v0, p0, Lisd;->m:Ls7c;
+    iget-object v0, p0, Lisd;->a:Ljava/util/regex/Pattern;
 
-    iget-object v0, v0, Ls7c;->b:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    check-cast v0, Ljava/util/Set;
+    move-result-object p1
 
-    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
 
-    return-void
+    move-result p1
+
+    return p1
+.end method
+
+.method public final b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lisd;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lisd;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0}, Ljava/util/regex/Pattern;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

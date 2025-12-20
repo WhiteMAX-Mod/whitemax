@@ -1,129 +1,142 @@
 .class public final Lc7c;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ltw0;
+.field public final synthetic X:Lone/me/pinbars/PinBarsWidget;
 
-.field public final b:Lk18;
-
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ltw0;Lk18;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lc7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    iput-object p1, p0, Lc7c;->a:Ltw0;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lc7c;->b:Lk18;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {p0, p1, p2}, Lc7c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    check-cast p1, Lc7c;
 
-    move-result-object v1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1, p2}, Lc7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v2
+    return-object p2
+.end method
 
-    if-eqz v2, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v0, Lc7c;
 
-    move-result-object v2
+    iget-object v1, p0, Lc7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    check-cast v2, Ljava/util/Map$Entry;
+    invoke-direct {v0, p2, v1}, Lc7c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    iput-object p1, v0, Lc7c;->o:Ljava/lang/Object;
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    check-cast v2, Ld7c;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v3, 0x0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iput-object v3, v2, Ld7c;->g:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lc7c;->o:Ljava/lang/Object;
 
-    iput-object v3, v2, Ld7c;->h:Ljava/lang/CharSequence;
+    check-cast p1, Lhp7;
 
-    iput-object v3, v2, Ld7c;->i:Ljava/lang/CharSequence;
+    instance-of v0, p1, Lgp7;
 
-    iput-object v3, v2, Ld7c;->j:Ljava/lang/CharSequence;
+    if-eqz v0, :cond_0
 
-    iput-object v3, v2, Ld7c;->k:Ljava/lang/String;
+    sget-object v0, Ll7c;->c:Ll7c;
 
-    iput-object v3, v2, Ld7c;->l:Ljava/lang/String;
+    check-cast p1, Lgp7;
 
-    iput-object v3, v2, Ld7c;->m:Lmf4;
+    iget-object p1, p1, Lgp7;->a:Landroid/net/Uri;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Lf3;->p0()Lim4;
 
-    iput-boolean v3, v2, Ld7c;->n:Z
+    move-result-object v0
 
-    iput-boolean v3, v2, Ld7c;->o:Z
+    new-instance v1, Lysb;
 
-    iput-boolean v3, v2, Ld7c;->p:Z
+    const-string v2, "link"
+
+    invoke-direct {v1, v2, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1}, [Lysb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string v1, ":link-intercept"
+
+    invoke-virtual {v0, v1, p1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    instance-of p1, p1, Lfp7;
 
-    return-void
-.end method
+    if-eqz p1, :cond_2
 
-.method public final b(Lpb2;Lsi9;)V
-    .locals 3
+    iget-object p1, p0, Lc7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    iget-object v0, p0, Lc7c;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lx84;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Le7c;
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Lone/me/pinbars/PinBarsWidget;->v0:Ld68;
 
-    invoke-virtual {v0, v1, p2}, Le7c;->a(Lpb2;Lsi9;)Ld7c;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-wide v1, p2, Lpj0;->a:J
+    check-cast p1, Lvq;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast p1, Lyq;
 
-    move-result-object p2
+    invoke-virtual {p1, v0}, Lyq;->a(Landroid/app/Activity;)V
 
-    iget-object v1, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    :cond_1
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v1, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p1
 
-    invoke-virtual {v0, p1}, Ld7c;->i(Lpb2;)V
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    return-void
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

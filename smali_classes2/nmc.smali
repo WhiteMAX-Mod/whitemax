@@ -1,90 +1,113 @@
 .class public final Lnmc;
-.super Landroid/text/style/ClickableSpan;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-.field public b:I
-
-.field public c:Z
-
-.field public d:Lf88;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p2, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    iput-object p1, p0, Lnmc;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    iput p2, p0, Lnmc;->b:I
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lnmc;->c:Z
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Lnmc;->d:Lf88;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lnmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p1, Lf88;->a:Lh88;
+    move-result-object p1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast p1, Lnmc;
 
-    move-result-wide v0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    sget-object v2, Lh88;->d:Ln7;
+    invoke-virtual {p1, p2}, Lnmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v3, v2, Ln7;->a:J
-
-    sub-long v3, v0, v3
-
-    const-wide/16 v5, 0x12c
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_0
-
-    iput-wide v0, v2, Ln7;->a:J
-
-    iget-object p1, p1, Lh88;->a:Le88;
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Li88;->o:Li88;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lnmc;->a:Ljava/lang/String;
-
-    invoke-interface {p1, v2, v0, v1}, Le88;->b(Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
-
-    :cond_0
-    return-void
+    return-object p2
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lnmc;->b:I
+    new-instance v0, Lnmc;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object v1, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    iget-boolean v0, p0, Lnmc;->c:Z
+    invoke-direct {v0, p2, v1}, Lnmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    iput-object p1, v0, Lnmc;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnmc;->o:Ljava/lang/Object;
+
+    check-cast p1, Lamc;
+
+    iget-object v0, p0, Lnmc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+
+    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:Lkxd;
+
+    invoke-virtual {v1}, Lkxd;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Lkxd;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-boolean v2, p1, Lamc;->b:Z
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()V
+
+    :cond_1
+    iget-object v0, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lvci;
+
+    iget-object p1, p1, Lamc;->a:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lbe8;->E(Ljava/util/List;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

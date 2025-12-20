@@ -1,80 +1,51 @@
-.class public final synthetic Lo3g;
+.class public abstract Lo3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La4h;
+.implements Lo6e;
 
 
 # instance fields
-.field public final synthetic a:Lp3g;
+.field public final a:Lf3g;
 
-.field public final synthetic b:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Lyj6;
-
-.field public final synthetic d:J
+.field public c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp3g;ILyj6;J)V
+.method public constructor <init>(Lf3g;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo3g;->a:Lp3g;
+    iput-object p1, p0, Lo3g;->a:Lf3g;
 
-    iput p2, p0, Lo3g;->b:I
-
-    iput-object p3, p0, Lo3g;->c:Lyj6;
-
-    iput-wide p4, p0, Lo3g;->d:J
+    iput-object p2, p0, Lo3g;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final l()V
+    .locals 2
 
-    iget-object v0, p0, Lo3g;->a:Lp3g;
+    iget-boolean v0, p0, Lo3g;->c:Z
 
-    iget v1, p0, Lo3g;->b:I
-
-    iget-object v2, p0, Lo3g;->c:Lyj6;
-
-    iget-wide v3, p0, Lo3g;->d:J
-
-    new-instance v5, Ltu6;
-
-    iget-object v6, v2, Lyj6;->a:Lhf6;
-
-    iget v7, v6, Lhf6;->u:I
-
-    iget v6, v6, Lhf6;->v:I
-
-    const/4 v8, -0x1
-
-    invoke-direct {v5, v1, v8, v7, v6}, Ltu6;-><init>(IIII)V
-
-    iget-object v0, v0, Lp3g;->d:Lggg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0, v5, v3, v4}, Lggg;->a0(Ltu6;J)V
-
-    iget-object v0, v2, Lyj6;->a:Lhf6;
-
-    iget v0, v0, Lhf6;->u:I
-
-    sget-object v0, Lah4;->a:Ljava/util/LinkedHashMap;
-
-    const-class v0, Lah4;
-
-    monitor-enter v0
-
-    monitor-exit v0
+    if-nez v0, :cond_0
 
     return-void
+
+    :cond_0
+    const/16 v0, 0x15
+
+    const-string v1, "statement is closed"
+
+    invoke-static {v0, v1}, Lsmj;->c(ILjava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    throw v0
 .end method

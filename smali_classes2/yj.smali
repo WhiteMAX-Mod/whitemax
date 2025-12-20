@@ -1,27 +1,39 @@
-.class public final Lyj;
+.class public final synthetic Lyj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls4e;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Lhi;
+.field public final synthetic a:Lzj;
 
 
 # direct methods
-.method public constructor <init>(IILhi;)V
+.method public synthetic constructor <init>(Lzj;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lyj;->a:I
+    iput-object p1, p0, Lyj;->a:Lzj;
 
-    iput p2, p0, Lyj;->b:I
+    return-void
+.end method
 
-    iput-object p3, p0, Lyj;->c:Lhi;
 
+# virtual methods
+.method public final a(Lai4;Z)V
+    .locals 0
+
+    iget-object p1, p0, Lyj;->a:Lzj;
+
+    iget-object p1, p1, Lzj;->g:Lpe5;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lpe5;->a()V
+
+    :cond_0
     return-void
 .end method

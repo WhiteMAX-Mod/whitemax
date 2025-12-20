@@ -1,275 +1,104 @@
-.class public final Lw41;
-.super Ldtf;
+.class public final synthetic Lw41;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lum6;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Throwable;
+.field public final synthetic a:I
 
-.field public final synthetic o:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lw41;->o:I
+    iput p1, p0, Lw41;->a:I
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lw41;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onDismiss()V
+    .locals 3
 
-    iget v0, p0, Lw41;->o:I
-
-    check-cast p1, Lz26;
-
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x5
-
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_0
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_1
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x3
-
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_2
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_3
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_4
-    new-instance p1, Lw41;
-
-    const/4 v0, 0x3
+    iget v0, p0, Lw41;->a:I
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v0, p3, v1}, Lw41;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lw41;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lw41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lw41;->o:I
-
-    const-string v1, "fail"
-
-    sget-object v2, Lqqg;->a:Lqqg;
+    iget-object v2, p0, Lw41;->b:Ljava/lang/Object;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast v2, Lojd;
 
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
+    iget-object v0, v2, Lojd;->v0:Lc4a;
 
-    const-string v0, "ViewThemeUtils"
+    if-eqz v0, :cond_0
 
-    const-string v1, "fail to change theme for spans"
+    iget v1, v0, Lc4a;->a:I
 
-    invoke-static {v0, v1, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    packed-switch v1, :pswitch_data_1
 
-    return-object v2
+    goto :goto_0
 
     :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object v0, v0, Lc4a;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
+    check-cast v0, Lone/me/messages/settings/MessagesSettingsScreen;
 
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+    sget-object v1, Lone/me/messages/settings/MessagesSettingsScreen;->w0:[Lp38;
 
-    if-nez v0, :cond_0
-
-    sget-object v0, Lt1b;->a:Lt1b;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {v0}, Lone/me/messages/settings/MessagesSettingsScreen;->z0()Lh77;
 
     move-result-object v0
 
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyi5;
-
-    check-cast v0, Ly3b;
-
-    invoke-virtual {v0, p1}, Ly3b;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    return-object v2
+    :goto_0
+    return-void
 
     :pswitch_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
 
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
+    iput-object v1, v2, Lone/me/chats/forward/ForwardPickerScreen;->H0:Ldog;
 
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
-
-    if-nez v0, :cond_1
-
-    const-string v0, "MiniChatsUpdated"
-
-    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_1
-    throw p1
+    return-void
 
     :pswitch_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast v2, Lxt1;
 
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
+    iput-object v1, v2, Lxt1;->H0:Ldog;
 
-    const-string v0, "ChatVM/MissedContactsController"
-
-    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
+    return-void
 
     :pswitch_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast v2, Lmq6;
 
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
+    invoke-interface {v2}, Lmq6;->invoke()Ljava/lang/Object;
 
-    const-string v0, "py2"
-
-    const-string v1, "catch error in chatUpdateFlow"
-
-    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :pswitch_4
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lw41;->X:Ljava/lang/Throwable;
-
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
-
-    if-nez v0, :cond_2
-
-    const-string v0, "CallChatRepositoryTag"
-
-    const-string v1, "fail no get chat"
-
-    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    return-object v2
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

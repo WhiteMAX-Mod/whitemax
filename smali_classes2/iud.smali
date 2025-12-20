@@ -1,78 +1,53 @@
-.class public final synthetic Liud;
-.super Ljava/lang/Object;
+.class public final Liud;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljud;
+.field public final synthetic Y:Lkud;
 
-.field public final synthetic c:J
+.field public Z:I
+
+.field public d:Lkud;
+
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljud;JI)V
+.method public constructor <init>(Lkud;Ll84;)V
     .locals 0
 
-    iput p4, p0, Liud;->a:I
+    iput-object p1, p0, Liud;->Y:Lkud;
 
-    iput-object p1, p0, Liud;->b:Ljud;
-
-    iput-wide p2, p0, Liud;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Liud;->a:I
+    iput-object p1, p0, Liud;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Liud;->Z:I
 
-    new-instance v0, Liud;
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    iget-object v2, p0, Liud;->b:Ljud;
+    iput p1, p0, Liud;->Z:I
 
-    iget-wide v3, p0, Liud;->c:J
+    iget-object p1, p0, Liud;->Y:Lkud;
 
-    invoke-direct {v0, v2, v3, v4, v1}, Liud;-><init>(Ljud;JI)V
+    const-wide/16 v0, 0x0
 
-    iget-object v1, v2, Ljud;->f:Landroid/os/Handler;
+    invoke-virtual {p1, v0, v1, p0}, Lkud;->a(JLl84;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result-object p1
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Liud;->b:Ljud;
-
-    iget-object v1, v0, Ljud;->m:Ljava/util/LinkedList;
-
-    iget-wide v2, p0, Liud;->c:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ljud;->b()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

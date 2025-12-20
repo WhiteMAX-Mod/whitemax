@@ -3,123 +3,115 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Lll7;
+
+.field public static final f:Lll7;
+
+.field public static final g:Lll7;
+
+.field public static final h:Lll7;
+
+
 # instance fields
 .field public final a:I
 
-.field public final b:[B
+.field public final b:I
 
 .field public final c:I
 
-.field public final d:I
-
 
 # direct methods
-.method public constructor <init>(III[B)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    const-string v0, "\\s+"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lqfg;->d:Ljava/util/regex/Pattern;
+
+    const-string v0, "auto"
+
+    const-string v1, "none"
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lll7;->i(I[Ljava/lang/Object;)Lll7;
+
+    move-result-object v0
+
+    sput-object v0, Lqfg;->e:Lll7;
+
+    const-string v0, "dot"
+
+    const-string v2, "sesame"
+
+    const-string v3, "circle"
+
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lll7;->i(I[Ljava/lang/Object;)Lll7;
+
+    move-result-object v0
+
+    sput-object v0, Lqfg;->f:Lll7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lll7;->i(I[Ljava/lang/Object;)Lll7;
+
+    move-result-object v0
+
+    sput-object v0, Lqfg;->g:Lll7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lll7;->i(I[Ljava/lang/Object;)Lll7;
+
+    move-result-object v0
+
+    sput-object v0, Lqfg;->h:Lll7;
+
+    return-void
+.end method
+
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lqfg;->a:I
 
-    iput-object p4, p0, Lqfg;->b:[B
+    iput p2, p0, Lqfg;->b:I
 
-    iput p2, p0, Lqfg;->c:I
-
-    iput p3, p0, Lqfg;->d:I
+    iput p3, p0, Lqfg;->c:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lqfg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lqfg;
-
-    iget v2, p0, Lqfg;->a:I
-
-    iget v3, p1, Lqfg;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lqfg;->c:I
-
-    iget v3, p1, Lqfg;->c:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lqfg;->d:I
-
-    iget v3, p1, Lqfg;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lqfg;->b:[B
-
-    iget-object p1, p1, Lqfg;->b:[B
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lqfg;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqfg;->b:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lqfg;->c:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lqfg;->d:I
-
-    add-int/2addr v1, v0
-
-    return v1
 .end method

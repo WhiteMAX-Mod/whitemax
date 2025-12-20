@@ -1,237 +1,74 @@
-.class public final Lot3;
+.class public final synthetic Lot3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public a:[I
+.field public final synthetic a:I
 
-.field public b:[I
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-.field public c:I
 
-.field public d:[I
+# direct methods
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;I)V
+    .locals 0
 
-.field public e:[F
+    iput p2, p0, Lot3;->a:I
 
-.field public f:I
+    iput-object p1, p0, Lot3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-.field public g:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:[Ljava/lang/String;
-
-.field public i:I
-
-.field public j:[I
-
-.field public k:[Z
-
-.field public l:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(IF)V
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    iget v0, p0, Lot3;->f:I
+    iget p1, p0, Lot3;->a:I
 
-    iget-object v1, p0, Lot3;->d:[I
+    const/4 v0, 0x1
 
-    array-length v2, v1
+    iget-object v1, p0, Lot3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-    if-lt v0, v2, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    array-length v0, v1
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->D0:I
 
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->d:[I
-
-    iget-object v0, p0, Lot3;->e:[F
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->e:[F
-
-    :cond_0
-    iget-object v0, p0, Lot3;->d:[I
-
-    iget v1, p0, Lot3;->f:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lot3;->e:[F
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lot3;->f:I
-
-    aput p2, p1, v1
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
     return-void
-.end method
 
-.method public final b(II)V
-    .locals 3
+    :pswitch_0
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->D0:I
 
-    iget v0, p0, Lot3;->c:I
+    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:Ld68;
 
-    iget-object v1, p0, Lot3;->a:[I
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    array-length v2, v1
+    move-result-object p1
 
-    if-lt v0, v2, :cond_0
+    check-cast p1, Lpt3;
 
-    array-length v0, v1
+    iget-object v2, p1, Lpt3;->d:Lnu1;
 
-    mul-int/lit8 v0, v0, 0x2
+    iget-object p1, p1, Lpt3;->b:Lfl1;
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    invoke-virtual {v2, p1}, Lnu1;->g(Lfl1;)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->a:[I
-
-    iget-object v0, p0, Lot3;->b:[I
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->b:[I
-
-    :cond_0
-    iget-object v0, p0, Lot3;->a:[I
-
-    iget v1, p0, Lot3;->c:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lot3;->b:[I
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lot3;->c:I
-
-    aput p2, p1, v1
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
     return-void
-.end method
 
-.method public final c(ILjava/lang/String;)V
-    .locals 3
+    nop
 
-    iget v0, p0, Lot3;->i:I
-
-    iget-object v1, p0, Lot3;->g:[I
-
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_0
-
-    array-length v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->g:[I
-
-    iget-object v0, p0, Lot3;->h:[Ljava/lang/String;
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    iput-object v0, p0, Lot3;->h:[Ljava/lang/String;
-
-    :cond_0
-    iget-object v0, p0, Lot3;->g:[I
-
-    iget v1, p0, Lot3;->i:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lot3;->h:[Ljava/lang/String;
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lot3;->i:I
-
-    aput-object p2, p1, v1
-
-    return-void
-.end method
-
-.method public final d(IZ)V
-    .locals 3
-
-    iget v0, p0, Lot3;->l:I
-
-    iget-object v1, p0, Lot3;->j:[I
-
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_0
-
-    array-length v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->j:[I
-
-    iget-object v0, p0, Lot3;->k:[Z
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([ZI)[Z
-
-    move-result-object v0
-
-    iput-object v0, p0, Lot3;->k:[Z
-
-    :cond_0
-    iget-object v0, p0, Lot3;->j:[I
-
-    iget v1, p0, Lot3;->l:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lot3;->k:[Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lot3;->l:I
-
-    aput-boolean p2, p1, v1
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

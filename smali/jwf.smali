@@ -4,26 +4,20 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final b:I
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(II)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ljwf;->a:I
+    iput-wide p1, p0, Ljwf;->a:J
 
-    iput p2, p0, Ljwf;->b:I
+    iput-wide p3, p0, Ljwf;->b:J
 
     return-void
 .end method

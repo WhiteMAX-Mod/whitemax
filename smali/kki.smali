@@ -1,50 +1,19 @@
 .class public final Lkki;
-.super Ljava/lang/Object;
+.super Lj8j;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
-
-# static fields
-.field public static final a:Lkki;
+# instance fields
+.field public final a:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lkki;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkki;->a:Lkki;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(F)V
     .locals 0
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput p1, p0, Lkki;->a:F
 
-    throw p1
+    return-void
 .end method

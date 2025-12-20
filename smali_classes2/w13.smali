@@ -1,265 +1,111 @@
-.class public final synthetic Lw13;
-.super Ljava/lang/Object;
+.class public final Lw13;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lz26;
-.implements Len6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
     .locals 0
 
-    iput p1, p0, Lw13;->a:I
+    iput-object p2, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    iput-object p2, p0, Lw13;->b:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lw13;->a:I
+    check-cast p1, Lx13;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lttg;
-
-    iget-object v0, p0, Lw13;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsac;
-
-    check-cast v0, Lpac;
-
-    iget-object v0, v0, Lpac;->a:Lpv0;
-
-    invoke-interface {v0, p1, p2}, Lcde;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lw13;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object p2, Lg84;->a:Lg84;
+    check-cast p1, Lw13;
 
-    if-ne p1, p2, :cond_0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lw13;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lv03;
-
-    iget-object v0, p0, Lw13;->b:Ljava/lang/Object;
-
-    check-cast v0, Lz26;
-
-    invoke-interface {v0, p1, p2}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_1
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lw13;->a:I
+    new-instance v0, Lw13;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    instance-of v0, p1, Lz26;
+    invoke-direct {v0, p2, v1}, Lw13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
 
-    if-eqz v0, :cond_0
+    iput-object p1, v0, Lw13;->o:Ljava/lang/Object;
 
-    instance-of v0, p1, Len6;
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Lw13;->getFunctionDelegate()Lxm6;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lw13;->o:Ljava/lang/Object;
 
-    check-cast p1, Len6;
+    check-cast p1, Lx13;
 
-    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
+    sget-object v0, Lx13;->a:Lx13;
 
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    goto :goto_0
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
+
+    iget-object p1, p0, Lw13;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+
+    invoke-virtual {p1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->B0()Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    new-instance v0, Ltib;
+
+    invoke-direct {v0, p1}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    sget p1, Lfkb;->b:I
+
+    new-instance v1, Lbhg;
+
+    invoke-direct {v1, p1}, Lbhg;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ltib;->g(Lghg;)V
+
+    invoke-virtual {v0}, Ltib;->i()Lsib;
 
     :cond_0
-    const/4 p1, 0x0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    :goto_0
-    return p1
-
-    :pswitch_0
-    instance-of v0, p1, Lz26;
-
-    if-eqz v0, :cond_1
-
-    instance-of v0, p1, Len6;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lw13;->getFunctionDelegate()Lxm6;
-
-    move-result-object v0
-
-    check-cast p1, Len6;
-
-    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getFunctionDelegate()Lxm6;
-    .locals 9
-
-    iget v0, p0, Lw13;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v1, Lhn6;
-
-    iget-object v0, p0, Lw13;->b:Ljava/lang/Object;
-
-    move-object v5, v0
-
-    check-cast v5, Lsac;
-
-    const-string v7, "send(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x2
-
-    const-class v4, Lsac;
-
-    const-string v6, "send"
-
-    invoke-direct/range {v1 .. v7}, Lgn6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_0
-    new-instance v2, Lhn6;
-
-    iget-object v0, p0, Lw13;->b:Ljava/lang/Object;
-
-    move-object v6, v0
-
-    check-cast v6, Lz26;
-
-    const-string v8, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    const/4 v4, 0x0
-
-    const/4 v3, 0x2
-
-    const-class v5, Lz26;
-
-    const-string v7, "emit"
-
-    invoke-direct/range {v2 .. v8}, Lgn6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lw13;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lw13;->getFunctionDelegate()Lxm6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lw13;->getFunctionDelegate()Lxm6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

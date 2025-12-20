@@ -1,28 +1,24 @@
 .class public final Lly2;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lpy2;
-
-.field public o:I
+.field public final synthetic o:Lm03;
 
 
 # direct methods
-.method public constructor <init>(Lpy2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lm03;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lly2;->Y:Lpy2;
+    iput-object p1, p0, Lly2;->o:Lm03;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lpb2;
+    check-cast p1, Lz16;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,122 +38,53 @@
 
     check-cast p1, Lly2;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lly2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lly2;
+
+    iget-object v0, p0, Lly2;->o:Lm03;
+
+    invoke-direct {p1, v0, p2}, Lly2;-><init>(Lm03;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lly2;
-
-    iget-object v1, p0, Lly2;->Y:Lpy2;
-
-    invoke-direct {v0, v1, p2}, Lly2;-><init>(Lpy2;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lly2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 5
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    sget-object v1, Lg84;->a:Lg84;
+    iget-object p1, p0, Lly2;->o:Lm03;
 
-    iget v2, p0, Lly2;->o:I
+    iget-object p1, p1, Lm03;->f1:Lyl5;
 
-    const/4 v3, 0x1
+    new-instance v0, Luy2;
 
-    if-eqz v2, :cond_1
+    sget v1, Lx7b;->p:I
 
-    if-ne v2, v3, :cond_0
+    sget v2, Lx7b;->o:I
 
-    :try_start_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v3, Ljava/lang/Integer;
 
-    goto :goto_1
+    invoke-direct {v3, v2}, Ljava/lang/Integer;-><init>(I)V
 
-    :catchall_0
-    move-exception p1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    const/4 v4, 0x4
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-direct {v0, v1, v3, v2, v4}, Luy2;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;I)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lly2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lpb2;
-
-    iget-object p1, p1, Lpb2;->b:Lrf2;
-
-    iget-wide v4, p1, Lrf2;->a:J
-
-    iget-object p1, p1, Lrf2;->c:Lof2;
-
-    :try_start_1
-    iget-object v2, p0, Lly2;->Y:Lpy2;
-
-    iget-wide v6, v2, Lpy2;->h:J
-
-    cmp-long v2, v6, v4
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Lly2;->Y:Lpy2;
-
-    iget-object v2, v2, Lpy2;->g:Lof2;
-
-    if-eq v2, p1, :cond_3
-
-    :cond_2
-    iget-object v2, p0, Lly2;->Y:Lpy2;
-
-    iput-object p1, v2, Lpy2;->g:Lof2;
-
-    iget-object p1, p0, Lly2;->Y:Lpy2;
-
-    iput-wide v4, p1, Lpy2;->h:J
-
-    iget-object p1, p0, Lly2;->Y:Lpy2;
-
-    iput v3, p0, Lly2;->o:I
-
-    invoke-virtual {p1, v4, v5, p0}, Lpy2;->b(JLq44;)Lqqg;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-ne v0, v1, :cond_3
-
-    return-object v1
-
-    :goto_0
-    const-string v1, "py2"
-
-    const-string v2, "catch error in chatUpdateFlow.onEach"
-
-    invoke-static {v1, v2, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_1
-    return-object v0
+    return-object p1
 .end method

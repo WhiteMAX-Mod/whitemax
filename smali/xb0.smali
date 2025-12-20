@@ -4,22 +4,37 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/opengl/EGLSurface;
 
-.field public final b:Landroidx/camera/core/ImageCaptureException;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(ILandroidx/camera/core/ImageCaptureException;)V
+.method public constructor <init>(Landroid/opengl/EGLSurface;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxb0;->a:I
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Lxb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iput-object p1, p0, Lxb0;->a:Landroid/opengl/EGLSurface;
+
+    iput p2, p0, Lxb0;->b:I
+
+    iput p3, p0, Lxb0;->c:I
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null eglSurface"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -42,21 +57,27 @@
 
     check-cast p1, Lxb0;
 
-    iget v1, p0, Lxb0;->a:I
+    iget-object v1, p0, Lxb0;->a:Landroid/opengl/EGLSurface;
 
-    iget v3, p1, Lxb0;->a:I
+    iget-object v3, p1, Lxb0;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {v1, v3}, Landroid/opengl/EGLSurface;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Lxb0;->b:I
+
+    iget v3, p1, Lxb0;->b:I
 
     if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lxb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iget v1, p0, Lxb0;->c:I
 
-    iget-object p1, p1, Lxb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iget p1, p1, Lxb0;->c:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
+    if-ne v1, p1, :cond_1
 
     return v0
 
@@ -65,9 +86,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Lxb0;->a:I
+    iget-object v0, p0, Lxb0;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -75,11 +100,13 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lxb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iget v2, p0, Lxb0;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    xor-int/2addr v0, v2
 
-    move-result v1
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lxb0;->c:I
 
     xor-int/2addr v0, v1
 
@@ -87,31 +114,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CaptureError{requestId="
+    const-string v1, "OutputSurface{eglSurface="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lxb0;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", imageCaptureException="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iget-object v1, p0, Lxb0;->a:Landroid/opengl/EGLSurface;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", width="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lxb0;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", height="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lxb0;->c:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

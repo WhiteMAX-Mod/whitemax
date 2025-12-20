@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkq8;
+.implements Lzu8;
 
 
 # virtual methods

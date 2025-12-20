@@ -1,125 +1,177 @@
 .class public final Lelb;
-.super Ljava/lang/Object;
+.super Lcom/google/android/material/tabs/TabLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Handler$Callback;
-
-
-# static fields
-.field public static final c:Ljava/util/concurrent/ExecutorService;
-
-.field public static final d:Ljava/lang/ThreadLocal;
+.implements Ljig;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final i1:Lflb;
 
-.field public final b:Lb7d;
+.field public final j1:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 1
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    const/4 p2, 0x0
 
-    move-result-object v0
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/tabs/TabLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sput-object v0, Lelb;->c:Ljava/util/concurrent/ExecutorService;
+    sget-object p1, Lglb;->a:Lz7g;
 
-    new-instance v1, Ljava/lang/ThreadLocal;
+    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+    move-result-object p1
 
-    sput-object v1, Lelb;->d:Ljava/lang/ThreadLocal;
+    check-cast p1, Lflb;
 
-    new-instance v1, Lmc;
+    iput-object p1, p0, Lelb;->i1:Lflb;
 
-    const/16 v2, 0xc
+    new-instance p1, Lrab;
 
-    invoke-direct {v1, v2}, Lmc;-><init>(I)V
+    const/4 v0, 0x3
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {p1, v0, p0}, Lrab;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Lv2j;->c(ILmq6;)Ld68;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lelb;->j1:Ljava/lang/Object;
+
+    invoke-direct {p0}, Lelb;->getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicator(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Ldc3;->s0:Lole;
+
+    invoke-virtual {p1, p0}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lplb;->i()Ltyf;
+
+    move-result-object p1
+
+    iget p1, p1, Ltyf;->h:I
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorFullWidth(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->setTabGravity(I)V
+
+    invoke-virtual {p0, p2}, Lcom/google/android/material/tabs/TabLayout;->setTabRippleColor(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    new-instance p2, Lc9b;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, v0, p0}, Lc9b;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    const-class p2, Lcom/google/android/material/tabs/TabLayout;
+
+    invoke-static {p2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+
+    move-result-object p2
+
+    const-string v0, "requestedTabMinWidth"
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p2, p0, v0, p1}, Lolj;->c(Lgd3;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lb7d;)V
-    .locals 0
+.method private final getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lelb;->j1:Ljava/lang/Object;
 
-    iput-object p1, p0, Lelb;->b:Lb7d;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    sget-object p1, Lelb;->c:Ljava/util/concurrent/ExecutorService;
+    move-result-object v0
 
-    iput-object p1, p0, Lelb;->a:Ljava/util/concurrent/ExecutorService;
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
 
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
+.method public final onThemeChanged(Lplb;)V
+    .locals 1
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    invoke-interface {p1}, Lplb;->i()Ltyf;
 
-    check-cast p1, Lw9i;
+    move-result-object p1
 
-    iget-boolean v0, p1, Lw9i;->c:Z
+    iget p1, p1, Ltyf;->h:I
 
-    const/4 v1, 0x1
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
 
-    if-eqz v0, :cond_0
+    sget-object p1, Ldc3;->s0:Lole;
 
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lole;->i(Landroid/content/Context;)Ldc3;
+
+    move-result-object p1
+
+    invoke-static {p1, p0}, Ldc3;->g(Ldc3;Landroid/view/ViewGroup;)V
+
+    return-void
+.end method
+
+.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    const/16 v0, 0x28
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_0
-    iget v0, p1, Lw9i;->d:I
+    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    add-int/2addr v0, v1
-
-    iput v0, p1, Lw9i;->d:I
-
-    iget-object v0, p0, Lelb;->b:Lb7d;
-
-    sget-object v2, Lhcf;->u0:Lhcf;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.long.executor.task."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p1, Lw9i;->d:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lw9i;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Lb7d;->log(Lhcf;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget p1, p1, Lw9i;->d:I
-
-    const/4 v0, 0x4
-
-    if-lt p1, v0, :cond_1
-
-    :goto_0
-    return v1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "No task duration check thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

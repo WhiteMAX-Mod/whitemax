@@ -3,141 +3,84 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lur3;
+.implements Lq38;
 
 
-# instance fields
-.field public final a:Lbs3;
+# static fields
+.field public static final a:Ld28;
 
-.field public final synthetic b:Lw5;
+.field public static final b:Lc28;
 
 
 # direct methods
-.method public constructor <init>(Lw5;Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Ly6i;Lbwf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ld28;
 
-    iput-object p1, p0, Ld28;->b:Lw5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lbs3;
+    sput-object v0, Ld28;->a:Ld28;
 
-    invoke-direct {p1, p2, p3, p4, p5}, Lbs3;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Ly6i;Lbwf;)V
+    sget-object v0, Lc28;->b:Lc28;
 
-    iput-object p1, p0, Ld28;->a:Lbs3;
+    sput-object v0, Ld28;->b:Lc28;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Ld28;->a:Lbs3;
+    check-cast p2, Lb28;
 
-    invoke-virtual {v0}, Lbs3;->a()Z
+    invoke-static {p1}, Lw1j;->a(Lkotlinx/serialization/json/internal/b;)V
 
-    move-result v0
+    sget-object v0, Leyf;->a:Leyf;
 
-    return v0
+    sget-object v1, Lm18;->a:Lm18;
+
+    new-instance v2, Ljd8;
+
+    invoke-direct {v2, v0, v1}, Ljd8;-><init>(Lq38;Lq38;)V
+
+    invoke-virtual {v2, p1, p2}, Ljd8;->a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final b()Los3;
-    .locals 1
+.method public final b(Lll4;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Ld28;->a:Lbs3;
+    invoke-static {p1}, Lw1j;->b(Lll4;)Lkotlinx/serialization/json/internal/a;
 
-    invoke-virtual {v0}, Lbs3;->b()Los3;
+    new-instance v0, Lb28;
 
-    move-result-object v0
+    sget-object v1, Leyf;->a:Leyf;
+
+    sget-object v2, Lm18;->a:Lm18;
+
+    new-instance v3, Ljd8;
+
+    invoke-direct {v3, v1, v2}, Ljd8;-><init>(Lq38;Lq38;)V
+
+    invoke-virtual {v3, p1}, Li0;->i(Lll4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Map;
+
+    invoke-direct {v0, p1}, Lb28;-><init>(Ljava/util/Map;)V
 
     return-object v0
 .end method
 
-.method public final c(Ltr3;)V
+.method public final d()Lvoe;
     .locals 1
 
-    iget-object v0, p0, Ld28;->a:Lbs3;
+    sget-object v0, Ld28;->b:Lc28;
 
-    invoke-virtual {v0, p1}, Lbs3;->c(Ltr3;)V
-
-    return-void
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-object v0, p0, Ld28;->a:Lbs3;
-
-    invoke-virtual {v0}, Lbs3;->d()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final e(Ltr3;)V
-    .locals 1
-
-    iget-object v0, p0, Ld28;->a:Lbs3;
-
-    invoke-virtual {v0, p1}, Lbs3;->e(Ltr3;)V
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    iget-object v0, p0, Ld28;->a:Lbs3;
-
-    invoke-virtual {v0}, Lbs3;->f()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 2
-
-    iget-object v0, p0, Ld28;->a:Lbs3;
-
-    invoke-virtual {v0}, Lbs3;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ld28;->b:Lw5;
-
-    const/16 v1, 0x23
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llv4;
-
-    invoke-virtual {v0}, Llv4;->e()V
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final invalidate()V
-    .locals 1
-
-    iget-object v0, p0, Ld28;->a:Lbs3;
-
-    invoke-virtual {v0}, Lbs3;->invalidate()V
-
-    return-void
+    return-object v0
 .end method

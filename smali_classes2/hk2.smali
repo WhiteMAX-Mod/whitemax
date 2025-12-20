@@ -1,100 +1,79 @@
 .class public final Lhk2;
-.super Ldtf;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:J
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(IJJLjava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {p0, p2, p3}, Lkk0;-><init>(J)V
 
-    const/4 p2, 0x2
+    iput-object p6, p0, Lhk2;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Lhk2;->c:J
+
+    iput p1, p0, Lhk2;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Lhk2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, "ChatJoinEvent{link=\'"
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Lhk2;
+    iget-object v1, p0, Lhk2;->b:Ljava/lang/String;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Lhk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "\', chatId="
 
-    return-object p2
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-wide v1, p0, Lhk2;->c:J
 
-    new-instance v0, Lhk2;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    const-string v1, ", type="
 
-    invoke-direct {v0, p2, v1}, Lhk2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lhk2;->o:Ljava/lang/Object;
+    iget v1, p0, Lhk2;->d:I
 
-    return-object v0
-.end method
+    invoke-static {v1}, Lx02;->y(I)Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result-object v1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lhk2;->o:Ljava/lang/Object;
+    const/16 v1, 0x7d
 
-    check-cast p1, Ljava/lang/Number;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v1
 
-    iget-object v0, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lr00;
-
-    const/16 v1, 0x64
-
-    int-to-float v1, v1
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lkti;->d(F)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v0
 .end method

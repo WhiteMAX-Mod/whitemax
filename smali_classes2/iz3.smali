@@ -1,73 +1,123 @@
-.class public abstract synthetic Liz3;
+.class public final Liz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public a:J
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:J
+
+.field public f:Ljava/util/List;
+
+.field public g:J
+
+.field public h:J
+
+.field public i:Loz3;
+
+.field public j:I
+
+.field public k:Lpz3;
+
+.field public l:I
+
+.field public m:I
+
+.field public n:Ljava/util/List;
+
+.field public o:Ljava/lang/String;
+
+.field public p:Ljava/lang/String;
+
+.field public q:Ljava/lang/String;
+
+.field public r:J
+
+.field public s:J
+
+.field public t:J
+
+.field public u:Llz3;
+
+.field public v:[I
+
+.field public w:Lnz3;
+
+.field public x:Ljava/lang/String;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final a()Lqz3;
+    .locals 1
 
-    const/4 v0, 0x7
+    iget-object v0, p0, Liz3;->k:Lpz3;
 
-    invoke-static {v0}, Laz1;->y(I)[I
+    if-nez v0, :cond_0
+
+    sget-object v0, Lpz3;->b:Lpz3;
+
+    iput-object v0, p0, Liz3;->k:Lpz3;
+
+    :cond_0
+    iget v0, p0, Liz3;->l:I
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Liz3;->l:I
+
+    :cond_1
+    iget-object v0, p0, Liz3;->n:Ljava/util/List;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Liz3;->n:Ljava/util/List;
+
+    :cond_2
+    iget-object v0, p0, Liz3;->f:Ljava/util/List;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_3
+    sget-object v0, Lkz3;->e:Lkz3;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    array-length v0, v0
+    iput-object v0, p0, Liz3;->f:Ljava/util/List;
+
+    :cond_4
+    iget-object v0, p0, Liz3;->v:[I
+
+    if-nez v0, :cond_5
+
+    const/4 v0, 0x0
 
     new-array v0, v0, [I
 
-    const/4 v1, 0x1
+    iput-object v0, p0, Liz3;->v:[I
 
-    const/4 v2, 0x6
+    :cond_5
+    new-instance v0, Lqz3;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, p0}, Lqz3;-><init>(Liz3;)V
 
-    :catch_0
-    const/4 v2, 0x5
-
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Liz3;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lhz3;->values()[Lhz3;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v2, 0x0
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    aput v3, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Liz3;->$EnumSwitchMapping$1:[I
-
-    return-void
+    return-object v0
 .end method

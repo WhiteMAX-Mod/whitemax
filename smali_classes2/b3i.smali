@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements La3i;
 
+# virtual methods
+.method public final serializer()Lq38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
-# instance fields
-.field public final a:Lyl7;
+    sget-object v0, La3i;->a:La3i;
 
-
-# direct methods
-.method public constructor <init>(Lyl7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb3i;->a:Lyl7;
-
-    return-void
+    return-object v0
 .end method

@@ -1,97 +1,111 @@
 .class public final Lff2;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final l:Lff2;
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lyf2;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lyf2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lff2;
+    iput-object p1, p0, Lff2;->X:Lyf2;
 
-    const/4 v10, 0x0
+    const/4 p1, 0x2
 
-    const/4 v11, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v0 .. v11}, Lff2;-><init>(ZZZZZZZZZZZ)V
-
-    sput-object v0, Lff2;->l:Lff2;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ZZZZZZZZZZZ)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lbb2;
 
-    iput-boolean p1, p0, Lff2;->a:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-boolean p2, p0, Lff2;->b:Z
+    invoke-virtual {p0, p1, p2}, Lff2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-boolean p3, p0, Lff2;->c:Z
+    move-result-object p1
 
-    iput-boolean p4, p0, Lff2;->d:Z
+    check-cast p1, Lff2;
 
-    iput-boolean p5, p0, Lff2;->e:Z
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iput-boolean p6, p0, Lff2;->f:Z
+    invoke-virtual {p1, p2}, Lff2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-boolean p7, p0, Lff2;->g:Z
+    return-object p2
+.end method
 
-    iput-boolean p8, p0, Lff2;->h:Z
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-boolean p9, p0, Lff2;->i:Z
+    new-instance v0, Lff2;
 
-    iput-boolean p10, p0, Lff2;->j:Z
+    iget-object v1, p0, Lff2;->X:Lyf2;
 
-    iput-boolean p11, p0, Lff2;->k:Z
+    invoke-direct {v0, v1, p2}, Lff2;-><init>(Lyf2;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    iput-object p1, v0, Lff2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lff2;->o:Ljava/lang/Object;
+
+    check-cast p1, Lbb2;
+
+    iget-object v0, p0, Lff2;->X:Lyf2;
+
+    iget-object v1, v0, Lma2;->i:Lhof;
+
+    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lbb2;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v2, Lbb2;->b:Lab2;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    sget-object v3, Lab2;->b:Lab2;
+
+    if-ne v2, v3, :cond_1
+
+    invoke-virtual {v1, p1}, Lhof;->setValue(Ljava/lang/Object;)V
+
+    :cond_1
+    sget-object p1, Lyf2;->B:[Lp38;
+
+    invoke-virtual {v0}, Lyf2;->u()Lla2;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lma2;->d(Lla2;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

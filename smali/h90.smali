@@ -2,222 +2,229 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final a:I
 
-.field public final b:D
+# static fields
+.field public static final a:Lh90;
 
-.field public final c:Ljava/lang/Throwable;
+.field public static final b:Lez5;
+
+.field public static final c:Lez5;
+
+.field public static final d:Lez5;
+
+.field public static final e:Lez5;
+
+.field public static final f:Lez5;
+
+.field public static final g:Lez5;
+
+.field public static final h:Lez5;
+
+.field public static final i:Lez5;
+
+.field public static final j:Lez5;
+
+.field public static final k:Lez5;
+
+.field public static final l:Lez5;
+
+.field public static final m:Lez5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Lh90;
 
-    const/4 v1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput-object v0, Lh90;->a:Lh90;
 
-    move-result-object v1
+    const-string v0, "sdkVersion"
 
-    const/4 v2, 0x3
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v2
+    sput-object v0, Lh90;->b:Lez5;
 
-    const/4 v3, 0x4
+    const-string v0, "model"
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
 
-    move-result-object v3
+    move-result-object v0
 
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Integer;
+    sput-object v0, Lh90;->c:Lez5;
 
-    move-result-object v1
+    const-string v0, "hardware"
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    sput-object v0, Lh90;->d:Lez5;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    const-string v0, "device"
 
-    return-void
-.end method
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
 
-.method public constructor <init>(IDLjava/lang/Throwable;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lh90;->e:Lez5;
 
-    iput p1, p0, Lh90;->a:I
+    const-string v0, "product"
 
-    iput-wide p2, p0, Lh90;->b:D
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
 
-    iput-object p4, p0, Lh90;->c:Ljava/lang/Throwable;
+    move-result-object v0
+
+    sput-object v0, Lh90;->f:Lez5;
+
+    const-string v0, "osBuild"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->g:Lez5;
+
+    const-string v0, "manufacturer"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->h:Lez5;
+
+    const-string v0, "fingerprint"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->i:Lez5;
+
+    const-string v0, "locale"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->j:Lez5;
+
+    const-string v0, "country"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->k:Lez5;
+
+    const-string v0, "mccMnc"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->l:Lez5;
+
+    const-string v0, "applicationBuild"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lh90;->m:Lez5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    check-cast p1, Lqd;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lxwa;
 
-    return v0
+    check-cast p1, Lda0;
 
-    :cond_0
-    instance-of v1, p1, Lh90;
+    iget-object v0, p1, Lda0;->a:Ljava/lang/Integer;
 
-    const/4 v2, 0x0
+    sget-object v1, Lh90;->b:Lez5;
 
-    if-eqz v1, :cond_2
+    invoke-interface {p2, v1, v0}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    check-cast p1, Lh90;
+    sget-object v0, Lh90;->c:Lez5;
 
-    iget v1, p1, Lh90;->a:I
+    iget-object v1, p1, Lda0;->b:Ljava/lang/String;
 
-    iget-object v3, p1, Lh90;->c:Ljava/lang/Throwable;
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    iget v4, p0, Lh90;->a:I
+    sget-object v0, Lh90;->d:Lez5;
 
-    if-ne v4, v1, :cond_2
+    iget-object v1, p1, Lda0;->c:Ljava/lang/String;
 
-    iget-wide v4, p0, Lh90;->b:D
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
+    sget-object v0, Lh90;->e:Lez5;
 
-    move-result-wide v4
+    iget-object v1, p1, Lda0;->d:Ljava/lang/String;
 
-    iget-wide v6, p1, Lh90;->b:D
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
+    sget-object v0, Lh90;->f:Lez5;
 
-    move-result-wide v6
+    iget-object v1, p1, Lda0;->e:Ljava/lang/String;
 
-    cmp-long p1, v4, v6
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    if-nez p1, :cond_2
+    sget-object v0, Lh90;->g:Lez5;
 
-    iget-object p1, p0, Lh90;->c:Ljava/lang/Throwable;
+    iget-object v1, p1, Lda0;->f:Ljava/lang/String;
 
-    if-nez p1, :cond_1
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    if-nez v3, :cond_2
+    sget-object v0, Lh90;->h:Lez5;
 
-    goto :goto_0
+    iget-object v1, p1, Lda0;->g:Ljava/lang/String;
 
-    :cond_1
-    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    move-result p1
+    sget-object v0, Lh90;->i:Lez5;
 
-    if-eqz p1, :cond_2
+    iget-object v1, p1, Lda0;->h:Ljava/lang/String;
 
-    :goto_0
-    return v0
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    :cond_2
-    return v2
-.end method
+    sget-object v0, Lh90;->j:Lez5;
 
-.method public final hashCode()I
-    .locals 7
+    iget-object v1, p1, Lda0;->i:Ljava/lang/String;
 
-    iget v0, p0, Lh90;->a:I
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    const v1, 0xf4243
+    sget-object v0, Lh90;->k:Lez5;
 
-    xor-int/2addr v0, v1
+    iget-object v1, p1, Lda0;->j:Ljava/lang/String;
 
-    mul-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    iget-wide v2, p0, Lh90;->b:D
+    sget-object v0, Lh90;->l:Lez5;
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+    iget-object v1, p1, Lda0;->k:Ljava/lang/String;
 
-    move-result-wide v4
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    const/16 v6, 0x20
+    sget-object v0, Lh90;->m:Lez5;
 
-    ushr-long/2addr v4, v6
+    iget-object p1, p1, Lda0;->l:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    move-result-wide v2
-
-    xor-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lh90;->c:Ljava/lang/Throwable;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AudioStats{audioState="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lh90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioAmplitudeInternal="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lh90;->b:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorCause="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh90;->c:Ljava/lang/Throwable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

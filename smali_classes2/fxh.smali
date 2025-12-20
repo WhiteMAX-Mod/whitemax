@@ -1,61 +1,120 @@
-.class public final Lfxh;
-.super Lgxh;
+.class public final synthetic Lfxh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final a:Lfxh;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkxh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lkxh;I)V
+    .locals 0
 
-    new-instance v0, Lfxh;
+    iput p2, p0, Lfxh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+    iput-object p1, p0, Lfxh;->b:Lkxh;
 
-    sput-object v0, Lfxh;->a:Lfxh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lfxh;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lfxh;->b:Lkxh;
 
-    :cond_0
-    instance-of p1, p1, Lfxh;
+    iget-object v0, v0, Lkxh;->s0:Lq70;
 
-    if-nez p1, :cond_1
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
+    check-cast p1, Ljava/lang/Integer;
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-.method public final hashCode()I
-    .locals 1
+    move-result p1
 
-    const v0, 0x7af79418
+    invoke-virtual {v0, p1}, Lq70;->setLinesColor(I)V
 
-    return v0
-.end method
+    return-void
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lfxh;->b:Lkxh;
 
-    const-string v0, "TooLargeText"
+    iget-object v0, v0, Lkxh;->u0:Landroid/widget/TextView;
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lfxh;->b:Lkxh;
+
+    iget-object v0, v0, Lkxh;->s0:Lq70;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lq70;->setLinesColor(I)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lfxh;->b:Lkxh;
+
+    iget-object v0, v0, Lkxh;->u0:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

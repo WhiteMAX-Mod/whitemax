@@ -1,23 +1,22 @@
 .class public final Lbjc;
-.super Lcjc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcjc;
 
 
 # instance fields
-.field public final a:Lgdc;
-
-.field public final b:I
+.field public final a:Lfhg;
 
 
 # direct methods
-.method public constructor <init>(Lgdc;I)V
+.method public constructor <init>(Lfhg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbjc;->a:Lgdc;
-
-    iput p2, p0, Lbjc;->b:I
+    iput-object p1, p0, Lbjc;->a:Lfhg;
 
     return-void
 .end method
@@ -25,135 +24,74 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     instance-of v0, p1, Lbjc;
 
     if-nez v0, :cond_1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lbjc;
 
-    iget-object v0, p0, Lbjc;->a:Lgdc;
+    iget-object v0, p0, Lbjc;->a:Lfhg;
 
-    iget-object v1, p1, Lbjc;->a:Lgdc;
+    iget-object p1, p1, Lbjc;->a:Lfhg;
 
-    invoke-virtual {v0, v1}, Lgdc;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lfhg;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget v0, p0, Lbjc;->b:I
-
-    iget p1, p1, Lbjc;->b:I
-
-    if-ne v0, p1, :cond_3
+    if-nez p1, :cond_2
 
     :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_1
     const/4 p1, 0x0
 
     return p1
-.end method
 
-.method public final getItemId()J
-    .locals 2
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Lbjc;->a:Lgdc;
-
-    iget-wide v0, v0, Lgdc;->a:J
-
-    return-wide v0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lbjc;->a:Lgdc;
-
-    invoke-virtual {v0}, Lgdc;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Lutb;->k(III)I
-
-    move-result v0
-
-    iget v1, p0, Lbjc;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
     .locals 1
 
-    iget v0, p0, Lbjc;->b:I
+    iget-object v0, p0, Lbjc;->a:Lfhg;
+
+    invoke-virtual {v0}, Lfhg;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lbjc;->b:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lj6j;->c(I)Ljava/lang/String;
+    const-string v1, "Text(text="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lbjc;->a:Lfhg;
 
-    const-string v2, "Result(cellModel="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, ")"
 
-    iget-object v2, p0, Lbjc;->a:Lgdc;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", type="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "CHAT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", itemViewType="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

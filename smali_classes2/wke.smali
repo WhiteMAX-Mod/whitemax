@@ -1,118 +1,111 @@
 .class public final Lwke;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lele;
+.field public final a:Z
 
-.field public o:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lele;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lwke;->X:Lele;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-boolean p1, p0, Lwke;->a:Z
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lwke;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lf84;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lwke;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lwke;
 
-    move-result-object p1
-
-    check-cast p1, Lwke;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lwke;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lwke;
-
-    iget-object v0, p0, Lwke;->X:Lele;
-
-    invoke-direct {p1, v0, p2}, Lwke;-><init>(Lele;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lwke;->o:I
-
-    iget-object v1, p0, Lwke;->X:Lele;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lwke;
 
-    iget-object p1, v1, Lele;->b:Los6;
+    iget-boolean v0, p0, Lwke;->a:Z
 
-    iput v2, p0, Lwke;->o:I
+    iget-boolean v1, p1, Lwke;->a:Z
 
-    invoke-virtual {p1, p0}, Los6;->d(Lq44;)Ljava/lang/Object;
+    if-eq v0, v1, :cond_2
 
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_0
 
     :cond_2
+    iget-boolean v0, p0, Lwke;->b:Z
+
+    iget-boolean p1, p1, Lwke;->b:Z
+
+    if-eq v0, p1, :cond_3
+
     :goto_0
-    check-cast p1, Lfre;
+    const/4 p1, 0x0
 
-    iget-object v0, v1, Lele;->D0:Ltcf;
+    return p1
 
-    invoke-virtual {v0, p1}, Ltcf;->setValue(Ljava/lang/Object;)V
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    return p1
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lwke;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lwke;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", showEmptyAlbums="
+
+    const-string v1, ")"
+
+    const-string v2, "SelectAlbumMode(onlyPhotoAlbums="
+
+    iget-boolean v3, p0, Lwke;->a:Z
+
+    iget-boolean v4, p0, Lwke;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

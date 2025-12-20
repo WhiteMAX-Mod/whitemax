@@ -1,62 +1,96 @@
 .class public final Lag2;
-.super Ld2f;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# virtual methods
-.method public final F(Lbg2;)V
-    .locals 7
 
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+# instance fields
+.field public final synthetic X:Lvd2;
 
-    check-cast v0, Lzf2;
+.field public final synthetic o:Lbg2;
 
-    iget-object v1, p1, Lbg2;->a:Ls5g;
 
-    invoke-virtual {v0, v1}, Lzf2;->setTitle(Ls5g;)V
+# direct methods
+.method public constructor <init>(Lbg2;Lvd2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iget-object v1, p1, Lbg2;->b:Ls5g;
+    iput-object p1, p0, Lag2;->o:Lbg2;
 
-    invoke-virtual {v0, v1}, Lzf2;->setSubtitle(Ls5g;)V
+    iput-object p2, p0, Lag2;->X:Lvd2;
 
-    iget-object v1, p1, Lbg2;->c:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iget-object v2, p1, Lbg2;->d:Ljava/lang/CharSequence;
-
-    iget-wide v3, p1, Lbg2;->o:J
-
-    iget-object v5, p1, Lbg2;->X:Lyd0;
-
-    iget-object v6, v0, Lzf2;->a:Luxa;
-
-    invoke-virtual {v6, v5}, Luxa;->setCustomOverlay(Lyd0;)V
-
-    iget-object v5, v0, Lzf2;->a:Luxa;
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    if-nez v2, :cond_0
-
-    const-string v2, ""
-
-    :cond_0
-    invoke-static {v5, v1, v3, v2}, Luxa;->n(Luxa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lbg2;->Y:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Lzf2;->setDescriptions(Ljava/util/List;)V
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic z(Lt98;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lbg2;
+    check-cast p1, Lac4;
 
-    invoke-virtual {p0, p1}, Lag2;->F(Lbg2;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lag2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lag2;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lag2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lag2;
+
+    iget-object v0, p0, Lag2;->o:Lbg2;
+
+    iget-object v1, p0, Lag2;->X:Lvd2;
+
+    invoke-direct {p1, v0, v1, p2}, Lag2;-><init>(Lbg2;Lvd2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lag2;->o:Lbg2;
+
+    iget-object p1, p1, Lbg2;->c:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lca3;
+
+    iget-object v0, p0, Lag2;->X:Lvd2;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lca3;->j()Lch2;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lch2;->j0(Ljava/util/List;)Lwea;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

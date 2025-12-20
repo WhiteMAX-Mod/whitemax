@@ -1,47 +1,33 @@
-.class public final Lx28;
+.class public interface abstract Lx28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkyg;
+.implements Ljava/io/Flushable;
+.implements Ljava/io/Closeable;
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Ln5g;
-    .locals 1
+.method public abstract Q(Ljava/io/InputStreamReader;)V
+.end method
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+.method public abstract j(Ljava/lang/String;)V
+.end method
 
-    move-result p2
+.method public abstract l0()V
+.end method
 
-    const/16 v0, 0x3c
+.method public abstract n()V
+.end method
 
-    if-lt p2, v0, :cond_0
+.method public abstract p()V
+.end method
 
-    const-class p2, Lx28;
+.method public abstract p0(Ljava/lang/String;)Lx28;
+.end method
 
-    invoke-static {p2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+.method public abstract q()V
+.end method
 
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lapi;->b(ILca3;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    new-instance p2, Ln5g;
-
-    invoke-direct {p2, p1}, Ln5g;-><init>(I)V
-
-    return-object p2
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
+.method public abstract r()V
 .end method

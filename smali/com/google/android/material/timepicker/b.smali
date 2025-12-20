@@ -61,17 +61,17 @@
 
     sub-int/2addr v1, v3
 
-    iget v3, v0, Ld7d;->G0:I
+    iget v3, v0, Lhgd;->G0:I
 
     if-eq v1, v3, :cond_1
 
-    iput v1, v0, Ld7d;->G0:I
+    iput v1, v0, Lhgd;->G0:I
 
     invoke-virtual {v0}, Lcom/google/android/material/timepicker/ClockFaceView;->v()V
 
     iget-object v1, v0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
 
-    iget v0, v0, Ld7d;->G0:I
+    iget v0, v0, Lhgd;->G0:I
 
     iput v0, v1, Lcom/google/android/material/timepicker/ClockHandView;->y0:I
 

@@ -1,38 +1,39 @@
-.class public final Lnhg;
+.class public abstract Lnhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzde;
-
-
-# instance fields
-.field public final a:Lzde;
-
-.field public final b:Lem6;
-
 
 # direct methods
-.method public constructor <init>(Lzde;Lem6;)V
+.method public static a(Landroid/text/PrecomputedText;)Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnhg;->a:Lzde;
-
-    iput-object p2, p0, Lnhg;->b:Lem6;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
+    .locals 0
 
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+    invoke-virtual {p0}, Landroid/icu/text/DecimalFormatSymbols;->getDigitStrings()[Ljava/lang/String;
 
-    new-instance v0, Lmhg;
+    move-result-object p0
 
-    invoke-direct {v0, p0}, Lmhg;-><init>(Lnhg;)V
+    return-object p0
+.end method
 
-    return-object v0
+.method public static c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getTextMetricsParams()Landroid/text/PrecomputedText$Params;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/widget/TextView;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
+
+    return-void
 .end method

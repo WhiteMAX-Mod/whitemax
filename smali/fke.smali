@@ -1,146 +1,85 @@
-.class public abstract Lfke;
-.super Ljava/util/AbstractSet;
+.class public final Lfke;
+.super Ldke;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final j:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Lvgd;JJJJLjava/util/List;JLjava/util/List;JJ)V
+    .locals 17
 
-    iput p1, p0, Lfke;->a:I
+    move-object/from16 v0, p0
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    move-object/from16 v1, p1
+
+    move-wide/from16 v2, p2
+
+    move-wide/from16 v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-object/from16 v10, p10
+
+    move-wide/from16 v11, p11
+
+    move-wide/from16 v13, p14
+
+    move-wide/from16 v15, p16
+
+    invoke-direct/range {v0 .. v16}, Ldke;-><init>(Lvgd;JJJJLjava/util/List;JJJ)V
+
+    move-object/from16 v1, p13
+
+    iput-object v1, v0, Lfke;->j:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public removeAll(Ljava/util/Collection;)Z
-    .locals 3
+.method public final e(J)J
+    .locals 0
 
-    iget v0, p0, Lfke;->a:I
+    iget-object p1, p0, Lfke;->j:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Lbvi;->d(Lfke;Ljava/util/Collection;)Z
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
 
-    return p1
+    int-to-long p1, p1
 
-    :pswitch_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-wide p1
+.end method
 
-    instance-of v0, p1, Ljava/util/Set;
+.method public final i(Liwd;J)Lvgd;
+    .locals 2
 
-    const/4 v1, 0x0
+    iget-wide v0, p0, Ldke;->d:J
 
-    if-eqz v0, :cond_1
+    sub-long/2addr p2, v0
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    long-to-int p1, p2
 
-    move-result v0
+    iget-object p2, p0, Lfke;->j:Ljava/util/List;
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    if-le v0, v2, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lvgd;
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p0, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    or-int/2addr v1, v0
-
-    goto :goto_1
-
-    :cond_2
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public retainAll(Ljava/util/Collection;)Z
+.method public final j()Z
     .locals 1
 
-    iget v0, p0, Lfke;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

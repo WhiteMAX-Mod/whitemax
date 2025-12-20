@@ -1,52 +1,48 @@
-.class public abstract Lj0d;
+.class public final synthetic Lj0d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmm4;
 
 
-# static fields
-.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a087f
+# instance fields
+.field public final synthetic a:Z
 
-.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a0880
+.field public final synthetic b:Ljava/lang/Long;
 
-.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a0881
+.field public final synthetic c:Ll0d;
 
-.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0882
 
-.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a0883
+# direct methods
+.method public synthetic constructor <init>(ZLjava/lang/Long;Ll0d;)V
+    .locals 0
 
-.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a0884
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a0885
+    iput-boolean p1, p0, Lj0d;->a:Z
 
-.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a0886
+    iput-object p2, p0, Lj0d;->b:Ljava/lang/Long;
 
-.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a0887
+    iput-object p3, p0, Lj0d;->c:Ll0d;
 
-.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a0888
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a0889
 
-.field public static oneme_stickers_settings_menu_share:I = 0x7f0a088a
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a088b
+    new-instance v0, Lone/me/qrscanner/QrScannerWidget;
 
-.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a088c
+    iget-boolean v1, p0, Lj0d;->a:Z
 
-.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a088d
+    iget-object v2, p0, Lj0d;->b:Ljava/lang/Long;
 
-.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a088e
+    iget-object v3, p0, Lj0d;->c:Ll0d;
 
-.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a088f
+    invoke-direct {v0, v1, v2, v3}, Lone/me/qrscanner/QrScannerWidget;-><init>(ZLjava/lang/Long;Ll0d;)V
 
-.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a0890
-
-.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a0891
-
-.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a0892
-
-.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a0893
-
-.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a0894
-
-.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a0895
-
-.field public static oneme_stickers_settings_toolbar:I = 0x7f0a0896
+    return-object v0
+.end method

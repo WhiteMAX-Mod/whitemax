@@ -1,90 +1,97 @@
 .class public final Lsmi;
-.super Ljava/lang/Object;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Loq6;
 
 
-# static fields
-.field public static final a:Lsmi;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnbf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lnbf;I)V
+    .locals 0
 
-    new-instance v0, Lsmi;
+    iput p2, p0, Lsmi;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsmi;->b:Lnbf;
 
-    sput-object v0, Lsmi;->a:Lsmi;
+    const/4 p1, 0x1
 
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lsmi;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/String;
+
+    iget-object p1, p0, Lsmi;->b:Lnbf;
+
+    invoke-static {p1}, Lnbf;->access$getMainLoopHandler$p(Lnbf;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lnbf;->access$getServerPingTimeoutMs$p(Lnbf;)J
+
+    move-result-wide v1
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/String;
+
+    iget-object v0, p0, Lsmi;->b:Lnbf;
+
+    invoke-virtual {v0}, Lnbf;->getSignalingLogger()Lyaf;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lyaf;->b:Ldgd;
+
+    invoke-interface {v1}, Ldgd;->shouldHideSensitiveInformation()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1}, Ltoj;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    throw p1
+    :cond_0
+    iget-object v1, v0, Lyaf;->a:Lcgd;
+
+    iget-object v0, v0, Lyaf;->d:Ljava/lang/String;
+
+    const-string v2, "May be ERROR, socket is already with "
+
+    invoke-static {v2, p1, v1, v0}, Lxfh;->o(Ljava/lang/String;Ljava/lang/String;Lcgd;Ljava/lang/String;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

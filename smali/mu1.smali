@@ -1,24 +1,51 @@
 .class public final Lmu1;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# instance fields
+.field public final synthetic X:Lnu1;
 
-# static fields
-.field public static final a:Lmu1;
+.field public Y:I
+
+.field public d:Lnu1;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnu1;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lmu1;
+    iput-object p1, p0, Lmu1;->X:Lnu1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmu1;->a:Lmu1;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lmu1;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lmu1;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lmu1;->Y:I
+
+    iget-object p1, p0, Lmu1;->X:Lnu1;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1, p0}, Lnu1;->e(JLl84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

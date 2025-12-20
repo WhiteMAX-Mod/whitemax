@@ -1,193 +1,112 @@
 .class public final Lb83;
-.super Ld2;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Ler6;
 
 
 # instance fields
-.field public final a:Lxx7;
+.field public synthetic X:Le14;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lxx7;)V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput p3, p0, Lb83;->o:I
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb83;->a:Lxx7;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->B()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final R()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->R()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final W()Z
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->W()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a0()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->a0()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->hasNext()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final n()V
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->n()V
-
-    return-void
-.end method
-
-.method public final name()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final p()V
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->p()V
-
-    return-void
-.end method
-
-.method public final peek()I
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->peek()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final q()V
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->q()V
-
-    return-void
-.end method
-
-.method public final r()V
-    .locals 1
-
-    iget-object v0, p0, Lb83;->a:Lxx7;
-
-    invoke-interface {v0}, Lxx7;->r()V
-
-    return-void
-.end method
-
-.method public final t()J
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lb83;->a:Lxx7;
+    iget v0, p0, Lb83;->o:I
 
-    invoke-interface {v0}, Lxx7;->t()J
+    check-cast p1, Le14;
 
-    move-result-wide v0
+    check-cast p2, Lv2h;
 
-    return-wide v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p2, Lb83;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lb83;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lb83;->X:Le14;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p2, p1}, Lb83;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p2, Lb83;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lb83;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lb83;->X:Le14;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p2, Lb83;->X:Le14;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final v()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lb83;->a:Lxx7;
+    iget v0, p0, Lb83;->o:I
 
-    invoke-interface {v0}, Lxx7;->v()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public final x()I
-    .locals 1
+    iget-object p1, p0, Lb83;->X:Le14;
 
-    iget-object v0, p0, Lb83;->a:Lxx7;
+    iget-object p1, p1, Le14;->a:Ljava/util/List;
 
-    invoke-interface {v0}, Lxx7;->x()I
+    return-object p1
 
-    move-result v0
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    return v0
+    iget-object p1, p0, Lb83;->X:Le14;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

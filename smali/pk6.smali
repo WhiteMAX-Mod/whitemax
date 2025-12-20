@@ -3,272 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Lsk6;
 
 
 # static fields
-.field public static final c:[Ljava/lang/String;
-
-.field public static final d:[Ljava/lang/String;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+.field public static final a:Lpk6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    const-string v4, " OR IGNORE "
+    new-instance v0, Lpk6;
 
-    const-string v5, " OR REPLACE "
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
-
-    const-string v1, " OR ROLLBACK "
-
-    const-string v2, " OR ABORT "
-
-    const-string v3, " OR FAIL "
-
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpk6;->c:[Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    sput-object v0, Lpk6;->d:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lpk6;->a:I
-
-    iput-object p2, p0, Lpk6;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lpk6;->a:Lpk6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public P()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+    return v0
 
-    return-void
+    :cond_0
+    instance-of p1, p1, Lpk6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public Q(Ljava/lang/String;)V
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public Z(Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget v0, p0, Lpk6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/Cursor;
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h0()Z
-    .locals 1
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
-
-    move-result v0
+    const v0, 0x25527745
 
     return v0
 .end method
 
-.method public i0()Z
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->isWriteAheadLoggingEnabled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public j0(Lrrf;)Landroid/database/Cursor;
-    .locals 4
-
-    new-instance v0, Lok6;
-
-    invoke-direct {v0, p1}, Lok6;-><init>(Lrrf;)V
-
-    iget-object v1, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/database/sqlite/SQLiteDatabase;
-
-    new-instance v2, Lnk6;
-
-    invoke-direct {v2, v0}, Lnk6;-><init>(Lok6;)V
-
-    invoke-interface {p1}, Lrrf;->l()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lpk6;->d:[Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, p1, v0, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public k0(Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 4
-
-    new-instance v0, Laqc;
-
-    const/4 v1, 0x5
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, p1, v3, v2, v1}, Laqc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p0, v0}, Lpk6;->j0(Lrrf;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public l()V
-    .locals 1
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    return-void
-.end method
-
-.method public l0()V
-    .locals 1
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-
-    return-void
-.end method
-
-.method public w()V
-    .locals 1
-
-    iget-object v0, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransactionNonExclusive()V
-
-    return-void
-.end method
-
-.method public y(Ljava/lang/String;)Lvk6;
-    .locals 2
-
-    new-instance v0, Lvk6;
-
-    iget-object v1, p0, Lpk6;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v1, p1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvk6;-><init>(Landroid/database/sqlite/SQLiteStatement;)V
+    const-string v0, "MultiselectDisabled"
 
     return-object v0
 .end method

@@ -3,564 +3,432 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb48;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnhd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final b:F
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lnhd;->a:I
+    new-instance v0, Lnjb;
 
-    iput-object p2, p0, Lnhd;->b:Ljava/lang/Object;
+    const/16 v1, 0x16
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
+
+    sput-object v0, Lnhd;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(IF)V
+    .locals 0
 
-# virtual methods
-.method public final d(Lj48;Lk38;)V
-    .locals 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lnhd;->a:I
+    iput p1, p0, Lnhd;->a:I
+
+    iput p2, p0, Lnhd;->b:F
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/Parcelable;)Lnhd;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_3
+
+    move-object v1, p0
+
+    check-cast v1, Landroid/media/Rating;
+
+    invoke-virtual {v1}, Landroid/media/Rating;->getRatingStyle()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/media/Rating;->isRated()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const/4 v3, 0x0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    packed-switch v2, :pswitch_data_0
+
+    goto :goto_2
+
+    :pswitch_0
+    invoke-virtual {v1}, Landroid/media/Rating;->getPercentRating()F
+
+    move-result v0
+
+    invoke-static {v0}, Lnhd;->d(F)Lnhd;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :pswitch_1
+    invoke-virtual {v1}, Landroid/media/Rating;->getStarRating()F
+
+    move-result v0
+
+    invoke-static {v2, v0}, Lnhd;->e(IF)Lnhd;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :pswitch_2
+    invoke-virtual {v1}, Landroid/media/Rating;->isThumbUp()Z
+
+    move-result v0
+
+    new-instance v1, Lnhd;
+
+    if-eqz v0, :cond_0
+
+    move v3, v4
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-direct {v1, v0, v3}, Lnhd;-><init>(IF)V
+
+    :goto_0
+    move-object v0, v1
+
+    goto :goto_1
+
+    :pswitch_3
+    invoke-virtual {v1}, Landroid/media/Rating;->hasHeart()Z
+
+    move-result v0
+
+    new-instance v1, Lnhd;
+
+    if-eqz v0, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-direct {v1, v0, v3}, Lnhd;-><init>(IF)V
+
+    goto :goto_0
+
+    :cond_2
+    packed-switch v2, :pswitch_data_1
+
+    goto :goto_1
+
+    :pswitch_4
+    new-instance v0, Lnhd;
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    invoke-direct {v0, v2, v1}, Lnhd;-><init>(IF)V
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p0, v0, Lnhd;->c:Ljava/lang/Object;
+
+    :cond_3
+    :goto_2
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+    .end packed-switch
+.end method
+
+.method public static d(F)Lnhd;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p0, v0
+
+    if-ltz v0, :cond_1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    cmpl-float v0, p0, v0
+
+    if-lez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lnhd;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p0}, Lnhd;-><init>(IF)V
+
+    return-object v0
+
+    :cond_1
+    :goto_0
+    const-string p0, "Rating"
+
+    const-string v0, "Invalid percentage-based rating value"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static e(IF)Lnhd;
+    .locals 4
+
+    const/4 v0, 0x3
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "Rating"
 
-    iget-object v3, p0, Lnhd;->b:Ljava/lang/Object;
+    if-eq p0, v0, :cond_2
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x4
 
-    sget-object v0, Lk38;->ON_CREATE:Lk38;
+    if-eq p0, v0, :cond_1
 
-    if-ne p2, v0, :cond_0
+    const/4 v0, 0x5
 
-    invoke-interface {p1}, Lj48;->p()Ll48;
+    if-eq p0, v0, :cond_0
 
-    move-result-object p1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Ll48;->f(Lf48;)V
+    const-string v0, "Invalid rating style ("
 
-    check-cast v3, Lhyd;
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lhyd;->b()V
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string p0, ") for a star rating"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
 
     :cond_0
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Next event must be ON_CREATE, it was "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :pswitch_0
-    check-cast v3, Lfs4;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "onStateChanged: new event = "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "fs4"
-
-    invoke-static {v0, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lk38;->ON_RESUME:Lk38;
-
-    if-eq p2, p1, :cond_1
+    const/high16 v0, 0x40a00000    # 5.0f
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, v3, Lfs4;->e:Ljava/lang/Object;
+    const/high16 v0, 0x40800000    # 4.0f
 
-    check-cast p1, Lx9f;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, v2}, Lsu7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    goto :goto_0
 
     :cond_2
-    iget-object p1, v3, Lfs4;->c:Ljava/lang/Object;
-
-    check-cast p1, La3b;
-
-    iget-object p1, p1, La3b;->b:Ljava/lang/Object;
-
-    check-cast p1, Lbj7;
-
-    iget-object p1, p1, Lbj7;->y0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v1, "onStateChanged: prevAllMediaCount = "
-
-    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v0, p2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p2, v3, Lfs4;->a:Ljava/lang/Object;
-
-    check-cast p2, Lbj7;
-
-    iget-object v0, v3, Lfs4;->b:Ljava/lang/Object;
-
-    check-cast v0, La84;
-
-    new-instance v1, Lhn8;
-
-    invoke-direct {v1, v3, p1, v2}, Lhn8;-><init>(Lfs4;ILkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p2, v0, v2, v1, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    move-result-object p1
-
-    iput-object p1, v3, Lfs4;->e:Ljava/lang/Object;
+    const/high16 v0, 0x40400000    # 3.0f
 
     :goto_0
-    return-void
+    const/4 v3, 0x0
 
-    :pswitch_1
-    check-cast v3, Lwo8;
+    cmpg-float v3, p1, v3
 
-    invoke-virtual {v3, v1}, Lwo8;->g(Z)V
+    if-ltz v3, :cond_4
 
-    return-void
+    cmpl-float v0, p1, v0
 
-    :pswitch_2
-    sget-object p1, Lk38;->ON_STOP:Lk38;
-
-    if-ne p2, p1, :cond_3
-
-    check-cast v3, Landroidx/fragment/app/a;
-
-    iget-object p1, v3, Landroidx/fragment/app/a;->S0:Landroid/view/View;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
-
-    :cond_3
-    return-void
-
-    :pswitch_3
-    sget-object p1, Lk38;->ON_DESTROY:Lk38;
-
-    if-ne p2, p1, :cond_5
-
-    check-cast v3, Lwzd;
-
-    iput-object v2, v3, Ldp5;->a:Landroid/view/View;
-
-    iget-object p1, v3, Ldp5;->b:Ljava/util/LinkedList;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcp5;
-
-    iget-object v0, v0, Lcp5;->b:Le44;
-
-    invoke-virtual {v0}, Le44;->invoke()Ljava/lang/Object;
+    if-lez v0, :cond_3
 
     goto :goto_1
 
+    :cond_3
+    new-instance v0, Lnhd;
+
+    invoke-direct {v0, p0, p1}, Lnhd;-><init>(IF)V
+
+    return-object v0
+
     :cond_4
-    invoke-virtual {p1}, Ljava/util/LinkedList;->clear()V
+    :goto_1
+    const-string p0, "Trying to set out of range star-based rating"
 
-    :cond_5
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public final b()F
+    .locals 2
+
+    const/4 v0, 0x3
+
+    iget v1, p0, Lnhd;->a:I
+
+    if-eq v1, v0, :cond_0
+
+    const/4 v0, 0x4
+
+    if-eq v1, v0, :cond_0
+
+    const/4 v0, 0x5
+
+    if-eq v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lnhd;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lnhd;->b:F
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/high16 v0, -0x40800000    # -1.0f
+
+    return v0
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    iget v0, p0, Lnhd;->b:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    iget v0, p0, Lnhd;->a:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Rating:style="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lnhd;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " rating="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lnhd;->b:F
+
+    cmpg-float v1, v2, v1
+
+    if-gez v1, :cond_0
+
+    const-string v1, "unrated"
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lnhd;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lnhd;->b:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
     return-void
-
-    :pswitch_4
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    check-cast v3, [Lzq6;
-
-    array-length p1, v3
-
-    if-gtz p1, :cond_7
-
-    array-length p1, v3
-
-    if-gtz p1, :cond_6
-
-    return-void
-
-    :cond_6
-    aget-object p1, v3, v1
-
-    throw v2
-
-    :cond_7
-    aget-object p1, v3, v1
-
-    throw v2
-
-    :pswitch_5
-    check-cast v3, Landroidx/fragment/app/b;
-
-    iget-object p1, v3, Lnl3;->o:Lfgh;
-
-    if-nez p1, :cond_9
-
-    invoke-virtual {v3}, Landroid/app/Activity;->getLastNonConfigurationInstance()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljl3;
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, p1, Ljl3;->b:Lfgh;
-
-    iput-object p1, v3, Lnl3;->o:Lfgh;
-
-    :cond_8
-    iget-object p1, v3, Lnl3;->o:Lfgh;
-
-    if-nez p1, :cond_9
-
-    new-instance p1, Lfgh;
-
-    invoke-direct {p1}, Lfgh;-><init>()V
-
-    iput-object p1, v3, Lnl3;->o:Lfgh;
-
-    :cond_9
-    iget-object p1, v3, Lnl3;->a:Ll48;
-
-    invoke-virtual {p1, p0}, Ll48;->f(Lf48;)V
-
-    return-void
-
-    :pswitch_6
-    check-cast v3, Lkyd;
-
-    sget-object v0, Lk38;->ON_CREATE:Lk38;
-
-    if-ne p2, v0, :cond_10
-
-    invoke-interface {p1}, Lj48;->p()Ll48;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Ll48;->f(Lf48;)V
-
-    invoke-interface {v3}, Lkyd;->l()Lpn;
-
-    move-result-object p1
-
-    const-string p2, "androidx.savedstate.Restarter"
-
-    invoke-virtual {p1, p2}, Lpn;->c(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    if-nez p1, :cond_a
-
-    goto/16 :goto_4
-
-    :cond_a
-    const-string p2, "classes_to_restore"
-
-    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_f
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_b
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_e
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    const-string v0, "Class "
-
-    :try_start_0
-    const-class v4, Lnhd;
-
-    invoke-virtual {v4}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v4
-
-    invoke-static {p2, v1, v4}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
-
-    move-result-object v4
-
-    const-class v5, Liyd;
-
-    invoke-virtual {v4, v5}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object v4
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-
-    :try_start_1
-    invoke-virtual {v4, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-    :try_end_1
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    :try_start_2
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Liyd;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    instance-of p2, v3, Lggh;
-
-    if-eqz p2, :cond_d
-
-    move-object p2, v3
-
-    check-cast p2, Lggh;
-
-    invoke-interface {p2}, Lggh;->h()Lfgh;
-
-    move-result-object p2
-
-    invoke-interface {v3}, Lkyd;->l()Lpn;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p2, p2, Lfgh;->a:Ljava/util/LinkedHashMap;
-
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-virtual {p2}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_3
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_c
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-virtual {p2, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lyfh;
-
-    invoke-interface {v3}, Lj48;->p()Ll48;
-
-    move-result-object v6
-
-    invoke-static {v5, v0, v6}, Lj8;->a(Lyfh;Lpn;Ll48;)V
-
-    goto :goto_3
-
-    :cond_c
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-virtual {p2}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object p2
-
-    invoke-direct {v4, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v4}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_b
-
-    invoke-virtual {v0}, Lpn;->g()V
-
-    goto :goto_2
-
-    :cond_d
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Internal error: OnRecreation should be registered only on components that implement ViewModelStoreOwner"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Failed to instantiate "
-
-    invoke-static {v1, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catch_1
-    move-exception p1
-
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " must have default constructor in order to be automatically recreated"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p2, v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :catch_2
-    move-exception p1
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, " wasn\'t found"
-
-    invoke-static {v0, p2, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v1, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_e
-    :goto_4
-    return-void
-
-    :cond_f
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Bundle with restored state for the component \"androidx.savedstate.Restarter\" must contain list of strings by the key \"classes_to_restore\""
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_10
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string p2, "Next event must be ON_CREATE"
-
-    invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

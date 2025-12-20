@@ -1,113 +1,79 @@
-.class public final enum Ll09;
-.super Ljava/lang/Enum;
+.class public final Ll09;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk09;
 
-# static fields
-.field public static final synthetic X:Lzg5;
 
-.field public static final enum a:Ll09;
-
-.field public static final enum b:Ll09;
-
-.field public static final enum c:Ll09;
-
-.field public static final enum d:Ll09;
-
-.field public static final synthetic o:[Ll09;
+# instance fields
+.field public final a:Landroid/os/Messenger;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Landroid/os/Messenger;)V
+    .locals 0
 
-    new-instance v0, Ll09;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll09;->a:Ll09;
-
-    new-instance v1, Ll09;
-
-    const-string v2, "AUDIO_MESSAGE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ll09;->b:Ll09;
-
-    new-instance v2, Ll09;
-
-    const-string v3, "AUDIO_DRAFT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Ll09;
-
-    const-string v4, "AUDIO_RECORD"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ll09;->c:Ll09;
-
-    new-instance v4, Ll09;
-
-    const-string v5, "MUSIC_FILE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ll09;->d:Ll09;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Ll09;
-
-    move-result-object v0
-
-    sput-object v0, Ll09;->o:[Ll09;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ll09;->X:Lzg5;
+    iput-object p1, p0, Ll09;->a:Landroid/os/Messenger;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll09;
-    .locals 1
 
-    const-class v0, Ll09;
+# virtual methods
+.method public final a(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Landroid/os/Bundle;
 
-    move-result-object p0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    check-cast p0, Ll09;
+    const-string v1, "data_media_item_id"
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1, p1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public static values()[Ll09;
-    .locals 1
+    const-string p1, "data_options"
 
-    sget-object v0, Ll09;->o:[Ll09;
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string p1, "data_notify_children_changed_options"
 
-    move-result-object v0
+    const/4 p3, 0x0
 
-    check-cast v0, [Ll09;
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    return-object v0
+    if-eqz p2, :cond_0
+
+    sget-object p1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lf78;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const-string p2, "data_media_item_list"
+
+    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    :cond_0
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object p1
+
+    const/4 p2, 0x3
+
+    iput p2, p1, Landroid/os/Message;->what:I
+
+    const/4 p2, 0x2
+
+    iput p2, p1, Landroid/os/Message;->arg1:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p2, p0, Ll09;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p2, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    return-void
 .end method

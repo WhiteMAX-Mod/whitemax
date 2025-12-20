@@ -1,124 +1,217 @@
-.class public final synthetic Llsd;
+.class public final Llsd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/os/Messenger;
 
-.field public final synthetic b:Lone/me/android/root/RootController;
+.field public final b:Luc;
+
+.field public final c:Landroid/os/Messenger;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:Landroid/util/SparseArray;
+
+.field public final synthetic i:Lqsd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/android/root/RootController;I)V
+.method public constructor <init>(Lqsd;Landroid/os/Messenger;)V
     .locals 0
 
-    iput p2, p0, Llsd;->a:I
-
-    iput-object p1, p0, Llsd;->b:Lone/me/android/root/RootController;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llsd;->i:Lqsd;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Llsd;->d:I
+
+    iput p1, p0, Llsd;->e:I
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Llsd;->h:Landroid/util/SparseArray;
+
+    iput-object p2, p0, Llsd;->a:Landroid/os/Messenger;
+
+    new-instance p1, Luc;
+
+    invoke-direct {p1, p0}, Luc;-><init>(Llsd;)V
+
+    iput-object p1, p0, Llsd;->b:Luc;
+
+    new-instance p2, Landroid/os/Messenger;
+
+    invoke-direct {p2, p1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+
+    iput-object p2, p0, Llsd;->c:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final a(I)V
+    .locals 6
 
-    iget v0, p0, Llsd;->a:I
+    iget v2, p0, Llsd;->d:I
 
-    const/4 v1, -0x1
+    add-int/lit8 v0, v2, 0x1
 
-    iget-object v2, p0, Llsd;->b:Lone/me/android/root/RootController;
+    iput v0, p0, Llsd;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v4, 0x0
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Lyy7;
+    const/4 v5, 0x0
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 v1, 0x5
 
-    move-result-object v0
+    move-object v0, p0
 
-    invoke-static {v0}, Lczi;->a(Landroid/content/Context;)Lf82;
+    move v3, p1
 
-    move-result-object v0
+    invoke-virtual/range {v0 .. v5}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
 
-    sget v2, Lwxc;->root_top_indicator:I
+    return-void
+.end method
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+.method public final b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+    .locals 1
 
-    new-instance v2, Ld74;
-
-    const/4 v3, -0x2
-
-    invoke-direct {v2, v1, v3}, Ld74;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v1, 0x64
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lkti;->d(F)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    neg-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Lyy7;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-static {v0}, Lczi;->a(Landroid/content/Context;)Lf82;
+    iput p1, v0, Landroid/os/Message;->what:I
 
-    move-result-object v0
+    iput p2, v0, Landroid/os/Message;->arg1:I
 
-    sget v2, Lwxc;->root_screen:I
+    iput p3, v0, Landroid/os/Message;->arg2:I
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    new-instance v2, Ld74;
+    invoke-virtual {v0, p5}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    invoke-direct {v2, v1, v1}, Ld74;-><init>(II)V
+    iget-object p2, p0, Llsd;->c:Landroid/os/Messenger;
 
-    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
+    iput-object p2, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    invoke-direct {v1}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
+    :try_start_0
+    iget-object p2, p0, Llsd;->a:Landroid/os/Messenger;
 
-    invoke-virtual {v2, v1}, Ld74;->b(La74;)V
+    invoke-virtual {p2, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 p1, 0x1
 
-    return-object v0
+    return p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :catch_0
+    move-exception p2
+
+    const/4 p3, 0x2
+
+    if-eq p1, p3, :cond_0
+
+    const-string p1, "MediaRouteProviderProxy"
+
+    const-string p3, "Could not send message to service."
+
+    invoke-static {p1, p3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final binderDied()V
+    .locals 3
+
+    iget-object v0, p0, Llsd;->i:Lqsd;
+
+    iget-object v0, v0, Lqsd;->t0:Lz7a;
+
+    new-instance v1, Lksd;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Lksd;-><init>(Llsd;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final c(II)V
+    .locals 7
+
+    const-string v0, "volume"
+
+    invoke-static {p2, v0}, Lqf7;->e(ILjava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iget v3, p0, Llsd;->d:I
+
+    add-int/lit8 p2, v3, 0x1
+
+    iput p2, p0, Llsd;->d:I
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x7
+
+    move-object v1, p0
+
+    move v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 7
+
+    const-string v0, "volume"
+
+    invoke-static {p2, v0}, Lqf7;->e(ILjava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iget v3, p0, Llsd;->d:I
+
+    add-int/lit8 p2, v3, 0x1
+
+    iput p2, p0, Llsd;->d:I
+
+    const/4 v5, 0x0
+
+    const/16 v2, 0x8
+
+    move-object v1, p0
+
+    move v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Llsd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+
+    return-void
 .end method

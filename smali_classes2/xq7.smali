@@ -1,23 +1,21 @@
 .class public final Lxq7;
-.super Li3;
+.super Lzk5;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lxq7;
+# instance fields
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILghg;)V
+    .locals 1
 
-    new-instance v0, Lxq7;
+    const/4 v0, 0x0
 
-    const/16 v1, 0xb
+    invoke-direct {p0, p2, v0}, Lzk5;-><init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, v1}, Li3;-><init>(I)V
-
-    sput-object v0, Lxq7;->c:Lxq7;
+    iput p1, p0, Lxq7;->c:I
 
     return-void
 .end method

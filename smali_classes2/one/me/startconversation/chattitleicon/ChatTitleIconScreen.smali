@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqq3;
-.implements Lg39;
-.implements Ljd0;
+.implements Lau3;
+.implements Lr79;
+.implements Lje0;
 
 
 # annotations
@@ -22,18 +22,18 @@
     d2 = {
         "Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lqq3;",
-        "Lg39;",
-        "Ljd0;",
+        "Lau3;",
+        "Lr79;",
+        "Lje0;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "",
         "ids",
-        "Lraf;",
+        "Lbmf;",
         "createType",
-        "([JLraf;)V",
+        "([JLbmf;)V",
         "start-conversation_release"
     }
     k = 0x1
@@ -47,46 +47,46 @@
 
 
 # static fields
-.field public static final synthetic z0:[Lyy7;
+.field public static final synthetic z0:[Lp38;
 
 
 # instance fields
-.field public final X:Lk18;
+.field public final X:Ld68;
 
-.field public final Y:Lk18;
+.field public final Y:Ld68;
 
-.field public final Z:Lk18;
+.field public final Z:Ld68;
 
-.field public final a:Leo7;
+.field public final a:Lvs7;
 
-.field public final b:Lbwf;
+.field public final b:Lz7g;
 
-.field public final c:Lhs;
+.field public final c:Lks;
 
-.field public final d:Lhs;
+.field public final d:Lks;
 
-.field public final o:Lka5;
+.field public final o:Lhj8;
 
-.field public final s0:Lsn0;
+.field public final s0:Lso0;
 
-.field public final t0:Lsn0;
+.field public final t0:Lso0;
 
-.field public final u0:Lsn0;
+.field public final u0:Lso0;
 
-.field public final v0:Lsn0;
+.field public final v0:Lso0;
 
-.field public final w0:Lsn0;
+.field public final w0:Lso0;
 
-.field public x0:Leu4;
+.field public x0:Lyx4;
 
-.field public final y0:Lsn0;
+.field public final y0:Lso0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 12
 
-    new-instance v0, Ltoc;
+    new-instance v0, Lgxc;
 
     const-class v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
@@ -96,69 +96,69 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lvid;->a:Lwid;
+    sget-object v2, Lfsd;->a:Lgsd;
 
     const-string v3, "createType"
 
     const-string v5, "getCreateType()Lone/me/startconversation/deeplink/StartConversationDeepLinkRoutes$CreateType;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
+    invoke-static {v2, v1, v3, v5, v4}, Lqf7;->d(Lgsd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lgxc;
 
     move-result-object v2
 
-    new-instance v3, Ltoc;
+    new-instance v3, Lgxc;
 
     const-string v5, "toolbar"
 
     const-string v6, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Ltoc;
+    new-instance v5, Lgxc;
 
     const-string v6, "hint"
 
     const-string v7, "getHint()Landroid/widget/TextView;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Ltoc;
+    new-instance v6, Lgxc;
 
     const-string v7, "chatIcon"
 
     const-string v8, "getChatIcon()Lone/me/sdk/uikit/common/avatar/OneMeAvatarView;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Ltoc;
+    new-instance v7, Lgxc;
 
     const-string v8, "chatTitle"
 
     const-string v9, "getChatTitle()Lone/me/sdk/uikit/common/views/OneMeTextInput;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Ltoc;
+    new-instance v8, Lgxc;
 
     const-string v9, "chatDescription"
 
     const-string v10, "getChatDescription()Lone/me/sdk/uikit/common/views/DescriptionTextViewWithLimit;"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Ltoc;
+    new-instance v9, Lgxc;
 
     const-string v10, "confirmButton"
 
     const-string v11, "getConfirmButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v9, v1, v10, v11, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0x8
 
-    new-array v1, v1, [Lyy7;
+    new-array v1, v1, [Lp38;
 
     aput-object v0, v1, v4
 
@@ -190,7 +190,7 @@
 
     aput-object v9, v1, v0
 
-    sput-object v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
+    sput-object v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
 
     return-void
 .end method
@@ -205,231 +205,231 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILro4;)V
 
     .line 7
-    sget-object v1, Leo7;->f:Leo7;
+    sget-object v1, Lvs7;->f:Lvs7;
 
-    iput-object v1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->a:Leo7;
+    iput-object v1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->a:Lvs7;
 
     .line 8
-    new-instance v1, Lfu2;
+    new-instance v1, Lrw2;
 
-    const/4 v3, 0x7
+    const/16 v3, 0x8
 
-    invoke-direct {v1, v3}, Lfu2;-><init>(I)V
+    invoke-direct {v1, v3}, Lrw2;-><init>(I)V
 
     .line 9
-    new-instance v3, Lbwf;
+    new-instance v3, Lz7g;
 
-    invoke-direct {v3, v1}, Lbwf;-><init>(Lcm6;)V
+    invoke-direct {v3, v1}, Lz7g;-><init>(Lmq6;)V
 
     .line 10
-    iput-object v3, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->b:Lbwf;
+    iput-object v3, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->b:Lz7g;
 
     .line 11
     new-array v0, v0, [J
 
     .line 12
-    new-instance v1, Lhs;
+    new-instance v1, Lks;
 
     const-class v3, [J
 
     const-string v4, "ids"
 
-    invoke-direct {v1, v3, v0, v4}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v0, v4}, Lks;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    iput-object v1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->c:Lhs;
+    iput-object v1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->c:Lks;
 
     .line 14
-    new-instance v0, Lhs;
+    new-instance v0, Lks;
 
-    const-class v1, Lraf;
+    const-class v1, Lbmf;
 
     const-string v3, "create_type"
 
-    invoke-direct {v0, v1, v3}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lks;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 15
-    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->d:Lhs;
+    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->d:Lks;
 
     .line 16
-    new-instance v0, Lka5;
+    new-instance v0, Lhj8;
 
     .line 17
-    new-instance v1, Laz2;
+    new-instance v1, Lq13;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, p0, v3}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {v1, p0, v3}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
     const/4 v3, 0x6
 
     .line 18
-    invoke-direct {v0, v1, v2, v3}, Lka5;-><init>(Lcm6;Lcm6;I)V
+    invoke-direct {v0, v1, v2, v3}, Lhj8;-><init>(Lmq6;Lmq6;I)V
 
-    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->o:Lka5;
+    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->o:Lhj8;
 
     .line 19
-    new-instance v0, Lqn2;
+    new-instance v0, Lmp2;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1, p1}, Lqn2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lmp2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 20
-    new-instance p1, Ltl2;
+    new-instance p1, Lao2;
 
     const/16 v1, 0x14
 
-    invoke-direct {p1, v1, v0}, Ltl2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lao2;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lsz2;
+    const-class v0, Li23;
 
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object p1
 
     .line 21
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->X:Lk18;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->X:Ld68;
 
     .line 22
-    sget-object p1, Lpaf;->a:Lpaf;
+    sget-object p1, Lylf;->a:Lylf;
 
     .line 23
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
 
     move-result-object v0
 
-    const/16 v1, 0xa
+    const/16 v1, 0xe
 
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+    invoke-virtual {v0, v1}, Lu5;->d(I)Lz7g;
 
     move-result-object v0
 
     .line 24
-    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Y:Lk18;
+    iput-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Y:Ld68;
 
     .line 25
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
 
     move-result-object p1
 
-    const/16 v0, 0x97
+    const/16 v0, 0x93
 
-    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
+    invoke-virtual {p1, v0}, Lu5;->d(I)Lz7g;
 
     move-result-object p1
 
     .line 26
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Z:Lk18;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Z:Ld68;
 
     .line 27
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->s0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->s0:Lso0;
 
     .line 28
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->t0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->t0:Lso0;
 
     .line 29
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x4
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->u0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->u0:Lso0;
 
     .line 30
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x5
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->v0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->v0:Lso0;
 
     .line 31
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x6
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->w0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->w0:Lso0;
 
     .line 32
-    new-instance p1, Laz2;
+    new-instance p1, Lq13;
 
     const/4 v0, 0x7
 
-    invoke-direct {p1, p0, v0}, Laz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v0}, Lq13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lmq6;)Lso0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->y0:Lsn0;
+    iput-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->y0:Lso0;
 
     return-void
 .end method
 
-.method public constructor <init>([JLraf;)V
+.method public constructor <init>([JLbmf;)V
     .locals 2
 
     .line 1
-    new-instance v0, Limb;
+    new-instance v0, Lysb;
 
     const-string v1, "ids"
 
-    invoke-direct {v0, v1, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    new-instance p1, Limb;
+    new-instance p1, Lysb;
 
     const-string v1, "create_type"
 
-    invoke-direct {p1, v1, p2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {v0, p1}, [Limb;
+    filled-new-array {v0, p1}, [Lysb;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -439,40 +439,60 @@
     return-void
 .end method
 
-.method public static final y0(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)Luxa;
+.method public static final z0(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)La4b;
     .locals 2
 
-    iget-object p0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->u0:Lsn0;
+    iget-object p0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->u0:Lso0;
 
-    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
+    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p0}, Lsn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lso0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Luxa;
+    check-cast p0, La4b;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final A0()Lone/me/sdk/uikit/common/button/OneMeButton;
+.method public final A0()Lmlb;
     .locals 2
 
-    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
+    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
+
+    const/4 v1, 0x5
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->v0:Lso0;
+
+    invoke-virtual {v0}, Lso0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmlb;
+
+    return-object v0
+.end method
+
+.method public final B0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    .locals 2
+
+    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
 
     const/4 v1, 0x7
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->y0:Lsn0;
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->y0:Lso0;
 
-    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lso0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -481,36 +501,36 @@
     return-object v0
 .end method
 
-.method public final B0()Lraf;
+.method public final C0()Lbmf;
     .locals 2
 
-    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
+    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->d:Lhs;
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->d:Lks;
 
-    invoke-virtual {v0, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lraf;
+    check-cast v0, Lbmf;
 
     return-object v0
 .end method
 
-.method public final C0()Lsz2;
+.method public final D0()Li23;
     .locals 1
 
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->X:Lk18;
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->X:Ld68;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lsz2;
+    check-cast v0, Li23;
 
     return-object v0
 .end method
@@ -518,15 +538,15 @@
 .method public final g(ILandroid/os/Bundle;)V
     .locals 1
 
-    sget p2, Lndb;->b:I
+    sget p2, Lekb;->b:I
 
     if-ne p1, p2, :cond_0
 
-    sget-object p1, Luaf;->c:Luaf;
+    sget-object p1, Lemf;->c:Lemf;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Li3;->p0()Lii4;
+    invoke-virtual {p1}, Lf3;->p0()Lim4;
 
     move-result-object p1
 
@@ -534,37 +554,37 @@
 
     const-string v0, ":media-picker/select/photo"
 
-    invoke-virtual {p1, v0, p2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {p1, v0, p2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 
     :cond_0
-    sget p2, Lndb;->c:I
+    sget p2, Lekb;->c:I
 
     if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lsz2;->w()V
+    invoke-virtual {p1}, Li23;->v()V
 
     :cond_1
     return-void
 .end method
 
-.method public final getInsetsConfig()Leo7;
+.method public final getInsetsConfig()Lvs7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->a:Leo7;
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->a:Lvs7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lk1e;
+.method public final getScreenDelegate()Lrbe;
     .locals 1
 
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->o:Lka5;
+    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->o:Lhj8;
 
     return-object v0
 .end method
@@ -572,7 +592,7 @@
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 2
 
-    invoke-super {p0, p1, p2, p3}, Lc54;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lx84;->onActivityResult(IILandroid/content/Intent;)V
 
     const/16 v0, 0x309
 
@@ -582,7 +602,7 @@
 
     if-ne p2, p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object p1
 
@@ -600,23 +620,23 @@
     move-object p3, p2
 
     :goto_0
-    invoke-virtual {p1}, Lsz2;->u()Llzf;
+    invoke-virtual {p1}, Li23;->t()Lbbg;
 
     move-result-object v0
 
-    check-cast v0, Lq2b;
+    check-cast v0, Lb9b;
 
-    invoke-virtual {v0}, Lq2b;->b()Lz74;
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
 
     move-result-object v0
 
-    new-instance v1, Lmz2;
+    new-instance v1, Lc23;
 
-    invoke-direct {v1, p1, p3, p2}, Lmz2;-><init>(Lsz2;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, p3, p2}, Lc23;-><init>(Li23;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
 
     const/4 p2, 0x2
 
-    invoke-static {p1, v0, v1, p2}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    invoke-static {p1, v0, v1, p2}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
 
     :cond_1
     return-void
@@ -625,13 +645,13 @@
 .method public final onAttach(Landroid/view/View;)V
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0()Lveb;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->A0()Lmlb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lveb;->a:Lw3b;
+    iget-object p1, p1, Lmlb;->a:Lgab;
 
-    invoke-static {p1}, Lapi;->f(Landroid/view/View;)V
+    invoke-static {p1}, Lo2j;->l(Landroid/view/View;)V
 
     return-void
 .end method
@@ -659,19 +679,19 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    sget-object p2, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
+    sget-object p2, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lp38;
 
     const/4 v1, 0x2
 
     aget-object p2, p2, v1
 
-    iget-object p2, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->s0:Lsn0;
+    iget-object p2, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->s0:Lso0;
 
-    invoke-virtual {p2}, Lsn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lso0;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lyfb;
+    check-cast p2, Lpmb;
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -697,11 +717,11 @@
 
     invoke-virtual {p2, p1}, Landroidx/core/widget/NestedScrollView;->setFillViewport(Z)V
 
-    new-instance p1, Lcz2;
+    new-instance p1, Ls13;
 
     const/4 v1, 0x1
 
-    invoke-direct {p1, p0, v1}, Lcz2;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
+    invoke-direct {p1, p0, v1}, Ls13;-><init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;I)V
 
     new-instance v1, Landroidx/constraintlayout/widget/ConstraintLayout;
 
@@ -711,7 +731,7 @@
 
     invoke-direct {v1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    sget v2, Lndb;->d:I
+    sget v2, Lekb;->d:I
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
@@ -723,13 +743,13 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1, v1}, Lcz2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Ls13;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p2, v1}, Landroidx/core/widget/NestedScrollView;->addView(Landroid/view/View;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->A0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->B0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object p1
 
@@ -741,13 +761,13 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lc54;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lx84;->onDestroyView(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->x0:Leu4;
+    iget-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->x0:Lyx4;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Leu4;->a()V
+    invoke-virtual {p1}, Lyx4;->a()V
 
     :cond_0
     return-void
@@ -760,25 +780,25 @@
 
     if-ne p1, p3, :cond_0
 
-    iget-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Y:Lk18;
+    iget-object p1, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->Y:Ld68;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lqsb;
+    check-cast p1, Lezb;
 
-    invoke-virtual {p1, p2}, Lqsb;->c([Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Lezb;->c([Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lsz2;->w()V
+    invoke-virtual {p1}, Li23;->v()V
 
     :cond_0
     return-void
@@ -787,99 +807,99 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object p1
 
-    iget-object p1, p1, Lsz2;->x0:Lhbd;
+    iget-object p1, p1, Li23;->x0:Lpkd;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj48;->p()Ll48;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
 
     move-result-object v0
 
-    sget-object v1, Ll38;->d:Ll38;
+    invoke-interface {v0}, La98;->p()Lc98;
 
-    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+    move-result-object v0
+
+    sget-object v1, Lc88;->d:Lc88;
+
+    invoke-static {p1, v0, v1}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
 
     move-result-object p1
 
-    new-instance v0, Ldz2;
+    new-instance v0, Lt13;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Ldz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+    invoke-direct {v0, v2, p0}, Lt13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
 
-    new-instance v3, Lg56;
+    new-instance v3, Lo96;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
-
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    iget-object p1, p1, Lsz2;->y0:Lci5;
+    invoke-static {v3, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
+
+    move-result-object p1
+
+    iget-object p1, p1, Li23;->y0:Lyl5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj48;->p()Ll48;
+    invoke-interface {v0}, La98;->p()Lc98;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+    invoke-static {p1, v0, v1}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
 
     move-result-object p1
 
-    new-instance v0, Lez2;
+    new-instance v0, Lu13;
 
-    invoke-direct {v0, v2, p0}, Lez2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+    invoke-direct {v0, v2, p0}, Lu13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
 
-    new-instance v1, Lg56;
+    new-instance v1, Lo96;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, p1, v0, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v1, p1, v0, v3}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
-
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    iget-object p1, p1, Lsz2;->z0:Lci5;
+    invoke-static {v1, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
-    new-instance v0, Lgz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
-    invoke-direct {v0, v2, p0}, Lgz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+    move-result-object p1
 
-    new-instance v1, Lg56;
+    iget-object p1, p1, Li23;->z0:Lyl5;
+
+    new-instance v0, Lw13;
+
+    invoke-direct {v0, v2, p0}, Lw13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+
+    new-instance v1, Lo96;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lv38;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lm88;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    invoke-static {v1, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
     return-void
 .end method
@@ -887,13 +907,13 @@
 .method public final q(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 6
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Loz2;
+    new-instance v0, Le23;
 
     const/4 v5, 0x0
 
@@ -903,13 +923,13 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Loz2;-><init>(Lsz2;Ljava/lang/String;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v0 .. v5}, Le23;-><init>(Li23;Ljava/lang/String;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x3
 
     const/4 p2, 0x0
 
-    invoke-static {v1, p2, v0, p1}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    invoke-static {v1, p2, v0, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
 
     return-void
 .end method
@@ -917,51 +937,31 @@
 .method public final r(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->C0()Lsz2;
+    invoke-virtual {p0}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Li23;
 
     move-result-object p1
 
-    iget-object v0, p1, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p1}, Lsz2;->u()Llzf;
-
-    move-result-object v1
-
-    check-cast v1, Lq2b;
-
-    invoke-virtual {v1}, Lq2b;->b()Lz74;
+    invoke-virtual {p1}, Li23;->t()Lbbg;
 
     move-result-object v1
 
-    new-instance v2, Lpz2;
+    check-cast v1, Lb9b;
+
+    invoke-virtual {v1}, Lb9b;->b()Ltb4;
+
+    move-result-object v1
+
+    new-instance v2, Lf23;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p1, p2, p3, v3}, Lpz2;-><init>(Lsz2;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, p1, p2, p3, v3}, Lf23;-><init>(Li23;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x2
 
-    invoke-static {v0, v1, v3, v2, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    invoke-static {v0, v1, v3, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
     return-void
-.end method
-
-.method public final z0()Lveb;
-    .locals 2
-
-    sget-object v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lyy7;
-
-    const/4 v1, 0x5
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->v0:Lsn0;
-
-    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lveb;
-
-    return-object v0
 .end method

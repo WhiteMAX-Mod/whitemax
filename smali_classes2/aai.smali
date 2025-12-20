@@ -1,87 +1,152 @@
-.class public final Laai;
-.super Ljava/lang/Object;
+.class public final enum Laai;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lk5i;
 
 
 # static fields
-.field public static final c:Lbwf;
+.field public static final synthetic X:[Laai;
+
+.field public static final synthetic Y:Lwk5;
+
+.field public static final enum d:Laai;
+
+.field public static final enum o:Laai;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Throwable;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
-    new-instance v0, Ldwh;
+    new-instance v0, Laai;
 
-    const/4 v1, 0x6
+    const/16 v1, 0xe
 
-    invoke-direct {v0, v1}, Ldwh;-><init>(I)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v1, Lbwf;
+    move-result-object v5
 
-    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+    const-string v1, "SHARE"
 
-    sput-object v1, Laai;->c:Lbwf;
+    const/4 v2, 0x0
+
+    const-string v3, "WebAppShare"
+
+    const-string v4, "web_app_share"
+
+    invoke-direct/range {v0 .. v5}, Laai;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v0, Laai;->d:Laai;
+
+    new-instance v1, Laai;
+
+    const/16 v2, 0xf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v2, "MAX_SHARE"
+
+    const/4 v3, 0x1
+
+    const-string v4, "WebAppMaxShare"
+
+    const-string v5, "web_app_max_share"
+
+    invoke-direct/range {v1 .. v6}, Laai;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v1, Laai;->o:Laai;
+
+    filled-new-array {v0, v1}, [Laai;
+
+    move-result-object v0
+
+    sput-object v0, Laai;->X:[Laai;
+
+    new-instance v1, Lwk5;
+
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Laai;->Y:Lwk5;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    .locals 0
 
-    const-string v0, "gleff"
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Laai;->a:Ljava/lang/String;
 
-    const-class v1, Laai;
+    iput-object p4, p0, Laai;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Laai;->a:Ljava/lang/String;
-
-    sget-object v1, Lx9i;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Laai;->a:Ljava/lang/String;
-
-    const-string v2, "failed to load gl-effects library with system loader"
-
-    invoke-static {v1, v2, v0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iput-object v0, p0, Laai;->b:Ljava/lang/Throwable;
+    iput-object p5, p0, Laai;->c:Ljava/lang/Integer;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
+.method public static valueOf(Ljava/lang/String;)Laai;
+    .locals 1
 
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+    const-class v0, Laai;
 
-    throw v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Laai;
+
+    return-object p0
+.end method
+
+.method public static values()[Laai;
+    .locals 1
+
+    sget-object v0, Laai;->X:[Laai;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Laai;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Laai;->c:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Laai;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Laai;->b:Ljava/lang/String;
+
+    return-object v0
 .end method

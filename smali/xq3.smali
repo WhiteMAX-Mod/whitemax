@@ -1,362 +1,118 @@
-.class public final Lxq3;
-.super Lpv0;
+.class public final synthetic Lxq3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final u0:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/io/Serializable;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lpv0;-><init>(I)V
+    iput p1, p0, Lxq3;->a:I
 
-    iput p2, p0, Lxq3;->u0:I
+    iput-object p2, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_1
-
-    if-lt p1, v0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    const-string p2, "Buffered channel capacity must be at least 1, but "
-
-    const-string v0, " was specified"
-
-    invoke-static {p1, p2, v0}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_1
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string p2, "This implementation does not support suspension for senders, use "
-
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-class p2, Lpv0;
-
-    invoke-static {p2}, Lvid;->a(Ljava/lang/Class;)Lca3;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lca3;->b()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " instead"
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
 .end method
 
 
 # virtual methods
-.method public final J(Ljava/lang/Object;Z)Ljava/lang/Object;
-    .locals 16
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lxq3;->a:I
 
-    sget-object v8, Lqqg;->a:Lqqg;
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, v0, Lxq3;->u0:I
+    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    const/4 v9, 0x3
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    if-ne v1, v9, :cond_2
+    new-instance v1, Ljava/lang/Thread;
 
-    invoke-super/range {p0 .. p1}, Lpv0;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v3, "tracer-io-"
 
-    instance-of v2, v1, Lma2;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    instance-of v2, v1, Lla2;
+    move-result v0
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_0
-    return-object v8
+    move-result-object v0
 
-    :cond_1
-    :goto_0
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
     return-object v1
 
-    :cond_2
-    sget-object v6, Lrv0;->d:Lkotlinx/coroutines/internal/Symbol;
+    :pswitch_0
+    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    sget-object v1, Lpv0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Ljava/lang/Thread;
 
-    move-result-object v1
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    check-cast v1, Loa2;
+    return-object v1
 
-    :cond_3
-    :goto_1
-    sget-object v2, Lpv0;->b:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    :pswitch_1
+    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+    check-cast v0, Ljava/lang/String;
 
-    move-result-wide v2
+    new-instance v1, Ljava/lang/Thread;
 
-    const-wide v4, 0xfffffffffffffffL
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    and-long/2addr v4, v2
+    return-object v1
 
-    const/4 v7, 0x0
+    :pswitch_2
+    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    invoke-virtual {v0, v2, v3, v7}, Lpv0;->u(JZ)Z
+    check-cast v0, Ljava/lang/String;
 
-    move-result v7
+    new-instance v1, Ljava/lang/Thread;
 
-    sget v10, Lrv0;->b:I
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    int-to-long v11, v10
+    return-object v1
 
-    div-long v2, v4, v11
+    :pswitch_3
+    iget-object v0, p0, Lxq3;->b:Ljava/io/Serializable;
 
-    rem-long v13, v4, v11
+    check-cast v0, Ljava/lang/String;
 
-    long-to-int v13, v13
+    new-instance v1, Ljava/lang/Thread;
 
-    iget-wide v14, v1, Lkotlinx/coroutines/internal/Segment;->id:J
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    cmp-long v14, v14, v2
+    const/16 p1, 0xa
 
-    if-eqz v14, :cond_5
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
 
-    invoke-static {v0, v2, v3, v1}, Lpv0;->c(Lpv0;JLoa2;)Loa2;
+    return-object v1
 
-    move-result-object v2
-
-    if-nez v2, :cond_4
-
-    if-eqz v7, :cond_3
-
-    invoke-virtual {v0}, Lpv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Lla2;
-
-    invoke-direct {v2, v1}, Lla2;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_4
-    move-object v1, v2
-
-    :cond_5
-    move-object/from16 v3, p1
-
-    move v2, v13
-
-    invoke-static/range {v0 .. v7}, Lpv0;->e(Lpv0;Loa2;ILjava/lang/Object;JLjava/lang/Object;Z)I
-
-    move-result v13
-
-    if-eqz v13, :cond_f
-
-    const/4 v3, 0x1
-
-    if-eq v13, v3, :cond_e
-
-    const/4 v3, 0x2
-
-    if-eq v13, v3, :cond_a
-
-    if-eq v13, v9, :cond_9
-
-    const/4 v2, 0x4
-
-    if-eq v13, v2, :cond_7
-
-    const/4 v2, 0x5
-
-    if-eq v13, v2, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    goto :goto_1
-
-    :cond_7
-    sget-object v2, Lpv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->get(Ljava/lang/Object;)J
-
-    move-result-wide v2
-
-    cmp-long v2, v4, v2
-
-    if-gez v2, :cond_8
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    :cond_8
-    invoke-virtual {v0}, Lpv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Lla2;
-
-    invoke-direct {v2, v1}, Lla2;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_9
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "unexpected"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_a
-    if-eqz v7, :cond_b
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
-
-    invoke-virtual {v0}, Lpv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Lla2;
-
-    invoke-direct {v2, v1}, Lla2;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_b
-    instance-of v3, v6, Lojh;
-
-    if-eqz v3, :cond_c
-
-    check-cast v6, Lojh;
-
-    goto :goto_2
-
-    :cond_c
-    const/4 v6, 0x0
-
-    :goto_2
-    if-eqz v6, :cond_d
-
-    add-int v13, v2, v10
-
-    invoke-interface {v6, v1, v13}, Lojh;->a(Lkotlinx/coroutines/internal/Segment;I)V
-
-    :cond_d
-    iget-wide v3, v1, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    mul-long/2addr v3, v11
-
-    int-to-long v1, v2
-
-    add-long/2addr v3, v1
-
-    invoke-virtual {v0, v3, v4}, Lpv0;->m(J)V
-
-    :cond_e
-    return-object v8
-
-    :cond_f
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    return-object v8
-.end method
-
-.method public final g(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lxq3;->J(Ljava/lang/Object;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p1, p2}, Lxq3;->J(Ljava/lang/Object;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of p1, p1, Lla2;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :cond_0
-    invoke-virtual {p0}, Lpv0;->r()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public final x()Z
-    .locals 2
-
-    iget v0, p0, Lxq3;->u0:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

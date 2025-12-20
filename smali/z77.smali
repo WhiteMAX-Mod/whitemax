@@ -3,202 +3,157 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb4f;
+.implements Lb87;
 
 
 # instance fields
-.field public final a:Lxh6;
+.field public final a:J
 
-.field public b:Z
+.field public final b:J
 
-.field public final synthetic c:La9;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(La9;)V
-    .locals 1
+.method public constructor <init>(JJLjava/util/ArrayList;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz77;->c:La9;
+    iput-wide p1, p0, Lz77;->a:J
 
-    new-instance v0, Lxh6;
+    iput-wide p3, p0, Lz77;->b:J
 
-    iget-object p1, p1, La9;->f:Ljava/lang/Object;
-
-    check-cast p1, Lvv0;
-
-    invoke-interface {p1}, Lb4f;->m()Lu9g;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lxh6;-><init>(Lu9g;)V
-
-    iput-object v0, p0, Lz77;->a:Lxh6;
+    iput-object p5, p0, Lz77;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L(Lqu0;J)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lz77;->c:La9;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, La9;->f:Ljava/lang/Object;
-
-    check-cast v0, Lvv0;
-
-    iget-boolean v1, p0, Lz77;->b:Z
-
-    if-nez v1, :cond_1
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v1, p2, v1
-
-    if-nez v1, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    invoke-interface {v0, p2, p3}, Lvv0;->N(J)Lvv0;
+    instance-of v0, p1, Lz77;
 
-    const-string v1, "\r\n"
+    if-nez v0, :cond_1
 
-    invoke-interface {v0, v1}, Lvv0;->I(Ljava/lang/String;)Lvv0;
-
-    invoke-interface {v0, p1, p2, p3}, Lb4f;->L(Lqu0;J)V
-
-    invoke-interface {v0, v1}, Lvv0;->I(Ljava/lang/String;)Lvv0;
-
-    return-void
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lz77;
 
-    const-string p2, "closed"
+    iget-wide v0, p0, Lz77;->a:J
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p1, Lz77;->a:J
 
-    throw p1
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lz77;->b:J
+
+    iget-wide v2, p1, Lz77;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lz77;->c:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lz77;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final declared-synchronized close()V
-    .locals 3
+.method public final hashCode()I
+    .locals 4
 
-    monitor-enter p0
+    iget-wide v0, p0, Lz77;->a:J
 
-    :try_start_0
-    iget-boolean v0, p0, Lz77;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    monitor-exit p0
+    const/16 v1, 0x1f
 
-    return-void
+    mul-int/2addr v0, v1
 
-    :cond_0
-    const/4 v0, 0x1
+    iget-wide v2, p0, Lz77;->b:J
 
-    :try_start_1
-    iput-boolean v0, p0, Lz77;->b:Z
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
 
-    iget-object v0, p0, Lz77;->c:La9;
+    move-result v0
 
-    iget-object v0, v0, La9;->f:Ljava/lang/Object;
+    iget-object v1, p0, Lz77;->c:Ljava/util/ArrayList;
 
-    check-cast v0, Lvv0;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    const-string v1, "0\r\n\r\n"
+    move-result v1
 
-    invoke-interface {v0, v1}, Lvv0;->I(Ljava/lang/String;)Lvv0;
+    add-int/2addr v1, v0
 
-    iget-object v0, p0, Lz77;->a:Lxh6;
-
-    iget-object v1, v0, Lxh6;->e:Lu9g;
-
-    sget-object v2, Lu9g;->d:Lt9g;
-
-    iput-object v2, v0, Lxh6;->e:Lu9g;
-
-    invoke-virtual {v1}, Lu9g;->a()Lu9g;
-
-    invoke-virtual {v1}, Lu9g;->b()Lu9g;
-
-    iget-object v0, p0, Lz77;->c:La9;
-
-    const/4 v1, 0x3
-
-    iput v1, v0, La9;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
+    return v1
 .end method
 
-.method public final declared-synchronized flush()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    monitor-enter p0
+    const-string v0, "OneToOne(opponentId="
 
-    :try_start_0
-    iget-boolean v0, p0, Lz77;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, ", chatId="
 
-    if-eqz v0, :cond_0
+    iget-wide v2, p0, Lz77;->a:J
 
-    monitor-exit p0
+    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    :try_start_1
-    iget-object v0, p0, Lz77;->c:La9;
+    iget-wide v1, p0, Lz77;->b:J
 
-    iget-object v0, v0, La9;->f:Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lvv0;
+    const-string v1, ", messagesIds="
 
-    invoke-interface {v0}, Lvv0;->flush()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    monitor-exit p0
+    iget-object v1, p0, Lz77;->c:Ljava/util/ArrayList;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception v0
+    const-string v1, ")"
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final m()Lu9g;
-    .locals 1
-
-    iget-object v0, p0, Lz77;->a:Lxh6;
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,179 +1,175 @@
-.class public final Lneb;
-.super Lcom/google/android/material/tabs/TabLayout;
+.class public abstract Lneb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu6g;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final i1:Loeb;
+.field public static final a:I
 
-.field public final j1:Ljava/lang/Object;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 p2, 0x0
+    sget v0, Lcdd;->oneme_notifications_and_sounds_settings_toolbar_title:I
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/tabs/TabLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    sput v0, Lneb;->a:I
 
-    sget-object p1, Lpeb;->a:Lbwf;
+    sget v0, Lcdd;->oneme_notifications_settings_chat_enable_notifications_button:I
 
-    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
+    sput v0, Lneb;->b:I
 
-    move-result-object p1
+    sget v0, Lcdd;->oneme_notifications_settings_chat_enabled_section_title:I
 
-    check-cast p1, Loeb;
+    sput v0, Lneb;->c:I
 
-    iput-object p1, p0, Lneb;->i1:Loeb;
+    sget v0, Lcdd;->oneme_notifications_settings_chat_settings_button:I
 
-    new-instance p1, Lfr7;
+    sput v0, Lneb;->d:I
 
-    const/16 v0, 0x1d
+    sget v0, Lcdd;->oneme_notifications_settings_chat_toolbar_title:I
 
-    invoke-direct {p1, v0, p0}, Lfr7;-><init>(ILjava/lang/Object;)V
+    sput v0, Lneb;->e:I
 
-    const/4 v0, 0x3
+    sget v0, Lcdd;->oneme_notifications_settings_chat_type_all_button:I
 
-    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
+    sput v0, Lneb;->f:I
 
-    move-result-object p1
+    sget v0, Lcdd;->oneme_notifications_settings_chat_type_pin_reply_button:I
 
-    iput-object p1, p0, Lneb;->j1:Ljava/lang/Object;
+    sput v0, Lneb;->g:I
 
-    invoke-direct {p0}, Lneb;->getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
+    sget v0, Lcdd;->oneme_notifications_settings_default_ringtone_title:I
 
-    move-result-object p1
+    sput v0, Lneb;->h:I
 
-    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicator(Landroid/graphics/drawable/Drawable;)V
+    sget v0, Lcdd;->oneme_notifications_settings_dialog_enable_notifications_button:I
 
-    sget-object p1, La93;->s0:Lv1a;
+    sput v0, Lneb;->i:I
 
-    invoke-virtual {p1, p0}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    sget v0, Lcdd;->oneme_notifications_settings_dialog_settings_button:I
 
-    move-result-object p1
+    sput v0, Lneb;->j:I
 
-    invoke-interface {p1}, Lyeb;->i()Lgnf;
+    sget v0, Lcdd;->oneme_notifications_settings_dialog_toolbar_title:I
 
-    move-result-object p1
+    sput v0, Lneb;->k:I
 
-    iget p1, p1, Lgnf;->h:I
+    sget v0, Lcdd;->oneme_notifications_settings_enable_all_notifications:I
 
-    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+    sput v0, Lneb;->l:I
 
-    const/4 p1, 0x0
+    sget v0, Lcdd;->oneme_notifications_settings_open_settings_button_description:I
 
-    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorFullWidth(Z)V
+    sput v0, Lneb;->m:I
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    sget v0, Lcdd;->oneme_notifications_settings_open_settings_button_ringtone:I
 
-    const/4 v0, 0x2
+    sput v0, Lneb;->n:I
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->setTabGravity(I)V
+    sget v0, Lcdd;->oneme_notifications_settings_open_settings_button_title:I
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/tabs/TabLayout;->setTabRippleColor(Landroid/content/res/ColorStateList;)V
+    sput v0, Lneb;->o:I
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+    sget v0, Lcdd;->oneme_notifications_settings_open_settings_call_ringtone_title:I
 
-    new-instance p2, Lawa;
+    sput v0, Lneb;->p:I
 
-    const/4 v0, 0x4
+    sget v0, Lcdd;->oneme_notifications_settings_open_settings_calls_vibration:I
 
-    invoke-direct {p2, v0, p0}, Lawa;-><init>(ILjava/lang/Object;)V
+    sput v0, Lneb;->q:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    sget v0, Lcdd;->oneme_notifications_settings_other_new_user_button:I
 
-    const-class p2, Lcom/google/android/material/tabs/TabLayout;
+    sput v0, Lneb;->r:I
 
-    invoke-static {p2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+    sget v0, Lcdd;->oneme_notifications_settings_other_settings_button:I
 
-    move-result-object p2
+    sput v0, Lneb;->s:I
 
-    const-string v0, "requestedTabMinWidth"
+    sget v0, Lcdd;->oneme_notifications_settings_other_toolbar_title:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput v0, Lneb;->t:I
 
-    move-result-object p1
+    sget v0, Lcdd;->oneme_notifications_settings_reset_default_button:I
 
-    invoke-static {p2, p0, v0, p1}, Lz7j;->c(Lca3;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
+    sput v0, Lneb;->u:I
 
-    return-void
-.end method
+    sget v0, Lcdd;->oneme_notifications_settings_reset_settings_button:I
 
-.method private final getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
-    .locals 1
+    sput v0, Lneb;->v:I
 
-    iget-object v0, p0, Lneb;->j1:Ljava/lang/Object;
+    sget v0, Lcdd;->oneme_notifications_settings_show_content_button:I
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    sput v0, Lneb;->w:I
 
-    move-result-object v0
+    sget v0, Lcdd;->oneme_notifications_settings_toolbar_title:I
 
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+    sput v0, Lneb;->x:I
 
-    return-object v0
-.end method
+    sget v0, Lcdd;->oneme_notifications_settings_type_off:I
 
+    sput v0, Lneb;->y:I
 
-# virtual methods
-.method public final onThemeChanged(Lyeb;)V
-    .locals 1
+    sget v0, Lcdd;->oneme_notifications_settings_type_on:I
 
-    invoke-interface {p1}, Lyeb;->i()Lgnf;
+    sput v0, Lneb;->z:I
 
-    move-result-object p1
+    sget v0, Lcdd;->oneme_notifications_settings_type_reply:I
 
-    iget p1, p1, Lgnf;->h:I
-
-    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
-
-    sget-object p1, La93;->s0:Lv1a;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lv1a;->x(Landroid/content/Context;)La93;
-
-    move-result-object p1
-
-    invoke-static {p1, p0}, La93;->h(La93;Landroid/view/ViewGroup;)V
-
-    return-void
-.end method
-
-.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    const/16 v0, 0x28
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result v0
-
-    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    sput v0, Lneb;->A:I
 
     return-void
 .end method

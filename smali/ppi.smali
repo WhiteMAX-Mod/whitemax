@@ -1,129 +1,101 @@
-.class public abstract Lppi;
-.super Ljava/lang/Object;
+.class public final Lppi;
+.super Li4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lppi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Landroid/accounts/Account;
+
+.field public final c:I
+
+.field public final d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Lcl3;
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lna0;
+    new-instance v0, Lioh;
 
-    invoke-direct {v0, p0, p1}, Lna0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v1, 0x12
 
-    const-class p0, Lna0;
+    invoke-direct {v0, v1}, Lioh;-><init>(I)V
 
-    invoke-static {p0}, Lcl3;->b(Ljava/lang/Class;)Lbl3;
+    sput-object v0, Lppi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result-object p0
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lbl3;->c:I
-
-    new-instance p1, Li62;
-
-    const/16 v1, 0xc
-
-    invoke-direct {p1, v1, v0}, Li62;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lbl3;->g:Ljava/lang/Object;
-
-    invoke-virtual {p0}, Lbl3;->b()Lcl3;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Lu75;)V
-    .locals 3
+.method public constructor <init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
+    .locals 0
 
-    sget-object v0, Lu75;->f:Lu75;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, v0}, Lu75;->equals(Ljava/lang/Object;)Z
+    iput p1, p0, Lppi;->a:I
+
+    iput-object p2, p0, Lppi;->b:Landroid/accounts/Account;
+
+    iput p3, p0, Lppi;->c:I
+
+    iput-object p4, p0, Lppi;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
+
+    const/16 v0, 0x4f45
+
+    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lone/me/sdk/camerax/vms/processor/VideoMessageProcessorException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "The specified dynamic range="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " is not supported yet"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public static c(Ljava/lang/String;Los5;)Lcl3;
-    .locals 3
-
-    const-class v0, Lna0;
-
-    invoke-static {v0}, Lcl3;->b(Ljava/lang/Class;)Lbl3;
-
-    move-result-object v0
-
     const/4 v1, 0x1
 
-    iput v1, v0, Lbl3;->c:I
+    const/4 v2, 0x4
 
-    const-class v1, Landroid/content/Context;
+    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    invoke-static {v1}, Lvt4;->a(Ljava/lang/Class;)Lvt4;
+    iget v1, p0, Lppi;->a:I
 
-    move-result-object v1
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, v1}, Lbl3;->a(Lvt4;)V
+    const/4 v1, 0x2
 
-    new-instance v1, Ldq4;
+    iget-object v3, p0, Lppi;->b:Landroid/accounts/Account;
 
-    const/16 v2, 0x9
+    invoke-static {p1, v1, v3, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-direct {v1, p0, v2, p1}, Ldq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v1, 0x3
 
-    iput-object v1, v0, Lbl3;->g:Ljava/lang/Object;
+    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    invoke-virtual {v0}, Lbl3;->b()Lcl3;
+    iget v1, p0, Lppi;->c:I
 
-    move-result-object p0
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lppi;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
-.method public static final d(II)Z
-    .locals 0
+    invoke-static {p1, v2, v1, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    and-int/2addr p0, p1
+    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
 
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

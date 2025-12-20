@@ -1,168 +1,90 @@
-.class public abstract Lyzi;
+.class public final Lyzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lyzi;
+
 
 # direct methods
-.method public static a(ZZZZZZZZZZZZ)J
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-eqz p11, :cond_0
+    new-instance v0, Lyzi;
 
-    const-wide/16 v0, 0x1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    sput-object v0, Lyzi;->a:Lyzi;
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    new-instance v0, Ldqi;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    const/4 v1, 0x1
 
-    const-wide/16 v2, 0x2
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    or-long/2addr v0, v2
+    const-class v1, Lrqi;
 
-    :cond_1
-    if-eqz p1, :cond_2
-
-    const-wide/16 p0, 0x4
-
-    or-long/2addr v0, p0
-
-    :cond_2
-    if-eqz p2, :cond_3
-
-    const-wide/16 p0, 0x8
-
-    or-long/2addr v0, p0
-
-    :cond_3
-    if-eqz p3, :cond_4
-
-    const-wide/16 p0, 0x10
-
-    or-long/2addr v0, p0
-
-    :cond_4
-    if-eqz p4, :cond_5
-
-    const-wide/16 p0, 0x20
-
-    or-long/2addr v0, p0
-
-    :cond_5
-    if-eqz p5, :cond_6
-
-    const-wide/16 p0, 0x40
-
-    or-long/2addr v0, p0
-
-    :cond_6
-    if-eqz p6, :cond_7
-
-    const-wide/16 p0, 0x80
-
-    or-long/2addr v0, p0
-
-    :cond_7
-    if-eqz p7, :cond_8
-
-    const-wide/16 p0, 0x100
-
-    or-long/2addr v0, p0
-
-    :cond_8
-    if-eqz p8, :cond_9
-
-    const-wide/16 p0, 0x200
-
-    or-long/2addr v0, p0
-
-    :cond_9
-    if-eqz p9, :cond_a
-
-    const-wide/16 p0, 0x400
-
-    or-long/2addr v0, p0
-
-    :cond_a
-    if-eqz p10, :cond_b
-
-    const-wide/16 p0, 0x800
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-
-    :cond_b
-    return-wide v0
-.end method
-
-.method public static final b(Lvgb;Lg2h;)J
-    .locals 5
-
-    instance-of v0, p1, Lcn3;
-
-    const-wide/16 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lvgb;->f()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    if-lez p0, :cond_0
+    const/4 v2, 0x2
 
-    goto :goto_0
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-eqz v0, :cond_1
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result p0
+    const/4 v2, 0x4
 
-    check-cast p1, Lcn3;
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    iget-object v0, p1, Lcn3;->a:Ljava/util/List;
+    move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
+    const/4 v2, 0x5
 
-    move-result p0
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    :goto_1
-    if-ge v0, p0, :cond_1
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    iget-object v3, p1, Lcn3;->a:Ljava/util/List;
+    move-result-object v0
 
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v2, 0x6
 
-    move-result-object v3
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    check-cast v3, Lbn3;
+    move-result-object v0
 
-    iget-wide v3, v3, Lbn3;->d:J
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    add-long/2addr v1, v3
+    move-result-object v0
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_1
-    return-wide v1
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

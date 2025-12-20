@@ -1,35 +1,55 @@
-.class public interface abstract Lcbb;
-.super Ljava/lang/Object;
+.class public final Lcbb;
+.super Ll84;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Lsfa;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lhbb;
+
+.field public d:Lhbb;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:I
+
+
+# direct methods
+.method public constructor <init>(Lhbb;Ll84;)V
+    .locals 0
+
+    iput-object p1, p0, Lcbb;->Z:Lhbb;
+
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public J(Ljava/lang/CharSequence;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lcbb;->Y:Ljava/lang/Object;
 
-.method public a0()V
-    .locals 0
+    iget p1, p0, Lcbb;->s0:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public e()V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lcbb;->s0:I
 
-.method public m()V
-    .locals 0
+    iget-object p1, p0, Lcbb;->Z:Lhbb;
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public o()V
-    .locals 0
+    invoke-virtual {p1, v0, p0}, Lhbb;->g(Loq6;Ll84;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

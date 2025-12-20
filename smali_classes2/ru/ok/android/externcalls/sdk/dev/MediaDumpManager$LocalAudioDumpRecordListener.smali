@@ -22,7 +22,7 @@
         "",
         "",
         "dirPath",
-        "Lqqg;",
+        "Lv2h;",
         "onRecordStarted",
         "(Ljava/lang/String;)V",
         "onRecordCompleted",

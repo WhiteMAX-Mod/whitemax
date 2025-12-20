@@ -1,83 +1,48 @@
 .class public final Lh72;
-.super Lh07;
+.super Landroidx/core/widget/NestedScrollView;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:[B
-
-.field public c:Ljava/lang/Object;
+.field public final synthetic R0:Li72;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroid/content/Context;Li72;)V
     .locals 0
 
-    iput p1, p0, Lh72;->a:I
+    iput-object p2, p0, Lh72;->R0:Li72;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Landroidx/core/widget/NestedScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()[B
-    .locals 1
+.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 2
 
-    iget v0, p0, Lh72;->a:I
+    iget-object v0, p0, Lh72;->R0:Li72;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Li72;->e(Li72;)Lg72;
 
-    iget-object v0, p0, Lh72;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, [B
+    sget-object v1, Lg72;->c:Lg72;
 
-    return-object v0
+    if-eq v0, v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lh72;->b:[B
+    const/4 p1, 0x0
 
-    return-object v0
+    return p1
 
-    :pswitch_1
-    iget-object v0, p0, Lh72;->b:[B
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
-    return-object v0
+    move-result p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()Llbg;
-    .locals 1
-
-    iget v0, p0, Lh72;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Llbg;->s0:Llbg;
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Llbg;->o:Llbg;
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Llbg;->Y:Llbg;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

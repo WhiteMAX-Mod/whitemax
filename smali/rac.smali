@@ -1,26 +1,67 @@
-.class public interface abstract Lrac;
+.class public final Lrac;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Li66;
+
+
+# direct methods
+.method public constructor <init>(Li66;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrac;->a:Li66;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Loac;Ljava/lang/String;Ljava/util/Map;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lrac;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lrac;
+
+    iget-object v0, p0, Lrac;->a:Li66;
+
+    iget-object p1, p1, Lrac;->a:Li66;
+
+    invoke-virtual {v0, p1}, Li66;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public abstract c(Loac;)V
-.end method
+.method public final hashCode()I
+    .locals 1
 
-.method public abstract d(Loac;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-.end method
+    iget-object v0, p0, Lrac;->a:Li66;
 
-.method public abstract e(Loac;Ljava/lang/String;Z)V
-.end method
+    iget-object v0, v0, Li66;->a:Landroid/util/SparseBooleanArray;
 
-.method public abstract i(Loac;Ljava/lang/String;)Z
-.end method
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->hashCode()I
 
-.method public abstract j(Loac;Ljava/lang/String;)V
-.end method
+    move-result v0
 
-.method public abstract k(Loac;Ljava/lang/String;)V
+    return v0
 .end method

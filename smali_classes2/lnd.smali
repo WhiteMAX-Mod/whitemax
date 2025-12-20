@@ -1,63 +1,140 @@
 .class public final Llnd;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnnd;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final a:Lghg;
 
-.field public Y:Lyi5;
+.field public final b:Ljava/lang/Integer;
 
-.field public Z:Loje;
 
-.field public d:Lhwa;
+# direct methods
+.method public constructor <init>(Lghg;Ljava/lang/Integer;)V
+    .locals 0
 
-.field public o:Ln2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public s0:Ll0g;
+    iput-object p1, p0, Llnd;->a:Lghg;
 
-.field public t0:J
+    iput-object p2, p0, Llnd;->b:Ljava/lang/Integer;
 
-.field public u0:I
-
-.field public v0:I
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public x0:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Llnd;->w0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Llnd;->x0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llnd;->x0:I
-
-    const-wide/16 v4, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
+    :cond_0
+    instance-of v1, p1, Llnd;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    move-object v7, p0
+    return v2
 
-    invoke-static/range {v0 .. v7}, Ld8j;->b(Lhwa;Ln2;Ljava/lang/String;Lyi5;JILq44;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Llnd;
 
-    move-result-object p1
+    iget-object v1, p0, Llnd;->a:Lghg;
 
-    return-object p1
+    iget-object v3, p1, Llnd;->a:Lghg;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
+
+    iget-object p1, p1, Llnd;->b:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Llnd;->a:Lghg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(textSource="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llnd;->a:Lghg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", iconRes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llnd;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

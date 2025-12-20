@@ -31,9 +31,9 @@
 
 .field public final a:Landroid/view/ScaleGestureDetector;
 
-.field public final b:Ldd;
+.field public final b:Lgd;
 
-.field public c:Lm0c;
+.field public c:Ln7c;
 
 .field public d:F
 
@@ -74,21 +74,21 @@
 
     iput-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->a:Landroid/view/ScaleGestureDetector;
 
-    invoke-static {}, Lzm;->a()Lqm3;
+    invoke-static {}, Lbn;->a()Laq3;
 
     move-result-object p2
 
-    check-cast p2, Lt1b;
+    check-cast p2, Ld8b;
 
-    invoke-virtual {p2}, Lt1b;->a()Ldd;
+    invoke-virtual {p2}, Ld8b;->a()Lgd;
 
     move-result-object p2
 
-    iput-object p2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->b:Ldd;
+    iput-object p2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->b:Lgd;
 
-    sget-object p2, Lm0c;->b:Lm0c;
+    sget-object p2, Ln7c;->b:Ln7c;
 
-    iput-object p2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iput-object p2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
     const/high16 p2, 0x3f800000    # 1.0f
 
@@ -114,11 +114,11 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lrw4;->a()Lrw4;
+    invoke-static {}, Ln05;->a()Ln05;
 
     move-result-object v1
 
-    iget v1, v1, Lrw4;->q:I
+    iget v1, v1, Ln05;->q:I
 
     int-to-float v1, v1
 
@@ -133,18 +133,18 @@
     return-void
 .end method
 
-.method private getStateByScale()Lm0c;
+.method private getStateByScale()Ln7c;
     .locals 6
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
-    sget-object v1, Lm0c;->a:Lm0c;
+    sget-object v1, Ln7c;->a:Ln7c;
 
     const/high16 v2, 0x3e800000    # 0.25f
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    sget-object v4, Lm0c;->b:Lm0c;
+    sget-object v4, Ln7c;->b:Ln7c;
 
     if-ne v0, v4, :cond_1
 
@@ -152,7 +152,7 @@
 
     iget v5, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->t0:F
 
-    invoke-static {v5, v3, v2, v3}, Lutb;->i(FFFF)F
+    invoke-static {v5, v3, v2, v3}, Ln0c;->h(FFFF)F
 
     move-result v2
 
@@ -436,19 +436,19 @@
 
     iput v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
 
-    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Lm0c;
+    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Ln7c;
 
     move-result-object v0
 
-    sget-object v1, Lm0c;->a:Lm0c;
+    sget-object v1, Ln7c;->a:Ln7c;
 
     const/4 v2, 0x0
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
-    sget-object v1, Lm0c;->b:Lm0c;
+    sget-object v1, Ln7c;->b:Ln7c;
 
     if-ne v0, v1, :cond_0
 
@@ -500,9 +500,9 @@
 
     iput v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->d:F
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
-    sget-object v1, Lm0c;->b:Lm0c;
+    sget-object v1, Ln7c;->b:Ln7c;
 
     if-ne v0, v1, :cond_0
 
@@ -593,7 +593,7 @@
 .method public final onScaleEnd(Landroid/view/ScaleGestureDetector;)V
     .locals 8
 
-    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Lm0c;
+    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Ln7c;
 
     move-result-object p1
 
@@ -601,13 +601,13 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lm0c;->b:Lm0c;
+    sget-object v2, Ln7c;->b:Ln7c;
 
-    sget-object v3, Lm0c;->a:Lm0c;
+    sget-object v3, Ln7c;->a:Ln7c;
 
     if-ne p1, v3, :cond_0
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
     if-ne p1, v2, :cond_0
 
@@ -627,9 +627,9 @@
 
     iput-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->E0:Landroid/animation/ValueAnimator;
 
-    new-instance v4, Ll0c;
+    new-instance v4, Lm7c;
 
-    invoke-direct {v4, p0, v1}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v4, p0, v1}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {p1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -638,7 +638,7 @@
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     :cond_0
-    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Lm0c;
+    invoke-direct {p0}, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->getStateByScale()Ln7c;
 
     move-result-object p1
 
@@ -648,7 +648,7 @@
 
     if-ne p1, v3, :cond_1
 
-    iput-object v3, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iput-object v3, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
     iget p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
 
@@ -669,7 +669,7 @@
     goto :goto_0
 
     :cond_1
-    iput-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iput-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
     iget p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
 
@@ -692,7 +692,7 @@
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Lm0c;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->c:Ln7c;
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -724,11 +724,11 @@
 
     invoke-virtual {p1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->b:Ldd;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->b:Lgd;
 
     const-string v3, "PINCH_TO_ZOOM"
 
-    invoke-virtual {v2, v3, p1}, Ldd;->g(Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-virtual {v2, v3, p1}, Lgd;->g(Ljava/lang/String;Ljava/util/HashMap;)V
 
     iget-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->D0:Landroid/animation/ValueAnimator;
 
@@ -738,9 +738,9 @@
 
     move-result-object p1
 
-    new-instance v6, Ll0c;
+    new-instance v6, Lm7c;
 
-    invoke-direct {v6, p0, v4}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v6, p0, v4}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {p1, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -774,9 +774,9 @@
 
     iput-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->F0:Landroid/animation/ValueAnimator;
 
-    new-instance v6, Ll0c;
+    new-instance v6, Lm7c;
 
-    invoke-direct {v6, p0, v5}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v6, p0, v5}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {p1, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -810,9 +810,9 @@
 
     iput-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->G0:Landroid/animation/ValueAnimator;
 
-    new-instance v6, Ll0c;
+    new-instance v6, Lm7c;
 
-    invoke-direct {v6, p0, v0}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v6, p0, v0}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {p1, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -840,11 +840,11 @@
 
     iput-object v0, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->H0:Landroid/animation/ValueAnimator;
 
-    new-instance v6, Ll0c;
+    new-instance v6, Lm7c;
 
     const/4 v7, 0x4
 
-    invoke-direct {v6, p0, v7}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v6, p0, v7}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {v0, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -870,11 +870,11 @@
 
     iput-object p1, p0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->I0:Landroid/animation/ValueAnimator;
 
-    new-instance v0, Ll0c;
+    new-instance v0, Lm7c;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, p0, v1}, Ll0c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    invoke-direct {v0, p0, v1}, Lm7c;-><init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 

@@ -1,180 +1,289 @@
 .class public final Lioa;
-.super Ldtf;
+.super Lkoa;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# static fields
+.field public static final synthetic i:[Lp38;
 
 
 # instance fields
-.field public final synthetic X:Lloa;
+.field public final e:Lwea;
 
-.field public final synthetic Y:J
+.field public final f:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final synthetic Z:J
+.field public final g:Le7;
 
-.field public o:I
+.field public h:J
 
 
 # direct methods
-.method public constructor <init>(Lloa;JJLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lioa;->X:Lloa;
+    new-instance v0, Lifa;
 
-    iput-wide p2, p0, Lioa;->Y:J
+    const-string v1, "job"
 
-    iput-wide p4, p0, Lioa;->Z:J
+    const-string v2, "getJob()Lkotlinx/coroutines/Job;"
 
-    const/4 p1, 0x2
+    const-class v3, Lioa;
 
-    invoke-direct {p0, p1, p6}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lfsd;->a:Lgsd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lp38;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lioa;->i:[Lp38;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lac4;Ld68;)V
+    .locals 3
+
+    invoke-direct {p0, p1, p2}, Lkoa;-><init>(Lac4;Ld68;)V
+
+    new-instance p2, Lwea;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Lwea;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lioa;->e:Lwea;
+
+    new-instance p2, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    iput-object p2, p0, Lioa;->f:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-static {}, Llkj;->b()Le7;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lioa;->g:Le7;
+
+    sget p2, Lqa5;->d:I
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lioa;->h:J
+
+    invoke-virtual {p0}, Lkoa;->a()V
+
+    new-instance p2, Lhoa;
+
+    invoke-direct {p2, p0, v0}, Lhoa;-><init>(Lioa;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v0, v0, p2, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkoa;->c:Lglf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lioa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lioa;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lioa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
-
-    new-instance v0, Lioa;
-
-    iget-wide v2, p0, Lioa;->Y:J
-
-    iget-wide v4, p0, Lioa;->Z:J
-
-    iget-object v1, p0, Lioa;->X:Lloa;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lioa;-><init>(Lloa;JJLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d()V
     .locals 8
 
-    iget v0, p0, Lioa;->o:I
+    iget-object v0, p0, Lioa;->e:Lwea;
 
-    iget-object v1, p0, Lioa;->X:Lloa;
-
-    const/4 v6, 0x2
-
-    const/4 v2, 0x1
-
-    sget-object v7, Lg84;->a:Lg84;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v6, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    move-object v0, v1
-
-    move-object v1, p1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iput v2, p0, Lioa;->o:I
-
-    move-object v0, v1
-
-    iget-wide v1, p0, Lioa;->Y:J
-
-    iget-wide v3, p0, Lioa;->Z:J
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Lloa;->b(JJLq44;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v7, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0}, Lioa;->e()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-nez v1, :cond_0
 
-    iget-object v0, v0, Lloa;->o:Lk18;
+    return-void
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    :cond_0
+    iget-object v1, p0, Lioa;->f:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget v2, v0, Lwea;->d:I
+
+    iget-object v3, p0, Lkoa;->b:Ld68;
+
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lpfc;
+
+    iget-object v3, v3, Lpfc;->b:Lncc;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-max-chunk-size:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v5, 0xa
+
+    int-to-long v5, v5
+
+    invoke-virtual {v3, v4, v5, v6}, Lncc;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    long-to-int v3, v3
+
+    if-ge v2, v3, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    sget v2, Lqa5;->d:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v2
+
+    sget-object v4, Lwa5;->b:Lwa5;
+
+    invoke-static {v2, v3, v4}, Lfnj;->i(JLwa5;)J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lioa;->h:J
+
+    invoke-static {v2, v3, v4, v5}, Lqa5;->l(JJ)J
+
+    move-result-wide v4
+
+    invoke-virtual {p0}, Lkoa;->b()J
+
+    move-result-wide v6
+
+    invoke-static {v4, v5, v6, v7}, Lqa5;->d(JJ)I
+
+    move-result v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-gtz v4, :cond_2
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :cond_2
+    :try_start_2
+    iput-wide v2, p0, Lioa;->h:J
+
+    invoke-static {v0}, Lt5j;->b(Lwea;)Lwea;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lwea;->c()V
+
+    iget-object v0, p0, Lkoa;->a:Lac4;
+
+    sget-object v3, Ldc4;->b:Ldc4;
+
+    new-instance v4, Lgoa;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p0, v2, v5}, Lgoa;-><init>(Lioa;Lwea;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v5, v3, v4, v2}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
     move-result-object v0
 
-    check-cast v0, Lqpa;
+    iget-object v2, p0, Lioa;->g:Le7;
 
-    iput v6, p0, Lioa;->o:I
+    sget-object v3, Lioa;->i:[Lp38;
 
-    iget-wide v1, p0, Lioa;->Y:J
+    const/4 v4, 0x0
 
-    iget-wide v3, p0, Lioa;->Z:J
+    aget-object v3, v3, v4
 
-    move-object v5, p0
+    invoke-virtual {v2, p0, v3, v0}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-virtual/range {v0 .. v5}, Lqpa;->g(JJLdtf;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+.end method
+
+.method public final e()Z
+    .locals 4
+
+    invoke-virtual {p0}, Lkoa;->b()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lqa5;->d(JJ)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lkoa;->b:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-ne v0, v7, :cond_4
+    check-cast v0, Lpfc;
 
-    :goto_1
-    return-object v7
+    iget-object v0, v0, Lpfc;->b:Lncc;
 
-    :cond_4
-    :goto_2
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v0
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-max-chunk-size:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xa
+
+    int-to-long v2, v2
+
+    invoke-virtual {v0, v1, v2, v3}, Lncc;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

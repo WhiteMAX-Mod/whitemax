@@ -1,49 +1,52 @@
-.class public final Lvqf;
-.super Lq44;
+.class public final synthetic Lvqf;
+.super Lw8;
 .source "SourceFile"
 
+# interfaces
+.implements Ler6;
 
-# instance fields
-.field public final synthetic X:Lxqf;
 
-.field public Y:I
-
-.field public d:Lxqf;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final Z:Lvqf;
 
 
 # direct methods
-.method public constructor <init>(Lxqf;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lvqf;->X:Lxqf;
+    new-instance v0, Lvqf;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lysb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lvqf;->Z:Lvqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lvqf;->o:Ljava/lang/Object;
+    check-cast p1, Lerf;
 
-    iget p1, p0, Lvqf;->Y:I
+    check-cast p2, Ljava/lang/Boolean;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    or-int/2addr p1, v0
+    sget-object p3, Larf;->G0:[Lp38;
 
-    iput p1, p0, Lvqf;->Y:I
+    new-instance p3, Lysb;
 
-    iget-object p1, p0, Lvqf;->X:Lxqf;
+    invoke-direct {p3, p1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p0}, Lxqf;->c(Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p3
 .end method

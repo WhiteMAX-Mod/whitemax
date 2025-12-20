@@ -1,99 +1,64 @@
-.class public final synthetic Lmd6;
+.class public final Lmd6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lod6;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lod6;
-
-.field public final synthetic c:Lneb;
+# static fields
+.field public static final a:Lmd6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lod6;Lneb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lmd6;->a:I
+    new-instance v0, Lmd6;
 
-    iput-object p1, p0, Lmd6;->b:Lod6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lmd6;->c:Lneb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lmd6;->a:Lmd6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lmd6;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lmd6;->b:Lod6;
-
-    iget-object v1, v0, Lod6;->d:Lnd6;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Lmd6;->c:Lneb;
-
-    invoke-virtual {v2, v1}, Lcom/google/android/material/tabs/TabLayout;->k(Lfyf;)V
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of p1, p1, Lmd6;
 
-    iput-object v1, v0, Lod6;->d:Lnd6;
+    if-nez p1, :cond_1
 
-    iput-object v1, v0, Lod6;->o:Lneb;
+    const/4 p1, 0x0
 
-    iget-object v2, v0, Lod6;->v0:Liv;
-
-    iget-object v3, v2, Liv;->f:Ljava/util/List;
-
-    iput-object v3, v0, Lod6;->s0:Ljava/util/List;
-
-    invoke-virtual {v2, v1, v1}, Liv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    :goto_0
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lmd6;->b:Lod6;
-
-    iget-object v1, v0, Lod6;->s0:Ljava/util/List;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    iget-object v3, p0, Lmd6;->c:Lneb;
-
-    invoke-virtual {v3}, Lcom/google/android/material/tabs/TabLayout;->j()V
-
-    iget-object v3, v0, Lod6;->v0:Liv;
-
-    invoke-virtual {v3, v1, v2}, Liv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    return p1
 
     :cond_1
-    iput-object v2, v0, Lod6;->s0:Ljava/util/List;
+    return v0
+.end method
 
-    goto :goto_0
+.method public final hashCode()I
+    .locals 1
 
-    nop
+    const v0, -0x667a69eb
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ConfirmDeletion"
+
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Landroidx/work/OverwritingInputMerger;
-.super Lom7;
+.super Lzq7;
 .source "SourceFile"
 
 
@@ -14,14 +14,16 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)Lyd4;
+.method public final a(Ljava/util/ArrayList;)Lyh4;
     .locals 3
 
-    new-instance v0, Lr5j;
+    new-instance v0, Ls2e;
 
     const/16 v1, 0xe
 
-    invoke-direct {v0, v1}, Lr5j;-><init>(I)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ls2e;-><init>(IB)V
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -42,9 +44,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lyd4;
+    check-cast v2, Lyh4;
 
-    iget-object v2, v2, Lyd4;->a:Ljava/util/HashMap;
+    iget-object v2, v2, Lyh4;->a:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -55,9 +57,9 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v1}, Lr5j;->E(Ljava/util/Map;)V
+    invoke-virtual {v0, v1}, Ls2e;->H(Ljava/util/Map;)V
 
-    invoke-virtual {v0}, Lr5j;->g()Lyd4;
+    invoke-virtual {v0}, Ls2e;->z()Lyh4;
 
     move-result-object p1
 

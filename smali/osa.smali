@@ -1,87 +1,37 @@
-.class public final Losa;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Losa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpy4;
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final a:Lvta;
-
-.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Lvta;)V
+.method public static a(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
+    .locals 1
+
+    new-instance v0, Landroid/app/Notification$Action$Builder;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/app/Notification$Builder;Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
 
-    iput-object p1, p0, Losa;->a:Lvta;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final dispose()V
+.method public static c(Landroid/app/Notification$Builder;Ljava/lang/Object;)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-static {p0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    check-cast p1, Landroid/graphics/drawable/Icon;
 
-    return-void
-.end method
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setSmallIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
 
-.method public final e()Z
-    .locals 2
+    move-result-object p0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lty4;->a:Lty4;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lty4;->a:Lty4;
-
-    if-eq v0, v1, :cond_0
-
-    iget-wide v0, p0, Losa;->b:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v2, v0
-
-    iput-wide v2, p0, Losa;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Losa;->a:Lvta;
-
-    invoke-interface {v1, v0}, Lvta;->f(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

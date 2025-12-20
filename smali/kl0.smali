@@ -1,122 +1,66 @@
 .class public final Lkl0;
-.super Ljava/lang/Object;
+.super Loe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic b:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic c:Lll0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+.method public synthetic constructor <init>(Lll0;I)V
     .locals 0
 
+    iput p2, p0, Lkl0;->b:I
+
+    iput-object p1, p0, Lkl0;->c:Lll0;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkl0;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Lkl0;->b:Ljava/lang/String;
-
-    iput p2, p0, Lkl0;->c:I
-
-    iput p3, p0, Lkl0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, Lkl0;->b:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p1, p0, Lkl0;->c:Lll0;
+
+    iget-boolean v0, p1, Lll0;->s0:Z
+
+    if-nez v0, :cond_0
+
+    iget v0, p1, Lll0;->t0:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    instance-of v1, p1, Lkl0;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    const/4 p1, 0x0
 
-    if-nez v1, :cond_1
+    iget-object v0, p0, Lkl0;->c:Lll0;
 
-    return v2
+    invoke-virtual {v0, p1}, Lll0;->setIndeterminate(Z)V
 
-    :cond_1
-    check-cast p1, Lkl0;
+    iget p1, v0, Lll0;->b:I
 
-    iget v1, p0, Lkl0;->c:I
+    invoke-virtual {v0, p1}, Lll0;->b(I)V
 
-    iget v3, p1, Lkl0;->c:I
+    return-void
 
-    if-ne v1, v3, :cond_2
+    nop
 
-    iget v1, p0, Lkl0;->d:I
-
-    iget v3, p1, Lkl0;->d:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lkl0;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lkl0;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lkl0;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lkl0;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lkl0;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget v1, p0, Lkl0;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lkl0;->a:Ljava/lang/String;
-
-    iget-object v3, p0, Lkl0;->b:Ljava/lang/String;
-
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

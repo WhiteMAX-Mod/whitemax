@@ -1,53 +1,107 @@
 .class public final Lx4;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Lm5;
-
-.field public final c:I
+.field public final a:Lss4;
 
 
 # direct methods
-.method public constructor <init>(ILm5;I)V
+.method public constructor <init>(Lss4;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lx4;->a:I
-
-    iput-object p2, p0, Lx4;->b:Lm5;
-
-    iput p3, p0, Lx4;->c:I
+    iput-object p1, p0, Lx4;->a:Lss4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lx4;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lx4;
+
+    iget-object v0, p0, Lx4;->a:Lss4;
+
+    iget-object p1, p1, Lx4;->a:Lss4;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lx4;->a:Lss4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onTouchExplorationStateChanged(Z)V
     .locals 2
 
-    new-instance p1, Landroid/os/Bundle;
+    iget-object v0, p0, Lx4;->a:Lss4;
 
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+    iget-object v0, v0, Lss4;->b:Ljava/lang/Object;
 
-    const-string v0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
+    check-cast v0, Lba5;
 
-    iget v1, p0, Lx4;->a:I
+    iget-object v1, v0, Lba5;->h:Landroid/widget/AutoCompleteTextView;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    if-eqz v1, :cond_1
 
-    iget v0, p0, Lx4;->c:I
+    invoke-static {v1}, Ljnj;->a(Landroid/widget/EditText;)Z
 
-    iget-object v1, p0, Lx4;->b:Lm5;
+    move-result v1
 
-    iget-object v1, v1, Lm5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1, v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
+    iget-object v0, v0, Lkj5;->d:Lcom/google/android/material/internal/CheckableImageButton;
 
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    :goto_0
+    sget-object v1, Lash;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
+
+    :cond_1
     return-void
 .end method

@@ -1,246 +1,119 @@
 .class public final Lym9;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lan9;JJLjava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lym9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    iput v0, p0, Lym9;->a:I
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lym9;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lym9;->c:J
-
-    iput-wide p4, p0, Lym9;->d:J
-
-    iput-object p6, p0, Lym9;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqlh;Ljava/lang/String;JJ)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lym9;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lym9;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lym9;->b:Ljava/lang/String;
-
-    iput-wide p3, p0, Lym9;->c:J
-
-    iput-wide p5, p0, Lym9;->d:J
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lym9;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lym9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lym9;->o:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lqlh;
+    check-cast p1, Lym9;
 
-    iget-object v1, v0, Lqlh;->d:Lcrd;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-object v0, v0, Lqlh;->a:Llrd;
+    invoke-virtual {p1, p2}, Lym9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lj3;->a()Lvk6;
+    return-object p2
+.end method
 
-    move-result-object v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v3, 0x1
+    new-instance v0, Lym9;
 
-    iget-object v4, p0, Lym9;->b:Ljava/lang/String;
+    iget-object v1, p0, Lym9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    if-nez v4, :cond_0
+    invoke-direct {v0, p2, v1}, Lym9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
 
-    invoke-interface {v2, v3}, Lqrf;->S(I)V
+    iput-object p1, v0, Lym9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lym9;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljja;
+
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lp38;
+
+    instance-of v0, p1, Lem4;
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lym9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    new-instance v0, Lwm9;
+
+    invoke-direct {v0, v1, p1}, Lwm9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Ljja;)V
+
+    new-instance p1, Llu0;
+
+    invoke-direct {p1, v1, v0}, Llu0;-><init>(Lx84;Lmq6;)V
+
+    invoke-virtual {v1}, Lx84;->getRouter()Lw3e;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lx84;->getRouter()Lw3e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lw3e;->a(Lb94;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v2, v3, v4}, Lqrf;->f(ILjava/lang/String;)V
+    new-instance v0, Lo9;
 
-    :goto_0
-    const/4 v3, 0x2
+    const/4 v2, 0x7
 
-    iget-wide v4, p0, Lym9;->c:J
+    invoke-direct {v0, v1, v2, p1}, Lo9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {v2, v3, v4, v5}, Lqrf;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Lym9;->d:J
-
-    invoke-interface {v2, v3, v4, v5}, Lqrf;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Llrd;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v2}, Lvk6;->w()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Llrd;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Llrd;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
-
-    return-object v3
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v3
-
-    :try_start_3
-    invoke-virtual {v0}, Llrd;->k()V
-
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lym9;->o:Ljava/lang/Object;
-
-    check-cast v0, Lan9;
-
-    iget-object v1, v0, Lan9;->c:Lbi;
-
-    iget-object v0, v0, Lan9;->a:Llrd;
-
-    invoke-virtual {v1}, Lj3;->a()Lvk6;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Lym9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lqrf;->k(IJ)V
-
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Lym9;->d:J
-
-    invoke-interface {v2, v3, v4, v5}, Lqrf;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Lym9;->b:Ljava/lang/String;
-
-    if-nez v4, :cond_1
-
-    invoke-interface {v2, v3}, Lqrf;->S(I)V
-
-    goto :goto_2
+    invoke-virtual {v1, v0}, Lx84;->addLifecycleListener(Lv84;)V
 
     :cond_1
-    invoke-interface {v2, v3, v4}, Lqrf;->f(ILjava/lang/String;)V
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    :goto_2
-    :try_start_4
-    invoke-virtual {v0}, Llrd;->c()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :try_start_5
-    invoke-virtual {v2}, Lvk6;->w()I
-
-    invoke-virtual {v0}, Llrd;->q()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :try_start_6
-    invoke-virtual {v0}, Llrd;->k()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_3
-
-    :catchall_3
-    move-exception v3
-
-    :try_start_7
-    invoke-virtual {v0}, Llrd;->k()V
-
-    throw v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :goto_3
-    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

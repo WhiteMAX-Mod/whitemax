@@ -1,55 +1,69 @@
-.class public final Lft7;
-.super Lb2;
+.class public abstract Lft7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final o:Lft7;
-
-
-# instance fields
-.field public final d:[Ljava/lang/Object;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lft7;
+    new-instance v0, Loea;
 
     const/4 v1, 0x0
 
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-direct {v0, v1}, Lft7;-><init>([Ljava/lang/Object;)V
-
-    sput-object v0, Lft7;->o:Lft7;
+    invoke-direct {v0, v1}, Loea;-><init>(I)V
 
     return-void
 .end method
 
-.method public constructor <init>([Ljava/lang/Object;)V
+.method public static final a(III)Loea;
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Loea;
 
-    array-length v1, p1
+    invoke-direct {v0}, Loea;-><init>()V
 
-    invoke-direct {p0, v1, v0}, Lb2;-><init>(II)V
+    const/16 v1, 0x2000
 
-    iput-object p1, p0, Lft7;->d:[Ljava/lang/Object;
+    invoke-virtual {v0, v1, p0}, Loea;->e(II)V
 
-    return-void
+    const/4 p0, 0x4
+
+    invoke-virtual {v0, p0, p1}, Loea;->e(II)V
+
+    const/16 p0, 0x4000
+
+    invoke-virtual {v0, p0, p2}, Loea;->e(II)V
+
+    return-object v0
 .end method
 
+.method public static final b(IIIIIII)Loea;
+    .locals 2
 
-# virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
+    new-instance v0, Loea;
 
-    iget-object v0, p0, Lft7;->d:[Ljava/lang/Object;
+    invoke-direct {v0}, Loea;-><init>()V
 
-    aget-object p1, v0, p1
+    const/16 v1, 0x400
 
-    return-object p1
+    invoke-virtual {v0, v1, p0}, Loea;->e(II)V
+
+    const/16 p0, 0x800
+
+    invoke-virtual {v0, p0, p1}, Loea;->e(II)V
+
+    invoke-virtual {v0, p2, p3}, Loea;->e(II)V
+
+    invoke-virtual {v0, p4, p5}, Loea;->e(II)V
+
+    const/16 p0, 0x80
+
+    invoke-virtual {v0, p0, p6}, Loea;->e(II)V
+
+    return-object v0
 .end method

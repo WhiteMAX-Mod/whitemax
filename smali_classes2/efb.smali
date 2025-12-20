@@ -1,451 +1,637 @@
-.class public final synthetic Lefb;
+.class public abstract Lefb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final A0:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public static final B:I
 
-.field public final synthetic c:Lyfb;
+.field public static final B0:I
+
+.field public static final C:I
+
+.field public static final C0:I
+
+.field public static final D:I
+
+.field public static final D0:I
+
+.field public static final E:I
+
+.field public static final E0:I
+
+.field public static final F:I
+
+.field public static final F0:I
+
+.field public static final G:I
+
+.field public static final G0:I
+
+.field public static final H:I
+
+.field public static final H0:I
+
+.field public static final I:I
+
+.field public static final I0:I
+
+.field public static final J:I
+
+.field public static final J0:I
+
+.field public static final K:I
+
+.field public static final K0:I
+
+.field public static final L:I
+
+.field public static final L0:I
+
+.field public static final M:I
+
+.field public static final M0:I
+
+.field public static final N:I
+
+.field public static final N0:I
+
+.field public static final O:I
+
+.field public static final O0:I
+
+.field public static final P:I
+
+.field public static final P0:I
+
+.field public static final Q:I
+
+.field public static final Q0:I
+
+.field public static final R:I
+
+.field public static final R0:I
+
+.field public static final S:I
+
+.field public static final S0:I
+
+.field public static final T:I
+
+.field public static final T0:I
+
+.field public static final U:I
+
+.field public static final U0:I
+
+.field public static final V:I
+
+.field public static final V0:I
+
+.field public static final W:I
+
+.field public static final W0:I
+
+.field public static final X:I
+
+.field public static final X0:I
+
+.field public static final Y:I
+
+.field public static final Y0:I
+
+.field public static final Z:I
+
+.field public static final Z0:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final g:I
+
+.field public static final g0:I
+
+.field public static final h:I
+
+.field public static final h0:I
+
+.field public static final i:I
+
+.field public static final i0:I
+
+.field public static final j:I
+
+.field public static final j0:I
+
+.field public static final k:I
+
+.field public static final k0:I
+
+.field public static final l:I
+
+.field public static final l0:I
+
+.field public static final m:I
+
+.field public static final m0:I
+
+.field public static final n:I
+
+.field public static final n0:I
+
+.field public static final o:I
+
+.field public static final o0:I
+
+.field public static final p:I
+
+.field public static final p0:I
+
+.field public static final q:I
+
+.field public static final q0:I
+
+.field public static final r:I
+
+.field public static final r0:I
+
+.field public static final s:I
+
+.field public static final s0:I
+
+.field public static final t:I
+
+.field public static final t0:I
+
+.field public static final u:I
+
+.field public static final u0:I
+
+.field public static final v:I
+
+.field public static final v0:I
+
+.field public static final w:I
+
+.field public static final w0:I
+
+.field public static final x:I
+
+.field public static final x0:I
+
+.field public static final y:I
+
+.field public static final y0:I
+
+.field public static final z:I
+
+.field public static final z0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lyfb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lefb;->a:I
+    sget v0, Lj8d;->profile_avatar_select_screen:I
 
-    iput-object p1, p0, Lefb;->b:Landroid/content/Context;
+    sput v0, Lefb;->a:I
 
-    iput-object p2, p0, Lefb;->c:Lyfb;
+    sget v0, Lj8d;->profile_change_inactive_ttl_delete_1_month:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lefb;->b:I
+
+    sget v0, Lj8d;->profile_change_inactive_ttl_delete_3_month:I
+
+    sput v0, Lefb;->c:I
+
+    sget v0, Lj8d;->profile_change_inactive_ttl_delete_6_month:I
+
+    sput v0, Lefb;->d:I
+
+    sget v0, Lj8d;->profile_confirmation_sheet_cancel:I
+
+    sput v0, Lefb;->e:I
+
+    sget v0, Lj8d;->profile_delete_contact_confirmation_sheet_confirm:I
+
+    sput v0, Lefb;->f:I
+
+    sget v0, Lj8d;->profile_edit_admin_chat_type:I
+
+    sput v0, Lefb;->g:I
+
+    sget v0, Lj8d;->profile_edit_admin_clear_channel_history:I
+
+    sput v0, Lefb;->h:I
+
+    sget v0, Lj8d;->profile_edit_admin_clear_chat_history:I
+
+    sput v0, Lefb;->i:I
+
+    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_cancel:I
+
+    sput v0, Lefb;->j:I
+
+    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_confirm_for_all:I
+
+    sput v0, Lefb;->k:I
+
+    sget v0, Lj8d;->profile_edit_admin_clear_chat_history_confirm_for_yourself:I
+
+    sput v0, Lefb;->l:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_channel:I
+
+    sput v0, Lefb;->m:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_channel_cancel:I
+
+    sput v0, Lefb;->n:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_channel_certain_confirm:I
+
+    sput v0, Lefb;->o:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_channel_confirm:I
+
+    sput v0, Lefb;->p:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_chat:I
+
+    sput v0, Lefb;->q:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_chat_cancel:I
+
+    sput v0, Lefb;->r:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_chat_certain_confirm:I
+
+    sput v0, Lefb;->s:I
+
+    sget v0, Lj8d;->profile_edit_admin_close_chat_confirm:I
+
+    sput v0, Lefb;->t:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_channel:I
+
+    sput v0, Lefb;->u:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_channel_and_change_owner_confirm:I
+
+    sput v0, Lefb;->v:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_channel_cancel:I
+
+    sput v0, Lefb;->w:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_channel_confirm:I
+
+    sput v0, Lefb;->x:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_chat:I
+
+    sput v0, Lefb;->y:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_chat_and_change_owner_confirm:I
+
+    sput v0, Lefb;->z:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_chat_cancel:I
+
+    sput v0, Lefb;->A:I
+
+    sget v0, Lj8d;->profile_edit_admin_leave_chat_confirm:I
+
+    sput v0, Lefb;->B:I
+
+    sget v0, Lj8d;->profile_edit_admin_move_rights:I
+
+    sput v0, Lefb;->C:I
+
+    sget v0, Lj8d;->profile_edit_admin_participants_permission:I
+
+    sput v0, Lefb;->D:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_change_chat_info:I
+
+    sput v0, Lefb;->E:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_change_owner_cancel_action:I
+
+    sput v0, Lefb;->F:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_change_owner_change_action:I
+
+    sput v0, Lefb;->G:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_control_admin:I
+
+    sput v0, Lefb;->H:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_delete_from_admins_cancel_action:I
+
+    sput v0, Lefb;->I:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
+
+    sput v0, Lefb;->J:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_delete_messages:I
+
+    sput v0, Lefb;->K:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_link:I
+
+    sput v0, Lefb;->L:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_edit_chat_members:I
+
+    sput v0, Lefb;->M:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_edit_messages:I
+
+    sput v0, Lefb;->N:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_pin_messages:I
+
+    sput v0, Lefb;->O:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_recycler_view:I
+
+    sput v0, Lefb;->P:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_send_messages:I
+
+    sput v0, Lefb;->Q:I
+
+    sget v0, Lj8d;->profile_edit_admin_permissions_toolbar_view:I
+
+    sput v0, Lefb;->R:I
+
+    sget v0, Lj8d;->profile_edit_admin_view_stats:I
+
+    sput v0, Lefb;->S:I
+
+    sget v0, Lj8d;->profile_edit_appbar_layout:I
+
+    sput v0, Lefb;->T:I
+
+    sget v0, Lj8d;->profile_edit_avatar:I
+
+    sput v0, Lefb;->U:I
+
+    sget v0, Lj8d;->profile_edit_change_avatar_cancel:I
+
+    sput v0, Lefb;->V:I
+
+    sget v0, Lj8d;->profile_edit_change_avatar_remove_current:I
+
+    sput v0, Lefb;->W:I
+
+    sget v0, Lj8d;->profile_edit_change_avatar_select_neuro_avatar:I
+
+    sput v0, Lefb;->X:I
+
+    sget v0, Lj8d;->profile_edit_change_avatar_upload_from_camera:I
+
+    sput v0, Lefb;->Y:I
+
+    sget v0, Lj8d;->profile_edit_change_avatar_upload_from_gallery:I
+
+    sput v0, Lefb;->Z:I
+
+    sget v0, Lj8d;->profile_edit_collapsible_container_layout:I
+
+    sput v0, Lefb;->a0:I
+
+    sget v0, Lj8d;->profile_edit_confirm_exit_button:I
+
+    sput v0, Lefb;->b0:I
+
+    sget v0, Lj8d;->profile_edit_confirm_save_button:I
+
+    sput v0, Lefb;->c0:I
+
+    sget v0, Lj8d;->profile_edit_contact_delete_action:I
+
+    sput v0, Lefb;->d0:I
+
+    sget v0, Lj8d;->profile_edit_delete_profile_button:I
+
+    sput v0, Lefb;->e0:I
+
+    sget v0, Lj8d;->profile_edit_delete_profile_cancel_button:I
+
+    sput v0, Lefb;->f0:I
+
+    sget v0, Lj8d;->profile_edit_invite_by_link:I
+
+    sput v0, Lefb;->g0:I
+
+    sget v0, Lj8d;->profile_edit_link_private:I
+
+    sput v0, Lefb;->h0:I
+
+    sget v0, Lj8d;->profile_edit_link_public:I
+
+    sput v0, Lefb;->i0:I
+
+    sget v0, Lj8d;->profile_edit_logout_confirm_action:I
+
+    sput v0, Lefb;->j0:I
+
+    sget v0, Lj8d;->profile_edit_member_permissions_add_user:I
+
+    sput v0, Lefb;->k0:I
+
+    sget v0, Lj8d;->profile_edit_member_permissions_call_to_chat:I
+
+    sput v0, Lefb;->l0:I
+
+    sget v0, Lj8d;->profile_edit_member_permissions_change_photo:I
+
+    sput v0, Lefb;->m0:I
+
+    sget v0, Lj8d;->profile_edit_member_permissions_pin_message:I
+
+    sput v0, Lefb;->n0:I
+
+    sget v0, Lj8d;->profile_edit_member_permissions_see_private_link:I
+
+    sput v0, Lefb;->o0:I
+
+    sget v0, Lj8d;->profile_edit_oneme_toolbar:I
+
+    sput v0, Lefb;->p0:I
+
+    sget v0, Lj8d;->profile_edit_reactions:I
+
+    sput v0, Lefb;->q0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_activation_switch:I
+
+    sput v0, Lefb;->r0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_added_reactions:I
+
+    sput v0, Lefb;->s0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_added_reactions_title:I
+
+    sput v0, Lefb;->t0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_constraint_layout:I
+
+    sput v0, Lefb;->u0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider:I
+
+    sput v0, Lefb;->v0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_current_value:I
+
+    sput v0, Lefb;->w0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_max_value:I
+
+    sput v0, Lefb;->x0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_count_slider_min_value:I
+
+    sput v0, Lefb;->y0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_error_view:I
+
+    sput v0, Lefb;->z0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_exit_without_save:I
+
+    sput v0, Lefb;->A0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_linear_layout:I
+
+    sput v0, Lefb;->B0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_loading_container:I
+
+    sput v0, Lefb;->C0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_loading_reactions_container:I
+
+    sput v0, Lefb;->D0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_media_keyboard_container:I
+
+    sput v0, Lefb;->E0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_save:I
+
+    sput v0, Lefb;->F0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_save_and_exit:I
+
+    sput v0, Lefb;->G0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_scrollview:I
+
+    sput v0, Lefb;->H0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_slider_container:I
+
+    sput v0, Lefb;->I0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_slider_title:I
+
+    sput v0, Lefb;->J0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_to_default_settings:I
+
+    sput v0, Lefb;->K0:I
+
+    sget v0, Lj8d;->profile_edit_reactions_settings_toolbar:I
+
+    sput v0, Lefb;->L0:I
+
+    sget v0, Lj8d;->profile_edit_recycler_view:I
+
+    sput v0, Lefb;->M0:I
+
+    sget v0, Lj8d;->profile_edit_selectable_item_checkbox:I
+
+    sput v0, Lefb;->N0:I
+
+    sget v0, Lj8d;->profile_edit_selectable_item_subtitle:I
+
+    sput v0, Lefb;->O0:I
+
+    sget v0, Lj8d;->profile_edit_selectable_item_title:I
+
+    sput v0, Lefb;->P0:I
+
+    sget v0, Lj8d;->profile_edit_short_link:I
+
+    sput v0, Lefb;->Q0:I
+
+    sget v0, Lj8d;->profile_edit_short_link_input_button:I
+
+    sput v0, Lefb;->R0:I
+
+    sget v0, Lj8d;->profile_edit_short_link_toolbar:I
+
+    sput v0, Lefb;->S0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_action_copy:I
+
+    sput v0, Lefb;->T0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_action_qr_code:I
+
+    sput v0, Lefb;->U0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_action_refresh_link:I
+
+    sput v0, Lefb;->V0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_action_share:I
+
+    sput v0, Lefb;->W0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_action_share_external:I
+
+    sput v0, Lefb;->X0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_confirm_button:I
+
+    sput v0, Lefb;->Y0:I
+
+    sget v0, Lj8d;->profile_edit_shortlink_confirm_update:I
+
+    sput v0, Lefb;->Z0:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lefb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lbgb;
-
-    iget-object v1, p0, Lefb;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lbgb;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lzud;->Q0:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v1, p0, Lefb;->c:Lyfb;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lefb;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lzud;->U0:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v2, 0x10
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lkti;->d(F)I
-
-    move-result v3
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lkti;->d(F)I
-
-    move-result v2
-
-    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v1, Lyud;->a0:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object v1, La93;->s0:Lv1a;
-
-    invoke-virtual {v1, v0}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lyeb;->getIcon()Lnb7;
-
-    move-result-object v1
-
-    iget v1, v1, Lnb7;->f:I
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    iget-object v1, p0, Lefb;->c:Lyfb;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Luxa;
-
-    iget-object v1, p0, Lefb;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Luxa;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lzud;->T0:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    iget-object v1, p0, Lefb;->c:Lyfb;
-
-    invoke-virtual {v1}, Lyfb;->getForm()Lqfb;
-
-    move-result-object v2
-
-    sget-object v3, Lqfb;->c:Lqfb;
-
-    if-ne v2, v3, :cond_0
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v3, 0x28
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lkti;->d(F)I
-
-    move-result v4
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lkti;->d(F)I
-
-    move-result v3
-
-    invoke-direct {v2, v4, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v3, 0x18
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lkti;->d(F)I
-
-    move-result v4
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lkti;->d(F)I
-
-    move-result v3
-
-    invoke-direct {v2, v4, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    :goto_0
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v2, Lkxa;->a:Lkxa;
-
-    invoke-virtual {v0, v2}, Luxa;->setAvatarShape(Lnxa;)V
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Liwe;
-
-    iget-object v1, p0, Lefb;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Liwe;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lzud;->R0:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    sget-object v1, La93;->s0:Lv1a;
-
-    invoke-virtual {v1, v0}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lyeb;->getText()Lu3g;
-
-    move-result-object v2
-
-    iget v2, v2, Lu3g;->e:I
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->setSingleLine()V
-
-    new-instance v2, Lulc;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v3}, Lulc;-><init>(I)V
-
-    iget-object v3, v2, Lulc;->b:Ljava/lang/Object;
-
-    check-cast v3, Lbwe;
-
-    const/4 v4, 0x0
-
-    iput-boolean v4, v3, Lbwe;->j:Z
-
-    invoke-virtual {v1, v0}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lyeb;->getText()Lu3g;
-
-    move-result-object v5
-
-    iget v5, v5, Lu3g;->a:I
-
-    iput v5, v3, Lbwe;->d:I
-
-    invoke-virtual {v1, v0}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lyeb;->getText()Lu3g;
-
-    move-result-object v1
-
-    iget v1, v1, Lu3g;->h:I
-
-    invoke-virtual {v2, v1}, Lulc;->q(I)V
-
-    const-wide/16 v5, 0x384
-
-    invoke-virtual {v2, v5, v6}, Lulc;->r(J)V
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v2, v1}, Lulc;->p(F)V
-
-    const/16 v1, 0x168
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v5
-
-    invoke-static {v1}, Lkti;->d(F)I
-
-    move-result v1
-
-    invoke-virtual {v2, v1}, Lulc;->s(I)V
-
-    new-instance v1, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    iput-object v1, v3, Lbwe;->p:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {v2}, Lulc;->k()Lbwe;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Liwe;->a(Lbwe;)V
-
-    invoke-static {v0}, Ljgh;->a(Landroid/widget/TextView;)Lkgh;
-
-    sget-object v1, Ldpg;->l:Lt5g;
-
-    invoke-static {v1, v0}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
-
-    iget-object v1, p0, Lefb;->c:Lyfb;
-
-    iget-object v2, v1, Lyfb;->s0:Lxfb;
-
-    sget-object v3, Lyfb;->J0:[Lyy7;
-
-    const/4 v5, 0x5
-
-    aget-object v3, v3, v5
-
-    iget-object v2, v2, Li3;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    iget-object v3, v0, Liwe;->b:Lewe;
-
-    if-eqz v2, :cond_1
-
-    const/4 v4, 0x1
-
-    iput-boolean v4, v0, Liwe;->c:Z
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v3}, Lewe;->c()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Lewe;->d()V
-
-    iput-boolean v4, v0, Liwe;->c:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

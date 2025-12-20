@@ -1,70 +1,71 @@
 .class public final Lzqi;
-.super Ljava/lang/Object;
+.super Lyni;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
-
-
-# static fields
-.field public static final a:Lzqi;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lzqi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzqi;->a:Lzqi;
-
-    new-instance v0, Lmli;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
-
-    return-void
-.end method
+.implements Ldri;
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final Y(Laxa;Loqi;)Lxqi;
+    .locals 4
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    sget v1, Lyti;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, v1}, Loqi;->writeToParcel(Landroid/os/Parcel;I)V
+
+    invoke-virtual {p0, v0, p1}, Lyni;->W(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.vision.barcode.internal.client.INativeBarcodeDetector"
+
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lxqi;
+
+    if-eqz v3, :cond_1
+
+    move-object p1, v2
+
+    check-cast p1, Lxqi;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lxqi;
+
+    invoke-direct {v2, v0, v1, p1}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p1, v2
+
+    :goto_0
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+
+    return-object p1
 .end method

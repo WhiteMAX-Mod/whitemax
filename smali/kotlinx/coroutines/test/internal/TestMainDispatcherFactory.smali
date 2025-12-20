@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Lwl8;
+.method public final createDispatcher(Ljava/util/List;)Llq8;
     .locals 5
 
     new-instance v0, Ljava/util/ArrayList;
@@ -148,19 +148,19 @@
     sget-object p1, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;->INSTANCE:Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;
 
     :cond_6
-    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Lwl8;
+    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Llq8;
 
     move-result-object p1
 
-    new-instance v0, Ln3g;
+    new-instance v0, Lbfg;
 
-    invoke-direct {v0}, Lz74;-><init>()V
+    invoke-direct {v0}, Ltb4;-><init>()V
 
-    new-instance v1, Lm3g;
+    new-instance v1, Lafg;
 
-    invoke-direct {v1, p1}, Lm3g;-><init>(Lwl8;)V
+    invoke-direct {v1, p1}, Lafg;-><init>(Llq8;)V
 
-    iput-object v1, v0, Ln3g;->a:Lm3g;
+    iput-object v1, v0, Lbfg;->a:Lafg;
 
     return-object v0
 .end method

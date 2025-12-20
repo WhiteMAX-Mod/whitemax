@@ -1,37 +1,90 @@
-.class public abstract Lwyi;
+.class public final Lwyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lwyi;
+
 
 # direct methods
-.method public static b(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-eq p0, p1, :cond_1
+    new-instance v0, Lwyi;
 
-    if-eqz p0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sput-object v0, Lwyi;->a:Lwyi;
 
-    move-result p0
+    new-instance v0, Ldqi;
 
-    if-eqz p0, :cond_0
+    const/4 v1, 0x1
 
-    goto :goto_0
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    :cond_0
-    const/4 p0, 0x0
+    const-class v1, Lrqi;
 
-    return p0
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    move-result-object v0
 
-    return p0
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

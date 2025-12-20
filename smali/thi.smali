@@ -1,80 +1,49 @@
-.class public final Lthi;
+.class public abstract Lthi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
-
-
-# static fields
-.field public static final a:Lthi;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lthi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lthi;->a:Lthi;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Landroidx/work/WorkRequest;)V
+    .locals 6
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object v4
+
+    move-object v1, p0
+
+    check-cast v1, Lwhi;
+
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    new-instance v0, Lkhi;
+
+    sget-object v3, Lpo5;->b:Lpo5;
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lkhi;-><init>(Lwhi;Ljava/lang/String;Lpo5;Ljava/util/List;I)V
+
+    invoke-virtual {v0}, Lkhi;->e()Lnpb;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "enqueue needs at least one WorkRequest."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public abstract b(Ljava/lang/String;ILbyb;)Lnpb;
 .end method

@@ -1,224 +1,65 @@
 .class public final Lx06;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/DrawableWrapper;
 .source "SourceFile"
-
-# interfaces
-.implements Lqfc;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Lzf3;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lzf3;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx06;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lx06;->b:Lzf3;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx06;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lx06;
-
-    iget-object v1, p0, Lx06;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lx06;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lx06;->b:Lzf3;
-
-    iget-object p1, p1, Lx06;->b:Lzf3;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    int-to-long v0, v0
+    sget v1, Le6d;->ic_file_extension:I
 
-    return-wide v0
-.end method
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-.method public final h(Lt98;)Z
-    .locals 5
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    const/4 v0, 0x1
-
-    int-to-long v1, v0
-
-    invoke-interface {p1}, Lt98;->getItemId()J
-
-    move-result-wide v3
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
+    new-instance p1, Lw06;
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lx06;->a:Ljava/lang/String;
+    invoke-direct {p1, p0, v0}, Lw06;-><init>(Lx06;I)V
 
-    if-nez v1, :cond_0
+    const/4 v0, 0x3
 
-    move v1, v0
+    invoke-static {v0, p1}, Lv2j;->c(ILmq6;)Ld68;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iput-object p1, p0, Lx06;->a:Ljava/lang/Object;
 
-    move-result v1
+    new-instance p1, Lw06;
 
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lx06;->b:Lzf3;
+    invoke-direct {p1, p0, v1}, Lw06;-><init>(Lx06;I)V
 
-    if-nez v2, :cond_1
+    invoke-static {v0, p1}, Lv2j;->c(ILmq6;)Ld68;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_1
-    iget-object v0, v2, Lzf3;->a:Ljava/util/List;
+    iput-object p1, p0, Lx06;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    new-instance p1, Lw06;
 
-    move-result v0
+    const/4 v1, 0x2
 
-    :goto_1
-    add-int/2addr v1, v0
+    invoke-direct {p1, p0, v1}, Lw06;-><init>(Lx06;I)V
 
-    return v1
-.end method
+    invoke-static {v0, p1}, Lv2j;->c(ILmq6;)Ld68;
 
-.method public final k(Lt98;)Ljava/lang/Object;
-    .locals 1
+    move-result-object p1
 
-    instance-of v0, p1, Lx06;
+    iput-object p1, p0, Lx06;->c:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lfgc;
-
-    check-cast p1, Lx06;
-
-    iget-object p1, p1, Lx06;->b:Lzf3;
-
-    invoke-direct {v0, p1}, Lfgc;-><init>(Lzf3;)V
-
-    return-object v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final q(Lt98;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lx06;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FirstNameItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lx06;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx06;->b:Lzf3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

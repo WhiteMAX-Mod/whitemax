@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li42;
+.implements Lm62;
 
 
 # instance fields

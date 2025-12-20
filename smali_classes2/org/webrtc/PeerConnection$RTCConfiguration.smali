@@ -75,6 +75,12 @@
 
 .field public offerExtmapAllowMixed:Z
 
+.field public portAllocatorFlags:I
+
+.field public portAllocatorMaxPort:I
+
+.field public portAllocatorMinPort:I
+
 .field public presumeWritableWhenFullyRelayed:Z
 
 .field public pruneTurnPorts:Z
@@ -143,7 +149,7 @@
 
     iput-object p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->iceServers:Ljava/util/List;
 
-    const/16 p1, 0x32
+    const/16 p1, 0xc8
 
     iput p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->audioJitterBufferMaxPackets:I
 
@@ -226,6 +232,12 @@
     iput-boolean p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->enableImplicitRollback:Z
 
     iput-boolean v1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->offerExtmapAllowMixed:Z
+
+    iput p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorMinPort:I
+
+    iput p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorMaxPort:I
+
+    iput p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorFlags:I
 
     sget-object p1, Lorg/webrtc/PeerConnection$VpnPreference;->DEFAULT:Lorg/webrtc/PeerConnection$VpnPreference;
 
@@ -527,6 +539,39 @@
     .end annotation
 
     iget-boolean v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->offerExtmapAllowMixed:Z
+
+    return v0
+.end method
+
+.method public getPortAllocatorFlags()I
+    .locals 1
+    .annotation build Lorg/webrtc/CalledByNative;
+        value = "RTCConfiguration"
+    .end annotation
+
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorFlags:I
+
+    return v0
+.end method
+
+.method public getPortAllocatorMaxPort()I
+    .locals 1
+    .annotation build Lorg/webrtc/CalledByNative;
+        value = "RTCConfiguration"
+    .end annotation
+
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorMaxPort:I
+
+    return v0
+.end method
+
+.method public getPortAllocatorMinPort()I
+    .locals 1
+    .annotation build Lorg/webrtc/CalledByNative;
+        value = "RTCConfiguration"
+    .end annotation
+
+    iget v0, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorMinPort:I
 
     return v0
 .end method

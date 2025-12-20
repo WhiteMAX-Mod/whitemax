@@ -1,76 +1,91 @@
 .class public final Ltrb;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic o:Lurb;
+.field public final a:Ldwd;
+
+.field public final b:Lsrb;
+
+.field public final c:Lcgd;
+
+.field public final d:Lhb2;
+
+.field public final e:Lla;
+
+.field public final f:Lvli;
+
+.field public volatile g:Lo58;
+
+.field public volatile h:Lqae;
+
+.field public i:D
+
+.field public j:J
+
+.field public final k:Lrod;
+
+.field public l:D
+
+.field public m:D
+
+.field public final n:Lvo8;
+
+.field public final o:Ldr0;
+
+.field public final p:Ldr0;
 
 
 # direct methods
-.method public constructor <init>(Lurb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ldwd;Lsrb;Lcgd;Lhb2;Lla;Lvli;)V
     .locals 0
 
-    iput-object p1, p0, Ltrb;->o:Lurb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltrb;->a:Ldwd;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ltrb;->b:Lsrb;
+
+    iput-object p3, p0, Ltrb;->c:Lcgd;
+
+    iput-object p4, p0, Ltrb;->d:Lhb2;
+
+    iput-object p5, p0, Ltrb;->e:Lla;
+
+    iput-object p6, p0, Ltrb;->f:Lvli;
+
+    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+
+    iput-wide p1, p0, Ltrb;->i:D
+
+    new-instance p1, Lrod;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p2}, Lrod;-><init>(I)V
+
+    iput-object p1, p0, Ltrb;->k:Lrod;
+
+    new-instance p1, Lvo8;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltrb;->n:Lvo8;
+
+    new-instance p1, Ldr0;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ldr0;-><init>(I)V
+
+    iput-object p1, p0, Ltrb;->o:Ldr0;
+
+    new-instance p1, Ldr0;
+
+    invoke-direct {p1, p2}, Ldr0;-><init>(I)V
+
+    iput-object p1, p0, Ltrb;->p:Ldr0;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lz26;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltrb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltrb;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Ltrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ltrb;
-
-    iget-object v0, p0, Ltrb;->o:Lurb;
-
-    invoke-direct {p1, v0, p2}, Ltrb;-><init>(Lurb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ltrb;->o:Lurb;
-
-    iget-object v0, p1, Lurb;->a:Landroid/app/Application;
-
-    iget-object p1, p1, Lurb;->c:Ljt5;
-
-    invoke-virtual {v0, p1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
 .end method

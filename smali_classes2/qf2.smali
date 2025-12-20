@@ -1,65 +1,48 @@
 .class public final Lqf2;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final synthetic X:Lrf2;
 
-.field public b:J
+.field public synthetic d:Ljava/lang/Object;
 
-.field public c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:Ljava/util/List;
-
-.field public f:I
-
-.field public g:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lqf2;)V
-    .locals 2
+.method public constructor <init>(Lrf2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqf2;->X:Lrf2;
 
-    iget-object v0, p1, Lqf2;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Lqf2;->a:Ljava/lang/String;
-
-    iget-wide v0, p1, Lqf2;->b:J
-
-    iput-wide v0, p0, Lqf2;->b:J
-
-    iget-object v0, p1, Lqf2;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lqf2;->c:Ljava/lang/String;
-
-    iget v0, p1, Lqf2;->d:I
-
-    iput v0, p0, Lqf2;->d:I
-
-    iget-object v0, p1, Lqf2;->e:Ljava/util/List;
-
-    iput-object v0, p0, Lqf2;->e:Ljava/util/List;
-
-    iget v0, p1, Lqf2;->f:I
-
-    iput v0, p0, Lqf2;->f:I
-
-    iget p1, p1, Lqf2;->g:I
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x3
-
-    :goto_0
-    iput p1, p0, Lqf2;->g:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lqf2;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lqf2;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqf2;->o:I
+
+    iget-object p1, p0, Lqf2;->X:Lrf2;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lrf2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -2,133 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final d:Ljava/util/Set;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lrf7;
+.field public final b:Ld68;
 
-.field public final synthetic c:Lld3;
-
-.field public final synthetic d:Lzd3;
-
-.field public final synthetic o:Lpd7;
+.field public final c:Ld68;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrf7;Lld3;Lzd3;Lpd7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p5, p0, Lsd3;->a:I
+    sget-object v0, Lhzb;->U0:Lhzb;
 
-    iput-object p1, p0, Lsd3;->b:Lrf7;
+    sget-object v1, Lhzb;->V0:Lhzb;
 
-    iput-object p2, p0, Lsd3;->c:Lld3;
+    filled-new-array {v0, v1}, [Lhzb;
 
-    iput-object p3, p0, Lsd3;->d:Lzd3;
+    move-result-object v0
 
-    iput-object p4, p0, Lsd3;->o:Lpd7;
+    invoke-static {v0}, Lbt;->E([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lsd3;->d:Ljava/util/Set;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ld68;Ld68;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-class v0, Lsd3;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsd3;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lsd3;->b:Ld68;
+
+    iput-object p2, p0, Lsd3;->c:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a(JLl84;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lsd3;->a:I
+    iget-object v0, p0, Lsd3;->b:Ld68;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsd3;->b:Lrf7;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lzk6;->e()Ldf7;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ldf7;->b(Lrf7;Ljava/lang/Object;)Lpe4;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lsd3;->c:Lld3;
+    check-cast v0, Lbbg;
 
-    iput-object v0, v1, Lld3;->d:Lpe4;
+    check-cast v0, Lb9b;
 
-    iget-object v2, p0, Lsd3;->d:Lzd3;
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
 
-    iget-boolean v3, v2, Lzd3;->e:Z
+    move-result-object v0
 
-    if-eqz v3, :cond_0
+    new-instance v1, Lrd3;
 
-    new-instance v3, Ltd3;
+    const/4 v2, 0x0
 
-    iget-object v4, p0, Lsd3;->o:Lpd7;
+    invoke-direct {v1, p0, p1, p2, v2}, Lrd3;-><init>(Lsd3;JLkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v3, v2, v4, v1}, Ltd3;-><init>(Lzd3;Lpd7;Lld3;)V
+    invoke-static {v0, v1, p3}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    sget-object v1, Lyu1;->a:Lyu1;
+    move-result-object p1
 
-    check-cast v0, Lr0;
+    sget-object p2, Lbc4;->a:Lbc4;
 
-    invoke-virtual {v0, v3, v1}, Lr0;->l(Laf4;Ljava/util/concurrent/Executor;)V
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    return-void
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    :pswitch_0
-    iget-object v0, p0, Lsd3;->b:Lrf7;
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lzk6;->e()Ldf7;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ldf7;->b(Lrf7;Ljava/lang/Object;)Lpe4;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsd3;->c:Lld3;
-
-    iput-object v0, v1, Lld3;->d:Lpe4;
-
-    iget-object v2, p0, Lsd3;->d:Lzd3;
-
-    iget-boolean v3, v2, Lzd3;->e:Z
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ltd3;
-
-    iget-object v4, p0, Lsd3;->o:Lpd7;
-
-    invoke-direct {v3, v2, v4, v1}, Ltd3;-><init>(Lzd3;Lpd7;Lld3;)V
-
-    sget-object v1, Lyu1;->a:Lyu1;
-
-    check-cast v0, Lr0;
-
-    invoke-virtual {v0, v3, v1}, Lr0;->l(Laf4;Ljava/util/concurrent/Executor;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

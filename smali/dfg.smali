@@ -1,59 +1,235 @@
 .class public final Ldfg;
-.super Ljava/lang/Object;
+.super Lg3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Ljo6;
 
-.field public final b:I
+.field public final Y:Lyy6;
 
-.field public final c:J
+.field public d:Lwrg;
 
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:Lgf6;
-
-.field public final g:I
-
-.field public final h:[J
-
-.field public final i:[J
-
-.field public final j:I
-
-.field public final k:[Lhfg;
+.field public o:Lkda;
 
 
 # direct methods
-.method public constructor <init>(IIJJJLgf6;I[Lhfg;I[J[J)V
+.method public constructor <init>(Lyy6;Lj02;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lg3;-><init>(Lj02;)V
 
-    iput p1, p0, Ldfg;->a:I
+    iput-object p1, p0, Ldfg;->Y:Lyy6;
 
-    iput p2, p0, Ldfg;->b:I
+    return-void
+.end method
 
-    iput-wide p3, p0, Ldfg;->c:J
 
-    iput-wide p5, p0, Ldfg;->d:J
+# virtual methods
+.method public final declared-synchronized f()V
+    .locals 1
 
-    iput-wide p7, p0, Ldfg;->e:J
+    monitor-enter p0
 
-    iput-object p9, p0, Ldfg;->f:Lgf6;
+    :try_start_0
+    iget-object v0, p0, Ldfg;->d:Lwrg;
 
-    iput p10, p0, Ldfg;->g:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p11, p0, Ldfg;->k:[Lhfg;
+    invoke-virtual {v0}, Lwrg;->r()V
 
-    iput p12, p0, Ldfg;->j:I
+    invoke-super {p0}, Lg3;->f()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object p13, p0, Ldfg;->h:[J
+    monitor-exit p0
 
-    iput-object p14, p0, Ldfg;->i:[J
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final h()I
+    .locals 2
+
+    iget-object v0, p0, Ldfg;->d:Lwrg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Lwrg;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public final l(IJ)V
+    .locals 7
+
+    iget-object v3, p0, Ldfg;->X:Ljo6;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ldfg;->o:Lkda;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lg3;->a:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lj02;
+
+    new-instance v0, Lcfg;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move-wide v4, p2
+
+    invoke-direct/range {v0 .. v5}, Lcfg;-><init>(Ldfg;ILjo6;J)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v6, v0, p1}, Lj02;->m(Lsgh;Z)V
+
+    return-void
+.end method
+
+.method public final n()V
+    .locals 4
+
+    iget-object v0, p0, Ldfg;->d:Lwrg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lg3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lj02;
+
+    iget-object v1, p0, Ldfg;->d:Lwrg;
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Ljv4;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3, v1}, Ljv4;-><init>(ILjava/lang/Object;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lj02;->m(Lsgh;Z)V
+
+    return-void
+.end method
+
+.method public final o(Lfz6;)V
+    .locals 3
+
+    iget-object v0, p0, Lg3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lj02;
+
+    new-instance v1, Ls92;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, p0, v2, p1}, Ls92;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lj02;->m(Lsgh;Z)V
+
+    return-void
+.end method
+
+.method public final q()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final v(Ljo6;Z)V
+    .locals 0
+
+    iput-object p1, p0, Ldfg;->X:Ljo6;
+
+    return-void
+.end method
+
+.method public final w(Lkda;)V
+    .locals 0
+
+    iput-object p1, p0, Ldfg;->o:Lkda;
+
+    return-void
+.end method
+
+.method public final x(Lgt4;)V
+    .locals 3
+
+    new-instance v0, Lwrg;
+
+    iget-object v1, p0, Lg3;->a:Ljava/lang/Object;
+
+    check-cast v1, Lj02;
+
+    iget-object v2, p0, Ldfg;->Y:Lyy6;
+
+    invoke-direct {v0, v2, p1, v1}, Lwrg;-><init>(Lyy6;Lez6;Lj02;)V
+
+    iput-object v0, p0, Ldfg;->d:Lwrg;
+
+    return-void
+.end method
+
+.method public final y()V
+    .locals 3
+
+    iget-object v0, p0, Lg3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lj02;
+
+    new-instance v1, Ljv4;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, p0}, Ljv4;-><init>(ILjava/lang/Object;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lj02;->m(Lsgh;Z)V
 
     return-void
 .end method

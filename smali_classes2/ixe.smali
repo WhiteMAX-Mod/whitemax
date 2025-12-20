@@ -1,133 +1,36 @@
 .class public final Lixe;
-.super Le13;
+.super Ladf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ln5g;
+# virtual methods
+.method public final z(Lie8;)V
+    .locals 4
 
-.field public final b:Lem6;
+    instance-of v0, p1, Ler0;
 
-
-# direct methods
-.method public constructor <init>(Ln5g;Lem6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lixe;->a:Ln5g;
-
-    iput-object p2, p0, Lixe;->b:Lem6;
+    if-nez v0, :cond_0
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lixe;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-    if-nez v0, :cond_1
+    check-cast v0, Le7b;
 
-    goto :goto_0
+    check-cast p1, Ler0;
 
-    :cond_1
-    check-cast p1, Lixe;
+    iget-object v1, p1, Ler0;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Lixe;->a:Ln5g;
+    invoke-virtual {v0, v1}, Le7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p1, Lixe;->a:Ln5g;
+    iget-wide v1, p1, Ler0;->a:J
 
-    invoke-virtual {v0, v1}, Ln5g;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p1, Ler0;->d:Ljava/lang/CharSequence;
 
-    move-result v0
+    iget-object p1, p1, Ler0;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v1, v2, v3, p1}, Le7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lixe;->b:Lem6;
-
-    iget-object p1, p1, Lixe;->b:Lem6;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lixe;->a:Ln5g;
-
-    iget v0, v0, Ln5g;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lixe;->b:Lem6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancelableSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lixe;->a:Ln5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lixe;->b:Lem6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

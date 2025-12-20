@@ -1,51 +1,18 @@
 .class public final Lydh;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Laeh;
-
-.field public Z:I
-
-.field public d:Laeh;
-
-.field public o:Lsi9;
-
-
-# direct methods
-.method public constructor <init>(Laeh;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lydh;->Y:Laeh;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lzdh;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final c(Lub5;)Ljava/util/ArrayList;
+    .locals 0
 
-    iput-object p1, p0, Lydh;->X:Ljava/lang/Object;
+    new-instance p1, Ljava/util/ArrayList;
 
-    iget p1, p0, Lydh;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lydh;->Z:I
-
-    iget-object p1, p0, Lydh;->Y:Laeh;
-
-    invoke-static {p1, p0}, Laeh;->t(Laeh;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     return-object p1
 .end method

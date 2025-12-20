@@ -1,95 +1,153 @@
-.class public final synthetic Lkp4;
+.class public final Lkp4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lu75;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/res/Resources;
 
-.field public final synthetic b:Ltp4;
-
-.field public final synthetic c:Lv7f;
+.field public final b:Lu75;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltp4;Lv7f;I)V
+.method public constructor <init>(Landroid/content/res/Resources;Lu75;)V
     .locals 0
 
-    iput p3, p0, Lkp4;->a:I
-
-    iput-object p1, p0, Lkp4;->b:Ltp4;
-
-    iput-object p2, p0, Lkp4;->c:Lv7f;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkp4;->a:Landroid/content/res/Resources;
+
+    iput-object p2, p0, Lkp4;->b:Lu75;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a(Lxf3;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    iget v0, p0, Lkp4;->a:I
+    :try_start_0
+    invoke-static {}, Lxp6;->b()Lwp6;
 
-    packed-switch v0, :pswitch_data_0
+    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    iget-object v0, p0, Lkp4;->b:Ltp4;
+    if-eqz v0, :cond_2
 
-    iget-object v1, v0, Ltp4;->b:Ljava/util/ArrayList;
+    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    iget-object v2, p0, Lkp4;->c:Lv7f;
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lkp4;->a:Landroid/content/res/Resources;
 
-    iget-object v0, v0, Ltp4;->c:Ljava/util/ArrayList;
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    return-void
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lkp4;->b:Ltp4;
-
-    iget-object v1, v0, Ltp4;->b:Ljava/util/ArrayList;
-
-    iget-object v2, p0, Lkp4;->c:Lv7f;
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget v1, v2, Lv7f;->a:I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
-    iget-object v2, v2, Lv7f;->c:Landroidx/fragment/app/a;
+    move-result v1
 
-    iget-object v2, v2, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+    const/4 v2, -0x1
 
-    iget-object v0, v0, Ltp4;->a:Landroid/view/ViewGroup;
+    if-eq v1, v2, :cond_0
 
-    invoke-static {v1, v2, v0}, Lctd;->a(ILandroid/view/View;Landroid/view/ViewGroup;)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    :pswitch_1
-    iget-object v0, p0, Lkp4;->b:Ltp4;
+    move-result v1
 
-    iget-object v1, p0, Lkp4;->c:Lv7f;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Ltp4;->a(Lv7f;)V
+    if-eq v1, v2, :cond_1
 
-    return-void
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :goto_0
+    new-instance v1, Lgqb;
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v2
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+
+    move-result p1
+
+    invoke-direct {v1, v0, v2, p1}, Lgqb;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lxp6;->b()Lwp6;
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {}, Lxp6;->b()Lwp6;
+
+    return-object v0
+
+    :cond_2
+    iget-object v0, p0, Lkp4;->b:Lu75;
+
+    if-eqz v0, :cond_3
+
+    :try_start_1
+    invoke-interface {v0, p1}, Lu75;->b(Lxf3;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0, p1}, Lu75;->a(Lxf3;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lxp6;->b()Lwp6;
+
+    return-object p1
+
+    :cond_3
+    invoke-static {}, Lxp6;->b()Lwp6;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_1
+    invoke-static {}, Lxp6;->b()Lwp6;
+
+    throw p1
+.end method
+
+.method public final b(Lxf3;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

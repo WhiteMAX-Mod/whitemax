@@ -43,23 +43,23 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILtk4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILro4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+.method public final M0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
     .locals 0
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    new-instance p2, Ld82;
+    new-instance p2, Lha2;
 
-    invoke-direct {p2, p0, p1}, Ld82;-><init>(Lone/me/settings/privacy/ui/ChangeDisabledDialog;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lha2;-><init>(Lone/me/settings/privacy/ui/ChangeDisabledDialog;Landroid/content/Context;)V
 
     return-object p2
 .end method

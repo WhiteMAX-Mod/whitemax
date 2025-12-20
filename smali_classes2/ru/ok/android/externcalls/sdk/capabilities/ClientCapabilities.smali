@@ -13,7 +13,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0008\u0018\u0000 \u00122\u00020\u0001:\u0002\u0011\u0012B\u001b\u0008\u0016\u0012\u0012\u0010\u0002\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00040\u0003\"\u00020\u0004\u00a2\u0006\u0002\u0010\u0005B\u0015\u0008\u0002\u0012\u000c\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0006\u00a2\u0006\u0002\u0010\u0007J\u0006\u0010\u0008\u001a\u00020\tJ\u000e\u0010\n\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\u0004J\u000e\u0010\r\u001a\u00020\u00002\u0006\u0010\u000e\u001a\u00020\u0004J\u000e\u0010\u000f\u001a\u00020\u00002\u0006\u0010\u000e\u001a\u00020\u0004J\u0016\u0010\u0010\u001a\u00020\u00002\u0006\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000bR\u0014\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0013"
+        "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0008\u0018\u0000 \u00142\u00020\u0001:\u0002\u0013\u0014B\u001b\u0008\u0016\u0012\u0012\u0010\u0002\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00040\u0003\"\u00020\u0004\u00a2\u0006\u0002\u0010\u0005B\u0015\u0008\u0002\u0012\u000c\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0006\u00a2\u0006\u0002\u0010\u0007J\u0006\u0010\u0008\u001a\u00020\tJ\u0006\u0010\n\u001a\u00020\u000bJ\u000e\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u0004J\u000e\u0010\u000f\u001a\u00020\u00002\u0006\u0010\u0010\u001a\u00020\u0004J\u000e\u0010\u0011\u001a\u00020\u00002\u0006\u0010\u0010\u001a\u00020\u0004J\u0016\u0010\u0012\u001a\u00020\u00002\u0006\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0012\u001a\u00020\rR\u0014\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;",
@@ -24,6 +24,8 @@
         "([Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;)V",
         "",
         "(Ljava/util/Set;)V",
+        "getHexValueString",
+        "",
         "getValue",
         "",
         "has",
@@ -66,11 +68,15 @@
 
 .field private static final BIT_SESSION_STATE_UPDATES:I = 0xe
 
+.field private static final BIT_USE_P2P_RELAY:I = 0x10
+
 .field private static final BIT_VIDEO_TRACKS:I = 0x1
 
 .field private static final BIT_VMOJI:I = 0x9
 
 .field private static final BIT_WAITING_HALL:I = 0x2
+
+.field private static final BIT_WAIT_FOR_ADMIN:I = 0x11
 
 .field private static final BIT_WATCH_MOVIE:I = 0x6
 
@@ -97,7 +103,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;-><init>(Ltk4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;-><init>(Lro4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->Companion:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;
 
@@ -124,7 +130,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Set;Ltk4;)V
+.method public synthetic constructor <init>(Ljava/util/Set;Lro4;)V
     .locals 0
 
     .line 1
@@ -143,10 +149,12 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
+    .line 4
+    invoke-static {p1}, Lbt;->E([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
 
+    .line 5
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;)V
 
     return-void
@@ -190,6 +198,20 @@
 
 
 # virtual methods
+.method public final getHexValueString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->getValue()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final getValue()I
     .locals 4
 
@@ -267,7 +289,7 @@
 .end method
 
 .method public final set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
-    .locals 7
+    .locals 1
 
     if-eqz p2, :cond_0
 
@@ -283,7 +305,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->caps:Ljava/util/Set;
 
-    invoke-static {v0, p1}, Lgke;->f(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+    invoke-static {v0, p1}, Lmue;->e(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
     move-result-object p1
 
@@ -292,7 +314,7 @@
     return-object p2
 
     :cond_0
-    if-nez p2, :cond_4
+    if-nez p2, :cond_1
 
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->caps:Ljava/util/Set;
 
@@ -300,70 +322,20 @@
 
     move-result p2
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_1
 
     new-instance p2, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->caps:Ljava/util/Set;
 
-    new-instance v1, Ljava/util/LinkedHashSet;
+    invoke-static {v0, p1}, Lmue;->c(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
-    invoke-interface {v0}, Ljava/util/Set;->size()I
+    move-result-object p1
 
-    move-result v2
-
-    invoke-static {v2}, Lto8;->i(I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/LinkedHashSet;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :cond_1
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    if-nez v3, :cond_2
-
-    invoke-static {v4, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    move v3, v5
-
-    move v5, v2
-
-    :cond_2
-    if-eqz v5, :cond_1
-
-    invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_3
-    invoke-direct {p2, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;)V
+    invoke-direct {p2, p1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;)V
 
     return-object p2
 
-    :cond_4
+    :cond_1
     return-object p0
 .end method

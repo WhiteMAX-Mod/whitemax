@@ -1,110 +1,155 @@
-.class public final Lxog;
-.super Lwog;
+.class public final synthetic Lxog;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic a:Landroid/content/Context;
+
+.field public final synthetic b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+.field public final synthetic c:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+.field public final synthetic d:Lzlh;
+
+.field public final synthetic o:Lk5a;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;Lcom/google/firebase/messaging/FirebaseMessaging;Lzlh;Lk5a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxog;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lxog;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    iput-object p3, p0, Lxog;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    iput-object p4, p0, Lxog;->d:Lzlh;
+
+    iput-object p5, p0, Lxog;->o:Lk5a;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final N0(Ljava/lang/Object;)Landroid/graphics/Typeface;
-    .locals 3
+.method public final call()Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, -0x1
+    iget-object v5, p0, Lxog;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v6, p0, Lxog;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    move-result-object v0
+    iget-object v1, p0, Lxog;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    iget-object v2, p0, Lxog;->d:Lzlh;
+
+    iget-object v4, p0, Lxog;->o:Lk5a;
+
+    const-class v3, Lwog;
+
+    monitor-enter v3
 
     :try_start_0
-    iget-object v1, p0, Lwog;->c:Ljava/lang/Class;
+    sget-object v0, Lwog;->c:Ljava/lang/ref/WeakReference;
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lwog;->s0:Ljava/lang/reflect/Method;
-
-    const-string v2, "sans-serif"
-
-    filled-new-array {v1, v2, v0, v0}, [Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
+    check-cast v0, Lwog;
 
     goto :goto_0
 
-    :catch_1
-    move-exception p1
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    new-instance v0, Ljava/lang/RuntimeException;
+    if-nez v0, :cond_1
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    const-string v0, "com.google.android.gms.appid"
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v5, v0, v7}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    new-instance v7, Lwog;
+
+    invoke-direct {v7, v0, v6}, Lwog;-><init>(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+
+    monitor-enter v7
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-static {v0, v6}, Lw07;->d(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)Lw07;
+
+    move-result-object v0
+
+    iput-object v0, v7, Lwog;->a:Lw07;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    monitor-exit v7
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v7}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lwog;->c:Ljava/lang/ref/WeakReference;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-object v0, v7
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :cond_1
+    :goto_1
+    monitor-exit v3
+
+    move-object v3, v0
+
+    new-instance v0, Lyog;
+
+    invoke-direct/range {v0 .. v6}, Lyog;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lzlh;Lwog;Lk5a;Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+
+    return-object v0
+
+    :goto_2
+    :try_start_5
+    monitor-exit v3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     throw v0
-.end method
-
-.method public final R0(Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    const-class v1, Ljava/lang/String;
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {p1, v1, v2, v2}, [Ljava/lang/Class;
-
-    move-result-object p1
-
-    const-class v1, Landroid/graphics/Typeface;
-
-    const-string v2, "createFromFamiliesWithDefault"
-
-    invoke-virtual {v1, v2, p1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    return-object p1
-.end method
-
-.method public final h0(Landroid/content/Context;Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    invoke-static {p2, p3, p1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
 .end method

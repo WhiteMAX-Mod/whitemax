@@ -1,87 +1,93 @@
 .class public final Lc99;
-.super Ls29;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public b:Z
+
+.field public final c:Ljava/util/ArrayList;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    const/4 v3, -0x1
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    const/4 v6, -0x1
+    const/4 v0, 0x1
 
-    const/4 v2, -0x1
+    iput-boolean v0, p0, Lc99;->b:Z
 
-    const-wide/16 v4, -0x1
+    iput-object p1, p0, Lc99;->a:Landroid/content/Context;
 
-    move-object v0, p0
+    new-instance p1, Ljava/util/ArrayList;
 
-    move-object v1, p1
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1
-    invoke-direct/range {v0 .. v6}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;JI)V
-    .locals 7
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x1
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v4, p2
-
-    move v6, p4
-
-    .line 2
-    invoke-direct/range {v0 .. v6}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
+    iput-object p1, p0, Lc99;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)Lc99;
-    .locals 9
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    new-instance v0, Lc99;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    iget-object v1, p0, Ls29;->a:Ljava/lang/Object;
+    move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    move-result v1
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_0
+    move-result p1
 
-    move-object v2, p0
+    if-eqz p1, :cond_0
+
+    const-string p1, "noConnectivity"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-boolean p2, p0, Lc99;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    iput-boolean p1, p0, Lc99;->b:Z
+
+    iget-object p1, p0, Lc99;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lf99;
+
+    invoke-virtual {p2}, Lf99;->c()V
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Ls29;
-
-    iget-wide v6, p0, Ls29;->d:J
-
-    iget v8, p0, Ls29;->e:I
-
-    iget v4, p0, Ls29;->b:I
-
-    iget v5, p0, Ls29;->c:I
-
-    move-object v3, p1
-
-    invoke-direct/range {v2 .. v8}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
-
-    :goto_0
-    invoke-direct {v0, v2}, Ls29;-><init>(Ls29;)V
-
-    return-object v0
+    return-void
 .end method

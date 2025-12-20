@@ -1,24 +1,23 @@
-.class public final Ln9e;
-.super Lw16;
+.class public abstract Ln9e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp9e;
+
+# static fields
+.field public static final a:Lmfa;
 
 
-# virtual methods
-.method public final a()J
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    const-wide/16 v0, -0x1
+    new-instance v0, Lmfa;
 
-    return-wide v0
-.end method
+    const/4 v1, 0x0
 
-.method public final b(J)J
-    .locals 0
+    invoke-direct {v0, v1}, Lmfa;-><init>(I)V
 
-    const-wide/16 p1, 0x0
+    sput-object v0, Ln9e;->a:Lmfa;
 
-    return-wide p1
+    return-void
 .end method

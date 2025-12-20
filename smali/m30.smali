@@ -1,44 +1,55 @@
 .class public final Lm30;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public final a:Landroid/content/ContentResolver;
 
-.field public final synthetic b:Ln30;
+.field public final b:Landroid/net/Uri;
+
+.field public final synthetic c:Ln30;
 
 
 # direct methods
-.method public constructor <init>(Ln30;Landroid/os/Handler;)V
+.method public constructor <init>(Ln30;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm30;->c:Ln30;
 
-    iput-object p1, p0, Lm30;->b:Ln30;
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    iput-object p2, p0, Lm30;->a:Landroid/os/Handler;
+    iput-object p3, p0, Lm30;->a:Landroid/content/ContentResolver;
+
+    iput-object p4, p0, Lm30;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioFocusChange(I)V
-    .locals 2
+.method public final onChange(Z)V
+    .locals 3
 
-    new-instance v0, Ll30;
+    iget-object p1, p0, Lm30;->c:Ln30;
 
-    const/4 v1, 0x0
+    iget-object v0, p1, Ln30;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p1, v1}, Ll30;-><init>(Ljava/lang/Object;II)V
+    check-cast v0, Landroid/content/Context;
 
-    iget-object p1, p0, Lm30;->a:Landroid/os/Handler;
+    iget-object v1, p1, Ln30;->j:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    check-cast v1, La30;
+
+    iget-object v2, p1, Ln30;->i:Ljava/lang/Object;
+
+    check-cast v2, Luz6;
+
+    invoke-static {v0, v1, v2}, Lk30;->b(Landroid/content/Context;La30;Luz6;)Lk30;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ln30;->a(Lk30;)V
 
     return-void
 .end method

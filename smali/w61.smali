@@ -3,175 +3,239 @@
 .source "SourceFile"
 
 # interfaces
-.implements La71;
+.implements Lh76;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public a:I
 
-.field public final b:I
+.field public final synthetic b:Lh76;
 
-.field public final c:I
+.field public final synthetic c:Ld71;
 
-.field public final d:I
+.field public final synthetic d:J
 
-.field public final e:Ln5g;
-
-.field public final f:Ln5g;
+.field public final synthetic o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 1
+.method public constructor <init>(Lh76;Ld71;JLjava/lang/Integer;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iput-object p2, p0, Lw61;->c:Ld71;
 
-    sget p1, Lj0b;->J:I
+    iput-wide p3, p0, Lw61;->d:J
 
-    iput p1, p0, Lw61;->b:I
+    iput-object p5, p0, Lw61;->o:Ljava/lang/Integer;
 
-    sget p1, Li0b;->l0:I
-
-    iput p1, p0, Lw61;->c:I
-
-    sget p1, Li0b;->w0:I
-
-    iput p1, p0, Lw61;->d:I
-
-    sget p1, Lm0b;->A2:I
-
-    new-instance v0, Ln5g;
-
-    invoke-direct {v0, p1}, Ln5g;-><init>(I)V
-
-    iput-object v0, p0, Lw61;->e:Ln5g;
-
-    iput-object v0, p0, Lw61;->f:Ln5g;
+    iput-object p1, p0, Lw61;->b:Lh76;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 11
 
-    iget v0, p0, Lw61;->c:I
+    instance-of v0, p2, Lv61;
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
+    move-object v0, p2
 
-    iget-object v0, p0, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    check-cast v0, Lv61;
 
-    return-object v0
-.end method
+    iget v1, v0, Lv61;->o:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    const/high16 v2, -0x80000000
 
-    const/4 v0, 0x1
+    and-int v3, v1, v2
 
-    if-ne p0, p1, :cond_0
+    if-eqz v3, :cond_0
 
-    return v0
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lv61;->o:I
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lw61;
+    new-instance v0, Lv61;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p0, p2}, Lv61;-><init>(Lw61;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_1
+    :goto_0
+    iget-object p2, v0, Lv61;->d:Ljava/lang/Object;
 
-    return v2
+    iget v1, v0, Lv61;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto/16 :goto_4
 
     :cond_1
-    check-cast p1, Lw61;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v1, p0, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p1, p1, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
+    throw p1
 
     :cond_2
-    return v0
-.end method
+    invoke-static {p2}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public final getContentDescription()Ls5g;
-    .locals 1
+    iget p2, p0, Lw61;->a:I
 
-    iget-object v0, p0, Lw61;->f:Ln5g;
+    add-int/lit8 v1, p2, 0x1
 
-    return-object v0
-.end method
+    iput v1, p0, Lw61;->a:I
 
-.method public final getIcon()I
-    .locals 1
+    if-ltz p2, :cond_9
 
-    iget v0, p0, Lw61;->d:I
+    if-nez p2, :cond_7
 
-    return v0
-.end method
+    move-object p2, p1
 
-.method public final getId()I
-    .locals 1
+    check-cast p2, Lud2;
 
-    iget v0, p0, Lw61;->b:I
+    iget-object v1, p2, Lud2;->b:Lzh2;
 
-    return v0
-.end method
+    invoke-virtual {v1}, Lzh2;->c()I
 
-.method public final getTitle()Ls5g;
-    .locals 1
+    move-result v7
 
-    iget-object v0, p0, Lw61;->e:Ln5g;
+    iget-object v1, p0, Lw61;->o:Ljava/lang/Integer;
 
-    return-object v0
-.end method
+    if-eqz v1, :cond_3
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    iget-object v0, p0, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    move-result p2
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+    goto :goto_1
 
-    move-result v0
+    :cond_3
+    iget-object p2, p2, Lud2;->b:Lzh2;
 
-    return v0
-.end method
+    invoke-virtual {p2}, Lzh2;->c()I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_1
+    iget-object v4, p0, Lw61;->c:Ld71;
 
-    const-string v1, "Earpiece(device="
+    iget-object v1, v4, Ld71;->i:Ld68;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lw61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v1, Lux5;
 
-    const-string v1, ")"
+    check-cast v1, Loy5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, v1, Loy5;->D:Lwx5;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v5, Loy5;->D0:[Lp38;
 
-    move-result-object v0
+    const/16 v6, 0x13
 
-    return-object v0
+    aget-object v5, v5, v6
+
+    invoke-virtual {v3, v1, v5}, Lwx5;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljt2;
+
+    iget-boolean v3, v1, Ljt2;->a:Z
+
+    const/4 v10, 0x0
+
+    if-eqz v3, :cond_4
+
+    move-object v8, v1
+
+    goto :goto_2
+
+    :cond_4
+    move-object v8, v10
+
+    :goto_2
+    if-nez v8, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    iget v1, v8, Ljt2;->c:I
+
+    if-ge p2, v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    iget-object p2, v4, Ld71;->a:Lxx1;
+
+    new-instance v3, Lq61;
+
+    const/4 v9, 0x0
+
+    iget-wide v5, p0, Lw61;->d:J
+
+    invoke-direct/range {v3 .. v9}, Lq61;-><init>(Ld71;JILjt2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p2, v10, v10, v3, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    move-result-object p2
+
+    iget-object v1, v4, Ld71;->q:Le7;
+
+    sget-object v3, Ld71;->r:[Lp38;
+
+    aget-object v3, v3, v2
+
+    invoke-virtual {v1, v4, v3, p2}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+
+    :cond_7
+    :goto_3
+    iput v2, v0, Lv61;->o:I
+
+    iget-object p2, p0, Lw61;->b:Lh76;
+
+    invoke-interface {p2, p1, v0}, Lh76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_8
+
+    return-object p2
+
+    :cond_8
+    :goto_4
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :cond_9
+    new-instance p1, Ljava/lang/ArithmeticException;
+
+    const-string p2, "Index overflow has happened"
+
+    invoke-direct {p1, p2}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

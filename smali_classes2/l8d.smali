@@ -1,9 +1,8 @@
-.class public final Ll8d;
+.class public abstract Ll8d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/ThreadLocal;
+# static fields
+.field public static arch_activity_wrapper_view_id:I = 0x7f0a00cd
 
-.field public b:Ljava/lang/ThreadLocal;
+.field public static arch_child_widget_wrapper_id:I = 0x7f0a00ce

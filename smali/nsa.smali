@@ -1,54 +1,67 @@
-.class public final Lnsa;
-.super Lhk3;
+.class public abstract Lnsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lon6;
-
-
-# instance fields
-.field public final a:Ltsa;
 
 
 # direct methods
-.method public constructor <init>(Ltsa;)V
+.method public static a(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    iput-object p1, p0, Lnsa;->a:Ltsa;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final b()Lvqa;
-    .locals 3
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    new-instance v0, Lqra;
+    move-result-object p0
 
-    iget-object v1, p0, Lnsa;->a:Ltsa;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Lqra;-><init>(Llta;I)V
-
-    return-object v0
+    return-object p0
 .end method
 
-.method public final g(Lrk3;)V
-    .locals 2
+.method public static c(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-    new-instance v0, Lcs8;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    invoke-direct {v0, v1, p1}, Lcs8;-><init>(ILjava/lang/Object;)V
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lnsa;->a:Ltsa;
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {p1, v0}, Lvqa;->a(Lvta;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setPublicVersion(Landroid/app/Notification;)Landroid/app/Notification$Builder;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Landroid/app/Notification$Builder;Landroid/net/Uri;Ljava/lang/Object;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    check-cast p2, Landroid/media/AudioAttributes;
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

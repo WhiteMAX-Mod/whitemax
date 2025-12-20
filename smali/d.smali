@@ -1,61 +1,21 @@
 .class public final Ld;
-.super Ljava/lang/Object;
+.super Lzp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final a:Ld;
 
 
 # direct methods
-.method public constructor <init>(IIIJLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ld;
 
-    .line 4
-    iput-object p6, p0, Ld;->c:Ljava/lang/String;
+    invoke-direct {v0}, Lzp;-><init>()V
 
-    .line 5
-    iput p1, p0, Ld;->b:I
-
-    .line 6
-    iput p2, p0, Ld;->a:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IILjava/lang/String;)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Ld;->a:I
-
-    iput p2, p0, Ld;->b:I
-
-    iput-object p3, p0, Ld;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    .line 2
-    iput-object p1, p0, Ld;->c:Ljava/lang/String;
-
-    iput p2, p0, Ld;->a:I
-
-    iput p3, p0, Ld;->b:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ld;->a:Ld;
 
     return-void
 .end method

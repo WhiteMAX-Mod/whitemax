@@ -1,109 +1,73 @@
-.class public final enum Lecb;
-.super Ljava/lang/Enum;
+.class public abstract Lecb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lecb;
+.field public static final a:I
 
-.field public static final enum a:Lecb;
+.field public static final b:I
 
-.field public static final enum b:Lecb;
+.field public static final c:I
 
-.field public static final enum c:Lecb;
+.field public static final d:I
 
-.field public static final enum d:Lecb;
+.field public static final e:I
 
-.field public static final enum o:Lecb;
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    new-instance v0, Lecb;
+    sget v0, Ltcd;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    const-string v1, "TIMEOUT"
+    sput v0, Lecb;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Ltcd;->oneme_contact_not_found_bottom_sheet_subtitle:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lecb;->b:I
 
-    sput-object v0, Lecb;->a:Lecb;
+    sget v0, Ltcd;->oneme_contact_not_found_bottom_sheet_title:I
 
-    new-instance v1, Lecb;
+    sput v0, Lecb;->c:I
 
-    const-string v2, "SWIPE"
+    sget v0, Ltcd;->oneme_found_contact_is_self_error:I
 
-    const/4 v3, 0x1
+    sput v0, Lecb;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Ltcd;->oneme_invite_by_link_action:I
 
-    sput-object v1, Lecb;->b:Lecb;
+    sput v0, Lecb;->e:I
 
-    new-instance v2, Lecb;
+    sget v0, Ltcd;->oneme_invite_by_phone_action:I
 
-    const-string v3, "MANUAL"
+    sput v0, Lecb;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Ltcd;->oneme_invite_by_phone_continue_button:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lecb;->g:I
 
-    sput-object v2, Lecb;->c:Lecb;
+    sget v0, Ltcd;->oneme_invite_by_phone_description:I
 
-    new-instance v3, Lecb;
+    sput v0, Lecb;->h:I
 
-    const-string v4, "ROOT_VIEW_DETACHED"
+    sget v0, Ltcd;->oneme_invite_by_phone_title:I
 
-    const/4 v5, 0x3
+    sput v0, Lecb;->i:I
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Ltcd;->oneme_invite_friends_to_max_bottom_sheet_title:I
 
-    sput-object v3, Lecb;->d:Lecb;
-
-    new-instance v4, Lecb;
-
-    const-string v5, "RIGHT_ELEMENT_CLICK"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lecb;->o:Lecb;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lecb;
-
-    move-result-object v0
-
-    sput-object v0, Lecb;->X:[Lecb;
+    sput v0, Lecb;->j:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lecb;
-    .locals 1
-
-    const-class v0, Lecb;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lecb;
-
-    return-object p0
-.end method
-
-.method public static values()[Lecb;
-    .locals 1
-
-    sget-object v0, Lecb;->X:[Lecb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lecb;
-
-    return-object v0
 .end method

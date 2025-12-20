@@ -2,78 +2,277 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# direct methods
-.method public static final a(Lm1c;Landroid/view/View;Lqj1;Landroid/graphics/RectF;)V
-    .locals 0
 
-    iget p0, p3, Landroid/graphics/RectF;->top:F
+# instance fields
+.field public X:Z
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
+.field public Y:Z
 
-    iget p0, p3, Landroid/graphics/RectF;->left:F
+.field public Z:Z
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
+.field public a:Z
 
-    iget p0, p3, Landroid/graphics/RectF;->top:F
+.field public b:I
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
+.field public c:J
 
-    iget p0, p3, Landroid/graphics/RectF;->left:F
+.field public d:Z
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
+.field public o:Ljava/lang/String;
 
-    const/high16 p0, 0x3f800000    # 1.0f
+.field public s0:I
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
+.field public t0:Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
+.field public u0:I
 
-    const/4 p3, 0x0
+.field public v0:Ljava/lang/String;
 
-    invoke-static {p1, p3}, Lmfh;->j(Landroid/view/View;F)V
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
-.end method
+    instance-of v0, p1, Lm1c;
 
-.method public static b()Z
-    .locals 3
+    if-eqz v0, :cond_2
 
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    check-cast p1, Lm1c;
 
-    const/4 v1, 0x0
+    if-nez p1, :cond_0
 
-    if-eqz v0, :cond_1
+    goto :goto_1
 
-    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    :cond_0
+    if-ne p0, p1, :cond_1
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_1
+    iget v0, p0, Lm1c;->b:I
 
-    const-string v2, "huawei"
+    iget v1, p1, Lm1c;->b:I
 
-    invoke-static {v0, v2, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    if-ne v0, v1, :cond_2
 
-    move-result v2
+    iget-wide v0, p0, Lm1c;->c:J
 
-    if-nez v2, :cond_0
+    iget-wide v2, p1, Lm1c;->c:J
 
-    const-string v2, "honor"
+    cmp-long v0, v0, v2
 
-    invoke-static {v0, v2, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lm1c;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Lm1c;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lm1c;->Y:Z
+
+    iget-boolean v1, p1, Lm1c;->Y:Z
+
+    if-ne v0, v1, :cond_2
+
+    iget v0, p0, Lm1c;->s0:I
+
+    iget v1, p1, Lm1c;->s0:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lm1c;->t0:Ljava/lang/String;
+
+    iget-object v1, p1, Lm1c;->t0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lm1c;->u0:I
+
+    iget v1, p1, Lm1c;->u0:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lm1c;->v0:Ljava/lang/String;
+
+    iget-object p1, p1, Lm1c;->v0:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/16 v0, 0x87d
+
+    iget v1, p0, Lm1c;->b:I
+
+    add-int/2addr v0, v1
+
+    const/16 v1, 0x35
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lm1c;->c:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Long;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lm1c;->o:Ljava/lang/String;
+
+    invoke-static {v2, v1, v0}, Lzy4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lm1c;->Y:Z
+
+    const/16 v3, 0x4d5
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x4cf
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    move v2, v3
 
-    return v0
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lm1c;->s0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lm1c;->t0:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lm1c;->u0:I
+
+    invoke-static {v2, v0, v1}, Ln0c;->j(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lm1c;->v0:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    add-int/2addr v2, v3
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Country Code: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lm1c;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " National Number: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lm1c;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lm1c;->X:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lm1c;->Y:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, " Leading Zero(s): true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    iget-boolean v1, p0, Lm1c;->Z:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, " Number of leading zeros: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lm1c;->s0:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_1
-    return v1
+    iget-boolean v1, p0, Lm1c;->d:Z
+
+    if-eqz v1, :cond_2
+
+    const-string v1, " Extension: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm1c;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

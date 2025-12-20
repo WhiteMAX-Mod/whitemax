@@ -1,128 +1,82 @@
-.class public final Lufd;
+.class public final synthetic Lufd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwfd;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:[B
+.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
 
 
 # direct methods
-.method public constructor <init>(J[B)V
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;I)V
     .locals 0
 
+    iput p2, p0, Lufd;->a:I
+
+    iput-object p1, p0, Lufd;->b:Lone/me/rlottie/RLottieDrawable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lufd;->a:J
-
-    iput-object p3, p0, Lufd;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final run()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lufd;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lufd;->b:Lone/me/rlottie/RLottieDrawable;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v2, v1, Lone/me/rlottie/RLottieDrawable;->D1:Ljava/util/Set;
+
+    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
+
+    invoke-interface {v2, v1}, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;->onLoaded(Lone/me/rlottie/RLottieDrawable;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lufd;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    invoke-virtual {v1}, Lone/me/rlottie/RLottieDrawable;->invalidateInternal()V
 
-    if-nez v1, :cond_1
+    return-void
 
-    return v2
+    nop
 
-    :cond_1
-    check-cast p1, Lufd;
-
-    iget-wide v3, p0, Lufd;->a:J
-
-    iget-wide v5, p1, Lufd;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lufd;->b:[B
-
-    iget-object p1, p1, Lufd;->b:[B
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lufd;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lufd;->b:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lufd;->b:[B
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "AudioMsg(duration="
-
-    const-string v2, ", wave="
-
-    iget-wide v3, p0, Lufd;->a:J
-
-    invoke-static {v1, v3, v4, v2, v0}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

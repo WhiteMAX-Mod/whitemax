@@ -1,186 +1,137 @@
-.class public abstract Lfqi;
-.super Ljava/lang/Object;
+.class public final Lfqi;
+.super Ljqi;
 .source "SourceFile"
 
 
+# instance fields
+.field public final transient c:I
+
+.field public final transient d:I
+
+.field public final synthetic o:Ljqi;
+
+
 # direct methods
-.method public static final a([Ljava/lang/Object;IILf3;)Ljava/lang/String;
-    .locals 3
+.method public constructor <init>(Ljqi;II)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lfqi;->o:Ljqi;
 
-    mul-int/lit8 v1, p2, 0x3
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    add-int/lit8 v1, v1, 0x2
+    iput p2, p0, Lfqi;->c:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    iput p3, p0, Lfqi;->d:I
 
-    const-string v1, "["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_2
-
-    if-lez v1, :cond_0
-
-    const-string v2, ", "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    add-int v2, p1, v1
-
-    aget-object v2, p0, v2
-
-    if-ne v2, p3, :cond_1
-
-    const-string v2, "(this Collection)"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const-string p0, "]"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final c(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, -0x1
-
-    :goto_0
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static synthetic d(Landroid/view/View;Landroid/view/ViewGroup;)V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {p1, p0, v0}, Lfqi;->c(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public static final e(Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-static {v0}, Lfqi;->e(Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public static final h(II[Ljava/lang/Object;)V
-    .locals 1
-
-    :goto_0
-    if-ge p0, p1, :cond_0
-
-    const/4 v0, 0x0
-
-    aput-object v0, p2, p0
-
-    add-int/lit8 p0, p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract f()V
+.method public final b()I
+    .locals 2
+
+    iget-object v0, p0, Lfqi;->o:Ljqi;
+
+    invoke-virtual {v0}, Lzpi;->c()I
+
+    move-result v0
+
+    iget v1, p0, Lfqi;->c:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lfqi;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public g()V
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, Lfqi;->o:Ljqi;
+
+    invoke-virtual {v0}, Lzpi;->c()I
+
+    move-result v0
+
+    iget v1, p0, Lfqi;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final d()[Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lfqi;->o:Ljqi;
+
+    invoke-virtual {v0}, Lzpi;->d()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final e(II)Ljqi;
+    .locals 1
+
+    iget v0, p0, Lfqi;->d:I
+
+    invoke-static {p1, p2, v0}, Leaj;->e(III)V
+
+    iget v0, p0, Lfqi;->c:I
+
+    add-int/2addr p1, v0
+
+    add-int/2addr p2, v0
+
+    iget-object v0, p0, Lfqi;->o:Ljqi;
+
+    invoke-virtual {v0, p1, p2}, Ljqi;->e(II)Ljqi;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lfqi;->d:I
+
+    invoke-static {p1, v0}, Leaj;->c(II)V
+
+    iget v0, p0, Lfqi;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lfqi;->o:Ljqi;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lfqi;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lfqi;->e(II)Ljqi;
+
+    move-result-object p1
+
+    return-object p1
 .end method

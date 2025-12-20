@@ -1,66 +1,129 @@
-.class public final Luo;
-.super Lph6;
+.class public Luo;
+.super Landroid/widget/SeekBar;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic t0:Lbp;
-
-.field public final synthetic u0:Lep;
+.field public final a:Lvo;
 
 
 # direct methods
-.method public constructor <init>(Lep;Lep;Lbp;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    .line 1
+    sget v0, Lh4d;->seekBarStyle:I
+
+    invoke-direct {p0, p1, p2, v0}, Luo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    iput-object p1, p0, Luo;->u0:Lep;
+    .line 2
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p3, p0, Luo;->t0:Lbp;
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p0, p2}, Lph6;-><init>(Landroid/view/View;)V
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lyig;->a(Landroid/view/View;Landroid/content/Context;)V
+
+    .line 4
+    new-instance p1, Lvo;
+
+    invoke-direct {p1, p0}, Lvo;-><init>(Luo;)V
+
+    iput-object p1, p0, Luo;->a:Lvo;
+
+    .line 5
+    invoke-virtual {p1, p2, p3}, Lvo;->u(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lyye;
-    .locals 1
-
-    iget-object v0, p0, Luo;->t0:Lbp;
-
-    return-object v0
-.end method
-
-.method public final c()Z
+.method public drawableStateChanged()V
     .locals 3
 
-    iget-object v0, p0, Luo;->u0:Lep;
+    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    invoke-virtual {v0}, Lep;->getInternalPopup()Ldp;
+    iget-object v0, p0, Luo;->a:Lvo;
 
-    move-result-object v1
+    iget-object v1, v0, Lvo;->o:Luo;
 
-    invoke-interface {v1}, Ldp;->a()Z
+    iget-object v0, v0, Lvo;->X:Landroid/graphics/drawable/Drawable;
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_0
-
-    iget-object v1, v0, Lep;->s0:Ldp;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
     move-result v2
 
-    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
+    if-eqz v2, :cond_0
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/view/View;->getDrawableState()[I
 
-    invoke-interface {v1, v2, v0}, Ldp;->n(II)V
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    return v0
+.method public final jumpDrawablesToCurrentState()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
+
+    iget-object v0, p0, Luo;->a:Lvo;
+
+    iget-object v0, v0, Lvo;->X:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public declared-synchronized onDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+
+    iget-object v0, p0, Luo;->a:Lvo;
+
+    invoke-virtual {v0, p1}, Lvo;->C(Landroid/graphics/Canvas;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

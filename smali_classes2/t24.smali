@@ -1,87 +1,46 @@
-.class public final Lt24;
-.super Lsj0;
+.class public final synthetic Lt24;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public final b:Ljava/util/List;
+.field public final synthetic a:J
+
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(JZ)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Lsj0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-wide p1, p0, Lt24;->a:J
 
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lt24;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/util/Collection;)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0, p1, p2}, Lsj0;-><init>(J)V
-
-    .line 6
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object p1, p0, Lt24;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/Collection;)V
-    .locals 1
-
-    .line 3
-    invoke-direct {p0}, Lsj0;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lt24;->b:Ljava/util/List;
+    iput-boolean p3, p0, Lt24;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Lp38;
 
-    const-string v1, "ContactsUpdateEvent{idList="
+    sget-object v0, Ls54;->c:Ls54;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v1, p0, Lt24;->a:J
 
-    iget-object v1, p0, Lt24;->b:Ljava/util/List;
+    iget-boolean v3, p0, Lt24;->b:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2, v3}, Ls54;->L0(JZ)V
 
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lv2h;->a:Lv2h;
 
     return-object v0
 .end method

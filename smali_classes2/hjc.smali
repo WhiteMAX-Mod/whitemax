@@ -1,108 +1,67 @@
 .class public final Lhjc;
-.super Lljc;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Z
 
-.field public final b:I
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Lsx9;
+
+.field public final synthetic s0:Lljc;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lljc;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhjc;->s0:Lljc;
 
-    iput p1, p0, Lhjc;->a:I
-
-    iput p1, p0, Lhjc;->b:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lhjc;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lhjc;->t0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lhjc;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lhjc;->t0:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    iget-object v0, p0, Lhjc;->s0:Lljc;
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    move-object v6, p0
 
-    :cond_1
-    check-cast p1, Lhjc;
+    invoke-virtual/range {v0 .. v6}, Lljc;->e(Lvic;Lsic;Ljava/lang/String;ZLsx9;Ll84;)Ljava/lang/Object;
 
-    iget v1, p0, Lhjc;->a:I
+    move-result-object p1
 
-    iget p1, p1, Lhjc;->a:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/high16 v0, 0x80000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lhjc;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lhjc;->b:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lhjc;->a:I
-
-    invoke-static {v0}, Lj6j;->c(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OfficialOrgLabel(itemViewType="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

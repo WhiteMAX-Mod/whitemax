@@ -1,217 +1,208 @@
-.class public final Lb24;
-.super Ldtf;
+.class public final synthetic Lb24;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Loq6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/contacts/ContactsPickerScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lq24;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/ContactsPickerScreen;)V
+.method public synthetic constructor <init>(Lq24;JI)V
     .locals 0
 
-    iput-object p2, p0, Lb24;->X:Lone/me/chats/picker/contacts/ContactsPickerScreen;
+    iput p4, p0, Lb24;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lb24;->b:Lq24;
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lb24;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lb24;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lb24;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Lvib;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lb24;
+    sget-object v0, Lc24;->$EnumSwitchMapping$1:[I
 
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lb24;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lb24;
-
-    iget-object v1, p0, Lb24;->X:Lone/me/chats/picker/contacts/ContactsPickerScreen;
-
-    invoke-direct {v0, p2, v1}, Lb24;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/ContactsPickerScreen;)V
-
-    iput-object p1, v0, Lb24;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lb24;->o:Ljava/lang/Object;
-
-    check-cast p1, Lz14;
-
-    if-eqz p1, :cond_7
-
-    iget-object v0, p0, Lb24;->X:Lone/me/chats/picker/contacts/ContactsPickerScreen;
-
-    iget-object v1, v0, Lone/me/chats/picker/contacts/ContactsPickerScreen;->t0:Lhs;
-
-    iget-object p1, p1, Lz14;->a:Lb04;
-
-    sget-object v2, Lone/me/chats/picker/contacts/ContactsPickerScreen;->v0:[Lyy7;
-
-    invoke-virtual {v0}, Lc54;->getRouter()Lytd;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lytd;->e()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v5, v3
-
-    check-cast v5, Lbud;
-
-    iget-object v5, v5, Lbud;->a:Lc54;
-
-    instance-of v5, v5, Ldj6;
-
-    if-eqz v5, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, v4
-
-    :goto_0
-    check-cast v3, Lbud;
-
-    if-eqz v3, :cond_2
-
-    iget-object v2, v3, Lbud;->a:Lc54;
-
-    goto :goto_1
-
-    :cond_2
-    move-object v2, v4
-
-    :goto_1
-    instance-of v3, v2, Ldj6;
-
-    if-eqz v3, :cond_3
-
-    move-object v4, v2
-
-    check-cast v4, Ldj6;
-
-    :cond_3
-    if-eqz v4, :cond_6
-
-    sget-object v2, Lone/me/chats/picker/contacts/ContactsPickerScreen;->v0:[Lyy7;
-
-    const/4 v3, 0x0
-
-    aget-object v5, v2, v3
-
-    invoke-virtual {v1, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Number;
-
-    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v5, Landroid/content/Intent;
-
-    invoke-direct {v5}, Landroid/content/Intent;-><init>()V
-
-    const-string v6, "contacts.picker.result.key"
-
-    invoke-virtual {v5, v6, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
-
-    aget-object p1, v2, v3
-
-    invoke-virtual {v1, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    const/4 v1, -0x1
+    aget p1, v0, p1
 
-    invoke-interface {v4, p1, v1, v5}, Ldj6;->X(IILandroid/content/Intent;)V
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lc54;->getOnBackPressedDispatcher()Ljva;
+    if-ne p1, v0, :cond_0
 
-    move-result-object p1
+    iget-object p1, p0, Lb24;->b:Lq24;
 
-    if-eqz p1, :cond_5
+    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p1}, Ljva;->d()V
+    iget-object v1, p1, Lq24;->c:Lbbg;
 
-    :cond_5
-    invoke-static {v0}, Lapi;->c(Lc54;)V
+    check-cast v1, Lb9b;
 
-    :cond_6
-    :goto_2
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v1}, Lb9b;->b()Ltb4;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lq24;->s()Lub4;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
+
+    move-result-object v1
+
+    new-instance v2, Le24;
+
+    iget-wide v3, p0, Lb24;->c:J
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, p1, v3, v4, v5}, Le24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v5, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    :pswitch_0
+    sget-object v0, Lc24;->$EnumSwitchMapping$1:[I
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    throw p1
+    move-result p1
+
+    aget p1, v0, p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    iget-object p1, p0, Lb24;->b:Lq24;
+
+    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p1, Lq24;->c:Lbbg;
+
+    check-cast v1, Lb9b;
+
+    invoke-virtual {v1}, Lb9b;->b()Ltb4;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lq24;->s()Lub4;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
+
+    move-result-object v1
+
+    new-instance v2, Lf24;
+
+    iget-wide v3, p0, Lb24;->c:J
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, p1, v3, v4, v5}, Lf24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v5, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    :cond_1
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, p0, Lb24;->b:Lq24;
+
+    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p1, Lq24;->c:Lbbg;
+
+    check-cast v1, Lb9b;
+
+    invoke-virtual {v1}, Lb9b;->b()Ltb4;
+
+    move-result-object v1
+
+    sget-object v2, Lfoa;->a:Lfoa;
+
+    invoke-virtual {v1, v2}, Ln0;->plus(Lrb4;)Lrb4;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lq24;->s()Lub4;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Lrb4;->plus(Lrb4;)Lrb4;
+
+    move-result-object v1
+
+    new-instance v2, Lp24;
+
+    const/4 v3, 0x0
+
+    iget-wide v4, p0, Lb24;->c:J
+
+    invoke-direct {v2, p1, v4, v5, v3}, Lp24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
+
+    sget-object p1, Ldc4;->c:Ldc4;
+
+    invoke-static {v0, v1, p1, v2}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
+
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

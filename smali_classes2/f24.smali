@@ -1,136 +1,126 @@
 .class public final Lf24;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljzb;
-
-
-# static fields
-.field public static final synthetic h:[Lyy7;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lfde;
+.field public final synthetic X:Lq24;
 
-.field public final b:Lk18;
+.field public final synthetic Y:J
 
-.field public final c:Lk18;
-
-.field public d:Lf84;
-
-.field public final e:Lt9f;
-
-.field public final f:Ljve;
-
-.field public final g:Lgbd;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lz8a;
-
-    const-string v1, "collectJob"
-
-    const-string v2, "getCollectJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lf24;
-
-    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lvid;->a:Lwid;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lyy7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lf24;->h:[Lyy7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lk18;Lk18;Lfde;)V
+.method public constructor <init>(Lq24;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf24;->X:Lq24;
 
-    iput-object p3, p0, Lf24;->a:Lfde;
+    iput-wide p2, p0, Lf24;->Y:J
 
-    iput-object p1, p0, Lf24;->b:Lk18;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lf24;->c:Lk18;
-
-    invoke-static {}, Lc7j;->c()Lt9f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lf24;->e:Lt9f;
-
-    const p1, 0x7fffffff
-
-    const/4 p2, 0x5
-
-    const/4 p3, 0x0
-
-    invoke-static {p3, p1, p2}, Lkve;->b(III)Ljve;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lf24;->f:Ljve;
-
-    new-instance p2, Lgbd;
-
-    invoke-direct {p2, p1}, Lgbd;-><init>(Le9a;)V
-
-    iput-object p2, p0, Lf24;->g:Lgbd;
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lf24;->d:Lf84;
-
-    return-void
-.end method
-
-.method public final b(Lyyb;)V
-    .locals 1
-
-    iget-object v0, p0, Lf24;->a:Lfde;
-
-    invoke-virtual {v0, p1}, Lfde;->F(Lyyb;)V
-
-    return-void
-.end method
-
-.method public final d(J)V
-    .locals 1
-
-    iget-object v0, p0, Lf24;->a:Lfde;
-
-    invoke-virtual {v0, p1, p2}, Lfde;->E(J)V
-
-    return-void
-.end method
-
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iput-object p1, p0, Lf24;->d:Lf84;
+    check-cast p1, Lac4;
 
-    return-void
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lf24;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lf24;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lf24;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lf24;
+
+    iget-object v0, p0, Lf24;->X:Lq24;
+
+    iget-wide v1, p0, Lf24;->Y:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lf24;-><init>(Lq24;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lf24;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf24;->X:Lq24;
+
+    iget-object p1, p1, Lq24;->s0:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldy3;
+
+    iput v1, p0, Lf24;->o:I
+
+    iget-wide v0, p0, Lf24;->Y:J
+
+    invoke-virtual {p1, v0, v1, p0}, Ldy3;->a(JLl84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

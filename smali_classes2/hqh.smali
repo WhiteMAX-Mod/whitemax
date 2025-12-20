@@ -1,185 +1,93 @@
 .class public final Lhqh;
-.super Ljava/lang/Object;
+.super Lf3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lgqh;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic c:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic d:Liqh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Liqh;I)V
+    .locals 0
 
-    new-instance v0, Lgqh;
+    iput p2, p0, Lhqh;->c:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhqh;->d:Liqh;
 
-    sput-object v0, Lhqh;->Companion:Lgqh;
+    const/16 p1, 0xb
 
-    return-void
-.end method
+    packed-switch p2, :pswitch_data_0
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    const/4 p2, 0x0
 
-    and-int/lit8 v0, p2, 0x7
-
-    const/4 v1, 0x7
-
-    if-ne v1, v0, :cond_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhqh;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lhqh;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lhqh;->c:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
 
     return-void
 
-    :cond_0
-    sget-object p1, Lfqh;->a:Lfqh;
+    :pswitch_0
+    sget-object p2, Lcqh;->a:Lcqh;
 
-    invoke-virtual {p1}, Lfqh;->d()Lree;
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
 
-    move-result-object p1
+    return-void
 
-    invoke-static {p2, v1, p1}, Lg5j;->c(IILree;)V
-
-    const/4 p1, 0x0
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lhqh;->c:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Lcqh;
+
+    check-cast p1, Lcqh;
+
+    iget-object p1, p0, Lhqh;->d:Liqh;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
     :cond_0
-    instance-of v1, p1, Lhqh;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v0
 
-    return v2
+    if-nez v0, :cond_1
+
+    check-cast p2, Lfqh;
+
+    check-cast p1, Lfqh;
+
+    iget-object p1, p0, Lhqh;->d:Liqh;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
     :cond_1
-    check-cast p1, Lhqh;
+    return-void
 
-    iget-object v1, p0, Lhqh;->a:Ljava/lang/String;
+    nop
 
-    iget-object v3, p1, Lhqh;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lhqh;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lhqh;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhqh;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lhqh;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lhqh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lhqh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lhqh;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", url="
-
-    const-string v1, ", fileName="
-
-    const-string v2, "WebAppDownloadFileRequest(requestId="
-
-    iget-object v3, p0, Lhqh;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lhqh;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lhqh;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,121 +1,73 @@
-.class public abstract Lx5b;
-.super Ljava/lang/Object;
+.class public final enum Lx5b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Lx5b;
 
-.field public static final b:I
+.field public static final enum b:Lx5b;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
+.field public static final synthetic c:[Lx5b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_animals_and_plants:I
+    new-instance v0, Lx5b;
 
-    sput v0, Lx5b;->a:I
+    const-string v1, "ICON"
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_classic:I
+    const/4 v2, 0x0
 
-    sput v0, Lx5b;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_flags:I
+    sput-object v0, Lx5b;->a:Lx5b;
 
-    sput v0, Lx5b;->c:I
+    new-instance v1, Lx5b;
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_food_and_drink:I
+    const-string v2, "ICON_WITH_TEXT"
 
-    sput v0, Lx5b;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_gestures_and_people:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lx5b;->e:I
+    sput-object v1, Lx5b;->b:Lx5b;
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_objects:I
+    filled-new-array {v0, v1}, [Lx5b;
 
-    sput v0, Lx5b;->f:I
+    move-result-object v0
 
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_sport_and_activity:I
-
-    sput v0, Lx5b;->g:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_symbols:I
-
-    sput v0, Lx5b;->h:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_emoji_travels_and_transport:I
-
-    sput v0, Lx5b;->i:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_favorite:I
-
-    sput v0, Lx5b;->j:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_popular:I
-
-    sput v0, Lx5b;->k:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_recent:I
-
-    sput v0, Lx5b;->l:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_recent_clear_action:I
-
-    sput v0, Lx5b;->m:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_recent_clear_cancel:I
-
-    sput v0, Lx5b;->n:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_recent_clear_title:I
-
-    sput v0, Lx5b;->o:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_tab_emoji:I
-
-    sput v0, Lx5b;->p:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_tab_gifs:I
-
-    sput v0, Lx5b;->q:I
-
-    sget v0, Lr3d;->oneme_media_keyboard_tab_stickers:I
-
-    sput v0, Lx5b;->r:I
+    sput-object v0, Lx5b;->c:[Lx5b;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lx5b;
+    .locals 1
+
+    const-class v0, Lx5b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lx5b;
+
+    return-object p0
+.end method
+
+.method public static values()[Lx5b;
+    .locals 1
+
+    sget-object v0, Lx5b;->c:[Lx5b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lx5b;
+
+    return-object v0
 .end method

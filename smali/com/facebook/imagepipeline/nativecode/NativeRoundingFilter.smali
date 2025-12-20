@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lfz4;
+.annotation build Lb35;
 .end annotation
 
 
@@ -14,7 +14,7 @@
 
     const-string v0, "native-filters"
 
-    invoke-static {v0}, Lnca;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Luia;->c(Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -28,28 +28,28 @@
 .end method
 
 .method private static native nativeAddRoundedCornersFilter(Landroid/graphics/Bitmap;IIII)V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private static native nativeToCircleFastFilter(Landroid/graphics/Bitmap;Z)V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private static native nativeToCircleFilter(Landroid/graphics/Bitmap;Z)V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private static native nativeToCircleWithBorderFilter(Landroid/graphics/Bitmap;IIZ)V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method public static toCircle(Landroid/graphics/Bitmap;Z)V
     .locals 2
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -80,7 +80,7 @@
 
 .method public static toCircleFast(Landroid/graphics/Bitmap;Z)V
     .locals 2
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

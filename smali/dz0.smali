@@ -1,23 +1,61 @@
 .class public final Ldz0;
-.super Ljava/lang/Object;
+.super Lugc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public a:[B
 
-.field public final b:J
+.field public b:I
 
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Ldz0;->a:[B
 
-    iput-wide p1, p0, Ldz0;->a:J
+    iget v1, p0, Ldz0;->b:I
 
-    iput-wide p3, p0, Ldz0;->b:J
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b(I)V
+    .locals 2
+
+    iget-object v0, p0, Ldz0;->a:[B
+
+    array-length v1, v0
+
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldz0;->a:[B
+
+    :cond_1
     return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Ldz0;->b:I
+
+    return v0
 .end method

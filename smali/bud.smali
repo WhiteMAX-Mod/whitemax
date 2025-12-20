@@ -4,148 +4,138 @@
 
 
 # instance fields
-.field public final a:Lc54;
+.field public final a:Ljava/lang/String;
 
-.field public b:Ljava/lang/String;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public c:Lh54;
+.field public final c:[Ljava/lang/CharSequence;
 
-.field public d:Lh54;
+.field public final d:Z
 
-.field public e:Z
+.field public final e:I
 
-.field public f:I
+.field public final f:Landroid/os/Bundle;
+
+.field public final g:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbud;->a:Lc54;
+    iput-object p1, p0, Lbud;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lbud;->b:Ljava/lang/String;
+    iput-object p2, p0, Lbud;->b:Ljava/lang/CharSequence;
 
-    iput-object p3, p0, Lbud;->c:Lh54;
+    iput-object p3, p0, Lbud;->c:[Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Lbud;->d:Lh54;
+    iput-boolean p4, p0, Lbud;->d:Z
 
-    iput-boolean p5, p0, Lbud;->e:Z
+    iput p5, p0, Lbud;->e:I
 
-    iput p6, p0, Lbud;->f:I
+    iput-object p6, p0, Lbud;->f:Landroid/os/Bundle;
 
-    return-void
-.end method
+    iput-object p7, p0, Lbud;->g:Ljava/util/Set;
 
+    const/4 p1, 0x2
 
-# virtual methods
-.method public final a(Lh54;)V
-    .locals 2
+    if-ne p5, p1, :cond_1
 
-    iget-boolean v0, p0, Lbud;->e:Z
+    if-eqz p4, :cond_0
 
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lbud;->d:Lh54;
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-class v0, Lbud;
+    const-string p2, "setEditChoicesBeforeSending requires setAllowFreeFormInput"
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "s can not be modified after being added to a Router."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
 
-.method public final b()Lh54;
-    .locals 1
-
-    iget-object v0, p0, Lbud;->a:Lc54;
-
-    invoke-virtual {v0}, Lc54;->getOverriddenPushHandler()Lh54;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbud;->c:Lh54;
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final c(Lh54;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lbud;->e:Z
-
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lbud;->c:Lh54;
-
+    :cond_1
+    :goto_0
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-class v0, Lbud;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "s can not be modified after being added to a Router."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public final d(Ljava/lang/String;)V
-    .locals 2
+.method public static a(Lbud;)Landroid/app/RemoteInput;
+    .locals 4
 
-    iget-boolean v0, p0, Lbud;->e:Z
+    new-instance v0, Landroid/app/RemoteInput$Builder;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lbud;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lbud;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget-object v1, p0, Lbud;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lbud;->c:[Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setChoices([Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lbud;->d:Z
+
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setAllowFreeFormInput(Z)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lbud;->f:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lbud;->g:Ljava/util/Set;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3}, Lztd;->d(Landroid/app/RemoteInput$Builder;Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-class v0, Lbud;
+    const/16 v2, 0x1d
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    if-lt v1, v2, :cond_1
 
-    move-result-object v0
+    iget p0, p0, Lbud;->e:I
 
-    const-string v1, "s can not be modified after being added to a Router."
+    invoke-static {v0, p0}, Laud;->b(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :cond_1
+    invoke-virtual {v0}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p0
 .end method

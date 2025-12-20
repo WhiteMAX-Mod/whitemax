@@ -2,213 +2,367 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Le79;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:Lwy8;
+.field public final a:Lmd9;
 
 .field public final b:J
 
-.field public c:Landroid/media/session/MediaSession$QueueItem;
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lmd9;JJJJZZZZ)V
+    .locals 7
 
-    new-instance v0, Lpq8;
+    move/from16 v0, p10
 
-    const/4 v1, 0x5
+    move/from16 v1, p11
 
-    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
+    move/from16 v2, p12
 
-    sput-object v0, Le79;->CREATOR:Landroid/os/Parcelable$Creator;
+    move/from16 v3, p13
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/media/session/MediaSession$QueueItem;Lwy8;J)V
-    .locals 2
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, -0x1
+    const/4 v4, 0x1
 
-    cmp-long v0, p3, v0
+    const/4 v5, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v3, :cond_1
 
-    .line 2
-    iput-object p2, p0, Le79;->a:Lwy8;
-
-    .line 3
-    iput-wide p3, p0, Le79;->b:J
-
-    .line 4
-    iput-object p1, p0, Le79;->c:Landroid/media/session/MediaSession$QueueItem;
-
-    return-void
-
-    .line 5
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Id cannot be QueueItem.UNKNOWN_ID"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    sget-object v0, Lwy8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwy8;
-
-    iput-object v0, p0, Le79;->a:Lwy8;
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Le79;->b:J
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 6
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/media/session/MediaSession$QueueItem;
-
-    invoke-virtual {v1}, Landroid/media/session/MediaSession$QueueItem;->getDescription()Landroid/media/MediaDescription;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lwy8;->a(Landroid/media/MediaDescription;)Lwy8;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Landroid/media/session/MediaSession$QueueItem;->getQueueId()J
-
-    move-result-wide v3
-
-    new-instance v5, Le79;
-
-    invoke-direct {v5, v1, v2, v3, v4}, Le79;-><init>(Landroid/media/session/MediaSession$QueueItem;Lwy8;J)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    move v6, v5
+
+    goto :goto_1
+
     :cond_1
-    return-object v0
+    :goto_0
+    move v6, v4
+
+    :goto_1
+    invoke-static {v6}, Ln5j;->b(Z)V
+
+    if-eqz v2, :cond_3
+
+    if-eqz v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v6, v5
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    move v6, v4
+
+    :goto_3
+    invoke-static {v6}, Ln5j;->b(Z)V
+
+    if-eqz v0, :cond_5
+
+    if-nez v1, :cond_4
+
+    if-nez v2, :cond_4
+
+    if-nez v3, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    move v4, v5
+
+    :cond_5
+    :goto_4
+    invoke-static {v4}, Ln5j;->b(Z)V
+
+    iput-object p1, p0, Le79;->a:Lmd9;
+
+    iput-wide p2, p0, Le79;->b:J
+
+    iput-wide p4, p0, Le79;->c:J
+
+    iput-wide p6, p0, Le79;->d:J
+
+    move-wide p1, p8
+
+    iput-wide p1, p0, Le79;->e:J
+
+    iput-boolean v0, p0, Le79;->f:Z
+
+    iput-boolean v1, p0, Le79;->g:Z
+
+    iput-boolean v2, p0, Le79;->h:Z
+
+    iput-boolean v3, p0, Le79;->i:Z
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a(J)Le79;
+    .locals 16
 
-    const/4 v0, 0x0
+    move-object/from16 v0, p0
 
-    return v0
+    iget-wide v1, v0, Le79;->c:J
+
+    cmp-long v1, p1, v1
+
+    if-nez v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v2, Le79;
+
+    iget-boolean v14, v0, Le79;->h:Z
+
+    iget-boolean v15, v0, Le79;->i:Z
+
+    iget-object v3, v0, Le79;->a:Lmd9;
+
+    iget-wide v4, v0, Le79;->b:J
+
+    iget-wide v8, v0, Le79;->d:J
+
+    iget-wide v10, v0, Le79;->e:J
+
+    iget-boolean v12, v0, Le79;->f:Z
+
+    iget-boolean v13, v0, Le79;->g:Z
+
+    move-wide/from16 v6, p1
+
+    invoke-direct/range {v2 .. v15}, Le79;-><init>(Lmd9;JJJJZZZZ)V
+
+    return-object v2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final b(J)Le79;
+    .locals 16
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    const-string v1, "MediaSession.QueueItem { Description="
+    iget-wide v1, v0, Le79;->b:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    cmp-long v1, p1, v1
 
-    iget-object v1, p0, Le79;->a:Lwy8;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    const-string v1, ", Id="
+    :cond_0
+    new-instance v2, Le79;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v14, v0, Le79;->h:Z
+
+    iget-boolean v15, v0, Le79;->i:Z
+
+    iget-object v3, v0, Le79;->a:Lmd9;
+
+    iget-wide v6, v0, Le79;->c:J
+
+    iget-wide v8, v0, Le79;->d:J
+
+    iget-wide v10, v0, Le79;->e:J
+
+    iget-boolean v12, v0, Le79;->f:Z
+
+    iget-boolean v13, v0, Le79;->g:Z
+
+    move-wide/from16 v4, p1
+
+    invoke-direct/range {v2 .. v15}, Le79;-><init>(Lmd9;JJJJZZZZ)V
+
+    return-object v2
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Le79;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Le79;
+
+    iget-wide v2, p0, Le79;->b:J
+
+    iget-wide v4, p1, Le79;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Le79;->c:J
+
+    iget-wide v4, p1, Le79;->c:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Le79;->d:J
+
+    iget-wide v4, p1, Le79;->d:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Le79;->e:J
+
+    iget-wide v4, p1, Le79;->e:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-boolean v2, p0, Le79;->f:Z
+
+    iget-boolean v3, p1, Le79;->f:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Le79;->g:Z
+
+    iget-boolean v3, p1, Le79;->g:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Le79;->h:Z
+
+    iget-boolean v3, p1, Le79;->h:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Le79;->i:Z
+
+    iget-boolean v3, p1, Le79;->i:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Le79;->a:Lmd9;
+
+    iget-object p1, p1, Le79;->a:Lmd9;
+
+    invoke-static {v2, p1}, Loah;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Le79;->a:Lmd9;
+
+    invoke-virtual {v0}, Ld79;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
 
     iget-wide v1, p0, Le79;->b:J
 
-    const-string v3, " }"
+    long-to-int v1, v1
 
-    invoke-static {v0, v1, v2, v3}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    add-int/2addr v0, v1
 
-    move-result-object v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
-.end method
+    iget-wide v1, p0, Le79;->c:J
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    long-to-int v1, v1
 
-    iget-object v0, p0, Le79;->a:Lwy8;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0, p1, p2}, Lwy8;->writeToParcel(Landroid/os/Parcel;I)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v0, p0, Le79;->b:J
+    iget-wide v1, p0, Le79;->d:J
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    long-to-int v1, v1
 
-    return-void
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Le79;->e:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le79;->f:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le79;->g:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le79;->h:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le79;->i:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

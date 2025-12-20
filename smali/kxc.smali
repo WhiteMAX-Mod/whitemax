@@ -1,46 +1,95 @@
 .class public abstract Lkxc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static common_full_open_on_phone:I = 0x7f080324
+.field public static final a:Lqg8;
 
-.field public static common_google_signin_btn_icon_dark:I = 0x7f080325
 
-.field public static common_google_signin_btn_icon_dark_focused:I = 0x7f080326
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public static common_google_signin_btn_icon_dark_normal:I = 0x7f080327
+    new-instance v0, Ljava/util/HashMap;
 
-.field public static common_google_signin_btn_icon_dark_normal_background:I = 0x7f080328
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-.field public static common_google_signin_btn_icon_disabled:I = 0x7f080329
+    new-instance v1, Ljava/util/HashMap;
 
-.field public static common_google_signin_btn_icon_light:I = 0x7f08032a
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-.field public static common_google_signin_btn_icon_light_focused:I = 0x7f08032b
+    sget-object v2, Lx90;->a:Lx90;
 
-.field public static common_google_signin_btn_icon_light_normal:I = 0x7f08032c
+    const-class v3, Lkxc;
 
-.field public static common_google_signin_btn_icon_light_normal_background:I = 0x7f08032d
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static common_google_signin_btn_text_dark:I = 0x7f08032e
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static common_google_signin_btn_text_dark_focused:I = 0x7f08032f
+    sget-object v2, Lq90;->a:Lq90;
 
-.field public static common_google_signin_btn_text_dark_normal:I = 0x7f080330
+    const-class v3, Lse3;
 
-.field public static common_google_signin_btn_text_dark_normal_background:I = 0x7f080331
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static common_google_signin_btn_text_disabled:I = 0x7f080332
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static common_google_signin_btn_text_light:I = 0x7f080333
+    sget-object v2, Lz90;->a:Lz90;
 
-.field public static common_google_signin_btn_text_light_focused:I = 0x7f080334
+    const-class v3, Ltkg;
 
-.field public static common_google_signin_btn_text_light_normal:I = 0x7f080335
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static common_google_signin_btn_text_light_normal_background:I = 0x7f080336
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static googleg_disabled_color_18:I = 0x7f0804e9
+    sget-object v2, Lt90;->a:Lt90;
 
-.field public static googleg_standard_color_18:I = 0x7f0804ea
+    const-class v3, Lal8;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Ls90;->a:Ls90;
+
+    const-class v3, Lwk8;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lr90;->a:Lr90;
+
+    const-class v3, Lvz6;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Ly90;->a:Ly90;
+
+    const-class v3, Ljwf;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Lqg8;
+
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3, v0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    sget-object v1, Lcti;->a:Ld18;
+
+    invoke-direct {v2, v3, v0, v1}, Lqg8;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sput-object v2, Lkxc;->a:Lqg8;
+
+    return-void
+.end method

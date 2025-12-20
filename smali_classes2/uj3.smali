@@ -1,236 +1,941 @@
 .class public final Luj3;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+.field public final A:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final B:I
+
+.field public final C:I
+
+.field public final D:I
+
+.field public final E:I
+
+.field public final F:I
+
+.field public final G:I
+
+.field public final H:I
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:I
+
+.field public final p:I
+
+.field public final q:I
+
+.field public final r:I
+
+.field public final s:I
+
+.field public final t:I
+
+.field public final u:I
+
+.field public final v:I
+
+.field public final w:I
+
+.field public final x:I
+
+.field public final y:I
+
+.field public final z:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+.method public constructor <init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
     .locals 0
 
-    iput-object p2, p0, Luj3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p1, p0, Luj3;->a:I
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Luj3;->b:I
+
+    iput p3, p0, Luj3;->c:I
+
+    iput p4, p0, Luj3;->d:I
+
+    iput p5, p0, Luj3;->e:I
+
+    iput p6, p0, Luj3;->f:I
+
+    iput p7, p0, Luj3;->g:I
+
+    iput p8, p0, Luj3;->h:I
+
+    iput p9, p0, Luj3;->i:I
+
+    iput p10, p0, Luj3;->j:I
+
+    iput p11, p0, Luj3;->k:I
+
+    iput p12, p0, Luj3;->l:I
+
+    iput p13, p0, Luj3;->m:I
+
+    iput p14, p0, Luj3;->n:I
+
+    iput p15, p0, Luj3;->o:I
+
+    move/from16 p1, p16
+
+    iput p1, p0, Luj3;->p:I
+
+    move/from16 p1, p17
+
+    iput p1, p0, Luj3;->q:I
+
+    move/from16 p1, p18
+
+    iput p1, p0, Luj3;->r:I
+
+    move/from16 p1, p19
+
+    iput p1, p0, Luj3;->s:I
+
+    move/from16 p1, p20
+
+    iput p1, p0, Luj3;->t:I
+
+    move/from16 p1, p21
+
+    iput p1, p0, Luj3;->u:I
+
+    move/from16 p1, p22
+
+    iput p1, p0, Luj3;->v:I
+
+    move/from16 p1, p23
+
+    iput p1, p0, Luj3;->w:I
+
+    move/from16 p1, p24
+
+    iput p1, p0, Luj3;->x:I
+
+    move/from16 p1, p25
+
+    iput p1, p0, Luj3;->y:I
+
+    move/from16 p1, p26
+
+    iput p1, p0, Luj3;->z:I
+
+    move/from16 p1, p27
+
+    iput p1, p0, Luj3;->A:I
+
+    move/from16 p1, p28
+
+    iput p1, p0, Luj3;->B:I
+
+    move/from16 p1, p29
+
+    iput p1, p0, Luj3;->C:I
+
+    move/from16 p1, p30
+
+    iput p1, p0, Luj3;->D:I
+
+    move/from16 p1, p31
+
+    iput p1, p0, Luj3;->E:I
+
+    move/from16 p1, p32
+
+    iput p1, p0, Luj3;->F:I
+
+    move/from16 p1, p33
+
+    iput p1, p0, Luj3;->G:I
+
+    move/from16 p1, p34
+
+    iput p1, p0, Luj3;->H:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Luj3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Luj3;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Luj3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Luj3;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Luj3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Luj3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
-
-    iput-object p1, v0, Luj3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Luj3;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lyy7;
-
-    sget-object p1, Lzj3;->c:Lzj3;
-
-    invoke-virtual {p1}, Li3;->p0()Lii4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lii4;->d()Z
-
-    goto/16 :goto_3
+    goto/16 :goto_1
 
     :cond_0
-    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lyy7;
+    instance-of v0, p1, Luj3;
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+    if-nez v0, :cond_1
 
-    sget v0, Lg3b;->c:I
+    goto/16 :goto_0
 
-    const/4 v1, 0x6
+    :cond_1
+    check-cast p1, Luj3;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, v2, v2, v1}, Laz1;->e(ILandroid/os/Bundle;Lf1e;I)Loq3;
+    iget v0, p0, Luj3;->a:I
 
-    move-result-object v0
+    iget v1, p1, Luj3;->a:I
 
-    sget v1, Lg3b;->a:I
+    if-eq v0, v1, :cond_2
 
-    new-instance v3, Ln5g;
+    goto/16 :goto_0
 
-    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+    :cond_2
+    iget v0, p0, Luj3;->b:I
 
-    invoke-virtual {v0, v3}, Loq3;->f(Ls5g;)V
+    iget v1, p1, Luj3;->b:I
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-eq v0, v1, :cond_3
 
-    move-result-object p1
+    goto/16 :goto_0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    :cond_3
+    iget v0, p0, Luj3;->c:I
 
-    move-result v1
+    iget v1, p1, Luj3;->c:I
 
-    if-eqz v1, :cond_1
+    if-eq v0, v1, :cond_4
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    goto/16 :goto_0
 
-    move-result-object v1
+    :cond_4
+    iget v0, p0, Luj3;->d:I
 
-    check-cast v1, Lpq3;
+    iget v1, p1, Luj3;->d:I
 
-    filled-new-array {v1}, [Lpq3;
+    if-eq v0, v1, :cond_5
 
-    move-result-object v1
+    goto/16 :goto_0
 
-    invoke-virtual {v0, v1}, Loq3;->a([Lpq3;)V
+    :cond_5
+    iget v0, p0, Luj3;->e:I
+
+    iget v1, p1, Luj3;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto/16 :goto_0
+
+    :cond_6
+    iget v0, p0, Luj3;->f:I
+
+    iget v1, p1, Luj3;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto/16 :goto_0
+
+    :cond_7
+    iget v0, p0, Luj3;->g:I
+
+    iget v1, p1, Luj3;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto/16 :goto_0
+
+    :cond_8
+    iget v0, p0, Luj3;->h:I
+
+    iget v1, p1, Luj3;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto/16 :goto_0
+
+    :cond_9
+    iget v0, p0, Luj3;->i:I
+
+    iget v1, p1, Luj3;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto/16 :goto_0
+
+    :cond_a
+    iget v0, p0, Luj3;->j:I
+
+    iget v1, p1, Luj3;->j:I
+
+    if-eq v0, v1, :cond_b
+
+    goto/16 :goto_0
+
+    :cond_b
+    iget v0, p0, Luj3;->k:I
+
+    iget v1, p1, Luj3;->k:I
+
+    if-eq v0, v1, :cond_c
+
+    goto/16 :goto_0
+
+    :cond_c
+    iget v0, p0, Luj3;->l:I
+
+    iget v1, p1, Luj3;->l:I
+
+    if-eq v0, v1, :cond_d
+
+    goto/16 :goto_0
+
+    :cond_d
+    iget v0, p0, Luj3;->m:I
+
+    iget v1, p1, Luj3;->m:I
+
+    if-eq v0, v1, :cond_e
+
+    goto/16 :goto_0
+
+    :cond_e
+    iget v0, p0, Luj3;->n:I
+
+    iget v1, p1, Luj3;->n:I
+
+    if-eq v0, v1, :cond_f
+
+    goto/16 :goto_0
+
+    :cond_f
+    iget v0, p0, Luj3;->o:I
+
+    iget v1, p1, Luj3;->o:I
+
+    if-eq v0, v1, :cond_10
+
+    goto/16 :goto_0
+
+    :cond_10
+    iget v0, p0, Luj3;->p:I
+
+    iget v1, p1, Luj3;->p:I
+
+    if-eq v0, v1, :cond_11
+
+    goto/16 :goto_0
+
+    :cond_11
+    iget v0, p0, Luj3;->q:I
+
+    iget v1, p1, Luj3;->q:I
+
+    if-eq v0, v1, :cond_12
+
+    goto/16 :goto_0
+
+    :cond_12
+    iget v0, p0, Luj3;->r:I
+
+    iget v1, p1, Luj3;->r:I
+
+    if-eq v0, v1, :cond_13
+
+    goto/16 :goto_0
+
+    :cond_13
+    iget v0, p0, Luj3;->s:I
+
+    iget v1, p1, Luj3;->s:I
+
+    if-eq v0, v1, :cond_14
+
+    goto/16 :goto_0
+
+    :cond_14
+    iget v0, p0, Luj3;->t:I
+
+    iget v1, p1, Luj3;->t:I
+
+    if-eq v0, v1, :cond_15
+
+    goto/16 :goto_0
+
+    :cond_15
+    iget v0, p0, Luj3;->u:I
+
+    iget v1, p1, Luj3;->u:I
+
+    if-eq v0, v1, :cond_16
+
+    goto/16 :goto_0
+
+    :cond_16
+    iget v0, p0, Luj3;->v:I
+
+    iget v1, p1, Luj3;->v:I
+
+    if-eq v0, v1, :cond_17
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, p0, Luj3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    :cond_17
+    iget v0, p0, Luj3;->w:I
 
-    iget-object v1, p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->d:Lbwf;
+    iget v1, p1, Luj3;->w:I
 
-    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+    if-eq v0, v1, :cond_18
 
-    move-result-object v1
+    goto :goto_0
 
-    check-cast v1, Lpq3;
+    :cond_18
+    iget v0, p0, Luj3;->x:I
 
-    filled-new-array {v1}, [Lpq3;
+    iget v1, p1, Luj3;->x:I
 
-    move-result-object v1
+    if-eq v0, v1, :cond_19
 
-    invoke-virtual {v0, v1}, Loq3;->a([Lpq3;)V
+    goto :goto_0
 
-    invoke-virtual {v0}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    :cond_19
+    iget v0, p0, Luj3;->y:I
 
-    move-result-object v4
+    iget v1, p1, Luj3;->y:I
 
-    new-instance v0, Lmg8;
+    if-eq v0, v1, :cond_1a
 
-    invoke-direct {v0, p1}, Lmg8;-><init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+    goto :goto_0
 
-    invoke-virtual {v4, v0}, Lc54;->addLifecycleListener(La54;)V
+    :cond_1a
+    iget v0, p0, Luj3;->z:I
 
-    invoke-virtual {v4, p1}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+    iget v1, p1, Luj3;->z:I
 
-    move-object v0, p1
+    if-eq v0, v1, :cond_1b
 
+    goto :goto_0
+
+    :cond_1b
+    iget v0, p0, Luj3;->A:I
+
+    iget v1, p1, Luj3;->A:I
+
+    if-eq v0, v1, :cond_1c
+
+    goto :goto_0
+
+    :cond_1c
+    iget v0, p0, Luj3;->B:I
+
+    iget v1, p1, Luj3;->B:I
+
+    if-eq v0, v1, :cond_1d
+
+    goto :goto_0
+
+    :cond_1d
+    iget v0, p0, Luj3;->C:I
+
+    iget v1, p1, Luj3;->C:I
+
+    if-eq v0, v1, :cond_1e
+
+    goto :goto_0
+
+    :cond_1e
+    iget v0, p0, Luj3;->D:I
+
+    iget v1, p1, Luj3;->D:I
+
+    if-eq v0, v1, :cond_1f
+
+    goto :goto_0
+
+    :cond_1f
+    iget v0, p0, Luj3;->E:I
+
+    iget v1, p1, Luj3;->E:I
+
+    if-eq v0, v1, :cond_20
+
+    goto :goto_0
+
+    :cond_20
+    iget v0, p0, Luj3;->F:I
+
+    iget v1, p1, Luj3;->F:I
+
+    if-eq v0, v1, :cond_21
+
+    goto :goto_0
+
+    :cond_21
+    iget v0, p0, Luj3;->G:I
+
+    iget v1, p1, Luj3;->G:I
+
+    if-eq v0, v1, :cond_22
+
+    goto :goto_0
+
+    :cond_22
+    iget v0, p0, Luj3;->H:I
+
+    iget p1, p1, Luj3;->H:I
+
+    if-eq v0, p1, :cond_23
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_23
     :goto_1
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
+    const/4 p1, 0x1
 
-    move-result-object v1
+    return p1
+.end method
 
-    if-eqz v1, :cond_2
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
+    const v0, -0x63d850
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Luj3;->a:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->b:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->c:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->d:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    const v2, -0xef86c1
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->e:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->f:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->g:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->h:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->i:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->j:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->k:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->l:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->m:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->n:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->o:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->p:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->q:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->r:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->s:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->t:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->u:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->v:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->w:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    const v2, -0xe4a142
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->x:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->y:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->z:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->A:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->B:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->C:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->D:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->E:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->F:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Luj3;->G:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Luj3;->H:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", archiveElement="
+
+    const-string v1, ", archiveIcon="
+
+    const-string v2, "CommonBackgroundFileTypeColors(archiveBadge=-6543440, archiveBkg="
+
+    iget v3, p0, Luj3;->a:I
+
+    iget v4, p0, Luj3;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_1
+    const-string v1, ", background="
 
-    :cond_2
-    instance-of v1, v0, Leud;
+    const-string v2, ", dataBadge=-15697601, dataBkg="
 
-    if-eqz v1, :cond_3
+    iget v3, p0, Luj3;->c:I
 
-    check-cast v0, Leud;
+    iget v4, p0, Luj3;->d:I
 
-    goto :goto_2
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    :cond_3
-    move-object v0, v2
+    const-string v1, ", dataElement="
 
-    :goto_2
-    if-eqz v0, :cond_4
+    const-string v2, ", dataIcon="
 
-    check-cast v0, Lone/me/android/root/RootController;
+    iget v3, p0, Luj3;->e:I
 
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->E0()Lytd;
+    iget v4, p0, Luj3;->f:I
 
-    move-result-object v2
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    :cond_4
-    invoke-virtual {v4, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
+    const-string v1, ", imageBadge="
 
-    if-eqz v2, :cond_5
+    const-string v2, ", imageBkg="
 
-    new-instance v3, Lbud;
+    iget v3, p0, Luj3;->g:I
 
-    const/4 v8, 0x0
+    iget v4, p0, Luj3;->h:I
 
-    const/4 v9, -0x1
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    const/4 v5, 0x0
+    const-string v1, ", imageElement="
 
-    const/4 v6, 0x0
+    const-string v2, ", imageIcon="
 
-    const/4 v7, 0x0
+    iget v3, p0, Luj3;->i:I
 
-    invoke-direct/range {v3 .. v9}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+    iget v4, p0, Luj3;->j:I
 
-    const/4 p1, 0x0
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    const/4 v0, 0x1
+    const-string v1, ", musicBadge="
 
-    const-string v1, "BottomSheetWidget"
+    const-string v2, ", musicBkg="
 
-    invoke-static {p1, v3, v0, v1}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+    iget v3, p0, Luj3;->k:I
 
-    invoke-virtual {v2, v3}, Lytd;->H(Lbud;)V
+    iget v4, p0, Luj3;->l:I
 
-    :cond_5
-    :goto_3
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    return-object p1
+    const-string v1, ", musicElement="
+
+    const-string v2, ", musicIcon="
+
+    iget v3, p0, Luj3;->m:I
+
+    iget v4, p0, Luj3;->n:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", presentationBadge="
+
+    const-string v2, ", presentationBkg="
+
+    iget v3, p0, Luj3;->o:I
+
+    iget v4, p0, Luj3;->p:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", presentationElement="
+
+    const-string v2, ", presentationIcon="
+
+    iget v3, p0, Luj3;->q:I
+
+    iget v4, p0, Luj3;->r:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", programBadge="
+
+    const-string v2, ", programBkg="
+
+    iget v3, p0, Luj3;->s:I
+
+    iget v4, p0, Luj3;->t:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", programElement="
+
+    const-string v2, ", programIcon="
+
+    iget v3, p0, Luj3;->u:I
+
+    iget v4, p0, Luj3;->v:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", textBadge=-14983490, textBkg="
+
+    const-string v2, ", textElement="
+
+    iget v3, p0, Luj3;->w:I
+
+    iget v4, p0, Luj3;->x:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", textIcon="
+
+    const-string v2, ", unknownBadge="
+
+    iget v3, p0, Luj3;->y:I
+
+    iget v4, p0, Luj3;->z:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", unknownBkg="
+
+    const-string v2, ", unknownElement="
+
+    iget v3, p0, Luj3;->A:I
+
+    iget v4, p0, Luj3;->B:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", unknownIcon="
+
+    const-string v2, ", videoBadge="
+
+    iget v3, p0, Luj3;->C:I
+
+    iget v4, p0, Luj3;->D:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", videoBkg="
+
+    const-string v2, ", videoElement="
+
+    iget v3, p0, Luj3;->E:I
+
+    iget v4, p0, Luj3;->F:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", videoIcon="
+
+    const-string v2, ")"
+
+    iget v3, p0, Luj3;->G:I
+
+    iget v4, p0, Luj3;->H:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

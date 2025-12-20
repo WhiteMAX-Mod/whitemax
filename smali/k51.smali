@@ -1,207 +1,226 @@
 .class public final Lk51;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lgr6;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public synthetic X:Z
 
-.field public final b:Ljava/util/List;
+.field public synthetic Y:Z
 
-.field public final c:Ljava/util/LinkedHashMap;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final d:Landroid/graphics/Point;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;Lo98;Ljava/util/LinkedHashMap;Landroid/graphics/Point;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lk51;->o:I
 
-    iput-object p1, p0, Lk51;->a:Landroid/os/Bundle;
-
-    iput-object p2, p0, Lk51;->b:Ljava/util/List;
-
-    iput-object p3, p0, Lk51;->c:Ljava/util/LinkedHashMap;
-
-    iput-object p4, p0, Lk51;->d:Landroid/graphics/Point;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lk51;->o:I
 
-    goto :goto_1
+    check-cast p1, Ljava/lang/Boolean;
 
-    :cond_0
-    instance-of v0, p1, Lk51;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lk51;
-
-    iget-object v0, p0, Lk51;->a:Landroid/os/Bundle;
-
-    iget-object v1, p1, Lk51;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lk51;->b:Ljava/util/List;
-
-    iget-object v1, p1, Lk51;->b:Ljava/util/List;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lk51;->c:Ljava/util/LinkedHashMap;
-
-    iget-object v1, p1, Lk51;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lk51;->d:Landroid/graphics/Point;
-
-    iget-object p1, p1, Lk51;->d:Landroid/graphics/Point;
-
-    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    if-nez p1, :cond_5
+    packed-switch v0, :pswitch_data_0
 
-    :goto_0
-    const/4 p1, 0x0
+    check-cast p2, Lgs9;
 
-    return p1
+    check-cast p3, Ljava/lang/Boolean;
 
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return p1
+    move-result p3
+
+    check-cast p4, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lk51;
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p4, v2}, Lk51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Lk51;->X:Z
+
+    iput-object p2, v0, Lk51;->Z:Ljava/lang/Object;
+
+    iput-boolean p3, v0, Lk51;->Y:Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Lk51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p3, Lfa;
+
+    check-cast p4, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lk51;
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p4, v2}, Lk51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Lk51;->X:Z
+
+    iput-boolean p2, v0, Lk51;->Y:Z
+
+    iput-object p3, v0, Lk51;->Z:Ljava/lang/Object;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Lk51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lk51;->a:Landroid/os/Bundle;
+    iget v0, p0, Lk51;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Lk51;->X:Z
+
+    iget-object v0, p0, Lk51;->Z:Ljava/lang/Object;
+
+    check-cast v0, Lgs9;
+
+    iget-boolean v1, p0, Lk51;->Y:Z
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lgs9;->b:Landroid/view/MotionEvent;
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v4
+
+    const/4 v5, 0x3
+
+    if-eq v4, v5, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lk51;->b:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Lk51;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lk51;->d:Landroid/graphics/Point;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    if-ne v0, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/graphics/Point;->hashCode()I
+    move v0, v2
 
-    move-result v0
+    goto :goto_1
 
+    :cond_1
     :goto_0
-    add-int/2addr v2, v0
+    move v0, v3
 
-    return v2
-.end method
+    :goto_1
+    if-nez p1, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    if-nez v1, :cond_2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
-    const-string v1, "CallContextMenuInfo(bundle="
+    move v2, v3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_2
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lk51;->a:Landroid/os/Bundle;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, ", actions="
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean p1, p0, Lk51;->X:Z
 
-    iget-object v1, p0, Lk51;->b:Ljava/util/List;
+    iget-boolean v0, p0, Lk51;->Y:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lk51;->Z:Ljava/lang/Object;
 
-    const-string v1, ", statParam="
+    check-cast v1, Lfa;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, v1, Lfa;->a:Z
 
-    iget-object v1, p0, Lk51;->c:Ljava/util/LinkedHashMap;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v2, :cond_3
 
-    const-string v1, ", anchor="
+    iget-boolean v1, v1, Lfa;->c:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_3
 
-    iget-object v1, p0, Lk51;->d:Landroid/graphics/Point;
+    goto :goto_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_3
+    if-eqz p1, :cond_4
 
-    const-string v1, ")"
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_4
+    :goto_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,139 +2,120 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmhc;
-
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final a:Ld68;
 
-.field public final b:Ls5g;
+.field public final b:Ld68;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ls5g;)V
+.method public constructor <init>(Ld68;Ld68;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljhc;->a:Ljava/lang/Long;
+    iput-object p1, p0, Ljhc;->a:Ld68;
 
-    iput-object p2, p0, Ljhc;->b:Ls5g;
+    iput-object p2, p0, Ljhc;->b:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(JZ)V
+    .locals 11
 
-    const/4 v0, 0x1
+    invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    new-instance p2, Lysb;
 
-    :cond_0
-    instance-of v1, p1, Ljhc;
+    const-string v0, "webappId"
 
-    const/4 v2, 0x0
+    invoke-direct {p2, v0, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    if-nez v1, :cond_1
+    filled-new-array {p2}, [Lysb;
 
-    return v2
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Ljhc;
+    invoke-static {p1}, Lw4j;->a([Lysb;)Lxs;
 
-    iget-object v1, p0, Ljhc;->a:Ljava/lang/Long;
+    move-result-object p1
 
-    iget-object v3, p1, Ljhc;->a:Ljava/lang/Long;
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p2
 
-    move-result v1
+    new-instance p3, Lysb;
 
-    if-nez v1, :cond_2
+    const-string v0, "paramValue"
 
-    return v2
+    invoke-direct {p3, v0, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_2
-    iget-object v1, p0, Ljhc;->b:Ls5g;
+    new-instance p2, Lysb;
 
-    iget-object p1, p1, Ljhc;->b:Ls5g;
+    const-string v0, "paramAdditionally"
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p2, v0, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result p1
+    filled-new-array {p3, p2}, [Lysb;
 
-    if-nez p1, :cond_3
+    move-result-object p1
 
-    return v2
+    invoke-static {p1}, Lw4j;->a([Lysb;)Lxs;
 
-    :cond_3
-    return v0
-.end method
+    move-result-object v7
 
-.method public final hashCode()I
-    .locals 2
+    iget-object p1, p0, Ljhc;->a:Ld68;
 
-    iget-object v0, p0, Ljhc;->a:Ljava/lang/Long;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    const/4 v0, 0x0
+    check-cast p1, Lgd;
 
-    goto :goto_0
+    new-instance v0, Ltk8;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object p2, p0, Ljhc;->b:Ld68;
 
-    move-result v0
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p3
 
-    iget-object v1, p0, Ljhc;->b:Ls5g;
+    check-cast p3, Lte3;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    check-cast p3, Lcfe;
 
-    move-result v1
+    invoke-virtual {p3}, Lcfe;->s()J
 
-    add-int/2addr v1, v0
+    move-result-wide v3
 
-    return v1
-.end method
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Lte3;
 
-    const-string v1, "UpdateError(requestId="
+    check-cast p2, Ldj8;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2}, Ldj8;->K()J
 
-    iget-object v1, p0, Ljhc;->a:Ljava/lang/Long;
+    move-result-wide v5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-wide/16 v8, 0x0
 
-    const-string v1, ", errorText="
+    const/16 v10, 0x20
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "SETTINGS"
 
-    iget-object v1, p0, Ljhc;->b:Ls5g;
+    const-string v2, "MINIAPP_BIOMETRY"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v0 .. v10}, Ltk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
 
-    const-string v1, ")"
+    invoke-virtual {p1, v0}, Lgd;->h(Ltk8;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

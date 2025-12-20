@@ -1,132 +1,48 @@
-.class public final synthetic Lge2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Liu3;
+.class public final Lge2;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Luq1;
 
-.field public final synthetic b:Lve2;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lve2;Ljava/lang/Object;JI)V
+.method public constructor <init>(Luq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Lge2;->a:I
+    iput-object p1, p0, Lge2;->X:Luq1;
 
-    iput-object p1, p0, Lge2;->b:Lve2;
-
-    iput-object p2, p0, Lge2;->d:Ljava/lang/Object;
-
-    iput-wide p3, p0, Lge2;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lge2;->a:I
+    iput-object p1, p0, Lge2;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lge2;->o:I
 
-    iget-object v0, p0, Lge2;->d:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lsi9;
+    or-int/2addr p1, v0
 
-    check-cast p1, Laf2;
+    iput p1, p0, Lge2;->o:I
 
-    iget-object v1, p0, Lge2;->b:Lve2;
+    iget-object p1, p0, Lge2;->X:Luq1;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v0, p0}, Luq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-wide/16 v0, 0x0
+    move-result-object p1
 
-    iput-wide v0, p1, Laf2;->h0:J
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v2, p1, Laf2;->h0:J
-
-    iget-object v1, v1, Lve2;->t:Lkz4;
-
-    invoke-virtual {v1}, Lkz4;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqi9;
-
-    iget-wide v4, p0, Lge2;->c:J
-
-    invoke-virtual {v1, v4, v5, v2, v3}, Lqi9;->i(JJ)Lsi9;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-wide v2, v0, Lsi9;->c:J
-
-    iget-wide v4, v1, Lsi9;->c:J
-
-    cmp-long v1, v2, v4
-
-    if-lez v1, :cond_2
-
-    :cond_1
-    iget-wide v0, v0, Lsi9;->b:J
-
-    iput-wide v0, p1, Laf2;->h0:J
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lge2;->d:Ljava/lang/Object;
-
-    check-cast v0, Lp3b;
-
-    check-cast p1, Laf2;
-
-    iget-object v1, p0, Lge2;->b:Lve2;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object v0, p1, Laf2;->c0:Lp3b;
-
-    iget-wide v2, p0, Lge2;->c:J
-
-    iput-wide v2, p1, Laf2;->d0:J
-
-    iget-object v0, v1, Lve2;->o:Lz7c;
-
-    iget-object v0, v0, Lz7c;->a:Lpe8;
-
-    invoke-virtual {v0}, Lw4e;->j()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Laf2;->e0:J
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

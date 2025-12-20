@@ -3,72 +3,21 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrt4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrt4;
-
-    iget v1, p0, Lrt4;->a:I
-
-    iget p1, p1, Lrt4;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lrt4;->a:I
+    invoke-static {}, Lc5;->w()V
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    sget-object v0, Lal7;->b:Lcc6;
 
-    move-result v0
+    sget-object v0, Lltd;->o:Lltd;
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeltaCounter(count="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lrt4;->a:I
-
-    const/16 v2, 0x29
-
-    invoke-static {v0, v1, v2}, Lxc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0}, Lc5;->i(Lltd;)Landroid/media/RouteDiscoveryPreference$Builder;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Lc5;->j(Landroid/media/RouteDiscoveryPreference$Builder;)Landroid/media/RouteDiscoveryPreference;
+
+    return-void
 .end method

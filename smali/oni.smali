@@ -1,53 +1,55 @@
-.class public final Loni;
-.super Lmci;
+.class public abstract synthetic Loni;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic g:Lcom/google/android/gms/common/internal/a;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
+    invoke-static {}, Lwph;->values()[Lwph;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-direct {p0, p1, p2, v0}, Lmci;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
+    array-length v0, v0
 
+    new-array v0, v0, [I
+
+    sput-object v0, Loni;->a:[I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v0, 0x2
+
+    :try_start_1
+    sget-object v2, Loni;->a:[I
+
+    aput v0, v2, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Loni;->a:[I
+
+    const/4 v2, 0x3
+
+    aput v2, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Les3;)V
-    .locals 1
-
-    iget-object v0, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
-
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Luj0;
-
-    invoke-interface {v0, p1}, Luj0;->y(Les3;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    return-void
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget-object v0, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
-
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Luj0;
-
-    sget-object v1, Les3;->o:Les3;
-
-    invoke-interface {v0, v1}, Luj0;->y(Les3;)V
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

@@ -4,24 +4,20 @@
 
 
 # instance fields
-.field public final a:F
+.field public final a:Ljava/lang/String;
 
-.field public final b:F
-
-.field public final c:Z
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(FFZ)V
+.method public constructor <init>(Ljava/lang/String;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lal1;->a:F
+    iput-object p1, p0, Lal1;->a:Ljava/lang/String;
 
-    iput p2, p0, Lal1;->b:F
-
-    iput-boolean p3, p0, Lal1;->c:Z
+    iput-wide p2, p0, Lal1;->b:J
 
     return-void
 .end method

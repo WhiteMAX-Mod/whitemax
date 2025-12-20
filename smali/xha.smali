@@ -1,22 +1,20 @@
-.class public final Lxha;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
+.class public final synthetic Lxha;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljj7;
+.implements Lcom/my/tracker/core/utils/BiConsumer;
 
 
 # virtual methods
-.method public final b()Lxha;
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    return-object p0
-.end method
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-.method public final isActive()Z
-    .locals 1
+    check-cast p2, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
 
-    const/4 v0, 0x1
+    invoke-static {p1, p2}, Lcom/my/tracker/applifecycle/MyTrackerAppLifecycle;->a(Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
 
-    return v0
+    return-void
 .end method

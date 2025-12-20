@@ -1,281 +1,370 @@
-.class public final synthetic Lyi4;
+.class public final Lyi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loa8;
-.implements Luq4;
+
+# static fields
+.field public static final synthetic j:I
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:J
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:I
 
-.field public final synthetic d:Ljava/io/Serializable;
+.field public final d:[B
+
+.field public final e:Ljava/util/Map;
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lar4;Lnq4;Z[I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "goog.exo.datasource"
 
-    iput-object p1, p0, Lyi4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lyi4;->c:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Lyi4;->a:Z
-
-    iput-object p4, p0, Lyi4;->d:Ljava/io/Serializable;
+    invoke-static {v0}, Loq5;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lhd;Ltb8;Lg19;Ljava/io/IOException;Z)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+    .locals 9
 
-    .line 1
+    move-wide/from16 v0, p7
+
+    move-wide/from16 v2, p9
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lyi4;->b:Ljava/lang/Object;
+    add-long v4, p2, v0
 
-    iput-object p3, p0, Lyi4;->c:Ljava/lang/Object;
+    const-wide/16 v6, 0x0
 
-    iput-object p4, p0, Lyi4;->d:Ljava/io/Serializable;
+    cmp-long v4, v4, v6
 
-    iput-boolean p5, p0, Lyi4;->a:Z
+    const/4 v5, 0x0
+
+    const/4 v8, 0x1
+
+    if-ltz v4, :cond_0
+
+    move v4, v8
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v5
+
+    :goto_0
+    invoke-static {v4}, Ln5j;->b(Z)V
+
+    cmp-long v4, v0, v6
+
+    if-ltz v4, :cond_1
+
+    move v4, v8
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v5
+
+    :goto_1
+    invoke-static {v4}, Ln5j;->b(Z)V
+
+    cmp-long v4, v2, v6
+
+    if-gtz v4, :cond_2
+
+    const-wide/16 v6, -0x1
+
+    cmp-long v4, v2, v6
+
+    if-nez v4, :cond_3
+
+    :cond_2
+    move v5, v8
+
+    :cond_3
+    invoke-static {v5}, Ln5j;->b(Z)V
+
+    iput-object p1, p0, Lyi4;->a:Landroid/net/Uri;
+
+    iput-wide p2, p0, Lyi4;->b:J
+
+    iput p4, p0, Lyi4;->c:I
+
+    if-eqz p5, :cond_4
+
+    array-length p1, p5
+
+    if-eqz p1, :cond_4
+
+    move-object p1, p5
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    iput-object p1, p0, Lyi4;->d:[B
+
+    new-instance p1, Ljava/util/HashMap;
+
+    move-object p2, p6
+
+    invoke-direct {p1, p6}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lyi4;->e:Ljava/util/Map;
+
+    iput-wide v0, p0, Lyi4;->f:J
+
+    iput-wide v2, p0, Lyi4;->g:J
+
+    move-object/from16 p1, p11
+
+    iput-object p1, p0, Lyi4;->h:Ljava/lang/String;
+
+    move/from16 p1, p12
+
+    iput p1, p0, Lyi4;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public f(ILlfg;[I)Lzjd;
-    .locals 11
+.method public final a()Lxi4;
+    .locals 3
 
-    iget-object v0, p0, Lyi4;->b:Ljava/lang/Object;
+    new-instance v0, Lxi4;
 
-    check-cast v0, Lar4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lyi4;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lyi4;->a:Landroid/net/Uri;
 
-    move-object v6, v1
+    iput-object v1, v0, Lxi4;->a:Landroid/net/Uri;
 
-    check-cast v6, Lnq4;
+    iget-wide v1, p0, Lyi4;->b:J
 
-    iget-object v1, p0, Lyi4;->d:Ljava/io/Serializable;
+    iput-wide v1, v0, Lxi4;->b:J
 
-    check-cast v1, [I
+    iget v1, p0, Lyi4;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput v1, v0, Lxi4;->c:I
 
-    new-instance v9, Lfq4;
+    iget-object v1, p0, Lyi4;->d:[B
 
-    invoke-direct {v9, v0, v6}, Lfq4;-><init>(Lar4;Lnq4;)V
+    iput-object v1, v0, Lxi4;->d:[B
 
-    aget v10, v1, p1
+    iget-object v1, p0, Lyi4;->e:Ljava/util/Map;
 
-    invoke-static {}, Lwg7;->i()Ltg7;
+    iput-object v1, v0, Lxi4;->e:Ljava/util/Map;
 
-    move-result-object v0
+    iget-wide v1, p0, Lyi4;->f:J
 
-    const/4 v1, 0x0
+    iput-wide v1, v0, Lxi4;->f:J
 
-    move v5, v1
+    iget-wide v1, p0, Lyi4;->g:J
 
-    :goto_0
-    iget v1, p2, Llfg;->a:I
+    iput-wide v1, v0, Lxi4;->g:J
 
-    if-ge v5, v1, :cond_0
+    iget-object v1, p0, Lyi4;->h:Ljava/lang/String;
 
-    new-instance v2, Lhq4;
+    iput-object v1, v0, Lxi4;->h:Ljava/lang/String;
 
-    aget v7, p3, v5
+    iget v1, p0, Lyi4;->i:I
 
-    iget-boolean v8, p0, Lyi4;->a:Z
+    iput v1, v0, Lxi4;->i:I
 
-    move v3, p1
+    return-object v0
+.end method
 
-    move-object v4, p2
+.method public final b(J)Lyi4;
+    .locals 5
 
-    invoke-direct/range {v2 .. v10}, Lhq4;-><init>(ILlfg;ILnq4;IZLfq4;I)V
+    iget-wide v0, p0, Lyi4;->g:J
 
-    invoke-virtual {v0, v2}, Lmg7;->a(Ljava/lang/Object;)V
+    const-wide/16 v2, -0x1
 
-    add-int/lit8 v5, v5, 0x1
+    cmp-long v4, v0, v2
+
+    if-nez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ltg7;->i()Lzjd;
+    sub-long v2, v0, p1
+
+    :goto_0
+    invoke-virtual {p0, p1, p2, v2, v3}, Lyi4;->c(JJ)Lyi4;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 6
+.method public final c(JJ)Lyi4;
+    .locals 14
 
-    iget-object v0, p0, Lyi4;->b:Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    check-cast v0, Ltb8;
+    cmp-long v0, p1, v0
 
-    iget-object v1, p0, Lyi4;->c:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast v1, Lg19;
+    iget-wide v0, p0, Lyi4;->g:J
 
-    iget-object v2, p0, Lyi4;->d:Ljava/io/Serializable;
+    cmp-long v0, v0, p3
 
-    check-cast v2, Ljava/io/IOException;
+    if-nez v0, :cond_0
 
-    check-cast p1, Lfl5;
+    return-object p0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    new-instance v1, Lyi4;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lyi4;->f:J
 
-    const-string v3, "MediaLoadData{dataType="
+    add-long v8, v2, p1
 
-    invoke-direct {p1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v12, p0, Lyi4;->h:Ljava/lang/String;
 
-    iget v3, v1, Lg19;->a:I
+    iget v13, p0, Lyi4;->i:I
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lyi4;->a:Landroid/net/Uri;
 
-    const-string v3, ", trackType="
+    iget-wide v3, p0, Lyi4;->b:J
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v5, p0, Lyi4;->c:I
 
-    iget v3, v1, Lg19;->b:I
+    iget-object v6, p0, Lyi4;->d:[B
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lyi4;->e:Ljava/util/Map;
 
-    const-string v3, ", trackFormat="
+    move-wide/from16 v10, p3
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v1 .. v13}, Lyi4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-    iget-object v3, v1, Lg19;->g:Ljava/lang/Object;
+    return-object v1
+.end method
 
-    check-cast v3, Lgf6;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v3, ", trackSelectionReason="
+    iget v1, p0, Lyi4;->c:I
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v1, v0, :cond_2
 
-    iget v3, v1, Lg19;->c:I
+    const/4 v0, 0x2
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eq v1, v0, :cond_1
 
-    const-string v3, ", trackSelectionData="
+    const/4 v0, 0x3
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v1, v0, :cond_0
 
-    iget-object v3, v1, Lg19;->d:Ljava/lang/Object;
+    const-string v0, "HEAD"
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v3, ", mediaStartTimeMs="
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    iget-wide v3, v1, Lg19;->e:J
+    throw v0
 
-    invoke-virtual {p1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_1
+    const-string v0, "POST"
 
-    const-string v3, ", mediaEndTimeMs="
+    goto :goto_0
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    const-string v0, "GET"
 
-    iget-wide v3, v1, Lg19;->f:J
+    :goto_0
+    iget-object v1, p0, Lyi4;->a:Landroid/net/Uri;
 
-    const-string v1, "}"
-
-    invoke-static {p1, v3, v4, v1}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "LoadEventInfo{loadTaskId"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v4, v0, Ltb8;->a:J
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", dataSpec"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, v0, Ltb8;->b:Lye4;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", uri"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, v0, Ltb8;->c:Landroid/net/Uri;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", responseHeaders"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, v0, Ltb8;->d:Ljava/util/Map;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", elapsedRealtimeMs"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, v0, Ltb8;->e:J
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", loadDurationMs"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, v0, Ltb8;->f:J
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", bytesLoaded"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, v0, Ltb8;->g:J
-
-    invoke-static {v3, v4, v5, v1}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lyi4;->a:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    filled-new-array {v1, v0, p1}, [Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result-object p1
+    move-result v2
 
-    const-string v0, "fl5"
+    add-int/lit8 v2, v2, 0x46
 
-    const-string v1, "onLoadError, wasCanceled %b, loadEventInfo = %s, mediaLoadData = %s"
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    invoke-static {v0, v2, v1, p1}, Lwqi;->g(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result v3
 
-    return-void
+    add-int/2addr v3, v2
+
+    iget-object v2, p0, Lyi4;->h:Ljava/lang/String;
+
+    invoke-static {v3, v2}, Lzy4;->f(ILjava/lang/String;)I
+
+    move-result v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v3, "DataSpec["
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v0, p0, Lyi4;->f:J
+
+    const-string v3, ", "
+
+    invoke-static {v0, v1, v3, v3, v4}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-wide v0, p0, Lyi4;->g:J
+
+    invoke-static {v0, v1, v3, v2, v4}, Lqi3;->e(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lyi4;->i:I
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

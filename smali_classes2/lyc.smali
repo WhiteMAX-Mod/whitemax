@@ -1,10 +1,11 @@
-.class public abstract Llyc;
+.class public interface abstract Llyc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static threads_state_recycler:I = 0x7f0a0c0a
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public static threads_state_state_view:I = 0x7f0a0c0b
-
-.field public static threads_state_toolbar:I = 0x7f0a0c0c
+.method public abstract b()V
+.end method

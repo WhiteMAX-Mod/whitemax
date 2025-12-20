@@ -2,20 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvl5;
 
-# static fields
-.field public static final a:Lil5;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lbhg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lbhg;)V
+    .locals 0
 
-    new-instance v0, Lil5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lil5;->a:Ljava/lang/String;
 
-    sput-object v0, Lil5;->a:Lil5;
+    iput-object p2, p0, Lil5;->b:Lbhg;
 
     return-void
 .end method

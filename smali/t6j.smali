@@ -1,102 +1,50 @@
-.class public final enum Lt6j;
-.super Ljava/lang/Enum;
+.class public final Lt6j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lami;
+.implements Lwwa;
 
 
 # static fields
-.field public static final enum b:Lt6j;
-
-.field public static final enum c:Lt6j;
-
-.field public static final synthetic d:[Lt6j;
-
-
-# instance fields
-.field public final a:I
+.field public static final a:Lt6j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     new-instance v0, Lt6j;
 
-    const-string v1, "TYPE_UNKNOWN"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lt6j;->a:Lt6j;
 
-    invoke-direct {v0, v1, v2, v2}, Lt6j;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Lyyi;
 
-    new-instance v1, Lt6j;
+    const/4 v1, 0x1
 
-    const-string v2, "TYPE_THIN"
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    const/4 v3, 0x1
+    const-class v1, Lqzi;
 
-    invoke-direct {v1, v2, v3, v3}, Lt6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lt6j;->b:Lt6j;
-
-    new-instance v2, Lt6j;
-
-    const-string v3, "TYPE_THICK"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lt6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lt6j;->c:Lt6j;
-
-    new-instance v3, Lt6j;
-
-    const-string v4, "TYPE_GMV"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lt6j;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lt6j;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lt6j;->d:[Lt6j;
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lt6j;->a:I
-
-    return-void
-.end method
-
-.method public static values()[Lt6j;
-    .locals 1
-
-    sget-object v0, Lt6j;->d:[Lt6j;
-
-    invoke-virtual {v0}, [Lt6j;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lt6j;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final d()I
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lt6j;->a:I
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return v0
+    move-result-object p1
+
+    throw p1
 .end method

@@ -1,59 +1,85 @@
-.class public final Lu6c;
-.super Lxfh;
+.class public final enum Lu6c;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lk18;
+# static fields
+.field public static final enum a:Lu6c;
 
-.field public final c:Lk18;
+.field public static final enum b:Lu6c;
 
-.field public final d:Lk18;
+.field public static final enum c:Lu6c;
+
+.field public static final synthetic d:[Lu6c;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 5
 
-    sget-object v0, Lsu4;->a:Lsu4;
+    new-instance v0, Lu6c;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    const-string v1, "CHATS"
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    const/16 v2, 0x8
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+    sput-object v0, Lu6c;->a:Lu6c;
 
-    move-result-object v1
+    new-instance v1, Lu6c;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    const-string v2, "CHAT"
 
-    move-result-object v2
+    const/4 v3, 0x1
 
-    const/16 v3, 0x2e
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v2, v3}, Lw5;->d(I)Lbwf;
+    sput-object v1, Lu6c;->b:Lu6c;
 
-    move-result-object v2
+    new-instance v2, Lu6c;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    const-string v3, "OTHER"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lu6c;->c:Lu6c;
+
+    filled-new-array {v0, v1, v2}, [Lu6c;
 
     move-result-object v0
 
-    const/16 v3, 0xb6
-
-    invoke-virtual {v0, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lxfh;-><init>()V
-
-    iput-object v2, p0, Lu6c;->b:Lk18;
-
-    iput-object v1, p0, Lu6c;->c:Lk18;
-
-    iput-object v0, p0, Lu6c;->d:Lk18;
+    sput-object v0, Lu6c;->d:[Lu6c;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lu6c;
+    .locals 1
+
+    const-class v0, Lu6c;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lu6c;
+
+    return-object p0
+.end method
+
+.method public static values()[Lu6c;
+    .locals 1
+
+    sget-object v0, Lu6c;->d:[Lu6c;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lu6c;
+
+    return-object v0
 .end method

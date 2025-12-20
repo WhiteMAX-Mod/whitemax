@@ -1,73 +1,40 @@
-.class public final Lb06;
+.class public abstract Lb06;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/security/Signature;
-
-.field public final b:Ljavax/crypto/Cipher;
-
-.field public final c:Ljavax/crypto/Mac;
-
-
 # direct methods
-.method public constructor <init>(Ljava/security/Signature;)V
+.method public static synthetic a(Ljava/lang/Throwable;)Z
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Lb06;->b(Ljava/lang/Throwable;)Z
 
-    .line 2
-    iput-object p1, p0, Lb06;->a:Ljava/security/Signature;
+    move-result p0
 
-    const/4 p1, 0x0
-
-    .line 3
-    iput-object p1, p0, Lb06;->b:Ljavax/crypto/Cipher;
-
-    .line 4
-    iput-object p1, p0, Lb06;->c:Ljavax/crypto/Mac;
-
-    return-void
+    return p0
 .end method
 
-.method public constructor <init>(Ljavax/crypto/Cipher;)V
-    .locals 0
+.method private static b(Ljava/lang/Throwable;)Z
+    .locals 1
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p0, Landroid/system/ErrnoException;
 
-    .line 6
-    iput-object p1, p0, Lb06;->b:Ljavax/crypto/Cipher;
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x0
+    check-cast p0, Landroid/system/ErrnoException;
 
-    .line 7
-    iput-object p1, p0, Lb06;->a:Ljava/security/Signature;
+    iget p0, p0, Landroid/system/ErrnoException;->errno:I
 
-    .line 8
-    iput-object p1, p0, Lb06;->c:Ljavax/crypto/Mac;
+    sget v0, Landroid/system/OsConstants;->EACCES:I
 
-    return-void
-.end method
+    if-ne p0, v0, :cond_0
 
-.method public constructor <init>(Ljavax/crypto/Mac;)V
-    .locals 0
+    const/4 p0, 0x1
 
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return p0
 
-    .line 10
-    iput-object p1, p0, Lb06;->c:Ljavax/crypto/Mac;
+    :cond_0
+    const/4 p0, 0x0
 
-    const/4 p1, 0x0
-
-    .line 11
-    iput-object p1, p0, Lb06;->b:Ljavax/crypto/Cipher;
-
-    .line 12
-    iput-object p1, p0, Lb06;->a:Ljava/security/Signature;
-
-    return-void
+    return p0
 .end method

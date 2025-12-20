@@ -1,137 +1,110 @@
-.class public final enum Li88;
-.super Ljava/lang/Enum;
+.class public final Li88;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final enum X:Li88;
 
-.field public static final synthetic Y:[Li88;
+# instance fields
+.field public final synthetic X:Lo96;
 
-.field public static final synthetic Z:Lzg5;
-
-.field public static final enum a:Li88;
-
-.field public static final enum b:Li88;
-
-.field public static final enum c:Li88;
-
-.field public static final enum d:Li88;
-
-.field public static final enum o:Li88;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lo96;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Li88;
+    iput-object p1, p0, Li88;->X:Lo96;
 
-    const-string v1, "URL"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Li88;->a:Li88;
-
-    new-instance v1, Li88;
-
-    const-string v2, "HASH_TAG"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Li88;->b:Li88;
-
-    new-instance v2, Li88;
-
-    const-string v3, "BOT_COMMAND"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Li88;->c:Li88;
-
-    new-instance v3, Li88;
-
-    const-string v4, "PROFILE_TAG"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Li88;->d:Li88;
-
-    new-instance v4, Li88;
-
-    const-string v5, "MENTION"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Li88;->o:Li88;
-
-    new-instance v5, Li88;
-
-    const-string v6, "ML_ENTRY"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Li88;
-
-    const-string v7, "MARKDOWN_LINK"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Li88;->X:Li88;
-
-    filled-new-array/range {v0 .. v6}, [Li88;
-
-    move-result-object v0
-
-    sput-object v0, Li88;->Y:[Li88;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Li88;->Z:Lzg5;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Li88;
-    .locals 1
 
-    const-class v0, Li88;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lac4;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Li88;
+    invoke-virtual {p0, p1, p2}, Li88;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Li88;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Li88;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Li88;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Li88;->Y:[Li88;
+    new-instance p1, Li88;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Li88;->X:Lo96;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Li88;-><init>(Lo96;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Li88;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Li88;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iput v1, p0, Li88;->o:I
+
+    iget-object p1, p0, Li88;->X:Lo96;
+
+    invoke-static {p1, p0}, Lqx0;->g(Lf76;Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

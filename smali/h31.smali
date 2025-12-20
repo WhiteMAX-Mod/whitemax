@@ -1,74 +1,69 @@
-.class public final synthetic Lh31;
-.super Ljava/lang/Object;
+.class public final Lh31;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lofa;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Lta;
+
+.field public d:Lj31;
+
+.field public o:Lat;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Ljava/lang/Object;
+
+.field public u0:Ljava/util/Iterator;
+
+.field public v0:Lxs;
+
+.field public w0:J
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Lj31;
+
+.field public z0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lj31;Ll84;)V
     .locals 0
 
-    iput p1, p0, Lh31;->a:I
+    iput-object p1, p0, Lh31;->y0:Lj31;
 
-    iput-object p2, p0, Lh31;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lh31;->a:I
+    iput-object p1, p0, Lh31;->x0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lh31;->z0:I
 
-    iget-object v0, p0, Lh31;->b:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lone/me/chats/forward/ForwardPickerScreen;
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lh31;->z0:I
 
-    iput-object v1, v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lncg;
+    iget-object p1, p0, Lh31;->y0:Lj31;
 
-    return-void
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lh31;->b:Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lj31;->a(Lj31;Lat;Ll84;)Ljava/lang/Object;
 
-    check-cast v0, Lur1;
+    move-result-object p1
 
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lur1;->H0:Lncg;
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lh31;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcm6;
-
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

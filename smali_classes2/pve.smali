@@ -1,89 +1,170 @@
-.class public final synthetic Lpve;
-.super Ljava/lang/Object;
+.class public final Lpve;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lyve;
 
-.field public final synthetic b:Lrve;
+.field public final synthetic Y:Z
 
-.field public final synthetic c:Z
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrve;ZI)V
+.method public constructor <init>(Lyve;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lpve;->a:I
+    iput-object p1, p0, Lpve;->X:Lyve;
 
-    iput-object p1, p0, Lpve;->b:Lrve;
+    iput-boolean p2, p0, Lpve;->Y:Z
 
-    iput-boolean p2, p0, Lpve;->c:Z
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpve;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpve;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lpve;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lpve;->a:I
+    new-instance p1, Lpve;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lpve;->X:Lyve;
 
-    iget-object v0, p0, Lpve;->b:Lrve;
+    iget-boolean v1, p0, Lpve;->Y:Z
 
-    iget-object v0, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+    invoke-direct {p1, v0, v1, p2}, Lpve;-><init>(Lyve;ZLkotlin/coroutines/Continuation;)V
 
-    if-eqz v0, :cond_0
+    return-object p1
+.end method
 
-    iget-boolean v1, p0, Lpve;->c:Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setSpeakerMute(Z)V
+    iget v0, p0, Lpve;->o:I
 
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lpve;->b:Lrve;
-
-    iget-object v0, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lpve;->c:Z
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setMicrophoneMute(Z)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    :pswitch_1
-    iget-object v0, p0, Lpve;->b:Lrve;
+    sget-object p1, Lyve;->A0:[Lp38;
 
-    iget-object v0, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+    iget-object p1, p0, Lpve;->X:Lyve;
 
-    if-eqz v0, :cond_2
+    iget-object v0, p1, Lyve;->d:Ld68;
 
-    iget-boolean v1, p0, Lpve;->c:Z
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setNoiseSuppressorEnabled(Z)Z
+    move-result-object v0
+
+    check-cast v0, Lhk;
+
+    iget-object v2, v0, Lhk;->a:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljah;
+
+    const-string v3, "app.media.animoji.enabled"
+
+    iget-boolean v4, p0, Lpve;->Y:Z
+
+    invoke-virtual {v2, v3, v4}, Lz3;->f(Ljava/lang/String;Z)V
+
+    iget-object v2, v0, Lhk;->g:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v3, Lxb4;
+
+    const-string v5, "invalidate chats and messages cache"
+
+    invoke-direct {v3, v5}, Lxb4;-><init>(Ljava/lang/String;)V
+
+    new-instance v5, Lgk;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v0, v4, v6}, Lgk;-><init>(Lhk;ZLkotlin/coroutines/Continuation;)V
+
+    sget-object v4, Ldc4;->b:Ldc4;
+
+    invoke-static {v2, v3, v4, v5}, Ly8j;->d(Lac4;Lrb4;Ldc4;Lcr6;)Lglf;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lhk;->h:Le7;
+
+    sget-object v4, Lhk;->j:[Lp38;
+
+    const/4 v5, 0x0
+
+    aget-object v4, v4, v5
+
+    invoke-virtual {v3, v0, v4, v2}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
+
+    iput v1, p0, Lpve;->o:I
+
+    invoke-static {p1, p0}, Lyve;->s(Lyve;Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    return-void
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

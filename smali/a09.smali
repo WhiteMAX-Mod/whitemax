@@ -3,432 +3,87 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
-
-.field public static final o:Ljava/lang/String;
-
-.field public static final p:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Landroid/media/browse/MediaBrowser;
 
-.field public final c:Lvz8;
+.field public final c:Landroid/os/Bundle;
 
-.field public final d:Llz8;
+.field public final d:Lyz8;
 
-.field public final e:Ljava/util/List;
+.field public final e:Lxs;
 
-.field public final f:Ljava/lang/String;
+.field public f:Ljfc;
 
-.field public final g:Lwg7;
+.field public g:Landroid/os/Messenger;
 
-.field public final h:J
+.field public h:Lqb9;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lf1c;Landroid/os/Bundle;)V
     .locals 2
-
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->i:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->j:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->k:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->l:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->m:Ljava/lang/String;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->n:Ljava/lang/String;
-
-    const/4 v0, 0x6
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->o:Ljava/lang/String;
-
-    const/4 v0, 0x7
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, La09;->p:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;Lvz8;Llz8;Ljava/util/List;Ljava/lang/String;Lwg7;J)V
-    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La09;->a:Landroid/net/Uri;
+    new-instance v0, Lyz8;
 
-    invoke-static {p2}, Lxz9;->n(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0, p0}, Lyz8;-><init>(La09;)V
 
-    move-result-object p1
+    iput-object v0, p0, La09;->d:Lyz8;
 
-    iput-object p1, p0, La09;->b:Ljava/lang/String;
-
-    iput-object p3, p0, La09;->c:Lvz8;
-
-    iput-object p4, p0, La09;->d:Llz8;
-
-    iput-object p5, p0, La09;->e:Ljava/util/List;
-
-    iput-object p6, p0, La09;->f:Ljava/lang/String;
-
-    iput-object p7, p0, La09;->g:Lwg7;
-
-    invoke-static {}, Lwg7;->i()Ltg7;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {p7}, Ljava/util/AbstractCollection;->size()I
-
-    move-result p3
-
-    if-ge p2, p3, :cond_0
-
-    invoke-interface {p7, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lg09;
-
-    new-instance p4, Lbl3;
-
-    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
-
-    iget-object p5, p3, Lg09;->a:Landroid/net/Uri;
-
-    iput-object p5, p4, Lbl3;->d:Ljava/lang/Object;
-
-    iget-object p5, p3, Lg09;->b:Ljava/lang/String;
-
-    iput-object p5, p4, Lbl3;->a:Ljava/lang/String;
-
-    iget-object p5, p3, Lg09;->c:Ljava/lang/String;
-
-    iput-object p5, p4, Lbl3;->e:Ljava/io/Serializable;
-
-    iget p5, p3, Lg09;->d:I
-
-    iput p5, p4, Lbl3;->b:I
-
-    iget p5, p3, Lg09;->e:I
-
-    iput p5, p4, Lbl3;->c:I
-
-    iget-object p5, p3, Lg09;->f:Ljava/lang/String;
-
-    iput-object p5, p4, Lbl3;->f:Ljava/io/Serializable;
-
-    iget-object p3, p3, Lg09;->g:Ljava/lang/String;
-
-    iput-object p3, p4, Lbl3;->g:Ljava/lang/Object;
-
-    new-instance p3, Lf09;
-
-    invoke-direct {p3, p4}, Lg09;-><init>(Lbl3;)V
-
-    invoke-virtual {p1, p3}, Lmg7;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Ltg7;->i()Lzjd;
-
-    iput-wide p8, p0, La09;->h:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, La09;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, La09;
-
-    iget-object v0, p0, La09;->a:Landroid/net/Uri;
-
-    iget-object v1, p1, La09;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->b:Ljava/lang/String;
-
-    iget-object v1, p1, La09;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->c:Lvz8;
-
-    iget-object v1, p1, La09;->c:Lvz8;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->d:Llz8;
-
-    iget-object v1, p1, La09;->d:Llz8;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->e:Ljava/util/List;
-
-    iget-object v1, p1, La09;->e:Ljava/util/List;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->f:Ljava/lang/String;
-
-    iget-object v1, p1, La09;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, La09;->g:Lwg7;
-
-    iget-object v1, p1, La09;->g:Lwg7;
-
-    invoke-virtual {v0, v1}, Lwg7;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-wide v0, p0, La09;->h:J
-
-    iget-wide v2, p1, La09;->h:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-object v0, p0, La09;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v0, Lxs;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, La09;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
 
-    if-nez v2, :cond_0
+    iput-object v0, p0, La09;->e:Lxs;
 
-    move v2, v1
+    iput-object p1, p0, La09;->a:Landroid/content/Context;
+
+    new-instance v0, Landroid/os/Bundle;
+
+    if-eqz p4, :cond_0
+
+    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     :goto_0
-    add-int/2addr v0, v2
+    iput-object v0, p0, La09;->c:Landroid/os/Bundle;
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-string p4, "extra_client_version"
 
-    iget-object v2, p0, La09;->c:Lvz8;
+    const/4 v1, 0x1
 
-    if-nez v2, :cond_1
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    move v2, v1
+    const-string p4, "extra_calling_pid"
 
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Lvz8;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, La09;->d:Llz8;
-
-    if-nez v2, :cond_2
-
-    move v2, v1
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Llz8;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, La09;->e:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, La09;->f:Ljava/lang/String;
-
-    if-nez v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
-    :goto_3
-    add-int/2addr v2, v1
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    mul-int/lit8 v2, v2, 0x1f
+    iput-object p0, p3, Lf1c;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, La09;->g:Lwg7;
+    new-instance p4, Landroid/media/browse/MediaBrowser;
 
-    invoke-virtual {v0}, Lwg7;->hashCode()I
+    iget-object p3, p3, Lf1c;->a:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p3, Lzz8;
 
-    add-int/2addr v0, v2
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
 
-    const-wide/16 v1, 0x1f
+    iput-object p4, p0, La09;->b:Landroid/media/browse/MediaBrowser;
 
-    int-to-long v3, v0
-
-    mul-long/2addr v3, v1
-
-    iget-wide v0, p0, La09;->h:J
-
-    add-long/2addr v3, v0
-
-    long-to-int v0, v3
-
-    return v0
+    return-void
 .end method

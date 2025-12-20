@@ -1,67 +1,158 @@
 .class public final Ly91;
-.super Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lie8;
 
-# static fields
-.field public static final b:Ly91;
 
-.field public static final c:Lgi4;
+# instance fields
+.field public final a:J
 
-.field public static final d:Lgi4;
+.field public final b:Landroid/text/SpannableStringBuilder;
 
-.field public static final e:Lgi4;
+.field public final c:J
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(JLandroid/text/SpannableStringBuilder;)V
+    .locals 0
 
-    new-instance v0, Ly91;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    iput-wide p1, p0, Ly91;->a:J
 
-    sput-object v0, Ly91;->b:Ly91;
+    iput-object p3, p0, Ly91;->b:Landroid/text/SpannableStringBuilder;
 
-    const/4 v1, 0x0
+    iput-wide p1, p0, Ly91;->c:J
 
-    new-array v2, v1, [Ljava/lang/String;
+    sget p1, Lg7d;->call_event_view_item:I
 
-    const-string v3, ":calls-history"
+    iput p1, p0, Ly91;->d:I
 
-    const/4 v4, 0x0
+    return-void
+.end method
 
-    const/16 v5, 0xe
 
-    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result-object v2
+    if-ne p0, p1, :cond_0
 
-    sput-object v2, Ly91;->c:Lgi4;
+    goto :goto_1
 
-    const-string v2, ":call-history-info"
+    :cond_0
+    instance-of v0, p1, Ly91;
 
-    new-array v1, v1, [Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_1
+    check-cast p1, Ly91;
 
-    sput-object v1, Ly91;->d:Lgi4;
+    iget-wide v0, p0, Ly91;->a:J
 
-    const-string v1, "chat_id"
+    iget-wide v2, p1, Ly91;->a:J
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    cmp-long v0, v0, v2
 
-    move-result-object v1
+    if-eqz v0, :cond_2
 
-    const-string v2, ":call-presettings"
+    goto :goto_0
 
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    :cond_2
+    iget-object v0, p0, Ly91;->b:Landroid/text/SpannableStringBuilder;
+
+    iget-object p1, p1, Ly91;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Ly91;->c:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ly91;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ly91;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Ly91;->d:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallEventItemView(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ly91;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly91;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ly91;->e:Lgi4;
-
-    return-void
+    return-object v0
 .end method

@@ -20,25 +20,25 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;",
         "Lru/ok/android/externcalls/sdk/rate/RateManager;",
-        "Ly6d;",
+        "Lcgd;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;",
         "configProvider",
         "Lkotlin/Function0;",
-        "Lmdg;",
+        "Lbpg;",
         "currentTopology",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
         "statMonitor",
         "<init>",
-        "(Ly6d;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lcm6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V",
+        "(Lcgd;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lmq6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V",
         "Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;",
         "config",
-        "Lqqg;",
+        "Lv2h;",
         "onConfigReceived",
         "(Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;)V",
-        "Lpy4;",
+        "Ll25;",
         "observeStats",
-        "()Lpy4;",
+        "()Ll25;",
         "Lru/ok/android/externcalls/sdk/rate/RateHint;",
         "rateHint",
         "addRateHint",
@@ -46,8 +46,8 @@
         "logHints",
         "()V",
         "release",
-        "Ly6d;",
-        "Lcm6;",
+        "Lcgd;",
+        "Lmq6;",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;",
         "rttTrigger",
@@ -60,7 +60,7 @@
         "Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;",
         "serverCandidateTypeTrigger",
         "initDisposable",
-        "Lpy4;",
+        "Ll25;",
         "observeDisposable",
         "",
         "_rateHints",
@@ -99,23 +99,23 @@
     .end annotation
 .end field
 
-.field private final currentTopology:Lcm6;
+.field private final currentTopology:Lmq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcm6;"
+            "Lmq6;"
         }
     .end annotation
 .end field
 
 .field private directCandidateTypeTrigger:Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;
 
-.field private final initDisposable:Lpy4;
+.field private final initDisposable:Ll25;
 
-.field private final log:Ly6d;
+.field private final log:Lcgd;
 
 .field private lossTrigger:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;
 
-.field private observeDisposable:Lpy4;
+.field private observeDisposable:Ll25;
 
 .field private final rateHints:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -142,21 +142,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$Companion;-><init>(Ltk4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$Companion;-><init>(Lro4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ly6d;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lcm6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
-    .locals 1
+.method public constructor <init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lmq6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ly6d;",
+            "Lcgd;",
             "Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;",
-            "Lcm6;",
+            "Lmq6;",
             "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
             ")V"
         }
@@ -164,9 +164,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->currentTopology:Lcm6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->currentTopology:Lmq6;
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
@@ -178,15 +178,15 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->rateHints:Ljava/util/List;
 
-    invoke-interface {p2}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Le2f;
+    invoke-interface {p2}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Lbdf;
 
     move-result-object p1
 
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Le2f;->i(Lj0e;)Lu2f;
+    invoke-virtual {p1, p2}, Lbdf;->i(Lqae;)Ltdf;
 
     move-result-object p1
 
@@ -198,15 +198,11 @@
 
     invoke-direct {p3, p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$2;-><init>(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)V
 
-    new-instance p4, Lqu1;
+    invoke-virtual {p1, p2, p3}, Lbdf;->k(Lux3;Lux3;)Lvw1;
 
-    const/4 v0, 0x2
+    move-result-object p1
 
-    invoke-direct {p4, p2, v0, p3}, Lqu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p4}, Le2f;->k(Lv2f;)V
-
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->initDisposable:Lpy4;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->initDisposable:Ll25;
 
     return-void
 .end method
@@ -219,10 +215,10 @@
     return-void
 .end method
 
-.method public static final synthetic access$getCurrentTopology$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Lcm6;
+.method public static final synthetic access$getCurrentTopology$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Lmq6;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->currentTopology:Lcm6;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->currentTopology:Lmq6;
 
     return-object p0
 .end method
@@ -235,10 +231,10 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Ly6d;
+.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Lcgd;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     return-object p0
 .end method
@@ -282,7 +278,7 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -298,25 +294,25 @@
 
     const-string v1, "RateManager"
 
-    invoke-interface {v0, v1, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private final observeStats()Lpy4;
+.method private final observeStats()Ll25;
     .locals 5
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;->observeStat()Lvqa;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;->observeStat()Lcxa;
 
     move-result-object v0
 
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lvqa;->l(Lj0e;)Lssa;
+    invoke-virtual {v0, v1}, Lcxa;->l(Lqae;)Lzya;
 
     move-result-object v0
 
@@ -328,13 +324,13 @@
 
     invoke-direct {v2, p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$observeStats$2;-><init>(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)V
 
-    new-instance v3, Lv08;
+    new-instance v3, Lo58;
 
-    sget-object v4, Lpdf;->d:Ljn6;
+    sget-object v4, Lz7f;->f:Ltr6;
 
-    invoke-direct {v3, v1, v2, v4}, Lv08;-><init>(Lgu3;Lgu3;Lp6;)V
+    invoke-direct {v3, v1, v2, v4}, Lo58;-><init>(Lux3;Lux3;Ln6;)V
 
-    invoke-virtual {v0, v3}, Lvqa;->a(Lvta;)V
+    invoke-virtual {v0, v3}, Lcxa;->a(Lc0b;)V
 
     return-object v3
 .end method
@@ -354,7 +350,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->getRttRateHintConfig()Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
@@ -364,7 +360,7 @@
 
     invoke-direct {v3, p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$1;-><init>(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;-><init>(Ly6d;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;-><init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->rttTrigger:Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;
 
@@ -381,7 +377,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->getLossHintConfig()Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;
 
@@ -391,7 +387,7 @@
 
     invoke-direct {v3, p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$2;-><init>(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;-><init>(Ly6d;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;-><init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->lossTrigger:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;
 
@@ -408,7 +404,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->getDirectCandidateTypeHintConfig()Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
@@ -420,7 +416,7 @@
 
     const-string v4, ""
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;-><init>(Ly6d;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;-><init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->directCandidateTypeTrigger:Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;
 
@@ -437,7 +433,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/rate/RateManagerConfig;->getServerCandidateTypeHintConfig()Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
@@ -449,16 +445,16 @@
 
     const-string v3, "s"
 
-    invoke-direct {v0, v1, p1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;-><init>(Ly6d;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;-><init>(Lcgd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->serverCandidateTypeTrigger:Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;
 
     :cond_3
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Lpy4;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Ll25;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeDisposable:Lpy4;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeDisposable:Ll25;
 
     return-void
 .end method
@@ -484,7 +480,7 @@
 .method public final logHints()V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Ly6d;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->log:Lcgd;
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->getRateHints()Ljava/util/List;
 
@@ -514,7 +510,7 @@
 
     const-string v2, "RateManager"
 
-    invoke-interface {v0, v2, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -522,15 +518,15 @@
 .method public final release()V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->initDisposable:Lpy4;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->initDisposable:Ll25;
 
-    invoke-interface {v0}, Lpy4;->dispose()V
+    invoke-interface {v0}, Ll25;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeDisposable:Lpy4;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeDisposable:Ll25;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lpy4;->dispose()V
+    invoke-interface {v0}, Ll25;->dispose()V
 
     :cond_0
     return-void

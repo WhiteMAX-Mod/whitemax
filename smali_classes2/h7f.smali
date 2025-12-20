@@ -1,90 +1,56 @@
-.class public final Lh7f;
-.super Landroid/text/style/ReplacementSpan;
+.class public final synthetic Lh7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ll7f;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Ll7f;I)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+    iput p2, p0, Lh7f;->a:I
 
-    iput p1, p0, Lh7f;->a:I
+    iput-object p1, p0, Lh7f;->b:Ll7f;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lh7f;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lh7f;
-
-    iget p1, p1, Lh7f;->a:I
-
-    iget v1, p0, Lh7f;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
     iget p1, p0, Lh7f;->a:I
 
-    return p1
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final hashCode()I
-    .locals 2
+    iget-object p1, p0, Lh7f;->b:Ll7f;
 
-    const-class v0, Lh7f;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object p1, p0, Lh7f;->b:Ll7f;
 
-    iget v1, p0, Lh7f;->a:I
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    return-void
 
-    move-result v1
+    nop
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,130 +1,96 @@
-.class public final Lyki;
+.class public final synthetic Lyki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
-# static fields
-.field public static final a:Lyki;
+# instance fields
+.field public final synthetic X:Ljava/lang/String;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/userlifecycle/o/a;
+
+.field public final synthetic c:Ljava/util/Map;
+
+.field public final synthetic d:Z
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lyki;
+    iput p6, p0, Lyki;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyki;->b:Lcom/my/tracker/userlifecycle/o/a;
 
-    sput-object v0, Lyki;->a:Lyki;
+    iput-object p2, p0, Lyki;->c:Ljava/util/Map;
 
-    new-instance v0, Ltci;
+    iput-boolean p3, p0, Lyki;->d:Z
 
-    const/4 v1, 0x1
+    iput-object p4, p0, Lyki;->o:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    iput-object p5, p0, Lyki;->X:Ljava/lang/String;
 
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x8
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x9
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 7
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lyki;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v4, p0, Lyki;->o:Ljava/lang/String;
+
+    iget-object v5, p0, Lyki;->X:Ljava/lang/String;
+
+    iget-object v1, p0, Lyki;->b:Lcom/my/tracker/userlifecycle/o/a;
+
+    iget-object v2, p0, Lyki;->c:Ljava/util/Map;
+
+    iget-boolean v3, p0, Lyki;->d:Z
+
+    move-object v6, p1
+
+    invoke-static/range {v1 .. v6}, Lcom/my/tracker/userlifecycle/o/a;->b(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+
+    :pswitch_0
+    move-object v5, p1
+
+    iget-object v3, p0, Lyki;->o:Ljava/lang/String;
+
+    iget-object v4, p0, Lyki;->X:Ljava/lang/String;
+
+    iget-object v0, p0, Lyki;->b:Lcom/my/tracker/userlifecycle/o/a;
+
+    iget-object v1, p0, Lyki;->c:Ljava/util/Map;
+
+    iget-boolean v2, p0, Lyki;->d:Z
+
+    invoke-static/range {v0 .. v5}, Lcom/my/tracker/userlifecycle/o/a;->a(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

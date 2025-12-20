@@ -1,69 +1,139 @@
 .class public final Lzkh;
-.super Lwa2;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final c:Lzkh;
+
+# instance fields
+.field public final synthetic o:Lllh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lllh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lzkh;
+    iput-object p1, p0, Lzkh;->o:Lllh;
 
-    const-wide/16 v1, 0x0
+    const/4 p1, 0x2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lwa2;-><init>(Ljava/lang/Long;I)V
-
-    sput-object v0, Lzkh;->c:Lzkh;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lzkh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lzkh;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lzkh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance p1, Lzkh;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lzkh;->o:Lllh;
 
-    return v0
+    invoke-direct {p1, v0, p2}, Lzkh;-><init>(Lllh;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzkh;->o:Lllh;
+
+    iget-object v0, p1, Lllh;->k:Lgeb;
+
+    iget-object v1, p1, Lllh;->b:Ld68;
+
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly16;
+
+    check-cast v1, Lp36;
+
+    invoke-virtual {v1}, Lp36;->k()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/io/File;
+
+    const-string v2, "placeholder_videomsg.jpeg"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldti;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lzkh;
+    move-object v0, v2
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
+    :goto_0
+    iget-object p1, p1, Lllh;->q:Lhof;
 
     :cond_1
-    return v0
-.end method
+    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v1
 
-    const v0, 0x3cd4b16
+    move-object v3, v1
 
-    return v0
-.end method
+    check-cast v3, Lalh;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 v4, 0x3
 
-    const-string v0, "External"
+    invoke-static {v3, v2, v2, v0, v4}, Lalh;->a(Lalh;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lalh;
 
-    return-object v0
+    move-result-object v3
+
+    invoke-virtual {p1, v1, v3}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

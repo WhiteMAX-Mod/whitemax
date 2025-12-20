@@ -2,160 +2,161 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lju3;
-
 
 # instance fields
-.field public final a:Lmsf;
+.field public final a:F
 
-.field public final b:Landroid/graphics/SurfaceTexture;
+.field public final b:J
 
-.field public final c:Landroid/view/Surface;
-
-.field public final synthetic d:La8h;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(La8h;Lmsf;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
+.method public constructor <init>(FJLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz7h;->d:La8h;
+    iput p1, p0, Lz7h;->a:F
 
-    iput-object p2, p0, Lz7h;->a:Lmsf;
+    iput-wide p2, p0, Lz7h;->b:J
 
-    iput-object p3, p0, Lz7h;->b:Landroid/graphics/SurfaceTexture;
-
-    iput-object p4, p0, Lz7h;->c:Landroid/view/Surface;
+    iput-object p4, p0, Lz7h;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lub0;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lz7h;->b:Landroid/graphics/SurfaceTexture;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lz7h;->d:La8h;
+    return v0
 
-    iget-object v2, v1, La8h;->a:Ljava/lang/String;
+    :cond_0
+    instance-of v1, p1, Lz7h;
 
-    iget p1, p1, Lub0;->a:I
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_4
+    if-nez v1, :cond_1
 
-    const/4 v3, 0x1
+    return v2
 
-    if-eq p1, v3, :cond_3
+    :cond_1
+    check-cast p1, Lz7h;
 
-    const/4 v3, 0x2
+    iget v1, p0, Lz7h;->a:F
 
-    if-eq p1, v3, :cond_2
+    iget v3, p1, Lz7h;->a:F
 
-    const/4 v3, 0x3
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    if-eq p1, v3, :cond_1
+    move-result v1
 
-    const/4 v3, 0x4
+    if-eqz v1, :cond_2
 
-    if-eq p1, v3, :cond_0
+    return v2
 
-    const-string v3, "SerufaceRequest.Result_UNKNOWN_code_"
+    :cond_2
+    iget-wide v3, p0, Lz7h;->b:J
 
-    invoke-static {p1, v3}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+    iget-wide v5, p1, Lz7h;->b:J
 
-    move-result-object p1
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lz7h;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lz7h;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lz7h;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lz7h;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lz7h;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const-string p1, "WILL_NOT_PROVIDE_SURFACE"
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "SURFACE_ALREADY_PROVIDED"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "INVALID_SURFACE"
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "REQUEST_CANCELLED"
-
-    goto :goto_0
-
-    :cond_4
-    const-string p1, "SURFACE_USED_SUCCESSFULLY"
+    move-result v1
 
     :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    add-int/2addr v0, v1
 
-    const-string v4, "onSurfaceRequestResult event="
+    return v0
+.end method
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "UploadState(progress="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget v1, p0, Lz7h;->a:F
 
-    invoke-virtual {v1}, La8h;->b()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lz7h;->a:Lmsf;
+    const-string v1, ", fileSize="
 
-    iget-object v2, p1, Lmsf;->a:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    monitor-enter v2
+    iget-wide v1, p0, Lz7h;->b:J
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :try_start_0
-    iput-object v3, p1, Lmsf;->n:Llsf;
+    const-string v1, ", uploadToken="
 
-    iput-object v3, p1, Lmsf;->o:Ljava/util/concurrent/Executor;
+    const-string v2, ")"
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v3, p0, Lz7h;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+    invoke-static {v0, v1, v3, v2}, La3e;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
+    move-result-object v0
 
-    iget-object p1, p0, Lz7h;->c:Landroid/view/Surface;
-
-    invoke-virtual {p1}, Landroid/view/Surface;->release()V
-
-    iget p1, v1, La8h;->v0:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, v1, La8h;->v0:I
-
-    invoke-virtual {v1}, La8h;->c()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

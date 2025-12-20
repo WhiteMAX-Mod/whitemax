@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcuc;
+.implements Ld3d;

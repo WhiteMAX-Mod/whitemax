@@ -1,64 +1,59 @@
 .class public final Lrmg;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
-# interfaces
-.implements Ltmg;
 
+# instance fields
+.field public X:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lrmg;
+.field public Y:Ljavax/net/ssl/SSLEngine;
+
+.field public Z:Lsmg;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lsmg;
+
+.field public u0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsmg;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lrmg;
+    iput-object p1, p0, Lrmg;->t0:Lsmg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lrmg;->a:Lrmg;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lrmg;->s0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lrmg;->u0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lrmg;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lrmg;->u0:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lrmg;->t0:Lsmg;
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lsmg;->b(Ljava/lang/String;Ll84;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, 0x2ddcfce7
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "GoToFinish"
-
-    return-object v0
+    return-object p1
 .end method

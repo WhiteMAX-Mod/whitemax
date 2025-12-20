@@ -1,348 +1,311 @@
-.class public abstract enum Lica;
-.super Ljava/lang/Enum;
+.class public final Lica;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static a:Z = false
 
-.field public static final synthetic b:[Lica;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:[Ljava/lang/String;
+
+.field public final synthetic Z:Li78;
+
+.field public o:Ljava/util/Set;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>([Ljava/lang/String;Li78;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lica;->Y:[Ljava/lang/String;
 
-    new-array v0, v0, [Lica;
+    iput-object p2, p0, Lica;->Z:Li78;
 
-    sput-object v0, Lica;->b:[Lica;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()V
-    .locals 7
 
-    new-instance v0, Ljava/io/File;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v1, "java.io.tmpdir"
+    check-cast p1, Lac4;
 
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Lica;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    check-cast p1, Lica;
 
-    move-result-object v0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    new-instance v1, Ljava/io/File;
+    invoke-virtual {p1, p2}, Lica;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    new-instance v0, Lhca;
+    return-object p1
+.end method
 
-    const/4 v2, 0x0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-direct {v0, v2}, Lhca;-><init>(I)V
+    new-instance p1, Lica;
 
-    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
+    iget-object v0, p0, Lica;->Y:[Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v1, p0, Lica;->Z:Li78;
+
+    invoke-direct {p1, v0, v1, p2}, Lica;-><init>([Ljava/lang/String;Li78;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    iget v0, p0, Lica;->X:I
+
+    iget-object v1, p0, Lica;->Z:Li78;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    array-length v1, v0
+    if-ne v0, v2, :cond_0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lica;->o:Ljava/util/Set;
 
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lica;->Y:[Ljava/lang/String;
+
+    array-length v0, p1
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lbt;->E([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    iget-object p1, v1, Li78;->h:Ljava/lang/Object;
+
+    check-cast p1, Lh6f;
+
+    iput-object v0, p0, Lica;->o:Ljava/util/Set;
+
+    iput v2, p0, Lica;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v3, Lbc4;->a:Lbc4;
+
+    if-ne p1, v3, :cond_2
+
+    return-object v3
+
+    :cond_2
     :goto_0
-    if-ge v2, v1, :cond_1
+    iget-object p1, v1, Li78;->c:Ljava/lang/Object;
 
-    aget-object v3, v0, v2
+    check-cast p1, Ljv7;
 
-    new-instance v4, Ljava/io/File;
+    iget-object v1, p1, Ljv7;->e:Ljava/util/concurrent/locks/ReentrantLock;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    :try_start_0
+    iget-object p1, p1, Ljv7;->d:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    move-result-object v6
+    move-result-object p1
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lei3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
-    const-string v6, ".lck"
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_3
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lg0b;
+
+    iget-object v3, v1, Lg0b;->a:Lfv7;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    instance-of v3, v3, Lkca;
+
+    if-nez v3, :cond_3
+
+    iget-object v3, v1, Lg0b;->c:[Ljava/lang/String;
+
+    array-length v4, v3
+
+    sget-object v5, Lmh5;->a:Lmh5;
+
+    if-eqz v4, :cond_a
+
+    const/4 v6, 0x0
+
+    if-eq v4, v2, :cond_7
+
+    new-instance v4, Lhue;
+
+    invoke-direct {v4}, Lhue;-><init>()V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    :cond_4
+    :goto_2
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v4}, Ljava/io/File;->exists()Z
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    array-length v8, v3
+
+    move v9, v6
+
+    :goto_3
+    if-ge v9, v8, :cond_4
+
+    aget-object v10, v3, v9
+
+    invoke-static {v10, v7, v2}, Lqyf;->o(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_5
+
+    invoke-virtual {v4, v10}, Lhue;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_5
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    invoke-static {v4}, Lmue;->a(Lhue;)Lhue;
+
+    move-result-object v5
+
+    goto :goto_4
+
+    :cond_7
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v4
 
-    if-nez v4, :cond_0
+    if-eqz v4, :cond_8
 
-    :try_start_0
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_4
+
+    :cond_8
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_9
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_a
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    aget-object v8, v3, v6
+
+    invoke-static {v7, v8, v2}, Lqyf;->o(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9
+
+    iget-object v5, v1, Lg0b;->d:Ljava/util/Set;
+
+    :cond_a
+    :goto_4
+    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v1, v1, Lg0b;->a:Lfv7;
+
+    invoke-virtual {v1, v5}, Lfv7;->a(Ljava/util/Set;)V
 
     goto :goto_1
 
-    :catch_0
-    move-exception v3
+    :cond_b
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    sget-object v4, Ljava/lang/System;->err:Ljava/io/PrintStream;
+    return-object p1
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    :catchall_0
+    move-exception p1
 
-    const-string v6, "Failed to delete old temp lib"
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public static c()I
-    .locals 3
-
-    const-string v0, "os.name"
-
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Linux"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x2
-
-    return v0
-
-    :cond_0
-    const-string v1, "Mac"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x3
-
-    return v0
-
-    :cond_1
-    const-string v1, "Windows"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_2
-    const-string v1, "Solaris"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    const-string v1, "SunOS"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v2, "Unsupported operating system: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_4
-    :goto_0
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public static d()Ljava/lang/String;
-    .locals 4
-
-    invoke-static {}, Lica;->c()I
-
-    move-result v0
-
-    const-class v1, Lica;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0x2e
-
-    const/16 v3, 0x2f
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-static {v2, v1, v2}, Laz1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_3
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_2
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x4
-
-    if-ne v0, v3, :cond_0
-
-    const-string v3, "solaris"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    const-string v3, "darwin"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v3, "linux"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v3, "win32"
-
-    :goto_0
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "os.arch"
-
-    invoke-static {v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "/liblz4-java."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Lvb9;->b(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lica;
-    .locals 1
-
-    const-class v0, Lica;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lu45;->r(Ljava/lang/Object;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static values()[Lica;
-    .locals 1
-
-    sget-object v0, Lica;->b:[Lica;
-
-    invoke-virtual {v0}, [Lica;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lica;
-
-    return-object v0
+    throw p1
 .end method

@@ -1,129 +1,72 @@
-.class public abstract Lzb9;
+.class public final synthetic Lzb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lic9;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljc9;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ljc9;JI)V
+    .locals 0
 
-    new-instance v0, Limb;
+    iput p4, p0, Lzb9;->a:I
 
-    const-string v1, "mkv"
+    iput-object p1, p0, Lzb9;->b:Ljc9;
 
-    const-string v2, "video/x-matroska"
+    iput-wide p2, p0, Lzb9;->c:J
 
-    invoke-direct {v0, v1, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const-string v2, "glb"
-
-    const-string v3, "model/gltf-binary"
-
-    invoke-direct {v1, v2, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0, v1}, [Limb;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lto8;->j([Limb;)Ljava/util/Map;
-
-    move-result-object v0
-
-    sput-object v0, Lzb9;->a:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final b(Leb9;)V
+    .locals 2
 
-    const/4 v1, 0x6
+    iget p1, p0, Lzb9;->a:I
 
-    const/16 v2, 0x2e
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {p0, v2, v0, v1}, Lvmf;->G(Ljava/lang/CharSequence;CII)I
+    iget-object p1, p0, Lzb9;->b:Ljc9;
 
-    move-result v0
+    iget-object p1, p1, Ljc9;->g:Lxb9;
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Lxb9;->t:Lccc;
 
-    if-ltz v0, :cond_1
+    iget-wide v0, p0, Lzb9;->c:J
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {p1, v0, v1}, Lccc;->Y(J)V
 
-    move-result v2
+    return-void
 
-    add-int/lit8 v2, v2, -0x1
+    :pswitch_0
+    iget-object p1, p0, Lzb9;->b:Ljc9;
 
-    if-ne v0, v2, :cond_0
+    iget-object p1, p1, Ljc9;->g:Lxb9;
 
-    goto :goto_0
+    iget-object p1, p1, Lxb9;->t:Lccc;
 
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
+    iget-wide v0, p0, Lzb9;->c:J
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    long-to-int v0, v0
 
-    move-result-object p0
+    invoke-virtual {p1, v0}, Lccc;->Z(I)V
 
-    goto :goto_1
+    return-void
 
-    :cond_1
-    :goto_0
-    move-object p0, v1
-
-    :goto_1
-    if-eqz p0, :cond_4
-
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v0, Lvz9;->b:Ljava/util/Map;
-
-    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v0, Lvz9;->a:Landroid/webkit/MimeTypeMap;
-
-    invoke-virtual {v0, p0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_2
-    if-nez v0, :cond_3
-
-    sget-object v0, Lzb9;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
-
-    :cond_3
-    return-object v0
-
-    :cond_4
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

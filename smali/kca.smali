@@ -1,103 +1,83 @@
-.class public final enum Lkca;
-.super Ljava/lang/Enum;
+.class public final Lkca;
+.super Lfv7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum c:Lkca;
-
-.field public static final enum d:Lkca;
-
-.field public static final synthetic o:[Lkca;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Li78;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Li78;[Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lkca;
+    iput-object p1, p0, Lkca;->b:Li78;
 
-    const/4 v1, 0x0
-
-    const-string v2, "jingle_peerconnection_so"
-
-    const-string v3, "WEBRTC"
-
-    invoke-direct {v0, v3, v1, v2}, Lkca;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lkca;->c:Lkca;
-
-    new-instance v1, Lkca;
-
-    const/4 v2, 0x1
-
-    const-string v3, "tensorflowlite"
-
-    const-string v4, "TENSORFLOW"
-
-    invoke-direct {v1, v4, v2, v3}, Lkca;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lkca;->d:Lkca;
-
-    filled-new-array {v0, v1}, [Lkca;
-
-    move-result-object v0
-
-    sput-object v0, Lkca;->o:[Lkca;
+    invoke-direct {p0, p2}, Lfv7;-><init>([Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final a(Ljava/util/Set;)V
+    .locals 3
 
-    iput-object p3, p0, Lkca;->a:Ljava/lang/String;
+    iget-object v0, p0, Lkca;->b:Li78;
 
-    const-string p1, "lib"
+    iget-object v1, v0, Li78;->f:Ljava/lang/Object;
 
-    const-string p2, ".so"
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-static {p1, p3, p2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    iget-object v1, v0, Li78;->g:Ljava/lang/Object;
+
+    check-cast v1, Lnf7;
+
+    if-eqz v1, :cond_1
+
+    iget v0, v0, Li78;->a:I
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-interface {p1, v2}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lkca;->b:Ljava/lang/String;
+    check-cast p1, [Ljava/lang/String;
+
+    invoke-interface {v1, v0, p1}, Lnf7;->P(I[Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Lkca;
-    .locals 1
+    :catch_0
+    move-exception p1
 
-    const-class v0, Lkca;
+    goto :goto_1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :cond_1
+    :goto_0
+    return-void
 
-    move-result-object p0
+    :goto_1
+    const-string v0, "ROOM"
 
-    check-cast p0, Lkca;
+    const-string v1, "Cannot broadcast invalidation"
 
-    return-object p0
-.end method
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-.method public static values()[Lkca;
-    .locals 1
-
-    sget-object v0, Lkca;->o:[Lkca;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkca;
-
-    return-object v0
+    return-void
 .end method

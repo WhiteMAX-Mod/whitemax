@@ -1,5 +1,5 @@
 .class public Lcom/facebook/imagepipeline/memory/AshmemMemoryChunkPool;
-.super Lmf9;
+.super Lyj9;
 .source "SourceFile"
 
 
@@ -8,29 +8,29 @@
     value = 0x1b
 .end annotation
 
-.annotation build Lfz4;
+.annotation build Lb35;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lrf9;Lw5c;Lx5c;)V
+.method public constructor <init>(Ldk9;Lcdc;Lddc;)V
     .locals 0
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 
-    invoke-direct {p0, p1, p2, p3}, Lmf9;-><init>(Lrf9;Lw5c;Lx5c;)V
+    invoke-direct {p0, p1, p2, p3}, Lyj9;-><init>(Ldk9;Lcdc;Lddc;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(I)Ljava/lang/Object;
+.method public final d(I)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lft;
+    new-instance v0, Ljt;
 
-    invoke-direct {v0, p1}, Lft;-><init>(I)V
+    invoke-direct {v0, p1}, Ljt;-><init>(I)V
 
     return-object v0
 .end method

@@ -1,100 +1,26 @@
-.class public final Liki;
+.class public interface abstract Liki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
-
-
-# static fields
-.field public static final a:Liki;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Liki;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liki;->a:Liki;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract B()V
+.end method
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)V
+.end method
 
-    move-result-object p1
+.method public abstract f()F
+.end method
 
-    throw p1
+.method public abstract k()F
+.end method
+
+.method public abstract m(Lhg5;)V
+.end method
+
+.method public abstract v()Landroid/graphics/Rect;
+.end method
+
+.method public abstract z(FLyw1;)V
 .end method

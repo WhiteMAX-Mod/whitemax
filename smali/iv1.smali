@@ -1,51 +1,118 @@
-.class public final Liv1;
+.class public final synthetic Liv1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liq1;
+.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic a:Lqv1;
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lmv1;
 
 
 # direct methods
-.method public constructor <init>(Lqv1;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lmv1;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Liv1;->a:I
 
-    iput-object p1, p0, Liv1;->a:Lqv1;
+    iput-object p1, p0, Liv1;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Liv1;->c:Lmv1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l()V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Liv1;->a:Lqv1;
+    iget v0, p0, Liv1;->a:I
 
-    iget-object v0, v0, Lqv1;->o:Ltcf;
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
+    new-instance v0, Luv1;
 
-    move-result-object v1
+    iget-object v1, p0, Liv1;->b:Landroid/content/Context;
 
-    move-object v2, v1
+    invoke-direct {v0, v1}, Luv1;-><init>(Landroid/content/Context;)V
 
-    check-cast v2, Lbt1;
+    new-instance v1, Lzw3;
 
-    sget-object v2, Lbt1;->i:Lbt1;
+    const/4 v2, -0x1
 
-    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v1, v2, v2}, Lzw3;-><init>(II)V
 
-    move-result v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x0
 
-    return-void
+    invoke-static {v0, v1}, Lgsh;->j(Landroid/view/ViewGroup;Z)V
+
+    new-instance v1, Lv3e;
+
+    const/16 v2, 0x12
+
+    iget-object v3, p0, Liv1;->c:Lmv1;
+
+    invoke-direct {v1, v2, v3}, Lv3e;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Luv1;->setListener(Lsv1;)V
+
+    new-instance v1, Lgv1;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v3, v2}, Lgv1;-><init>(Lmv1;I)V
+
+    invoke-virtual {v0, v1}, Luv1;->setVideoLayoutUpdatesControllerProvider(Lmq6;)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Liv1;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Liv1;->c:Lmv1;
+
+    invoke-static {v0, v1}, Lmv1;->z(Landroid/content/Context;Lmv1;)Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Liv1;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Liv1;->c:Lmv1;
+
+    invoke-static {v0, v1}, Lmv1;->y(Landroid/content/Context;Lmv1;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Liv1;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Liv1;->c:Lmv1;
+
+    invoke-static {v0, v1}, Lmv1;->x(Landroid/content/Context;Lmv1;)Llgd;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

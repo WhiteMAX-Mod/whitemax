@@ -3,227 +3,306 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lke5;
+
+.field public static b:Lke5;
+
+
 # direct methods
-.method public static final a(Lc54;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Loc3;
+    new-instance v0, Lke5;
 
-    invoke-direct {v0, p0}, Loc3;-><init>(Lc54;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Lc54;->getRouter()Lytd;
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v1, v1, v1, v2}, Lke5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    sput-object v0, Lbsi;->a:Lke5;
+
+    return-void
+.end method
+
+.method public static final a(Landroid/widget/TextView;Lplb;)V
+    .locals 4
+
+    invoke-interface {p1}, Lplb;->i()Ltyf;
+
+    move-result-object v0
+
+    iget v0, v0, Ltyf;->h:I
+
+    const v1, 0x3e75c28f    # 0.24f
+
+    invoke-static {v0, v1}, Lfij;->b(IF)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setHighlightColor(I)V
+
+    invoke-static {p0}, Lzri;->b(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lplb;->i()Ltyf;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    iget v1, v1, Ltyf;->h:I
 
-    invoke-virtual {p0}, Lc54;->getRouter()Lytd;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Lytd;->a(Lg54;)V
-
-    return-void
+    invoke-static {v0, v1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
-    new-instance v1, Lq9;
+    invoke-interface {p1}, Lplb;->i()Ltyf;
 
-    const/16 v2, 0x11
+    move-result-object p1
 
-    invoke-direct {v1, p0, v2, v0}, Lq9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget p1, p1, Ltyf;->h:I
 
-    invoke-virtual {p0, v1}, Lc54;->addLifecycleListener(La54;)V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return-void
-.end method
+    const/16 v1, 0x1d
 
-.method public static final b(II)V
-    .locals 4
+    if-lt v0, v1, :cond_3
 
-    if-gt p0, p1, :cond_0
+    invoke-static {p0}, Lvud;->y(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    if-eqz v0, :cond_1
 
-    const-string v1, ") is greater than size ("
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    const-string v2, ")."
+    move-result-object v0
 
-    const-string v3, "toIndex ("
+    if-eqz v0, :cond_1
 
-    invoke-static {v3, p0, v1, p1, v2}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static final c(J)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p0, p0, v0
-
-    if-gez p0, :cond_0
-
-    sget p0, Ls65;->d:I
-
-    sget-wide p0, Ls65;->c:J
-
-    return-wide p0
-
-    :cond_0
-    sget p0, Ls65;->d:I
-
-    sget-wide p0, Ls65;->b:J
-
-    return-wide p0
-.end method
-
-.method public static final d(JJLy65;)J
-    .locals 7
-
-    sub-long v0, p0, p2
-
-    xor-long v2, v0, p0
-
-    xor-long v4, v0, p2
-
-    not-long v4, v4
-
-    and-long/2addr v2, v4
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-gez v2, :cond_1
-
-    sget-object v2, Ly65;->c:Ly65;
-
-    invoke-virtual {p4, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v3
-
-    if-gez v3, :cond_0
-
-    iget-object v0, p4, Ly65;->a:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v1, v2, Ly65;->a:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v3, 0x1
-
-    invoke-virtual {v0, v3, v4, v1}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    div-long v3, p0, v0
-
-    div-long v5, p2, v0
-
-    sub-long/2addr v3, v5
-
-    rem-long/2addr p0, v0
-
-    rem-long/2addr p2, v0
-
-    sub-long/2addr p0, p2
-
-    sget p2, Ls65;->d:I
-
-    invoke-static {v3, v4, v2}, Lv9j;->i(JLy65;)J
-
-    move-result-wide p2
-
-    invoke-static {p0, p1, p4}, Lv9j;->i(JLy65;)J
-
-    move-result-wide p0
-
-    invoke-static {p2, p3, p0, p1}, Ls65;->l(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_0
-    invoke-static {v0, v1}, Lbsi;->c(J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ls65;->o(J)J
-
-    move-result-wide p0
-
-    return-wide p0
+    invoke-static {p0, v0}, Lvud;->x(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
-    invoke-static {v0, v1, p4}, Lv9j;->i(JLy65;)J
+    invoke-static {p0}, Lvud;->B(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
 
-    move-result-wide p0
+    move-result-object v0
 
-    return-wide p0
-.end method
+    if-eqz v0, :cond_2
 
-.method public static final e(JJLy65;)J
-    .locals 6
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    const-wide/16 v0, 0x1
+    move-result-object v0
 
-    sub-long v2, p2, v0
+    if-eqz v0, :cond_2
 
-    or-long/2addr v2, v0
+    invoke-static {v0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    const-wide v4, 0x7fffffffffffffffL
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_1
-
-    cmp-long p0, p0, p2
-
-    if-nez p0, :cond_0
-
-    sget p0, Ls65;->d:I
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-
-    :cond_0
-    invoke-static {p2, p3}, Lbsi;->c(J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ls65;->o(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_1
-    sub-long v2, p0, v0
-
-    or-long/2addr v0, v2
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_2
-
-    invoke-static {p0, p1}, Lbsi;->c(J)J
-
-    move-result-wide p0
-
-    return-wide p0
+    invoke-static {p0, v0}, Lvud;->A(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     :cond_2
-    invoke-static {p0, p1, p2, p3, p4}, Lbsi;->d(JJLy65;)J
+    invoke-static {p0}, Lvud;->D(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
 
-    move-result-wide p0
+    move-result-object v0
 
-    return-wide p0
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    invoke-static {v0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-static {p0, v0}, Lvud;->C(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_3
+    const-string v0, "mEditor"
+
+    invoke-static {p0, v0}, Lolj;->b(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_4
+
+    goto/16 :goto_1
+
+    :cond_4
+    const-string v1, "mTextSelectHandleRes"
+
+    invoke-static {p0, v1}, Lolj;->b(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Ljava/lang/Integer;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_5
+
+    move-object v1, v3
+
+    :cond_5
+    check-cast v1, Ljava/lang/Integer;
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    invoke-static {v1, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    const-string v2, "mSelectHandleCenter"
+
+    invoke-static {v0, v2, v1}, Lolj;->d(Ljava/lang/Object;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+
+    :cond_6
+    const-string v1, "mTextSelectHandleLeftRes"
+
+    invoke-static {p0, v1}, Lolj;->b(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Ljava/lang/Integer;
+
+    if-nez v2, :cond_7
+
+    move-object v1, v3
+
+    :cond_7
+    check-cast v1, Ljava/lang/Integer;
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    invoke-static {v1, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    const-string v2, "mSelectHandleLeft"
+
+    invoke-static {v0, v2, v1}, Lolj;->d(Ljava/lang/Object;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+
+    :cond_8
+    const-string v1, "mTextSelectHandleRightRes"
+
+    invoke-static {p0, v1}, Lolj;->b(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Ljava/lang/Integer;
+
+    if-nez v2, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    move-object v3, v1
+
+    :goto_0
+    check-cast v3, Ljava/lang/Integer;
+
+    if-eqz v3, :cond_a
+
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_a
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_a
+
+    invoke-static {p0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    const-string p1, "mSelectHandleRight"
+
+    invoke-static {v0, p1, p0}, Lolj;->d(Ljava/lang/Object;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+
+    :cond_a
+    :goto_1
+    return-void
+.end method
+
+.method public static b(III)I
+    .locals 2
+
+    and-int/lit8 p1, p1, 0x8
+
+    if-eqz p1, :cond_0
+
+    add-int/lit8 p0, p0, -0x1
+
+    :cond_0
+    if-gt p2, p0, :cond_1
+
+    sub-int/2addr p0, p2
+
+    return p0
+
+    :cond_1
+    new-instance p1, Ljava/io/IOException;
+
+    const-string v0, "PROTOCOL_ERROR padding "
+
+    const-string v1, " > remaining length "
+
+    invoke-static {v0, p2, p0, v1}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

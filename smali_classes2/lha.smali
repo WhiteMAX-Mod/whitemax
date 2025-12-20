@@ -1,19 +1,78 @@
-.class public interface abstract Llha;
+.class public final synthetic Llha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Lwha;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmha;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lmha;I)V
+    .locals 0
 
-    sget-object v0, Lwha;->x0:Lwha;
+    iput p2, p0, Llha;->a:I
 
-    sput-object v0, Llha;->a:Lwha;
+    iput-object p1, p0, Llha;->b:Lmha;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Llha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llha;->b:Lmha;
+
+    iget-object v1, v0, Lmha;->Z:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    iget-object v1, v0, Lmha;->s0:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    iget-object v1, v0, Lmha;->Y:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    iget-object v1, v0, Lmha;->t0:Landroidx/appcompat/widget/AppCompatImageButton;
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    iget-object v0, v0, Lmha;->v0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llha;->b:Lmha;
+
+    iget-object v0, v0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

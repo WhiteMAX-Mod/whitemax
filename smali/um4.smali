@@ -3,276 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lef8;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lvm4;
+.field public final synthetic b:Lld;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvm4;I)V
+.method public synthetic constructor <init>(Lld;II)V
     .locals 0
 
-    iput p2, p0, Lum4;->a:I
+    .line 1
+    iput p3, p0, Lum4;->a:I
 
-    iput-object p1, p0, Lum4;->b:Lvm4;
+    iput-object p1, p0, Lum4;->b:Lld;
+
+    iput p2, p0, Lum4;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Lld;IJ)V
+    .locals 0
+
+    .line 2
+    const/4 p3, 0x2
+
+    iput p3, p0, Lum4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lum4;->b:Lld;
+
+    iput p2, p0, Lum4;->c:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lld;Lz49;I)V
+    .locals 0
+
+    .line 3
+    const/4 p2, 0x7
+
+    iput p2, p0, Lum4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lum4;->b:Lld;
+
+    iput p3, p0, Lum4;->c:I
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Lum4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lum4;->b:Lvm4;
+    iget v0, p0, Lum4;->c:I
 
-    monitor-enter v0
+    check-cast p1, Lmd;
 
-    :try_start_0
-    iget-object v1, v0, Lvm4;->a:Lul3;
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    invoke-virtual {v1}, Lul3;->get()Ljava/lang/Object;
+    invoke-interface {p1, v1, v0}, Lmd;->g0(Lld;I)V
 
-    move-result-object v1
-
-    check-cast v1, Ly17;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iget-object v4, v0, Lvm4;->c:Lrpc;
-
-    invoke-interface {v4}, Lrpc;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcr4;
-
-    invoke-virtual {v4}, Lcr4;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v2, v3, v4}, Ly17;->h(JLjava/lang/String;)V
-
-    monitor-exit v0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lum4;->b:Lvm4;
+    iget v0, p0, Lum4;->c:I
 
-    monitor-enter v0
+    check-cast p1, Lmd;
 
-    :try_start_1
-    iget-object v1, v0, Lvm4;->a:Lul3;
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    invoke-virtual {v1}, Lul3;->get()Ljava/lang/Object;
+    invoke-interface {p1, v1, v0}, Lmd;->Z(Lld;I)V
 
-    move-result-object v1
+    return-void
 
-    check-cast v1, Ly17;
+    :pswitch_1
+    check-cast p1, Lmd;
 
-    invoke-virtual {v1}, Ly17;->c()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v2
+    iget-object v0, p0, Lum4;->b:Lld;
 
-    invoke-virtual {v1}, Ly17;->b()V
+    iget v1, p0, Lum4;->c:I
 
-    new-instance v1, Lorg/json/JSONArray;
+    invoke-interface {p1, v0, v1}, Lmd;->s0(Lld;I)V
 
-    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
+    return-void
 
-    const/4 v3, 0x0
+    :pswitch_2
+    iget v0, p0, Lum4;->c:I
 
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    check-cast p1, Lmd;
 
-    move-result v4
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    if-ge v3, v4, :cond_0
+    invoke-interface {p1, v1, v0}, Lmd;->P(Lld;I)V
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    return-void
 
-    move-result-object v4
+    :pswitch_3
+    iget v0, p0, Lum4;->c:I
 
-    check-cast v4, Lga0;
+    check-cast p1, Lmd;
 
-    new-instance v5, Lorg/json/JSONObject;
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
+    invoke-interface {p1, v1, v0}, Lmd;->t0(Lld;I)V
 
-    const-string v6, "agent"
+    return-void
 
-    iget-object v7, v4, Lga0;->a:Ljava/lang/String;
+    :pswitch_4
+    iget v0, p0, Lum4;->c:I
 
-    invoke-virtual {v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    check-cast p1, Lmd;
 
-    const-string v6, "dates"
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    new-instance v7, Lorg/json/JSONArray;
+    invoke-interface {p1, v1, v0}, Lmd;->J(Lld;I)V
 
-    iget-object v4, v4, Lga0;->b:Ljava/util/ArrayList;
+    return-void
 
-    invoke-direct {v7, v4}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
+    :pswitch_5
+    iget v0, p0, Lum4;->c:I
 
-    invoke-virtual {v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    check-cast p1, Lmd;
 
-    invoke-virtual {v1, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    add-int/lit8 v3, v3, 0x1
+    invoke-interface {p1, v1, v0}, Lmd;->G(Lld;I)V
 
-    goto :goto_0
+    return-void
 
-    :catchall_1
-    move-exception v1
+    :pswitch_6
+    iget v0, p0, Lum4;->c:I
 
-    goto :goto_4
+    check-cast p1, Lmd;
 
-    :cond_0
-    new-instance v2, Lorg/json/JSONObject;
+    iget-object v1, p0, Lum4;->b:Lld;
 
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+    invoke-interface {p1, v1, v0}, Lmd;->R0(Lld;I)V
 
-    const-string v3, "heartbeats"
-
-    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "version"
-
-    const-string v3, "2"
-
-    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    new-instance v3, Landroid/util/Base64OutputStream;
-
-    const/16 v4, 0xb
-
-    invoke-direct {v3, v1, v4}, Landroid/util/Base64OutputStream;-><init>(Ljava/io/OutputStream;I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    new-instance v4, Ljava/util/zip/GZIPOutputStream;
-
-    invoke-direct {v4, v3}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :try_start_3
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, "UTF-8"
-
-    invoke-virtual {v2, v5}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2}, Ljava/io/OutputStream;->write([B)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    :try_start_4
-    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :try_start_5
-    invoke-virtual {v3}, Landroid/util/Base64OutputStream;->close()V
-
-    const-string v2, "UTF-8"
-
-    invoke-virtual {v1, v2}, Ljava/io/ByteArrayOutputStream;->toString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    monitor-exit v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    return-object v1
-
-    :catchall_2
-    move-exception v1
-
-    goto :goto_2
-
-    :catchall_3
-    move-exception v1
-
-    :try_start_6
-    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
-
-    goto :goto_1
-
-    :catchall_4
-    move-exception v2
-
-    :try_start_7
-    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v1
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :goto_2
-    :try_start_8
-    invoke-virtual {v3}, Landroid/util/Base64OutputStream;->close()V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_5
-
-    goto :goto_3
-
-    :catchall_5
-    move-exception v2
-
-    :try_start_9
-    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_3
-    throw v1
-
-    :goto_4
-    monitor-exit v0
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
-
-    throw v1
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

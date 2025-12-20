@@ -1,51 +1,91 @@
-.class public abstract synthetic Lqr;
+.class public final synthetic Lqr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lor6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Las;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Las;)V
+    .locals 0
 
-    invoke-static {}, Lxq;->values()[Lxq;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqr;->a:Las;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lqr;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lqr;->getFunctionDelegate()Lhr6;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast p1, Lor6;
 
-    new-array v0, v0, [I
+    invoke-interface {p1}, Lor6;->getFunctionDelegate()Lhr6;
 
-    const/4 v1, 0x1
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lhr6;
+    .locals 7
+
+    new-instance v0, Lrr6;
+
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x1
 
-    :catch_0
-    const/4 v2, 0x2
+    const-class v3, Las;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object v4, p0, Lqr;->a:Las;
 
-    :catch_1
-    const/4 v1, 0x3
+    const-string v5, "selectTheme"
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    :catch_2
-    sput-object v0, Lqr;->$EnumSwitchMapping$0:[I
+    return-object v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lqr;->getFunctionDelegate()Lhr6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

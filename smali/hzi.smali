@@ -1,60 +1,31 @@
 .class public final Lhzi;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Landroid/os/IInterface;
 
 
-# static fields
-.field public static final a:Lhzi;
+# instance fields
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    new-instance v0, Lhzi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lhzi;->a:Lhzi;
-
-    new-instance v0, Lmli;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lhzi;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lhzi;->c:Landroid/os/IBinder;
 
-    move-result-object p1
-
-    throw p1
+    return-object v0
 .end method

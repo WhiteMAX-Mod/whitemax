@@ -1,91 +1,48 @@
-.class public final synthetic Lmfe;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Len6;
+.class public final Lmfe;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic a:Lr77;
+.field public final synthetic X:Lpde;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lr77;)V
+.method public constructor <init>(Lpde;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmfe;->X:Lpde;
 
-    iput-object p1, p0, Lmfe;->a:Lr77;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Lmfe;
+    iput-object p1, p0, Lmfe;->d:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lmfe;->o:I
 
-    if-eqz p1, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Lmfe;->getFunctionDelegate()Lxm6;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lmfe;->o:I
 
-    check-cast p1, Len6;
+    iget-object p1, p0, Lmfe;->X:Lpde;
 
-    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    invoke-virtual {p1, v0, p0}, Lpde;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget-object p1, Lbc4;->a:Lbc4;
 
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getFunctionDelegate()Lxm6;
-    .locals 7
-
-    new-instance v0, Ly8;
-
-    const-string v6, "onNewHost(Ljava/lang/String;)Lkotlinx/coroutines/Job;"
-
-    const/16 v2, 0x8
-
-    const/4 v1, 0x1
-
-    const-class v3, Lr77;
-
-    iget-object v4, p0, Lmfe;->a:Lr77;
-
-    const-string v5, "onNewHost"
-
-    invoke-direct/range {v0 .. v6}, Ly8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lmfe;->getFunctionDelegate()Lxm6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

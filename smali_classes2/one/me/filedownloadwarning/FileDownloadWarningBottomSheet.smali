@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqq3;
+.implements Lau3;
 
 
 # annotations
@@ -20,7 +20,7 @@
     d2 = {
         "Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;",
         "Lone/me/sdk/arch/Widget;",
-        "Lqq3;",
+        "Lau3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -52,9 +52,9 @@
 
 
 # instance fields
-.field public final a:Lk18;
+.field public final a:Ld68;
 
-.field public final b:Lk18;
+.field public final b:Ld68;
 
 
 # direct methods
@@ -67,11 +67,11 @@
     move-result-object p1
 
     .line 9
-    new-instance p2, Limb;
+    new-instance p2, Lysb;
 
     const-string v0, "chat_id"
 
-    invoke-direct {p2, v0, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 10
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -79,18 +79,18 @@
     move-result-object p1
 
     .line 11
-    new-instance p3, Limb;
+    new-instance p3, Lysb;
 
     const-string p4, "message_id"
 
-    invoke-direct {p3, p4, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p4, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 12
-    new-instance p4, Limb;
+    new-instance p4, Lysb;
 
     const-string p1, "attach_id"
 
-    invoke-direct {p4, p1, p5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, p1, p5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 13
     invoke-static {p6, p7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -98,25 +98,25 @@
     move-result-object p1
 
     .line 14
-    new-instance p5, Limb;
+    new-instance p5, Lysb;
 
     const-string p6, "file_id"
 
-    invoke-direct {p5, p6, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5, p6, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 15
-    new-instance p6, Limb;
+    new-instance p6, Lysb;
 
     const-string p1, "file_name"
 
-    invoke-direct {p6, p1, p8}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p6, p1, p8}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 16
-    new-instance p7, Limb;
+    new-instance p7, Lysb;
 
     const-string p1, "file_url"
 
-    invoke-direct {p7, p1, p9}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p7, p1, p9}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 17
     invoke-static {p10, p11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -124,19 +124,19 @@
     move-result-object p1
 
     .line 18
-    new-instance p8, Limb;
+    new-instance p8, Lysb;
 
     const-string p9, "file_size"
 
-    invoke-direct {p8, p9, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p8, p9, p1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 19
-    filled-new-array/range {p2 .. p8}, [Limb;
+    filled-new-array/range {p2 .. p8}, [Lysb;
 
     move-result-object p1
 
     .line 20
-    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -156,219 +156,223 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILro4;)V
 
     .line 2
-    new-instance v0, Lwj1;
+    new-instance v0, Lbm1;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, p1, v1}, Lwj1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v0, p1, v1}, Lbm1;-><init>(Landroid/os/Bundle;I)V
 
     .line 3
-    new-instance p1, Lyo3;
+    new-instance p1, Ljt3;
 
-    const/16 v1, 0xb
+    const/16 v1, 0x9
 
-    invoke-direct {p1, v1, v0}, Lyo3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Ljt3;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lkw5;
+    const-class v0, Lt06;
 
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object p1
 
     .line 4
-    iput-object p1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->a:Lk18;
+    iput-object p1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->a:Ld68;
 
     .line 5
-    sget-object p1, Lfw5;->a:Lfw5;
+    sget-object p1, Lo06;->a:Lo06;
 
     .line 6
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu5;
 
     move-result-object p1
 
-    const/16 v0, 0xa0
+    const/16 v0, 0x9c
 
-    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
+    invoke-virtual {p1, v0}, Lu5;->d(I)Lz7g;
 
     move-result-object p1
 
     .line 7
-    iput-object p1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Lk18;
+    iput-object p1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Landroid/os/Bundle;)V
-    .locals 6
+.method public final H(Landroid/os/Bundle;)V
+    .locals 7
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    iget-object v0, p1, Lkw5;->w0:Lk18;
+    iget-object v0, p1, Lt06;->w0:Ld68;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lzz;
+    check-cast v0, Lp00;
 
-    new-instance v1, Lr8d;
+    new-instance v1, Lwhd;
 
-    iget-wide v2, p1, Lkw5;->c:J
+    iget-wide v2, p1, Lt06;->c:J
 
-    iget-wide v4, p1, Lkw5;->Z:J
+    iget-wide v4, p1, Lt06;->Z:J
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lr8d;-><init>(JJ)V
+    iget-object v6, p1, Lt06;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lzz;->a(Lu8d;)V
+    invoke-direct/range {v1 .. v6}, Lwhd;-><init>(JJLjava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {v0, v1}, Lp00;->a(Laid;)V
+
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lkw5;->t()Lf7f;
+    invoke-virtual {p1}, Lt06;->s()Lgif;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Lk18;
+    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Ld68;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lsc4;
+    check-cast v0, Lsg4;
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, p1, v1}, Lsc4;->a(Lf7f;I)V
+    invoke-virtual {v0, p1, v1}, Lsg4;->a(Lgif;I)V
 
     :cond_0
     return-void
 .end method
 
 .method public final g(ILandroid/os/Bundle;)V
-    .locals 6
+    .locals 7
 
-    sget p2, Lh3b;->a:I
+    sget p2, Ls9b;->a:I
 
-    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Lk18;
+    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Ld68;
 
     if-ne p1, p2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    iget-object p2, p1, Lkw5;->s0:Lk18;
+    iget-object p2, p1, Lt06;->s0:Ld68;
 
-    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Llzf;
-
-    check-cast p2, Lq2b;
-
-    invoke-virtual {p2}, Lq2b;->b()Lz74;
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    new-instance v1, Ljw5;
+    check-cast p2, Lbbg;
+
+    check-cast p2, Lb9b;
+
+    invoke-virtual {p2}, Lb9b;->b()Ltb4;
+
+    move-result-object p2
+
+    new-instance v1, Ls06;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Ljw5;-><init>(Lkw5;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, v2}, Ls06;-><init>(Lt06;Lkotlin/coroutines/Continuation;)V
 
     const/4 v2, 0x2
 
-    invoke-static {p1, p2, v1, v2}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    invoke-static {p1, p2, v1, v2}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
 
     move-result-object p2
 
-    iget-object v1, p1, Lkw5;->x0:Lt9f;
+    iget-object v1, p1, Lt06;->x0:Le7;
 
-    sget-object v3, Lkw5;->y0:[Lyy7;
+    sget-object v3, Lt06;->y0:[Lp38;
 
     const/4 v4, 0x0
 
     aget-object v3, v3, v4
 
-    invoke-virtual {v1, p1, v3, p2}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+    invoke-virtual {v1, p1, v3, p2}, Le7;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lkw5;->t()Lf7f;
+    invoke-virtual {p1}, Lt06;->s()Lgif;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lsc4;
+    check-cast p2, Lsg4;
 
-    invoke-virtual {p2, p1, v2}, Lsc4;->a(Lf7f;I)V
+    invoke-virtual {p2, p1, v2}, Lsg4;->a(Lgif;I)V
 
     return-void
 
     :cond_0
-    sget p2, Lh3b;->b:I
+    sget p2, Ls9b;->b:I
 
     if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    iget-object p2, p1, Lkw5;->w0:Lk18;
+    iget-object p2, p1, Lt06;->w0:Ld68;
 
-    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lzz;
+    check-cast p2, Lp00;
 
-    new-instance v1, Lr8d;
+    new-instance v1, Lwhd;
 
-    iget-wide v2, p1, Lkw5;->c:J
+    iget-wide v2, p1, Lt06;->c:J
 
-    iget-wide v4, p1, Lkw5;->Z:J
+    iget-wide v4, p1, Lt06;->Z:J
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lr8d;-><init>(JJ)V
+    iget-object v6, p1, Lt06;->d:Ljava/lang/String;
 
-    invoke-virtual {p2, v1}, Lzz;->a(Lu8d;)V
+    invoke-direct/range {v1 .. v6}, Lwhd;-><init>(JJLjava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p2, v1}, Lp00;->a(Laid;)V
+
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lkw5;->t()Lf7f;
+    invoke-virtual {p1}, Lt06;->s()Lgif;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lsc4;
+    check-cast p2, Lsg4;
 
     const/4 v0, 0x3
 
-    invoke-virtual {p2, p1, v0}, Lsc4;->a(Lf7f;I)V
+    invoke-virtual {p2, p1, v0}, Lsg4;->a(Lgif;I)V
 
     :cond_1
     return-void
@@ -405,35 +409,35 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
 
-    sget p1, Li3b;->d:I
+    sget p1, Lt9b;->d:I
 
     const/4 v0, 0x6
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v1, v0}, Laz1;->e(ILandroid/os/Bundle;Lf1e;I)Loq3;
+    invoke-static {p1, v1, v1, v0}, Lc12;->f(ILandroid/os/Bundle;Lmbe;I)Lyt3;
 
     move-result-object p1
 
-    sget v0, Li3b;->c:I
+    sget v0, Lt9b;->c:I
 
-    new-instance v2, Ln5g;
+    new-instance v2, Lbhg;
 
-    invoke-direct {v2, v0}, Ln5g;-><init>(I)V
+    invoke-direct {v2, v0}, Lbhg;-><init>(I)V
 
-    invoke-virtual {p1, v2}, Loq3;->f(Ls5g;)V
+    invoke-virtual {p1, v2}, Lyt3;->f(Lghg;)V
 
-    new-instance v3, Lpq3;
+    new-instance v3, Lzt3;
 
-    sget v4, Lh3b;->b:I
+    sget v4, Ls9b;->b:I
 
-    sget v0, Li3b;->b:I
+    sget v0, Lt9b;->b:I
 
-    new-instance v5, Ln5g;
+    new-instance v5, Lbhg;
 
-    invoke-direct {v5, v0}, Ln5g;-><init>(I)V
+    invoke-direct {v5, v0}, Lbhg;-><init>(I)V
 
     const/4 v8, 0x3
 
@@ -443,63 +447,63 @@
 
     const/4 v7, 0x1
 
-    invoke-direct/range {v3 .. v9}, Lpq3;-><init>(ILs5g;IZII)V
+    invoke-direct/range {v3 .. v9}, Lzt3;-><init>(ILghg;IZII)V
 
-    new-instance v0, Lpq3;
+    new-instance v0, Lzt3;
 
-    sget v2, Lh3b;->a:I
+    sget v2, Ls9b;->a:I
 
-    sget v4, Li3b;->a:I
+    sget v4, Lt9b;->a:I
 
-    new-instance v5, Ln5g;
+    new-instance v5, Lbhg;
 
-    invoke-direct {v5, v4}, Ln5g;-><init>(I)V
+    invoke-direct {v5, v4}, Lbhg;-><init>(I)V
 
     const/16 v4, 0x20
 
     const/4 v6, 0x2
 
-    invoke-direct {v0, v2, v5, v6, v4}, Lpq3;-><init>(ILs5g;II)V
+    invoke-direct {v0, v2, v5, v6, v4}, Lzt3;-><init>(ILghg;II)V
 
-    filled-new-array {v3, v0}, [Lpq3;
+    filled-new-array {v3, v0}, [Lzt3;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Loq3;->a([Lpq3;)V
+    invoke-virtual {p1, v0}, Lyt3;->a([Lzt3;)V
 
-    invoke-virtual {p1}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    invoke-virtual {p1}, Lyt3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
     move-result-object v8
 
-    new-instance p1, Lm54;
+    new-instance p1, Lh94;
 
-    invoke-direct {p1, v6, p0}, Lm54;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v6, p0}, Lh94;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v8, p1}, Lc54;->addLifecycleListener(La54;)V
+    invoke-virtual {v8, p1}, Lx84;->addLifecycleListener(Lv84;)V
 
-    invoke-virtual {v8, p0}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+    invoke-virtual {v8, p0}, Lone/me/sdk/arch/Widget;->setTargetController(Lx84;)V
 
     move-object p1, p0
 
     :goto_0
-    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+    invoke-virtual {p1}, Lx84;->getParentController()Lx84;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+    invoke-virtual {p1}, Lx84;->getParentController()Lx84;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Leud;
+    instance-of v0, p1, Lc4e;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Leud;
+    check-cast p1, Lc4e;
 
     goto :goto_1
 
@@ -511,18 +515,18 @@
 
     check-cast p1, Lone/me/android/root/RootController;
 
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->E0()Lytd;
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw3e;
 
     move-result-object v1
 
     :cond_2
-    invoke-virtual {v8, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
+    invoke-virtual {v8, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->O0(Lone/me/sdk/arch/Widget;)V
 
     const/4 p1, 0x1
 
     if-eqz v1, :cond_3
 
-    new-instance v7, Lbud;
+    new-instance v7, Lz3e;
 
     const/4 v12, 0x0
 
@@ -534,51 +538,51 @@
 
     const/4 v11, 0x0
 
-    invoke-direct/range {v7 .. v13}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+    invoke-direct/range {v7 .. v13}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
 
     const/4 v0, 0x0
 
     const-string v2, "BottomSheetWidget"
 
-    invoke-static {v0, v7, p1, v2}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+    invoke-static {v0, v7, p1, v2}, Lc12;->v(ZLz3e;ZLjava/lang/String;)V
 
-    invoke-virtual {v1, v7}, Lytd;->H(Lbud;)V
+    invoke-virtual {v1, v7}, Lw3e;->H(Lz3e;)V
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->y0()Lkw5;
+    invoke-virtual {p0}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->z0()Lt06;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkw5;->t()Lf7f;
+    invoke-virtual {v0}, Lt06;->s()Lgif;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    iget-object v1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Lk18;
+    iget-object v1, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->b:Ld68;
 
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lsc4;
+    check-cast v1, Lsg4;
 
-    invoke-virtual {v1, v0, p1}, Lsc4;->a(Lf7f;I)V
+    invoke-virtual {v1, v0, p1}, Lsg4;->a(Lgif;I)V
 
     :cond_4
     return-void
 .end method
 
-.method public final y0()Lkw5;
+.method public final z0()Lt06;
     .locals 1
 
-    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->a:Lk18;
+    iget-object v0, p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->a:Ld68;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkw5;
+    check-cast v0, Lt06;
 
     return-object v0
 .end method

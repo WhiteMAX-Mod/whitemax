@@ -3,180 +3,264 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Llqf;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:J
+.field public final b:Lbsf;
+
+.field public final c:Landroid/widget/FrameLayout;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    iput p3, p0, Lip8;->a:I
+    iput p2, p0, Lip8;->a:I
 
-    iput-wide p1, p0, Lip8;->b:J
+    packed-switch p2, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Lgp8;
+
+    invoke-direct {p2, p1}, Lgp8;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lbsf;
+
+    invoke-direct {p1, p2}, Lbsf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lip8;->b:Lbsf;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Lydi;
+
+    invoke-direct {p2, p1}, Lydi;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lbsf;
+
+    invoke-direct {p1, p2}, Lbsf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lip8;->b:Lbsf;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Lbqf;
+
+    invoke-direct {p2, p1}, Lbqf;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    new-instance p1, Lbsf;
+
+    invoke-direct {p1, p2}, Lbsf;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lip8;->b:Lbsf;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final c(Lep8;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 8
+.method public final a(Lrqf;)V
+    .locals 2
 
     iget v0, p0, Lip8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lckh;
+    iget-object v0, p0, Lip8;->b:Lbsf;
 
-    iget-wide v0, p0, Lip8;->b:J
+    invoke-virtual {v0, p1}, Lbsf;->b(Lrqf;)V
 
-    invoke-virtual {p2, v0, v1}, Lckh;->b(J)J
+    invoke-virtual {v0}, Lbsf;->c()V
 
-    move-result-wide v2
+    const/16 v1, 0x15e
 
-    new-instance p2, Ls65;
+    iget v0, v0, Lbsf;->b:I
 
-    invoke-direct {p2, v2, v3}, Ls65;-><init>(J)V
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    check-cast p1, Lckh;
+    move-result v0
 
-    invoke-virtual {p1, v0, v1}, Lckh;->b(J)J
+    iget-object v1, p0, Lip8;->c:Landroid/widget/FrameLayout;
 
-    move-result-wide v0
+    check-cast v1, Lydi;
 
-    new-instance p1, Ls65;
+    invoke-virtual {v1, p1, v0}, Lydi;->a(Lrqf;I)V
 
-    invoke-direct {p1, v0, v1}, Ls65;-><init>(J)V
-
-    invoke-static {p2, p1}, Lb5j;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-
-    move-result p1
-
-    return p1
+    return-void
 
     :pswitch_0
-    const-wide v0, 0x7fffffffffffffffL
+    iget-object v0, p0, Lip8;->b:Lbsf;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, p1}, Lbsf;->b(Lrqf;)V
 
-    move-result-object v0
+    invoke-virtual {v0}, Lbsf;->c()V
 
-    check-cast p2, Lu6e;
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
 
-    iget-object v1, p2, Lu6e;->d:Lpb2;
+    check-cast v0, Lbqf;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1}, Lbqf;->a(Lrqf;)V
 
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Lip8;->b:J
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v1, Lpb2;->b:Lrf2;
-
-    invoke-virtual {v1, v4, v5}, Lrf2;->e(J)Z
-
-    move-result v1
-
-    if-ne v1, v3, :cond_0
-
-    move-object p2, v0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p2, p2, Lu6e;->d:Lpb2;
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Lpb2;->o()J
-
-    move-result-wide v6
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_1
-    move-object p2, v2
-
-    :goto_0
-    check-cast p1, Lu6e;
-
-    iget-object v1, p1, Lu6e;->d:Lpb2;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lpb2;->b:Lrf2;
-
-    invoke-virtual {v1, v4, v5}, Lrf2;->e(J)Z
-
-    move-result v1
-
-    if-ne v1, v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object p1, p1, Lu6e;->d:Lpb2;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Lpb2;->o()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v2
-
-    :goto_1
-    invoke-static {p2, v0}, Lb5j;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-
-    move-result p1
-
-    return p1
+    return-void
 
     :pswitch_1
-    check-cast p1, Lkp8;
+    iget-object v0, p0, Lip8;->b:Lbsf;
 
-    check-cast p2, Lkp8;
+    invoke-virtual {v0, p1}, Lbsf;->b(Lrqf;)V
 
-    iget-wide p1, p1, Lkp8;->c:J
+    invoke-virtual {v0}, Lbsf;->c()V
 
-    iget-wide v0, p0, Lip8;->b:J
+    const/16 v1, 0x15e
 
-    cmp-long p1, p1, v0
+    iget v0, v0, Lbsf;->b:I
 
-    if-nez p1, :cond_4
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    const/4 p1, -0x1
+    move-result v0
 
-    goto :goto_2
+    iget-object v1, p0, Lip8;->c:Landroid/widget/FrameLayout;
 
-    :cond_4
-    const/4 p1, 0x0
+    check-cast v1, Lgp8;
 
-    :goto_2
-    return p1
+    invoke-virtual {v1, p1, v0}, Lgp8;->a(Lrqf;I)V
+
+    return-void
 
     nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Lep8;)V
+    .locals 1
+
+    iget v0, p0, Lip8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lydi;
+
+    invoke-virtual {v0, p1}, Lydi;->b(Lep8;)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lgp8;
+
+    invoke-virtual {v0, p1}, Lgp8;->b(Lep8;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final setParent(Landroid/view/ViewGroup;)V
+    .locals 3
+
+    iget v0, p0, Lip8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lydi;
+
+    iget-object v1, p0, Lip8;->b:Lbsf;
+
+    invoke-virtual {v0, v1}, Lydi;->setSizeConfigurator(Lbsf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lbqf;
+
+    iget-object v1, p0, Lip8;->b:Lbsf;
+
+    invoke-virtual {v0, v1}, Lbqf;->setSizeConfigurator(Lbsf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lip8;->c:Landroid/widget/FrameLayout;
+
+    check-cast v0, Lgp8;
+
+    iget-object v1, p0, Lip8;->b:Lbsf;
+
+    invoke-virtual {v0, v1}, Lgp8;->setSizeConfigurator(Lbsf;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

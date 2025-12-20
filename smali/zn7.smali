@@ -1,25 +1,31 @@
-.class public final Lzn7;
+.class public abstract Lzn7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lj3;
-
-.field public b:Ljp4;
-
-.field public c:Los0;
-
-.field public d:Z
+# static fields
+.field public static final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lj3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lrr5;->a:Lrr5;
 
-    iput-object p1, p0, Lzn7;->a:Lj3;
+    sget-object v1, Lrr5;->o:Lrr5;
+
+    sget-object v2, Lrr5;->v0:Lrr5;
+
+    filled-new-array {v2, v0, v1}, [Lrr5;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lzn7;->a:Ljava/util/List;
 
     return-void
 .end method

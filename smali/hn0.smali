@@ -1,99 +1,204 @@
 .class public final Lhn0;
-.super Lnc7;
+.super Lww3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:[B
+.field public final synthetic f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[B)V
+.method public synthetic constructor <init>(Ljx3;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lnc7;-><init>(Ljava/lang/String;)V
+    iput p2, p0, Lhn0;->f:I
 
-    iput-object p2, p0, Lhn0;->b:[B
+    invoke-direct {p0, p1}, Lww3;-><init>(Ljx3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lkii;)Z
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lhn0;->f:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object p1, p1, Lkii;->j:Lpx3;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-boolean p1, p1, Lpx3;->e:Z
 
-    if-eqz p1, :cond_2
+    return p1
 
-    const-class v2, Lhn0;
+    :pswitch_0
+    iget-object p1, p1, Lkii;->j:Lpx3;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p1, Lpx3;->a:I
 
-    move-result-object v3
+    const/4 v0, 0x3
 
-    if-eq v2, v3, :cond_1
+    if-eq p1, v0, :cond_1
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x6
+
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
     :cond_1
-    check-cast p1, Lhn0;
+    :goto_0
+    const/4 p1, 0x1
 
-    iget-object v2, p0, Lnc7;->a:Ljava/lang/String;
+    :goto_1
+    return p1
 
-    iget-object v3, p1, Lnc7;->a:Ljava/lang/String;
+    :pswitch_1
+    iget-object p1, p1, Lkii;->j:Lpx3;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget p1, p1, Lpx3;->a:I
 
-    move-result v2
+    const/4 v0, 0x2
 
-    if-eqz v2, :cond_2
+    if-ne p1, v0, :cond_2
 
-    iget-object v2, p0, Lhn0;->b:[B
+    const/4 p1, 0x1
 
-    iget-object p1, p1, Lhn0;->b:[B
+    goto :goto_2
 
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    return p1
+
+    :pswitch_2
+    iget-object p1, p1, Lkii;->j:Lpx3;
+
+    iget-boolean p1, p1, Lpx3;->d:Z
+
+    return p1
+
+    :pswitch_3
+    iget-object p1, p1, Lkii;->j:Lpx3;
+
+    iget-boolean p1, p1, Lpx3;->b:Z
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget v0, p0, Lhn0;->f:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    :goto_0
+    xor-int/lit8 p1, p1, 0x1
 
-    return v0
+    return p1
+
+    :pswitch_0
+    check-cast p1, Lmka;
+
+    iget-boolean v0, p1, Lmka;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p1, p1, Lmka;->c:Z
+
+    if-eqz p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    const/4 p1, 0x1
+
+    :goto_2
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lmka;
+
+    iget-boolean v0, p1, Lmka;->a:Z
+
+    if-eqz v0, :cond_3
+
+    iget-boolean p1, p1, Lmka;->b:Z
+
+    if-nez p1, :cond_2
+
+    goto :goto_3
 
     :cond_2
-    :goto_0
-    return v1
-.end method
+    const/4 p1, 0x0
 
-.method public final hashCode()I
-    .locals 3
+    goto :goto_4
 
-    iget-object v0, p0, Lnc7;->a:Ljava/lang/String;
+    :cond_3
+    :goto_3
+    const/4 p1, 0x1
 
-    const/16 v1, 0x1f
+    :goto_4
+    return p1
 
-    const/16 v2, 0x20f
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v2, v1, v0}, Lu45;->e(IILjava/lang/String;)I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result p1
 
-    iget-object v1, p0, Lhn0;->b:[B
+    goto :goto_0
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+    :pswitch_3
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result v1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    add-int/2addr v1, v0
+    move-result p1
 
-    return v1
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

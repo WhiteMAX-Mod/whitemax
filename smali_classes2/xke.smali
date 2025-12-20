@@ -1,136 +1,85 @@
 .class public final Lxke;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lale;
 
 
 # instance fields
-.field public final synthetic X:Lele;
-
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic o:Landroid/graphics/RectF;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/RectF;Lele;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lxke;->o:Landroid/graphics/RectF;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxke;->X:Lele;
-
-    iput-object p3, p0, Lxke;->Y:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lxke;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxke;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxke;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lxke;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance p1, Lxke;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lxke;->X:Lele;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lxke;->Y:Ljava/lang/String;
+    return v0
 
-    iget-object v2, p0, Lxke;->o:Landroid/graphics/RectF;
+    :cond_0
+    instance-of v1, p1, Lxke;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lxke;-><init>(Landroid/graphics/RectF;Lele;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
 
-    return-object p1
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxke;
+
+    iget v1, p0, Lxke;->a:I
+
+    iget p1, p1, Lxke;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lxke;->a:I
 
-    new-instance v0, Ln10;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object p1, p0, Lxke;->o:Landroid/graphics/RectF;
+    move-result v0
 
-    iget v1, p1, Landroid/graphics/RectF;->left:F
+    return v0
+.end method
 
-    iget v2, p1, Landroid/graphics/RectF;->top:F
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v3, p1, Landroid/graphics/RectF;->right:F
+    const-string v0, "AlbumHeightChanged(height="
 
-    iget v4, p1, Landroid/graphics/RectF;->bottom:F
+    const-string v1, ")"
 
-    const/4 v5, 0x2
+    iget v2, p0, Lxke;->a:I
 
-    invoke-direct/range {v0 .. v5}, Ln10;-><init>(FFFFI)V
+    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object p1, p0, Lxke;->X:Lele;
+    move-result-object v0
 
-    iget-object v1, p1, Lele;->I0:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iget-object v2, p1, Lele;->t0:Lk18;
-
-    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhwa;
-
-    iget-object v3, p0, Lxke;->Y:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0}, Lhwa;->A(Ljava/lang/String;Ln10;)J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
-
-    iget-object p1, p1, Lele;->B0:Lci5;
-
-    new-instance v0, Lype;
-
-    sget v1, Lpbb;->q:I
-
-    new-instance v2, Ln5g;
-
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
-
-    sget v1, Lyud;->n:I
-
-    new-instance v3, Ljava/lang/Integer;
-
-    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lype;-><init>(Ls5g;Ljava/lang/Integer;)V
-
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v0
 .end method

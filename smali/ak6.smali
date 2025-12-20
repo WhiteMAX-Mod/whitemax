@@ -1,25 +1,21 @@
 .class public final Lak6;
-.super Ljava/lang/Object;
+.super Lzp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final synthetic b:Lt3g;
+# static fields
+.field public static final a:Lak6;
 
 
 # direct methods
-.method public constructor <init>(Lt3g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lak6;
 
-    iput-object p1, p0, Lak6;->b:Lt3g;
+    invoke-direct {v0}, Lzp;-><init>()V
 
-    iget p1, p1, Lt3g;->X:I
-
-    iput p1, p0, Lak6;->a:I
+    sput-object v0, Lak6;->a:Lak6;
 
     return-void
 .end method

@@ -3,88 +3,49 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj48;
+.implements Lms1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ll48;
+.field public final synthetic a:Lvx1;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lvx1;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lnx1;->a:I
-
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    new-instance v0, Ll48;
-
-    invoke-direct {v0, p0}, Ll48;-><init>(Lj48;)V
-
-    iput-object v0, p0, Lnx1;->b:Ll48;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lnx1;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ll48;
-
-    invoke-direct {v0, p0}, Ll48;-><init>(Lj48;)V
-
-    iput-object v0, p0, Lnx1;->b:Ll48;
-
-    .line 3
-    new-instance v0, Lm54;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, Lm54;-><init>(ILjava/lang/Object;)V
-
-    .line 4
-    invoke-virtual {p1, v0}, Lc54;->addLifecycleListener(La54;)V
+    iput-object p1, p0, Lnx1;->a:Lvx1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p()Ll48;
-    .locals 1
+.method public final l()V
+    .locals 3
 
-    iget v0, p0, Lnx1;->a:I
+    iget-object v0, p0, Lnx1;->a:Lvx1;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, v0, Lvx1;->p:Lhof;
 
-    iget-object v0, p0, Lnx1;->b:Ll48;
+    :cond_0
+    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_0
-    iget-object v0, p0, Lnx1;->b:Ll48;
+    move-object v2, v1
 
-    return-object v0
+    check-cast v2, Lfv1;
 
-    nop
+    sget-object v2, Lfv1;->i:Lfv1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1, v2}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
 .end method

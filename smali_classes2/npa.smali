@@ -1,49 +1,58 @@
 .class public final Lnpa;
-.super Lq44;
+.super Lxbg;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lqpa;
+.field public c:Lx04;
 
 
-# direct methods
-.method public constructor <init>(Lqpa;Lq44;)V
-    .locals 0
+# virtual methods
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lnpa;->o:Lqpa;
+    const-string v0, "contact"
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p1}, Lx04;->g(Lgr9;)Lx04;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnpa;->c:Lx04;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lgr9;->y()V
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Lnpa;->c:Lx04;
 
-    iput-object p1, p0, Lnpa;->d:Ljava/lang/Object;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lnpa;->X:I
+    const-string v2, "{contact="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lnpa;->X:I
+    const-string v0, "}"
 
-    iget-object p1, p0, Lnpa;->o:Lqpa;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lqpa;->h(Ljava/util/List;Lq44;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

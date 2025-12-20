@@ -1,234 +1,67 @@
 .class public final Lr1e;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Ljava/util/Iterator;
 
-.field public final b:I
+.field public Y:Ljava/util/Collection;
 
-.field public final c:I
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final d:I
+.field public d:Lt1e;
 
-.field public final e:Z
+.field public o:Ljava/util/Collection;
 
-.field public final f:Z
+.field public final synthetic s0:Lt1e;
 
-.field public final g:Z
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(IIIIZZZ)V
+.method public constructor <init>(Lt1e;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr1e;->s0:Lt1e;
 
-    iput p1, p0, Lr1e;->a:I
-
-    iput p2, p0, Lr1e;->b:I
-
-    iput p3, p0, Lr1e;->c:I
-
-    iput p4, p0, Lr1e;->d:I
-
-    iput-boolean p5, p0, Lr1e;->e:Z
-
-    iput-boolean p6, p0, Lr1e;->f:Z
-
-    iput-boolean p7, p0, Lr1e;->g:Z
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lr1e;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lr1e;->t0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lr1e;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lr1e;->t0:I
 
-    if-nez v1, :cond_1
+    const/4 v6, 0x0
 
-    return v2
+    const/4 v7, 0x0
 
-    :cond_1
-    check-cast p1, Lr1e;
+    iget-object v0, p0, Lr1e;->s0:Lt1e;
 
-    iget v1, p0, Lr1e;->a:I
+    const-wide/16 v1, 0x0
 
-    iget v3, p1, Lr1e;->a:I
+    const-wide/16 v3, 0x0
 
-    if-eq v1, v3, :cond_2
+    const/4 v5, 0x0
 
-    return v2
+    move-object v8, p0
 
-    :cond_2
-    iget v1, p0, Lr1e;->b:I
+    invoke-virtual/range {v0 .. v8}, Lt1e;->p(JJLjava/util/Set;Ljava/lang/Integer;ZLl84;)Ljava/lang/Object;
 
-    iget v3, p1, Lr1e;->b:I
+    move-result-object p1
 
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lr1e;->c:I
-
-    iget v3, p1, Lr1e;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lr1e;->d:I
-
-    iget v3, p1, Lr1e;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lr1e;->e:Z
-
-    iget-boolean v3, p1, Lr1e;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lr1e;->f:Z
-
-    iget-boolean v3, p1, Lr1e;->f:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Lr1e;->g:Z
-
-    iget-boolean p1, p1, Lr1e;->g:Z
-
-    if-eq v1, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lr1e;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lr1e;->b:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lr1e;->c:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lr1e;->d:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lr1e;->e:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lr1e;->f:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lr1e;->g:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", realWidth="
-
-    const-string v1, ", topInset="
-
-    const-string v2, "ScreenInfo(realHeight="
-
-    iget v3, p0, Lr1e;->a:I
-
-    iget v4, p0, Lr1e;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", bottomInset="
-
-    const-string v2, ", isWeakDevice="
-
-    iget v3, p0, Lr1e;->c:I
-
-    iget v4, p0, Lr1e;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", isLong="
-
-    const-string v2, ", isWide="
-
-    iget-boolean v3, p0, Lr1e;->e:Z
-
-    iget-boolean v4, p0, Lr1e;->f:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Laz1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lr1e;->g:Z
-
-    invoke-static {v0, v2, v1}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

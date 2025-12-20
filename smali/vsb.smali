@@ -1,174 +1,200 @@
 .class public final Lvsb;
-.super Lo2;
+.super Lt98;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lvsb;
-
-
 # instance fields
-.field public final a:Luig;
+.field public final synthetic q:I
 
-.field public final b:I
+.field public final synthetic r:Lgj4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lvsb;
-
-    sget-object v1, Luig;->e:Luig;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lvsb;-><init>(Luig;I)V
-
-    sput-object v0, Lvsb;->c:Lvsb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Luig;I)V
+.method public synthetic constructor <init>(Lgj4;Landroid/content/Context;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lvsb;->q:I
 
-    iput-object p1, p0, Lvsb;->a:Luig;
+    iput-object p1, p0, Lvsb;->r:Lgj4;
 
-    iput p2, p0, Lvsb;->b:I
+    invoke-direct {p0, p2}, Lt98;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final containsKey(Ljava/lang/Object;)Z
-    .locals 3
+.method public final d(Landroid/util/DisplayMetrics;)F
+    .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lvsb;->q:I
 
-    if-nez p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    move v1, v0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    :goto_0
+    int-to-float p1, p1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, p1
+
+    return v0
+
+    :pswitch_0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(I)I
+    .locals 1
+
+    iget v0, p0, Lvsb;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lt98;->f(I)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const/16 v0, 0x64
+
+    invoke-super {p0, p1}, Lt98;->f(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Landroid/view/View;Lsrd;Lqrd;)V
+    .locals 2
+
+    iget p2, p0, Lvsb;->q:I
+
+    packed-switch p2, :pswitch_data_0
+
+    iget-object p2, p0, Lvsb;->r:Lgj4;
+
+    iget-object v0, p2, Lgj4;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    move-result v1
+    move-result-object v0
 
-    :goto_0
-    iget-object v2, p0, Lvsb;->a:Luig;
-
-    invoke-virtual {v2, v1, v0, p1}, Luig;->d(IILjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Ljava/util/Map;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    move-object v0, p1
-
-    check-cast v0, Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    move-result v2
-
-    iget v3, p0, Lvsb;->b:I
-
-    if-eq v3, v2, :cond_2
-
-    return v1
-
-    :cond_2
-    instance-of v1, v0, Lvsb;
-
-    iget-object v2, p0, Lvsb;->a:Luig;
-
-    if-eqz v1, :cond_3
-
-    check-cast p1, Lvsb;
-
-    iget-object p1, p1, Lvsb;->a:Luig;
-
-    sget-object v0, Lxf3;->o:Lxf3;
-
-    invoke-virtual {v2, p1, v0}, Luig;->g(Luig;Lsm6;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    instance-of v0, v0, Lxsb;
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, Lxsb;
-
-    iget-object p1, p1, Lxsb;->c:Luig;
-
-    sget-object v0, Lxf3;->X:Lxf3;
-
-    invoke-virtual {v2, p1, v0}, Luig;->g(Luig;Lsm6;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    invoke-super {p0, p1}, Lo2;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    iget-object v2, p0, Lvsb;->a:Luig;
-
-    invoke-virtual {v2, v1, v0, p1}, Luig;->h(IILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v0, p1}, Lgj4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
 
     move-result-object p1
 
-    return-object p1
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lt98;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v1, p0, Lt98;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lqrd;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p2, p0, Lvsb;->r:Lgj4;
+
+    iget-object v0, p2, Lgj4;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Lgj4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lt98;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    iget-object v1, p0, Lt98;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lqrd;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

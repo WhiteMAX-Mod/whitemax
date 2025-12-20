@@ -1,124 +1,217 @@
-.class public final synthetic Lcaa;
-.super Ljava/lang/Object;
+.class public Lcaa;
+.super Lkm0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldn6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Leaa;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final i:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leaa;Ljava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(JJLjava/util/List;Z)V
+    .locals 12
 
-    iput p3, p0, Lcaa;->a:I
+    const/4 v10, -0x1
 
-    iput-object p1, p0, Lcaa;->b:Leaa;
+    const/4 v11, -0x1
 
-    iput-object p2, p0, Lcaa;->c:Ljava/lang/Object;
+    const-wide/16 v6, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v8, 0x0
+
+    move-object v0, p0
+
+    move-wide v2, p1
+
+    move-wide v4, p3
+
+    move-object/from16 v1, p5
+
+    move/from16 v9, p6
+
+    .line 3
+    invoke-direct/range {v0 .. v11}, Lcaa;-><init>(Ljava/util/List;JJJLgz;ZII)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;JJJLgz;ZII)V
+    .locals 12
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-wide v3, p2
+
+    move-wide/from16 v1, p4
+
+    move-wide/from16 v6, p6
+
+    move-object/from16 v8, p8
+
+    move/from16 v9, p9
+
+    move/from16 v10, p10
+
+    move/from16 v11, p11
+
+    .line 1
+    invoke-direct/range {v0 .. v11}, Lkm0;-><init>(JJZJLgz;ZII)V
+
+    .line 2
+    iput-object p1, p0, Lcaa;->i:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final a()Landroid/net/Uri;
+    .locals 2
 
-    iget v0, p0, Lcaa;->a:I
+    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcaa;->c:Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    check-cast v0, Lgsc;
+    move-result-object v0
 
-    check-cast p1, Lle8;
+    check-cast v0, Laaa;
 
-    iget-object v1, p0, Lcaa;->b:Leaa;
+    iget-object v0, v0, Laaa;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, Lb3j;->n(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Lkm0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    check-cast p1, Lcaa;
+
+    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
+
+    iget-object p1, p1, Lcaa;->i:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    :goto_0
+    return v0
+.end method
+
+.method public final getHeight()I
+    .locals 3
+
+    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
 
     const/4 v2, 0x0
 
-    iput-boolean v2, p1, Lle8;->a:Z
+    if-eqz v1, :cond_0
 
-    const/4 v3, 0x1
+    return v2
 
-    iput-boolean v3, p1, Lle8;->b:Z
+    :cond_0
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iput-boolean v2, p1, Lle8;->c:Z
+    move-result-object v0
 
-    iput-object v0, p1, Lle8;->i:Lgsc;
+    check-cast v0, Laaa;
 
-    iput-boolean v2, p1, Lle8;->g:Z
+    iget v0, v0, Laaa;->c:I
 
-    iput-boolean v2, p1, Lle8;->h:Z
+    return v0
+.end method
 
-    iget-object v0, v1, Leaa;->s0:Lp2h;
+.method public final getWidth()I
+    .locals 3
 
-    iget-boolean v0, v0, Lp2h;->d:Z
+    iget-object v0, p0, Lcaa;->i:Ljava/util/List;
 
-    iput-boolean v0, p1, Lle8;->n:Z
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lcaa;->c:Ljava/lang/Object;
-
-    check-cast v0, Ldaa;
-
-    check-cast p1, Lle8;
-
-    iget-object v1, p0, Lcaa;->b:Leaa;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v2, v0, Ldaa;->b:Lp2h;
-
-    iget-object v2, v2, Lp2h;->a:Lgsc;
-
-    iput-object v2, p1, Lle8;->i:Lgsc;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p1, Lle8;->a:Z
-
-    iput-boolean v2, p1, Lle8;->b:Z
+    move-result v1
 
     const/4 v2, 0x0
 
-    iput-boolean v2, p1, Lle8;->g:Z
+    if-eqz v1, :cond_0
 
-    iput-boolean v2, p1, Lle8;->h:Z
+    return v2
 
-    iput-boolean v2, p1, Lle8;->c:Z
+    :cond_0
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v1, v1, Leaa;->s0:Lp2h;
+    move-result-object v0
 
-    iget-boolean v1, v1, Lp2h;->d:Z
+    check-cast v0, Laaa;
 
-    iput-boolean v1, p1, Lle8;->n:Z
+    iget v0, v0, Laaa;->b:I
 
-    iget-boolean v0, v0, Ldaa;->e:Z
+    return v0
+.end method
 
-    iput-boolean v0, p1, Lle8;->o:Z
+.method public hashCode()I
+    .locals 2
 
-    return-object p1
+    invoke-super {p0}, Lkm0;->hashCode()I
 
-    nop
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcaa;->i:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

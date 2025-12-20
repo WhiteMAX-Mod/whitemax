@@ -1,114 +1,106 @@
-.class public abstract Lhw0;
+.class public final synthetic Lhw0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzw1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+
 
 # direct methods
-.method public static a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/os/Bundle;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    iput p2, p0, Lhw0;->a:I
 
-    move-result-object p0
+    iput-object p1, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public static b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)[Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/os/Bundle;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "TT;>;)[TT;"
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;Ljava/lang/Class;)[Ljava/lang/Object;
+# virtual methods
+.method public final r(Lyw1;)Ljava/lang/String;
+    .locals 2
 
-    move-result-object p0
+    iget v0, p0, Lhw0;->a:I
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public static c(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/os/Bundle;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "+TT;>;)",
-            "Ljava/util/ArrayList<",
-            "TT;>;"
-        }
-    .end annotation
+    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    move-result-object p0
+    const-string p1, "Terminate InputBuffer"
 
-    return-object p0
-.end method
+    return-object p1
 
-.method public static d(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Ljava/io/Serializable;",
-            ">(",
-            "Landroid/os/Bundle;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
+    :pswitch_0
+    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    move-result-object p0
+    const-string p1, "mReleasedFuture"
 
-    return-object p0
-.end method
+    return-object p1
 
-.method public static e(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Landroid/util/SparseArray;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/os/Bundle;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "+TT;>;)",
-            "Landroid/util/SparseArray<",
-            "TT;>;"
-        }
-    .end annotation
+    :pswitch_1
+    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;Ljava/lang/Class;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    move-result-object p0
+    const-string p1, "acquireInputBuffer"
 
-    return-object p0
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "Data closed"
+
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Ly12;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Ly12;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "OnScreenFlashUiApplied"
+
+    return-object p1
+
+    :pswitch_4
+    iget-object v0, p0, Lhw0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "Data closed"
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

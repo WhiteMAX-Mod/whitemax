@@ -1,64 +1,60 @@
-.class public final Lqdd;
+.class public abstract Lqdd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lrdd;
 
 
 # static fields
-.field public static final a:Lqdd;
+.field public static oneme_setting_item_about:I = 0x7f13097d
 
+.field public static oneme_setting_item_appearance:I = 0x7f13097e
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_setting_item_battery:I = 0x7f13097f
 
-    new-instance v0, Lqdd;
+.field public static oneme_setting_item_devices:I = 0x7f130980
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_setting_item_esia_connected_title:I = 0x7f130981
 
-    sput-object v0, Lqdd;->a:Lqdd;
+.field public static oneme_setting_item_esia_not_connected_subtitle:I = 0x7f130982
 
-    return-void
-.end method
+.field public static oneme_setting_item_esia_not_connected_title:I = 0x7f130983
 
+.field public static oneme_setting_item_folders:I = 0x7f130984
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_setting_item_invite_friends_title:I = 0x7f130985
 
-    const/4 v0, 0x1
+.field public static oneme_setting_item_messages:I = 0x7f130986
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_setting_item_notification:I = 0x7f130987
 
-    return v0
+.field public static oneme_setting_item_notification_and_sound:I = 0x7f130988
 
-    :cond_0
-    instance-of p1, p1, Lqdd;
+.field public static oneme_setting_item_privacy:I = 0x7f130989
 
-    if-nez p1, :cond_1
+.field public static oneme_setting_item_storage:I = 0x7f13098a
 
-    const/4 p1, 0x0
+.field public static oneme_setting_item_support:I = 0x7f13098b
 
-    return p1
+.field public static oneme_settings_avatars_modal_title:I = 0x7f13098d
 
-    :cond_1
-    return v0
-.end method
+.field public static oneme_settings_cant_open_camera:I = 0x7f13098e
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_settings_change_avatar_delete_current:I = 0x7f13098f
 
-    const v0, 0x726dbab4
+.field public static oneme_settings_change_avatar_error:I = 0x7f130990
 
-    return v0
-.end method
+.field public static oneme_settings_change_avatar_success:I = 0x7f130991
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static oneme_settings_change_avatar_title:I = 0x7f130992
 
-    const-string v0, "OutOfMemory"
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f130993
 
-    return-object v0
-.end method
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f130994
+
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f130995
+
+.field public static oneme_settings_delete_avatar_success:I = 0x7f130997
+
+.field public static oneme_settings_language_modal_title:I = 0x7f13099c
+
+.field public static oneme_settings_link_copied_snackbar_title:I = 0x7f13099d
+
+.field public static oneme_settings_phonenumber_copied_snackbar_title:I = 0x7f1309bb

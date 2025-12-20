@@ -1,15 +1,23 @@
-.class public abstract Lmda;
+.class public final Lmda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lhz6;
+
+.field public final b:J
+
+
 # direct methods
-.method public static a(Landroid/view/ViewGroup;)Z
+.method public constructor <init>(Lhz6;J)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getClipToPadding()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lmda;->a:Lhz6;
 
-    return p0
+    iput-wide p2, p0, Lmda;->b:J
+
+    return-void
 .end method

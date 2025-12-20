@@ -3,846 +3,332 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/util/Printer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
+
+.field public b:J
+
+.field public c:J
+
+.field public final d:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lpq8;->a:I
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lpq8;->d:Ljava/util/LinkedList;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 9
+    const-string v0, ">>>>> Dispatching to "
 
-    iget v0, p0, Lpq8;->a:I
+    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const-string v0, "<<<<< Finished to "
 
-    sget-object p1, Lvcb;->a:Lvcb;
+    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object p0
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const-string v0, ": "
 
-    sget-object p1, Ltcb;->a:Ltcb;
+    const/4 v1, 0x6
 
-    return-object p1
+    invoke-static {v0, p0, v1}, Liyf;->I(Ljava/lang/String;Ljava/lang/CharSequence;I)I
 
-    :pswitch_1
-    new-instance v0, Lscb;
+    move-result v0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const-string v2, "} "
 
-    move-result p1
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p1}, Lscb;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_2
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    sget-object p1, Lrcb;->a:Lrcb;
-
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Lqcb;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-direct {v0, p1}, Lqcb;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lpcb;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-direct {v0, v1, p1}, Lpcb;-><init>(II)V
-
-    return-object v0
-
-    :pswitch_5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    sget-object p1, Lncb;->b:Lncb;
-
-    return-object p1
-
-    :pswitch_6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    sget-object p1, Lmcb;->b:Lmcb;
-
-    return-object p1
-
-    :pswitch_7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    sget-object p1, Llcb;->b:Llcb;
-
-    return-object p1
-
-    :pswitch_8
-    new-instance v0, Lcdb;
-
-    const-class v1, Lcdb;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    check-cast v2, Lucb;
-
-    sget-object v3, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v3, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    invoke-interface {v3, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v5
-
-    invoke-virtual {p1, v5}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v5
-
-    check-cast v5, Ladb;
-
-    sget-object v6, Lkcb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v6, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lkcb;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Locb;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbdb;->valueOf(Ljava/lang/String;)Lbdb;
-
-    move-result-object v7
-
-    move-object v8, v6
-
-    move-object v6, v1
-
-    move-object v1, v2
-
-    move-object v2, v4
-
-    move-object v4, v5
-
-    move-object v5, v8
-
-    invoke-direct/range {v0 .. v7}, Lcdb;-><init>(Lucb;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ladb;Lkcb;Locb;Lbdb;)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lkcb;
-
-    sget-object v1, Ljcb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljcb;
-
-    iget v1, v1, Ljcb;->a:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {p0, v2, v3, v3, v1}, Liyf;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
 
     move-result v2
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    add-int/lit8 v4, v2, 0x1
 
-    move-result p1
-
-    invoke-direct {v0, v1, v2, p1}, Lkcb;-><init>(III)V
-
-    return-object v0
-
-    :pswitch_a
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    new-instance v0, Ljcb;
-
-    invoke-direct {v0, p1}, Ljcb;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_b
-    new-instance v1, Lx2b;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v3
-
-    const-class v0, Lx2b;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {p0, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    if-gtz v0, :cond_1
 
-    move-result-object v4
-
-    check-cast v4, Ls5g;
-
-    sget-object v5, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v5, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    const/4 v6, 0x0
+    if-lez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    move-object v7, p1
-
-    check-cast v7, Ls5g;
-
-    invoke-direct/range {v1 .. v7}, Lx2b;-><init>(Ljava/lang/String;ILs5g;Ljava/lang/CharSequence;Ljava/lang/Integer;Ls5g;)V
-
-    return-object v1
-
-    :pswitch_c
-    new-instance v2, Lzea;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v3
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v6
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    :goto_1
-    move v7, p1
-
-    goto :goto_2
+    return-object p0
 
     :cond_1
-    const/4 p1, 0x0
+    :goto_0
+    const-string v5, "DispatchedContinuation[Dispatchers.Main"
+
+    invoke-static {p0, v5, v3, v3, v1}, Liyf;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v5
+
+    if-ltz v5, :cond_3
+
+    add-int/lit8 v5, v5, 0x27
+
+    const-string v2, ".immediate"
+
+    const/4 v6, 0x4
+
+    invoke-static {p0, v2, v5, v3, v6}, Liyf;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    const-string v7, ", Continuation at "
+
+    if-ltz v2, :cond_2
+
+    add-int/lit8 v2, v2, 0xa
+
+    invoke-static {p0, v7, v2, v3, v6}, Liyf;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
 
     goto :goto_1
 
-    :goto_2
-    invoke-direct/range {v2 .. v7}, Lzea;-><init>(JLjava/lang/String;IZ)V
-
-    return-object v2
-
-    :pswitch_d
-    new-instance v0, Loda;
-
-    invoke-direct {v0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, v0, Loda;->a:I
-
-    return-object v0
-
-    :pswitch_e
-    new-instance v0, Ltaa;
-
-    invoke-direct {v0, p1}, Ltaa;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_f
-    new-instance v0, Lq2a;
-
-    invoke-direct {v0, p1}, Lq2a;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Lg2a;->a(II)Lg2a;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_11
-    new-instance v0, Lq1a;
-
-    invoke-direct {v0, p1}, Lq1a;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_12
-    new-instance v0, Lsy9;
-
-    invoke-direct {v0, p1}, Lsy9;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v1, Lhd9;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lbr2;->valueOf(Ljava/lang/String;)Lbr2;
-
-    move-result-object v4
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x1
-
-    :goto_3
-    move v5, v0
-
-    goto :goto_4
-
     :cond_2
-    const/4 v0, 0x0
+    invoke-static {p0, v7, v5, v3, v6}, Liyf;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    :goto_1
+    if-ltz v2, :cond_4
+
+    add-int/lit8 v2, v2, 0x12
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v2, v2, 0x2
+
+    :cond_4
+    :goto_2
+    const/16 v5, 0x5d
+
+    invoke-static {p0, v5, v3, v1}, Liyf;->H(Ljava/lang/CharSequence;CII)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    if-le v5, v2, :cond_5
 
     goto :goto_3
 
+    :cond_5
+    move-object v6, v7
+
+    :goto_3
+    if-eqz v6, :cond_6
+
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v5
+
     :goto_4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const/16 v6, 0x40
 
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const/4 p1, 0x0
-
-    :goto_5
-    move-object v6, p1
-
-    goto :goto_6
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    goto :goto_5
-
-    :goto_6
-    invoke-direct/range {v1 .. v6}, Lhd9;-><init>(JLbr2;ZLjava/lang/Integer;)V
-
-    return-object v1
-
-    :pswitch_14
-    new-instance v2, Lec9;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v3
-
-    const-class v0, Lec9;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    move-object v4, v1
-
-    check-cast v4, Ls5g;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lhoe;->valueOf(Ljava/lang/String;)Lhoe;
-
-    move-result-object v5
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    const/4 v1, 0x0
-
-    :goto_7
-    move-object v6, v1
-
-    goto :goto_8
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {p0, v6, v3, v1}, Liyf;->H(Ljava/lang/CharSequence;CII)I
 
     move-result v1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object v3
+
+    if-le v1, v2, :cond_7
+
+    move-object v7, v3
+
+    :cond_7
+    if-eqz v7, :cond_8
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    :goto_5
+    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    invoke-virtual {p0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
     move-result-object v1
 
-    goto :goto_7
+    const-string v2, "null"
 
-    :goto_8
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v2
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    move-object v7, p1
-
-    check-cast v7, Lfoe;
-
-    invoke-direct/range {v2 .. v7}, Lec9;-><init>(ILs5g;Lhoe;Ljava/lang/Integer;Lfoe;)V
-
-    return-object v2
-
-    :pswitch_15
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/media/session/MediaSession$Token;
-
-    new-instance v1, Lg79;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {v1, p1, v0}, Lg79;-><init>(Landroid/media/session/MediaSession$Token;Ldb7;)V
+    if-nez v2, :cond_9
 
     return-object v1
 
-    :pswitch_16
-    new-instance v0, Lf79;
+    :cond_9
+    add-int/lit8 v0, v0, 0x2
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    sget-object v1, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object p0
 
-    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    const-string v0, " "
 
-    move-result-object p1
+    invoke-static {v4, v0, p0}, Lzy4;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast p1, Landroid/os/ResultReceiver;
+    move-result-object p0
 
-    iput-object p1, v0, Lf79;->a:Landroid/os/ResultReceiver;
-
-    return-object v0
-
-    :pswitch_17
-    new-instance v0, Le79;
-
-    invoke-direct {v0, p1}, Le79;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_18
-    new-instance v0, Lx19;
-
-    invoke-direct {v0, p1}, Lx19;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_19
-    sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/media/MediaDescription;
-
-    invoke-static {p1}, Lwy8;->a(Landroid/media/MediaDescription;)Lwy8;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1a
-    new-instance v0, Lmv8;
-
-    invoke-direct {v0, p1}, Lmv8;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_1b
-    new-instance v0, Ljs8;
-
-    invoke-direct {v0, p1}, Ljs8;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-
-    :pswitch_1c
-    new-instance v0, Lqq8;
-
-    invoke-direct {v0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
-
-    const-class v1, Lqq8;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Lqq8;->a:I
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 1
 
-    iget v0, p0, Lpq8;->a:I
+# virtual methods
+.method public final println(Ljava/lang/String;)V
+    .locals 10
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p1, :cond_3
 
-    new-array p1, p1, [Lvcb;
+    const-string v0, ">>>>> Dispatching to "
 
-    return-object p1
+    const/4 v1, 0x0
 
-    :pswitch_0
-    new-array p1, p1, [Ltcb;
+    invoke-static {p1, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    return-object p1
+    move-result v0
 
-    :pswitch_1
-    new-array p1, p1, [Lscb;
+    if-eqz v0, :cond_1
 
-    return-object p1
+    invoke-static {p1}, Lpq8;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    :pswitch_2
-    new-array p1, p1, [Lrcb;
+    move-result-object p1
 
-    return-object p1
+    invoke-static {}, Lkti;->c()Z
 
-    :pswitch_3
-    new-array p1, p1, [Lqcb;
+    move-result v0
 
-    return-object p1
+    if-eqz v0, :cond_0
 
-    :pswitch_4
-    new-array p1, p1, [Lpcb;
+    invoke-static {p1}, Lkti;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object p1
 
-    :pswitch_5
-    new-array p1, p1, [Lncb;
+    invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    return-object p1
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    :pswitch_6
-    new-array p1, p1, [Lmcb;
+    move-result-wide v0
 
-    return-object p1
+    iput-wide v0, p0, Lpq8;->a:J
 
-    :pswitch_7
-    new-array p1, p1, [Llcb;
+    iget-wide v0, p0, Lpq8;->c:J
 
-    return-object p1
+    const-wide/16 v2, 0x1
 
-    :pswitch_8
-    new-array p1, p1, [Lcdb;
+    add-long/2addr v0, v2
 
-    return-object p1
+    iput-wide v0, p0, Lpq8;->c:J
 
-    :pswitch_9
-    new-array p1, p1, [Lkcb;
+    return-void
 
-    return-object p1
+    :cond_1
+    const-string v0, "<<<<< Finished to "
 
-    :pswitch_a
-    new-array p1, p1, [Ljcb;
+    invoke-static {p1, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    return-object p1
+    move-result v0
 
-    :pswitch_b
-    new-array p1, p1, [Lx2b;
+    if-eqz v0, :cond_3
 
-    return-object p1
+    invoke-static {}, Lkti;->c()Z
 
-    :pswitch_c
-    new-array p1, p1, [Lzea;
+    move-result v0
 
-    return-object p1
+    if-eqz v0, :cond_2
 
-    :pswitch_d
-    new-array p1, p1, [Loda;
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    return-object p1
+    :cond_2
+    iget-wide v0, p0, Lpq8;->c:J
 
-    :pswitch_e
-    new-array p1, p1, [Ltaa;
+    const-wide/16 v2, -0x1
 
-    return-object p1
+    add-long/2addr v0, v2
 
-    :pswitch_f
-    new-array p1, p1, [Lq2a;
+    iput-wide v0, p0, Lpq8;->c:J
 
-    return-object p1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    :pswitch_10
-    new-array p1, p1, [Lg2a;
+    move-result-wide v0
 
-    return-object p1
+    iput-wide v0, p0, Lpq8;->b:J
 
-    :pswitch_11
-    new-array p1, p1, [Lq1a;
+    invoke-static {p1}, Lpq8;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v3
 
-    :pswitch_12
-    new-array p1, p1, [Lsy9;
+    new-instance v2, Loq8;
 
-    return-object p1
+    iget-wide v4, p0, Lpq8;->a:J
 
-    :pswitch_13
-    new-array p1, p1, [Lhd9;
+    iget-wide v6, p0, Lpq8;->b:J
 
-    return-object p1
+    iget-wide v8, p0, Lpq8;->c:J
 
-    :pswitch_14
-    new-array p1, p1, [Lec9;
+    invoke-direct/range {v2 .. v9}, Loq8;-><init>(Ljava/lang/String;JJJ)V
 
-    return-object p1
+    iget-object p1, p0, Lpq8;->d:Ljava/util/LinkedList;
 
-    :pswitch_15
-    new-array p1, p1, [Lg79;
+    invoke-virtual {p1, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    return-object p1
+    const-wide/16 v0, 0x0
 
-    :pswitch_16
-    new-array p1, p1, [Lf79;
+    iput-wide v0, p0, Lpq8;->a:J
 
-    return-object p1
+    iput-wide v0, p0, Lpq8;->b:J
 
-    :pswitch_17
-    new-array p1, p1, [Le79;
-
-    return-object p1
-
-    :pswitch_18
-    new-array p1, p1, [Lx19;
-
-    return-object p1
-
-    :pswitch_19
-    new-array p1, p1, [Lwy8;
-
-    return-object p1
-
-    :pswitch_1a
-    new-array p1, p1, [Lmv8;
-
-    return-object p1
-
-    :pswitch_1b
-    new-array p1, p1, [Ljs8;
-
-    return-object p1
-
-    :pswitch_1c
-    new-array p1, p1, [Lqq8;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    return-void
 .end method

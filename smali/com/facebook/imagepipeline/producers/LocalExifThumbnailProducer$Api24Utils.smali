@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation build Lez4;
+.annotation build La35;
 .end annotation

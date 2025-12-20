@@ -1,74 +1,64 @@
-.class public final synthetic Lhqf;
-.super Ljava/lang/Object;
+.class public final Lhqf;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmqf;
+.field public c:Lxpf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmqf;I)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    iput p2, p0, Lhqf;->a:I
-
-    iput-object p1, p0, Lhqf;->b:Lmqf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d(Lgr9;Ljava/lang/String;)V
     .locals 1
 
-    iget v0, p0, Lhqf;->a:I
+    const-string v0, "sticker"
 
-    check-cast p1, Landroid/view/View;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    check-cast p2, Lfqf;
+    move-result p2
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p2, :cond_0
 
-    iget-object v0, p0, Lhqf;->b:Lmqf;
+    invoke-static {p1}, Lxpf;->a(Lgr9;)Lxpf;
 
-    iget-object v0, v0, Lmqf;->R0:Lox3;
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lhqf;->c:Lxpf;
 
-    invoke-virtual {v0, p1, p2}, Lox3;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {p1}, Lgr9;->y()V
 
-    return-object p1
+    return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lhqf;->b:Lmqf;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, v0, Lmqf;->R0:Lox3;
+    iget-object v0, p0, Lhqf;->c:Lxpf;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p1, p2}, Lox3;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
+    const-string v1, "{sticker = "
 
-    return-object p1
+    const-string v2, "}"
 
-    nop
+    invoke-static {v1, v0, v2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,51 +1,62 @@
 .class public final Lov7;
-.super Lq44;
+.super Ladf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lqv7;
+# virtual methods
+.method public final F(Lmv7;)V
+    .locals 3
 
-.field public Y:I
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-.field public d:Lqv7;
+    check-cast v0, Lnv7;
 
-.field public synthetic o:Ljava/lang/Object;
+    iget-object v1, p1, Lmv7;->b:Lbhg;
 
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-# direct methods
-.method public constructor <init>(Lqv7;Lq44;)V
-    .locals 0
+    move-result-object v2
 
-    iput-object p1, p0, Lov7;->X:Lqv7;
+    invoke-virtual {v1, v2}, Lghg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, ""
+
+    :cond_0
+    invoke-virtual {v0, v1}, Lnv7;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lmv7;->c:Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lnv7;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
+.method public final bridge synthetic z(Lie8;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p1, Lmv7;
 
-    iput-object p1, p0, Lov7;->o:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lov7;->F(Lmv7;)V
 
-    iget p1, p0, Lov7;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lov7;->Y:I
-
-    iget-object p1, p0, Lov7;->X:Lqv7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lqv7;->e(Lyph;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

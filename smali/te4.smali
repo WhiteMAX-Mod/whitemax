@@ -1,150 +1,157 @@
-.class public final synthetic Lte4;
+.class public final Lte4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcrf;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/CharSequence;
+
+.field public b:Landroid/graphics/Bitmap;
+
+.field public c:Landroid/text/Layout$Alignment;
+
+.field public d:Landroid/text/Layout$Alignment;
+
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:F
+
+.field public m:F
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:F
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lte4;->a:I
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lte4;->a:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lte4;->b:Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lte4;->c:Landroid/text/Layout$Alignment;
+
+    iput-object v0, p0, Lte4;->d:Landroid/text/Layout$Alignment;
+
+    const v0, -0x800001
+
+    iput v0, p0, Lte4;->e:F
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lte4;->f:I
+
+    iput v1, p0, Lte4;->g:I
+
+    iput v0, p0, Lte4;->h:F
+
+    iput v1, p0, Lte4;->i:I
+
+    iput v1, p0, Lte4;->j:I
+
+    iput v0, p0, Lte4;->k:F
+
+    iput v0, p0, Lte4;->l:F
+
+    iput v0, p0, Lte4;->m:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lte4;->n:Z
+
+    const/high16 v0, -0x1000000
+
+    iput v0, p0, Lte4;->o:I
+
+    iput v1, p0, Lte4;->p:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 9
+.method public final a()Lve4;
+    .locals 20
 
-    iget v0, p0, Lte4;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Lve4;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    iget-object v2, v0, Lte4;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    iget-object v3, v0, Lte4;->c:Landroid/text/Layout$Alignment;
 
-    throw v0
+    iget-object v4, v0, Lte4;->d:Landroid/text/Layout$Alignment;
 
-    :pswitch_0
-    sget-object v0, Lk3c;->a:Lcrf;
+    iget-object v5, v0, Lte4;->b:Landroid/graphics/Bitmap;
 
-    const-class v0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+    iget v6, v0, Lte4;->e:F
 
-    return-object v0
+    iget v7, v0, Lte4;->f:I
 
-    :pswitch_1
-    new-instance v1, Lao4;
+    iget v8, v0, Lte4;->g:I
 
-    new-instance v2, Lqi4;
+    iget v9, v0, Lte4;->h:F
 
-    invoke-direct {v2}, Lqi4;-><init>()V
+    iget v10, v0, Lte4;->i:I
 
-    const/16 v5, 0x9c4
+    iget v11, v0, Lte4;->j:I
 
-    const/16 v6, 0x1388
+    iget v12, v0, Lte4;->k:F
 
-    const v3, 0xc350
+    iget v13, v0, Lte4;->l:F
 
-    const v4, 0xc350
+    iget v14, v0, Lte4;->m:F
 
-    invoke-direct/range {v1 .. v6}, Lao4;-><init>(Lqi4;IIII)V
+    iget-boolean v15, v0, Lte4;->n:Z
 
-    return-object v1
+    move-object/from16 v16, v1
 
-    :pswitch_2
-    new-instance v2, Lbo4;
+    iget v1, v0, Lte4;->o:I
 
-    new-instance v3, Lri4;
+    move/from16 v17, v1
 
-    invoke-direct {v3}, Lri4;-><init>()V
+    iget v1, v0, Lte4;->p:I
 
-    const/16 v7, 0x7d0
+    move/from16 v18, v1
 
-    const/4 v8, 0x0
+    iget v1, v0, Lte4;->q:F
 
-    const v4, 0xc350
+    move/from16 v19, v18
 
-    const v5, 0xc350
+    move/from16 v18, v1
 
-    const/16 v6, 0x3e8
+    move-object/from16 v1, v16
 
-    invoke-direct/range {v2 .. v8}, Lbo4;-><init>(Lri4;IIIIZ)V
+    move/from16 v16, v17
 
-    return-object v2
+    move/from16 v17, v19
 
-    :pswitch_3
-    const/16 v0, 0xc
+    invoke-direct/range {v1 .. v18}, Lve4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
 
-    new-array v0, v0, [B
+    move-object/from16 v16, v1
 
-    sget-object v1, Luo4;->i:Ljava/util/Random;
-
-    invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lva8;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lva8;
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Ll2a;
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v1, v0}, Ll2a;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    :goto_0
-    move-object v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Li2a;
-
-    invoke-direct {v1, v0}, Li2a;-><init>(Ljava/util/concurrent/ExecutorService;)V
-
-    goto :goto_0
-
-    :goto_1
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v16
 .end method

@@ -36,7 +36,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lfvc;->imageButtonStyle:I
+    sget v0, Lh4d;->imageButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AppCompatImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -46,13 +46,13 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->s0:Z
 
-    new-instance p1, Lss0;
+    new-instance p1, Lgu0;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p2, p0}, Lss0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lgu0;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p0, p1}, Lhfh;->n(Landroid/view/View;Lz4;)V
+    invoke-static {p0, p1}, Lash;->n(Landroid/view/View;Lw4;)V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 .method public final onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    instance-of v0, p1, Lv73;
+    instance-of v0, p1, Lza3;
 
     if-nez v0, :cond_0
 
@@ -108,13 +108,13 @@
     return-void
 
     :cond_0
-    check-cast p1, Lv73;
+    check-cast p1, Lza3;
 
-    iget-object v0, p1, Lf0;->a:Landroid/os/Parcelable;
+    iget-object v0, p1, Ld0;->a:Landroid/os/Parcelable;
 
     invoke-super {p0, v0}, Landroid/view/View;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-boolean p1, p1, Lv73;->c:Z
+    iget-boolean p1, p1, Lza3;->c:Z
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->setChecked(Z)V
 
@@ -128,13 +128,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lv73;
+    new-instance v1, Lza3;
 
-    invoke-direct {v1, v0}, Lf0;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {v1, v0}, Ld0;-><init>(Landroid/os/Parcelable;)V
 
     iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
-    iput-boolean v0, v1, Lv73;->c:Z
+    iput-boolean v0, v1, Lza3;->c:Z
 
     return-object v1
 .end method

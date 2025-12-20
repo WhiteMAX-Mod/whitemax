@@ -40,17 +40,17 @@
     .locals 2
 
     .line 2
-    sget p1, Ls65;->d:I
+    sget p1, Lqa5;->d:I
 
     const-wide/16 v0, 0x1f40
 
-    sget-object p1, Ly65;->c:Ly65;
+    sget-object p1, Lwa5;->c:Lwa5;
 
-    invoke-static {v0, v1, p1}, Lv9j;->i(JLy65;)J
+    invoke-static {v0, v1, p1}, Lfnj;->i(JLwa5;)J
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Ls65;->n(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lqa5;->p(J)Ljava/lang/String;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
     const-string v1, " seconds"
 
     .line 3
-    invoke-static {v0, p1, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

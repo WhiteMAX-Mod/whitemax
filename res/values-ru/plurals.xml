@@ -1,81 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="inactive_ttl">
-        <item quantity="other">%d месяцев</item>
-        <item quantity="zero">%d месяцев</item>
-        <item quantity="one">%d месяц</item>
-        <item quantity="two">%d месяца</item>
-        <item quantity="few">%d месяца</item>
-        <item quantity="many">%d месяцев</item>
-    </plurals>
-    <plurals name="max_attach_count_error">
-        <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
-        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
-        <item quantity="one">Сообщение не может содержать более чем %d вложение</item>
-        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
-        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
-        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
-    </plurals>
     <plurals name="mtrl_badge_content_description">
         <item quantity="other">%d нового уведомления</item>
         <item quantity="one">%d новое уведомление</item>
         <item quantity="few">%d новых уведомления</item>
         <item quantity="many">%d новых уведомлений</item>
-    </plurals>
-    <plurals name="tt_chat_subtitle_count">
-        <item quantity="other">%d участников</item>
-        <item quantity="zero">%d участников</item>
-        <item quantity="one">%d участник</item>
-        <item quantity="two">%d участника</item>
-        <item quantity="few">%d участника</item>
-        <item quantity="many">%d участников</item>
-    </plurals>
-    <plurals name="tt_dates_days_past">
-        <item quantity="other">%d дней назад</item>
-        <item quantity="zero">%d дней назад</item>
-        <item quantity="one">%d день назад</item>
-        <item quantity="two">%d дня назад</item>
-        <item quantity="few">%d дня назад</item>
-        <item quantity="many">%d дней назад</item>
-    </plurals>
-    <plurals name="tt_dates_hours_past">
-        <item quantity="other">%d часов назад</item>
-        <item quantity="zero">%d часов назад</item>
-        <item quantity="one">%d час назад</item>
-        <item quantity="two">%d часа назад</item>
-        <item quantity="few">%d часа назад</item>
-        <item quantity="many">%d часов назад</item>
-    </plurals>
-    <plurals name="tt_dates_minutes_past">
-        <item quantity="other">%d минут назад</item>
-        <item quantity="zero">%d минут назад</item>
-        <item quantity="one">%d минуту назад</item>
-        <item quantity="two">%d минуты назад</item>
-        <item quantity="few">%d минуты назад</item>
-        <item quantity="many">%d минут назад</item>
-    </plurals>
-    <plurals name="tt_dates_months_past">
-        <item quantity="other">%d месяцев назад</item>
-        <item quantity="zero">%d месяцев назад</item>
-        <item quantity="one">%d месяц назад</item>
-        <item quantity="two">%d месяца назад</item>
-        <item quantity="few">%d месяца назад</item>
-        <item quantity="many">%d месяцев назад</item>
-    </plurals>
-    <plurals name="tt_dates_weeks_past">
-        <item quantity="other">%d недель назад</item>
-        <item quantity="zero">%d недель назад</item>
-        <item quantity="one">%d неделю назад</item>
-        <item quantity="two">%d недели назад</item>
-        <item quantity="few">%d недели назад</item>
-        <item quantity="many">%d недель назад</item>
-    </plurals>
-    <plurals name="tt_new_messages">
-        <item quantity="other">%d сообщений</item>
-        <item quantity="zero">%d сообщений</item>
-        <item quantity="one">%d сообщение</item>
-        <item quantity="two">%d сообщения</item>
-        <item quantity="few">%d сообщения</item>
-        <item quantity="many">%d сообщений</item>
     </plurals>
 </resources>

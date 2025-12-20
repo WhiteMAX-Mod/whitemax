@@ -1,82 +1,85 @@
-.class public final Lhf;
+.class public final synthetic Lhf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic b:Lgf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
+.method public synthetic constructor <init>(Lgf;I)V
     .locals 0
 
     iput p2, p0, Lhf;->a:I
 
-    iput-object p1, p0, Lhf;->b:Landroid/view/View;
+    iput-object p1, p0, Lhf;->b:Lgf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     iget v0, p0, Lhf;->a:I
 
-    iget-object v1, p0, Lhf;->b:Landroid/view/View;
-
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v0, p0, Lhf;->b:Lgf;
 
-    sget-object p1, Lhfh;->a:Ljava/util/WeakHashMap;
+    iget-object v0, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    invoke-static {v1}, Lteh;->c(Landroid/view/View;)V
+    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Lcr0;->c()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Z
+
+    invoke-static {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;)V
+
+    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->e()V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v0, p0, Lhf;->b:Lgf;
 
-    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
+    iget-object v1, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    invoke-static {p1}, Lteh;->c(Landroid/view/View;)V
+    iget-object v1, v1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lcr0;
+
+    invoke-virtual {v1}, Lcr0;->b()V
+
+    new-instance v1, Lhf;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2}, Lhf;-><init>(Lgf;I)V
+
+    invoke-static {v1}, Lle;->d(Ljava/lang/Runnable;)V
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
-
-    iget p1, p0, Lhf;->a:I
-
-    return-void
 .end method

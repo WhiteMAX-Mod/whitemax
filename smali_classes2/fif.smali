@@ -1,97 +1,141 @@
-.class public final Lfif;
-.super Ljava/lang/Object;
+.class public final enum Lfif;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lfif;
+
+.field public static final synthetic Y:[Lfif;
+
+.field public static final synthetic Z:Lwk5;
+
+.field public static final enum b:Lfif;
+
+.field public static final enum c:Lfif;
+
+.field public static final enum d:Lfif;
+
+.field public static final enum o:Lfif;
+
+
 # instance fields
-.field public final a:Lk18;
-
-.field public final b:Lk18;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Ltcf;
-
-.field public final e:Lhbd;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public g:Lx9f;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Ltef;Llzf;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfif;
 
-    iput-object p1, p0, Lfif;->a:Lk18;
+    const-string v1, "DIALOG_USER_ID"
 
-    iput-object p2, p0, Lfif;->b:Lk18;
+    const/4 v2, 0x0
 
-    check-cast p4, Lq2b;
+    const/4 v3, 0x1
 
-    invoke-virtual {p4}, Lq2b;->b()Lz74;
+    invoke-direct {v0, v1, v2, v3}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    move-result-object p1
+    sput-object v0, Lfif;->b:Lfif;
 
-    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v1, Lfif;
 
-    move-result-object p1
+    const-string v2, "DIALOG_BOT_ID"
 
-    iput-object p1, p0, Lfif;->c:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v4, 0x2
 
-    sget-object p2, Lhd5;->a:Lhd5;
+    invoke-direct {v1, v2, v3, v4}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {p2}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+    sput-object v1, Lfif;->c:Lfif;
 
-    move-result-object p2
+    new-instance v2, Lfif;
 
-    iput-object p2, p0, Lfif;->d:Ltcf;
+    const-string v3, "CHAT_ID"
 
-    new-instance p4, Lhbd;
+    const/4 v5, 0x3
 
-    invoke-direct {p4, p2}, Lhbd;-><init>(Lf9a;)V
+    invoke-direct {v2, v3, v4, v5}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    iput-object p4, p0, Lfif;->e:Lhbd;
+    sput-object v2, Lfif;->d:Lfif;
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v3, Lfif;
 
-    const-wide/16 v0, 0x0
+    const-string v4, "CHANNEL_ID"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v6, 0x4
 
-    move-result-object p4
+    invoke-direct {v3, v4, v5, v6}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {p2, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    new-instance v4, Lfif;
 
-    iput-object p2, p0, Lfif;->f:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v5, "FOLDER_ID"
 
-    iget-object p2, p3, Ltef;->l:Lnm0;
+    const/4 v7, 0x5
 
-    invoke-static {p2}, Ls8j;->a(Llta;)Lsu1;
+    invoke-direct {v4, v5, v6, v7}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    move-result-object p2
+    sput-object v4, Lfif;->o:Lfif;
 
-    new-instance p3, Luxb;
+    new-instance v5, Lfif;
 
-    const/16 p4, 0x13
+    const-string v6, "WEBAPP_ID"
 
-    invoke-direct {p3, p2, p0, p4}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
+    const/4 v8, 0x6
 
-    new-instance p2, Lbif;
+    invoke-direct {v5, v6, v7, v8}, Lfif;-><init>(Ljava/lang/String;II)V
 
-    const/4 p4, 0x0
+    sput-object v5, Lfif;->X:Lfif;
 
-    invoke-direct {p2, p0, p4}, Lbif;-><init>(Lfif;Lkotlin/coroutines/Continuation;)V
+    filled-new-array/range {v0 .. v5}, [Lfif;
 
-    new-instance p4, Lg56;
+    move-result-object v0
 
-    const/4 v0, 0x1
+    sput-object v0, Lfif;->Y:[Lfif;
 
-    invoke-direct {p4, p3, p2, v0}, Lg56;-><init>(Lx26;Lsm6;I)V
+    new-instance v1, Lwk5;
 
-    invoke-static {p4, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lfif;->Z:Lwk5;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lfif;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lfif;
+    .locals 1
+
+    const-class v0, Lfif;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lfif;
+
+    return-object p0
+.end method
+
+.method public static values()[Lfif;
+    .locals 1
+
+    sget-object v0, Lfif;->Y:[Lfif;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lfif;
+
+    return-object v0
 .end method

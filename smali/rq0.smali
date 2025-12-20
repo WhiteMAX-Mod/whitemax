@@ -1,121 +1,72 @@
-.class public final Lrq0;
-.super Ljava/util/concurrent/CountDownLatch;
+.class public final synthetic Lrq0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv2f;
-.implements Lrk3;
-.implements Lbs8;
+.implements Lsgh;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final synthetic a:Luq0;
 
-.field public b:Ljava/lang/Throwable;
+.field public final synthetic b:Landroid/graphics/Bitmap;
 
-.field public c:Lpy4;
+.field public final synthetic c:Ljo6;
 
-.field public volatile d:Z
+.field public final synthetic d:Lrw3;
+
+
+# direct methods
+.method public synthetic constructor <init>(Luq0;Landroid/graphics/Bitmap;Ljo6;Lrw3;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrq0;->a:Luq0;
+
+    iput-object p2, p0, Lrq0;->b:Landroid/graphics/Bitmap;
+
+    iput-object p3, p0, Lrq0;->c:Ljo6;
+
+    iput-object p4, p0, Lrq0;->d:Lrw3;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    iput-object p1, p0, Lrq0;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lrq0;->d:Lrw3;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {v0}, Lrw3;->b()Z
 
-    return-void
-.end method
+    move-result v1
 
-.method public final b()V
-    .locals 0
+    const-string v2, "Bitmap queued but no timestamps provided."
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-static {v2, v1}, Lp5j;->a(Ljava/lang/Object;Z)V
 
-    return-void
-.end method
+    iget-object v1, p0, Lrq0;->a:Luq0;
 
-.method public final c(Lpy4;)V
-    .locals 1
+    iget-object v2, v1, Luq0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    iput-object p1, p0, Lrq0;->c:Lpy4;
+    new-instance v3, Ltq0;
 
-    iget-boolean v0, p0, Lrq0;->d:Z
+    iget-object v4, p0, Lrq0;->b:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_0
+    iget-object v5, p0, Lrq0;->c:Ljo6;
 
-    invoke-interface {p1}, Lpy4;->dispose()V
+    invoke-direct {v3, v4, v5, v0}, Ltq0;-><init>(Landroid/graphics/Bitmap;Ljo6;Lrw3;)V
 
-    :cond_0
-    return-void
-.end method
+    invoke-interface {v2, v3}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-.method public final d()Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v1}, Luq0;->z()V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    const/4 v0, 0x0
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lrq0;->d:Z
-
-    iget-object v1, p0, Lrq0;->c:Lpy4;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lpy4;->dispose()V
-
-    :cond_0
-    invoke-static {v0}, Lbj5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lrq0;->b:Ljava/lang/Throwable;
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lrq0;->a:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    invoke-static {v0}, Lbj5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 0
-
-    iput-object p1, p0, Lrq0;->b:Ljava/lang/Throwable;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    iput-boolean v0, v1, Luq0;->t0:Z
 
     return-void
 .end method

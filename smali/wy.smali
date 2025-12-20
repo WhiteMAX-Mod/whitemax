@@ -1,181 +1,199 @@
 .class public final Lwy;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a()Ljava/lang/Throwable;
-    .locals 2
+# static fields
+.field public static final g:Ljava/util/ArrayDeque;
 
-    sget-object v0, Lbj5;->a:Laj5;
+.field public static final h:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object v0
+# instance fields
+.field public final a:Landroid/media/MediaCodec;
 
-    check-cast v0, Ljava/lang/Throwable;
+.field public final b:Landroid/os/HandlerThread;
 
-    sget-object v1, Lbj5;->a:Laj5;
+.field public c:Lty;
 
-    if-eq v0, v1, :cond_0
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+.field public final e:Lhr3;
 
-    move-result-object v0
+.field public f:Z
 
-    check-cast v0, Ljava/lang/Throwable;
 
-    :cond_0
-    return-object v0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    sput-object v0, Lwy;->g:Ljava/util/ArrayDeque;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwy;->h:Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public final b(Ljava/lang/Throwable;)Z
-    .locals 3
+.method public constructor <init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;)V
+    .locals 2
 
-    sget-object v0, Lbj5;->a:Laj5;
+    new-instance v0, Lhr3;
 
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lhr3;-><init>(I)V
 
-    check-cast v0, Ljava/lang/Throwable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lbj5;->a:Laj5;
+    iput-object p1, p0, Lwy;->a:Landroid/media/MediaCodec;
 
-    if-ne v0, v1, :cond_0
+    iput-object p2, p0, Lwy;->b:Landroid/os/HandlerThread;
 
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+    iput-object v0, p0, Lwy;->e:Lhr3;
 
-    const/4 p1, 0x0
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    return p1
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    :cond_0
-    if-nez v0, :cond_1
+    iput-object p1, p0, Lwy;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-object v1, p1
+    return-void
+.end method
 
-    goto :goto_1
+.method public static b()Luy;
+    .locals 2
 
-    :cond_1
-    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+    sget-object v0, Lwy;->g:Ljava/util/ArrayDeque;
 
-    filled-new-array {v0, p1}, [Ljava/lang/Throwable;
+    monitor-enter v0
 
-    move-result-object v2
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    invoke-direct {v1, v2}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    move-result v1
 
-    :cond_2
-    :goto_1
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v1, :cond_0
 
-    move-result v2
+    new-instance v1, Luy;
 
-    if-eqz v2, :cond_3
+    invoke-direct {v1}, Luy;-><init>()V
 
-    const/4 p1, 0x1
+    monitor-exit v0
 
-    return p1
+    return-object v1
 
-    :cond_3
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v0, :cond_2
+    :catchall_0
+    move-exception v1
 
     goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Luy;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final c()V
-    .locals 2
 
-    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
+# virtual methods
+.method public final a()V
+    .locals 3
 
-    move-result-object v0
+    iget-boolean v0, p0, Lwy;->f:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lbj5;->a:Laj5;
+    :try_start_0
+    iget-object v0, p0, Lwy;->c:Lty;
 
-    if-eq v0, v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lwy;->e:Lhr3;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x0
+
+    :try_start_1
+    iput-boolean v1, v0, Lhr3;->b:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit v0
+
+    iget-object v1, p0, Lwy;->c:Lty;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+
+    invoke-virtual {v0}, Lhr3;->a()V
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v1
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 
     :cond_0
-    return-void
-.end method
-
-.method public final d(Lrk3;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lrk3;->b()V
-
-    return-void
-
-    :cond_0
-    sget-object v1, Lbj5;->a:Laj5;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Lrk3;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final e(Lvta;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lvta;->b()V
-
-    return-void
-
-    :cond_0
-    sget-object v1, Lbj5;->a:Laj5;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Lvta;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final f(Laof;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Laof;->b()V
-
-    return-void
-
-    :cond_0
-    sget-object v1, Lbj5;->a:Laj5;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Laof;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
     return-void
 .end method

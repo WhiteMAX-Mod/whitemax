@@ -2,1146 +2,247 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Collection;
+.implements Ld38;
+
 
 # instance fields
-.field public a:I
+.field public final a:[Ljava/lang/Object;
 
-.field public final b:Lws;
-
-.field public final c:Lte8;
-
-.field public d:I
-
-.field public e:[I
-
-.field public f:[I
-
-.field public g:[F
-
-.field public h:I
-
-.field public i:I
-
-.field public j:Z
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lws;Lte8;)V
-    .locals 3
+.method public constructor <init>([Ljava/lang/Object;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lls;->a:[Ljava/lang/Object;
 
-    iput v0, p0, Lls;->a:I
-
-    const/16 v1, 0x8
-
-    iput v1, p0, Lls;->d:I
-
-    new-array v2, v1, [I
-
-    iput-object v2, p0, Lls;->e:[I
-
-    new-array v2, v1, [I
-
-    iput-object v2, p0, Lls;->f:[I
-
-    new-array v1, v1, [F
-
-    iput-object v1, p0, Lls;->g:[F
-
-    const/4 v1, -0x1
-
-    iput v1, p0, Lls;->h:I
-
-    iput v1, p0, Lls;->i:I
-
-    iput-boolean v0, p0, Lls;->j:Z
-
-    iput-object p1, p0, Lls;->b:Lws;
-
-    iput-object p2, p0, Lls;->c:Lte8;
+    iput-boolean p2, p0, Lls;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm6f;FZ)V
-    .locals 11
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
 
-    const v0, -0x457ced91    # -0.001f
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    cmpl-float v1, p2, v0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    const v2, 0x3a83126f    # 0.001f
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-lez v1, :cond_0
-
-    cmpg-float v1, p2, v2
-
-    if-gez v1, :cond_0
-
-    goto/16 :goto_6
-
-    :cond_0
-    iget v1, p0, Lls;->h:I
-
-    iget-object v3, p0, Lls;->b:Lws;
-
-    const/4 v4, 0x0
-
-    const/4 v5, -0x1
-
-    const/4 v6, 0x1
-
-    if-ne v1, v5, :cond_1
-
-    iput v4, p0, Lls;->h:I
-
-    iget-object p3, p0, Lls;->g:[F
-
-    aput p2, p3, v4
-
-    iget-object p2, p0, Lls;->e:[I
-
-    iget p3, p1, Lm6f;->b:I
-
-    aput p3, p2, v4
-
-    iget-object p2, p0, Lls;->f:[I
-
-    aput v5, p2, v4
-
-    iget p2, p1, Lm6f;->u0:I
-
-    add-int/2addr p2, v6
-
-    iput p2, p1, Lm6f;->u0:I
-
-    invoke-virtual {p1, v3}, Lm6f;->a(Lws;)V
-
-    iget p1, p0, Lls;->a:I
-
-    add-int/2addr p1, v6
-
-    iput p1, p0, Lls;->a:I
-
-    iget-boolean p1, p0, Lls;->j:Z
-
-    if-nez p1, :cond_10
-
-    iget p1, p0, Lls;->i:I
-
-    add-int/2addr p1, v6
-
-    iput p1, p0, Lls;->i:I
-
-    iget-object p2, p0, Lls;->e:[I
-
-    array-length p3, p2
-
-    if-lt p1, p3, :cond_10
-
-    iput-boolean v6, p0, Lls;->j:Z
-
-    array-length p1, p2
-
-    sub-int/2addr p1, v6
-
-    iput p1, p0, Lls;->i:I
-
-    return-void
-
-    :cond_1
-    move v7, v4
-
-    move v8, v5
-
-    :goto_0
-    if-eq v1, v5, :cond_8
-
-    iget v9, p0, Lls;->a:I
-
-    if-ge v7, v9, :cond_8
-
-    iget-object v9, p0, Lls;->e:[I
-
-    aget v9, v9, v1
-
-    iget v10, p1, Lm6f;->b:I
-
-    if-ne v9, v10, :cond_6
-
-    iget-object v4, p0, Lls;->g:[F
-
-    aget v5, v4, v1
-
-    add-float/2addr v5, p2
-
-    cmpl-float p2, v5, v0
-
-    const/4 v0, 0x0
-
-    if-lez p2, :cond_2
-
-    cmpg-float p2, v5, v2
-
-    if-gez p2, :cond_2
-
-    move v5, v0
-
-    :cond_2
-    aput v5, v4, v1
-
-    cmpl-float p2, v5, v0
-
-    if-nez p2, :cond_10
-
-    iget p2, p0, Lls;->h:I
-
-    if-ne v1, p2, :cond_3
-
-    iget-object p2, p0, Lls;->f:[I
-
-    aget p2, p2, v1
-
-    iput p2, p0, Lls;->h:I
-
-    goto :goto_1
-
-    :cond_3
-    iget-object p2, p0, Lls;->f:[I
-
-    aget v0, p2, v1
-
-    aput v0, p2, v8
-
-    :goto_1
-    if-eqz p3, :cond_4
-
-    invoke-virtual {p1, v3}, Lm6f;->c(Lws;)V
-
-    :cond_4
-    iget-boolean p2, p0, Lls;->j:Z
-
-    if-eqz p2, :cond_5
-
-    iput v1, p0, Lls;->i:I
-
-    :cond_5
-    iget p2, p1, Lm6f;->u0:I
-
-    sub-int/2addr p2, v6
-
-    iput p2, p1, Lm6f;->u0:I
-
-    iget p1, p0, Lls;->a:I
-
-    sub-int/2addr p1, v6
-
-    iput p1, p0, Lls;->a:I
-
-    return-void
-
-    :cond_6
-    if-ge v9, v10, :cond_7
-
-    move v8, v1
-
-    :cond_7
-    iget-object v9, p0, Lls;->f:[I
-
-    aget v1, v9, v1
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_8
-    iget p3, p0, Lls;->i:I
-
-    add-int/lit8 v0, p3, 0x1
-
-    iget-boolean v1, p0, Lls;->j:Z
-
-    if-eqz v1, :cond_a
-
-    iget-object v0, p0, Lls;->e:[I
-
-    aget v1, v0, p3
-
-    if-ne v1, v5, :cond_9
-
-    goto :goto_2
-
-    :cond_9
-    array-length p3, v0
-
-    goto :goto_2
-
-    :cond_a
-    move p3, v0
-
-    :goto_2
-    iget-object v0, p0, Lls;->e:[I
-
-    array-length v1, v0
-
-    if-lt p3, v1, :cond_c
-
-    iget v1, p0, Lls;->a:I
-
-    array-length v0, v0
-
-    if-ge v1, v0, :cond_c
-
-    move v0, v4
-
-    :goto_3
-    iget-object v1, p0, Lls;->e:[I
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_c
-
-    aget v1, v1, v0
-
-    if-ne v1, v5, :cond_b
-
-    move p3, v0
-
-    goto :goto_4
-
-    :cond_b
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    :cond_c
-    :goto_4
-    iget-object v0, p0, Lls;->e:[I
-
-    array-length v1, v0
-
-    if-lt p3, v1, :cond_d
-
-    array-length p3, v0
-
-    iget v0, p0, Lls;->d:I
-
-    mul-int/lit8 v0, v0, 0x2
-
-    iput v0, p0, Lls;->d:I
-
-    iput-boolean v4, p0, Lls;->j:Z
-
-    add-int/lit8 v1, p3, -0x1
-
-    iput v1, p0, Lls;->i:I
-
-    iget-object v1, p0, Lls;->g:[F
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v0
-
-    iput-object v0, p0, Lls;->g:[F
-
-    iget-object v0, p0, Lls;->e:[I
-
-    iget v1, p0, Lls;->d:I
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lls;->e:[I
-
-    iget-object v0, p0, Lls;->f:[I
-
-    iget v1, p0, Lls;->d:I
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lls;->f:[I
-
-    :cond_d
-    iget-object v0, p0, Lls;->e:[I
-
-    iget v1, p1, Lm6f;->b:I
-
-    aput v1, v0, p3
-
-    iget-object v0, p0, Lls;->g:[F
-
-    aput p2, v0, p3
-
-    if-eq v8, v5, :cond_e
-
-    iget-object p2, p0, Lls;->f:[I
-
-    aget v0, p2, v8
-
-    aput v0, p2, p3
-
-    aput p3, p2, v8
-
-    goto :goto_5
-
-    :cond_e
-    iget-object p2, p0, Lls;->f:[I
-
-    iget v0, p0, Lls;->h:I
-
-    aput v0, p2, p3
-
-    iput p3, p0, Lls;->h:I
-
-    :goto_5
-    iget p2, p1, Lm6f;->u0:I
-
-    add-int/2addr p2, v6
-
-    iput p2, p1, Lm6f;->u0:I
-
-    invoke-virtual {p1, v3}, Lm6f;->a(Lws;)V
-
-    iget p1, p0, Lls;->a:I
-
-    add-int/2addr p1, v6
-
-    iput p1, p0, Lls;->a:I
-
-    iget-boolean p1, p0, Lls;->j:Z
-
-    if-nez p1, :cond_f
-
-    iget p1, p0, Lls;->i:I
-
-    add-int/2addr p1, v6
-
-    iput p1, p0, Lls;->i:I
-
-    :cond_f
-    iget p1, p0, Lls;->i:I
-
-    iget-object p2, p0, Lls;->e:[I
-
-    array-length p3, p2
-
-    if-lt p1, p3, :cond_10
-
-    iput-boolean v6, p0, Lls;->j:Z
-
-    array-length p1, p2
-
-    sub-int/2addr p1, v6
-
-    iput p1, p0, Lls;->i:I
-
-    :cond_10
-    :goto_6
-    return-void
+    throw p1
 .end method
 
-.method public final b()V
-    .locals 5
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    iget v0, p0, Lls;->h:I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    move v2, v1
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    const/4 v3, -0x1
-
-    if-eq v0, v3, :cond_1
-
-    iget v4, p0, Lls;->a:I
-
-    if-ge v2, v4, :cond_1
-
-    iget-object v3, p0, Lls;->c:Lte8;
-
-    iget-object v3, v3, Lte8;->c:Ljava/lang/Object;
-
-    check-cast v3, [Lm6f;
-
-    iget-object v4, p0, Lls;->e:[I
-
-    aget v4, v4, v0
-
-    aget-object v3, v3, v4
-
-    if-eqz v3, :cond_0
-
-    iget-object v4, p0, Lls;->b:Lws;
-
-    invoke-virtual {v3, v4}, Lm6f;->c(Lws;)V
-
-    :cond_0
-    iget-object v3, p0, Lls;->f:[I
-
-    aget v0, v3, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iput v3, p0, Lls;->h:I
-
-    iput v3, p0, Lls;->i:I
-
-    iput-boolean v1, p0, Lls;->j:Z
-
-    iput v1, p0, Lls;->a:I
-
-    return-void
+    throw p1
 .end method
 
-.method public final c(Lm6f;)F
-    .locals 4
+.method public final clear()V
+    .locals 2
 
-    iget v0, p0, Lls;->h:I
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
+    const-string v1, "Operation is not supported for read-only collection"
 
-    :goto_0
-    const/4 v2, -0x1
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-eq v0, v2, :cond_1
+    throw v0
+.end method
 
-    iget v2, p0, Lls;->a:I
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-ge v1, v2, :cond_1
+    iget-object v0, p0, Lls;->a:[Ljava/lang/Object;
 
-    iget-object v2, p0, Lls;->e:[I
+    invoke-static {v0, p1}, Lbt;->h([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aget v2, v2, v0
-
-    iget v3, p1, Lm6f;->b:I
-
-    if-ne v2, v3, :cond_0
-
-    iget-object p1, p0, Lls;->g:[F
-
-    aget p1, p1, v0
+    move-result p1
 
     return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
 
     :cond_0
-    iget-object v2, p0, Lls;->f:[I
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    aget v0, v2, v0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    move-result-object p1
 
     :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lls;->a:[Ljava/lang/Object;
+
+    invoke-static {v2, v0}, Lbt;->h([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     const/4 p1, 0x0
 
     return p1
+
+    :cond_2
+    return v1
 .end method
 
-.method public final d()I
+.method public final isEmpty()Z
     .locals 1
 
-    iget v0, p0, Lls;->a:I
+    iget-object v0, p0, Lls;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final e(I)Lm6f;
+.method public final iterator()Ljava/util/Iterator;
     .locals 3
 
-    iget v0, p0, Lls;->h:I
+    new-instance v0, Lc2;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
-    :goto_0
-    const/4 v2, -0x1
+    iget-object v2, p0, Lls;->a:[Ljava/lang/Object;
 
-    if-eq v0, v2, :cond_1
+    invoke-direct {v0, v1, v2}, Lc2;-><init>(ILjava/lang/Object;)V
 
-    iget v2, p0, Lls;->a:I
-
-    if-ge v1, v2, :cond_1
-
-    if-ne v1, p1, :cond_0
-
-    iget-object p1, p0, Lls;->c:Lte8;
-
-    iget-object p1, p1, Lte8;->c:Ljava/lang/Object;
-
-    check-cast p1, [Lm6f;
-
-    iget-object v1, p0, Lls;->e:[I
-
-    aget v0, v1, v0
-
-    aget-object p1, p1, v0
-
-    return-object p1
-
-    :cond_0
-    iget-object v2, p0, Lls;->f:[I
-
-    aget v0, v2, v0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final f(I)F
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lls;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lls;->h:I
+    .line 2
+    iget-object v0, p0, Lls;->a:[Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lls;->b:Z
 
-    :goto_0
-    const/4 v2, -0x1
+    const-class v2, [Ljava/lang/Object;
 
-    if-eq v0, v2, :cond_1
+    if-eqz v1, :cond_0
 
-    iget v2, p0, Lls;->a:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ge v1, v2, :cond_1
+    move-result-object v1
 
-    if-ne v1, p1, :cond_0
+    .line 3
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lls;->g:[F
+    move-result v1
 
-    aget p1, p1, v0
+    if-eqz v1, :cond_0
 
-    return p1
+    return-object v0
 
+    .line 4
     :cond_0
-    iget-object v2, p0, Lls;->f:[I
+    array-length v1, v0
 
-    aget v0, v2, v0
+    invoke-static {v0, v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v0
 
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method
 
-.method public final g(Lm6f;F)V
-    .locals 9
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 1
+    invoke-static {p0, p1}, Lei4;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    cmpl-float v0, p2, v0
+    move-result-object p1
 
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1, v1}, Lls;->h(Lm6f;Z)F
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lls;->h:I
-
-    iget-object v2, p0, Lls;->b:Lws;
-
-    const/4 v3, 0x0
-
-    const/4 v4, -0x1
-
-    if-ne v0, v4, :cond_1
-
-    iput v3, p0, Lls;->h:I
-
-    iget-object v0, p0, Lls;->g:[F
-
-    aput p2, v0, v3
-
-    iget-object p2, p0, Lls;->e:[I
-
-    iget v0, p1, Lm6f;->b:I
-
-    aput v0, p2, v3
-
-    iget-object p2, p0, Lls;->f:[I
-
-    aput v4, p2, v3
-
-    iget p2, p1, Lm6f;->u0:I
-
-    add-int/2addr p2, v1
-
-    iput p2, p1, Lm6f;->u0:I
-
-    invoke-virtual {p1, v2}, Lm6f;->a(Lws;)V
-
-    iget p1, p0, Lls;->a:I
-
-    add-int/2addr p1, v1
-
-    iput p1, p0, Lls;->a:I
-
-    iget-boolean p1, p0, Lls;->j:Z
-
-    if-nez p1, :cond_d
-
-    iget p1, p0, Lls;->i:I
-
-    add-int/2addr p1, v1
-
-    iput p1, p0, Lls;->i:I
-
-    iget-object p2, p0, Lls;->e:[I
-
-    array-length v0, p2
-
-    if-lt p1, v0, :cond_d
-
-    iput-boolean v1, p0, Lls;->j:Z
-
-    array-length p1, p2
-
-    sub-int/2addr p1, v1
-
-    iput p1, p0, Lls;->i:I
-
-    return-void
-
-    :cond_1
-    move v5, v3
-
-    move v6, v4
-
-    :goto_0
-    if-eq v0, v4, :cond_4
-
-    iget v7, p0, Lls;->a:I
-
-    if-ge v5, v7, :cond_4
-
-    iget-object v7, p0, Lls;->e:[I
-
-    aget v7, v7, v0
-
-    iget v8, p1, Lm6f;->b:I
-
-    if-ne v7, v8, :cond_2
-
-    iget-object p1, p0, Lls;->g:[F
-
-    aput p2, p1, v0
-
-    return-void
-
-    :cond_2
-    if-ge v7, v8, :cond_3
-
-    move v6, v0
-
-    :cond_3
-    iget-object v7, p0, Lls;->f:[I
-
-    aget v0, v7, v0
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lls;->i:I
-
-    add-int/lit8 v5, v0, 0x1
-
-    iget-boolean v7, p0, Lls;->j:Z
-
-    if-eqz v7, :cond_6
-
-    iget-object v5, p0, Lls;->e:[I
-
-    aget v7, v5, v0
-
-    if-ne v7, v4, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    array-length v0, v5
-
-    goto :goto_1
-
-    :cond_6
-    move v0, v5
-
-    :goto_1
-    iget-object v5, p0, Lls;->e:[I
-
-    array-length v7, v5
-
-    if-lt v0, v7, :cond_8
-
-    iget v7, p0, Lls;->a:I
-
-    array-length v5, v5
-
-    if-ge v7, v5, :cond_8
-
-    move v5, v3
-
-    :goto_2
-    iget-object v7, p0, Lls;->e:[I
-
-    array-length v8, v7
-
-    if-ge v5, v8, :cond_8
-
-    aget v7, v7, v5
-
-    if-ne v7, v4, :cond_7
-
-    move v0, v5
-
-    goto :goto_3
-
-    :cond_7
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_2
-
-    :cond_8
-    :goto_3
-    iget-object v5, p0, Lls;->e:[I
-
-    array-length v7, v5
-
-    if-lt v0, v7, :cond_9
-
-    array-length v0, v5
-
-    iget v5, p0, Lls;->d:I
-
-    mul-int/lit8 v5, v5, 0x2
-
-    iput v5, p0, Lls;->d:I
-
-    iput-boolean v3, p0, Lls;->j:Z
-
-    add-int/lit8 v3, v0, -0x1
-
-    iput v3, p0, Lls;->i:I
-
-    iget-object v3, p0, Lls;->g:[F
-
-    invoke-static {v3, v5}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v3
-
-    iput-object v3, p0, Lls;->g:[F
-
-    iget-object v3, p0, Lls;->e:[I
-
-    iget v5, p0, Lls;->d:I
-
-    invoke-static {v3, v5}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v3
-
-    iput-object v3, p0, Lls;->e:[I
-
-    iget-object v3, p0, Lls;->f:[I
-
-    iget v5, p0, Lls;->d:I
-
-    invoke-static {v3, v5}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v3
-
-    iput-object v3, p0, Lls;->f:[I
-
-    :cond_9
-    iget-object v3, p0, Lls;->e:[I
-
-    iget v5, p1, Lm6f;->b:I
-
-    aput v5, v3, v0
-
-    iget-object v3, p0, Lls;->g:[F
-
-    aput p2, v3, v0
-
-    if-eq v6, v4, :cond_a
-
-    iget-object p2, p0, Lls;->f:[I
-
-    aget v3, p2, v6
-
-    aput v3, p2, v0
-
-    aput v0, p2, v6
-
-    goto :goto_4
-
-    :cond_a
-    iget-object p2, p0, Lls;->f:[I
-
-    iget v3, p0, Lls;->h:I
-
-    aput v3, p2, v0
-
-    iput v0, p0, Lls;->h:I
-
-    :goto_4
-    iget p2, p1, Lm6f;->u0:I
-
-    add-int/2addr p2, v1
-
-    iput p2, p1, Lm6f;->u0:I
-
-    invoke-virtual {p1, v2}, Lm6f;->a(Lws;)V
-
-    iget p1, p0, Lls;->a:I
-
-    add-int/2addr p1, v1
-
-    iput p1, p0, Lls;->a:I
-
-    iget-boolean p2, p0, Lls;->j:Z
-
-    if-nez p2, :cond_b
-
-    iget p2, p0, Lls;->i:I
-
-    add-int/2addr p2, v1
-
-    iput p2, p0, Lls;->i:I
-
-    :cond_b
-    iget-object p2, p0, Lls;->e:[I
-
-    array-length v0, p2
-
-    if-lt p1, v0, :cond_c
-
-    iput-boolean v1, p0, Lls;->j:Z
-
-    :cond_c
-    iget p1, p0, Lls;->i:I
-
-    array-length v0, p2
-
-    if-lt p1, v0, :cond_d
-
-    iput-boolean v1, p0, Lls;->j:Z
-
-    array-length p1, p2
-
-    sub-int/2addr p1, v1
-
-    iput p1, p0, Lls;->i:I
-
-    :cond_d
-    return-void
-.end method
-
-.method public final h(Lm6f;Z)F
-    .locals 7
-
-    iget v0, p0, Lls;->h:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v2, 0x0
-
-    move v3, v1
-
-    :goto_0
-    if-eq v0, v1, :cond_5
-
-    iget v4, p0, Lls;->a:I
-
-    if-ge v2, v4, :cond_5
-
-    iget-object v4, p0, Lls;->e:[I
-
-    aget v4, v4, v0
-
-    iget v5, p1, Lm6f;->b:I
-
-    if-ne v4, v5, :cond_4
-
-    iget v2, p0, Lls;->h:I
-
-    if-ne v0, v2, :cond_1
-
-    iget-object v2, p0, Lls;->f:[I
-
-    aget v2, v2, v0
-
-    iput v2, p0, Lls;->h:I
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v2, p0, Lls;->f:[I
-
-    aget v4, v2, v0
-
-    aput v4, v2, v3
-
-    :goto_1
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Lls;->b:Lws;
-
-    invoke-virtual {p1, p2}, Lm6f;->c(Lws;)V
-
-    :cond_2
-    iget p2, p1, Lm6f;->u0:I
-
-    add-int/lit8 p2, p2, -0x1
-
-    iput p2, p1, Lm6f;->u0:I
-
-    iget p1, p0, Lls;->a:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lls;->a:I
-
-    iget-object p1, p0, Lls;->e:[I
-
-    aput v1, p1, v0
-
-    iget-boolean p1, p0, Lls;->j:Z
-
-    if-eqz p1, :cond_3
-
-    iput v0, p0, Lls;->i:I
-
-    :cond_3
-    iget-object p1, p0, Lls;->g:[F
-
-    aget p1, p1, v0
-
-    return p1
-
-    :cond_4
-    iget-object v3, p0, Lls;->f:[I
-
-    aget v3, v3, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    move v6, v3
-
-    move v3, v0
-
-    move v0, v6
-
-    goto :goto_0
-
-    :cond_5
-    :goto_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget v0, p0, Lls;->h:I
-
-    const-string v1, ""
-
-    const/4 v2, 0x0
-
-    :goto_0
-    const/4 v3, -0x1
-
-    if-eq v0, v3, :cond_0
-
-    iget v3, p0, Lls;->a:I
-
-    if-ge v2, v3, :cond_0
-
-    const-string v3, " -> "
-
-    invoke-static {v1, v3}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lls;->g:[F
-
-    aget v3, v3, v0
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v3, " : "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lls;->c:Lte8;
-
-    iget-object v3, v3, Lte8;->c:Ljava/lang/Object;
-
-    check-cast v3, [Lm6f;
-
-    iget-object v4, p0, Lls;->e:[I
-
-    aget v4, v4, v0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lls;->f:[I
-
-    aget v0, v3, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
+    return-object p1
 .end method

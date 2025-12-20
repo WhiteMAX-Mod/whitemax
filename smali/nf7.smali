@@ -1,41 +1,41 @@
-.class public final Lnf7;
+.class public interface abstract Lnf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IInterface;
+
 
 # static fields
-.field public static final c:Lnf7;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+.field public static final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lnf7;
+    const/16 v0, 0x24
 
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+    const/16 v1, 0x2e
 
-    invoke-direct {v0, v1, v2, v1, v2}, Lnf7;-><init>(JJ)V
+    const-string v2, "androidx$room$IMultiInstanceInvalidationService"
 
-    sput-object v0, Lnf7;->c:Lnf7;
+    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lnf7;->b:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(JJ)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public abstract K(Llf7;I)V
+.end method
 
-    iput-wide p1, p0, Lnf7;->a:J
+.method public abstract P(I[Ljava/lang/String;)V
+.end method
 
-    iput-wide p3, p0, Lnf7;->b:J
-
-    return-void
+.method public abstract n(Llf7;Ljava/lang/String;)I
 .end method

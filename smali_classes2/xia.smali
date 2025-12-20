@@ -3,33 +3,21 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljve;
-
-.field public final b:Lgbd;
+# static fields
+.field public static final a:Lyna;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyna;
 
-    const/4 v0, 0x0
+    const/16 v1, 0x19
 
-    const/4 v1, 0x7
+    invoke-direct {v0, v1}, Lyna;-><init>(I)V
 
-    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxia;->a:Ljve;
-
-    new-instance v1, Lgbd;
-
-    invoke-direct {v1, v0}, Lgbd;-><init>(Le9a;)V
-
-    iput-object v1, p0, Lxia;->b:Lgbd;
+    sput-object v0, Lxia;->a:Lyna;
 
     return-void
 .end method

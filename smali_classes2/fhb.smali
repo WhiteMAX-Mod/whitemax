@@ -1,43 +1,55 @@
-.class public abstract synthetic Lfhb;
+.class public abstract Lfhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    const/4 v0, 0x7
+    sget v0, Ly8d;->oneme_snackbar_caption_id:I
 
-    invoke-static {v0}, Laz1;->y(I)[I
+    sput v0, Lfhb;->a:I
 
-    move-result-object v0
+    sget v0, Ly8d;->oneme_snackbar_container_id:I
 
-    array-length v0, v0
+    sput v0, Lfhb;->b:I
 
-    new-array v0, v0, [I
+    sget v0, Ly8d;->oneme_snackbar_left_icon_id:I
 
-    const/4 v1, 0x1
+    sput v0, Lfhb;->c:I
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sget v0, Ly8d;->oneme_snackbar_right_button_id:I
 
-    :catch_0
-    const/4 v1, 0x2
+    sput v0, Lfhb;->d:I
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sget v0, Ly8d;->oneme_snackbar_style_circle:I
 
-    :catch_1
-    sput-object v0, Lfhb;->$EnumSwitchMapping$0:[I
+    sput v0, Lfhb;->e:I
+
+    sget v0, Ly8d;->oneme_snackbar_style_shine:I
+
+    sput v0, Lfhb;->f:I
+
+    sget v0, Ly8d;->oneme_snackbar_title_id:I
+
+    sput v0, Lfhb;->g:I
 
     return-void
 .end method

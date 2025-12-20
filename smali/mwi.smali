@@ -1,41 +1,70 @@
-.class public abstract Lmwi;
+.class public final Lmwi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lmwi;
+
 
 # direct methods
-.method public static a(JLtw0;Llzf;)Lsq9;
-    .locals 7
-
-    new-instance v0, Lsq9;
-
-    const-wide/16 v3, 0x0
-
-    move-wide v1, p0
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v0 .. v6}, Lsq9;-><init>(JJLtw0;Llzf;)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Ljava/io/CharConversionException;
+    new-instance v0, Lmwi;
 
-    const-string v1, "Unsupported UCS-4 endianness ("
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, ") detected"
+    sput-object v0, Lmwi;->a:Lmwi;
 
-    invoke-static {v1, p0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Ldqi;
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p0}, Ljava/io/CharConversionException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    throw v0
+    const-class v1, Lrqi;
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

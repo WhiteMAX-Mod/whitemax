@@ -1,200 +1,355 @@
-.class public final synthetic Lyw4;
+.class public final Lyw4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic b:Lax4;
+.field public final b:Ld68;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lax4;I)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lz7g;)V
     .locals 0
 
-    iput p2, p0, Lyw4;->a:I
-
-    iput-object p1, p0, Lyw4;->b:Lax4;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    iput-object p2, p0, Lyw4;->b:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
 
-    iget v0, p0, Lyw4;->a:I
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
 
-    iget-object v0, p0, Lyw4;->b:Lax4;
+    move-result p1
 
-    iget-object v1, v0, Lds1;->n:Lk01;
+    return p1
+.end method
 
-    if-eqz v1, :cond_0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-virtual {v1, v0}, Lk01;->B(Lds1;)V
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    :cond_0
-    iget-object v1, v0, Lax4;->I:Lwib;
-
-    new-instance v2, Lodg;
-
-    iget-wide v3, v0, Lds1;->t:J
-
-    const/4 v0, 0x1
-
-    invoke-direct {v2, v3, v4, v0}, Lodg;-><init>(JI)V
-
-    invoke-virtual {v1, v2}, Lwib;->C(Lodg;)V
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lyw4;->b:Lax4;
+.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 1
 
-    invoke-virtual {v0}, Lds1;->F()Z
+    .line 1
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result v1
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
 
-    if-eqz v1, :cond_4
+    move-result-object p1
 
-    iget-object v1, v0, Lax4;->C:Ljava/util/HashMap;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 1
 
-    move-result-object v1
+    .line 2
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object p1
 
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    return-object p1
+.end method
 
-    move-result v2
+.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 1
 
-    if-eqz v2, :cond_4
+    .line 1
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    check-cast v2, Ljava/util/Map$Entry;
+    return-object p1
+.end method
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object v3
+    .line 2
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    check-cast v3, Lti1;
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v2
+    return-object p1
+.end method
 
-    check-cast v2, Lwpb;
+.method public final isShutdown()Z
+    .locals 1
 
-    invoke-virtual {v2}, Lwpb;->B()Lorg/webrtc/PeerConnection$IceConnectionState;
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v2
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
-    sget-object v4, Lorg/webrtc/PeerConnection$IceConnectionState;->CONNECTED:Lorg/webrtc/PeerConnection$IceConnectionState;
+    move-result v0
 
-    if-eq v2, v4, :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v0, v3}, Lds1;->w(Lti1;)Lyi1;
+.method public final isTerminated()Z
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 3
+
+    .line 5
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
+
+    move-result-object p1
+
+    .line 6
+    iget-object v0, p0, Lyw4;->b:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 7
+    new-instance v1, Lhgb;
+
+    .line 8
+    iget-object v2, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v1, p1, v2}, Lhgb;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    .line 9
+    new-instance p1, Lggb;
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v0, Lds1;->b:Z
+    invoke-direct {p1, v1, v2}, Lggb;-><init>(Lhgb;I)V
 
-    iget-object v2, v0, Lds1;->e:Lb7d;
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    if-eqz v1, :cond_2
+    move-result-object p1
 
-    iget-object v1, v1, Lyi1;->l:Ljava/lang/String;
+    iput-object p1, v1, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
 
-    goto :goto_0
+    return-object v1
+.end method
 
-    :cond_2
-    const/4 v1, 0x0
+.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 3
 
-    :goto_0
-    const-string v3, "DIRECT_CONNECTION_TIMEOUT"
+    .line 1
+    iget-object v0, p0, Lyw4;->b:Ld68;
 
-    invoke-static {v2, v3, v1}, Lw0a;->d(Lb7d;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    iget-object v1, v0, Lds1;->n:Lk01;
+    move-result-object v0
 
-    if-eqz v1, :cond_3
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-virtual {v1, v0}, Lk01;->B(Lds1;)V
+    .line 2
+    new-instance v1, Lhgb;
 
-    :cond_3
-    iget-object v1, v0, Lax4;->I:Lwib;
+    .line 3
+    iget-object v2, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lodg;
+    invoke-direct {v1, p1, v2}, Lhgb;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
 
-    iget-wide v3, v0, Lds1;->u:J
+    .line 4
+    new-instance p1, Lggb;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x1
 
-    invoke-direct {v2, v3, v4, v0}, Lodg;-><init>(JI)V
+    invoke-direct {p1, v1, v2}, Lggb;-><init>(Lhgb;I)V
 
-    invoke-virtual {v1, v2}, Lwib;->C(Lodg;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    :cond_4
-    return-void
+    move-result-object p1
 
-    :pswitch_1
-    iget-object v0, p0, Lyw4;->b:Lax4;
+    iput-object p1, v1, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
 
-    iget-object v1, v0, Lax4;->C:Ljava/util/HashMap;
+    return-object v1
+.end method
 
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
 
-    move-result-object v1
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v1
+    iget-object v0, p0, Lyw4;->b:Ld68;
 
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_5
+    move-object v1, v0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
 
-    move-result-object v2
+    new-instance v0, Lhgb;
 
-    check-cast v2, Lwpb;
+    iget-object v2, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v2}, Lwpb;->B()Lorg/webrtc/PeerConnection$IceConnectionState;
+    invoke-direct {v0, p1, v2}, Lhgb;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
 
-    move-result-object v3
+    new-instance v2, Lggb;
 
-    invoke-virtual {v0, v2, v3}, Lax4;->W(Lwpb;Lorg/webrtc/PeerConnection$IceConnectionState;)V
+    const/4 p1, 0x0
 
-    goto :goto_1
+    invoke-direct {v2, v0, p1}, Lggb;-><init>(Lhgb;I)V
 
-    :cond_5
-    return-void
+    move-wide v3, p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v0
+.end method
+
+.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lyw4;->b:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v0, Lhgb;
+
+    iget-object v2, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v0, p1, v2}, Lhgb;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    new-instance v2, Lggb;
+
+    const/4 p1, 0x0
+
+    invoke-direct {v2, v0, p1}, Lggb;-><init>(Lhgb;I)V
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lhgb;->Z:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v0
+.end method
+
+.method public final shutdown()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Shutting down is not allowed."
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Shutting down is not allowed."
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 3
+    iget-object v0, p0, Lyw4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
 .end method

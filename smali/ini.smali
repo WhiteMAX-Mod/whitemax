@@ -2,59 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-# static fields
-.field public static final a:Lini;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lini;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput-object v0, Lini;->a:Lini;
+    const/4 v1, 0x0
 
-    new-instance v0, Ltci;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const/4 v1, 0x1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const-class v1, Lhdi;
+    iput-object v0, p0, Lini;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const/4 v2, 0x2
+    iput-object v0, p0, Lini;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    new-instance v0, Landroid/util/Size;
 
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

@@ -1,121 +1,145 @@
-.class public final enum Lif6;
-.super Ljava/lang/Enum;
+.class public final Lif6;
+.super Lb5g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lif6;
-
-.field public static final synthetic Y:[Lif6;
-
-.field public static final enum a:Lif6;
-
-.field public static final enum b:Lif6;
-
-.field public static final enum c:Lif6;
-
-.field public static final enum d:Lif6;
-
-.field public static final enum o:Lif6;
+# interfaces
+.implements Lgr6;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 8
+# instance fields
+.field public synthetic X:Ljava/lang/Throwable;
 
-    new-instance v0, Lif6;
+.field public synthetic Y:J
 
-    const-string v1, "FORMAT_HANDLED"
+.field public o:I
 
-    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sput-object v0, Lif6;->a:Lif6;
+    check-cast p1, Lh76;
 
-    new-instance v1, Lif6;
+    check-cast p2, Ljava/lang/Throwable;
 
-    const-string v2, "FORMAT_EXCEEDS_CAPABILITIES"
+    check-cast p3, Ljava/lang/Number;
 
-    const/4 v3, 0x1
+    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-wide v0
 
-    sput-object v1, Lif6;->b:Lif6;
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    new-instance v2, Lif6;
+    new-instance p1, Lif6;
 
-    const-string v3, "FORMAT_UNSUPPORTED_DRM"
+    const/4 p3, 0x4
 
-    const/4 v4, 0x2
+    invoke-direct {p1, p3, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p2, p1, Lif6;->X:Ljava/lang/Throwable;
 
-    sput-object v2, Lif6;->c:Lif6;
+    iput-wide v0, p1, Lif6;->Y:J
 
-    new-instance v3, Lif6;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    const-string v4, "FORMAT_UNSUPPORTED_SUBTYPE"
+    invoke-virtual {p1, p2}, Lif6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v5, 0x3
+    move-result-object p1
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lif6;->d:Lif6;
-
-    new-instance v4, Lif6;
-
-    const-string v5, "FORMAT_UNSUPPORTED_TYPE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lif6;->o:Lif6;
-
-    new-instance v5, Lif6;
-
-    const-string v6, "UNKNOWN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lif6;->X:Lif6;
-
-    filled-new-array/range {v0 .. v5}, [Lif6;
-
-    move-result-object v0
-
-    sput-object v0, Lif6;->Y:[Lif6;
-
-    return-void
+    return-object p1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lif6;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const-class v0, Lif6;
+    iget v0, p0, Lif6;->o:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    check-cast p0, Lif6;
+    if-ne v0, v1, :cond_0
 
-    return-object p0
-.end method
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public static values()[Lif6;
-    .locals 1
+    goto :goto_0
 
-    sget-object v0, Lif6;->Y:[Lif6;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, [Lif6;
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lif6;->X:Ljava/lang/Throwable;
+
+    iget-wide v2, p0, Lif6;->Y:J
+
+    const-wide/16 v4, 0x5
+
+    cmp-long v0, v2, v4
+
+    if-gez v0, :cond_3
+
+    instance-of v0, p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
+
+    invoke-static {p1}, Lz7f;->d(Lcbg;)Lhbg;
+
+    move-result-object p1
+
+    instance-of p1, p1, Ldbg;
+
+    if-eqz p1, :cond_3
+
+    long-to-int p1, v2
+
+    sget v0, Lqa5;->d:I
+
+    const/4 v0, 0x5
+
+    sget-object v2, Lwa5;->d:Lwa5;
+
+    invoke-static {v0, v2}, Lfnj;->h(ILwa5;)J
+
+    move-result-wide v2
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0, v2, v3}, Lbh0;->b(IIJ)J
+
+    move-result-wide v2
+
+    iput v1, p0, Lif6;->o:I
+
+    invoke-static {v2, v3, p0}, Lzlj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    :cond_3
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p1
 .end method

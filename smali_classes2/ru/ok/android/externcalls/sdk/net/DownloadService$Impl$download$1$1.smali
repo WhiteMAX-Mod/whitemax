@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$download$1$1;
-.super Lu08;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Loq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Le2f;
+    value = Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lbdf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lu08;",
-        "Lem6;"
+        "Ln58;",
+        "Loq6;"
     }
 .end annotation
 
@@ -30,7 +30,7 @@
     d2 = {
         "",
         "it",
-        "Lqqg;",
+        "Lv2h;",
         "invoke",
         "(Ljava/lang/String;)V",
         "<anonymous>"
@@ -56,7 +56,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$download$1$1;->invoke(Ljava/lang/String;)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method
@@ -82,13 +82,13 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$download$1$1;->this$0:Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;)Ly6d;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;)Lcgd;
 
     move-result-object v0
 
     const-string v1, "DownloadService.Impl"
 
-    invoke-interface {v0, v1, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

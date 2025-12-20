@@ -1,84 +1,86 @@
-.class public final synthetic Lcif;
-.super Ljava/lang/Object;
+.class public final Lcif;
+.super Lgif;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lahf;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lahf;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput p2, p0, Lcif;->a:I
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lcif;->b:Lahf;
+    invoke-direct {p0, p1, p2, v0}, Lgif;-><init>(JI)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lcif;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lcif;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lgif;
+    return v0
 
-    iget-object v0, p0, Lcif;->b:Lahf;
+    :cond_0
+    instance-of v1, p1, Lcif;
 
-    iget-wide v0, v0, Lahf;->b:J
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Lgif;->b:Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    new-instance v2, Lgif;
+    return v2
 
-    invoke-direct {v2, v0, v1, p1}, Lgif;-><init>(JLjava/lang/String;)V
+    :cond_1
+    check-cast p1, Lcif;
 
-    return-object v2
+    iget-wide v3, p0, Lcif;->c:J
 
-    :pswitch_0
-    check-cast p1, Lgif;
+    iget-wide v5, p1, Lcif;->c:J
 
-    iget-object v0, p0, Lcif;->b:Lahf;
+    cmp-long p1, v3, v5
 
-    iget-wide v0, v0, Lahf;->b:J
+    if-eqz p1, :cond_2
 
-    iget-object p1, p1, Lgif;->b:Ljava/lang/String;
+    return v2
 
-    new-instance v2, Lgif;
+    :cond_2
+    return v0
+.end method
 
-    invoke-direct {v2, v0, v1, p1}, Lgif;-><init>(JLjava/lang/String;)V
+.method public final hashCode()I
+    .locals 2
 
-    return-object v2
+    iget-wide v0, p0, Lcif;->c:J
 
-    :pswitch_1
-    check-cast p1, Ljava/lang/Long;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object p1, p0, Lcif;->b:Lahf;
+    move-result v0
 
-    iget-wide v0, p1, Lahf;->b:J
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    move-result-object p1
+    const-string v0, "ChatId(chatId="
 
-    return-object p1
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-wide v2, p0, Lcif;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

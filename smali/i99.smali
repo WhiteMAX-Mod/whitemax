@@ -1,80 +1,116 @@
-.class public final synthetic Li99;
+.class public final Li99;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfu3;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Llk6;
-
-.field public final synthetic c:Lub8;
-
-.field public final synthetic d:Lg19;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llk6;Lub8;Lg19;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p4, p0, Li99;->a:I
+    iput p1, p0, Li99;->a:I
 
-    iput-object p1, p0, Li99;->b:Llk6;
-
-    iput-object p2, p0, Li99;->c:Lub8;
-
-    iput-object p3, p0, Li99;->d:Lg19;
+    iput-object p2, p0, Li99;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final a(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
 
-    iget v0, p0, Li99;->a:I
+    iget p1, p0, Li99;->a:I
 
-    check-cast p1, Ln99;
+    packed-switch p1, :pswitch_data_0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Li99;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Li99;->b:Llk6;
+    check-cast p1, Lfa9;
 
-    iget v1, v0, Llk6;->b:I
+    iget-object p1, p1, Lfa9;->w0:Lha9;
 
-    iget-object v0, v0, Llk6;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Ld99;
+    iput-boolean v0, p1, Lha9;->I0:Z
 
-    iget-object v2, p0, Li99;->c:Lub8;
-
-    iget-object v3, p0, Li99;->d:Lg19;
-
-    invoke-interface {p1, v1, v0, v2, v3}, Ln99;->d(ILd99;Lub8;Lg19;)V
+    invoke-virtual {p1}, Lha9;->o()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Li99;->b:Llk6;
+    iget-object p1, p0, Li99;->b:Ljava/lang/Object;
 
-    iget v1, v0, Llk6;->b:I
+    check-cast p1, Landroidx/mediarouter/app/d;
 
-    iget-object v0, v0, Llk6;->c:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ld99;
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
 
-    iget-object v2, p0, Li99;->c:Lub8;
+    return-void
 
-    iget-object v3, p0, Li99;->d:Lg19;
+    nop
 
-    invoke-interface {p1, v1, v0, v2, v3}, Ln99;->u(ILd99;Lub8;Lg19;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    iget p1, p0, Li99;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 1
+
+    iget p1, p0, Li99;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Li99;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfa9;
+
+    iget-object p1, p1, Lfa9;->w0:Lha9;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lha9;->I0:Z
+
+    :pswitch_0
     return-void
 
     nop

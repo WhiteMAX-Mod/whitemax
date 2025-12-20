@@ -1,38 +1,38 @@
-.class public final Le74;
+.class public interface abstract Le74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
-
-
-# instance fields
-.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
 
 # direct methods
-.method public constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Le74;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onPreDraw()Z
+.method public static a(Le74;)J
     .locals 2
 
-    iget-object v0, p0, Le74;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+    check-cast p0, Lto4;
 
-    const/4 v1, 0x0
+    iget-object p0, p0, Lto4;->b:Ljava/util/Map;
 
-    invoke-virtual {v0, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->p(I)V
+    const-string v0, "exo_len"
 
-    const/4 v0, 0x1
+    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    move-result-object p0
+
+    check-cast p0, [B
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method

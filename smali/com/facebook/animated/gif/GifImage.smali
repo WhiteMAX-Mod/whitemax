@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lfz4;
+.annotation build Lb35;
 .end annotation
 
 
@@ -16,7 +16,7 @@
 .field public a:Landroid/graphics/Bitmap$Config;
 
 .field private mNativeContext:J
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end field
 
@@ -24,7 +24,7 @@
 # direct methods
 .method public constructor <init>()V
     .locals 1
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 
     .line 1
@@ -40,7 +40,7 @@
 
 .method public constructor <init>(J)V
     .locals 1
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 
     .line 3
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/nio/ByteBuffer;Lie7;)Lcom/facebook/animated/gif/GifImage;
+.method public static a(Ljava/nio/ByteBuffer;Lmi7;)Lcom/facebook/animated/gif/GifImage;
     .locals 2
 
     invoke-static {}, Lcom/facebook/animated/gif/GifImage;->c()V
@@ -74,14 +74,14 @@
 
     move-result-object p0
 
-    iget-object p1, p1, Lie7;->b:Landroid/graphics/Bitmap$Config;
+    iget-object p1, p1, Lmi7;->b:Landroid/graphics/Bitmap$Config;
 
     iput-object p1, p0, Lcom/facebook/animated/gif/GifImage;->a:Landroid/graphics/Bitmap$Config;
 
     return-object p0
 .end method
 
-.method public static b(JILie7;)Lcom/facebook/animated/gif/GifImage;
+.method public static b(JILmi7;)Lcom/facebook/animated/gif/GifImage;
     .locals 2
 
     invoke-static {}, Lcom/facebook/animated/gif/GifImage;->c()V
@@ -112,7 +112,7 @@
 
     move-result-object p0
 
-    iget-object p1, p3, Lie7;->b:Landroid/graphics/Bitmap$Config;
+    iget-object p1, p3, Lmi7;->b:Landroid/graphics/Bitmap$Config;
 
     iput-object p1, p0, Lcom/facebook/animated/gif/GifImage;->a:Landroid/graphics/Bitmap$Config;
 
@@ -144,7 +144,7 @@
 
     const-string v1, "gifimage"
 
-    invoke-static {v1}, Lnca;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Luia;->c(Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -171,72 +171,72 @@
 .end method
 
 .method private static native nativeCreateFromDirectByteBuffer(Ljava/nio/ByteBuffer;IZ)Lcom/facebook/animated/gif/GifImage;
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private static native nativeCreateFromFileDescriptor(IIZ)Lcom/facebook/animated/gif/GifImage;
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private static native nativeCreateFromNativeMemory(JIIZ)Lcom/facebook/animated/gif/GifImage;
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeDispose()V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeFinalize()V
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetDuration()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetFrame(I)Lcom/facebook/animated/gif/GifFrame;
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetFrameCount()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetFrameDurations()[I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetHeight()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetLoopCount()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetSizeInBytes()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeGetWidth()I
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
 .method private native nativeIsAnimated()Z
-    .annotation build Lfz4;
+    .annotation build Lb35;
     .end annotation
 .end method
 
@@ -280,7 +280,7 @@
     return-void
 .end method
 
-.method public final g(I)Lye;
+.method public final g(I)Lbf;
     .locals 8
 
     invoke-direct {p0, p1}, Lcom/facebook/animated/gif/GifImage;->nativeGetFrame(I)Lcom/facebook/animated/gif/GifFrame;
@@ -288,7 +288,7 @@
     move-result-object p1
 
     :try_start_0
-    new-instance v0, Lye;
+    new-instance v0, Lbf;
 
     invoke-virtual {p1}, Lcom/facebook/animated/gif/GifFrame;->e()I
 
@@ -343,7 +343,7 @@
     goto :goto_1
 
     :goto_2
-    invoke-direct/range {v0 .. v5}, Lye;-><init>(IIIII)V
+    invoke-direct/range {v0 .. v5}, Lbf;-><init>(IIIII)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

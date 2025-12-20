@@ -2,56 +2,70 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsy4;
-.implements Ly73;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Liia;
+.field public final b:Lfia;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:F
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Liia;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liia;->a:Liia;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Throwable;)Z
+.method public constructor <init>(ILfia;IIIIIIIFIIII)V
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
-.end method
+    iput p1, p0, Liia;->a:I
 
-.method public final dispose()V
-    .locals 0
+    iput-object p2, p0, Liia;->b:Lfia;
+
+    iput p3, p0, Liia;->c:I
+
+    iput p4, p0, Liia;->d:I
+
+    iput p5, p0, Liia;->e:I
+
+    iput p6, p0, Liia;->f:I
+
+    iput p7, p0, Liia;->g:I
+
+    iput p10, p0, Liia;->j:F
+
+    iput p11, p0, Liia;->k:I
+
+    iput p12, p0, Liia;->l:I
+
+    iput p13, p0, Liia;->m:I
+
+    iput p14, p0, Liia;->n:I
+
+    iput p8, p0, Liia;->h:I
+
+    iput p9, p0, Liia;->i:I
 
     return-void
-.end method
-
-.method public final getParent()Lqt7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "NonDisposableHandle"
-
-    return-object v0
 .end method

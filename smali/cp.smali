@@ -1,51 +1,49 @@
 .class public final Lcp;
-.super Landroid/view/View$BaseSavedState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lcp;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:Lxo;
+
+.field public final synthetic b:Ldp;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ldp;Lxo;)V
+    .locals 0
 
-    new-instance v0, Le8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x3
+    iput-object p1, p0, Lcp;->b:Ldp;
 
-    invoke-direct {v0, v1}, Le8;-><init>(I)V
-
-    sput-object v0, Lcp;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p2, p0, Lcp;->a:Lxo;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final onDismiss()V
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object v0, p0, Lcp;->b:Ldp;
 
-    iget-boolean p2, p0, Lcp;->a:Z
+    iget-object v0, v0, Ldp;->Q0:Lgp;
 
-    int-to-byte p2, p2
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcp;->a:Lxo;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    :cond_0
     return-void
 .end method

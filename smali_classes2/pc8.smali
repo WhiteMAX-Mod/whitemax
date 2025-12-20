@@ -1,48 +1,8 @@
-.class public final Lpc8;
+.class public interface abstract Lpc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt98;
-
-
-# static fields
-.field public static final a:Lpc8;
-
-.field public static final b:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lpc8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lpc8;->a:Lpc8;
-
-    sget v0, Li1b;->q:I
-
-    sput v0, Lpc8;->b:I
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lpc8;->b:I
-
-    return v0
+.method public abstract setOnLinkLongClickListener(Lee3;)V
 .end method

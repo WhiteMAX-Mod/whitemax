@@ -1,232 +1,170 @@
 .class public final Ljv8;
-.super Landroid/os/Handler;
+.super Lro;
 .source "SourceFile"
 
 
+# static fields
+.field public static final t0:I
+
+.field public static final u0:[[I
+
+
 # instance fields
-.field public final synthetic a:I
+.field public o:Landroid/content/res/ColorStateList;
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.field public s0:Z
 
 
 # direct methods
-.method public constructor <init>(Llv8;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/4 v0, 0x0
+    sget v0, Lred;->Widget_MaterialComponents_CompoundButton_RadioButton:I
 
-    iput v0, p0, Ljv8;->a:I
+    sput v0, Ljv8;->t0:I
 
-    .line 1
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    const v0, 0x101009e
 
-    .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const v1, 0x10100a0
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    filled-new-array {v0, v1}, [I
 
-    iput-object v0, p0, Ljv8;->b:Ljava/lang/Object;
+    move-result-object v2
+
+    const v3, -0x10100a0
+
+    filled-new-array {v0, v3}, [I
+
+    move-result-object v0
+
+    const v4, -0x101009e
+
+    filled-new-array {v4, v1}, [I
+
+    move-result-object v1
+
+    filled-new-array {v4, v3}, [I
+
+    move-result-object v3
+
+    filled-new-array {v2, v0, v1, v3}, [[I
+
+    move-result-object v0
+
+    sput-object v0, Ljv8;->u0:[[I
 
     return-void
 .end method
 
-.method public constructor <init>(Lo79;Landroid/os/Looper;)V
-    .locals 1
+.method private getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ljv8;->o:Landroid/content/res/ColorStateList;
 
-    iput v0, p0, Ljv8;->a:I
+    if-nez v0, :cond_0
 
-    .line 3
-    iput-object p1, p0, Ljv8;->c:Ljava/lang/Object;
+    sget v0, Lf4d;->colorControlActivated:I
 
-    .line 4
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-static {p0, v0}, Lu6j;->d(Landroid/view/View;I)I
 
-    return-void
+    move-result v0
+
+    sget v1, Lf4d;->colorOnSurface:I
+
+    invoke-static {p0, v1}, Lu6j;->d(Landroid/view/View;I)I
+
+    move-result v1
+
+    sget v2, Lf4d;->colorSurface:I
+
+    invoke-static {p0, v2}, Lu6j;->d(Landroid/view/View;I)I
+
+    move-result v2
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-static {v2, v3, v0}, Lu6j;->g(IFI)I
+
+    move-result v0
+
+    const v3, 0x3f0a3d71    # 0.54f
+
+    invoke-static {v2, v3, v1}, Lu6j;->g(IFI)I
+
+    move-result v3
+
+    const v4, 0x3ec28f5c    # 0.38f
+
+    invoke-static {v2, v4, v1}, Lu6j;->g(IFI)I
+
+    move-result v5
+
+    invoke-static {v2, v4, v1}, Lu6j;->g(IFI)I
+
+    move-result v1
+
+    filled-new-array {v0, v3, v5, v1}, [I
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/res/ColorStateList;
+
+    sget-object v2, Ljv8;->u0:[[I
+
+    invoke-direct {v1, v2, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    iput-object v1, p0, Ljv8;->o:Landroid/content/res/ColorStateList;
+
+    :cond_0
+    iget-object v0, p0, Ljv8;->o:Landroid/content/res/ColorStateList;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 8
+.method public final onAttachedToWindow()V
+    .locals 1
 
-    iget v0, p0, Ljv8;->a:I
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v0, p0, Ljv8;->s0:Z
 
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    if-eqz v0, :cond_0
 
-    return-void
+    invoke-static {p0}, Lbq3;->a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
 
-    :pswitch_0
-    const-string v0, "MediaBrowserCompat"
+    move-result-object v0
 
-    const-string v1, "\n  Client version: 1\n  Service version: "
+    if-nez v0, :cond_0
 
-    const-string v2, "Unhandled message: "
+    const/4 v0, 0x1
 
-    iget-object v3, p0, Ljv8;->c:Ljava/lang/Object;
-
-    check-cast v3, Ljava/lang/ref/WeakReference;
-
-    if-nez v3, :cond_0
-
-    goto/16 :goto_1
+    invoke-virtual {p0, v0}, Ljv8;->setUseMaterialThemeColors(Z)V
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v3
+.method public setUseMaterialThemeColors(Z)V
+    .locals 0
 
-    check-cast v3, Landroid/os/Messenger;
+    iput-boolean p1, p0, Ljv8;->s0:Z
 
-    iget-object v4, p0, Ljv8;->b:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    check-cast v4, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v4}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Llv8;
-
-    if-eqz v3, :cond_6
-
-    if-nez v4, :cond_1
-
-    goto/16 :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lh79;->w(Landroid/os/Bundle;)V
-
-    :try_start_0
-    iget v6, p1, Landroid/os/Message;->what:I
-
-    const/4 v7, 0x3
-
-    if-eq v6, v7, :cond_2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p0}, Ljv8;->getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lbq3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
-    goto :goto_1
-
-    :cond_2
-    const-string p1, "data_options"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lh79;->w(Landroid/os/Bundle;)V
-
-    const-string p1, "data_notify_children_changed_options"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lh79;->w(Landroid/os/Bundle;)V
-
-    const-string p1, "data_media_item_id"
-
-    invoke-virtual {v5, p1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "data_media_item_list"
-
-    invoke-virtual {v5, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    sget-object v2, Lmv8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {v1, v2}, Ln28;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
-
-    iget-object v1, v4, Llv8;->g:Landroid/os/Messenger;
-
-    if-eq v1, v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v1, v4, Llv8;->e:Lus;
-
-    invoke-virtual {v1, p1}, Lz0f;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_5
-
-    :goto_0
-    sget-boolean v1, Lnv8;->b:Z
-
-    if-eqz v1, :cond_6
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onLoadChildren for id that isn\'t subscribed id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_5
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-    :try_end_0
-    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const-string p1, "Could not unparcel the data."
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_6
-    :goto_1
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-static {p0, p1}, Lbq3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+
+    return-void
 .end method

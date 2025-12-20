@@ -1,84 +1,188 @@
 .class public final Licj;
-.super Lr7j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final transient c:Lnji;
 
-.field public final transient d:Lxcj;
+# static fields
+.field public static final a:Licj;
+
+.field public static final b:Lez5;
+
+.field public static final c:Lez5;
+
+.field public static final d:Lez5;
+
+.field public static final e:Lez5;
+
+.field public static final f:Lez5;
 
 
 # direct methods
-.method public constructor <init>(Lnji;Lxcj;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Licj;
 
-    iput-object p1, p0, Licj;->c:Lnji;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Licj;->d:Lxcj;
+    sput-object v0, Licj;->a:Licj;
+
+    new-instance v0, Lyyi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+
+    const-class v1, Lqzi;
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "inferenceCommonLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Licj;->b:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "options"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Licj;->c:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "detectedBarcodeFormats"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Licj;->d:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "detectedBarcodeValueTypes"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Licj;->e:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "imageInfo"
+
+    invoke-direct {v1, v2, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Licj;->f:Lez5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Licj;->d:Lxcj;
-
-    invoke-virtual {v0, p1}, Ln4j;->a([Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Licj;->c:Lnji;
-
-    invoke-virtual {v0, p1}, Lnji;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final synthetic iterator()Ljava/util/Iterator;
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Licj;->d:Lxcj;
+    check-cast p1, Lskj;
 
-    const/4 v1, 0x0
+    check-cast p2, Lxwa;
 
-    invoke-virtual {v0, v1}, Ln4j;->f(I)Lf2j;
+    sget-object v0, Licj;->b:Lez5;
 
-    move-result-object v0
+    iget-object v1, p1, Lskj;->a:Lojj;
 
-    return-object v0
-.end method
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-.method public final size()I
-    .locals 1
+    sget-object v0, Licj;->c:Lez5;
 
-    iget-object v0, p0, Licj;->c:Lnji;
+    iget-object v1, p1, Lskj;->b:Ldpj;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    const/4 v0, 0x1
+    sget-object v0, Licj;->d:Lez5;
 
-    return v0
+    iget-object v1, p1, Lskj;->c:Lowi;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Licj;->e:Lez5;
+
+    iget-object v1, p1, Lskj;->d:Lowi;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Licj;->f:Lez5;
+
+    iget-object p1, p1, Lskj;->e:Lkjj;
+
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    return-void
 .end method

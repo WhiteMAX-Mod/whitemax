@@ -1,46 +1,83 @@
-.class public abstract Lvzc;
-.super Ljava/lang/Object;
+.class public final Lvzc;
+.super Ll84;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_section_avatar:I = 0x7f0a077a
+# instance fields
+.field public X:Lzzc;
 
-.field public static oneme_section_description:I = 0x7f0a077b
+.field public Y:Ljava/lang/String;
 
-.field public static oneme_section_end_arrow:I = 0x7f0a077c
+.field public Z:Landroid/graphics/Bitmap;
 
-.field public static oneme_section_end_checkbox:I = 0x7f0a077d
+.field public d:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-.field public static oneme_section_end_container:I = 0x7f0a077e
+.field public o:Lp36;
 
-.field public static oneme_section_end_custom_icon:I = 0x7f0a077f
+.field public s0:Landroid/graphics/Bitmap;
 
-.field public static oneme_section_end_text:I = 0x7f0a0780
+.field public synthetic t0:Ljava/lang/Object;
 
-.field public static oneme_section_name_viewtype:I = 0x7f0a0781
+.field public final synthetic u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-.field public static oneme_section_start_icon:I = 0x7f0a0782
+.field public v0:I
 
-.field public static oneme_section_title:I = 0x7f0a0783
 
-.field public static oneme_section_upper_text:I = 0x7f0a0784
+# direct methods
+.method public constructor <init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Ll84;)V
+    .locals 0
 
-.field public static oneme_settings_itemcontent_container:I = 0x7f0a078d
+    iput-object p1, p0, Lvzc;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-.field public static oneme_settings_itemcontent_counter:I = 0x7f0a078e
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a078f
+    return-void
+.end method
 
-.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0790
 
-.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0791
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a0792
+    iput-object p1, p0, Lvzc;->t0:Ljava/lang/Object;
 
-.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a0793
+    iget p1, p0, Lvzc;->v0:I
 
-.field public static oneme_settings_sectionname_iconview:I = 0x7f0a0804
+    const/high16 v0, -0x80000000
 
-.field public static oneme_settings_sectionname_textview:I = 0x7f0a0805
+    or-int/2addr p1, v0
 
-.field public static oneme_settingslist_rv:I = 0x7f0a0855
+    iput p1, p0, Lvzc;->v0:I
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    iget-object v0, p0, Lvzc;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v12, p0
+
+    invoke-virtual/range {v0 .. v12}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->g(Landroid/content/Context;ILp36;Lbbg;Lzzc;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

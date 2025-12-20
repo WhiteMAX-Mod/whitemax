@@ -1,97 +1,59 @@
 .class public final Lku;
-.super Ll0g;
+.super Lkk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Z
+.field public final b:I
 
-.field public d:J
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ltm9;)V
+.method public constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
+    invoke-direct {p0, p2, p3}, Lkk0;-><init>(J)V
+
+    iput p1, p0, Lku;->b:I
+
+    iput-object p4, p0, Lku;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "success"
+    const-string v1, "AssetsGetByIdsEvent{type="
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    iget v1, p0, Lku;->b:I
 
-    if-nez v0, :cond_1
+    invoke-static {v1}, Lc12;->x(I)Ljava/lang/String;
 
-    const-string v0, "updateTime"
+    move-result-object v1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p2
+    const-string v1, ", ids="
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ltm9;->v()V
+    iget-object v1, p0, Lku;->c:Ljava/util/List;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    const/16 v1, 0x7d
 
-    invoke-static {p1, v0, v1}, Lefi;->l(Ltm9;J)J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-wide p1
-
-    iput-wide p1, p0, Lku;->d:J
-
-    return-void
-
-    :cond_1
-    invoke-static {p1}, Lefi;->g(Ltm9;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lku;->c:Z
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-boolean v0, p0, Lku;->c:Z
-
-    iget-wide v1, p0, Lku;->d:J
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Response{success="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ", updateTime="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

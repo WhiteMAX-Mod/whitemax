@@ -1,9 +1,3 @@
 .class public final Lcr5;
-.super Ljava/lang/Object;
+.super Lz3;
 .source "SourceFile"
-
-
-# instance fields
-.field public a:J
-
-.field public b:J

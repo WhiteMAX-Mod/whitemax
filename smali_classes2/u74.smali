@@ -1,49 +1,53 @@
-.class public final Lu74;
-.super Landroid/view/ViewOutlineProvider;
+.class public interface abstract Lu74;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:F
-
-
-# direct methods
-.method public constructor <init>(F)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
-
-    iput p1, p0, Lu74;->a:F
-
-    return-void
+# virtual methods
+.method public abstract b()Lu74;
 .end method
 
+.method public abstract build()Lv74;
+.end method
 
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 6
+.method public abstract c()Lu74;
+.end method
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+.method public abstract e(Landroid/graphics/Rect;F)Lu74;
+.end method
 
-    move-result v3
+.method public g()Lu74;
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    return-object p0
+.end method
 
-    move-result v4
+.method public abstract h(Ljava/util/Collection;)Lu74;
+.end method
 
-    iget v5, p0, Lu74;->a:F
+.method public i(FF)Lu74;
+    .locals 0
 
-    const/4 v1, 0x0
+    return-object p0
+.end method
 
-    const/4 v2, 0x0
+.method public abstract j(F)Lu74;
+.end method
 
-    move-object v0, p2
+.method public abstract m(Landroid/os/Bundle;)Lu74;
+.end method
 
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+.method public n()Lu74;
+    .locals 0
 
-    const/4 p2, 0x1
+    return-object p0
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+.method public abstract q(Landroid/view/View;)Lu74;
+.end method
 
-    return-void
+.method public abstract s()Lu74;
+.end method
+
+.method public abstract v(Lghg;)Lu74;
 .end method

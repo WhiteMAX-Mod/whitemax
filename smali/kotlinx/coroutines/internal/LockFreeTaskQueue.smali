@@ -25,7 +25,7 @@
         "singleConsumer",
         "<init>",
         "(Z)V",
-        "Lqqg;",
+        "Lv2h;",
         "close",
         "()V",
         "element",
@@ -38,7 +38,7 @@
         "transform",
         "",
         "map",
-        "(Lem6;)Ljava/util/List;",
+        "(Loq6;)Ljava/util/List;",
         "isClosed",
         "()Z",
         "isEmpty",
@@ -120,14 +120,14 @@
     return-object v0
 .end method
 
-.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lem6;)V
+.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Loq6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
-            "Lem6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -137,7 +137,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -333,14 +333,14 @@
     return v0
 .end method
 
-.method public final map(Lem6;)Ljava/util/List;
+.method public final map(Loq6;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lem6;",
+            "Loq6;",
             ")",
             "Ljava/util/List<",
             "TR;>;"
@@ -357,7 +357,7 @@
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
-    invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->map(Lem6;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->map(Loq6;)Ljava/util/List;
 
     move-result-object p1
 

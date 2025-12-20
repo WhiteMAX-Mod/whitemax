@@ -1,155 +1,126 @@
 .class public final Lfs;
-.super Lt6d;
+.super Lihf;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile c:Lfs;
-
-.field public static final d:Les;
+# interfaces
+.implements Loqd;
 
 
 # instance fields
-.field public final b:Laq4;
+.field public final a:I
+
+.field public b:Ld15;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
-
-    new-instance v0, Les;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Les;-><init>(I)V
-
-    sput-object v0, Lfs;->d:Les;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Laq4;
+    iput p2, p0, Lfs;->a:I
 
-    invoke-direct {v0}, Laq4;-><init>()V
+    new-instance v0, Ld15;
 
-    iput-object v0, p0, Lfs;->b:Laq4;
+    new-instance v1, Ljava/io/File;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1, p2}, Ld15;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Lfs;->b:Ld15;
 
     return-void
-.end method
-
-.method public static c()Lfs;
-    .locals 2
-
-    sget-object v0, Lfs;->c:Lfs;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lfs;->c:Lfs;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lfs;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lfs;->c:Lfs;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lfs;
-
-    invoke-direct {v1}, Lfs;-><init>()V
-
-    sput-object v1, Lfs;->c:Lfs;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lfs;->c:Lfs;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final a(Landroid/content/Context;)Lihf;
+    .locals 2
 
-    iget-object v0, p0, Lfs;->b:Laq4;
+    new-instance v0, Ld15;
 
-    iget-object v1, v0, Laq4;->d:Landroid/os/Handler;
+    new-instance v1, Ljava/io/File;
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    iget-object v1, v0, Laq4;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    monitor-enter v1
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    :try_start_0
-    iget-object v2, v0, Laq4;->d:Landroid/os/Handler;
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    if-nez v2, :cond_0
+    iget p1, p0, Lfs;->a:I
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    or-int/lit8 p1, p1, 0x1
 
-    move-result-object v2
+    invoke-direct {v0, v1, p1}, Ld15;-><init>(Ljava/io/File;I)V
 
-    invoke-static {v2}, Laq4;->c(Landroid/os/Looper;)Landroid/os/Handler;
+    iput-object v0, p0, Lfs;->b:Ld15;
 
-    move-result-object v2
+    return-object p0
+.end method
 
-    iput-object v2, v0, Laq4;->d:Landroid/os/Handler;
+.method public final b()Ljava/lang/String;
+    .locals 0
 
-    goto :goto_0
+    const/4 p0, 0x0
 
-    :catchall_0
-    move-exception p1
+    throw p0
+.end method
 
-    goto :goto_1
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+    .locals 1
 
-    :cond_0
-    :goto_0
-    monitor-exit v1
+    iget-object v0, p0, Lfs;->b:Ld15;
 
-    goto :goto_2
+    invoke-virtual {v0, p1, p2, p3}, Ld15;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result p1
 
-    throw p1
+    return p1
+.end method
 
-    :cond_1
-    :goto_2
-    iget-object v0, v0, Laq4;->d:Landroid/os/Handler;
+.method public final d(I)V
+    .locals 0
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget-object p1, p0, Lfs;->b:Ld15;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ApplicationSoSource["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfs;->b:Ld15;
+
+    invoke-virtual {v1}, Ld15;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

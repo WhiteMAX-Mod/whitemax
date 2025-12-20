@@ -1,57 +1,76 @@
 .class public final Lvi9;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwi9;
 
 
 # instance fields
-.field public X:Z
+.field public final a:Lpkd;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lwi9;
-
-.field public d:Lwi9;
-
-.field public o:Ljava/util/List;
-
-.field public s0:I
+.field public final b:Lah5;
 
 
 # direct methods
-.method public constructor <init>(Lwi9;Lq44;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lvi9;->Z:Lwi9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lch5;->a:Lch5;
+
+    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
+
+    move-result-object v0
+
+    new-instance v1, Lpkd;
+
+    invoke-direct {v1, v0}, Lpkd;-><init>(Lofa;)V
+
+    iput-object v1, p0, Lvi9;->a:Lpkd;
+
+    sget-object v0, Lah5;->a:Lah5;
+
+    iput-object v0, p0, Lvi9;->b:Lah5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(Ljava/lang/String;)V
+    .locals 0
 
-    iput-object p1, p0, Lvi9;->Y:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lvi9;->s0:I
+.method public final b()Lf76;
+    .locals 1
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lvi9;->b:Lah5;
 
-    or-int/2addr p1, v0
+    return-object v0
+.end method
 
-    iput p1, p0, Lvi9;->s0:I
-
-    const/4 p1, 0x0
+.method public final d()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lvi9;->Z:Lwi9;
+    return v0
+.end method
 
-    invoke-virtual {v1, p0, v0, p1}, Lwi9;->a(Lq44;Ljava/util/List;Z)Ljava/lang/Object;
+.method public final e()Lpkd;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lvi9;->a:Lpkd;
 
-    return-object p1
+    return-object v0
+.end method
+
+.method public final f()V
+    .locals 0
+
+    return-void
 .end method

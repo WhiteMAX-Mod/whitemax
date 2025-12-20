@@ -1,846 +1,1015 @@
-.class public final Ls6b;
+.class public abstract Ls6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsnc;
-.implements Lq22;
-.implements Lzhf;
-.implements Lrn6;
-.implements Ltm6;
-.implements Llva;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public a:Ljava/lang/Object;
+.field public static final A0:I
+
+.field public static final A1:I
+
+.field public static final B:I
+
+.field public static final B0:I
+
+.field public static final B1:I
+
+.field public static final C:I
+
+.field public static final C0:I
+
+.field public static final C1:I
+
+.field public static final D:I
+
+.field public static final D0:I
+
+.field public static final D1:I
+
+.field public static final E:I
+
+.field public static final E0:I
+
+.field public static final E1:I
+
+.field public static final F:I
+
+.field public static final F0:I
+
+.field public static final F1:I
+
+.field public static final G:I
+
+.field public static final G0:I
+
+.field public static final G1:I
+
+.field public static final H:I
+
+.field public static final H0:I
+
+.field public static final H1:I
+
+.field public static final I:I
+
+.field public static final I0:I
+
+.field public static final I1:I
+
+.field public static final J:I
+
+.field public static final J0:I
+
+.field public static final J1:I
+
+.field public static final K:I
+
+.field public static final K0:I
+
+.field public static final K1:I
+
+.field public static final L:I
+
+.field public static final L0:I
+
+.field public static final L1:I
+
+.field public static final M:I
+
+.field public static final M0:I
+
+.field public static final M1:I
+
+.field public static final N:I
+
+.field public static final N0:I
+
+.field public static final N1:I
+
+.field public static final O:I
+
+.field public static final O0:I
+
+.field public static final O1:I
+
+.field public static final P:I
+
+.field public static final P0:I
+
+.field public static final P1:I
+
+.field public static final Q:I
+
+.field public static final Q0:I
+
+.field public static final Q1:I
+
+.field public static final R:I
+
+.field public static final R0:I
+
+.field public static final R1:I
+
+.field public static final S:I
+
+.field public static final S0:I
+
+.field public static final S1:I
+
+.field public static final T:I
+
+.field public static final T0:I
+
+.field public static final T1:I
+
+.field public static final U:I
+
+.field public static final U0:I
+
+.field public static final U1:I
+
+.field public static final V:I
+
+.field public static final V0:I
+
+.field public static final V1:I
+
+.field public static final W:I
+
+.field public static final W0:I
+
+.field public static final W1:I
+
+.field public static final X:I
+
+.field public static final X0:I
+
+.field public static final X1:I
+
+.field public static final Y:I
+
+.field public static final Y0:I
+
+.field public static final Y1:I
+
+.field public static final Z:I
+
+.field public static final Z0:I
+
+.field public static final Z1:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final a1:I
+
+.field public static final a2:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final b1:I
+
+.field public static final b2:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final c1:I
+
+.field public static final c2:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final d1:I
+
+.field public static final d2:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final e1:I
+
+.field public static final e2:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final f1:I
+
+.field public static final f2:I
+
+.field public static final g:I
+
+.field public static final g0:I
+
+.field public static final g1:I
+
+.field public static final g2:I
+
+.field public static final h:I
+
+.field public static final h0:I
+
+.field public static final h1:I
+
+.field public static final h2:I
+
+.field public static final i:I
+
+.field public static final i0:I
+
+.field public static final i1:I
+
+.field public static final i2:I
+
+.field public static final j:I
+
+.field public static final j0:I
+
+.field public static final j1:I
+
+.field public static final j2:I
+
+.field public static final k:I
+
+.field public static final k0:I
+
+.field public static final k1:I
+
+.field public static final k2:I
+
+.field public static final l:I
+
+.field public static final l0:I
+
+.field public static final l1:I
+
+.field public static final m:I
+
+.field public static final m0:I
+
+.field public static final m1:I
+
+.field public static final n:I
+
+.field public static final n0:I
+
+.field public static final n1:I
+
+.field public static final o:I
+
+.field public static final o0:I
+
+.field public static final o1:I
+
+.field public static final p:I
+
+.field public static final p0:I
+
+.field public static final p1:I
+
+.field public static final q:I
+
+.field public static final q0:I
+
+.field public static final q1:I
+
+.field public static final r:I
+
+.field public static final r0:I
+
+.field public static final r1:I
+
+.field public static final s:I
+
+.field public static final s0:I
+
+.field public static final s1:I
+
+.field public static final t:I
+
+.field public static final t0:I
+
+.field public static final t1:I
+
+.field public static final u:I
+
+.field public static final u0:I
+
+.field public static final u1:I
+
+.field public static final v:I
+
+.field public static final v0:I
+
+.field public static final v1:I
+
+.field public static final w:I
+
+.field public static final w0:I
+
+.field public static final w1:I
+
+.field public static final x:I
+
+.field public static final x0:I
+
+.field public static final x1:I
+
+.field public static final y:I
+
+.field public static final y0:I
+
+.field public static final y1:I
+
+.field public static final z:I
+
+.field public static final z0:I
+
+.field public static final z1:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sparse-switch p1, :sswitch_data_0
+    sget v0, Lg7d;->call_admin_settings_camera_in_call:I
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Ls6b;->a:I
 
-    .line 3
-    new-instance p1, Landroid/util/LruCache;
+    sget v0, Lg7d;->call_admin_settings_disable_all_cameras_once:I
 
-    const/16 v0, 0xa
+    sput v0, Ls6b;->b:I
 
-    invoke-direct {p1, v0}, Landroid/util/LruCache;-><init>(I)V
+    sget v0, Lg7d;->call_admin_settings_disable_all_hands_once:I
 
-    iput-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->c:I
 
-    return-void
+    sget v0, Lg7d;->call_admin_settings_disable_all_mic_once:I
 
-    .line 4
-    :sswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Ls6b;->d:I
 
-    .line 5
-    new-instance p1, Landroid/util/SparseArray;
+    sget v0, Lg7d;->call_admin_settings_header_bottom_vh:I
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    sput v0, Ls6b;->e:I
 
-    iput-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_admin_settings_header_vh:I
 
-    return-void
+    sput v0, Ls6b;->f:I
 
-    .line 6
-    :sswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lg7d;->call_admin_settings_item_vh:I
 
-    .line 7
-    sget-object p1, Lrd5;->a:Lrd5;
+    sput v0, Ls6b;->g:I
 
-    iput-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_admin_settings_mic_in_call:I
 
-    return-void
+    sput v0, Ls6b;->h:I
 
-    nop
+    sget v0, Lg7d;->call_admin_settings_screen_record_in_call:I
 
-    :sswitch_data_0
-    .sparse-switch
-        0x8 -> :sswitch_1
-        0xb -> :sswitch_0
-    .end sparse-switch
-.end method
+    sput v0, Ls6b;->i:I
 
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+    sget v0, Lg7d;->call_admin_settings_screen_sharing_in_call:I
 
-    .line 1
-    iput-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->j:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lg7d;->call_admins_settings_waiting_room:I
 
-    return-void
-.end method
+    sput v0, Ls6b;->k:I
 
+    sget v0, Lg7d;->call_animation_background_fade:I
 
-# virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;)V
-    .locals 0
+    sput v0, Ls6b;->l:I
 
-    check-cast p1, Ljava/lang/Void;
+    sget v0, Lg7d;->call_animation_fade:I
 
-    return-void
-.end method
+    sput v0, Ls6b;->m:I
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    sget v0, Lg7d;->call_animation_indicator_show_tag:I
 
-    check-cast p1, Ljava/lang/Number;
+    sput v0, Ls6b;->n:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    sget v0, Lg7d;->call_bottom_control_container:I
 
-    iget-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->o:I
 
-    check-cast p1, Ly87;
+    sget v0, Lg7d;->call_context_action_chat:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput v0, Ls6b;->p:I
 
-    new-instance v0, Lu4e;
+    sget v0, Lg7d;->call_context_action_debug_menu:I
 
-    const/16 v1, 0xc
+    sput v0, Ls6b;->q:I
 
-    invoke-direct {v0, v1, p1}, Lu4e;-><init>(ILjava/lang/Object;)V
+    sget v0, Lg7d;->call_context_action_open_profile:I
 
-    new-instance p1, Lwk3;
+    sput v0, Ls6b;->r:I
 
-    const/4 v1, 0x2
+    sget v0, Lg7d;->call_context_action_record_screen:I
 
-    invoke-direct {p1, v1, v0}, Lwk3;-><init>(ILjava/lang/Object;)V
+    sput v0, Ls6b;->s:I
 
-    invoke-static {}, Lde;->a()Lj0e;
+    sget v0, Lg7d;->call_context_action_record_screen_unavailable:I
 
-    move-result-object v0
+    sput v0, Ls6b;->t:I
 
-    invoke-virtual {p1, v0}, Le2f;->m(Lj0e;)Lu2f;
+    sget v0, Lg7d;->call_context_action_settings:I
 
-    move-result-object p1
+    sput v0, Ls6b;->u:I
 
-    return-object p1
-.end method
+    sget v0, Lg7d;->call_context_action_share_screen:I
 
-.method public b(F)V
-    .locals 1
+    sput v0, Ls6b;->v:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_context_action_share_screen_unavailable:I
 
-    check-cast v0, Lsnc;
+    sput v0, Ls6b;->w:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lg7d;->call_context_action_user_camera_rotate:I
 
-    invoke-interface {v0, p1}, Lsnc;->b(F)V
+    sput v0, Ls6b;->x:I
 
-    :cond_0
-    return-void
-.end method
+    sget v0, Lg7d;->call_context_action_user_low_hand:I
 
-.method public c(Lru/ok/tamtam/android/widgets/quickcamera/CameraExceptionImpl;)V
-    .locals 5
+    sput v0, Ls6b;->y:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_context_action_user_pin:I
 
-    check-cast v0, Lytc;
+    sput v0, Ls6b;->z:I
 
-    iget-object v0, v0, Lytc;->d:Lbuc;
+    sget v0, Lg7d;->call_context_action_user_unpin:I
 
-    const/4 v1, 0x0
+    sput v0, Ls6b;->A:I
 
-    if-nez v0, :cond_0
+    sget v0, Lg7d;->call_context_action_user_write_chat:I
 
-    move-object v0, v1
+    sput v0, Ls6b;->B:I
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Lg7d;->call_context_action_write_chat:I
 
-    const-string v2, "onCameraError"
+    sput v0, Ls6b;->C:I
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    sget v0, Lg7d;->call_context_dialog_invite_user_to_p2p:I
 
-    move-result-object p1
+    sput v0, Ls6b;->D:I
 
-    const-string v3, "QuickCameraViewModel"
+    sget v0, Lg7d;->call_debug_menu_settings_action_list:I
 
-    invoke-static {v3, v2, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sput v0, Ls6b;->E:I
 
-    iget-object p1, v0, Lbuc;->t0:Ltcf;
+    sget v0, Lg7d;->call_debug_menu_settings_header_vh:I
 
-    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+    sput v0, Ls6b;->F:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_debug_menu_settings_item_vh:I
 
-    check-cast v0, Lntc;
+    sput v0, Ls6b;->G:I
 
-    sget-object v2, Lktc;->a:Lktc;
+    sget v0, Lg7d;->call_debug_menu_settings_toolbar:I
 
-    invoke-static {v0, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Ls6b;->H:I
 
-    move-result v2
+    sget v0, Lg7d;->call_dynamic_type_bluetooth:I
 
-    sget-object v3, Ljtc;->a:Ljtc;
+    sput v0, Ls6b;->I:I
 
-    if-eqz v2, :cond_1
+    sget v0, Lg7d;->call_dynamic_type_earpiece:I
 
-    move-object v1, v3
+    sput v0, Ls6b;->J:I
 
-    goto :goto_0
+    sget v0, Lg7d;->call_dynamic_type_speakerphone:I
 
-    :cond_1
-    instance-of v2, v0, Lltc;
+    sput v0, Ls6b;->K:I
 
-    sget-object v4, Lmtc;->a:Lmtc;
+    sget v0, Lg7d;->call_dynamic_type_unknown:I
 
-    if-eqz v2, :cond_2
+    sput v0, Ls6b;->L:I
 
-    move-object v1, v4
+    sget v0, Lg7d;->call_dynamic_type_wired_headset:I
 
-    goto :goto_0
+    sput v0, Ls6b;->M:I
 
-    :cond_2
-    invoke-static {v0, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lg7d;->call_events_recyclerview:I
 
-    move-result v2
+    sput v0, Ls6b;->N:I
 
-    if-eqz v2, :cond_3
+    sget v0, Lg7d;->call_ic_share_view:I
 
-    goto :goto_0
+    sput v0, Ls6b;->O:I
 
-    :cond_3
-    invoke-static {v0, v4}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lg7d;->call_incoming_avatar_preview_small:I
 
-    move-result v0
+    sput v0, Ls6b;->P:I
 
-    if-eqz v0, :cond_6
+    sget v0, Lg7d;->call_incoming_camera_preview:I
 
-    :goto_0
-    if-eqz v1, :cond_5
+    sput v0, Ls6b;->Q:I
 
-    :cond_4
-    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+    sget v0, Lg7d;->call_indicator_panel:I
 
-    move-result-object v0
+    sput v0, Ls6b;->R:I
 
-    move-object v2, v0
+    sget v0, Lg7d;->call_indicator_panel_container:I
 
-    check-cast v2, Lntc;
+    sput v0, Ls6b;->S:I
 
-    invoke-virtual {p1, v0, v1}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lg7d;->call_indicator_panel_fake:I
 
-    move-result v0
+    sput v0, Ls6b;->T:I
 
-    if-eqz v0, :cond_4
+    sget v0, Lg7d;->call_indicator_time:I
 
-    :cond_5
-    return-void
+    sput v0, Ls6b;->U:I
 
-    :cond_6
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    sget v0, Lg7d;->call_indicator_title:I
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    sput v0, Ls6b;->V:I
 
-    throw p1
-.end method
+    sget v0, Lg7d;->call_info_admin_setting_action_list:I
 
-.method public d()V
-    .locals 7
+    sput v0, Ls6b;->W:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_info_admin_setting_toolbar:I
 
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
+    sput v0, Ls6b;->X:I
 
-    sget-object v1, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->u0:[Lyy7;
+    sget v0, Lg7d;->call_invite_banner_close_btn:I
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->A0()Lrdh;
+    sput v0, Ls6b;->Y:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_invite_banner_copy_btn:I
 
-    if-eqz v0, :cond_6
+    sput v0, Ls6b;->Z:I
 
-    check-cast v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+    sget v0, Lg7d;->call_invite_banner_send_btn:I
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->Q0()Lyq2;
+    sput v0, Ls6b;->a0:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_invite_banner_share_btn:I
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->O0()Lcbh;
+    sput v0, Ls6b;->b0:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_invite_banner_title_btn:I
 
-    invoke-interface {v0}, Lcbh;->d()Z
+    sput v0, Ls6b;->c0:I
 
-    move-result v0
+    sget v0, Lg7d;->call_join_link_cancel:I
 
-    iget-object v1, v1, Lyq2;->h1:Ltcf;
+    sput v0, Ls6b;->d0:I
 
-    :cond_0
-    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
+    sget v0, Lg7d;->call_join_link_stack_avatar:I
 
-    move-result-object v2
+    sput v0, Ls6b;->e0:I
 
-    move-object v3, v2
+    sget v0, Lg7d;->call_join_link_title:I
 
-    check-cast v3, Lw54;
+    sput v0, Ls6b;->f0:I
 
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    sget v0, Lg7d;->call_join_link_with_ask_device_microphone_switch:I
 
-    move-result v3
+    sput v0, Ls6b;->g0:I
 
-    sget-object v4, Lw54;->b:Lw54;
+    sget v0, Lg7d;->call_join_link_with_ask_device_preview:I
 
-    if-eqz v3, :cond_5
+    sput v0, Ls6b;->h0:I
 
-    const/4 v5, 0x1
+    sget v0, Lg7d;->call_join_link_with_ask_device_preview_container:I
 
-    sget-object v6, Lw54;->a:Lw54;
+    sput v0, Ls6b;->i0:I
 
-    if-eq v3, v5, :cond_3
+    sget v0, Lg7d;->call_join_link_with_ask_device_video_switch:I
 
-    const/4 v5, 0x2
+    sput v0, Ls6b;->j0:I
 
-    if-eq v3, v5, :cond_2
+    sget v0, Lg7d;->call_loading:I
 
-    const/4 v5, 0x3
+    sput v0, Ls6b;->k0:I
 
-    if-ne v3, v5, :cond_1
+    sget v0, Lg7d;->call_menu_record:I
 
-    goto :goto_1
+    sput v0, Ls6b;->l0:I
 
-    :cond_1
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    sget v0, Lg7d;->call_more:I
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    sput v0, Ls6b;->m0:I
 
-    throw v0
+    sget v0, Lg7d;->call_more_action_call_chat_vh:I
 
-    :cond_2
-    :goto_0
-    move-object v4, v6
+    sput v0, Ls6b;->n0:I
 
-    goto :goto_1
+    sget v0, Lg7d;->call_more_action_record_vh:I
 
-    :cond_3
-    if-eqz v0, :cond_4
+    sput v0, Ls6b;->o0:I
 
-    goto :goto_0
+    sget v0, Lg7d;->call_more_actions_list:I
 
-    :cond_4
-    sget-object v4, Lw54;->d:Lw54;
+    sput v0, Ls6b;->p0:I
 
-    :cond_5
-    :goto_1
-    invoke-virtual {v1, v2, v4}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lg7d;->call_more_actions_vh:I
 
-    move-result v2
+    sput v0, Ls6b;->q0:I
 
-    if-eqz v2, :cond_0
+    sget v0, Lg7d;->call_more_popup_drag_layout:I
 
-    :cond_6
-    return-void
-.end method
+    sput v0, Ls6b;->r0:I
 
-.method public e(Lfff;)V
-    .locals 6
+    sget v0, Lg7d;->call_name_layout:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->s0:I
 
-    check-cast v0, Lr91;
+    sget v0, Lg7d;->call_not_contact_warning:I
 
-    iget-object v0, v0, Lr91;->Z:Ljava/lang/Object;
+    sput v0, Ls6b;->t0:I
 
-    check-cast v0, Lw7c;
+    sget v0, Lg7d;->call_opponent_info_buttons:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput v0, Ls6b;->u0:I
 
-    sget-object v1, Ldjf;->c:Ldjf;
+    sget v0, Lg7d;->call_pip_camera_preview:I
 
-    iget-wide v2, p1, Lfff;->a:J
+    sput v0, Ls6b;->v0:I
 
-    iget-object p1, v0, Lw7c;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_pip_container_id:I
 
-    check-cast p1, Lone/me/stickersshowcase/StickersShowcaseScreen;
+    sput v0, Ls6b;->w0:I
 
-    sget-object v0, Lone/me/stickersshowcase/StickersShowcaseScreen;->u0:[Lyy7;
+    sget v0, Lg7d;->call_pip_video:I
 
-    iget-object v0, p1, Lone/me/stickersshowcase/StickersShowcaseScreen;->a:Lhs;
+    sput v0, Ls6b;->x0:I
 
-    sget-object v4, Lone/me/stickersshowcase/StickersShowcaseScreen;->u0:[Lyy7;
+    sget v0, Lg7d;->call_raise_hand:I
 
-    const/4 v5, 0x0
+    sput v0, Ls6b;->y0:I
 
-    aget-object v4, v4, v5
+    sget v0, Lg7d;->call_raise_hand_status:I
 
-    invoke-virtual {v0, p1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    sput v0, Ls6b;->z0:I
 
-    move-result-object p1
+    sget v0, Lg7d;->call_rate_button_group:I
 
-    check-cast p1, Ljava/lang/Number;
+    sput v0, Ls6b;->A0:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    sget v0, Lg7d;->call_rate_chip_group:I
 
-    move-result-wide v4
+    sput v0, Ls6b;->B0:I
 
-    invoke-virtual {v1}, Li3;->p0()Lii4;
+    sget v0, Lg7d;->call_rate_negative_button:I
 
-    move-result-object p1
+    sput v0, Ls6b;->C0:I
 
-    const-string v0, ":stickers/preview?sticker_id="
+    sget v0, Lg7d;->call_rate_positive_button:I
 
-    const-string v1, "&chat_id="
+    sput v0, Ls6b;->D0:I
 
-    invoke-static {v2, v3, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lg7d;->call_rate_send_button:I
 
-    move-result-object v0
+    sput v0, Ls6b;->E0:I
 
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    sget v0, Lg7d;->call_rate_toolbar:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sput v0, Ls6b;->F0:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_round_btn_counter:I
 
-    const/4 v1, 0x0
+    sput v0, Ls6b;->G0:I
 
-    invoke-virtual {p1, v0, v1}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    sget v0, Lg7d;->call_round_btn_icon:I
 
-    return-void
-.end method
+    sput v0, Ls6b;->H0:I
 
-.method public f(Ljava/util/List;)Z
-    .locals 3
+    sget v0, Lg7d;->call_round_btn_title:I
 
-    new-instance v0, Ljava/util/ArrayList;
+    sput v0, Ls6b;->I0:I
 
-    const/16 v1, 0xa
+    sget v0, Lg7d;->call_screen_admin_confirm_add_users_check:I
 
-    invoke-static {p1, v1}, Lwe3;->q(Ljava/lang/Iterable;I)I
+    sput v0, Ls6b;->J0:I
 
-    move-result v1
+    sget v0, Lg7d;->call_screen_admin_confirm_add_users_neutral:I
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    sput v0, Ls6b;->K0:I
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    sget v0, Lg7d;->call_screen_admin_confirm_add_users_positive:I
 
-    move-result-object p1
+    sput v0, Ls6b;->L0:I
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lg7d;->call_screen_admin_confirm_add_users_subtitle:I
 
-    move-result v1
+    sput v0, Ls6b;->M0:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lg7d;->call_screen_admin_confirm_add_users_title:I
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput v0, Ls6b;->N0:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_screen_admin_confirm_remove_user_neutral:I
 
-    check-cast v1, Ll9f;
+    sput v0, Ls6b;->O0:I
 
-    iget-wide v1, v1, Ll9f;->c:J
+    sget v0, Lg7d;->call_screen_admin_confirm_remove_user_positive:I
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sput v0, Ls6b;->P0:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_screen_admin_confirm_remove_user_subtitle:I
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sput v0, Ls6b;->Q0:I
 
-    goto :goto_0
+    sget v0, Lg7d;->call_screen_admin_confirm_remove_user_title:I
 
-    :cond_0
-    invoke-static {v0}, Lue3;->h0(Ljava/lang/Iterable;)Ljava/util/Set;
+    sput v0, Ls6b;->R0:I
 
-    move-result-object p1
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_apply_all:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->S0:I
 
-    check-cast v0, Ljava/util/Set;
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_empty:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sput v0, Ls6b;->T0:I
 
-    move-result v0
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_list:I
 
-    xor-int/lit8 v0, v0, 0x1
+    sput v0, Ls6b;->U0:I
 
-    iput-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_more_vh:I
 
-    return v0
-.end method
+    sput v0, Ls6b;->V0:I
 
-.method public g(Lfff;)V
-    .locals 7
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_reject_all:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->W0:I
 
-    check-cast v0, Lr91;
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_title:I
 
-    iget-object v0, v0, Lr91;->Z:Ljava/lang/Object;
+    sput v0, Ls6b;->X0:I
 
-    check-cast v0, Lw7c;
+    sget v0, Lg7d;->call_screen_admin_user_in_wait_room_vh:I
 
-    iget-object v0, v0, Lw7c;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->Y0:I
 
-    check-cast v0, Lone/me/stickersshowcase/StickersShowcaseScreen;
+    sget v0, Lg7d;->call_screen_camera_admin_remove_user:I
 
-    sget-object v1, Lone/me/stickersshowcase/StickersShowcaseScreen;->u0:[Lyy7;
+    sput v0, Ls6b;->Z0:I
 
-    invoke-virtual {v0}, Lone/me/stickersshowcase/StickersShowcaseScreen;->z0()Lnjf;
+    sget v0, Lg7d;->call_screen_camera_admin_stop_camera_user:I
 
-    move-result-object v0
+    sput v0, Ls6b;->a1:I
 
-    iget-wide v3, v0, Lnjf;->b:J
+    sget v0, Lg7d;->call_screen_camera_admin_stop_mic_user:I
 
-    const-wide/16 v1, 0x0
+    sput v0, Ls6b;->b1:I
 
-    cmp-long v1, v3, v1
+    sget v0, Lg7d;->call_screen_camera_admin_stop_sharing_user:I
 
-    if-gtz v1, :cond_0
+    sput v0, Ls6b;->c1:I
 
-    goto :goto_0
+    sget v0, Lg7d;->call_screen_container_id:I
 
-    :cond_0
-    iget-wide v5, p1, Lfff;->a:J
+    sput v0, Ls6b;->d1:I
 
-    new-instance v1, Lxge;
+    sget v0, Lg7d;->call_screen_incoming_container_id:I
 
-    const/4 v2, 0x1
+    sput v0, Ls6b;->e1:I
 
-    invoke-direct/range {v1 .. v6}, Lxge;-><init>(IJJ)V
+    sget v0, Lg7d;->call_screen_menu_grid_mode:I
 
-    new-instance p1, Lyge;
+    sput v0, Ls6b;->f1:I
 
-    invoke-direct {p1, v1}, Lyge;-><init>(Lxge;)V
+    sget v0, Lg7d;->call_screen_menu_speaker_mode:I
 
-    iget-object v1, v0, Lnjf;->Y:Lk18;
+    sput v0, Ls6b;->g1:I
 
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+    sget v0, Lg7d;->call_screen_opponents_list_add_users:I
 
-    move-result-object v1
+    sput v0, Ls6b;->h1:I
 
-    check-cast v1, Lc6i;
+    sget v0, Lg7d;->call_screen_opponents_list_invite_users:I
 
-    invoke-virtual {v1, p1}, Lc6i;->b(Lhge;)V
+    sput v0, Ls6b;->i1:I
 
-    iget-object p1, v0, Lnjf;->s0:Lci5;
+    sget v0, Lg7d;->call_screen_opponents_list_link:I
 
-    sget-object v0, Ljc3;->b:Ljc3;
+    sput v0, Ls6b;->j1:I
 
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    sget v0, Lg7d;->call_screen_raisehand_manage_negative_btn:I
 
-    :goto_0
-    sget-object p1, Lcjf;->a:Lcjf;
+    sput v0, Ls6b;->k1:I
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
+    sget v0, Lg7d;->call_screen_raisehand_manage_positive_btn:I
 
-    move-result-object p1
+    sput v0, Ls6b;->l1:I
 
-    invoke-virtual {p1}, Lw5;->f()Ljava/lang/Object;
+    sget v0, Lg7d;->call_screen_raisehand_manage_subtitle:I
 
-    move-result-object p1
+    sput v0, Ls6b;->m1:I
 
-    check-cast p1, Luh7;
+    sget v0, Lg7d;->call_screen_raisehand_manage_title:I
 
-    if-eqz p1, :cond_1
+    sput v0, Ls6b;->n1:I
 
-    new-instance v0, Lth7;
+    sget v0, Lg7d;->call_screen_record_admin_skip_record:I
 
-    sget-object v1, Lrh7;->b:Lrh7;
+    sput v0, Ls6b;->o1:I
 
-    const/4 v2, 0x1
+    sget v0, Lg7d;->call_screen_record_admin_stop_record:I
 
-    invoke-direct {v0, v1, v2}, Lth7;-><init>(Lrh7;I)V
+    sput v0, Ls6b;->p1:I
 
-    new-instance v1, Lth7;
+    sget v0, Lg7d;->call_screen_record_manage_negative_btn:I
 
-    sget-object v3, Lrh7;->X:Lrh7;
+    sput v0, Ls6b;->q1:I
 
-    invoke-direct {v1, v3, v2}, Lth7;-><init>(Lrh7;I)V
+    sget v0, Lg7d;->call_screen_record_manage_positive_btn:I
 
-    filled-new-array {v0, v1}, [Lth7;
+    sput v0, Ls6b;->r1:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_screen_record_manage_record_info:I
 
-    invoke-static {v0}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
+    sput v0, Ls6b;->s1:I
 
-    move-result-object v0
+    sget v0, Lg7d;->call_screen_record_manage_record_need_remove:I
 
-    sget-object v1, Lf1e;->N0:Lf1e;
+    sput v0, Ls6b;->t1:I
 
-    invoke-virtual {p1, v0, v1}, Luh7;->f(Ljava/util/Set;Lf1e;)V
+    sget v0, Lg7d;->call_screen_record_manage_subtitle:I
 
-    :cond_1
-    return-void
-.end method
+    sput v0, Ls6b;->u1:I
 
-.method public i(Ldgf;)V
-    .locals 6
+    sget v0, Lg7d;->call_screen_record_manage_title:I
 
-    iget-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->v1:I
 
-    check-cast v0, Lr91;
+    sget v0, Lg7d;->call_screen_record_me_owner_exit_negative:I
 
-    iget-object v0, v0, Lr91;->Z:Ljava/lang/Object;
+    sput v0, Ls6b;->w1:I
 
-    check-cast v0, Lw7c;
+    sget v0, Lg7d;->call_screen_record_me_owner_exit_positive:I
 
-    iget-object v0, v0, Lw7c;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->x1:I
 
-    check-cast v0, Lone/me/stickersshowcase/StickersShowcaseScreen;
+    sget v0, Lg7d;->call_screen_record_start_name:I
 
-    sget-object v1, Lone/me/stickersshowcase/StickersShowcaseScreen;->u0:[Lyy7;
+    sput v0, Ls6b;->y1:I
 
-    invoke-virtual {v0}, Lone/me/stickersshowcase/StickersShowcaseScreen;->z0()Lnjf;
+    sget v0, Lg7d;->call_screen_record_start_target_chat:I
 
-    move-result-object v0
+    sput v0, Ls6b;->z1:I
 
-    iget-object v1, v0, Lnjf;->v0:Lus;
+    sget v0, Lg7d;->call_screen_record_start_target_start_btn:I
 
-    iget-wide v2, p1, Ldgf;->a:J
+    sput v0, Ls6b;->A1:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget v0, Lg7d;->call_screen_record_start_title:I
 
-    move-result-object v4
+    sput v0, Ls6b;->B1:I
 
-    invoke-virtual {v1, v4}, Lz0f;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sget v0, Lg7d;->call_settings:I
 
-    move-result-object v4
+    sput v0, Ls6b;->C1:I
 
-    check-cast v4, Lqt7;
+    sget v0, Lg7d;->call_share_screen_stop_share_btn:I
 
-    if-eqz v4, :cond_0
+    sput v0, Ls6b;->D1:I
 
-    invoke-interface {v4}, Lqt7;->isActive()Z
+    sget v0, Lg7d;->call_share_screen_subtitle_view:I
 
-    move-result v4
+    sput v0, Ls6b;->E1:I
 
-    const/4 v5, 0x1
+    sget v0, Lg7d;->call_share_screen_title_view:I
 
-    if-ne v4, v5, :cond_0
+    sput v0, Ls6b;->F1:I
 
-    return-void
+    sget v0, Lg7d;->call_share_sound_switch:I
 
-    :cond_0
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sput v0, Ls6b;->G1:I
 
-    move-result-object v2
+    sget v0, Lg7d;->call_top_control_container:I
 
-    iget-object v3, v0, Lnjf;->d:Llzf;
+    sput v0, Ls6b;->H1:I
 
-    check-cast v3, Lq2b;
+    sget v0, Lg7d;->call_user_full_avatar:I
 
-    invoke-virtual {v3}, Lq2b;->b()Lz74;
+    sput v0, Ls6b;->I1:I
 
-    move-result-object v3
+    sget v0, Lg7d;->call_user_full_name:I
 
-    new-instance v4, Lmjf;
+    sput v0, Ls6b;->J1:I
 
-    const/4 v5, 0x0
+    sget v0, Lg7d;->call_user_full_status:I
 
-    invoke-direct {v4, v0, p1, v5}, Lmjf;-><init>(Lnjf;Ldgf;Lkotlin/coroutines/Continuation;)V
+    sput v0, Ls6b;->K1:I
 
-    const/4 p1, 0x2
+    sget v0, Lg7d;->call_user_small_avatar:I
 
-    invoke-static {v0, v3, v4, p1}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    sput v0, Ls6b;->L1:I
 
-    move-result-object p1
+    sget v0, Lg7d;->call_user_top_spacer:I
 
-    invoke-virtual {v1, v2, p1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sput v0, Ls6b;->M1:I
 
-    return-void
-.end method
+    sget v0, Lg7d;->call_users_action_negative:I
 
-.method public onFailure(Ljava/lang/Throwable;)V
-    .locals 7
+    sput v0, Ls6b;->N1:I
 
-    iget-object p1, p0, Ls6b;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_users_action_one_positive:I
 
-    check-cast p1, Lawf;
+    sput v0, Ls6b;->O1:I
 
-    iget-object v0, p1, Lawf;->a:Ljava/lang/Object;
+    sget v0, Lg7d;->call_users_action_two_positive:I
 
-    monitor-enter v0
+    sput v0, Ls6b;->P1:I
 
-    :try_start_0
-    iget-object v1, p1, Lawf;->k:Ljava/util/List;
+    sget v0, Lg7d;->call_users_blocked_label:I
 
-    const/4 v2, 0x0
+    sput v0, Ls6b;->Q1:I
 
-    if-eqz v1, :cond_1
+    sget v0, Lg7d;->call_users_large_label_view:I
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sput v0, Ls6b;->R1:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_users_large_video_view:I
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sput v0, Ls6b;->S1:I
 
-    move-result v3
+    sget v0, Lg7d;->call_users_speakers_pip_view:I
 
-    if-eqz v3, :cond_0
+    sput v0, Ls6b;->T1:I
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget v0, Lg7d;->call_users_speakers_scroll_start:I
 
-    move-result-object v3
+    sput v0, Ls6b;->U1:I
 
-    check-cast v3, Lzr4;
+    sget v0, Lg7d;->call_users_speakers_view_pager:I
 
-    invoke-virtual {v3}, Lzr4;->b()V
+    sput v0, Ls6b;->V1:I
 
-    goto :goto_0
+    sget v0, Lg7d;->call_waiting_room_events_container:I
 
-    :cond_0
-    iput-object v2, p1, Lawf;->k:Ljava/util/List;
+    sput v0, Ls6b;->W1:I
 
-    goto :goto_1
+    sget v0, Lg7d;->call_waiting_room_events_multi_view:I
 
-    :catchall_0
-    move-exception p1
+    sput v0, Ls6b;->X1:I
 
-    goto :goto_7
+    sget v0, Lg7d;->call_waiting_room_events_multi_view_avatar:I
 
-    :cond_1
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput v0, Ls6b;->Y1:I
 
-    iget-object v0, p1, Lawf;->u:Lc69;
+    sget v0, Lg7d;->call_waiting_room_events_multi_view_chevron:I
 
-    invoke-virtual {v0}, Lc69;->d()V
+    sput v0, Ls6b;->Z1:I
 
-    iget-object v0, p1, Lawf;->b:Llz9;
+    sget v0, Lg7d;->call_waiting_room_events_multi_view_subtitle:I
 
-    invoke-virtual {v0}, Llz9;->h()Ljava/util/ArrayList;
+    sput v0, Ls6b;->a2:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_waiting_room_events_multi_view_title:I
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    sput v0, Ls6b;->b2:I
 
-    move-result-object v1
+    sget v0, Lg7d;->call_waiting_room_events_router:I
 
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sput v0, Ls6b;->c2:I
 
-    move-result v3
+    sget v0, Lg7d;->call_waiting_room_events_view:I
 
-    if-eqz v3, :cond_5
+    sput v0, Ls6b;->d2:I
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget v0, Lg7d;->unknown_call_bottom_sheet_add_contact_button:I
 
-    move-result-object v3
+    sput v0, Ls6b;->e2:I
 
-    check-cast v3, Lawf;
+    sget v0, Lg7d;->unknown_call_bottom_sheet_block_button:I
 
-    if-ne v3, p1, :cond_2
+    sput v0, Ls6b;->f2:I
 
-    goto :goto_6
+    sget v0, Lg7d;->unknown_call_bottom_sheet_button_group:I
 
-    :cond_2
-    iget-object v4, v3, Lawf;->a:Ljava/lang/Object;
+    sput v0, Ls6b;->g2:I
 
-    monitor-enter v4
+    sget v0, Lg7d;->unknown_call_bottom_sheet_close_button:I
 
-    :try_start_1
-    iget-object v5, v3, Lawf;->k:Ljava/util/List;
+    sput v0, Ls6b;->h2:I
 
-    if-eqz v5, :cond_4
+    sget v0, Lg7d;->unknown_call_bottom_sheet_ok_button:I
 
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sput v0, Ls6b;->i2:I
 
-    move-result-object v5
+    sget v0, Lg7d;->unknown_call_bottom_sheet_subtitle:I
 
-    :goto_3
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    sput v0, Ls6b;->j2:I
 
-    move-result v6
+    sget v0, Lg7d;->unknown_call_bottom_sheet_title:I
 
-    if-eqz v6, :cond_3
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lzr4;
-
-    invoke-virtual {v6}, Lzr4;->b()V
-
-    goto :goto_3
-
-    :cond_3
-    iput-object v2, v3, Lawf;->k:Ljava/util/List;
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_5
-
-    :cond_4
-    :goto_4
-    monitor-exit v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    iget-object v3, v3, Lawf;->u:Lc69;
-
-    invoke-virtual {v3}, Lc69;->d()V
-
-    goto :goto_2
-
-    :goto_5
-    :try_start_2
-    monitor-exit v4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-
-    :cond_5
-    :goto_6
-    iget-object v1, v0, Llz9;->b:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_3
-    iget-object v0, v0, Llz9;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_2
-    move-exception p1
-
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    throw p1
-
-    :goto_7
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p1
-.end method
-
-.method public p(Lcom/google/android/gms/tasks/Task;)V
-    .locals 0
-
-    iget-object p1, p0, Ls6b;->a:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    sput v0, Ls6b;->k2:I
 
     return-void
 .end method

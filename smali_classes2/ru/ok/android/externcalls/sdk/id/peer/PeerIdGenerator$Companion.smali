@@ -26,9 +26,9 @@
         "MAX_JS_SAFE_LONG",
         "J",
         "MIN_JS_SAFE_LONG",
-        "Lbk8;",
+        "Lpo8;",
         "PEER_ID_RANGE",
-        "Lbk8;",
+        "Lpo8;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ltk4;)V
+.method public synthetic constructor <init>(Lro4;)V
     .locals 0
 
     .line 1

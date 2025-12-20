@@ -1,74 +1,42 @@
 .class public final Ltb1;
-.super Ldtf;
+.super Lqr4;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic t:Lvb1;
+
+
+# direct methods
+.method public constructor <init>(Lvb1;)V
+    .locals 0
+
+    iput-object p1, p0, Ltb1;->t:Lvb1;
+
+    invoke-direct {p0}, Lqr4;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltb1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltb1;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Ltb1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final f()J
     .locals 2
 
-    new-instance v0, Ltb1;
+    iget-object v0, p0, Ltb1;->t:Lvb1;
 
-    const/4 v1, 0x2
+    iget-object v0, v0, Lvb1;->K0:Lqpb;
 
-    invoke-direct {v0, v1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget v0, v0, Lqpb;->a:I
 
-    iput-object p1, v0, Ltb1;->o:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    return-object v0
-.end method
+    const-wide/16 v0, 0x96
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    return-wide v0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p0, Ltb1;->o:Ljava/lang/Object;
-
-    check-cast p1, Lf84;
-
-    new-instance v0, Lsb1;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v2, v2, v0, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method

@@ -1,176 +1,113 @@
-.class public final synthetic Llv;
-.super Ljava/lang/Object;
+.class public final Llv;
+.super Lov;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ZIJ)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput p3, p0, Llv;->a:I
-
-    iput-object p1, p0, Llv;->d:Ljava/lang/Object;
-
-    iput-wide p4, p0, Llv;->b:J
-
-    iput-boolean p2, p0, Llv;->c:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Llv;->a:J
+
+    iput-boolean p3, p0, Llv;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Llv;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Llv;->d:Ljava/lang/Object;
-
-    check-cast v0, Lsi2;
-
-    iget-boolean v1, p0, Llv;->c:Z
-
-    check-cast v0, Lve2;
-
-    iget-wide v2, p0, Llv;->b:J
-
-    invoke-virtual {v0, v2, v3, v1}, Lve2;->q0(JZ)Lpb2;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Llv;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-static {v0}, Lue3;->I(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ld93;
-
-    invoke-static {v0}, Lue3;->Q(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld93;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ld93;->a()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    move-object v3, v2
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Ld93;->c()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    move-object v1, v2
+    :cond_0
+    instance-of v0, p1, Llv;
 
-    :goto_1
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Llv;
+
+    iget-wide v0, p0, Llv;->a:J
+
+    iget-wide v2, p1, Llv;->a:J
+
+    cmp-long v0, v0, v2
+
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Ld93;->a()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_2
-    move-object v4, v2
+    iget-boolean v0, p0, Llv;->b:Z
 
-    :goto_2
-    if-eqz v0, :cond_3
+    iget-boolean p1, p1, Llv;->b:Z
 
-    invoke-interface {v0}, Ld93;->c()J
+    if-eq v0, p1, :cond_3
 
-    move-result-wide v5
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
+    return p1
 
     :cond_3
-    const-string v0, "insertDataSourceResult: \n                |loadTime: "
+    :goto_1
+    const/4 p1, 0x1
 
-    const-string v5, ", \n                |forward: "
+    return p1
+.end method
 
-    iget-wide v6, p0, Llv;->b:J
+.method public final hashCode()I
+    .locals 2
 
-    iget-boolean v8, p0, Llv;->c:Z
+    iget-wide v0, p0, Llv;->a:J
 
-    invoke-static {v6, v7, v0, v5, v8}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Llv;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "LoadingAround(time="
+
+    const-string v1, ", isAddEventCaused="
+
+    iget-wide v2, p0, Llv;->a:J
+
+    iget-boolean v4, p0, Llv;->b:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lxd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v5, ", \n                |firstChunk:"
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, "-"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                |lastChunk:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                |"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,16 +115,5 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lwmf;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,157 +1,61 @@
 .class public final Lxv7;
-.super Ldtf;
+.super Lyv7;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
-
-# instance fields
-.field public final synthetic X:Lra3;
-
-.field public o:I
+# static fields
+.field public static final a:Lxv7;
 
 
 # direct methods
-.method public constructor <init>(Lra3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lxv7;->X:Lra3;
+    new-instance v0, Lxv7;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lxv7;->a:Lxv7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxv7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxv7;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lxv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lxv7;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lxv7;->X:Lra3;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lxv7;-><init>(Lra3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lxv7;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p1, Lxv7;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object p1, p0, Lxv7;->X:Lra3;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p1, Lra3;->d:Ljava/lang/Object;
+    const v0, -0x6c883c95
 
-    check-cast p1, Ljava/util/List;
+    return v0
+.end method
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
-
-    :cond_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    const-string v2, "WebAppBackButtonPressed"
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Lcw7;
-
-    invoke-interface {v3}, Lcw7;->c()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_0
-    check-cast v0, Lcw7;
-
-    if-eqz v0, :cond_4
-
-    iput v1, p0, Lxv7;->o:I
-
-    const-string p1, "{}"
-
-    invoke-interface {v0, v2, p1, p0}, Lcw7;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_4
+    const-string v0, "TooManyRequests"
 
     return-object v0
-
-    :cond_4
-    :goto_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
 .end method

@@ -1,60 +1,134 @@
 .class public final Lmpi;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
-
-# static fields
-.field public static final a:Lmpi;
+# instance fields
+.field public final I0:Lzeg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lvd3;Lzeg;Lgoi;Lgoi;)V
+    .locals 8
 
-    new-instance v0, Lmpi;
+    const/16 v3, 0x10e
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v7, 0x0
 
-    sput-object v0, Lmpi;->a:Lmpi;
+    move-object v0, p0
 
-    new-instance v0, Ltci;
+    move-object v1, p1
 
-    const/4 v1, 0x1
+    move-object v2, p2
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    move-object v4, p3
 
-    const-class v1, Lhdi;
+    move-object v5, p5
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    move-object v6, p6
 
-    move-result-object v0
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILvd3;Li07;Lj07;I)V
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p4, v0, Lmpi;->I0:Lzeg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final g()I
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const v0, 0xc1fa340
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lhpi;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lhpi;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lhpi;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v0, v2}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public final m()[Ltx5;
+    .locals 1
+
+    sget-object v0, Lq1j;->b:[Ltx5;
+
+    return-object v0
+.end method
+
+.method public final n()Landroid/os/Bundle;
+    .locals 3
+
+    iget-object v0, p0, Lmpi;->I0:Lzeg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v0, v0, Lzeg;->a:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const-string v2, "api"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.common.telemetry.service.START"
+
+    return-object v0
+.end method
+
+.method public final r()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

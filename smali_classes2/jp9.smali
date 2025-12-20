@@ -1,128 +1,67 @@
-.class public final Ljp9;
+.class public abstract synthetic Ljp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx26;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lx26;
-
-.field public final synthetic c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhbd;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-    .locals 0
-
-    iput p3, p0, Ljp9;->a:I
-
-    iput-object p1, p0, Ljp9;->b:Lx26;
-
-    iput-object p2, p0, Ljp9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Ljp9;->a:I
+    invoke-static {}, Lip9;->values()[Lip9;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    new-instance v0, Lip9;
+    array-length v0, v0
 
-    iget-object v1, p0, Ljp9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    new-array v0, v0, [I
 
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v1, v2}, Lip9;-><init>(Lz26;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p1, p0, Ljp9;->b:Lx26;
-
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lip9;
-
-    iget-object v1, p0, Ljp9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v1, v2}, Lip9;-><init>(Lz26;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p1, p0, Ljp9;->b:Lx26;
-
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_1
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lip9;
-
-    iget-object v1, p0, Ljp9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Lip9;-><init>(Lz26;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p1, p0, Ljp9;->b:Lx26;
+    :catch_0
+    const/4 v2, 0x2
 
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object p1
+    :catch_1
+    const/4 v1, 0x3
 
-    sget-object p2, Lg84;->a:Lg84;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-ne p1, p2, :cond_2
+    :catch_2
+    const/4 v2, 0x4
 
-    goto :goto_2
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    :cond_2
-    sget-object p1, Lqqg;->a:Lqqg;
+    :catch_3
+    const/4 v1, 0x5
 
-    :goto_2
-    return-object p1
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    nop
+    :catch_4
+    sput-object v0, Ljp9;->$EnumSwitchMapping$0:[I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

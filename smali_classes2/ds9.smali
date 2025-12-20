@@ -1,134 +1,145 @@
 .class public final Lds9;
-.super Lxfh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ltcf;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final Y:Lhbd;
-
-.field public final Z:Lci5;
-
-.field public final b:Ltcf;
-
-.field public final c:Lhbd;
-
-.field public final d:Ltcf;
-
-.field public final o:Lhbd;
-
-.field public final s0:Lci5;
+.field public final b:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
+    .locals 0
 
-    invoke-direct {p0}, Lxfh;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iput-object p1, p0, Lds9;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lds9;->b:Ltcf;
-
-    new-instance v1, Lhbd;
-
-    invoke-direct {v1, v0}, Lhbd;-><init>(Lf9a;)V
-
-    iput-object v1, p0, Lds9;->c:Lhbd;
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lds9;->d:Ltcf;
-
-    new-instance v2, Lhbd;
-
-    invoke-direct {v2, v1}, Lhbd;-><init>(Lf9a;)V
-
-    iput-object v2, p0, Lds9;->o:Lhbd;
-
-    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lds9;->X:Ltcf;
-
-    new-instance v1, Lhbd;
-
-    invoke-direct {v1, v0}, Lhbd;-><init>(Lf9a;)V
-
-    iput-object v1, p0, Lds9;->Y:Lhbd;
-
-    new-instance v0, Lci5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lci5;-><init>(I)V
-
-    iput-object v0, p0, Lds9;->Z:Lci5;
-
-    new-instance v0, Lci5;
-
-    invoke-direct {v0, v1}, Lci5;-><init>(I)V
-
-    iput-object v0, p0, Lds9;->s0:Lci5;
+    iput-object p2, p0, Lds9;->b:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final t(Limb;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lds9;->d:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lx27;
-
-    if-nez p1, :cond_1
+    instance-of v1, p1, Lds9;
 
     const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    new-instance v2, Lx27;
+    check-cast p1, Lds9;
 
-    iget-object v3, p1, Limb;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lds9;->a:Ljava/lang/CharSequence;
 
-    check-cast v3, Ljava/lang/Number;
+    iget-object v3, p1, Lds9;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-wide v3
+    move-result v1
 
-    iget-object v5, p1, Limb;->b:Ljava/lang/Object;
+    if-nez v1, :cond_2
 
-    check-cast v5, Ljava/util/List;
+    return v2
 
-    invoke-direct {v2, v3, v4, v5}, Lx27;-><init>(JLjava/util/List;)V
+    :cond_2
+    iget-object v1, p0, Lds9;->b:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lds9;->b:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lds9;->a:Ljava/lang/CharSequence;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lds9;->b:Ljava/lang/Integer;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    :goto_1
+    add-int/2addr v1, v0
 
-    return-void
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "InputTextData(inputText="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lds9;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inputCursorPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lds9;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

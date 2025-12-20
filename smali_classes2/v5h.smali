@@ -2,96 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx5h;
-
 
 # instance fields
-.field public final a:F
+.field public final a:Ld68;
+
+.field public final b:Ld68;
+
+.field public final c:Ld68;
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public constructor <init>(Ld68;Ld68;Ld68;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lv5h;->a:F
+    iput-object p1, p0, Lv5h;->a:Ld68;
+
+    iput-object p2, p0, Lv5h;->b:Ld68;
+
+    iput-object p3, p0, Lv5h;->c:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(ILc2f;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lv5h;->c:Ld68;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lv5h;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lv5h;
-
-    iget v1, p0, Lv5h;->a:F
-
-    iget p1, p1, Lv5h;->a:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lv5h;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SeekProgress(progress="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lv5h;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lbbg;
+
+    check-cast v0, Lb9b;
+
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
+
+    move-result-object v0
+
+    new-instance v1, Lu5h;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, v2}, Lu5h;-><init>(Lv5h;ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p2}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

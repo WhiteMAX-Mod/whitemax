@@ -1,35 +1,21 @@
-.class public abstract synthetic Lvph;
-.super Ljava/lang/Object;
+.class public final Lvph;
+.super Luph;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final d:Lcii;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcii;Ljava/lang/String;Lmgh;)V
+    .locals 1
 
-    invoke-static {}, Luph;->values()[Luph;
+    const/16 v0, 0xd
 
-    move-result-object v0
+    invoke-direct {p0, p2, v0, p3}, Lk2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lvph;->$EnumSwitchMapping$0:[I
+    iput-object p1, p0, Lvph;->d:Lcii;
 
     return-void
 .end method

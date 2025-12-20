@@ -1,130 +1,48 @@
 .class public final Lc04;
-.super Lsj0;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic X:Lt3;
 
-.field public final c:Ljava/io/Serializable;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/io/Serializable;I)V
+.method public constructor <init>(Lt3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lc04;->b:I
+    iput-object p1, p0, Lc04;->X:Lt3;
 
-    invoke-direct {p0, p1, p2}, Lsj0;-><init>(J)V
-
-    iput-object p3, p0, Lc04;->c:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lc04;->b:I
-
-    .line 2
-    invoke-direct {p0}, Lsj0;-><init>()V
-
-    .line 3
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lc04;->c:Ljava/io/Serializable;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lc04;->b:I
+    iput-object p1, p0, Lc04;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lc04;->o:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/high16 v0, -0x80000000
 
-    const-string v1, "SharePreviewEvent{attaches="
+    or-int/2addr p1, v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lc04;->o:I
 
-    iget-object v1, p0, Lc04;->c:Ljava/io/Serializable;
+    iget-object p1, p0, Lc04;->X:Lt3;
 
-    check-cast v1, Lsz;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, p0}, Lt3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/16 v1, 0x7d
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ProfileEvent{contactInfo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lc04;->c:Ljava/io/Serializable;
-
-    check-cast v1, Lgx3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactNotFoundEvent{contactServerIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lc04;->c:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

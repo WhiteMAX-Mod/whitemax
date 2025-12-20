@@ -8,7 +8,7 @@
 
 .field public y1:Z
 
-.field public z1:Llk6;
+.field public z1:Lwo6;
 
 
 # direct methods
@@ -49,9 +49,9 @@
 
     const-string v1, "ru.ok.messages.views.dialogs.FrgDlgBase"
 
-    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    instance-of p1, p1, Ld6;
+    instance-of p1, p1, Lb6;
 
     if-eqz p1, :cond_0
 
@@ -96,7 +96,7 @@
 
     move-result-object p1
 
-    check-cast p1, Ld6;
+    check-cast p1, Lb6;
 
     goto :goto_0
 
@@ -108,7 +108,7 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->t0(ZZ)V
+    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->s0(ZZ)V
 
     return-void
 
@@ -153,11 +153,11 @@
     return-void
 
     :cond_0
-    new-instance v0, Llk6;
+    new-instance v0, Lwo6;
 
-    invoke-direct {v0, p1, p2, p3}, Llk6;-><init>(I[Ljava/lang/String;[I)V
+    invoke-direct {v0, p1, p2, p3}, Lwo6;-><init>(I[Ljava/lang/String;[I)V
 
-    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Llk6;
+    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Lwo6;
 
     return-void
 .end method
@@ -171,19 +171,19 @@
 
     iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
-    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Llk6;
+    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Lwo6;
 
     if-eqz v0, :cond_0
 
-    iget v1, v0, Llk6;->b:I
+    iget v1, v0, Lwo6;->b:I
 
-    iget-object v1, v0, Llk6;->c:Ljava/lang/Object;
+    iget-object v1, v0, Lwo6;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Llk6;->d:Ljava/lang/Object;
+    iget-object v0, v0, Lwo6;->d:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Llk6;
+    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Lwo6;
 
     :cond_0
     return-void

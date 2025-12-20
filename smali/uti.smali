@@ -1,64 +1,70 @@
-.class public abstract Luti;
+.class public final Luti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lwwa;
 
 
-# instance fields
-.field public final a:Ln2g;
+# static fields
+.field public static final a:Luti;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Luti;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Luti;->a:Ln2g;
+    sput-object v0, Luti;->a:Luti;
 
-    return-void
-.end method
+    new-instance v0, Ldqi;
 
-.method public constructor <init>(Ln2g;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    iput-object p1, p0, Luti;->a:Ln2g;
+    const-class v1, Lrqi;
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-.method public final run()V
-    .locals 2
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :try_start_0
-    invoke-virtual {p0}, Luti;->a()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    iget-object v1, p0, Luti;->a:Ln2g;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v0}, Ln2g;->c(Ljava/lang/Exception;)Z
-
-    :cond_0
-    return-void
+    throw p1
 .end method

@@ -1,37 +1,28 @@
 .class public final Lbm6;
-.super Ljava/lang/Object;
+.super Lng9;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
-
-.field public final b:Ljava/lang/Object;
-
-.field public c:Z
-
-.field public final d:Ljava/util/ArrayList;
+.field public m:Lsf8;
 
 
-# direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lml3;)V
-    .locals 0
+# virtual methods
+.method public final d()Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lbm6;->m:Lsf8;
 
-    iput-object p1, p0, Lbm6;->a:Ljava/util/concurrent/Executor;
+    if-nez v0, :cond_0
 
-    new-instance p1, Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    return-object v0
 
-    iput-object p1, p0, Lbm6;->b:Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Lsf8;->d()Ljava/lang/Object;
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lbm6;->d:Ljava/util/ArrayList;
-
-    return-void
+    return-object v0
 .end method

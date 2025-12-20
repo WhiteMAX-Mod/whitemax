@@ -1,23 +1,25 @@
 .class public final Lt0f;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lti1;
-
 .field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lti1;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x14
 
-    iput-object p1, p0, Lt0f;->a:Lti1;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    iput-object p2, p0, Lt0f;->b:Ljava/lang/String;
+    iput-object p1, p0, Lt0f;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lt0f;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,11 +47,11 @@
     :cond_1
     check-cast p1, Lt0f;
 
-    iget-object v1, p0, Lt0f;->a:Lti1;
+    iget-object v1, p0, Lt0f;->b:Ljava/lang/String;
 
-    iget-object v3, p1, Lt0f;->a:Lti1;
+    iget-object v3, p1, Lt0f;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -58,11 +60,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lt0f;->b:Ljava/lang/String;
+    iget-object v1, p0, Lt0f;->c:Ljava/lang/String;
 
-    iget-object p1, p1, Lt0f;->b:Ljava/lang/String;
+    iget-object p1, p1, Lt0f;->c:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -77,15 +79,15 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lt0f;->a:Lti1;
+    iget-object v0, p0, Lt0f;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lti1;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lt0f;->b:Ljava/lang/String;
+    iget-object v1, p0, Lt0f;->c:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -97,31 +99,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SignalingUrlSharingInfo(initiator="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lt0f;->a:Lti1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lt0f;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", path="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "CropAvatar(uriAsString="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lt0f;->b:Ljava/lang/String;
+
+    iget-object v4, p0, Lt0f;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

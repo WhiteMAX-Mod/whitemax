@@ -1,82 +1,136 @@
-.class public final Lg32;
+.class public final synthetic Lg32;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh32;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:Ly6d;
+.field public final synthetic X:F
 
-.field public final b:Lg9g;
+.field public final synthetic Y:F
 
-.field public volatile c:Lorg/webrtc/Size;
+.field public final synthetic a:Li32;
 
-.field public d:J
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic d:F
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method public constructor <init>(Ly6d;)V
-    .locals 2
+.method public synthetic constructor <init>(Li32;IIFFFF)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg32;->a:Ly6d;
+    iput-object p1, p0, Lg32;->a:Li32;
 
-    new-instance p1, Lg9g;
+    iput p2, p0, Lg32;->b:I
 
-    invoke-direct {p1}, Lg9g;-><init>()V
+    iput p3, p0, Lg32;->c:I
 
-    iput-object p1, p0, Lg32;->b:Lg9g;
+    iput p4, p0, Lg32;->d:F
 
-    new-instance p1, Lorg/webrtc/Size;
+    iput p5, p0, Lg32;->o:F
 
-    const/4 v0, 0x0
+    iput p6, p0, Lg32;->X:F
 
-    invoke-direct {p1, v0, v0}, Lorg/webrtc/Size;-><init>(II)V
-
-    iput-object p1, p0, Lg32;->c:Lorg/webrtc/Size;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lg32;->d:J
+    iput p7, p0, Lg32;->Y:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 5
 
-    iget-object v0, p0, Lg32;->b:Lg9g;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    invoke-virtual {v0}, Lg9g;->b()D
+    move-result p1
 
-    move-result-wide v0
+    iget-object v0, p0, Lg32;->a:Li32;
 
-    iget-object v2, p0, Lg32;->c:Lorg/webrtc/Size;
+    iget-object v1, v0, Li32;->s0:Landroid/graphics/Paint;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object v2, v0, Li32;->b:Landroid/animation/ArgbEvaluator;
 
-    const-string v4, "fps estimation: "
+    iget v3, p0, Lg32;->b:I
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    const-string v0, ", frame size: "
+    iget v4, p0, Lg32;->c:I
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, p1, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    return-object v0
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v1, v0, Li32;->c:Landroid/animation/FloatEvaluator;
+
+    iget v2, p0, Lg32;->d:F
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    iget v3, p0, Lg32;->o:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
+
+    move-result v2
+
+    iput v2, v0, Li32;->t0:F
+
+    iget v2, p0, Lg32;->X:F
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    iget v3, p0, Lg32;->Y:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v0, Li32;->u0:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

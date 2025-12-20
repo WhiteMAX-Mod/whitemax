@@ -1,48 +1,75 @@
-.class public final Lqsa;
-.super Lvqa;
+.class public abstract Lqsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Loyd;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqsa;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Notification$Builder;
     .locals 1
 
-    iget-object v0, p0, Lqsa;->a:Ljava/lang/Object;
+    new-instance v0, Landroid/app/Notification$Builder;
+
+    invoke-direct {v0, p0, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public final o(Lvta;)V
-    .locals 2
+.method public static b(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-    new-instance v0, Lkta;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBadgeIconType(I)Landroid/app/Notification$Builder;
 
-    iget-object v1, p0, Lqsa;->a:Ljava/lang/Object;
+    move-result-object p0
 
-    invoke-direct {v0, p1, v1}, Lkta;-><init>(Lvta;Ljava/lang/Object;)V
+    return-object p0
+.end method
 
-    invoke-interface {p1, v0}, Lvta;->c(Lpy4;)V
+.method public static c(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {v0}, Lkta;->run()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColorized(Z)Landroid/app/Notification$Builder;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setGroupAlertBehavior(I)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Landroid/app/Notification$Builder;Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setSettingsText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setShortcutId(Ljava/lang/String;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Landroid/app/Notification$Builder;J)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setTimeoutAfter(J)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

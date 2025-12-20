@@ -1,464 +1,333 @@
 .class public final Ltk8;
-.super Ld2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic E0:I
+.field public final a:Ljava/lang/String;
 
-.field public final F0:I
+.field public final b:Ljava/lang/String;
 
-.field public G0:Lfff;
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ljava/util/Map;
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcff;I)V
-    .locals 1
+.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
-    iput p3, p0, Ltk8;->E0:I
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p3, :pswitch_data_0
+    .line 2
+    iput-object p7, p0, Ltk8;->a:Ljava/lang/String;
 
-    new-instance p3, Lsk8;
+    .line 3
+    iput-object p8, p0, Ltk8;->b:Ljava/lang/String;
 
-    invoke-direct {p3, p1}, Lsk8;-><init>(Landroid/content/Context;)V
+    .line 4
+    iput-wide p1, p0, Ltk8;->c:J
 
-    invoke-direct {p0, p3}, Lmid;-><init>(Landroid/view/View;)V
+    .line 5
+    iput-wide p3, p0, Ltk8;->d:J
 
-    const/16 p1, 0x51
+    .line 6
+    iput-object p9, p0, Ltk8;->e:Ljava/util/Map;
 
-    int-to-float p1, p1
+    .line 7
+    iput-wide p5, p0, Ltk8;->f:J
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lkti;->d(F)I
+    .line 8
+    invoke-static {p7}, Liyf;->G(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    const/16 v0, 0x15e
+    if-nez p1, :cond_0
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+    invoke-static {p8}, Liyf;->G(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    iput p1, p0, Ltk8;->F0:I
-
-    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v0, p1, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p1, Lkg6;
-
-    const/16 v0, 0x8
-
-    invoke-direct {p1, p0, v0, p2}, Lkg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p3, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance p1, Ld72;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p1, p0, v0, p2}, Ld72;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p3, p1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    if-nez p1, :cond_0
 
     return-void
 
-    :pswitch_0
-    new-instance p3, Le1i;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p3, p1}, Le1i;-><init>(Landroid/content/Context;)V
+    const-string p2, "type or event can\'t be empty"
 
-    invoke-direct {p0, p3}, Lmid;-><init>(Landroid/view/View;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/16 p1, 0x51
+    throw p1
+.end method
 
-    int-to-float p1, p1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+    .locals 13
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    and-int/lit8 v0, p10, 0x4
 
-    move-result-object v0
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    move-wide v4, v1
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    goto :goto_0
 
-    mul-float/2addr p1, v0
+    :cond_0
+    move-wide/from16 v4, p3
 
-    invoke-static {p1}, Lkti;->d(F)I
+    :goto_0
+    and-int/lit8 v0, p10, 0x8
 
-    move-result p1
+    if-eqz v0, :cond_1
 
-    const/16 v0, 0x15e
+    move-wide v6, v1
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+    goto :goto_1
 
-    move-result p1
+    :cond_1
+    move-wide/from16 v6, p5
 
-    iput p1, p0, Ltk8;->F0:I
+    :goto_1
+    and-int/lit8 v0, p10, 0x20
 
-    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+    if-eqz v0, :cond_2
 
-    invoke-direct {v0, p1, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    .line 9
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {p3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-wide v0
 
-    new-instance p1, Lwfe;
+    move-wide v8, v0
 
-    const/16 v0, 0x17
+    :goto_2
+    move-object v3, p0
 
-    invoke-direct {p1, p0, v0, p2}, Lwfe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-object v10, p1
 
-    invoke-static {p3, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    move-object v11, p2
 
-    new-instance p1, Ld72;
+    move-object/from16 v12, p7
 
-    const/16 v0, 0x9
+    goto :goto_3
 
-    invoke-direct {p1, p0, v0, p2}, Ld72;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :cond_2
+    move-wide/from16 v8, p8
 
-    invoke-virtual {p3, p1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    goto :goto_2
 
-    return-void
-
-    :pswitch_1
-    new-instance p3, Loef;
-
-    invoke-direct {p3, p1}, Loef;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p3}, Lmid;-><init>(Landroid/view/View;)V
-
-    const/16 p1, 0x51
-
-    iput p1, p0, Ltk8;->F0:I
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lkti;->d(F)I
-
-    move-result p1
-
-    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v0, p1, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p1, Lwfe;
-
-    const/16 v0, 0xb
-
-    invoke-direct {p1, p0, v0, p2}, Lwfe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p3, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance p1, Ld72;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, p0, v0, p2}, Ld72;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p3, p1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    .line 10
+    :goto_3
+    invoke-direct/range {v3 .. v12}, Ltk8;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final A(Lt98;Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Ltk8;->E0:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    instance-of v0, p2, Leff;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ltk8;->z(Lt98;)V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    check-cast p2, Leff;
+    instance-of v1, p1, Ltk8;
 
-    iget-boolean p1, p2, Leff;->a:Z
+    const/4 v2, 0x0
 
-    iget-object p2, p0, Lmid;->a:Landroid/view/View;
+    if-nez v1, :cond_1
 
-    check-cast p2, Le1i;
-
-    if-eqz p1, :cond_1
-
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
+    check-cast p1, Ltk8;
 
-    :goto_0
-    invoke-virtual {p2, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-object v1, p0, Ltk8;->a:Ljava/lang/String;
 
-    :goto_1
-    return-void
+    iget-object v3, p1, Ltk8;->a:Ljava/lang/String;
 
-    :pswitch_0
-    instance-of v0, p2, Leff;
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_2
+    move-result v1
 
-    invoke-virtual {p0, p1}, Ltk8;->z(Lt98;)V
+    if-nez v1, :cond_2
 
-    goto :goto_3
+    return v2
 
     :cond_2
-    check-cast p2, Leff;
+    iget-object v1, p0, Ltk8;->b:Ljava/lang/String;
 
-    iget-boolean p1, p2, Leff;->a:Z
+    iget-object v3, p1, Ltk8;->b:Ljava/lang/String;
 
-    iget-object p2, p0, Lmid;->a:Landroid/view/View;
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p2, Loef;
+    move-result v1
 
-    if-eqz p1, :cond_3
+    if-nez v1, :cond_3
 
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_2
+    return v2
 
     :cond_3
-    const/high16 p1, 0x3f800000    # 1.0f
+    iget-wide v3, p0, Ltk8;->c:J
 
-    :goto_2
-    invoke-virtual {p2, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-wide v5, p1, Ltk8;->c:J
 
-    :goto_3
-    return-void
+    cmp-long v1, v3, v5
 
-    :pswitch_1
-    instance-of v0, p2, Leff;
+    if-eqz v1, :cond_4
 
-    if-nez v0, :cond_4
-
-    invoke-virtual {p0, p1}, Ltk8;->z(Lt98;)V
-
-    goto :goto_5
+    return v2
 
     :cond_4
-    check-cast p2, Leff;
+    iget-wide v3, p0, Ltk8;->d:J
 
-    iget-boolean p1, p2, Leff;->a:Z
+    iget-wide v5, p1, Ltk8;->d:J
 
-    iget-object p2, p0, Lmid;->a:Landroid/view/View;
+    cmp-long v1, v3, v5
 
-    check-cast p2, Lsk8;
+    if-eqz v1, :cond_5
 
-    if-eqz p1, :cond_5
-
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_4
+    return v2
 
     :cond_5
-    const/high16 p1, 0x3f800000    # 1.0f
+    iget-object v1, p0, Ltk8;->e:Ljava/util/Map;
 
-    :goto_4
-    invoke-virtual {p2, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-object v3, p1, Ltk8;->e:Ljava/util/Map;
 
-    :goto_5
-    return-void
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v1, :cond_6
 
-.method public final z(Lt98;)V
-    .locals 3
-
-    iget v0, p0, Ltk8;->E0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    instance-of v0, p1, Lfff;
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    check-cast p1, Lfff;
-
-    iput-object p1, p0, Ltk8;->G0:Lfff;
-
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
-
-    move-object v1, v0
-
-    check-cast v1, Le1i;
-
-    iget v2, p0, Ltk8;->F0:I
-
-    invoke-virtual {v1, p1, v2}, Le1i;->a(Lfff;I)V
-
-    iget-boolean p1, p1, Lfff;->t0:Z
-
-    check-cast v0, Le1i;
-
-    if-eqz p1, :cond_1
-
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    instance-of v0, p1, Lfff;
-
-    if-nez v0, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    check-cast p1, Lfff;
-
-    iput-object p1, p0, Ltk8;->G0:Lfff;
-
-    iget v0, p0, Ltk8;->F0:I
-
-    iget-object v1, p0, Lmid;->a:Landroid/view/View;
-
-    if-nez v0, :cond_3
-
-    move-object v0, v1
-
-    check-cast v0, Loef;
-
-    new-instance v2, Lmgf;
-
-    invoke-direct {v2, v1}, Lmgf;-><init>(Landroid/view/View;)V
-
-    invoke-virtual {v0, v2}, Loef;->setSizeConfigurator(Lmgf;)V
-
-    :cond_3
-    move-object v0, v1
-
-    check-cast v0, Loef;
-
-    invoke-virtual {v0, p1}, Loef;->a(Lfff;)V
-
-    iget-boolean p1, p1, Lfff;->t0:Z
-
-    check-cast v1, Loef;
-
-    if-eqz p1, :cond_4
-
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_2
-
-    :cond_4
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    :goto_2
-    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_3
-    return-void
-
-    :pswitch_1
-    instance-of v0, p1, Lfff;
-
-    if-nez v0, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    check-cast p1, Lfff;
-
-    iput-object p1, p0, Ltk8;->G0:Lfff;
-
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
-
-    move-object v1, v0
-
-    check-cast v1, Lsk8;
-
-    iget v2, p0, Ltk8;->F0:I
-
-    invoke-virtual {v1, p1, v2}, Lsk8;->a(Lfff;I)V
-
-    iget-boolean p1, p1, Lfff;->t0:Z
-
-    check-cast v0, Lsk8;
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x3e99999a    # 0.3f
-
-    goto :goto_4
+    return v2
 
     :cond_6
-    const/high16 p1, 0x3f800000    # 1.0f
+    iget-wide v3, p0, Ltk8;->f:J
 
-    :goto_4
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-wide v5, p1, Ltk8;->f:J
 
-    :goto_5
-    return-void
+    cmp-long p1, v3, v5
 
-    nop
+    if-eqz p1, :cond_7
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Ltk8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ltk8;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ltk8;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ltk8;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltk8;->e:Ljava/util/Map;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-wide v0, p0, Ltk8;->f:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", event="
+
+    const-string v1, ", userId="
+
+    const-string v2, "LogEntry(type="
+
+    iget-object v3, p0, Ltk8;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Ltk8;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Ltk8;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sessionId="
+
+    const-string v2, ", params="
+
+    iget-wide v3, p0, Ltk8;->d:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Ltk8;->e:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", time="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ltk8;->f:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

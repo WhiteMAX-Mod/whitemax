@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract b(Lmsf;)V
+.method public abstract b()V
 .end method

@@ -1,67 +1,45 @@
 .class public final Lmea;
-.super Landroid/telephony/TelephonyCallback;
+.super Lpd4;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/telephony/TelephonyCallback$DisplayInfoListener;
-
-
-# instance fields
-.field public final a:Lqea;
 
 
 # direct methods
-.method public constructor <init>(Lqea;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
+    .line 1
+    sget-object p1, Lnd4;->b:Lnd4;
 
-    iput-object p1, p0, Lmea;->a:Lqea;
+    invoke-direct {p0, p1}, Lmea;-><init>(Lpd4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lpd4;)V
+    .locals 1
+
+    .line 2
+    invoke-direct {p0}, Lpd4;-><init>()V
+
+    .line 3
+    iget-object v0, p0, Lpd4;->a:Ljava/util/LinkedHashMap;
+
+    iget-object p1, p1, Lpd4;->a:Ljava/util/LinkedHashMap;
+
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
-    .locals 2
+.method public final a(Lod4;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Ll49;->c(Landroid/telephony/TelephonyDisplayInfo;)I
+    iget-object v0, p0, Lpd4;->a:Ljava/util/LinkedHashMap;
 
-    move-result p1
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x5
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_1
-
-    if-ne p1, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    const/16 v1, 0xa
-
-    :cond_2
-    iget-object p1, p0, Lmea;->a:Lqea;
-
-    invoke-virtual {p1, v1}, Lqea;->d(I)V
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

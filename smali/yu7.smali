@@ -1,21 +1,13 @@
 .class public final Lyu7;
-.super Lxp;
+.super Lqyd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyu7;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lyu7;
-
-    invoke-direct {v0}, Lxp;-><init>()V
-
-    sput-object v0, Lyu7;->a:Lyu7;
-
-    return-void
+    return-object p1
 .end method

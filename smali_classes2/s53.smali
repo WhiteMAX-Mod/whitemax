@@ -1,121 +1,47 @@
-.class public final Ls53;
-.super Ldtf;
+.class public final synthetic Ls53;
+.super Lw8;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
-
-
-# instance fields
-.field public final synthetic X:Lone/me/chats/list/ChatsListWidget;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
-    .locals 0
-
-    iput-object p2, p0, Ls53;->X:Lone/me/chats/list/ChatsListWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Ler6;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, Ls53;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, La63;
 
-    move-result-object p1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Ls53;
+    iget-object p3, p0, Lw8;->a:Ljava/lang/Object;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    check-cast p3, Lone/me/chats/search/ChatsListSearchScreen;
 
-    invoke-virtual {p1, p2}, Ls53;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Lp38;
 
-    return-object p2
-.end method
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object p2, p2, La63;->a:Lz53;
 
-    new-instance v0, Ls53;
+    sget-object p3, Ll53;->$EnumSwitchMapping$1:[I
 
-    iget-object v1, p0, Ls53;->X:Lone/me/chats/list/ChatsListWidget;
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {v0, p2, v1}, Ls53;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+    move-result p2
 
-    iput-object p1, v0, Ls53;->o:Ljava/lang/Object;
+    aget p2, p3, p2
 
-    return-object v0
-.end method
+    const/4 p3, 0x2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    if-ne p2, p3, :cond_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls53;->o:Ljava/lang/Object;
-
-    check-cast p1, Lcda;
-
-    instance-of v0, p1, Lei4;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Ly14;->c:Ly14;
-
-    check-cast p1, Lei4;
-
-    invoke-virtual {v0, p1}, Li3;->s0(Lei4;)V
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    instance-of v0, p1, Lhaf;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->L0:[Lyy7;
-
-    iget-object v0, p0, Ls53;->X:Lone/me/chats/list/ChatsListWidget;
-
-    iget-object v0, v0, Lone/me/chats/list/ChatsListWidget;->H0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkj1;
-
-    move-object v1, p1
-
-    check-cast v1, Lhaf;
-
-    iget-wide v2, v1, Lhaf;->b:J
-
-    iget-boolean v1, v1, Lhaf;->c:Z
-
-    new-instance v4, Loe1;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, p1, v5}, Loe1;-><init>(Lcda;I)V
-
-    invoke-virtual {v0, v2, v3, v1, v4}, Lkj1;->l(JZLcm6;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object p1, Lch5;->a:Lch5;
 
     return-object p1
 .end method

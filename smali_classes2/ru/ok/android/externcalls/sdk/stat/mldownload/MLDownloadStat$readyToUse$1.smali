@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat$readyToUse$1;
-.super Lu08;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Loq6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lu08;",
-        "Lem6;"
+        "Ln58;",
+        "Loq6;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Lm81;",
+        "Lqa1;",
         "statSender",
-        "Lqqg;",
+        "Lv2h;",
         "invoke",
-        "(Lm81;)V",
+        "(Lqa1;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -60,7 +60,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
@@ -71,16 +71,16 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lm81;
+    check-cast p1, Lqa1;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat$readyToUse$1;->invoke(Lm81;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat$readyToUse$1;->invoke(Lqa1;)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method
 
-.method public final invoke(Lm81;)V
+.method public final invoke(Lqa1;)V
     .locals 4
 
     .line 2
@@ -103,11 +103,11 @@
     invoke-virtual {v1, v3, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     .line 5
-    check-cast p1, Ln81;
+    check-cast p1, Lra1;
 
     const-string v2, "ml_ready_to_use"
 
-    invoke-virtual {p1, v2, v0, v1}, Ln81;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {p1, v2, v0, v1}, Lra1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     return-void
 .end method

@@ -1,144 +1,169 @@
-.class public final Ltk6;
+.class public final synthetic Ltk6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lprf;
+.implements Loq6;
 
 
 # instance fields
-.field public final X:Lbwf;
+.field public final synthetic a:I
 
-.field public Y:Z
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lggg;
-
-.field public final d:Z
-
-.field public final o:Z
+.field public final synthetic b:Lone/me/chats/forward/ForwardPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lggg;ZZ)V
+.method public synthetic constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
     .locals 0
 
+    iput p2, p0, Ltk6;->a:I
+
+    iput-object p1, p0, Ltk6;->b:Lone/me/chats/forward/ForwardPickerScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltk6;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Ltk6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ltk6;->c:Lggg;
-
-    iput-boolean p4, p0, Ltk6;->d:Z
-
-    iput-boolean p5, p0, Ltk6;->o:Z
-
-    new-instance p1, Lm2;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, p2, p0}, Lm2;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lbwf;
-
-    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p2, p0, Ltk6;->X:Lbwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    iget-object v0, p0, Ltk6;->X:Lbwf;
+    iget v0, p0, Ltk6;->a:I
 
-    invoke-virtual {v0}, Lbwf;->e()Z
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    move-result v1
+    iget-object v2, p0, Ltk6;->b:Lone/me/chats/forward/ForwardPickerScreen;
 
-    if-eqz v1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    check-cast p1, Landroid/view/View;
+
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lp38;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lrjj;->a(I)Lu74;
 
     move-result-object v0
 
-    check-cast v0, Lsk6;
+    invoke-interface {v0, p1}, Lu74;->q(Landroid/view/View;)Lu74;
 
-    invoke-virtual {v0}, Lsk6;->close()V
+    move-result-object p1
+
+    invoke-virtual {v2}, Lone/me/chats/forward/ForwardPickerScreen;->P0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v3, Lx74;
+
+    sget v4, Lp7b;->e:I
+
+    sget v0, Lr7b;->b:I
+
+    new-instance v5, Lbhg;
+
+    invoke-direct {v5, v0}, Lbhg;-><init>(I)V
+
+    sget v0, Lx4e;->s1:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    invoke-direct/range {v3 .. v8}, Lx74;-><init>(ILghg;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    new-instance v3, Lx74;
 
-.method public final getReadableDatabase()Lpk6;
-    .locals 2
+    sget v4, Lp7b;->f:I
 
-    iget-object v0, p0, Ltk6;->X:Lbwf;
+    sget v0, Lr7b;->c:I
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    new-instance v5, Lbhg;
 
-    move-result-object v0
+    invoke-direct {v5, v0}, Lbhg;-><init>(I)V
 
-    check-cast v0, Lsk6;
+    sget v0, Lx4e;->r1:I
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1}, Lsk6;->c(Z)Lpk6;
+    move-result-object v6
 
-    move-result-object v0
+    const/4 v7, 0x0
 
-    return-object v0
-.end method
+    const/16 v8, 0x14
 
-.method public final getWritableDatabase()Lpk6;
-    .locals 2
+    invoke-direct/range {v3 .. v8}, Lx74;-><init>(ILghg;Ljava/lang/Integer;Ljava/lang/Integer;I)V
 
-    iget-object v0, p0, Ltk6;->X:Lbwf;
-
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Lsk6;
+    :goto_0
+    invoke-interface {p1, v0}, Lu74;->h(Ljava/util/Collection;)Lu74;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lsk6;->c(Z)Lpk6;
+    invoke-interface {p1}, Lu74;->c()Lu74;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
-.end method
+    invoke-interface {p1}, Lu74;->build()Lv74;
 
-.method public final setWriteAheadLoggingEnabled(Z)V
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Ltk6;->X:Lbwf;
+    invoke-interface {p1, v2}, Lv74;->u(Lone/me/sdk/arch/Widget;)V
 
-    invoke-virtual {v0}, Lbwf;->e()Z
+    return-object v1
 
-    move-result v1
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    if-eqz v1, :cond_0
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lp38;
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Lx84;->getOnBackPressedDispatcher()Lr1b;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lsk6;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->setWriteAheadLoggingEnabled(Z)V
+    invoke-virtual {p1}, Lr1b;->d()V
 
-    :cond_0
-    iput-boolean p1, p0, Ltk6;->Y:Z
+    :cond_1
+    return-object v1
 
-    return-void
+    :pswitch_1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lp38;
+
+    invoke-virtual {v2, p1}, Lone/me/chats/forward/ForwardPickerScreen;->Q0(Z)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

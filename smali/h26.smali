@@ -1,130 +1,79 @@
 .class public final Lh26;
-.super Lxhd;
+.super Le26;
 .source "SourceFile"
-
-# interfaces
-.implements Le26;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lh26;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public X:F
+.field public b:Z
 
-.field public Y:I
+.field public c:[Ljava/io/File;
 
-.field public Z:F
-
-.field public o:F
-
-.field public s0:I
-
-.field public t0:I
-
-.field public u0:I
-
-.field public v0:I
-
-.field public w0:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwf4;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
-
-    sput-object v0, Lh26;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
+.field public d:I
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a()Ljava/io/File;
+    .locals 5
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lh26;->b:Z
 
-    return v0
-.end method
+    iget-object v1, p0, Lj26;->a:Ljava/io/File;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    if-nez v0, :cond_0
 
-    iget p2, p0, Lh26;->o:F
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    iput-boolean v0, p0, Lh26;->b:Z
 
-    iget p2, p0, Lh26;->X:F
+    return-object v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    :cond_0
+    iget-object v0, p0, Lh26;->c:[Ljava/io/File;
 
-    iget p2, p0, Lh26;->Y:I
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_2
 
-    iget p2, p0, Lh26;->Z:F
+    iget v3, p0, Lh26;->d:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    array-length v4, v0
 
-    iget p2, p0, Lh26;->s0:I
+    if-ge v3, v4, :cond_1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_0
 
-    iget p2, p0, Lh26;->t0:I
+    :cond_1
+    return-object v2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_2
+    :goto_0
+    if-nez v0, :cond_4
 
-    iget p2, p0, Lh26;->u0:I
+    invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v0
 
-    iget p2, p0, Lh26;->v0:I
+    iput-object v0, p0, Lh26;->c:[Ljava/io/File;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_3
 
-    iget-boolean p2, p0, Lh26;->w0:Z
+    array-length v0, v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    if-nez v0, :cond_4
 
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    :cond_3
+    return-object v2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_4
+    iget-object v0, p0, Lh26;->c:[Ljava/io/File;
 
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v1, p0, Lh26;->d:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    add-int/lit8 v2, v1, 0x1
 
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v2, p0, Lh26;->d:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    aget-object v0, v0, v1
 
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object v0
 .end method

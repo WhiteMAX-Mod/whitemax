@@ -1,87 +1,120 @@
-.class public final Lal2;
+.class public final synthetic Lal2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfl2;
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lal2;->a:I
 
-    iput-wide p1, p0, Lal2;->a:J
+    iput-object p6, p0, Lal2;->d:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lal2;->b:J
+
+    iput-wide p4, p0, Lal2;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
 
-    const/4 v0, 0x1
+    iget v0, p0, Lal2;->a:I
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    return v0
+    iget-wide v2, p0, Lal2;->b:J
 
-    :cond_0
-    instance-of v1, p1, Lal2;
+    iget-object v4, p0, Lal2;->d:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    check-cast v4, Lca3;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lal2;
-
-    iget-wide v3, p0, Lal2;->a:J
-
-    iget-wide v5, p1, Lal2;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lal2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Add(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lal2;->a:J
-
-    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Lca3;->j()Lch2;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    iget-wide v5, p0, Lal2;->c:J
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    filled-new-array {v4, v7}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    const-string v7, "ch2"
+
+    const-string v8, "changeLastNotifMessageId, chatId = %d, lastNotifMessageId = %d"
+
+    invoke-static {v7, v8, v4}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance v4, Ljg2;
+
+    const/4 v7, 0x7
+
+    invoke-direct {v4, v5, v6, v7}, Ljg2;-><init>(JI)V
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v2, v3, v5, v4}, Lch2;->r(JZLwx3;)Lud2;
+
+    return-object v1
+
+    :pswitch_0
+    move-object v6, v4
+
+    check-cast v6, Lch2;
+
+    invoke-virtual {v6, v2, v3}, Lch2;->K(J)Lai2;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v7, v0, Lhk0;->a:J
+
+    iget-object v9, v0, Lai2;->b:Lzh2;
+
+    iget-wide v10, p0, Lal2;->c:J
+
+    invoke-virtual/range {v6 .. v11}, Lch2;->o0(JLzh2;J)V
+
+    :goto_0
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

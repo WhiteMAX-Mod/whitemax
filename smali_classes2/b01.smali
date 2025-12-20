@@ -1,91 +1,89 @@
-.class public final synthetic Lb01;
+.class public final Lb01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/io/File;
 
-.field public final synthetic b:Lk01;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ln01;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk01;I)V
-    .locals 0
-
-    iput p2, p0, Lb01;->a:I
-
-    iput-object p1, p0, Lb01;->b:Lk01;
+.method public constructor <init>(Ljava/io/File;Ln01;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lb01;->a:Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->length()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lb01;->b:J
+
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lb01;->c:J
+
+    iput-object p2, p0, Lb01;->d:Ln01;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lb01;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "CacheEntry{file="
 
-    check-cast p1, Lwdf;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lb01;->b:Lk01;
+    iget-object v1, p0, Lb01;->a:Ljava/io/File;
 
-    iget-object v0, v0, Lk01;->o0:Lds1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lds1;->M(Lwdf;)V
+    const-string v1, ", length="
 
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget-wide v1, p0, Lb01;->b:J
 
-    :pswitch_0
-    check-cast p1, Leef;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lb01;->b:Lk01;
+    const-string v1, ", lastModified="
 
-    iget-object v0, v0, Lk01;->o0:Lds1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lds1;->z(Leef;)V
+    iget-wide v1, p0, Lb01;->c:J
 
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    check-cast p1, Lwdf;
+    const-string v1, ", cacheType="
 
-    iget-object v0, p0, Lb01;->b:Lk01;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lk01;->o0:Lds1;
+    iget-object v1, p0, Lb01;->d:Ln01;
 
-    invoke-virtual {v0, p1}, Lds1;->M(Lwdf;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const/16 v1, 0x7d
 
-    :pswitch_2
-    check-cast p1, Leef;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lb01;->b:Lk01;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, v0, Lk01;->o0:Lds1;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lds1;->z(Leef;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

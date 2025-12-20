@@ -1,192 +1,165 @@
 .class public final Lrpa;
-.super Ljava/lang/Object;
+.super Lxbg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic c:[Lyy7;
-
-.field public static final d:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lkz4;
+.field public c:J
 
-.field public final b:Lkz4;
+.field public d:J
+
+.field public o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ltoc;
-
-    const-class v1, Lrpa;
-
-    const-string v2, "exceptionHandler"
-
-    const-string v3, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lvid;->a:Lwid;
-
-    const-string v3, "analytics"
-
-    const-string v5, "getAnalytics()Lru/ok/tamtam/stats/Analytics;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Lyy7;
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Lrpa;->c:[Lyy7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrpa;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkz4;Lkz4;)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
-    iput-object p2, p0, Lrpa;->a:Lkz4;
-
-    iput-object p1, p0, Lrpa;->b:Lkz4;
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/Map;Lws5;)V
-    .locals 5
-
-    iget-wide v0, p1, Lws5;->a:J
-
-    iget-object v2, p1, Lws5;->g:Ljava/lang/Long;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "trid"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p1, Lws5;->h:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "eKey"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    if-eqz v2, :cond_1
-
-    const-string v0, "ttime"
-
-    invoke-interface {p0, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide v0, p1, Lws5;->j:J
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    sub-long/2addr v0, v3
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "dtime"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide v0, p1, Lws5;->i:J
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "fcmdtime"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object p1, p1, Lws5;->e:Ljava/lang/Long;
-
-    if-eqz p1, :cond_2
-
-    const-string v0, "suid"
-
-    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ldd;
-    .locals 2
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 4
 
-    sget-object v0, Lrpa;->c:[Lyy7;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "time"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "userId"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     const/4 v1, 0x1
 
-    aget-object v0, v0, v1
+    goto :goto_0
 
-    iget-object v0, p0, Lrpa;->b:Lkz4;
+    :sswitch_2
+    const-string v0, "chatId"
 
-    invoke-virtual {v0}, Lkz4;->get()Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p2
 
-    check-cast v0, Ldd;
+    if-nez p2, :cond_2
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final c()Lyi5;
-    .locals 2
-
-    sget-object v0, Lrpa;->c:[Lyy7;
-
+    :cond_2
     const/4 v1, 0x0
 
-    aget-object v0, v0, v1
+    :goto_0
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Lrpa;->a:Lkz4;
+    packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {v0}, Lkz4;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Lgr9;->y()V
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrpa;->o:J
+
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrpa;->d:J
+
+    return-void
+
+    :pswitch_2
+    invoke-static {p1, v2, v3}, Lisi;->m(Lgr9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrpa;->c:J
+
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x5128d96d -> :sswitch_2
+        -0x31d4d1ba -> :sswitch_1
+        0x3652cd -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 8
+
+    iget-wide v0, p0, Lrpa;->c:J
+
+    iget-wide v2, p0, Lrpa;->d:J
+
+    iget-wide v4, p0, Lrpa;->o:J
+
+    const-string v6, "Response{chatId="
+
+    const-string v7, ", userId="
+
+    invoke-static {v0, v1, v6, v7}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lyi5;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", time="
+
+    const-string v2, "}"
+
+    invoke-static {v4, v5, v1, v2, v0}, Lzy4;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,120 +1,48 @@
 .class public final Lf7c;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final synthetic X:Lvr7;
 
-.field public final b:[Ljava/lang/String;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
+.method public constructor <init>(Lvr7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf7c;->X:Lvr7;
 
-    iput-object p1, p0, Lf7c;->a:Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lf7c;->b:[Ljava/lang/String;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()Lf7c;
-    .locals 3
-
-    new-instance v0, Lf7c;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const-string v2, ""
-
-    invoke-direct {v0, v2, v1}, Lf7c;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lf7c;->d:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iget p1, p0, Lf7c;->o:I
 
-    return p1
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v0, p1, Lf7c;
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lf7c;->o:I
 
-    if-nez v0, :cond_1
+    iget-object p1, p0, Lf7c;->X:Lvr7;
 
-    return v1
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lf7c;
+    invoke-virtual {p1, v0, p0}, Lvr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lf7c;->a:Ljava/lang/CharSequence;
+    move-result-object p1
 
-    iget-object v2, p1, Lf7c;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object v0, p0, Lf7c;->b:[Ljava/lang/String;
-
-    iget-object p1, p1, Lf7c;->b:[Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PreProcessedText{text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lf7c;->a:Ljava/lang/CharSequence;
-
-    invoke-static {v1}, Luog;->h(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tokens="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf7c;->b:[Ljava/lang/String;
-
-    array-length v1, v1
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lxc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

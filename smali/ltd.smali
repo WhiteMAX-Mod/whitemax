@@ -1,85 +1,117 @@
-.class public abstract Lltd;
-.super Landroid/graphics/drawable/Drawable;
+.class public final Lltd;
+.super Lal7;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:D
+.field public static final o:Lltd;
+
+
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
+
+.field public final transient d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    const-wide v0, 0x4046800000000000L    # 45.0
+    new-instance v0, Lltd;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    const/4 v1, 0x0
 
-    move-result-wide v0
+    new-array v2, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
+    invoke-direct {v0, v1, v2}, Lltd;-><init>(I[Ljava/lang/Object;)V
 
-    move-result-wide v0
-
-    sput-wide v0, Lltd;->a:D
+    sput-object v0, Lltd;->o:Lltd;
 
     return-void
 .end method
 
-.method public static a(FFZ)F
-    .locals 6
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz p2, :cond_0
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    float-to-double v0, p0
+    iput-object p2, p0, Lltd;->c:[Ljava/lang/Object;
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    iput p1, p0, Lltd;->d:I
 
-    sget-wide v4, Lltd;->a:D
-
-    sub-double/2addr v2, v4
-
-    float-to-double p0, p1
-
-    mul-double/2addr v2, p0
-
-    add-double/2addr v2, v0
-
-    double-to-float p0, v2
-
-    :cond_0
-    return p0
+    return-void
 .end method
 
-.method public static b(FFZ)F
-    .locals 6
 
-    const/high16 v0, 0x3fc00000    # 1.5f
+# virtual methods
+.method public final b(I[Ljava/lang/Object;)I
+    .locals 3
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lltd;->c:[Ljava/lang/Object;
 
-    mul-float/2addr p0, v0
+    const/4 v1, 0x0
 
-    float-to-double v0, p0
+    iget v2, p0, Lltd;->d:I
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    invoke-static {v0, v1, p2, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-wide v4, Lltd;->a:D
+    add-int/2addr p1, v2
 
-    sub-double/2addr v2, v4
+    return p1
+.end method
 
-    float-to-double p0, p1
+.method public final c()[Ljava/lang/Object;
+    .locals 1
 
-    mul-double/2addr v2, p0
+    iget-object v0, p0, Lltd;->c:[Ljava/lang/Object;
 
-    add-double/2addr v2, v0
+    return-object v0
+.end method
 
-    double-to-float p0, v2
+.method public final d()I
+    .locals 1
 
-    return p0
+    iget v0, p0, Lltd;->d:I
 
-    :cond_0
-    mul-float/2addr p0, v0
+    return v0
+.end method
 
-    return p0
+.method public final e()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lltd;->d:I
+
+    invoke-static {p1, v0}, Lljj;->d(II)V
+
+    iget-object v0, p0, Lltd;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lltd;->d:I
+
+    return v0
 .end method

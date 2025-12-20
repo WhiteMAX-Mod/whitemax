@@ -61,11 +61,11 @@
 
     move-result-object p1
 
-    new-instance v1, Lr6;
+    new-instance v1, Lp6;
 
     const/16 v3, 0xd
 
-    invoke-direct {v1, v3, p0}, Lr6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, p0}, Lp6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lmfg;->d:Lmfg;
+    sget-object v3, Lcrg;->d:Lcrg;
 
     const v3, 0x109000f
 
@@ -87,7 +87,7 @@
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
-    sget v5, Lf5d;->exo_track_selection_none:I
+    sget v5, Lked;->exo_track_selection_none:I
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget v4, Lj1d;->exo_list_divider:I
+    sget v4, Lmad;->exo_list_divider:I
 
     invoke-virtual {p1, v4, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
-    sget v2, Lf5d;->exo_track_selection_auto:I
+    sget v2, Lked;->exo_track_selection_auto:I
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -186,7 +186,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lpq4;",
+            "Lmu4;",
             ">;"
         }
     .end annotation
@@ -214,7 +214,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lpq4;
+    check-cast v3, Lmu4;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -304,7 +304,7 @@
     return-void
 .end method
 
-.method public setTrackNameProvider(Lofg;)V
+.method public setTrackNameProvider(Lerg;)V
     .locals 0
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

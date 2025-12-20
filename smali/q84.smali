@@ -1,74 +1,44 @@
-.class public final Lq84;
-.super Ldtf;
+.class public final synthetic Lq84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lx3e;
 
 
 # instance fields
-.field public final synthetic o:Ljava/util/concurrent/Callable;
+.field public final synthetic a:Lx84;
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lx84;I)V
     .locals 0
 
-    iput-object p1, p0, Lq84;->o:Ljava/util/concurrent/Callable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lq84;->a:Lx84;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lq84;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 3
 
-    check-cast p1, Lf84;
+    iget-object v0, p0, Lq84;->a:Lx84;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lx84;->router:Lw3e;
 
-    invoke-virtual {p0, p1, p2}, Lq84;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lx84;->instanceId:Ljava/lang/String;
 
-    move-result-object p1
+    iget v2, p0, Lq84;->b:I
 
-    check-cast p1, Lq84;
+    invoke-virtual {v1, v2, v0}, Lw3e;->K(ILjava/lang/String;)V
 
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lq84;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lq84;
-
-    iget-object v0, p0, Lq84;->o:Ljava/util/concurrent/Callable;
-
-    invoke-direct {p1, v0, p2}, Lq84;-><init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq84;->o:Ljava/util/concurrent/Callable;
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -2,261 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lda8;
-
 
 # instance fields
-.field public final a:Lda8;
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public c:I
+.field public final c:I
 
-.field public d:I
-
-.field public o:Ljava/lang/Object;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lda8;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lhm0;->a:Ljava/lang/String;
 
-    iput v0, p0, Lhm0;->b:I
+    iput-object p4, p0, Lhm0;->b:Ljava/lang/String;
 
-    const/4 v0, -0x1
+    iput p2, p0, Lhm0;->c:I
 
-    iput v0, p0, Lhm0;->c:I
-
-    iput v0, p0, Lhm0;->d:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lhm0;->o:Ljava/lang/Object;
-
-    iput-object p1, p0, Lhm0;->a:Lda8;
+    iput p3, p0, Lhm0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lhm0;->b:I
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
     :cond_0
-    const/4 v1, 0x1
+    instance-of v1, p1, Lhm0;
 
-    iget-object v2, p0, Lhm0;->a:Lda8;
+    const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_3
+    if-nez v1, :cond_1
 
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    iget v0, p0, Lhm0;->c:I
+    check-cast p1, Lhm0;
+
+    iget v1, p0, Lhm0;->c:I
+
+    iget v3, p1, Lhm0;->c:I
+
+    if-ne v1, v3, :cond_2
 
     iget v1, p0, Lhm0;->d:I
 
-    iget-object v3, p0, Lhm0;->o:Ljava/lang/Object;
+    iget v3, p1, Lhm0;->d:I
 
-    invoke-interface {v2, v0, v1, v3}, Lda8;->h(IILjava/lang/Object;)V
+    if-ne v1, v3, :cond_2
 
-    goto :goto_0
+    iget-object v1, p0, Lhm0;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lhm0;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lmcj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lhm0;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lhm0;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lmcj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    iget v0, p0, Lhm0;->c:I
-
-    iget v1, p0, Lhm0;->d:I
-
-    invoke-interface {v2, v0, v1}, Lda8;->g(II)V
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lhm0;->c:I
-
-    iget v1, p0, Lhm0;->d:I
-
-    invoke-interface {v2, v0, v1}, Lda8;->c(II)V
-
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lhm0;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lhm0;->b:I
-
-    return-void
+    return v2
 .end method
 
-.method public final b(II)V
-    .locals 1
-
-    invoke-virtual {p0}, Lhm0;->a()V
-
-    iget-object v0, p0, Lhm0;->a:Lda8;
-
-    invoke-interface {v0, p1, p2}, Lda8;->b(II)V
-
-    return-void
-.end method
-
-.method public final c(II)V
+.method public final hashCode()I
     .locals 4
 
-    iget v0, p0, Lhm0;->b:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
     iget v0, p0, Lhm0;->c:I
 
-    if-lt p1, v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v2, p0, Lhm0;->d:I
+    move-result-object v0
 
-    add-int v3, v0, v2
+    iget v1, p0, Lhm0;->d:I
 
-    if-gt p1, v3, :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/2addr v2, p2
+    move-result-object v1
 
-    iput v2, p0, Lhm0;->d:I
+    iget-object v2, p0, Lhm0;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+    iget-object v3, p0, Lhm0;->b:Ljava/lang/String;
 
-    move-result p1
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
 
-    iput p1, p0, Lhm0;->c:I
+    move-result-object v0
 
-    return-void
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    :cond_0
-    invoke-virtual {p0}, Lhm0;->a()V
+    move-result v0
 
-    iput p1, p0, Lhm0;->c:I
-
-    iput p2, p0, Lhm0;->d:I
-
-    iput v1, p0, Lhm0;->b:I
-
-    return-void
-.end method
-
-.method public final g(II)V
-    .locals 3
-
-    iget v0, p0, Lhm0;->b:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lhm0;->c:I
-
-    if-lt v0, p1, :cond_0
-
-    add-int v2, p1, p2
-
-    if-gt v0, v2, :cond_0
-
-    iget v0, p0, Lhm0;->d:I
-
-    add-int/2addr v0, p2
-
-    iput v0, p0, Lhm0;->d:I
-
-    iput p1, p0, Lhm0;->c:I
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lhm0;->a()V
-
-    iput p1, p0, Lhm0;->c:I
-
-    iput p2, p0, Lhm0;->d:I
-
-    iput v1, p0, Lhm0;->b:I
-
-    return-void
-.end method
-
-.method public final h(IILjava/lang/Object;)V
-    .locals 5
-
-    iget v0, p0, Lhm0;->b:I
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lhm0;->c:I
-
-    iget v2, p0, Lhm0;->d:I
-
-    add-int/2addr v2, v0
-
-    if-gt p1, v2, :cond_0
-
-    add-int v3, p1, p2
-
-    if-lt v3, v0, :cond_0
-
-    iget-object v4, p0, Lhm0;->o:Ljava/lang/Object;
-
-    if-ne v4, p3, :cond_0
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    iput p1, p0, Lhm0;->c:I
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iget p2, p0, Lhm0;->c:I
-
-    sub-int/2addr p1, p2
-
-    iput p1, p0, Lhm0;->d:I
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lhm0;->a()V
-
-    iput p1, p0, Lhm0;->c:I
-
-    iput p2, p0, Lhm0;->d:I
-
-    iput-object p3, p0, Lhm0;->o:Ljava/lang/Object;
-
-    iput v1, p0, Lhm0;->b:I
-
-    return-void
+    return v0
 .end method

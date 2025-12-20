@@ -1,29 +1,48 @@
-.class public interface abstract Liq1;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Liq1;
+.super Ll84;
+
+
+# instance fields
+.field public final synthetic X:Lt3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lt3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Liq1;->X:Lt3;
+
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public e()V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Liq1;->d:Ljava/lang/Object;
 
-.method public k()V
-    .locals 0
+    iget p1, p0, Liq1;->o:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public l()V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Liq1;->o:I
 
-.method public onCallAccepted()V
-    .locals 0
+    iget-object p1, p0, Liq1;->X:Lt3;
 
-    return-void
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lt3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

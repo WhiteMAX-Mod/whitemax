@@ -3,188 +3,136 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final a:Lxvi;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxvi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Landroid/os/Messenger;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lxvi;
+    new-instance v0, Lgqi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x12
 
-    sput-object v0, Lxvi;->a:Lxvi;
+    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
 
-    new-instance v0, Lmli;
+    sput-object v0, Lxvi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
 
-    const-class v1, Lemi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+    new-instance v0, Landroid/os/Messenger;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x8
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x9
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xb
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xd
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xe
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xf
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object v0, p0, Lxvi;->a:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lxvi;->a:Landroid/os/Messenger;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    check-cast p1, Lxvi;
+
+    iget-object p1, p1, Lxvi;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
     move-result-object p1
 
-    throw p1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lxvi;->a:Landroid/os/Messenger;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Lxvi;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    return-void
 .end method

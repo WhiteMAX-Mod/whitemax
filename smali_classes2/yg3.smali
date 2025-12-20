@@ -1,67 +1,147 @@
-.class public abstract synthetic Lyg3;
+.class public final Lyg3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Laj4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lfh3;
+
+.field public final synthetic b:Lth7;
+
+.field public final synthetic c:Lqg3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lfh3;Lth7;Lqg3;)V
+    .locals 0
 
-    invoke-static {}, Lc10;->values()[Lc10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyg3;->a:Lfh3;
+
+    iput-object p2, p0, Lyg3;->b:Lth7;
+
+    iput-object p3, p0, Lyg3;->c:Lqg3;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lpi4;)V
+    .locals 7
+
+    check-cast p1, Lp0;
+
+    invoke-virtual {p1}, Lp0;->e()F
+
+    move-result v0
+
+    invoke-virtual {p1}, Lp0;->g()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lp0;->f()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    const v1, 0x3f7d70a4    # 0.99f
+
+    cmpg-float v1, v0, v1
+
+    if-gez v1, :cond_3
+
+    if-eqz p1, :cond_3
+
+    const/16 p1, 0x2710
+
+    int-to-float p1, p1
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Ln7j;->c(F)I
+
+    move-result v5
+
+    iget-object v2, p0, Lyg3;->a:Lfh3;
+
+    iget-object p1, v2, Lfh3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
 
-    new-array v0, v0, [I
+    move-result v0
 
-    const/4 v1, 0x1
+    iget-object v4, p0, Lyg3;->c:Lqg3;
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v3, p0, Lyg3;->b:Lth7;
 
-    :catch_0
-    const/4 v1, 0x2
+    if-eqz v0, :cond_1
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {v2, v3, v4, v5}, Lfh3;->a(Lfh3;Lth7;Lqg3;I)V
 
-    :catch_1
-    const/16 v1, 0x8
+    return-void
 
-    const/4 v2, 0x3
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v0
 
-    :catch_2
-    const/4 v1, 0x4
+    new-instance v1, Lzg3;
 
-    :try_start_3
-    aput v1, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-eqz v0, :cond_2
 
-    :catch_3
-    const/4 v2, 0x5
+    const/4 v6, 0x0
 
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-direct/range {v1 .. v6}, Lzg3;-><init>(Lfh3;Lth7;Lqg3;II)V
 
-    :catch_4
-    sput-object v0, Lyg3;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_2
+    const/4 v6, 0x1
+
+    invoke-direct/range {v1 .. v6}, Lzg3;-><init>(Lfh3;Lth7;Lqg3;II)V
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b(Lpi4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lpi4;)V
+    .locals 0
 
     return-void
 .end method

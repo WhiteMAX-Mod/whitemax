@@ -4,42 +4,40 @@
 
 
 # static fields
-.field public static final b:Le1;
+.field public static final d:Le1;
 
 
 # instance fields
-.field public final a:Ljava/lang/Throwable;
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public c:Le1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
     new-instance v0, Le1;
 
-    new-instance v1, Ld1;
+    const/4 v1, 0x0
 
-    const-string v2, "Failure occurred while trying to finish a future."
+    invoke-direct {v0, v1, v1}, Le1;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
-
-    invoke-direct {v0, v1}, Le1;-><init>(Ljava/lang/Throwable;)V
-
-    sput-object v0, Le1;->b:Le1;
+    sput-object v0, Le1;->d:Le1;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Le1;->a:Ljava/lang/Runnable;
 
-    iput-object p1, p0, Le1;->a:Ljava/lang/Throwable;
+    iput-object p2, p0, Le1;->b:Ljava/util/concurrent/Executor;
 
     return-void
 .end method

@@ -22,12 +22,12 @@
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Map;",
         "key",
         "renderers",
-        "Lqqg;",
+        "Lv2h;",
         "setRenderers",
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Ljava/util/List;)V",
-        "Lah1;",
+        "Lej1;",
         "getCallRenderer",
-        "()Lah1;",
+        "()Lej1;",
         "callRenderer",
         "Lorg/webrtc/EglBase$Context;",
         "getEglBaseContext",
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public abstract getCallRenderer()Lah1;
+.method public abstract getCallRenderer()Lej1;
 .end method
 
 .method public abstract getEglBaseContext()Lorg/webrtc/EglBase$Context;

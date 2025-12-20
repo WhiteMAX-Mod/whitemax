@@ -1,53 +1,25 @@
-.class public final Lsn2;
-.super Lq44;
+.class public abstract Lsn2;
+.super Ladf;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:La40;
-
-.field public Z:I
-
-.field public d:La40;
-
-.field public o:Lw68;
-
-
-# direct methods
-.method public constructor <init>(La40;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lsn2;->Y:La40;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public F(Ljg9;Loq6;Lcr6;)V
     .locals 1
 
-    iput-object p1, p0, Lsn2;->X:Ljava/lang/Object;
+    new-instance v0, Lxb;
 
-    iget p1, p0, Lsn2;->Z:I
+    invoke-direct {v0, p2, p1}, Lxb;-><init>(Loq6;Ljg9;)V
 
-    const/high16 v0, -0x80000000
+    iget-object p2, p0, Lwrd;->a:Landroid/view/View;
 
-    or-int/2addr p1, v0
+    invoke-static {p2, v0}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iput p1, p0, Lsn2;->Z:I
+    new-instance v0, Ljl2;
 
-    iget-object p1, p0, Lsn2;->Y:La40;
+    invoke-direct {v0, p3, p1, p0}, Ljl2;-><init>(Lcr6;Ljg9;Lsn2;)V
 
-    const/4 v0, 0x0
+    invoke-virtual {p2, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    invoke-virtual {p1, v0, p0}, La40;->b(Lw68;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

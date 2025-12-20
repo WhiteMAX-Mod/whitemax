@@ -1,166 +1,109 @@
 .class public final Lbie;
-.super Ljava/lang/Object;
+.super Ld0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lbie;
-
-.field public static final c:Ljava/lang/String;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbie;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lhh7;
+.field public c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Lc0;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    const/4 v1, 0x7
 
-    new-instance v1, Lbie;
+    invoke-direct {v0, v1}, Lc0;-><init>(I)V
 
-    invoke-direct {v1, v0}, Lbie;-><init>(Ljava/util/HashSet;)V
-
-    sput-object v1, Lbie;->b:Lbie;
-
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lbie;->c:Ljava/lang/String;
+    sput-object v0, Lbie;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/HashSet;)V
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    invoke-static {p1}, Lhh7;->j(Ljava/util/Collection;)Lhh7;
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lbie;->a:Lhh7;
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lbie;->c:Z
 
     return-void
-.end method
-
-.method public static a(Landroid/os/Bundle;)Lbie;
-    .locals 3
-
-    sget-object v0, Lbie;->c:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    const-string p0, "SessionCommands"
-
-    const-string v0, "Missing commands. Creating an empty SessionCommands"
-
-    invoke-static {p0, v0}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p0, Lbie;->b:Lbie;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/Bundle;
-
-    invoke-static {v2}, Laie;->a(Landroid/os/Bundle;)Laie;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Lbie;
-
-    invoke-direct {p0, v0}, Lbie;-><init>(Ljava/util/HashSet;)V
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x1
+    const-string v1, "SearchView.SavedState{"
 
-    return p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    instance-of v0, p1, Lbie;
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    const/4 p1, 0x0
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    return p1
+    move-result-object v1
 
-    :cond_1
-    check-cast p1, Lbie;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lbie;->a:Lhh7;
+    const-string v1, " isIconified="
 
-    iget-object p1, p1, Lbie;->a:Lhh7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lhh7;->equals(Ljava/lang/Object;)Z
+    iget-boolean v1, p0, Lbie;->c:Z
 
-    move-result p1
+    const-string v2, "}"
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lbie;->a:Lhh7;
-
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    return-object v0
+.end method
 
-    move-result v0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return v0
+    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
+
+    iget-boolean p2, p0, Lbie;->c:Z
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+
+    return-void
 .end method

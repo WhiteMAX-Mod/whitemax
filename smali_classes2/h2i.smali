@@ -1,66 +1,69 @@
-.class public final synthetic Lh2i;
-.super Ljava/lang/Object;
+.class public final Lh2i;
+.super Lkm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# static fields
+.field public static final b:Lh2i;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lgm4;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public static final d:Lgm4;
+
+.field public static final e:Lgm4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lh2i;->a:I
+    new-instance v0, Lh2i;
 
-    iput-object p1, p0, Lh2i;->b:Lone/me/sdk/arch/Widget;
+    invoke-direct {v0}, Lkm4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lh2i;->b:Lh2i;
+
+    const-string v1, "bot_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":webapp:root"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v2
+
+    sput-object v2, Lh2i;->c:Lgm4;
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, ":settings/webapps"
+
+    invoke-static {v0, v3, v2, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v2
+
+    sput-object v2, Lh2i;->d:Lgm4;
+
+    const-string v2, ":settings/webapp"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1, v4, v5}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v0
+
+    sput-object v0, Lh2i;->e:Lgm4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lh2i;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lh2i;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast p2, Lha3;
-
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->w0(Lone/me/sdk/arch/Widget;Ljava/lang/Object;Lha3;)Lqqg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lha3;
-
-    iget-object v0, p0, Lh2i;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->t0(Lone/me/sdk/arch/Widget;Landroid/view/View;Lha3;)Lqqg;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

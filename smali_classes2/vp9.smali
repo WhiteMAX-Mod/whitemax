@@ -3,46 +3,45 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leq9;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-
-# direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lvp9;->a:J
-
-    iput-wide p3, p0, Lvp9;->b:J
-
-    iput-wide p5, p0, Lvp9;->c:J
-
-    return-void
-.end method
+.implements Ljava/lang/Cloneable;
 
 
 # virtual methods
-.method public final a()Z
+.method public final clone()Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Lvp9;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
 .end method
 
-.method public final j()J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-wide v0, p0, Lvp9;->a:J
+    instance-of v0, p1, Lvp9;
 
-    return-wide v0
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    check-cast p1, Lvp9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x164be01
+
+    return v0
 .end method

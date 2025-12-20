@@ -1,102 +1,102 @@
 .class public final Lejc;
-.super Lljc;
+.super Lmf4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public v0:Ljava/util/List;
 
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+# virtual methods
+.method public final E(Lw3e;I)V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lejc;->v0:Ljava/util/List;
 
-    iput-wide p1, p0, Lejc;->a:J
+    invoke-static {p2, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lsic;
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
+
+    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Lsic;)V
+
+    new-instance v0, Lz3e;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
+
+    invoke-virtual {p1, v0}, Lw3e;->S(Lz3e;)V
 
     return-void
 .end method
 
+.method public final j()I
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iget-object v0, p0, Lejc;->v0:Ljava/util/List;
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lejc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lejc;
-
-    iget-wide v3, p0, Lejc;->a:J
-
-    iget-wide v5, p1, Lejc;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x1000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lejc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final m()I
-    .locals 1
+.method public final k(I)J
+    .locals 2
 
-    const/16 v0, 0x1000
+    iget-object v0, p0, Lejc;->v0:Ljava/util/List;
 
-    return v0
-.end method
+    invoke-static {p1, v0}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object p1
 
-    const-string v0, "DebugProfileInfo(id="
+    check-cast p1, Lsic;
 
-    const-string v1, ")"
+    if-eqz p1, :cond_0
 
-    iget-wide v2, p0, Lejc;->a:J
+    iget-wide v0, p1, Lsic;->a:J
 
-    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    int-to-long v0, p1
+
+    return-wide v0
 .end method

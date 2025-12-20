@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lk01;
+# virtual methods
+.method public final serializer()Lq38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
+    sget-object v0, Ln9i;->a:Ln9i;
 
-# direct methods
-.method public constructor <init>(Lk01;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo9i;->a:Lk01;
-
-    return-void
+    return-object v0
 .end method

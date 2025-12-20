@@ -1,183 +1,221 @@
 .class public final Lxpc;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lzfe;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lk18;
+.field public final synthetic Y:Liqc;
+
+.field public final synthetic Z:Lud2;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
+.method public constructor <init>(Liqc;Lud2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxpc;->Y:Liqc;
 
-    iput-object p1, p0, Lxpc;->a:Lk18;
+    iput-object p2, p0, Lxpc;->Z:Lud2;
 
-    iput-object p2, p0, Lxpc;->b:Lk18;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lac4;
 
-    const-string v1, "onProxyEnableChange: oldValue="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", newValue="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lxpc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const-string v0, "xpc"
+    check-cast p1, Lxpc;
 
-    invoke-static {v0, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-object p1, p0, Lxpc;->a:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lxpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lzzf;
-
-    invoke-virtual {p1, p2}, Lzzf;->f(Ljava/lang/String;)V
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lxpc;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj94;
-
-    const-string v0, "proxy"
-
-    invoke-virtual {p1, v0, p2}, Lj94;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p1
 .end method
 
-.method public final b(Ljava/util/List;Ljava/util/List;)V
-    .locals 7
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const-string v0, "xpc"
+    new-instance v0, Lxpc;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lxpc;->Y:Liqc;
 
-    const-string v2, "onProxyDomainsChanged: oldValue="
+    iget-object v2, p0, Lxpc;->Z:Lud2;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, p2}, Lxpc;-><init>(Liqc;Lud2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object p1, v0, Lxpc;->X:Ljava/lang/Object;
 
-    const-string p1, ", newValue="
+    return-object v0
+.end method
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lxpc;->o:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    sget-object v2, Lv2h;->a:Lv2h;
 
-    invoke-static {v0, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lxpc;->a:Lk18;
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    check-cast p1, Lzzf;
-
-    monitor-enter p1
-
-    :try_start_0
-    iput-object p2, p1, Lzzf;->f:Ljava/util/List;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lxpc;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj94;
-
-    const-string v0, "proxyDomains"
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x3f
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v1, p2
-
-    invoke-static/range {v1 .. v6}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, v0, p2}, Lj94;->b(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v2
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :catchall_0
-    move-exception v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-object p2, v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    throw p1
 
-    throw p2
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxpc;->X:Ljava/lang/Object;
+
+    check-cast p1, Lac4;
+
+    iget-object v0, p0, Lxpc;->Y:Liqc;
+
+    iget-object v3, v0, Liqc;->Z:Ld68;
+
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lfv3;
+
+    invoke-interface {v3}, Lfv3;->f()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object p1, v0, Liqc;->Y:Lh6f;
+
+    iput v1, p0, Lxpc;->o:I
+
+    sget-object v0, Lid4;->a:Lid4;
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object v2
+
+    :cond_3
+    iget-object v1, p0, Lxpc;->Z:Lud2;
+
+    iget-object v3, v1, Lud2;->b:Lzh2;
+
+    iget-wide v3, v3, Lzh2;->a:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
+
+    invoke-static {p1, v1}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Liqc;->v0:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxc4;
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ProfileInvite"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "ONEME-18920"
+
+    invoke-virtual {p1, v1, v0}, Lxc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :cond_4
+    iget-object p1, v0, Liqc;->X:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v3, p1
+
+    check-cast v3, Lo2b;
+
+    iget-wide v4, v1, Lud2;->a:J
+
+    iget-object p1, v1, Lud2;->b:Lzh2;
+
+    iget-wide v6, p1, Lzh2;->a:J
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
+
+    invoke-virtual/range {v3 .. v11}, Lo2b;->f(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v3
+
+    iget-object p1, v0, Liqc;->A0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
 .end method

@@ -1,11 +1,8 @@
-.class public interface abstract Ldbd;
+.class public abstract Ldbd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lbbd;
 
 
-# virtual methods
-.method public abstract O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
-.end method
+# static fields
+.field public static call_users_in_wait_room_count:I = 0x7f110006
+
+.field public static call_users_info_count:I = 0x7f110007

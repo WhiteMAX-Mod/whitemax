@@ -1,49 +1,82 @@
 .class public final Llf;
-.super Lmdf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final j:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Leo7;Lem6;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lmdf;-><init>(Landroid/view/View;Leo7;Lem6;)V
+    iput p2, p0, Llf;->a:I
 
-    const/16 p1, 0x8
+    iput-object p1, p0, Llf;->b:Landroid/view/View;
 
-    iput p1, p0, Llf;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lg4i;Lms0;)V
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 2
 
-    iget-object p1, p1, Lg4i;->a:Le4i;
+    iget v0, p0, Llf;->a:I
 
-    iget v0, p0, Lmdf;->d:I
+    iget-object v1, p0, Llf;->b:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Le4i;->f(I)Lco7;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    iget v1, p0, Llf;->j:I
+    sget-object p1, Lash;->a:Ljava/util/WeakHashMap;
 
-    invoke-virtual {p1, v1}, Le4i;->f(I)Lco7;
+    invoke-static {v1}, Lmrh;->c(Landroid/view/View;)V
 
-    move-result-object p1
+    return-void
 
-    invoke-static {v0, p1}, Lco7;->a(Lco7;Lco7;)Lco7;
+    :pswitch_0
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    move-result-object p1
+    sget-object v0, Lash;->a:Ljava/util/WeakHashMap;
 
-    invoke-virtual {p0, p1, p2}, Lmdf;->a(Lco7;Lms0;)V
+    invoke-static {p1}, Lmrh;->c(Landroid/view/View;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    iget p1, p0, Llf;->a:I
 
     return-void
 .end method

@@ -1,125 +1,119 @@
-.class public final Lpxd;
-.super Ldtf;
+.class public Lpxd;
+.super Lgl0;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lsxd;
+.field public final c:I
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic Z:Z
-
-.field public o:I
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lsxd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lpxd;->X:Lsxd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lpxd;->Y:Ljava/lang/String;
+    iput p1, p0, Lpxd;->c:I
 
-    iput-boolean p3, p0, Lpxd;->Z:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lpxd;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpxd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpxd;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lpxd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Landroid/graphics/Bitmap;Lt9c;)Lag3;
     .locals 3
 
-    new-instance p1, Lpxd;
+    iget v0, p0, Lpxd;->c:I
 
-    iget-object v0, p0, Lpxd;->Y:Ljava/lang/String;
+    if-lez v0, :cond_1
 
-    iget-boolean v1, p0, Lpxd;->Z:Z
+    iget v1, p0, Lpxd;->d:I
 
-    iget-object v2, p0, Lpxd;->X:Lsxd;
+    if-lez v1, :cond_1
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lpxd;-><init>(Lsxd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    return-object p1
-.end method
+    move-result v2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    if-ne v0, v2, :cond_0
 
-    iget v0, p0, Lpxd;->o:I
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    const/4 v1, 0x1
+    move-result v2
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    if-eq v1, v2, :cond_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v2, 0x1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Lpxd;->o:I
-
-    iget-object p1, p0, Lpxd;->X:Lsxd;
-
-    iget-object v0, p0, Lpxd;->Y:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lpxd;->Z:Z
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v0, v1, v2, p0}, Lsxd;->a(Lsxd;Ljava/lang/String;ZZLq44;)Ljava/lang/Comparable;
+    invoke-virtual {p2, p1, v0, v1, v2}, Lt9c;->d(Landroid/graphics/Bitmap;IIZ)Loo4;
 
     move-result-object p1
 
-    sget-object v0, Lg84;->a:Lg84;
+    :try_start_0
+    invoke-virtual {p1}, Lag3;->n0()Ljava/lang/Object;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p2
+
+    check-cast p2, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0, p2, p2}, Lgl0;->d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p1}, Loo4;->l()Lag3;
+
+    move-result-object p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Lag3;->close()V
+
+    return-object p2
+
+    :catchall_0
+    move-exception p2
+
+    invoke-virtual {p1}, Lag3;->close()V
+
+    throw p2
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Lgl0;->a(Landroid/graphics/Bitmap;Lt9c;)Lag3;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b()Lh01;
+    .locals 5
+
+    new-instance v0, Lzbf;
+
+    const-string v1, "resize:"
+
+    const-string v2, ","
+
+    iget v3, p0, Lpxd;->c:I
+
+    iget v4, p0, Lpxd;->d:I
+
+    invoke-static {v1, v3, v4, v2}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lzbf;-><init>(Ljava/lang/String;)V
 
     return-object v0
+.end method
 
-    :cond_2
-    return-object p1
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ResizePostprocessor"
+
+    return-object v0
 .end method

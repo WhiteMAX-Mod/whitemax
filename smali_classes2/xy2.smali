@@ -1,96 +1,48 @@
 .class public final Lxy2;
-.super Lid0;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final synthetic X:Luq1;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Luq1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x5
+    iput-object p1, p0, Lxy2;->X:Luq1;
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
-
-    iput-object p1, p0, Lxy2;->b:Landroid/content/Intent;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxy2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxy2;
-
-    iget-object v1, p0, Lxy2;->b:Landroid/content/Intent;
-
-    iget-object p1, p1, Lxy2;->b:Landroid/content/Intent;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lxy2;->b:Landroid/content/Intent;
+    iput-object p1, p0, Lxy2;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget p1, p0, Lxy2;->o:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iput p1, p0, Lxy2;->o:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lxy2;->X:Luq1;
 
-    const-string v1, "PickPhotoFromCamera(data="
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p0}, Luq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lxy2;->b:Landroid/content/Intent;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

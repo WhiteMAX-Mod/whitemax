@@ -1,122 +1,188 @@
 .class public final Lph7;
-.super Ljava/lang/Object;
+.super Lkh7;
 .source "SourceFile"
-
-# interfaces
-.implements Ls9a;
 
 
 # instance fields
-.field public final a:Lw3a;
+.field public final D0:Ljava/util/concurrent/Executor;
 
-.field public final b:Ljava/util/LinkedHashSet;
+.field public final E0:Ljava/lang/Object;
+
+.field public F0:Lnj7;
+
+.field public G0:Loh7;
 
 
 # direct methods
-.method public constructor <init>(Lw3a;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkh7;-><init>()V
 
-    iput-object p1, p0, Lph7;->a:Lw3a;
+    new-instance v0, Ljava/lang/Object;
 
-    new-instance p1, Ljava/util/LinkedHashSet;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+    iput-object v0, p0, Lph7;->E0:Ljava/lang/Object;
 
-    iput-object p1, p0, Lph7;->b:Ljava/util/LinkedHashSet;
+    iput-object p1, p0, Lph7;->D0:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Lry9;)V
-    .locals 1
+.method public final a(Lpj7;)Lnj7;
+    .locals 0
 
-    invoke-static {p1}, Lqxi;->b(Lry9;)Z
+    invoke-interface {p1}, Lpj7;->f()Lnj7;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lph7;->b:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final J(ILjava/nio/ByteBuffer;Lzu0;)V
-    .locals 1
+.method public final c()V
+    .locals 2
 
-    iget-object v0, p0, Lph7;->a:Lw3a;
+    iget-object v0, p0, Lph7;->E0:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2, p3}, Lw3a;->J(ILjava/nio/ByteBuffer;Lzu0;)V
+    monitor-enter v0
 
-    return-void
-.end method
-
-.method public final c0(Lhf6;)I
-    .locals 3
-
-    iget-object v0, p0, Lph7;->a:Lw3a;
-
-    invoke-virtual {v0, p1}, Lw3a;->c0(Lhf6;)I
-
-    move-result v1
-
-    iget-object v2, p1, Lhf6;->n:Ljava/lang/String;
-
-    invoke-static {v2}, Lxz9;->m(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    new-instance v2, Lx3a;
-
-    iget p1, p1, Lhf6;->z:I
-
-    invoke-direct {v2, p1}, Lx3a;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lw3a;->A(Lry9;)V
-
-    :cond_0
-    return v1
-.end method
-
-.method public final close()V
-    .locals 3
-
-    iget-object v0, p0, Lph7;->b:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    iget-object v2, p0, Lph7;->a:Lw3a;
+    :try_start_0
+    iget-object v1, p0, Lph7;->F0:Lnj7;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    check-cast v1, Lry9;
-
-    invoke-virtual {v2, v1}, Lw3a;->A(Lry9;)V
+    iput-object v1, p0, Lph7;->F0:Lnj7;
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
-    invoke-virtual {v2}, Lw3a;->close()V
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final f(Lnj7;)V
+    .locals 5
+
+    iget-object v0, p0, Lph7;->E0:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lkh7;->C0:Z
+
+    if-nez v1, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v1, p0, Lph7;->G0:Loh7;
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {p1}, Lnj7;->getImageInfo()Lui7;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lui7;->getTimestamp()J
+
+    move-result-wide v1
+
+    iget-object v3, p0, Lph7;->G0:Loh7;
+
+    iget-object v3, v3, Lql6;->b:Lnj7;
+
+    invoke-interface {v3}, Lnj7;->getImageInfo()Lui7;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lui7;->getTimestamp()J
+
+    move-result-wide v3
+
+    cmp-long v1, v1, v3
+
+    if-gtz v1, :cond_1
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lph7;->F0:Lnj7;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+
+    :cond_2
+    iput-object p1, p0, Lph7;->F0:Lnj7;
+
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :cond_3
+    new-instance v1, Loh7;
+
+    invoke-direct {v1, p1, p0}, Loh7;-><init>(Lnj7;Lph7;)V
+
+    iput-object v1, p0, Lph7;->G0:Loh7;
+
+    invoke-virtual {p0, v1}, Lkh7;->b(Lnj7;)Lwe8;
+
+    move-result-object p1
+
+    new-instance v2, Lgud;
+
+    const/16 v3, 0x15
+
+    invoke-direct {v2, v3, v1}, Lgud;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {}, Lgbj;->a()La15;
+
+    move-result-object v1
+
+    invoke-static {p1, v2, v1}, Ledf;->a(Lwe8;Lbs6;Ljava/util/concurrent/Executor;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

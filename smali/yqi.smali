@@ -1,186 +1,162 @@
-.class public abstract Lyqi;
+.class public final synthetic Lyqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final synthetic b:Lyqi;
+
+.field public static final synthetic c:Lyqi;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static final a(Ljava/io/OutputStream;Ljava/lang/String;)V
+.method static synthetic constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lyqi;
 
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-direct {v0, v1}, Lyqi;-><init>(I)V
 
-    if-ge v0, v1, :cond_0
+    sput-object v0, Lyqi;->b:Lyqi;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+    new-instance v0, Lyqi;
 
-    move-result v1
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Ljava/io/OutputStream;->write(I)V
+    invoke-direct {v0, v1}, Lyqi;-><init>(I)V
 
-    add-int/lit8 v0, v0, 0x1
+    sput-object v0, Lyqi;->c:Lyqi;
 
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public static b(Landroid/content/Context;I)F
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iput p1, p0, Lyqi;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, p1, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static c(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
-    .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Status;->c:Landroid/app/PendingIntent;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lcom/google/android/gms/common/api/ResolvableApiException;
-
-    invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
-
-    invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
-
-    return-object v0
-.end method
-
-.method public static d(Landroid/view/View;)Landroid/view/ViewGroup;
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
+    iget v0, p0, Lyqi;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    const v1, 0x1020002
+    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Couldn\'t find encoder for type "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    check-cast p2, Lxwa;
+
+    sget-object v0, Ltzi;->g:Lez5;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroid/view/ViewGroup;
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    if-eqz v1, :cond_0
+    sget-object v0, Ltzi;->h:Lez5;
 
-    return-object v1
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    if-eq v0, p0, :cond_1
+    move-result-object p1
 
-    instance-of p0, v0, Landroid/view/ViewGroup;
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    if-eqz p0, :cond_1
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    return-object v0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/view/View;)Z
-    .locals 1
-
-    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static f(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
-    .locals 1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x9
-
-    if-eq p0, v0, :cond_0
-
-    packed-switch p0, :pswitch_data_0
-
-    return-object p1
-
-    :pswitch_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
-
-    return-object p0
+    return-void
 
     :pswitch_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Couldn\'t find encoder for type "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     :pswitch_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+    check-cast p1, Ljava/util/Map$Entry;
 
-    return-object p0
+    check-cast p2, Lxwa;
 
-    :cond_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+    sget-object v0, Lari;->g:Lez5;
 
-    return-object p0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    :cond_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    move-result-object v1
 
-    return-object p0
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    :cond_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
+    sget-object v0, Lari;->h:Lez5;
 
-    return-object p0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    return-void
+
+    nop
 
     :pswitch_data_0
-    .packed-switch 0xe
+    .packed-switch 0x0
         :pswitch_2
         :pswitch_1
         :pswitch_0

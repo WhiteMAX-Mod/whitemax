@@ -1,10 +1,3 @@
-.class public abstract Lwbj;
-.super Luai;
+.class public final Lwbj;
+.super Lyni;
 .source "SourceFile"
-
-# interfaces
-.implements Lhcj;
-
-
-# static fields
-.field public static final synthetic d:I

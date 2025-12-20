@@ -1,141 +1,94 @@
 .class public final Lz00;
-.super Ljava/lang/Object;
+.super Lni8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:J
-
-.field public final f:Ljava/util/List;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly00;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v0, p1, Ly00;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lz00;->a:Ljava/lang/String;
-
-    iget-object v0, p1, Ly00;->e:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lz00;->b:Ljava/lang/String;
-
-    iget v0, p1, Ly00;->a:I
-
-    iput v0, p0, Lz00;->c:I
-
-    iget v0, p1, Ly00;->b:I
-
-    iput v0, p0, Lz00;->d:I
-
-    iget-wide v0, p1, Ly00;->c:J
-
-    iput-wide v0, p0, Lz00;->e:J
-
-    iget-object p1, p1, Ly00;->f:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iput-object p1, p0, Lz00;->f:Ljava/util/List;
-
-    return-void
-.end method
+.field public X:Ls2e;
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Lz00;->d:I
+    invoke-super {p0}, Lni8;->a()V
 
-    const/4 v1, 0x3
+    iget-object v0, p0, Lz00;->X:Ls2e;
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Ls2e;->b:Ljava/lang/Object;
 
-    return v0
+    check-cast v0, Lo58;
+
+    invoke-static {v0}, Li6e;->b(Ll25;)V
 
     :cond_0
     const/4 v0, 0x0
 
-    return v0
+    iput-object v0, p0, Lz00;->X:Ls2e;
+
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 2
+.method public final c()V
+    .locals 5
 
-    const/4 v0, 0x5
+    iget-object v0, p0, Lni8;->b:Lime;
 
-    iget v1, p0, Lz00;->d:I
+    iget-object v1, p0, Lni8;->o:Ldi8;
 
-    if-ne v1, v0, :cond_0
+    invoke-virtual {v0, v1}, Lime;->e(Ldi8;)Lv1c;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    iget-object v2, v1, Ldi8;->d:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lz00;->a()Z
+    iget-object v2, v0, Lv1c;->b:Landroid/net/Uri;
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-ne v1, v0, :cond_1
+    if-eqz v2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    iget-object v2, v0, Lv1c;->a:Landroid/net/Uri;
 
-    return v0
+    if-eqz v2, :cond_2
+
+    goto :goto_0
 
     :cond_2
+    iget-object v2, v1, Ldi8;->d:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
     :goto_0
-    const/4 v0, 0x1
+    if-eqz v0, :cond_3
 
-    return v0
-.end method
+    iget-object v0, v0, Lv1c;->o:Landroid/net/Uri;
 
-.method public final c()Z
-    .locals 2
+    goto :goto_1
 
-    iget v0, p0, Lz00;->c:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
+    :cond_3
     const/4 v0, 0x0
 
-    return v0
+    :goto_1
+    iget-object v3, p0, Lni8;->a:Lbj8;
+
+    const/4 v4, 0x0
+
+    invoke-interface {v3, v1, v2, v4, v0}, Lbj8;->n(Ldi8;Landroid/net/Uri;ILandroid/net/Uri;)V
+
+    return-void
 .end method

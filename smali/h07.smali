@@ -1,1419 +1,354 @@
-.class public abstract Lh07;
+.class public Lh07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:I
+
+.field public static final b:Lh07;
+
+
 # direct methods
-.method public static c(Ljava/nio/ByteBuffer;Llbg;Li62;)Ljava/util/ArrayList;
-    .locals 20
+.method static constructor <clinit>()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    sget v0, Lx07;->e:I
 
-    move-object/from16 v1, p1
+    const v0, 0xbdfcb8
 
-    move-object/from16 v2, p2
+    sput v0, Lh07;->a:I
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+    new-instance v0, Lh07;
 
-    move-result v3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v4, 0x2
+    sput-object v0, Lh07;->b:Lh07;
 
-    if-lt v3, v4, :cond_3d
+    return-void
+.end method
 
-    new-instance v3, Ljava/util/ArrayList;
+.method public static a(Landroid/content/Context;)I
+    .locals 2
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    sget v0, Lx07;->e:I
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v5
-
-    const v6, 0xffff
-
-    and-int/2addr v5, v6
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v7
-
-    if-lt v7, v5, :cond_3c
-
-    :goto_0
-    const/4 v7, 0x4
-
-    if-lt v5, v7, :cond_3b
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v8
-
-    and-int/2addr v8, v6
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v9
-
-    and-int/2addr v9, v6
-
-    add-int/lit8 v5, v5, -0x4
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
-
-    move-result-object v10
-
-    check-cast v10, Ljava/nio/ByteBuffer;
-
-    if-gt v9, v5, :cond_3a
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v10
-
-    sget-object v11, Lkbg;->b:Lkbg;
-
-    iget-short v11, v11, Lkbg;->a:S
-
-    const-string v12, "extension underflow"
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x1
-
-    const-string v15, "inconsistent length"
-
-    move/from16 v16, v6
-
-    const/4 v6, 0x0
-
-    if-ne v8, v11, :cond_7
-
-    new-instance v7, Lbs;
-
-    invoke-direct {v7}, Lbs;-><init>()V
-
-    invoke-virtual {v7, v0, v11, v6}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v6
-
-    if-lez v6, :cond_6
-
-    if-lt v6, v4, :cond_5
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v8
-
-    add-int/lit8 v11, v8, 0x2
-
-    if-ne v6, v11, :cond_4
-
-    :goto_1
-    if-lez v8, :cond_2
-
-    invoke-static {v14, v0}, Lbs;->c(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    invoke-static {v4, v0}, Lbs;->c(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v6
-
-    and-int v6, v6, v16
-
-    invoke-static {v6, v0}, Lbs;->c(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v11
-
-    if-gt v6, v11, :cond_0
-
-    new-array v11, v6, [B
-
-    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    :goto_2
-    add-int/lit8 v6, v6, 0x3
-
-    goto :goto_3
-
-    :cond_0
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v12}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static {v4, v0}, Lbs;->c(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v6
-
-    and-int v6, v6, v16
-
-    invoke-static {v6, v0}, Lbs;->c(ILjava/nio/ByteBuffer;)V
-
-    new-array v11, v6, [B
-
-    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    new-instance v13, Ljava/lang/String;
-
-    const-string v17, "ASCII"
-
-    invoke-static/range {v17 .. v17}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v14
-
-    invoke-direct {v13, v11, v14}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    iput-object v13, v7, Lbs;->b:Ljava/lang/Object;
-
-    goto :goto_2
-
-    :goto_3
-    sub-int/2addr v8, v6
-
-    const/4 v14, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    if-ltz v8, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "incorrect extension length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_6
-    iput-object v13, v7, Lbs;->b:Ljava/lang/Object;
-
-    :goto_4
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_5
-    move v7, v4
-
-    move/from16 v18, v9
-
-    goto/16 :goto_13
-
-    :cond_7
-    sget-object v11, Lkbg;->c:Lkbg;
-
-    iget-short v11, v11, Lkbg;->a:S
-
-    if-ne v8, v11, :cond_8
-
-    new-instance v6, Lhqc;
-
-    const/4 v7, 0x1
-
-    invoke-direct {v6, v7, v0}, Lhqc;-><init>(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_8
-    sget-object v11, Lkbg;->d:Lkbg;
-
-    iget-short v14, v11, Lkbg;->a:S
-
-    if-ne v8, v14, :cond_c
-
-    new-instance v8, Lu0f;
-
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v12, v8, Lu0f;->a:Ljava/util/List;
-
-    iget-short v11, v11, Lkbg;->a:S
-
-    invoke-virtual {v8, v0, v11, v7}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v7
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v11
-
-    add-int/lit8 v12, v11, 0x2
-
-    if-ne v7, v12, :cond_b
-
-    rem-int/lit8 v7, v11, 0x2
-
-    if-nez v7, :cond_a
-
-    :goto_6
-    if-ge v6, v11, :cond_9
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v7
-
-    rem-int v7, v7, v16
-
-    invoke-static {}, Lobg;->values()[Lobg;
-
-    move-result-object v12
-
-    invoke-static {v12}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
-
-    move-result-object v12
-
-    new-instance v13, Lfb3;
-
-    const/4 v14, 0x4
-
-    invoke-direct {v13, v7, v14}, Lfb3;-><init>(II)V
-
-    invoke-interface {v12, v13}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
-
-    move-result-object v7
-
-    new-instance v12, Lm4;
-
-    const/16 v13, 0x13
-
-    invoke-direct {v12, v13, v8}, Lm4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v7, v12}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    add-int/lit8 v6, v6, 0x2
-
-    goto :goto_6
-
-    :cond_9
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_a
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "invalid group length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_b
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_c
-    sget-object v11, Lkbg;->o:Lkbg;
-
-    iget-short v11, v11, Lkbg;->a:S
-
-    if-ne v8, v11, :cond_d
-
-    new-instance v6, Lbs;
-
-    invoke-direct {v6, v0}, Lbs;-><init>(Ljava/nio/ByteBuffer;)V
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_5
-
-    :cond_d
-    sget-object v11, Lkbg;->X:Lkbg;
-
-    iget-short v14, v11, Lkbg;->a:S
-
-    if-ne v8, v14, :cond_1e
-
-    sget-object v6, Llbg;->c:Llbg;
-
-    if-ne v1, v6, :cond_e
-
-    new-instance v6, Lxfe;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v6, v0, v14, v4}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v7
-
-    iput v7, v6, Lxfe;->a:I
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_5
-
-    :cond_e
-    sget-object v6, Llbg;->b:Llbg;
-
-    if-ne v1, v6, :cond_1d
-
-    new-instance v6, Lkb3;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v8
-
-    const/16 v12, 0x2c
-
-    iget-short v11, v11, Lkbg;->a:S
-
-    invoke-virtual {v6, v0, v11, v12}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v11
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v12, v6, Lkb3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v12
-
-    and-int v12, v12, v16
-
-    sub-int/2addr v11, v4
-
-    :goto_7
-    if-lez v12, :cond_12
-
-    const-string v13, "Incomplete psk identity"
-
-    if-lt v11, v4, :cond_11
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v14
-
-    and-int v14, v14, v16
-
-    add-int/lit8 v11, v11, -0x2
-
-    if-gt v14, v11, :cond_10
-
-    new-array v15, v14, [B
-
-    invoke-virtual {v0, v15}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    sub-int/2addr v11, v14
-
-    if-lt v11, v7, :cond_f
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v13
-
-    add-int/lit8 v11, v11, -0x4
-
-    iget-object v7, v6, Lkb3;->a:Ljava/util/List;
-
-    new-instance v4, Ljb3;
-
-    move/from16 v19, v8
-
-    move/from16 v18, v9
-
-    int-to-long v8, v13
-
-    invoke-direct {v4, v8, v9, v15}, Ljb3;-><init>(J[B)V
-
-    invoke-interface {v7, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v14, v14, 0x6
-
-    sub-int/2addr v12, v14
-
-    move/from16 v9, v18
-
-    move/from16 v8, v19
-
-    const/4 v4, 0x2
-
-    const/4 v7, 0x4
-
-    goto :goto_7
-
-    :cond_f
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v13}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_10
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect identity length value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_11
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v13}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_12
-    move/from16 v19, v8
-
-    move/from16 v18, v9
-
-    if-nez v12, :cond_1c
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v4
-
-    sub-int v4, v4, v19
-
-    iput v4, v6, Lkb3;->c:I
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v4, v6, Lkb3;->b:Ljava/util/ArrayList;
-
-    const/4 v4, 0x2
-
-    if-lt v11, v4, :cond_1b
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v4
-
-    and-int v4, v4, v16
-
-    add-int/lit8 v11, v11, -0x2
-
-    :goto_8
-    if-lez v4, :cond_16
-
-    const/4 v7, 0x1
-
-    if-lt v11, v7, :cond_15
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v7
-
-    and-int/lit16 v7, v7, 0xff
-
-    add-int/lit8 v11, v11, -0x1
-
-    if-gt v7, v11, :cond_14
-
-    const/16 v8, 0x20
-
-    if-lt v7, v8, :cond_13
-
-    new-array v8, v7, [B
-
-    invoke-virtual {v0, v8}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    sub-int/2addr v11, v7
-
-    iget-object v9, v6, Lkb3;->b:Ljava/util/ArrayList;
-
-    new-instance v12, Lib3;
-
-    invoke-direct {v12, v8}, Lib3;-><init>([B)V
-
-    invoke-virtual {v9, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v7, v7, 0x1
-
-    sub-int/2addr v4, v7
-
-    goto :goto_8
-
-    :cond_13
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Invalid binder length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_14
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect binder length value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_15
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect binder value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_16
-    if-nez v4, :cond_1a
-
-    if-gtz v11, :cond_19
-
-    iget-object v4, v6, Lkb3;->a:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    iget-object v7, v6, Lkb3;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
-
-    move-result v7
-
-    if-ne v4, v7, :cond_18
-
-    iget-object v4, v6, Lkb3;->a:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-eqz v4, :cond_17
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_9
-    const/4 v7, 0x2
-
-    goto/16 :goto_13
-
-    :cond_17
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Empty OfferedPsks"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_18
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Inconsistent number of identities vs binders"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_19
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect extension data length value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1a
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect binders length value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1b
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incomplete binders"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1c
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect identities length value"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1d
-    new-instance v0, Ltech/kwik/agent15/alert/IllegalParameterAlert;
-
-    invoke-static {}, Llbg;->values()[Llbg;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
-
-    move-result-object v2
-
-    new-instance v3, La6;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, v4, v1}, La6;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Extension not allowed in "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/IllegalParameterAlert;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1e
-    move/from16 v18, v9
-
-    sget-object v4, Lkbg;->Y:Lkbg;
-
-    iget-short v4, v4, Lkbg;->a:S
-
-    if-ne v8, v4, :cond_22
-
-    new-instance v7, Lg85;
-
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v7, v0, v4, v6}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v4
-
-    sget-object v6, Llbg;->d:Llbg;
-
-    const-string v8, "invalid extension data length"
-
-    if-ne v1, v6, :cond_20
-
-    const/4 v6, 0x4
-
-    if-ne v4, v6, :cond_1f
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v4
-
-    int-to-long v8, v4
-
-    const-wide v11, 0xffffffffL
-
-    and-long/2addr v8, v11
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    iput-object v4, v7, Lg85;->a:Ljava/lang/Long;
-
-    goto :goto_a
-
-    :cond_1f
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v8}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_20
-    if-nez v4, :cond_21
-
-    :goto_a
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_9
-
-    :cond_21
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v8}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_22
-    sget-object v4, Lkbg;->Z:Lkbg;
-
-    iget-short v4, v4, Lkbg;->a:S
-
-    if-ne v8, v4, :cond_23
-
-    new-instance v4, Lurf;
-
-    invoke-direct {v4, v0, v1}, Lurf;-><init>(Ljava/nio/ByteBuffer;Llbg;)V
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_9
-
-    :cond_23
-    sget-object v4, Lkbg;->s0:Lkbg;
-
-    iget-short v4, v4, Lkbg;->a:S
-
-    if-ne v8, v4, :cond_24
-
-    new-instance v4, Lhqc;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v4, v6, v0}, Lhqc;-><init>(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_9
-
-    :cond_24
-    sget-object v4, Lkbg;->t0:Lkbg;
-
-    iget-short v4, v4, Lkbg;->a:S
-
-    if-ne v8, v4, :cond_25
-
-    new-instance v4, Le72;
-
-    invoke-direct {v4, v0}, Le72;-><init>(Ljava/nio/ByteBuffer;)V
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_9
-
-    :cond_25
-    sget-object v4, Lkbg;->u0:Lkbg;
-
-    iget-short v6, v4, Lkbg;->a:S
-
-    if-ne v8, v6, :cond_2d
-
-    new-instance v6, Liz7;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v7, v6, Liz7;->b:Ljava/util/ArrayList;
-
-    iget-short v4, v4, Lkbg;->a:S
-
-    const/4 v7, 0x1
-
-    invoke-virtual {v6, v0, v4, v7}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v4
-
-    const/4 v7, 0x2
-
-    if-lt v4, v7, :cond_2c
-
-    sget-object v8, Llbg;->b:Llbg;
-
-    if-ne v1, v8, :cond_29
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v8
-
-    add-int/lit8 v9, v8, 0x2
-
-    if-ne v4, v9, :cond_28
-
-    :goto_b
-    if-lez v8, :cond_26
-
-    invoke-virtual {v6, v0}, Liz7;->d(Ljava/nio/ByteBuffer;)I
-
-    move-result v4
-
-    sub-int/2addr v8, v4
-
-    goto :goto_b
-
-    :cond_26
-    if-nez v8, :cond_27
-
-    goto :goto_c
-
-    :cond_27
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_28
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_29
-    sget-object v8, Llbg;->c:Llbg;
-
-    if-ne v1, v8, :cond_2b
-
-    invoke-virtual {v6, v0}, Liz7;->d(Ljava/nio/ByteBuffer;)I
-
-    move-result v8
-
-    sub-int/2addr v4, v8
-
-    if-nez v4, :cond_2a
-
-    :goto_c
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_13
-
-    :cond_2a
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v15}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2b
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_2c
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {v0, v12}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2d
-    const/4 v7, 0x2
-
-    if-eqz v2, :cond_35
-
-    iget-object v4, v2, Li62;->b:Ljava/lang/Object;
-
-    check-cast v4, Ldb4;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v6
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/nio/ByteBuffer;
-
-    iget-object v9, v4, Ldb4;->a:Lqje;
-
-    iget-object v9, v9, Lqje;->b:Ljava/lang/Object;
-
-    check-cast v9, Lzzg;
-
-    and-int v6, v6, v16
-
-    iget v9, v9, Lzzg;->a:I
-
-    const/16 v11, 0x39
-
-    const v12, 0xffa5
-
-    const v14, 0x6b3343cf
-
-    const/4 v15, 0x1
-
-    if-eq v9, v15, :cond_2f
-
-    if-ne v9, v14, :cond_2e
-
-    goto :goto_d
-
-    :cond_2e
-    if-ne v6, v12, :cond_35
-
-    goto :goto_e
-
-    :cond_2f
-    :goto_d
-    if-ne v6, v11, :cond_35
-
-    :goto_e
-    new-instance v13, Ldtc;
-
-    iget-object v6, v4, Ldb4;->a:Lqje;
-
-    iget-object v6, v6, Lqje;->b:Ljava/lang/Object;
-
-    check-cast v6, Lzzg;
-
-    invoke-direct {v13, v6}, Ldtc;-><init>(Lzzg;)V
-
-    iget-object v4, v4, Ldb4;->f:Lbh8;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v9
-
-    and-int v9, v9, v16
-
-    iget v6, v6, Lzzg;->a:I
-
-    const/4 v15, 0x1
-
-    if-eq v6, v15, :cond_31
-
-    if-ne v6, v14, :cond_30
-
-    goto :goto_f
-
-    :cond_30
-    if-ne v9, v12, :cond_34
-
-    goto :goto_10
-
-    :cond_31
-    :goto_f
-    if-ne v9, v11, :cond_34
-
-    :goto_10
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v6
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v9
-
-    new-instance v11, Ljava/util/HashSet;
-
-    invoke-direct {v11}, Ljava/util/HashSet;-><init>()V
-
-    const-string v12, "Transport parameters: "
-
-    invoke-interface {v4, v12}, Lbh8;->debug(Ljava/lang/String;)V
-
-    :goto_11
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v12
-
-    sub-int/2addr v12, v9
-
-    if-ge v12, v6, :cond_32
+    const/4 v0, 0x0
 
     :try_start_0
-    invoke-virtual {v13, v0, v11, v4}, Ldtc;->e(Ljava/nio/ByteBuffer;Ljava/util/HashSet;Lbh8;)V
-    :try_end_0
-    .catch Ltech/kwik/core/generic/InvalidIntegerEncodingException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ltech/kwik/core/impl/TransportError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    goto :goto_11
+    move-result-object p0
+
+    const-string v1, "com.google.android.gms"
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    return p0
 
     :catch_0
-    move-exception v0
+    const-string p0, "GooglePlayServicesUtil"
 
-    new-instance v1, Ltech/kwik/agent15/TlsProtocolException;
+    const-string v1, "Google Play services is missing."
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_1
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "invalid integer encoding in transport parameter extension"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_32
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v4
-
-    sub-int/2addr v4, v9
-
-    if-ne v4, v6, :cond_33
-
-    goto :goto_12
-
-    :cond_33
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "inconsistent size in transport parameter extension"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_34
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw v0
-
-    :cond_35
-    :goto_12
-    if-eqz v13, :cond_36
-
-    invoke-virtual {v3, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_13
-
-    :cond_36
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v6, "Unsupported extension, type is: "
-
-    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lah8;->a(Ljava/lang/String;)V
-
-    new-instance v4, Lorg;
-
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v6
-
-    const/4 v8, 0x4
-
-    if-lt v6, v8, :cond_39
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v6
-
-    and-int v6, v6, v16
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v8
-
-    if-lt v8, v6, :cond_38
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v6, v6, 0x4
-
-    new-array v6, v6, [B
-
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_13
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
-
-    move-result v4
-
-    sub-int/2addr v4, v10
-
-    add-int/lit8 v9, v18, 0x4
-
-    if-ne v4, v9, :cond_37
-
-    sub-int v5, v5, v18
-
-    move v4, v7
-
-    move/from16 v6, v16
-
-    goto/16 :goto_0
-
-    :cond_37
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Incorrect extension length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_38
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Invalid extension length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_39
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Extension must be at least 4 bytes long"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3a
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Extension length exceeds extensions length"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3b
-    return-object v3
-
-    :cond_3c
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Extensions too short"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3d
-    new-instance v0, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v1, "Extension field must be at least 2 bytes long"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method
 
 
 # virtual methods
-.method public abstract a()[B
-.end method
-
-.method public abstract b()Llbg;
-.end method
-
-.method public final d(Ljava/nio/ByteBuffer;Llbg;I)I
+.method public b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 3
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    const/4 v0, 0x1
 
-    move-result v0
+    const-string v1, "com.google.android.gms"
 
-    const/4 v1, 0x4
+    if-eq p1, v0, :cond_1
 
-    const-string v2, "handshake message underflow"
+    const/4 v0, 0x2
 
-    if-lt v0, v1, :cond_3
+    if-eq p1, v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    const/4 p2, 0x3
 
-    move-result v0
+    const/4 p3, 0x0
 
-    and-int/lit16 v0, v0, 0xff
+    if-eq p1, p2, :cond_0
 
-    iget-byte p2, p2, Llbg;->a:B
+    return-object p3
 
-    if-ne v0, p2, :cond_2
+    :cond_0
+    const-string p1, "package"
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    invoke-static {p1, v1, p3}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result p2
+    move-result-object p1
 
-    and-int/lit16 p2, p2, 0xff
+    new-instance p2, Landroid/content/Intent;
 
-    shl-int/lit8 p2, p2, 0x10
+    const-string p3, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    invoke-direct {p2, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    and-int/lit16 v0, v0, 0xff
+    return-object p2
 
-    shl-int/lit8 v0, v0, 0x8
+    :cond_1
+    if-eqz p2, :cond_3
 
-    or-int/2addr p2, v0
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    or-int/2addr p2, v0
-
-    add-int/lit8 v0, p2, 0x4
-
-    if-lt v0, p3, :cond_1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-static {p2}, Lmmj;->a(Landroid/content/Context;)Z
 
     move-result p1
 
-    if-lt p1, p2, :cond_0
+    if-nez p1, :cond_2
 
-    return p2
-
-    :cond_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " can\'t be less than "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p2, " bytes"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_0
 
     :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Landroid/content/Intent;
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    const-string p2, "com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION"
 
-    throw p1
+    invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string p2, "com.google.android.wearable.app"
+
+    invoke-virtual {p1, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    return-object p1
 
     :cond_3
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+    :goto_0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+    const-string v0, "gcore_"
 
-    throw p1
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v0, Lh07;->a:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "-"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_5
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_6
+
+    :try_start_0
+    invoke-static {p2}, Lgji;->a(Landroid/content/Context;)Lyc4;
+
+    move-result-object p3
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object p3, p3, Lyc4;->a:Landroid/content/Context;
+
+    invoke-virtual {p3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p3, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_6
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Landroid/content/Intent;
+
+    const-string p3, "android.intent.action.VIEW"
+
+    invoke-direct {p2, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string p3, "market://details"
+
+    invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p3
+
+    const-string v0, "id"
+
+    invoke-virtual {p3, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p3
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const-string v0, "pcampaignid"
+
+    invoke-virtual {p3, v0, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_7
+    invoke-virtual {p3}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    const-string p1, "com.android.vending"
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 p1, 0x80000
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    return-object p2
+.end method
+
+.method public c(Landroid/content/Context;I)I
+    .locals 4
+
+    invoke-static {p1, p2}, Lx07;->a(Landroid/content/Context;I)I
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    const/16 v1, 0x12
+
+    if-ne p2, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-ne p2, v0, :cond_3
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/pm/PackageManager;->getPackageInstaller()Landroid/content/pm/PackageInstaller;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/pm/PackageInstaller;->getAllSessions()Ljava/util/List;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    const-string v3, "com.google.android.gms"
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/content/pm/PackageInstaller$SessionInfo;
+
+    invoke-virtual {v2}, Landroid/content/pm/PackageInstaller$SessionInfo;->getAppPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 p1, 0x1
+
+    :goto_0
+    move v0, p1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p1
+
+    const/16 v0, 0x2000
+
+    :try_start_1
+    invoke-virtual {p1, v3, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-boolean p1, p1, Landroid/content/pm/ApplicationInfo;->enabled:Z
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_1
+    if-eqz v0, :cond_4
+
+    return v1
+
+    :cond_4
+    return p2
 .end method

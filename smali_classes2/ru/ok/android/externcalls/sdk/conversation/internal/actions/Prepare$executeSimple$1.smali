@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;
-.super Lu08;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lmq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Le2f;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Lbdf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lu08;",
-        "Lcm6;"
+        "Ln58;",
+        "Lmq6;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
         "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00020\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Le2f;",
-        "Lajb;",
+        "Lbdf;",
+        "Lrpb;",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "invoke",
-        "()Le2f;",
+        "()Lbdf;",
         "<anonymous>"
     }
     k = 0x3
@@ -56,19 +56,19 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Le2f;
+.method public final invoke()Lbdf;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Le2f;"
+            "Lbdf;"
         }
     .end annotation
 
@@ -121,14 +121,14 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;
 
-    invoke-static {v3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lo64;
+    invoke-static {v3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lja4;
 
     move-result-object v3
 
-    check-cast v3, Lp64;
+    check-cast v3, Lka4;
 
     .line 6
-    iget-object v3, v3, Lp64;->a:Ljava/lang/String;
+    iget-object v3, v3, Lka4;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -137,23 +137,23 @@
 
     .line 7
     :goto_0
-    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Le2f;
+    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Lbdf;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Le2f;->i(Lj0e;)Lu2f;
+    invoke-virtual {v0, v1}, Lbdf;->i(Lqae;)Ltdf;
 
     move-result-object v0
 
     .line 9
     sget-object v1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1$2;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1$2;
 
-    invoke-virtual {v0, v1}, Le2f;->h(Ltm6;)Lm2f;
+    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
 
     move-result-object v0
 
@@ -171,18 +171,18 @@
     if-eqz v0, :cond_3
 
     .line 11
-    new-instance v1, Lajb;
+    new-instance v1, Lrpb;
 
-    invoke-direct {v1, v0}, Lajb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    invoke-direct {v1, v0}, Lrpb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
 
     :cond_3
     if-nez v1, :cond_4
 
     .line 12
-    sget-object v1, Lajb;->b:Lajb;
+    sget-object v1, Lrpb;->b:Lrpb;
 
     :cond_4
-    invoke-static {v1}, Le2f;->g(Ljava/lang/Object;)Lwk3;
+    invoke-static {v1}, Lbdf;->g(Ljava/lang/Object;)Lgo3;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->invoke()Le2f;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->invoke()Lbdf;
 
     move-result-object v0
 

@@ -1,20 +1,22 @@
-.class public interface abstract Lccd;
+.class public abstract Lccd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Libe;
-.end method
+# static fields
+.field public static call_incoming_warning_not_contact:I = 0x7f13017e
 
-.method public abstract b()Ljava/lang/Object;
-.end method
+.field public static call_notification_active_call:I = 0x7f1301b9
 
-.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
-.end method
+.field public static call_notification_channel_incoming:I = 0x7f1301bc
 
-.method public abstract iterator()Lkv0;
-.end method
+.field public static call_notification_channel_outgoing:I = 0x7f1301bd
 
-.method public abstract k(Lwf3;)Ljava/lang/Object;
-.end method
+.field public static call_notification_incoming_call:I = 0x7f1301c0
+
+.field public static call_notification_incoming_cancel_call:I = 0x7f1301c1
+
+.field public static call_notification_incoming_take_call:I = 0x7f1301c2
+
+.field public static call_notification_incoming_video_call:I = 0x7f1301c4
+
+.field public static call_notification_name_temp:I = 0x7f1301c5

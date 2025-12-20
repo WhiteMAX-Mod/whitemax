@@ -1,191 +1,60 @@
-.class public abstract enum Lywd;
-.super Ljava/lang/Enum;
+.class public final synthetic Lywd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzw1;
 
-# static fields
-.field public static final synthetic a:[Lywd;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzwd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Lywd;
-
-    sput-object v0, Lywd;->a:[Lywd;
-
-    return-void
-.end method
-
-.method public static a(I[B)V
+.method public synthetic constructor <init>(Lzwd;I)V
     .locals 0
 
-    if-ltz p0, :cond_0
+    iput p2, p0, Lywd;->a:I
 
-    array-length p1, p1
+    iput-object p1, p0, Lywd;->b:Lzwd;
 
-    if-ge p0, p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    invoke-direct {p1, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
-
-    throw p1
 .end method
 
-.method public static c(I[BI)V
-    .locals 0
 
-    if-ltz p2, :cond_1
-
-    if-lez p2, :cond_0
-
-    invoke-static {p0, p1}, Lywd;->a(I[B)V
-
-    add-int/2addr p0, p2
-
-    add-int/lit8 p0, p0, -0x1
-
-    invoke-static {p0, p1}, Lywd;->a(I[B)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "lengths must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static d(I[B)I
-    .locals 2
-
-    sget-object v0, Lbyg;->a:Ljava/nio/ByteOrder;
-
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_0
-
-    aget-byte v0, p1, p0
-
-    and-int/lit16 v0, v0, 0xff
-
-    shl-int/lit8 v0, v0, 0x18
-
-    add-int/lit8 v1, p0, 0x1
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, p0, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 p0, p0, 0x3
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    or-int/2addr p0, v0
-
-    return p0
-
-    :cond_0
-    invoke-static {p0, p1}, Lywd;->e(I[B)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(I[B)I
-    .locals 2
-
-    aget-byte v0, p1, p0
-
-    and-int/lit16 v0, v0, 0xff
-
-    add-int/lit8 v1, p0, 0x1
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, p0, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 p0, p0, 0x3
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    shl-int/lit8 p0, p0, 0x18
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lywd;
+# virtual methods
+.method public final r(Lyw1;)Ljava/lang/String;
     .locals 1
 
-    const-class v0, Lywd;
+    iget v0, p0, Lywd;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lywd;->b:Lzwd;
 
-    invoke-static {p0}, Lu45;->r(Ljava/lang/Object;)V
+    iput-object p1, v0, Lzwd;->f:Lyw1;
 
-    const/4 p0, 0x0
+    const-string p1, "RequestCompleteFuture"
 
-    throw p0
-.end method
+    return-object p1
 
-.method public static values()[Lywd;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lywd;->b:Lzwd;
 
-    sget-object v0, Lywd;->a:[Lywd;
+    iput-object p1, v0, Lzwd;->e:Lyw1;
 
-    invoke-virtual {v0}, [Lywd;->clone()Ljava/lang/Object;
+    const-string p1, "CaptureCompleteFuture"
 
-    move-result-object v0
+    return-object p1
 
-    check-cast v0, [Lywd;
+    nop
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

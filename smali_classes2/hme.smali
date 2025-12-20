@@ -1,135 +1,73 @@
-.class public final Lhme;
-.super Lid0;
+.class public final enum Lhme;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ln5g;
+# static fields
+.field public static final enum a:Lhme;
 
-.field public final c:Ljava/lang/Integer;
+.field public static final enum b:Lhme;
+
+.field public static final synthetic c:[Lhme;
 
 
 # direct methods
-.method public constructor <init>(Ln5g;Ljava/lang/Integer;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/16 v0, 0x11
+    new-instance v0, Lhme;
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+    const-string v1, "START"
 
-    iput-object p1, p0, Lhme;->b:Ln5g;
+    const/4 v2, 0x0
 
-    iput-object p2, p0, Lhme;->c:Ljava/lang/Integer;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lhme;->a:Lhme;
+
+    new-instance v1, Lhme;
+
+    const-string v2, "FINISH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lhme;->b:Lhme;
+
+    filled-new-array {v0, v1}, [Lhme;
+
+    move-result-object v0
+
+    sput-object v0, Lhme;->c:[Lhme;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lhme;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-class v0, Lhme;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Lhme;
+    check-cast p0, Lhme;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lhme;
-
-    iget-object v0, p0, Lhme;->b:Ln5g;
-
-    iget-object v1, p1, Lhme;->b:Ln5g;
-
-    invoke-virtual {v0, v1}, Ln5g;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lhme;->c:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lhme;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static values()[Lhme;
+    .locals 1
 
-    iget-object v0, p0, Lhme;->b:Ln5g;
+    sget-object v0, Lhme;->c:[Lhme;
 
-    iget v0, v0, Ln5g;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lhme;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhme;->b:Ln5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhme;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Lhme;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lhme;
 
     return-object v0
 .end method

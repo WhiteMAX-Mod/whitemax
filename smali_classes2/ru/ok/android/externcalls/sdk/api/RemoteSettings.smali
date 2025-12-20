@@ -19,9 +19,9 @@
         "",
         "",
         "key",
-        "Le2f;",
+        "Lbdf;",
         "get",
-        "(Ljava/lang/String;)Le2f;",
+        "(Ljava/lang/String;)Lbdf;",
         "Companion",
         "calls-sdk_release"
     }
@@ -46,6 +46,8 @@
 
 .field public static final KEY_WORDSPOTTER_CONFIG:Ljava/lang/String; = "android.wordspotter.config"
 
+.field public static final P2P_RELAY_SWITCH_CONFIG:Ljava/lang/String; = "android.p2prelay.config"
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -60,13 +62,13 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/String;)Le2f;
+.method public abstract get(Ljava/lang/String;)Lbdf;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Le2f;"
+            "Lbdf;"
         }
     .end annotation
 .end method

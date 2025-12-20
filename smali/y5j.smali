@@ -2,113 +2,69 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final a:Lx5j;
 
-.field public final b:Ljava/lang/Integer;
+# static fields
+.field public static final a:Ly5j;
 
 
 # direct methods
-.method public synthetic constructor <init>(Laqc;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ly5j;
 
-    iget-object v0, p1, Laqc;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lx5j;
+    sput-object v0, Ly5j;->a:Ly5j;
 
-    iput-object v0, p0, Ly5j;->a:Lx5j;
+    new-instance v0, Lyyi;
 
-    iget-object p1, p1, Laqc;->c:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    iput-object p1, p0, Ly5j;->b:Ljava/lang/Integer;
+    const-class v1, Lqzi;
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-ne p1, p0, :cond_0
+    move-result-object p1
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ly5j;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ly5j;
-
-    iget-object v1, p0, Ly5j;->a:Lx5j;
-
-    iget-object v3, p1, Ly5j;->a:Lx5j;
-
-    invoke-static {v1, v3}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Ly5j;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Ly5j;->b:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-static {p1, p1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Ly5j;->b:Ljava/lang/Integer;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Ly5j;->a:Lx5j;
-
-    filled-new-array {v2, v0, v1, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    throw p1
 .end method

@@ -1,67 +1,97 @@
-.class public interface abstract Lage;
+.class public final Lage;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbge;
 
-# static fields
-.field public static final a:Lxs;
 
-.field public static final b:[Ljava/lang/String;
-
-.field public static final c:[I
+# instance fields
+.field public final a:Lgu2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lgu2;)V
+    .locals 0
 
-    new-instance v0, Lxs;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v5, "error.message.like.unknown.like"
-
-    const-string v6, "error.message.like.unknown.reaction"
-
-    const-string v1, "error.comment.chat.access"
-
-    const-string v2, "error.comment.invalid"
-
-    const-string v3, "error.message.invalid"
-
-    const-string v4, "error.message.chat.access"
-
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lxs;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lage;->a:Lxs;
-
-    const-string v0, "modifiers"
-
-    const-string v1, "accessFlags"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lage;->b:[Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x1
-
-    filled-new-array {v2, v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lage;->c:[I
+    iput-object p1, p0, Lage;->a:Lgu2;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lage;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lage;
+
+    iget-object v1, p0, Lage;->a:Lgu2;
+
+    iget-object p1, p1, Lage;->a:Lgu2;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lage;->a:Lgu2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SearchResult(result="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lage;->a:Lgu2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

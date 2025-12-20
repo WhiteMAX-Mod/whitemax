@@ -2,55 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwgg;
+
+# static fields
+.field public static final Companion:Li6i;
 
 
 # instance fields
-.field public final a:Lse4;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lwgg;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lse4;Lwgg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
+    new-instance v0, Li6i;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lj6i;->Companion:Li6i;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj6i;->a:Lse4;
+    iput-object p2, p0, Lj6i;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lj6i;->b:Lwgg;
+    iput-object p3, p0, Lj6i;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lh6i;->a:Lh6i;
+
+    invoke-virtual {p2}, Lh6i;->d()Lvoe;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lvij;->b(IILvoe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lj6i;->a:Ljava/lang/String;
+
+    .line 4
+    iput-object p2, p0, Lj6i;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lse4;Lze4;Z)V
-    .locals 1
-
-    iget-object p1, p0, Lj6i;->b:Lwgg;
-
-    iget-object v0, p0, Lj6i;->a:Lse4;
-
-    invoke-interface {p1, v0, p2, p3}, Lwgg;->c(Lse4;Lze4;Z)V
-
-    return-void
-.end method
-
-.method public final d(Lse4;Lze4;ZI)V
-    .locals 1
-
-    iget-object p1, p0, Lj6i;->b:Lwgg;
-
-    iget-object v0, p0, Lj6i;->a:Lse4;
-
-    invoke-interface {p1, v0, p2, p3, p4}, Lwgg;->d(Lse4;Lze4;ZI)V
-
-    return-void
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -72,11 +96,11 @@
     :cond_1
     check-cast p1, Lj6i;
 
-    iget-object v1, p0, Lj6i;->a:Lse4;
+    iget-object v1, p0, Lj6i;->a:Ljava/lang/String;
 
-    iget-object v3, p1, Lj6i;->a:Lse4;
+    iget-object v3, p1, Lj6i;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -85,11 +109,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lj6i;->b:Lwgg;
+    iget-object v1, p0, Lj6i;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Lj6i;->b:Lwgg;
+    iget-object p1, p1, Lj6i;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -101,32 +125,20 @@
     return v0
 .end method
 
-.method public final h(Lse4;Lze4;Z)V
-    .locals 1
-
-    iget-object p1, p0, Lj6i;->b:Lwgg;
-
-    iget-object v0, p0, Lj6i;->a:Lse4;
-
-    invoke-interface {p1, v0, p2, p3}, Lwgg;->h(Lse4;Lze4;Z)V
-
-    return-void
-.end method
-
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lj6i;->a:Lse4;
+    iget-object v0, p0, Lj6i;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lj6i;->b:Lwgg;
+    iget-object v1, p0, Lj6i;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
@@ -135,44 +147,20 @@
     return v1
 .end method
 
-.method public final i(Lse4;Lze4;Z)V
-    .locals 1
-
-    iget-object p1, p0, Lj6i;->b:Lwgg;
-
-    iget-object v0, p0, Lj6i;->a:Lse4;
-
-    invoke-interface {p1, v0, p2, p3}, Lwgg;->i(Lse4;Lze4;Z)V
-
-    return-void
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WrapperTransferListener(dataSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lj6i;->a:Lse4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", listener="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lj6i;->b:Lwgg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", phone="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "WebAppRequestPhoneResponse(requestId="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lj6i;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lj6i;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

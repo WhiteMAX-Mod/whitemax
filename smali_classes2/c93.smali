@@ -2,70 +2,55 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lie8;
 
-# instance fields
-.field public final a:J
 
-.field public final b:J
+# static fields
+.field public static final a:Lc93;
 
-.field public c:J
+.field public static final b:I
+
+.field public static final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(JJ)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-wide/16 v5, 0x0
+    new-instance v0, Lc93;
 
-    move-object v0, p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-wide v1, p1
+    sput-object v0, Lc93;->a:Lc93;
 
-    move-wide v3, p3
+    sget v0, Lj7d;->oneme_chat_list_loading_view_type:I
 
-    .line 1
-    invoke-direct/range {v0 .. v6}, Lc93;-><init>(JJJ)V
+    sput v0, Lc93;->b:I
 
-    return-void
-.end method
+    sget v0, Lj7d;->oneme_chat_list_loading_id:I
 
-.method public constructor <init>(JJJ)V
-    .locals 0
+    int-to-long v0, v0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-wide p1, p0, Lc93;->a:J
-
-    .line 4
-    iput-wide p3, p0, Lc93;->b:J
-
-    .line 5
-    iput-wide p5, p0, Lc93;->c:J
+    sput-wide v0, Lc93;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method public final getItemId()J
+    .locals 2
 
-    iget-wide v0, p0, Lc93;->b:J
+    sget-wide v0, Lc93;->c:J
 
-    iget-wide v2, p0, Lc93;->c:J
+    return-wide v0
+.end method
 
-    cmp-long v0, v0, v2
+.method public final m()I
+    .locals 1
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    sget v0, Lc93;->b:I
 
     return v0
 .end method

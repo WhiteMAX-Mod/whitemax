@@ -2,286 +2,191 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpn0;
-
 
 # instance fields
-.field public final a:Lx16;
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
-
-.field public final c:Ln7;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lx16;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp16;->a:Lx16;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput p2, p0, Lp16;->b:I
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    new-instance p1, Ln7;
+    iput-object v0, p0, Lp16;->b:Ljava/util/HashMap;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp16;->c:Ln7;
+    iput-object p1, p0, Lp16;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
 
-# virtual methods
-.method public final a(Lip5;)J
-    .locals 14
+    invoke-static {p0}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {p1}, Lip5;->o()J
+    move-result-object p0
 
-    move-result-wide v0
+    invoke-static {p1}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p1}, Lip5;->getLength()J
+    move-result-object p1
 
-    move-result-wide v2
-
-    const-wide/16 v4, 0x6
-
-    sub-long/2addr v2, v4
-
-    cmp-long v0, v0, v2
-
-    iget-object v1, p0, Lp16;->c:Ln7;
-
-    iget-object v2, p0, Lp16;->a:Lx16;
-
-    if-gez v0, :cond_3
-
-    invoke-interface {p1}, Lip5;->o()J
-
-    move-result-wide v6
-
-    const/4 v0, 0x2
-
-    new-array v3, v0, [B
-
-    const/4 v8, 0x0
-
-    invoke-interface {p1, v8, v3, v0}, Lip5;->i(I[BI)V
-
-    aget-byte v9, v3, v8
-
-    and-int/lit16 v9, v9, 0xff
-
-    shl-int/lit8 v9, v9, 0x8
-
-    const/4 v10, 0x1
-
-    aget-byte v11, v3, v10
-
-    and-int/lit16 v11, v11, 0xff
-
-    or-int/2addr v9, v11
-
-    iget v11, p0, Lp16;->b:I
-
-    if-eq v9, v11, :cond_0
-
-    invoke-interface {p1}, Lip5;->y()V
-
-    invoke-interface {p1}, Lip5;->getPosition()J
-
-    move-result-wide v11
-
-    sub-long/2addr v6, v11
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Lip5;->q(I)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance v9, Lumb;
-
-    const/16 v12, 0x10
-
-    invoke-direct {v9, v12}, Lumb;-><init>(I)V
-
-    iget-object v12, v9, Lumb;->a:[B
-
-    invoke-static {v3, v8, v12, v8, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v3, v9, Lumb;->a:[B
-
-    :goto_1
-    const/16 v12, 0xe
-
-    if-ge v8, v12, :cond_2
-
-    add-int v12, v0, v8
-
-    rsub-int/lit8 v13, v8, 0xe
-
-    invoke-interface {p1, v12, v3, v13}, Lip5;->t(I[BI)I
-
-    move-result v12
-
-    const/4 v13, -0x1
-
-    if-ne v12, v13, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/2addr v8, v12
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    invoke-virtual {v9, v8}, Lumb;->I(I)V
-
-    invoke-interface {p1}, Lip5;->y()V
-
-    invoke-interface {p1}, Lip5;->getPosition()J
-
-    move-result-wide v12
-
-    sub-long/2addr v6, v12
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Lip5;->q(I)V
-
-    invoke-static {v9, v2, v11, v1}, Lz7;->a(Lumb;Lx16;ILn7;)Z
-
-    move-result v8
-
-    :goto_3
-    if-nez v8, :cond_3
-
-    invoke-interface {p1, v10}, Lip5;->q(I)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {p1}, Lip5;->o()J
-
-    move-result-wide v6
-
-    invoke-interface {p1}, Lip5;->getLength()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v4
-
-    cmp-long v0, v6, v8
-
-    if-ltz v0, :cond_4
-
-    invoke-interface {p1}, Lip5;->getLength()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Lip5;->o()J
-
-    move-result-wide v3
-
-    sub-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    invoke-interface {p1, v0}, Lip5;->q(I)V
-
-    iget-wide v0, v2, Lx16;->k:J
-
-    return-wide v0
-
-    :cond_4
-    iget-wide v0, v1, Ln7;->a:J
-
-    return-wide v0
-.end method
-
-.method public final b(Lip5;J)Lnn0;
-    .locals 19
-
-    invoke-interface/range {p1 .. p1}, Lip5;->getPosition()J
-
-    move-result-wide v4
-
-    invoke-virtual/range {p0 .. p1}, Lp16;->a(Lip5;)J
-
-    move-result-wide v2
-
-    invoke-interface/range {p1 .. p1}, Lip5;->o()J
-
-    move-result-wide v10
-
-    move-object/from16 v12, p0
-
-    iget-object v0, v12, Lp16;->a:Lx16;
-
-    iget v0, v0, Lx16;->d:I
-
-    const/4 v1, 0x6
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    move-object/from16 v1, p1
+    if-nez v0, :cond_1
 
-    invoke-interface {v1, v0}, Lip5;->q(I)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {p0 .. p1}, Lp16;->a(Lip5;)J
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-wide v15
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1}, Lip5;->o()J
+    const/16 p1, 0x2f
 
-    move-result-wide v17
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    cmp-long v0, v2, p2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-gtz v0, :cond_0
+    move-result-object p1
 
-    cmp-long v0, v15, p2
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    if-lez v0, :cond_0
+    move-result p0
 
-    new-instance v6, Lnn0;
+    if-eqz p0, :cond_0
 
-    const/4 v7, 0x0
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v6 .. v11}, Lnn0;-><init>(IJJ)V
-
-    return-object v6
+    goto :goto_0
 
     :cond_0
-    cmp-long v0, v15, p2
+    const/4 p0, 0x0
 
-    if-gtz v0, :cond_1
-
-    new-instance v13, Lnn0;
-
-    const/4 v14, -0x2
-
-    invoke-direct/range {v13 .. v18}, Lnn0;-><init>(IJJ)V
-
-    return-object v13
+    return p0
 
     :cond_1
-    new-instance v0, Lnn0;
+    :goto_0
+    const/4 p0, 0x1
 
-    const/4 v1, -0x1
+    return p0
+.end method
 
-    invoke-direct/range {v0 .. v5}, Lnn0;-><init>(IJJ)V
 
-    return-object v0
+# virtual methods
+.method public final b(Landroid/net/Uri;)Ljava/io/File;
+    .locals 4
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x2f
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->indexOf(II)I
+
+    move-result v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lp16;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    if-eqz v1, :cond_1
+
+    new-instance p1, Ljava/io/File;
+
+    invoke-direct {p1, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lp16;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/SecurityException;
+
+    const-string v0, "Resolved path jumped beyond configured root"
+
+    invoke-direct {p1, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :catch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to resolve canonical path for "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unable to find configured root for "
+
+    invoke-static {p1, v1}, La3e;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

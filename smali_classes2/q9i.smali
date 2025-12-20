@@ -1,105 +1,181 @@
-.class public final enum Lq9i;
-.super Ljava/lang/Enum;
+.class public final synthetic Lq9i;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkv6;
 
 
 # static fields
-.field public static final enum b:Lq9i;
+.field public static final a:Lq9i;
 
-.field public static final enum c:Lq9i;
-
-.field public static final enum d:Lq9i;
-
-.field public static final synthetic o:[Lq9i;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field private static final descriptor:Lvoe;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 4
 
     new-instance v0, Lq9i;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "tcp_relay"
+    sput-object v0, Lq9i;->a:Lq9i;
 
-    const-string v3, "TCP_RELAY"
+    new-instance v1, Llcc;
 
-    invoke-direct {v0, v3, v1, v2}, Lq9i;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lq9i;->b:Lq9i;
-
-    new-instance v1, Lq9i;
-
-    const/4 v2, 0x1
-
-    const-string v3, "udp_relay"
-
-    const-string v4, "UDP_RELAY"
-
-    invoke-direct {v1, v4, v2, v3}, Lq9i;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lq9i;->c:Lq9i;
-
-    new-instance v2, Lq9i;
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupScreenCaptureBehaviorResponse"
 
     const/4 v3, 0x2
 
-    const-string v4, "srflx"
+    invoke-direct {v1, v2, v0, v3}, Llcc;-><init>(Ljava/lang/String;Lkv6;I)V
 
-    const-string v5, "SRFLX"
+    const-string v0, "requestId"
 
-    invoke-direct {v2, v5, v3, v4}, Lq9i;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/4 v2, 0x0
 
-    sput-object v2, Lq9i;->d:Lq9i;
+    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
 
-    filled-new-array {v0, v1, v2}, [Lq9i;
+    const-string v0, "isScreenCaptureEnabled"
 
-    move-result-object v0
+    invoke-virtual {v1, v0, v2}, Llcc;->k(Ljava/lang/String;Z)V
 
-    sput-object v0, Lq9i;->o:[Lq9i;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lq9i;->a:Ljava/lang/String;
+    sput-object v1, Lq9i;->descriptor:Lvoe;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lq9i;
-    .locals 1
 
-    const-class v0, Lq9i;
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Ls9i;
 
-    move-result-object p0
+    sget-object v0, Lq9i;->descriptor:Lvoe;
 
-    check-cast p0, Lq9i;
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lvoe;)Lkotlinx/serialization/json/internal/b;
 
-    return-object p0
+    move-result-object p1
+
+    iget-object v1, p2, Ls9i;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lvoe;ILjava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget-boolean p2, p2, Ls9i;->b:Z
+
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->c(Lvoe;IZ)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
 .end method
 
-.method public static values()[Lq9i;
+.method public final b(Lll4;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lq9i;->descriptor:Lvoe;
+
+    invoke-interface {p1, v0}, Lll4;->r(Lvoe;)Lip3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    move v6, v5
+
+    :goto_0
+    if-eqz v4, :cond_3
+
+    invoke-interface {p1, v0}, Lip3;->e(Lvoe;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    invoke-interface {p1, v0, v1}, Lip3;->y(Lvoe;I)Z
+
+    move-result v6
+
+    or-int/lit8 v5, v5, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-interface {p1, v0, v2}, Lip3;->j(Lvoe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-interface {p1, v0}, Lip3;->m(Lvoe;)V
+
+    new-instance p1, Ls9i;
+
+    invoke-direct {p1, v3, v5, v6}, Ls9i;-><init>(Ljava/lang/String;IZ)V
+
+    return-object p1
+.end method
+
+.method public final c()[Lq38;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lq38;
+
+    sget-object v1, Leyf;->a:Leyf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lts0;->a:Lts0;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lvoe;
     .locals 1
 
-    sget-object v0, Lq9i;->o:[Lq9i;
-
-    invoke-virtual {v0}, [Lq9i;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lq9i;
+    sget-object v0, Lq9i;->descriptor:Lvoe;
 
     return-object v0
 .end method

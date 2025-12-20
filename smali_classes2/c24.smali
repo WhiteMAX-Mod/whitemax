@@ -1,199 +1,83 @@
-.class public final Lc24;
-.super Ldtf;
+.class public abstract synthetic Lc24;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lum6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public synthetic X:Landroid/view/View;
-
-.field public final synthetic o:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p3, p0, Lc24;->o:I
+    invoke-static {}, Ly24;->values()[Ly24;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lc24;->o:I
-
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lyeb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lc24;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lc24;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lc24;->X:Landroid/view/View;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lc24;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lc24;
-
-    const/4 v0, 0x3
+    new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    invoke-direct {p2, v0, p3, v1}, Lc24;-><init>(ILkotlin/coroutines/Continuation;I)V
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p1, p2, Lc24;->X:Landroid/view/View;
+    :catch_0
+    const/4 v2, 0x0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    const/4 v3, 0x2
 
-    invoke-virtual {p2, p1}, Lc24;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_1
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-object p1
+    :catch_1
+    sput-object v0, Lc24;->$EnumSwitchMapping$0:[I
 
-    :pswitch_1
-    new-instance p2, Lc24;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lc24;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lc24;->X:Landroid/view/View;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lc24;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lc24;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lc24;->X:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lvib;->values()[Lvib;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
+    array-length v0, v0
 
-    if-eqz v1, :cond_0
+    new-array v0, v0, [I
 
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+    const/4 v4, 0x4
 
-    goto :goto_0
+    :try_start_2
+    aput v1, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    :cond_0
-    const/4 v0, 0x0
+    :catch_2
+    :try_start_3
+    aput v3, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    :goto_0
-    if-eqz v0, :cond_1
+    :catch_3
+    const/4 v2, 0x3
 
-    sget-object v1, La93;->s0:Lv1a;
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-virtual {v1, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    :catch_4
+    :try_start_5
+    aput v4, v0, v3
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result-object p1
+    :catch_5
+    sput-object v0, Lc24;->$EnumSwitchMapping$1:[I
 
-    invoke-interface {p1}, Lyeb;->getText()Lu3g;
-
-    move-result-object p1
-
-    iget p1, p1, Lu3g;->b:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lc24;->X:Landroid/view/View;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lyeb;->i()Lgnf;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lgnf;->b:Llnf;
-
-    iget v0, v0, Llnf;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lc24;->X:Landroid/view/View;
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->l:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

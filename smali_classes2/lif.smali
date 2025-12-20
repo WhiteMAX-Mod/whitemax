@@ -1,20 +1,8 @@
-.class public final Llif;
-.super Ld2f;
+.class public interface abstract Llif;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lj8e;
 
 
 # virtual methods
-.method public final b(Lqif;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final z(Lt98;)V
-    .locals 0
-
-    return-void
+.method public abstract b()Landroid/graphics/drawable/Drawable;
 .end method

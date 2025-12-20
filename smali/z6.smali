@@ -1,77 +1,105 @@
 .class public final Lz6;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lam6;
 .source "SourceFile"
-
-# interfaces
-.implements Lpy4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic t0:I
+
+.field public final synthetic u0:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroidx/appcompat/view/menu/ActionMenuItemView;)V
+    .locals 1
 
-    iput p1, p0, Lz6;->a:I
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    iput v0, p0, Lz6;->t0:I
+
+    .line 1
+    iput-object p1, p0, Lz6;->u0:Landroid/view/View;
+
+    .line 2
+    invoke-direct {p0, p1}, Lam6;-><init>(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ld7;Ld7;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lz6;->t0:I
+
+    .line 3
+    iput-object p1, p0, Lz6;->u0:Landroid/view/View;
+
+    invoke-direct {p0, p2}, Lam6;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
+.method public final b()Lw9f;
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v0, p0, Lz6;->t0:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lz6;->u0:Landroid/view/View;
+
+    check-cast v0, Ld7;
+
+    iget-object v0, v0, Ld7;->d:Lf7;
+
+    iget-object v0, v0, Lf7;->C0:Lb7;
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget v1, p0, Lz6;->a:I
-
-    packed-switch v1, :pswitch_data_0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
     goto :goto_0
 
-    :pswitch_0
-    check-cast v0, Lp6;
-
-    :try_start_0
-    invoke-interface {v0}, Lp6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lbj5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    :cond_0
+    invoke-virtual {v0}, Lsk9;->a()Lqk9;
 
     move-result-object v0
 
-    throw v0
+    :goto_0
+    return-object v0
 
-    :cond_0
-    return-void
+    :pswitch_0
+    iget-object v0, p0, Lz6;->u0:Landroid/view/View;
+
+    check-cast v0, Landroidx/appcompat/view/menu/ActionMenuItemView;
+
+    iget-object v0, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->z0:La7;
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lc7;
+
+    iget-object v0, v0, Lc7;->a:Lf7;
+
+    iget-object v0, v0, Lf7;->D0:Lb7;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lsk9;->a()Lqk9;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return-object v0
 
     nop
 
@@ -81,101 +109,110 @@
     .end packed-switch
 .end method
 
-.method public final e()Z
-    .locals 1
+.method public final c()Z
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v0, p0, Lz6;->t0:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lz6;->u0:Landroid/view/View;
+
+    check-cast v0, Ld7;
+
+    iget-object v0, v0, Ld7;->d:Lf7;
+
+    invoke-virtual {v0}, Lf7;->l()Z
 
     const/4 v0, 0x1
 
     return v0
 
+    :pswitch_0
+    iget-object v0, p0, Lz6;->u0:Landroid/view/View;
+
+    check-cast v0, Landroidx/appcompat/view/menu/ActionMenuItemView;
+
+    iget-object v1, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->x0:Lgk9;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->u0:Llk9;
+
+    invoke-interface {v1, v0}, Lgk9;->a(Llk9;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lz6;->b()Lw9f;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lw9f;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public d()Z
     .locals 2
 
-    iget v0, p0, Lz6;->a:I
+    iget v0, p0, Lz6;->t0:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0}, Lam6;->d()Z
 
-    const-string v1, "RunnableDisposable(disposed="
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lz6;->e()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lz6;->u0:Landroid/view/View;
 
-    const-string v1, "ActionDisposable(disposed="
+    check-cast v0, Ld7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Ld7;->d:Lf7;
 
-    invoke-virtual {p0}, Lz6;->e()Z
+    iget-object v1, v0, Lf7;->E0:Ljs6;
 
-    move-result v1
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, ", "
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {v0}, Lf7;->g()Z
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return v0
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

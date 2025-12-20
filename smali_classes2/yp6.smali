@@ -1,178 +1,264 @@
-.class public final Lyp6;
-.super Ldtf;
+.class public final synthetic Lyp6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic o:Ltq6;
+.field public final synthetic b:Lru/ok/messages/views/dialogs/FrgDlgPermissions;
 
 
 # direct methods
-.method public constructor <init>(Ltq6;ZLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/messages/views/dialogs/FrgDlgPermissions;I)V
     .locals 0
 
-    iput-object p1, p0, Lyp6;->o:Ltq6;
+    iput p2, p0, Lyp6;->a:I
 
-    iput-boolean p2, p0, Lyp6;->X:Z
+    iput-object p1, p0, Lyp6;->b:Lru/ok/messages/views/dialogs/FrgDlgPermissions;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
-    check-cast p1, Lf84;
+    iget p1, p0, Lyp6;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p2, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lyp6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lyp6;->b:Lru/ok/messages/views/dialogs/FrgDlgPermissions;
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p1, Lru/ok/messages/views/dialogs/FrgDlgPermissions;->C1:I
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
 
     move-result-object p1
 
-    check-cast p1, Lyp6;
+    if-eqz p1, :cond_0
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {p1, p2}, Lyp6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "package"
 
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lyp6;
-
-    iget-object v0, p0, Lyp6;->o:Ltq6;
-
-    iget-boolean v1, p0, Lyp6;->X:Z
-
-    invoke-direct {p1, v0, v1, p2}, Lyp6;-><init>(Ltq6;ZLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyp6;->o:Ltq6;
-
-    iget-object v0, p1, Ltq6;->v0:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Lop6;
-
-    iget v2, v3, Lop6;->h:I
-
-    if-eqz v2, :cond_0
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x7bf
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v3 .. v11}, Lop6;->b(Lop6;Lzub;Lp2h;Landroid/net/Uri;IZILandroid/net/Uri;I)Lop6;
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
+    invoke-static {v2, v3, p2}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p2
+
+    const-string v2, "android.settings.APPLICATION_DETAILS_SETTINGS"
+
+    invoke-direct {v1, v2, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {p1, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
     :cond_0
-    move-object v4, v3
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
 
-    iget-boolean v2, p0, Lyp6;->X:Z
+    move-result-object p1
 
-    if-eqz v2, :cond_1
+    instance-of p2, p1, Lzp6;
 
-    iget-object v2, v4, Lop6;->c:Lvd8;
+    if-eqz p2, :cond_1
 
-    iget-object v11, v2, Lvd8;->u0:Landroid/net/Uri;
+    check-cast p1, Lzp6;
 
-    const/4 v10, 0x0
-
-    const/16 v12, 0x3df
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v4 .. v12}, Lop6;->b(Lop6;Lzub;Lp2h;Landroid/net/Uri;IZILandroid/net/Uri;I)Lop6;
-
-    move-result-object v4
+    invoke-interface {p1}, Lzp6;->h()V
 
     :cond_1
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object p1, v0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
+
+    instance-of p2, p1, Lzp6;
+
+    if-eqz p2, :cond_2
+
+    check-cast p1, Lzp6;
+
+    invoke-interface {p1}, Lzp6;->h()V
+
+    :cond_2
+    return-void
+
+    :pswitch_0
+    iget-boolean p1, v0, Lru/ok/messages/views/dialogs/FrgDlgPermissions;->B1:Z
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+
+    move-result-object p1
+
+    instance-of p2, p1, Lzp6;
+
+    if-eqz p2, :cond_3
+
+    check-cast p1, Lzp6;
+
+    invoke-interface {p1}, Lzp6;->j()V
+
+    :cond_3
+    iget-object p1, v0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
+
+    instance-of p2, p1, Lzp6;
+
+    if-eqz p2, :cond_a
+
+    check-cast p1, Lzp6;
+
+    invoke-interface {p1}, Lzp6;->j()V
+
+    goto/16 :goto_0
+
+    :cond_4
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->j0()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string v1, "use.result.api"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_5
+
+    new-instance p1, Landroid/os/Bundle;
+
+    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+
+    const-string p2, "dialog:permissions:result"
+
+    invoke-virtual {p1, p2, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->x()Landroidx/fragment/app/c;
+
+    move-result-object p2
+
+    iget-object v0, v0, Landroidx/fragment/app/a;->J0:Ljava/lang/String;
+
+    invoke-virtual {p2, v0, p1}, Landroidx/fragment/app/c;->c0(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    :cond_2
-    iget-object p1, p1, Ltq6;->v0:Ltcf;
+    :cond_5
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->j0()Landroid/os/Bundle;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-virtual {p1, v0, v1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v3, "ru.ok.tamtam.extra.PERMISSIONS"
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {p1, v3}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
-    return-object p1
+    move-result-object p1
+
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/a;->z(Z)Landroidx/fragment/app/a;
+
+    move-result-object v1
+
+    const-string v3, "permissions_prefs"
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->A()I
+
+    move-result v0
+
+    :try_start_0
+    invoke-virtual {v1, p1, v0}, Landroidx/fragment/app/a;->h0([Ljava/lang/String;I)V
+
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->v()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    if-nez v1, :cond_6
+
+    invoke-virtual {v0, v3, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sput-object v0, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    :cond_6
+    sget-object v0, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    invoke-static {v0, p1}, Ltsi;->f(Landroid/content/SharedPreferences;[Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    sget-object v0, La9j;->a:Ln5b;
+
+    if-eqz v0, :cond_7
+
+    move-object p2, v0
+
+    :cond_7
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p2, "tsi"
+
+    const-string v0, "Can\'t request permission"
+
+    invoke-static {p2, v0, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_8
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_a
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->A()I
+
+    move-result v0
+
+    invoke-static {p2, p1, v0}, Lx7;->j(Landroidx/fragment/app/b;[Ljava/lang/String;I)V
+
+    sget-object v0, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    if-nez v0, :cond_9
+
+    invoke-virtual {p2, v3, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p2
+
+    sput-object p2, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    :cond_9
+    sget-object p2, Ltsi;->e:Landroid/content/SharedPreferences;
+
+    invoke-static {p2, p1}, Ltsi;->f(Landroid/content/SharedPreferences;[Ljava/lang/String;)V
+
+    :cond_a
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

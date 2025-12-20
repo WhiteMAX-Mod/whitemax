@@ -1,138 +1,98 @@
-.class public final synthetic Lcl6;
-.super Ljava/lang/Object;
+.class public final Lcl6;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
 
-.field public final synthetic b:Lzva;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzva;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
     .locals 0
 
-    iput p2, p0, Lcl6;->a:I
+    iput-object p2, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput-object p1, p0, Lcl6;->b:Lzva;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcl6;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lcl6;->b:Lzva;
+    invoke-virtual {p0, p1, p2}, Lcl6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    check-cast p1, Lcl6;
 
-    move-result-object v0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+    invoke-virtual {p1, p2}, Lcl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v3
+    return-object p2
+.end method
 
-    iget-object v0, v1, Lzva;->b:Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    check-cast v0, Lk18;
+    new-instance v0, Lcl6;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lcl6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
 
-    move-object v2, v0
-
-    check-cast v2, Lg4b;
-
-    sget-object v0, Lg4b;->q:[Lyy7;
-
-    const/4 v7, 0x0
-
-    const/4 v6, 0x5
-
-    const-string v4, "frsc-sch"
-
-    move v5, v3
-
-    invoke-virtual/range {v2 .. v7}, Lg4b;->f(ILjava/lang/String;IIZ)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v4}, Lg4b;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object v0
+    iput-object p1, v0, Lcl6;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, v1, Lzva;->b:Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast v0, Lk18;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Lcl6;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast v0, Lg4b;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lp38;
 
-    move-result-object v0
+    iget-object p1, p0, Lcl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, v1, Lzva;->b:Ljava/lang/Object;
-
-    check-cast v0, Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->N0()Lo3d;
 
     move-result-object v0
 
-    check-cast v0, Lg4b;
+    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lf4c;
 
-    invoke-virtual {v0}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
+    move-result-object p1
 
-    move-result-object v0
+    iget-object p1, p1, Lf4c;->c:Lg6c;
 
-    return-object v0
+    check-cast p1, Lnk6;
 
-    :pswitch_2
-    iget-object v0, v1, Lzva;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lnk6;->g()Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, Lk18;
+    move-result-object p1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lo3d;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    check-cast v0, Lg4b;
-
-    invoke-virtual {v0}, Lg4b;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

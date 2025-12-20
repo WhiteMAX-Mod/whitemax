@@ -1,232 +1,224 @@
 .class public final Lf0c;
-.super Ldtf;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/pinbars/PinBarsWidget;
+.field public X:I
 
-.field public final synthetic Y:Landroid/view/View;
+.field public c:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public d:Lx04;
+
+.field public o:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    iput-object p3, p0, Lf0c;->X:Lone/me/pinbars/PinBarsWidget;
-
-    iput-object p1, p0, Lf0c;->Y:Landroid/view/View;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 2
 
-    check-cast p1, Lc1c;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {p0, p1, p2}, Lf0c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, -0x1
 
-    check-cast p1, Lf0c;
+    sparse-switch v0, :sswitch_data_0
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    goto :goto_0
 
-    invoke-virtual {p1, p2}, Lf0c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :sswitch_0
+    const-string v0, "tokenType"
 
-    return-object p2
-.end method
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move-result p2
 
-    new-instance v0, Lf0c;
+    if-nez p2, :cond_0
 
-    iget-object v1, p0, Lf0c;->X:Lone/me/pinbars/PinBarsWidget;
-
-    iget-object v2, p0, Lf0c;->Y:Landroid/view/View;
-
-    invoke-direct {v0, v2, p2, v1}, Lf0c;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
-
-    iput-object p1, v0, Lf0c;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lf0c;->o:Ljava/lang/Object;
-
-    check-cast p1, Lc1c;
-
-    iget-object v0, p0, Lf0c;->Y:Landroid/view/View;
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lf0c;->X:Lone/me/pinbars/PinBarsWidget;
-
-    iget-object v2, v1, Lone/me/pinbars/PinBarsWidget;->t0:Landroid/transition/AutoTransition;
-
-    instance-of v3, p1, Lb1c;
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    sget p1, Lk8b;->h:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v0, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    goto :goto_0
 
     :cond_0
-    iput-object v4, v1, Lone/me/pinbars/PinBarsWidget;->X:Ln8b;
+    const/4 v1, 0x3
 
-    goto/16 :goto_2
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "token"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    iget-object v3, v1, Lone/me/pinbars/PinBarsWidget;->X:Ln8b;
+    const/4 v1, 0x2
 
-    if-nez v3, :cond_3
+    goto :goto_0
 
-    new-instance v3, Ln8b;
+    :sswitch_2
+    const-string v0, "phone"
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v5
+    move-result p2
 
-    const/4 v6, 0x1
-
-    invoke-direct {v3, v5, v6}, Ln8b;-><init>(Landroid/content/Context;I)V
-
-    sget v5, Lk8b;->h:I
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->setId(I)V
-
-    new-instance v5, Lrzb;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v1, v6}, Lrzb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
-
-    invoke-virtual {v3, v5}, Ln8b;->setCloseBtnClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v5, Lrzb;
-
-    const/4 v6, 0x5
-
-    invoke-direct {v5, v1, v6}, Lrzb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v5, Lvzb;
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x1
-
-    invoke-direct {v5, v6, v4, v7}, Lvzb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v5, v3}, Ltqi;->c(Lum6;Landroid/view/View;)V
-
-    iput-object v3, v1, Lone/me/pinbars/PinBarsWidget;->X:Ln8b;
-
-    invoke-static {v0, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    iget-object v2, v1, Lone/me/pinbars/PinBarsWidget;->X:Ln8b;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v3
-
-    if-gez v3, :cond_2
+    if-nez p2, :cond_2
 
     goto :goto_0
 
     :cond_2
-    const/4 v3, 0x0
+    const/4 v1, 0x1
 
-    :goto_0
-    invoke-virtual {v0, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "profile"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->X:Ln8b;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_4
+    :goto_0
+    packed-switch v1, :pswitch_data_0
 
-    goto :goto_2
+    invoke-virtual {p1}, Lgr9;->y()V
 
-    :cond_4
-    check-cast p1, Lb1c;
+    return-void
 
-    iget-object v2, p1, Lb1c;->b:Ln5g;
+    :pswitch_0
+    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v3
+    invoke-static {p1}, Lgg9;->p(Ljava/lang/String;)I
 
-    invoke-virtual {v2, v3}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    move-result p1
 
-    move-result-object v2
+    iput p1, p0, Lf0c;->X:I
 
-    const-string v3, ""
+    return-void
 
-    if-nez v2, :cond_5
+    :pswitch_1
+    invoke-static {p1}, Lisi;->p(Lgr9;)Ljava/lang/String;
 
-    move-object v2, v3
+    move-result-object p1
 
-    :cond_5
-    invoke-virtual {v0, v2}, Ln8b;->setTitle(Ljava/lang/CharSequence;)V
+    iput-object p1, p0, Lf0c;->c:Ljava/lang/String;
 
-    iget-object v2, p1, Lb1c;->c:Lr5g;
+    return-void
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :pswitch_2
+    const-wide/16 v0, 0x0
 
-    move-result-object v1
+    invoke-static {p1, v0, v1}, Lisi;->m(Lgr9;J)J
 
-    invoke-virtual {v2, v1}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    move-result-wide p1
 
-    move-result-object v1
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-nez v1, :cond_6
+    move-result-object p1
 
-    goto :goto_1
+    iput-object p1, p0, Lf0c;->o:Ljava/lang/Long;
 
-    :cond_6
-    move-object v3, v1
+    return-void
 
-    :goto_1
-    invoke-virtual {v0, v3}, Ln8b;->setSubtitle(Ljava/lang/CharSequence;)V
+    :pswitch_3
+    invoke-static {p1}, Lx04;->g(Lgr9;)Lx04;
 
-    iget-boolean p1, p1, Lb1c;->d:Z
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Ln8b;->setCloseButtonVisibility(Z)V
+    iput-object p1, p0, Lf0c;->d:Lx04;
 
-    :goto_2
-    sget-object p1, Lqqg;->a:Lqqg;
+    return-void
 
-    return-object p1
+    :sswitch_data_0
+    .sparse-switch
+        -0x12717657 -> :sswitch_3
+        0x65b3d6e -> :sswitch_2
+        0x696b9f9 -> :sswitch_1
+        0x86f18d3 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lf0c;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lf0c;->d:Lx04;
+
+    iget-object v2, p0, Lf0c;->o:Ljava/lang/Long;
+
+    iget v3, p0, Lf0c;->X:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "{token=\'"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', profile="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", phone="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", tokenType="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Lgg9;->n(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

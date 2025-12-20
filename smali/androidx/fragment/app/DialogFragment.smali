@@ -10,11 +10,11 @@
 # instance fields
 .field public i1:Landroid/os/Handler;
 
-.field public final j1:Lue;
+.field public final j1:Lxe;
 
-.field public final k1:Lzv4;
+.field public final k1:Lvz4;
 
-.field public final l1:Law4;
+.field public final l1:Lwz4;
 
 .field public m1:I
 
@@ -28,7 +28,7 @@
 
 .field public r1:Z
 
-.field public final s1:Lvz5;
+.field public final s1:Lc46;
 
 .field public t1:Landroid/app/Dialog;
 
@@ -47,25 +47,25 @@
 
     invoke-direct {p0}, Landroidx/fragment/app/a;-><init>()V
 
-    new-instance v0, Lue;
+    new-instance v0, Lxe;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, v1, p0}, Lue;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lxe;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->j1:Lue;
+    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->j1:Lxe;
 
-    new-instance v0, Lzv4;
+    new-instance v0, Lvz4;
 
-    invoke-direct {v0, p0}, Lzv4;-><init>(Landroidx/fragment/app/DialogFragment;)V
+    invoke-direct {v0, p0}, Lvz4;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->k1:Lzv4;
+    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->k1:Lvz4;
 
-    new-instance v0, Law4;
+    new-instance v0, Lwz4;
 
-    invoke-direct {v0, p0}, Law4;-><init>(Landroidx/fragment/app/DialogFragment;)V
+    invoke-direct {v0, p0}, Lwz4;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->l1:Law4;
+    iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->l1:Lwz4;
 
     const/4 v0, 0x0
 
@@ -83,13 +83,13 @@
 
     iput v1, p0, Landroidx/fragment/app/DialogFragment;->q1:I
 
-    new-instance v1, Lvz5;
+    new-instance v1, Lc46;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lvz5;-><init>(Landroidx/fragment/app/DialogFragment;I)V
+    invoke-direct {v1, p0, v2}, Lc46;-><init>(Landroidx/fragment/app/DialogFragment;I)V
 
-    iput-object v1, p0, Landroidx/fragment/app/DialogFragment;->s1:Lvz5;
+    iput-object v1, p0, Landroidx/fragment/app/DialogFragment;->s1:Lc46;
 
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->x1:Z
 
@@ -113,11 +113,11 @@
 
     invoke-super {p0, p1}, Landroidx/fragment/app/a;->L(Landroid/content/Context;)V
 
-    iget-object p1, p0, Landroidx/fragment/app/a;->c1:Lj8a;
+    iget-object p1, p0, Landroidx/fragment/app/a;->c1:Lsea;
 
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Lvz5;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Lc46;
 
-    invoke-virtual {p1, v0}, Lcb8;->f(Lwta;)V
+    invoke-virtual {p1, v0}, Lsf8;->f(Ld0b;)V
 
     iget-boolean p1, p0, Landroidx/fragment/app/DialogFragment;->w1:Z
 
@@ -268,11 +268,11 @@
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->v1:Z
 
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/a;->c1:Lj8a;
+    iget-object v0, p0, Landroidx/fragment/app/a;->c1:Lsea;
 
-    iget-object v1, p0, Landroidx/fragment/app/DialogFragment;->s1:Lvz5;
+    iget-object v1, p0, Landroidx/fragment/app/DialogFragment;->s1:Lc46;
 
-    invoke-virtual {v0, v1}, Lcb8;->j(Lwta;)V
+    invoke-virtual {v0, v1}, Lsf8;->j(Ld0b;)V
 
     return-void
 .end method
@@ -315,7 +315,7 @@
     :try_start_0
     iput-boolean v3, p0, Landroidx/fragment/app/DialogFragment;->r1:Z
 
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->v0()Landroid/app/Dialog;
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->u0()Landroid/app/Dialog;
 
     move-result-object v4
 
@@ -327,7 +327,7 @@
 
     iget v5, p0, Landroidx/fragment/app/DialogFragment;->m1:I
 
-    invoke-virtual {p0, v4, v5}, Landroidx/fragment/app/DialogFragment;->w0(Landroid/app/Dialog;I)V
+    invoke-virtual {p0, v4, v5}, Landroidx/fragment/app/DialogFragment;->v0(Landroid/app/Dialog;I)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->v()Landroid/content/Context;
 
@@ -358,13 +358,13 @@
 
     iget-object v4, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    iget-object v5, p0, Landroidx/fragment/app/DialogFragment;->k1:Lzv4;
+    iget-object v5, p0, Landroidx/fragment/app/DialogFragment;->k1:Lvz4;
 
     invoke-virtual {v4, v5}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     iget-object v4, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    iget-object v5, p0, Landroidx/fragment/app/DialogFragment;->l1:Law4;
+    iget-object v5, p0, Landroidx/fragment/app/DialogFragment;->l1:Lwz4;
 
     invoke-virtual {v4, v5}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -391,7 +391,7 @@
 
     :cond_4
     :goto_3
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
@@ -432,7 +432,7 @@
 
     :cond_6
     :goto_4
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
@@ -588,13 +588,13 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lpai;->d(Landroid/view/View;Lj48;)V
+    invoke-static {v0, p0}, Ln5j;->f(Landroid/view/View;La98;)V
 
-    sget v1, Lw0d;->view_tree_view_model_store_owner:I
+    sget v1, Lz9d;->view_tree_view_model_store_owner:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    invoke-static {v0, p0}, Lwqi;->l(Landroid/view/View;Lkyd;)V
+    invoke-static {v0, p0}, Lp5j;->n(Landroid/view/View;Lr8e;)V
 
     :cond_0
     return-void
@@ -692,7 +692,7 @@
 
     const/4 p1, 0x3
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result p1
 
@@ -717,39 +717,27 @@
     :cond_0
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->t0(ZZ)V
+    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->s0(ZZ)V
 
     :cond_1
     return-void
 .end method
 
-.method public final r()Lq08;
+.method public final r()Lj58;
     .locals 2
 
-    new-instance v0, Lai6;
+    new-instance v0, Llm6;
 
-    invoke-direct {v0, p0}, Lai6;-><init>(Landroidx/fragment/app/a;)V
+    invoke-direct {v0, p0}, Llm6;-><init>(Landroidx/fragment/app/a;)V
 
-    new-instance v1, Lbw4;
+    new-instance v1, Lxz4;
 
-    invoke-direct {v1, p0, v0}, Lbw4;-><init>(Landroidx/fragment/app/DialogFragment;Lai6;)V
+    invoke-direct {v1, p0, v0}, Lxz4;-><init>(Landroidx/fragment/app/DialogFragment;Llm6;)V
 
     return-object v1
 .end method
 
-.method public s0()V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroidx/fragment/app/DialogFragment;->t0(ZZ)V
-
-    return-void
-.end method
-
-.method public final t0(ZZ)V
+.method public final s0(ZZ)V
     .locals 4
 
     iget-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->v1:Z
@@ -802,7 +790,7 @@
     :cond_1
     iget-object p2, p0, Landroidx/fragment/app/DialogFragment;->i1:Landroid/os/Handler;
 
-    iget-object v2, p0, Landroidx/fragment/app/DialogFragment;->j1:Lue;
+    iget-object v2, p0, Landroidx/fragment/app/DialogFragment;->j1:Lxe;
 
     invoke-virtual {p2, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -822,11 +810,11 @@
 
     if-ltz v0, :cond_3
 
-    new-instance v1, Lri6;
+    new-instance v1, Lcn6;
 
-    invoke-direct {v1, p2, v0}, Lri6;-><init>(Landroidx/fragment/app/c;I)V
+    invoke-direct {v1, p2, v0}, Lcn6;-><init>(Landroidx/fragment/app/c;I)V
 
-    invoke-virtual {p2, v1, p1}, Landroidx/fragment/app/c;->x(Lqi6;Z)V
+    invoke-virtual {p2, v1, p1}, Landroidx/fragment/app/c;->y(Lbn6;Z)V
 
     const/4 p1, -0x1
 
@@ -839,7 +827,7 @@
 
     const-string p2, "Bad id: "
 
-    invoke-static {v0, p2}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -852,27 +840,27 @@
 
     move-result-object p2
 
-    new-instance v2, Lue0;
+    new-instance v2, Lqf0;
 
-    invoke-direct {v2, p2}, Lue0;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v2, p2}, Lqf0;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-boolean v0, v2, Lue0;->o:Z
+    iput-boolean v0, v2, Lqf0;->o:Z
 
-    invoke-virtual {v2, p0}, Lue0;->h(Landroidx/fragment/app/a;)V
+    invoke-virtual {v2, p0}, Lqf0;->h(Landroidx/fragment/app/a;)V
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {v2, v0}, Lue0;->d(Z)I
+    invoke-virtual {v2, v0}, Lqf0;->d(Z)I
 
     return-void
 
     :cond_5
-    invoke-virtual {v2, v1}, Lue0;->d(Z)I
+    invoke-virtual {v2, v1}, Lqf0;->d(Z)I
 
     return-void
 .end method
 
-.method public u0()I
+.method public t0()I
     .locals 1
 
     iget v0, p0, Landroidx/fragment/app/DialogFragment;->n1:I
@@ -880,12 +868,12 @@
     return v0
 .end method
 
-.method public v0()Landroid/app/Dialog;
+.method public u0()Landroid/app/Dialog;
     .locals 3
 
     const/4 v0, 0x3
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
     move-result v0
 
@@ -908,22 +896,22 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    new-instance v0, Lpl3;
+    new-instance v0, Lzo3;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->k0()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->u0()I
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->t0()I
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lpl3;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lzo3;-><init>(Landroid/content/Context;I)V
 
     return-object v0
 .end method
 
-.method public w0(Landroid/app/Dialog;I)V
+.method public v0(Landroid/app/Dialog;I)V
     .locals 2
 
     const/4 v0, 0x1
@@ -957,7 +945,7 @@
     return-void
 .end method
 
-.method public x0(Landroidx/fragment/app/c;Ljava/lang/String;)V
+.method public w0(Landroidx/fragment/app/c;Ljava/lang/String;)V
     .locals 3
 
     const/4 v0, 0x0
@@ -970,15 +958,15 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lue0;
+    new-instance v2, Lqf0;
 
-    invoke-direct {v2, p1}, Lue0;-><init>(Landroidx/fragment/app/c;)V
+    invoke-direct {v2, p1}, Lqf0;-><init>(Landroidx/fragment/app/c;)V
 
-    iput-boolean v1, v2, Lue0;->o:Z
+    iput-boolean v1, v2, Lqf0;->o:Z
 
-    invoke-virtual {v2, v0, p0, p2, v1}, Lue0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+    invoke-virtual {v2, v0, p0, p2, v1}, Lqf0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
 
-    invoke-virtual {v2, v0}, Lue0;->d(Z)I
+    invoke-virtual {v2, v0}, Lqf0;->d(Z)I
 
     return-void
 .end method

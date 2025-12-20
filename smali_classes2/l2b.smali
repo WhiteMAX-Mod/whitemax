@@ -1,75 +1,73 @@
-.class public final Ll2b;
-.super Lq44;
+.class public final enum Ll2b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Llz;
+# static fields
+.field public static final enum a:Ll2b;
 
-.field public Y:Z
+.field public static final enum b:Ll2b;
 
-.field public Z:Z
-
-.field public d:Lo2b;
-
-.field public o:Lsi9;
-
-.field public s0:Z
-
-.field public t0:Z
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Lo2b;
-
-.field public w0:I
+.field public static final synthetic c:[Ll2b;
 
 
 # direct methods
-.method public constructor <init>(Lo2b;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Ll2b;->v0:Lo2b;
+    new-instance v0, Ll2b;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "ACCEPT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll2b;->a:Ll2b;
+
+    new-instance v1, Ll2b;
+
+    const-string v2, "DECLINE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ll2b;->b:Ll2b;
+
+    filled-new-array {v0, v1}, [Ll2b;
+
+    move-result-object v0
+
+    sput-object v0, Ll2b;->c:[Ll2b;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ll2b;
+    .locals 1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    const-class v0, Ll2b;
 
-    iput-object p1, p0, Ll2b;->u0:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget p1, p0, Ll2b;->w0:I
+    move-result-object p0
 
-    const/high16 v0, -0x80000000
+    check-cast p0, Ll2b;
 
-    or-int/2addr p1, v0
+    return-object p0
+.end method
 
-    iput p1, p0, Ll2b;->w0:I
+.method public static values()[Ll2b;
+    .locals 1
 
-    const/4 v5, 0x0
+    sget-object v0, Ll2b;->c:[Ll2b;
 
-    const/4 v6, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v0, p0, Ll2b;->v0:Lo2b;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, [Ll2b;
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-virtual/range {v0 .. v7}, Lo2b;->f(Lsi9;Llz;ZZZZLq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

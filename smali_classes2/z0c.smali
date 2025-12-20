@@ -1,103 +1,146 @@
 .class public final Lz0c;
-.super Ljava/lang/Object;
+.super Ltyd;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ljve;
+.field public c:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Landroid/database/Cursor;
 
 
 # direct methods
-.method public constructor <init>(Ltw0;Llzf;)V
-    .locals 2
+.method public constructor <init>(Landroid/database/Cursor;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz0c;->o:Landroid/database/Cursor;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x2
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lz0c;->a:Ljve;
-
-    check-cast p2, Lq2b;
-
-    invoke-virtual {p2}, Lq2b;->c()Lwl8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lz0c;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Ltw0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Ltyd;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Ln73;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ln8a;
+    check-cast p1, Lioe;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ln8a;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p1, Ln73;->b:Ljava/util/Collection;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lz0c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lz0c;
 
-    move-result v2
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1, p2}, Lz0c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v2
+    return-object p1
+.end method
 
-    check-cast v2, Ljava/lang/Number;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+    new-instance v0, Lz0c;
 
-    move-result-wide v2
+    iget-object v1, p0, Lz0c;->o:Landroid/database/Cursor;
 
-    invoke-virtual {v0, v2, v3}, Ln8a;->a(J)Z
+    invoke-direct {v0, v1, p2}, Lz0c;-><init>(Landroid/database/Cursor;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lz0c;->d:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    iget v1, p0, Lz0c;->c:I
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lz0c;->o:Landroid/database/Cursor;
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lz0c;->d:Ljava/lang/Object;
+
+    check-cast v1, Lioe;
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    new-instance p1, Ljbe;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/16 v0, 0x1a
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v0}, Ljbe;-><init>(I)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ly0c;
+    throw p1
 
-    invoke-direct {v0, p0, p1, v1}, Ly0c;-><init>(Lz0c;Ljbe;Lkotlin/coroutines/Continuation;)V
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/4 p1, 0x3
+    iget-object p1, p0, Lz0c;->d:Ljava/lang/Object;
 
-    iget-object v2, p0, Lz0c;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-object v1, p1
 
-    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    check-cast v1, Lioe;
 
-    return-void
+    :goto_0
+    :try_start_1
+    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iput-object v1, p0, Lz0c;->d:Ljava/lang/Object;
+
+    iput v2, p0, Lz0c;->c:I
+
+    invoke-virtual {v1, v3, p0}, Lioe;->b(Ljava/lang/Object;Ltyd;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v0
+
+    :cond_2
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :goto_1
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    throw p1
 .end method

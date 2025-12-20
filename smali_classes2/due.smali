@@ -1,184 +1,66 @@
 .class public final Ldue;
-.super Ldtf;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lmuc;
-
-.field public final synthetic Y:Lone/me/sharedata/ShareDataPickerScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmuc;Lone/me/sharedata/ShareDataPickerScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    iput-object p1, p0, Ldue;->X:Lmuc;
-
-    iput-object p2, p0, Ldue;->Y:Lone/me/sharedata/ShareDataPickerScreen;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 1
 
-    check-cast p1, Lqte;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v0, "token"
 
-    invoke-virtual {p0, p1, p2}, Ldue;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lgr9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lgr9;->N0()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Ldue;
+    iput-object p1, p0, Ldue;->c:Ljava/lang/String;
 
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Ldue;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Ldue;
+    iget-object v0, p0, Ldue;->c:Ljava/lang/String;
 
-    iget-object v1, p0, Ldue;->X:Lmuc;
+    invoke-static {v0}, Ltri;->i(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    iget-object v2, p0, Ldue;->Y:Lone/me/sharedata/ShareDataPickerScreen;
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2, p2}, Ldue;-><init>(Lmuc;Lone/me/sharedata/ShareDataPickerScreen;Lkotlin/coroutines/Continuation;)V
+    const-string v1, "{token=\'"
 
-    iput-object p1, v0, Ldue;->o:Ljava/lang/Object;
+    const-string v2, "\'}"
+
+    invoke-static {v1, v0, v2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldue;->o:Ljava/lang/Object;
-
-    check-cast p1, Lqte;
-
-    const/16 v0, 0x8
-
-    iget-object v1, p0, Ldue;->X:Lmuc;
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v2, p0, Ldue;->Y:Lone/me/sharedata/ShareDataPickerScreen;
-
-    iget-boolean v3, v2, Lone/me/sharedata/ShareDataPickerScreen;->v0:Z
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {v2}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Ljxb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Ljxb;->Y:Lhbd;
-
-    iget-object v2, v2, Lhbd;->a:Lmcf;
-
-    invoke-interface {v2}, Lmcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Set;
-
-    invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_1
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p1, Lqte;->a:Ls5g;
-
-    iget-object v2, p1, Lqte;->b:Ls5g;
-
-    iget-object v3, p1, Lqte;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lqte;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v1, v0}, Lmuc;->setTitle(Ljava/lang/CharSequence;)V
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lmuc;->setBody(Ljava/lang/CharSequence;)V
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lmuc;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZ)V
-
-    invoke-virtual {v1, p1}, Lmuc;->setCounter(Ljava/lang/Integer;)V
-
-    :goto_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

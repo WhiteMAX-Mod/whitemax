@@ -2,78 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvv8;
-
 
 # instance fields
-.field public final a:Landroid/os/Messenger;
+.field public A:I
 
+.field public B:I
 
-# direct methods
-.method public constructor <init>(Landroid/os/Messenger;)V
-    .locals 0
+.field public C:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public D:I
 
-    iput-object p1, p0, Lwv8;->a:Landroid/os/Messenger;
+.field public E:I
 
-    return-void
-.end method
+.field public F:F
+
+.field public G:F
+
+.field public H:F
+
+.field public I:F
+
+.field public J:F
+
+.field public K:F
+
+.field public L:F
+
+.field public M:F
+
+.field public N:F
+
+.field public O:F
+
+.field public P:[B
+
+.field public Q:I
+
+.field public R:I
+
+.field public S:I
+
+.field public T:J
+
+.field public U:J
+
+.field public V:Lmvg;
+
+.field public W:Z
+
+.field public X:Z
+
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lirg;
+
+.field public a:Z
+
+.field public a0:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Z
+
+.field public j:[B
+
+.field public k:Lgrg;
+
+.field public l:[B
+
+.field public m:Lw85;
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:F
+
+.field public v:F
+
+.field public w:F
+
+.field public x:[B
+
+.field public y:I
+
+.field public z:Z
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
+.method public final a(Ljava/lang/String;)[B
     .locals 2
 
-    new-instance v0, Landroid/os/Bundle;
+    iget-object v0, p0, Lwv8;->l:[B
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    if-eqz v0, :cond_0
 
-    const-string v1, "data_media_item_id"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "data_options"
-
-    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const-string p1, "data_notify_children_changed_options"
-
-    const/4 p3, 0x0
-
-    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    if-eqz p2, :cond_0
-
-    sget-object p1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Ln28;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    const-string p2, "data_media_item_list"
-
-    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    return-object v0
 
     :cond_0
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Missing CodecPrivate for codec "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 p2, 0x3
+    const/4 v0, 0x0
 
-    iput p2, p1, Landroid/os/Message;->what:I
+    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
 
-    const/4 p2, 0x2
+    move-result-object p1
 
-    iput p2, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object p2, p0, Lwv8;->a:Landroid/os/Messenger;
-
-    invoke-virtual {p2, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-
-    return-void
+    throw p1
 .end method

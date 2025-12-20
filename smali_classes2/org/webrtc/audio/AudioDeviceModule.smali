@@ -4,7 +4,24 @@
 
 
 # virtual methods
-.method public abstract getNativeAudioDeviceModulePointer()J
+.method public getNative(J)J
+    .locals 0
+
+    invoke-interface {p0}, Lorg/webrtc/audio/AudioDeviceModule;->getNativeAudioDeviceModulePointer()J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public getNativeAudioDeviceModulePointer()J
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
 .end method
 
 .method public abstract release()V

@@ -1,66 +1,70 @@
-.class public abstract Le8j;
+.class public final Le8j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Le8j;
+
 
 # direct methods
-.method public static final a(JLpb3;)I
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    check-cast p2, Lw4e;
-
-    invoke-virtual {p2}, Lw4e;->j()J
-
-    move-result-wide v0
-
-    cmp-long p2, v0, p0
-
-    if-ltz p2, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    sub-long/2addr p0, v0
-
-    long-to-float p0, p0
-
-    const p1, 0x4a5bba00    # 3600000.0f
-
-    div-float/2addr p0, p1
-
-    invoke-static {p0}, Ljava/lang/Math;->round(F)I
-
-    move-result p0
-
-    int-to-double p0, p0
-
-    const-wide/high16 v0, 0x4038000000000000L    # 24.0
-
-    div-double/2addr p0, v0
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide p0
-
-    double-to-int p0, p0
-
-    return p0
-.end method
-
-.method public static final b(Lcm6;)Lvnd;
-    .locals 1
-
-    new-instance v0, Lvnd;
+    new-instance v0, Le8j;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p0, v0, Lvnd;->a:Lcm6;
+    sput-object v0, Le8j;->a:Le8j;
 
-    sget-object p0, Lkk4;->B0:Lkk4;
+    new-instance v0, Lyyi;
 
-    iput-object p0, v0, Lvnd;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+
+    const-class v1, Lqzi;
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

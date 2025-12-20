@@ -1,53 +1,150 @@
 .class public final Litf;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lytf;
-
-.field public Z:I
-
-.field public d:Lytf;
-
-.field public o:Lttg;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lytf;Lq44;)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 2
+
+    and-int/lit8 p2, p2, 0x1
+
+    if-eqz p2, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, v0, v1}, Litf;-><init>(Ljava/lang/String;J)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;J)V
     .locals 0
 
-    iput-object p1, p0, Litf;->Y:Lytf;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-object p1, p0, Litf;->a:Ljava/lang/String;
+
+    .line 4
+    iput-wide p2, p0, Litf;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Litf;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Litf;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Litf;
 
-    iput p1, p0, Litf;->Z:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Litf;->Y:Lytf;
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Litf;
+
+    iget-object v1, p0, Litf;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Litf;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Litf;->b:J
+
+    iget-wide v5, p1, Litf;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Litf;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Lytf;->b(Lytf;Lttg;Lq44;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    return-object p1
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Litf;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "QueryState(query="
+
+    const-string v1, ", marker="
+
+    iget-wide v2, p0, Litf;->b:J
+
+    iget-object v4, p0, Litf;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lq3g;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

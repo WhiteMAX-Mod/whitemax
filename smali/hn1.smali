@@ -1,26 +1,16 @@
-.class public interface abstract Lhn1;
+.class public final synthetic Lhn1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
+
 
 # virtual methods
-.method public d(Landroid/graphics/RectF;Z)V
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public e(Z)V
-    .locals 0
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
     return-void
-.end method
-
-.method public abstract f(Lo98;ZJ)V
-.end method
-
-.method public abstract getShouldScaleMainOpponent()Z
-.end method
-
-.method public abstract o(Z)V
 .end method

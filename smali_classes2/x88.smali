@@ -1,29 +1,73 @@
 .class public final Lx88;
-.super Lh98;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La98;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final o:Ljava/lang/String;
+.field public a:Lc98;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 9
+# virtual methods
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 1
 
-    const-wide/16 v5, 0x0
+    iget-object p1, p0, Lx88;->a:Lc98;
 
-    const-wide/16 v7, 0x0
+    iget-object p1, p1, Lc98;->d:Lc88;
 
-    const-wide/16 v1, 0x0
+    sget-object v0, Lc88;->a:Lc88;
 
-    const-wide/16 v3, 0x0
+    if-ne p1, v0, :cond_0
 
-    move-object v0, p0
+    new-instance p1, Lc98;
 
-    invoke-direct/range {v0 .. v8}, Lh98;-><init>(JJJJ)V
+    invoke-direct {p1, p0}, Lc98;-><init>(La98;)V
 
-    iput-object p1, v0, Lx88;->o:Ljava/lang/String;
+    iput-object p1, p0, Lx88;->a:Lc98;
+
+    :cond_0
+    iget-object p1, p0, Lx88;->a:Lc98;
+
+    sget-object v0, Lb88;->ON_START:Lb88;
+
+    invoke-virtual {p1, v0}, Lc98;->d(Lb88;)V
 
     return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, Lx88;->a:Lc98;
+
+    iget-object p1, p1, Lc98;->d:Lc88;
+
+    sget-object v0, Lc88;->c:Lc88;
+
+    invoke-virtual {p1, v0}, Lc88;->a(Lc88;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lx88;->a:Lc98;
+
+    sget-object v0, Lb88;->ON_DESTROY:Lb88;
+
+    invoke-virtual {p1, v0}, Lc98;->d(Lb88;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p()Lc98;
+    .locals 1
+
+    iget-object v0, p0, Lx88;->a:Lc98;
+
+    return-object v0
 .end method

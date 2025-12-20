@@ -1,304 +1,171 @@
-.class public final Lfz0;
-.super Ljava/lang/Object;
+.class public abstract enum Lfz0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/TreeSet;
-
-.field public final d:Ljava/util/ArrayList;
-
-.field public e:Luk4;
+# static fields
+.field public static final synthetic a:[Lfz0;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Luk4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput p1, p0, Lfz0;->a:I
+    new-array v0, v0, [Lfz0;
 
-    iput-object p2, p0, Lfz0;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lfz0;->e:Luk4;
-
-    new-instance p1, Ljava/util/TreeSet;
-
-    invoke-direct {p1}, Ljava/util/TreeSet;-><init>()V
-
-    iput-object p1, p0, Lfz0;->c:Ljava/util/TreeSet;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lfz0;->d:Ljava/util/ArrayList;
+    sput-object v0, Lfz0;->a:[Lfz0;
 
     return-void
 .end method
 
+.method public static a(ILjava/nio/ByteBuffer;)V
+    .locals 0
 
-# virtual methods
-.method public final a(JJ)Ld1f;
-    .locals 21
+    if-ltz p0, :cond_0
 
-    move-object/from16 v0, p0
-
-    move-wide/from16 v1, p3
-
-    new-instance v3, Ld1f;
-
-    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v11, 0x0
-
-    iget-object v4, v0, Lfz0;->b:Ljava/lang/String;
-
-    const-wide/16 v7, -0x1
-
-    move-wide/from16 v5, p1
-
-    invoke-direct/range {v3 .. v11}, Lwy0;-><init>(Ljava/lang/String;JJJLjava/io/File;)V
-
-    iget-object v4, v0, Lfz0;->c:Ljava/util/TreeSet;
-
-    invoke-virtual {v4, v3}, Ljava/util/TreeSet;->floor(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ld1f;
-
-    if-eqz v5, :cond_0
-
-    iget-wide v6, v5, Lwy0;->b:J
-
-    iget-wide v8, v5, Lwy0;->c:J
-
-    add-long/2addr v6, v8
-
-    cmp-long v6, v6, p1
-
-    if-lez v6, :cond_0
-
-    return-object v5
-
-    :cond_0
-    invoke-virtual {v4, v3}, Ljava/util/TreeSet;->ceiling(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ld1f;
-
-    if-eqz v3, :cond_2
-
-    iget-wide v3, v3, Lwy0;->b:J
-
-    sub-long v3, v3, p1
-
-    const-wide/16 v5, -0x1
-
-    cmp-long v5, v1, v5
-
-    if-nez v5, :cond_1
-
-    move-wide v1, v3
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v1
-
-    :cond_2
-    :goto_0
-    move-wide/from16 v16, v1
-
-    new-instance v12, Ld1f;
-
-    const-wide v18, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/16 v20, 0x0
-
-    iget-object v13, v0, Lfz0;->b:Ljava/lang/String;
-
-    move-wide/from16 v14, p1
-
-    invoke-direct/range {v12 .. v20}, Lwy0;-><init>(Ljava/lang/String;JJJLjava/io/File;)V
-
-    return-object v12
-.end method
-
-.method public final b(JJ)Z
-    .locals 9
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Lfz0;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_3
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ldz0;
-
-    iget-wide v3, v2, Ldz0;->a:J
-
-    iget-wide v5, v2, Ldz0;->b:J
-
-    const-wide/16 v7, -0x1
-
-    cmp-long v2, v5, v7
-
-    if-nez v2, :cond_0
-
-    cmp-long v2, p1, v3
-
-    if-ltz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_0
-    cmp-long v2, p3, v7
-
-    if-nez v2, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    cmp-long v2, v3, p1
-
-    if-gtz v2, :cond_2
-
-    add-long v7, p1, p3
-
-    add-long/2addr v3, v5
-
-    cmp-long v2, v7, v3
-
-    if-gtz v2, :cond_2
-
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lfz0;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lfz0;
-
-    iget v2, p0, Lfz0;->a:I
-
-    iget v3, p1, Lfz0;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lfz0;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lfz0;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lfz0;->c:Ljava/util/TreeSet;
-
-    iget-object v3, p1, Lfz0;->c:Ljava/util/TreeSet;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lfz0;->e:Luk4;
-
-    iget-object p1, p1, Lfz0;->e:Luk4;
-
-    invoke-virtual {v2, p1}, Luk4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-ge p0, p1, :cond_0
 
-    return v0
+    return-void
 
-    :cond_2
-    :goto_0
-    return v1
+    :cond_0
+    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    invoke-direct {p1, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
+
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static c(Ljava/nio/ByteBuffer;II)V
+    .locals 0
 
-    iget v0, p0, Lfz0;->a:I
+    if-ltz p2, :cond_1
 
-    const/16 v1, 0x1f
+    if-lez p2, :cond_0
 
-    mul-int/2addr v0, v1
+    invoke-static {p1, p0}, Lfz0;->a(ILjava/nio/ByteBuffer;)V
 
-    iget-object v2, p0, Lfz0;->b:Ljava/lang/String;
+    add-int/2addr p1, p2
 
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+    add-int/lit8 p1, p1, -0x1
+
+    invoke-static {p1, p0}, Lfz0;->a(ILjava/nio/ByteBuffer;)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "lengths must be >= 0"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    sget-object v1, Lsah;->a:Ljava/nio/ByteOrder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iget-object v1, p0, Lfz0;->e:Luk4;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Luk4;->hashCode()I
+    return-object p0
 
-    move-result v1
+    :cond_0
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
-    add-int/2addr v1, v0
+    move-result-object p0
 
-    return v1
+    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(ILjava/nio/ByteBuffer;)I
+    .locals 1
+
+    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    add-int/lit8 p0, p0, 0x1
+
+    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result p0
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x8
+
+    or-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static g(Ljava/nio/ByteBuffer;II)V
+    .locals 1
+
+    int-to-byte v0, p2
+
+    invoke-virtual {p0, p1, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 p1, p1, 0x1
+
+    ushr-int/lit8 p2, p2, 0x8
+
+    int-to-byte p2, p2
+
+    invoke-virtual {p0, p1, p2}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lfz0;
+    .locals 1
+
+    const-class v0, Lfz0;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lzy4;->r(Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public static values()[Lfz0;
+    .locals 1
+
+    sget-object v0, Lfz0;->a:[Lfz0;
+
+    invoke-virtual {v0}, [Lfz0;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lfz0;
+
+    return-object v0
 .end method

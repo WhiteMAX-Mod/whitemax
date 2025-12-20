@@ -1,91 +1,87 @@
 .class public final Lw8g;
-.super Ljava/lang/Object;
+.super Lihf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljxd;
-
-
-# instance fields
-.field public final a:Ljxd;
-
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(Ljxd;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw8g;->a:Ljxd;
-
-    iput-wide p2, p0, Lw8g;->b:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final b()Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lw8g;->a:Ljxd;
+    const/4 p0, 0x0
 
-    invoke-interface {v0}, Ljxd;->b()V
-
-    return-void
+    throw p0
 .end method
 
-.method public final e()Z
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
     .locals 1
 
-    iget-object v0, p0, Lw8g;->a:Ljxd;
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    invoke-interface {v0}, Ljxd;->e()Z
+    move-result p2
 
-    move-result v0
+    const/4 p3, 0x3
 
-    return v0
+    sub-int/2addr p2, p3
+
+    invoke-virtual {p1, p3, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :catch_0
+    move-exception p2
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string v0, "Error loading library: "
+
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p3, "SoLoader"
+
+    invoke-static {p3, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final g(J)I
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-wide v0, p0, Lw8g;->b:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sub-long/2addr p1, v0
+    const-string v1, "SystemLoadWrapperSoSource["
 
-    iget-object v0, p0, Lw8g;->a:Ljxd;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, p2}, Ljxd;->g(J)I
+    invoke-static {}, Lb8g;->getClassLoaderLdLoadLibrary()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v1
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final i(Lxt4;Lph4;I)I
-    .locals 4
+    const-string v1, "]"
 
-    iget-object v0, p0, Lw8g;->a:Ljxd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1, p2, p3}, Ljxd;->i(Lxt4;Lph4;I)I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    const/4 p3, -0x4
-
-    if-ne p1, p3, :cond_0
-
-    iget-wide v0, p2, Lph4;->Y:J
-
-    iget-wide v2, p0, Lw8g;->b:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p2, Lph4;->Y:J
-
-    :cond_0
-    return p1
+    return-object v0
 .end method

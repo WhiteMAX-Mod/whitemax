@@ -1,283 +1,113 @@
-.class public abstract Lwsf;
-.super Ljava/lang/Object;
+.class public final enum Lwsf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+
+# static fields
+.field public static final synthetic X:Lwk5;
+
+.field public static final enum b:Lwsf;
+
+.field public static final enum c:Lwsf;
+
+.field public static final enum d:Lwsf;
+
+.field public static final synthetic o:[Lwsf;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 0
+    .locals 6
 
-    return-void
-.end method
-
-.method public static a(ID)I
-    .locals 0
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result p1
-
-    add-int/2addr p1, p0
-
-    mul-int/lit8 p1, p1, 0x1f
-
-    return p1
-.end method
-
-.method public static b(Lha8;Lrn6;Ljava/util/concurrent/Executor;)V
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lzn6;
+    new-instance v0, Lwsf;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1, p1}, Lzn6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const-string v2, "recent"
 
-    invoke-interface {p0, v0, p2}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    const-string v3, "RECENT"
+
+    invoke-direct {v0, v3, v1, v2}, Lwsf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lwsf;->b:Lwsf;
+
+    new-instance v1, Lwsf;
+
+    const/4 v2, 0x1
+
+    const-string v3, "favorite"
+
+    const-string v4, "FAVORITE"
+
+    invoke-direct {v1, v4, v2, v3}, Lwsf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lwsf;->c:Lwsf;
+
+    new-instance v2, Lwsf;
+
+    const/4 v3, 0x2
+
+    const-string v4, "set"
+
+    const-string v5, "SET"
+
+    invoke-direct {v2, v5, v3, v4}, Lwsf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lwsf;->d:Lwsf;
+
+    filled-new-array {v0, v1, v2}, [Lwsf;
+
+    move-result-object v0
+
+    sput-object v0, Lwsf;->o:[Lwsf;
+
+    new-instance v1, Lwk5;
+
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lwsf;->X:Lwk5;
 
     return-void
 .end method
 
-.method public static c(Ljava/util/List;)Ls98;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ls98;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Ljava/util/ArrayList;
+    iput-object p3, p0, Lwsf;->a:Ljava/lang/String;
 
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    const/4 p0, 0x1
-
-    invoke-static {}, Layi;->a()Lex4;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, p0, v2}, Ls98;-><init>(Ljava/util/ArrayList;ZLex4;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public static d(Ljava/util/concurrent/Future;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Future was expected to be done, "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lz5j;->f(Ljava/lang/String;Z)V
-
-    invoke-static {p0}, Lwsf;->e(Ljava/util/concurrent/Future;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lwsf;
     .locals 1
 
-    const/4 v0, 0x0
+    const-class v0, Lwsf;
 
-    :goto_0
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_0
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_1
-    throw p0
-
-    :catch_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static f(Ljava/lang/Object;)Lag7;
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    sget-object p0, Lag7;->c:Lag7;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lag7;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, Lag7;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public static g(Lha8;)Lha8;
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lwn6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lwn6;-><init>(Lha8;I)V
-
-    invoke-static {v0}, Lixi;->a(Luu1;)Lwu1;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lwsf;
+
     return-object p0
 .end method
 
-.method public static h(Lha8;Ltu1;)V
-    .locals 2
-
-    invoke-static {}, Layi;->a()Lex4;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, p0, p1, v0}, Lwsf;->i(ZLha8;Ltu1;Lex4;)V
-
-    return-void
-.end method
-
-.method public static i(ZLha8;Ltu1;Lex4;)V
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Las4;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p2, v1}, Las4;-><init>(Ltu1;I)V
-
-    invoke-static {p1, v0, p3}, Lwsf;->b(Lha8;Lrn6;Ljava/util/concurrent/Executor;)V
-
-    if-eqz p0, :cond_0
-
-    new-instance p0, Lue;
-
-    const/16 p3, 0x18
-
-    invoke-direct {p0, p3, p1}, Lue;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Layi;->a()Lex4;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p0, p1}, Ltu1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static j(Landroid/view/View;Landroid/text/TextPaint;Lt5g;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    sget-object v1, Lt75;->b:Lt75;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0, p1, v0, v1}, Lt5g;->a(Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lt75;)V
-
-    return-void
-.end method
-
-.method public static k(Ljava/util/ArrayList;)Ls98;
-    .locals 3
-
-    new-instance v0, Ls98;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    const/4 p0, 0x0
-
-    invoke-static {}, Layi;->a()Lex4;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, p0, v2}, Ls98;-><init>(Ljava/util/ArrayList;ZLex4;)V
-
-    return-object v0
-.end method
-
-.method public static l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+.method public static values()[Lwsf;
     .locals 1
 
-    new-instance v0, Lq72;
+    sget-object v0, Lwsf;->o:[Lwsf;
 
-    invoke-direct {v0, p1, p0}, Lq72;-><init>(Lyu;Lha8;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-interface {p0, v0, p2}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    move-result-object v0
+
+    check-cast v0, [Lwsf;
 
     return-object v0
 .end method

@@ -4,62 +4,160 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Lk18;
+.field public final b:I
 
-.field public final c:Lbwf;
+.field public final c:I
 
-.field public final d:Lk18;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(La84;Lk18;Lk18;Lk18;Llzf;)V
-    .locals 1
+.method public constructor <init>(IIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v0, Lpj3;
+    iput p1, p0, Lpj3;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput p2, p0, Lpj3;->b:I
+
+    iput p3, p0, Lpj3;->c:I
+
+    iput p4, p0, Lpj3;->d:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lpj3;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lpj3;
+
+    iget v0, p0, Lpj3;->a:I
+
+    iget v1, p1, Lpj3;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lpj3;->b:I
+
+    iget v1, p1, Lpj3;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lpj3;->c:I
+
+    iget v1, p1, Lpj3;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lpj3;->d:I
+
+    iget p1, p1, Lpj3;->d:I
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lpj3;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lpj3;->b:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Lpj3;->c:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Lpj3;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", neutral="
+
+    const-string v1, ", themed="
+
+    const-string v2, "CommonActionBackgroundColors(error="
+
+    iget v3, p0, Lpj3;->a:I
+
+    iget v4, p0, Lpj3;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iput-object v0, p0, Lpj3;->a:Ljava/lang/String;
+    const-string v1, ", themedFade="
 
-    iput-object p2, p0, Lpj3;->b:Lk18;
+    const-string v2, ")"
 
-    new-instance p2, Lnz;
+    iget v3, p0, Lpj3;->c:I
 
-    const/16 v0, 0xd
+    iget v4, p0, Lpj3;->d:I
 
-    invoke-direct {p2, p3, v0}, Lnz;-><init>(Lk18;I)V
+    invoke-static {v0, v3, v1, v4, v2}, Lxd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    new-instance p3, Lbwf;
+    move-result-object v0
 
-    invoke-direct {p3, p2}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p3, p0, Lpj3;->c:Lbwf;
-
-    iput-object p4, p0, Lpj3;->d:Lk18;
-
-    check-cast p5, Lq2b;
-
-    invoke-virtual {p5}, Lq2b;->b()Lz74;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lp0;->plus(Lx74;)Lx74;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpj3;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    return-void
+    return-object v0
 .end method

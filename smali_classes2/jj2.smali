@@ -1,58 +1,59 @@
 .class public final Ljj2;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lp41;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public X:Ljava/util/Collection;
+
+.field public Y:Ljava/util/Iterator;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lkj2;
+
+.field public o:Ljava/util/Comparator;
+
+.field public final synthetic s0:Lkj2;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkj2;Ll84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljj2;->s0:Lkj2;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ljj2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onNewMessage(Lfj7;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Ljj2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Ljj2;->Z:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Ljj2;->t0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Ljj2;->t0:I
 
-    if-eqz v1, :cond_0
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    iget-object v1, p0, Ljj2;->s0:Lkj2;
 
-    check-cast v1, Lp41;
+    invoke-virtual {v1, p0, p1, v0}, Lkj2;->h(Ll84;Ljava/util/List;Z)Ljava/lang/Object;
 
-    invoke-interface {v1, p1}, Lp41;->onNewMessage(Lfj7;)V
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

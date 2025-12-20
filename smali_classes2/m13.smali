@@ -1,50 +1,86 @@
 .class public final Lm13;
-.super Ldtf;
+.super Lie0;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# instance fields
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
+
+    const/4 v0, 0x5
+
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+
+    iput-wide p1, p0, Lm13;->b:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lf84;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lm13;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lm13;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lm13;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iget-wide v3, p0, Lm13;->b:J
 
-    invoke-virtual {p1, p2}, Lm13;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lm13;->b:J
 
-    return-object p2
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lm13;
+    iget-wide v0, p0, Lm13;->b:J
 
-    const/4 v0, 0x2
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {p1, v0, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const-string v0, "OpenChatAndUpdateBackstack(chatId="
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    const-string v1, ")"
 
-    return-object p1
+    iget-wide v2, p0, Lm13;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

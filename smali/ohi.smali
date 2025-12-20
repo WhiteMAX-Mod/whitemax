@@ -2,69 +2,40 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final a:Lf1c;
 
-# static fields
-.field public static final a:Lohi;
+.field public final b:Lcj6;
+
+.field public final c:Lmii;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lohi;
+    const-string v0, "WMFgUpdater"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lohi;->a:Lohi;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Landroidx/work/impl/WorkDatabase;Lyhc;Lf1c;)V
     .locals 0
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lohi;->b:Lcj6;
+
+    iput-object p3, p0, Lohi;->a:Lf1c;
+
+    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->A()Lmii;
 
     move-result-object p1
 
-    throw p1
+    iput-object p1, p0, Lohi;->c:Lmii;
+
+    return-void
 .end method

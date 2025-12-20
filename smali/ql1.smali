@@ -1,22 +1,23 @@
 .class public final Lql1;
-.super Ljava/lang/Object;
+.super Lf3;
 .source "SourceFile"
 
-# interfaces
-.implements Lnn1;
 
-
-# instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
+# static fields
+.field public static final c:Lql1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lql1;
 
-    iput-object p1, p0, Lql1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+
+    sput-object v0, Lql1;->c:Lql1;
 
     return-void
 .end method

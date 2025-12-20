@@ -1,131 +1,127 @@
-.class public abstract Lh9h;
+.class public final Lh9h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/List;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final b:Ljava/util/List;
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iput-object p1, p0, Lh9h;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lm26;->a(FF)J
-
-    move-result-wide v2
-
-    new-instance v4, Lm26;
-
-    invoke-direct {v4, v2, v3}, Lm26;-><init>(J)V
-
-    const/high16 v2, 0x44610000    # 900.0f
-
-    invoke-static {v2, v1}, Lm26;->a(FF)J
-
-    move-result-wide v5
-
-    new-instance v3, Lm26;
-
-    invoke-direct {v3, v5, v6}, Lm26;-><init>(J)V
-
-    const v5, 0x44c1c000    # 1550.0f
-
-    invoke-static {v5, v0}, Lm26;->a(FF)J
-
-    move-result-wide v6
-
-    new-instance v8, Lm26;
-
-    invoke-direct {v8, v6, v7}, Lm26;-><init>(J)V
-
-    const v6, 0x44dac000    # 1750.0f
-
-    invoke-static {v6, v1}, Lm26;->a(FF)J
-
-    move-result-wide v9
-
-    new-instance v7, Lm26;
-
-    invoke-direct {v7, v9, v10}, Lm26;-><init>(J)V
-
-    const/high16 v9, 0x44fa0000    # 2000.0f
-
-    invoke-static {v9, v1}, Lm26;->a(FF)J
-
-    move-result-wide v10
-
-    new-instance v12, Lm26;
-
-    invoke-direct {v12, v10, v11}, Lm26;-><init>(J)V
-
-    filled-new-array {v4, v3, v8, v7, v12}, [Lm26;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    sput-object v3, Lh9h;->a:Ljava/util/List;
-
-    new-instance v3, Lds;
-
-    const v4, 0x3ba3d70a    # 0.005f
-
-    invoke-direct {v3, v0, v0, v4, v0}, Lds;-><init>(FFFF)V
-
-    new-instance v4, Lds;
-
-    const v7, 0x3f03d70a    # 0.515f
-
-    const/high16 v8, 0x43370000    # 183.0f
-
-    invoke-direct {v4, v2, v0, v7, v8}, Lds;-><init>(FFFF)V
-
-    new-instance v0, Lds;
-
-    const v2, 0x3f5be76d    # 0.859f
-
-    const/high16 v7, 0x43890000    # 274.0f
-
-    const v8, 0x3f05e354    # 0.523f
-
-    invoke-direct {v0, v5, v8, v2, v7}, Lds;-><init>(FFFF)V
-
-    new-instance v2, Lds;
-
-    const v5, 0x3f7020c5    # 0.938f
-
-    const v7, 0x43988000    # 305.0f
-
-    const v8, 0x3f445a1d    # 0.767f
-
-    invoke-direct {v2, v6, v8, v5, v7}, Lds;-><init>(FFFF)V
-
-    new-instance v5, Lds;
-
-    const v6, 0x3f7eb852    # 0.995f
-
-    const/high16 v7, 0x43b40000    # 360.0f
-
-    invoke-direct {v5, v9, v6, v1, v7}, Lds;-><init>(FFFF)V
-
-    filled-new-array {v3, v4, v0, v2, v5}, [Lds;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lh9h;->b:Ljava/util/List;
+    iput-boolean p2, p0, Lh9h;->b:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lh9h;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lh9h;
+
+    iget-object v0, p0, Lh9h;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lh9h;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lh9h;->b:Z
+
+    iget-boolean p1, p1, Lh9h;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lh9h;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lh9h;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UrlState(url="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lh9h;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isRestored="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lh9h;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

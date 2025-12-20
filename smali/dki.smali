@@ -1,23 +1,25 @@
-.class public abstract Ldki;
-.super Ljava/lang/Object;
+.class public final Ldki;
+.super Ln0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final b:Lexf;
+
+
+# instance fields
+.field public a:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-class v0, Ldki;
+    new-instance v0, Lexf;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    sput-object v0, Ldki;->b:Lexf;
 
     return-void
 .end method

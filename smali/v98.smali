@@ -1,197 +1,108 @@
 .class public final Lv98;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Ld38;
 
 
 # instance fields
-.field public a:I
+.field public a:Ljava/lang/String;
 
-.field public final synthetic b:Lw98;
+.field public b:Z
+
+.field public final synthetic c:Ldt;
 
 
 # direct methods
-.method public constructor <init>(Lw98;)V
+.method public constructor <init>(Ldt;)V
     .locals 0
 
-    iput-object p1, p0, Lv98;->b:Lw98;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lv98;->a:I
-
-    invoke-virtual {p0}, Lv98;->a()V
+    iput-object p1, p0, Lv98;->c:Ldt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final hasNext()Z
+    .locals 2
 
-    iget-object v0, p0, Lv98;->b:Lw98;
+    iget-object v0, p0, Lv98;->a:Ljava/lang/String;
 
-    iget-object v0, v0, Lw98;->c:Lvf9;
+    const/4 v1, 0x1
 
-    iget-object v1, v0, Lvf9;->F0:Lzf9;
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_1
+    iget-boolean v0, p0, Lv98;->b:Z
 
-    invoke-virtual {v0}, Lvf9;->i()V
+    if-nez v0, :cond_0
 
-    iget-object v0, v0, Lvf9;->t0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lv98;->c:Ldt;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    iget-object v0, v0, Ldt;->b:Ljava/lang/Object;
 
-    move-result v2
+    check-cast v0, Ljava/io/BufferedReader;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    :goto_0
-    if-ge v3, v2, :cond_1
+    move-result-object v0
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iput-object v0, p0, Lv98;->a:Ljava/lang/String;
 
-    move-result-object v4
+    if-nez v0, :cond_0
 
-    check-cast v4, Lzf9;
-
-    if-ne v4, v1, :cond_0
-
-    iput v3, p0, Lv98;->a:I
-
-    return-void
+    iput-boolean v1, p0, Lv98;->b:Z
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    iget-object v0, p0, Lv98;->a:Ljava/lang/String;
 
-    goto :goto_0
+    if-eqz v0, :cond_1
+
+    return v1
 
     :cond_1
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    iput v0, p0, Lv98;->a:I
-
-    return-void
+    return v0
 .end method
 
-.method public final b(I)Lzf9;
+.method public final next()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lv98;->b:Lw98;
+    invoke-virtual {p0}, Lv98;->hasNext()Z
 
-    iget-object v1, v0, Lw98;->c:Lvf9;
+    move-result v0
 
-    invoke-virtual {v1}, Lvf9;->i()V
+    if-eqz v0, :cond_0
 
-    iget-object v1, v1, Lvf9;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lv98;->a:I
-
-    if-ltz v0, :cond_0
-
-    if-lt p1, v0, :cond_0
-
-    add-int/lit8 p1, p1, 0x1
-
-    :cond_0
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzf9;
-
-    return-object p1
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    iget-object v0, p0, Lv98;->b:Lw98;
-
-    iget-object v1, v0, Lw98;->c:Lvf9;
-
-    invoke-virtual {v1}, Lvf9;->i()V
-
-    iget-object v1, v1, Lvf9;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lv98;->a:I
-
-    if-gez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    return v1
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lv98;->b(I)Lzf9;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lv98;->b:Lw98;
-
-    iget-object v0, p2, Lw98;->b:Landroid/view/LayoutInflater;
-
-    iget p2, p2, Lw98;->o:I
+    iget-object v0, p0, Lv98;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    iput-object v1, p0, Lv98;->a:Ljava/lang/String;
 
-    move-result-object p2
+    return-object v0
 
     :cond_0
-    move-object p3, p2
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    check-cast p3, Lng9;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    invoke-virtual {p0, p1}, Lv98;->b(I)Lzf9;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Lng9;->c(Lzf9;)V
-
-    return-object p2
+    throw v0
 .end method
 
-.method public final notifyDataSetChanged()V
-    .locals 0
+.method public final remove()V
+    .locals 2
 
-    invoke-virtual {p0}, Lv98;->a()V
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    const-string v1, "Operation is not supported for read-only collection"
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

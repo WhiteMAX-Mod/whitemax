@@ -3,398 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lkn1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lw5;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw5;I)V
-    .locals 0
-
-    iput p2, p0, Lr4e;->a:I
-
-    iput-object p1, p0, Lr4e;->b:Lw5;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lr4e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final onRtcStats(Legd;)V
     .locals 2
 
-    iget v0, p0, Lr4e;->a:I
+    iget-object v0, p0, Lr4e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x9
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    return-object v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    :pswitch_0
-    iget-object v0, p0, Lr4e;->b:Lw5;
+    move-result v1
 
-    const/16 v1, 0x89
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    check-cast v1, Lkn1;
 
-    :pswitch_1
-    iget-object v0, p0, Lr4e;->b:Lw5;
+    invoke-interface {v1, p1}, Lkn1;->onRtcStats(Legd;)V
 
-    const/16 v1, 0x2f
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x18e
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x61
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x23
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x15b
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x18f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x120
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x109
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x62
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x9
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x19a
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x1b0
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0xb5
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x8f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x61
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0xd9
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0xd7
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x193
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0xb6
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x1f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x4f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x58
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0xab
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x15b
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x2e
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x62
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Lr4e;->b:Lw5;
-
-    const/16 v1, 0x30
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

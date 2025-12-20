@@ -1,156 +1,84 @@
 .class public final Lpe1;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lte1;
+.implements Lcr6;
 
 
-# static fields
-.field public static final a:Lpe1;
+# instance fields
+.field public final synthetic X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-.field public static final b:J
-
-.field public static final c:Ln5g;
-
-.field public static final d:Ls18;
-
-.field public static final o:Lhoe;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+    .locals 0
 
-    new-instance v0, Lpe1;
+    iput-object p2, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lpe1;->a:Lpe1;
-
-    sget-wide v0, Lzza;->a:J
-
-    sput-wide v0, Lpe1;->b:J
-
-    sget v0, Lb0b;->e:I
-
-    new-instance v1, Ln5g;
-
-    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
-
-    sput-object v1, Lpe1;->c:Ln5g;
-
-    new-instance v0, Ls18;
-
-    sget v1, Lxza;->d:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Ls18;-><init>(III)V
-
-    sput-object v0, Lpe1;->d:Ls18;
-
-    sget-object v0, Lhoe;->a:Lhoe;
-
-    sput-object v0, Lpe1;->o:Lhoe;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Lu18;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lpe1;->d:Ls18;
+    check-cast p1, Ljava/lang/String;
 
-    return-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpe1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpe1;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lpe1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lpe1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget-wide v0, Lpe1;->b:J
+    new-instance v0, Lpe1;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-.method public final getTitle()Ls5g;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lpe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
 
-    sget-object v0, Lpe1;->c:Ln5g;
+    iput-object p1, v0, Lpe1;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getType()Lhoe;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lpe1;->o:Lhoe;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lpe1;->o:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    check-cast p1, Ljava/lang/String;
 
-    const v0, -0x122eeb95
+    iget-object v0, p0, Lpe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    return v0
-.end method
+    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lee1;
 
-.method public final m()I
-    .locals 1
+    move-result-object v0
 
-    sget v0, Lyza;->m:I
+    invoke-virtual {v0, p1}, Lee1;->setTime(Ljava/lang/CharSequence;)V
 
-    return v0
-.end method
+    sget-object p1, Lv2h;->a:Lv2h;
 
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CopyLink"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+    return-object p1
 .end method

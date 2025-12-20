@@ -1,44 +1,129 @@
-.class public abstract Lzc5;
+.class public final Lzc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
+# instance fields
+.field public final a:Lomc;
+
+.field public final b:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Lomc;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzc5;->a:Lomc;
+
+    iput-object p2, p0, Lzc5;->b:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzc5;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzc5;
+
+    iget-object v1, p0, Lzc5;->a:Lomc;
+
+    iget-object v3, p1, Lzc5;->a:Lomc;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lzc5;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lzc5;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Lzc5;->a:Lomc;
+
+    invoke-virtual {v0}, Lomc;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzc5;->b:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    const-string v1, "State(appBarState="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    iget-object v1, p0, Lzc5;->a:Lomc;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    const-string v1, ", items="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzc5;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

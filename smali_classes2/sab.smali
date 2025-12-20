@@ -1,19 +1,76 @@
-.class public abstract Lsab;
+.class public final synthetic Lsab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/FileFilter;
 
-# static fields
-.field public static final a:I
+
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lk4d;->oneme_snackbar_cancel_btn_title:I
+    iput p1, p0, Lsab;->a:I
 
-    sput v0, Lsab;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/io/File;)Z
+    .locals 1
+
+    iget v0, p0, Lsab;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "log"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "zip"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    invoke-static {p1}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "zip"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

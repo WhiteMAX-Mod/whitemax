@@ -1,50 +1,48 @@
 .class public final Lew2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lkw2;
-
-
-# static fields
-.field public static final d:Lv17;
+.super Ll84;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lt3;
 
-.field public final b:Lsf6;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Z
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lt3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lv17;
+    iput-object p1, p0, Lew2;->X:Lt3;
 
-    const/16 v1, 0x10
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lv17;-><init>(IB)V
-
-    sput-object v0, Lew2;->d:Lv17;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILsf6;Z)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput p1, p0, Lew2;->a:I
+    iput-object p1, p0, Lew2;->d:Ljava/lang/Object;
 
-    iput-object p2, p0, Lew2;->b:Lsf6;
+    iget p1, p0, Lew2;->o:I
 
-    iput-boolean p3, p0, Lew2;->c:Z
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lew2;->o:I
+
+    iget-object p1, p0, Lew2;->X:Lt3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lt3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

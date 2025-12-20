@@ -11,14 +11,14 @@
     d2 = {
         "Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;",
         "",
-        "Lqqg;",
+        "Lv2h;",
         "load",
         "()V",
         "",
         "libName",
         "(Ljava/lang/String;)V",
         "Companion",
-        "vu5",
+        "dz5",
         "media-ffmpeg_release"
     }
     k = 0x1
@@ -32,16 +32,16 @@
 
 
 # static fields
-.field public static final Companion:Lvu5;
+.field public static final Companion:Ldz5;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lvu5;->a:Lvu5;
+    sget-object v0, Ldz5;->a:Ldz5;
 
-    sput-object v0, Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;->Companion:Lvu5;
+    sput-object v0, Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;->Companion:Ldz5;
 
     return-void
 .end method

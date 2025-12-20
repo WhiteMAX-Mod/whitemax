@@ -1,60 +1,35 @@
-.class public final synthetic Lqo9;
+.class public abstract synthetic Lqo9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lqo9;->a:I
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
 
-    return-void
-.end method
+    array-length v1, v1
 
+    new-array v1, v1, [I
 
-# virtual methods
-.method public final onDismiss()V
-    .locals 2
+    const/4 v2, 0x0
 
-    iget v0, p0, Lqo9;->a:I
+    :try_start_0
+    aput v0, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Lncg;
+    :catch_0
+    sput-object v1, Lqo9;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Lncg;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

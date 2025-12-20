@@ -1,35 +1,53 @@
-.class public final Llm;
+.class public interface abstract Llm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Lyl;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final a:Lkm;
 
 
 # direct methods
-.method public constructor <init>(Lyl;Lyl;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lkm;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Llm;->a:Lkm;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public debugApiException(Ltl;Ljm;Lru/ok/android/api/core/ApiException;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Llm;->a:Ljava/lang/Object;
+.method public debugApiRequest(Ltl;Ljm;Lul;)V
+    .locals 0
 
-    iput-object p2, p0, Llm;->b:Lyl;
+    return-void
+.end method
 
-    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
+.method public debugApiResponseFail(Ltl;Ljm;Lo28;)Lo28;
+    .locals 0
 
-    move-result-object p1
+    return-object p3
+.end method
 
-    invoke-static {p1}, Lwm;->b(Landroid/net/Uri;)Ljava/lang/String;
+.method public debugApiResponseOk(Ltl;Ljm;Lo28;)Lo28;
+    .locals 0
 
-    move-result-object p1
+    return-object p3
+.end method
 
-    iput-object p1, p0, Llm;->c:Ljava/lang/String;
+.method public debugIoException(Ltl;Ljm;Ljava/io/IOException;)V
+    .locals 0
 
     return-void
 .end method

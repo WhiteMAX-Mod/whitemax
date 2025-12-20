@@ -1,99 +1,126 @@
-.class public abstract Llqi;
-.super Ljava/lang/Object;
+.class public final Llqi;
+.super Leoi;
 .source "SourceFile"
+
+# interfaces
+.implements Lrri;
+
+
+# instance fields
+.field public final synthetic d:I
+
+.field public final synthetic e:Lx1b;
 
 
 # direct methods
-.method public static final a(Landroid/animation/Animator;)V
+.method public constructor <init>(Lx1b;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
+    iput p2, p0, Llqi;->d:I
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+    iput-object p1, p0, Llqi;->e:Lx1b;
+
+    const-string p1, "com.google.android.gms.maps.internal.IOnMapReadyCallback"
+
+    const/4 p2, 0x6
+
+    invoke-direct {p0, p1, p2}, Leoi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public static final b(Landroidx/viewpager2/widget/ViewPager2;)V
-    .locals 2
 
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object p0, Lzx0;->H0:Lzx0;
-
-    invoke-static {v0, p0}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object p0
-
-    invoke-static {p0}, Llee;->i(Lzde;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p0, :cond_0
-
-    sget v0, Lzud;->a1:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setId(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs c([Ljava/lang/Object;)Ljava/util/ArrayList;
-    .locals 5
-
-    array-length v0, p0
-
-    const-string v1, "arraySize"
-
-    invoke-static {v0, v1}, Lu4j;->a(ILjava/lang/String;)V
-
-    const-wide/16 v1, 0x5
-
-    int-to-long v3, v0
-
-    add-long/2addr v3, v1
-
-    div-int/lit8 v0, v0, 0xa
-
-    int-to-long v0, v0
-
-    add-long/2addr v3, v0
-
-    invoke-static {v3, v4}, Ljni;->h(J)I
-
-    move-result v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-static {v1, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
-
-    return-object v1
-.end method
-
-.method public static d(Lom6;Ljava/util/List;)Ljava/util/AbstractList;
+# virtual methods
+.method public final O(Lb1j;)V
     .locals 1
 
-    if-eqz p1, :cond_0
+    iget v0, p0, Llqi;->d:I
 
-    new-instance v0, Lxa8;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1}, Lxa8;-><init>(Lom6;Ljava/util/List;)V
+    new-instance v0, Lu07;
 
-    return-object v0
+    invoke-direct {v0, p1}, Lu07;-><init>(Lb1j;)V
+
+    iget-object p1, p0, Llqi;->e:Lx1b;
+
+    invoke-interface {p1, v0}, Lx1b;->T(Lu07;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lu07;
+
+    invoke-direct {v0, p1}, Lu07;-><init>(Lb1j;)V
+
+    iget-object p1, p0, Llqi;->e:Lx1b;
+
+    invoke-interface {p1, v0}, Lx1b;->T(Lu07;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Lya8;
+    const-string v1, "com.google.android.gms.maps.internal.IGoogleMapDelegate"
 
-    invoke-direct {v0, p0, p1}, Lya8;-><init>(Lom6;Ljava/util/List;)V
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    return-object v0
+    move-result-object v2
+
+    instance-of v3, v2, Lb1j;
+
+    if-eqz v3, :cond_1
+
+    move-object p1, v2
+
+    check-cast p1, Lb1j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lb1j;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p1, v1, v3}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p1, v2
+
+    :goto_0
+    invoke-static {p2}, Lxti;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1}, Lrri;->O(Lb1j;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method

@@ -1,29 +1,55 @@
-.class public interface abstract Lmg9;
+.class public final Lmg9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld0b;
+
+
+# instance fields
+.field public final a:Lsf8;
+
+.field public final b:Ld0b;
+
+.field public c:I
+
+
+# direct methods
+.method public constructor <init>(Lsf8;Ld0b;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lmg9;->c:I
+
+    iput-object p1, p0, Lmg9;->a:Lsf8;
+
+    iput-object p2, p0, Lmg9;->b:Ld0b;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b(Lqnf;)Z
-.end method
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-.method public abstract c()Z
-.end method
+    iget v0, p0, Lmg9;->c:I
 
-.method public abstract d(Lzf9;)Z
-.end method
+    iget-object v1, p0, Lmg9;->a:Lsf8;
 
-.method public abstract e(Llg9;)V
-.end method
+    iget v1, v1, Lsf8;->g:I
 
-.method public abstract f(Lvf9;Z)V
-.end method
+    if-eq v0, v1, :cond_0
 
-.method public abstract h(Lzf9;)Z
-.end method
+    iput v1, p0, Lmg9;->c:I
 
-.method public abstract i()V
-.end method
+    iget-object v0, p0, Lmg9;->b:Ld0b;
 
-.method public abstract k(Landroid/content/Context;Lvf9;)V
+    invoke-interface {v0, p1}, Ld0b;->a(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
 .end method

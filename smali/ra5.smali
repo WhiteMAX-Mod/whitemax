@@ -3,12 +3,13 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public h(Ljava/lang/Throwable;)V
-    .locals 0
+# direct methods
+.method public static final a(Ljava/time/Duration;)J
+    .locals 2
 
-    return-void
-.end method
+    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
 
-.method public abstract i()V
+    move-result-wide v0
+
+    return-wide v0
 .end method

@@ -1,118 +1,120 @@
 .class public final Ld6b;
-.super Ldtf;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Ldh4;
+.field public final synthetic c:I
 
-.field public o:I
+.field public final synthetic d:Le6b;
 
 
 # direct methods
-.method public constructor <init>(Ldh4;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Le6b;I)V
     .locals 0
 
-    iput-object p1, p0, Ld6b;->X:Ldh4;
+    iput p2, p0, Ld6b;->c:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ld6b;->d:Le6b;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 p1, 0xb
+
+    packed-switch p2, :pswitch_data_0
+
+    sget-object p2, Lx5b;->b:Lx5b;
+
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p2, Lw5b;->a:Lw5b;
+
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ld6b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ld6b;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Ld6b;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    new-instance p1, Ld6b;
+    iget v0, p0, Ld6b;->c:I
 
-    iget-object v0, p0, Ld6b;->X:Ldh4;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Ld6b;-><init>(Ldh4;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    if-nez v0, :cond_0
 
-    iget v0, p0, Ld6b;->o:I
+    check-cast p2, Lplb;
 
-    const/4 v1, 0x1
+    check-cast p1, Lplb;
 
-    if-eqz v0, :cond_1
+    iget-object p1, p0, Ld6b;->d:Le6b;
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p1
+    if-nez v0, :cond_1
+
+    check-cast p2, Lw5b;
+
+    check-cast p1, Lw5b;
+
+    iget-object p1, p0, Ld6b;->d:Le6b;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    return-void
 
-    iput v1, p0, Ld6b;->o:I
+    :pswitch_1
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance p1, Lt4b;
+    move-result v0
 
-    const/4 v0, 0x0
+    if-nez v0, :cond_2
 
-    const/4 v2, 0x1
+    check-cast p2, Lx5b;
 
-    invoke-direct {p1, v1, v0, v2}, Lt4b;-><init>(ILkotlin/coroutines/Continuation;I)V
+    check-cast p1, Lx5b;
 
-    iget-object v0, p0, Ld6b;->X:Ldh4;
+    iget-object p1, p0, Ld6b;->d:Le6b;
 
-    invoke-virtual {v0, p1, p0}, Ldh4;->d(Lem6;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    return-void
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

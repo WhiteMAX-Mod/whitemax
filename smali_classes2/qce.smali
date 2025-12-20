@@ -1,141 +1,75 @@
-.class public final Lqce;
-.super Ldtf;
+.class public abstract synthetic Lqce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic X:Lfde;
-
-.field public final synthetic Y:Lyyb;
-
-.field public o:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lfde;Lyyb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lqce;->X:Lfde;
+    const/4 v0, 0x3
 
-    iput-object p2, p0, Lqce;->Y:Lyyb;
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    const/4 p1, 0x2
+    move-result-object v1
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v1, v1
 
-    return-void
-.end method
+    new-array v1, v1, [I
 
+    const/4 v2, 0x1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const/4 v3, 0x0
 
-    check-cast p1, Lf84;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    :catch_0
+    const/4 v4, 0x2
 
-    invoke-virtual {p0, p1, p2}, Lqce;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_1
+    aput v4, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object p1
+    :catch_1
+    :try_start_2
+    aput v0, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast p1, Lqce;
+    :catch_2
+    sput-object v1, Lqce;->$EnumSwitchMapping$0:[I
 
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lqce;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lqce;
-
-    iget-object v0, p0, Lqce;->X:Lfde;
-
-    iget-object v1, p0, Lqce;->Y:Lyyb;
-
-    invoke-direct {p1, v0, v1, p2}, Lqce;-><init>(Lfde;Lyyb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lqce;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqce;->X:Lfde;
-
-    iget-object p1, p1, Lfde;->b:Ljava/lang/Object;
-
-    check-cast p1, Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lw63;
-
-    iget-object v0, p0, Lqce;->Y:Lyyb;
-
-    iget-wide v2, v0, Lyyb;->a:J
-
-    iput v1, p0, Lqce;->o:I
-
-    iget-object v0, p1, Lw63;->c:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {v4}, Lc12;->z(I)[I
 
     move-result-object v0
 
-    check-cast v0, Ll4e;
+    array-length v0, v0
 
-    invoke-virtual {v0}, Ll4e;->a()J
+    new-array v0, v0, [I
 
-    move-result-wide v0
+    :try_start_3
+    aput v2, v0, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    xor-long/2addr v0, v2
+    :catch_3
+    :try_start_4
+    aput v4, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-virtual {p1, v0, v1, p0}, Lw63;->p(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :catch_4
+    sput-object v0, Lqce;->$EnumSwitchMapping$1:[I
 
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    return-void
 .end method

@@ -1,142 +1,133 @@
 .class public final Lyxf;
-.super Ljava/lang/Object;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
+
+# interfaces
+.implements Ltt8;
+.implements Landroid/text/style/UpdateAppearance;
 
 
 # instance fields
-.field public final a:Ljavax/net/ssl/SSLEngine;
+.field public final synthetic a:I
 
-.field public final b:Ljava/nio/ByteBuffer;
-
-.field public final c:Ljava/nio/ByteBuffer;
-
-.field public final d:Ljava/nio/ByteBuffer;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljavax/net/ssl/SSLEngine;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lyxf;->a:I
 
-    iput-object p1, p0, Lyxf;->a:Ljavax/net/ssl/SSLEngine;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    move-result-object v0
+    const/4 p1, 0x7
 
-    invoke-interface {v0}, Ljavax/net/ssl/SSLSession;->getPacketBufferSize()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyxf;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljavax/net/ssl/SSLSession;->getPacketBufferSize()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyxf;->c:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljavax/net/ssl/SSLSession;->getApplicationBufferSize()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyxf;->d:Ljava/nio/ByteBuffer;
+    iput p1, p0, Lyxf;->b:I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+
+    const/4 p1, 0x4
+
+    iput p1, p0, Lyxf;->b:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final copy()Lab4;
+    .locals 2
+
+    iget v0, p0, Lyxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lyxf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyxf;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lyxf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lyxf;-><init>(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lyxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lyxf;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lyxf;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lyxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    return v0
+    return-void
 
-    :cond_0
-    instance-of v1, p1, Lyxf;
+    :pswitch_0
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
 
-    if-nez v1, :cond_1
+    return-void
 
-    return v2
+    nop
 
-    :cond_1
-    check-cast p1, Lyxf;
-
-    iget-object v1, p0, Lyxf;->a:Ljavax/net/ssl/SSLEngine;
-
-    iget-object p1, p1, Lyxf;->a:Ljavax/net/ssl/SSLEngine;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lyxf;->a:Ljavax/net/ssl/SSLEngine;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TLSSession(sslEngine="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyxf;->a:Ljavax/net/ssl/SSLEngine;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

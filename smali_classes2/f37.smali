@@ -1,96 +1,52 @@
-.class public final Lf37;
-.super Ljava/lang/Object;
+.class public final synthetic Lf37;
+.super Lw8;
 .source "SourceFile"
 
 # interfaces
-.implements Lg37;
+.implements Ler6;
 
 
-# instance fields
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Z
+# static fields
+.field public static final Z:Lf37;
 
 
 # direct methods
-.method public constructor <init>(Lg37;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf37;
 
-    invoke-interface {p1}, Lg37;->g()J
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    move-result-wide v0
+    const/4 v2, 0x4
 
-    iput-wide v0, p0, Lf37;->b:J
+    const/4 v3, 0x3
 
-    invoke-interface {p1}, Lg37;->h()J
+    const-class v4, Lysb;
 
-    move-result-wide v0
+    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    iput-wide v0, p0, Lf37;->c:J
-
-    invoke-interface {p1}, Lg37;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lue3;->d0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lf37;->d:Ljava/util/List;
-
-    invoke-interface {p1}, Lg37;->b()V
-
-    invoke-interface {p1}, Lg37;->a()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lf37;->e:Z
+    sput-object v0, Lf37;->Z:Lf37;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lf37;->e:Z
-
-    return v0
-.end method
-
-.method public final b()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lud2;
 
-.method public final g()J
-    .locals 2
+    check-cast p2, Lbf4;
 
-    iget-wide v0, p0, Lf37;->b:J
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return-wide v0
-.end method
+    sget-object p3, Lk37;->j:Lysb;
 
-.method public final h()J
-    .locals 2
+    new-instance p3, Lysb;
 
-    iget-wide v0, p0, Lf37;->c:J
+    invoke-direct {p3, p1, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-wide v0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lf37;->d:Ljava/util/List;
-
-    return-object v0
+    return-object p3
 .end method

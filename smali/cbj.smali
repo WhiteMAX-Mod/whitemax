@@ -4,127 +4,155 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Z)V
-    .locals 0
+.method public static a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    .locals 5
 
-    if-eqz p1, :cond_0
+    const/16 v0, 0x22
 
-    return-void
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
-.end method
-
-.method public static b(Lone/me/sdk/arch/Widget;)V
-    .locals 12
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
-
-    sget v0, Lt3d;->oneme_login_sms_count_exceeded_title:I
-
-    const/4 v1, 0x6
+    move-result v1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v2, v1}, Laz1;->e(ILandroid/os/Bundle;Lf1e;I)Loq3;
-
-    move-result-object v0
-
-    sget v1, Lt3d;->oneme_login_sms_count_exceeded_description:I
-
-    new-instance v3, Ln5g;
-
-    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
-
-    invoke-virtual {v0, v3}, Loq3;->f(Ls5g;)V
-
-    sget v1, Lxyc;->oneme_login_sms_code_exceeded_ok_btn:I
-
-    sget v3, Lmvd;->g0:I
-
-    new-instance v4, Ln5g;
-
-    invoke-direct {v4, v3}, Ln5g;-><init>(I)V
-
-    invoke-virtual {v0, v1, v4}, Loq3;->d(ILs5g;)V
-
-    invoke-virtual {v0}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v6
-
-    invoke-virtual {v6, p0}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
-
-    move-object v0, p0
-
     :goto_0
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
+    if-ge v2, v1, :cond_3
 
-    move-result-object v1
+    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
-    if-eqz v1, :cond_0
+    move-result v3
 
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
+    const/16 v4, 0xa
 
-    move-result-object v0
+    if-eq v3, v4, :cond_2
 
-    goto :goto_0
+    const/16 v4, 0xd
+
+    if-eq v3, v4, :cond_1
+
+    if-eq v3, v0, :cond_0
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, v0, Leud;
+    const-string v3, "%22"
 
-    if-eqz v1, :cond_1
-
-    check-cast v0, Leud;
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_1
-    move-object v0, v2
+    const-string v3, "%0D"
 
-    :goto_1
-    if-eqz v0, :cond_2
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lone/me/android/root/RootController;
-
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->E0()Lytd;
-
-    move-result-object v2
+    goto :goto_1
 
     :cond_2
-    invoke-virtual {v6, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
+    const-string v3, "%0A"
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public static b(Lv42;Ljava/lang/Integer;Ljava/util/List;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    const-string v1, "0"
+
+    invoke-interface {p2, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
 
     if-eqz v2, :cond_3
 
-    new-instance v5, Lbud;
+    const-string v2, "1"
 
-    const/4 v10, 0x0
+    invoke-interface {p2, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    const/4 v11, -0x1
+    move-result p2
 
-    const/4 v7, 0x0
+    if-nez p2, :cond_1
 
-    const/4 v8, 0x0
+    goto :goto_0
 
-    const/4 v9, 0x0
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct/range {v5 .. v11}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+    move-result p2
 
-    const/4 p0, 0x0
+    const/4 v3, 0x1
 
-    const/4 v0, 0x1
+    if-ne p2, v3, :cond_2
 
-    const-string v1, "BottomSheetWidget"
+    invoke-virtual {p0, v1}, Lv42;->b(Ljava/lang/String;)Lk32;
 
-    invoke-static {p0, v5, v0, v1}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+    move-result-object p0
 
-    invoke-virtual {v2, v5}, Lytd;->H(Lbud;)V
+    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {p0, p1}, Lk32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    if-ne p0, v3, :cond_3
+
+    return-object v2
+
+    :cond_2
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {p0, v2}, Lv42;->b(Ljava/lang/String;)Lk32;
+
+    move-result-object p0
+
+    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {p0, p1}, Lk32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    return-object v1
 
     :cond_3
-    return-void
+    :goto_0
+    return-object v0
 .end method

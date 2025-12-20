@@ -1,71 +1,58 @@
 .class public final Lry5;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhb1;
 
 
 # instance fields
-.field public X:Lutg;
-
-.field public Y:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public Z:Lsm6;
-
-.field public d:Lty5;
-
-.field public o:Lebg;
-
-.field public s0:I
-
-.field public t0:I
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Lty5;
-
-.field public w0:I
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lty5;Lq44;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lry5;->v0:Lty5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lry5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final onFeedback(Lgb1;)V
+    .locals 2
 
-    iput-object p1, p0, Lry5;->u0:Ljava/lang/Object;
+    iget-object v0, p0, Lry5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget p1, p0, Lry5;->w0:I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iput p1, p0, Lry5;->w0:I
+    move-result v1
 
-    const/4 v3, 0x0
+    if-eqz v1, :cond_0
 
-    const/4 v4, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, p0, Lry5;->v0:Lty5;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    check-cast v1, Lhb1;
 
-    const/4 v2, 0x0
+    invoke-interface {v1, p1}, Lhb1;->onFeedback(Lgb1;)V
 
-    move-object v5, p0
+    goto :goto_0
 
-    invoke-virtual/range {v0 .. v5}, Lty5;->f(Lebg;Lutg;Ljava/nio/channels/AsynchronousFileChannel;Lsm6;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

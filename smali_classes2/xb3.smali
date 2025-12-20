@@ -1,117 +1,144 @@
-.class public abstract Lxb3;
-.super Ljava/lang/Object;
+.class public final Lxb3;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Ler6;
 
-# static fields
-.field public static final a:Lx6i;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Throwable;
+
+.field public final synthetic Y:Ldc3;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ldc3;Lkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    new-instance v0, Lx6i;
+    iput p3, p0, Lxb3;->o:I
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput-object p1, p0, Lxb3;->Y:Ldc3;
 
-    move-result-object v1
+    const/4 p1, 0x3
 
-    invoke-direct {v0, v1}, Lx6i;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lxb3;->a:Lx6i;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 3
 
-    new-instance v0, Lcj;
-
-    const/16 v1, 0xf
-
-    const-string v2, "Copied Text"
-
-    invoke-direct {v0, p0, v2, p1, v1}, Lcj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    sget-object p0, Lxb3;->a:Lx6i;
-
-    invoke-virtual {p0, v0}, Lx6i;->u(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static final b()Z
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v0, p0, Lxb3;->o:I
 
-    const/16 v1, 0x20
+    check-cast p1, Lh76;
 
-    if-le v0, v1, :cond_1
+    check-cast p2, Ljava/lang/Throwable;
 
-    sget-object v0, Lvzg;->a:Lbwf;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance p1, Lxb3;
 
-    check-cast v0, Ljava/lang/Boolean;
+    iget-object v0, p0, Lxb3;->Y:Ldc3;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-direct {p1, v0, p3, v1}, Lxb3;-><init>(Ldc3;Lkotlin/coroutines/Continuation;I)V
 
-    if-eqz v0, :cond_0
+    iput-object p2, p1, Lxb3;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lxb3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p1, Lxb3;
+
+    iget-object v0, p0, Lxb3;->Y:Ldc3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, p3, v1}, Lxb3;-><init>(Ldc3;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Lxb3;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lxb3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lxb3;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxb3;->Y:Ldc3;
+
+    iget-object v0, v0, Ldc3;->Z:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxb3;->X:Ljava/lang/Throwable;
+
+    const-string v1, "big_flow: completion"
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v0, v1, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v0
-
-    :cond_1
     :goto_0
-    const/4 v0, 0x1
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    return v0
-.end method
+    return-object p1
 
-.method public static final c(Landroid/content/Context;)Ljava/lang/CharSequence;
-    .locals 1
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v0, "clipboard"
+    iget-object p1, p0, Lxb3;->X:Ljava/lang/Throwable;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v0, p0, Lxb3;->Y:Ldc3;
 
-    move-result-object p0
+    iget-object v0, v0, Ldc3;->Z:Ljava/lang/Object;
 
-    check-cast p0, Landroid/content/ClipboardManager;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+    const-string v1, "big_flow: fail"
 
-    move-result-object p0
+    invoke-static {v0, v1, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-eqz p0, :cond_0
+    throw p1
 
-    const/4 v0, 0x0
+    nop
 
-    invoke-virtual {p0, v0}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

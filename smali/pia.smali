@@ -1,175 +1,348 @@
-.class public final Lpia;
-.super Ljava/lang/Object;
+.class public abstract enum Lpia;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lree;
 
 
 # static fields
-.field public static final a:Lpia;
+.field public static a:Z = false
+
+.field public static final synthetic b:[Lpia;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lpia;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [Lpia;
 
-    sput-object v0, Lpia;->a:Lpia;
+    sput-object v0, Lpia;->b:[Lpia;
 
     return-void
 .end method
 
+.method public static a()V
+    .locals 7
 
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+    new-instance v0, Ljava/io/File;
 
-    const-string v0, "kotlin.Nothing"
+    const-string v1, "java.io.tmpdir"
 
-    return-object v0
-.end method
+    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-.method public final c()Z
-    .locals 1
+    move-result-object v1
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-.method public final d(Ljava/lang/String;)I
-    .locals 1
+    move-result-object v0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/io/File;
 
-    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Loia;
 
-    throw p1
-.end method
+    const/4 v2, 0x0
 
-.method public final e()Ls9j;
-    .locals 1
+    invoke-direct {v0, v2}, Loia;-><init>(I)V
 
-    sget-object v0, Lnnf;->e:Lnnf;
+    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
+    if-eqz v0, :cond_1
 
-    if-ne p0, p1, :cond_0
+    array-length v1, v0
 
-    const/4 p1, 0x1
+    const/4 v2, 0x0
 
-    return p1
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    new-instance v4, Ljava/io/File;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ".lck"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    :try_start_0
+    invoke-virtual {v3}, Ljava/io/File;->delete()Z
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v3
+
+    sget-object v4, Ljava/lang/System;->err:Ljava/io/PrintStream;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Failed to delete old temp lib"
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     :cond_0
-    const/4 p1, 0x0
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
 
-    return p1
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
-.method public final f()I
-    .locals 1
+.method public static c()I
+    .locals 3
 
-    const/4 v0, 0x0
+    const-string v0, "os.name"
+
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Linux"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :cond_0
+    const-string v1, "Mac"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x3
+
+    return v0
+
+    :cond_1
+    const-string v1, "Windows"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
+    const-string v1, "Solaris"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    const-string v1, "SunOS"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    new-instance v1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v2, "Unsupported operating system: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_4
+    :goto_0
+    const/4 v0, 0x4
 
     return v0
 .end method
 
-.method public final g(I)Ljava/lang/String;
-    .locals 1
+.method public static d()Ljava/lang/String;
+    .locals 4
 
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final getAnnotations()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lhd5;->a:Lhd5;
-
-    return-object v0
-.end method
-
-.method public final h(I)Ljava/util/List;
-    .locals 1
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    sget-object v0, Lnnf;->e:Lnnf;
-
-    invoke-virtual {v0}, Ls9j;->hashCode()I
+    invoke-static {}, Lpia;->c()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-class v1, Lpia;
 
-    const v1, -0x6c61e840
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
-    add-int/2addr v0, v1
+    move-result-object v1
 
-    return v0
-.end method
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
 
-.method public final i(I)Lree;
-    .locals 1
+    move-result-object v1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/16 v2, 0x2e
 
-    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+    const/16 v3, 0x2f
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
-    throw p1
-.end method
+    move-result-object v1
 
-.method public final isInline()Z
-    .locals 1
+    const-string v2, "/"
 
+    invoke-static {v2, v1, v2}, Lc12;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_3
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_2
+
+    const/4 v3, 0x3
+
+    if-eq v0, v3, :cond_1
+
+    const/4 v3, 0x4
+
+    if-ne v0, v3, :cond_0
+
+    const-string v3, "solaris"
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    throw v0
+
+    :cond_1
+    const-string v3, "darwin"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v3, "linux"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v3, "win32"
+
+    :goto_0
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "os.arch"
+
+    invoke-static {v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "/liblz4-java."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Lgg9;->b(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final j(I)Z
+.method public static valueOf(Ljava/lang/String;)Lpia;
     .locals 1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-class v0, Lpia;
 
-    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw p1
+    invoke-static {p0}, Lzy4;->r(Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public static values()[Lpia;
     .locals 1
 
-    const-string v0, "NothingSerialDescriptor"
+    sget-object v0, Lpia;->b:[Lpia;
+
+    invoke-virtual {v0}, [Lpia;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpia;
 
     return-object v0
 .end method

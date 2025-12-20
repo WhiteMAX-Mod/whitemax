@@ -1,55 +1,93 @@
-.class public final Ltf0;
-.super Lq44;
+.class public abstract Ltf0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public d:Ljava/util/List;
-
-.field public o:Luid;
-
-.field public s0:I
+# static fields
+.field public static final a:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Ltf0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
+    sget-object v0, Lu5a;->X:Lu5a;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v1, Lu5a;->Z:Lu5a;
+
+    sget-object v2, Lu5a;->Y:Lu5a;
+
+    sget-object v3, Lu5a;->o:Lu5a;
+
+    sget-object v4, Lu5a;->d:Lu5a;
+
+    filled-new-array {v2, v3, v4, v0, v1}, [Lu5a;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbt;->E([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Ltf0;->a:Ljava/util/Set;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)Z
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    new-instance v0, Lc2;
 
-    iput-object p1, p0, Ltf0;->Y:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    iget p1, p0, Ltf0;->s0:I
+    sget-object v2, Lu5a;->w0:Lwk5;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1, v2}, Lc2;-><init>(ILjava/lang/Object;)V
 
-    or-int/2addr p1, v0
+    :cond_0
+    invoke-virtual {v0}, Lc2;->hasNext()Z
 
-    iput p1, p0, Ltf0;->s0:I
+    move-result v1
 
-    iget-object p1, p0, Ltf0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
+    if-eqz v1, :cond_1
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lc2;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->c(Ljava/util/List;Lq44;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    move-object v2, v1
 
-    return-object p1
+    check-cast v2, Lu5a;
+
+    iget-object v2, v2, Lu5a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Lu5a;
+
+    if-nez v1, :cond_2
+
+    sget-object v1, Lu5a;->c:Lu5a;
+
+    :cond_2
+    sget-object p0, Ltf0;->a:Ljava/util/Set;
+
+    invoke-interface {p0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
 .end method

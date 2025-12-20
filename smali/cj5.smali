@@ -3,86 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Lcfc;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/reflect/Constructor;
+.field public final synthetic a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/reflect/Constructor;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lcj5;->a:I
-
-    iput-object p1, p0, Lcj5;->b:Ljava/lang/reflect/Constructor;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcj5;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lcj5;->a:I
+    check-cast p1, Landroid/media/MediaCodecInfo;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v0, Ldj5;->a:Lqs;
 
-    iget-object v0, p0, Lcj5;->b:Ljava/lang/reflect/Constructor;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast p1, Ljava/lang/Throwable;
+    const/16 v1, 0x1d
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->a(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p1}, Lx75;->A(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 v2, 0x1
+
+    if-lt v0, v1, :cond_1
+
+    invoke-static {p1}, Lx75;->v(Landroid/media/MediaCodecInfo;)Z
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lcj5;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lx5a;->i(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    :goto_0
+    move p1, v2
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lcj5;->b:Ljava/lang/reflect/Constructor;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->c(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {p1}, Ll5j;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, "arc."
 
-    :pswitch_1
-    iget-object v0, p0, Lcj5;->b:Ljava/lang/reflect/Constructor;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-result v0
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->d(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    if-eqz v0, :cond_5
 
-    return-object p1
+    :cond_4
+    move p1, v1
 
-    :pswitch_2
-    iget-object v0, p0, Lcj5;->b:Ljava/lang/reflect/Constructor;
+    goto :goto_1
 
-    check-cast p1, Ljava/lang/Throwable;
+    :cond_5
+    const-string v0, "omx.google."
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->e(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    if-nez v0, :cond_2
 
-    nop
+    const-string v0, "omx.ffmpeg."
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "omx.sec."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const-string v0, ".sw."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :cond_6
+    const-string v0, "omx.qcom.video.decoder.hevcswvdec"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "c2.android."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "c2.google."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "omx."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const-string v0, "c2."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :goto_1
+    xor-int/2addr p1, v2
+
+    return p1
 .end method

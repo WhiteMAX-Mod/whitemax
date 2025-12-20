@@ -1,142 +1,57 @@
-.class public final Lmx0;
-.super Lijb;
+.class public interface abstract Lmx0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# instance fields
-.field public final a:Lom6;
-
-.field public final b:Lijb;
-
-
-# direct methods
-.method public constructor <init>(Lom6;Lijb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmx0;->a:Lom6;
-
-    iput-object p2, p0, Lmx0;->b:Lijb;
-
-    return-void
-.end method
+.implements Lyhf;
+.implements Ljava/nio/channels/ReadableByteChannel;
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Lmx0;->a:Lom6;
-
-    invoke-interface {v0, p1}, Lom6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v0, p2}, Lom6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lmx0;->b:Lijb;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+.method public abstract G(J)Ljava/lang/String;
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmx0;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lmx0;
-
-    iget-object v1, p0, Lmx0;->a:Lom6;
-
-    iget-object v3, p1, Lmx0;->a:Lom6;
-
-    invoke-interface {v1, v3}, Lom6;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lmx0;->b:Lijb;
-
-    iget-object p1, p1, Lmx0;->b:Lijb;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
+.method public abstract R(Lky;)J
 .end method
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lmx0;->a:Lom6;
-
-    iget-object v1, p0, Lmx0;->b:Lijb;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+.method public abstract X(Ljava/nio/charset/Charset;)Ljava/lang/String;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract b0(Lew0;J)V
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract f0()Ljava/lang/String;
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method public abstract h(J)Lnz0;
+.end method
 
-    iget-object v1, p0, Lmx0;->b:Lijb;
+.method public abstract m0(Lvpb;)I
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public abstract readByte()B
+.end method
 
-    const-string v1, ".onResultOf("
+.method public abstract readFully([B)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract readInt()I
+.end method
 
-    iget-object v1, p0, Lmx0;->a:Lom6;
+.method public abstract readLong()J
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public abstract readShort()S
+.end method
 
-    const-string v1, ")"
+.method public abstract s0(J)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract skip(J)V
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public abstract v0()J
+.end method
 
-    move-result-object v0
-
-    return-object v0
+.method public abstract x0()Ljava/io/InputStream;
 .end method

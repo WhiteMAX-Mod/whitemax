@@ -1,91 +1,51 @@
-.class public final enum Lvl9;
-.super Ljava/lang/Enum;
+.class public final Lvl9;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lvl9;
-
-.field public static final synthetic c:[Lvl9;
-
-.field public static final synthetic d:Lzg5;
-
-
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lzl9;
+
+.field public Y:I
+
+.field public d:Lzl9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lvl9;
-
-    const-string v1, "EMOJI"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lvl9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lvl9;->b:Lvl9;
-
-    new-instance v1, Lvl9;
-
-    const-string v2, "STICKER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lvl9;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1}, [Lvl9;
-
-    move-result-object v0
-
-    sput-object v0, Lvl9;->c:[Lvl9;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lvl9;->d:Lzg5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lzl9;Ll84;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lvl9;->X:Lzl9;
 
-    iput p3, p0, Lvl9;->a:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lvl9;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lvl9;
+    iput-object p1, p0, Lvl9;->o:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lvl9;->Y:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lvl9;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lvl9;->Y:I
 
-.method public static values()[Lvl9;
-    .locals 1
+    iget-object p1, p0, Lvl9;->X:Lzl9;
 
-    sget-object v0, Lvl9;->c:[Lvl9;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lzl9;->a(Ljava/util/List;Ll84;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lvl9;
-
-    return-object v0
+    return-object p1
 .end method

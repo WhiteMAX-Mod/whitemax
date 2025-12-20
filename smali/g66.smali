@@ -1,80 +1,189 @@
 .class public final Lg66;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lwta;
+.field public final synthetic a:I
 
-.field public final synthetic o:Lcb8;
+.field public final b:Landroid/util/SparseBooleanArray;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lcb8;Lwta;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lg66;->o:Lcb8;
+    iput p1, p0, Lg66;->a:I
 
-    iput-object p2, p0, Lg66;->X:Lwta;
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Landroid/util/SparseBooleanArray;
+
+    invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    iput-object p1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Landroid/util/SparseBooleanArray;
+
+    invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    iput-object p1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg66;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lg66;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lg66;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(I)V
     .locals 2
 
-    new-instance p1, Lg66;
+    iget v0, p0, Lg66;->a:I
 
-    iget-object v0, p0, Lg66;->o:Lcb8;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lg66;->X:Lwta;
+    iget-boolean v0, p0, Lg66;->c:Z
 
-    invoke-direct {p1, v0, v1, p2}, Lg66;-><init>(Lcb8;Lwta;Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x1
 
-    return-object p1
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lp5j;->g(Z)V
+
+    iget-object v0, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->append(IZ)V
+
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lg66;->c:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Ln5j;->d(Z)V
+
+    iget-object v0, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0, p1, v1}, Landroid/util/SparseBooleanArray;->append(IZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public b(Li66;)V
+    .locals 2
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lg66;->o:Lcb8;
+    :goto_0
+    iget-object v1, p1, Li66;->a:Landroid/util/SparseBooleanArray;
 
-    iget-object v0, p0, Lg66;->X:Lwta;
+    invoke-virtual {v1}, Landroid/util/SparseBooleanArray;->size()I
 
-    invoke-virtual {p1, v0}, Lcb8;->j(Lwta;)V
+    move-result v1
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    if-ge v0, v1, :cond_0
 
-    return-object p1
+    invoke-virtual {p1, v0}, Li66;->b(I)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lg66;->a(I)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public varargs c([I)V
+    .locals 3
+
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    aget v2, p1, v1
+
+    invoke-virtual {p0, v2}, Lg66;->a(I)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public d()Lh66;
+    .locals 2
+
+    iget-boolean v0, p0, Lg66;->c:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Ln5j;->d(Z)V
+
+    iput-boolean v1, p0, Lg66;->c:Z
+
+    new-instance v0, Lh66;
+
+    iget-object v1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-direct {v0, v1}, Lh66;-><init>(Landroid/util/SparseBooleanArray;)V
+
+    return-object v0
+.end method
+
+.method public e()Li66;
+    .locals 2
+
+    iget-boolean v0, p0, Lg66;->c:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lp5j;->g(Z)V
+
+    iput-boolean v1, p0, Lg66;->c:Z
+
+    new-instance v0, Li66;
+
+    iget-object v1, p0, Lg66;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-direct {v0, v1}, Li66;-><init>(Landroid/util/SparseBooleanArray;)V
+
+    return-object v0
 .end method

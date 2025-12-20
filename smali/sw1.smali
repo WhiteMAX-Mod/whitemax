@@ -1,99 +1,316 @@
-.class public final Lsw1;
+.class public abstract Lsw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz28;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final NO_RECEIVER:Ljava/lang/Object;
+
 
 # instance fields
-.field public final a:Ljve;
+.field private final isTopLevel:Z
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field private final name:Ljava/lang/String;
+
+.field private final owner:Ljava/lang/Class;
+
+.field protected final receiver:Ljava/lang/Object;
+
+.field private transient reflected:Lz28;
+
+.field private final signature:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lrw1;->a:Lrw1;
+
+    sput-object v0, Lsw1;->NO_RECEIVER:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lsw1;->receiver:Ljava/lang/Object;
 
-    const/4 v1, 0x7
+    iput-object p2, p0, Lsw1;->owner:Ljava/lang/Class;
 
-    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
+    iput-object p3, p0, Lsw1;->name:Ljava/lang/String;
 
-    move-result-object v0
+    iput-object p4, p0, Lsw1;->signature:Ljava/lang/String;
 
-    iput-object v0, p0, Lsw1;->a:Ljve;
-
-    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Llzf;
-
-    check-cast p2, Lq2b;
-
-    invoke-virtual {p2}, Lq2b;->c()Lwl8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lsw1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltw0;
-
-    invoke-virtual {p1, p0}, Ltw0;->d(Ljava/lang/Object;)V
+    iput-boolean p5, p0, Lsw1;->isTopLevel:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lr51;)V
-    .locals 3
-    .annotation runtime Lvnf;
-    .end annotation
+.method public varargs call([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 1
-    new-instance v0, Lqw1;
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, p0, p1, v1}, Lqw1;-><init>(Lsw1;Lr51;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v0, p1}, Lz28;->call([Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p1, 0x3
+    move-result-object p1
 
-    iget-object v2, p0, Lsw1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final onEvent(Lrj0;)V
-    .locals 3
-    .annotation runtime Lvnf;
+.method public callBy(Ljava/util/Map;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lz28;->callBy(Ljava/util/Map;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public compute()Lz28;
+    .locals 1
+
+    iget-object v0, p0, Lsw1;->reflected:Lz28;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lsw1;->computeReflected()Lz28;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsw1;->reflected:Lz28;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public abstract computeReflected()Lz28;
+.end method
+
+.method public getAnnotations()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
     .end annotation
 
-    .line 2
-    new-instance v0, Lrw1;
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, p0, p1, v1}, Lrw1;-><init>(Lsw1;Lrj0;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v0}, Ly28;->getAnnotations()Ljava/util/List;
 
-    const/4 p1, 0x3
+    move-result-object v0
 
-    iget-object v2, p0, Lsw1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    return-object v0
+.end method
 
-    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+.method public getBoundReceiver()Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lsw1;->receiver:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lsw1;->name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOwner()Lb38;
+    .locals 2
+
+    iget-object v0, p0, Lsw1;->owner:Ljava/lang/Class;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    iget-boolean v1, p0, Lsw1;->isTopLevel:Z
+
+    if-eqz v1, :cond_1
+
+    sget-object v1, Lfsd;->a:Lgsd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lbsb;
+
+    invoke-direct {v1, v0}, Lbsb;-><init>(Ljava/lang/Class;)V
+
+    return-object v1
+
+    :cond_1
+    invoke-static {v0}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->getParameters()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract getReflected()Lz28;
+.end method
+
+.method public getReturnType()Ls38;
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->getReturnType()Ls38;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSignature()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lsw1;->signature:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTypeParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->getTypeParameters()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getVisibility()Lt38;
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->getVisibility()Lt38;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isAbstract()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->isAbstract()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isFinal()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->isFinal()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isOpen()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->isOpen()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isSuspend()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lsw1;->getReflected()Lz28;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lz28;->isSuspend()Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -10,7 +10,7 @@
 # instance fields
 .field public A0:Landroid/view/VelocityTracker;
 
-.field public final a:Lrw4;
+.field public final a:Ln05;
 
 .field public b:I
 
@@ -30,7 +30,7 @@
 
 .field public w0:Z
 
-.field public x0:Lk4f;
+.field public x0:Ljff;
 
 .field public final y0:Ljava/util/ArrayList;
 
@@ -81,13 +81,13 @@
 
     move-result-object v2
 
-    sget-object v3, Lb6d;->SlideOutLayout:[I
+    sget-object v3, Lgfd;->SlideOutLayout:[I
 
     invoke-virtual {v2, p2, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v2, Lb6d;->SlideOutLayout_chistyakov_orientation:I
+    sget v2, Lgfd;->SlideOutLayout_chistyakov_orientation:I
 
     invoke-virtual {p2, v2, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -95,7 +95,7 @@
 
     iput v2, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->b:I
 
-    sget v2, Lb6d;->SlideOutLayout_type:I
+    sget v2, Lgfd;->SlideOutLayout_type:I
 
     invoke-virtual {p2, v2, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -103,9 +103,9 @@
 
     iput p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->c:I
 
-    invoke-static {p0}, Lm8j;->a(Landroid/view/View;)V
+    invoke-static {p0}, Lemj;->a(Landroid/view/View;)V
 
-    invoke-static {p0}, Lm8j;->d(Landroid/view/View;)Z
+    invoke-static {p0}, Lemj;->c(Landroid/view/View;)Z
 
     move-result p1
 
@@ -117,7 +117,7 @@
 
     if-ne p1, v2, :cond_0
 
-    invoke-static {p0}, Lm8j;->d(Landroid/view/View;)Z
+    invoke-static {p0}, Lemj;->c(Landroid/view/View;)Z
 
     move-result p1
 
@@ -140,11 +140,11 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lrw4;->a()Lrw4;
+    invoke-static {}, Ln05;->a()Ln05;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->a:Lrw4;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->a:Ln05;
 
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -197,9 +197,9 @@
 
     if-gtz p1, :cond_3
 
-    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->a:Lrw4;
+    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->a:Ln05;
 
-    iget p1, p1, Lrw4;->q:I
+    iget p1, p1, Ln05;->q:I
 
     int-to-float p1, p1
 
@@ -433,11 +433,11 @@
     invoke-interface {v0, v4}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_5
-    iget-object v0, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     if-eqz v0, :cond_7
 
-    invoke-interface {v0}, Lk4f;->o()V
+    invoke-interface {v0}, Ljff;->o()V
 
     goto :goto_5
 
@@ -909,7 +909,7 @@
 
     move-result p1
 
-    sget-object v8, Lozg;->a:Ljava/util/Map;
+    sget-object v8, Lfch;->a:Ljava/util/Map;
 
     invoke-virtual {v7, p1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
 
@@ -933,7 +933,7 @@
 
     move-result p1
 
-    sget-object v8, Lozg;->a:Ljava/util/Map;
+    sget-object v8, Lfch;->a:Ljava/util/Map;
 
     invoke-virtual {v7, p1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
@@ -1013,13 +1013,13 @@
     :cond_6
     invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/SlideOutLayout;->d(F)V
 
-    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     if-eqz p1, :cond_12
 
     check-cast p1, Lru/ok/messages/views/fragments/FrgSlideOut;
 
-    invoke-virtual {p1}, Lru/ok/messages/views/fragments/FrgSlideOut;->B0()Lql6;
+    invoke-virtual {p1}, Lru/ok/messages/views/fragments/FrgSlideOut;->B0()Lbq6;
 
     move-result-object v2
 
@@ -1066,19 +1066,19 @@
 
     :cond_b
     :goto_4
-    iget-object v5, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object v5, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     if-eqz v5, :cond_c
 
-    invoke-interface {v5}, Lk4f;->a()Z
+    invoke-interface {v5}, Ljff;->a()Z
 
     move-result v5
 
     if-nez v5, :cond_c
 
-    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
-    invoke-interface {p1, v4}, Lk4f;->m(I)V
+    invoke-interface {p1, v4}, Ljff;->b(I)V
 
     goto/16 :goto_a
 
@@ -1181,19 +1181,19 @@
 
     move-result-object p1
 
-    new-instance v2, Lj4f;
+    new-instance v2, Liff;
 
-    invoke-direct {v2, p0, v4}, Lj4f;-><init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
+    invoke-direct {v2, p0, v4}, Liff;-><init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
 
     invoke-virtual {p1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    new-instance v2, Lq00;
+    new-instance v2, Lg10;
 
     const/16 v4, 0x19
 
-    invoke-direct {v2, v4, p0}, Lq00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v4, p0}, Lg10;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v2}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -1225,7 +1225,7 @@
 
     if-eq v2, p1, :cond_14
 
-    iget-object v2, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object v2, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     if-eqz v2, :cond_13
 
@@ -1374,7 +1374,7 @@
 
     if-eq v2, v1, :cond_1e
 
-    iget-object v2, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iget-object v2, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     if-eqz v2, :cond_1d
 
@@ -1449,10 +1449,10 @@
     return-void
 .end method
 
-.method public setSlideOutListener(Lk4f;)V
+.method public setSlideOutListener(Ljff;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lk4f;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Ljff;
 
     return-void
 .end method

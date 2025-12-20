@@ -1,158 +1,220 @@
 .class public final Lyqe;
-.super Ldtf;
+.super Lkre;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lere;
+.field public final v0:J
 
-.field public o:I
+.field public final w0:J
+
+.field public final x0:J
 
 
 # direct methods
-.method public constructor <init>(Lere;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lxqe;)V
+    .locals 2
 
-    iput-object p1, p0, Lyqe;->X:Lere;
+    invoke-direct {p0, p1}, Lkre;-><init>(Ljre;)V
 
-    const/4 p1, 0x2
+    iget-wide v0, p1, Lxqe;->h:J
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide v0, p0, Lyqe;->v0:J
+
+    iget-wide v0, p1, Lxqe;->i:J
+
+    iput-wide v0, p0, Lyqe;->w0:J
+
+    iget-wide v0, p1, Lxqe;->j:J
+
+    iput-wide v0, p0, Lyqe;->x0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final v()Lcn9;
+    .locals 11
 
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyqe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyqe;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lyqe;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lyqe;
-
-    iget-object v0, p0, Lyqe;->X:Lere;
-
-    invoke-direct {p1, v0, p2}, Lyqe;-><init>(Lere;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lyqe;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyqe;->X:Lere;
-
-    iget-object v0, p1, Lere;->x0:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Llqe;->m()Lbn9;
 
     move-result-object v0
 
-    check-cast v0, Lqlh;
+    iget-wide v1, p0, Lyqe;->w0:J
 
-    invoke-virtual {p1}, Lere;->y()Lpb3;
+    invoke-virtual {v0, v1, v2}, Lbn9;->l(J)Ldn9;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lw4e;
+    invoke-virtual {p0}, Llqe;->h()Lch2;
 
-    invoke-virtual {p1}, Lw4e;->s()J
+    move-result-object v1
 
-    move-result-wide v2
+    iget-wide v2, p0, Lyqe;->v0:J
 
-    iput v1, p0, Lyqe;->o:I
+    invoke-virtual {v1, v2, v3}, Lch2;->M(J)Lud2;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    const-string p1, "SELECT * FROM webapp_biometry WHERE user_id = ?"
+    const/4 v2, 0x0
 
-    invoke-static {v1, p1}, Ldsd;->c(ILjava/lang/String;)Ldsd;
+    if-eqz v1, :cond_8
 
-    move-result-object p1
+    if-eqz v0, :cond_8
 
-    invoke-static {p1, v1, v2, v3}, Lxrf;->m(Ldsd;IJ)Landroid/os/CancellationSignal;
+    iget-object v0, v0, Ldn9;->x0:Lcf9;
 
-    move-result-object v2
+    invoke-virtual {v0}, Lcf9;->z()I
 
-    iget-object v3, v0, Lqlh;->a:Llrd;
+    move-result v1
 
-    new-instance v4, Lnlh;
+    const/4 v3, 0x0
 
-    const/4 v5, 0x0
+    :goto_0
+    if-ge v3, v1, :cond_8
 
-    invoke-direct {v4, v0, p1, v5}, Lnlh;-><init>(Lqlh;Ldsd;I)V
+    invoke-virtual {v0, v3}, Lcf9;->y(I)Lm20;
 
-    invoke-static {v3, v2, v4, p0}, Lk7j;->a(Llrd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object p1
+    if-nez v4, :cond_0
 
-    sget-object v0, Lg84;->a:Lg84;
+    goto/16 :goto_1
 
-    if-ne p1, v0, :cond_2
+    :cond_0
+    iget-object v5, v4, Lm20;->b:La20;
 
-    return-object v0
+    invoke-virtual {v4}, Lm20;->e()Z
+
+    move-result v6
+
+    iget-wide v7, p0, Lyqe;->x0:J
+
+    if-eqz v6, :cond_1
+
+    iget-wide v9, v5, La20;->Z:J
+
+    cmp-long v6, v9, v7
+
+    if-eqz v6, :cond_4
+
+    :cond_1
+    invoke-virtual {v4}, Lm20;->g()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, v4, Lm20;->d:Ll20;
+
+    iget-wide v9, v6, Ll20;->a:J
+
+    cmp-long v6, v9, v7
+
+    if-eqz v6, :cond_4
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/util/Collection;
+    iget-object v6, v4, Lm20;->f:Lh20;
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    if-eqz v6, :cond_3
 
-    move-result p1
+    iget-wide v9, v6, Lh20;->a:J
 
-    xor-int/2addr p1, v1
+    cmp-long v6, v9, v7
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v6, :cond_4
 
-    move-result-object p1
+    :cond_3
+    invoke-virtual {v4}, Lm20;->f()Z
 
-    return-object p1
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    iget-object v6, v4, Lm20;->g:Le20;
+
+    iget-wide v9, v6, Le20;->a:J
+
+    cmp-long v6, v9, v7
+
+    if-nez v6, :cond_7
+
+    :cond_4
+    invoke-virtual {v4}, Lm20;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v5}, La20;->c()Lz10;
+
+    move-result-object v0
+
+    new-instance v1, La20;
+
+    invoke-direct {v1, v0}, La20;-><init>(Lz10;)V
+
+    invoke-virtual {v4}, Lm20;->h()Ln10;
+
+    move-result-object v0
+
+    iput-object v1, v0, Ln10;->b:La20;
+
+    invoke-virtual {v0}, Ln10;->a()Lm20;
+
+    move-result-object v4
+
+    :cond_5
+    new-instance v0, Ln20;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ln20;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ln20;->c()Lcf9;
+
+    move-result-object v0
+
+    invoke-virtual {v4}, Lm20;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, v4, Lm20;->g:Le20;
+
+    iget-object v2, v1, Le20;->b:Ljava/lang/String;
+
+    :cond_6
+    new-instance v1, Lcn9;
+
+    invoke-direct {v1}, Lcn9;-><init>()V
+
+    iput-object v2, v1, Lcn9;->g:Ljava/lang/String;
+
+    iput-object v0, v1, Lcn9;->n:Lcf9;
+
+    return-object v1
+
+    :cond_7
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_8
+    :goto_1
+    return-object v2
+.end method
+
+.method public final w()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ServiceTaskForwardAttachMessage"
+
+    return-object v0
 .end method

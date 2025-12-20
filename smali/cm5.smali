@@ -1,50 +1,55 @@
 .class public final Lcm5;
-.super Ljava/lang/Object;
+.super Ldm5;
 .source "SourceFile"
-
-# interfaces
-.implements Lp99;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Lvp8;
-
-.field public c:Ls9g;
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lvp8;)V
+.method public constructor <init>(Ljava/lang/Runnable;J)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Ldm5;-><init>(J)V
 
-    iput-object p1, p0, Lcm5;->a:Ljava/lang/Object;
-
-    iput-object p2, p0, Lcm5;->b:Lvp8;
-
-    iget-object p1, p2, Lvp8;->o:Lrp8;
-
-    iput-object p1, p0, Lcm5;->c:Ls9g;
+    iput-object p1, p0, Lcm5;->c:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ls9g;
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcm5;->c:Ls9g;
+    iget-object v0, p0, Lcm5;->c:Ljava/lang/Runnable;
 
-    return-object v0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
 .end method
 
-.method public final getUid()Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lcm5;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-super {p0}, Ldm5;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcm5;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

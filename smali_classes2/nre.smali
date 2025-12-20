@@ -1,95 +1,86 @@
 .class public final Lnre;
-.super Lid0;
+.super Ljre;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic h:I
+
+.field public final i:Ljava/lang/String;
+
+.field public j:Z
+
+.field public final k:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(JLjava/lang/String;Lm20;)V
     .locals 1
 
-    const/16 v0, 0x14
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+    iput v0, p0, Lnre;->h:I
 
-    iput-object p1, p0, Lnre;->b:Ljava/lang/String;
+    .line 5
+    invoke-direct {p0, p1, p2}, Ljre;-><init>(J)V
+
+    .line 6
+    iput-object p3, p0, Lnre;->i:Ljava/lang/String;
+
+    .line 7
+    iput-object p4, p0, Lnre;->k:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;ZLjava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lnre;->h:I
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Ljre;-><init>(J)V
+
+    .line 2
+    iput-object p3, p0, Lnre;->i:Ljava/lang/String;
+
+    .line 3
+    iput-boolean p4, p0, Lnre;->j:Z
+
+    .line 4
+    iput-object p5, p0, Lnre;->k:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnre;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnre;
-
-    iget-object v1, p0, Lnre;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lnre;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Lkre;
     .locals 1
 
-    iget-object v0, p0, Lnre;->b:Ljava/lang/String;
+    iget v0, p0, Lnre;->h:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    new-instance v0, Lpre;
 
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenSystemRingtones(selected="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lnre;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lpre;-><init>(Lnre;)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lore;
+
+    invoke-direct {v0, p0}, Lore;-><init>(Lnre;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

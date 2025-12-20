@@ -2,1249 +2,983 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La38;
+.implements Led3;
+
+
+# static fields
+.field public static final b:Ljava/util/Map;
+
+.field public static final c:Ljava/util/HashMap;
+
+.field public static final d:Ljava/util/LinkedHashMap;
+
 
 # instance fields
-.field public final a:[B
-
-.field public final b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
+.field public final a:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 24
+
+    const-class v22, Lar6;
+
+    const-class v23, Lbr6;
+
+    const-class v1, Lmq6;
+
+    const-class v2, Loq6;
+
+    const-class v3, Lcr6;
+
+    const-class v4, Ler6;
+
+    const-class v5, Lgr6;
+
+    const-class v6, Lir6;
+
+    const-class v7, Ljr6;
+
+    const-class v8, Lkr6;
+
+    const-class v9, Llr6;
+
+    const-class v10, Lmr6;
+
+    const-class v11, Lnq6;
+
+    const-class v12, Lpq6;
+
+    const-class v13, Lqq6;
+
+    const-class v14, Lrq6;
+
+    const-class v15, Lsq6;
+
+    const-class v16, Ltq6;
+
+    const-class v17, Luq6;
+
+    const-class v18, Lvq6;
+
+    const-class v19, Lwq6;
+
+    const-class v20, Lxq6;
+
+    const-class v21, Lzq6;
+
+    filled-new-array/range {v1 .. v23}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfi3;->f([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lgi3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    add-int/lit8 v5, v3, 0x1
+
+    if-ltz v3, :cond_0
+
+    check-cast v4, Ljava/lang/Class;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    new-instance v6, Lysb;
+
+    invoke-direct {v6, v4, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Lfi3;->m()V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_1
+    invoke-static {v1}, Lit8;->i(Ljava/util/ArrayList;)Ljava/util/Map;
+
+    move-result-object v0
+
+    sput-object v0, Lgd3;->b:Ljava/util/Map;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    const-string v1, "boolean"
+
+    const-string v3, "kotlin.Boolean"
+
+    invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "char"
+
+    const-string v4, "kotlin.Char"
+
+    invoke-virtual {v0, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "byte"
+
+    const-string v5, "kotlin.Byte"
+
+    invoke-virtual {v0, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "short"
+
+    const-string v6, "kotlin.Short"
+
+    invoke-virtual {v0, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "int"
+
+    const-string v7, "kotlin.Int"
+
+    invoke-virtual {v0, v1, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "float"
+
+    const-string v8, "kotlin.Float"
+
+    invoke-virtual {v0, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "long"
+
+    const-string v9, "kotlin.Long"
+
+    invoke-virtual {v0, v1, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "double"
+
+    const-string v10, "kotlin.Double"
+
+    invoke-virtual {v0, v1, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const-string v11, "java.lang.Boolean"
+
+    invoke-virtual {v1, v11, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Character"
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Byte"
+
+    invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Short"
+
+    invoke-virtual {v1, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Integer"
+
+    invoke-virtual {v1, v3, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Float"
+
+    invoke-virtual {v1, v3, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Long"
+
+    invoke-virtual {v1, v3, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "java.lang.Double"
+
+    invoke-virtual {v1, v3, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    const-string v4, "java.lang.Object"
+
+    const-string v5, "kotlin.Any"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.String"
+
+    const-string v5, "kotlin.String"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.CharSequence"
+
+    const-string v5, "kotlin.CharSequence"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Throwable"
+
+    const-string v5, "kotlin.Throwable"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Cloneable"
+
+    const-string v5, "kotlin.Cloneable"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Number"
+
+    const-string v5, "kotlin.Number"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Comparable"
+
+    const-string v5, "kotlin.Comparable"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Enum"
+
+    const-string v5, "kotlin.Enum"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.annotation.Annotation"
+
+    const-string v5, "kotlin.Annotation"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.lang.Iterable"
+
+    const-string v5, "kotlin.collections.Iterable"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.Iterator"
+
+    const-string v5, "kotlin.collections.Iterator"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.Collection"
+
+    const-string v5, "kotlin.collections.Collection"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.List"
+
+    const-string v5, "kotlin.collections.List"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.Set"
+
+    const-string v5, "kotlin.collections.Set"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.ListIterator"
+
+    const-string v5, "kotlin.collections.ListIterator"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.Map"
+
+    const-string v5, "kotlin.collections.Map"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "java.util.Map$Entry"
+
+    const-string v5, "kotlin.collections.Map.Entry"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "kotlin.jvm.internal.StringCompanionObject"
+
+    const-string v5, "kotlin.String.Companion"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "kotlin.jvm.internal.EnumCompanionObject"
+
+    const-string v5, "kotlin.Enum.Companion"
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-virtual {v3, v1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x6
+
+    const/16 v6, 0x2e
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "kotlin.jvm.internal."
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1, v6, v2, v5}, Liyf;->H(Ljava/lang/CharSequence;CII)I
+
+    move-result v5
+
+    if-ne v5, v4, :cond_2
+
+    move-object v4, v1
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v5, v5, 0x1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v1, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    :goto_2
+    const-string v5, "CompanionObject"
+
+    invoke-static {v7, v4, v5}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ".Companion"
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v0, Lgd3;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Class;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v9, "kotlin.Function"
+
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v7, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_4
+    sput-object v3, Lgd3;->c:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
+
+    move-result v1
+
+    invoke-static {v1}, Lit8;->d(I)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-static {v3, v6, v2, v5}, Liyf;->H(Ljava/lang/CharSequence;CII)I
+
+    move-result v8
+
+    if-ne v8, v4, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    add-int/lit8 v8, v8, 0x1
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v9
+
+    invoke-virtual {v3, v8, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_5
+    invoke-interface {v0, v7, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_4
+
+    :cond_6
+    sput-object v0, Lgd3;->d:Ljava/util/LinkedHashMap;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Class;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7fffffff
-
-    iput v0, p0, Lgd3;->g:I
-
-    iput-object p1, p0, Lgd3;->a:[B
-
-    iput p2, p0, Lgd3;->b:I
-
-    add-int/2addr p3, p2
-
-    iput p3, p0, Lgd3;->c:I
-
-    iput p2, p0, Lgd3;->e:I
+    iput-object p1, p0, Lgd3;->a:Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a()Ljava/lang/Class;
     .locals 1
 
-    iget v0, p0, Lgd3;->f:I
+    iget-object v0, p0, Lgd3;->a:Ljava/lang/Class;
 
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v0, "Protocol message end-group tag did not match expected tag."
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public final b()I
-    .locals 2
+.method public final b()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Lgd3;->g:I
+    iget-object v0, p0, Lgd3;->a:Ljava/lang/Class;
 
-    const v1, 0x7fffffff
+    invoke-virtual {v0}, Ljava/lang/Class;->isAnonymousClass()Z
 
-    if-ne v0, v1, :cond_0
+    move-result v1
 
-    const/4 v0, -0x1
+    const/4 v2, 0x0
 
-    return v0
+    if-eqz v1, :cond_0
 
-    :cond_0
-    iget v1, p0, Lgd3;->e:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 2
-
-    iget v0, p0, Lgd3;->e:I
-
-    iget v1, p0, Lgd3;->b:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final d(I)V
-    .locals 2
-
-    iput p1, p0, Lgd3;->g:I
-
-    iget v0, p0, Lgd3;->c:I
-
-    iget v1, p0, Lgd3;->d:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lgd3;->c:I
-
-    if-le v0, p1, :cond_0
-
-    sub-int p1, v0, p1
-
-    iput p1, p0, Lgd3;->d:I
-
-    sub-int/2addr v0, p1
-
-    iput v0, p0, Lgd3;->c:I
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Class;->isLocalClass()Z
 
-    iput p1, p0, Lgd3;->d:I
+    move-result v1
 
-    return-void
-.end method
+    if-eqz v1, :cond_1
 
-.method public final e(I)I
-    .locals 3
-
-    if-ltz p1, :cond_2
-
-    iget v0, p0, Lgd3;->e:I
-
-    add-int/2addr p1, v0
-
-    iget v0, p0, Lgd3;->g:I
-
-    if-gt p1, v0, :cond_1
-
-    iput p1, p0, Lgd3;->g:I
-
-    iget v1, p0, Lgd3;->c:I
-
-    iget v2, p0, Lgd3;->d:I
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lgd3;->c:I
-
-    if-le v1, p1, :cond_0
-
-    sub-int p1, v1, p1
-
-    iput p1, p0, Lgd3;->d:I
-
-    sub-int/2addr v1, p1
-
-    iput v1, p0, Lgd3;->c:I
-
-    return v0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput p1, p0, Lgd3;->d:I
-
-    return v0
+    :goto_0
+    return-object v2
 
     :cond_1
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
-    move-result-object p1
+    move-result v1
 
-    throw p1
+    sget-object v3, Lgd3;->c:Ljava/util/HashMap;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    const-string v1, "Array"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     :cond_2
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    if-nez v2, :cond_3
 
-    const-string v0, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
+    const-string v0, "kotlin.Array"
 
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    throw p1
+    :cond_3
+    return-object v2
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-nez v1, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_5
+    return-object v1
 .end method
 
-.method public final f()Z
-    .locals 1
+.method public final c()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {p0}, Lgd3;->p()I
+    iget-object v0, p0, Lgd3;->a:Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->isAnonymousClass()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    return-object v2
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->isLocalClass()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    const/16 v3, 0x24
+
+    if-eqz v2, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Liyf;->X(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingConstructor()Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Liyf;->X(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    const/4 v2, 0x6
+
+    invoke-static {v1, v3, v0, v2}, Liyf;->D(Ljava/lang/CharSequence;CII)I
 
     move-result v0
+
+    const/4 v2, -0x1
+
+    if-ne v0, v2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    return-object v1
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
+
+    move-result v1
+
+    sget-object v3, Lgd3;->d:Ljava/util/LinkedHashMap;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
+
+    move-result v1
+
+    const-string v4, "Array"
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_5
+    if-nez v2, :cond_6
+
+    return-object v4
+
+    :cond_6
+    return-object v2
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-nez v1, :cond_8
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_8
+    return-object v1
+.end method
+
+.method public final d(Ljava/lang/Object;)Z
+    .locals 2
+
+    sget-object v0, Lgd3;->b:Ljava/util/Map;
+
+    iget-object v1, p0, Lgd3;->a:Ljava/lang/Class;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final g()[B
-    .locals 5
-
-    invoke-virtual {p0}, Lgd3;->p()I
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
-    iget v1, p0, Lgd3;->c:I
-
-    iget v2, p0, Lgd3;->e:I
-
-    sub-int/2addr v1, v2
-
-    if-gt v0, v1, :cond_0
-
-    if-lez v0, :cond_0
-
-    new-array v1, v0, [B
-
-    iget-object v3, p0, Lgd3;->a:[B
-
-    const/4 v4, 0x0
-
-    invoke-static {v3, v2, v1, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v2, p0, Lgd3;->e:I
-
-    add-int/2addr v2, v0
-
-    iput v2, p0, Lgd3;->e:I
-
-    return-object v1
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcoi;->e:[B
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {p0, v0}, Lgd3;->m(I)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final h()D
-    .locals 2
-
-    invoke-virtual {p0}, Lgd3;->o()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i()F
-    .locals 1
-
-    invoke-virtual {p0}, Lgd3;->n()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final j(Lfl9;)V
-    .locals 3
-
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result v0
-
-    iget v1, p0, Lgd3;->h:I
-
-    const/16 v2, 0x40
-
-    if-ge v1, v2, :cond_0
-
-    invoke-virtual {p0, v0}, Lgd3;->e(I)I
-
-    move-result v0
-
-    iget v1, p0, Lgd3;->h:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lgd3;->h:I
-
-    invoke-virtual {p1, p0}, Lfl9;->mergeFrom(Lgd3;)Lfl9;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lgd3;->a(I)V
-
-    iget p1, p0, Lgd3;->h:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lgd3;->h:I
-
-    invoke-virtual {p0, v0}, Lgd3;->d(I)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v0, "Protocol message had too many levels of nesting.  May be malicious.  Use CodedInputStream.setRecursionLimit() to increase the depth limit."
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final k(I)Ljava/io/Serializable;
-    .locals 7
-
-    const/4 v0, 0x1
-
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unknown type "
-
-    invoke-static {p1, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lgd3;->q()J
-
-    move-result-wide v1
-
-    ushr-long v3, v1, v0
-
-    const-wide/16 v5, 0x1
-
-    and-long v0, v1, v5
-
-    neg-long v0, v0
-
-    xor-long/2addr v0, v3
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    invoke-virtual {p0}, Lgd3;->p()I
+    invoke-static {v0, p1}, La1h;->k(ILjava/lang/Object;)Z
 
     move-result p1
-
-    ushr-int/lit8 v1, p1, 0x1
-
-    and-int/2addr p1, v0
-
-    neg-int p1, p1
-
-    xor-int/2addr p1, v1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_3
-    invoke-virtual {p0}, Lgd3;->o()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_4
-    invoke-virtual {p0}, Lgd3;->n()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_5
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_6
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_7
-    invoke-virtual {p0}, Lgd3;->g()[B
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_8
-    invoke-virtual {p0}, Lgd3;->r()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_9
-    invoke-virtual {p0}, Lgd3;->f()Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_a
-    invoke-virtual {p0}, Lgd3;->n()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_b
-    invoke-virtual {p0}, Lgd3;->o()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_c
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_d
-    invoke-virtual {p0}, Lgd3;->q()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_e
-    invoke-virtual {p0}, Lgd3;->q()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_f
-    invoke-virtual {p0}, Lgd3;->i()F
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_10
-    invoke-virtual {p0}, Lgd3;->h()D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_0
-        :pswitch_0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final l()B
-    .locals 2
-
-    iget v0, p0, Lgd3;->e:I
-
-    iget v1, p0, Lgd3;->c:I
-
-    if-eq v0, v1, :cond_0
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lgd3;->e:I
-
-    iget-object v1, p0, Lgd3;->a:[B
-
-    aget-byte v0, v1, v0
-
-    return v0
-
-    :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public final m(I)[B
-    .locals 4
-
-    if-ltz p1, :cond_2
-
-    iget v0, p0, Lgd3;->e:I
-
-    add-int v1, v0, p1
-
-    iget v2, p0, Lgd3;->g:I
-
-    if-gt v1, v2, :cond_1
-
-    iget v1, p0, Lgd3;->c:I
-
-    sub-int/2addr v1, v0
-
-    if-gt p1, v1, :cond_0
-
-    new-array v1, p1, [B
-
-    iget-object v2, p0, Lgd3;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v0, v1, v3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v0, p0, Lgd3;->e:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lgd3;->e:I
-
-    return-object v1
-
-    :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_1
-    sub-int/2addr v2, v0
-
-    invoke-virtual {p0, v2}, Lgd3;->v(I)V
-
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v0, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final n()I
-    .locals 4
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v0
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v2
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v3
-
-    and-int/lit16 v0, v0, 0xff
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    and-int/lit16 v1, v2, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    and-int/lit16 v1, v3, 0xff
-
-    shl-int/lit8 v1, v1, 0x18
-
-    or-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final o()J
-    .locals 13
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v0
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v2
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v3
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v4
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v5
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v6
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v7
-
-    int-to-long v8, v0
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v8, v10
-
-    int-to-long v0, v1
-
-    and-long/2addr v0, v10
-
-    const/16 v12, 0x8
-
-    shl-long/2addr v0, v12
-
-    or-long/2addr v0, v8
-
-    int-to-long v8, v2
-
-    and-long/2addr v8, v10
-
-    const/16 v2, 0x10
-
-    shl-long/2addr v8, v2
-
-    or-long/2addr v0, v8
-
-    int-to-long v2, v3
-
-    and-long/2addr v2, v10
-
-    const/16 v8, 0x18
-
-    shl-long/2addr v2, v8
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v4
-
-    and-long/2addr v2, v10
-
-    const/16 v4, 0x20
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v5
-
-    and-long/2addr v2, v10
-
-    const/16 v4, 0x28
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v6
-
-    and-long/2addr v2, v10
-
-    const/16 v4, 0x30
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v7
-
-    and-long/2addr v2, v10
-
-    const/16 v4, 0x38
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final p()I
-    .locals 3
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    return v0
-
-    :cond_0
-    and-int/lit8 v0, v0, 0x7f
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    if-ltz v1, :cond_1
-
-    shl-int/lit8 v1, v1, 0x7
-
-    :goto_0
-    or-int/2addr v0, v1
-
-    return v0
-
-    :cond_1
-    and-int/lit8 v1, v1, 0x7f
-
-    shl-int/lit8 v1, v1, 0x7
-
-    or-int/2addr v0, v1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    if-ltz v1, :cond_2
-
-    shl-int/lit8 v1, v1, 0xe
-
-    goto :goto_0
-
-    :cond_2
-    and-int/lit8 v1, v1, 0x7f
-
-    shl-int/lit8 v1, v1, 0xe
-
-    or-int/2addr v0, v1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    if-ltz v1, :cond_3
-
-    shl-int/lit8 v1, v1, 0x15
-
-    goto :goto_0
-
-    :cond_3
-    and-int/lit8 v1, v1, 0x7f
-
-    shl-int/lit8 v1, v1, 0x15
-
-    or-int/2addr v0, v1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v1
-
-    shl-int/lit8 v2, v1, 0x1c
-
-    or-int/2addr v0, v2
-
-    if-gez v1, :cond_6
-
-    const/4 v1, 0x0
-
-    :goto_1
-    const/4 v2, 0x5
-
-    if-ge v1, v2, :cond_5
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v2
-
-    if-ltz v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    new-instance v0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v1, "CodedInputStream encountered a malformed varint."
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_6
-    :goto_2
-    return v0
-.end method
-
-.method public final q()J
-    .locals 6
-
-    const/4 v0, 0x0
-
-    const-wide/16 v1, 0x0
-
-    :goto_0
-    const/16 v3, 0x40
-
-    if-ge v0, v3, :cond_1
-
-    invoke-virtual {p0}, Lgd3;->l()B
-
-    move-result v3
-
-    and-int/lit8 v4, v3, 0x7f
-
-    int-to-long v4, v4
-
-    shl-long/2addr v4, v0
-
-    or-long/2addr v1, v4
-
-    and-int/lit16 v3, v3, 0x80
-
-    if-nez v3, :cond_0
-
-    return-wide v1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x7
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v1, "CodedInputStream encountered a malformed varint."
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final r()Ljava/lang/String;
-    .locals 5
-
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result v0
-
-    iget v1, p0, Lgd3;->c:I
-
-    iget v2, p0, Lgd3;->e:I
-
-    sub-int/2addr v1, v2
-
-    if-gt v0, v1, :cond_0
-
-    if-lez v0, :cond_0
-
-    new-instance v1, Ljava/lang/String;
-
-    iget-object v3, p0, Lgd3;->a:[B
-
-    sget-object v4, Lkp7;->a:Ljava/nio/charset/Charset;
-
-    invoke-direct {v1, v3, v2, v0, v4}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
-
-    iget v2, p0, Lgd3;->e:I
-
-    add-int/2addr v2, v0
-
-    iput v2, p0, Lgd3;->e:I
-
-    return-object v1
-
-    :cond_0
-    new-instance v1, Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lgd3;->m(I)[B
-
-    move-result-object v0
-
-    sget-object v2, Lkp7;->a:Ljava/nio/charset/Charset;
-
-    invoke-direct {v1, v0, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    return-object v1
-.end method
-
-.method public final s()I
-    .locals 2
-
-    iget v0, p0, Lgd3;->e:I
-
-    iget v1, p0, Lgd3;->c:I
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lgd3;->f:I
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lgd3;->f:I
-
-    if-eqz v0, :cond_1
-
-    return v0
-
-    :cond_1
-    new-instance v0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v1, "Protocol message contained an invalid tag (zero)."
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final t(I)V
-    .locals 4
-
-    iget v0, p0, Lgd3;->e:I
-
-    iget v1, p0, Lgd3;->b:I
-
-    sub-int/2addr v0, v1
-
-    if-gt p1, v0, :cond_1
-
-    if-ltz p1, :cond_0
-
-    add-int/2addr v1, p1
-
-    iput v1, p0, Lgd3;->e:I
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Bad position "
-
-    invoke-static {p1, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v2, "Position "
-
-    const-string v3, " is beyond current "
-
-    invoke-static {p1, v2, v3}, Lho7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v2, p0, Lgd3;->e:I
-
-    sub-int/2addr v2, v1
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final u(I)Z
-    .locals 4
-
-    and-int/lit8 v0, p1, 0x7
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_6
-
-    if-eq v0, v1, :cond_5
-
-    const/4 v2, 0x2
-
-    if-eq v0, v2, :cond_4
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 p1, 0x5
-
-    if-ne v0, p1, :cond_0
-
-    invoke-virtual {p0}, Lgd3;->n()I
-
-    return v1
-
-    :cond_0
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v0, "Protocol message tag had invalid wire type."
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/4 p1, 0x0
 
     return p1
 
-    :cond_2
-    invoke-virtual {p0}, Lgd3;->s()I
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Class;->isPrimitive()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, v0}, Lgd3;->u(I)Z
+    invoke-static {v1}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_2
+    invoke-static {v0}, Li2j;->b(La38;)Ljava/lang/Class;
 
-    :cond_3
-    ushr-int/2addr p1, v3
+    move-result-object v1
 
-    shl-int/2addr p1, v3
-
-    or-int/2addr p1, v2
-
-    invoke-virtual {p0, p1}, Lgd3;->a(I)V
-
-    return v1
-
-    :cond_4
-    invoke-virtual {p0}, Lgd3;->p()I
+    :cond_1
+    invoke-virtual {v1, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lgd3;->v(I)V
-
-    return v1
-
-    :cond_5
-    invoke-virtual {p0}, Lgd3;->o()J
-
-    return v1
-
-    :cond_6
-    invoke-virtual {p0}, Lgd3;->p()I
-
-    return v1
+    return p1
 .end method
 
-.method public final v(I)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-ltz p1, :cond_2
+    instance-of v0, p1, Lgd3;
 
-    iget v0, p0, Lgd3;->e:I
+    if-eqz v0, :cond_0
 
-    add-int v1, v0, p1
+    invoke-static {p0}, Li2j;->b(La38;)Ljava/lang/Class;
 
-    iget v2, p0, Lgd3;->g:I
+    move-result-object v0
 
-    if-gt v1, v2, :cond_1
+    check-cast p1, La38;
 
-    iget v2, p0, Lgd3;->c:I
+    invoke-static {p1}, Li2j;->b(La38;)Ljava/lang/Class;
 
-    sub-int/2addr v2, v0
+    move-result-object p1
 
-    if-gt p1, v2, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput v1, p0, Lgd3;->e:I
+    move-result p1
 
-    return-void
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
+.end method
 
-    throw p1
+.method public final hashCode()I
+    .locals 1
 
-    :cond_1
-    sub-int/2addr v2, v0
+    invoke-static {p0}, Li2j;->b(La38;)Ljava/lang/Class;
 
-    invoke-virtual {p0, v2}, Lgd3;->v(I)V
+    move-result-object v0
 
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p1
+    move-result v0
 
-    throw p1
+    return v0
+.end method
 
-    :cond_2
-    new-instance p1, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const-string v0, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    throw p1
+    iget-object v1, p0, Lgd3;->a:Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " (Kotlin reflection is not available)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

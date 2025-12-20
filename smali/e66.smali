@@ -1,80 +1,304 @@
-.class public final Le66;
-.super Ldtf;
+.class public Le66;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lmje;
 
 
 # instance fields
-.field public final synthetic X:Lfz1;
+.field public final synthetic a:I
 
-.field public final synthetic o:Lcb8;
+.field public final b:J
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcb8;Lfz1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 2
 
-    iput-object p1, p0, Le66;->o:Lcb8;
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Le66;->X:Lfz1;
+    iput v0, p0, Le66;->a:I
 
-    const/4 p1, 0x2
+    const-wide/16 v0, 0x0
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 4
+    invoke-direct {p0, p1, p2, v0, v1}, Le66;-><init>(JJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Le66;->a:I
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-wide p1, p0, Le66;->b:J
+
+    .line 7
+    new-instance p1, Lkje;
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p2, p3, v0
+
+    if-nez p2, :cond_0
+
+    .line 8
+    sget-object p2, Lqje;->c:Lqje;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, Lqje;
+
+    invoke-direct {p2, v0, v1, p3, p4}, Lqje;-><init>(JJ)V
+
+    .line 9
+    :goto_0
+    invoke-direct {p1, p2, p2}, Lkje;-><init>(Lqje;Lqje;)V
+
+    .line 10
+    iput-object p1, p0, Le66;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lf66;J)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Le66;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Le66;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-wide p2, p0, Le66;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le66;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le66;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Le66;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Le66;
-
-    iget-object v0, p0, Le66;->o:Lcb8;
-
-    iget-object v1, p0, Le66;->X:Lfz1;
-
-    invoke-direct {p1, v0, v1, p2}, Le66;-><init>(Lcb8;Lfz1;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c()Z
     .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget v0, p0, Le66;->a:I
 
-    iget-object p1, p0, Le66;->o:Lcb8;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Le66;->X:Lfz1;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcb8;->f(Lwta;)V
+    return v0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    :pswitch_0
+    const/4 v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(J)Lkje;
+    .locals 13
+
+    iget v0, p0, Le66;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Le66;->c:Ljava/lang/Object;
+
+    check-cast p1, Lkje;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Le66;->c:Ljava/lang/Object;
+
+    check-cast v0, Lf66;
+
+    iget-object v1, v0, Lf66;->l:Ljava/lang/Object;
+
+    check-cast v1, Lz39;
+
+    invoke-static {v1}, Ln5j;->e(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lf66;->l:Ljava/lang/Object;
+
+    check-cast v1, Lz39;
+
+    iget-object v2, v1, Lz39;->c:Ljava/lang/Object;
+
+    check-cast v2, [J
+
+    iget-object v1, v1, Lz39;->b:Ljava/lang/Object;
+
+    check-cast v1, [J
+
+    iget v3, v0, Lf66;->f:I
+
+    int-to-long v3, v3
+
+    mul-long/2addr v3, p1
+
+    const-wide/32 v5, 0xf4240
+
+    div-long v7, v3, v5
+
+    iget-wide v3, v0, Lf66;->k:J
+
+    const-wide/16 v9, 0x1
+
+    sub-long v11, v3, v9
+
+    const-wide/16 v9, 0x0
+
+    invoke-static/range {v7 .. v12}, Loah;->j(JJJ)J
+
+    move-result-wide v3
+
+    const/4 v7, 0x0
+
+    invoke-static {v2, v3, v4, v7}, Loah;->e([JJZ)I
+
+    move-result v3
+
+    const-wide/16 v7, 0x0
+
+    const/4 v4, -0x1
+
+    if-ne v3, v4, :cond_0
+
+    move-wide v9, v7
+
+    goto :goto_0
+
+    :cond_0
+    aget-wide v9, v2, v3
+
+    :goto_0
+    if-ne v3, v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    aget-wide v7, v1, v3
+
+    :goto_1
+    mul-long/2addr v9, v5
+
+    iget v0, v0, Lf66;->f:I
+
+    int-to-long v11, v0
+
+    div-long/2addr v9, v11
+
+    iget-wide v11, p0, Le66;->b:J
+
+    add-long/2addr v7, v11
+
+    new-instance v4, Lqje;
+
+    invoke-direct {v4, v9, v10, v7, v8}, Lqje;-><init>(JJ)V
+
+    cmp-long p1, v9, p1
+
+    if-eqz p1, :cond_3
+
+    array-length p1, v2
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-ne v3, p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    aget-wide p1, v2, v3
+
+    aget-wide v2, v1, v3
+
+    mul-long/2addr p1, v5
+
+    int-to-long v0, v0
+
+    div-long/2addr p1, v0
+
+    add-long/2addr v11, v2
+
+    new-instance v0, Lqje;
+
+    invoke-direct {v0, p1, p2, v11, v12}, Lqje;-><init>(JJ)V
+
+    new-instance p1, Lkje;
+
+    invoke-direct {p1, v4, v0}, Lkje;-><init>(Lqje;Lqje;)V
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    new-instance p1, Lkje;
+
+    invoke-direct {p1, v4, v4}, Lkje;-><init>(Lqje;Lqje;)V
+
+    :goto_3
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget v0, p0, Le66;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v0, p0, Le66;->b:J
+
+    return-wide v0
+
+    :pswitch_0
+    iget-object v0, p0, Le66;->c:Ljava/lang/Object;
+
+    check-cast v0, Lf66;
+
+    invoke-virtual {v0}, Lf66;->c()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

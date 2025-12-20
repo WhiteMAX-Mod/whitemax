@@ -1,73 +1,55 @@
 .class public final Ld17;
-.super Lh17;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ld17;
+# instance fields
+.field public X:Ljava/io/Serializable;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lg17;
+
+.field public d:Lg17;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lg17;Ll84;)V
+    .locals 0
 
-    new-instance v0, Ld17;
+    iput-object p1, p0, Ld17;->Z:Lg17;
 
-    sget v1, Lk1b;->p:I
-
-    new-instance v2, Ln5g;
-
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
-
-    sget v1, Lmvd;->K:I
-
-    new-instance v3, Ln5g;
-
-    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lh17;-><init>(Ln5g;Ln5g;)V
-
-    sput-object v0, Ld17;->c:Ld17;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ld17;->Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ld17;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Ld17;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Ld17;->s0:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Ld17;->Z:Lg17;
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-static {p1, v0, p0}, Lg17;->a(Lg17;Ljava/lang/String;Ll84;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, -0x52663c62
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "AwaitingNetwork"
-
-    return-object v0
+    return-object p1
 .end method

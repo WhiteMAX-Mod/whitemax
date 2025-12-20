@@ -1,44 +1,48 @@
 .class public final Lmdb;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
+.super Ll84;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public final synthetic X:Lv0a;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;)V
+.method public constructor <init>(Lv0a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmdb;->X:Lv0a;
 
-    iput-object p1, p0, Lmdb;->a:Lk18;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;)Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lldb;
+    iput-object p1, p0, Lmdb;->d:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lmdb;->o:I
 
-    invoke-direct {v0, p0, p1, v1}, Lldb;-><init>(Lmdb;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lkotlin/coroutines/Continuation;)V
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lbd5;->a:Lbd5;
+    or-int/2addr p1, v0
 
-    invoke-static {p1, v0}, Lsvi;->g(Lx74;Lsm6;)Ljava/lang/Object;
+    iput p1, p0, Lmdb;->o:I
+
+    iget-object p1, p0, Lmdb;->X:Lv0a;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lv0a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;
 
     return-object p1
 .end method

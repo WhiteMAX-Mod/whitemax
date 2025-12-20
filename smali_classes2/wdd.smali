@@ -1,64 +1,104 @@
-.class public final Lwdd;
+.class public abstract Lwdd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lxdd;
 
 
 # static fields
-.field public static final a:Lwdd;
+.field public static oneme_settings_twofa_change_email_title:I = 0x7f130a27
 
+.field public static oneme_settings_twofa_change_password_title:I = 0x7f130a28
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_settings_twofa_check_password_subtitle:I = 0x7f130a29
 
-    new-instance v0, Lwdd;
+.field public static oneme_settings_twofa_check_password_title:I = 0x7f130a2a
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_twofa_configuration_change_email_success:I = 0x7f130a2b
 
-    sput-object v0, Lwdd;->a:Lwdd;
+.field public static oneme_settings_twofa_configuration_change_password_success:I = 0x7f130a2c
 
-    return-void
-.end method
+.field public static oneme_settings_twofa_configuration_description:I = 0x7f130a2d
 
+.field public static oneme_settings_twofa_configuration_disable_success:I = 0x7f130a2e
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_settings_twofa_configuration_disable_warning_negative_action:I = 0x7f130a2f
 
-    const/4 v0, 0x1
+.field public static oneme_settings_twofa_configuration_disable_warning_positive_action:I = 0x7f130a30
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_settings_twofa_configuration_disable_warning_subtitle:I = 0x7f130a31
 
-    return v0
+.field public static oneme_settings_twofa_configuration_disable_warning_title:I = 0x7f130a32
 
-    :cond_0
-    instance-of p1, p1, Lwdd;
+.field public static oneme_settings_twofa_configuration_set_email_success:I = 0x7f130a33
 
-    if-nez p1, :cond_1
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_description:I = 0x7f130a34
 
-    const/4 p1, 0x0
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_email_action:I = 0x7f130a35
 
-    return p1
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_skip_action:I = 0x7f130a36
 
-    :cond_1
-    return v0
-.end method
+.field public static oneme_settings_twofa_creation_email_empty_confirmation_title:I = 0x7f130a37
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_settings_twofa_creation_email_hint:I = 0x7f130a38
 
-    const v0, 0x18d35279
+.field public static oneme_settings_twofa_creation_email_title:I = 0x7f130a39
 
-    return v0
-.end method
+.field public static oneme_settings_twofa_creation_email_verify_resend_code:I = 0x7f130a3a
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static oneme_settings_twofa_creation_email_verify_resend_code_timer:I = 0x7f130a3b
 
-    const-string v0, "Stop"
+.field public static oneme_settings_twofa_creation_email_verify_subtitle:I = 0x7f130a3c
 
-    return-object v0
-.end method
+.field public static oneme_settings_twofa_creation_email_verify_title:I = 0x7f130a3d
+
+.field public static oneme_settings_twofa_creation_hint_input_hint:I = 0x7f130a3e
+
+.field public static oneme_settings_twofa_creation_hint_subtitle:I = 0x7f130a3f
+
+.field public static oneme_settings_twofa_creation_hint_title:I = 0x7f130a40
+
+.field public static oneme_settings_twofa_creation_new_email_description:I = 0x7f130a41
+
+.field public static oneme_settings_twofa_creation_new_email_title:I = 0x7f130a42
+
+.field public static oneme_settings_twofa_creation_new_password_title:I = 0x7f130a43
+
+.field public static oneme_settings_twofa_creation_other_action:I = 0x7f130a44
+
+.field public static oneme_settings_twofa_creation_password_action:I = 0x7f130a45
+
+.field public static oneme_settings_twofa_creation_password_first_hint:I = 0x7f130a46
+
+.field public static oneme_settings_twofa_creation_password_second_hint:I = 0x7f130a47
+
+.field public static oneme_settings_twofa_creation_password_title:I = 0x7f130a48
+
+.field public static oneme_settings_twofa_creation_toolbar_steps:I = 0x7f130a49
+
+.field public static oneme_settings_twofa_delete_user_title:I = 0x7f130a4a
+
+.field public static oneme_settings_twofa_delete_user_undo_delete_action:I = 0x7f130a4b
+
+.field public static oneme_settings_twofa_delete_user_undo_delete_success:I = 0x7f130a4c
+
+.field public static oneme_settings_twofa_disable_password_title:I = 0x7f130a4d
+
+.field public static oneme_settings_twofa_error_passwords_equals:I = 0x7f130a4e
+
+.field public static oneme_settings_twofa_forget_password_action:I = 0x7f130a4f
+
+.field public static oneme_settings_twofa_lost_email_action:I = 0x7f130a50
+
+.field public static oneme_settings_twofa_onboarding_description:I = 0x7f130a51
+
+.field public static oneme_settings_twofa_onboarding_set_password:I = 0x7f130a52
+
+.field public static oneme_settings_twofa_onboarding_success_description:I = 0x7f130a53
+
+.field public static oneme_settings_twofa_onboarding_success_title:I = 0x7f130a54
+
+.field public static oneme_settings_twofa_onboarding_title:I = 0x7f130a55
+
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_action:I = 0x7f130a56
+
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_description:I = 0x7f130a57
+
+.field public static oneme_settings_twofa_restore_delete_user_confirmation_title:I = 0x7f130a58

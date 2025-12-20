@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract k(Lq44;)Ljava/lang/Object;
+.method public abstract a(Lipf;)V
 .end method

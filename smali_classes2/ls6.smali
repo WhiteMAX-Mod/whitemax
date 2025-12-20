@@ -1,47 +1,72 @@
-.class public final Lls6;
-.super Lq44;
+.class public final synthetic Lls6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Los6;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Los6;Lq44;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lls6;->o:Los6;
+    iput p1, p0, Lls6;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lls6;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
-    iput-object p1, p0, Lls6;->d:Ljava/lang/Object;
+    iget v0, p0, Lls6;->a:I
 
-    iget p1, p0, Lls6;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lls6;->b:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lorg/webrtc/SurfaceTextureHelper;
 
-    iput p1, p0, Lls6;->X:I
+    invoke-static {v0, p1}, Lorg/webrtc/SurfaceTextureHelper;->d(Lorg/webrtc/SurfaceTextureHelper;Landroid/graphics/SurfaceTexture;)V
 
-    iget-object p1, p0, Lls6;->o:Los6;
+    return-void
 
-    invoke-virtual {p1, p0}, Los6;->b(Lq44;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object p1, p0, Lls6;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p1, Lo9e;
 
-    return-object p1
+    iget-object p1, p1, Lo9e;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lls6;->b:Ljava/lang/Object;
+
+    check-cast p1, Levd;
+
+    invoke-virtual {p1}, Levd;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

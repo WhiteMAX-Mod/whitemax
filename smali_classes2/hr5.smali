@@ -1,140 +1,117 @@
-.class public final synthetic Lhr5;
+.class public final Lhr5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lqs5;
-
-.field public final synthetic c:Ljava/util/List;
+.field public final b:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqs5;Ljava/util/List;I)V
-    .locals 0
-
-    iput p3, p0, Lhr5;->a:I
-
-    iput-object p1, p0, Lhr5;->b:Lqs5;
-
-    iput-object p2, p0, Lhr5;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public constructor <init>(I)V
     .locals 6
 
-    iget v0, p0, Lhr5;->a:I
+    and-int/lit8 v0, p1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lhr5;->c:Ljava/util/List;
-
-    iget-object v1, p0, Lhr5;->b:Lqs5;
-
-    iget-object v2, v1, Lqs5;->a:Llrd;
-
-    invoke-virtual {v2}, Llrd;->c()V
-
-    :try_start_0
-    const-string v3, "SELECT MAX(`index`) FROM favorite_stickers"
-
-    const/4 v4, 0x0
-
-    invoke-static {v4, v3}, Ldsd;->c(ILjava/lang/String;)Ldsd;
-
-    move-result-object v3
-
-    iget-object v1, v1, Lqs5;->a:Llrd;
-
-    invoke-virtual {v1}, Llrd;->b()V
-
-    invoke-virtual {v1, v3}, Llrd;->n(Lrrf;)Landroid/database/Cursor;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-wide/16 v0, 0x1f4
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    const-wide/16 v0, 0x3e8
+
+    :goto_0
+    and-int/lit8 p1, p1, 0x4
+
+    if-eqz p1, :cond_1
+
+    const/high16 p1, 0x3fc00000    # 1.5f
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    :try_start_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v3}, Ldsd;->y()V
-
-    add-int/lit8 v4, v4, 0x1
-
-    invoke-static {v4, v0}, Lqs5;->b(ILjava/util/List;)Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Llrd;->q()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-virtual {v2}, Llrd;->k()V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_2
+    :cond_1
+    const/high16 p1, 0x40000000    # 2.0f
 
     :goto_1
-    :try_start_3
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v3}, Ldsd;->y()V
+    iput-wide v0, p0, Lhr5;->a:J
 
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    iput p1, p0, Lhr5;->b:F
 
-    :goto_2
-    invoke-virtual {v2}, Llrd;->k()V
+    const-wide/16 v2, 0x1
 
-    throw v0
+    cmp-long v2, v0, v2
 
-    :pswitch_0
-    iget-object v0, p0, Lhr5;->b:Lqs5;
+    if-ltz v2, :cond_5
 
-    iget-object v1, p0, Lhr5;->c:Ljava/util/List;
+    const-wide/16 v2, 0x7530
 
-    invoke-virtual {v0, v1}, Lqs5;->a(Ljava/util/List;)V
+    cmp-long v0, v2, v0
+
+    if-ltz v0, :cond_4
+
+    float-to-double v0, p1
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double p1, v0, v2
+
+    if-ltz p1, :cond_3
+
+    const p1, 0x3e4ccccd    # 0.2f
+
+    float-to-double v0, p1
+
+    const-wide/16 v4, 0x0
+
+    cmpg-double p1, v0, v4
+
+    if-ltz p1, :cond_2
+
+    cmpg-double p1, v2, v0
+
+    if-lez p1, :cond_2
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Range is invalid. Must be greater or equal 0.0 and lower than 1.0."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Multiplier is invalid. Must be greater than 1.0."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "maxInterval is invalid. Must be greater or equal than Interval."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Interval is invalid. Must be greater than 1."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

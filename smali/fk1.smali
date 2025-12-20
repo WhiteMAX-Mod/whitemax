@@ -1,24 +1,28 @@
-.class public final synthetic Lfk1;
+.class public final Lfk1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lf76;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lgk1;
+.field public final synthetic b:Lf76;
+
+.field public final synthetic c:Ld68;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgk1;I)V
+.method public synthetic constructor <init>(Lf76;Ld68;I)V
     .locals 0
 
-    iput p2, p0, Lfk1;->a:I
+    iput p3, p0, Lfk1;->a:I
 
-    iput-object p1, p0, Lfk1;->b:Lgk1;
+    iput-object p1, p0, Lfk1;->b:Lf76;
+
+    iput-object p2, p0, Lfk1;->c:Ld68;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,39 +31,65 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lfk1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lfk1;->b:Lgk1;
+    new-instance v0, Lr51;
 
-    invoke-static {v0}, Lgk1;->v(Lgk1;)Landroid/graphics/drawable/LayerDrawable;
+    iget-object v1, p0, Lfk1;->c:Ld68;
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    return-object v0
+    invoke-direct {v0, p1, v1, v2}, Lr51;-><init>(Lh76;Ld68;I)V
+
+    iget-object p1, p0, Lfk1;->b:Lf76;
+
+    invoke-interface {p1, v0, p2}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    sget v0, Lyud;->O0:I
+    new-instance v0, Lr51;
 
-    iget-object v1, p0, Lfk1;->b:Lgk1;
+    iget-object v1, p0, Lfk1;->c:Ld68;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v2, 0x1
 
-    move-result-object v1
+    invoke-direct {v0, p1, v1, v2}, Lr51;-><init>(Lh76;Ld68;I)V
 
-    invoke-static {v1, v0}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lfk1;->b:Lf76;
 
-    move-result-object v0
+    invoke-interface {p1, v0, p2}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    move-result-object p1
 
-    move-result-object v0
+    sget-object p2, Lbc4;->a:Lbc4;
 
-    return-object v0
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    :goto_1
+    return-object p1
 
     nop
 

@@ -1,36 +1,17 @@
-.class public final Lp7e;
+.class public interface abstract Lp7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
-
-
-# instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/e;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/e;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp7e;->a:Landroidx/appcompat/widget/e;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 0
+.method public abstract b()V
+.end method
 
-    iget-object p1, p0, Lp7e;->a:Landroidx/appcompat/widget/e;
+.method public abstract e()Z
+.end method
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/e;->onSubmitQuery()V
+.method public abstract h(J)I
+.end method
 
-    const/4 p1, 0x1
-
-    return p1
+.method public abstract n(Ljfc;Lol4;I)I
 .end method

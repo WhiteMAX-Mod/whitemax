@@ -1,8 +1,21 @@
-.class public abstract Li0d;
-.super Ljava/lang/Object;
+.class public final Li0d;
+.super Lzp;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_stickers_search_stickers_list:I = 0x7f0a087d
+.field public static final a:Li0d;
 
-.field public static oneme_stickers_search_toolbar:I = 0x7f0a087e
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Li0d;
+
+    invoke-direct {v0}, Lzp;-><init>()V
+
+    sput-object v0, Li0d;->a:Li0d;
+
+    return-void
+.end method

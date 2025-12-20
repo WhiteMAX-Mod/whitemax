@@ -1,209 +1,249 @@
 .class public final Lh61;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Li61;
 
 
 # instance fields
-.field public final a:Ln5g;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public b:Ljava/lang/Object;
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ln5g;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 6
 
-    sget v0, Lk0b;->u:I
+    iput p2, p0, Lh61;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p2, :pswitch_data_0
 
-    iput-object p1, p0, Lh61;->a:Ln5g;
+    const/4 p2, 0x0
 
-    sget p1, Lj0b;->F:I
+    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput p1, p0, Lh61;->b:I
+    new-instance v0, Lv41;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lv41;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lh61;->b:Ljava/lang/Object;
+
+    sget v1, Lm5d;->ic_call_speaker_24:I
+
+    invoke-static {p1, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v3, Ldc3;->s0:Lole;
+
+    invoke-virtual {v3, p0}, Lole;->q(Landroid/view/View;)Lrbb;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lrbb;->c:Lplb;
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    const/4 v5, -0x1
+
+    invoke-direct {v2, v5, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iput-object v1, p0, Lh61;->c:Ljava/lang/Object;
+
+    sget v1, Lx4e;->f0:I
+
+    invoke-static {p1, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    new-instance v1, Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-virtual {v3, p0}, Lole;->q(Landroid/view/View;)Lrbb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lrbb;->c:Lplb;
+
+    invoke-direct {v1, v5, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iput-object p1, p0, Lh61;->d:Ljava/lang/Object;
+
+    new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    invoke-direct {v1, v0, p2, p2}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    invoke-direct {p1, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p0}, Lole;->q(Landroid/view/View;)Lrbb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lrbb;->c:Lplb;
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->l:I
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public onDraw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Lh61;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    :cond_0
-    instance-of v1, p1, Lh61;
+    return-void
 
-    if-nez v1, :cond_1
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh61;
-
-    iget-object v1, p0, Lh61;->a:Ln5g;
-
-    iget-object p1, p1, Lh61;->a:Ln5g;
-
-    invoke-virtual {v1, p1}, Ln5g;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    sget-wide v1, Lk0b;->p:J
-
-    cmp-long p1, v1, v1
-
-    if-eqz p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lk0b;->p:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Ls5g;
-    .locals 1
-
-    iget-object v0, p0, Lh61;->a:Ln5g;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lh61;->a:Ln5g;
-
-    iget v0, v0, Ln5g;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    sget-wide v2, Lk0b;->p:J
-
-    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Laz1;->v(I)I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    return v1
-.end method
+    move-result v2
 
-.method public final m()I
-    .locals 1
+    sub-int/2addr v1, v2
 
-    iget v0, p0, Lh61;->b:I
+    sub-int/2addr v1, v0
 
-    return v0
-.end method
+    div-int/lit8 v1, v1, 0x2
 
-.method public final t()I
-    .locals 1
+    iget-object v2, p0, Lh61;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    return v0
-.end method
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result v3
 
-    sget-wide v0, Lk0b;->p:J
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result v4
 
-    const-string v3, "Header(title="
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v5
 
-    iget-object v3, p0, Lh61;->a:Ln5g;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v6
 
-    const-string v3, ", sectionId=0, itemId="
+    sub-int/2addr v5, v6
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v6
 
-    const-string v0, ", sectionItemType="
+    sub-int/2addr v6, v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-int/2addr v6, v1
 
-    const/4 v0, 0x4
+    invoke-virtual {v2, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-static {v0}, Lctd;->v(I)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    move-result-object v0
+    iget-object v2, p0, Lh61;->d:Ljava/lang/Object;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    const-string v0, ")"
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    move-result-object v0
+    move-result v4
 
-    return-object v0
+    add-int/2addr v4, v1
+
+    add-int/2addr v4, v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v5
+
+    sub-int/2addr v1, v5
+
+    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

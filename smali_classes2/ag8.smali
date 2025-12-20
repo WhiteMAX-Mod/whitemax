@@ -1,30 +1,26 @@
-.class public final enum Lag8;
-.super Ljava/lang/Enum;
+.class public final Lag8;
+.super Lbg8;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lag8;
-
-.field public static final enum Y:Lag8;
-
-.field public static final enum Z:Lag8;
-
-.field public static final enum c:Lag8;
-
-.field public static final enum d:Lag8;
-
-.field public static final enum o:Lag8;
-
-.field public static final enum s0:Lag8;
-
-.field public static final synthetic t0:[Lag8;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
 
-.field public final b:Llg8;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:J
 
 
 # direct methods
@@ -33,150 +29,228 @@
 
     new-instance v0, Lag8;
 
-    const/4 v1, 0x0
+    const-wide/16 v7, 0x7d0
 
-    const-string v2, "send"
+    const/4 v9, 0x0
 
-    const-string v3, "SEND"
+    const-wide/32 v1, 0xc350
 
-    invoke-direct {v0, v3, v1, v2}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const-wide/32 v3, 0xc350
 
-    sput-object v0, Lag8;->c:Lag8;
+    const-wide/16 v5, 0x3e8
 
-    new-instance v1, Lag8;
-
-    const-string v2, "EXCEPTION"
-
-    const/4 v3, 0x1
-
-    const-string v4, "exception"
-
-    sget-object v5, Llg8;->Y:Llg8;
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;Llg8;)V
-
-    sput-object v1, Lag8;->d:Lag8;
-
-    new-instance v2, Lag8;
-
-    const/4 v3, 0x2
-
-    const-string v4, "send_ack"
-
-    const-string v6, "SEND_ACK"
-
-    invoke-direct {v2, v6, v3, v4}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lag8;->o:Lag8;
-
-    new-instance v3, Lag8;
-
-    const/4 v4, 0x3
-
-    const-string v6, "queue"
-
-    const-string v7, "QUEUE"
-
-    invoke-direct {v3, v7, v4, v6}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lag8;->X:Lag8;
-
-    new-instance v4, Lag8;
-
-    const/4 v6, 0x4
-
-    const-string v7, "error"
-
-    const-string v8, "ERROR"
-
-    invoke-direct {v4, v8, v6, v7, v5}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;Llg8;)V
-
-    sput-object v4, Lag8;->Y:Lag8;
-
-    new-instance v5, Lag8;
-
-    const/4 v6, 0x5
-
-    const-string v7, "receive"
-
-    const-string v8, "RECEIVE"
-
-    invoke-direct {v5, v8, v6, v7}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lag8;->Z:Lag8;
-
-    new-instance v6, Lag8;
-
-    const/4 v7, 0x6
-
-    const-string v8, "notif"
-
-    const-string v9, "NOTIF"
-
-    invoke-direct {v6, v9, v7, v8}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lag8;->s0:Lag8;
-
-    filled-new-array/range {v0 .. v6}, [Lag8;
-
-    move-result-object v0
-
-    sput-object v0, Lag8;->t0:[Lag8;
+    invoke-direct/range {v0 .. v9}, Lag8;-><init>(JJJJZ)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 1
-
-    .line 4
-    sget-object v0, Llg8;->d:Llg8;
-
-    .line 5
-    invoke-direct {p0, p1, p2, p3, v0}, Lag8;-><init>(Ljava/lang/String;ILjava/lang/String;Llg8;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Llg8;)V
+.method public constructor <init>(JJJJZ)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p3, p0, Lag8;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lag8;->a:J
 
-    .line 3
-    iput-object p4, p0, Lag8;->b:Llg8;
+    iput-wide p3, p0, Lag8;->b:J
+
+    iput-wide p5, p0, Lag8;->c:J
+
+    iput-wide p7, p0, Lag8;->d:J
+
+    iput-boolean p9, p0, Lag8;->e:Z
+
+    invoke-static {p1, p2}, Lqah;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lag8;->f:J
+
+    invoke-static {p3, p4}, Lqah;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lag8;->g:J
+
+    invoke-static {p5, p6}, Lqah;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lag8;->h:J
+
+    invoke-static {p7, p8}, Lqah;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lag8;->i:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lag8;
-    .locals 1
 
-    const-class v0, Lag8;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lag8;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lag8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lag8;
+
+    iget-wide v3, p0, Lag8;->a:J
+
+    iget-wide v5, p1, Lag8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lag8;->b:J
+
+    iget-wide v5, p1, Lag8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lag8;->c:J
+
+    iget-wide v5, p1, Lag8;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lag8;->d:J
+
+    iget-wide v5, p1, Lag8;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lag8;->e:Z
+
+    iget-boolean p1, p1, Lag8;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public static values()[Lag8;
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    sget-object v0, Lag8;->t0:[Lag8;
+    iget-wide v0, p0, Lag8;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lag8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lag8;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lag8;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lag8;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Default(minBufferMs="
+
+    const-string v1, ", maxBufferMs="
+
+    iget-wide v2, p0, Lag8;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lag8;
+    iget-wide v1, p0, Lag8;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bufferForPlaybackMs="
+
+    const-string v2, ", bufferForPlaybackAfterRebufferMs="
+
+    iget-wide v3, p0, Lag8;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-wide v1, p0, Lag8;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", prioritizeTimeOverSizeThresholds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lag8;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

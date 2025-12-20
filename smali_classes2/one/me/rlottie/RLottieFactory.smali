@@ -659,7 +659,7 @@
 
     .line 9
     :try_start_0
-    sget-object v0, Lvca;->a:Ljava/lang/String;
+    sget-object v0, Lcja;->a:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -669,7 +669,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lvca;->c(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {p0}, Lcja;->c(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
@@ -1035,7 +1035,7 @@
     if-eqz p1, :cond_0
 
     .line 10
-    new-instance v0, Lzp0;
+    new-instance v0, Lzq0;
 
     .line 11
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -1060,7 +1060,7 @@
 
     .line 12
     :goto_1
-    invoke-direct/range {v1 .. v6}, Lone/me/rlottie/RLottieDrawable;-><init>(Ljava/io/File;IILzp0;Z)V
+    invoke-direct/range {v1 .. v6}, Lone/me/rlottie/RLottieDrawable;-><init>(Ljava/io/File;IILzq0;Z)V
 
     .line 13
     iput-boolean p1, v1, Lone/me/rlottie/RLottieDrawable;->h1:Z
@@ -2357,12 +2357,12 @@
     const/4 v1, 0x1
 
     .line 18
-    invoke-static {p0, v1, p5}, Luca;->a(Ljava/lang/String;IZ)Lsca;
+    invoke-static {p0, v1, p5}, Lbja;->a(Ljava/lang/String;IZ)Lzia;
 
     move-result-object v1
 
     .line 19
-    invoke-virtual {v1, v0}, Lsca;->e(Ltca;)V
+    invoke-virtual {v1, v0}, Lzia;->e(Laja;)V
 
     return-object v0
 .end method

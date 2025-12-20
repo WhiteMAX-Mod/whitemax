@@ -4,107 +4,121 @@
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final a:Lwo6;
 
 
 # direct methods
-.method public static a(Landroid/os/Bundle;Ljava/util/HashSet;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-string v0, "k5j"
+    new-instance v0, Lwo6;
 
-    const-string v1, "onCreate"
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    new-array v1, v1, [Ljava/lang/String;
 
-    const-string v0, "ru.ok.tamtam.extra.EXTRA_UNHANDLED_EVENTS"
+    const-string v2, "GoogleSignInCommon"
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    invoke-direct {v0, v2, v1}, Lwo6;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
 
-    move-result v1
+    sput-object v0, Lk5j;->a:Lwo6;
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p1}, Ljava/util/HashSet;->clear()V
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
-
-    :cond_0
     return-void
 .end method
 
-.method public static final b()Lkmg;
-    .locals 10
+.method public static a(Landroid/content/Context;)V
+    .locals 2
 
-    sget v0, Lr4d;->oneme_settings_twofa_restore_delete_user_confirmation_title:I
+    invoke-static {p0}, Ldjj;->v(Landroid/content/Context;)Ldjj;
 
-    new-instance v1, Ln5g;
+    move-result-object p0
 
-    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+    invoke-virtual {p0}, Ldjj;->e()V
 
-    sget v0, Lr4d;->oneme_settings_twofa_restore_delete_user_confirmation_description:I
+    sget-object p0, Lioi;->b:Ljava/util/Set;
 
-    new-instance v2, Ln5g;
+    monitor-enter p0
 
-    invoke-direct {v2, v0}, Ln5g;-><init>(I)V
+    :try_start_0
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    new-instance v3, Lpq3;
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    sget v4, Le0d;->oneme_settings_twofa_delete_user_confirmation_action:I
+    move-result-object p0
 
-    sget v0, Lr4d;->oneme_settings_twofa_restore_delete_user_confirmation_action:I
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v5, Ln5g;
+    move-result v0
 
-    invoke-direct {v5, v0}, Ln5g;-><init>(I)V
+    if-nez v0, :cond_1
 
-    const/4 v8, 0x3
+    sget-object v0, Lk07;->A0:Ljava/lang/Object;
 
-    const/4 v9, 0x1
+    monitor-enter v0
 
-    const/4 v6, 0x3
+    :try_start_1
+    sget-object p0, Lk07;->B0:Lk07;
 
-    const/4 v7, 0x1
+    if-eqz p0, :cond_0
 
-    invoke-direct/range {v3 .. v9}, Lpq3;-><init>(ILs5g;IZII)V
+    iget-object v1, p0, Lk07;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance v0, Lpq3;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    sget v4, Le0d;->oneme_settings_twofa_delete_user_confirmation_skip:I
+    iget-object p0, p0, Lk07;->w0:Lz7a;
 
-    sget v5, Lmvd;->p:I
+    const/16 v1, 0xa
 
-    new-instance v6, Ln5g;
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    invoke-direct {v6, v5}, Ln5g;-><init>(I)V
+    move-result-object v1
 
-    const/4 v5, 0x2
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    const/16 v7, 0x20
+    goto :goto_0
 
-    invoke-direct {v0, v4, v6, v5, v7}, Lpq3;-><init>(ILs5g;II)V
+    :catchall_0
+    move-exception p0
 
-    filled-new-array {v3, v0}, [Lpq3;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+    return-void
 
-    move-result-object v0
+    :goto_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-instance v3, Lkmg;
+    throw p0
 
-    sget-object v4, Lf1e;->V1:Lf1e;
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v3, v1, v2, v0, v4}, Lkmg;-><init>(Ln5g;Ln5g;Ljava/util/List;Lf1e;)V
+    move-result-object p0
 
-    return-object v3
+    check-cast p0, Lioi;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
 .end method

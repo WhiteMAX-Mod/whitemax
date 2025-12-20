@@ -1,182 +1,114 @@
-.class public final Lvg;
+.class public final synthetic Lvg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic b:Landroid/view/View;
 
-.field public final synthetic c:F
-
-.field public final synthetic d:F
-
-.field public final synthetic e:Z
-
-.field public final synthetic f:Lem6;
+.field public final synthetic c:Log;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZLem6;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;Log;I)V
+    .locals 0
 
-    sget v0, Lj0b;->a:I
+    iput p3, p0, Lvg;->a:I
+
+    iput-object p1, p0, Lvg;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lvg;->c:Log;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvg;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lvg;->b:Ljava/lang/String;
-
-    iput p3, p0, Lvg;->c:F
-
-    iput p4, p0, Lvg;->d:F
-
-    iput-boolean p5, p0, Lvg;->e:Z
-
-    iput-object p6, p0, Lvg;->f:Lem6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    iget p1, p0, Lvg;->d:F
+    iget p1, p0, Lvg;->a:I
 
-    iget-object v0, p0, Lvg;->a:Landroid/view/View;
+    iget-object v0, p0, Lvg;->c:Log;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    iget-object v1, p0, Lvg;->b:Landroid/view/View;
 
-    iget-boolean p1, p0, Lvg;->e:Z
+    packed-switch p1, :pswitch_data_0
 
-    const/4 v1, 0x0
+    sget p1, Lns1;->w0:I
 
-    if-eqz p1, :cond_0
+    new-instance p1, Landroid/graphics/Rect;
 
-    move p1, v1
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
-    goto :goto_0
+    move-result-object v2
 
-    :cond_0
-    const/16 p1, 0x8
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v2
 
-    iget-object p1, p0, Lvg;->f:Lem6;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    if-eqz p1, :cond_2
+    const/high16 v3, 0x41800000    # 16.0f
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    mul-float/2addr v2, v3
 
-    move-result v2
+    float-to-int v2, v2
 
-    if-nez v2, :cond_1
+    neg-int v2, v2
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result v4
 
-    move-result-object v1
+    iget v0, v0, Log;->a:I
 
-    invoke-interface {p1, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    :cond_2
-    sget p1, Lj0b;->m:I
+    invoke-direct {p1, v5, v2, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    const/4 v1, 0x0
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    move-result-object v0
 
-    iget p1, p0, Lvg;->d:F
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    iget-object v0, p0, Lvg;->a:Landroid/view/View;
+    mul-float/2addr v0, v3
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean p1, p0, Lvg;->e:Z
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p1, 0x8
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lvg;->f:Lem6;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget p1, Lj0b;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    invoke-static {v1, p1, v0}, Lgsh;->b(Landroid/view/View;Landroid/graphics/Rect;F)V
 
     return-void
-.end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    :pswitch_0
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    sget p1, Lj0b;->m:I
+    iget v0, v0, Log;->a:I
 
-    iget-object v0, p0, Lvg;->b:Ljava/lang/String;
+    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    iget-object v1, p0, Lvg;->a:Landroid/view/View;
-
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget p1, p0, Lvg;->c:F
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

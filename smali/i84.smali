@@ -1,97 +1,35 @@
-.class public final enum Li84;
-.super Ljava/lang/Enum;
+.class public abstract Li84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Li84;
-
-.field public static final enum b:Li84;
-
-.field public static final enum c:Li84;
-
-.field public static final enum d:Li84;
-
-.field public static final synthetic o:[Li84;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+    .locals 0
 
-    new-instance v0, Li84;
-
-    const-string v1, "DEFAULT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Li84;->a:Li84;
-
-    new-instance v1, Li84;
-
-    const-string v2, "LAZY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Li84;->b:Li84;
-
-    new-instance v2, Li84;
-
-    const-string v3, "ATOMIC"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Li84;->c:Li84;
-
-    new-instance v3, Li84;
-
-    const-string v4, "UNDISPATCHED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Li84;->d:Li84;
-
-    filled-new-array {v0, v1, v2, v3}, [Li84;
-
-    move-result-object v0
-
-    sput-object v0, Li84;->o:[Li84;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Li84;
-    .locals 1
-
-    const-class v0, Li84;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object p0
-
-    check-cast p0, Li84;
 
     return-object p0
 .end method
 
-.method public static values()[Li84;
+.method public static b(Landroid/content/Context;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
     .locals 1
 
-    sget-object v0, Li84;->o:[Li84;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
 
-    move-result-object v0
-
-    check-cast v0, [Li84;
-
-    return-object v0
+    return-void
 .end method

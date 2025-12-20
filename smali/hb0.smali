@@ -4,141 +4,90 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:J
-
-.field public final c:Lh90;
+.field public final b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(JJLh90;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lhb0;->a:J
+    if-eqz p1, :cond_0
 
-    iput-wide p3, p0, Lhb0;->b:J
+    iput-object p1, p0, Lhb0;->a:Ljava/lang/String;
 
-    iput-object p5, p0, Lhb0;->c:Lh90;
+    iput-object p2, p0, Lhb0;->b:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-.method public static a(JJLh90;)Lhb0;
-    .locals 10
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p0, v0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-ltz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
 
     :cond_0
-    move v2, v3
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    :goto_0
-    const-string v5, "duration must be positive value."
+    const-string p2, "Null userAgent"
 
-    invoke-static {v5, v2}, Lz5j;->a(Ljava/lang/String;Z)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    cmp-long v0, p2, v0
-
-    if-ltz v0, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    const-string v0, "bytes must be positive value."
-
-    invoke-static {v0, v3}, Lz5j;->a(Ljava/lang/String;Z)V
-
-    new-instance v4, Lhb0;
-
-    move-wide v5, p0
-
-    move-wide v7, p2
-
-    move-object v9, p4
-
-    invoke-direct/range {v4 .. v9}, Lhb0;-><init>(JJLh90;)V
-
-    return-object v4
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lhb0;
+    instance-of v0, p1, Lhb0;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Lhb0;
 
-    iget-wide v3, p0, Lhb0;->a:J
+    iget-object v0, p0, Lhb0;->a:Ljava/lang/String;
 
-    iget-wide v5, p1, Lhb0;->a:J
+    iget-object v1, p1, Lhb0;->a:Ljava/lang/String;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v0
 
-    iget-wide v3, p0, Lhb0;->b:J
+    if-eqz v0, :cond_1
 
-    iget-wide v5, p1, Lhb0;->b:J
+    iget-object v0, p0, Lhb0;->b:Ljava/util/ArrayList;
 
-    cmp-long v1, v3, v5
+    iget-object p1, p1, Lhb0;->b:Ljava/util/ArrayList;
 
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lhb0;->c:Lh90;
-
-    iget-object p1, p1, Lhb0;->c:Lh90;
-
-    invoke-virtual {v1, p1}, Lh90;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    return v0
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    return v2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 2
 
-    iget-wide v0, p0, Lhb0;->a:J
+    iget-object v0, p0, Lhb0;->a:Ljava/lang/String;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -146,21 +95,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Lhb0;->b:J
+    iget-object v1, p0, Lhb0;->b:Ljava/util/ArrayList;
 
-    ushr-long v5, v3, v2
-
-    xor-long v2, v5, v3
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lhb0;->c:Lh90;
-
-    invoke-virtual {v1}, Lh90;->hashCode()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->hashCode()I
 
     move-result v1
 
@@ -170,31 +107,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RecordingStats{recordedDurationNanos="
+    const-string v1, "HeartBeatResult{userAgent="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lhb0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", numBytesRecorded="
+    iget-object v1, p0, Lhb0;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lhb0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioStats="
+    const-string v1, ", usedDates="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lhb0;->c:Lh90;
+    iget-object v1, p0, Lhb0;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

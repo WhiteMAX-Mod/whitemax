@@ -2,248 +2,277 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
 
 # static fields
-.field public static volatile c:Li30;
+.field public static final d:Li30;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:Lll7;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    const/16 v2, 0xa
+
+    const/4 v3, 0x2
+
+    if-lt v0, v1, :cond_1
+
+    new-instance v0, Li30;
+
+    new-instance v1, Lkl7;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v1, v4}, Lqk7;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    :goto_0
+    if-gt v4, v2, :cond_0
+
+    invoke-static {v4}, Lqah;->s(I)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Lqk7;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lkl7;->j()Lll7;
+
+    move-result-object v1
+
+    invoke-direct {v0, v3, v1}, Li30;-><init>(ILjava/util/Set;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Li30;
+
+    invoke-direct {v0, v3, v2}, Li30;-><init>(II)V
+
+    :goto_1
+    sput-object v0, Li30;->d:Li30;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 0
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
     iput p1, p0, Li30;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    .line 9
+    iput p2, p0, Li30;->b:I
+
+    const/4 p1, 0x0
+
+    .line 10
+    iput-object p1, p0, Li30;->c:Lll7;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/Set;)V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance p1, Lh30;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lh30;-><init>(I)V
-
-    const/4 v0, 0x2
+    iput p1, p0, Li30;->a:I
 
     .line 3
-    invoke-static {v0, p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+    invoke-static {p2}, Lll7;->j(Ljava/util/Collection;)Lll7;
 
     move-result-object p1
 
-    iput-object p1, p0, Li30;->b:Ljava/lang/Object;
-
-    return-void
+    iput-object p1, p0, Li30;->c:Lll7;
 
     .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Lrk7;->g()Lz3h;
 
-    return-void
+    move-result-object p1
 
-    .line 5
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x0
 
-    .line 6
-    new-instance p1, Landroid/os/Handler;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    check-cast v0, Ljava/lang/Integer;
 
-    iput-object p1, p0, Li30;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    return-void
+    move-result v0
 
-    nop
+    .line 5
+    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v0
 
-.method public constructor <init>(Lu5i;)V
-    .locals 1
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
 
-    const/4 v0, 0x3
+    move-result p2
 
-    iput v0, p0, Li30;->a:I
+    goto :goto_0
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Li30;->b:Ljava/lang/Object;
+    .line 6
+    :cond_0
+    iput p2, p0, Li30;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Li30;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljava/lang/ThreadLocal;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
+    return v0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    instance-of v1, p1, Li30;
 
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
-
-    return-void
+    return v2
 
     :cond_1
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p1, Li30;
 
-    move-result-object v1
+    iget v1, p0, Li30;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    iget v3, p1, Li30;->a:I
 
-    return-void
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Li30;->b:I
+
+    iget v3, p1, Li30;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Li30;->c:Lll7;
+
+    iget-object p1, p1, Li30;->c:Lll7;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
     iget v0, p0, Li30;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Li30;->b:Ljava/lang/Object;
+    iget v1, p0, Li30;->b:I
 
-    check-cast v0, Lu5i;
+    add-int/2addr v0, v1
 
-    iget-object v0, v0, Lu5i;->b:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast v0, Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Li30;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
+    iget-object v1, p0, Li30;->c:Lll7;
 
     if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Lll7;->hashCode()I
 
     move-result v1
 
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    const/16 v0, 0xf
-
-    if-gt v1, v0, :cond_1
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v0, Lar0;->d:Lar0;
-
-    iget-object v0, v0, Lar0;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     :goto_0
-    invoke-virtual {p0}, Li30;->a()V
+    add-int/2addr v0, v1
 
-    return-void
+    return v0
+.end method
 
-    :goto_1
-    invoke-virtual {p0}, Li30;->a()V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    throw p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    iget-object v0, p0, Li30;->b:Ljava/lang/Object;
+    const-string v1, "AudioProfile[format="
 
-    check-cast v0, Landroid/os/Handler;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget v1, p0, Li30;->a:I
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_2
-    iget-object v0, p0, Li30;->b:Ljava/lang/Object;
+    const-string v1, ", maxChannelCount="
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iget v1, p0, Li30;->b:I
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, ", channelMasks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li30;->c:Lll7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

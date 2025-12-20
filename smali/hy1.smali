@@ -1,192 +1,118 @@
-.class public final synthetic Lhy1;
-.super Ljava/lang/Object;
+.class public final Lhy1;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lly1;
 
-.field public final synthetic b:Liy1;
-
-.field public final synthetic c:Ltu1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liy1;Ltu1;I)V
+.method public constructor <init>(Lly1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lhy1;->a:I
+    iput-object p1, p0, Lhy1;->X:Lly1;
 
-    iput-object p1, p0, Lhy1;->b:Liy1;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lhy1;->c:Ltu1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lhy1;->a:I
+    check-cast p1, Lk61;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, p1, p2}, Lhy1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lhy1;->b:Liy1;
+    move-result-object p1
 
-    iput-boolean v0, v1, Liy1;->b:Z
+    check-cast p1, Lhy1;
 
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    const-string v2, "Camera2CameraControl was updated with new options."
+    invoke-virtual {p1, p2}, Lhy1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    return-object p2
+.end method
 
-    iget-object v2, v1, Liy1;->g:Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    check-cast v2, Ltu1;
+    new-instance v0, Lhy1;
 
-    if-eqz v2, :cond_0
+    iget-object v1, p0, Lhy1;->X:Lly1;
 
-    invoke-virtual {v2, v0}, Ltu1;->d(Ljava/lang/Throwable;)Z
+    invoke-direct {v0, v1, p2}, Lhy1;-><init>(Lly1;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x0
+    iput-object p1, v0, Lhy1;->o:Ljava/lang/Object;
 
-    iput-object v0, v1, Liy1;->g:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lhy1;->c:Ltu1;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object v0, v1, Liy1;->g:Ljava/lang/Object;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-boolean v0, v1, Liy1;->a:Z
+    iget-object p1, p0, Lhy1;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lk61;
 
-    iget-object v0, v1, Liy1;->c:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast v0, Lry1;
+    const-string v1, "Chat info was changed chat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", restart service."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "CallEngineTag"
+
+    invoke-static {v0, p1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lhy1;->X:Lly1;
+
+    iget-object v0, p1, Lly1;->D0:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcr1;
+
+    iget-object p1, p1, Lly1;->d:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Application;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lxtd;
+    invoke-static {p1}, Lcr1;->d(Landroid/content/Context;)V
 
-    const/16 v3, 0x15
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-direct {v2, v3, v0}, Lxtd;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v2}, Lixi;->a(Luu1;)Lwu1;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lwsf;->g(Lha8;)Lha8;
-
-    move-result-object v0
-
-    new-instance v2, Lo3;
-
-    const/16 v3, 0x1d
-
-    invoke-direct {v2, v3, v1}, Lo3;-><init>(ILjava/lang/Object;)V
-
-    iget-object v3, v1, Liy1;->d:Ljava/lang/Object;
-
-    check-cast v3, Lqee;
-
-    invoke-interface {v0, v2, v3}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v1, Liy1;->b:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lhy1;->b:Liy1;
-
-    iput-boolean v0, v1, Liy1;->b:Z
-
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v2, "Camera2CameraControl was updated with new options."
-
-    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, v1, Liy1;->g:Ljava/lang/Object;
-
-    check-cast v2, Ltu1;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2, v0}, Ltu1;->d(Ljava/lang/Throwable;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, v1, Liy1;->g:Ljava/lang/Object;
-
-    :cond_2
-    iget-object v0, p0, Lhy1;->c:Ltu1;
-
-    iput-object v0, v1, Liy1;->g:Ljava/lang/Object;
-
-    iget-boolean v0, v1, Liy1;->a:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, v1, Liy1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lry1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lxtd;
-
-    const/16 v3, 0x15
-
-    invoke-direct {v2, v3, v0}, Lxtd;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v2}, Lixi;->a(Luu1;)Lwu1;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lwsf;->g(Lha8;)Lha8;
-
-    move-result-object v0
-
-    new-instance v2, Lo3;
-
-    const/16 v3, 0x1d
-
-    invoke-direct {v2, v3, v1}, Lo3;-><init>(ILjava/lang/Object;)V
-
-    iget-object v3, v1, Liy1;->d:Ljava/lang/Object;
-
-    check-cast v3, Lqee;
-
-    invoke-interface {v0, v2, v3}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v1, Liy1;->b:Z
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

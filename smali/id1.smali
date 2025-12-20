@@ -1,206 +1,210 @@
-.class public final Lid1;
+.class public final synthetic Lid1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
 
 # instance fields
-.field public final a:Lk18;
+.field public final synthetic a:I
 
-.field public final b:Lk18;
+.field public final synthetic b:Ldc3;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
+.method public synthetic constructor <init>(Ldc3;I)V
     .locals 0
 
+    iput p2, p0, Lid1;->a:I
+
+    iput-object p1, p0, Lid1;->b:Ldc3;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lid1;->a:Lk18;
-
-    iput-object p2, p0, Lid1;->b:Lk18;
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/Intent;Ln41;Z)V
-    .locals 3
-
-    const-string v0, "action-open-incoming"
-
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v0, p1, Ln41;->c:Ljava/lang/CharSequence;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
-    :cond_1
-    const-string v2, "incoming_param_name"
-
-    invoke-virtual {p0, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v0, p1, Ln41;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_2
-
-    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_2
-    const-string v0, "incoming_param_avatar"
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object p1, p1, Ln41;->a:Ljava/lang/Long;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    goto :goto_1
-
-    :cond_3
-    const-wide/16 v0, 0x0
-
-    :goto_1
-    const-string p1, "incoming_param_chat_id"
-
-    invoke-virtual {p0, p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    const-string p1, "incoming_param_is_video"
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const/high16 p1, 0x10000000
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Landroid/app/Application;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lid1;->a:Lk18;
+    iget v0, p0, Lid1;->a:I
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lid1;->b:Ldc3;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Landroid/app/Application;
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Landroid/content/Context;
 
-.method public final c()Landroid/app/PendingIntent;
-    .locals 6
+    sget v1, Lk5d;->ic_link_16:I
 
-    iget-object v0, p0, Lid1;->b:Lk18;
+    sget v2, Lkgb;->a:I
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lrt5;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, Lgu5;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lgu5;->q()Z
+    new-instance v2, Lkig;
 
-    move-result v0
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    const/high16 v1, 0xc000000
+    return-object v2
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
 
-    const-string v3, "action-microphone-state"
+    check-cast v0, Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    sget v1, Lh5e;->t0:I
 
-    new-instance v0, Landroid/content/Intent;
+    sget v2, Lkgb;->a:I
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lid1;->b()Landroid/app/Application;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    new-instance v2, Lkig;
 
-    move-result-object v3
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    return-object v2
 
-    invoke-virtual {p0}, Lid1;->b()Landroid/app/Application;
+    :pswitch_1
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
 
-    move-result-object v3
+    check-cast v0, Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    sget v1, Lh5e;->u0:I
 
-    move-result-object v3
+    sget v2, Lkgb;->a:I
 
-    invoke-static {v3, v2, v0, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    :cond_0
-    invoke-virtual {p0}, Lid1;->b()Landroid/app/Application;
+    move-result-object v1
 
-    move-result-object v0
+    new-instance v2, Lkig;
 
-    new-instance v4, Landroid/content/Intent;
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    const-class v5, Lone/me/android/calls/CallNotifierBroadcastReceiver;
+    return-object v2
 
-    invoke-direct {v4, v0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    :pswitch_2
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
 
-    invoke-virtual {v4, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    check-cast v0, Landroid/content/Context;
 
-    invoke-virtual {p0}, Lid1;->b()Landroid/app/Application;
+    sget v1, Lh5e;->j0:I
 
-    move-result-object v3
+    sget v2, Lkgb;->a:I
 
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v4, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, v2, v4, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    move-result-object v1
 
-    move-result-object v0
+    new-instance v2, Lkig;
 
-    return-object v0
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+
+    return-object v2
+
+    :pswitch_3
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    sget v1, Lh5e;->k0:I
+
+    sget v2, Lkgb;->a:I
+
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Lkig;
+
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+
+    return-object v2
+
+    :pswitch_4
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    sget v1, Lh5e;->q0:I
+
+    sget v2, Lkgb;->a:I
+
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Lkig;
+
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+
+    return-object v2
+
+    :pswitch_5
+    iget-object v0, v1, Ldc3;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    sget v1, Lh5e;->r0:I
+
+    sget v2, Lkgb;->a:I
+
+    invoke-static {v0, v1}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Lkig;
+
+    invoke-direct {v2, v1, v0}, Lkig;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

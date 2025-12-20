@@ -1,258 +1,243 @@
-.class public final synthetic Lot8;
-.super Ljava/lang/Object;
+.class public final enum Lot8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final enum X:Lot8;
+
+.field public static final synthetic Y:[Lot8;
+
+.field public static final c:Lyna;
+
+.field public static final d:Ljava/util/LinkedHashSet;
+
+.field public static final o:Ljava/util/LinkedHashSet;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    iput p2, p0, Lot8;->a:I
+    new-instance v0, Lot8;
 
-    iput-object p1, p0, Lot8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    sget v1, Lv9d;->markdown_original:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v2, Ll5e;->w0:I
+
+    const/4 v3, 0x0
+
+    const-string v4, "ORIGINAL"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v1, Lot8;
+
+    sget v2, Lv9d;->markdown_heading:I
+
+    sget v3, Ll5e;->t0:I
+
+    const/4 v4, 0x1
+
+    const-string v5, "HEADING"
+
+    invoke-direct {v1, v4, v5, v2, v3}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v2, Lot8;
+
+    sget v3, Lv9d;->markdown_bold:I
+
+    sget v4, Ll5e;->s0:I
+
+    const/4 v5, 0x2
+
+    const-string v6, "BOLD"
+
+    invoke-direct {v2, v5, v6, v3, v4}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v3, Lot8;
+
+    sget v4, Lv9d;->markdown_italic:I
+
+    sget v5, Ll5e;->u0:I
+
+    const/4 v6, 0x3
+
+    const-string v7, "ITALIC"
+
+    invoke-direct {v3, v6, v7, v4, v5}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v4, Lot8;
+
+    sget v5, Lv9d;->markdown_underline:I
+
+    sget v6, Ll5e;->A0:I
+
+    const/4 v7, 0x4
+
+    const-string v8, "UNDERLINE"
+
+    invoke-direct {v4, v7, v8, v5, v6}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v5, Lot8;
+
+    sget v6, Lv9d;->markdown_mono:I
+
+    sget v7, Ll5e;->v0:I
+
+    const/4 v8, 0x5
+
+    const-string v9, "MONO"
+
+    invoke-direct {v5, v8, v9, v6, v7}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v6, Lot8;
+
+    sget v7, Lv9d;->markdown_strikethrough:I
+
+    sget v8, Ll5e;->z0:I
+
+    const/4 v9, 0x6
+
+    const-string v10, "STRIKETHROUGH"
+
+    invoke-direct {v6, v9, v10, v7, v8}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v7, Lot8;
+
+    sget v8, Lv9d;->markdown_link:I
+
+    sget v9, Ll5e;->r0:I
+
+    const/4 v10, 0x7
+
+    const-string v11, "LINK"
+
+    invoke-direct {v7, v10, v11, v8, v9}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    new-instance v8, Lot8;
+
+    sget v9, Lv9d;->markdown_quote:I
+
+    sget v10, Ll5e;->x0:I
+
+    const/16 v11, 0x8
+
+    const-string v12, "QUOTE"
+
+    invoke-direct {v8, v11, v12, v9, v10}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    sput-object v8, Lot8;->X:Lot8;
+
+    new-instance v9, Lot8;
+
+    sget v10, Lv9d;->markdown_regular:I
+
+    sget v11, Ll5e;->y0:I
+
+    const/16 v12, 0x9
+
+    const-string v13, "REGULAR"
+
+    invoke-direct {v9, v12, v13, v10, v11}, Lot8;-><init>(ILjava/lang/String;II)V
+
+    filled-new-array/range {v0 .. v9}, [Lot8;
+
+    move-result-object v10
+
+    sput-object v10, Lot8;->Y:[Lot8;
+
+    new-instance v10, Lyna;
+
+    const/16 v11, 0x18
+
+    invoke-direct {v10, v11}, Lyna;-><init>(I)V
+
+    sput-object v10, Lot8;->c:Lyna;
+
+    filled-new-array {v0, v1, v2, v8}, [Lot8;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmue;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Lot8;->d:Ljava/util/LinkedHashSet;
+
+    move-object v10, v6
+
+    move-object v11, v7
+
+    move-object v12, v8
+
+    move-object v13, v9
+
+    move-object v6, v2
+
+    move-object v7, v3
+
+    move-object v8, v4
+
+    move-object v9, v5
+
+    move-object v5, v1
+
+    filled-new-array/range {v5 .. v13}, [Lot8;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmue;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Lot8;->o:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget p1, p0, Lot8;->a:I
+    iput p3, p0, Lot8;->a:I
 
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lot8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lsd8;
-
-    iget-object p1, p1, Lsd8;->f:Ldce;
-
-    iget-object v0, p1, Ldce;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
-
-    invoke-virtual {p1}, Ldce;->n()V
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lpt8;
-
-    if-eqz p1, :cond_1
-
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    iget-object v0, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:Ljava/lang/String;
-
-    const-string v2, "SELECTED_MEDIA_ALBUM"
-
-    invoke-static {v0, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Ld6;->F()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->a0()V
-
-    :cond_1
-    :goto_0
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lqt8;
-
-    invoke-virtual {p1}, Lphd;->m()V
+    iput p4, p0, Lot8;->b:I
 
     return-void
+.end method
 
-    :pswitch_0
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->a1:I
+.method public static valueOf(Ljava/lang/String;)Lot8;
+    .locals 1
 
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lsd8;
+    const-class v0, Lot8;
 
-    iget-object v2, p1, Lsd8;->f:Ldce;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget v3, v2, Ldce;->k:I
+    move-result-object p0
 
-    const/4 v4, 0x3
+    check-cast p0, Lot8;
 
-    if-ne v3, v4, :cond_2
+    return-object p0
+.end method
 
-    goto :goto_1
+.method public static values()[Lot8;
+    .locals 1
 
-    :cond_2
-    move v0, v4
+    sget-object v0, Lot8;->Y:[Lot8;
 
-    :goto_1
-    invoke-virtual {v2, v0}, Ldce;->p(I)V
-
-    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->v()V
-
-    iget-object p1, p1, Lsd8;->f:Ldce;
-
-    iget p1, p1, Ldce;->k:I
-
-    if-ne p1, v4, :cond_3
-
-    sget p1, Lmvd;->J1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    goto :goto_2
-
-    :cond_3
-    sget p1, Lmvd;->O1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    :goto_2
-    return-void
-
-    :pswitch_1
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->a1:I
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lsd8;
-
-    iget-object v2, p1, Lsd8;->f:Ldce;
-
-    iget v3, v2, Ldce;->k:I
-
-    const/4 v4, 0x2
-
-    if-ne v3, v4, :cond_4
-
-    move v3, v0
-
-    goto :goto_3
-
-    :cond_4
-    move v3, v4
-
-    :goto_3
-    invoke-virtual {v2, v3}, Ldce;->p(I)V
-
-    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->v()V
-
-    iget-object p1, p1, Lsd8;->f:Ldce;
-
-    iget v2, p1, Ldce;->k:I
-
-    if-ne v2, v4, :cond_6
-
-    invoke-virtual {p1}, Ldce;->b()I
-
-    move-result p1
-
-    if-le p1, v0, :cond_5
-
-    sget p1, Lmvd;->L1:I
-
-    goto :goto_4
-
-    :cond_5
-    sget p1, Lmvd;->K1:I
-
-    :goto_4
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    goto :goto_5
-
-    :cond_6
-    sget p1, Lmvd;->M1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    :goto_5
-    return-void
-
-    :pswitch_2
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lpt8;
-
-    if-nez p1, :cond_7
-
-    goto :goto_6
-
-    :cond_7
-    iget-boolean p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->W0:Z
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Lz7c;
-
-    iget-object p1, p1, Lz7c;->b:Ll5c;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v2, 0xc
-
-    int-to-long v2, v2
-
-    invoke-virtual {p1, v0, v2, v3}, Ll5c;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v2
-
-    long-to-int p1, v2
-
-    iget-object v0, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lsd8;
-
-    iget-object v0, v0, Lsd8;->f:Ldce;
-
-    invoke-virtual {v0}, Ldce;->b()I
-
-    move-result v0
-
-    if-le v0, p1, :cond_8
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast v0, [Lot8;
 
-    move-result-object v1
-
-    sget v2, Lkvd;->a:I
-
-    invoke-static {v2, p1, v1}, Ll6g;->p(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1}, Lefi;->r(Landroid/content/Context;Ljava/lang/String;I)V
-
-    goto :goto_6
-
-    :cond_8
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lpt8;
-
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()V
-
-    :goto_6
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

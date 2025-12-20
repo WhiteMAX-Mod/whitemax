@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field public final a:Lg0h;
+.field public final a:Lvch;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lwcb;
+    new-instance v0, Lnjb;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1}, Lwcb;-><init>(I)V
+    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
 
     sput-object v0, Landroidx/versionedparcelable/ParcelImpl;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -52,27 +52,27 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    new-instance v0, Lf0h;
+    new-instance v0, Luch;
 
-    invoke-direct {v0, p1}, Lf0h;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Luch;-><init>(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0}, Le0h;->h()Lg0h;
+    invoke-virtual {v0}, Ltch;->h()Lvch;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lg0h;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lvch;
 
     return-void
 .end method
 
-.method public constructor <init>(Lg0h;)V
+.method public constructor <init>(Lvch;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lg0h;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lvch;
 
     return-void
 .end method
@@ -90,13 +90,13 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    new-instance p2, Lf0h;
+    new-instance p2, Luch;
 
-    invoke-direct {p2, p1}, Lf0h;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p2, p1}, Luch;-><init>(Landroid/os/Parcel;)V
 
-    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lg0h;
+    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->a:Lvch;
 
-    invoke-virtual {p2, p1}, Le0h;->l(Lg0h;)V
+    invoke-virtual {p2, p1}, Ltch;->l(Lvch;)V
 
     return-void
 .end method

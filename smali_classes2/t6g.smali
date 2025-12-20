@@ -1,34 +1,27 @@
-.class public final synthetic Lt6g;
-.super Ljava/lang/Object;
+.class public final Lt6g;
+.super Lmi7;
 .source "SourceFile"
-
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
 
 
 # instance fields
-.field public final synthetic a:Lsm6;
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsm6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lt6g;->a:Lsm6;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onFrame(II)V
+.method public constructor <init>(Ls6g;)V
     .locals 1
 
-    iget-object v0, p0, Lt6g;->a:Lsm6;
+    invoke-direct {p0, p1}, Lmi7;-><init>(Lmt8;)V
 
-    invoke-static {v0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Lsm6;II)V
+    iget v0, p1, Ls6g;->o:I
+
+    iput v0, p0, Lt6g;->d:I
+
+    iget p1, p1, Ls6g;->X:I
+
+    iput p1, p0, Lt6g;->e:I
 
     return-void
 .end method

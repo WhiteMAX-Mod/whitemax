@@ -1,620 +1,564 @@
 .class public final Love;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lje8;
-.implements Lq8a;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lorg/webrtc/EglBase$Context;
-
-.field public final b:Lhe8;
-
-.field public final c:Lrve;
-
-.field public final d:Lf54;
-
-.field public final e:Lr8a;
-
-.field public final f:Landroid/content/Context;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ly6d;
-
-.field public final l:Z
-
-.field public final m:Lsi1;
-
-.field public final n:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public volatile o:Lie8;
-
-.field public volatile p:Lorg/webrtc/VideoSink;
-
-.field public final q:Lwd8;
-
-.field public final r:Lbtd;
-
-.field public final s:Ly8g;
-
-.field public final t:Lnve;
-
-.field public final u:Lawd;
-
-.field public v:Lb32;
-
-.field public w:Lge8;
+.field public final synthetic o:Lyve;
 
 
 # direct methods
-.method public constructor <init>(Lmve;)V
-    .locals 3
+.method public constructor <init>(Lyve;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Love;->o:Lyve;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/4 p1, 0x2
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Love;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Love;->v:Lb32;
-
-    iget-object v0, p1, Lmve;->e:Ly6d;
-
-    iput-object v0, p0, Love;->k:Ly6d;
-
-    iget-object v1, p1, Lmve;->a:Lrve;
-
-    iput-object v1, p0, Love;->c:Lrve;
-
-    iget-object v1, p1, Lmve;->b:Lf54;
-
-    iput-object v1, p0, Love;->d:Lf54;
-
-    iget-object v1, p1, Lmve;->i:Ljava/lang/Integer;
-
-    iput-object v1, p0, Love;->j:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lmve;->d:Landroid/content/Context;
-
-    iput-object v1, p0, Love;->f:Landroid/content/Context;
-
-    iget-object v1, p1, Lmve;->c:Lr8a;
-
-    iput-object v1, p0, Love;->e:Lr8a;
-
-    iget-object v1, p1, Lmve;->k:Lorg/webrtc/EglBase$Context;
-
-    iput-object v1, p0, Love;->a:Lorg/webrtc/EglBase$Context;
-
-    iget-boolean v1, p1, Lmve;->j:Z
-
-    iput-boolean v1, p0, Love;->l:Z
-
-    iget-object v1, p1, Lmve;->f:Lsi1;
-
-    iput-object v1, p0, Love;->m:Lsi1;
-
-    iget-object v1, p1, Lmve;->g:Lhe8;
-
-    iput-object v1, p0, Love;->b:Lhe8;
-
-    iget-object v1, p1, Lmve;->l:Lwd8;
-
-    iput-object v1, p0, Love;->q:Lwd8;
-
-    iget-object v1, p1, Lmve;->n:Lbtd;
-
-    iput-object v1, p0, Love;->r:Lbtd;
-
-    const-string v1, "ARDAMSv0"
-
-    iput-object v1, p0, Love;->h:Ljava/lang/String;
-
-    const-string v1, "ARDAMSa0"
-
-    iput-object v1, p0, Love;->i:Ljava/lang/String;
-
-    const-string v1, "ARDAMS"
-
-    iput-object v1, p0, Love;->g:Ljava/lang/String;
-
-    const-string v1, "SlmsSource"
-
-    const-string v2, "local media stream id = ARDAMS local video track id = ARDAMSv0 local audio track id = ARDAMSa0"
-
-    invoke-interface {v0, v1, v2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p1, Lmve;->m:Ly8g;
-
-    iput-object v0, p0, Love;->s:Ly8g;
-
-    iget-object v0, p1, Lmve;->o:Lnve;
-
-    iput-object v0, p0, Love;->t:Lnve;
-
-    iget-object p1, p1, Lmve;->h:Lawd;
-
-    iput-object p1, p0, Love;->u:Lawd;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Los0;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Love;->o:Lie8;
+    check-cast p1, Lac4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, p1, p2}, Love;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    move v0, v2
+    check-cast p1, Love;
 
-    goto :goto_0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :cond_0
-    move v0, v1
+    invoke-virtual {p1, p2}, Love;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    if-eqz v0, :cond_4
-
-    new-instance v3, Lfe8;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean v1, v3, Lfe8;->o:Z
-
-    const/4 v4, 0x0
-
-    iput-object v4, v3, Lfe8;->s:Ljava/lang/Integer;
-
-    iput-boolean v1, v3, Lfe8;->t:Z
-
-    iget-object v1, p0, Love;->c:Lrve;
-
-    iget-object v1, v1, Lrve;->d:Lorg/webrtc/PeerConnectionFactory;
-
-    iput-object v1, v3, Lfe8;->a:Lorg/webrtc/PeerConnectionFactory;
-
-    iget-object v1, p0, Love;->c:Lrve;
-
-    iget-object v1, v1, Lrve;->a:Ljava/util/concurrent/ExecutorService;
-
-    iput-object v1, v3, Lfe8;->c:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Love;->d:Lf54;
-
-    iput-object v1, v3, Lfe8;->b:Lf54;
-
-    iget-object v1, p0, Love;->g:Ljava/lang/String;
-
-    iput-object v1, v3, Lfe8;->e:Ljava/lang/String;
-
-    iget-object v1, p0, Love;->h:Ljava/lang/String;
-
-    iput-object v1, v3, Lfe8;->f:Ljava/lang/String;
-
-    iget-object v1, p0, Love;->i:Ljava/lang/String;
-
-    iput-object v1, v3, Lfe8;->g:Ljava/lang/String;
-
-    iget-object v1, p0, Love;->f:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iput-object v1, v3, Lfe8;->d:Landroid/content/Context;
-
-    iget-object v1, p0, Love;->k:Ly6d;
-
-    iput-object v1, v3, Lfe8;->h:Ly6d;
-
-    iget-object v1, p0, Love;->a:Lorg/webrtc/EglBase$Context;
-
-    iput-object v1, v3, Lfe8;->i:Lorg/webrtc/EglBase$Context;
-
-    iput-boolean v2, v3, Lfe8;->k:Z
-
-    iget-object v1, p0, Love;->b:Lhe8;
-
-    iput-object v1, v3, Lfe8;->j:Lhe8;
-
-    iget-boolean v1, p0, Love;->l:Z
-
-    iput-boolean v1, v3, Lfe8;->p:Z
-
-    iget-object v1, p0, Love;->m:Lsi1;
-
-    iget-boolean v2, v1, Lsi1;->q:Z
-
-    iput-boolean v2, v3, Lfe8;->l:Z
-
-    iget-object v2, p0, Love;->q:Lwd8;
-
-    iput-object v2, v3, Lfe8;->q:Lwd8;
-
-    iget-object v4, p0, Love;->r:Lbtd;
-
-    iput-object v4, v3, Lfe8;->m:Lbtd;
-
-    iget-object v4, p0, Love;->j:Ljava/lang/Integer;
-
-    iput-object v4, v3, Lfe8;->s:Ljava/lang/Integer;
-
-    iget-object v1, v1, Lsi1;->z:Lqi1;
-
-    iget-boolean v4, v1, Lqi1;->a:Z
-
-    iput-boolean v4, v3, Lfe8;->t:Z
-
-    iget-boolean v1, v1, Lqi1;->k:Z
-
-    iput-boolean v1, v3, Lfe8;->o:Z
-
-    iget-object v1, p0, Love;->s:Ly8g;
-
-    iput-object v1, v3, Lfe8;->n:Ly8g;
-
-    iget-object v1, p0, Love;->u:Lawd;
-
-    iput-object v1, v3, Lfe8;->r:Lawd;
-
-    iget-object v1, v3, Lfe8;->a:Lorg/webrtc/PeerConnectionFactory;
-
-    if-eqz v1, :cond_3
-
-    if-eqz v2, :cond_3
-
-    iget-object v1, v3, Lfe8;->b:Lf54;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->e:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->f:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->g:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->h:Ly6d;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->j:Lhe8;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->i:Lorg/webrtc/EglBase$Context;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->m:Lbtd;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->n:Ly8g;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v3, Lfe8;->r:Lawd;
-
-    if-eqz v1, :cond_3
-
-    new-instance v1, Lie8;
-
-    invoke-direct {v1, v3}, Lie8;-><init>(Lfe8;)V
-
-    iput-object v1, p0, Love;->o:Lie8;
-
-    iget-object v1, p0, Love;->o:Lie8;
-
-    iget-object v2, p0, Love;->w:Lge8;
-
-    iput-object v2, v1, Lie8;->x:Lge8;
-
-    iget-object v1, p0, Love;->o:Lie8;
-
-    iget-object v1, v1, Lie8;->c:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Love;->v:Lb32;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Love;->o:Lie8;
-
-    iget-object v2, p0, Love;->v:Lb32;
-
-    invoke-virtual {v1, v2}, Lie8;->k(Lb32;)V
-
-    :cond_1
-    iget-object v1, p0, Love;->p:Lorg/webrtc/VideoSink;
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, p0, Love;->o:Lie8;
-
-    invoke-virtual {v2, v1}, Lie8;->j(Lorg/webrtc/VideoSink;)V
-
-    :cond_2
-    iget-object v1, p0, Love;->o:Lie8;
-
-    iget-object v2, p0, Love;->e:Lr8a;
-
-    invoke-virtual {v1, v2}, Lie8;->d(Lr8a;)V
-
-    iget-object v1, p0, Love;->t:Lnve;
-
-    if-eqz v1, :cond_4
-
-    iget-object v2, p0, Love;->o:Lie8;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lee8;
-
-    invoke-direct {v3, v2}, Lee8;-><init>(Lie8;)V
-
-    invoke-interface {v1, v3}, Lnve;->b(Lee8;)V
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_4
-    :goto_1
-    new-instance v1, Los0;
-
-    iget-object v2, p0, Love;->o:Lie8;
-
-    invoke-direct {v1, v2, v0}, Los0;-><init>(Ljava/lang/Object;Z)V
-
-    return-object v1
+    return-object p2
 .end method
 
-.method public final b(Lie8;)V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const-string v0, "SlmsSource"
+    new-instance p1, Love;
 
-    const-string v1, "onLocalMediaStreamChanged"
+    iget-object v0, p0, Love;->o:Lyve;
 
-    iget-object v2, p0, Love;->k:Ly6d;
+    invoke-direct {p1, v0, p2}, Love;-><init>(Lyve;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {v2, v0, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    return-object p1
+.end method
 
-    iget-object v0, p0, Love;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 29
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    invoke-static {}, Lfi3;->c()Lee8;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v1, Lyve;->A0:[Lp38;
 
-    move-result v1
+    new-instance v1, Lqie;
 
-    if-eqz v1, :cond_0
+    sget v2, Lyhb;->q:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v3, Lbhg;
 
-    move-result-object v1
+    invoke-direct {v3, v2}, Lbhg;-><init>(I)V
 
-    check-cast v1, Lje8;
+    sget-wide v4, Lxhb;->f:J
 
-    invoke-interface {v1, p1}, Lje8;->b(Lie8;)V
+    const/4 v2, 0x0
 
-    goto :goto_0
+    invoke-direct {v1, v2, v4, v5, v3}, Lqie;-><init>(IJLbhg;)V
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Lee8;->add(Ljava/lang/Object;)Z
 
-.method public final c()I
-    .locals 4
+    sget-wide v10, Lxhb;->c:J
 
-    iget-object v0, p0, Love;->o:Lie8;
+    sget v1, Lyhb;->n:I
 
-    const/4 v1, 0x0
+    new-instance v8, Lbhg;
 
-    if-eqz v0, :cond_4
+    invoke-direct {v8, v1}, Lbhg;-><init>(I)V
 
-    iget-object v2, v0, Lie8;->r:Ld12;
+    new-instance v12, Lyye;
 
-    if-eqz v2, :cond_2
+    move-object/from16 v1, p0
 
-    iget-boolean v3, v2, Ld12;->k:Z
+    iget-object v3, v1, Love;->o:Lyve;
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v3}, Lyve;->t()Ljah;
 
-    iget-object v3, v0, Lie8;->y:Lubh;
+    move-result-object v4
 
-    iget-object v3, v3, Lvt3;->e:Ljava/lang/Object;
+    const-string v5, "app.media.load.photo"
 
-    check-cast v3, Lorg/webrtc/MediaStreamTrack;
+    iget-object v4, v4, Lz3;->g:Lg68;
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v4, v5, v2}, Lg68;->getInt(Ljava/lang/String;I)I
 
-    invoke-virtual {v3}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
+    move-result v4
 
-    move-result v3
+    invoke-static {v4, v2}, Lyve;->v(IZ)Lghg;
 
-    goto :goto_0
+    move-result-object v4
 
-    :cond_0
-    move v3, v1
+    const/4 v5, 0x0
 
-    :goto_0
-    if-eqz v3, :cond_2
+    invoke-direct {v12, v4, v5}, Lyye;-><init>(Lghg;Ljava/lang/Integer;)V
 
-    iget-boolean v0, v2, Ld12;->i:Z
+    new-instance v6, Lrie;
 
-    if-eqz v0, :cond_1
+    const/4 v9, 0x0
 
-    const/4 v0, 0x1
+    const/4 v14, 0x1
 
-    return v0
+    move v7, v14
 
-    :cond_1
-    const/4 v0, 0x2
+    invoke-direct/range {v6 .. v12}, Lrie;-><init>(ILbhg;IJLcze;)V
 
-    return v0
+    invoke-virtual {v0, v6}, Lee8;->add(Ljava/lang/Object;)Z
 
-    :cond_2
-    iget-object v2, v0, Lie8;->t:Li1e;
+    sget-wide v11, Lxhb;->a:J
 
-    if-eqz v2, :cond_4
+    sget v4, Lyhb;->j:I
 
-    iget-boolean v2, v2, Li1e;->d:Z
+    new-instance v9, Lbhg;
 
-    if-eqz v2, :cond_4
+    invoke-direct {v9, v4}, Lbhg;-><init>(I)V
 
-    iget-object v0, v0, Lie8;->z:Lg2e;
+    new-instance v13, Lyye;
 
-    iget-object v0, v0, Lvt3;->e:Ljava/lang/Object;
+    invoke-virtual {v3}, Lyve;->t()Ljah;
 
-    check-cast v0, Lorg/webrtc/MediaStreamTrack;
+    move-result-object v4
 
-    if-eqz v0, :cond_3
+    const-string v6, "app.media.load.gif"
 
-    invoke-virtual {v0}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
+    iget-object v4, v4, Lz3;->g:Lg68;
 
-    move-result v0
+    invoke-virtual {v4, v6, v2}, Lg68;->getInt(Ljava/lang/String;I)I
 
-    goto :goto_1
+    move-result v4
 
-    :cond_3
-    move v0, v1
+    invoke-static {v4, v2}, Lyve;->v(IZ)Lghg;
 
-    :goto_1
-    if-eqz v0, :cond_4
+    move-result-object v4
 
-    const/4 v0, 0x3
+    invoke-direct {v13, v4, v5}, Lyye;-><init>(Lghg;Ljava/lang/Integer;)V
 
-    return v0
+    new-instance v7, Lrie;
 
-    :cond_4
-    return v1
-.end method
+    const/4 v10, 0x0
 
-.method public final d(Z)V
-    .locals 4
+    const/16 v16, 0x2
 
-    iget-object v0, p0, Love;->o:Lie8;
+    move/from16 v8, v16
 
-    if-eqz v0, :cond_1
+    invoke-direct/range {v7 .. v13}, Lrie;-><init>(ILbhg;IJLcze;)V
 
-    iget-object v1, v0, Lie8;->j:Lm50;
+    invoke-virtual {v0, v7}, Lee8;->add(Ljava/lang/Object;)Z
 
-    iget-object v2, v1, Lvt3;->e:Ljava/lang/Object;
+    sget-wide v19, Lxhb;->e:J
 
-    check-cast v2, Lorg/webrtc/MediaStreamTrack;
+    sget v4, Lyhb;->v:I
 
-    if-eqz v2, :cond_0
+    new-instance v6, Lbhg;
 
-    invoke-virtual {v2}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
+    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
+
+    new-instance v4, Lyye;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v7
+
+    const-string v8, "app.media.load.video_messages"
+
+    iget-object v7, v7, Lz3;->g:Lg68;
+
+    invoke-virtual {v7, v8, v2}, Lg68;->getInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    invoke-static {v7, v2}, Lyve;->v(IZ)Lghg;
+
+    move-result-object v7
+
+    invoke-direct {v4, v7, v5}, Lyye;-><init>(Lghg;Ljava/lang/Integer;)V
+
+    new-instance v15, Lrie;
+
+    const/16 v18, 0x0
+
+    move-object/from16 v21, v4
+
+    move-object/from16 v17, v6
+
+    invoke-direct/range {v15 .. v21}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    move/from16 v8, v16
+
+    invoke-virtual {v0, v15}, Lee8;->add(Ljava/lang/Object;)Z
+
+    sget-wide v20, Lxhb;->b:J
+
+    sget v4, Lyhb;->m:I
+
+    new-instance v6, Lbhg;
+
+    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
+
+    new-instance v4, Laze;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v7
+
+    const-string v9, "app.media.load.roaming"
+
+    iget-object v7, v7, Lz3;->g:Lg68;
+
+    invoke-virtual {v7, v9, v2}, Lg68;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    goto :goto_0
+    const/4 v7, 0x1
 
-    :cond_0
-    const/4 v2, 0x0
+    invoke-direct {v4, v2, v7}, Laze;-><init>(ZZ)V
 
-    :goto_0
-    if-eq v2, p1, :cond_1
+    new-instance v16, Lrie;
 
-    const-string v2, "setAudioShareTrackEnabled, enabled="
+    const/16 v19, 0x0
 
-    invoke-static {v2, p1}, Lxc0;->f(Ljava/lang/String;Z)Ljava/lang/String;
+    const/16 v17, 0x3
+
+    move-object/from16 v22, v4
+
+    move-object/from16 v18, v6
+
+    invoke-direct/range {v16 .. v22}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    move-object/from16 v2, v16
+
+    move/from16 v23, v17
+
+    invoke-virtual {v0, v2}, Lee8;->add(Ljava/lang/Object;)Z
+
+    new-instance v2, Lqie;
+
+    sget v4, Lyhb;->r:I
+
+    new-instance v6, Lbhg;
+
+    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
+
+    sget v4, Lwhb;->w:I
+
+    int-to-long v9, v4
+
+    invoke-direct {v2, v7, v9, v10, v6}, Lqie;-><init>(IJLbhg;)V
+
+    invoke-virtual {v0, v2}, Lee8;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lwhb;->m:I
+
+    int-to-long v9, v2
+
+    sget v2, Lyhb;->u:I
+
+    new-instance v15, Lbhg;
+
+    invoke-direct {v15, v2}, Lbhg;-><init>(I)V
+
+    new-instance v2, Lyye;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v4
+
+    const-string v6, "app.video.auto.play"
+
+    iget-object v4, v4, Lz3;->g:Lg68;
+
+    invoke-virtual {v4, v6, v7}, Lg68;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    invoke-static {v4, v7}, Lyve;->v(IZ)Lghg;
+
+    move-result-object v4
+
+    invoke-direct {v2, v4, v5}, Lyye;-><init>(Lghg;Ljava/lang/Integer;)V
+
+    new-instance v13, Lrie;
+
+    const/16 v16, 0x1
+
+    move-object/from16 v19, v2
+
+    move-wide/from16 v17, v9
+
+    invoke-direct/range {v13 .. v19}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    invoke-virtual {v0, v13}, Lee8;->add(Ljava/lang/Object;)Z
+
+    iget-object v2, v3, Lyve;->o:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    iget-object v0, v0, Lie8;->n:Ly6d;
+    check-cast v2, Lux5;
 
-    const-string v3, "OKRTCLmsAdapter"
+    check-cast v2, Loy5;
 
-    invoke-interface {v0, v3, v2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2}, Loy5;->x()Z
 
-    invoke-virtual {v1, p1}, Lvt3;->o(Z)V
+    move-result v2
+
+    sget v4, Lwhb;->i:I
+
+    int-to-long v9, v4
+
+    sget v4, Lyhb;->k:I
+
+    new-instance v6, Lbhg;
+
+    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
+
+    new-instance v4, Laze;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v11
+
+    const-string v12, "app.media.autoplay.gif"
+
+    iget-object v11, v11, Lz3;->g:Lg68;
+
+    invoke-virtual {v11, v12, v7}, Lg68;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v11
+
+    invoke-direct {v4, v11, v7}, Laze;-><init>(ZZ)V
+
+    new-instance v15, Lrie;
+
+    const/16 v18, 0x1
+
+    move-object/from16 v21, v4
+
+    move-object/from16 v17, v6
+
+    move/from16 v16, v8
+
+    move-wide/from16 v19, v9
+
+    invoke-direct/range {v15 .. v21}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    invoke-virtual {v0, v15}, Lee8;->add(Ljava/lang/Object;)Z
+
+    sget v4, Lwhb;->g:I
+
+    int-to-long v12, v4
+
+    sget v4, Lyhb;->h:I
+
+    new-instance v10, Lbhg;
+
+    invoke-direct {v10, v4}, Lbhg;-><init>(I)V
+
+    new-instance v14, Laze;
+
+    iget-object v4, v3, Lyve;->d:Ld68;
+
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lhk;
+
+    invoke-virtual {v4}, Lhk;->a()Z
+
+    move-result v4
+
+    invoke-direct {v14, v4, v7}, Laze;-><init>(ZZ)V
+
+    if-eqz v2, :cond_0
+
+    move/from16 v9, v16
+
+    goto :goto_0
+
+    :cond_0
+    move/from16 v9, v23
+
+    :goto_0
+    new-instance v8, Lrie;
+
+    const/4 v11, 0x1
+
+    invoke-direct/range {v8 .. v14}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    invoke-virtual {v0, v8}, Lee8;->add(Ljava/lang/Object;)Z
+
+    if-eqz v2, :cond_1
+
+    sget-wide v26, Lxhb;->d:J
+
+    sget v2, Lyhb;->p:I
+
+    new-instance v4, Lbhg;
+
+    invoke-direct {v4, v2}, Lbhg;-><init>(I)V
+
+    new-instance v2, Laze;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v6
+
+    const-string v8, "app.media.autoplay.playlist"
+
+    iget-object v6, v6, Lz3;->g:Lg68;
+
+    invoke-virtual {v6, v8, v7}, Lg68;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v6
+
+    invoke-direct {v2, v6, v7}, Laze;-><init>(ZZ)V
+
+    new-instance v22, Lrie;
+
+    const/16 v25, 0x1
+
+    move-object/from16 v28, v2
+
+    move-object/from16 v24, v4
+
+    invoke-direct/range {v22 .. v28}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    move-object/from16 v2, v22
+
+    invoke-virtual {v0, v2}, Lee8;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    return-void
-.end method
+    new-instance v2, Lqie;
 
-.method public final h(Lr8a;)V
-    .locals 3
+    sget v4, Lyhb;->s:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v6, Lbhg;
 
-    const-string v1, "onMediaSettingsChanged, "
+    invoke-direct {v6, v4}, Lbhg;-><init>(I)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget v4, Lwhb;->x:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    int-to-long v7, v4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v4, v7, v8, v6}, Lqie;-><init>(IJLbhg;)V
+
+    invoke-virtual {v0, v2}, Lee8;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lwhb;->p:I
+
+    int-to-long v10, v2
+
+    sget v2, Lyhb;->x:I
+
+    new-instance v8, Lbhg;
+
+    invoke-direct {v8, v2}, Lbhg;-><init>(I)V
+
+    new-instance v12, Lyye;
+
+    invoke-virtual {v3}, Lyve;->t()Ljah;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljah;->o()Loeh;
+
+    move-result-object v2
+
+    iget-object v2, v2, Loeh;->a:Lg1d;
+
+    iget-object v2, v2, Lg1d;->a:Ljava/lang/String;
+
+    new-instance v4, Lfhg;
+
+    invoke-direct {v4, v2}, Lfhg;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-direct {v12, v4, v5}, Lyye;-><init>(Lghg;Ljava/lang/Integer;)V
+
+    new-instance v6, Lrie;
+
+    const/4 v9, 0x2
+
+    const/4 v14, 0x4
+
+    move v7, v14
+
+    invoke-direct/range {v6 .. v12}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    invoke-virtual {v0, v6}, Lee8;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lwhb;->n:I
+
+    int-to-long v4, v2
+
+    sget v2, Lyhb;->i:I
+
+    new-instance v15, Lbhg;
+
+    invoke-direct {v15, v2}, Lbhg;-><init>(I)V
+
+    new-instance v13, Lrie;
+
+    const/16 v16, 0x3
+
+    sget-object v19, Lvye;->a:Lvye;
+
+    move-wide/from16 v17, v4
+
+    invoke-direct/range {v13 .. v19}, Lrie;-><init>(ILbhg;IJLcze;)V
+
+    invoke-virtual {v0, v13}, Lee8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lfi3;->b(Ljava/util/List;)Lee8;
 
     move-result-object v0
 
-    const-string v1, "SlmsSource"
+    iget-object v2, v3, Lyve;->X:Lhof;
 
-    iget-object v2, p0, Love;->k:Ly6d;
+    :cond_2
+    invoke-virtual {v2}, Lhof;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v2, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v3
 
-    iget-object v0, p0, Love;->c:Lrve;
+    move-object v4, v3
 
-    iget-object v0, v0, Lrve;->a:Ljava/util/concurrent/ExecutorService;
+    check-cast v4, Ljava/util/List;
 
-    new-instance v1, Laee;
+    invoke-virtual {v2, v3, v0}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/16 v2, 0x8
+    move-result v3
 
-    invoke-direct {v1, p0, v2, p1}, Laee;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v3, :cond_2
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    return-void
+    return-object v0
 .end method

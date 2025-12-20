@@ -3,123 +3,65 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final p:Lr10;
-
-
 # instance fields
-.field public final a:J
+.field public a:Ls10;
 
-.field public final b:Ljava/lang/String;
+.field public b:J
 
-.field public final c:I
+.field public c:Ljava/util/List;
 
-.field public final d:I
+.field public d:Ljava/lang/String;
 
-.field public final e:Ljava/lang/String;
+.field public e:Ljava/lang/String;
 
-.field public final f:Ljava/lang/String;
+.field public f:Ljava/lang/String;
 
-.field public final g:Ljava/util/List;
+.field public g:Ljava/lang/String;
 
-.field public final h:Ljava/lang/String;
+.field public h:Ld20;
 
-.field public final i:J
+.field public i:Ljava/lang/String;
 
-.field public final j:I
+.field public j:Ljava/lang/String;
 
-.field public final k:J
+.field public k:Z
 
-.field public final l:Ljava/lang/String;
+.field public l:I
 
-.field public final m:Z
+.field public m:J
 
-.field public final n:I
+.field public n:J
 
-.field public final o:Ljava/lang/String;
+.field public o:Ljava/lang/String;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final a()Lt10;
     .locals 1
 
-    new-instance v0, Lq10;
+    iget-object v0, p0, Lr10;->c:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Lq10;->a()Lr10;
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lr10;->p:Lr10;
+    iput-object v0, p0, Lr10;->c:Ljava/util/List;
 
-    return-void
-.end method
+    :cond_0
+    iget-object v0, p0, Lr10;->a:Ls10;
 
-.method public constructor <init>(Lq10;)V
-    .locals 2
+    if-nez v0, :cond_1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ls10;->a:Ls10;
 
-    iget-wide v0, p1, Lq10;->a:J
+    iput-object v0, p0, Lr10;->a:Ls10;
 
-    iput-wide v0, p0, Lr10;->a:J
+    :cond_1
+    new-instance v0, Lt10;
 
-    iget-object v0, p1, Lq10;->d:Ljava/lang/String;
+    invoke-direct {v0, p0}, Lt10;-><init>(Lr10;)V
 
-    iput-object v0, p0, Lr10;->b:Ljava/lang/String;
-
-    iget v0, p1, Lq10;->b:I
-
-    iput v0, p0, Lr10;->c:I
-
-    iget v0, p1, Lq10;->c:I
-
-    iput v0, p0, Lr10;->d:I
-
-    iget-object v0, p1, Lq10;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lq10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Lq10;->i:Ljava/util/List;
-
-    iput-object v0, p0, Lr10;->g:Ljava/util/List;
-
-    iget-object v0, p1, Lq10;->h:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->h:Ljava/lang/String;
-
-    iget-wide v0, p1, Lq10;->e:J
-
-    iput-wide v0, p0, Lr10;->i:J
-
-    iget v0, p1, Lq10;->j:I
-
-    iput v0, p0, Lr10;->j:I
-
-    iget-wide v0, p1, Lq10;->k:J
-
-    iput-wide v0, p0, Lr10;->k:J
-
-    iget-object v0, p1, Lq10;->l:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->l:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lq10;->m:Z
-
-    iput-boolean v0, p0, Lr10;->m:Z
-
-    iget v0, p1, Lq10;->n:I
-
-    iput v0, p0, Lr10;->n:I
-
-    iget-object p1, p1, Lq10;->o:Ljava/lang/String;
-
-    iput-object p1, p0, Lr10;->o:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

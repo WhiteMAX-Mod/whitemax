@@ -1,33 +1,44 @@
-.class public final Lgl;
+.class public interface abstract Lgl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgl;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lgl;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lgl;->a:Lgl;
-
-    return-void
+# virtual methods
+.method public abstract a()Ljava/util/Set;
 .end method
 
+.method public abstract b(Ljava/lang/String;)V
+.end method
 
-# virtual methods
-.method public final a(Landroid/content/Context;)Ljava/io/File;
-    .locals 0
+.method public abstract c()Z
+.end method
 
-    invoke-virtual {p1}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
+.method public abstract d()V
+.end method
 
-    move-result-object p1
+.method public abstract disconnect()V
+.end method
 
-    return-object p1
+.method public abstract e(Lpk0;)V
+.end method
+
+.method public abstract f(Ll4e;)V
+.end method
+
+.method public abstract g()I
+.end method
+
+.method public abstract h()[Ltx5;
+.end method
+
+.method public abstract i()Ljava/lang/String;
+.end method
+
+.method public abstract isConnected()Z
+.end method
+
+.method public abstract j()Z
+.end method
+
+.method public abstract k(Lve7;Ljava/util/Set;)V
 .end method

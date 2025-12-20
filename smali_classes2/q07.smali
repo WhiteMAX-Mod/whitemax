@@ -1,102 +1,77 @@
-.class public final enum Lq07;
-.super Ljava/lang/Enum;
+.class public final Lq07;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lr07;
-
-
-# static fields
-.field public static final enum b:Lq07;
-
-.field public static final enum c:Lq07;
-
-.field public static final synthetic d:[Lq07;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public static a(Landroid/content/Context;Ldk8;)V
+    .locals 4
 
-    new-instance v0, Lq07;
+    sget v0, Lck8;->a:I
 
-    const-string v1, "LONG_PRESS"
+    new-instance v0, Llpi;
+
+    sget-object v1, Llpi;->m:Lcii;
+
+    sget-object v2, Lfl;->e:Lel;
+
+    sget-object v3, Le07;->c:Le07;
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lf07;-><init>(Landroid/content/Context;Lcii;Lfl;Le07;)V
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Lcom/google/android/gms/location/LocationRequest;
+
+    invoke-direct {v1}, Lcom/google/android/gms/location/LocationRequest;-><init>()V
+
+    const/16 v2, 0x64
+
+    iput v2, v1, Lcom/google/android/gms/location/LocationRequest;->a:I
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lek8;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Lq07;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1, p0, v2, v2}, Lek8;-><init>(Ljava/util/ArrayList;ZZ)V
 
-    sput-object v0, Lq07;->b:Lq07;
-
-    new-instance v1, Lq07;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0x11
-
-    const-string v4, "REJECT"
-
-    invoke-direct {v1, v4, v2, v3}, Lq07;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lq07;->c:Lq07;
-
-    filled-new-array {v0, v1}, [Lq07;
-
-    move-result-object v0
-
-    sput-object v0, Lq07;->d:[Lq07;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lq07;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lq07;
-    .locals 1
-
-    const-class v0, Lq07;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {}, Lqk7;->e()Lfu0;
 
     move-result-object p0
 
-    check-cast p0, Lq07;
+    new-instance v3, Lkif;
 
-    return-object p0
-.end method
+    invoke-direct {v3, v1}, Lkif;-><init>(Ljava/lang/Object;)V
 
-.method public static values()[Lq07;
-    .locals 1
+    iput-object v3, p0, Lfu0;->d:Ljava/lang/Object;
 
-    sget-object v0, Lq07;->d:[Lq07;
+    const/16 v1, 0x97a
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iput v1, p0, Lfu0;->b:I
 
-    move-result-object v0
+    invoke-virtual {p0}, Lfu0;->e()Lsoi;
 
-    check-cast v0, [Lq07;
+    move-result-object p0
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v2, p0}, Lf07;->b(ILqk7;)Ljpj;
 
+    move-result-object p0
 
-# virtual methods
-.method public final a()I
-    .locals 1
+    new-instance v0, Lp07;
 
-    iget v0, p0, Lq07;->a:I
+    invoke-direct {v0, p1}, Lp07;-><init>(Ldk8;)V
 
-    return v0
+    invoke-virtual {p0, v0}, Ljpj;->i(Lt1b;)Ljpj;
+
+    new-instance v0, Lp07;
+
+    invoke-direct {v0, p1}, Lp07;-><init>(Ldk8;)V
+
+    invoke-virtual {p0, v0}, Ljpj;->j(Lv1b;)Ljpj;
+
+    return-void
 .end method

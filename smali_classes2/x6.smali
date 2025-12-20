@@ -1,149 +1,253 @@
-.class public final synthetic Lx6;
+.class public final Lx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lhnc;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lcm6;
+.field public final b:Lrze;
+
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILcm6;)V
+.method public synthetic constructor <init>(ILrze;)V
+    .locals 1
+
+    const/16 v0, 0x400
+
+    .line 1
+    invoke-direct {p0, p1, p2, v0}, Lx6;-><init>(ILrze;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ILrze;I)V
     .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lx6;->a:I
 
-    iput-object p2, p0, Lx6;->b:Lcm6;
+    iput-object p2, p0, Lx6;->b:Lrze;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lx6;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lx6;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lx6;->b:Lcm6;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_0
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_2
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_3
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_4
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_5
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_6
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_7
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lx6;
 
-    :pswitch_8
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_9
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lx6;
 
-    :pswitch_a
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    iget v1, p0, Lx6;->a:I
 
-    return-void
+    iget v3, p1, Lx6;->a:I
 
-    :pswitch_b
-    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->o:I
+    if-eq v1, v3, :cond_2
 
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    return v2
 
-    return-void
+    :cond_2
+    iget-object v1, p0, Lx6;->b:Lrze;
 
-    :pswitch_c
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    iget-object v3, p1, Lx6;->b:Lrze;
 
-    return-void
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_d
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    move-result v1
 
-    return-void
+    if-nez v1, :cond_3
 
-    :pswitch_e
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    return v2
 
-    return-void
+    :cond_3
+    iget v1, p0, Lx6;->c:I
 
-    :pswitch_f
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+    iget p1, p1, Lx6;->c:I
 
-    return-void
+    if-ne v1, p1, :cond_4
 
-    nop
+    return v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_4
+    return v2
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget v0, p0, Lx6;->a:I
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lie8;)Z
+    .locals 1
+
+    instance-of v0, p1, Lx6;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lx6;
+
+    iget p1, p1, Lx6;->a:I
+
+    iget v0, p0, Lx6;->a:I
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lx6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lx6;->b:Lrze;
+
+    invoke-virtual {v1}, Lrze;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v0, p0, Lx6;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lx6;->c:I
+
+    return v0
+.end method
+
+.method public final q(Lie8;)Z
+    .locals 1
+
+    instance-of v0, p1, Lx6;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, p1
+
+    check-cast v0, Lx6;
+
+    iget-object v0, v0, Lx6;->b:Lrze;
+
+    iget-object v0, v0, Lrze;->Y:Lcze;
+
+    instance-of v0, v0, Laze;
+
+    if-eqz v0, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lx6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lx6;->c:I
+
+    invoke-static {v0}, Lxjj;->c(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "ActionItem(actionId="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lx6;->a:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", model="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lx6;->b:Lrze;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", itemViewType="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

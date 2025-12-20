@@ -1,19 +1,23 @@
 .class public final Lctf;
-.super Ljava/lang/Object;
+.super Lf3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lieb;
+# static fields
+.field public static final c:Lctf;
 
 
 # direct methods
-.method public constructor <init>(Lieb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lctf;
 
-    iput-object p1, p0, Lctf;->a:Lieb;
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+
+    sput-object v0, Lctf;->c:Lctf;
 
     return-void
 .end method

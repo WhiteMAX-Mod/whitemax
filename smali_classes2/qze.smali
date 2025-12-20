@@ -1,360 +1,223 @@
-.class public abstract Lqze;
-.super Ljava/lang/Object;
+.class public final Lqze;
+.super Lsze;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
-
-.field public b:Ljava/lang/Runnable;
-
-.field public c:Lm0f;
-
-.field public d:Ljava/util/concurrent/ExecutorService;
-
-.field public e:Ly6d;
-
-.field public f:Lz6d;
-
-.field public g:J
-
-.field public h:Z
-
-.field public i:Lag5;
-
-.field public j:Z
+.field public E0:Lgze;
 
 
 # virtual methods
-.method public abstract build()Loze;
+.method public final A(Lie8;Ljava/lang/Object;)V
+    .locals 4
+
+    check-cast p1, Lfze;
+
+    instance-of v0, p2, Ldze;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p2, Ldze;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p2, v1
+
+    :goto_0
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+
+    if-eqz p2, :cond_8
+
+    iget-object p2, p2, Lf3;->b:Ljava/lang/Object;
+
+    check-cast p2, Ljava/util/BitSet;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move-object v2, v0
+
+    check-cast v2, Lpze;
+
+    invoke-interface {p1}, Lfze;->getTitle()Lghg;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lpze;->setTitle(Lghg;)V
+
+    :cond_1
+    const/4 v2, 0x2
+
+    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    move-object v2, v0
+
+    check-cast v2, Lpze;
+
+    invoke-interface {p1}, Lfze;->getType()Leze;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lpze;->setType(Leze;)V
+
+    :cond_2
+    const/4 v2, 0x3
+
+    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    move-object v2, v0
+
+    check-cast v2, Lpze;
+
+    invoke-interface {p1}, Lfze;->b()Lghg;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lpze;->setDescription(Lghg;)V
+
+    :cond_3
+    const/4 v2, 0x4
+
+    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    move-object v2, v0
+
+    check-cast v2, Lpze;
+
+    invoke-virtual {v2, v1}, Lpze;->setOnSwitchListener(Llze;)V
+
+    invoke-interface {p1}, Lfze;->e()Lcze;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lpze;->setEndView(Lcze;)V
+
+    invoke-interface {p1}, Lfze;->e()Lcze;
+
+    move-result-object v1
+
+    instance-of v1, v1, Laze;
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Lrk;
+
+    const/16 v3, 0x14
+
+    invoke-direct {v1, v3, p0}, Lrk;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v1}, Lpze;->setOnSwitchCheckedListener(Lcr6;)V
+
+    :cond_4
+    const/4 v1, 0x5
+
+    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    move-object v1, v0
+
+    check-cast v1, Lpze;
+
+    invoke-interface {p1}, Lfze;->c()Luye;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lpze;->setCounter(Luye;)V
+
+    :cond_5
+    const/4 v1, 0x6
+
+    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    move-object v1, v0
+
+    check-cast v1, Lpze;
+
+    invoke-interface {p1}, Lfze;->d()Lghg;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lpze;->setUpperText(Lghg;)V
+
+    :cond_6
+    const/4 v1, 0x7
+
+    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7
+
+    check-cast v0, Lpze;
+
+    invoke-interface {p1}, Lfze;->f()Ln68;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lpze;->setStartIcon(Ln68;)V
+
+    :cond_7
+    return-void
+
+    :cond_8
+    check-cast v0, Lpze;
+
+    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
+
+    return-void
 .end method
 
-.method public final getEndpointParameters()Lag5;
+.method public final E()V
     .locals 1
 
-    iget-object v0, p0, Lqze;->i:Lag5;
+    const/4 v0, 0x0
 
-    return-object v0
+    iput-object v0, p0, Lqze;->E0:Lgze;
+
+    return-void
 .end method
 
-.method public final getExecutor()Ljava/util/concurrent/ExecutorService;
+.method public final z(Lie8;)V
     .locals 1
 
-    iget-object v0, p0, Lqze;->d:Ljava/util/concurrent/ExecutorService;
+    check-cast p1, Lfze;
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-.method public final getLog()Ly6d;
-    .locals 1
+    check-cast v0, Lpze;
 
-    iget-object v0, p0, Lqze;->e:Ly6d;
-
-    return-object v0
-.end method
-
-.method public final getLogConfiguration()Lz6d;
-    .locals 1
-
-    iget-object v0, p0, Lqze;->f:Lz6d;
-
-    return-object v0
-.end method
-
-.method public final getReconnectTimeoutAction()Ljava/lang/Runnable;
-    .locals 1
-
-    iget-object v0, p0, Lqze;->b:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method public final getServerPingTimeoutMs()J
-    .locals 2
-
-    iget-wide v0, p0, Lqze;->g:J
-
-    return-wide v0
-.end method
-
-.method public final getSignalingStat()Lm0f;
-    .locals 1
-
-    iget-object v0, p0, Lqze;->c:Lm0f;
-
-    return-object v0
-.end method
-
-.method public final getTimeoutMS()J
-    .locals 2
-
-    iget-wide v0, p0, Lqze;->a:J
-
-    return-wide v0
-.end method
-
-.method public final isFastRecoverEnabled()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqze;->h:Z
-
-    return v0
-.end method
-
-.method public final isReplaceParametersInEndpointEnabled()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqze;->j:Z
-
-    return v0
-.end method
-
-.method public final setEndpointParameters(Lag5;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lag5;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->i:Lag5;
-
-    return-object p0
-.end method
-
-.method public final setEndpointParameters(Lag5;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->i:Lag5;
-
-    return-void
-.end method
-
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/ExecutorService;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-object p0
-.end method
-
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-.method public final setFastRecoverEnabled(Z)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-boolean p1, p0, Lqze;->h:Z
-
-    return-object p0
-.end method
-
-.method public final setFastRecoverEnabled(Z)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lqze;->h:Z
-
-    return-void
-.end method
-
-.method public final setIsReplaceParametersInEndpointEnabled(Z)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lqze;"
-        }
-    .end annotation
-
-    iput-boolean p1, p0, Lqze;->j:Z
-
-    return-object p0
-.end method
-
-.method public final setLog(Ly6d;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ly6d;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->e:Ly6d;
-
-    return-object p0
-.end method
-
-.method public final setLog(Ly6d;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->e:Ly6d;
-
-    return-void
-.end method
-
-.method public final setLogConfiguration(Lz6d;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lz6d;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->f:Lz6d;
-
-    return-object p0
-.end method
-
-.method public final setLogConfiguration(Lz6d;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->f:Lz6d;
-
-    return-void
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->b:Ljava/lang/Runnable;
-
-    return-object p0
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->b:Ljava/lang/Runnable;
-
-    return-void
-.end method
-
-.method public final setReplaceParametersInEndpointEnabled(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lqze;->j:Z
-
-    return-void
-.end method
-
-.method public final setServerPingTimeoutMs(J)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lqze;->g:J
-
-    return-object p0
-.end method
-
-.method public final setServerPingTimeoutMs(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lqze;->g:J
-
-    return-void
-.end method
-
-.method public final setSignalingStat(Lm0f;)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lm0f;",
-            ")",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lqze;->c:Lm0f;
-
-    return-object p0
-.end method
-
-.method public final setSignalingStat(Lm0f;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lqze;->c:Lm0f;
-
-    return-void
-.end method
-
-.method public final setTimeoutMS(J)Lqze;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lqze;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lqze;->a:J
-
-    return-object p0
-.end method
-
-.method public final setTimeoutMS(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lqze;->a:J
+    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
 
     return-void
 .end method

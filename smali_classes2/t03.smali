@@ -2,23 +2,40 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld93;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ld68;
+
+.field public final c:Ld68;
+
+.field public final d:Ld68;
+
+.field public final e:Ld68;
 
 
-# virtual methods
-.method public final a()J
-    .locals 2
+# direct methods
+.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
+    .locals 1
 
-    const-wide/16 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-wide v0
-.end method
+    const-class v0, Lt03;
 
-.method public final c()J
-    .locals 2
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const-wide v0, 0x7fffffffffffffffL
+    move-result-object v0
 
-    return-wide v0
+    iput-object v0, p0, Lt03;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lt03;->b:Ld68;
+
+    iput-object p2, p0, Lt03;->c:Ld68;
+
+    iput-object p3, p0, Lt03;->d:Ld68;
+
+    iput-object p4, p0, Lt03;->e:Ld68;
+
+    return-void
 .end method

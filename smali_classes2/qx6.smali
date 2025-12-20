@@ -1,209 +1,53 @@
 .class public final Lqx6;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lpx6;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lrx6;
+.field public final synthetic Y:Ltx6;
 
-.field public final c:[I
+.field public Z:I
 
-.field public final d:[I
+.field public d:Ltx6;
+
+.field public o:Lud2;
 
 
 # direct methods
-.method public constructor <init>(Lpx6;Lrx6;[I[I)V
+.method public constructor <init>(Ltx6;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqx6;->Y:Ltx6;
 
-    iput-object p1, p0, Lqx6;->a:Lpx6;
-
-    iput-object p2, p0, Lqx6;->b:Lrx6;
-
-    iput-object p3, p0, Lqx6;->c:[I
-
-    iput-object p4, p0, Lqx6;->d:[I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lqx6;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lqx6;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lqx6;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lqx6;->Z:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lqx6;->Y:Ltx6;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lqx6;
+    invoke-virtual {p1, v0, v0, p0}, Ltx6;->a(Lud2;[JLl84;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lqx6;->a:Lpx6;
+    move-result-object p1
 
-    iget-object v3, p1, Lqx6;->a:Lpx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lqx6;->b:Lrx6;
-
-    iget-object v3, p1, Lqx6;->b:Lrx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lqx6;->c:[I
-
-    iget-object v3, p1, Lqx6;->c:[I
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lqx6;->d:[I
-
-    iget-object p1, p1, Lqx6;->d:[I
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lqx6;->a:Lpx6;
-
-    iget v0, v0, Lpx6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lqx6;->b:Lrx6;
-
-    iget v2, v2, Lrx6;->a:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lqx6;->c:[I
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lqx6;->d:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lqx6;->c:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqx6;->d:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "GradientsSkeletonGradientColors(cell="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lqx6;->a:Lpx6;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", grid="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lqx6;->b:Lrx6;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", cellGradient="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", gridGradient="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

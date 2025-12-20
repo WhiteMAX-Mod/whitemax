@@ -1,9 +1,9 @@
-.class public final Le;
+.class public final synthetic Le;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lio7;
+.implements Lmm4;
 
 
 # instance fields
@@ -23,425 +23,231 @@
 
 
 # virtual methods
-.method public final a(Lw5;)Ljava/lang/Object;
-    .locals 11
+.method public final a()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Le;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/settings/storage/ui/SettingsStorageScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0417\u0430\u043f\u0438\u0441\u044c \u0437\u0432\u043e\u043d\u043a\u0430"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_0
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gcmpe:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0413\u0440\u0443\u043f\u043f\u043e\u0432\u044b\u0435 \u0437\u0432\u043e\u043d\u043a\u0438: \u043f\u0435\u0440\u043c\u0438\u0448\u0435\u043d \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432 \u0447\u0430\u0442\u0430"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_1
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/settings/media/ui/SettingMediaScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gce:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/settings/media/ui/SettingMediaScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0413\u0440\u0443\u043f\u043f\u043e\u0432\u044b\u0435 \u0437\u0432\u043e\u043d\u043a\u0438"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_2
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-    new-instance v0, Lr5g;
+    const/4 v1, 0x0
 
-    const-string v1, "\ud83d\udcde \u0421\u043a\u0440\u044b\u0432\u0430\u0442\u044c \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u0438 \u044d\u043a\u0440\u0430\u043d\u0430 \u0432\u0445\u043e\u0434\u044f\u0449\u0435\u0433\u043e \u0437\u0432\u043e\u043d\u043a\u0430"
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;-><init>(Landroid/os/Bundle;ILro4;)V
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->hide-incoming-call-notif:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v0, v1, v2}, Lefe;-><init>(Lr5g;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_3
-    new-instance v8, Lr5g;
+    new-instance v0, Lone/me/settings/devices/SettingsDevicesScreen;
 
-    const-string p1, "\ud83d\udcde \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0430\u0443\u0434\u0438\u043e \u0444\u043e\u043a\u0443\u0441\u0430 \u043f\u043b\u0435\u0435\u0440\u0430 \u0440\u0438\u043d\u0433\u0442\u043e\u043d\u043e\u0432"
+    const/4 v1, 0x0
 
-    invoke-direct {v8, p1}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+    const/4 v2, 0x1
 
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-player-focus:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0, v1, v2, v1}, Lone/me/settings/devices/SettingsDevicesScreen;-><init>(Landroid/os/Bundle;ILro4;)V
 
-    const-string p1, "1 - \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u044b\u0439 \u0444\u043e\u043a\u0443\u0441"
-
-    const-string v0, "2 - \u0438\u0433\u043d\u043e\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043e\u0431 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438 \u0444\u043e\u043a\u0443\u0441\u0430"
-
-    const-string v1, "0 - \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0439 \u0444\u043e\u043a\u0443\u0441 (\u0441\u0442\u0430\u0440\u043e\u0435 \u043f\u043e\u0432\u0435\u0434\u0435\u043d\u0438\u0435)"
-
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v3, Lpfe;
-
-    const-wide/16 v5, 0x0
-
-    const/4 v9, 0x4
-
-    invoke-direct/range {v3 .. v9}, Lpfe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lr5g;I)V
-
-    return-object v3
+    return-object v0
 
     :pswitch_4
-    new-instance v9, Lr5g;
+    new-instance v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
-    const-string p1, "\ud83d\udcde \u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0438\u043d\u0434\u0438\u043a\u0430\u0442\u043e\u0440\u0430 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0430"
+    invoke-direct {v0}, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;-><init>()V
 
-    invoke-direct {v9, p1}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
-
-    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->enable-unknown-contact-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-string p1, "1 - \u043a\u043d\u043e\u043f\u043a\u0438 \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0432 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b \u0438 \u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c"
-
-    const-string v0, "2 - \u043a\u043d\u043e\u043f\u043a\u0438 \u0412\u0441\u0451 \u0432 \u043f\u043e\u0440\u044f\u0434\u043a\u0435 \u0438 \u0417\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c"
-
-    const-string v1, "0 - \u043d\u0435 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043e\u043f\u0440\u043e\u0441"
-
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
-
-    move-result-object v8
-
-    new-instance v4, Lpfe;
-
-    const-wide/16 v6, 0x0
-
-    const/4 v10, 0x4
-
-    invoke-direct/range {v4 .. v10}, Lpfe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lr5g;I)V
-
-    return-object v4
+    return-object v0
 
     :pswitch_5
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
-    new-instance v0, Lr5g;
+    invoke-direct {v0}, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;-><init>()V
 
-    const-string v1, "\ud83d\udcde \u041f\u043e\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0430\u0443\u0434\u0438\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432"
-
-    invoke-direct {v0, v1}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-am-speaker-fix:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v0, v1, v2}, Lefe;-><init>(Lr5g;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_6
-    new-instance v8, Lr5g;
+    new-instance v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
 
-    const-string p1, "\ud83d\udcde \u041a\u0430\u0441\u0442\u043e\u043c\u043d\u044b\u0439 AJB"
+    invoke-direct {v0}, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;-><init>()V
 
-    invoke-direct {v8, p1}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
-
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-majb:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v3, Lpfe;
-
-    const/4 v7, 0x0
-
-    const/16 v9, 0xc
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v3 .. v9}, Lpfe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lr5g;I)V
-
-    return-object v3
+    return-object v0
 
     :pswitch_7
-    sget-object p1, Lr61;->a:Lr61;
+    new-instance v0, Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    return-object p1
+    invoke-direct {v0}, Lone/me/notifications/settings/NotificationsSettingsScreen;-><init>()V
+
+    return-object v0
 
     :pswitch_8
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/messages/settings/MessagesSettingsScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-wt-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/messages/settings/MessagesSettingsScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c WebTransport"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_9
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/android/logout/LogoutScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-remove-nonopus-audiocodecs:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/android/logout/LogoutScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0423\u0434\u0430\u043b\u044f\u0442\u044c \u043d\u0435-Opus \u0430\u0443\u0434\u0438\u043e\u043a\u043e\u0434\u0435\u043a\u0438 \u0438\u0437 SDP"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_a
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/login/LoginScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-load-kws-by-sdk-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/login/LoginScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c KeywordSpotter"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_b
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->cfs:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0441\u0442\u0430\u0440\u0442 \u0447\u0435\u0440\u0435\u0437 \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u0438\u0439 \u0431\u0435\u043a\u0435\u043d\u0434"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_c
-    new-instance p1, Le31;
+    new-instance v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;-><init>()V
 
-    invoke-direct {p1, v0}, Le31;-><init>(I)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_d
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->local-pip-broadcast:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0440\u043e\u0434\u043a\u0430\u0441\u0442 \u0434\u043b\u044f \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u0432 \u041f\u0438\u041f"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_e
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/folders/list/FoldersListScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/folders/list/FoldersListScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041a\u0430\u0441\u0442\u043e\u043c\u043d\u044b\u0439 \u0440\u0438\u0433\u0442\u043e\u043d \u0432\u0445\u043e\u0434\u044f\u0449\u0435\u0433\u043e \u0437\u0432\u043e\u043d\u043a\u0430"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_f
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gc-link-pre-settings:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041f\u0440\u0435\u0434\u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0433\u043e \u0437\u0432\u043e\u043d\u043a\u0430 \u043f\u043e \u0441\u0441\u044b\u043b\u043a\u0435"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_10
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/showroom/ShowroomScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/showroom/ShowroomScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u041f\u0435\u0440\u0435\u0445\u043e\u0434 \u0438\u0437 1-1 \u0437\u0432\u043e\u043d\u043a\u0430 \u0432 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0439"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_11
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/devmenu/tools/server/ServerPortBottomSheet;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->group-call-chat-support:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/devmenu/tools/server/ServerPortBottomSheet;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\ud83d\udcde \u0427\u0430\u0442 \u0432 \u0433\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u043c \u0437\u0432\u043e\u043d\u043a\u0435"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_12
-    const/16 v0, 0x1ce
+    new-instance v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;
 
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
+    invoke-direct {v0}, Lone/me/devmenu/tools/server/ServerHostBottomSheet;-><init>()V
 
-    move-result-object p1
-
-    check-cast p1, Lui8;
-
-    return-object p1
+    return-object v0
 
     :pswitch_13
-    new-instance p1, Lz29;
+    new-instance v0, Lone/me/devmenu/logsviewer/LogsViewerScreen;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Lone/me/devmenu/logsviewer/LogsViewerScreen;-><init>()V
 
-    invoke-direct {p1, v0}, Lz29;-><init>(I)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_14
-    sget-object p1, Lpq;->a:Lpq;
+    new-instance v0, Lone/me/devmenu/DevMenuScreen;
 
-    return-object p1
+    invoke-direct {v0}, Lone/me/devmenu/DevMenuScreen;-><init>()V
+
+    return-object v0
 
     :pswitch_15
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/contactlist/ContactListWidget;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->suspend-video-converter:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Ly24;->a:Ly24;
 
-    invoke-direct {p1, v0}, Lefe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
+    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Ly24;)V
 
-    return-object p1
+    return-object v0
 
     :pswitch_16
-    new-instance p1, Lefe;
+    new-instance v0, Lj54;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->show-warning-links:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "show-warning-links`"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_17
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/chats/search/ChatsListSearchScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/chats/search/ChatsListSearchScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "media-playlist-enabled"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_18
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/calllist/ui/CallHistoryScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/calllist/ui/CallHistoryScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "search-loader-v2-enabled"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_19
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->miui-menu-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\u041c\u0435\u043d\u044e \u0444\u043e\u0440\u043c\u0430\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0434\u043b\u044f miui \u0432\u0441\u0435\u0445 \u0432\u0435\u0440\u0441\u0438\u0439"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_1a
-    new-instance p1, Lefe;
+    new-instance v0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->quotes-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;-><init>()V
 
-    const/4 v1, 0x0
-
-    const-string v2, "\u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0438 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0430 markdown quote \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u0430"
-
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p1
+    return-object v0
 
     :pswitch_1b
-    new-instance v3, Lpfe;
+    new-instance v0, Lone/me/appupdate/forceupdate/ForceUpdateScreen;
 
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->media-order:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0}, Lone/me/appupdate/forceupdate/ForceUpdateScreen;-><init>()V
 
-    const-string p1, "2 - \u041c\u0435\u0434\u0438\u0430 \u0441\u0432\u0435\u0440\u0445\u0443 \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u043f\u043e\u0441\u0442\u0430\u0445 \u043a\u0430\u043d\u0430\u043b\u043e\u0432"
-
-    const-string v0, "3 - \u041f\u043e\u0440\u044f\u0434\u043e\u043a \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0441 \u0431\u0435\u043a\u0430"
-
-    const-string v1, "0 - \u041c\u0435\u0434\u0438\u0430 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u043d\u0438\u0437\u0443"
-
-    const-string v2, "1 - \u041c\u0435\u0434\u0438\u0430 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u0432\u0435\u0440\u0445\u0443"
-
-    filled-new-array {v1, v2, p1, v0}, [Ljava/lang/String;
-
-    move-result-object v7
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x14
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v3 .. v9}, Lpfe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lr5g;I)V
-
-    return-object v3
+    return-object v0
 
     :pswitch_1c
-    sget-object p1, Lh;->a:Lh;
+    new-instance v0, Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    return-object p1
+    invoke-direct {v0}, Lone/me/aboutappsettings/AboutAppSettingsScreen;-><init>()V
+
+    return-object v0
 
     nop
 

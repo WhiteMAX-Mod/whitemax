@@ -1,53 +1,67 @@
 .class public final Lska;
-.super Lq44;
+.super Landroid/telephony/TelephonyCallback;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/telephony/TelephonyCallback$DisplayInfoListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ltka;
-
-.field public Z:I
-
-.field public d:Ltka;
-
-.field public o:Ljava/lang/String;
+.field public final a:Lwka;
 
 
 # direct methods
-.method public constructor <init>(Ltka;Lq44;)V
+.method public constructor <init>(Lwka;)V
     .locals 0
 
-    iput-object p1, p0, Lska;->Y:Ltka;
+    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lska;->a:Lwka;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
+    .locals 2
 
-    iput-object p1, p0, Lska;->X:Ljava/lang/Object;
+    invoke-static {p1}, Lv89;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
-    iget p1, p0, Lska;->Z:I
+    move-result p1
 
-    const/high16 v0, -0x80000000
+    const/4 v0, 0x3
 
-    or-int/2addr p1, v0
+    const/4 v1, 0x5
 
-    iput p1, p0, Lska;->Z:I
+    if-eq p1, v0, :cond_1
 
-    iget-object p1, p0, Lska;->Y:Ltka;
+    const/4 v0, 0x4
 
-    const/4 v0, 0x0
+    if-eq p1, v0, :cond_1
 
-    invoke-virtual {p1, v0, p0}, Ltka;->h(Ljava/lang/String;Lq44;)Ljava/lang/Object;
+    if-ne p1, v1, :cond_0
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    if-eqz p1, :cond_2
+
+    const/16 v1, 0xa
+
+    :cond_2
+    iget-object p1, p0, Lska;->a:Lwka;
+
+    invoke-virtual {p1, v1}, Lwka;->d(I)V
+
+    return-void
 .end method

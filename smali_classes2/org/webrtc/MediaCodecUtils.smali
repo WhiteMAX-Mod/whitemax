@@ -191,15 +191,13 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v1, "Unsupported codec: "
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "Unsupported codec: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -246,7 +244,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p0}, Ly35;->A(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {p0}, Lx75;->A(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 
@@ -311,7 +309,7 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p0}, Ly35;->v(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {p0}, Lx75;->v(Landroid/media/MediaCodecInfo;)Z
 
     move-result p0
 

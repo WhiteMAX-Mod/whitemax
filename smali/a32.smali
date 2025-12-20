@@ -1,300 +1,137 @@
 .class public final La32;
-.super Ltk0;
+.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 .source "SourceFile"
 
 
 # instance fields
-.field public final C0:Lph4;
+.field public final a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
-.field public final D0:Lumb;
-
-.field public E0:Lam5;
-
-.field public F0:J
+.field public final b:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)V
+    .locals 0
 
-    const/4 v0, 0x6
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;-><init>()V
 
-    invoke-direct {p0, v0}, Ltk0;-><init>(I)V
+    iput-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    new-instance v0, Lph4;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lph4;-><init>(I)V
-
-    iput-object v0, p0, La32;->C0:Lph4;
-
-    new-instance v0, Lumb;
-
-    invoke-direct {v0}, Lumb;-><init>()V
-
-    iput-object v0, p0, La32;->D0:Lumb;
+    iput-object p2, p0, La32;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    const/16 v0, 0x8
+    new-instance v0, Lz22;
 
-    if-ne p1, v0, :cond_0
+    const/4 v1, 0x0
 
-    check-cast p2, Lam5;
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    iput-object p2, p0, La32;->E0:Lam5;
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    :cond_0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
     return-void
 .end method
 
-.method public final h()Ljava/lang/String;
-    .locals 1
+.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    const-string v0, "CameraMotionRenderer"
+    new-instance v0, Lz22;
 
-    return-object v0
-.end method
+    const/4 v1, 0x2
 
-.method public final j()Z
-    .locals 1
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    invoke-virtual {p0}, Ltk0;->i()Z
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    move-result v0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return v0
-.end method
-
-.method public final l()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final m()V
-    .locals 1
-
-    iget-object v0, p0, La32;->E0:Lam5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lam5;->d()V
-
-    :cond_0
     return-void
 .end method
 
-.method public final o(JZ)V
-    .locals 0
+.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    const-wide/high16 p1, -0x8000000000000000L
-
-    iput-wide p1, p0, La32;->F0:J
-
-    iget-object p1, p0, La32;->E0:Lam5;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lam5;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w(JJ)V
-    .locals 5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p0}, Ltk0;->i()Z
-
-    move-result p3
-
-    if-nez p3, :cond_7
-
-    iget-wide p3, p0, La32;->F0:J
-
-    const-wide/32 v0, 0x186a0
-
-    add-long/2addr v0, p1
-
-    cmp-long p3, p3, v0
-
-    if-gez p3, :cond_7
-
-    iget-object p3, p0, La32;->C0:Lph4;
-
-    invoke-virtual {p3}, Lph4;->w()V
-
-    iget-object p4, p0, Ltk0;->c:Lxt4;
-
-    invoke-virtual {p4}, Lxt4;->clear()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p4, p3, v0}, Ltk0;->v(Lxt4;Lph4;I)I
-
-    move-result p4
-
-    const/4 v1, -0x4
-
-    if-ne p4, v1, :cond_7
-
-    const/4 p4, 0x4
-
-    invoke-virtual {p3, p4}, Loy;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    iget-wide v1, p3, Lph4;->Y:J
-
-    iput-wide v1, p0, La32;->F0:J
-
-    iget-wide v3, p0, Ltk0;->v0:J
-
-    cmp-long v1, v1, v3
-
-    if-gez v1, :cond_2
+    new-instance v0, Lz22;
 
     const/4 v1, 0x1
 
-    goto :goto_1
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    :cond_2
-    move v1, v0
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    :goto_1
-    iget-object v2, p0, La32;->E0:Lam5;
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    if-eqz v2, :cond_0
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p3}, Lph4;->z()V
-
-    iget-object p3, p3, Lph4;->o:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Lzxg;->a:Ljava/lang/String;
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    if-eq v1, v2, :cond_4
-
-    const/4 p3, 0x0
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
-
-    move-result v2
-
-    iget-object v3, p0, La32;->D0:Lumb;
-
-    invoke-virtual {v3, v2, v1}, Lumb;->H(I[B)V
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result p3
-
-    add-int/2addr p3, p4
-
-    invoke-virtual {v3, p3}, Lumb;->J(I)V
-
-    const/4 p3, 0x3
-
-    new-array p4, p3, [F
-
-    :goto_2
-    if-ge v0, p3, :cond_5
-
-    invoke-virtual {v3}, Lumb;->l()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result v1
-
-    aput v1, p4, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    move-object p3, p4
-
-    :goto_3
-    if-nez p3, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object p3, p0, La32;->E0:Lam5;
-
-    invoke-virtual {p3}, Lam5;->c()V
-
-    goto :goto_0
-
-    :cond_7
-    :goto_4
     return-void
 .end method
 
-.method public final z(Lhf6;)I
-    .locals 1
+.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    const-string v0, "application/x-camera-motion"
+    new-instance v0, Lz22;
 
-    iget-object p1, p1, Lhf6;->n:Ljava/lang/String;
+    const/4 v1, 0x5
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    move-result p1
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    const/4 v0, 0x0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    if-eqz p1, :cond_0
+    return-void
+.end method
 
-    const/4 p1, 0x4
+.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
 
-    invoke-static {p1, v0, v0, v0}, Ltk0;->b(IIII)I
+    new-instance v0, Lz22;
 
-    move-result p1
+    const/4 v1, 0x3
 
-    return p1
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
 
-    :cond_0
-    invoke-static {v0, v0, v0, v0}, Ltk0;->b(IIII)I
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
 
-    move-result p1
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return p1
+    return-void
+.end method
+
+.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .locals 2
+
+    new-instance v0, Lz22;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p0, p1, v1}, Lz22;-><init>(La32;Landroid/hardware/camera2/CameraCaptureSession;I)V
+
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
+    .locals 2
+
+    new-instance v0, Lbj;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lbj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, p0, La32;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

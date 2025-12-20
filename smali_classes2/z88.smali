@@ -1,29 +1,40 @@
 .class public final Lz88;
-.super Lh98;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhn;
 
 
 # instance fields
-.field public final o:Ljava/lang/String;
+.field public final synthetic a:Lhn;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 9
+.method public constructor <init>(Lkn;Lc98;Ljn;)V
+    .locals 0
 
-    const-wide/16 v5, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v7, 0x0
+    iput-object p3, p0, Lz88;->a:Lhn;
 
-    const-wide/16 v1, 0x0
+    new-instance p3, Ly88;
 
-    const-wide/16 v3, 0x0
+    invoke-direct {p3, p1, p0, p2}, Ly88;-><init>(Lkn;Lz88;Lc98;)V
 
-    move-object v0, p0
+    invoke-virtual {p2, p3}, Lc98;->a(Lw88;)V
 
-    invoke-direct/range {v0 .. v8}, Lh98;-><init>(JJJJ)V
+    return-void
+.end method
 
-    iput-object p1, v0, Lz88;->o:Ljava/lang/String;
+
+# virtual methods
+.method public final e0(Lkn;I)V
+    .locals 1
+
+    iget-object v0, p0, Lz88;->a:Lhn;
+
+    invoke-interface {v0, p1, p2}, Lhn;->e0(Lkn;I)V
 
     return-void
 .end method

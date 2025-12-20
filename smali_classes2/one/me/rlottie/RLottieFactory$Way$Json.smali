@@ -65,7 +65,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLtk4;)V
+    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/rlottie/RLottieFactory$Way;-><init>(IIZLro4;)V
 
     .line 6
     iput-object p1, p0, Lone/me/rlottie/RLottieFactory$Way$Json;->jsonString:Ljava/lang/String;
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;IIZILtk4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;IIZILro4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4

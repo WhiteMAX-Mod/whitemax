@@ -1,85 +1,51 @@
-.class public abstract Luab;
-.super Ljava/lang/Object;
+.class public final Luab;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:I
+.field public final synthetic Y:Lhbb;
 
-.field public static final c:I
+.field public Z:I
 
-.field public static final d:I
+.field public d:Lhbb;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public o:Lvfa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhbb;Ll84;)V
+    .locals 0
 
-    sget v0, Lxzc;->oneme_stickers_sticker_first_frame:I
+    iput-object p1, p0, Luab;->Y:Lhbb;
 
-    sput v0, Luab;->a:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_lottie:I
-
-    sput v0, Luab;->b:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_set_header_button:I
-
-    sput v0, Luab;->c:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_set_header_subtitle:I
-
-    sput v0, Luab;->d:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_set_header_title:I
-
-    sput v0, Luab;->e:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_set_list:I
-
-    sput v0, Luab;->f:I
-
-    sget v0, Lxzc;->oneme_stickers_sticker_webm:I
-
-    sput v0, Luab;->g:I
-
-    sget v0, Lxzc;->oneme_stickers_view_type_sticker:I
-
-    sput v0, Luab;->h:I
-
-    sget v0, Lxzc;->oneme_stickers_view_type_sticker_lottie:I
-
-    sput v0, Luab;->i:I
-
-    sget v0, Lxzc;->oneme_stickers_view_type_sticker_webm:I
-
-    sput v0, Luab;->j:I
-
-    sget v0, Lxzc;->oneme_stickers_view_type_stickers_set:I
-
-    sput v0, Luab;->k:I
-
-    sget v0, Lxzc;->oneme_stickers_view_type_stickers_set_showcase:I
-
-    sput v0, Luab;->l:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Luab;->X:Ljava/lang/Object;
+
+    iget p1, p0, Luab;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Luab;->Z:I
+
+    iget-object p1, p0, Luab;->Y:Lhbb;
+
+    invoke-static {p1, p0}, Lhbb;->a(Lhbb;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

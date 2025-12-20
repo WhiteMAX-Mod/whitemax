@@ -1,224 +1,173 @@
 .class public final Lrs7;
-.super Lj0e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lyvd;
-
-.field public static final e:Lyvd;
-
-.field public static final f:J
-
-.field public static final g:Ljava/util/concurrent/TimeUnit;
-
-.field public static final h:Lqs7;
-
-.field public static final i:Z
-
-.field public static final j:Los7;
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Landroid/app/Dialog;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    sput-object v0, Lrs7;->g:Ljava/util/concurrent/TimeUnit;
-
-    const-string v0, "rx3.io-keep-alive-time"
-
-    const-wide/16 v1, 0x3c
-
-    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    sput-wide v0, Lrs7;->f:J
-
-    new-instance v0, Lqs7;
-
-    new-instance v1, Lyvd;
-
-    const-string v2, "RxCachedThreadSchedulerShutdown"
-
-    invoke-direct {v1, v2}, Lyvd;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, v1}, Lqs7;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    sput-object v0, Lrs7;->h:Lqs7;
-
-    invoke-virtual {v0}, Leha;->dispose()V
-
-    const-string v0, "rx3.io-priority"
-
-    const/4 v1, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    new-instance v2, Lyvd;
-
-    const-string v3, "RxCachedThreadScheduler"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, v0, v4}, Lyvd;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v2, Lrs7;->d:Lyvd;
-
-    new-instance v3, Lyvd;
-
-    const-string v5, "RxCachedWorkerPoolEvictor"
-
-    invoke-direct {v3, v5, v0, v4}, Lyvd;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v3, Lrs7;->e:Lyvd;
-
-    const-string v0, "rx3.io-scheduled-release"
-
-    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    sput-boolean v0, Lrs7;->i:Z
-
-    new-instance v0, Los7;
-
-    const-wide/16 v3, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-direct {v0, v3, v4, v5, v2}, Los7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
-
-    sput-object v0, Lrs7;->j:Los7;
-
-    iget-object v2, v0, Los7;->c:Lzl3;
-
-    invoke-virtual {v2}, Lzl3;->dispose()V
-
-    iget-object v2, v0, Los7;->o:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_0
-    iget-object v0, v0, Los7;->d:Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
-
-    :cond_1
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 7
+.method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lrs7;->a:Landroid/app/Dialog;
 
-    sget-object v1, Lrs7;->j:Los7;
+    iget v0, p2, Landroid/graphics/Rect;->left:I
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    iput v0, p0, Lrs7;->b:I
 
-    iput-object v0, p0, Lrs7;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget p2, p2, Landroid/graphics/Rect;->top:I
 
-    new-instance v2, Los7;
+    iput p2, p0, Lrs7;->c:I
 
-    sget-wide v3, Lrs7;->f:J
+    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
-    sget-object v5, Lrs7;->g:Ljava/util/concurrent/TimeUnit;
+    move-result-object p1
 
-    sget-object v6, Lrs7;->d:Lyvd;
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-    invoke-direct {v2, v3, v4, v5, v6}, Los7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
+    move-result-object p1
 
-    :cond_0
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
 
-    move-result v3
+    move-result p1
 
-    if-eqz v3, :cond_1
+    iput p1, p0, Lrs7;->d:I
 
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_0
-
-    iget-object v0, v2, Los7;->c:Lzl3;
-
-    invoke-virtual {v0}, Lzl3;->dispose()V
-
-    iget-object v0, v2, Los7;->o:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x1
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_2
-    iget-object v0, v2, Los7;->d:Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
-
-    :cond_3
-    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lh0e;
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    new-instance v0, Lps7;
+    const v0, 0x1020002
 
-    iget-object v1, p0, Lrs7;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
+    iget v1, p0, Lrs7;->b:I
 
-    check-cast v1, Los7;
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
-    invoke-direct {v0, v1}, Lps7;-><init>(Los7;)V
+    move-result v2
 
-    return-object v0
+    add-int/2addr v2, v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    iget v3, p0, Lrs7;->c:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    new-instance v3, Landroid/graphics/RectF;
+
+    int-to-float v2, v2
+
+    int-to-float v4, v4
+
+    int-to-float v1, v1
+
+    int-to-float v0, v0
+
+    invoke-direct {v3, v2, v4, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    invoke-virtual {v3, v0, v1}, Landroid/graphics/RectF;->contains(FF)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p2
+
+    const/4 v2, 0x1
+
+    if-ne p2, v2, :cond_1
+
+    const/4 p2, 0x4
+
+    invoke-virtual {v0, p2}, Landroid/view/MotionEvent;->setAction(I)V
+
+    :cond_1
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1c
+
+    if-ge p2, v3, :cond_2
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
+
+    iget p2, p0, Lrs7;->d:I
+
+    neg-int v1, p2
+
+    sub-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    neg-int p2, p2
+
+    sub-int/2addr p2, v2
+
+    int-to-float p2, p2
+
+    invoke-virtual {v0, v1, p2}, Landroid/view/MotionEvent;->setLocation(FF)V
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+
+    iget-object p1, p0, Lrs7;->a:Landroid/app/Dialog;
+
+    invoke-virtual {p1, v0}, Landroid/app/Dialog;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

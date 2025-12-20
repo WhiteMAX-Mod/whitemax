@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhu3;
+.implements Lvx3;
 
 
 # instance fields
@@ -13,11 +13,11 @@
 
 .field public final synthetic c:Z
 
-.field public final synthetic d:Lhu3;
+.field public final synthetic d:Lvx3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLhu3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLvx3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +28,7 @@
 
     iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/b;->c:Z
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/b;->d:Lhu3;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/b;->d:Lvx3;
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/b;->d:Lhu3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/b;->d:Lvx3;
 
     check-cast p1, Ljava/util/Collection;
 
@@ -48,7 +48,7 @@
 
     iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/b;->c:Z
 
-    invoke-static {v1, v2, v3, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->I(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLhu3;Ljava/util/Collection;)V
+    invoke-static {v1, v2, v3, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->a(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLvx3;Ljava/util/Collection;)V
 
     return-void
 .end method

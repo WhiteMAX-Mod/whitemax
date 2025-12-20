@@ -51,7 +51,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lo6d;->TextAppearance:[I
+    sget-object v2, Ltfd;->TextAppearance:[I
 
     const v3, 0x1010041
 
@@ -63,7 +63,7 @@
 
     move-result-object v1
 
-    sget v2, Lo6d;->TextAppearance_android_textSize:I
+    sget v2, Ltfd;->TextAppearance_android_textSize:I
 
     invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 

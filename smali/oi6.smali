@@ -3,74 +3,93 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loi6;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Landroid/content/Context;
+
+.field public final synthetic d:Lzfd;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwf4;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
-
-    sput-object v0, Loi6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;Landroid/content/Context;Lzfd;II)V
     .locals 0
 
+    iput p5, p0, Loi6;->a:I
+
+    iput-object p1, p0, Loi6;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Loi6;->c:Landroid/content/Context;
+
+    iput-object p3, p0, Loi6;->d:Lzfd;
+
+    iput p4, p0, Loi6;->o:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loi6;->a:Ljava/lang/String;
-
-    iput p2, p0, Loi6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p0, Loi6;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :try_start_0
+    iget-object v0, p0, Loi6;->b:Ljava/lang/String;
 
-    iget-object p2, p0, Loi6;->a:Ljava/lang/String;
+    iget-object v1, p0, Loi6;->c:Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v2, p0, Loi6;->d:Lzfd;
 
-    iget p2, p0, Loi6;->b:I
+    iget v3, p0, Loi6;->o:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v0, v1, v2, v3}, Lqi6;->a(Ljava/lang/String;Landroid/content/Context;Lzfd;I)Lpi6;
 
-    return-void
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    new-instance v0, Lpi6;
+
+    const/4 v1, -0x3
+
+    invoke-direct {v0, v1}, Lpi6;-><init>(I)V
+
+    :goto_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Loi6;->d:Lzfd;
+
+    iget v1, p0, Loi6;->o:I
+
+    iget-object v2, p0, Loi6;->b:Ljava/lang/String;
+
+    iget-object v3, p0, Loi6;->c:Landroid/content/Context;
+
+    invoke-static {v2, v3, v0, v1}, Lqi6;->a(Ljava/lang/String;Landroid/content/Context;Lzfd;I)Lpi6;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

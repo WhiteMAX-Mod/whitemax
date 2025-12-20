@@ -1,57 +1,31 @@
 .class public final Lv1g;
-.super Ljava/lang/Object;
+.super Ladf;
 .source "SourceFile"
-
-# interfaces
-.implements Lw1g;
-
-
-# instance fields
-.field public final a:Lw1g;
-
-.field public final b:Ljava/util/HashMap;
-
-
-# direct methods
-.method public constructor <init>(Lw1g;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lv1g;->a:Lw1g;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lv1g;->b:Ljava/util/HashMap;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-    .locals 2
+.method public final z(Lie8;)V
+    .locals 4
 
-    iget-object v0, p0, Lv1g;->b:Ljava/util/HashMap;
+    check-cast p1, Lu1g;
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-    move-result-object v1
+    check-cast v0, Le7b;
 
-    check-cast v1, Ljava/util/concurrent/ThreadFactory;
+    iget-object v1, p1, Lu1g;->b:Ljava/lang/CharSequence;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0, v1}, Le7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Lv1g;->a:Lw1g;
+    iget-object v2, p1, Lu1g;->d:Ljava/lang/CharSequence;
 
-    invoke-interface {v1, p1}, Lw1g;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    invoke-virtual {v0, v2}, Le7b;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    move-result-object v1
+    iget-wide v2, p1, Lu1g;->a:J
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lu1g;->c:Ljava/lang/String;
 
-    :cond_0
-    return-object v1
+    invoke-virtual {v0, v2, v3, v1, p1}, Le7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    return-void
 .end method

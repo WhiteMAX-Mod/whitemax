@@ -242,7 +242,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lmri;->a()Landroid/app/Application;
+    invoke-static {}, Lu4j;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -537,11 +537,11 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lwo4;
+    new-instance v0, Lss4;
 
-    const/16 v1, 0xa
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1, p0}, Lwo4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lss4;-><init>(ILjava/lang/Object;)V
 
     move-object p0, v0
 
@@ -703,11 +703,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lwo4;
+    new-instance v2, Lss4;
 
-    const/16 v3, 0xb
+    const/16 v3, 0xa
 
-    invoke-direct {v2, v3, v1}, Lwo4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lss4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->grab(Ljavax/inject/Provider;)V
     :try_end_0

@@ -1,95 +1,145 @@
-.class public final Le8b;
-.super Li3;
+.class public abstract Le8b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic d:Lf8b;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
 
 
 # direct methods
-.method public constructor <init>(Lf8b;I)V
-    .locals 0
-
-    iput p2, p0, Le8b;->c:I
-
-    iput-object p1, p0, Le8b;->d:Lf8b;
-
-    const/16 p1, 0xc
-
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Ld8b;->a:Ld8b;
-
-    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p2, Lc8b;->a:Lc8b;
-
-    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Le8b;->c:I
+    sget v0, Ll7d;->oneme_contactlist_action_audio_call:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Le8b;->a:I
 
-    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Ll7d;->oneme_contactlist_action_block:I
 
-    move-result v0
+    sput v0, Le8b;->b:I
 
-    if-nez v0, :cond_0
+    sget v0, Ll7d;->oneme_contactlist_action_delete:I
 
-    check-cast p2, Lc8b;
+    sput v0, Le8b;->c:I
 
-    check-cast p1, Lc8b;
+    sget v0, Ll7d;->oneme_contactlist_action_open_profile:I
 
-    iget-object p1, p0, Le8b;->d:Lf8b;
+    sput v0, Le8b;->d:I
 
-    invoke-virtual {p1}, Lf8b;->c()V
+    sget v0, Ll7d;->oneme_contactlist_action_select:I
 
-    :cond_0
+    sput v0, Le8b;->e:I
+
+    sget v0, Ll7d;->oneme_contactlist_action_share_contact:I
+
+    sput v0, Le8b;->f:I
+
+    sget v0, Ll7d;->oneme_contactlist_action_suspend_bot:I
+
+    sput v0, Le8b;->g:I
+
+    sget v0, Ll7d;->oneme_contactlist_action_unblock:I
+
+    sput v0, Le8b;->h:I
+
+    sget v0, Ll7d;->oneme_contactlist_action_video_call:I
+
+    sput v0, Le8b;->i:I
+
+    sget v0, Ll7d;->oneme_contactlist_action_write:I
+
+    sput v0, Le8b;->j:I
+
+    sget v0, Ll7d;->oneme_contactlist_confirm_block:I
+
+    sput v0, Le8b;->k:I
+
+    sget v0, Ll7d;->oneme_contactlist_confirm_cancel:I
+
+    sput v0, Le8b;->l:I
+
+    sget v0, Ll7d;->oneme_contactlist_confirm_delete:I
+
+    sput v0, Le8b;->m:I
+
+    sget v0, Ll7d;->oneme_contactlist_confirm_unblock:I
+
+    sput v0, Le8b;->n:I
+
+    sget v0, Ll7d;->oneme_contactlist_contact_view_type:I
+
+    sput v0, Le8b;->o:I
+
+    sget v0, Ll7d;->oneme_contactlist_container:I
+
+    sput v0, Le8b;->p:I
+
+    sget v0, Ll7d;->oneme_contactlist_empty_search_result_view_type:I
+
+    sput v0, Le8b;->q:I
+
+    sget v0, Ll7d;->oneme_contactlist_global_contact_view_type:I
+
+    sput v0, Le8b;->r:I
+
+    sget v0, Ll7d;->oneme_contactlist_menu_item_add_contact:I
+
+    sput v0, Le8b;->s:I
+
+    sget v0, Ll7d;->oneme_contactlist_menu_item_create_chat:I
+
+    sput v0, Le8b;->t:I
+
+    sget v0, Ll7d;->oneme_contactlist_phonebook_contact_view_type:I
+
+    sput v0, Le8b;->u:I
+
+    sget v0, Ll7d;->oneme_contactlist_toolbar:I
+
+    sput v0, Le8b;->v:I
+
     return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, Ld8b;
-
-    check-cast p1, Ld8b;
-
-    iget-object p1, p0, Le8b;->d:Lf8b;
-
-    invoke-virtual {p1}, Lf8b;->d()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

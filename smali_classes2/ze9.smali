@@ -1,53 +1,135 @@
 .class public final Lze9;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lre9;
 
-.field public final synthetic Y:Lhf9;
+.field public final b:J
 
-.field public Z:I
+.field public final c:Ljava/util/ArrayList;
 
-.field public d:Ljava/lang/Object;
+.field public volatile d:I
 
-.field public o:Lpb2;
+.field public volatile e:I
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Lhf9;Lq44;)V
-    .locals 0
+.method public constructor <init>(Lre9;)V
+    .locals 2
 
-    iput-object p1, p0, Lze9;->Y:Lhf9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lze9;->a:Lre9;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lze9;->b:J
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lze9;->c:Ljava/util/ArrayList;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lze9;->d:I
+
+    iput p1, p0, Lze9;->e:I
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lze9;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lze9;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
     .locals 1
 
-    iput-object p1, p0, Lze9;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lze9;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget p1, p0, Lze9;->Z:I
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
-    iput p1, p0, Lze9;->Z:I
+    iget-object v0, p0, Lze9;->a:Lre9;
 
-    iget-object p1, p0, Lze9;->Y:Lhf9;
+    iget-object v1, v0, Lre9;->b:Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
+    invoke-static {v1}, Lkp6;->o(Ljava/util/ArrayList;)Ljava/lang/String;
 
-    invoke-static {p1, v0, p0}, Lhf9;->u(Lhf9;Lpb2;Lq44;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    iget-object v2, p0, Lze9;->c:Ljava/util/ArrayList;
 
-    return-object p1
+    invoke-static {v2}, Lkp6;->l(Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lre9;->c:Ljava/lang/String;
+
+    const-string v4, "              "
+
+    invoke-static {v0, v4}, Lkp6;->n(Lre9;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0}, Lkp6;->m(Lre9;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "\n              }\n              inputMedias={"
+
+    const-string v6, "\n              }\n              out="
+
+    const-string v7, "\n            MediaTransformRequest(\n              in={"
+
+    invoke-static {v7, v1, v5, v2, v6}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n              anc={"
+
+    const-string v5, "\n              }\n              request={"
+
+    invoke-static {v1, v3, v2, v4, v5}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n              }\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljyf;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

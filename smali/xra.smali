@@ -1,54 +1,95 @@
-.class public final Lxra;
-.super Le2f;
+.class public abstract Lxra;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lon6;
-
-
-# instance fields
-.field public final a:Lora;
 
 
 # direct methods
-.method public constructor <init>(Lora;)V
+.method public static a(Landroid/app/Person;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p1, p2}, Landroid/app/Notification$CallStyle;->forIncomingCall(Landroid/app/Person;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
 
-    iput-object p1, p0, Lxra;->a:Lora;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Person;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
+    .locals 0
 
-# virtual methods
-.method public final b()Lvqa;
-    .locals 3
+    invoke-static {p0, p1}, Landroid/app/Notification$CallStyle;->forOngoingCall(Landroid/app/Person;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
 
-    new-instance v0, Lura;
+    move-result-object p0
 
-    iget-object v1, p0, Lxra;->a:Lora;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lura;-><init>(Lk3;Z)V
-
-    return-object v0
+    return-object p0
 .end method
 
-.method public final l(Lv2f;)V
-    .locals 2
+.method public static c(Landroid/app/Person;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
+    .locals 0
 
-    new-instance v0, Lvra;
+    invoke-static {p0, p1, p2}, Landroid/app/Notification$CallStyle;->forScreeningCall(Landroid/app/Person;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification$CallStyle;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    invoke-direct {v0, v1, p1}, Lvra;-><init>(ILjava/lang/Object;)V
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lxra;->a:Lora;
+.method public static d(Landroid/app/Notification$CallStyle;I)Landroid/app/Notification$CallStyle;
+    .locals 0
 
-    invoke-virtual {p1, v0}, Lvqa;->a(Lvta;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setAnswerButtonColorHint(I)Landroid/app/Notification$CallStyle;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAuthenticationRequired(Z)Landroid/app/Notification$Action$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/app/Notification$CallStyle;I)Landroid/app/Notification$CallStyle;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setDeclineButtonColorHint(I)Landroid/app/Notification$CallStyle;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Landroid/app/Notification$CallStyle;Z)Landroid/app/Notification$CallStyle;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setIsVideo(Z)Landroid/app/Notification$CallStyle;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/app/Notification$CallStyle;Landroid/graphics/drawable/Icon;)Landroid/app/Notification$CallStyle;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setVerificationIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$CallStyle;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(Landroid/app/Notification$CallStyle;Ljava/lang/CharSequence;)Landroid/app/Notification$CallStyle;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setVerificationText(Ljava/lang/CharSequence;)Landroid/app/Notification$CallStyle;
+
+    move-result-object p0
+
+    return-object p0
 .end method

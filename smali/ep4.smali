@@ -1,80 +1,68 @@
 .class public final Lep4;
-.super Lm0e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lep4;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Luz5;
+
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lep4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v5, Le3g;->c:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v6, Le3g;->d:I
+    iput-object p2, p0, Lep4;->a:Ljava/lang/String;
 
-    sget-wide v2, Le3g;->e:J
+    new-instance p2, Luz5;
 
-    sget-object v4, Le3g;->a:Ljava/lang/String;
+    invoke-direct {p2, p1}, Luz5;-><init>(Ljava/io/File;)V
 
-    invoke-direct {v0}, Lz74;-><init>()V
+    iput-object p2, p0, Lep4;->b:Luz5;
 
-    new-instance v1, Le84;
+    const-wide/16 p1, -0x1
 
-    invoke-direct/range {v1 .. v6}, Le84;-><init>(JLjava/lang/String;II)V
+    iput-wide p1, p0, Lep4;->c:J
 
-    iput-object v1, v0, Lm0e;->a:Le84;
-
-    sput-object v0, Lep4;->b:Lep4;
+    iput-wide p1, p0, Lep4;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
+.method public final a()J
+    .locals 4
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-wide v0, p0, Lep4;->d:J
 
-    const-string v1, "Dispatchers.Default cannot be closed"
+    const-wide/16 v2, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    cmp-long v0, v0, v2
 
-    throw v0
-.end method
+    if-gez v0, :cond_0
 
-.method public final limitedParallelism(ILjava/lang/String;)Lz74;
-    .locals 1
+    iget-object v0, p0, Lep4;->b:Luz5;
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+    iget-object v0, v0, Luz5;->a:Ljava/io/File;
 
-    sget v0, Le3g;->c:I
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
-    if-lt p1, v0, :cond_0
+    move-result-wide v0
 
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lz74;Ljava/lang/String;)Lz74;
-
-    move-result-object p1
-
-    return-object p1
+    iput-wide v0, p0, Lep4;->d:J
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lz74;->limitedParallelism(ILjava/lang/String;)Lz74;
+    iget-wide v0, p0, Lep4;->d:J
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Dispatchers.Default"
-
-    return-object v0
+    return-wide v0
 .end method

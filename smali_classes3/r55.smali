@@ -1,305 +1,310 @@
-.class public final Lr55;
+.class public final synthetic Lr55;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:I
-
-.field public c:[J
+.field public final synthetic b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
 
 # direct methods
-.method public constructor <init>(IB)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
     .locals 0
-
-    iput p1, p0, Lr55;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 p1, 0x20
-
-    .line 2
-    new-array p1, p1, [J
-
-    iput-object p1, p0, Lr55;->c:[J
-
-    return-void
-
-    :pswitch_0
-    const/16 p1, 0x20
-
-    const/4 p2, 0x2
-
-    .line 3
-    invoke-direct {p0, p1, p2}, Lr55;-><init>(II)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(II)V
-    .locals 2
 
     iput p2, p0, Lr55;->a:I
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput p1, p0, Lr55;->b:I
-
-    .line 6
-    new-array p1, p1, [J
-
-    iput-object p1, p0, Lr55;->c:[J
-
-    const-wide/16 v0, -0x1
-
-    .line 7
-    invoke-static {p1, v0, v1}, Ljava/util/Arrays;->fill([JJ)V
-
     return-void
-
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    new-array p1, p1, [J
-
-    iput-object p1, p0, Lr55;->c:[J
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(J)V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
     iget v0, p0, Lr55;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget v0, p0, Lr55;->b:I
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    iget-object v1, p0, Lr55;->c:[J
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
 
     move-result-object v0
 
-    iput-object v0, p0, Lr55;->c:[J
+    check-cast v0, Lefe;
 
-    :cond_0
-    iget-object v0, p0, Lr55;->c:[J
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
 
-    iget v1, p0, Lr55;->b:I
+    move-result-object v0
 
-    add-int/lit8 v2, v1, 0x1
+    const/16 v1, 0x91
 
-    iput v2, p0, Lr55;->b:I
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
 
-    aput-wide p1, v0, v1
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lh64;
+
+    return-object v0
 
     :pswitch_0
-    iget v0, p0, Lr55;->b:I
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    iget-object v1, p0, Lr55;->c:[J
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
 
     move-result-object v0
 
-    iput-object v0, p0, Lr55;->c:[J
+    check-cast v0, Lefe;
 
-    :cond_1
-    iget-object v0, p0, Lr55;->c:[J
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
 
-    iget v1, p0, Lr55;->b:I
+    move-result-object v0
 
-    add-int/lit8 v2, v1, 0x1
+    const/16 v1, 0x40
 
-    iput v2, p0, Lr55;->b:I
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
 
-    aput-wide p1, v0, v1
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lfv3;
 
-    nop
+    return-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-.method public b([J)V
-    .locals 5
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
 
-    iget v0, p0, Lr55;->b:I
+    move-result-object v0
 
-    array-length v1, p1
+    check-cast v0, Lefe;
 
-    add-int/2addr v0, v1
+    invoke-virtual {v0}, Lefe;->l()Lbbg;
 
-    iget-object v1, p0, Lr55;->c:[J
+    move-result-object v0
 
-    array-length v2, v1
+    return-object v0
 
-    if-le v0, v2, :cond_0
+    :pswitch_2
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    array-length v2, v1
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
 
-    mul-int/lit8 v2, v2, 0x2
+    move-result-object v0
 
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+    check-cast v0, Lefe;
 
-    move-result v2
+    invoke-virtual {v0}, Lefe;->g()Lz06;
 
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([JI)[J
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+
+    move-result-object v0
+
+    check-cast v0, Lefe;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+
+    move-result-object v0
+
+    const/16 v1, 0x166
+
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv06;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+
+    move-result-object v0
+
+    check-cast v0, Lefe;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+
+    move-result-object v0
+
+    const/16 v1, 0x1c9
+
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La5g;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+
+    move-result-object v0
+
+    check-cast v0, Lefe;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+
+    move-result-object v0
+
+    const/16 v1, 0x36
+
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljy0;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->j()Lwag;
+
+    move-result-object v0
+
+    check-cast v0, Lefe;
+
+    invoke-virtual {v0}, Lefe;->e()Ly16;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r()Lfeg;
 
     move-result-object v1
 
-    iput-object v1, p0, Lr55;->c:[J
+    iget-object v1, v1, Lfeg;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    const v2, 0x596fabde
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r()Lfeg;
+
+    move-result-object v0
+
+    iget-wide v2, v0, Lfeg;->b:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Lr55;->b:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    iget-object v0, v0, Lbf8;->b:Landroidx/work/WorkerParameters;
+
+    iget-object v0, v0, Landroidx/work/WorkerParameters;->b:Lyh4;
+
+    const-string v1, "requestId"
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Lyh4;->d(Ljava/lang/String;J)J
+
+    move-result-wide v5
+
+    const-string v1, "botId"
+
+    invoke-virtual {v0, v1, v2, v3}, Lyh4;->d(Ljava/lang/String;J)J
+
+    move-result-wide v7
+
+    const-string v1, "fileName"
+
+    invoke-virtual {v0, v1}, Lyh4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    if-nez v1, :cond_0
+
+    move-object v10, v2
+
+    goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lr55;->c:[J
+    move-object v10, v1
 
-    iget v2, p0, Lr55;->b:I
+    :goto_0
+    const-string v1, "fileUrl"
 
-    array-length v3, p1
+    invoke-virtual {v0, v1}, Lyh4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    invoke-static {p1, v4, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    if-nez v0, :cond_1
 
-    iput v0, p0, Lr55;->b:I
+    move-object v9, v2
 
-    return-void
-.end method
-
-.method public c(I)J
-    .locals 4
-
-    iget v0, p0, Lr55;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    if-ltz p1, :cond_0
-
-    iget v0, p0, Lr55;->b:I
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Lr55;->c:[J
-
-    aget-wide v1, v0, p1
-
-    return-wide v1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "Invalid index "
-
-    const-string v2, ", size is "
-
-    invoke-static {p1, v1, v2}, Lho7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v1, p0, Lr55;->b:I
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    if-ltz p1, :cond_1
-
-    iget v0, p0, Lr55;->b:I
-
-    if-ge p1, v0, :cond_1
-
-    iget-object v0, p0, Lr55;->c:[J
-
-    aget-wide v1, v0, p1
-
-    return-wide v1
+    goto :goto_1
 
     :cond_1
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    move-object v9, v0
 
-    iget v1, p0, Lr55;->b:I
+    :goto_1
+    new-instance v4, Lfeg;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct/range {v4 .. v10}, Lfeg;-><init>(JJLjava/lang/String;Ljava/lang/String;)V
 
-    const/16 v3, 0x2e
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Invalid index "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", size is "
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v4
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

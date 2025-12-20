@@ -1,103 +1,85 @@
-.class public abstract Ls5b;
-.super Ljava/lang/Object;
+.class public final enum Ls5b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Ls5b;
 
-.field public static final b:I
+.field public static final enum b:Ls5b;
 
-.field public static final c:I
+.field public static final enum c:Ls5b;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public static final synthetic d:[Ls5b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    sget v0, Ltyc;->oneme_contact_not_found_bottom_sheet_negative_button:I
+    new-instance v0, Ls5b;
 
-    sput v0, Ls5b;->a:I
+    const-string v1, "SMALL"
 
-    sget v0, Ltyc;->oneme_contact_not_found_bottom_sheet_positive_button:I
+    const/4 v2, 0x0
 
-    sput v0, Ls5b;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Ltyc;->oneme_invite_action_view_type:I
+    sput-object v0, Ls5b;->a:Ls5b;
 
-    sput v0, Ls5b;->c:I
+    new-instance v1, Ls5b;
 
-    sget v0, Ltyc;->oneme_invite_by_link_action_menu_item:I
+    const-string v2, "MEDIUM"
 
-    sput v0, Ls5b;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Ltyc;->oneme_invite_by_phone_action_menu_item:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Ls5b;->e:I
+    sput-object v1, Ls5b;->b:Ls5b;
 
-    sget v0, Ltyc;->oneme_invite_by_phone_continue_button:I
+    new-instance v2, Ls5b;
 
-    sput v0, Ls5b;->f:I
+    const-string v3, "LARGE"
 
-    sget v0, Ltyc;->oneme_invite_by_phone_description:I
+    const/4 v4, 0x2
 
-    sput v0, Ls5b;->g:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Ltyc;->oneme_invite_by_phone_input:I
+    sput-object v2, Ls5b;->c:Ls5b;
 
-    sput v0, Ls5b;->h:I
+    filled-new-array {v0, v1, v2}, [Ls5b;
 
-    sget v0, Ltyc;->oneme_invite_by_phone_title:I
+    move-result-object v0
 
-    sput v0, Ls5b;->i:I
-
-    sget v0, Ltyc;->oneme_invite_by_phone_toolbar:I
-
-    sput v0, Ls5b;->j:I
-
-    sget v0, Ltyc;->oneme_invite_by_qr_bottom_sheet_qr_code:I
-
-    sput v0, Ls5b;->k:I
-
-    sget v0, Ltyc;->oneme_invite_by_qr_bottom_sheet_qr_code_share:I
-
-    sput v0, Ls5b;->l:I
-
-    sget v0, Ltyc;->oneme_invite_friends_to_max_bottom_sheet_image_stack:I
-
-    sput v0, Ls5b;->m:I
-
-    sget v0, Ltyc;->oneme_invite_friends_to_max_bottom_sheet_invite_button:I
-
-    sput v0, Ls5b;->n:I
-
-    sget v0, Ltyc;->oneme_invite_friends_to_max_bottom_sheet_title:I
-
-    sput v0, Ls5b;->o:I
+    sput-object v0, Ls5b;->d:[Ls5b;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ls5b;
+    .locals 1
+
+    const-class v0, Ls5b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ls5b;
+
+    return-object p0
+.end method
+
+.method public static values()[Ls5b;
+    .locals 1
+
+    sget-object v0, Ls5b;->d:[Ls5b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ls5b;
+
+    return-object v0
 .end method

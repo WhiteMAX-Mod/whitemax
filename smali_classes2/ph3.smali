@@ -3,42 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrh3;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lph3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:J
+.field public final synthetic b:Lrh3;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lrh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+    .locals 0
 
-    new-instance v0, Lph3;
+    iput p6, p0, Lph3;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lph3;->b:Lrh3;
 
-    sput-object v0, Lph3;->a:Lph3;
+    iput-object p2, p0, Lph3;->c:Landroid/graphics/drawable/Drawable;
 
-    const-class v0, Lph3;
+    iput-object p3, p0, Lph3;->d:Ljava/lang/Runnable;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iput-wide p4, p0, Lph3;->o:J
 
-    const-wide/16 v0, 0x1
-
-    sput-wide v0, Lph3;->b:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getId()J
-    .locals 2
+.method public final run()V
+    .locals 5
 
-    sget-wide v0, Lph3;->b:J
+    iget v0, p0, Lph3;->a:I
 
-    return-wide v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lph3;->d:Ljava/lang/Runnable;
+
+    iget-wide v1, p0, Lph3;->o:J
+
+    iget-object v3, p0, Lph3;->b:Lrh3;
+
+    iget-object v4, p0, Lph3;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v3, v4, v0, v1, v2}, Lrh3;->C(Lrh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lph3;->d:Ljava/lang/Runnable;
+
+    iget-wide v1, p0, Lph3;->o:J
+
+    iget-object v3, p0, Lph3;->b:Lrh3;
+
+    iget-object v4, p0, Lph3;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v3, v4, v0, v1, v2}, Lrh3;->C(Lrh3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

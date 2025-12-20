@@ -27,9 +27,9 @@
         "R",
         "",
         "params",
-        "Le2f;",
+        "Lbdf;",
         "execute",
-        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Le2f;",
+        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lbdf;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -43,11 +43,11 @@
 
 
 # virtual methods
-.method public abstract execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Le2f;
+.method public abstract execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lbdf;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TP;)",
-            "Le2f;"
+            "Lbdf;"
         }
     .end annotation
 .end method

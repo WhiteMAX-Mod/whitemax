@@ -1,51 +1,27 @@
 .class public final Lv70;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lw70;
+.field public final a:Z
 
-.field public Y:I
+.field public final b:Ljava/lang/String;
 
-.field public d:Lw70;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lw70;Lq44;)V
+.method public constructor <init>(ZLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lv70;->X:Lw70;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lv70;->a:Z
+
+    iput-object p2, p0, Lv70;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lv70;->c:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lv70;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lv70;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv70;->Y:I
-
-    iget-object p1, p0, Lv70;->X:Lw70;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lw70;->a(Ljava/lang/String;Ljava/lang/String;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

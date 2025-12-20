@@ -1,19 +1,21 @@
 .class public final Lem4;
-.super Ljava/lang/Object;
+.super Ljja;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lq9b;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lq9b;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    iput-object p1, p0, Lem4;->a:Lq9b;
+    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lem4;->b:Ljava/lang/String;
 
     return-void
 .end method

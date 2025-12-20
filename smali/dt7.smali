@@ -1,45 +1,61 @@
 .class public final Ldt7;
-.super Lv76;
+.super Lugc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Iterable;
+.field public a:[I
 
-.field public final synthetic b:Ll7c;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Iterable;Ll7c;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldt7;->a:Ljava/lang/Iterable;
-
-    iput-object p2, p0, Ldt7;->b:Ll7c;
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Ldt7;->a:Ljava/lang/Iterable;
+    iget-object v0, p0, Ldt7;->a:[I
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget v1, p0, Ldt7;->b:I
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    new-instance v1, Let7;
+.method public final b(I)V
+    .locals 2
 
-    iget-object v2, p0, Ldt7;->b:Ll7c;
+    iget-object v0, p0, Ldt7;->a:[I
 
-    invoke-direct {v1, v0, v2}, Let7;-><init>(Ljava/util/Iterator;Ll7c;)V
+    array-length v1, v0
 
-    return-object v1
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldt7;->a:[I
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Ldt7;->b:I
+
+    return v0
 .end method

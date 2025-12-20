@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;",
         "Landroidx/recyclerview/widget/LinearLayoutManager;",
-        "n4f",
+        "mff",
         "scheduled-send-picker-dialog_release"
     }
     k = 0x1
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field public final E:Ln4f;
+.field public final E:Lmff;
 
 .field public F:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -37,18 +37,18 @@
 
 .field public final J:I
 
-.field public final K:Lgf4;
+.field public final K:Lgj4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ln4f;)V
+.method public constructor <init>(Landroid/content/Context;Lmff;)V
     .locals 3
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    iput-object p2, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->E:Ln4f;
+    iput-object p2, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->E:Lmff;
 
-    sget p2, Lb1d;->picker_min_distance:I
+    sget p2, Lead;->picker_min_distance:I
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -60,7 +60,7 @@
 
     iput p2, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->G:I
 
-    sget p2, Lvvc;->picker_scale_factor:I
+    sget p2, Lx4d;->picker_scale_factor:I
 
     new-instance v0, Landroid/util/TypedValue;
 
@@ -80,7 +80,7 @@
 
     iput p2, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->H:F
 
-    sget p2, Lvvc;->picker_min_scale_factor:I
+    sget p2, Lx4d;->picker_min_scale_factor:I
 
     new-instance v0, Landroid/util/TypedValue;
 
@@ -98,7 +98,7 @@
 
     iput p2, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->I:F
 
-    sget p2, Lvvc;->date_picker_selection_rect_offset:I
+    sget p2, Lx4d;->date_picker_selection_rect_offset:I
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -112,22 +112,22 @@
 
     iput p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->J:I
 
-    new-instance p1, Lgf4;
+    new-instance p1, Lgj4;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2}, Lgf4;-><init>(I)V
+    invoke-direct {p1, p2}, Lgj4;-><init>(I)V
 
-    iput-object p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->K:Lgf4;
+    iput-object p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->K:Lgj4;
 
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->p1(I)V
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->q1(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0(ILdid;Liid;)I
+.method public final B0(ILnrd;Lsrd;)I
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->p:I
@@ -141,13 +141,13 @@
     return p1
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->A0(ILdid;Liid;)I
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->B0(ILnrd;Lsrd;)I
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->u1()V
+    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->v1()V
 
     :cond_1
     return p1
@@ -158,19 +158,19 @@
 
     iput-object p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->F:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->K:Lgf4;
+    iget-object v0, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->K:Lgj4;
 
-    invoke-virtual {v0, p1}, Lgf4;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, p1}, Lgj4;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 .end method
 
-.method public final l0(Ldid;Liid;)V
+.method public final l0(Lnrd;Lsrd;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->l0(Ldid;Liid;)V
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->l0(Lnrd;Lsrd;)V
 
-    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->u1()V
+    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->v1()V
 
     return-void
 .end method
@@ -206,11 +206,11 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Ln7j;->h(II)Lto7;
+    invoke-static {v2, v3}, Lelj;->i(II)Lmt7;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lro7;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Lkt7;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
@@ -220,17 +220,17 @@
     :goto_0
     move-object v4, v2
 
-    check-cast v4, Lso7;
+    check-cast v4, Llt7;
 
-    iget-boolean v4, v4, Lso7;->c:Z
+    iget-boolean v4, v4, Llt7;->c:Z
 
     if-eqz v4, :cond_4
 
     move-object v4, v2
 
-    check-cast v4, Lso7;
+    check-cast v4, Llt7;
 
-    invoke-virtual {v4}, Lso7;->nextInt()I
+    invoke-virtual {v4}, Llt7;->nextInt()I
 
     move-result v4
 
@@ -293,18 +293,18 @@
     goto :goto_1
 
     :cond_4
-    iget-object p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->E:Ln4f;
+    iget-object p1, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->E:Lmff;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1, v3}, Ln4f;->b(I)V
+    invoke-interface {p1, v3}, Lmff;->c(I)V
 
     :cond_5
     :goto_2
     return-void
 .end method
 
-.method public final u1()V
+.method public final v1()V
     .locals 14
 
     iget-object v0, p0, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;->F:Landroidx/recyclerview/widget/RecyclerView;
@@ -320,7 +320,7 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v0, Lbq4;->e0:Lbq4;
+    sget-object v0, Lyt4;->e0:Lyt4;
 
     goto :goto_0
 
@@ -329,9 +329,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lq1g;->a0:Lbwf;
+    sget-object v1, Lbdg;->a0:Lz7g;
 
-    invoke-static {v0}, Lnca;->d(Landroid/content/Context;)Lq1g;
+    invoke-static {v0}, Ldpf;->t(Landroid/content/Context;)Lbdg;
 
     move-result-object v0
 
@@ -368,28 +368,28 @@
 
     const/4 v7, 0x0
 
-    invoke-static {v7, v6}, Ln7j;->h(II)Lto7;
+    invoke-static {v7, v6}, Lelj;->i(II)Lmt7;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lro7;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v6}, Lkt7;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
     :goto_1
     move-object v8, v6
 
-    check-cast v8, Lso7;
+    check-cast v8, Llt7;
 
-    iget-boolean v8, v8, Lso7;->c:Z
+    iget-boolean v8, v8, Llt7;->c:Z
 
     if-eqz v8, :cond_9
 
     move-object v8, v6
 
-    check-cast v8, Lso7;
+    check-cast v8, Llt7;
 
-    invoke-virtual {v8}, Lso7;->nextInt()I
+    invoke-virtual {v8}, Llt7;->nextInt()I
 
     move-result v8
 
@@ -464,9 +464,9 @@
 
     invoke-virtual {v5, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    sget-object v9, Lo07;->b:Lo07;
+    sget-object v9, La57;->b:La57;
 
-    invoke-static {v8, v9}, Luog;->i(Landroid/view/View;Lr07;)Z
+    invoke-static {v8, v9}, La1h;->m(Landroid/view/View;Ld57;)Z
 
     :cond_4
     sub-float/2addr v10, v1
@@ -538,12 +538,12 @@
 
     if-eqz v10, :cond_8
 
-    iget v9, v0, Lq1g;->F:I
+    iget v9, v0, Lbdg;->F:I
 
     goto :goto_5
 
     :cond_8
-    iget v9, v0, Lq1g;->M:I
+    iget v9, v0, Lbdg;->M:I
 
     :goto_5
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setTextColor(I)V

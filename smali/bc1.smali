@@ -1,48 +1,54 @@
-.class public final Lbc1;
-.super Lq44;
+.class public final synthetic Lbc1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic X:Lpg0;
+.field public final synthetic a:Ljava/lang/Long;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public o:I
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Z
 
 
 # direct methods
-.method public constructor <init>(Lpg0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    iput-object p1, p0, Lbc1;->X:Lpg0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbc1;->a:Ljava/lang/Long;
+
+    iput-object p2, p0, Lbc1;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lbc1;->c:Ljava/lang/String;
+
+    iput-boolean p4, p0, Lbc1;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lbc1;->d:Ljava/lang/Object;
+    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
-    iget p1, p0, Lbc1;->o:I
+    iget-object v1, p0, Lbc1;->a:Ljava/lang/Long;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lbc1;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lbc1;->c:Ljava/lang/String;
 
-    iput p1, p0, Lbc1;->o:I
+    iget-boolean v4, p0, Lbc1;->d:Z
 
-    iget-object p1, p0, Lbc1;->X:Lpg0;
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

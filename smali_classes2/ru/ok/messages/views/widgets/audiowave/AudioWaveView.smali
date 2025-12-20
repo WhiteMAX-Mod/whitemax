@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu6g;
+.implements Ljig;
 
 
 # annotations
@@ -14,12 +14,12 @@
     d2 = {
         "Lru/ok/messages/views/widgets/audiowave/AudioWaveView;",
         "Landroid/view/View;",
-        "Lu6g;",
-        "Lz60;",
+        "Ljig;",
+        "Lr70;",
         "listener",
-        "Lqqg;",
+        "Lv2h;",
         "setListener",
-        "(Lz60;)V",
+        "(Lr70;)V",
         "",
         "u0",
         "Z",
@@ -83,7 +83,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -93,7 +93,7 @@
 
     iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -103,7 +103,7 @@
 
     iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -117,7 +117,7 @@
 
     mul-float/2addr p2, v0
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -171,9 +171,9 @@
 
     iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:Landroid/graphics/Paint;
 
-    invoke-static {p0}, Lm8j;->a(Landroid/view/View;)V
+    invoke-static {p0}, Lemj;->a(Landroid/view/View;)V
 
-    invoke-static {p0}, Lm8j;->d(Landroid/view/View;)Z
+    invoke-static {p0}, Lemj;->c(Landroid/view/View;)Z
 
     move-result p1
 
@@ -261,7 +261,7 @@
 
     mul-float/2addr v5, v4
 
-    invoke-static {v5}, Lkti;->d(F)I
+    invoke-static {v5}, Ln7j;->c(F)I
 
     move-result v4
 
@@ -291,7 +291,7 @@
 
     mul-float/2addr v7, v5
 
-    invoke-static {v7}, Lkti;->d(F)I
+    invoke-static {v7}, Ln7j;->c(F)I
 
     move-result v5
 
@@ -324,7 +324,7 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Lkti;->d(F)I
+    invoke-static {v6}, Ln7j;->c(F)I
 
     move-result v6
 
@@ -463,7 +463,7 @@
     return-void
 .end method
 
-.method public final onThemeChanged(Lyeb;)V
+.method public final onThemeChanged(Lplb;)V
     .locals 3
 
     iget-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->u0:Z
@@ -476,7 +476,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lbq4;->e0:Lbq4;
+    sget-object p1, Lyt4;->e0:Lyt4;
 
     goto :goto_0
 
@@ -485,14 +485,14 @@
 
     move-result-object p1
 
-    sget-object v0, Lq1g;->a0:Lbwf;
+    sget-object v0, Lbdg;->a0:Lz7g;
 
-    invoke-static {p1}, Lnca;->d(Landroid/content/Context;)Lq1g;
+    invoke-static {p1}, Ldpf;->t(Landroid/content/Context;)Lbdg;
 
     move-result-object p1
 
     :goto_0
-    iget-object p1, p1, Lq1g;->h:Lyt0;
+    iget-object p1, p1, Lbdg;->h:Lmv0;
 
     goto :goto_2
 
@@ -503,7 +503,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lbq4;->e0:Lbq4;
+    sget-object p1, Lyt4;->e0:Lyt4;
 
     goto :goto_1
 
@@ -512,21 +512,21 @@
 
     move-result-object p1
 
-    sget-object v0, Lq1g;->a0:Lbwf;
+    sget-object v0, Lbdg;->a0:Lz7g;
 
-    invoke-static {p1}, Lnca;->d(Landroid/content/Context;)Lq1g;
+    invoke-static {p1}, Ldpf;->t(Landroid/content/Context;)Lbdg;
 
     move-result-object p1
 
     :goto_1
-    iget-object p1, p1, Lq1g;->g:Lyt0;
+    iget-object p1, p1, Lbdg;->g:Lmv0;
 
     :goto_2
-    iget-object v0, p1, Lyt0;->a:Lrt0;
+    iget-object v0, p1, Lmv0;->a:Lfv0;
 
-    iget v1, v0, Lrt0;->e:I
+    iget v1, v0, Lfv0;->e:I
 
-    iget v0, v0, Lrt0;->f:I
+    iget v0, v0, Lfv0;->f:I
 
     iget-object v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->b:Landroid/graphics/Paint;
 
@@ -536,9 +536,9 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p1, Lyt0;->c:Lau0;
+    iget-object p1, p1, Lmv0;->c:Lov0;
 
-    iget p1, p1, Lau0;->a:I
+    iget p1, p1, Lov0;->a:I
 
     iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:Landroid/graphics/Paint;
 
@@ -640,7 +640,7 @@
     return-void
 .end method
 
-.method public final setListener(Lz60;)V
+.method public final setListener(Lr70;)V
     .locals 0
 
     return-void

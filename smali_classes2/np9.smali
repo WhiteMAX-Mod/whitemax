@@ -1,119 +1,53 @@
 .class public final Lnp9;
-.super Ldtf;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic o:I
+.field public final synthetic Y:Lop9;
+
+.field public Z:I
+
+.field public d:Lop9;
+
+.field public o:Ldn9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Lop9;Ll84;)V
     .locals 0
 
-    iput-object p2, p0, Lnp9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p1, p0, Lnp9;->Y:Lop9;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lnp9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnp9;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lnp9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lnp9;
+    iput-object p1, p0, Lnp9;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lnp9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget p1, p0, Lnp9;->Z:I
 
-    invoke-direct {v0, p2, v1}, Lnp9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Ljava/lang/Number;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    iput p1, p0, Lnp9;->Z:I
 
-    move-result p1
+    iget-object p1, p0, Lnp9;->Y:Lop9;
 
-    iput p1, v0, Lnp9;->o:I
+    const-wide/16 v0, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v0, v1, p0}, Lop9;->a(JLl84;)Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget p1, p0, Lnp9;->o:I
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lyy7;
-
-    iget-object v0, p0, Lnp9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0()Lmqf;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lmqf;->G0:Ltcf;
-
-    :cond_0
-    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p1, Lqqg;->a:Lqqg;
+    move-result-object p1
 
     return-object p1
 .end method

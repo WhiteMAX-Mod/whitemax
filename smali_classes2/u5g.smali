@@ -1,76 +1,50 @@
 .class public final Lu5g;
-.super Ln2;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final d:Z
+.field public X:Lh76;
+
+.field public final synthetic Y:Ls5g;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lf4g;)V
-    .locals 3
+.method public constructor <init>(Ls5g;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0xc
+    iput-object p1, p0, Lu5g;->Y:Ls5g;
 
-    invoke-direct {p0, p1, v0, p2}, Ln2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p2, Lf4g;->a:Ljava/lang/String;
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    const-string v1, "auto"
-
-    const/4 v2, 0x6
-
-    invoke-static {p1, v1, p2, p2, v2}, Lvmf;->D(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
-
-    move-result p1
-
-    const/4 v1, -0x1
-
-    if-ne p1, v1, :cond_0
-
-    move p2, v0
-
-    :cond_0
-    xor-int/lit8 p1, p2, 0x1
-
-    iput-boolean p1, p0, Lu5g;->d:Z
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ln2;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lu5g;->d:Ljava/lang/Object;
 
-    check-cast v0, Lxy8;
+    iget p1, p0, Lu5g;->o:I
 
-    check-cast v0, Lf4g;
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    or-int/2addr p1, v0
 
-    const-string v2, "TextTrack(format: "
+    iput p1, p0, Lu5g;->o:I
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lu5g;->Y:Ls5g;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v0, ")"
+    invoke-virtual {p1, v0, p0}, Ls5g;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

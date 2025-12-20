@@ -1,114 +1,64 @@
 .class public final Lzr1;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcs1;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lzr1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lzr1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    new-instance v0, Lzr1;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lzr1;->a:Lzr1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lzr1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
-    check-cast p1, Lzr1;
+    :cond_0
+    instance-of p1, p1, Lzr1;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, p2}, Lzr1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    return-object p2
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lzr1;
+    const v0, -0x42bf222b
 
-    iget-object v1, p0, Lzr1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    return v0
+.end method
 
-    invoke-direct {v0, p2, v1}, Lzr1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, v0, Lzr1;->o:Ljava/lang/Object;
+    const-string v0, "Hide"
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzr1;->o:Ljava/lang/Object;
-
-    check-cast p1, Lscg;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Lyy7;
-
-    iget-object v0, p0, Lzr1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->y0()Lur1;
-
-    move-result-object v0
-
-    iget-boolean v1, p1, Lscg;->c:Z
-
-    iget-object v2, p1, Lscg;->f:Ljcg;
-
-    invoke-virtual {v0, v1, v2}, Lur1;->x(ZLjcg;)V
-
-    new-instance v1, Lsr1;
-
-    iget-boolean v2, p1, Lscg;->d:Z
-
-    iget-boolean v3, p1, Lscg;->e:Z
-
-    invoke-direct {v1, v2, v3}, Lsr1;-><init>(ZZ)V
-
-    invoke-virtual {v0, v1}, Lur1;->setButtonsVisibility(Lsr1;)V
-
-    iget-boolean v5, p1, Lscg;->b:Z
-
-    iget-object v4, v0, Lur1;->K0:Landroid/widget/TextView;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x6
-
-    const-wide/16 v6, 0x0
-
-    invoke-static/range {v4 .. v9}, Lhqi;->g(Landroid/view/View;ZJLem6;I)V
-
-    iget-object v4, v0, Lur1;->L0:Landroid/widget/TextView;
-
-    invoke-static/range {v4 .. v9}, Lhqi;->g(Landroid/view/View;ZJLem6;I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
 .end method

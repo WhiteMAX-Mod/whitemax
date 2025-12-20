@@ -3,178 +3,75 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lfzi;
+.implements Landroid/os/IInterface;
 
 
-# static fields
-.field public static final a:Lzvi;
+# instance fields
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    new-instance v0, Lzvi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzvi;->a:Lzvi;
-
-    new-instance v0, Lmli;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x8
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x9
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xb
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xd
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xe
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lzvi;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lzvi;->c:Landroid/os/IBinder;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    throw p1
+.method public final i(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Lzvi;->c:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

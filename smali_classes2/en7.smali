@@ -1,26 +1,32 @@
 .class public final Len7;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/inputphone/InputPhoneScreen;
+.field public final synthetic X:Let6;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:I
+
+.field public final synthetic o:Lfn7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+.method public constructor <init>(Lfn7;Let6;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Len7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    iput-object p1, p0, Len7;->o:Lfn7;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Len7;->X:Let6;
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Len7;->Y:I
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +36,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lac4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Len7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,155 +46,85 @@
 
     check-cast p1, Len7;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Len7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Len7;
+    new-instance p1, Len7;
 
-    iget-object v1, p0, Len7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    iget-object v0, p0, Len7;->X:Let6;
 
-    invoke-direct {v0, p2, v1}, Len7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+    iget v1, p0, Len7;->Y:I
 
-    iput-object p1, v0, Len7;->o:Ljava/lang/Object;
+    iget-object v2, p0, Len7;->o:Lfn7;
 
-    return-object v0
+    invoke-direct {p1, v2, v0, v1, p2}, Len7;-><init>(Lfn7;Let6;ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Len7;->o:Ljava/lang/Object;
+    iget-object p1, p0, Len7;->o:Lfn7;
 
-    check-cast p1, Ljava/util/List;
+    iget-object v0, p1, Lfn7;->z0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v0, p0, Len7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    iget-object v1, p0, Len7;->X:Let6;
 
-    :goto_0
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lc54;->getParentController()Lc54;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    sget-object v2, Lv2h;->a:Lv2h;
+
+    if-nez v0, :cond_0
+
+    return-object v2
+
+    :cond_0
+    instance-of v3, v1, Ldt6;
+
+    if-eqz v3, :cond_1
+
+    const/16 v3, 0x28
 
     goto :goto_0
 
-    :cond_0
-    instance-of v1, v0, Leud;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Leud;
-
-    goto :goto_1
-
     :cond_1
-    move-object v0, v2
+    iget v3, p0, Len7;->Y:I
 
-    :goto_1
-    if-eqz v0, :cond_2
-
-    check-cast v0, Lone/me/android/root/RootController;
-
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->E0()Lytd;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_2
-    move-object v0, v2
-
-    :goto_2
-    if-eqz v0, :cond_5
-
-    sget-object v1, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->E0:Ljbe;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lytd;->g(Ljava/lang/String;)Lc54;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    instance-of v1, v0, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;
-
-    if-eqz v1, :cond_3
-
-    move-object v2, v0
-
-    check-cast v2, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;
-
-    :cond_3
-    if-eqz v2, :cond_5
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Lx2b;
-
-    invoke-interface {p1, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lx2b;
-
-    iget-object v1, v2, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->C0:Lhs;
-
-    sget-object v3, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->F0:[Lyy7;
-
-    aget-object v4, v3, v0
-
-    invoke-virtual {v1, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, [Lx2b;
-
-    invoke-static {v4, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-gt v4, v3, :cond_2
 
-    goto :goto_3
+    return-object v2
 
-    :cond_4
-    aget-object v0, v3, v0
+    :cond_2
+    iget-object p1, p1, Lfn7;->z0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v1, v2, p1}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    const/4 v4, 0x0
 
-    iget-object v0, v2, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->D0:Lb0i;
+    invoke-interface {v0, v4, v3}, Ljava/util/List;->subList(II)Ljava/util/List;
 
-    invoke-static {p1}, Lys;->D([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ll98;->E(Ljava/util/List;)V
-
-    :cond_5
-    :goto_3
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v2
 .end method

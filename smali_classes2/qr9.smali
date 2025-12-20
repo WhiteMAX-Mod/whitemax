@@ -1,220 +1,87 @@
 .class public final Lqr9;
-.super Li3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lqr9;
+# instance fields
+.field public final a:Laof;
+
+.field public final b:Lbbg;
+
+.field public final c:Ld68;
+
+.field public final d:Ld68;
+
+.field public final e:Ld68;
+
+.field public final f:Lz7g;
+
+.field public final g:Lfx0;
+
+.field public final h:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lpkd;Lbbg;Ld68;Ld68;Ld68;Ld68;)V
+    .locals 0
 
-    new-instance v0, Lqr9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
+    iput-object p1, p0, Lqr9;->a:Laof;
 
-    invoke-direct {v0, v1}, Li3;-><init>(I)V
+    iput-object p2, p0, Lqr9;->b:Lbbg;
 
-    sput-object v0, Lqr9;->c:Lqr9;
+    iput-object p3, p0, Lqr9;->c:Ld68;
 
-    return-void
-.end method
+    iput-object p4, p0, Lqr9;->d:Ld68;
 
-.method public static L0(Ljava/util/List;Z)Lei4;
-    .locals 6
+    iput-object p5, p0, Lqr9;->e:Ld68;
 
-    const/4 v4, 0x0
+    new-instance p1, Lor9;
 
-    const/16 v5, 0x3e
+    const/4 p2, 0x0
 
-    const-string v1, ","
+    invoke-direct {p1, p0, p2, p6}, Lor9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v2, 0x0
+    new-instance p2, Lz7g;
 
-    const/4 v3, 0x0
+    invoke-direct {p2, p1}, Lz7g;-><init>(Lmq6;)V
 
-    move-object v0, p0
+    iput-object p2, p0, Lqr9;->f:Lz7g;
 
-    invoke-static/range {v0 .. v5}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
+    const/4 p1, 0x6
 
-    move-result-object p0
+    const/4 p3, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 p4, 0x20
 
-    const-string v1, ":chats/forward?messages_ids="
+    const/4 p5, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "&show_ext_sharing="
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lei4;
-
-    invoke-direct {p1, p0}, Lei4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static M0(Lqr9;JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;I)Lei4;
-    .locals 2
-
-    and-int/lit8 v0, p6, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object p3, v1
-
-    :cond_0
-    and-int/lit8 v0, p6, 0x4
-
-    if-eqz v0, :cond_1
-
-    sget-object p4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    :cond_1
-    and-int/lit8 p6, p6, 0x8
-
-    if-eqz p6, :cond_2
-
-    move-object p5, v1
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lj03;
-
-    invoke-direct/range {p0 .. p5}, Lj03;-><init>(JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;)V
-
-    invoke-static {p0}, Li3;->C0(Lem6;)Lei4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static O0(JJLjava/lang/String;Lo05;)Lei4;
-    .locals 2
-
-    invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p5
-
-    const-string v0, ":dialogs/share-media?msg_id="
-
-    const-string v1, "&attach_id="
-
-    invoke-static {p0, p1, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string p1, "&local_attach_id="
-
-    invoke-static {p2, p3, p1, p4, p0}, Lhf3;->e(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string p1, "&cause_ordinal="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lei4;
-
-    invoke-direct {p1, p0}, Lei4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static P0(JLukh;Ljava/lang/Long;Ljava/lang/String;)Lei4;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p2, p2, Lukh;->a:Ljava/lang/String;
-
-    const-string v1, ":webapp:root?bot_id="
-
-    const-string v2, "&entry_point="
-
-    invoke-static {v1, p0, p1, v2, p2}, La9h;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p3, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p1, "&source_id="
-
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    if-eqz p4, :cond_1
-
-    const-string p0, "&start_param="
-
-    invoke-virtual {p0, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lei4;
-
-    invoke-direct {p1, p0}, Lei4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-
-# virtual methods
-.method public final N0(J)Lei4;
-    .locals 2
-
-    const-string v0, ":profile?id="
-
-    const-string v1, "&type=contact"
-
-    invoke-static {p1, p2, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p3, p5, p1}, Lmcj;->a(IILdr7;I)Lfx0;
 
     move-result-object p1
 
-    new-instance p2, Lei4;
+    iput-object p1, p0, Lqr9;->g:Lfx0;
 
-    invoke-direct {p2, p1}, Lei4;-><init>(Ljava/lang/String;)V
+    invoke-static {}, Ljava/util/concurrent/ConcurrentHashMap;->newKeySet()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
 
-    return-object p2
+    move-result-object p1
+
+    iput-object p1, p0, Lqr9;->h:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    invoke-virtual {p2}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lac4;
+
+    new-instance p2, Lpr9;
+
+    invoke-direct {p2, p0, p5}, Lpr9;-><init>(Lqr9;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p3, 0x3
+
+    invoke-static {p1, p5, p5, p2, p3}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    return-void
 .end method

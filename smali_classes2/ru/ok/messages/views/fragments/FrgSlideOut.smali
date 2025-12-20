@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk4f;
+.implements Ljff;
 
 
 # instance fields
@@ -25,20 +25,20 @@
 
 
 # virtual methods
-.method public final B0()Lql6;
+.method public final B0()Lbq6;
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Ld6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lb6;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Ld6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lb6;
 
     move-result-object v0
 
-    check-cast v0, Lql6;
+    check-cast v0, Lbq6;
 
     return-object v0
 
@@ -56,10 +56,10 @@
     return v0
 .end method
 
-.method public m(I)V
+.method public b(I)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Ld6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lb6;
 
     move-result-object p1
 
@@ -88,7 +88,7 @@
 .method public o()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->B0()Lql6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->B0()Lbq6;
 
     move-result-object v0
 
@@ -112,14 +112,14 @@
     return-void
 .end method
 
-.method public x0(Ld6;)V
+.method public x0(Lb6;)V
     .locals 1
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->j1:Z
 
-    instance-of p1, p1, Lql6;
+    instance-of p1, p1, Lbq6;
 
     if-eqz p1, :cond_0
 

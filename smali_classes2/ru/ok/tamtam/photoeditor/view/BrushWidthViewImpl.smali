@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lot0;
+.implements Lcv0;
 
 
 # instance fields
@@ -68,7 +68,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p1, v0}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -82,7 +82,7 @@
 
     const/16 v1, 0xb
 
-    invoke-static {p1, v1}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -108,7 +108,7 @@
 
     const/16 v1, 0x20
 
-    invoke-static {p1, v1}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -120,7 +120,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -152,7 +152,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {v2, v0}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     const/4 v4, 0x3
 
-    invoke-static {v0, v4}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -222,7 +222,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lsoi;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Lh3j;->b(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -607,11 +607,11 @@
 
     iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
 
-    new-instance p1, Lo3;
+    new-instance p1, Ll3;
 
-    const/16 v0, 0x16
+    const/16 v0, 0x15
 
-    invoke-direct {p1, v0, p0}, Lo3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Ll3;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -622,11 +622,11 @@
 .method public setBrushWidth(F)V
     .locals 2
 
-    new-instance v0, Lpt0;
+    new-instance v0, Ldv0;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lpt0;-><init>(Ljava/lang/Object;FI)V
+    invoke-direct {v0, p0, p1, v1}, Ldv0;-><init>(Ljava/lang/Object;FI)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

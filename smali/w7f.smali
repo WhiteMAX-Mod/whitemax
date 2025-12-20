@@ -1,37 +1,74 @@
-.class public abstract synthetic Lw7f;
+.class public final Lw7f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lq38;
+
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lw7f;
+
+.field public static final b:Lzgc;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    const/4 v0, 0x3
+    new-instance v0, Lw7f;
 
-    invoke-static {v0}, Laz1;->y(I)[I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lw7f;->a:Lw7f;
 
-    array-length v0, v0
+    new-instance v0, Lzgc;
 
-    new-array v0, v0, [I
+    const-string v1, "kotlin.Short"
 
-    const/4 v1, 0x1
+    sget-object v2, Lxgc;->i:Lxgc;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, v2}, Lzgc;-><init>(Ljava/lang/String;Lygc;)V
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lw7f;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lw7f;->b:Lzgc;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->shortValue()S
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->q(S)V
+
+    return-void
+.end method
+
+.method public final b(Lll4;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p1}, Lll4;->A()S
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Lvoe;
+    .locals 1
+
+    sget-object v0, Lw7f;->b:Lzgc;
+
+    return-object v0
 .end method

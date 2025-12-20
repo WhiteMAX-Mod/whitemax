@@ -1,123 +1,37 @@
-.class public final Lkz4;
+.class public abstract Lkz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
-
 
 # static fields
-.field public static final c:Ljava/lang/Object;
-
-
-# instance fields
-.field public volatile a:Lzkb;
-
-.field public volatile b:Ljava/lang/Object;
+.field public static volatile a:Lxp8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkz4;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
     .locals 5
 
-    iget-object v0, p0, Lkz4;->b:Ljava/lang/Object;
+    sget-object v0, Lg3d;->c:Lg3d;
 
-    sget-object v1, Lkz4;->c:Ljava/lang/Object;
+    invoke-static {}, Lgbj;->a()La15;
 
-    if-ne v0, v1, :cond_3
+    move-result-object v1
 
-    monitor-enter p0
+    new-instance v2, Lyk0;
 
-    :try_start_0
-    iget-object v0, p0, Lkz4;->b:Ljava/lang/Object;
+    const/16 v3, 0xa
 
-    if-ne v0, v1, :cond_2
+    invoke-direct {v2, v3}, Lyk0;-><init>(I)V
 
-    iget-object v0, p0, Lkz4;->a:Lzkb;
+    iget-object v0, v0, Lg3d;->a:Lsy;
 
-    invoke-virtual {v0}, Lzkb;->get()Ljava/lang/Object;
+    new-instance v3, Lf3d;
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    iget-object v2, p0, Lkz4;->b:Ljava/lang/Object;
+    invoke-direct {v3, v4, v2}, Lf3d;-><init>(ILjava/lang/Object;)V
 
-    if-eq v2, v1, :cond_1
+    invoke-virtual {v0, v1, v3}, Lsy;->h(Ljava/util/concurrent/Executor;Lbxa;)V
 
-    if-ne v2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    :goto_0
-    iput-object v0, p0, Lkz4;->b:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lkz4;->a:Lzkb;
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_3
-    return-object v0
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf84;
+.implements Lac4;
 
 
 # annotations
@@ -13,18 +13,18 @@
     }
     d2 = {
         "Lkotlinx/coroutines/internal/ContextScope;",
-        "Lf84;",
-        "Lx74;",
+        "Lac4;",
+        "Lrb4;",
         "context",
         "<init>",
-        "(Lx74;)V",
+        "(Lrb4;)V",
         "",
         "toString",
         "()Ljava/lang/String;",
         "coroutineContext",
-        "Lx74;",
+        "Lrb4;",
         "getCoroutineContext",
-        "()Lx74;",
+        "()Lrb4;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -38,26 +38,26 @@
 
 
 # instance fields
-.field private final coroutineContext:Lx74;
+.field private final coroutineContext:Lrb4;
 
 
 # direct methods
-.method public constructor <init>(Lx74;)V
+.method public constructor <init>(Lrb4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lx74;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lrb4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getCoroutineContext()Lx74;
+.method public getCoroutineContext()Lrb4;
     .locals 1
 
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lx74;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lrb4;
 
     return-object v0
 .end method
@@ -71,7 +71,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Lx74;
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Lrb4;
 
     move-result-object v1
 

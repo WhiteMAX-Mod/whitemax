@@ -1,368 +1,225 @@
 .class public final Lqpi;
-.super Ljava/lang/Object;
+.super Li4;
 .source "SourceFile"
 
-# interfaces
-.implements Lp5j;
-.implements Lvva;
-.implements Lnva;
-.implements Lkva;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqpi;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public final b:Landroid/os/IBinder;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:Luv3;
 
-.field public final d:Ljava/lang/Object;
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lapf;Lybj;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x4
+    new-instance v0, Lioh;
 
-    iput v0, p0, Lqpi;->a:I
+    const/16 v1, 0x13
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lioh;-><init>(I)V
 
-    iput-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lqpi;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lqpi;->d:Ljava/lang/Object;
+    sput-object v0, Lqpi;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lkva;)V
-    .locals 1
+.method public constructor <init>(ILandroid/os/IBinder;Luv3;ZZ)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lqpi;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput p1, p0, Lqpi;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lqpi;->b:Landroid/os/IBinder;
 
-    iput-object v0, p0, Lqpi;->c:Ljava/lang/Object;
+    iput-object p3, p0, Lqpi;->c:Luv3;
 
-    iput-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
+    iput-boolean p4, p0, Lqpi;->d:Z
 
-    iput-object p2, p0, Lqpi;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;Llva;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lqpi;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    iput-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lqpi;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lnva;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lqpi;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    iput-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lqpi;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lvva;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lqpi;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    iput-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lqpi;->d:Ljava/lang/Object;
+    iput-boolean p5, p0, Lqpi;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Lqpi;->d:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    check-cast v0, Lybj;
-
-    invoke-virtual {v0, p1}, Lybj;->o(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lqpi;->d:Ljava/lang/Object;
-
-    check-cast v0, Lybj;
-
-    invoke-virtual {v0}, Lybj;->p()V
-
-    return-void
-.end method
-
-.method public final c(Lcom/google/android/gms/tasks/Task;)V
-    .locals 4
-
-    iget v0, p0, Lqpi;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lowf;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, p0, v1, p1}, Lowf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lowf;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, p0, v2, p1}, Lowf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    goto :goto_3
 
     :cond_0
-    :goto_0
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    move-object v0, p1
-
-    check-cast v0, Lybj;
-
-    iget-boolean v0, v0, Lybj;->d:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    iget-object v0, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lowf;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, p0, v2, p1}, Lowf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p1
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lqpi;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    iget-object v0, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lc5e;
-
-    const/16 v2, 0xd
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, p1, v3, v2}, Lc5e;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catchall_2
-    move-exception p1
-
-    :try_start_5
-    monitor-exit v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    throw p1
-
-    :pswitch_3
-    check-cast p1, Lybj;
-
-    iget-boolean p1, p1, Lybj;->d:Z
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lqpi;->c:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_6
-    monitor-exit p1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    iget-object p1, p0, Lqpi;->b:Ljava/util/concurrent/Executor;
-
-    new-instance v0, Lthg;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lthg;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-ne p0, p1, :cond_1
 
     goto :goto_2
 
-    :catchall_3
-    move-exception v0
+    :cond_1
+    instance-of v0, p1, Lqpi;
 
-    :try_start_7
-    monitor-exit p1
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    if-nez v0, :cond_2
 
-    throw v0
+    goto :goto_3
 
     :cond_2
+    check-cast p1, Lqpi;
+
+    iget-object v0, p0, Lqpi;->c:Luv3;
+
+    iget-object v1, p1, Lqpi;->c:Luv3;
+
+    invoke-virtual {v0, v1}, Luv3;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const/4 v0, 0x2
+
+    const-string v1, "com.google.android.gms.common.internal.IAccountAccessor"
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lqpi;->b:Landroid/os/IBinder;
+
+    if-nez v3, :cond_3
+
+    move-object v4, v2
+
+    goto :goto_0
+
+    :cond_3
+    sget v4, Lv5;->d:I
+
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v4
+
+    instance-of v5, v4, Lve7;
+
+    if-eqz v5, :cond_4
+
+    check-cast v4, Lve7;
+
+    goto :goto_0
+
+    :cond_4
+    new-instance v4, Lfpj;
+
+    invoke-direct {v4, v3, v1, v0}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_0
+    iget-object p1, p1, Lqpi;->b:Landroid/os/IBinder;
+
+    if-nez p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    sget v2, Lv5;->d:I
+
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lve7;
+
+    if-eqz v3, :cond_6
+
+    check-cast v2, Lve7;
+
+    goto :goto_1
+
+    :cond_6
+    new-instance v2, Lfpj;
+
+    invoke-direct {v2, p1, v1, v0}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_1
+    invoke-static {v4, v2}, Lkcj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
     :goto_2
-    return-void
+    const/4 p1, 0x1
 
-    nop
+    return p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_7
+    :goto_3
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    iget-object v0, p0, Lqpi;->d:Ljava/lang/Object;
+    const/16 v0, 0x4f45
 
-    check-cast v0, Lybj;
+    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
 
-    invoke-virtual {v0, p1}, Lybj;->n(Ljava/lang/Exception;)V
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v1, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+
+    iget v1, p0, Lqpi;->a:I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x2
+
+    iget-object v3, p0, Lqpi;->b:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v3}, Lwmj;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    const/4 v1, 0x3
+
+    iget-object v3, p0, Lqpi;->c:Luv3;
+
+    invoke-static {p1, v1, v3, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v2, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Lqpi;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p2, 0x5
+
+    invoke-static {p1, p2, v2}, Lwmj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Lqpi;->o:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

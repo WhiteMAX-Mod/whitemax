@@ -1,81 +1,160 @@
-.class public final Lih1;
-.super Ld2f;
+.class public final synthetic Lih1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public final E0:Lft1;
+.field public final synthetic a:I
 
-.field public final F0:Lit1;
+.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;Lft1;)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmid;-><init>(Landroid/view/View;)V
+    iput p2, p0, Lih1;->a:I
 
-    iput-object p2, p0, Lih1;->E0:Lft1;
+    iput-object p1, p0, Lih1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
-    sget p2, Leyc;->call_opponent:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lit1;
-
-    iput-object p1, p0, Lih1;->F0:Lit1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final z(Lt98;)V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lvd1;
+    iget v0, p0, Lih1;->a:I
 
-    iget-object v0, p1, Lvd1;->c:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lih1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
-    iget-object v1, p1, Lvd1;->d:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lih1;->F0:Lit1;
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Laoa;
 
-    invoke-virtual {v2, v1, v0}, Lit1;->H(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    new-instance v0, Lpl1;
 
-    iget-boolean v0, p1, Lvd1;->Z:Z
+    new-instance v2, Lih1;
 
-    invoke-virtual {v2, v0}, Lit1;->D(Z)V
+    const/4 v3, 0x0
 
-    iget-boolean v0, p1, Lvd1;->X:Z
+    invoke-direct {v2, v1, v3}, Lih1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
 
-    invoke-virtual {v2, v0}, Lit1;->F(Z)V
+    new-instance v4, Lz7g;
 
-    iget-object v0, p1, Lvd1;->o:Lwd0;
+    invoke-direct {v4, v2}, Lz7g;-><init>(Lmq6;)V
 
-    invoke-virtual {v2, v0}, Lit1;->setAvatar(Lwd0;)V
+    new-instance v2, Lmfi;
 
-    iget-boolean v0, p1, Lvd1;->u0:Z
+    invoke-direct {v2, v1, v3}, Lmfi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {v2, v0}, Lit1;->setRaiseHand(Z)V
+    invoke-direct {v0, v4, v2}, Lpl1;-><init>(Lz7g;Lmfi;)V
 
-    iget-object v0, p1, Lvd1;->y0:Ltxg;
+    return-object v0
 
-    invoke-virtual {v2, v0}, Lit1;->setOpponentVideo(Ltxg;)V
+    :pswitch_0
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Laoa;
 
-    iget-object v0, p1, Lvd1;->z0:Luxg;
+    new-instance v2, Lxe0;
 
-    invoke-virtual {v2, v0}, Lit1;->setButtonAction(Luxg;)V
+    sget v0, Lg6b;->a:I
 
-    iget-object p1, p1, Lvd1;->a:Lzi1;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iput-object p1, v2, Lit1;->h1:Lzi1;
+    move-result-object v3
 
-    iget-object p1, p0, Lih1;->E0:Lft1;
+    invoke-static {v3, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    iput-object p1, v2, Lit1;->b1:Lft1;
+    move-result-object v3
 
-    return-void
+    sget-object v4, Lq3b;->a:Lq3b;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    new-instance v6, Lk8;
+
+    const/16 v0, 0x1c
+
+    invoke-direct {v6, v0}, Lk8;-><init>(I)V
+
+    new-instance v7, Lk8;
+
+    const/16 v0, 0x1d
+
+    invoke-direct {v7, v0}, Lk8;-><init>(I)V
+
+    invoke-direct/range {v2 .. v7}, Lxe0;-><init>(Landroid/graphics/drawable/Drawable;Lt3b;Landroid/content/Context;Loq6;Loq6;)V
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Laoa;
+
+    new-instance v2, Laf0;
+
+    sget v0, Lg6b;->c:I
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    sget-object v0, Ldc3;->s0:Lole;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lole;->i(Landroid/content/Context;)Ldc3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ldc3;->k()Lplb;
+
+    move-result-object v5
+
+    new-instance v6, Ljh1;
+
+    const/4 v0, 0x4
+
+    invoke-direct {v6, v0}, Ljh1;-><init>(I)V
+
+    new-instance v7, Ljh1;
+
+    const/4 v0, 0x5
+
+    invoke-direct {v7, v0}, Ljh1;-><init>(I)V
+
+    sget-object v4, Ls3b;->a:Ls3b;
+
+    invoke-direct/range {v2 .. v7}, Laf0;-><init>(Landroid/graphics/drawable/Drawable;Lt3b;Lplb;Loq6;Loq6;)V
+
+    return-object v2
+
+    :pswitch_2
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Laoa;
+
+    invoke-virtual {v1}, Lx84;->getRouter()Lw3e;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,110 +1,74 @@
-.class public final Ln6h;
-.super Landroid/graphics/drawable/LayerDrawable;
+.class public final synthetic Ln6h;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ln6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lu6h;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lu6h;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Ln6h;->a:I
 
-    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Ln6h;->b:Lu6h;
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p0, Ln6h;->a:I
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    const-string v1, "t6h"
 
-    move-result-object v0
+    iget-object v2, p0, Ln6h;->b:Lu6h;
 
-    instance-of v1, v0, Landroid/graphics/drawable/ShapeDrawable;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v1, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+    const-string v3, "removeUploadFromRepository: finished for data="
 
-    goto :goto_0
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
-
-    const/high16 v1, 0x5c000000
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_1
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final b(ILjava/lang/Integer;)V
-    .locals 2
-
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1, p2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    const/16 p1, 0x11
-
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
+    invoke-static {v1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

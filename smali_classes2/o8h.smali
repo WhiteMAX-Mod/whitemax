@@ -1,188 +1,215 @@
-.class public final Lo8h;
-.super Ldtf;
+.class public final enum Lo8h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# static fields
+.field public static final enum X:Lo8h;
+
+.field public static final enum Y:Lo8h;
+
+.field public static final enum Z:Lo8h;
+
+.field public static final enum b:Lo8h;
+
+.field public static final enum c:Lo8h;
+
+.field public static final enum d:Lo8h;
+
+.field public static final enum o:Lo8h;
+
+.field public static final enum s0:Lo8h;
+
+.field public static final enum t0:Lo8h;
+
+.field public static final synthetic u0:[Lo8h;
+
+.field public static final synthetic v0:Lwk5;
 
 
 # instance fields
-.field public final synthetic X:Lq8h;
-
-.field public final synthetic Y:Landroid/graphics/Bitmap;
-
-.field public o:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lq8h;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput-object p1, p0, Lo8h;->X:Lq8h;
+    new-instance v0, Lo8h;
 
-    iput-object p2, p0, Lo8h;->Y:Landroid/graphics/Bitmap;
+    const-string v1, "UNKNOWN"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, v2}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lo8h;->b:Lo8h;
+
+    new-instance v1, Lo8h;
+
+    const-string v2, "VIDEO"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lo8h;->c:Lo8h;
+
+    new-instance v2, Lo8h;
+
+    const-string v3, "PHOTO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lo8h;->d:Lo8h;
+
+    new-instance v3, Lo8h;
+
+    const-string v4, "PROFILE_PHOTO"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lo8h;->o:Lo8h;
+
+    new-instance v4, Lo8h;
+
+    const-string v5, "FILE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lo8h;->X:Lo8h;
+
+    new-instance v5, Lo8h;
+
+    const-string v6, "AUDIO"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lo8h;->Y:Lo8h;
+
+    new-instance v6, Lo8h;
+
+    const-string v7, "EXTERNAL_GIF"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v8}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lo8h;->Z:Lo8h;
+
+    new-instance v7, Lo8h;
+
+    const-string v8, "STICKER"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v9}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v7, Lo8h;->s0:Lo8h;
+
+    new-instance v8, Lo8h;
+
+    const-string v9, "VIDEO_MESSAGE"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10, v10}, Lo8h;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Lo8h;->t0:Lo8h;
+
+    filled-new-array/range {v0 .. v8}, [Lo8h;
+
+    move-result-object v0
+
+    sput-object v0, Lo8h;->u0:[Lo8h;
+
+    new-instance v1, Lwk5;
+
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lo8h;->v0:Lwk5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    check-cast p1, Lf84;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput p3, p0, Lo8h;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lo8h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lo8h;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lo8h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lo8h;
+    .locals 1
 
-    new-instance p1, Lo8h;
+    const-class v0, Lo8h;
 
-    iget-object v0, p0, Lo8h;->X:Lq8h;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v1, p0, Lo8h;->Y:Landroid/graphics/Bitmap;
+    move-result-object p0
 
-    invoke-direct {p1, v0, v1, p2}, Lo8h;-><init>(Lq8h;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    check-cast p0, Lo8h;
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public static values()[Lo8h;
+    .locals 1
 
-    sget-object v0, Lg84;->a:Lg84;
+    sget-object v0, Lo8h;->u0:[Lo8h;
 
-    iget v1, p0, Lo8h;->o:I
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lo8h;->X:Lq8h;
-
-    iget-object v1, p1, Lq8h;->k:Lkue;
-
-    iget-object v3, p0, Lo8h;->Y:Landroid/graphics/Bitmap;
-
-    iget-object p1, p1, Lq8h;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqx5;
-
-    check-cast p1, Liz5;
-
-    invoke-virtual {p1}, Liz5;->k()Ljava/io/File;
-
-    move-result-object p1
-
-    iput v2, p0, Lo8h;->o:I
-
-    invoke-virtual {v1, v3, p1, p0}, Lkue;->a(Landroid/graphics/Bitmap;Ljava/io/File;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lo8h;
 
     return-object v0
+.end method
 
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/String;
 
-    iget-object v0, p0, Lo8h;->X:Lq8h;
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    iget-object v0, v0, Lq8h;->h:Ljava/lang/String;
+    sget-object v0, Lo8h;->o:Lo8h;
 
-    sget-object v1, Lwqi;->a:Ll6b;
+    if-ne p0, v0, :cond_0
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    if-nez v1, :cond_3
+    return v0
 
-    goto :goto_1
+    :cond_0
+    const/4 v0, 0x0
 
-    :cond_3
-    sget-object v3, Llg8;->d:Llg8;
+    return v0
+.end method
 
-    invoke-virtual {v1, v3}, Ll6b;->b(Llg8;)Z
+.method public final c()Z
+    .locals 1
 
-    move-result v4
+    sget-object v0, Lo8h;->s0:Lo8h;
 
-    if-eqz v4, :cond_4
+    if-ne p0, v0, :cond_0
 
-    const-string v4, "VideoMessage Recording. Save placeholder"
+    const/4 v0, 0x1
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v0
 
-    :cond_4
-    :goto_1
-    iget-object v0, p0, Lo8h;->X:Lq8h;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lq8h;->q:Ltcf;
-
-    :cond_5
-    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lf8h;
-
-    const/4 v4, 0x3
-
-    invoke-static {v3, v2, v2, p1, v4}, Lf8h;->a(Lf8h;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lf8h;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return v0
 .end method

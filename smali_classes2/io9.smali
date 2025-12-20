@@ -1,80 +1,85 @@
-.class public final Lio9;
-.super Ljava/lang/Object;
+.class public final enum Lio9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lx26;
 
+# static fields
+.field public static final enum a:Lio9;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lio9;
 
-.field public final synthetic b:Ltcf;
+.field public static final enum c:Lio9;
 
-.field public final synthetic c:Lno9;
+.field public static final synthetic d:[Lio9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltcf;Lno9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p3, p0, Lio9;->a:I
+    new-instance v0, Lio9;
 
-    iput-object p1, p0, Lio9;->b:Ltcf;
+    const-string v1, "DISABLED"
 
-    iput-object p2, p0, Lio9;->c:Lno9;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lio9;->a:Lio9;
+
+    new-instance v1, Lio9;
+
+    const-string v2, "EXPANDED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lio9;->b:Lio9;
+
+    new-instance v2, Lio9;
+
+    const-string v3, "COLLAPSED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lio9;->c:Lio9;
+
+    filled-new-array {v0, v1, v2}, [Lio9;
+
+    move-result-object v0
+
+    sput-object v0, Lio9;->d:[Lio9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lio9;
+    .locals 1
 
-# virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    const-class v0, Lio9;
 
-    iget v0, p0, Lio9;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    new-instance v0, Lho9;
+    check-cast p0, Lio9;
 
-    iget-object v1, p0, Lio9;->c:Lno9;
+    return-object p0
+.end method
 
-    const/4 v2, 0x1
+.method public static values()[Lio9;
+    .locals 1
 
-    invoke-direct {v0, p1, v1, v2}, Lho9;-><init>(Lz26;Lno9;I)V
+    sget-object v0, Lio9;->d:[Lio9;
 
-    iget-object p1, p0, Lio9;->b:Ltcf;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p2}, Ltcf;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    sget-object p1, Lg84;->a:Lg84;
+    check-cast v0, [Lio9;
 
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lho9;
-
-    iget-object v1, p0, Lio9;->c:Lno9;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Lho9;-><init>(Lz26;Lno9;I)V
-
-    iget-object p1, p0, Lio9;->b:Ltcf;
-
-    invoke-virtual {p1, v0, p2}, Ltcf;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lg84;->a:Lg84;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,75 +1,55 @@
 .class public final Lpoa;
-.super Lki4;
+.super Ljava/security/MessageDigest;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lpoa;
-
-.field public static final c:Lgi4;
-
-.field public static final d:Lgi4;
-
-.field public static final e:Lgi4;
-
-.field public static final f:Lgi4;
+.field public static final a:Lpoa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     new-instance v0, Lpoa;
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    const-string v1, "NOP"
 
-    sput-object v0, Lpoa;->b:Lpoa;
+    invoke-direct {v0, v1}, Ljava/security/MessageDigest;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    sput-object v0, Lpoa;->a:Lpoa;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-void
+.end method
 
-    const-string v3, ":settings/notifications"
 
-    const/4 v4, 0x0
+# virtual methods
+.method public final engineDigest()[B
+    .locals 1
 
-    const/16 v5, 0xe
+    const/4 v0, 0x0
 
-    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    new-array v0, v0, [B
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    sput-object v2, Lpoa;->c:Lgi4;
+.method public final engineReset()V
+    .locals 0
 
-    const-string v2, ":settings/notifications/chat"
+    return-void
+.end method
 
-    new-array v3, v1, [Ljava/lang/String;
+.method public final engineUpdate(B)V
+    .locals 0
 
-    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    .line 1
+    return-void
+.end method
 
-    move-result-object v2
+.method public final engineUpdate([BII)V
+    .locals 0
 
-    sput-object v2, Lpoa;->d:Lgi4;
-
-    const-string v2, ":settings/notifications/dialog"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v2
-
-    sput-object v2, Lpoa;->e:Lgi4;
-
-    const-string v2, ":settings/notifications/other"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Lpoa;->f:Lgi4;
-
+    .line 2
     return-void
 .end method

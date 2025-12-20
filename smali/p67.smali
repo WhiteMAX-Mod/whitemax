@@ -1,181 +1,91 @@
-.class public final Lp67;
-.super Lih;
+.class public abstract Lp67;
+.super Lmx3;
 .source "SourceFile"
+
+
+# instance fields
+.field public q0:[Lmx3;
+
+.field public r0:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    invoke-direct {p0}, Lmx3;-><init>()V
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Lmx3;
+
+    iput-object v0, p0, Lp67;->q0:[Lmx3;
+
     const/4 v0, 0x0
 
-    .line 1
-    invoke-direct {p0, v0}, Lih;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    const-wide/16 v0, 0xc8
-
-    const/4 p1, 0x2
-
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Lih;-><init>(JI)V
+    iput v0, p0, Lp67;->r0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lh54;
-    .locals 4
-
-    new-instance v0, Lp67;
-
-    iget-wide v1, p0, Lih;->d:J
-
-    iget-boolean v3, p0, Lih;->t0:Z
-
-    invoke-direct {v0, v1, v2, v3}, Lih;-><init>(JZ)V
-
-    return-object v0
-.end method
-
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+.method public final R(ILqfi;Ljava/util/ArrayList;)V
     .locals 5
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    const/4 p5, 0x2
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    move v1, v0
 
-    const/4 v2, 0x0
+    :goto_0
+    iget v2, p0, Lp67;->r0:I
 
-    if-eqz p4, :cond_1
+    if-ge v1, v2, :cond_1
 
-    if-eqz p2, :cond_0
+    iget-object v2, p0, Lp67;->q0:[Lmx3;
 
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    aget-object v2, v2, v1
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+    iget-object v3, p2, Lqfi;->a:Ljava/util/ArrayList;
 
-    move-result v3
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    int-to-float v3, v3
+    move-result v4
 
-    neg-float v3, v3
+    if-eqz v4, :cond_0
 
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    goto :goto_1
 
     :cond_0
-    if-eqz p3, :cond_4
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    new-array p5, p5, [F
-
-    aput p4, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p2, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    return-object p1
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p4
-
-    invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_2
-    if-eqz p3, :cond_4
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_3
-    move p2, v2
+    :cond_1
+    :goto_2
+    iget v1, p0, Lp67;->r0:I
 
-    :goto_0
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    if-ge v0, v1, :cond_2
 
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+    iget-object v1, p0, Lp67;->q0:[Lmx3;
 
-    move-result v3
+    aget-object v1, v1, v0
 
-    int-to-float v3, v3
+    invoke-static {v1, p1, p3, p2}, Ledf;->d(Lmx3;ILjava/util/ArrayList;Lqfi;)Lqfi;
 
-    sub-float/2addr p2, v3
+    add-int/lit8 v0, v0, 0x1
 
-    new-array p5, p5, [F
+    goto :goto_2
 
-    aput p2, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p4, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_4
-    return-object p1
+    :cond_2
+    return-void
 .end method
 
-.method public final n(Landroid/view/View;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+.method public S()V
+    .locals 0
 
     return-void
 .end method

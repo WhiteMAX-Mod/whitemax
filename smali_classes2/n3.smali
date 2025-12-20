@@ -1,122 +1,224 @@
-.class public final synthetic Ln3;
-.super Ljava/lang/Object;
+.class public final Ln3;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Ler6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Landroid/view/View;
 
-.field public final synthetic b:Lone/me/chats/picker/AbstractPickerScreen;
+.field public synthetic Y:Lplb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/picker/AbstractPickerScreen;I)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p2, p0, Ln3;->a:I
+    iput p3, p0, Ln3;->o:I
 
-    iput-object p1, p0, Ln3;->b:Lone/me/chats/picker/AbstractPickerScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Ln3;->a:I
+    iget v0, p0, Ln3;->o:I
 
-    iget-object v1, p0, Ln3;->b:Lone/me/chats/picker/AbstractPickerScreen;
+    check-cast p1, Landroid/view/View;
+
+    check-cast p2, Lplb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lyy7;
+    new-instance v0, Ln3;
 
-    new-instance v0, La2b;
+    const/4 v1, 0x3
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 v2, 0x3
 
-    move-result-object v2
+    invoke-direct {v0, v1, p3, v2}, Ln3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-direct {v0, v2}, La2b;-><init>(Landroid/content/Context;)V
+    iput-object p1, v0, Ln3;->X:Landroid/view/View;
 
-    invoke-virtual {v0}, La2b;->getEditText()Landroid/widget/EditText;
+    iput-object p2, v0, Ln3;->Y:Lplb;
 
-    move-result-object v2
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->E0()Lmcf;
+    invoke-virtual {v0, p1}, Ln3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    check-cast v3, Ltcf;
-
-    invoke-virtual {v3}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ls5g;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Li5i;
-
-    invoke-direct {v2, v1, v0}, Li5i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, La2b;->setCallback(Ly1b;)V
-
-    invoke-virtual {v0}, La2b;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v2
-
-    new-instance v3, Lp3;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v1}, Lp3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    return-object v0
+    return-object p1
 
     :pswitch_0
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lyy7;
+    new-instance v0, Ln3;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->B0(Landroid/content/Context;)Lyfb;
+    invoke-direct {v0, v1, p3, v2}, Ln3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object v0
+    iput-object p1, v0, Ln3;->X:Landroid/view/View;
 
-    return-object v0
+    iput-object p2, v0, Ln3;->Y:Lplb;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Ln3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Ln3;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Ln3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Ln3;->X:Landroid/view/View;
+
+    iput-object p2, v0, Ln3;->Y:Lplb;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Ln3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Ln3;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Ln3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Ln3;->X:Landroid/view/View;
+
+    iput-object p2, v0, Ln3;->Y:Lplb;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Ln3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Ln3;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln3;->X:Landroid/view/View;
+
+    iget-object v0, p0, Ln3;->Y:Lplb;
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln3;->X:Landroid/view/View;
+
+    iget-object v0, p0, Ln3;->Y:Lplb;
+
+    invoke-interface {v0}, Lplb;->i()Ltyf;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ltyf;->b:Lzyf;
+
+    iget v0, v0, Lzyf;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln3;->X:Landroid/view/View;
+
+    iget-object v0, p0, Ln3;->Y:Lplb;
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lxf0;->a:Lwf0;
+
+    iget v0, v0, Lwf0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln3;->X:Landroid/view/View;
+
+    iget-object v0, p0, Ln3;->Y:Lplb;
+
+    invoke-interface {v0}, Lplb;->i()Ltyf;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ltyf;->b:Lzyf;
+
+    iget v0, v0, Lzyf;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

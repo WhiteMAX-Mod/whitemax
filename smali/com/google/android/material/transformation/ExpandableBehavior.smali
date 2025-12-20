@@ -1,12 +1,12 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableBehavior;
-.super La74;
+.super Lua4;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "La74;"
+        "Lua4;"
     }
 .end annotation
 
@@ -53,7 +53,7 @@
 .method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 3
 
-    sget-object p3, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object p3, Lash;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p2}, Landroid/view/View;->isLaidOut()Z
 

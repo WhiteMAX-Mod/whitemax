@@ -1,72 +1,81 @@
-.class public final synthetic Laba;
-.super Ljava/lang/Object;
+.class public final Laba;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Z
+.field public final c:[J
 
-.field public final synthetic c:Landroid/view/View;
+.field public final d:Lh00;
+
+.field public final o:[J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/view/View;Z)V
+.method public constructor <init>(JJ[JLh00;[J)V
     .locals 0
 
-    iput p1, p0, Laba;->a:I
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    iput-boolean p3, p0, Laba;->b:Z
+    iput-wide p3, p0, Laba;->b:J
 
-    iput-object p2, p0, Laba;->c:Landroid/view/View;
+    iput-object p5, p0, Laba;->c:[J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p6, p0, Laba;->d:Lh00;
+
+    iput-object p7, p0, Laba;->o:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Laba;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "MsgGetEvent{serverChatId="
 
-    iget-boolean v0, p0, Laba;->b:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
+    iget-wide v1, p0, Laba;->b:J
 
-    const/16 v0, 0x8
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Laba;->c:Landroid/view/View;
+    const-string v1, ", serverMessageIds="
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
+    iget-object v1, p0, Laba;->c:[J
 
-    :pswitch_0
-    iget-boolean v0, p0, Laba;->b:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    const-string v1, ", messages="
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Laba;->c:Landroid/view/View;
+    iget-object v1, p0, Laba;->d:Lh00;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    return-void
+    const-string v1, ", requestedMessageIds="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Laba;->o:[J
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

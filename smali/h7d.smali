@@ -1,225 +1,70 @@
-.class public final Lh7d;
-.super Landroid/graphics/drawable/LayerDrawable;
-.source "SourceFile"
+.class public abstract Lh7d;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/graphics/drawable/Animatable;
 
+# static fields
+.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a0620
 
-# instance fields
-.field public final a:Lvf;
+.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a0621
 
+.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0622
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a0623
 
-    const/4 v0, 0x0
+.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a0624
 
-    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
+.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a0625
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a0626
 
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a0627
 
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+.field public static oneme_chatmedia_viewer_info_panel_view_caption_text_container:I = 0x7f0a0628
 
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a0629
 
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a062a
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a062b
 
-    move-result-object v1
+.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a062c
 
-    sget-object v2, La93;->s0:Lv1a;
+.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a062d
 
-    invoke-virtual {v2, p1}, Lv1a;->z(Landroid/content/Context;)Lh5b;
+.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a062e
 
-    move-result-object v2
+.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a062f
 
-    iget-object v2, v2, Lh5b;->c:Lyeb;
+.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a0630
 
-    invoke-interface {v2}, Lyeb;->b()Lbf0;
+.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a0631
 
-    move-result-object v2
+.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0632
 
-    iget-object v2, v2, Lbf0;->a:Laf0;
+.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0633
 
-    iget v2, v2, Laf0;->n:I
+.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a0634
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a0635
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
+.field public static video_container:I = 0x7f0a0c6d
 
-    move-result v0
+.field public static video_container_id:I = 0x7f0a0c6e
 
-    sget v1, Lkwc;->ic_animated_handup:I
+.field public static video_error:I = 0x7f0a0c70
 
-    invoke-static {p1, v1}, Lvf;->a(Landroid/content/Context;I)Lvf;
+.field public static video_frame_id:I = 0x7f0a0c71
 
-    move-result-object p1
+.field public static video_go_to_message:I = 0x7f0a0c73
 
-    iput-object p1, p0, Lh7d;->a:Lvf;
+.field public static video_progressbar:I = 0x7f0a0c76
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
+.field public static video_progressbar_buffering:I = 0x7f0a0c77
 
-    move-result p1
+.field public static video_share:I = 0x7f0a0c78
 
-    const/16 v1, 0x30
+.field public static video_toolbar_id:I = 0x7f0a0c79
 
-    int-to-float v1, v1
+.field public static video_webview_container:I = 0x7f0a0c7a
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lkti;->d(F)I
-
-    move-result v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lkti;->d(F)I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v2, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    const/16 v1, 0x11
-
-    invoke-virtual {p0, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    const/16 v0, 0x1c
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lkti;->d(F)I
-
-    move-result v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    invoke-virtual {p0, p1, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final isRunning()Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lh7d;->a:Lvf;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lvf;->isRunning()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    return v2
-
-    :cond_0
-    return v0
-.end method
-
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
-
-    return-void
-.end method
-
-.method public final start()V
-    .locals 1
-
-    iget-object v0, p0, Lh7d;->a:Lvf;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lvf;->start()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final stop()V
-    .locals 1
-
-    iget-object v0, p0, Lh7d;->a:Lvf;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lvf;->stop()V
-
-    :cond_0
-    return-void
-.end method
+.field public static video_webview_id:I = 0x7f0a0c7b

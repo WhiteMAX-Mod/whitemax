@@ -1,84 +1,55 @@
-.class public final Lpsa;
-.super Lvqa;
+.class public abstract Lpsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lj0e;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Ljava/util/concurrent/TimeUnit;
-
-
 # direct methods
-.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lj0e;)V
+.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
 
-    iput-wide p1, p0, Lpsa;->b:J
+    move-result-object p0
 
-    iput-wide p3, p0, Lpsa;->c:J
-
-    iput-object p5, p0, Lpsa;->d:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p6, p0, Lpsa;->a:Lj0e;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final o(Lvta;)V
-    .locals 7
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomBigContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    new-instance v1, Losa;
+    move-result-object p0
 
-    invoke-direct {v1, p1}, Losa;-><init>(Lvta;)V
+    return-object p0
+.end method
 
-    invoke-interface {p1, v1}, Lvta;->c(Lpy4;)V
+.method public static c(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget-object v0, p0, Lpsa;->a:Lj0e;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    instance-of p1, v0, Lqgg;
+    move-result-object p0
 
-    if-eqz p1, :cond_0
+    return-object p0
+.end method
 
-    check-cast v0, Lqgg;
+.method public static d(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomHeadsUpContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    new-instance v0, Lpgg;
+    move-result-object p0
 
-    invoke-direct {v0}, Lpgg;-><init>()V
+    return-object p0
+.end method
 
-    invoke-static {v1, v0}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
+.method public static e(Landroid/app/Notification$Builder;[Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget-wide v4, p0, Lpsa;->c:J
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setRemoteInputHistory([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    iget-object v6, p0, Lpsa;->d:Ljava/util/concurrent/TimeUnit;
+    move-result-object p0
 
-    iget-wide v2, p0, Lpsa;->b:J
-
-    invoke-virtual/range {v0 .. v6}, Lh0e;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lpy4;
-
-    return-void
-
-    :cond_0
-    iget-wide v4, p0, Lpsa;->c:J
-
-    iget-object v6, p0, Lpsa;->d:Ljava/util/concurrent/TimeUnit;
-
-    iget-wide v2, p0, Lpsa;->b:J
-
-    invoke-virtual/range {v0 .. v6}, Lj0e;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lpy4;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
-
-    return-void
+    return-object p0
 .end method

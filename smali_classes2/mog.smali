@@ -1,72 +1,129 @@
-.class public final synthetic Lmog;
+.class public final Lmog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnog;
 
-.field public final synthetic b:Lpog;
+.field public final b:Loog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpog;I)V
+.method public constructor <init>(Lnog;Loog;)V
     .locals 0
 
-    iput p2, p0, Lmog;->a:I
-
-    iput-object p1, p0, Lmog;->b:Lpog;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmog;->a:Lnog;
+
+    iput-object p2, p0, Lmog;->b:Loog;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lmog;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Ljava/lang/CharSequence;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmog;->b:Lpog;
-
-    iget-object v0, v0, Lpog;->w0:Loog;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Loog;->t(Ljava/lang/CharSequence;)V
+    return v0
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    instance-of v1, p1, Lmog;
 
-    return-object p1
+    const/4 v2, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lmog;->b:Lpog;
+    if-nez v1, :cond_1
 
-    iget-object v0, v0, Lpog;->w0:Loog;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1}, Loog;->T(Ljava/lang/CharSequence;)V
+    return v2
 
     :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
+    check-cast p1, Lmog;
 
-    return-object p1
+    iget-object v1, p0, Lmog;->a:Lnog;
 
-    nop
+    iget-object v3, p1, Lmog;->a:Lnog;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lmog;->b:Loog;
+
+    iget-object p1, p1, Lmog;->b:Loog;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lmog;->a:Lnog;
+
+    invoke-virtual {v0}, Lnog;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lmog;->b:Loog;
+
+    invoke-virtual {v1}, Loog;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TopbarIconColors(default="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmog;->a:Lnog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmog;->b:Loog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

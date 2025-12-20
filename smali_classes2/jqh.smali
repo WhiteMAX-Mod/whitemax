@@ -1,19 +1,8 @@
-.class public final Ljqh;
+.class public interface abstract Ljqh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lzy7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lzy7;"
-        }
-    .end annotation
-
-    sget-object v0, Liqh;->a:Liqh;
-
-    return-object v0
+.method public abstract s(Z)Lfqh;
 .end method

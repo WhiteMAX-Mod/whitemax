@@ -1,155 +1,57 @@
-.class public final Lw21;
+.class public final synthetic Lw21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv21;
+.implements Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;
 
 
 # instance fields
-.field public final a:Lbv1;
+.field public final synthetic a:I
 
-.field public final b:Lk18;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic b:Lit1;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lbv1;)V
+.method public synthetic constructor <init>(Lit1;I)V
     .locals 0
 
+    iput p2, p0, Lw21;->a:I
+
+    iput-object p1, p0, Lw21;->b:Lit1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lw21;->a:Lbv1;
-
-    iput-object p1, p0, Lw21;->b:Lk18;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lw21;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;)V
-    .locals 7
+.method public final onParticipantStateChanged(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p1, p0, Lw21;->a:I
 
-    const-string v1, "setting audio state: "
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lw21;->b:Lit1;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p1, Lrub;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lrub;->c()V
 
-    move-result-object v0
-
-    const-string v1, "CallAudioController"
-
-    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lw21;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-eqz v1, :cond_0
-
-    const/4 v5, 0x6
-
-    const/4 v6, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v2, p1
-
-    invoke-static/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->changeStateAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lcm6;Lem6;ILjava/lang/Object;)V
-
-    :cond_0
     return-void
-.end method
 
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Lw21;->b:Lit1;
 
-    iget-object v0, p0, Lw21;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p1, Lj31;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->getCurrentDevice()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-virtual {p1}, Lj31;->d()Lia4;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-
-    :cond_1
-    :goto_0
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->Companion:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;->getNONE()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-    .locals 1
-
-    iget-object v0, p0, Lw21;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ln64;
-
-    invoke-virtual {v0}, Ln64;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMicrophoneManager()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final d()Z
-    .locals 3
-
-    invoke-virtual {p0}, Lw21;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
+    invoke-virtual {v0}, Lia4;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
     move-result-object v0
 
@@ -157,47 +59,91 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->isMicEnabled()Z
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    return v2
-
-    :cond_0
-    return v1
-.end method
-
-.method public final e(Z)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallAudioController microphone changed="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CallAudioController"
-
-    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lw21;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->setMicEnabled(Z)V
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
+    move-object v0, v1
+
+    :goto_0
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;->getChanges()Ljava/util/Collection;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
+
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v3
+
+    invoke-static {v3, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move-object v1, v2
+
+    :cond_2
+    check-cast v1, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
+
+    if-eqz v1, :cond_3
+
+    iget-object p2, p1, Lj31;->x0:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
+
+    move-result v1
+
+    invoke-virtual {p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    iget-object p1, p1, Lj31;->C0:Lh6f;
+
+    sget-object p2, Lya;->a:Lya;
+
+    invoke-virtual {p1, p2}, Lh6f;->h(Ljava/lang/Object;)Z
+
+    :cond_3
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

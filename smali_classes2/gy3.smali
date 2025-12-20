@@ -1,51 +1,58 @@
 .class public final Lgy3;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc10;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Liy3;
+.field public final b:Ljava/lang/String;
 
-.field public Z:I
+.field public final c:Ljava/lang/String;
 
-.field public d:Liy3;
+.field public final d:Ljava/lang/String;
 
-.field public o:Ljava/util/List;
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:I
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Landroid/graphics/drawable/Drawable;
+
+.field public final i:Landroid/graphics/drawable/Drawable;
+
+.field public final j:J
 
 
 # direct methods
-.method public constructor <init>(Liy3;Lq44;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ILjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
     .locals 0
 
-    iput-object p1, p0, Lgy3;->Y:Liy3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lgy3;->a:J
+
+    iput-object p3, p0, Lgy3;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lgy3;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lgy3;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lgy3;->e:Ljava/lang/CharSequence;
+
+    iput p7, p0, Lgy3;->f:I
+
+    iput-object p8, p0, Lgy3;->g:Ljava/lang/String;
+
+    iput-object p9, p0, Lgy3;->h:Landroid/graphics/drawable/Drawable;
+
+    iput-object p10, p0, Lgy3;->i:Landroid/graphics/drawable/Drawable;
+
+    iput-wide p11, p0, Lgy3;->j:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lgy3;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lgy3;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lgy3;->Z:I
-
-    iget-object p1, p0, Lgy3;->Y:Liy3;
-
-    invoke-static {p1, p0}, Liy3;->d(Liy3;Lq44;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,67 +1,135 @@
 .class public final Lk1;
-.super Ljava/lang/Object;
+.super Lg2j;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final a:Lhke;
-
-.field public final b:Lha8;
-
-
-# direct methods
-.method public constructor <init>(Lhke;Lha8;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk1;->a:Lhke;
-
-    iput-object p2, p0, Lk1;->b:Lha8;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Lv1;Le1;Le1;)Z
+    .locals 1
 
-    iget-object v0, p0, Lk1;->a:Lhke;
+    monitor-enter p1
 
-    iget-object v0, v0, Lx1;->a:Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p1, Lv1;->b:Le1;
 
-    if-eq v0, p0, :cond_0
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lv1;->b:Le1;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lk1;->b:Lha8;
+    const/4 p2, 0x0
 
-    invoke-static {v0}, Lx1;->h(Lha8;)Ljava/lang/Object;
+    monitor-exit p1
 
-    move-result-object v0
+    return p2
 
-    sget-object v1, Lx1;->X:Lwoi;
-
-    iget-object v2, p0, Lk1;->a:Lhke;
-
-    invoke-virtual {v1, v2, p0, v0}, Lwoi;->b(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lk1;->a:Lhke;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lx1;->e(Lx1;Z)V
-
-    :cond_1
     :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final b(Lv1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lv1;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lv1;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final c(Lv1;Lt1;Lt1;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lv1;->c:Lt1;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lv1;->c:Lt1;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final e(Lt1;Lt1;)V
+    .locals 0
+
+    iput-object p2, p1, Lt1;->b:Lt1;
+
+    return-void
+.end method
+
+.method public final f(Lt1;Ljava/lang/Thread;)V
+    .locals 0
+
+    iput-object p2, p1, Lt1;->a:Ljava/lang/Thread;
+
     return-void
 .end method

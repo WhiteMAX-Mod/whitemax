@@ -1,154 +1,139 @@
-.class public abstract Ly0f;
-.super Ll98;
+.class public final Ly0f;
+.super Lie0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lghg;
+
+.field public final c:Ljava/lang/Integer;
+
+
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method public constructor <init>(Lghg;Ljava/lang/Integer;)V
+    .locals 1
 
-    new-instance v0, Lyf4;
+    const/16 v0, 0x14
 
-    const/16 v1, 0x9
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lyf4;-><init>(I)V
+    iput-object p1, p0, Ly0f;->b:Lghg;
 
-    new-instance v1, Lxt4;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p1, v2, v0}, Lxt4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0, v1}, Ll98;-><init>(Lxt4;)V
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1}, Lphd;->A(Z)V
+    iput-object p2, p0, Ly0f;->c:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(I)Lt98;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    if-ltz p1, :cond_0
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Ll98;->d:Liv;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Liv;->f:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ll98;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt98;
-
-    return-object p1
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Ly0f;
 
-    return-object p1
-.end method
+    const/4 v2, 0x0
 
-.method public H(Ld2f;I)V
-    .locals 0
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p2}, Ll98;->C(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object p2
+    :cond_1
+    check-cast p1, Ly0f;
 
-    check-cast p2, Lt98;
+    iget-object v1, p0, Ly0f;->b:Lghg;
 
-    invoke-virtual {p1, p2}, Ld2f;->z(Lt98;)V
+    iget-object v3, p1, Ly0f;->b:Lghg;
 
-    return-void
-.end method
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public I(Ld2f;)V
-    .locals 0
+    move-result v1
 
-    invoke-virtual {p1}, Ld2f;->E()V
+    if-nez v1, :cond_2
 
-    return-void
-.end method
+    return v2
 
-.method public k(I)J
-    .locals 2
+    :cond_2
+    iget-object v1, p0, Ly0f;->c:Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1}, Ll98;->C(I)Ljava/lang/Object;
+    iget-object p1, p1, Ly0f;->c:Ljava/lang/Integer;
 
-    move-result-object p1
-
-    check-cast p1, Lt98;
-
-    invoke-interface {p1}, Lt98;->getItemId()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ll98;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt98;
-
-    invoke-interface {p1}, Lt98;->m()I
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public bridge synthetic r(Lmid;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    check-cast p1, Ld2f;
+    iget-object v0, p0, Ly0f;->b:Lghg;
 
-    invoke-virtual {p0, p1, p2}, Ly0f;->H(Ld2f;I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ly0f;->c:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public final w(Lmid;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Ld2f;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ld2f;->C()V
+    const-string v1, "ShowSnackbar(title="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final x(Lmid;)V
-    .locals 0
+    iget-object v1, p0, Ly0f;->b:Lghg;
 
-    check-cast p1, Ld2f;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ld2f;->D()V
+    const-string v1, ", icon="
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public bridge synthetic y(Lmid;)V
-    .locals 0
+    iget-object v1, p0, Ly0f;->c:Ljava/lang/Integer;
 
-    check-cast p1, Ld2f;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ly0f;->I(Ld2f;)V
+    const-string v1, ")"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

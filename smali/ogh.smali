@@ -1,9 +1,8 @@
-.class public final Logh;
+.class public interface abstract Logh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:F
+# virtual methods
+.method public abstract b(JJLrj6;Landroid/media/MediaFormat;)V
+.end method

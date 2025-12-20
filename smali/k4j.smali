@@ -4,442 +4,175 @@
 
 
 # direct methods
-.method public static a([B)Ljava/util/ArrayList;
-    .locals 6
+.method public static a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+    .locals 3
 
-    const/16 v0, 0xb
+    if-nez p1, :cond_0
 
-    aget-byte v0, p0, v0
+    const/4 p1, 0x0
 
-    and-int/lit16 v0, v0, 0xff
+    goto :goto_1
 
-    const/16 v1, 0x8
+    :cond_0
+    move-object v0, p1
 
-    shl-int/2addr v0, v1
+    :goto_0
+    if-eqz v0, :cond_2
 
-    const/16 v2, 0xa
+    instance-of v1, v0, Ljava/net/UnknownHostException;
 
-    aget-byte v2, p0, v2
+    if-eqz v1, :cond_1
 
-    and-int/lit16 v2, v2, 0xff
+    const-string p1, "UnknownHostException (no network)"
 
-    or-int/2addr v0, v2
+    goto :goto_1
 
-    int-to-long v2, v0
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    const-wide/32 v4, 0x3b9aca00
+    move-result-object v0
 
-    mul-long/2addr v2, v4
+    goto :goto_0
 
-    const-wide/32 v4, 0xbb80
+    :cond_2
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    div-long/2addr v2, v4
+    move-result-object p1
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    const/4 v4, 0x3
+    move-result-object p1
 
-    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
+    const-string v0, "\t"
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v1, "    "
 
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    :goto_1
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-object v4
+    move-result v0
 
-    invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    if-nez v0, :cond_3
 
-    move-result-object p0
-
-    invoke-virtual {p0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    const-string v0, "\n"
 
-    move-result-object v1
+    const-string v1, "\n  "
 
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x4
+
+    invoke-static {v0, p1}, Lzy4;->f(ILjava/lang/String;)I
+
+    move-result v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0xa
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-wide/32 v1, 0x4c4b400
-
-    invoke-virtual {p0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
+    :cond_3
+    return-object p0
 .end method
 
-.method public static final b(JLjava/util/List;)Z
+.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Lk4j;->a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public static final c(Lso0;)V
     .locals 1
 
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {p0}, Lso0;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-virtual {p0}, Lso0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/View;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld93;
-
-    invoke-interface {v0, p0, p1}, Ld93;->b(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public static final c(Ld93;Ld93;)Z
-    .locals 4
+.method public static d(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
+    .locals 0
 
-    invoke-interface {p0}, Ld93;->a()J
+    if-eqz p1, :cond_0
 
-    move-result-wide v0
-
-    invoke-interface {p1}, Ld93;->a()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p0}, Ld93;->c()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Ld93;->c()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
+    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
     if-nez p0, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final d(JLjava/util/List;)Ld93;
-    .locals 2
-
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ld93;
-
-    invoke-interface {v1, p0, p1}, Ld93;->b(J)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    check-cast v0, Ld93;
-
-    return-object v0
-.end method
-
-.method public static final e(JLjava/util/List;)Ld93;
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_0
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ld93;
-
-    invoke-interface {v2}, Ld93;->a()J
-
-    move-result-wide v2
-
-    cmp-long v2, v2, p0
-
-    if-lez v2, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    const/4 p0, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    :goto_1
-    move-object p0, p1
-
-    goto :goto_2
-
-    :cond_3
-    move-object p2, p1
-
-    check-cast p2, Ld93;
-
-    invoke-interface {p2}, Ld93;->c()J
-
-    move-result-wide v0
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v2, p2
-
-    check-cast v2, Ld93;
-
-    invoke-interface {v2}, Ld93;->c()J
-
-    move-result-wide v2
-
-    cmp-long v4, v0, v2
-
-    if-lez v4, :cond_5
-
-    move-object p1, p2
-
-    move-wide v0, v2
-
-    :cond_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_1
-
-    :goto_2
-    check-cast p0, Ld93;
-
-    return-object p0
-.end method
-
-.method public static final f(JLjava/util/List;)Ld93;
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_0
     :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    instance-of p1, p0, Landroid/view/View;
 
-    move-result v1
+    if-eqz p1, :cond_0
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ld93;
-
-    invoke-interface {v2}, Ld93;->c()J
-
-    move-result-wide v2
-
-    cmp-long v2, v2, p0
-
-    if-gez v2, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    goto :goto_0
 
-    move-result p1
+    :cond_0
+    return-void
+.end method
 
-    if-nez p1, :cond_2
+.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    .locals 0
 
-    const/4 p0, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p1, p2}, Lk4j;->a(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    :goto_1
-    move-object p0, p1
-
-    goto :goto_2
-
-    :cond_3
-    move-object p2, p1
-
-    check-cast p2, Ld93;
-
-    invoke-interface {p2}, Ld93;->c()J
-
-    move-result-wide v0
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v2, p2
-
-    check-cast v2, Ld93;
-
-    invoke-interface {v2}, Ld93;->c()J
-
-    move-result-wide v2
-
-    cmp-long v4, v0, v2
-
-    if-gez v4, :cond_5
-
-    move-object p1, p2
-
-    move-wide v0, v2
-
-    :cond_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_1
-
-    :goto_2
-    check-cast p0, Ld93;
-
-    return-object p0
+    return-void
 .end method

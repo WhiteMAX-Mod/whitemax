@@ -1,493 +1,482 @@
-.class public abstract Llsi;
-.super Ljava/lang/Object;
+.class public final Llsi;
+.super Lz7a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic b:Lcom/google/android/gms/common/internal/a;
+
+
 # direct methods
-.method public static a()Lwx;
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;Landroid/os/Looper;)V
+    .locals 0
+
+    iput-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    const/4 p1, 0x6
+
+    invoke-direct {p0, p2, p1}, Lz7a;-><init>(Landroid/os/Looper;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
     .locals 9
 
-    sget-object v0, Lwx;->j:Lwx;
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
 
-    iget-object v0, v0, Lwx;->f:Lwx;
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->F0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-class v1, Lwx;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v3
-
-    sget-wide v5, Lwx;->h:J
-
-    invoke-virtual {v1, v5, v6}, Ljava/lang/Object;->wait(J)V
-
-    sget-object v0, Lwx;->j:Lwx;
-
-    iget-object v0, v0, Lwx;->f:Lwx;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    sub-long/2addr v0, v3
-
-    sget-wide v3, Lwx;->i:J
-
-    cmp-long v0, v0, v3
-
-    if-ltz v0, :cond_0
-
-    sget-object v0, Lwx;->j:Lwx;
-
-    return-object v0
-
-    :cond_0
-    return-object v2
-
-    :cond_1
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v3
-
-    iget-wide v5, v0, Lwx;->g:J
-
-    sub-long/2addr v5, v3
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v5, v3
-
-    if-lez v3, :cond_2
-
-    const-wide/32 v3, 0xf4240
-
-    div-long v7, v5, v3
-
-    mul-long/2addr v3, v7
-
-    sub-long/2addr v5, v3
-
-    long-to-int v0, v5
-
-    invoke-virtual {v1, v7, v8, v0}, Ljava/lang/Object;->wait(JI)V
-
-    return-object v2
-
-    :cond_2
-    sget-object v1, Lwx;->j:Lwx;
-
-    iget-object v3, v0, Lwx;->f:Lwx;
-
-    iput-object v3, v1, Lwx;->f:Lwx;
-
-    iput-object v2, v0, Lwx;->f:Lwx;
-
-    return-object v0
-.end method
-
-.method public static final b(Ljava/util/Set;)Lhd6;
-    .locals 5
-
-    new-instance v0, Lhd6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lhd6;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result p0
-
-    new-array v2, p0, [I
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, p0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lra6;
-
-    iget v4, v4, Lra6;->a:I
-
-    aput v4, v2, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iput-object v2, v0, Lhd6;->b:Ljava/io/Serializable;
-
-    return-object v0
-.end method
-
-.method public static final c(Lhd6;)Ljava/util/EnumSet;
-    .locals 7
-
-    iget-object p0, p0, Lhd6;->b:Ljava/io/Serializable;
-
-    check-cast p0, [I
-
-    const-class v0, Lra6;
-
-    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_3
-
-    aget v3, p0, v2
-
-    sget-object v4, Lra6;->X:Lzg5;
-
-    new-instance v5, Lf2;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v6, v4}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v5}, Lf2;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v5}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v6, v4
-
-    check-cast v6, Lra6;
-
-    iget v6, v6, Lra6;->a:I
-
-    if-ne v6, v3, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_1
-    check-cast v4, Lra6;
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "unsupported type "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    return-object v0
-.end method
-
-.method public static final d(Landroid/content/Context;)V
-    .locals 10
-
-    const-string v0, "androidx.work.workdb"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v1
-
-    sget-object v2, Lr4i;->a:Ljava/lang/String;
-
-    const-string v3, "Migrating WorkDatabase to the no-backup directory"
-
-    invoke-virtual {v1, v2, v3}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/io/File;
-
-    sget-object v3, Lgl;->a:Lgl;
-
-    invoke-virtual {v3, p0}, Lgl;->a(Landroid/content/Context;)Ljava/io/File;
-
-    move-result-object p0
-
-    invoke-direct {v2, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    sget-object p0, Lr4i;->b:[Ljava/lang/String;
-
-    array-length v0, p0
-
-    invoke-static {v0}, Lto8;->i(I)I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    const/16 v3, 0x10
+    iget v1, p1, Landroid/os/Message;->arg1:I
 
-    if-ge v0, v3, :cond_0
+    const/4 v2, 0x7
 
-    move v0, v3
+    const/4 v3, 0x2
 
-    :cond_0
-    new-instance v3, Ljava/util/LinkedHashMap;
+    const/4 v4, 0x1
 
-    invoke-direct {v3, v0}, Ljava/util/LinkedHashMap;-><init>(I)V
+    if-eq v0, v1, :cond_2
 
-    array-length v0, p0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    const/4 v4, 0x0
+    if-eq v0, v3, :cond_1
 
-    :goto_0
-    if-ge v4, v0, :cond_1
+    if-eq v0, v4, :cond_1
 
-    aget-object v5, p0, v4
-
-    new-instance v6, Ljava/io/File;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    new-instance v7, Ljava/io/File;
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v7, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v3, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v4, v4, 0x1
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    return-void
+
     :cond_1
-    invoke-interface {v3}, Ljava/util/Map;->isEmpty()Z
+    :goto_0
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    move-result p0
+    check-cast p1, Lwpi;
 
-    if-eqz p0, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+    invoke-virtual {p1}, Lwpi;->c()V
 
-    move-result-object p0
+    return-void
+
+    :cond_2
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    const/4 v1, 0x4
+
+    const/4 v5, 0x5
+
+    if-eq v0, v4, :cond_4
+
+    if-eq v0, v2, :cond_4
+
+    if-ne v0, v1, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    new-instance p0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p0, v3}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {p0, v1, v2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
     :cond_3
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/io/File;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/File;
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v2
-
-    sget-object v3, Lr4i;->a:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Over-writing contents of "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v4}, Lcei;->o(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne v0, v5, :cond_5
 
     :cond_4
-    invoke-virtual {v1, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+    :goto_1
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
 
-    move-result v2
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->c()Z
 
-    if-eqz v2, :cond_5
+    move-result v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Migrated "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "to "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_3
+    if-eqz v0, :cond_1a
 
     :cond_5
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    const-string v3, "Renaming "
+    const/16 v6, 0x8
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v7, 0x3
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v8, 0x0
 
-    const-string v1, " to "
+    if-ne v0, v1, :cond_b
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Luv3;
 
-    const-string v0, " failed"
+    iget p1, p1, Landroid/os/Message;->arg2:I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1}, Luv3;-><init>(I)V
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object v1, v0, Lcom/google/android/gms/common/internal/a;->C0:Luv3;
 
-    move-result-object v0
+    iget-boolean p1, v0, Lcom/google/android/gms/common/internal/a;->D0:Z
 
-    :goto_3
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v1
-
-    sget-object v2, Lr4i;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p1, :cond_6
 
     goto :goto_2
 
     :cond_6
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    :try_start_0
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-boolean v0, p1, Lcom/google/android/gms/common/internal/a;->D0:Z
+
+    if-eqz v0, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    invoke-virtual {p1, v7, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    return-void
+
+    :catch_0
+    :goto_2
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->C0:Luv3;
+
+    if-eqz v0, :cond_a
+
+    goto :goto_3
+
+    :cond_a
+    new-instance v0, Luv3;
+
+    invoke-direct {v0, v6}, Luv3;-><init>(I)V
+
+    :goto_3
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->s0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->c(Luv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_b
+    if-ne v0, v5, :cond_d
+
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->C0:Luv3;
+
+    if-eqz v0, :cond_c
+
+    goto :goto_4
+
+    :cond_c
+    new-instance v0, Luv3;
+
+    invoke-direct {v0, v6}, Luv3;-><init>(I)V
+
+    :goto_4
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->s0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->c(Luv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_d
+    if-ne v0, v7, :cond_f
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    instance-of v1, v0, Landroid/app/PendingIntent;
+
+    if-eqz v1, :cond_e
+
+    move-object v8, v0
+
+    check-cast v8, Landroid/app/PendingIntent;
+
+    :cond_e
+    new-instance v0, Luv3;
+
+    iget p1, p1, Landroid/os/Message;->arg2:I
+
+    invoke-direct {v0, p1, v8}, Luv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->s0:Lpk0;
+
+    invoke-interface {p1, v0}, Lpk0;->c(Luv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+
+    :cond_f
+    const/4 v1, 0x6
+
+    if-ne v0, v1, :cond_11
+
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    invoke-virtual {v0, v5, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->x0:Lqmd;
+
+    if-eqz v0, :cond_10
+
+    iget p1, p1, Landroid/os/Message;->arg2:I
+
+    iget-object v0, v0, Lqmd;->a:Ljava/lang/Object;
+
+    check-cast v0, Li07;
+
+    invoke-interface {v0, p1}, Li07;->B(I)V
+
+    :cond_10
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->s()V
+
+    iget-object p1, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    invoke-static {p1, v5, v4, v8}, Lcom/google/android/gms/common/internal/a;->u(Lcom/google/android/gms/common/internal/a;IILandroid/os/IInterface;)Z
+
+    return-void
+
+    :cond_11
+    if-ne v0, v3, :cond_13
+
+    iget-object v0, p0, Llsi;->b:Lcom/google/android/gms/common/internal/a;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/a;->isConnected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    goto :goto_5
+
+    :cond_12
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Lwpi;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Lwpi;->c()V
+
+    return-void
+
+    :cond_13
+    :goto_5
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    if-eq v0, v3, :cond_15
+
+    if-eq v0, v4, :cond_15
+
+    if-ne v0, v2, :cond_14
+
+    goto :goto_6
+
+    :cond_14
+    const-string p1, "Don\'t know how to handle message: "
+
+    invoke-static {v0, p1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/Exception;
+
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+
+    const-string v1, "GmsClient"
+
+    invoke-static {v1, p1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+
+    :cond_15
+    :goto_6
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    move-object v0, p1
+
+    check-cast v0, Lwpi;
+
+    const-string p1, "Callback proxy "
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, v0, Lwpi;->a:Ljava/lang/Boolean;
+
+    iget-boolean v2, v0, Lwpi;->b:Z
+
+    if-eqz v2, :cond_16
+
+    const-string v2, "GmsClient"
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " being reused. This is not safe."
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_7
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_9
+
+    :cond_16
+    :goto_7
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v1, :cond_19
+
+    iget-object p1, v0, Lwpi;->f:Lcom/google/android/gms/common/internal/a;
+
+    iget v1, v0, Lwpi;->d:I
+
+    if-nez v1, :cond_17
+
+    invoke-virtual {v0}, Lwpi;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_19
+
+    invoke-virtual {p1, v4, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    new-instance p1, Luv3;
+
+    invoke-direct {p1, v6, v8}, Luv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {v0, p1}, Lwpi;->a(Luv3;)V
+
+    goto :goto_8
+
+    :cond_17
+    invoke-virtual {p1, v4, v8}, Lcom/google/android/gms/common/internal/a;->v(ILandroid/os/IInterface;)V
+
+    iget-object p1, v0, Lwpi;->e:Landroid/os/Bundle;
+
+    if-eqz p1, :cond_18
+
+    const-string v2, "pendingIntent"
+
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    move-object v8, p1
+
+    check-cast v8, Landroid/app/PendingIntent;
+
+    :cond_18
+    new-instance p1, Luv3;
+
+    invoke-direct {p1, v1, v8}, Luv3;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {v0, p1}, Lwpi;->a(Luv3;)V
+
+    :cond_19
+    :goto_8
+    monitor-enter v0
+
+    :try_start_2
+    iput-boolean v4, v0, Lwpi;->b:Z
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    invoke-virtual {v0}, Lwpi;->c()V
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p1
+
+    :goto_9
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+
+    :cond_1a
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Lwpi;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Lwpi;->c()V
+
     return-void
 .end method

@@ -1,130 +1,128 @@
 .class public final Lrve;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic X:Lyve;
 
-.field public final b:Ly6d;
+.field public final synthetic Y:I
 
-.field public volatile c:Ljava/lang/String;
-
-.field public volatile d:Lorg/webrtc/PeerConnectionFactory;
-
-.field public final e:Llqa;
-
-.field public f:Lr5j;
-
-.field public g:Lorg/webrtc/audio/JavaAudioDeviceModule;
-
-.field public h:Lorg/webrtc/EglBase;
-
-.field public final i:Lys4;
-
-.field public final j:Lnob;
-
-.field public k:I
-
-.field public volatile l:Lv08;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lorg/webrtc/EglBase;Ly6d;Lsi1;Lys4;Ln81;)V
-    .locals 12
+.method public constructor <init>(Lyve;ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    move-object/from16 v0, p5
+    iput-object p1, p0, Lrve;->X:Lyve;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lrve;->Y:I
 
-    const/4 v1, 0x0
+    const/4 p1, 0x2
 
-    iput v1, p0, Lrve;->k:I
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p1, p0, Lrve;->a:Ljava/util/concurrent/ExecutorService;
+    return-void
+.end method
 
-    iput-object p3, p0, Lrve;->b:Ly6d;
 
-    iput-object v0, p0, Lrve;->i:Lys4;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v2, Llqa;
+    check-cast p1, Lac4;
 
-    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v3
+    invoke-virtual {p0, p1, p2}, Lrve;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v2, v3, p3}, Llqa;-><init>(Lorg/webrtc/EglBase$Context;Ly6d;)V
+    move-result-object p1
 
-    iput-object v2, p0, Lrve;->e:Llqa;
+    check-cast p1, Lrve;
 
-    new-instance v4, Lnob;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
+    invoke-virtual {p1, p2}, Lrve;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object p1
 
-    move-object/from16 v10, p4
+    return-object p1
+.end method
 
-    iget-object v2, v10, Lsi1;->s:Lh79;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v3, v2, Lh79;->b:Ljava/lang/Object;
+    new-instance p1, Lrve;
 
-    check-cast v3, Los0;
+    iget-object v0, p0, Lrve;->X:Lyve;
 
-    iget-boolean v3, v3, Los0;->a:Z
+    iget v1, p0, Lrve;->Y:I
 
-    if-nez v3, :cond_1
+    invoke-direct {p1, v0, v1, p2}, Lrve;-><init>(Lyve;ILkotlin/coroutines/Continuation;)V
 
-    iget-object v2, v2, Lh79;->c:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    check-cast v2, Los0;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-boolean v2, v2, Los0;->a:Z
+    iget v0, p0, Lrve;->o:I
 
-    if-eqz v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    move-object v9, p3
-
-    move-object/from16 v7, p6
-
-    move v6, v1
-
-    move-object v8, v10
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
     const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :goto_2
-    invoke-direct/range {v4 .. v9}, Lnob;-><init>(Lorg/webrtc/EglBase$Context;ZLm81;Lsi1;Ly6d;)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iput-object v4, p0, Lrve;->j:Lnob;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v4}, Lys4;->a(Lns8;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v6, Lu02;
+    throw p1
 
-    const/16 v11, 0x11
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-object v7, p0
+    sget-object p1, Lyve;->A0:[Lp38;
 
-    move-object v8, p2
+    iget-object p1, p0, Lrve;->X:Lyve;
 
-    move-object v9, p3
+    invoke-virtual {p1}, Lyve;->t()Ljah;
 
-    move-object/from16 v10, p4
+    move-result-object v0
 
-    invoke-direct/range {v6 .. v11}, Lu02;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iget v2, p0, Lrve;->Y:I
 
-    invoke-interface {p1, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    const-string v3, "app.media.load.gif"
 
-    return-void
+    invoke-virtual {v0, v2, v3}, Lz3;->g(ILjava/lang/String;)V
+
+    iput v1, p0, Lrve;->o:I
+
+    invoke-static {p1, p0}, Lyve;->s(Lyve;Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

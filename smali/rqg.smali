@@ -2,79 +2,93 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzy7;
-
-
-# static fields
-.field public static final b:Lrqg;
-
 
 # instance fields
-.field public final synthetic a:Lsqa;
+.field public final a:Lrj6;
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public final e:Ljava/util/ArrayDeque;
+
+.field public final f:Ljava/util/ArrayDeque;
+
+.field public g:Z
+
+.field public h:[B
+
+.field public i:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lrqg;
-
-    invoke-direct {v0}, Lrqg;-><init>()V
-
-    sput-object v0, Lrqg;->b:Lrqg;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILrj6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lsqa;
+    iput-object p2, p0, Lrqg;->a:Lrj6;
 
-    invoke-direct {v0}, Lsqa;-><init>()V
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lrqg;->a:Lsqa;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lrqg;->b:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lrqg;->c:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lrqg;->d:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lrqg;->e:Ljava/util/ArrayDeque;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lrqg;->f:Ljava/util/ArrayDeque;
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lrqg;->i:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+.method public final a()I
     .locals 1
 
-    check-cast p2, Lqqg;
+    iget-object v0, p0, Lrqg;->a:Lrj6;
 
-    iget-object v0, p0, Lrqg;->a:Lsqa;
+    iget-object v0, v0, Lrj6;->n:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, p2}, Lsqa;->a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    invoke-static {v0}, Lx5a;->i(Ljava/lang/String;)Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public final b(Llh4;)Ljava/lang/Object;
-    .locals 1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lrqg;->a:Lsqa;
+    const v0, 0xbb80
 
-    invoke-virtual {v0, p1}, Lsqa;->b(Llh4;)Ljava/lang/Object;
+    return v0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    :cond_0
+    const v0, 0x15f90
 
-    return-object p1
-.end method
-
-.method public final d()Lree;
-    .locals 1
-
-    iget-object v0, p0, Lrqg;->a:Lsqa;
-
-    invoke-virtual {v0}, Lsqa;->d()Lree;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

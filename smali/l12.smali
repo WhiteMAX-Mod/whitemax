@@ -1,40 +1,47 @@
 .class public final Ll12;
-.super Ljava/lang/Object;
+.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 .source "SourceFile"
 
-# interfaces
-.implements Lj12;
 
-
-# instance fields
-.field public final a:Lha0;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lha0;
-
-    invoke-direct {v1, v0}, Lha0;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, p0, Ll12;->a:Lha0;
+# virtual methods
+.method public final onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    .locals 0
 
     return-void
 .end method
 
+.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
+    .locals 0
 
-# virtual methods
-.method public final getConfig()Lao3;
-    .locals 1
+    return-void
+.end method
 
-    sget-object v0, Lfjb;->c:Lfjb;
+.method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
+    .locals 0
 
-    return-object v0
+    return-void
+.end method
+
+.method public final onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    .locals 0
+
+    return-void
 .end method

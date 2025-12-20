@@ -1,72 +1,216 @@
 .class public final Lpha;
-.super Ljava/lang/Object;
+.super Lg3;
 .source "SourceFile"
 
 # interfaces
-.implements Lkyg;
+.implements Lob3;
+.implements Lbjg;
+
+
+# static fields
+.field public static final t0:I
+
+
+# instance fields
+.field public X:Landroid/widget/TextView;
+
+.field public Y:Landroid/widget/ImageButton;
+
+.field public Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+
+.field public final d:Z
+
+.field public o:Landroidx/constraintlayout/widget/Group;
+
+.field public s0:Lxj8;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lqad;->layout_send_location:I
+
+    sput v0, Lpha;->t0:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lg3;-><init>(Landroid/content/Context;)V
+
+    iput-boolean p2, p0, Lpha;->d:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Ln5g;
-    .locals 3
+.method public final b()V
+    .locals 4
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Landroid/view/View;
 
-    if-lez v0, :cond_2
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x2d
-
-    if-eq v1, v2, :cond_0
-
-    const/16 v2, 0x20
-
-    if-ne v1, v2, :cond_2
+    return-void
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Lbdg;->a0:Lz7g;
+
+    invoke-static {v0}, Ldpf;->t(Landroid/content/Context;)Lbdg;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lpha;->X:Landroid/widget/TextView;
+
+    iget v2, v0, Lbdg;->J:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v1, p0, Lpha;->Y:Landroid/widget/ImageButton;
+
+    iget v2, v0, Lbdg;->J:I
+
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v1, v2, v3}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    iget-object v1, p0, Lpha;->Y:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0}, Lbdg;->a()Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 5
+
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lt9d;->layout_send_location__live_group:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/constraintlayout/widget/Group;
+
+    iput-object v0, p0, Lpha;->o:Landroidx/constraintlayout/widget/Group;
+
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lt9d;->layout_send_location__tv_pick_duration:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lpha;->X:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lt9d;->layout_send_location__cancel_button:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lpha;->Y:Landroid/widget/ImageButton;
+
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lt9d;->layout_send_location__send_button:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+
+    iput-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+
+    iget-object v1, p0, Lg3;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/Context;
+
+    sget v2, Ll5e;->L1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Ll5e;->T1:I
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v4}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+
+    new-instance v2, Lij6;
+
+    const/16 v4, 0x13
+
+    invoke-direct {v2, v4, p0}, Lij6;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v2}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0}, Lpha;->b()V
+
+    iget-object v0, p0, Lg3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    new-instance v2, Loha;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    iget-boolean v0, p0, Lpha;->d:Z
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    const-class p2, Lpha;
+    :cond_0
+    sget v3, Ll5e;->H1:I
 
-    invoke-static {p2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+    :goto_0
+    iget-object v0, p0, Lpha;->Z:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
 
-    move-result-object p2
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lapi;->b(ILca3;)Ljava/lang/Integer;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setTitle(Ljava/lang/CharSequence;)V
 
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    new-instance p2, Ln5g;
-
-    invoke-direct {p2, p1}, Ln5g;-><init>(I)V
-
-    return-object p2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 .end method

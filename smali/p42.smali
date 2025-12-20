@@ -1,49 +1,68 @@
-.class public final Lp42;
-.super Lq44;
+.class public interface abstract Lp42;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lto1;
+# interfaces
+.implements Lj22;
+.implements Li9h;
 
 
-# direct methods
-.method public constructor <init>(Lto1;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public a()Ln42;
+    .locals 1
+
+    invoke-interface {p0}, Lp42;->n()Ln42;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c(Ln32;)V
     .locals 0
-
-    iput-object p1, p0, Lp42;->o:Lto1;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public abstract e()Ldxa;
+.end method
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract f()Lu32;
+.end method
+
+.method public g()Ll32;
     .locals 1
 
-    iput-object p1, p0, Lp42;->d:Ljava/lang/Object;
+    sget-object v0, Lo32;->a:Ln32;
 
-    iget p1, p0, Lp42;->X:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public i(Z)V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lp42;->X:I
+.method public abstract j(Ljava/util/ArrayList;)V
+.end method
 
-    iget-object p1, p0, Lp42;->o:Lto1;
+.method public abstract k(Ljava/util/ArrayList;)V
+.end method
 
-    const/4 v0, 0x0
+.method public l()Z
+    .locals 1
 
-    invoke-virtual {p1, v0, p0}, Lto1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    return v0
+.end method
 
-    return-object p1
+.method public m(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract n()Ln42;
 .end method

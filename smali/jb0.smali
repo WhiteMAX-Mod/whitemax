@@ -4,32 +4,39 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lyb0;
 
-.field public final b:J
-
-.field public final c:Ljava/util/Set;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/Set;)V
+.method public constructor <init>(Lyb0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ljb0;->a:J
+    if-eqz p1, :cond_0
 
-    iput-wide p3, p0, Ljb0;->b:J
+    iput-object p1, p0, Ljb0;->a:Lyb0;
 
-    iput-object p5, p0, Ljb0;->c:Ljava/util/Set;
+    iput p2, p0, Ljb0;->b:I
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null packet"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -46,31 +53,21 @@
 
     check-cast p1, Ljb0;
 
-    iget-wide v3, p0, Ljb0;->a:J
+    iget-object v1, p0, Ljb0;->a:Lyb0;
 
-    iget-wide v5, p1, Ljb0;->a:J
+    iget-object v3, p1, Ljb0;->a:Lyb0;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, v3}, Lyb0;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v1
 
-    iget-wide v3, p0, Ljb0;->b:J
+    if-eqz v1, :cond_1
 
-    iget-wide v5, p1, Ljb0;->b:J
+    iget v1, p0, Ljb0;->b:I
 
-    cmp-long v1, v3, v5
+    iget p1, p1, Ljb0;->b:I
 
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Ljb0;->c:Ljava/util/Set;
-
-    iget-object p1, p1, Ljb0;->c:Ljava/util/Set;
-
-    invoke-interface {v1, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
+    if-ne v1, p1, :cond_1
 
     return v0
 
@@ -79,17 +76,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 2
 
-    iget-wide v0, p0, Ljb0;->a:J
+    iget-object v0, p0, Ljb0;->a:Lyb0;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Lyb0;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -97,23 +90,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Ljb0;->b:J
-
-    ushr-long v5, v3, v2
-
-    xor-long v2, v5, v3
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Ljb0;->c:Ljava/util/Set;
-
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
-
-    move-result v1
+    iget v1, p0, Ljb0;->b:I
 
     xor-int/2addr v0, v1
 
@@ -125,35 +102,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ConfigValue{delta="
+    const-string v1, "In{packet="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Ljb0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxAllowedDelay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ljb0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", flags="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljb0;->c:Ljava/util/Set;
+    iget-object v1, p0, Ljb0;->a:Lyb0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", jpegQuality="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Ljb0;->b:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

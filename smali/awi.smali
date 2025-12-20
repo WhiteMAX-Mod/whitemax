@@ -1,24 +1,35 @@
-.class public final synthetic Lawi;
+.class public final Lawi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Lbjj;
+.implements Ld2b;
+.implements Lv1b;
+.implements Ls1b;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lj84;
+
+.field public final d:Ljpj;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lj84;Ljpj;I)V
     .locals 0
 
-    iput p1, p0, Lawi;->a:I
+    iput p4, p0, Lawi;->a:I
 
-    iput-object p2, p0, Lawi;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lawi;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p2, p0, Lawi;->c:Lj84;
+
+    iput-object p3, p0, Lawi;->d:Ljpj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,233 +38,49 @@
 
 
 # virtual methods
-.method public final binderDied()V
-    .locals 6
+.method public a(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lawi;->d:Ljpj;
+
+    invoke-virtual {v0, p1}, Ljpj;->o(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final b(Lcom/google/android/gms/tasks/Task;)V
+    .locals 3
 
     iget v0, p0, Lawi;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lawi;->b:Ljava/lang/Object;
+    new-instance v0, Ljrf;
 
-    check-cast v0, Ljcj;
+    const/16 v1, 0xb
 
-    iget-object v1, v0, Ljcj;->b:Lulc;
+    const/4 v2, 0x0
 
-    const-string v2, "reportBinderDeath"
+    invoke-direct {v0, p0, p1, v2, v1}, Ljrf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    const/4 v3, 0x0
+    iget-object p1, p0, Lawi;->b:Ljava/util/concurrent/Executor;
 
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Lulc;->v(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Ljcj;->i:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, v0, Ljcj;->b:Lulc;
-
-    iget-object v2, v0, Ljcj;->c:Ljava/lang/String;
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "%s : Binder has died."
-
-    invoke-virtual {v1, v3, v2}, Lulc;->v(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Ljcj;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lz1j;
-
-    new-instance v3, Landroid/os/RemoteException;
-
-    iget-object v4, v0, Ljcj;->c:Ljava/lang/String;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, " : Binder has died."
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, v2, Lz1j;->a:Ln2g;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2, v3}, Ln2g;->c(Ljava/lang/Exception;)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, v0, Ljcj;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v1, v0, Ljcj;->f:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v0}, Ljcj;->d()V
-
-    monitor-exit v1
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
 
     :pswitch_0
-    iget-object v0, p0, Lawi;->b:Ljava/lang/Object;
+    new-instance v0, Lfsg;
 
-    check-cast v0, Lz8j;
+    const/4 v1, 0x6
 
-    iget-object v1, v0, Lz8j;->b:Lhx5;
+    invoke-direct {v0, p0, v1, p1}, Lfsg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v2, "reportBinderDeath"
+    iget-object p1, p0, Lawi;->b:Ljava/util/concurrent/Executor;
 
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Lhx5;->a(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lz8j;->i:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_5
-
-    iget-object v1, v0, Lz8j;->b:Lhx5;
-
-    iget-object v2, v0, Lz8j;->c:Ljava/lang/String;
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "%s : Binder has died."
-
-    invoke-virtual {v1, v3, v2}, Lhx5;->a(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lz8j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_3
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Luti;
-
-    iget-object v3, v0, Lz8j;->c:Ljava/lang/String;
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, " : Binder has died."
-
-    new-instance v5, Landroid/os/RemoteException;
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v5, v3}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, v2, Luti;->a:Ln2g;
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v2, v5}, Ln2g;->c(Ljava/lang/Exception;)Z
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v1, v0, Lz8j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v1, v0, Lz8j;->f:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_1
-    invoke-virtual {v0}, Lz8j;->c()V
-
-    monitor-exit v1
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
 
     nop
 
@@ -261,4 +88,24 @@
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public c()V
+    .locals 1
+
+    iget-object v0, p0, Lawi;->d:Ljpj;
+
+    invoke-virtual {v0}, Ljpj;->p()V
+
+    return-void
+.end method
+
+.method public onFailure(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Lawi;->d:Ljpj;
+
+    invoke-virtual {v0, p1}, Ljpj;->n(Ljava/lang/Exception;)V
+
+    return-void
 .end method

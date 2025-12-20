@@ -1,194 +1,242 @@
-.class public final synthetic Lnog;
+.class public final Lnog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final b:I
 
-.field public final synthetic c:Lpog;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lpog;I)V
+.method public constructor <init>(IIIIIII)V
     .locals 0
 
-    iput p3, p0, Lnog;->a:I
-
-    iput-object p1, p0, Lnog;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lnog;->c:Lpog;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lnog;->a:I
+
+    iput p2, p0, Lnog;->b:I
+
+    iput p3, p0, Lnog;->c:I
+
+    iput p4, p0, Lnog;->d:I
+
+    iput p5, p0, Lnog;->e:I
+
+    iput p6, p0, Lnog;->f:I
+
+    iput p7, p0, Lnog;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lnog;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lnog;
 
     iget v0, p0, Lnog;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Lnog;->a:I
 
-    new-instance v0, Lmq3;
+    if-eq v0, v1, :cond_2
 
-    const/4 v1, 0x0
+    goto :goto_0
 
-    iget-object v2, p0, Lnog;->b:Landroid/content/Context;
+    :cond_2
+    iget v0, p0, Lnog;->b:I
 
-    invoke-direct {v0, v2, v1}, Lmq3;-><init>(Landroid/content/Context;I)V
+    iget v1, p1, Lnog;->b:I
 
-    iget-object v1, p0, Lnog;->c:Lpog;
+    if-eq v0, v1, :cond_3
 
-    invoke-virtual {v0, v1}, Lmq3;->setListener(Liq3;)V
+    goto :goto_0
 
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+    :cond_3
+    iget v0, p0, Lnog;->c:I
 
-    const/4 v3, -0x2
+    iget v1, p1, Lnog;->c:I
 
-    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    if-eq v0, v1, :cond_4
 
-    const/16 v3, 0x18
+    goto :goto_0
 
-    int-to-float v3, v3
+    :cond_4
+    iget v0, p0, Lnog;->d:I
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    iget v1, p1, Lnog;->d:I
 
-    move-result-object v4
+    if-eq v0, v1, :cond_5
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    goto :goto_0
 
-    move-result-object v4
+    :cond_5
+    iget v0, p0, Lnog;->e:I
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    iget v1, p1, Lnog;->e:I
 
-    mul-float/2addr v3, v4
+    if-eq v0, v1, :cond_6
 
-    invoke-static {v3}, Lkti;->d(F)I
+    goto :goto_0
 
-    move-result v3
+    :cond_6
+    iget v0, p0, Lnog;->f:I
 
-    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    iget v1, p1, Lnog;->f:I
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-eq v0, v1, :cond_7
 
-    new-instance v2, Lip3;
+    goto :goto_0
 
-    const/4 v3, 0x2
+    :cond_7
+    iget v0, p0, Lnog;->g:I
 
-    invoke-direct {v2, v0, v0, v3}, Lip3;-><init>(Lmq3;Lmq3;I)V
+    iget p1, p1, Lnog;->g:I
 
-    invoke-static {v0, v2}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
+    if-eq v0, p1, :cond_8
 
-    new-instance v2, Lq8g;
+    :goto_0
+    const/4 p1, 0x0
 
-    const/4 v3, 0x3
+    return p1
 
-    invoke-direct {v2, v3}, Lq8g;-><init>(I)V
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v2}, Lmq3;->setKeyboardOpen(Lcm6;)V
+    return p1
+.end method
 
-    const/16 v2, 0x11
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
+    iget v0, p0, Lnog;->a:I
 
-    return-object v0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    :pswitch_0
-    new-instance v0, Lveb;
+    move-result v0
 
-    iget-object v1, p0, Lnog;->b:Landroid/content/Context;
+    const/16 v1, 0x1f
 
-    invoke-direct {v0, v1}, Lveb;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+    mul-int/2addr v0, v1
 
     const/4 v2, -0x1
 
-    const/4 v3, -0x2
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    move-result v0
 
-    const/16 v2, 0x8
+    iget v2, p0, Lnog;->b:I
 
-    int-to-float v2, v2
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    move-result v0
 
-    move-result-object v3
+    iget v2, p0, Lnog;->c:I
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    move-result-object v3
+    move-result v0
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    iget v2, p0, Lnog;->d:I
 
-    mul-float/2addr v2, v3
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    invoke-static {v2}, Lkti;->d(F)I
+    move-result v0
 
-    move-result v2
+    iget v2, p0, Lnog;->e:I
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    const/16 v2, 0xc
+    move-result v0
 
-    int-to-float v2, v2
+    iget v2, p0, Lnog;->f:I
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    move-result-object v3
+    move-result v0
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget v1, p0, Lnog;->g:I
 
-    move-result-object v3
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    move-result v1
 
-    mul-float/2addr v2, v3
+    add-int/2addr v1, v0
 
-    invoke-static {v2}, Lkti;->d(F)I
+    return v1
+.end method
 
-    move-result v2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    const-string v0, ", contrastStatic=-1, neutralFade="
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const-string v1, ", primary="
 
-    sget v1, Lw9b;->M:I
+    const-string v2, "TopbarIconDefaultColors(contrast="
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v3, p0, Lnog;->a:I
 
-    move-result-object v1
+    iget v4, p0, Lnog;->b:I
 
-    invoke-virtual {v0, v1}, Lveb;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lteb;->b:Lteb;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lveb;->setTypingMode(Lteb;)V
+    const-string v1, ", quaternary="
 
-    new-instance v1, Lmog;
+    const-string v2, ", secondary="
 
-    const/4 v2, 0x1
+    iget v3, p0, Lnog;->c:I
 
-    iget-object v3, p0, Lnog;->c:Lpog;
+    iget v4, p0, Lnog;->d:I
 
-    invoke-direct {v1, v3, v2}, Lmog;-><init>(Lpog;I)V
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lveb;->f(Lem6;)V
+    const-string v1, ", tertiary="
+
+    const-string v2, ", themed="
+
+    iget v3, p0, Lnog;->e:I
+
+    iget v4, p0, Lnog;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Lnog;->g:I
+
+    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

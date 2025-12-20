@@ -1,146 +1,205 @@
-.class public abstract Lkxi;
-.super Ljava/lang/Object;
+.class public final Lkxi;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final I0:Lwbf;
+
+.field public final J0:Lwbf;
+
+.field public final K0:Lwbf;
+
+
 # direct methods
-.method public static a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lvd3;Lgoi;Lgoi;)V
+    .locals 8
 
-    const/16 v0, 0x22
+    const/16 v3, 0x17
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v7, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    move-object v0, p0
 
-    move-result v1
+    move-object v1, p1
 
-    const/4 v2, 0x0
+    move-object v2, p2
 
-    :goto_0
-    if-ge v2, v1, :cond_3
+    move-object v4, p3
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+    move-object v5, p4
 
-    move-result v3
+    move-object v6, p5
 
-    const/16 v4, 0xa
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILvd3;Li07;Lj07;I)V
 
-    if-eq v3, v4, :cond_2
+    new-instance p1, Lwbf;
 
-    const/16 v4, 0xd
+    const/4 p2, 0x0
 
-    if-eq v3, v4, :cond_1
+    invoke-direct {p1, p2}, Lwbf;-><init>(I)V
 
-    if-eq v3, v0, :cond_0
+    iput-object p1, v0, Lkxi;->I0:Lwbf;
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    new-instance p1, Lwbf;
 
-    goto :goto_1
+    invoke-direct {p1, p2}, Lwbf;-><init>(I)V
 
-    :cond_0
-    const-string v3, "%22"
+    iput-object p1, v0, Lkxi;->J0:Lwbf;
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lwbf;
 
-    goto :goto_1
+    invoke-direct {p1, p2}, Lwbf;-><init>(I)V
 
-    :cond_1
-    const-string v3, "%0D"
-
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_2
-    const-string v3, "%0A"
-
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iput-object p1, v0, Lkxi;->K0:Lwbf;
 
     return-void
 .end method
 
-.method public static final b(Leh9;)Z
-    .locals 7
 
-    iget-object p0, p0, Leh9;->a:Lsi9;
+# virtual methods
+.method public final g()I
+    .locals 1
 
-    invoke-virtual {p0}, Lsi9;->i()Lz00;
+    const v0, 0xb2c988
+
+    return v0
+.end method
+
+.method public final synthetic l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    instance-of v1, v0, Llnj;
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
+    check-cast v0, Llnj;
 
-    invoke-virtual {v0}, Lz00;->b()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v2
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    :goto_0
-    move v3, v1
+    new-instance v0, Llnj;
 
-    :goto_1
-    if-eqz v0, :cond_4
+    invoke-direct {v0, p1}, Llnj;-><init>(Landroid/os/IBinder;)V
 
-    iget-object v0, v0, Lz00;->f:Ljava/util/List;
+    return-object v0
+.end method
 
-    if-eqz v3, :cond_3
+.method public final m()[Ltx5;
+    .locals 1
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    sget-object v0, Lw1j;->a:[Ltx5;
 
-    move-result v3
+    return-object v0
+.end method
 
-    if-ne v3, v1, :cond_3
+.method public final p()Ljava/lang/String;
+    .locals 1
 
-    iget-wide v3, p0, Lsi9;->o:J
+    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p0
+.method public final q()Ljava/lang/String;
+    .locals 1
 
-    check-cast p0, Ljava/lang/Long;
+    const-string v0, "com.google.android.location.internal.GoogleLocationManagerService.START"
 
-    if-nez p0, :cond_2
+    return-object v0
+.end method
 
-    goto :goto_2
+.method public final s()V
+    .locals 2
 
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    iget-object v0, p0, Lkxi;->I0:Lwbf;
 
-    cmp-long p0, v3, v5
+    monitor-enter v0
 
-    if-nez p0, :cond_3
+    :try_start_0
+    iget-object v1, p0, Lkxi;->I0:Lwbf;
 
-    goto :goto_3
+    invoke-virtual {v1}, Lwbf;->clear()V
 
-    :cond_3
-    :goto_2
-    return v2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    :cond_4
-    :goto_3
-    return v1
+    iget-object v1, p0, Lkxi;->J0:Lwbf;
+
+    monitor-enter v1
+
+    :try_start_1
+    iget-object v0, p0, Lkxi;->J0:Lwbf;
+
+    invoke-virtual {v0}, Lwbf;->clear()V
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    iget-object v0, p0, Lkxi;->K0:Lwbf;
+
+    monitor-enter v0
+
+    :try_start_2
+    iget-object v1, p0, Lkxi;->K0:Lwbf;
+
+    invoke-virtual {v1}, Lwbf;->clear()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v0
+
+    :catchall_2
+    move-exception v1
+
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    throw v1
+.end method
+
+.method public final t()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

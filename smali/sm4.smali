@@ -1,46 +1,92 @@
-.class public final Lsm4;
+.class public final synthetic Lsm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqa5;
-
-
-# static fields
-.field public static final b:Ljava/lang/ThreadLocal;
+.implements Lef8;
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lld;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lld;ZI)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    iput p3, p0, Lsm4;->a:I
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    iput-object p1, p0, Lsm4;->b:Lld;
 
-    sput-object v0, Lsm4;->b:Ljava/lang/ThreadLocal;
+    iput-boolean p2, p0, Lsm4;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Lsm4;->a:I
 
-    new-instance v0, Landroid/text/TextPaint;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
+    iget-boolean v0, p0, Lsm4;->c:Z
 
-    iput-object v0, p0, Lsm4;->a:Landroid/text/TextPaint;
+    check-cast p1, Lmd;
 
-    const/high16 v1, 0x41200000    # 10.0f
+    iget-object v1, p0, Lsm4;->b:Lld;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-interface {p1, v1, v0}, Lmd;->A(Lld;Z)V
 
     return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lsm4;->c:Z
+
+    check-cast p1, Lmd;
+
+    iget-object v1, p0, Lsm4;->b:Lld;
+
+    invoke-interface {p1, v1, v0}, Lmd;->u(Lld;Z)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lmd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lsm4;->b:Lld;
+
+    iget-boolean v1, p0, Lsm4;->c:Z
+
+    invoke-interface {p1, v0, v1}, Lmd;->M0(Lld;Z)V
+
+    return-void
+
+    :pswitch_2
+    iget-boolean v0, p0, Lsm4;->c:Z
+
+    check-cast p1, Lmd;
+
+    iget-object v1, p0, Lsm4;->b:Lld;
+
+    invoke-interface {p1, v1, v0}, Lmd;->w(Lld;Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

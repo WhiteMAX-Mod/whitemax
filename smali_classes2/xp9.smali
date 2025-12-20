@@ -1,114 +1,73 @@
-.class public final Lxp9;
+.class public abstract Lxp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Leq9;
 
+# static fields
+.field public static final a:Ljava/nio/charset/Charset;
 
-# instance fields
-.field public final a:J
+.field public static final b:Lvp9;
+
+.field public static final c:Lwp9;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "UTF-8"
 
-    iput-wide p1, p0, Lxp9;->a:J
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    sput-object v0, Lxp9;->a:Ljava/nio/charset/Charset;
+
+    new-instance v0, Lvp9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxp9;->b:Lvp9;
+
+    new-instance v0, Lwp9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Lwp9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Lwp9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    const v1, 0x7fffffff
+
+    iput v1, v0, Lwp9;->c:I
+
+    const/16 v1, 0x2000
+
+    iput v1, v0, Lwp9;->d:I
+
+    iput v1, v0, Lwp9;->o:I
+
+    sput-object v0, Lxp9;->c:Lwp9;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxp9;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxp9;
-
-    iget-wide v1, p0, Lxp9;->a:J
-
-    iget-wide v3, p1, Lxp9;->a:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public static a([B)Lgr9;
     .locals 2
 
-    iget-wide v0, p0, Lxp9;->a:J
+    sget-object v0, Lxp9;->c:Lwp9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    new-instance v1, Lorg/msgpack/core/buffer/ArrayBufferInput;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v1, p0}, Lorg/msgpack/core/buffer/ArrayBufferInput;-><init>([B)V
 
-    const/4 v1, 0x1
+    new-instance p0, Lgr9;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-direct {p0, v1, v0}, Lgr9;-><init>(Lorg/msgpack/core/buffer/ArrayBufferInput;Lwp9;)V
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lxp9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OnUnsupportedAttachButtonClick(messageId="
-
-    const-string v1, ", isSkippableForMultiSelect=true)"
-
-    iget-wide v2, p0, Lxp9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

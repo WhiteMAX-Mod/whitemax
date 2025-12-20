@@ -1,204 +1,226 @@
-.class public final synthetic Lrm7;
-.super Ljava/lang/Object;
+.class public final Lrm7;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/login/inputname/InputNameScreen;
+.field public final synthetic Y:Lfn7;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/inputname/InputNameScreen;I)V
+.method public constructor <init>(Lfn7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lrm7;->a:I
+    iput-object p1, p0, Lrm7;->Y:Lfn7;
 
-    iput-object p1, p0, Lrm7;->b:Lone/me/login/inputname/InputNameScreen;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lrm7;->a:I
+    check-cast p1, Lac4;
 
-    sget-object v1, Lqqg;->a:Lqqg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lrm7;->b:Lone/me/login/inputname/InputNameScreen;
+    invoke-virtual {p0, p1, p2}, Lrm7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p1, Lrm7;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lrm7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
+    move-result-object p1
 
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->A0()Lveb;
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0}, Lveb;->g()Z
+    new-instance v0, Lrm7;
 
-    move-result v0
+    iget-object v1, p0, Lrm7;->Y:Lfn7;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, p2}, Lrm7;-><init>(Lfn7;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lrm7;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    iget-object v0, p0, Lrm7;->Y:Lfn7;
+
+    iget-object v1, v0, Lfn7;->c:Lbbg;
+
+    iget v2, p0, Lrm7;->o:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lbc4;->a:Lbc4;
+
+    if-eqz v2, :cond_2
+
+    if-eq v2, v4, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v2, p0, Lrm7;->X:Ljava/lang/Object;
+
+    check-cast v2, Lac4;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->C0()Lym7;
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lrm7;->X:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->B0()Ljava/lang/String;
+    move-object v2, p1
 
-    move-result-object v2
+    check-cast v2, Lac4;
 
-    invoke-virtual {v0, v2, p1}, Lym7;->t(Ljava/lang/String;Z)V
+    iput-object v2, p0, Lrm7;->X:Ljava/lang/Object;
 
-    :goto_0
-    return-object v1
+    iput v4, p0, Lrm7;->o:I
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/CharSequence;
+    move-object p1, v1
 
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
+    check-cast p1, Lb9b;
 
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->C0()Lym7;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lym7;->Z:Lci5;
-
-    new-instance v3, Lm27;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v4}, Lm27;-><init>(I)V
-
-    invoke-static {v0, v3}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v3, v2, Lone/me/login/inputname/InputNameScreen;->z0:Lhs;
-
-    sget-object v4, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
-
-    const/4 v5, 0x6
-
-    aget-object v4, v4, v5
-
-    invoke-virtual {v3, v2, v0}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->C0()Lym7;
-
-    move-result-object v0
-
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->A0()Lveb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lveb;->a:Lw3b;
-
-    invoke-virtual {v2}, Landroid/view/View;->isFocused()Z
-
-    move-result v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lb9b;->b()Ltb4;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, v2}, Lym7;->t(Ljava/lang/String;Z)V
+    new-instance v4, Lkm7;
 
-    return-object v1
+    invoke-direct {v4, v0, v5}, Lkm7;-><init>(Lfn7;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_1
-    check-cast p1, Ljava/lang/CharSequence;
+    invoke-static {p1, v4, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
+    move-result-object p1
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    if-ne p1, v6, :cond_3
 
-    move-result v0
+    goto :goto_2
 
-    const/4 v3, 0x1
+    :cond_3
+    :goto_0
+    check-cast p1, Ljava/lang/Iterable;
 
-    if-lez v0, :cond_1
+    new-instance v4, Ljava/util/ArrayList;
 
-    move v0, v3
+    const/16 v7, 0xa
+
+    invoke-static {p1, v7}, Lgi3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v7
+
+    invoke-direct {v4, v7}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lft6;
+
+    move-object v8, v1
+
+    check-cast v8, Lb9b;
+
+    invoke-virtual {v8}, Lb9b;->b()Ltb4;
+
+    move-result-object v8
+
+    new-instance v9, Lqm7;
+
+    invoke-direct {v9, v0, v7, v5}, Lqm7;-><init>(Lfn7;Lft6;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2, v8, v9, v3}, Ly8j;->b(Lac4;Ltb4;Lcr6;I)Lxv4;
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_4
+    iput-object v5, p0, Lrm7;->X:Ljava/lang/Object;
 
-    :goto_1
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iput v3, p0, Lrm7;->o:I
 
-    move-result-object p1
-
-    iget-object v4, v2, Lone/me/login/inputname/InputNameScreen;->y0:Lhs;
-
-    sget-object v5, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
-
-    const/4 v6, 0x5
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v4, v2, p1}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->y0()Lqf;
+    invoke-static {v4, p0}, Lp7j;->a(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-boolean v3, p1, Lqf;->c:Z
+    if-ne p1, v6, :cond_5
 
-    invoke-virtual {p1, v0}, Lqf;->setEnabled(Z)V
+    :goto_2
+    return-object v6
 
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->C0()Lym7;
+    :cond_5
+    :goto_3
+    check-cast p1, Ljava/lang/Iterable;
+
+    new-instance v1, Lrm5;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, v0}, Lrm5;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v1}, Lei3;->U(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
     move-result-object p1
 
-    iget-object p1, p1, Lym7;->Z:Lci5;
-
-    new-instance v0, Lm27;
-
-    invoke-direct {v0, v3}, Lm27;-><init>(I)V
-
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/login/inputname/InputNameScreen;->A0:[Lyy7;
-
-    invoke-virtual {v2}, Lone/me/login/inputname/InputNameScreen;->D0()V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

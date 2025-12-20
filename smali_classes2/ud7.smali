@@ -3,140 +3,138 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lzd7;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzd7;I)V
+.method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lud7;->a:I
-
-    iput-object p1, p0, Lud7;->b:Lzd7;
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Lud7;->a:I
+
+    .line 3
+    iput-object p2, p0, Lud7;->b:Ljava/lang/String;
+
+    const/4 p1, 0x0
+
+    .line 4
+    iput-object p1, p0, Lud7;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput p1, p0, Lud7;->a:I
+
+    .line 7
+    iput-object p2, p0, Lud7;->b:Ljava/lang/String;
+
+    .line 8
+    iput-object p3, p0, Lud7;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lud7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lud7;
+
+    iget v2, p0, Lud7;->a:I
+
+    iget p1, p1, Lud7;->a:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
 
     iget v0, p0, Lud7;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lud7;->b:Lzd7;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v1, Lqd7;->a:Lqd7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
+    const-string v1, "HttpError{code="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lud7;->b:Lzd7;
+    iget v1, p0, Lud7;->a:I
 
-    sget-object v1, Lqd7;->a:Lqd7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
+    const-string v1, ", error=\'"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    iget-object v0, p0, Lud7;->b:Lzd7;
+    iget-object v1, p0, Lud7;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lzd7;->getShowProgress()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v1, "\', reason=\'"
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lrd7;->a:Lrd7;
+    const-string v1, "\'}"
 
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
+    iget-object v2, p0, Lud7;->c:Ljava/lang/String;
 
-    :cond_0
-    return-void
+    invoke-static {v0, v2, v1}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :pswitch_2
-    iget-object v0, p0, Lud7;->b:Lzd7;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lzd7;->getShowProgress()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    sget-object v1, Lrd7;->a:Lrd7;
-
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lud7;->b:Lzd7;
-
-    sget-object v1, Lsd7;->a:Lsd7;
-
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lud7;->b:Lzd7;
-
-    sget-object v1, Lsd7;->a:Lsd7;
-
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lud7;->b:Lzd7;
-
-    sget-object v1, Lsd7;->a:Lsd7;
-
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lud7;->b:Lzd7;
-
-    sget-object v1, Lsd7;->a:Lsd7;
-
-    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lud7;->b:Lzd7;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

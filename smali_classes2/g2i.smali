@@ -3,70 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final synthetic a:J
 
-.field public final synthetic c:I
+.field public final synthetic b:Loxh;
+
+.field public final synthetic c:Ljava/lang/Long;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;II)V
+.method public synthetic constructor <init>(JLoxh;Ljava/lang/Long;Ljava/lang/String;ZI)V
     .locals 0
 
-    iput p3, p0, Lg2i;->a:I
-
-    iput-object p1, p0, Lg2i;->b:Lone/me/sdk/arch/Widget;
-
-    iput p2, p0, Lg2i;->c:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lg2i;->a:J
+
+    iput-object p3, p0, Lg2i;->b:Loxh;
+
+    iput-object p4, p0, Lg2i;->c:Ljava/lang/Long;
+
+    iput-object p5, p0, Lg2i;->d:Ljava/lang/String;
+
+    iput-boolean p6, p0, Lg2i;->o:Z
+
+    iput p7, p0, Lg2i;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lg2i;->a:I
+    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v1, p0, Lg2i;->a:J
 
-    iget v0, p0, Lg2i;->c:I
+    iget-object v3, p0, Lg2i;->b:Loxh;
 
-    check-cast p1, Landroid/view/View;
+    iget-object v4, p0, Lg2i;->c:Ljava/lang/Long;
 
-    iget-object v1, p0, Lg2i;->b:Lone/me/sdk/arch/Widget;
+    iget-object v5, p0, Lg2i;->d:Ljava/lang/String;
 
-    invoke-static {v1, v0, p1}, Lone/me/sdk/arch/Widget;->s0(Lone/me/sdk/arch/Widget;ILandroid/view/View;)Landroid/view/View;
+    iget-boolean v6, p0, Lg2i;->o:Z
 
-    move-result-object p1
+    iget v7, p0, Lg2i;->X:I
 
-    return-object p1
+    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLoxh;Ljava/lang/Long;Ljava/lang/String;ZI)V
 
-    :pswitch_0
-    iget v0, p0, Lg2i;->c:I
-
-    check-cast p1, Lc83;
-
-    iget-object v1, p0, Lg2i;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-static {v1, v0, p1}, Lone/me/sdk/arch/Widget;->r0(Lone/me/sdk/arch/Widget;ILc83;)Lc83;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,43 +1,70 @@
 .class public final Lq5j;
-.super Luai;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final d:Lulc;
 
-.field public final e:Ln2g;
-
-.field public final synthetic f:Lp6j;
-
-.field public final synthetic g:Lp6j;
+# static fields
+.field public static final a:Lq5j;
 
 
 # direct methods
-.method public constructor <init>(Lp6j;Ln2g;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lq5j;->g:Lp6j;
+    new-instance v0, Lq5j;
 
-    new-instance p3, Lulc;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "OnRequestInstallCallback"
+    sput-object v0, Lq5j;->a:Lq5j;
 
-    invoke-direct {p3, v0}, Lulc;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lyyi;
 
-    iput-object p1, p0, Lq5j;->f:Lp6j;
+    const/4 v1, 0x1
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-direct {p0, p1}, Luai;-><init>(I)V
+    const-class v1, Lqzi;
 
-    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    move-result-object v0
 
-    iput-object p3, p0, Lq5j;->d:Lulc;
+    const/4 v2, 0x2
 
-    iput-object p2, p0, Lq5j;->e:Ln2g;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

@@ -1,21 +1,25 @@
 .class public final Lfrc;
-.super Lxp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfrc;
+# instance fields
+.field public final a:Lkqe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lfrc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lxp;-><init>()V
+    new-instance v0, Lkqe;
 
-    sput-object v0, Lfrc;->a:Lfrc;
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lkqe;-><init>(I)V
+
+    iput-object v0, p0, Lfrc;->a:Lkqe;
 
     return-void
 .end method

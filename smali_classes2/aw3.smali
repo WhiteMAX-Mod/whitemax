@@ -1,71 +1,77 @@
 .class public final Law3;
-.super Lpj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lzv3;
-
-.field public c:Lb8c;
+.field public final a:Lhof;
 
 
 # direct methods
-.method public constructor <init>(JLzv3;)V
-    .locals 1
+.method public constructor <init>(Lbbg;Lute;)V
+    .locals 9
 
-    .line 1
-    sget-object v0, Lb8c;->c:Lb8c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2, p3, v0}, Law3;-><init>(JLzv3;Lb8c;)V
+    check-cast p1, Lb9b;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Lb9b;->a()Ltb4;
 
-.method public constructor <init>(JLzv3;Lb8c;)V
-    .locals 0
+    move-result-object p1
 
-    .line 2
-    invoke-direct {p0, p1, p2}, Lpj0;-><init>(J)V
+    const/4 v0, 0x1
 
-    .line 3
-    iput-object p3, p0, Law3;->b:Lzv3;
+    const-string v1, "conn-events"
 
-    .line 4
-    iput-object p4, p0, Law3;->c:Lb8c;
+    invoke-virtual {p1, v0, v1}, Ltb4;->limitedParallelism(ILjava/lang/String;)Ltb4;
 
-    return-void
-.end method
+    move-result-object p1
 
+    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p2, Lute;->l:I
 
-    const-string v1, "ContactDb{data="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Law3;->b:Lzv3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", presence="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Law3;->c:Lb8c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
+
+    move-result-object v3
+
+    iput-object v3, p0, Law3;->a:Lhof;
+
+    iget-object p2, p2, Lute;->h:Lmn0;
+
+    invoke-static {p2}, Lnmj;->c(Lrza;)Lxw1;
+
+    move-result-object p2
+
+    new-instance v1, Low;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x10
+
+    const/4 v2, 0x2
+
+    const-class v4, Lofa;
+
+    const-string v5, "emit"
+
+    const-string v6, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
+
+    invoke-direct/range {v1 .. v8}, Low;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v0, Lo96;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p2, v1, v2}, Lo96;-><init>(Lf76;Lcr6;I)V
+
+    invoke-static {v0, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
+
+    return-void
 .end method

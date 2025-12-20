@@ -1,331 +1,205 @@
 .class public final Ln5c;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-.field public final b:I
+.field public final synthetic Y:Landroid/view/View;
 
-.field public final c:Landroid/graphics/Paint;
-
-.field public final d:Landroid/graphics/Paint;
-
-.field public final e:Landroid/graphics/Paint;
-
-.field public final f:I
-
-.field public final g:Landroid/graphics/RectF;
-
-.field public h:F
-
-.field public final i:Landroid/graphics/RectF;
-
-.field public final j:Landroid/graphics/RectF;
-
-.field public final k:Landroid/graphics/RectF;
-
-.field public final l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
-    .locals 7
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ln5c;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iput-object p3, p0, Ln5c;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    iput-object p3, p0, Ln5c;->Y:Landroid/view/View;
 
-    invoke-static {}, Lrw4;->a()Lrw4;
+    const/4 p2, 0x2
 
-    move-result-object p3
-
-    iget v0, p3, Lrw4;->i:I
-
-    iget v1, p3, Lrw4;->b:I
-
-    iget v2, p3, Lrw4;->a:I
-
-    iput v2, p0, Ln5c;->a:I
-
-    iget p3, p3, Lrw4;->h:I
-
-    iput p3, p0, Ln5c;->b:I
-
-    sget-object v3, Lq1g;->a0:Lbwf;
-
-    invoke-static {p2}, Lnca;->d(Landroid/content/Context;)Lq1g;
-
-    move-result-object p2
-
-    new-instance v3, Landroid/graphics/Paint;
-
-    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v3, p0, Ln5c;->c:Landroid/graphics/Paint;
-
-    iget v4, p2, Lq1g;->w:I
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iput-object v3, p0, Ln5c;->d:Landroid/graphics/Paint;
-
-    new-instance v3, Landroid/graphics/Paint;
-
-    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v3, p0, Ln5c;->e:Landroid/graphics/Paint;
-
-    iget p2, p2, Lq1g;->m:I
-
-    const v6, 0x3f19999a    # 0.6f
-
-    invoke-static {p2, v6}, Lzob;->b(IF)I
-
-    move-result p2
-
-    invoke-virtual {v3, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    sub-int/2addr p1, p3
-
-    iput p1, p0, Ln5c;->f:I
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    neg-int v3, p3
-
-    mul-int/lit8 v3, v3, 0x2
-
-    int-to-float v3, v3
-
-    int-to-float v1, v1
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v4
-
-    add-float/2addr v3, v1
-
-    int-to-float v2, v2
-
-    add-float/2addr v3, v2
-
-    sub-int v4, p1, p3
-
-    int-to-float v4, v4
-
-    mul-int/lit8 v5, p3, 0x2
-
-    int-to-float v5, v5
-
-    add-float/2addr v5, v1
-
-    add-float/2addr v5, v2
-
-    add-int/2addr p3, p1
-
-    add-int/2addr p3, v0
-
-    int-to-float p3, p3
-
-    invoke-direct {p2, v3, v4, v5, p3}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Ln5c;->g:Landroid/graphics/RectF;
-
-    new-instance p3, Landroid/graphics/RectF;
-
-    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v0
-
-    sub-float/2addr v0, v1
-
-    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
-
-    move-result p2
-
-    add-float/2addr p2, v1
-
-    int-to-float p1, p1
-
-    const/high16 v1, -0x3ee00000    # -10.0f
-
-    invoke-direct {p3, v0, v1, p2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p3, p0, Ln5c;->i:Landroid/graphics/RectF;
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    iget v0, p3, Landroid/graphics/RectF;->left:F
-
-    sub-float v1, v0, v2
-
-    const/4 v3, 0x0
-
-    invoke-direct {p2, v1, v3, v0, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Ln5c;->j:Landroid/graphics/RectF;
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    iget p3, p3, Landroid/graphics/RectF;->right:F
-
-    add-float/2addr v2, p3
-
-    invoke-direct {p2, p3, v3, v2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Ln5c;->k:Landroid/graphics/RectF;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ln5c;->i:Landroid/graphics/RectF;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+    invoke-virtual {p0, p1, p2}, Ln5c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    move-result-object p1
 
-    iget-object v1, p0, Ln5c;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    check-cast p1, Ln5c;
 
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result v0
+    invoke-virtual {p1, p2}, Ln5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    return-object p2
 .end method
 
-.method public final b(Landroid/view/MotionEvent;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    new-instance v0, Ln5c;
 
-    move-result v0
+    iget-object v1, p0, Ln5c;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iget-object v1, p0, Ln5c;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    iget-object v2, p0, Ln5c;->Y:Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p2, v1, v2}, Ln5c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
 
-    const/4 v2, 0x2
+    iput-object p1, v0, Ln5c;->o:Ljava/lang/Object;
 
-    if-eq v0, v2, :cond_0
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln5c;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Ln5c;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+
+    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->t0:Lso0;
+
+    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Y:Lz3c;
+
+    invoke-virtual {v2, p1}, Lbe8;->E(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->A0()Lf4c;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lf4c;->t0:Lpkd;
+
+    iget-object v2, v2, Lpkd;->a:Laof;
+
+    invoke-interface {v2}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-static {v2}, Liyf;->G(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x4
+
+    if-nez v2, :cond_5
+
+    iget-object v2, p0, Ln5c;->Y:Landroid/view/View;
+
+    instance-of v5, v2, Landroid/view/ViewGroup;
+
+    if-eqz v5, :cond_0
+
+    check-cast v2, Landroid/view/ViewGroup;
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    const/4 v2, 0x0
 
-    move-result p1
+    :goto_0
+    if-eqz v2, :cond_1
 
-    iget v0, p0, Ln5c;->h:F
+    invoke-virtual {v1}, Lso0;->getValue()Ljava/lang/Object;
 
-    add-float/2addr p1, v0
+    move-result-object v5
 
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
+    check-cast v5, Landroid/view/View;
 
-    move-result p1
-
-    invoke-virtual {p0, p1}, Ln5c;->c(F)V
-
-    return-void
+    invoke-static {v5, v2}, Lq4j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     :cond_1
-    invoke-virtual {p0}, Ln5c;->a()F
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->B0()Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
+    if-eqz p1, :cond_3
 
-    move-result v0
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    move-result v2
 
-    move-result p1
+    if-nez v2, :cond_2
 
-    sub-float/2addr v0, p1
+    goto :goto_1
 
-    iput v0, p0, Ln5c;->h:F
+    :cond_2
+    move v2, v4
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final c(F)V
-    .locals 3
+    :cond_3
+    :goto_1
+    move v2, v3
 
-    iget-object v0, p0, Ln5c;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    :goto_2
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
+    invoke-virtual {v1}, Lso0;->getValue()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    iget-object v0, p0, Ln5c;->g:Landroid/graphics/RectF;
+    check-cast v0, Lhab;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    if-eqz p1, :cond_4
 
-    move-result v1
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
-
-    sub-float/2addr p1, v1
-
-    iget v1, v0, Landroid/graphics/RectF;->top:F
-
-    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
-    iget-object v0, p0, Ln5c;->i:Landroid/graphics/RectF;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    if-ne p1, v1, :cond_4
 
-    move-result v1
+    goto :goto_3
 
-    div-float/2addr v1, v2
+    :cond_4
+    move v3, v4
 
-    sub-float/2addr p1, v1
+    :goto_3
+    invoke-virtual {v0, v3}, Lhab;->setVisibility(I)V
 
-    const/4 v1, 0x0
+    goto :goto_4
 
-    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->B0()Landroidx/recyclerview/widget/RecyclerView;
 
-    iget p1, v0, Landroid/graphics/RectF;->left:F
+    move-result-object p1
 
-    iget v2, p0, Ln5c;->a:I
+    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    int-to-float v2, v2
+    invoke-virtual {v1}, Lso0;->getValue()Ljava/lang/Object;
 
-    sub-float/2addr p1, v2
+    move-result-object p1
 
-    iget-object v2, p0, Ln5c;->j:Landroid/graphics/RectF;
+    check-cast p1, Lhab;
 
-    invoke-virtual {v2, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
+    invoke-virtual {p1, v4}, Lhab;->setVisibility(I)V
 
-    iget-object p1, p0, Ln5c;->k:Landroid/graphics/RectF;
+    :goto_4
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    iget v0, v0, Landroid/graphics/RectF;->right:F
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
-
-    return-void
+    return-object p1
 .end method

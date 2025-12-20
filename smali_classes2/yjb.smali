@@ -1,67 +1,73 @@
-.class public final Lyjb;
+.class public final synthetic Lyjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:J
+.field public final synthetic b:Lbkb;
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
+.method public synthetic constructor <init>(Lbkb;I)V
     .locals 0
 
+    iput p2, p0, Lyjb;->a:I
+
+    iput-object p1, p0, Lyjb;->b:Lbkb;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyjb;->a:I
-
-    iput-wide p2, p0, Lyjb;->b:J
-
-    iput-wide p4, p0, Lyjb;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lyjb;->a:I
 
-    const-string v1, "OutgoingMessageLink{type="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lyjb;->b:Lbkb;
 
-    iget v1, p0, Lyjb;->a:I
+    iget-object v0, v0, Lbkb;->u0:Lzjb;
 
-    invoke-static {v1}, Lvb9;->j(I)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    check-cast v0, Lrb9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lrb9;->b:Ljava/lang/Object;
 
-    const-string v1, ", chatId="
+    check-cast v0, Lo37;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lo37;->F0:Lg0e;
 
-    iget-wide v1, p0, Lyjb;->b:J
+    invoke-virtual {v0}, Lg0e;->stop()V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    const-string v2, "}"
-
-    iget-wide v3, p0, Lyjb;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lu45;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
+    :cond_0
+    sget-object v0, Lv2h;->a:Lv2h;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lyjb;->b:Lbkb;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    sget-object v0, Lv2h;->a:Lv2h;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

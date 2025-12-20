@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl$removeOnAudioDeviceListChangeListener$1;
-.super Lu08;
+.super Ln58;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lmq6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lu08;",
-        "Lcm6;"
+        "Ln58;",
+        "Lmq6;"
     }
 .end annotation
 
@@ -28,7 +28,7 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lqqg;",
+        "Lv2h;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -58,7 +58,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p1}, Ln58;-><init>(I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl$removeOnAudioDeviceListChangeListener$1;->invoke()V
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    sget-object v0, Lv2h;->a:Lv2h;
 
     return-object v0
 .end method

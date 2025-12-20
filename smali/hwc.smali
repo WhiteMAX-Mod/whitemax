@@ -1,200 +1,356 @@
-.class public abstract Lhwc;
+.class public final Lhwc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Lt65;
 
-# static fields
-.field public static abc_action_bar_content_inset_material:I = 0x7f070000
 
-.field public static abc_action_bar_content_inset_with_nav:I = 0x7f070001
+# instance fields
+.field public volatile a:Z
 
-.field public static abc_action_bar_default_height_material:I = 0x7f070002
+.field public volatile b:Ljava/lang/Object;
 
-.field public static abc_action_bar_default_padding_end_material:I = 0x7f070003
+.field public final c:Ljava/lang/Object;
 
-.field public static abc_action_bar_default_padding_start_material:I = 0x7f070004
+.field public final d:Ljava/lang/Object;
 
-.field public static abc_action_bar_elevation_material:I = 0x7f070005
+.field public final e:Ljava/lang/Object;
 
-.field public static abc_action_bar_icon_vertical_padding_material:I = 0x7f070006
+.field public final f:Ljava/lang/Object;
 
-.field public static abc_action_bar_overflow_padding_end_material:I = 0x7f070007
+.field public g:Ljava/lang/Object;
 
-.field public static abc_action_bar_overflow_padding_start_material:I = 0x7f070008
 
-.field public static abc_action_bar_stacked_max_height:I = 0x7f070009
+# direct methods
+.method public constructor <init>(Ljava/net/DatagramSocket;Lpl8;Lv1d;Ly5;)V
+    .locals 2
 
-.field public static abc_action_bar_stacked_tab_max_width:I = 0x7f07000a
+    .line 1
+    const-string v0, "Socket receive buffer size: "
 
-.field public static abc_action_bar_subtitle_bottom_margin_material:I = 0x7f07000b
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static abc_action_bar_subtitle_top_margin_material:I = 0x7f07000c
+    const/4 v1, 0x0
 
-.field public static abc_action_button_min_height_material:I = 0x7f07000d
+    .line 2
+    iput-boolean v1, p0, Lhwc;->a:Z
 
-.field public static abc_action_button_min_width_material:I = 0x7f07000e
+    .line 3
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static abc_action_button_min_width_overflow_material:I = 0x7f07000f
+    iput-object p1, p0, Lhwc;->b:Ljava/lang/Object;
 
-.field public static abc_alert_dialog_button_bar_height:I = 0x7f070010
+    .line 4
+    iput-object p2, p0, Lhwc;->c:Ljava/lang/Object;
 
-.field public static abc_alert_dialog_button_dimen:I = 0x7f070011
+    .line 5
+    iput-object p3, p0, Lhwc;->d:Ljava/lang/Object;
 
-.field public static abc_button_inset_horizontal_material:I = 0x7f070012
+    .line 6
+    iput-object p4, p0, Lhwc;->e:Ljava/lang/Object;
 
-.field public static abc_button_inset_vertical_material:I = 0x7f070013
+    .line 7
+    new-instance p3, Ljava/lang/Thread;
 
-.field public static abc_button_padding_horizontal_material:I = 0x7f070014
+    new-instance p4, Lc9b;
 
-.field public static abc_button_padding_vertical_material:I = 0x7f070015
+    const/16 v1, 0xe
 
-.field public static abc_cascading_menus_min_smallest_width:I = 0x7f070016
+    invoke-direct {p4, v1, p0}, Lc9b;-><init>(ILjava/lang/Object;)V
 
-.field public static abc_config_prefDialogWidth:I = 0x7f070017
+    const-string v1, "receiver"
 
-.field public static abc_control_corner_material:I = 0x7f070018
+    invoke-direct {p3, p4, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-.field public static abc_control_inset_material:I = 0x7f070019
+    iput-object p3, p0, Lhwc;->f:Ljava/lang/Object;
 
-.field public static abc_control_padding_material:I = 0x7f07001a
+    const/4 p4, 0x1
 
-.field public static abc_dialog_corner_radius_material:I = 0x7f07001b
+    .line 8
+    invoke-virtual {p3, p4}, Ljava/lang/Thread;->setDaemon(Z)V
 
-.field public static abc_dialog_fixed_height_major:I = 0x7f07001c
+    .line 9
+    new-instance p3, Ljava/util/concurrent/LinkedBlockingQueue;
 
-.field public static abc_dialog_fixed_height_minor:I = 0x7f07001d
+    invoke-direct {p3}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-.field public static abc_dialog_fixed_width_major:I = 0x7f07001e
+    iput-object p3, p0, Lhwc;->g:Ljava/lang/Object;
 
-.field public static abc_dialog_fixed_width_minor:I = 0x7f07001f
+    .line 10
+    :try_start_0
+    invoke-virtual {p1}, Ljava/net/DatagramSocket;->getReceiveBufferSize()I
 
-.field public static abc_dialog_list_padding_bottom_no_buttons:I = 0x7f070020
+    move-result p1
 
-.field public static abc_dialog_list_padding_top_no_title:I = 0x7f070021
+    new-instance p3, Ljava/lang/StringBuilder;
 
-.field public static abc_dialog_min_width_major:I = 0x7f070022
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static abc_dialog_min_width_minor:I = 0x7f070023
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.field public static abc_dialog_padding_material:I = 0x7f070024
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static abc_dialog_padding_top_material:I = 0x7f070025
+    move-result-object p1
 
-.field public static abc_dialog_title_divider_material:I = 0x7f070026
+    invoke-interface {p2, p1}, Lpl8;->debug(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
 
-.field public static abc_disabled_alpha_material_dark:I = 0x7f070027
+    :catch_0
+    return-void
+.end method
 
-.field public static abc_disabled_alpha_material_light:I = 0x7f070028
+.method public constructor <init>(Lz49;Lyz0;Ljava/util/concurrent/ExecutorService;JJ)V
+    .locals 13
 
-.field public static abc_dropdownitem_icon_width:I = 0x7f070029
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static abc_dropdownitem_text_padding_left:I = 0x7f07002a
+    move-object/from16 v0, p3
 
-.field public static abc_dropdownitem_text_padding_right:I = 0x7f07002b
+    .line 12
+    iput-object v0, p0, Lhwc;->c:Ljava/lang/Object;
 
-.field public static abc_edit_text_inset_bottom_material:I = 0x7f07002c
+    .line 13
+    iget-object p1, p1, Lz49;->b:Lp49;
 
-.field public static abc_edit_text_inset_horizontal_material:I = 0x7f07002d
+    .line 14
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static abc_edit_text_inset_top_material:I = 0x7f07002e
+    .line 15
+    sget-object v6, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-.field public static abc_floating_window_z:I = 0x7f07002f
+    .line 16
+    iget-object v1, p1, Lp49;->a:Landroid/net/Uri;
 
-.field public static abc_list_item_height_large_material:I = 0x7f070030
+    .line 17
+    iget-object v11, p1, Lp49;->f:Ljava/lang/String;
 
-.field public static abc_list_item_height_material:I = 0x7f070031
+    .line 18
+    const-string p1, "The uri must be set."
 
-.field public static abc_list_item_height_small_material:I = 0x7f070032
+    invoke-static {v1, p1}, Lp5j;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
-.field public static abc_list_item_padding_horizontal_material:I = 0x7f070033
+    .line 19
+    new-instance v0, Lzi4;
 
-.field public static abc_panel_menu_list_width:I = 0x7f070034
+    const-wide/16 v2, 0x0
 
-.field public static abc_progress_bar_height_material:I = 0x7f070035
+    const/4 v4, 0x1
 
-.field public static abc_search_view_preferred_height:I = 0x7f070036
+    const/4 v5, 0x0
 
-.field public static abc_search_view_preferred_width:I = 0x7f070037
+    const/4 v12, 0x4
 
-.field public static abc_seekbar_track_background_height_material:I = 0x7f070038
+    move-wide/from16 v7, p4
 
-.field public static abc_seekbar_track_progress_height_material:I = 0x7f070039
+    move-wide/from16 v9, p6
 
-.field public static abc_select_dialog_padding_start_material:I = 0x7f07003a
+    .line 20
+    invoke-direct/range {v0 .. v12}, Lzi4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-.field public static abc_star_big:I = 0x7f07003b
+    .line 21
+    iput-object v0, p0, Lhwc;->d:Ljava/lang/Object;
 
-.field public static abc_star_medium:I = 0x7f07003c
+    .line 22
+    invoke-virtual {p2}, Lyz0;->c()La01;
 
-.field public static abc_star_small:I = 0x7f07003d
+    move-result-object p1
 
-.field public static abc_switch_padding:I = 0x7f07003e
+    iput-object p1, p0, Lhwc;->e:Ljava/lang/Object;
 
-.field public static abc_text_size_body_1_material:I = 0x7f07003f
+    .line 23
+    new-instance v1, La4a;
 
-.field public static abc_text_size_body_2_material:I = 0x7f070040
+    const/16 v2, 0x13
 
-.field public static abc_text_size_button_material:I = 0x7f070041
+    invoke-direct {v1, v2, p0}, La4a;-><init>(ILjava/lang/Object;)V
 
-.field public static abc_text_size_caption_material:I = 0x7f070042
+    .line 24
+    new-instance v2, Lq01;
 
-.field public static abc_text_size_display_1_material:I = 0x7f070043
+    const/4 v3, 0x0
 
-.field public static abc_text_size_display_2_material:I = 0x7f070044
+    invoke-direct {v2, p1, v0, v3, v1}, Lq01;-><init>(La01;Lzi4;[BLp01;)V
 
-.field public static abc_text_size_display_3_material:I = 0x7f070045
+    iput-object v2, p0, Lhwc;->f:Ljava/lang/Object;
 
-.field public static abc_text_size_display_4_material:I = 0x7f070046
+    return-void
+.end method
 
-.field public static abc_text_size_headline_material:I = 0x7f070047
 
-.field public static abc_text_size_large_material:I = 0x7f070048
+# virtual methods
+.method public a(Lg65;)V
+    .locals 2
 
-.field public static abc_text_size_medium_material:I = 0x7f070049
+    iput-object p1, p0, Lhwc;->g:Ljava/lang/Object;
 
-.field public static abc_text_size_menu_header_material:I = 0x7f07004a
+    const/4 p1, 0x0
 
-.field public static abc_text_size_menu_material:I = 0x7f07004b
+    :goto_0
+    if-nez p1, :cond_2
 
-.field public static abc_text_size_small_material:I = 0x7f07004c
+    :try_start_0
+    iget-boolean v0, p0, Lhwc;->a:Z
 
-.field public static abc_text_size_subhead_material:I = 0x7f07004d
+    if-nez v0, :cond_2
 
-.field public static abc_text_size_subtitle_material_toolbar:I = 0x7f07004e
+    new-instance v0, Lgwc;
 
-.field public static abc_text_size_title_material:I = 0x7f07004f
+    invoke-direct {v0, p0}, Lgwc;-><init>(Lhwc;)V
 
-.field public static abc_text_size_title_material_toolbar:I = 0x7f070050
+    iput-object v0, p0, Lhwc;->b:Ljava/lang/Object;
 
-.field public static disabled_alpha_material_dark:I = 0x7f0700c2
+    iget-object v0, p0, Lhwc;->c:Ljava/lang/Object;
 
-.field public static disabled_alpha_material_light:I = 0x7f0700c3
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-.field public static highlight_alpha_material_colored:I = 0x7f07013c
+    iget-object v1, p0, Lhwc;->b:Ljava/lang/Object;
 
-.field public static highlight_alpha_material_dark:I = 0x7f07013d
+    check-cast v1, Lgwc;
 
-.field public static highlight_alpha_material_light:I = 0x7f07013e
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static hint_alpha_material_dark:I = 0x7f07013f
+    :try_start_1
+    iget-object v0, p0, Lhwc;->b:Ljava/lang/Object;
 
-.field public static hint_alpha_material_light:I = 0x7f070140
+    check-cast v0, Lgwc;
 
-.field public static hint_pressed_alpha_material_dark:I = 0x7f070141
+    invoke-virtual {v0}, Lu5e;->get()Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.field public static hint_pressed_alpha_material_light:I = 0x7f070142
+    const/4 p1, 0x1
 
-.field public static tooltip_corner_radius:I = 0x7f0704bd
+    goto :goto_0
 
-.field public static tooltip_horizontal_padding:I = 0x7f0704be
+    :catchall_0
+    move-exception p1
 
-.field public static tooltip_margin:I = 0x7f0704bf
+    goto :goto_1
 
-.field public static tooltip_precise_anchor_extra_offset:I = 0x7f0704c0
+    :catch_0
+    move-exception v0
 
-.field public static tooltip_precise_anchor_threshold:I = 0x7f0704c1
+    :try_start_2
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-.field public static tooltip_vertical_padding:I = 0x7f0704c2
+    move-result-object v0
 
-.field public static tooltip_y_offset_non_touch:I = 0x7f0704c3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static tooltip_y_offset_touch:I = 0x7f0704c4
+    instance-of v1, v0, Landroidx/media3/common/PriorityTaskManager$PriorityTooLowException;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, v0, Ljava/io/IOException;
+
+    if-eqz p1, :cond_1
+
+    check-cast v0, Ljava/io/IOException;
+
+    throw v0
+
+    :cond_1
+    sget-object p1, Lqah;->a:Ljava/lang/String;
+
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_1
+    iget-object v0, p0, Lhwc;->b:Ljava/lang/Object;
+
+    check-cast v0, Lgwc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lu5e;->a()V
+
+    throw p1
+
+    :cond_2
+    iget-object p1, p0, Lhwc;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgwc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Lu5e;->a()V
+
+    return-void
+.end method
+
+.method public b()Lshd;
+    .locals 4
+
+    iget-object v0, p0, Lhwc;->g:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    const/16 v1, 0xf
+
+    int-to-long v1, v1
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lshd;
+
+    return-object v0
+.end method
+
+.method public cancel()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lhwc;->a:Z
+
+    iget-object v1, p0, Lhwc;->b:Ljava/lang/Object;
+
+    check-cast v1, Lgwc;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v0}, Lu5e;->cancel(Z)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public remove()V
+    .locals 3
+
+    iget-object v0, p0, Lhwc;->e:Ljava/lang/Object;
+
+    check-cast v0, La01;
+
+    iget-object v1, v0, La01;->a:Ltz0;
+
+    iget-object v0, v0, La01;->o:Li01;
+
+    iget-object v2, p0, Lhwc;->d:Ljava/lang/Object;
+
+    check-cast v2, Lzi4;
+
+    invoke-virtual {v0, v2}, Li01;->e(Lzi4;)Ljava/lang/String;
+
+    move-result-object v0
+
+    check-cast v1, Lybf;
+
+    invoke-virtual {v1, v0}, Lybf;->l(Ljava/lang/String;)V
+
+    return-void
+.end method

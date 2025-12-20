@@ -3,307 +3,119 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpy4;
-.implements Lqy4;
+.implements Lxx3;
 
 
 # instance fields
-.field public final a:Lzl3;
+.field public final a:Lc4g;
 
-.field public final b:Ljava/util/HashSet;
+.field public final synthetic b:Lvkh;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lvkh;Lc4g;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lzl3;
+    iput-object p1, p0, Lskh;->b:Lvkh;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lskh;->a:Lzl3;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lskh;->b:Ljava/util/HashSet;
+    iput-object p2, p0, Lskh;->a:Lc4g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Lpy4;)Z
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    monitor-enter p0
+    check-cast p1, Ltc0;
 
-    :try_start_0
-    new-instance v0, Ltkh;
+    iget-object v0, p0, Lskh;->b:Lvkh;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iget-object v0, v0, Lvkh;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lskh;->a:Lzl3;
+    sget-object v1, Lm4j;->a:Lvcb;
 
-    invoke-virtual {p1, v0}, Lzl3;->a(Lpy4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object v1, p0, Lskh;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
+    sget-object v2, Lxk8;->d:Lxk8;
+
+    invoke-virtual {v1, v2}, Lvcb;->b(Lxk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "onOutputSurface close event=0"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    monitor-exit p0
+    iget-object p1, p0, Lskh;->b:Lvkh;
 
-    return p1
+    invoke-virtual {p1}, Lvkh;->e()V
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object p1, p0, Lskh;->a:Lc4g;
 
-    throw p1
-.end method
+    invoke-virtual {p1}, Lc4g;->close()V
 
-.method public final declared-synchronized b(Lpy4;)Z
-    .locals 5
+    iget-object p1, p0, Lskh;->b:Lvkh;
 
-    monitor-enter p0
+    iget-object p1, p1, Lvkh;->Y:Ljava/util/LinkedHashMap;
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lskh;->a:Lc4g;
 
-    :try_start_0
-    iget-object v1, p0, Lskh;->a:Lzl3;
+    invoke-virtual {p1, v0}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lskh;->b:Ljava/util/HashSet;
+    move-result-object p1
 
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    check-cast p1, Landroid/view/Surface;
 
-    move-result-object v2
+    if-eqz p1, :cond_3
 
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lskh;->b:Lvkh;
 
-    move-result v3
+    iget-object v0, v0, Lvkh;->t0:Lmlh;
 
-    if-eqz v3, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, v0, Lp35;->c:Ljava/lang/Object;
 
-    move-result-object v3
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast v3, Ltkh;
+    const/4 v2, 0x1
 
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-static {v1, v2}, Lrs6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    move-result-object v4
+    iget-object v1, v0, Lp35;->e:Ljava/lang/Object;
 
-    check-cast v4, Lpy4;
+    check-cast v1, Ljava/lang/Thread;
 
-    if-ne v4, p1, :cond_0
+    invoke-static {v1}, Lrs6;->c(Ljava/lang/Thread;)V
 
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    invoke-virtual {v1, v3}, Lzl3;->b(Lpy4;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    const-string v1, "skh"
-
-    const-string v2, "delete: failed"
-
-    invoke-static {v1, v2, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Lpy4;)Z
-    .locals 5
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lskh;->a:Lzl3;
-
-    iget-object v2, p0, Lskh;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ltkh;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lpy4;
-
-    if-ne v4, p1, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    invoke-virtual {v1, v3}, Lzl3;->c(Lpy4;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    const-string v1, "skh"
-
-    const-string v2, "delete: failed"
-
-    invoke-static {v1, v2, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lskh;->a:Lzl3;
-
-    invoke-virtual {v0}, Lzl3;->d()V
-
-    iget-object v0, p0, Lskh;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
+    invoke-virtual {v0, p1, v2}, Lp35;->s(Landroid/view/Surface;Z)V
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string v0, "Required value was null."
 
-    throw v0
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-.method public final declared-synchronized dispose()V
-    .locals 1
+    throw p1
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lskh;->a:Lzl3;
-
-    invoke-virtual {v0}, Lzl3;->dispose()V
-
-    iget-object v0, p0, Lskh;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
+    :cond_3
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lskh;->a:Lzl3;
-
-    iget-boolean v0, v0, Lzl3;->b:Z
-
-    return v0
 .end method

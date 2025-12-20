@@ -1,22 +1,51 @@
 .class public final Lpe6;
-.super Landroid/text/style/ForegroundColorSpan;
+.super Ll84;
 .source "SourceFile"
 
-# interfaces
-.implements Lg74;
+
+# instance fields
+.field public final synthetic X:Lqe6;
+
+.field public Y:I
+
+.field public d:Lqe6;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lqe6;Ll84;)V
+    .locals 0
+
+    iput-object p1, p0, Lpe6;->X:Lqe6;
+
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final copy()Lg74;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lpe6;
+    iput-object p1, p0, Lpe6;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/text/style/ForegroundColorSpan;->getForegroundColor()I
+    iget p1, p0, Lpe6;->Y:I
 
-    move-result v1
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, v1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+    or-int/2addr p1, v0
 
-    return-object v0
+    iput p1, p0, Lpe6;->Y:I
+
+    iget-object p1, p0, Lpe6;->X:Lqe6;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lqe6;->a(ZLl84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -3,18 +3,34 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll7c;
+.implements Lef8;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lld;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:J
+
+.field public final synthetic o:J
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lld;IJJI)V
     .locals 0
 
-    iput p1, p0, Lgn4;->a:I
+    iput p7, p0, Lgn4;->a:I
+
+    iput-object p1, p0, Lgn4;->b:Lld;
+
+    iput p2, p0, Lgn4;->c:I
+
+    iput-wide p3, p0, Lgn4;->d:J
+
+    iput-wide p5, p0, Lgn4;->o:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,86 +39,52 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 16
 
-    iget v0, p0, Lgn4;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Lgn4;->a:I
 
-    check-cast p1, Ljava/lang/String;
+    packed-switch v1, :pswitch_data_0
 
-    if-eqz p1, :cond_0
+    iget-wide v7, v0, Lgn4;->o:J
 
-    const/4 p1, 0x1
+    move-object/from16 v2, p1
 
-    goto :goto_0
+    check-cast v2, Lmd;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v3, v0, Lgn4;->b:Lld;
 
-    :goto_0
-    return p1
+    iget v4, v0, Lgn4;->c:I
+
+    iget-wide v5, v0, Lgn4;->d:J
+
+    invoke-interface/range {v2 .. v8}, Lmd;->z0(Lld;IJJ)V
+
+    return-void
 
     :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    iget-wide v14, v0, Lgn4;->o:J
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-object/from16 v9, p1
 
-    move-result-object p1
+    check-cast v9, Lmd;
 
-    if-eqz p1, :cond_1
+    iget-object v10, v0, Lgn4;->b:Lld;
 
-    const/4 p1, 0x1
+    iget v11, v0, Lgn4;->c:I
 
-    goto :goto_1
+    iget-wide v12, v0, Lgn4;->d:J
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-interface/range {v9 .. v15}, Lmd;->x0(Lld;IJJ)V
 
-    :goto_1
-    return p1
-
-    :pswitch_1
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    return p1
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    const/4 p1, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :goto_3
-    return p1
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

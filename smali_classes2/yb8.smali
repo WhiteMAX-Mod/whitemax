@@ -1,27 +1,51 @@
 .class public final Lyb8;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic X:Ljc8;
 
-.field public final b:Lk18;
+.field public Y:I
 
-.field public final c:Lk18;
+.field public d:Lhic;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Landroid/content/Context;)V
+.method public constructor <init>(Ljc8;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyb8;->X:Ljc8;
 
-    iput-object p3, p0, Lyb8;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lyb8;->b:Lk18;
-
-    iput-object p1, p0, Lyb8;->c:Lk18;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lyb8;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lyb8;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lyb8;->Y:I
+
+    iget-object p1, p0, Lyb8;->X:Ljc8;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Ljc8;->j(Lhic;Lwd8;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

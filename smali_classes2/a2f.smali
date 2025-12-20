@@ -1,224 +1,169 @@
 .class public final La2f;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:La2f;
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Comparable;
+.field public final synthetic X:Ld2f;
 
-.field public final b:[Ljava/lang/Object;
+.field public final synthetic Y:I
 
-.field public final c:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ld2f;ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, La2f;->X:Ld2f;
 
-    new-array v0, v0, [Ljava/lang/Comparable;
+    iput p2, p0, La2f;->Y:I
 
-    new-instance v1, La2f;
+    const/4 p1, 0x2
 
-    invoke-direct {v1, v0, v0}, La2f;-><init>([Ljava/lang/Comparable;[Ljava/lang/Object;)V
-
-    sput-object v1, La2f;->d:La2f;
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>([Ljava/lang/Comparable;[Ljava/lang/Object;)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    array-length v0, p1
-
-    array-length v1, p2
-
-    if-ne v0, v1, :cond_0
-
-    iput-object p1, p0, La2f;->a:[Ljava/lang/Comparable;
-
-    iput-object p2, p0, La2f;->b:[Ljava/lang/Object;
-
-    array-length p1, p1
-
-    iput p1, p0, La2f;->c:I
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "different array sizes: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    array-length p1, p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " keys and "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    array-length p1, p2
-
-    const-string p2, " values"
-
-    invoke-static {v1, p1, p2}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lac4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, La2f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, La2f;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, La2f;
 
-    iget v1, p1, La2f;->c:I
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget v3, p0, La2f;->c:I
+    invoke-virtual {p1, p2}, La2f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v1, v3, :cond_2
+    move-result-object p1
 
-    iget-object v1, p1, La2f;->a:[Ljava/lang/Comparable;
-
-    iget-object v3, p0, La2f;->a:[Ljava/lang/Comparable;
-
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object p1, p1, La2f;->b:[Ljava/lang/Object;
-
-    iget-object v1, p0, La2f;->b:[Ljava/lang/Object;
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, La2f;->a:[Ljava/lang/Comparable;
+    new-instance p1, La2f;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    iget-object v0, p0, La2f;->X:Ld2f;
 
-    move-result v0
+    iget v1, p0, La2f;->Y:I
 
-    iget-object v1, p0, La2f;->b:[Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, La2f;-><init>(Ld2f;ILkotlin/coroutines/Continuation;)V
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, La2f;->o:I
 
-    const-string v1, "["
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_1
 
-    :goto_0
-    iget v2, p0, La2f;->c:I
+    if-ne v0, v2, :cond_0
 
-    if-ge v1, v2, :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_0
-
-    const/16 v2, 0x2c
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-object v1
 
     :cond_0
-    const-string v2, "{"
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v2, p0, La2f;->a:[Ljava/lang/Comparable;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    aget-object v2, v2, v1
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " : "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, La2f;->b:[Ljava/lang/Object;
-
-    aget-object v2, v2, v1
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x7d
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    const/16 v1, 0x5d
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    sget-object p1, Ld2f;->P0:[Lp38;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, La2f;->X:Ld2f;
+
+    invoke-virtual {p1}, Ld2f;->w()Ljah;
 
     move-result-object v0
 
+    const-string v3, "ALL"
+
+    iget-object v0, v0, Lz3;->g:Lg68;
+
+    const-string v4, "app.privacy.chats.invite"
+
+    invoke-virtual {v0, v4, v3}, Lg68;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lq3g;->b(Ljava/lang/String;)I
+
+    move-result v0
+
+    iget v3, p0, La2f;->Y:I
+
+    if-ne v0, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Ld2f;->w()Ljah;
+
+    move-result-object v0
+
+    invoke-static {v3}, Lq3g;->i(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v4, v5}, Lz3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ld2f;->v()Lo2b;
+
+    move-result-object v0
+
+    new-instance v4, Leah;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput v3, v4, Leah;->o:I
+
+    new-instance v3, Lhah;
+
+    invoke-direct {v3, v4}, Lhah;-><init>(Leah;)V
+
+    invoke-virtual {v0, v3}, Lo2b;->n(Lhah;)J
+
+    iput v2, p0, La2f;->o:I
+
+    invoke-static {p1, p0}, Ld2f;->u(Ld2f;Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_3
+
     return-object v0
+
+    :cond_3
+    :goto_0
+    return-object v1
 .end method

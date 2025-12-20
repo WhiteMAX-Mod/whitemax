@@ -1,61 +1,83 @@
-.class public abstract Lzza;
-.super Ljava/lang/Object;
+.class public final Lzza;
+.super Lcxa;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final a:Lqae;
 
-.field public static final b:J
+.field public final b:J
 
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lqae;)V
+    .locals 0
 
-    sget v0, Lbyc;->call_history_info_copy_link:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
+    iput-wide p1, p0, Lzza;->b:J
 
-    sput-wide v0, Lzza;->a:J
+    iput-object p3, p0, Lzza;->c:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Lbyc;->call_history_info_open_chat_call:I
+    iput-object p4, p0, Lzza;->a:Lqae;
 
-    int-to-long v0, v0
+    return-void
+.end method
 
-    sput-wide v0, Lzza;->b:J
 
-    sget v0, Lbyc;->call_history_info_recreate:I
+# virtual methods
+.method public final n(Lc0b;)V
+    .locals 4
 
-    int-to-long v0, v0
+    new-instance v0, Lyza;
 
-    sput-wide v0, Lzza;->c:J
+    const/4 v1, 0x0
 
-    sget v0, Lbyc;->call_history_info_send_to_chat:I
+    invoke-direct {v0, v1, p1}, Lyza;-><init>(ILjava/lang/Object;)V
 
-    int-to-long v0, v0
+    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
 
-    sput-wide v0, Lzza;->d:J
+    iget-wide v1, p0, Lzza;->b:J
 
-    sget v0, Lbyc;->call_history_info_share_link:I
+    iget-object p1, p0, Lzza;->c:Ljava/util/concurrent/TimeUnit;
 
-    int-to-long v0, v0
+    iget-object v3, p0, Lzza;->a:Lqae;
 
-    sput-wide v0, Lzza;->e:J
+    invoke-virtual {v3, v0, v1, v2, p1}, Lqae;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
 
-    sget v0, Lbyc;->call_history_info_start_call:I
+    move-result-object p1
 
-    int-to-long v0, v0
+    :cond_0
+    const/4 v1, 0x0
 
-    sput-wide v0, Lzza;->f:J
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lp25;->a:Lp25;
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Ll25;->dispose()V
+
+    :cond_2
+    :goto_0
     return-void
 .end method

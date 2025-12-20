@@ -1,320 +1,401 @@
-.class public final Lf07;
+.class public abstract Lf07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lbwf;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lqbg;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lq93;
+.field public final c:Lcii;
 
-.field public final d:Ljava/util/List;
+.field public final d:Lfl;
+
+.field public final e:Lem;
+
+.field public final f:Landroid/os/Looper;
+
+.field public final g:I
+
+.field public final h:Lioi;
+
+.field public final i:Lgfj;
+
+.field public final j:Lk07;
 
 
 # direct methods
-.method public constructor <init>(Lqbg;Lq93;Ljava/util/List;Lcm6;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lcii;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;Lgfj;)V
+    .locals 2
 
+    .line 1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    .line 2
+    new-instance v1, Le07;
+
+    invoke-direct {v1, p4, v0}, Le07;-><init>(Lgfj;Landroid/os/Looper;)V
+
+    .line 3
+    invoke-direct {p0, p1, p2, p3, v1}, Lf07;-><init>(Landroid/content/Context;Lcii;Lfl;Le07;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcii;Lfl;Le07;)V
+    .locals 3
+
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf07;->b:Lqbg;
+    const-string v0, "Null context is not permitted."
 
-    iput-object p2, p0, Lf07;->c:Lq93;
+    invoke-static {p1, v0}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lf07;->d:Ljava/util/List;
+    const-string v0, "Api must not be null."
 
-    new-instance p1, Lm2;
+    .line 5
+    invoke-static {p2, v0}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p4}, Lm2;-><init>(Lcm6;)V
+    const-string v0, "Settings must not be null; use Settings.DEFAULT_SETTINGS instead."
 
-    new-instance p2, Lbwf;
+    .line 6
+    invoke-static {p4, v0}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
+    .line 7
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iput-object p2, p0, Lf07;->a:Lbwf;
+    move-result-object v0
+
+    const-string v1, "The provided context did not have an application context."
+
+    .line 8
+    invoke-static {v0, v1}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lf07;->a:Landroid/content/Context;
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1e
+
+    if-lt v1, v2, :cond_0
+
+    .line 9
+    invoke-static {p1}, Lc5;->r(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-object p1, p0, Lf07;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lf07;->c:Lcii;
+
+    iput-object p3, p0, Lf07;->d:Lfl;
+
+    .line 10
+    iget-object v1, p4, Le07;->b:Landroid/os/Looper;
+
+    iput-object v1, p0, Lf07;->f:Landroid/os/Looper;
+
+    .line 11
+    new-instance v1, Lem;
+
+    invoke-direct {v1, p2, p3, p1}, Lem;-><init>(Lcii;Lfl;Ljava/lang/String;)V
+
+    .line 12
+    iput-object v1, p0, Lf07;->e:Lem;
+
+    .line 13
+    new-instance p1, Lioi;
+
+    invoke-direct {p1, p0}, Lioi;-><init>(Lf07;)V
+
+    iput-object p1, p0, Lf07;->h:Lioi;
+
+    .line 14
+    invoke-static {v0}, Lk07;->e(Landroid/content/Context;)Lk07;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf07;->j:Lk07;
+
+    .line 15
+    iget-object p2, p1, Lk07;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 16
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p2
+
+    .line 17
+    iput p2, p0, Lf07;->g:I
+
+    .line 18
+    iget-object p2, p4, Le07;->a:Lgfj;
+
+    iput-object p2, p0, Lf07;->i:Lgfj;
+
+    .line 19
+    iget-object p1, p1, Lk07;->w0:Lz7a;
+
+    const/4 p2, 0x7
+
+    .line 20
+    invoke-virtual {p1, p2, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/List;
-    .locals 1
+.method public final a()Lwzi;
+    .locals 4
 
-    iget-object v0, p0, Lf07;->a:Lbwf;
+    new-instance v0, Lwzi;
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lwzi;-><init>(I)V
 
-    check-cast v0, Ljava/util/List;
+    sget-object v1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-    return-object v0
-.end method
+    iget-object v2, v0, Lwzi;->b:Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    check-cast v2, Lat;
 
-    instance-of v0, p1, Lf07;
+    if-nez v2, :cond_0
 
-    if-eqz v0, :cond_0
+    new-instance v2, Lat;
 
-    check-cast p1, Lf07;
+    const/4 v3, 0x0
 
-    iget-object v0, p1, Lf07;->b:Lqbg;
+    invoke-direct {v2, v3}, Lat;-><init>(I)V
 
-    iget-object v1, p0, Lf07;->b:Lqbg;
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p1, Lf07;->c:Lq93;
-
-    iget-object v1, p0, Lf07;->c:Lq93;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lf07;->a()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lf07;->a()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lf07;->d:Ljava/util/List;
-
-    iget-object v0, p0, Lf07;->d:Ljava/util/List;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    iput-object v2, v0, Lwzi;->b:Ljava/lang/Object;
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object v2, v0, Lwzi;->b:Ljava/lang/Object;
 
-    return p1
-.end method
+    check-cast v2, Lat;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {v2, v1}, Lat;->addAll(Ljava/util/Collection;)Z
 
-    iget-object v0, p0, Lf07;->b:Lqbg;
+    iget-object v1, p0, Lf07;->a:Landroid/content/Context;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lf07;->c:Lq93;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-virtual {p0}, Lf07;->a()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lf07;->d:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    invoke-virtual {p0}, Lf07;->a()Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/security/cert/Certificate;
-
-    instance-of v4, v3, Ljava/security/cert/X509Certificate;
-
-    if-eqz v4, :cond_0
-
-    check-cast v3, Ljava/security/cert/X509Certificate;
-
-    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/security/cert/Certificate;->getType()Ljava/lang/String;
-
-    move-result-object v3
-
-    :goto_1
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Handshake{tlsVersion="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lf07;->b:Lqbg;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, " cipherSuite="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lf07;->c:Lq93;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, " peerCertificates="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " localCertificates="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v3, p0, Lf07;->d:Ljava/util/List;
-
-    invoke-static {v3, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result v3
+    move-result-object v2
 
-    if-eqz v3, :cond_3
+    iput-object v2, v0, Lwzi;->d:Ljava/lang/Object;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, Ljava/security/cert/Certificate;
+    iput-object v1, v0, Lwzi;->c:Ljava/lang/Object;
 
-    instance-of v4, v3, Ljava/security/cert/X509Certificate;
+    return-object v0
+.end method
 
-    if-eqz v4, :cond_2
+.method public final b(ILqk7;)Ljpj;
+    .locals 11
 
-    check-cast v3, Ljava/security/cert/X509Certificate;
+    new-instance v0, Lydg;
 
-    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+    invoke-direct {v0}, Lydg;-><init>()V
 
-    move-result-object v3
+    iget-object v1, p0, Lf07;->i:Lgfj;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v2, p0, Lf07;->j:Lk07;
 
-    move-result-object v3
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v3, p2, Lqk7;->b:I
+
+    if-eqz v3, :cond_6
+
+    iget-object v4, p0, Lf07;->e:Lem;
+
+    invoke-virtual {v2}, Lk07;->a()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Ls2e;->D()Ls2e;
+
+    move-result-object v5
+
+    iget-object v5, v5, Ls2e;->b:Ljava/lang/Object;
+
+    check-cast v5, Lt2e;
+
+    const/4 v6, 0x1
+
+    if-eqz v5, :cond_3
+
+    iget-boolean v7, v5, Lt2e;->b:Z
+
+    if-eqz v7, :cond_2
+
+    iget-boolean v5, v5, Lt2e;->c:Z
+
+    iget-object v7, v2, Lk07;->t0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v7, v4}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lgoi;
+
+    if-eqz v7, :cond_1
+
+    iget-object v8, v7, Lgoi;->d:Lgl;
+
+    instance-of v9, v8, Lcom/google/android/gms/common/internal/a;
+
+    if-eqz v9, :cond_2
+
+    check-cast v8, Lcom/google/android/gms/common/internal/a;
+
+    iget-object v9, v8, Lcom/google/android/gms/common/internal/a;->E0:Lo9j;
+
+    if-eqz v9, :cond_1
+
+    invoke-virtual {v8}, Lcom/google/android/gms/common/internal/a;->c()Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    invoke-static {v7, v8, v3}, Ljh2;->b(Lgoi;Lcom/google/android/gms/common/internal/a;I)Lbw3;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_2
+
+    iget v8, v7, Lgoi;->n:I
+
+    add-int/2addr v8, v6
+
+    iput v8, v7, Lgoi;->n:I
+
+    iget-boolean v6, v5, Lbw3;->c:Z
+
+    goto :goto_1
+
+    :cond_1
+    move v6, v5
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 v3, 0x0
 
     goto :goto_3
 
-    :cond_2
-    invoke-virtual {v3}, Ljava/security/cert/Certificate;->getType()Ljava/lang/String;
+    :cond_3
+    :goto_1
+    new-instance v5, Ljh2;
 
-    move-result-object v3
+    const-wide/16 v7, 0x0
 
-    :goto_3
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v6, :cond_4
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v9
 
     goto :goto_2
 
-    :cond_3
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_4
+    move-wide v9, v7
 
-    const/16 v0, 0x7d
+    :goto_2
+    if-eqz v6, :cond_5
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-wide v7
 
-    move-result-object v0
+    :cond_5
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object v2, v5, Ljh2;->d:Ljava/lang/Object;
+
+    iput v3, v5, Ljh2;->a:I
+
+    iput-object v4, v5, Ljh2;->o:Ljava/lang/Object;
+
+    iput-wide v9, v5, Ljh2;->b:J
+
+    iput-wide v7, v5, Ljh2;->c:J
+
+    move-object v3, v5
+
+    :goto_3
+    if-eqz v3, :cond_6
+
+    iget-object v4, v0, Lydg;->a:Ljpj;
+
+    iget-object v5, v2, Lk07;->w0:Lz7a;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lbp0;
+
+    const/4 v7, 0x2
+
+    invoke-direct {v6, v5, v7}, Lbp0;-><init>(Landroid/os/Handler;I)V
+
+    invoke-virtual {v4, v6, v3}, Ljpj;->b(Ljava/util/concurrent/Executor;Lt1b;)Ljpj;
+
+    :cond_6
+    new-instance v3, Lcpi;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lcpi;-><init>(ILqk7;Lydg;Lgfj;)V
+
+    iget-object p1, v2, Lk07;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance p2, Lpoi;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result p1
+
+    invoke-direct {p2, v3, p1, p0}, Lpoi;-><init>(Ljpi;ILf07;)V
+
+    iget-object p1, v2, Lk07;->w0:Lz7a;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    iget-object p1, v0, Lydg;->a:Ljpj;
+
+    return-object p1
 .end method

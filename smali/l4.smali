@@ -2,15 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
+.method public abstract a(Lk4;)Z
+.end method
 
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract b(Lk4;)[Lkotlin/coroutines/Continuation;
 .end method

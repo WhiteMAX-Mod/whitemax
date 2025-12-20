@@ -1,142 +1,141 @@
-.class public final Lcwb;
-.super Ldtf;
+.class public final synthetic Lcwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lvx3;
 
 
 # instance fields
-.field public final synthetic X:Lgwb;
+.field public final synthetic a:I
 
-.field public final synthetic Y:D
+.field public final synthetic b:Llwb;
 
-.field public final synthetic Z:D
-
-.field public o:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lgwb;DDLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Llwb;ZI)V
     .locals 0
 
-    iput-object p1, p0, Lcwb;->X:Lgwb;
+    iput p3, p0, Lcwb;->a:I
 
-    iput-wide p2, p0, Lcwb;->Y:D
+    iput-object p1, p0, Lcwb;->b:Llwb;
 
-    iput-wide p4, p0, Lcwb;->Z:D
+    iput-boolean p2, p0, Lcwb;->c:Z
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    check-cast p1, Lf84;
+    iget v0, p0, Lcwb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    invoke-virtual {p0, p1, p2}, Lcwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lcwb;->b:Llwb;
 
-    check-cast p1, Lcwb;
+    iget-boolean v1, p0, Lcwb;->c:Z
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    invoke-virtual {v0, p1, v1}, Llwb;->u(Lorg/webrtc/PeerConnection;Z)V
 
-    invoke-virtual {p1, p2}, Lcwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Llwb;->l(Lorg/webrtc/PeerConnection;Z)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lcwb;->b:Llwb;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    iget-object v1, v0, Llwb;->R:Lorg/webrtc/MediaConstraints;
 
-    new-instance v0, Lcwb;
+    iget-boolean v2, p0, Lcwb;->c:Z
 
-    iget-wide v2, p0, Lcwb;->Y:D
+    if-eqz v2, :cond_0
 
-    iget-wide v4, p0, Lcwb;->Z:D
+    new-instance v1, Lorg/webrtc/MediaConstraints;
 
-    iget-object v1, p0, Lcwb;->X:Lgwb;
+    invoke-direct {v1}, Lorg/webrtc/MediaConstraints;-><init>()V
 
-    move-object v6, p2
+    iget-object v2, v1, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
 
-    invoke-direct/range {v0 .. v6}, Lcwb;-><init>(Lgwb;DDLkotlin/coroutines/Continuation;)V
+    iget-object v3, v0, Llwb;->R:Lorg/webrtc/MediaConstraints;
 
-    return-object v0
-.end method
+    iget-object v3, v3, Lorg/webrtc/MediaConstraints;->optional:Ljava/util/List;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    iget v0, p0, Lcwb;->o:I
+    iget-object v2, v1, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
 
-    const/4 v1, 0x1
+    iget-object v3, v0, Llwb;->R:Lorg/webrtc/MediaConstraints;
 
-    if-eqz v0, :cond_1
+    iget-object v3, v3, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
 
-    if-ne v0, v1, :cond_0
+    invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object v2, v1, Lorg/webrtc/MediaConstraints;->mandatory:Ljava/util/List;
+
+    new-instance v3, Lorg/webrtc/MediaConstraints$KeyValuePair;
+
+    const-string v4, "IceRestart"
+
+    const-string v5, "true"
+
+    invoke-direct {v3, v4, v5}, Lorg/webrtc/MediaConstraints$KeyValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object v2, v0, Llwb;->E:Lwk1;
+
+    iget-boolean v3, v2, Lwk1;->z:Z
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, v2, Lwk1;->y:Lpja;
+
+    sget-object v3, Lpja;->a:Lpja;
+
+    invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    new-instance p1, Lqja;
+
+    const-string v1, "emulated error"
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v3, v1, v2, v2}, Lqja;-><init>(Lpja;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, p1}, Llwb;->h(Lqja;)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    new-instance v2, Liwb;
 
-    iget-object p1, p0, Lcwb;->X:Lgwb;
+    const/4 v3, 0x0
 
-    iget-object p1, p1, Lgwb;->u0:Ljve;
+    invoke-direct {v2, v0, v3}, Liwb;-><init>(Llwb;I)V
 
-    new-instance v0, Ljava/lang/Double;
+    invoke-virtual {p1, v2, v1}, Lorg/webrtc/PeerConnection;->createOffer(Lorg/webrtc/SdpObserver;Lorg/webrtc/MediaConstraints;)V
 
-    iget-wide v2, p0, Lcwb;->Y:D
-
-    invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
-
-    new-instance v2, Ljava/lang/Double;
-
-    iget-wide v3, p0, Lcwb;->Z:D
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Double;-><init>(D)V
-
-    new-instance v3, Limb;
-
-    invoke-direct {v3, v0, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iput v1, p0, Lcwb;->o:I
-
-    invoke-virtual {p1, v3, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    return-void
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

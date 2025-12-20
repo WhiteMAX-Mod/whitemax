@@ -2,158 +2,174 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/Choreographer$FrameCallback;
+.implements Landroid/os/Handler$Callback;
+
+
+# static fields
+.field public static final o:Ldhh;
+
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public volatile a:J
+
+.field public final b:Landroid/os/Handler;
+
+.field public c:Landroid/view/Choreographer;
+
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 1
+
+    new-instance v0, Ldhh;
+
+    invoke-direct {v0}, Ldhh;-><init>()V
+
+    sput-object v0, Ldhh;->o:Ldhh;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-wide v0, p0, Ldhh;->a:J
 
-    iput-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:FrameReleaseChoreographer"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    sget-object v1, Lqah;->a:Ljava/lang/String;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1, v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v1, p0, Ldhh;->b:Landroid/os/Handler;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(F)V
-    .locals 1
+.method public final doFrame(J)V
+    .locals 2
 
-    iget-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
+    iput-wide p1, p0, Ldhh;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object p1, p0, Ldhh;->c:Landroid/view/Choreographer;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Landroid/view/View;
+    const-wide/16 v0, 0x1f4
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/view/Choreographer;->postFrameCallbackDelayed(Landroid/view/Choreographer$FrameCallback;J)V
 
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
     return-void
 .end method
 
-.method public final b()V
-    .locals 1
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 3
 
-    iget-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
+    iget p1, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-eq p1, v0, :cond_4
 
-    check-cast v0, Landroid/view/View;
+    const/4 v1, 0x2
 
-    if-eqz v0, :cond_0
+    if-eq p1, v1, :cond_2
 
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    if-eq p1, v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
+    const/4 p1, 0x0
 
-    :cond_0
-    return-void
-.end method
-
-.method public final c(J)V
-    .locals 1
-
-    iget-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    return p1
 
     :cond_0
-    return-void
-.end method
+    iget-object p1, p0, Ldhh;->c:Landroid/view/Choreographer;
 
-.method public final d(Lehh;)V
-    .locals 4
+    if-eqz p1, :cond_1
 
-    iget-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
+    iget v1, p0, Ldhh;->d:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    sub-int/2addr v1, v0
 
-    move-result-object v0
+    iput v1, p0, Ldhh;->d:I
 
-    check-cast v0, Landroid/view/View;
+    if-nez v1, :cond_1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-    if-eqz p1, :cond_0
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    iput-wide v1, p0, Ldhh;->a:J
 
-    move-result-object v1
+    :cond_1
+    return v0
 
-    new-instance v2, Lkh;
+    :cond_2
+    iget-object p1, p0, Ldhh;->c:Landroid/view/Choreographer;
 
-    const/4 v3, 0x5
+    if-eqz p1, :cond_3
 
-    invoke-direct {v2, p1, v3, v0}, Lkh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget v1, p0, Ldhh;->d:I
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    add-int/2addr v1, v0
 
-    return-void
+    iput v1, p0, Ldhh;->d:I
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    if-ne v1, v0, :cond_3
+
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :try_start_0
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Ldhh;->c:Landroid/view/Choreographer;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    goto :goto_0
 
-    :cond_1
-    return-void
-.end method
+    :catch_0
+    move-exception p1
 
-.method public final e(F)V
-    .locals 1
+    const-string v1, "VideoFrameReleaseHelper"
 
-    iget-object v0, p0, Ldhh;->a:Ljava/lang/ref/WeakReference;
+    const-string v2, "Vsync sampling disabled due to platform error"
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-static {v1, v2, p1}, Lnfi;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
-    return-void
+    :goto_0
+    return v0
 .end method

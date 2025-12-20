@@ -1,221 +1,299 @@
 .class public final Lfk2;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;ZZZ)V
     .locals 0
 
-    iput-object p2, p0, Lfk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lfk2;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lfk2;->b:J
+
+    iput-object p4, p0, Lfk2;->c:Ljava/lang/CharSequence;
+
+    iput-object p5, p0, Lfk2;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lfk2;->e:Ljava/lang/String;
+
+    iput-boolean p7, p0, Lfk2;->f:Z
+
+    iput-boolean p8, p0, Lfk2;->g:Z
+
+    iput-boolean p9, p0, Lfk2;->h:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lfk2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lfk2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lfk2;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iget-object v1, p0, Lfk2;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lfk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lfk2;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lfk2;->b:J
+
+    iget-wide v5, p1, Lfk2;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lfk2;->c:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lfk2;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lfk2;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lfk2;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lfk2;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Lfk2;->e:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lfk2;->f:Z
+
+    iget-boolean v3, p1, Lfk2;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lfk2;->g:Z
+
+    iget-boolean v3, p1, Lfk2;->g:Z
+
+    if-eq v1, v3, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-boolean v1, p0, Lfk2;->h:Z
+
+    iget-boolean p1, p1, Lfk2;->h:Z
+
+    if-eq v1, p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 4
 
-    new-instance v0, Lfk2;
+    iget-object v0, p0, Lfk2;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lfk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lfk2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
-
-    iput-object p1, v0, Lfk2;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfk2;->o:Ljava/lang/Object;
-
-    check-cast p1, Lu05;
-
-    instance-of v0, p1, Lt05;
-
-    iget-object v1, p0, Lfk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
-
-    check-cast p1, Lt05;
-
-    iget-object v0, p1, Lt05;->a:Landroid/net/Uri;
-
-    iget-object p1, p1, Lt05;->b:Lo05;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    packed-switch v2, :pswitch_data_0
-
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lap7;->a:Ljava/lang/String;
-
-    const-string p1, "*/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, p1}, Lap7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_1
-    sget-object v0, Lo05;->o:Lo05;
-
-    if-ne p1, v0, :cond_0
-
-    sget p1, Lm3d;->media_share_dialog_download_gif_success:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lm3d;->media_share_dialog_download_photo_success:I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     :goto_0
-    sget v0, Lyud;->A:I
+    const/16 v1, 0x1f
 
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
+    mul-int/2addr v0, v1
 
-    goto :goto_1
+    iget-wide v2, p0, Lfk2;->b:J
 
-    :pswitch_2
-    if-eqz v0, :cond_2
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
 
-    sget-object p1, Lap7;->a:Ljava/lang/String;
+    move-result v0
 
-    const-string p1, "image/*"
+    iget-object v2, p0, Lfk2;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {v2, v0, v1}, Lzy4;->g(Ljava/lang/CharSequence;II)I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-static {v2, v0, p1}, Lap7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+    iget-object v2, p0, Lfk2;->d:Ljava/lang/String;
 
-    goto :goto_1
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
 
-    :pswitch_3
-    sget p1, Lm3d;->media_share_dialog_download_video_success:I
+    move-result v0
 
-    sget v0, Lyud;->o:I
+    iget-object v2, p0, Lfk2;->e:Ljava/lang/String;
 
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
 
-    goto :goto_1
+    move-result v0
 
-    :pswitch_4
-    if-eqz v0, :cond_2
+    iget-boolean v2, p0, Lfk2;->f:Z
 
-    sget-object p1, Lap7;->a:Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
 
-    const-string p1, "video/*"
+    move-result v0
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-boolean v2, p0, Lfk2;->g:Z
 
-    move-result-object v2
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
 
-    invoke-static {v2, v0, p1}, Lap7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+    move-result v0
 
-    goto :goto_1
+    iget-boolean v1, p0, Lfk2;->h:Z
 
-    :cond_1
-    instance-of v0, p1, Ls05;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    if-eqz v0, :cond_4
+    move-result v1
 
-    check-cast p1, Ls05;
+    add-int/2addr v1, v0
 
-    iget p1, p1, Ls05;->a:I
+    return v1
+.end method
 
-    sget v0, Lyud;->J:I
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sget-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->I0:[Lyy7;
+    const-string v0, "ChatItemModel(avatarUrl="
 
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
+    const-string v1, ", avatarSourceId="
 
-    const/4 p1, 0x1
+    iget-wide v2, p0, Lfk2;->b:J
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+    iget-object v4, p0, Lfk2;->a:Ljava/lang/String;
 
-    :cond_2
-    :goto_1
-    iget-object p1, v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Lts4;
+    invoke-static {v0, v2, v3, v4, v1}, Lq3g;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_3
+    move-result-object v0
 
-    invoke-virtual {p1}, Lts4;->a()V
+    const-string v1, ", avatarAbbreviation="
 
-    :cond_3
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget-object v1, p0, Lfk2;->c:Ljava/lang/CharSequence;
 
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v1, ", chatName="
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lfk2;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfk2;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isLoading="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lfk2;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPrivate="
+
+    const-string v2, ", hasEditLinkPermission="
+
+    iget-boolean v3, p0, Lfk2;->g:Z
+
+    iget-boolean v4, p0, Lfk2;->h:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lqi3;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

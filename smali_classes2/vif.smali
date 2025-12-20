@@ -3,183 +3,92 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldi4;
+.implements Lm4e;
 
 
-# static fields
-.field public static final a:Lvif;
-
-.field public static final b:Lwif;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lvif;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lvif;->a:Lvif;
-
-    sget-object v0, Lwif;->b:Lwif;
-
-    sput-object v0, Lvif;->b:Lwif;
-
-    return-void
-.end method
+# instance fields
+.field public a:Lzk1;
 
 
 # virtual methods
-.method public final a()Lki4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lvif;->b:Lwif;
+    if-ne p0, p1, :cond_0
 
-    return-object v0
-.end method
+    const/4 p1, 0x1
 
-.method public final b(Ljava/lang/String;Lgi4;Landroid/os/Bundle;)Lni4;
-    .locals 12
-
-    sget-object v0, Lvif;->b:Lwif;
-
-    iget-object v0, v0, Lki4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return p1
 
     :cond_0
-    const-string v0, "set_id"
+    if-eqz p1, :cond_2
 
-    invoke-static {v0, p3}, Ll8j;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    const-class v0, Lvif;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-wide/16 v0, -0x1
+    check-cast p1, Lvif;
 
-    :goto_0
-    sget-object v2, Lwif;->b:Lwif;
+    iget-object v0, p0, Lvif;->a:Lzk1;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Lvif;->a:Lzk1;
 
-    sget-object v2, Lwif;->c:Lgi4;
+    invoke-virtual {v0, p1}, Lzk1;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p2, v2}, Lgi4;->equals(Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lxre;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lxre;-><init>(I)V
-
-    :goto_1
-    move-object v10, v0
-
-    goto :goto_2
+    return p1
 
     :cond_2
-    sget-object v2, Lwif;->d:Lgi4;
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p2, v2}, Lgi4;->equals(Ljava/lang/Object;)Z
+    return p1
+.end method
 
-    move-result v2
+.method public final hashCode()I
+    .locals 1
 
-    if-eqz v2, :cond_3
+    iget-object v0, p0, Lvif;->a:Lzk1;
 
-    new-instance v0, Lxre;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    const/4 v1, 0x5
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lxre;-><init>(I)V
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    goto :goto_1
+    move-result v0
 
-    :cond_3
-    sget-object v2, Lwif;->e:Lgi4;
+    return v0
+.end method
 
-    invoke-virtual {p2, v2}, Lgi4;->equals(Ljava/lang/Object;)Z
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result v2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_4
+    const-string v1, "SpeakerChangedNotification{speaker="
 
-    new-instance v0, Lxre;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x6
+    iget-object v1, p0, Lvif;->a:Lzk1;
 
-    invoke-direct {v0, v1}, Lxre;-><init>(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const/16 v1, 0x7d
 
-    :cond_4
-    sget-object v2, Lwif;->f:Lgi4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v2}, Lgi4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_5
-
-    new-instance v2, Lw91;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v0, v1, v3}, Lw91;-><init>(JI)V
-
-    move-object v10, v2
-
-    :goto_2
-    new-instance v4, Lni4;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x10
-
-    const/4 v8, 0x1
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    move-object v7, p3
-
-    invoke-direct/range {v4 .. v11}, Lni4;-><init>(Ljava/lang/String;Lgi4;Landroid/os/Bundle;ILli4;Lmi4;I)V
-
-    return-object v4
-
-    :cond_5
-    move-object v6, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v6}, Laz1;->h(Ljava/lang/String;Lgi4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

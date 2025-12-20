@@ -1,97 +1,80 @@
-.class public final Ll34;
+.class public final synthetic Ll34;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp34;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Ls5g;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ln34;
+
+.field public final synthetic c:Lgy3;
 
 
 # direct methods
-.method public constructor <init>(Ls5g;)V
+.method public synthetic constructor <init>(Ln34;Lgy3;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ll34;->a:I
 
-    iput-object p1, p0, Ll34;->a:Ls5g;
+    iput-object p1, p0, Ll34;->b:Ln34;
+
+    iput-object p2, p0, Ll34;->c:Lgy3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget p1, p0, Ll34;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p1, p0, Ll34;->b:Ln34;
 
-    :cond_0
-    instance-of v1, p1, Ll34;
+    iget-object p1, p1, Ln34;->d:Loq6;
 
-    const/4 v2, 0x0
+    new-instance v0, Lgu9;
 
-    if-nez v1, :cond_1
+    iget-object v1, p0, Ll34;->c:Lgy3;
 
-    return v2
+    iget-wide v2, v1, Lgy3;->j:J
 
-    :cond_1
-    check-cast p1, Ll34;
+    invoke-direct {v0, v2, v3, v1}, Lgu9;-><init>(JLc10;)V
 
-    iget-object v1, p0, Ll34;->a:Ls5g;
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p1, Ll34;->a:Ls5g;
+    return-void
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    iget-object p1, p0, Ll34;->b:Ln34;
 
-    move-result p1
+    iget-object p1, p1, Ln34;->d:Loq6;
 
-    if-nez p1, :cond_2
+    new-instance v0, Lfu9;
 
-    return v2
+    iget-object v1, p0, Ll34;->c:Lgy3;
 
-    :cond_2
-    return v0
-.end method
+    iget-wide v2, v1, Lgy3;->j:J
 
-.method public final hashCode()I
-    .locals 1
+    invoke-direct {v0, v2, v3, v1}, Lfu9;-><init>(JLc10;)V
 
-    iget-object v0, p0, Ll34;->a:Ls5g;
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v0
+    nop
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Gallery(toolbarTitle="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ll34;->a:Ls5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

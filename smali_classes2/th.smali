@@ -1,25 +1,21 @@
 .class public final Lth;
-.super Ljava/lang/Object;
+.super Luh;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lv17;
+.field public static final a:Lth;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lv17;
+    new-instance v0, Lth;
 
-    const/16 v1, 0xd
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lv17;-><init>(IB)V
-
-    sput-object v0, Lth;->a:Lv17;
+    sput-object v0, Lth;->a:Lth;
 
     return-void
 .end method

@@ -1,75 +1,72 @@
 .class public final Lz3b;
-.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:La4b;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public synthetic constructor <init>(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+    .locals 0
+
+    iput p4, p0, Lz3b;->a:I
+
+    iput-object p1, p0, Lz3b;->b:La4b;
+
+    iput-object p2, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lz3b;->d:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lz3b;->a:I
 
-    const/4 v0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    iget-object v0, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    iget-object v1, p0, Lz3b;->d:Ljava/lang/Runnable;
 
-    :goto_0
-    if-nez v0, :cond_1
+    iget-object v2, p0, Lz3b;->b:La4b;
 
-    const/4 p1, 0x0
+    invoke-static {v2, v0, v1}, La4b;->e(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    return p1
+    return-void
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
+    :pswitch_0
+    iget-object v0, p0, Lz3b;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lz3b;->d:Ljava/lang/Runnable;
 
-    move-result p1
+    iget-object v2, p0, Lz3b;->b:La4b;
 
-    return p1
-.end method
+    invoke-static {v2, v0, v1}, La4b;->e(La4b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
+    return-void
 
-    check-cast p1, Ljava/lang/Runnable;
+    nop
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

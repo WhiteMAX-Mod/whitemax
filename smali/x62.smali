@@ -1,80 +1,64 @@
 .class public final Lx62;
-.super Lnof;
+.super Ljo3;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
+
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public t0:J
+.field private volatile synthetic _resumed$volatile:I
 
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 6
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    check-cast p1, Lx62;
+    const-class v0, Lx62;
 
-    const/4 v0, 0x4
+    const-string v1, "_resumed$volatile"
 
-    invoke-virtual {p0, v0}, Loy;->j(I)Z
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Loy;->j(I)Z
+    sput-object v0, Lx62;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    move-result v2
+    return-void
+.end method
 
-    if-eq v1, v2, :cond_0
+.method public constructor <init>(Lp62;Ljava/lang/Throwable;Z)V
+    .locals 2
 
-    invoke-virtual {p0, v0}, Loy;->j(I)Z
+    if-nez p2, :cond_0
 
-    move-result p1
+    new-instance p2, Ljava/util/concurrent/CancellationException;
 
-    if-eqz p1, :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v1, "Continuation "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " was cancelled normally"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     :cond_0
-    iget-wide v0, p0, Loh4;->X:J
-
-    iget-wide v2, p1, Loh4;->X:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_1
-
-    iget-wide v0, p0, Lx62;->t0:J
-
-    iget-wide v4, p1, Lx62;->t0:J
-
-    sub-long/2addr v0, v4
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_1
+    invoke-direct {p0, p2, p3}, Ljo3;-><init>(Ljava/lang/Throwable;Z)V
 
     const/4 p1, 0x0
 
-    return p1
+    iput p1, p0, Lx62;->_resumed$volatile:I
 
-    :cond_1
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, -0x1
-
-    return p1
+    return-void
 .end method

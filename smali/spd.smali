@@ -1,217 +1,275 @@
 .class public final Lspd;
-.super Latc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Lbhg;
+
+.field public final b:Lghg;
+
+.field public final c:Lrpd;
+
+.field public final d:Lrpd;
+
+.field public final e:Lfhg;
+
+.field public final f:Z
+
+
+# direct methods
+.method public constructor <init>(Lbhg;Lbhg;Lrpd;Lrpd;Lfhg;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lspd;->a:Lbhg;
+
+    iput-object p2, p0, Lspd;->b:Lghg;
+
+    iput-object p3, p0, Lspd;->c:Lrpd;
+
+    iput-object p4, p0, Lspd;->d:Lrpd;
+
+    iput-object p5, p0, Lspd;->e:Lfhg;
+
+    iput-boolean p6, p0, Lspd;->f:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lysc;Lbtc;Lbj;)V
-    .locals 4
-
-    iget-object p1, p1, Lysc;->Q0:Lrr3;
-
-    invoke-virtual {p2}, Lbtc;->k()[B
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 p3, 0xa
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    iget v0, p0, Lspd;->a:I
-
-    iget-object v1, p1, Lrr3;->e:Lz6f;
-
-    iget-object v1, v1, Lsr3;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Lov5;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v3}, Lov5;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-le v0, v1, :cond_0
-
-    iget-object p1, p1, Lrr3;->d:Lov3;
-
-    const-string p2, "invalid connection ID sequence number"
-
-    invoke-virtual {p1, p3, p2}, Lov3;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lspd;->a:I
-
-    iget-object v1, p1, Lrr3;->e:Lz6f;
-
-    iget-object v1, v1, Lsr3;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lor3;
-
-    iget-object v1, v1, Lor3;->b:[B
-
-    invoke-static {v1, p2}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    iget-object p1, p1, Lrr3;->d:Lov3;
-
-    const-string p2, "cannot retire current connection ID"
-
-    invoke-virtual {p1, p3, p2}, Lov3;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    iget-object p2, p1, Lrr3;->e:Lz6f;
-
-    invoke-virtual {p2, v0}, Lsr3;->c(I)[B
-
-    move-result-object p2
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p1, Lrr3;->b:Lwha;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p2, p1, Lrr3;->e:Lz6f;
-
-    invoke-virtual {p2}, Lsr3;->b()Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    iget p3, p1, Lrr3;->i:I
-
-    if-ge p2, p3, :cond_2
-
-    invoke-virtual {p1}, Lrr3;->a()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final c()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget v0, p0, Lspd;->a:I
+    if-ne p0, p1, :cond_0
 
-    int-to-long v0, v0
+    goto :goto_1
 
-    invoke-static {v0, v1}, Lepi;->a(J)I
+    :cond_0
+    instance-of v0, p1, Lspd;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lspd;
+
+    iget-object v0, p0, Lspd;->a:Lbhg;
+
+    iget-object v1, p1, Lspd;->a:Lbhg;
+
+    invoke-virtual {v0, v1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    add-int/lit8 v0, v0, 0x1
+    if-nez v0, :cond_2
 
-    return v0
-.end method
+    goto :goto_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    :cond_2
+    iget-object v0, p0, Lspd;->b:Lghg;
 
-    instance-of v0, p1, Lspd;
+    iget-object v1, p1, Lspd;->b:Lghg;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p1, Lspd;
+    move-result v0
 
-    iget p1, p1, Lspd;->a:I
+    if-nez v0, :cond_3
 
-    iget v0, p0, Lspd;->a:I
+    goto :goto_0
 
-    if-ne p1, v0, :cond_0
+    :cond_3
+    iget-object v0, p0, Lspd;->c:Lrpd;
 
-    const/4 p1, 0x1
+    iget-object v1, p1, Lspd;->c:Lrpd;
 
-    return p1
+    invoke-virtual {v0, v1}, Lrpd;->equals(Ljava/lang/Object;)Z
 
-    :cond_0
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lspd;->d:Lrpd;
+
+    iget-object v1, p1, Lspd;->d:Lrpd;
+
+    invoke-virtual {v0, v1}, Lrpd;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lspd;->e:Lfhg;
+
+    iget-object v1, p1, Lspd;->e:Lfhg;
+
+    invoke-virtual {v0, v1}, Lfhg;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Lspd;->f:Z
+
+    iget-boolean p1, p1, Lspd;->f:Z
+
+    if-eq v0, p1, :cond_7
+
+    :goto_0
     const/4 p1, 0x0
 
     return p1
-.end method
 
-.method public final g(Ljava/nio/ByteBuffer;)V
-    .locals 1
+    :cond_7
+    :goto_1
+    const/4 p1, 0x1
 
-    const/16 v0, 0x19
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget v0, p0, Lspd;->a:I
-
-    invoke-static {v0, p1}, Lepi;->b(ILjava/nio/ByteBuffer;)I
-
-    return-void
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Lspd;->a:I
+    iget-object v0, p0, Lspd;->a:Lbhg;
+
+    iget v0, v0, Lbhg;->c:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lspd;->b:Lghg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lspd;->c:Lrpd;
+
+    invoke-virtual {v1}, Lrpd;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lspd;->d:Lrpd;
+
+    invoke-virtual {v0}, Lrpd;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lspd;->e:Lfhg;
+
+    invoke-virtual {v1}, Lfhg;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lspd;->f:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lspd;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RetireConnectionIdFrame["
+    const-string v1, "ExitWithRecordState(title="
 
-    const-string v2, "]"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lspd;->a:Lbhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lspd;->b:Lghg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negativeButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lspd;->c:Lrpd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", positiveButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lspd;->d:Lrpd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordTitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lspd;->e:Lfhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canRemove="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lspd;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

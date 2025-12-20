@@ -1,48 +1,19 @@
 .class public final Lbkc;
-.super Lq44;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lckc;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic a:Lu5;
 
 
 # direct methods
-.method public constructor <init>(Lckc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lu5;)V
     .locals 0
 
-    iput-object p1, p0, Lbkc;->X:Lckc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbkc;->a:Lu5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lbkc;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lbkc;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lbkc;->o:I
-
-    iget-object p1, p0, Lbkc;->X:Lckc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lckc;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

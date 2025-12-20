@@ -1,96 +1,53 @@
-.class public final synthetic Lzq9;
+.class public final Lzq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
+
+# static fields
+.field public static final synthetic b:[Lp38;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/CharSequence;
-
-.field public final synthetic Y:Z
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgr9;
-
-.field public final synthetic c:Lpb2;
-
-.field public final synthetic d:Leh9;
-
-.field public final synthetic o:I
+.field public final a:Lg35;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgr9;Lpb2;Leh9;ILjava/lang/CharSequence;ZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p7, p0, Lzq9;->a:I
+    new-instance v0, Lgxc;
 
-    iput-object p1, p0, Lzq9;->b:Lgr9;
+    const-class v1, Lzq9;
 
-    iput-object p2, p0, Lzq9;->c:Lpb2;
+    const-string v2, "prefs"
 
-    iput-object p3, p0, Lzq9;->d:Leh9;
+    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
 
-    iput p4, p0, Lzq9;->o:I
+    const/4 v4, 0x0
 
-    iput-object p5, p0, Lzq9;->X:Ljava/lang/CharSequence;
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    iput-boolean p6, p0, Lzq9;->Y:Z
+    sget-object v1, Lfsd;->a:Lgsd;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lp38;
+
+    aput-object v0, v1, v4
+
+    sput-object v1, Lzq9;->b:[Lp38;
 
     return-void
 .end method
 
+.method public constructor <init>(Lg35;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lzq9;->a:I
+    iput-object p1, p0, Lzq9;->a:Lg35;
 
-    iget-object v5, p0, Lzq9;->X:Ljava/lang/CharSequence;
-
-    iget-boolean v6, p0, Lzq9;->Y:Z
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v1, p0, Lzq9;->b:Lgr9;
-
-    iget-object v2, p0, Lzq9;->c:Lpb2;
-
-    iget-object v3, p0, Lzq9;->d:Leh9;
-
-    iget v4, p0, Lzq9;->o:I
-
-    invoke-virtual/range {v1 .. v6}, Lgr9;->b(Lpb2;Leh9;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v1, p0, Lzq9;->b:Lgr9;
-
-    iget-object v2, p0, Lzq9;->c:Lpb2;
-
-    iget-object v3, p0, Lzq9;->d:Leh9;
-
-    iget v4, p0, Lzq9;->o:I
-
-    invoke-virtual/range {v1 .. v6}, Lgr9;->b(Lpb2;Leh9;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

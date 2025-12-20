@@ -1,5 +1,5 @@
 .class public final Landroidx/lifecycle/SavedStateHandlesVM;
-.super Lyfh;
+.super Lssh;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/lifecycle/SavedStateHandlesVM;",
-        "Lyfh;",
+        "Lssh;",
         "<init>",
         "()V",
         "lifecycle-viewmodel-savedstate_release"
@@ -33,7 +33,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lyfh;-><init>()V
+    invoke-direct {p0}, Lssh;-><init>()V
 
     new-instance v0, Ljava/util/LinkedHashMap;
 

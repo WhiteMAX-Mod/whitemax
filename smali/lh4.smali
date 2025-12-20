@@ -1,47 +1,56 @@
-.class public interface abstract Llh4;
+.class public final synthetic Llh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsh4;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lsh4;I)V
+    .locals 0
+
+    iput p2, p0, Llh4;->a:I
+
+    iput-object p1, p0, Llh4;->b:Lsh4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract A()S
-.end method
+.method public final run()V
+    .locals 2
 
-.method public abstract B()F
-.end method
+    iget v0, p0, Llh4;->a:I
 
-.method public abstract C()D
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract b()Z
-.end method
+    iget-object v0, p0, Llh4;->b:Lsh4;
 
-.method public abstract c()C
-.end method
+    const/4 v1, 0x0
 
-.method public abstract d(Lzy7;)Ljava/lang/Object;
-.end method
+    invoke-virtual {v0, v1}, Lsh4;->y(Z)V
 
-.method public abstract k()I
-.end method
+    return-void
 
-.method public abstract o(Lree;)Llh4;
-.end method
+    :pswitch_0
+    iget-object v0, p0, Llh4;->b:Lsh4;
 
-.method public abstract q()Ljava/lang/String;
-.end method
+    invoke-virtual {v0}, Lsh4;->A()V
 
-.method public abstract r(Lree;)Lyl3;
-.end method
+    return-void
 
-.method public abstract s(Lree;)I
-.end method
-
-.method public abstract t()J
-.end method
-
-.method public abstract v()Z
-.end method
-
-.method public abstract z()B
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

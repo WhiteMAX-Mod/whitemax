@@ -1,129 +1,29 @@
-.class public final Lpra;
-.super Lwl0;
+.class public abstract Lpra;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Object;
+# direct methods
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
+    .locals 0
 
-.field public Y:Z
-
-
-# virtual methods
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lwl0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p0, Lwl0;->o:I
-
-    iget-object v1, p0, Lwl0;->a:Lvta;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    :try_start_0
-    iget-boolean v0, p0, Lpra;->Y:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lpra;->X:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iput-object p1, p0, Lpra;->X:Ljava/lang/Object;
-
-    if-eqz v0, :cond_3
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lpra;->Y:Z
-
-    iput-object p1, p0, Lpra;->X:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :goto_1
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lwl0;->b:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lwl0;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method
 
-.method public final poll()Ljava/lang/Object;
-    .locals 2
+.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
+    .locals 0
 
-    :goto_0
-    iget-object v0, p0, Lwl0;->c:Losc;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    invoke-interface {v0}, Lo1f;->poll()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
+    .locals 0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
 
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    iget-boolean v1, p0, Lpra;->Y:Z
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lpra;->Y:Z
-
-    iput-object v0, p0, Lpra;->X:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_1
-    iget-object v1, p0, Lpra;->X:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iput-object v0, p0, Lpra;->X:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    iput-object v0, p0, Lpra;->X:Ljava/lang/Object;
-
-    goto :goto_0
+    return-void
 .end method

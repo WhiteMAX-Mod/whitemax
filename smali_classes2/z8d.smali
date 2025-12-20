@@ -1,41 +1,28 @@
-.class public final Lz8d;
-.super Landroid/view/ViewOutlineProvider;
-.source "SourceFile"
+.class public abstract Lz8d;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 6
+# static fields
+.field public static oneme_stickers_sticker_first_frame:I = 0x7f0a089f
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+.field public static oneme_stickers_sticker_lottie:I = 0x7f0a08a0
 
-    move-result v3
+.field public static oneme_stickers_sticker_set_header_button:I = 0x7f0a08a1
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+.field public static oneme_stickers_sticker_set_header_subtitle:I = 0x7f0a08a2
 
-    move-result v4
+.field public static oneme_stickers_sticker_set_header_title:I = 0x7f0a08a3
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+.field public static oneme_stickers_sticker_set_list:I = 0x7f0a08a4
 
-    move-result v0
+.field public static oneme_stickers_sticker_webm:I = 0x7f0a08a5
 
-    int-to-float v0, v0
+.field public static oneme_stickers_view_type_sticker:I = 0x7f0a08a6
 
-    const/high16 v1, 0x40000000    # 2.0f
+.field public static oneme_stickers_view_type_sticker_lottie:I = 0x7f0a08a7
 
-    div-float v5, v0, v1
+.field public static oneme_stickers_view_type_sticker_webm:I = 0x7f0a08a8
 
-    const/4 v1, 0x0
+.field public static oneme_stickers_view_type_stickers_set:I = 0x7f0a08a9
 
-    const/4 v2, 0x0
-
-    move-object v0, p2
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
-
-    return-void
-.end method
+.field public static oneme_stickers_view_type_stickers_set_showcase:I = 0x7f0a08aa

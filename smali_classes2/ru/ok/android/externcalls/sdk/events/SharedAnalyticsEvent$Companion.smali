@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ltk4;)V
+.method public synthetic constructor <init>(Lro4;)V
     .locals 0
 
     .line 1
@@ -71,7 +71,7 @@
 
     check-cast p1, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;
 
-    invoke-direct {v0, p1, v1}, Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent;-><init>(Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;Ltk4;)V
+    invoke-direct {v0, p1, v1}, Lru/ok/android/externcalls/sdk/events/SharedAnalyticsEvent;-><init>(Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;Lro4;)V
 
     return-object v0
 

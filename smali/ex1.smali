@@ -1,242 +1,150 @@
 .class public final Lex1;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lru/ok/android/externcalls/sdk/audio/Logger;
 
 
-# instance fields
-.field public final synthetic X:Ljava/lang/String;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lex1;->X:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 1
+    invoke-static {p1, p2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    check-cast p1, Lf84;
+    .line 2
+    invoke-static {p1, p2, p3}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lex1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lex1;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lex1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 7
 
-    new-instance p1, Lex1;
+    .line 1
+    sget-object v0, Lm4j;->a:Lvcb;
 
-    iget-object v0, p0, Lex1;->X:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lex1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .line 2
+    sget-object v1, Lxk8;->Y:Lxk8;
 
-    return-object p1
-.end method
+    const/4 v5, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const/16 v6, 0x8
 
-    iget v0, p0, Lex1;->o:I
+    const/4 v4, 0x0
 
-    const/4 v1, 0x1
+    move-object v2, p1
 
-    const-string v2, "CallsNotification"
+    move-object v3, p2
 
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_3
+    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 3
+    invoke-static {p1, p2, p3}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p1
+    return-void
+.end method
 
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+.method public final i(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    :try_start_1
-    const-string p1, "handle loading notification image"
+    const/4 v0, 0x0
 
-    invoke-static {v2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .line 1
+    invoke-static {p1, p2, v0}, Lm4j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    iget-object p1, p0, Lex1;->X:Ljava/lang/String;
+    return-void
+.end method
 
-    if-eqz p1, :cond_4
+.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    :try_start_2
-    invoke-static {p1}, Lvmf;->F(Ljava/lang/CharSequence;)Z
+    const/4 p3, 0x0
 
-    move-result v0
+    .line 2
+    invoke-static {p1, p2, p3}, Lm4j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    if-eqz v0, :cond_2
+    return-void
+.end method
 
-    goto :goto_0
+.method public final v(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    :cond_2
-    const-string v0, "start loading call push avatar"
+    .line 1
+    invoke-static {p1, p2}, Lm4j;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
 
-    new-instance v0, Ldx1;
+.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 7
 
-    invoke-direct {v0, p1, v3}, Ldx1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .line 2
+    sget-object v0, Lm4j;->a:Lvcb;
 
-    iput v1, p0, Lex1;->o:I
+    if-eqz v0, :cond_0
 
-    const-wide/16 v4, 0x1f4
+    sget-object v1, Lxk8;->c:Lxk8;
 
-    invoke-static {v4, v5, v0, p0}, Lyei;->g(JLsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object p1
-    :try_end_2
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    const/16 v6, 0x8
 
-    sget-object v0, Lg84;->a:Lg84;
+    move-object v2, p1
 
-    if-ne p1, v0, :cond_3
+    move-object v3, p2
 
-    return-object v0
+    move-object v5, p3
 
-    :cond_3
-    return-object p1
+    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
-    :cond_4
-    :goto_0
-    :try_start_3
-    const-string p1, "avatar for call push is empty"
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {v2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+.method public final w(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    return-object v3
+    .line 1
+    invoke-static {p1, p2}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_1
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 2
+    invoke-static {p1, p2, p3}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v4, "Failed to load call notification avatar due to: "
+    return-void
+.end method
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 3
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v0
+    invoke-static {p1, p2}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v3
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to InterruptedException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :goto_3
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to CancellationException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
+    return-void
 .end method

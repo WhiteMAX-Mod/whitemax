@@ -1,154 +1,95 @@
-.class public final Lcu6;
+.class public final synthetic Lcu6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewStub$OnInflateListener;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lmc0;
+.field public final synthetic a:Ldu6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lmc0;)V
+.method public synthetic constructor <init>(Ldu6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcu6;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lcu6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcu6;->c:Lmc0;
+    iput-object p1, p0, Lcu6;->a:Ldu6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    sget p1, Lugb;->b:I
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return v0
+    move-result-object v6
+
+    sget p1, Lugb;->a:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    move-object v1, p1
+
+    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
+
+    iget-object p1, p0, Lcu6;->a:Ldu6;
+
+    iput-object v1, p1, Ldu6;->F0:Lone/me/sdk/gallery/view/NumericCheckButton;
+
+    iget-object p1, p1, Lwrd;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const/16 p2, 0xa
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, p1
+
+    invoke-static {p2}, Ln7j;->c(F)I
+
+    move-result v2
+
+    if-nez v6, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lcu6;
+    new-instance v0, Lxp3;
 
-    const/4 v2, 0x0
+    const/4 v7, 0x1
 
-    if-nez v1, :cond_1
+    move v3, v2
 
-    return v2
+    move v4, v2
 
-    :cond_1
-    check-cast p1, Lcu6;
+    move v5, v2
 
-    iget-object v1, p0, Lcu6;->a:Ljava/lang/String;
+    invoke-direct/range {v0 .. v7}, Lxp3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
 
-    iget-object v3, p1, Lcu6;->a:Ljava/lang/String;
+    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lcu6;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lcu6;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lcu6;->c:Lmc0;
-
-    iget-object p1, p1, Lcu6;->c:Lmc0;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lcu6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lcu6;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcu6;->c:Lmc0;
-
-    invoke-virtual {v1}, Lmc0;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", avatarUrl="
-
-    const-string v1, ", abbreviationModel="
-
-    const-string v2, "WebAppContactData(displayName="
-
-    iget-object v3, p0, Lcu6;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lcu6;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcu6;->c:Lmc0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

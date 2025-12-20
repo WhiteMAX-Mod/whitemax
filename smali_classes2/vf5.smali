@@ -3,139 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lck9;
 
 
 # instance fields
-.field public final synthetic a:Lwf5;
+.field public final a:[Landroid/graphics/Bitmap;
 
-.field public final synthetic b:I
+.field public final b:Lhq0;
 
-.field public final synthetic c:I
+.field public final c:Lmp8;
 
 
 # direct methods
-.method public constructor <init>(Lwf5;II)V
-    .locals 0
+.method public constructor <init>(Liz4;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvf5;->a:Lwf5;
+    const/16 v0, 0x19
 
-    iput p2, p0, Lvf5;->b:I
+    new-array v1, v0, [Landroid/graphics/Bitmap;
 
-    iput p3, p0, Lvf5;->c:I
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    const/4 v3, 0x0
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, p0, Lvf5;->a:[Landroid/graphics/Bitmap;
+
+    new-instance v1, Lhq0;
+
+    sget-object v2, Luf5;->$EnumSwitchMapping$0:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, v2, p1
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-ne p1, v0, :cond_1
+
+    const/16 v0, 0x32
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    const/16 v0, 0x28
+
+    :cond_3
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v2
+
+    const/high16 p1, 0x100000
+
+    int-to-double v4, p1
+
+    mul-double/2addr v2, v4
+
+    invoke-static {v2, v3}, Ln7j;->b(D)I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, p1, v0}, Lhq0;-><init>(II)V
+
+    iput-object v1, p0, Lvf5;->b:Lhq0;
+
+    new-instance p1, Lmp8;
+
+    const/16 v0, 0x64
+
+    invoke-direct {p1, v0}, Lmp8;-><init>(I)V
+
+    iput-object p1, p0, Lvf5;->c:Lmp8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final a(Lbk9;)V
+    .locals 1
 
-    iget-object v0, p0, Lvf5;->a:Lwf5;
+    iget-object p1, p0, Lvf5;->b:Lhq0;
 
-    iget-object v1, v0, Lwf5;->a:Lsf5;
+    const/4 v0, -0x1
 
-    iget-object v2, v0, Lwf5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p1, v0}, Lmp8;->i(I)V
 
-    iget v3, p0, Lvf5;->b:I
-
-    if-nez v3, :cond_0
-
-    iget v3, p0, Lvf5;->c:I
-
-    :cond_0
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lphd;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Lphd;->j()I
-
-    move-result v4
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_0
-    sub-int/2addr v4, v3
-
-    iget v3, v0, Lwf5;->b:I
-
-    const/4 v5, 0x1
-
-    if-gt v4, v3, :cond_3
-
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-boolean v3, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
-
-    if-nez v3, :cond_3
-
-    :cond_2
-    invoke-interface {v1}, Lsf5;->q()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
-
-    invoke-interface {v1}, Lsf5;->p()V
-
-    :cond_3
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
-
-    move-result v3
-
-    if-ltz v3, :cond_5
-
-    iget v0, v0, Lwf5;->b:I
-
-    if-gt v3, v0, :cond_5
-
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-boolean v0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
-
-    if-nez v0, :cond_5
-
-    :cond_4
-    invoke-interface {v1}, Lsf5;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
-
-    invoke-interface {v1}, Lsf5;->j()V
-
-    :cond_5
     return-void
 .end method

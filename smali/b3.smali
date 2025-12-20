@@ -1,288 +1,945 @@
-.class public abstract Lb3;
-.super Ljava/lang/Object;
+.class public final Lb3;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Map$Entry;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final b:Ljava/lang/Object;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(ILjava/io/Serializable;)V
     .locals 0
 
     .line 1
     iput p1, p0, Lb3;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lb3;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZI)V
+.method public synthetic constructor <init>(Ljava/util/AbstractMap;I)V
     .locals 0
 
     .line 2
     iput p2, p0, Lb3;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    iput-object p1, p0, Lb3;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final clear()V
+    .locals 1
 
     iget v0, p0, Lb3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    instance-of v0, p1, Ljava/util/Map$Entry;
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    check-cast v0, Lp2;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lp2;->clear()V
 
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lpui;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lpui;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x1
-
-    :cond_0
-    return v1
+    return-void
 
     :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    check-cast v0, Lem3;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Lem3;->clear()V
 
-    check-cast p1, Ljava/util/Map$Entry;
+    return-void
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lp2;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {v0}, Lp2;->clear()V
 
-    move-result-object v2
+    return-void
 
-    invoke-static {v0, v2}, Luyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Lem3;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Lem3;->clear()V
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_3
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast v0, Lh2;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lh2;->b()V
 
-    invoke-static {v0, p1}, Luyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    return v1
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public contains(Ljava/lang/Object;)Z
+    .locals 2
+
+    iget v0, p0, Lb3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->containsValue(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsValue(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lh2;
+
+    invoke-virtual {v0}, Lcom/google/common/collect/a;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-interface {v1, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public isEmpty()Z
+    .locals 1
+
+    iget v0, p0, Lb3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    invoke-super {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
     .locals 3
 
     iget v0, p0, Lb3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    new-instance v1, Lcwi;
+
+    invoke-direct {v1, v0}, Lcwi;-><init>(Ljava/util/Iterator;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem3;
+
+    invoke-virtual {v0}, Lem3;->o()Ljava/util/Map;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_0
 
-    if-nez v0, :cond_0
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    move v0, v2
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    new-instance v1, Lwti;
 
-    move-result v0
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, v2}, Lwti;-><init>(Lem3;I)V
+
+    move-object v0, v1
 
     :goto_0
-    if-nez v1, :cond_1
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    new-instance v1, Lgt8;
+
+    invoke-direct {v1, v0}, Lxsg;-><init>(Ljava/util/Iterator;)V
+
+    return-object v1
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem3;
+
+    invoke-virtual {v0}, Lem3;->b()Ljava/util/Map;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    new-instance v1, Lam3;
 
-    move-result v2
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, v2}, Lam3;-><init>(Lem3;I)V
+
+    move-object v0, v1
 
     :goto_1
-    xor-int/2addr v0, v2
+    return-object v0
 
-    return v0
+    :pswitch_3
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    :pswitch_0
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    check-cast v0, Lh2;
 
-    move-result-object v0
+    new-instance v1, Lm2;
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-direct {v1, v0}, Lm2;-><init>(Lh2;)V
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_2
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    if-nez v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    xor-int/2addr v0, v2
-
-    return v0
+    return-object v1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public remove(Ljava/lang/Object;)Z
+    .locals 4
 
     iget v0, p0, Lb3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    :pswitch_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return p1
 
-    move-result-object v0
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast v0, Lp2;
+
+    :try_start_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    const-string v2, "="
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0, v2, v1}, Lu45;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_1
 
-    return-object v0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {p1, v3}, Lc9j;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lp2;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    :try_start_1
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+    :try_end_1
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {p1, v3}, Lmcj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lp2;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public removeAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    iget v0, p0, Lb3;->a:I
+
+    packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result p1
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    return p1
 
-    move-result-object v1
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, Lp2;
 
-    const-string v1, "="
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v1
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v1
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    :catch_0
+    new-instance v1, Ljava/util/HashSet;
 
-    return-object v0
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, v0, Lp2;->o:Ljava/io/Serializable;
+
+    check-cast p1, Lsti;
+
+    invoke-virtual {p1}, Lqti;->b()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    :goto_1
+    return p1
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    :try_start_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_1
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_3
+
+    :catch_1
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_3
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_4
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    :goto_3
+    return p1
 
     nop
 
     :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public retainAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    iget v0, p0, Lb3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    if-eqz p1, :cond_0
+
+    :try_start_0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    throw v1
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, v0, Lp2;->o:Ljava/io/Serializable;
+
+    check-cast p1, Lsti;
+
+    invoke-virtual {p1}, Lqti;->b()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    :goto_1
+    return p1
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    :try_start_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_1
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_3
+
+    :catch_1
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v0}, Lp2;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_3
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_4
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    :goto_3
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lb3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    iget-object v0, v0, Lp2;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem3;
+
+    invoke-virtual {v0}, Lem3;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp2;
+
+    iget-object v0, v0, Lp2;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_2
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem3;
+
+    invoke-virtual {v0}, Lem3;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_3
+    iget-object v0, p0, Lb3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lh2;
+
+    iget v0, v0, Lh2;->o:I
+
+    return v0
+
+    :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

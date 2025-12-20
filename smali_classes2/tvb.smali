@@ -1,131 +1,121 @@
-.class public final Ltvb;
-.super Lcda;
+.class public abstract Ltvb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:D
-
-.field public final c:D
+# static fields
+.field public static final a:Lizb;
 
 
 # direct methods
-.method public constructor <init>(DD)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 10
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    new-instance v0, Lysb;
 
-    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
+    const/4 v1, -0x1
 
-    iput-wide p1, p0, Ltvb;->b:D
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-wide p3, p0, Ltvb;->c:D
+    move-result-object v1
 
-    return-void
-.end method
+    sget-object v2, Lsvb;->a:Lsvb;
 
+    invoke-direct {v0, v1, v2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltvb;
+    new-instance v1, Lysb;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return v2
+    move-result-object v2
 
-    :cond_1
-    check-cast p1, Ltvb;
+    sget-object v3, Lsvb;->b:Lsvb;
 
-    iget-wide v3, p0, Ltvb;->b:D
+    invoke-direct {v1, v2, v3}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-wide v5, p1, Ltvb;->b:D
+    new-instance v2, Lysb;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    const/4 v3, 0x3
 
-    move-result v1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz v1, :cond_2
+    move-result-object v3
 
-    return v2
+    sget-object v4, Lsvb;->c:Lsvb;
 
-    :cond_2
-    iget-wide v3, p0, Ltvb;->c:D
+    invoke-direct {v2, v3, v4}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-wide v5, p1, Ltvb;->c:D
+    new-instance v3, Lysb;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    const/4 v4, 0x2
 
-    move-result p1
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz p1, :cond_3
+    move-result-object v4
 
-    return v2
+    sget-object v5, Lsvb;->d:Lsvb;
 
-    :cond_3
-    return v0
-.end method
+    invoke-direct {v3, v4, v5}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 3
+    new-instance v4, Lysb;
 
-    iget-wide v0, p0, Ltvb;->b:D
+    const/high16 v5, 0x10000000
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v0
+    move-result-object v5
 
-    mul-int/lit8 v0, v0, 0x1f
+    sget-object v6, Lsvb;->o:Lsvb;
 
-    iget-wide v1, p0, Ltvb;->c:D
+    invoke-direct {v4, v5, v6}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+    new-instance v5, Lysb;
 
-    move-result v1
+    const/16 v6, 0x15
 
-    add-int/2addr v1, v0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return v1
-.end method
+    move-result-object v6
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    sget-object v7, Lsvb;->X:Lsvb;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v5, v6, v7}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v1, "SendLocation(lat="
+    new-instance v6, Lysb;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v7, 0x16
 
-    iget-wide v1, p0, Ltvb;->b:D
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    const-string v1, ", lon="
+    sget-object v8, Lsvb;->Y:Lsvb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v6, v7, v8}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-wide v1, p0, Ltvb;->c:D
+    new-instance v7, Lysb;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    const/4 v8, 0x4
 
-    const-string v1, ")"
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v9, Lsvb;->Z:Lsvb;
+
+    invoke-direct {v7, v8, v9}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array/range {v0 .. v7}, [Lysb;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Lpoj;->b([Lysb;)Lizb;
+
+    move-result-object v0
+
+    sput-object v0, Ltvb;->a:Lizb;
+
+    return-void
 .end method

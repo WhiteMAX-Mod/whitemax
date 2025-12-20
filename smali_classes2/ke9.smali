@@ -2,14 +2,27 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lle9;
-
 
 # instance fields
-.field public final a:Lhbd;
+.field public final a:Lc60;
 
-.field public final b:Lfd5;
+.field public b:J
+
+.field public final c:Lu03;
+
+.field public final d:Lu03;
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:J
 
 
 # direct methods
@@ -18,59 +31,25 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lhd5;->a:Lhd5;
+    new-instance v0, Lc60;
 
-    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+    invoke-direct {v0}, Lc60;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Lke9;->a:Lc60;
 
-    new-instance v1, Lhbd;
+    new-instance v0, Lu03;
 
-    invoke-direct {v1, v0}, Lhbd;-><init>(Lf9a;)V
+    const/4 v1, 0x6
 
-    iput-object v1, p0, Lke9;->a:Lhbd;
+    invoke-direct {v0, v1}, Lu03;-><init>(I)V
 
-    sget-object v0, Lfd5;->a:Lfd5;
+    iput-object v0, p0, Lke9;->c:Lu03;
 
-    iput-object v0, p0, Lke9;->b:Lfd5;
+    new-instance v0, Lu03;
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lu03;-><init>(I)V
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()Lx26;
-    .locals 1
-
-    iget-object v0, p0, Lke9;->b:Lfd5;
-
-    return-object v0
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()Lhbd;
-    .locals 1
-
-    iget-object v0, p0, Lke9;->a:Lhbd;
-
-    return-object v0
-.end method
-
-.method public final f()V
-    .locals 0
+    iput-object v0, p0, Lke9;->d:Lu03;
 
     return-void
 .end method

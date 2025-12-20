@@ -3,114 +3,117 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltm6;
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ligf;
 
-.field public final synthetic b:Lkgf;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkgf;I)V
+.method public synthetic constructor <init>(Ligf;I)V
     .locals 0
 
-    iput p2, p0, Lggf;->a:I
-
-    iput-object p1, p0, Lggf;->b:Lkgf;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lggf;->a:Ligf;
+
+    iput p2, p0, Lggf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 3
 
-    iget v0, p0, Lggf;->a:I
+    const/16 p1, 0x43
 
-    check-cast p1, Ljava/util/List;
+    if-ne p2, p1, :cond_4
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    iget-object v0, p0, Lggf;->b:Lkgf;
+    move-result p1
 
-    iget-object v0, v0, Lkgf;->a:Lq9b;
+    if-nez p1, :cond_4
 
-    invoke-virtual {v0}, Lq9b;->w()Lwk3;
+    iget-object p1, p0, Lggf;->a:Ligf;
+
+    iget-object p1, p1, Ligf;->F0:Lqq7;
+
+    check-cast p1, Lwt3;
+
+    iget p2, p0, Lggf;->b:I
+
+    add-int/lit8 p3, p2, -0x1
+
+    invoke-virtual {p1, p2}, Lwt3;->H0(I)Lwq7;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Ligf;
+
+    invoke-virtual {v0}, Ligf;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lvef;
+    goto :goto_0
 
-    const/16 v2, 0xc
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {v1, v2}, Lvef;-><init>(I)V
+    :goto_0
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Le2f;->h(Ltm6;)Lm2f;
+    const-string v2, ""
 
-    move-result-object v0
+    if-eqz v0, :cond_2
 
-    new-instance v1, Loh2;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    const/16 v2, 0x19
+    move-result v0
 
-    invoke-direct {v1, v2, p1}, Loh2;-><init>(ILjava/util/List;)V
+    if-nez v0, :cond_1
 
-    new-instance p1, Lik3;
+    goto :goto_1
 
-    const/4 v2, 0x2
+    :cond_1
+    if-eqz p2, :cond_3
 
-    invoke-direct {p1, v0, v2, v1}, Lik3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    check-cast p2, Ligf;
 
-    return-object p1
+    invoke-virtual {p2, v2}, Ligf;->A(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lggf;->b:Lkgf;
+    return v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lvqa;->i(Ljava/lang/Iterable;)Lvk3;
-
-    move-result-object p1
-
-    new-instance v1, Lvef;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v1, v2}, Lvef;-><init>(I)V
-
-    new-instance v2, Lora;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v2, p1, v1, v3}, Lora;-><init>(Lvqa;Ltm6;I)V
-
-    invoke-virtual {v2}, Lvqa;->s()Lzqa;
+    :cond_2
+    :goto_1
+    invoke-virtual {p1, p3}, Lwt3;->H0(I)Lwq7;
 
     move-result-object p1
 
-    new-instance v1, Lggf;
+    if-eqz p1, :cond_3
 
-    const/4 v2, 0x1
+    check-cast p1, Ligf;
 
-    invoke-direct {v1, v0, v2}, Lggf;-><init>(Lkgf;I)V
+    invoke-virtual {p1, v2}, Ligf;->A(Ljava/lang/String;)V
 
-    new-instance v0, Lik3;
+    iget-object p1, p1, Ligf;->G0:Lrt3;
 
-    const/4 v2, 0x2
+    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    invoke-direct {v0, p1, v2, v1}, Lik3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :cond_3
+    return v1
 
-    return-object v0
+    :cond_4
+    const/4 p1, 0x0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

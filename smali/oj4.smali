@@ -4,74 +4,46 @@
 
 
 # instance fields
-.field public a:J
+.field public a:I
 
-.field public final b:Li50;
+.field public b:I
 
-.field public final c:Lka2;
-
-.field public final synthetic d:Lpj4;
-
-
-# direct methods
-.method public constructor <init>(Lpj4;Li50;Lka2;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loj4;->d:Lpj4;
-
-    iput-object p2, p0, Loj4;->b:Li50;
-
-    iput-wide p4, p0, Loj4;->a:J
-
-    iput-object p3, p0, Loj4;->c:Lka2;
-
-    return-void
-.end method
+.field public c:Ljava/lang/String;
 
 
 # virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-wide v0, p0, Loj4;->a:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    cmp-long v0, p1, v0
+    const-string v1, "Start:"
 
-    if-ltz v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x1
+    iget v1, p0, Loj4;->a:I
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v0, 0x0
+    const-string v1, " End:"
 
-    :goto_0
-    invoke-static {v0}, Lhsi;->b(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, p0, Loj4;->a:J
+    iget v1, p0, Loj4;->b:I
 
-    sub-long v0, p1, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    long-to-int v0, v0
+    const-string v1, " \'"
 
-    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    iget-object v1, p0, Loj4;->c:Ljava/lang/String;
 
-    iget-object v2, p0, Loj4;->b:Li50;
+    const-string v2, "\'"
 
-    iget v2, v2, Li50;->d:I
+    invoke-static {v0, v1, v2}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    mul-int/2addr v0, v2
+    move-result-object v0
 
-    add-int/2addr v0, v1
-
-    invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    iput-wide p1, p0, Loj4;->a:J
-
-    return-void
+    return-object v0
 .end method

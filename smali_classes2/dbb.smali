@@ -1,97 +1,98 @@
-.class public final enum Ldbb;
-.super Ljava/lang/Enum;
+.class public final Ldbb;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Loq6;
 
-# static fields
-.field public static final enum a:Ldbb;
 
-.field public static final enum b:Ldbb;
-
-.field public static final enum c:Ldbb;
-
-.field public static final enum d:Ldbb;
-
-.field public static final synthetic o:[Ldbb;
+# instance fields
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    new-instance v0, Ldbb;
+    iput p3, p0, Ldbb;->o:I
 
-    const-string v1, "COLLAPSED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ldbb;->a:Ldbb;
-
-    new-instance v1, Ldbb;
-
-    const-string v2, "ANIMATING_COLLAPSE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ldbb;->b:Ldbb;
-
-    new-instance v2, Ldbb;
-
-    const-string v3, "EXPANDED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ldbb;->c:Ldbb;
-
-    new-instance v3, Ldbb;
-
-    const-string v4, "ANIMATING_EXPAND"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ldbb;->d:Ldbb;
-
-    filled-new-array {v0, v1, v2, v3}, [Ldbb;
-
-    move-result-object v0
-
-    sput-object v0, Ldbb;->o:[Ldbb;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ldbb;
-    .locals 1
 
-    const-class v0, Ldbb;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Ldbb;->o:I
 
-    move-result-object p0
+    check-cast p1, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Ldbb;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
+    new-instance v0, Ldbb;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Ldbb;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Ldbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Ldbb;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p1, v2}, Ldbb;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Ldbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Ldbb;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Ldbb;->o:[Ldbb;
+    iget v0, p0, Ldbb;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    check-cast v0, [Ldbb;
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    return-object v0
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

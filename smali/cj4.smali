@@ -1,232 +1,117 @@
-.class public final synthetic Lcj4;
+.class public final Lcj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loa8;
-.implements Lpa8;
-.implements Lom6;
-.implements Lm7c;
-.implements Ltm6;
-.implements Lfu3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:I
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lg3g;
+
+.field public final d:Ld1e;
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Z
+
+.field public final g:I
+
+.field public final h:Ljava/util/concurrent/Executor;
+
+.field public final i:Ljava/util/concurrent/Executor;
+
+.field public final j:Landroid/content/Intent;
+
+.field public final k:Z
+
+.field public final l:Z
+
+.field public final m:Ljava/util/Set;
+
+.field public final n:Ljava/lang/String;
+
+.field public final o:Ljava/io/File;
+
+.field public final p:Ljava/util/concurrent/Callable;
+
+.field public final q:Ljava/util/List;
+
+.field public final r:Ljava/util/List;
+
+.field public final s:Z
+
+.field public final t:Lk6e;
+
+.field public final u:Lrb4;
+
+.field public v:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lg3g;Ld1e;Ljava/util/List;ZILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Ljava/util/List;Ljava/util/List;ZLk6e;Lrb4;)V
     .locals 0
-
-    .line 1
-    iput p2, p0, Lcj4;->a:I
-
-    iput p1, p0, Lcj4;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lcj4;->a:Landroid/content/Context;
 
-.method public synthetic constructor <init>(Lhd;IJ)V
-    .locals 0
+    iput-object p2, p0, Lcj4;->b:Ljava/lang/String;
 
-    .line 2
-    const/4 p1, 0x0
+    iput-object p3, p0, Lcj4;->c:Lg3g;
 
-    iput p1, p0, Lcj4;->a:I
+    iput-object p4, p0, Lcj4;->d:Ld1e;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p5, p0, Lcj4;->e:Ljava/util/List;
 
-    iput p2, p0, Lcj4;->b:I
+    iput-boolean p6, p0, Lcj4;->f:Z
 
-    return-void
-.end method
+    iput p7, p0, Lcj4;->g:I
 
+    iput-object p8, p0, Lcj4;->h:Ljava/util/concurrent/Executor;
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+    iput-object p9, p0, Lcj4;->i:Ljava/util/concurrent/Executor;
 
-    iget v0, p0, Lcj4;->a:I
+    iput-object p10, p0, Lcj4;->j:Landroid/content/Intent;
 
-    packed-switch v0, :pswitch_data_0
+    iput-boolean p11, p0, Lcj4;->k:Z
 
-    iget v0, p0, Lcj4;->b:I
+    iput-boolean p12, p0, Lcj4;->l:Z
 
-    check-cast p1, La5c;
+    iput-object p13, p0, Lcj4;->m:Ljava/util/Set;
 
-    invoke-virtual {p1, v0}, La5c;->g0(I)V
+    iput-object p14, p0, Lcj4;->n:Ljava/lang/String;
 
-    return-void
+    iput-object p15, p0, Lcj4;->o:Ljava/io/File;
 
-    :pswitch_0
-    iget v0, p0, Lcj4;->b:I
+    move-object/from16 p1, p16
 
-    check-cast p1, La5c;
+    iput-object p1, p0, Lcj4;->p:Ljava/util/concurrent/Callable;
 
-    invoke-virtual {p1, v0}, La5c;->j0(I)V
+    move-object/from16 p1, p17
 
-    return-void
+    iput-object p1, p0, Lcj4;->q:Ljava/util/List;
 
-    :pswitch_1
-    iget v0, p0, Lcj4;->b:I
+    move-object/from16 p1, p18
 
-    check-cast p1, La5c;
+    iput-object p1, p0, Lcj4;->r:Ljava/util/List;
 
-    invoke-virtual {p1, v0}, La5c;->N(I)V
+    move/from16 p1, p19
 
-    return-void
+    iput-boolean p1, p0, Lcj4;->s:Z
 
-    :pswitch_2
-    iget v0, p0, Lcj4;->b:I
+    move-object/from16 p1, p20
 
-    check-cast p1, La5c;
+    iput-object p1, p0, Lcj4;->t:Lk6e;
 
-    invoke-virtual {p1, v0}, La5c;->r(I)V
+    move-object/from16 p1, p21
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lcj4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lcj4;->b:I
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ltr8;->a:Ltr8;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Lor8;->d(Ljava/lang/Object;)Lzr8;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    iget p1, p0, Lcj4;->b:I
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lcj4;->a:I
-
-    iget v1, p0, Lcj4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lr3c;
-
-    invoke-interface {p1, v1}, Lr3c;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lr3c;
-
-    invoke-interface {p1, v1}, Lr3c;->K(I)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Lq3c;
-
-    invoke-interface {p1, v1}, Lq3c;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Lfl5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "onDroppedVideoFrames: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "fl5"
-
-    invoke-static {v0, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public test(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    iget v0, p0, Lcj4;->b:I
-
-    if-ge v0, p1, :cond_0
+    iput-object p1, p0, Lcj4;->u:Lrb4;
 
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Lcj4;->v:Z
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

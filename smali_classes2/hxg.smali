@@ -1,51 +1,26 @@
 .class public final Lhxg;
-.super Ld2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lct7;
+.implements Ljxg;
 
 
 # instance fields
-.field public E0:Lt9f;
+.field public final a:Lghg;
+
+.field public final b:I
 
 
-# virtual methods
-.method public final E()V
-    .locals 1
+# direct methods
+.method public constructor <init>(ILghg;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lhxg;->E0:Lt9f;
+    iput-object p2, p0, Lhxg;->a:Lghg;
 
-    return-void
-.end method
-
-.method public final z(Lt98;)V
-    .locals 2
-
-    check-cast p1, Lfxg;
-
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
-
-    check-cast v0, Lgxg;
-
-    iget-object v1, p1, Lfxg;->b:Lexg;
-
-    invoke-virtual {v0, v1}, Lgxg;->setType(Lexg;)V
-
-    iget-object p1, p1, Lfxg;->c:Ls5g;
-
-    invoke-virtual {p1, p0}, Ls5g;->a(Ld2f;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lgxg;->setTitle(Ljava/lang/CharSequence;)V
+    iput p1, p0, Lhxg;->b:I
 
     return-void
 .end method

@@ -2,101 +2,122 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Luj4;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lhf6;
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:Lg50;
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Z
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lhf6;IIIIIIILg50;ZZZ)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lc8;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lc8;-><init>(I)V
+
+    sput-object v0, Luj4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luj4;->a:Lhf6;
-
-    iput p2, p0, Luj4;->b:I
-
-    iput p3, p0, Luj4;->c:I
-
-    iput p4, p0, Luj4;->d:I
-
-    iput p5, p0, Luj4;->e:I
-
-    iput p6, p0, Luj4;->f:I
-
-    iput p7, p0, Luj4;->g:I
-
-    iput p8, p0, Luj4;->h:I
-
-    iput-object p9, p0, Luj4;->i:Lg50;
-
-    iput-boolean p10, p0, Luj4;->j:Z
-
-    iput-boolean p11, p0, Luj4;->k:Z
-
-    iput-boolean p12, p0, Luj4;->l:Z
+    iput-wide p1, p0, Luj4;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lx50;
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    new-instance v0, Lx50;
+    const/4 v0, 0x1
 
-    iget v1, p0, Luj4;->c:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    :goto_0
-    move v5, v2
-
-    goto :goto_1
+    return v0
 
     :cond_0
+    instance-of v1, p1, Luj4;
+
     const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
 
-    :goto_1
-    iget v6, p0, Luj4;->h:I
+    return v2
 
-    iget v1, p0, Luj4;->g:I
+    :cond_1
+    check-cast p1, Luj4;
 
-    iget v2, p0, Luj4;->e:I
+    iget-wide v3, p0, Luj4;->a:J
 
-    iget v3, p0, Luj4;->f:I
+    iget-wide v5, p1, Luj4;->a:J
 
-    iget-boolean v4, p0, Luj4;->l:Z
+    cmp-long p1, v3, v5
 
-    invoke-direct/range {v0 .. v6}, Lx50;-><init>(IIIZZI)V
+    if-nez p1, :cond_2
 
-    return-object v0
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Luj4;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Luj4;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    return-void
 .end method

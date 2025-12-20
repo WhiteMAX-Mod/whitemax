@@ -1,48 +1,53 @@
 .class public final Lh81;
-.super Lq44;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lb94;
 
 
 # instance fields
-.field public final synthetic X:Lw3;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
 
 # direct methods
-.method public constructor <init>(Lw3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lh81;->X:Lw3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lh81;->a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lx84;Lx84;Z)V
+    .locals 0
 
-    iput-object p1, p0, Lh81;->d:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lh81;->o:I
+.method public final b(Lx84;Lx84;Z)V
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    if-eqz p3, :cond_0
 
-    or-int/2addr p1, v0
+    sget-object p1, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lp38;
 
-    iput p1, p0, Lh81;->o:I
+    iget-object p1, p0, Lh81;->a:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
-    iget-object p1, p0, Lh81;->X:Lw3;
+    iget-object p1, p1, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->b:Ld68;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lw3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ll81;
+
+    invoke-virtual {p1}, Ll81;->s()V
+
+    :cond_0
+    return-void
 .end method

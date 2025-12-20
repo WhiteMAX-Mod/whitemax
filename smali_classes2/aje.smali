@@ -1,64 +1,67 @@
-.class public final synthetic Laje;
+.class public interface abstract Laje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmze;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;
-
-.field public final synthetic c:Lem6;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;I)V
-    .locals 0
-
-    iput p3, p0, Laje;->a:I
-
-    iput-object p1, p0, Laje;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;
-
-    iput-object p2, p0, Laje;->c:Lem6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lfze;
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 2
+.method public abstract a()I
+.end method
 
-    iget v0, p0, Laje;->a:I
+.method public b()Lghg;
+    .locals 1
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Laje;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Laje;->c:Lem6;
+.method public c()Luye;
+    .locals 1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Laje;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;
+.method public d()Lghg;
+    .locals 1
 
-    iget-object v1, p0, Laje;->c:Lem6;
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->d(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
+    return-object v0
+.end method
 
-    return-void
+.method public e()Lcze;
+    .locals 1
 
-    nop
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
+.end method
+
+.method public f()Ln68;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Leze;
+    .locals 1
+
+    sget-object v0, Leze;->b:Leze;
+
+    return-object v0
 .end method

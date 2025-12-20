@@ -1,101 +1,55 @@
-.class public final synthetic Lrzd;
-.super Ljava/lang/Object;
+.class public final Lrzd;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lvfa;
 
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lszd;
+
+.field public d:Lszd;
+
+.field public o:Lsmg;
+
+.field public s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
+.method public constructor <init>(Lszd;Ll84;)V
     .locals 0
 
-    iput p2, p0, Lrzd;->a:I
+    iput-object p1, p0, Lrzd;->Z:Lszd;
 
-    iput-object p1, p0, Lrzd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lrzd;->a:I
+    iput-object p1, p0, Lrzd;->Y:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Lrzd;->s0:I
 
-    const-string p1, "ScheduledSendPickerDialogFragment"
+    const/high16 v0, -0x80000000
 
-    const-string v0, "handle nav click"
+    or-int/2addr p1, v0
 
-    invoke-static {p1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iput p1, p0, Lrzd;->s0:I
 
-    new-instance p1, Lszd;
+    iget-object p1, p0, Lrzd;->Z:Lszd;
 
-    iget-object v0, p0, Lrzd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Parcelable;
-
-    invoke-direct {p1, v1}, Lszd;-><init>(Landroid/os/Parcelable;)V
-
-    invoke-virtual {v0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->B0(Luzd;)V
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->s0()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lrzd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->A0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    invoke-virtual {p1, v0, p0}, Lszd;->b(Lsmg;Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "ScheduledSendPickerViewModel"
-
-    const-string v1, "onSendClick"
-
-    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->m:Ltcf;
-
-    new-instance v0, Lzca;
-
-    invoke-direct {v0}, Lzca;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

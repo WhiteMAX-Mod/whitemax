@@ -1,86 +1,72 @@
-.class public final synthetic Lj91;
-.super Ljava/lang/Object;
+.class public final Lj91;
+.super Lpvh;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Ll91;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lp91;
+# static fields
+.field public static final c:Lj91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp91;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lj91;->a:I
+    new-instance v0, Lj91;
 
-    iput-object p1, p0, Lj91;->b:Lp91;
+    sget v1, Lgcd;->call_screen_connection_restored:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v2, 0x3e8
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Lpvh;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lj91;->c:Lj91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lj91;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lj91;->b:Lp91;
-
-    iget-object v0, v0, Lp91;->K0:Lzib;
-
-    iget v0, v0, Lzib;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lj91;->b:Lp91;
-
-    iget-object v0, v0, Lp91;->L0:Lcm6;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lx4h;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lj91;
 
-    :goto_0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x426150a3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Restored"
+
     return-object v0
-
-    :pswitch_1
-    new-instance v0, Ln91;
-
-    iget-object v1, p0, Lj91;->b:Lp91;
-
-    invoke-direct {v0, v1}, Ln91;-><init>(Lp91;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

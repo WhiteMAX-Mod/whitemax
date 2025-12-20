@@ -1,50 +1,53 @@
 .class public final La1j;
-.super Ljava/lang/Object;
+.super Lwpi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
-
-# static fields
-.field public static final a:La1j;
+# instance fields
+.field public final synthetic g:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
+    .locals 1
 
-    new-instance v0, La1j;
+    iput-object p1, p0, La1j;->g:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, La1j;->a:La1j;
-
-    new-instance v0, Lmli;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2, v0}, Lwpi;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Luv3;)V
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, La1j;->g:Lcom/google/android/gms/common/internal/a;
 
-    move-result-object p1
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Lpk0;
 
-    throw p1
+    invoke-interface {v0, p1}, Lpk0;->c(Luv3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, La1j;->g:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Lpk0;
+
+    sget-object v1, Luv3;->o:Luv3;
+
+    invoke-interface {v0, v1}, Lpk0;->c(Luv3;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -1,98 +1,200 @@
-.class public final synthetic Lix;
-.super Ljava/lang/Object;
+.class public final Lix;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lsid;
+.field public final synthetic X:Lmx;
 
-.field public final synthetic Y:Ltid;
-
-.field public final synthetic Z:Lih2;
-
-.field public final synthetic a:Lpx;
-
-.field public final synthetic b:Lpb2;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:Lsid;
-
-.field public final synthetic o:Ltid;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpx;Lpb2;JLsid;Ltid;Lsid;Ltid;Lih2;)V
+.method public constructor <init>(Lmx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lix;->X:Lmx;
 
-    iput-object p1, p0, Lix;->a:Lpx;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lix;->b:Lpb2;
-
-    iput-wide p3, p0, Lix;->c:J
-
-    iput-object p5, p0, Lix;->d:Lsid;
-
-    iput-object p6, p0, Lix;->o:Ltid;
-
-    iput-object p7, p0, Lix;->X:Lsid;
-
-    iput-object p8, p0, Lix;->Y:Ltid;
-
-    iput-object p9, p0, Lix;->Z:Lih2;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 17
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v1, v0, Lix;->a:Lpx;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, v1, Lpx;->e:Lqh2;
+    invoke-virtual {p0, p1, p2}, Lix;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v3, v0, Lix;->b:Lpb2;
+    move-result-object p1
 
-    iget-wide v5, v3, Lpb2;->a:J
+    check-cast p1, Lix;
 
-    iget-object v3, v0, Lix;->d:Lsid;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget v9, v3, Lsid;->a:I
+    invoke-virtual {p1, p2}, Lix;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, v0, Lix;->o:Ltid;
+    move-result-object p1
 
-    iget-wide v10, v3, Ltid;->a:J
+    return-object p1
+.end method
 
-    iget-object v3, v0, Lix;->X:Lsid;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v12, v3, Lsid;->a:I
+    new-instance v0, Lix;
 
-    iget-object v3, v0, Lix;->Y:Ltid;
+    iget-object v1, p0, Lix;->X:Lmx;
 
-    iget-wide v13, v3, Ltid;->a:J
+    invoke-direct {v0, v1, p2}, Lix;-><init>(Lmx;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, v1, Lpx;->b:Lrs4;
+    iput-object p1, v0, Lix;->o:Ljava/lang/Object;
 
-    const-wide/16 v3, 0x0
+    return-object v0
+.end method
 
-    iget-wide v7, v0, Lix;->c:J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v15, v0, Lix;->Z:Lih2;
+    sget-object v1, Lxk8;->Y:Lxk8;
 
-    move-object/from16 v16, v1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual/range {v2 .. v16}, Lqh2;->a(JJJIJIJLih2;Lrs4;)V
+    iget-object p1, p0, Lix;->o:Ljava/lang/Object;
 
-    sget-object v1, Lqqg;->a:Lqqg;
+    check-cast p1, Ljava/lang/Throwable;
 
-    return-object v1
+    instance-of v0, p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    const-string v2, ""
+
+    const-string v3, "request failed with "
+
+    if-eqz v0, :cond_2
+
+    move-object v0, p1
+
+    check-cast v0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object v0, v0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcbg;
+
+    iget-object v0, v0, Lcbg;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lcoj;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lix;->X:Lmx;
+
+    iget-object v0, v0, Lmx;->i:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Retrying"
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    move-object v4, v2
+
+    move-object v2, v0
+
+    sget-object v0, Lm4j;->a:Lvcb;
+
+    if-eqz v0, :cond_1
+
+    if-nez p1, :cond_0
+
+    move-object v3, v4
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, p1
+
+    :goto_0
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_1
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    move-object v4, v2
+
+    iget-object v0, p0, Lix;->X:Lmx;
+
+    iget-object v2, v0, Lmx;->i:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Couldn\'t recover"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lm4j;->a:Lvcb;
+
+    if-eqz v0, :cond_4
+
+    if-nez p1, :cond_3
+
+    move-object v3, v4
+
+    goto :goto_1
+
+    :cond_3
+    move-object v3, p1
+
+    :goto_1
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v6}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

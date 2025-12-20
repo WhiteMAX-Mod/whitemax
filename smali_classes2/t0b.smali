@@ -1,56 +1,103 @@
-.class public final Lt0b;
+.class public abstract Lt0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcm6;
+.field public final a:Ldc3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILcm6;)V
+.method public constructor <init>(Ldc3;)V
     .locals 0
 
-    iput p1, p0, Lt0b;->a:I
-
-    iput-object p2, p0, Lt0b;->b:Lcm6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lt0b;->a:Ldc3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final a(Ldc3;)V
+    .locals 2
 
-    iget p1, p0, Lt0b;->a:I
+    iget-object v0, p0, Lt0b;->a:Ldc3;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, v0, Ldc3;->a:Ljava/lang/Object;
 
-    iget-object p1, p0, Lt0b;->b:Lcm6;
+    check-cast v1, Lgs3;
 
-    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
+    iput-object v1, p1, Ldc3;->a:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->d:Ljava/lang/Object;
+
+    check-cast v1, Llm;
+
+    iput-object v1, p1, Ldc3;->d:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->b:Ljava/lang/Object;
+
+    check-cast v1, Ling;
+
+    iput-object v1, p1, Ldc3;->b:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->c:Ljava/lang/Object;
+
+    check-cast v1, Lv3e;
+
+    iput-object v1, p1, Ldc3;->c:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ltm;
+
+    iput-object v1, p1, Ldc3;->Y:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->X:Ljava/lang/Object;
+
+    check-cast v1, Lxm;
+
+    iput-object v1, p1, Ldc3;->X:Ljava/lang/Object;
+
+    iget-object v1, v0, Ldc3;->o:Ljava/lang/Object;
+
+    check-cast v1, Lcf9;
+
+    iput-object v1, p1, Ldc3;->o:Ljava/lang/Object;
+
+    iget-object v0, v0, Ldc3;->Z:Ljava/lang/Object;
+
+    iput-object v0, p1, Ldc3;->Z:Ljava/lang/Object;
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Lt0b;->b:Lcm6;
+.method public abstract b()Lnl;
+.end method
 
-    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
+.method public c()Lml;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
 
-    nop
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public d()Lyl;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract e()Ldii;
+.end method
+
+.method public abstract f()Lv5e;
+.end method
+
+.method public abstract g()Ldc3;
 .end method

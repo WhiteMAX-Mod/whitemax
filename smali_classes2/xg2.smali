@@ -1,135 +1,54 @@
-.class public final Lxg2;
-.super Lml2;
+.class public final synthetic Lxg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic G0:[Lyy7;
+# interfaces
+.implements Lwx3;
 
 
 # instance fields
-.field public E0:Lxz;
+.field public final synthetic a:J
 
-.field public final F0:Lt9f;
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(JLjava/lang/String;J)V
+    .locals 0
 
-    new-instance v0, Lz8a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "updateJob"
+    iput-wide p1, p0, Lxg2;->a:J
 
-    const-string v2, "getUpdateJob()Lkotlinx/coroutines/Job;"
+    iput-object p3, p0, Lxg2;->b:Ljava/lang/String;
 
-    const-class v3, Lxg2;
-
-    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lvid;->a:Lwid;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lyy7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lxg2;->G0:[Lyy7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    new-instance v0, Lil2;
-
-    invoke-direct {v0, p1}, Lil2;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, v0}, Lmid;-><init>(Landroid/view/View;)V
-
-    invoke-static {}, Lc7j;->c()Lt9f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxg2;->F0:Lt9f;
+    iput-wide p4, p0, Lxg2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lyb9;Lem6;Lsm6;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    check-cast p1, Ltb9;
+    check-cast p1, Lhh2;
 
-    invoke-virtual {p0, p1}, Lxg2;->G(Ltb9;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-super {p0, p1, p2, p3}, Lml2;->F(Lyb9;Lem6;Lsm6;)V
+    new-instance v0, Luh2;
 
-    return-void
-.end method
+    iget-object v1, p0, Lxg2;->b:Ljava/lang/String;
 
-.method public final G(Ltb9;)V
-    .locals 4
+    iget-wide v2, p0, Lxg2;->c:J
 
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+    iget-wide v4, p0, Lxg2;->a:J
 
-    check-cast v0, Lil2;
+    invoke-direct/range {v0 .. v5}, Luh2;-><init>(Ljava/lang/String;JJ)V
 
-    iget-wide v1, p1, Ltb9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v1, p1, Ltb9;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lil2;->setTitle(Ljava/lang/CharSequence;)V
-
-    invoke-static {v0}, Ltfh;->b(Landroid/view/View;)Lx38;
-
-    move-result-object v1
-
-    new-instance v2, Lwg2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, p0, v0, v3}, Lwg2;-><init>(Ltb9;Lxg2;Lil2;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x1
-
-    sget-object v0, Li84;->b:Li84;
-
-    invoke-static {v1, v3, v0, v2, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    move-result-object p1
-
-    sget-object v0, Lxg2;->G0:[Lyy7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lxg2;->F0:Lt9f;
-
-    invoke-virtual {v1, p0, v0, p1}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic z(Lt98;)V
-    .locals 0
-
-    check-cast p1, Ltb9;
-
-    invoke-virtual {p0, p1}, Lxg2;->G(Ltb9;)V
+    iput-object v0, p1, Lhh2;->k0:Luh2;
 
     return-void
 .end method

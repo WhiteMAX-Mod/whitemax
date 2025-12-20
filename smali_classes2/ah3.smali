@@ -1,218 +1,286 @@
 .class public final Lah3;
-.super Ldtf;
+.super Lck0;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Lbh3;
+.field public final synthetic b:Lfh3;
 
-.field public final synthetic Y:Lgj7;
+.field public final synthetic c:Lvj7;
 
-.field public o:I
+.field public final synthetic d:Lqg3;
+
+.field public final synthetic e:Lth7;
+
+.field public final synthetic f:Log3;
 
 
 # direct methods
-.method public constructor <init>(Lbh3;Lgj7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfh3;Lvj7;Lqg3;Lth7;Log3;)V
     .locals 0
 
-    iput-object p1, p0, Lah3;->X:Lbh3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lah3;->Y:Lgj7;
+    iput-object p1, p0, Lah3;->b:Lfh3;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lah3;->c:Lvj7;
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lah3;->d:Lqg3;
+
+    iput-object p4, p0, Lah3;->e:Lth7;
+
+    iput-object p5, p0, Lah3;->f:Log3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 3
 
-    check-cast p1, Lf84;
+    iget-object p1, p0, Lah3;->b:Lfh3;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p2, p1, Lfh3;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1, p2}, Lah3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object p1
+    move-result-object p3
 
-    check-cast p1, Lah3;
+    invoke-virtual {p3}, Landroid/os/Looper;->isCurrentThread()Z
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    move-result p3
 
-    invoke-virtual {p1, p2}, Lah3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lah3;->d:Lqg3;
 
-    move-result-object p1
+    iget-object v1, p0, Lah3;->f:Log3;
 
-    return-object p1
-.end method
+    if-eqz p3, :cond_0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v0}, Lqg3;->a()V
 
-    new-instance p1, Lah3;
+    invoke-virtual {p2}, Landroid/view/View;->postInvalidate()V
 
-    iget-object v0, p0, Lah3;->X:Lbh3;
+    iget-object p1, p1, Lfh3;->i:Loq6;
 
-    iget-object v1, p0, Lah3;->Y:Lgj7;
+    invoke-interface {v1}, Log3;->i()Ljava/lang/String;
 
-    invoke-direct {p1, v0, v1, p2}, Lah3;-><init>(Lbh3;Lgj7;Lkotlin/coroutines/Continuation;)V
+    move-result-object p2
 
-    return-object p1
-.end method
+    invoke-interface {p1, p2}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lah3;->Y:Lgj7;
-
-    iget-wide v1, v0, Lgj7;->b:J
-
-    iget v3, p0, Lah3;->o:I
-
-    const/4 v4, 0x0
-
-    iget-object v5, p0, Lah3;->X:Lbh3;
-
-    const/4 v6, 0x1
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v6, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p2}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object p3
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz p3, :cond_1
 
-    throw p1
+    new-instance p2, Lwg3;
+
+    const/4 v2, 0x0
+
+    invoke-direct {p2, v0, p1, v1, v2}, Lwg3;-><init>(Lqg3;Lfh3;Log3;I)V
+
+    invoke-virtual {p3, p2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    new-instance p3, Lwg3;
 
-    iget-object p1, v5, Lbh3;->b:Llzf;
+    const/4 v2, 0x1
 
-    check-cast p1, Lq2b;
+    invoke-direct {p3, v0, p1, v1, v2}, Lwg3;-><init>(Lqg3;Lfh3;Log3;I)V
 
-    invoke-virtual {p1}, Lq2b;->b()Lz74;
+    invoke-virtual {p2, p3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object p1, p0, Lah3;->b:Lfh3;
+
+    iget-object p1, p1, Lfh3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result p2
+
+    iget-object v0, p0, Lah3;->d:Lqg3;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v0}, Lqg3;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    new-instance p1, Lvg3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lvg3;-><init>(Lqg3;I)V
+
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance p2, Lvg3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, v1}, Lvg3;-><init>(Lqg3;I)V
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final e(Ljava/lang/String;)V
+    .locals 3
+
+    iget-object p1, p0, Lah3;->b:Lfh3;
+
+    iget-object p1, p1, Lfh3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lah3;->d:Lqg3;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lqg3;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance p1, Lvg3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v1, v2}, Lvg3;-><init>(Lqg3;I)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lvg3;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lvg3;-><init>(Lqg3;I)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/String;)V
+    .locals 7
+
+    iget-object v3, p0, Lah3;->b:Lfh3;
+
+    iget-object p1, v3, Lfh3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lah3;->c:Lvj7;
+
+    iget-object v2, p0, Lah3;->d:Lqg3;
+
+    iget-object v4, p0, Lah3;->e:Lth7;
+
+    if-eqz v0, :cond_1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Lkp6;->j()Lhj7;
 
     move-result-object p1
 
-    new-instance v3, Lzg3;
+    const/4 v0, 0x0
 
-    invoke-direct {v3, v5, v0, v4}, Lzg3;-><init>(Lbh3;Lgj7;Lkotlin/coroutines/Continuation;)V
-
-    iput v6, p0, Lah3;->o:I
-
-    invoke-static {p1, v3, p0}, Lsvi;->i(Lx74;Lsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v1, v0}, Lhj7;->b(Lvj7;Ljava/lang/Object;)Lpi4;
 
     move-result-object p1
 
-    sget-object v0, Lg84;->a:Lg84;
+    iput-object p1, v2, Lqg3;->d:Lpi4;
 
-    if-ne p1, v0, :cond_2
+    iget-boolean v0, v3, Lfh3;->e:Z
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lyg3;
+
+    invoke-direct {v0, v3, v4, v2}, Lyg3;-><init>(Lfh3;Lth7;Lqg3;)V
+
+    sget-object v1, Ldx1;->a:Ldx1;
+
+    check-cast p1, Lp0;
+
+    invoke-virtual {p1, v0, v1}, Lp0;->l(Laj4;Ljava/util/concurrent/Executor;)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v6
+
+    new-instance v0, Lxg3;
+
+    if-eqz v6, :cond_2
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lxg3;-><init>(Lvj7;Lqg3;Lfh3;Lth7;I)V
+
+    invoke-virtual {v6, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
 
     :cond_2
-    :goto_0
-    check-cast p1, Leh9;
+    const/4 v5, 0x1
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-direct/range {v0 .. v5}, Lxg3;-><init>(Lvj7;Lqg3;Lfh3;Lth7;I)V
 
-    if-nez p1, :cond_3
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    goto :goto_3
-
-    :cond_3
-    iget-object p1, p1, Leh9;->a:Lsi9;
-
-    sget-object v3, Ls10;->b:Ls10;
-
-    invoke-virtual {p1, v3}, Lsi9;->d(Ls10;)Lw10;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    iget-object p1, p1, Lw10;->c:Ld10;
-
-    if-nez p1, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    iget-object p1, p1, Ld10;->a:Lc10;
-
-    if-nez p1, :cond_5
-
-    const/4 p1, -0x1
-
-    goto :goto_1
-
-    :cond_5
-    sget-object v3, Lyg3;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v3, p1
-
-    :goto_1
-    if-eq p1, v6, :cond_7
-
-    const/4 v3, 0x2
-
-    if-eq p1, v3, :cond_7
-
-    const/4 v3, 0x3
-
-    if-eq p1, v3, :cond_7
-
-    const/4 v3, 0x4
-
-    if-eq p1, v3, :cond_6
-
-    const/4 v3, 0x5
-
-    if-eq p1, v3, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    new-instance v4, Lvg3;
-
-    invoke-direct {v4, v1, v2}, Lvg3;-><init>(J)V
-
-    goto :goto_2
-
-    :cond_7
-    new-instance v4, Lug3;
-
-    invoke-direct {v4, v1, v2}, Lug3;-><init>(J)V
-
-    :goto_2
-    if-nez v4, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    invoke-virtual {v5, v4}, Lbh3;->a(Lwg3;)V
-
-    :cond_9
-    :goto_3
-    return-object v0
+    return-void
 .end method

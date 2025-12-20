@@ -1,116 +1,68 @@
 .class public final Ls91;
-.super Ljava/lang/Object;
+.super Lpvh;
 .source "SourceFile"
 
+# interfaces
+.implements Lu91;
 
-# instance fields
-.field public final a:Lk18;
 
-.field public final b:Lk18;
+# static fields
+.field public static final c:Ls91;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ls91;
 
-    iput-object p1, p0, Ls91;->a:Lk18;
+    sget v1, Lgcd;->call_main_speaker_phone_disabled:I
 
-    iput-object p2, p0, Ls91;->b:Lk18;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lpvh;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Ls91;->c:Ls91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const-string v0, "HandleSilenceMode"
+    const/4 v0, 0x1
 
-    const-string v1, "try mute ringtones"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ls91;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loqd;
-
-    invoke-virtual {v0}, Loqd;->a()Lel1;
-
-    move-result-object v0
-
-    sget-object v1, Llg8;->d:Llg8;
-
-    iget-object v2, v0, Lel1;->j:Landroid/media/MediaPlayer;
-
-    const/4 v3, 0x0
-
-    const-string v4, "RingtoneManagerTag"
-
-    if-nez v2, :cond_3
-
-    iget-object v2, v0, Lel1;->h:Lbwf;
-
-    invoke-virtual {v2}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/Vibrator;
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    sget-object v0, Lwqi;->a:Ll6b;
+    instance-of p1, p1, Ls91;
 
-    if-nez v0, :cond_1
+    if-nez p1, :cond_1
 
-    goto :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    invoke-virtual {v0, v1}, Ll6b;->b(Llg8;)Z
+    return v0
+.end method
 
-    move-result v2
+.method public final hashCode()I
+    .locals 1
 
-    if-eqz v2, :cond_2
+    const v0, 0x6535960a
 
-    const-string v2, " mute already set"
+    return v0
+.end method
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :cond_2
-    :goto_0
-    return-void
+    const-string v0, "Muted"
 
-    :cond_3
-    :goto_1
-    sget-object v2, Lwqi;->a:Ll6b;
-
-    if-nez v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {v2, v1}, Ll6b;->b(Llg8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    const-string v5, " set mute"
-
-    invoke-virtual {v2, v1, v4, v5, v3}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_2
-    invoke-virtual {v0}, Lel1;->e()V
-
-    return-void
+    return-object v0
 .end method

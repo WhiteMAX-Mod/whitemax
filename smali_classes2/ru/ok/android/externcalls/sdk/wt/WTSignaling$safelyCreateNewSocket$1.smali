@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/wt/WTSignaling;->safelyCreateNewSocket(Ljava/lang/String;Lp0f;)V
+    value = Lru/ok/android/externcalls/sdk/wt/WTSignaling;->safelyCreateNewSocket(Ljava/lang/String;Lmbf;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
     d2 = {
         "ru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;",
-        "Lqqg;",
+        "Lv2h;",
         "onOpen",
         "()V",
         "",
@@ -51,14 +51,14 @@
 
 
 # instance fields
-.field final synthetic $listener:Lp0f;
+.field final synthetic $listener:Lmbf;
 
 
 # direct methods
-.method public constructor <init>(Lp0f;)V
+.method public constructor <init>(Lmbf;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lp0f;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lmbf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,15 +70,15 @@
 .method public onClosed(ILjava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lp0f;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lmbf;
 
-    check-cast v0, Lxpb;
+    check-cast v0, Lo4e;
 
-    iget-object v0, v0, Lxpb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo4e;->b:Ljava/lang/Object;
 
-    check-cast v0, Lq0f;
+    check-cast v0, Lnbf;
 
-    invoke-static {v0, p1, p2}, Lq0f;->access$handleSocketClosed(Lq0f;ILjava/lang/String;)V
+    invoke-static {v0, p1, p2}, Lnbf;->access$handleSocketClosed(Lnbf;ILjava/lang/String;)V
 
     return-void
 .end method
@@ -86,21 +86,21 @@
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lp0f;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lmbf;
 
-    check-cast v0, Lxpb;
+    check-cast v0, Lo4e;
 
-    iget-object v1, v0, Lxpb;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lo4e;->b:Ljava/lang/Object;
 
-    check-cast v1, Lq0f;
+    check-cast v1, Lnbf;
 
-    iget-object v0, v0, Lxpb;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lo4e;->c:Ljava/lang/Object;
 
-    check-cast v0, Ljt;
+    check-cast v0, Lmt;
 
-    iget-boolean v0, v0, Ljt;->b:Z
+    iget-boolean v0, v0, Lmt;->b:Z
 
-    invoke-static {v1, v0, p1}, Lq0f;->access$handleSocketFailure(Lq0f;ZLjava/lang/Throwable;)V
+    invoke-static {v1, v0, p1}, Lnbf;->access$handleSocketFailure(Lnbf;ZLjava/lang/Throwable;)V
 
     return-void
 .end method
@@ -108,15 +108,15 @@
 .method public onMessage(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lp0f;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lmbf;
 
-    check-cast v0, Lxpb;
+    check-cast v0, Lo4e;
 
-    iget-object v0, v0, Lxpb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo4e;->b:Ljava/lang/Object;
 
-    check-cast v0, Lq0f;
+    check-cast v0, Lnbf;
 
-    invoke-static {v0, p1}, Lq0f;->access$handleSocketMessage(Lq0f;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lnbf;->access$handleSocketMessage(Lnbf;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -124,15 +124,15 @@
 .method public onOpen()V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lp0f;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;->$listener:Lmbf;
 
-    check-cast v0, Lxpb;
+    check-cast v0, Lo4e;
 
-    iget-object v0, v0, Lxpb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo4e;->b:Ljava/lang/Object;
 
-    check-cast v0, Lq0f;
+    check-cast v0, Lnbf;
 
-    invoke-static {v0}, Lq0f;->access$handleSocketOpen(Lq0f;)V
+    invoke-static {v0}, Lnbf;->access$handleSocketOpen(Lnbf;)V
 
     return-void
 .end method

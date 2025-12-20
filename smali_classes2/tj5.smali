@@ -1,61 +1,141 @@
-.class public final synthetic Ltj5;
+.class public final Ltj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Luj5;
 
-.field public final synthetic b:Lzj5;
+.field public final synthetic b:I
 
-.field public final synthetic c:J
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzj5;JI)V
+.method public constructor <init>(Luj5;II)V
     .locals 0
 
-    iput p4, p0, Ltj5;->a:I
-
-    iput-object p1, p0, Ltj5;->b:Lzj5;
-
-    iput-wide p2, p0, Ltj5;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltj5;->a:Luj5;
+
+    iput p2, p0, Ltj5;->b:I
+
+    iput p3, p0, Ltj5;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 3
+.method public final run()V
+    .locals 6
 
-    iget v0, p0, Ltj5;->a:I
+    iget-object v0, p0, Ltj5;->a:Luj5;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Luj5;->a:Lqj5;
 
-    iget-object v0, p0, Ltj5;->b:Lzj5;
+    iget-object v2, v0, Luj5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-wide v1, p0, Ltj5;->c:J
+    iget v3, p0, Ltj5;->b:I
 
-    invoke-virtual {v0, v1, v2}, Lzj5;->f(J)V
+    if-nez v3, :cond_0
 
-    return-wide v1
+    iget v3, p0, Ltj5;->c:I
 
-    :pswitch_0
-    iget-object v0, p0, Ltj5;->b:Lzj5;
+    :cond_0
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    iget-wide v1, p0, Ltj5;->c:J
+    move-result-object v3
 
-    invoke-virtual {v0, v1, v2}, Lzj5;->f(J)V
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
 
-    return-wide v1
+    move-result v3
 
-    nop
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lzqd;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Lzqd;->j()I
+
+    move-result v4
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v4, 0x0
+
+    :goto_0
+    sub-int/2addr v4, v3
+
+    iget v3, v0, Luj5;->b:I
+
+    const/4 v5, 0x1
+
+    if-gt v4, v3, :cond_3
+
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-boolean v3, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
+
+    if-nez v3, :cond_3
+
+    :cond_2
+    invoke-interface {v1}, Lqj5;->p()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+
+    invoke-interface {v1}, Lqj5;->n()V
+
+    :cond_3
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
+
+    move-result v3
+
+    if-ltz v3, :cond_5
+
+    iget v0, v0, Luj5;->b:I
+
+    if-gt v3, v0, :cond_5
+
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-boolean v0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
+
+    if-nez v0, :cond_5
+
+    :cond_4
+    invoke-interface {v1}, Lqj5;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
+
+    invoke-interface {v1}, Lqj5;->j()V
+
+    :cond_5
+    return-void
 .end method

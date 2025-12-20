@@ -1,58 +1,53 @@
-.class public final synthetic Lnk2;
-.super Ljava/lang/Object;
+.class public final Lnk2;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:J
+.field public final synthetic Y:Lch2;
 
-.field public final synthetic c:Ljava/lang/String;
+.field public Z:I
 
-.field public final synthetic d:Lo05;
+.field public d:J
+
+.field public o:Lch2;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;Lo05;)V
+.method public constructor <init>(Lch2;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnk2;->Y:Lch2;
 
-    iput-wide p1, p0, Lnk2;->a:J
-
-    iput-wide p3, p0, Lnk2;->b:J
-
-    iput-object p5, p0, Lnk2;->c:Ljava/lang/String;
-
-    iput-object p6, p0, Lnk2;->d:Lo05;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Ljk2;
+    iput-object p1, p0, Lnk2;->X:Ljava/lang/Object;
 
-    new-instance v0, Ljk2;
+    iget p1, p0, Lnk2;->Z:I
 
-    const/4 v7, 0x0
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lnk2;->a:J
+    or-int/2addr p1, v0
 
-    iget-wide v3, p0, Lnk2;->b:J
+    iput p1, p0, Lnk2;->Z:I
 
-    iget-object v5, p0, Lnk2;->c:Ljava/lang/String;
+    iget-object p1, p0, Lnk2;->Y:Lch2;
 
-    iget-object v6, p0, Lnk2;->d:Lo05;
+    const-wide/16 v0, 0x0
 
-    invoke-direct/range {v0 .. v7}, Ljk2;-><init>(JJLjava/lang/String;Lo05;Z)V
+    invoke-static {p1, v0, v1, p0}, Ldl2;->g(Lch2;JLl84;)Ljava/lang/Comparable;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

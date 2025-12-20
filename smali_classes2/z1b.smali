@@ -1,159 +1,153 @@
 .class public final Lz1b;
-.super Landroid/text/method/TextKeyListener;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
+
+# static fields
+.field public static final o:Landroid/os/Handler;
 
 
 # instance fields
-.field public final synthetic a:La2b;
+.field public final a:Landroid/view/View;
+
+.field public final b:Lmq6;
+
+.field public c:Landroid/view/ViewTreeObserver;
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(La2b;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lz1b;->a:La2b;
+    new-instance v0, Landroid/os/Handler;
 
-    sget-object p1, Landroid/text/method/TextKeyListener$Capitalize;->NONE:Landroid/text/method/TextKeyListener$Capitalize;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-direct {p0, p1, v0}, Landroid/text/method/TextKeyListener;-><init>(Landroid/text/method/TextKeyListener$Capitalize;Z)V
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lz1b;->o:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/View;Lmq6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz1b;->a:Landroid/view/View;
+
+    iput-object p2, p0, Lz1b;->b:Lmq6;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz1b;->c:Landroid/view/ViewTreeObserver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
+.method public final onPreDraw()Z
+    .locals 4
+
+    iget-boolean v0, p0, Lz1b;->d:Z
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz1b;->b:Lmq6;
+
+    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iput-boolean v1, p0, Lz1b;->d:Z
+
+    new-instance v1, Lli6;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v1, v2, p0}, Lli6;-><init>(ILjava/lang/Object;)V
+
+    sget-object v2, Lz1b;->o:Landroid/os/Handler;
+
+    invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    move v1, v0
+
+    :cond_0
+    if-nez v1, :cond_1
+
+    const-string v0, "skipping frame"
+
+    const/4 v2, 0x0
+
+    const-string v3, "OneShotOnPreDrawListener"
+
+    invoke-static {v3, v0, v2}, Lm4j;->o(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    return v1
+.end method
+
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz1b;->c:Landroid/view/ViewTreeObserver;
 
     return-void
 .end method
 
-.method public final onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
 
-    const/16 v0, 0x43
+    iget-object p1, p0, Lz1b;->c:Landroid/view/ViewTreeObserver;
 
-    if-ne p3, v0, :cond_2
-
-    iget-object v0, p0, Lz1b;->a:La2b;
-
-    invoke-virtual {v0}, La2b;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, v0, La2b;->C0:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object p1, v0, La2b;->C0:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lue3;->O(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {p2}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result p2
-
-    const/4 p3, 0x1
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {v0}, La2b;->getCallback()Ly1b;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ljava/lang/Number;
-
-    invoke-virtual {p4}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    check-cast p2, Li5i;
-
-    invoke-virtual {p2, v1, v2}, Li5i;->n(J)V
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p1
-
-    invoke-virtual {v0, p1, p2}, La2b;->c(J)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {p1, p3}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
-
-    :goto_0
-    return p3
-
-    :cond_2
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/text/method/TextKeyListener;->onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
     move-result p1
 
-    return p1
-.end method
+    iget-object v0, p0, Lz1b;->a:Landroid/view/View;
 
-.method public final onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
-    .locals 0
+    if-eqz p1, :cond_0
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lz1b;->c:Landroid/view/ViewTreeObserver;
 
-    return p1
-.end method
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-.method public final onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 0
+    goto :goto_0
 
-    const/4 p1, 0x1
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    return p1
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    :goto_0
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
 .end method

@@ -1,45 +1,14 @@
-.class public final synthetic Ldxa;
-.super Ltoc;
+.class public interface abstract Ldxa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ldxa;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Ldxa;
-
-    const-string v1, "getDependencyDuration()J"
-
-    const/4 v2, 0x0
-
-    const-class v3, Lls8;
-
-    const-string v4, "dependencyDuration"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ldxa;->a:Ldxa;
-
-    return-void
+# virtual methods
+.method public abstract h(Ljava/util/concurrent/Executor;Lbxa;)V
 .end method
 
+.method public abstract m()Lwe8;
+.end method
 
-# virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Lls8;
-
-    iget-wide v0, p1, Lls8;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract o(Lbxa;)V
 .end method

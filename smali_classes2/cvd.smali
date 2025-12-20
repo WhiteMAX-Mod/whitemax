@@ -1,25 +1,23 @@
-.class public abstract Lcvd;
+.class public final Lcvd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Llnb;
 
-.field public static final b:I
+.field public final b:Landroid/util/Size;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llnb;Landroid/util/Size;)V
+    .locals 0
 
-    sget v0, Lp0d;->one_chat_reactions_expand_view_type:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lcvd;->a:I
+    iput-object p1, p0, Lcvd;->a:Llnb;
 
-    sget v0, Lp0d;->one_chat_reactions_selection_animoji_view_type:I
-
-    sput v0, Lcvd;->b:I
+    iput-object p2, p0, Lcvd;->b:Landroid/util/Size;
 
     return-void
 .end method

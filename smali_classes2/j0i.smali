@@ -1,357 +1,220 @@
 .class public final Lj0i;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lo0i;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
+.field public final synthetic Y:Lzzh;
 
-.field public final c:Landroid/content/Context;
+.field public final synthetic Z:Lu0i;
 
-.field public final d:Llqh;
+.field public o:I
 
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
+.field public final synthetic s0:Ld0i;
 
 
 # direct methods
-.method public constructor <init>(JJLandroid/content/Context;Lage;)V
-    .locals 3
+.method public constructor <init>(Lzzh;Ld0i;Lu0i;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Llqh;
+    iput-object p1, p0, Lj0i;->Y:Lzzh;
 
-    const-string v1, "webapp_s_key_"
+    iput-object p3, p0, Lj0i;->Z:Lu0i;
 
-    const-string v2, "_"
+    iput-object p2, p0, Lj0i;->s0:Ld0i;
 
-    invoke-static {p3, p4, v1, v2}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x2
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Llqh;-><init>(Ljava/lang/String;Z)V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lj0i;->a:J
-
-    iput-wide p3, p0, Lj0i;->b:J
-
-    iput-object p5, p0, Lj0i;->c:Landroid/content/Context;
-
-    iput-object v0, p0, Lj0i;->d:Llqh;
-
-    check-cast p6, Ll5c;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ss-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 p2, 0xa
-
-    int-to-long p2, p2
-
-    invoke-virtual {p6, p1, p2, p3}, Ll5c;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide p1
-
-    long-to-int p1, p1
-
-    iput p1, p0, Lj0i;->e:I
-
-    const-class p1, Lj0i;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj0i;->f:Ljava/lang/String;
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lj0i;->b()Landroid/content/SharedPreferences;
+    check-cast p1, Lsp0;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :try_start_0
-    iget-object v1, p0, Lj0i;->d:Llqh;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, p2, v2}, Llqh;->e(Ljava/lang/String;Ljavax/crypto/Cipher;)Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    new-instance v1, Lipd;
-
-    invoke-direct {v1, p2}, Lipd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p2, v1
-
-    :goto_0
-    nop
-
-    instance-of v1, p2, Lipd;
-
-    if-eqz v1, :cond_0
-
-    const-string p1, "Can\'t encrypt value"
-
-    invoke-static {p2}, Lkpd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lj0i;->f:Ljava/lang/String;
-
-    invoke-static {v0, p1, p2}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_0
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, p2}, Lj0i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    check-cast p1, Lj0i;
 
-    goto :goto_1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :cond_1
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    iget v2, p0, Lj0i;->e:I
-
-    if-ne v1, v2, :cond_2
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_2
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p1, p2}, Lj0i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    :goto_1
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p1
 .end method
 
-.method public final b()Landroid/content/SharedPreferences;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 4
 
-    const-string v0, "webapp_ss_"
+    new-instance v0, Lj0i;
 
-    const-string v1, "_"
+    iget-object v1, p0, Lj0i;->Z:Lu0i;
 
-    iget-wide v2, p0, Lj0i;->b:J
+    iget-object v2, p0, Lj0i;->s0:Ld0i;
 
-    invoke-static {v2, v3, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lj0i;->Y:Lzzh;
 
-    move-result-object v0
+    invoke-direct {v0, v3, v2, v1, p2}, Lj0i;-><init>(Lzzh;Ld0i;Lu0i;Lkotlin/coroutines/Continuation;)V
 
-    iget-wide v1, p0, Lj0i;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lj0i;->c:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
+    iput-object p1, v0, Lj0i;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final clear()Ljava/lang/Boolean;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    invoke-virtual {p0}, Lj0i;->b()Landroid/content/SharedPreferences;
+    iget v0, p0, Lj0i;->o:I
 
-    move-result-object v0
+    iget-object v1, p0, Lj0i;->s0:Ld0i;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
+    const/4 v2, 0x1
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, p0, Lj0i;->d:Llqh;
-
-    invoke-virtual {v1}, Llqh;->c()V
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public final get(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    invoke-virtual {p0}, Lj0i;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lj0i;->d:Llqh;
-
-    invoke-virtual {v0, p1, v1}, Llqh;->d(Ljava/lang/String;Ljavax/crypto/Cipher;)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lipd;
-
-    invoke-direct {v0, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_0
-    nop
-
-    instance-of v0, p1, Lipd;
+    iget-object v3, p0, Lj0i;->Z:Lu0i;
 
     if-eqz v0, :cond_1
 
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
     goto :goto_1
 
-    :cond_1
-    move-object v1, p1
-
-    :goto_1
-    check-cast v1, Ljava/lang/String;
-
-    return-object v1
-.end method
-
-.method public final remove(Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 2
-
-    invoke-virtual {p0}, Lj0i;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
     :cond_0
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj0i;->X:Ljava/lang/Object;
+
+    check-cast p1, Lsp0;
+
+    iget-boolean v0, p1, Lsp0;->a:Z
+
+    iget-object v4, p0, Lj0i;->Y:Lzzh;
+
+    if-eqz v0, :cond_2
+
+    new-instance v5, Lc0i;
+
+    iget-object v6, v4, Lzzh;->b:Ljava/lang/String;
+
+    sget-object v7, Lu0i;->i:Ljava/util/List;
+
+    iget-boolean v8, p1, Lsp0;->b:Z
+
+    iget-boolean v9, p1, Lsp0;->c:Z
+
+    iget-boolean v10, p1, Lsp0;->d:Z
+
+    iget-object p1, v3, Lu0i;->e:Lz7g;
+
+    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    move-object v11, p1
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    check-cast v11, Ljava/lang/String;
+
+    invoke-direct/range {v5 .. v11}, Lc0i;-><init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
+
+    iget-object p1, v3, Lu0i;->a:Lv08;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lc0i;->Companion:Lb0i;
+
+    invoke-virtual {v0}, Lb0i;->serializer()Lq38;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v5}, Lv08;->b(Lq38;Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p1, Ld1i;
+
+    iget-object v0, v4, Lzzh;->b:Ljava/lang/String;
+
+    iget-object v4, v3, Lu0i;->e:Lz7g;
+
+    invoke-virtual {v4}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-direct {p1, v0, v4}, Ld1i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v3, Lu0i;->a:Lv08;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v4, Ld1i;->Companion:Lc1i;
+
+    invoke-virtual {v4}, Lc1i;->serializer()Lq38;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4, p1}, Lv08;->b(Lq38;Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_0
+    iget-object v0, v3, Lu0i;->g:Lfx0;
+
+    new-instance v4, Li08;
+
+    iget-object v5, v1, Ld0i;->a:Ljava/lang/String;
+
+    invoke-direct {v4, v5, p1}, Li08;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput v2, p0, Lj0i;->o:I
+
+    invoke-interface {v0, v4, p0}, Lhne;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    iget-object p1, v1, Ld0i;->a:Ljava/lang/String;
+
+    invoke-static {v3, p1}, Lu0i;->e(Lu0i;Ljava/lang/String;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

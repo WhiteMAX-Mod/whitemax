@@ -1,69 +1,23 @@
 .class public final Lb6f;
-.super Lbid;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final a:Landroid/view/View;
 
-.field public final synthetic b:Lgf4;
+.field public final b:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method public constructor <init>(Lgf4;)V
+.method public constructor <init>(Landroid/view/View;Landroid/view/ViewGroup;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb6f;->b:Lgf4;
+    iput-object p1, p0, Lb6f;->a:Landroid/view/View;
 
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lb6f;->a:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    iget-boolean p1, p0, Lb6f;->a:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lb6f;->a:Z
-
-    iget-object p1, p0, Lb6f;->b:Lgf4;
-
-    invoke-virtual {p1}, Lgf4;->l()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
-
-    if-nez p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lb6f;->a:Z
+    iput-object p2, p0, Lb6f;->b:Landroid/view/ViewGroup;
 
     return-void
 .end method

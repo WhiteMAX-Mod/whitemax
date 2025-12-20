@@ -1,189 +1,49 @@
 .class public final Lclh;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Lukh;
-
-.field public final d:Lwa2;
+.field public final synthetic o:Lllh;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lukh;Lwa2;)V
+.method public constructor <init>(Lllh;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lclh;->o:Lllh;
 
-    iput-wide p1, p0, Lclh;->a:J
-
-    iput-object p3, p0, Lclh;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lclh;->c:Lukh;
-
-    iput-object p5, p0, Lclh;->d:Lwa2;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lclh;->d:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lclh;->X:I
 
-    :cond_0
-    instance-of v0, p1, Lclh;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lclh;->X:I
 
-    :cond_1
-    check-cast p1, Lclh;
+    iget-object p1, p0, Lclh;->o:Lllh;
 
-    iget-wide v0, p0, Lclh;->a:J
+    const-wide/16 v0, 0x0
 
-    iget-wide v2, p1, Lclh;->a:J
+    invoke-virtual {p1, v0, v1, p0}, Lllh;->f(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    move-result-object p1
 
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lclh;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lclh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lclh;->c:Lukh;
-
-    iget-object v1, p1, Lclh;->c:Lukh;
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lclh;->d:Lwa2;
-
-    iget-object p1, p1, Lclh;->d:Lwa2;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lclh;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lclh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lclh;->c:Lukh;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lclh;->d:Lwa2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "WebAppAnalyticsParam(botId="
-
-    const-string v1, ", webAppName="
-
-    iget-wide v2, p0, Lclh;->a:J
-
-    iget-object v4, p0, Lclh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", entryPoint="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lclh;->c:Lukh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sourceType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lclh;->d:Lwa2;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", label=null)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

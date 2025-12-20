@@ -1,137 +1,164 @@
-.class public final enum Lo05;
-.super Ljava/lang/Enum;
+.class public final Lo05;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lo05;
-
-.field public static final synthetic Y:[Lo05;
-
-.field public static final synthetic Z:Lzg5;
-
-.field public static final enum a:Lo05;
-
-.field public static final enum b:Lo05;
-
-.field public static final enum c:Lo05;
-
-.field public static final enum d:Lo05;
-
-.field public static final enum o:Lo05;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lo05;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SHARE_VIDEO"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lo05;->a:Lo05;
-
-    new-instance v1, Lo05;
-
-    const-string v2, "DOWNLOAD_VIDEO"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lo05;->b:Lo05;
-
-    new-instance v2, Lo05;
-
-    const-string v3, "SHARE_PHOTO"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lo05;->c:Lo05;
-
-    new-instance v3, Lo05;
-
-    const-string v4, "DOWNLOAD_PHOTO"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lo05;
-
-    const-string v5, "SHARE_GIF"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lo05;->d:Lo05;
-
-    new-instance v5, Lo05;
-
-    const-string v6, "DOWNLOAD_GIF"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lo05;->o:Lo05;
-
-    new-instance v6, Lo05;
-
-    const-string v7, "SHARE_FILE"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lo05;->X:Lo05;
-
-    filled-new-array/range {v0 .. v6}, [Lo05;
-
-    move-result-object v0
-
-    sput-object v0, Lo05;->Y:[Lo05;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lo05;->Z:Lzg5;
+    iput-wide p1, p0, Lo05;->a:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lo05;
+.method public static final synthetic a(J)Lo05;
     .locals 1
 
-    const-class v0, Lo05;
+    new-instance v0, Lo05;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {v0, p0, p1}, Lo05;-><init>(J)V
 
-    move-result-object p0
-
-    check-cast p0, Lo05;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static values()[Lo05;
-    .locals 1
+.method public static b(IF)J
+    .locals 3
 
-    sget-object v0, Lo05;->Y:[Lo05;
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result p1
+
+    int-to-long v0, p1
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr p0, v2
+
+    add-long/2addr v0, p0
+
+    return-wide v0
+.end method
+
+.method public static final c(JLandroid/content/Context;)F
+    .locals 0
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    invoke-static {p0, p1, p2}, Lo05;->d(JLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final d(JLandroid/util/DisplayMetrics;)F
+    .locals 2
+
+    const/16 v0, 0x20
+
+    shr-long v0, p0, v0
+
+    long-to-int v0, v0
+
+    invoke-static {p0, p1}, Lo05;->e(J)F
+
+    move-result p0
+
+    invoke-static {v0, p0, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final e(J)F
+    .locals 2
+
+    const-wide v0, 0xffffffffL
+
+    and-long/2addr p0, v0
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Lo05;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lo05;
+
+    iget-wide v0, p1, Lo05;->a:J
+
+    iget-wide v2, p0, Lo05;->a:J
+
+    cmp-long p1, v2, v0
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lo05;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Dimension(encodedValue="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lo05;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lo05;
 
     return-object v0
 .end method

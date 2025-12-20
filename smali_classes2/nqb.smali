@@ -2,145 +2,223 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsqb;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
 
-.field public final b:Lc9a;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lh00;
+
+.field public final d:Lpqb;
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Ljava/util/List;
+
+.field public final h:Lmw4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lc9a;)V
-    .locals 0
+.method public constructor <init>(Lmqb;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnqb;->a:Ljava/lang/String;
+    iget-wide v0, p1, Lmqb;->a:J
 
-    iput-object p2, p0, Lnqb;->b:Lc9a;
+    iput-wide v0, p0, Lnqb;->a:J
+
+    iget-object v0, p1, Lmqb;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Lnqb;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lmqb;->c:Lh00;
+
+    iput-object v0, p0, Lnqb;->c:Lh00;
+
+    iget-object v0, p1, Lmqb;->d:Lpqb;
+
+    iput-object v0, p0, Lnqb;->d:Lpqb;
+
+    iget-boolean v0, p1, Lmqb;->e:Z
+
+    iput-boolean v0, p0, Lnqb;->e:Z
+
+    iget-boolean v0, p1, Lmqb;->f:Z
+
+    iput-boolean v0, p0, Lnqb;->f:Z
+
+    iget-object v0, p1, Lmqb;->g:Ljava/util/List;
+
+    iput-object v0, p0, Lnqb;->g:Ljava/util/List;
+
+    iget-object p1, p1, Lmqb;->h:Lmw4;
+
+    iput-object p1, p0, Lnqb;->h:Lmw4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final a()Lxs;
+    .locals 3
 
-    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
+    new-instance v0, Lxs;
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public final b()Lc9a;
-    .locals 1
+    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
 
-    iget-object v0, p0, Lnqb;->b:Lc9a;
+    iget-wide v1, p0, Lnqb;->a:J
 
-    return-object v0
-.end method
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    move-result-object v1
 
-    const/4 v0, 0x1
+    const-string v2, "cid"
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    iget-object v1, p0, Lnqb;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Ltri;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "text"
+
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    instance-of v1, p1, Lnqb;
+    iget-boolean v1, p0, Lnqb;->e:Z
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    const-string v2, "detectShare"
+
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v1, p0, Lnqb;->c:Lh00;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    const-string v2, "attaches"
+
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    check-cast p1, Lnqb;
+    iget-object v1, p0, Lnqb;->d:Lpqb;
 
-    iget-object v1, p0, Lnqb;->a:Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    iget-object v3, p1, Lnqb;->a:Ljava/lang/String;
+    const-string v2, "link"
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    iget-object v1, p0, Lnqb;->b:Lc9a;
+    iget-boolean v1, p0, Lnqb;->f:Z
 
-    iget-object p1, p1, Lnqb;->b:Lc9a;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result p1
+    const-string v2, "isLive"
 
-    if-nez p1, :cond_3
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v2
+    iget-object v1, p0, Lnqb;->g:Ljava/util/List;
+
+    if-eqz v1, :cond_3
+
+    const-string v2, "elements"
+
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
-    return v0
-.end method
+    iget-object v1, p0, Lnqb;->h:Lmw4;
 
-.method public final hashCode()I
-    .locals 2
+    if-eqz v1, :cond_4
 
-    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
+    const-string v2, "delayedAttributes"
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Lmw4;->a()Ljava/util/Map;
 
-    move-result v0
+    move-result-object v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, v2, v1}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lnqb;->b:Lc9a;
-
-    invoke-virtual {v1}, Lc9a;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :cond_4
+    return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 6
 
-    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
+    iget-object v0, p0, Lnqb;->g:Ljava/util/List;
 
-    invoke-static {v0}, Lceg;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lvki;->a(Ljava/util/Collection;)I
 
-    move-result-object v0
+    move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "OutgoingMessage{cid="
 
-    const-string v2, "CancelMetric(traceId="
+    const-string v2, ", text="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v3, p0, Lnqb;->a:J
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "***"
 
-    const-string v0, ", localProperties="
+    invoke-static {v1, v3, v4, v2, v5}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    iget-object v0, p0, Lnqb;->b:Lc9a;
+    const-string v2, ", attaches="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    iget-object v2, p0, Lnqb;->c:Lh00;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", link="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lnqb;->d:Lpqb;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", detectShare="
+
+    const-string v3, ", live=\'"
+
+    iget-boolean v4, p0, Lnqb;->e:Z
+
+    iget-boolean v5, p0, Lnqb;->f:Z
+
+    invoke-static {v2, v3, v1, v4, v5}, Lqi3;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v2, "\', elements="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

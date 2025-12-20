@@ -1,387 +1,247 @@
 .class public final Lg65;
-.super Ltz4;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # instance fields
-.field public o:I
+.field public volatile X:Le65;
 
-.field public p:I
+.field public volatile Y:Z
 
-.field public final q:Lmni;
+.field public Z:Ljava/lang/Exception;
 
-.field public final r:Lmni;
+.field public final a:Lq65;
+
+.field public final b:Lt65;
+
+.field public final c:Ln65;
+
+.field public final d:Z
+
+.field public final o:I
+
+.field public s0:J
 
 
 # direct methods
-.method public constructor <init>(Lmni;Lmni;)V
-    .locals 1
+.method public constructor <init>(Lq65;Lt65;Ln65;ZILe65;)V
+    .locals 0
 
-    invoke-direct {p0}, Ltz4;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lg65;->a:Lq65;
 
-    iput v0, p0, Lg65;->o:I
+    iput-object p2, p0, Lg65;->b:Lt65;
 
-    iput v0, p0, Lg65;->p:I
+    iput-object p3, p0, Lg65;->c:Ln65;
 
-    iput-object p1, p0, Lg65;->q:Lmni;
+    iput-boolean p4, p0, Lg65;->d:Z
 
-    iput-object p2, p0, Lg65;->r:Lmni;
+    iput p5, p0, Lg65;->o:I
+
+    iput-object p6, p0, Lg65;->X:Le65;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lg65;->s0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Lu75;)Lfa0;
-    .locals 1
+.method public final a(Z)V
+    .locals 0
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    invoke-super {p0, p1}, Ltz4;->n(Lu75;)Lfa0;
-
-    move-result-object p1
-
-    invoke-static {}, Lho6;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lg65;->o:I
-
-    invoke-static {}, Lho6;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lg65;->p:I
-
-    return-object p1
-.end method
-
-.method public final q()V
-    .locals 1
-
-    invoke-super {p0}, Ltz4;->q()V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg65;->o:I
-
-    iput v0, p0, Lg65;->p:I
-
-    return-void
-.end method
-
-.method public final w(JLandroid/view/Surface;Lfsf;Landroid/graphics/SurfaceTexture;Landroid/graphics/SurfaceTexture;)V
-    .locals 8
-
-    iget-object v0, p0, Ltz4;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lho6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
-
-    iget-object v0, p0, Ltz4;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Thread;
-
-    invoke-static {v0}, Lho6;->c(Ljava/lang/Thread;)V
-
-    invoke-virtual {p0, p3}, Ltz4;->l(Landroid/view/Surface;)Lwa0;
-
-    move-result-object v0
-
-    sget-object v1, Lho6;->j:Lwa0;
-
-    if-ne v0, v1, :cond_1
-
-    invoke-virtual {p0, p3}, Ltz4;->h(Landroid/view/Surface;)Lwa0;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    move-object v2, p0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Ltz4;->d:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/HashMap;
-
-    invoke-virtual {v1, p3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    move-object v3, v0
-
-    iget-object v0, v3, Lwa0;->a:Landroid/opengl/EGLSurface;
-
-    iget-object v1, p0, Ltz4;->k:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/Surface;
-
-    if-eq p3, v1, :cond_2
-
-    invoke-virtual {p0, v0}, Ltz4;->o(Landroid/opengl/EGLSurface;)V
-
-    iput-object p3, p0, Ltz4;->k:Ljava/lang/Object;
-
-    :cond_2
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v2, v2, v1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
-
-    const/16 v1, 0x4000
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
-
-    iget-object v6, p0, Lg65;->q:Lmni;
-
-    iget v7, p0, Lg65;->o:I
-
-    move-object v2, p0
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-virtual/range {v2 .. v7}, Lg65;->x(Lwa0;Lfsf;Landroid/graphics/SurfaceTexture;Lmni;I)V
-
-    iget-object v6, v2, Lg65;->r:Lmni;
-
-    iget v7, v2, Lg65;->p:I
-
-    move-object v5, p6
-
-    invoke-virtual/range {v2 .. v7}, Lg65;->x(Lwa0;Lfsf;Landroid/graphics/SurfaceTexture;Lmni;I)V
-
-    iget-object p4, v2, Ltz4;->f:Ljava/lang/Object;
-
-    check-cast p4, Landroid/opengl/EGLDisplay;
-
-    invoke-static {p4, v0, p1, p2}, Landroid/opengl/EGLExt;->eglPresentationTimeANDROID(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;J)Z
-
-    iget-object p1, v2, Ltz4;->f:Ljava/lang/Object;
-
-    check-cast p1, Landroid/opengl/EGLDisplay;
-
-    invoke-static {p1, v0}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string p2, "Failed to swap buffers with EGL error: 0x"
-
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "DualOpenGlRenderer"
-
-    invoke-static {p2, p1}, Lgri;->i(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p3, p1}, Ltz4;->s(Landroid/view/Surface;Z)V
+    iput-object p1, p0, Lg65;->X:Le65;
 
-    :cond_3
-    :goto_0
+    :cond_0
+    iget-boolean p1, p0, Lg65;->Y:Z
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lg65;->Y:Z
+
+    iget-object p1, p0, Lg65;->b:Lt65;
+
+    invoke-interface {p1}, Lt65;->cancel()V
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_1
     return-void
 .end method
 
-.method public final x(Lwa0;Lfsf;Landroid/graphics/SurfaceTexture;Lmni;I)V
-    .locals 17
+.method public final b(JJF)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lg65;->c:Ln65;
 
-    move-object/from16 v1, p1
+    iput-wide p3, v0, Ln65;->a:J
 
-    move/from16 v2, p5
+    iget-object p3, p0, Lg65;->c:Ln65;
 
-    invoke-virtual {v0, v2}, Ltz4;->v(I)V
+    iput p5, p3, Ln65;->b:F
 
-    iget v2, v1, Lwa0;->b:I
+    iget-wide p3, p0, Lg65;->s0:J
 
-    iget v1, v1, Lwa0;->c:I
+    cmp-long p3, p1, p3
 
-    const/4 v3, 0x0
+    if-eqz p3, :cond_0
 
-    invoke-static {v3, v3, v2, v1}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    iput-wide p1, p0, Lg65;->s0:J
 
-    invoke-static {v3, v3, v2, v1}, Landroid/opengl/GLES20;->glScissor(IIII)V
+    iget-object p3, p0, Lg65;->X:Le65;
 
-    const/16 v4, 0x10
+    if-eqz p3, :cond_0
 
-    new-array v5, v4, [F
+    const/16 p4, 0x20
 
-    move-object/from16 v6, p3
+    shr-long p4, p1, p4
 
-    invoke-virtual {v6, v5}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
+    long-to-int p4, p4
 
-    new-array v6, v4, [F
+    long-to-int p1, p1
 
-    move-object/from16 v7, p2
+    const/16 p2, 0xb
 
-    invoke-virtual {v7, v6, v5}, Lfsf;->w([F[F)V
+    invoke-virtual {p3, p2, p4, p1, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    iget-object v5, v0, Ltz4;->m:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v5, Lfo6;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v7, v5, Lgo6;
-
-    const-string v8, "glUniformMatrix4fv"
-
-    const/4 v9, 0x1
-
-    if-eqz v7, :cond_0
-
-    move-object v7, v5
-
-    check-cast v7, Lgo6;
-
-    iget v7, v7, Lgo6;->f:I
-
-    invoke-static {v7, v9, v3, v6, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    invoke-static {v8}, Lho6;->b(Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
-    new-instance v6, Landroid/util/Size;
+    return-void
+.end method
 
-    int-to-float v7, v2
+.method public final run()V
+    .locals 8
 
-    invoke-virtual/range {p4 .. p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_0
+    iget-boolean v0, p0, Lg65;->d:Z
 
-    const/high16 v10, 0x3f800000    # 1.0f
+    if-eqz v0, :cond_0
 
-    mul-float/2addr v7, v10
+    iget-object v0, p0, Lg65;->b:Lt65;
 
-    float-to-int v7, v7
+    invoke-interface {v0}, Lt65;->remove()V
 
-    int-to-float v11, v1
+    goto :goto_2
 
-    mul-float/2addr v11, v10
+    :catch_0
+    move-exception v0
 
-    float-to-int v11, v11
+    goto :goto_1
 
-    invoke-direct {v6, v7, v11}, Landroid/util/Size;-><init>(II)V
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance v7, Landroid/util/Size;
+    const-wide/16 v1, -0x1
 
-    invoke-direct {v7, v2, v1}, Landroid/util/Size;-><init>(II)V
+    move v3, v0
 
-    new-array v13, v4, [F
+    :cond_1
+    :goto_0
+    iget-boolean v4, p0, Lg65;->Y:Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v13, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    if-nez v4, :cond_4
 
-    new-array v15, v4, [F
+    :try_start_1
+    iget-object v4, p0, Lg65;->b:Lt65;
 
-    invoke-static {v15, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    invoke-interface {v4, p0}, Lt65;->a(Lg65;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    new-array v11, v4, [F
+    goto :goto_2
 
-    invoke-static {v11, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    :catch_1
+    move-exception v4
 
-    invoke-virtual {v6}, Landroid/util/Size;->getWidth()I
+    :try_start_2
+    iget-boolean v5, p0, Lg65;->Y:Z
 
-    move-result v1
+    if-nez v5, :cond_1
 
-    int-to-float v1, v1
+    iget-object v5, p0, Lg65;->c:Ln65;
 
-    invoke-virtual {v7}, Landroid/util/Size;->getWidth()I
+    iget-wide v5, v5, Ln65;->a:J
 
-    move-result v2
+    cmp-long v7, v5, v1
 
-    int-to-float v2, v2
+    if-eqz v7, :cond_2
 
-    div-float/2addr v1, v2
+    move v3, v0
 
-    invoke-virtual {v6}, Landroid/util/Size;->getHeight()I
+    move-wide v1, v5
 
-    move-result v2
+    :cond_2
+    add-int/lit8 v5, v3, 0x1
 
-    int-to-float v2, v2
+    iget v6, p0, Lg65;->o:I
 
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
+    if-gt v5, v6, :cond_3
 
-    move-result v4
+    mul-int/lit16 v3, v3, 0x3e8
 
-    int-to-float v4, v4
+    const/16 v4, 0x1388
 
-    div-float/2addr v2, v4
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
-    invoke-static {v13, v3, v1, v2, v10}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
+    move-result v3
 
-    const/4 v1, 0x0
+    int-to-long v3, v3
 
-    invoke-static {v15, v3, v1, v1, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
+    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
 
-    const/4 v14, 0x0
+    move v3, v5
 
-    const/16 v16, 0x0
+    goto :goto_0
 
-    const/4 v12, 0x0
+    :cond_3
+    throw v4
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    invoke-static/range {v11 .. v16}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+    :goto_1
+    iput-object v0, p0, Lg65;->Z:Ljava/lang/Exception;
 
-    iget v1, v5, Lfo6;->b:I
+    goto :goto_2
 
-    invoke-static {v1, v9, v3, v11, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
+    :catch_2
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-static {v8}, Lho6;->b(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget v1, v5, Lfo6;->c:I
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    invoke-static {v1, v10}, Landroid/opengl/GLES20;->glUniform1f(IF)V
+    :cond_4
+    :goto_2
+    iget-object v0, p0, Lg65;->X:Le65;
 
-    const-string v1, "glUniform1f"
+    if-eqz v0, :cond_5
 
-    invoke-static {v1}, Lho6;->b(Ljava/lang/String;)V
+    const/16 v1, 0xa
 
-    const/16 v1, 0xbe2
+    invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glEnable(I)V
+    move-result-object v0
 
-    const/16 v2, 0x302
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    const/16 v4, 0x303
-
-    invoke-static {v2, v4, v9, v4}, Landroid/opengl/GLES20;->glBlendFuncSeparate(IIII)V
-
-    const/4 v2, 0x5
-
-    const/4 v4, 0x4
-
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glDrawArrays(III)V
-
-    const-string v2, "glDrawArrays"
-
-    invoke-static {v2}, Lho6;->b(Ljava/lang/String;)V
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDisable(I)V
-
+    :cond_5
     return-void
 .end method

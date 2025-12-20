@@ -1,157 +1,133 @@
-.class public final enum Lbhb;
-.super Ljava/lang/Enum;
+.class public abstract Lbhb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lbhb;
+.field public static final a:I
 
-.field public static final enum Y:Lbhb;
+.field public static final b:I
 
-.field public static final enum Z:Lbhb;
+.field public static final c:I
 
-.field public static final enum a:Lbhb;
+.field public static final d:I
 
-.field public static final enum b:Lbhb;
+.field public static final e:I
 
-.field public static final enum c:Lbhb;
+.field public static final f:I
 
-.field public static final enum d:Lbhb;
+.field public static final g:I
 
-.field public static final enum o:Lbhb;
+.field public static final h:I
 
-.field public static final enum s0:Lbhb;
+.field public static final i:I
 
-.field public static final synthetic t0:[Lbhb;
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 1
 
-    new-instance v0, Lbhb;
+    sget v0, Lkdd;->audio_record_active_call_error_snackbar_title:I
 
-    const-string v1, "UNKNOWN"
+    sput v0, Lbhb;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lkdd;->audio_record_confirm_exit_accept:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lbhb;->b:I
 
-    sput-object v0, Lbhb;->a:Lbhb;
+    sget v0, Lkdd;->audio_record_confirm_exit_description:I
 
-    new-instance v1, Lbhb;
+    sput v0, Lbhb;->c:I
 
-    const-string v2, "MEDIA"
+    sget v0, Lkdd;->audio_record_confirm_exit_title:I
 
-    const/4 v3, 0x1
+    sput v0, Lbhb;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lkdd;->audio_record_error_common:I
 
-    sput-object v1, Lbhb;->b:Lbhb;
+    sput v0, Lbhb;->e:I
 
-    new-instance v2, Lbhb;
+    sget v0, Lkdd;->audio_record_error_limit:I
 
-    const-string v3, "MEDIA_INITIALIZATION"
+    sput v0, Lbhb;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Lkdd;->audio_record_hold_to_start:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lbhb;->g:I
 
-    sput-object v2, Lbhb;->c:Lbhb;
+    sget v0, Lkdd;->channel_input_hint:I
 
-    new-instance v3, Lbhb;
+    sput v0, Lbhb;->h:I
 
-    const-string v4, "DRM"
+    sget v0, Lkdd;->chat_input_hint:I
 
-    const/4 v5, 0x3
+    sput v0, Lbhb;->i:I
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lkdd;->messagewrite_edit_quote_title:I
 
-    sput-object v3, Lbhb;->d:Lbhb;
+    sput v0, Lbhb;->j:I
 
-    new-instance v4, Lbhb;
+    sget v0, Lkdd;->reply_quote_self:I
 
-    const-string v5, "MANIFEST"
+    sput v0, Lbhb;->k:I
 
-    const/4 v6, 0x4
+    sget v0, Lkdd;->reply_quote_to_somebody:I
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lbhb;->l:I
 
-    sput-object v4, Lbhb;->o:Lbhb;
+    sget v0, Lkdd;->video_message_record_error_common:I
 
-    new-instance v5, Lbhb;
+    sput v0, Lbhb;->m:I
 
-    const-string v6, "TIME_SYNCHRONIZATION"
+    sget v0, Lkdd;->video_message_record_error_no_camera:I
 
-    const/4 v7, 0x5
+    sput v0, Lbhb;->n:I
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lkdd;->video_record_active_call_error_snackbar_title:I
 
-    sput-object v5, Lbhb;->X:Lbhb;
+    sput v0, Lbhb;->o:I
 
-    new-instance v6, Lbhb;
+    sget v0, Lkdd;->writebar__add_link_button:I
 
-    const-string v7, "AD"
+    sput v0, Lbhb;->p:I
 
-    const/4 v8, 0x6
+    sget v0, Lkdd;->writebar__add_link_title:I
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Lbhb;->q:I
 
-    sput-object v6, Lbhb;->Y:Lbhb;
+    sget v0, Lkdd;->writebar_commands_not_found:I
 
-    new-instance v7, Lbhb;
+    sput v0, Lbhb;->r:I
 
-    const-string v8, "MEDIA_PROGRESSIVE_LIVE"
+    sget v0, Lkdd;->writebar_mentions_not_found:I
 
-    const/4 v9, 0x7
+    sput v0, Lbhb;->s:I
 
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lkdd;->writebar_mentions_title:I
 
-    sput-object v7, Lbhb;->Z:Lbhb;
-
-    new-instance v8, Lbhb;
-
-    const-string v9, "CUSTOM_BASE"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lbhb;->s0:Lbhb;
-
-    filled-new-array/range {v0 .. v8}, [Lbhb;
-
-    move-result-object v0
-
-    sput-object v0, Lbhb;->t0:[Lbhb;
+    sput v0, Lbhb;->t:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lbhb;
-    .locals 1
-
-    const-class v0, Lbhb;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbhb;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbhb;
-    .locals 1
-
-    sget-object v0, Lbhb;->t0:[Lbhb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbhb;
-
-    return-object v0
 .end method

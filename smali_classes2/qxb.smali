@@ -1,48 +1,23 @@
 .class public final Lqxb;
-.super Lq44;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lrxb;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lrxb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lqxb;->X:Lrxb;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lqxb;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lqxb;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lqxb;->o:I
-
-    iget-object p1, p0, Lqxb;->X:Lrxb;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lrxb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    return-object p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqxb;->a:Ljava/lang/Integer;
+
+    return-void
 .end method

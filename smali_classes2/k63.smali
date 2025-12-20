@@ -1,98 +1,48 @@
-.class public final synthetic Lk63;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcm6;
+.class public final Lk63;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ll63;
 
-.field public final synthetic b:J
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JJJI)V
+.method public constructor <init>(Ll63;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p8, p0, Lk63;->a:I
+    iput-object p1, p0, Lk63;->X:Ll63;
 
-    iput-object p1, p0, Lk63;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lk63;->b:J
-
-    iput-wide p4, p0, Lk63;->c:J
-
-    iput-wide p6, p0, Lk63;->d:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lk63;->a:I
+    iput-object p1, p0, Lk63;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lk63;->o:I
 
-    iget-object v0, p0, Lk63;->o:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-object v2, v0
+    or-int/2addr p1, v0
 
-    check-cast v2, Lhwa;
+    iput p1, p0, Lk63;->o:I
 
-    new-instance v1, Lez5;
+    iget-object p1, p0, Lk63;->X:Ll63;
 
-    iget-wide v3, p0, Lk63;->b:J
+    const/4 v0, 0x0
 
-    iget-wide v5, p0, Lk63;->c:J
+    invoke-virtual {p1, v0, p0}, Ll63;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-wide v7, p0, Lk63;->d:J
+    move-result-object p1
 
-    invoke-direct/range {v1 .. v8}, Lez5;-><init>(Lhwa;JJJ)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lk63;->o:Ljava/lang/Object;
-
-    check-cast v0, Lw63;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v0}, Lw63;->i()Lve2;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lk63;->b:J
-
-    iget-wide v4, p0, Lk63;->c:J
-
-    iget-wide v6, p0, Lk63;->d:J
-
-    const/4 v8, -0x1
-
-    invoke-virtual/range {v1 .. v9}, Lve2;->x0(JJJIZ)Lpb2;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

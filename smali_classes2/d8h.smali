@@ -1,77 +1,51 @@
 .class public final Ld8h;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/util/Range;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lgsc;
+.field public final synthetic Y:Lj8h;
 
-.field public final c:Lfb0;
+.field public Z:I
+
+.field public d:Lj8h;
+
+.field public o:Lvfa;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Range;Lgsc;Lfb0;)V
+.method public constructor <init>(Lj8h;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld8h;->Y:Lj8h;
 
-    iput-object p1, p0, Ld8h;->a:Landroid/util/Range;
-
-    iput-object p2, p0, Ld8h;->b:Lgsc;
-
-    iput-object p3, p0, Ld8h;->c:Lfb0;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ld8h;->X:Ljava/lang/Object;
 
-    const-string v1, "VideoMessageQuality(fps="
+    iget p1, p0, Ld8h;->Z:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Ld8h;->a:Landroid/util/Range;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Ld8h;->Z:I
 
-    const-string v1, "|color="
+    iget-object p1, p0, Ld8h;->Y:Lj8h;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Lj8h;->a(Ll84;)Ljava/lang/Object;
 
-    sget-object v1, Lu75;->d:Lu75;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "|encoder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ld8h;->b:Lgsc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "|video="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ld8h;->c:Lfb0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

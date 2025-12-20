@@ -1,19 +1,22 @@
 .class public final Ltm1;
-.super Len1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lum1;
 
 
 # instance fields
-.field public final D:Lzi1;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lzi1;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0}, Len1;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltm1;->D:Lzi1;
+    iput-boolean p1, p0, Ltm1;->a:Z
 
     return-void
 .end method
@@ -41,15 +44,11 @@
     :cond_1
     check-cast p1, Ltm1;
 
-    iget-object v1, p0, Ltm1;->D:Lzi1;
+    iget-boolean v1, p0, Ltm1;->a:Z
 
-    iget-object p1, p1, Ltm1;->D:Lzi1;
+    iget-boolean p1, p1, Ltm1;->a:Z
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -60,9 +59,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ltm1;->D:Lzi1;
+    iget-boolean v0, p0, Ltm1;->a:Z
 
-    invoke-virtual {v0}, Lzi1;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -70,23 +69,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RaiseHandDialog(participantId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltm1;->D:Lzi1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "Close(showSnackbar="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Ltm1;->a:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

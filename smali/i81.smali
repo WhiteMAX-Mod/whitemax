@@ -1,172 +1,276 @@
 .class public final Li81;
-.super Lxfh;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lk81;
 
 
 # instance fields
-.field public final b:Lax1;
+.field public final a:I
 
-.field public final c:Lk18;
+.field public final b:Lbhg;
 
-.field public final d:Ltcf;
+.field public final c:J
 
-.field public final o:Lx26;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lqv1;Lk18;Llzf;Lax1;)V
-    .locals 7
+.method public constructor <init>(IJLbhg;)V
+    .locals 0
 
-    invoke-direct {p0}, Lxfh;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Li81;->b:Lax1;
+    iput p1, p0, Li81;->a:I
 
-    iput-object p2, p0, Li81;->c:Lk18;
+    iput-object p4, p0, Li81;->b:Lbhg;
 
-    check-cast p3, Lq2b;
+    iput-wide p2, p0, Li81;->c:J
 
-    invoke-virtual {p3}, Lq2b;->a()Lz74;
+    sget p1, Ls6b;->G:I
 
-    move-result-object p2
+    iput p1, p0, Li81;->d:I
 
-    invoke-virtual {p1}, Lqv1;->e()Lmcf;
+    return-void
+.end method
 
-    move-result-object p3
 
-    new-instance p4, Lcj0;
+# virtual methods
+.method public final a()I
+    .locals 1
 
-    const/4 v0, 0x3
+    iget v0, p0, Li81;->a:I
 
-    invoke-direct {p4, v0}, Lcj0;-><init>(I)V
+    return v0
+.end method
 
-    invoke-static {p3, p4}, Lgw0;->l(Lx26;Lsm6;)Lyy4;
+.method public final b()Lghg;
+    .locals 1
 
-    move-result-object p3
+    const/4 v0, 0x0
 
-    new-instance p4, Lph0;
+    return-object v0
+.end method
 
-    const/16 v1, 0x8
+.method public final e()Lcze;
+    .locals 1
 
-    invoke-direct {p4, p3, v1}, Lph0;-><init>(Lx26;I)V
+    const/4 v0, 0x0
 
-    invoke-static {p4, p2}, Lgw0;->u(Lx26;Lx74;)Lx26;
+    return-object v0
+.end method
 
-    move-result-object p3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    invoke-virtual {p1}, Lqv1;->b()Lmcf;
+    const/4 v0, 0x1
 
-    move-result-object p4
+    if-ne p0, p1, :cond_0
 
-    new-instance v2, Lph0;
+    return v0
 
-    const/16 v3, 0xa
+    :cond_0
+    instance-of v1, p1, Li81;
 
-    invoke-direct {v2, p4, v3}, Lph0;-><init>(Lx26;I)V
+    if-nez v1, :cond_1
 
-    invoke-static {v2, p2}, Lgw0;->u(Lx26;Lx74;)Lx26;
+    goto :goto_0
 
-    move-result-object p4
+    :cond_1
+    check-cast p1, Li81;
 
-    new-instance v2, Lb81;
+    iget v1, p0, Li81;->a:I
 
-    const/4 v3, 0x0
+    iget v2, p1, Li81;->a:I
 
-    invoke-direct {v2, p1, p0, v3}, Lb81;-><init>(Lqv1;Li81;Lkotlin/coroutines/Continuation;)V
+    if-eq v1, v2, :cond_2
 
-    invoke-static {v2}, Lgw0;->c(Lsm6;)Lsu1;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_2
+    iget-object v1, p0, Li81;->b:Lbhg;
 
-    invoke-static {v2, p2}, Lgw0;->u(Lx26;Lx74;)Lx26;
+    iget-object v2, p1, Li81;->b:Lbhg;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Lbhg;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lqv1;->e()Lmcf;
+    move-result v1
 
-    move-result-object v4
+    if-nez v1, :cond_3
 
-    new-instance v5, Lph0;
+    goto :goto_0
 
-    const/16 v6, 0x9
+    :cond_3
+    iget-wide v1, p0, Li81;->c:J
 
-    invoke-direct {v5, v4, v6}, Lph0;-><init>(Lx26;I)V
+    iget-wide v3, p1, Li81;->c:J
 
-    invoke-static {v5}, Lgw0;->m(Lx26;)Lx26;
+    cmp-long p1, v1, v3
 
-    move-result-object v4
+    if-eqz p1, :cond_4
 
-    invoke-static {v4, p2}, Lgw0;->u(Lx26;Lx74;)Lx26;
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result-object p2
+    return p1
 
-    sget-object v4, Lid5;->a:Lid5;
+    :cond_4
+    return v0
+.end method
 
-    invoke-static {v4}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+.method public final f()Ln68;
+    .locals 1
 
-    move-result-object v4
+    const/4 v0, 0x0
 
-    iput-object v4, p0, Li81;->d:Ltcf;
+    return-object v0
+.end method
 
-    new-instance v5, Lx3;
+.method public final getItemId()J
+    .locals 2
 
-    invoke-direct {v5, v4, p0, v1}, Lx3;-><init>(Lx26;Ljava/lang/Object;I)V
+    iget-wide v0, p0, Li81;->c:J
 
-    invoke-static {v5}, Lgw0;->m(Lx26;)Lx26;
+    return-wide v0
+.end method
+
+.method public final getTitle()Lghg;
+    .locals 1
+
+    iget-object v0, p0, Li81;->b:Lbhg;
+
+    return-object v0
+.end method
+
+.method public final getType()Leze;
+    .locals 1
+
+    sget-object v0, Leze;->b:Leze;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Li81;->a:I
+
+    invoke-static {v0}, Lc12;->w(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Li81;->b:Lbhg;
+
+    iget v2, v2, Lbhg;->c:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget-wide v2, p0, Li81;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    sget-object v1, Leze;->b:Leze;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    const v0, 0xe1781
+
+    mul-int/2addr v1, v0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Li81;->d:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallDebugMenuItem(sectionItemType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Li81;->a:I
+
+    invoke-static {v1}, La3e;->u(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Li81;->o:Lx26;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lqv1;->b()Lmcf;
+    const-string v1, ", title="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ltcf;
+    iget-object v1, p0, Li81;->b:Lbhg;
 
-    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", sectionId=0, itemId="
 
-    check-cast p1, Lmb4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p1, p1, Lmb4;->i:Z
+    iget-wide v1, p0, Li81;->c:J
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x4
+    const-string v1, ", type="
 
-    new-array p1, p1, [Lx26;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    sget-object v1, Leze;->b:Leze;
 
-    aput-object p4, p1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 p4, 0x1
+    const-string v1, ", descriptionRes=null, endView=null, leadingElementProperties=null, clickable=true)"
 
-    aput-object p3, p1, p4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p3, 0x2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    aput-object v2, p1, p3
+    move-result-object v0
 
-    aput-object p2, p1, v0
-
-    invoke-static {p1}, Lgw0;->y([Lx26;)Lu92;
-
-    move-result-object p1
-
-    new-instance p2, Lc81;
-
-    invoke-direct {p2, p0, v3}, Lc81;-><init>(Li81;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lg56;
-
-    invoke-direct {p3, p1, p2, p4}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    iget-object p1, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

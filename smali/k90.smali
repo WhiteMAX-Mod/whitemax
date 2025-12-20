@@ -1,95 +1,150 @@
 .class public final Lk90;
-.super Lgm0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+
+# static fields
+.field public static final a:Lk90;
+
+.field public static final b:Lez5;
+
+.field public static final c:Lez5;
+
+.field public static final d:Lez5;
+
+.field public static final e:Lez5;
+
+.field public static final f:Lez5;
+
+.field public static final g:Lez5;
+
+.field public static final h:Lez5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lk90;
 
-    iput-object p1, p0, Lk90;->a:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lk90;->a:Lk90;
+
+    const-string v0, "eventTimeMs"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->b:Lez5;
+
+    const-string v0, "eventCode"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->c:Lez5;
+
+    const-string v0, "eventUptimeMs"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->d:Lez5;
+
+    const-string v0, "sourceExtension"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->e:Lez5;
+
+    const-string v0, "sourceExtensionJsonProto3"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->f:Lez5;
+
+    const-string v0, "timezoneOffsetSeconds"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->g:Lez5;
+
+    const-string v0, "networkConnectionInfo"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Lk90;->h:Lez5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    if-ne p1, p0, :cond_0
+    check-cast p1, Luk8;
 
-    const/4 p1, 0x1
+    check-cast p2, Lxwa;
 
-    return p1
+    check-cast p1, Lqb0;
 
-    :cond_0
-    instance-of v0, p1, Lgm0;
+    iget-wide v0, p1, Lqb0;->a:J
 
-    if-eqz v0, :cond_1
+    sget-object v2, Lk90;->b:Lez5;
 
-    check-cast p1, Lgm0;
+    invoke-interface {p2, v2, v0, v1}, Lxwa;->e(Lez5;J)Lxwa;
 
-    check-cast p1, Lk90;
+    sget-object v0, Lk90;->c:Lez5;
 
-    iget-object p1, p1, Lk90;->a:Ljava/util/ArrayList;
+    iget-object v1, p1, Lqb0;->b:Ljava/lang/Integer;
 
-    iget-object v0, p0, Lk90;->a:Ljava/util/ArrayList;
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+    sget-object v0, Lk90;->d:Lez5;
 
-    move-result p1
+    iget-wide v1, p1, Lqb0;->c:J
 
-    return p1
+    invoke-interface {p2, v0, v1, v2}, Lxwa;->e(Lez5;J)Lxwa;
 
-    :cond_1
-    const/4 p1, 0x0
+    sget-object v0, Lk90;->e:Lez5;
 
-    return p1
-.end method
+    iget-object v1, p1, Lqb0;->d:[B
 
-.method public final hashCode()I
-    .locals 2
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    iget-object v0, p0, Lk90;->a:Ljava/util/ArrayList;
+    sget-object v0, Lk90;->f:Lez5;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
+    iget-object v1, p1, Lqb0;->e:Ljava/lang/String;
 
-    move-result v0
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    const v1, 0xf4243
+    sget-object v0, Lk90;->g:Lez5;
 
-    xor-int/2addr v0, v1
+    iget-wide v1, p1, Lqb0;->f:J
 
-    return v0
-.end method
+    invoke-interface {p2, v0, v1, v2}, Lxwa;->e(Lez5;J)Lxwa;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    sget-object v0, Lk90;->h:Lez5;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lqb0;->g:Lika;
 
-    const-string v1, "BatchedLogRequest{logRequests="
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lk90;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

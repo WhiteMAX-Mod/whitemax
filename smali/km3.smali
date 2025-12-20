@@ -1,90 +1,61 @@
-.class public final Lkm3;
+.class public abstract Lkm3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljee;
 
+# static fields
+.field public static final a:Lim3;
 
-# instance fields
-.field public final a:Ljee;
+.field public static final b:Ljm3;
 
-.field public final b:Lwg7;
+.field public static final c:Ljm3;
 
 
 # direct methods
-.method public constructor <init>(Ljee;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lim3;
 
-    iput-object p1, p0, Lkm3;->a:Ljee;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p2}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+    sput-object v0, Lkm3;->a:Lim3;
 
-    move-result-object p1
+    new-instance v0, Ljm3;
 
-    iput-object p1, p0, Lkm3;->b:Lwg7;
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1}, Ljm3;-><init>(I)V
+
+    sput-object v0, Lkm3;->b:Ljm3;
+
+    new-instance v0, Ljm3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljm3;-><init>(I)V
+
+    sput-object v0, Lkm3;->c:Ljm3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()J
-    .locals 2
-
-    iget-object v0, p0, Lkm3;->a:Ljee;
-
-    invoke-interface {v0}, Ljee;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract a(II)Lkm3;
 .end method
 
-.method public final j()Z
-    .locals 1
-
-    iget-object v0, p0, Lkm3;->a:Ljee;
-
-    invoke-interface {v0}, Ljee;->j()Z
-
-    move-result v0
-
-    return v0
+.method public abstract b(JJ)Lkm3;
 .end method
 
-.method public final o()J
-    .locals 2
-
-    iget-object v0, p0, Lkm3;->a:Ljee;
-
-    invoke-interface {v0}, Ljee;->o()J
-
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lkm3;
 .end method
 
-.method public final p(J)V
-    .locals 1
-
-    iget-object v0, p0, Lkm3;->a:Ljee;
-
-    invoke-interface {v0, p1, p2}, Ljee;->p(J)V
-
-    return-void
+.method public abstract d(ZZ)Lkm3;
 .end method
 
-.method public final r(Loc8;)Z
-    .locals 1
+.method public abstract e(ZZ)Lkm3;
+.end method
 
-    iget-object v0, p0, Lkm3;->a:Ljee;
-
-    invoke-interface {v0, p1}, Ljee;->r(Loc8;)Z
-
-    move-result p1
-
-    return p1
+.method public abstract f()I
 .end method

@@ -1,9 +1,9 @@
 .class public final Ln9;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/Set;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Ln9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -40,7 +38,7 @@
 
     check-cast p1, Ln9;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Ln9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,31 +60,28 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     iget-object p1, p0, Ln9;->o:Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/Set;
+    check-cast p1, Ljja;
 
-    invoke-static {p1}, Lue3;->e0(Ljava/util/Collection;)[J
+    instance-of p1, p1, Lpf3;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Ln9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+
+    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
 
     move-result-object p1
 
-    iget-object v0, p0, Ln9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    invoke-virtual {p1}, Lw3e;->C()Z
 
-    iget-object v1, v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->v0:Lhs;
-
-    sget-object v2, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->y0:[Lyy7;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0, p1}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

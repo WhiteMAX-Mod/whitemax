@@ -1,113 +1,431 @@
-.class public final Ltx4;
+.class public Ltx4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpx4;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public a:Ltfi;
 
-.field public final b:Ljava/lang/Object;
+.field public b:Z
 
-.field public final c:Ljava/lang/Object;
+.field public c:Z
 
-.field public final d:Ljava/lang/Object;
+.field public final d:Ltfi;
 
-.field public final e:Ljava/lang/Object;
+.field public e:I
 
-.field public final f:Ljava/lang/Object;
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Lq05;
+
+.field public j:Z
+
+.field public final k:Ljava/util/ArrayList;
+
+.field public final l:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lux4;)V
+.method public constructor <init>(Ltfi;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lrx4;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iput-object v0, p0, Ltx4;->a:Ltfi;
 
-    invoke-direct {v0, p1, v1}, Lrx4;-><init>(Lux4;I)V
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+    iput-boolean v1, p0, Ltx4;->b:Z
 
-    move-result-object v0
-
-    iput-object v0, p0, Ltx4;->a:Ljava/lang/Object;
-
-    new-instance v0, Lsx4;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2}, Lsx4;-><init>(Ltx4;Lux4;I)V
-
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ltx4;->b:Ljava/lang/Object;
-
-    new-instance v0, Lrx4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v2}, Lrx4;-><init>(Lux4;I)V
-
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ltx4;->c:Ljava/lang/Object;
-
-    new-instance v0, Lsx4;
+    iput-boolean v1, p0, Ltx4;->c:Z
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, p0, p1, v2}, Lsx4;-><init>(Ltx4;Lux4;I)V
+    iput v2, p0, Ltx4;->e:I
 
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+    iput v2, p0, Ltx4;->h:I
 
-    move-result-object v0
+    iput-object v0, p0, Ltx4;->i:Lq05;
 
-    iput-object v0, p0, Ltx4;->d:Ljava/lang/Object;
+    iput-boolean v1, p0, Ltx4;->j:Z
 
-    new-instance v0, Lps3;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0, p1, p0}, Lps3;-><init>(Lux4;Ltx4;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+    iput-object v0, p0, Ltx4;->k:Ljava/util/ArrayList;
 
-    move-result-object v0
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Ltx4;->e:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Lsx4;
+    iput-object v0, p0, Ltx4;->l:Ljava/util/ArrayList;
 
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p0, p1, v2}, Lsx4;-><init>(Ltx4;Lux4;I)V
-
-    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltx4;->f:Ljava/lang/Object;
+    iput-object p1, p0, Ltx4;->d:Ltfi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Luv0;
-    .locals 1
+.method public final a(Lpx4;)V
+    .locals 5
 
-    iget-object v0, p0, Ltx4;->b:Ljava/lang/Object;
+    iget-object p1, p0, Ltx4;->l:Ljava/util/ArrayList;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Luv0;
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltx4;
+
+    iget-boolean v1, v1, Ltx4;->j:Z
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltx4;->c:Z
+
+    iget-object v1, p0, Ltx4;->a:Ltfi;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1, p0}, Lpx4;->a(Lpx4;)V
+
+    :cond_2
+    iget-boolean v1, p0, Ltx4;->b:Z
+
+    if-eqz v1, :cond_3
+
+    iget-object p1, p0, Ltx4;->d:Ltfi;
+
+    invoke-interface {p1, p0}, Lpx4;->a(Lpx4;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ltx4;
+
+    instance-of v4, v3, Lq05;
+
+    if-eqz v4, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    add-int/lit8 v2, v2, 0x1
+
+    move-object v1, v3
+
+    goto :goto_0
+
+    :cond_5
+    if-eqz v1, :cond_7
+
+    if-ne v2, v0, :cond_7
+
+    iget-boolean p1, v1, Ltx4;->j:Z
+
+    if-eqz p1, :cond_7
+
+    iget-object p1, p0, Ltx4;->i:Lq05;
+
+    if-eqz p1, :cond_6
+
+    iget-boolean v0, p1, Ltx4;->j:Z
+
+    if-eqz v0, :cond_8
+
+    iget v0, p0, Ltx4;->h:I
+
+    iget p1, p1, Ltx4;->g:I
+
+    mul-int/2addr v0, p1
+
+    iput v0, p0, Ltx4;->f:I
+
+    :cond_6
+    iget p1, v1, Ltx4;->g:I
+
+    iget v0, p0, Ltx4;->f:I
+
+    add-int/2addr p1, v0
+
+    invoke-virtual {p0, p1}, Ltx4;->d(I)V
+
+    :cond_7
+    iget-object p1, p0, Ltx4;->a:Ltfi;
+
+    if-eqz p1, :cond_8
+
+    invoke-interface {p1, p0}, Lpx4;->a(Lpx4;)V
+
+    :cond_8
+    :goto_1
+    return-void
+.end method
+
+.method public final b(Ltfi;)V
+    .locals 1
+
+    iget-object v0, p0, Ltx4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-boolean v0, p0, Ltx4;->j:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1, p1}, Lpx4;->a(Lpx4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Ltx4;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Ltx4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ltx4;->j:Z
+
+    iput v0, p0, Ltx4;->g:I
+
+    iput-boolean v0, p0, Ltx4;->c:Z
+
+    iput-boolean v0, p0, Ltx4;->b:Z
+
+    return-void
+.end method
+
+.method public d(I)V
+    .locals 1
+
+    iget-boolean v0, p0, Ltx4;->j:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltx4;->j:Z
+
+    iput p1, p0, Ltx4;->g:I
+
+    iget-object p1, p0, Ltx4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpx4;
+
+    invoke-interface {v0, v0}, Lpx4;->a(Lpx4;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Ltx4;->d:Ltfi;
+
+    iget-object v1, v1, Ltfi;->b:Lmx3;
+
+    iget-object v1, v1, Lmx3;->h0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltx4;->e:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "BASELINE"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "BOTTOM"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "TOP"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "RIGHT"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "LEFT"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "VERTICAL_DIMENSION"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "HORIZONTAL_DIMENSION"
+
+    goto :goto_0
+
+    :pswitch_7
+    const-string v1, "UNKNOWN"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ltx4;->j:Z
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Ltx4;->g:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_0
+    const-string v1, "unresolved"
+
+    :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ") <t="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltx4;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ":d="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltx4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ">"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

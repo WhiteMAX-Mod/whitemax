@@ -1,64 +1,68 @@
-.class public final Lt42;
-.super Lzk3;
+.class public final synthetic Lt42;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private volatile synthetic _resumed$volatile:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lu42;
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lu42;Ljava/lang/String;I)V
+    .locals 0
 
-    const-class v0, Lt42;
+    iput p3, p0, Lt42;->a:I
 
-    const-string v1, "_resumed$volatile"
+    iput-object p1, p0, Lt42;->b:Lu42;
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p2, p0, Lt42;->c:Ljava/lang/String;
 
-    move-result-object v0
-
-    sput-object v0, Lt42;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ll42;Ljava/lang/Throwable;Z)V
+
+# virtual methods
+.method public final run()V
     .locals 2
 
-    if-nez p2, :cond_0
+    iget v0, p0, Lt42;->a:I
 
-    new-instance p2, Ljava/util/concurrent/CancellationException;
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lt42;->c:Ljava/lang/String;
 
-    const-string v1, "Continuation "
+    iget-object v1, p0, Lt42;->b:Lu42;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, v1, Lu42;->b:La12;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " was cancelled normally"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-direct {p0, p2, p3}, Lzk3;-><init>(Ljava/lang/Throwable;Z)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lt42;->_resumed$volatile:I
+    invoke-virtual {v1, v0}, La12;->onCameraUnavailable(Ljava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lt42;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lt42;->b:Lu42;
+
+    iget-object v1, v1, Lu42;->b:La12;
+
+    invoke-virtual {v1, v0}, La12;->onCameraAvailable(Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,5 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lny7;
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract getIntent()Landroid/content/Intent;
+.end method

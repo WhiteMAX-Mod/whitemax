@@ -2,140 +2,81 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/RunnableFuture;
-.implements Ljava/util/concurrent/ScheduledFuture;
+
+# static fields
+.field public static final d:Llzd;
+
+.field public static final e:Llzd;
+
+.field public static final f:Llzd;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/FutureTask;
+.field public final a:J
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Llzd;
 
-    .line 4
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    const-wide/16 v1, 0x0
 
-    invoke-direct {v0, p1, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    const/4 v3, 0x0
 
-    iput-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
+    invoke-direct {v0, v1, v2, v3, v3}, Llzd;-><init>(JZZ)V
+
+    sput-object v0, Llzd;->d:Llzd;
+
+    new-instance v0, Llzd;
+
+    const-wide/16 v4, 0x1f4
+
+    const/4 v6, 0x1
+
+    invoke-direct {v0, v4, v5, v6, v3}, Llzd;-><init>(JZZ)V
+
+    sput-object v0, Llzd;->e:Llzd;
+
+    new-instance v0, Llzd;
+
+    const-wide/16 v4, 0x64
+
+    invoke-direct {v0, v4, v5, v6, v3}, Llzd;-><init>(JZZ)V
+
+    new-instance v0, Llzd;
+
+    invoke-direct {v0, v1, v2, v3, v6}, Llzd;-><init>(JZZ)V
+
+    sput-object v0, Llzd;->f:Llzd;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 1
+.method public constructor <init>(JZZ)V
+    .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    iput-boolean p3, p0, Llzd;->b:Z
 
-    invoke-direct {v0, p1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+    iput-wide p1, p0, Llzd;->a:J
 
-    iput-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
+    if-eqz p4, :cond_0
 
-    return-void
-.end method
+    xor-int/lit8 p1, p3, 0x1
 
+    const-string p2, "shouldRetry must be false when completeWithoutFailure is set to true"
 
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 1
+    invoke-static {p2, p1}, Lpjj;->a(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Ljava/util/concurrent/Delayed;
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isCancelled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isDone()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 1
-
-    iget-object v0, p0, Llzd;->a:Ljava/util/concurrent/FutureTask;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->run()V
+    :cond_0
+    iput-boolean p4, p0, Llzd;->c:Z
 
     return-void
 .end method

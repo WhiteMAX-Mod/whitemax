@@ -1,15 +1,14 @@
-.class public abstract Lt65;
+.class public interface abstract Lt65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static final a(Ljava/time/Duration;)J
-    .locals 2
+# virtual methods
+.method public abstract a(Lg65;)V
+.end method
 
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
+.method public abstract cancel()V
+.end method
 
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract remove()V
 .end method

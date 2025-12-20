@@ -1,59 +1,70 @@
-.class public final Ljtf;
-.super Lq44;
+.class public final synthetic Ljtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public X:Ll0g;
+.field public final synthetic a:I
 
-.field public Y:J
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lytf;
-
-.field public o:Ln2;
-
-.field public final synthetic s0:Lytf;
-
-.field public t0:I
+.field public final synthetic b:Lpsf;
 
 
 # direct methods
-.method public constructor <init>(Lytf;Lq44;)V
+.method public synthetic constructor <init>(Lpsf;I)V
     .locals 0
 
-    iput-object p1, p0, Ljtf;->s0:Lytf;
+    iput p2, p0, Ljtf;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljtf;->b:Lpsf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iput-object p1, p0, Ljtf;->Z:Ljava/lang/Object;
+    iget v0, p0, Ljtf;->a:I
 
-    iget p1, p0, Ljtf;->t0:I
+    check-cast p1, Litf;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Ljtf;->b:Lpsf;
 
-    iput p1, p0, Ljtf;->t0:I
+    iget-wide v0, v0, Lpsf;->b:J
 
-    const/4 p1, 0x0
+    iget-object p1, p1, Litf;->a:Ljava/lang/String;
 
-    const-wide/16 v0, 0x0
+    new-instance v2, Litf;
 
-    iget-object v2, p0, Ljtf;->s0:Lytf;
+    invoke-direct {v2, p1, v0, v1}, Litf;-><init>(Ljava/lang/String;J)V
 
-    invoke-virtual {v2, p1, v0, v1, p0}, Lytf;->i(Ln2;JLq44;)Ljava/lang/Object;
+    return-object v2
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Ljtf;->b:Lpsf;
 
-    return-object p1
+    iget-wide v0, v0, Lpsf;->b:J
+
+    iget-object p1, p1, Litf;->a:Ljava/lang/String;
+
+    new-instance v2, Litf;
+
+    invoke-direct {v2, p1, v0, v1}, Litf;-><init>(Ljava/lang/String;J)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

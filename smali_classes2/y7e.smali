@@ -1,231 +1,166 @@
 .class public final Ly7e;
-.super Ljava/lang/Object;
+.super Lqj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lqha;
+.field public final synthetic a:Lpi4;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lp62;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Lz7e;
 
-.field public final d:Ljava/util/List;
+.field public final synthetic d:Z
 
-.field public final e:Ljava/util/List;
-
-.field public final f:Ljava/util/List;
-
-.field public final g:J
-
-.field public final h:I
-
-.field public final i:Z
-
-.field public final j:J
-
-.field public final k:Ljava/util/List;
-
-.field public final l:Ljava/util/List;
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/util/List;
+.field public final synthetic e:Z
 
 
 # direct methods
-.method public constructor <init>(Lx7e;)V
-    .locals 2
+.method public constructor <init>(Lpi4;Lp62;Lz7e;ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lx7e;->a:Lqha;
+    iput-object p1, p0, Ly7e;->a:Lpi4;
 
-    iput-object v0, p0, Ly7e;->a:Lqha;
+    iput-object p2, p0, Ly7e;->b:Lp62;
 
-    iget-object v0, p1, Lx7e;->b:Ljava/lang/String;
+    iput-object p3, p0, Ly7e;->c:Lz7e;
 
-    iput-object v0, p0, Ly7e;->b:Ljava/lang/String;
+    iput-boolean p4, p0, Ly7e;->d:Z
 
-    iget-object v0, p1, Lx7e;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Ly7e;->c:Ljava/lang/String;
-
-    iget-object v0, p1, Lx7e;->d:Ljava/util/List;
-
-    iput-object v0, p0, Ly7e;->d:Ljava/util/List;
-
-    iget-object v0, p1, Lx7e;->e:Ljava/util/List;
-
-    iput-object v0, p0, Ly7e;->e:Ljava/util/List;
-
-    iget-object v0, p1, Lx7e;->f:Ljava/util/List;
-
-    iput-object v0, p0, Ly7e;->f:Ljava/util/List;
-
-    iget-wide v0, p1, Lx7e;->g:J
-
-    iput-wide v0, p0, Ly7e;->g:J
-
-    iget-boolean v0, p1, Lx7e;->i:Z
-
-    iput-boolean v0, p0, Ly7e;->i:Z
-
-    iget v0, p1, Lx7e;->h:I
-
-    iput v0, p0, Ly7e;->h:I
-
-    iget-wide v0, p1, Lx7e;->j:J
-
-    iput-wide v0, p0, Ly7e;->j:J
-
-    iget-object v0, p1, Lx7e;->k:Ljava/util/List;
-
-    iput-object v0, p0, Ly7e;->k:Ljava/util/List;
-
-    iget-object v0, p1, Lx7e;->l:Ljava/util/List;
-
-    iput-object v0, p0, Ly7e;->l:Ljava/util/List;
-
-    iget-object v0, p1, Lx7e;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Ly7e;->m:Ljava/lang/String;
-
-    iget-object p1, p1, Lx7e;->n:Ljava/util/List;
-
-    iput-object p1, p0, Ly7e;->n:Ljava/util/List;
+    iput-boolean p5, p0, Ly7e;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 8
+.method public final c()V
+    .locals 3
 
-    iget-object v0, p0, Ly7e;->d:Ljava/util/List;
+    iget-object v0, p0, Ly7e;->b:Lp62;
 
-    invoke-static {v0}, Lzdi;->a(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget-object v1, p0, Ly7e;->e:Ljava/util/List;
-
-    invoke-static {v1}, Lzdi;->a(Ljava/util/Collection;)I
+    invoke-virtual {v0}, Lp62;->r()Z
 
     move-result v1
 
-    iget-object v2, p0, Ly7e;->k:Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    invoke-static {v2}, Lzdi;->a(Ljava/util/Collection;)I
+    new-instance v1, Ljava/lang/Throwable;
 
-    move-result v2
+    const-string v2, "Cancelled with fresco pipeline"
 
-    iget-object v3, p0, Ly7e;->l:Ljava/util/List;
+    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v3}, Lzdi;->a(Ljava/util/Collection;)I
+    invoke-virtual {v0, v1}, Lp62;->h(Ljava/lang/Throwable;)Z
 
-    move-result v3
+    :cond_0
+    return-void
+.end method
 
-    iget-object v4, p0, Ly7e;->n:Ljava/util/List;
+.method public final e(Lpi4;)V
+    .locals 1
 
-    invoke-static {v4}, Lzdi;->a(Ljava/util/Collection;)I
+    iget-object p1, p0, Ly7e;->b:Lp62;
 
-    move-result v4
+    const/4 v0, 0x0
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Lp62;->resumeWith(Ljava/lang/Object;)V
 
-    const-string v6, "Section{type="
+    return-void
+.end method
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 6
 
-    iget-object v6, p0, Ly7e;->a:Lqha;
+    iget-object v0, p0, Ly7e;->a:Lpi4;
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, Lp0;
 
-    const-string v6, ", id=\'"
+    invoke-virtual {v0}, Lp0;->g()Z
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget-object v6, p0, Ly7e;->b:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Ly7e;->b:Lp62;
 
-    const-string v6, "\', title=\'"
+    if-nez v0, :cond_0
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Lp62;->resumeWith(Ljava/lang/Object;)V
 
-    iget-object v6, p0, Ly7e;->c:Ljava/lang/String;
+    return-void
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    if-nez p1, :cond_1
 
-    const-string v6, "\', stickers="
+    invoke-virtual {v2, v1}, Lp62;->resumeWith(Ljava/lang/Object;)V
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_1
+    new-instance v0, Lvq0;
 
-    const-string v0, ", stickerSets="
+    iget-boolean v1, p0, Ly7e;->d:Z
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Ly7e;->c:Lz7e;
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_2
 
-    const-string v0, ", marker="
+    iget-object v4, v3, Lz7e;->c:Ljvb;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, v4, Ljvb;->a:Landroid/content/Context;
 
-    iget-wide v0, p0, Ly7e;->g:J
+    invoke-virtual {v4}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    const-string v0, ", totalCount="
+    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    iget v0, p0, Ly7e;->h:I
+    sget-object v5, Ljvb;->b:Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v4, v5}, Lc12;->j(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v0, ", collapsed="
+    move-result-object v4
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    iget-boolean v0, p0, Ly7e;->i:Z
+    :cond_2
+    sget-object v4, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-direct {v0, v4, p1}, Lvq0;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    const-string v0, ", updateTime="
+    iget-object p1, v3, Lz7e;->a:Lkbe;
 
-    const-string v1, ", recentEmojiList="
+    iget-boolean v3, p0, Ly7e;->e:Z
 
-    iget-wide v6, p0, Ly7e;->j:J
+    if-eqz v1, :cond_3
 
-    invoke-static {v6, v7, v0, v1, v5}, Laz1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-interface {p1, v3}, Lkbe;->f(Z)Ljava/lang/String;
 
-    const-string v0, ", recentsList="
+    move-result-object v1
 
-    const-string v1, ", animojiSets="
+    invoke-interface {p1, v0, v1}, Lkbe;->b(Llbe;Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {v5, v2, v0, v3, v1}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    move-result-object p1
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const-string v0, ", mode=\'"
+    :cond_3
+    invoke-interface {p1, v3}, Lkbe;->f(Z)Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    iget-object v0, p0, Ly7e;->m:Ljava/lang/String;
+    invoke-interface {p1, v0, v1}, Lkbe;->a(Llbe;Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v0, "\'}"
+    :goto_1
+    invoke-virtual {v2, p1}, Lp62;->resumeWith(Ljava/lang/Object;)V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

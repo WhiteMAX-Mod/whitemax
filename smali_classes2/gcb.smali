@@ -1,64 +1,127 @@
-.class public final synthetic Lgcb;
+.class public abstract Lgcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Handler$Callback;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
 
 
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 4
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    sget v0, Lw7d;->oneme_media_keyboard_bottom_panel:I
 
-    const/4 v1, 0x0
+    sput v0, Lgcb;->a:I
 
-    if-nez v0, :cond_3
+    sget v0, Lw7d;->oneme_media_keyboard_close_action:I
 
-    sget-object v0, Licb;->a:Landroid/os/Handler;
+    sput v0, Lgcb;->b:I
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    sget v0, Lw7d;->oneme_media_keyboard_emoji_container:I
 
-    check-cast p1, Lhcb;
+    sput v0, Lgcb;->c:I
 
-    sget-object v0, Licb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget v0, Lw7d;->oneme_media_keyboard_emoji_list:I
 
-    const/4 v2, 0x1
+    sput v0, Lgcb;->d:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    sget v0, Lw7d;->oneme_media_keyboard_emoji_tabs:I
 
-    move-result v3
+    sput v0, Lgcb;->e:I
 
-    if-eqz v3, :cond_2
+    sget v0, Lw7d;->oneme_media_keyboard_fake_search_view:I
 
-    sget-object v3, Licb;->b:Lhcb;
+    sput v0, Lgcb;->f:I
 
-    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lw7d;->oneme_media_keyboard_pager:I
 
-    move-result v3
+    sput v0, Lgcb;->g:I
 
-    if-nez v3, :cond_0
+    sget v0, Lw7d;->oneme_media_keyboard_recent_clear_confirmation_action:I
 
-    sget-object v3, Licb;->c:Lhcb;
+    sput v0, Lgcb;->h:I
 
-    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lw7d;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
 
-    move-result v3
+    sput v0, Lgcb;->i:I
 
-    if-eqz v3, :cond_1
+    sget v0, Lw7d;->oneme_media_keyboard_remove_action:I
 
-    :cond_0
-    sget-object v3, Lecb;->a:Lecb;
+    sput v0, Lgcb;->j:I
 
-    invoke-static {p1, v3}, Licb;->a(Lhcb;Lecb;)V
+    sget v0, Lw7d;->oneme_media_keyboard_settings_action:I
 
-    :cond_1
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    sput v0, Lgcb;->k:I
 
-    :cond_2
-    return v2
+    sget v0, Lw7d;->oneme_media_keyboard_showcase_action:I
 
-    :cond_3
-    return v1
+    sput v0, Lgcb;->l:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_stickers_container:I
+
+    sput v0, Lgcb;->m:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_stickers_header_title:I
+
+    sput v0, Lgcb;->n:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_stickers_list:I
+
+    sput v0, Lgcb;->o:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_stickers_tabs:I
+
+    sput v0, Lgcb;->p:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_tabs:I
+
+    sput v0, Lgcb;->q:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_view_type_category_emoji:I
+
+    sput v0, Lgcb;->r:I
+
+    sget v0, Lw7d;->oneme_media_keyboard_view_type_fake_search:I
+
+    sput v0, Lgcb;->s:I
+
+    return-void
 .end method

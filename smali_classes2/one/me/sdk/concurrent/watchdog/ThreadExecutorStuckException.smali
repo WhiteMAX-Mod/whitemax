@@ -32,25 +32,25 @@
 .method public constructor <init>(Ljava/util/Collection;)V
     .locals 11
 
-    sget v0, Ls65;->d:I
+    sget v0, Lqa5;->d:I
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
-    sget-object v2, Ly65;->b:Ly65;
+    sget-object v2, Lwa5;->b:Lwa5;
 
-    invoke-static {v0, v1, v2}, Lv9j;->i(JLy65;)J
+    invoke-static {v0, v1, v2}, Lfnj;->i(JLwa5;)J
 
     move-result-wide v0
 
-    new-instance v3, Lip8;
+    new-instance v3, Lxt8;
 
     const/4 v4, 0x2
 
-    invoke-direct {v3, v0, v1, v4}, Lip8;-><init>(JI)V
+    invoke-direct {v3, v0, v1, v4}, Lxt8;-><init>(JI)V
 
-    invoke-static {p1, v3}, Lue3;->X(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
+    invoke-static {p1, v3}, Lei3;->U(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
     move-result-object v5
 
@@ -62,15 +62,15 @@
 
     const-string v6, "\n"
 
-    invoke-static {v3, v4, v6}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v6}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    new-instance v9, Lc46;
+    new-instance v9, Lg33;
 
-    const/4 v3, 0x4
+    const/16 v3, 0x1c
 
-    invoke-direct {v9, v0, v1, v3}, Lc46;-><init>(JI)V
+    invoke-direct {v9, v0, v1, v3}, Lg33;-><init>(JI)V
 
     const/16 v10, 0x1d
 
@@ -78,7 +78,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v5 .. v10}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
+    invoke-static/range {v5 .. v10}, Lei3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Loq6;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1, v2}, Lv9j;->i(JLy65;)J
+    invoke-static {v0, v1, v2}, Lfnj;->i(JLwa5;)J
 
     move-result-wide v0
 
@@ -125,15 +125,15 @@
     :cond_1
     move-object v3, v2
 
-    check-cast v3, Lckh;
+    check-cast v3, Lvwh;
 
-    invoke-virtual {v3, v0, v1}, Lckh;->b(J)J
+    invoke-virtual {v3, v0, v1}, Lvwh;->b(J)J
 
     move-result-wide v3
 
-    new-instance v5, Ls65;
+    new-instance v5, Lqa5;
 
-    invoke-direct {v5, v3, v4}, Ls65;-><init>(J)V
+    invoke-direct {v5, v3, v4}, Lqa5;-><init>(J)V
 
     :cond_2
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -142,17 +142,17 @@
 
     move-object v4, v3
 
-    check-cast v4, Lckh;
+    check-cast v4, Lvwh;
 
-    invoke-virtual {v4, v0, v1}, Lckh;->b(J)J
+    invoke-virtual {v4, v0, v1}, Lvwh;->b(J)J
 
     move-result-wide v6
 
-    new-instance v4, Ls65;
+    new-instance v4, Lqa5;
 
-    invoke-direct {v4, v6, v7}, Ls65;-><init>(J)V
+    invoke-direct {v4, v6, v7}, Lqa5;-><init>(J)V
 
-    invoke-virtual {v5, v4}, Ls65;->compareTo(Ljava/lang/Object;)I
+    invoke-virtual {v5, v4}, Lqa5;->compareTo(Ljava/lang/Object;)I
 
     move-result v6
 
@@ -172,11 +172,11 @@
     goto :goto_0
 
     :goto_1
-    check-cast p1, Lckh;
+    check-cast p1, Lvwh;
 
     if-eqz p1, :cond_4
 
-    iget-object p1, p1, Lckh;->d:Ljava/lang/Thread;
+    iget-object p1, p1, Lvwh;->d:Ljava/lang/Thread;
 
     if-eqz p1, :cond_4
 

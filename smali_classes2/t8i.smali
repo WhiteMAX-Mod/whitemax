@@ -1,163 +1,51 @@
-.class public abstract Lt8i;
+.class public abstract synthetic Lt8i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyl;
 
-
-# instance fields
-.field private final a:Ljava/lang/String;
-
-.field private final b:Ljava/lang/String;
-
-.field private final c:Ljava/lang/String;
-
-.field private final d:Lox7;
-
-.field private final e:Landroid/net/Uri;
-
-.field private final f:Lnm;
-
-.field private final g:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lt8i;->a:Ljava/lang/String;
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    iput-object p2, p0, Lt8i;->b:Ljava/lang/String;
+    move-result-object v1
 
-    iput-object p3, p0, Lt8i;->c:Ljava/lang/String;
+    array-length v1, v1
 
-    sget-object p1, Lrx7;->a:Luha;
+    new-array v1, v1, [I
 
-    iput-object p1, p0, Lt8i;->d:Lox7;
+    const/4 v2, 0x1
 
-    const-string p1, "log.externalLog"
+    const/4 v3, 0x0
 
-    invoke-static {p1}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    :catch_0
+    const/4 v3, 0x2
 
-    iput-object p1, p0, Lt8i;->e:Landroid/net/Uri;
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object p1, Lnm;->c:Lnm;
+    :catch_1
+    :try_start_2
+    aput v0, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iput-object p1, p0, Lt8i;->f:Lnm;
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Lt8i;->g:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a(Lgy7;)V
-.end method
-
-.method public getOkParser()Lox7;
-    .locals 1
-
-    iget-object v0, p0, Lt8i;->d:Lox7;
-
-    return-object v0
-.end method
-
-.method public getPriority()I
-    .locals 1
-
-    iget v0, p0, Lt8i;->g:I
-
-    return v0
-.end method
-
-.method public getScope()Lnm;
-    .locals 1
-
-    iget-object v0, p0, Lt8i;->f:Lnm;
-
-    return-object v0
-.end method
-
-.method public getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lt8i;->e:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public shouldGzip()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public shouldPost()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public shouldReport()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public writeParams(Lgy7;)V
-    .locals 1
-
-    const-string v0, "collector"
-
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
-
-    iget-object v0, p0, Lt8i;->a:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Lgy7;->h(Ljava/lang/String;)V
-
-    const-string v0, "data"
-
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
-
-    invoke-interface {p1}, Lgy7;->p()V
-
-    const-string v0, "application"
-
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
-
-    iget-object v0, p0, Lt8i;->b:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Lgy7;->h(Ljava/lang/String;)V
-
-    const-string v0, "platform"
-
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
-
-    iget-object v0, p0, Lt8i;->c:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Lgy7;->h(Ljava/lang/String;)V
-
-    const-string v0, "items"
-
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
-
-    invoke-virtual {p0, p1}, Lt8i;->a(Lgy7;)V
-
-    invoke-interface {p1}, Lgy7;->n()V
+    :catch_2
+    sput-object v1, Lt8i;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

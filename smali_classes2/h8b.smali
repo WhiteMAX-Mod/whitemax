@@ -3,52 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final synthetic a:Lj8b;
+.field public final synthetic a:Lk8b;
+
+.field public final synthetic b:Lcom/google/android/material/chip/Chip;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/CharSequence;
+
+.field public final synthetic f:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj8b;)V
+.method public synthetic constructor <init>(Lk8b;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh8b;->a:Lj8b;
+    iput-object p1, p0, Lh8b;->a:Lk8b;
+
+    iput-object p2, p0, Lh8b;->b:Lcom/google/android/material/chip/Chip;
+
+    iput-wide p3, p0, Lh8b;->c:J
+
+    iput-wide p5, p0, Lh8b;->d:J
+
+    iput-object p7, p0, Lh8b;->e:Ljava/lang/CharSequence;
+
+    iput-object p8, p0, Lh8b;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 0
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 9
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    iget-object v7, p0, Lh8b;->e:Ljava/lang/CharSequence;
 
-    move-result p1
+    iget-object v8, p0, Lh8b;->f:Ljava/lang/String;
 
-    const/4 p3, 0x0
+    iget-object v0, p0, Lh8b;->a:Lk8b;
 
-    if-nez p1, :cond_0
+    iget-object v1, p0, Lh8b;->b:Lcom/google/android/material/chip/Chip;
 
-    const/16 p1, 0x43
+    iget-wide v3, p0, Lh8b;->c:J
 
-    if-ne p2, p1, :cond_0
+    iget-wide v5, p0, Lh8b;->d:J
 
-    const/4 p1, 0x1
+    move v2, p2
 
-    goto :goto_0
+    invoke-virtual/range {v0 .. v8}, Lk8b;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    :cond_0
-    move p1, p3
-
-    :goto_0
-    iget-object p2, p0, Lh8b;->a:Lj8b;
-
-    iput-boolean p1, p2, Lj8b;->o:Z
-
-    return p3
+    return-void
 .end method

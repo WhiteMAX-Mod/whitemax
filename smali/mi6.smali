@@ -3,102 +3,288 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb48;
+.implements Lte5;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Lwi6;
+.field public final b:Lzfd;
 
-.field public final synthetic c:Ll48;
+.field public final c:Lg67;
 
-.field public final synthetic d:Landroidx/fragment/app/c;
+.field public final d:Ljava/lang/Object;
+
+.field public e:Landroid/os/Handler;
+
+.field public f:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public g:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public h:Lpnj;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/c;Ljava/lang/String;Lwi6;Ll48;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lzfd;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmi6;->d:Landroidx/fragment/app/c;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lmi6;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lmi6;->b:Lwi6;
+    iput-object v0, p0, Lmi6;->d:Ljava/lang/Object;
 
-    iput-object p4, p0, Lmi6;->c:Ll48;
+    const-string v0, "Context cannot be null"
+
+    invoke-static {p1, v0}, Lpjj;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmi6;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lmi6;->b:Lzfd;
+
+    sget-object p1, Lni6;->d:Lg67;
+
+    iput-object p1, p0, Lmi6;->c:Lg67;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lj48;Lk38;)V
+.method public final a(Lpnj;)V
+    .locals 9
+
+    iget-object v1, p0, Lmi6;->d:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iput-object p1, p0, Lmi6;->h:Lpnj;
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    iget-object p1, p0, Lmi6;->d:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_1
+    iget-object v0, p0, Lmi6;->h:Lpnj;
+
+    if-nez v0, :cond_0
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lmi6;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "emojiCompat"
+
+    new-instance v8, Lxq3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v8, v1, v0}, Lxq3;-><init>(ILjava/io/Serializable;)V
+
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingDeque;
+
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const-wide/16 v4, 0xf
+
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
+
+    iput-object v1, p0, Lmi6;->g:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    iput-object v1, p0, Lmi6;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    :cond_1
+    iget-object v0, p0, Lmi6;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    new-instance v1, Lli6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, p0}, Lli6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_0
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+.end method
+
+.method public final b()V
     .locals 4
 
-    iget-object p1, p0, Lmi6;->d:Landroidx/fragment/app/c;
+    iget-object v0, p0, Lmi6;->d:Ljava/lang/Object;
 
-    iget-object v0, p1, Landroidx/fragment/app/c;->l:Ljava/util/Map;
+    monitor-enter v0
 
-    sget-object v1, Lk38;->ON_START:Lk38;
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Lmi6;->a:Ljava/lang/String;
+    :try_start_0
+    iput-object v1, p0, Lmi6;->h:Lpnj;
 
-    if-ne p2, v1, :cond_0
+    iget-object v2, p0, Lmi6;->e:Landroid/os/Handler;
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
-    move-result-object v1
+    const/4 v3, 0x0
 
-    check-cast v1, Landroid/os/Bundle;
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    if-eqz v1, :cond_0
+    goto :goto_0
 
-    iget-object v3, p0, Lmi6;->b:Lwi6;
+    :catchall_0
+    move-exception v1
 
-    invoke-interface {v3, v2, v1}, Lwi6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+    goto :goto_1
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    :goto_0
+    iput-object v1, p0, Lmi6;->e:Landroid/os/Handler;
 
-    const/4 v0, 0x2
+    iget-object v2, p0, Lmi6;->g:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    if-eqz v2, :cond_1
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    :cond_1
+    iput-object v1, p0, Lmi6;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    iput-object v1, p0, Lmi6;->g:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final c()Lwi6;
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lmi6;->c:Lg67;
+
+    iget-object v1, p0, Lmi6;->a:Landroid/content/Context;
+
+    iget-object v2, p0, Lmi6;->b:Lzfd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1, v2}, Lzzd;->b(Landroid/content/Context;Lzfd;)Laj;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget v1, v0, Laj;->b:I
+
+    if-nez v1, :cond_1
+
+    iget-object v0, v0, Laj;->c:Ljava/lang/Object;
+
+    check-cast v0, [Lwi6;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    array-length v1, v0
 
-    const-string v1, "Clearing fragment result with key "
+    if-eqz v1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "FragmentManager"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    return-object v0
 
     :cond_0
-    sget-object v0, Lk38;->ON_DESTROY:Lk38;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    if-ne p2, v0, :cond_1
+    const-string v1, "fetchFonts failed (empty result)"
 
-    iget-object p2, p0, Lmi6;->c:Ll48;
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p0}, Ll48;->f(Lf48;)V
-
-    iget-object p1, p1, Landroidx/fragment/app/c;->m:Ljava/util/Map;
-
-    invoke-interface {p1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    throw v0
 
     :cond_1
-    return-void
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v2, "fetchFonts failed ("
+
+    const-string v3, ")"
+
+    invoke-static {v1, v2, v3}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v2, "provider not found"
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

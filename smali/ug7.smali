@@ -1,90 +1,128 @@
-.class public final Lug7;
-.super Li2;
+.class public final synthetic Lug7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxg7;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final a:Ll3;
+.field public final synthetic a:Lxp8;
 
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ll3;II)V
+.method public synthetic constructor <init>(Lxp8;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lug7;->a:Ll3;
+    iput-object p1, p0, Lug7;->a:Lxp8;
 
     iput p2, p0, Lug7;->b:I
-
-    invoke-virtual {p1}, Lj0;->getSize()I
-
-    move-result p1
-
-    invoke-static {p2, p3, p1}, Lhqi;->e(III)V
-
-    sub-int/2addr p3, p2
-
-    iput p3, p0, Lug7;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lug7;->c:I
+    iget-object v0, p0, Lug7;->a:Lxp8;
 
-    invoke-static {p1, v0}, Lhqi;->c(II)V
+    iget-object v0, v0, Lxp8;->b:Ljava/lang/Object;
 
-    iget v0, p0, Lug7;->b:I
+    check-cast v0, Landroidx/work/impl/WorkDatabase;
 
-    add-int/2addr v0, p1
+    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->w()Ljfc;
 
-    iget-object p1, p0, Lug7;->a:Ll3;
+    move-result-object v1
 
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const-string v2, "next_job_scheduler_id"
 
-    move-result-object p1
+    invoke-virtual {v1, v2}, Ljfc;->B(Ljava/lang/String;)Ljava/lang/Long;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final getSize()I
-    .locals 1
+    const/4 v3, 0x0
 
-    iget v0, p0, Lug7;->c:I
+    if-eqz v1, :cond_0
 
-    return v0
-.end method
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-.method public final subList(II)Ljava/util/List;
-    .locals 2
+    move-result-wide v4
 
-    iget v0, p0, Lug7;->c:I
+    long-to-int v1, v4
 
-    invoke-static {p1, p2, v0}, Lhqi;->e(III)V
+    goto :goto_0
 
-    new-instance v0, Lug7;
+    :cond_0
+    move v1, v3
 
-    iget v1, p0, Lug7;->b:I
+    :goto_0
+    const v4, 0x7fffffff
 
-    add-int/2addr p1, v1
+    if-ne v1, v4, :cond_1
 
-    add-int/2addr v1, p2
+    move v4, v3
 
-    iget-object p2, p0, Lug7;->a:Ll3;
+    goto :goto_1
 
-    invoke-direct {v0, p2, p1, v1}, Lug7;-><init>(Ll3;II)V
+    :cond_1
+    add-int/lit8 v4, v1, 0x1
+
+    :goto_1
+    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->w()Ljfc;
+
+    move-result-object v5
+
+    new-instance v6, Lifc;
+
+    int-to-long v7, v4
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-direct {v6, v2, v4}, Lifc;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+
+    invoke-virtual {v5, v6}, Ljfc;->C(Lifc;)V
+
+    if-ltz v1, :cond_2
+
+    iget v4, p0, Lug7;->b:I
+
+    if-gt v1, v4, :cond_2
+
+    move v3, v1
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->w()Ljfc;
+
+    move-result-object v0
+
+    new-instance v1, Lifc;
+
+    const/4 v4, 0x1
+
+    int-to-long v4, v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-direct {v1, v2, v4}, Lifc;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+
+    invoke-virtual {v0, v1}, Ljfc;->C(Lifc;)V
+
+    :goto_2
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
 .end method

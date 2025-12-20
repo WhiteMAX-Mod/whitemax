@@ -1,58 +1,49 @@
 .class public final Lfyd;
-.super Ljava/lang/Object;
+.super Lgyd;
 .source "SourceFile"
-
-# interfaces
-.implements Lb48;
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lew0;
 
-.field public final b:Leyd;
-
-.field public c:Z
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Leyd;)V
+.method public constructor <init>(Lew0;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfyd;->a:Ljava/lang/String;
+    iput-object p1, p0, Lfyd;->a:Lew0;
 
-    iput-object p2, p0, Lfyd;->b:Leyd;
+    iput-wide p2, p0, Lfyd;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final B()J
+    .locals 2
 
-    return-void
+    iget-wide v0, p0, Lfyd;->b:J
+
+    return-wide v0
 .end method
 
-.method public final d(Lj48;Lk38;)V
+.method public final E()Lef9;
     .locals 1
 
-    sget-object v0, Lk38;->ON_DESTROY:Lk38;
+    const/4 v0, 0x0
 
-    if-ne p2, v0, :cond_0
+    return-object v0
+.end method
 
-    const/4 p2, 0x0
+.method public final c0()Lmx0;
+    .locals 1
 
-    iput-boolean p2, p0, Lfyd;->c:Z
+    iget-object v0, p0, Lfyd;->a:Lew0;
 
-    invoke-interface {p1}, Lj48;->p()Ll48;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Ll48;->f(Lf48;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

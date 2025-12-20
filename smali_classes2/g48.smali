@@ -1,73 +1,148 @@
 .class public final Lg48;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lj48;
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Ler6;
 
 
 # instance fields
-.field public a:Ll48;
+.field public synthetic X:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public final synthetic o:I
+
+
+# direct methods
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p3, p0, Lg48;->o:I
+
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object p1, p0, Lg48;->a:Ll48;
+    iget v0, p0, Lg48;->o:I
 
-    iget-object p1, p1, Ll48;->d:Ll38;
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    sget-object v0, Ll38;->a:Ll38;
+    check-cast p2, Lplb;
 
-    if-ne p1, v0, :cond_0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    new-instance p1, Ll48;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, p0}, Ll48;-><init>(Lj48;)V
+    new-instance p2, Lg48;
 
-    iput-object p1, p0, Lg48;->a:Ll48;
+    const/4 v0, 0x3
 
-    :cond_0
-    iget-object p1, p0, Lg48;->a:Ll48;
+    const/4 v1, 0x1
 
-    sget-object v0, Lk38;->ON_START:Lk38;
+    invoke-direct {p2, v0, p3, v1}, Lg48;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {p1, v0}, Ll48;->d(Lk38;)V
+    iput-object p1, p2, Lg48;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    return-void
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p2, p1}, Lg48;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p2, Lg48;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lg48;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lg48;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p2, p1}, Lg48;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object p1, p0, Lg48;->a:Ll48;
+    iget v0, p0, Lg48;->o:I
 
-    iget-object p1, p1, Ll48;->d:Ll38;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Ll38;->c:Ll38;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Ll38;->a(Ll38;)Z
+    iget-object p1, p0, Lg48;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result p1
+    sget-object v0, Ldc3;->s0:Lole;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, p1}, Lole;->n(Landroid/view/View;)Lplb;
 
-    iget-object p1, p0, Lg48;->a:Ll48;
+    move-result-object v1
 
-    sget-object v0, Lk38;->ON_DESTROY:Lk38;
+    invoke-interface {v1}, Lplb;->b()Lxf0;
 
-    invoke-virtual {p1, v0}, Ll48;->d(Lk38;)V
+    move-result-object v1
 
-    :cond_0
-    return-void
-.end method
+    iget v1, v1, Lxf0;->m:I
 
-.method public final p()Ll48;
-    .locals 1
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget-object v0, p0, Lg48;->a:Ll48;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lole;->i(Landroid/content/Context;)Ldc3;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ldc3;->g(Ldc3;Landroid/view/ViewGroup;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg48;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v0, Ldc3;->s0:Lole;
+
+    invoke-virtual {v0, p1}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->m:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

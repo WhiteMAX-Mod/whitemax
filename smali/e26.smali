@@ -1,6 +1,3 @@
-.class public interface abstract Le26;
-.super Ljava/lang/Object;
+.class public abstract Le26;
+.super Lj26;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;

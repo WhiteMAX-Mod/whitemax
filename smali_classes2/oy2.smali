@@ -1,49 +1,40 @@
 .class public final Loy2;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwy2;
 
-# instance fields
-.field public final synthetic X:Lpy2;
 
-.field public Y:I
+# static fields
+.field public static final a:Loy2;
 
-.field public d:Lpy2;
+.field public static final b:Loy2;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Loy2;
 
 
 # direct methods
-.method public constructor <init>(Lpy2;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Loy2;->X:Lpy2;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Loy2;->o:Ljava/lang/Object;
+    new-instance v0, Loy2;
 
-    iget p1, p0, Loy2;->Y:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Loy2;->a:Loy2;
 
-    or-int/2addr p1, v0
+    new-instance v0, Loy2;
 
-    iput p1, p0, Loy2;->Y:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Loy2;->X:Lpy2;
+    sput-object v0, Loy2;->b:Loy2;
 
-    invoke-virtual {p1, p0}, Lpy2;->c(Lq44;)Ljava/lang/Object;
+    new-instance v0, Loy2;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
+    sput-object v0, Loy2;->c:Loy2;
+
+    return-void
 .end method

@@ -8,13 +8,11 @@
 
 .field public final b:I
 
-.field public final c:I
-
-.field public final d:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>(IIZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,9 +21,7 @@
 
     iput p2, p0, Lau0;->b:I
 
-    iput p3, p0, Lau0;->c:I
-
-    iput p4, p0, Lau0;->d:I
+    iput-boolean p3, p0, Lau0;->c:Z
 
     return-void
 .end method
@@ -67,27 +63,18 @@
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lau0;->c:I
+    iget-boolean v0, p0, Lau0;->c:Z
 
-    iget v1, p1, Lau0;->c:I
+    iget-boolean p1, p1, Lau0;->c:Z
 
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lau0;->d:I
-
-    iget p1, p1, Lau0;->d:I
-
-    if-eq v0, p1, :cond_5
+    if-eq v0, p1, :cond_4
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_5
+    :cond_4
     :goto_1
     const/4 p1, 0x1
 
@@ -99,7 +86,7 @@
 
     iget v0, p0, Lau0;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Lc12;->w(I)I
 
     move-result v0
 
@@ -109,19 +96,13 @@
 
     iget v2, p0, Lau0;->b:I
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    invoke-static {v2, v0, v1}, Ln0c;->j(III)I
 
     move-result v0
 
-    iget v2, p0, Lau0;->c:I
+    iget-boolean v1, p0, Lau0;->c:Z
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v1, p0, Lau0;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -131,31 +112,69 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", neutralSecondary="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", reply="
+    const-string v1, "BottomInsetConfig(persistentType="
 
-    const-string v2, "BubbleStrokeColors(action="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lau0;->a:I
+    iget v1, p0, Lau0;->a:I
 
-    iget v4, p0, Lau0;->b:I
+    invoke-static {v1}, Lgg9;->l(I)Ljava/lang/String;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", replyOutside="
+    const-string v1, ", imeInsetChange="
 
-    const-string v2, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lau0;->c:I
+    const/4 v1, 0x1
 
-    iget v4, p0, Lau0;->d:I
+    iget v2, p0, Lau0;->b:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lxc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "Immediate"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "Animated"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "None"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", applyDeviceRoundCorners="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lau0;->c:Z
+
+    invoke-static {v0, v2, v1}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

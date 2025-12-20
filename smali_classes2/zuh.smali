@@ -1,144 +1,77 @@
 .class public final Lzuh;
-.super Ljava/lang/Object;
+.super Lv84;
 .source "SourceFile"
-
-# interfaces
-.implements Lavh;
 
 
 # instance fields
-.field public final a:[Ljava/lang/String;
+.field public final synthetic a:Lsy;
 
-.field public final b:[I
+.field public final synthetic b:Landroid/view/ViewTreeObserver;
+
+.field public final synthetic c:Lavh;
+
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;[I)V
+.method public constructor <init>(Lsy;Landroid/view/ViewTreeObserver;Lavh;Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzuh;->a:[Ljava/lang/String;
+    iput-object p1, p0, Lzuh;->a:Lsy;
 
-    iput-object p2, p0, Lzuh;->b:[I
+    iput-object p2, p0, Lzuh;->b:Landroid/view/ViewTreeObserver;
+
+    iput-object p3, p0, Lzuh;->c:Lavh;
+
+    iput-object p4, p0, Lzuh;->d:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final s(Lx84;Landroid/view/View;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object p2, p0, Lzuh;->a:Lsy;
 
-    if-ne p0, p1, :cond_0
+    iget-object p2, p2, Lsy;->X:Ljava/lang/Object;
 
-    return v0
+    check-cast p2, Ljava/util/ArrayList;
 
-    :cond_0
-    if-eqz p1, :cond_1
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
+    move-result-object p2
 
     :goto_0
-    const-class v2, Lzuh;
-
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    check-cast p1, Lzuh;
-
-    iget-object v1, p0, Lzuh;->a:[Ljava/lang/String;
-
-    iget-object v3, p1, Lzuh;->a:[Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lzuh;->b:[I
-
-    iget-object p1, p1, Lzuh;->b:[I
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lzuh;->a:[Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lzuh;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lzuh;->a:[Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lzuh;->b:[I
+    check-cast v0, Lxuh;
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    invoke-interface {v0}, Lxuh;->b()V
 
-    move-result-object v1
+    goto :goto_0
 
-    const-string v2, ", grantResults="
+    :cond_0
+    invoke-virtual {p1, p0}, Lx84;->removeLifecycleListener(Lv84;)V
 
-    const-string v3, ")"
+    iget-object p1, p0, Lzuh;->c:Lavh;
 
-    const-string v4, "VerifyCameraPermission(permissions="
+    iget-object p2, p0, Lzuh;->d:Landroid/view/View;
 
-    invoke-static {v4, v0, v2, v1, v3}, Lwy1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lzuh;->b:Landroid/view/ViewTreeObserver;
 
-    move-result-object v0
+    invoke-static {p1, p2, v0}, Lsy;->c(Lavh;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
 
-    return-object v0
+    return-void
 .end method

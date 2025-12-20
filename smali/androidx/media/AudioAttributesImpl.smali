@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lg0h;
+.implements Lvch;
 
 
 # virtual methods

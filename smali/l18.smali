@@ -2,97 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrpc;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Ljava/lang/Object;
+.field public final a:Lyd5;
 
-.field public volatile b:Lrpc;
+.field public b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll18;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrpc;)V
-    .locals 1
+.method public constructor <init>(Lvoe;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ll18;->c:Ljava/lang/Object;
+    new-instance v0, Lyd5;
 
-    iput-object v0, p0, Ll18;->a:Ljava/lang/Object;
+    new-instance v1, Low;
 
-    iput-object p1, p0, Ll18;->b:Lrpc;
+    const/4 v7, 0x0
 
-    return-void
-.end method
+    const/16 v8, 0x19
 
+    const/4 v2, 0x2
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+    const-class v4, Ll18;
 
-    iget-object v0, p0, Ll18;->a:Ljava/lang/Object;
+    const-string v5, "readIfAbsent"
 
-    sget-object v1, Ll18;->c:Ljava/lang/Object;
+    const-string v6, "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z"
 
-    if-ne v0, v1, :cond_1
+    move-object v3, p0
 
-    monitor-enter p0
+    invoke-direct/range {v1 .. v8}, Low;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    :try_start_0
-    iget-object v0, p0, Ll18;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-ne v0, v1, :cond_0
+    iput-object p1, v0, Lyd5;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ll18;->b:Lrpc;
+    iput-object v1, v0, Lyd5;->c:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lrpc;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Lvoe;->f()I
 
-    move-result-object v0
+    move-result p1
 
-    iput-object v0, p0, Ll18;->a:Ljava/lang/Object;
+    const-wide/16 v1, -0x1
 
-    const/4 v1, 0x0
+    const-wide/16 v4, 0x0
 
-    iput-object v1, p0, Ll18;->b:Lrpc;
+    const/16 v6, 0x40
+
+    if-gt p1, v6, :cond_1
+
+    if-ne p1, v6, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    shl-long v4, v1, p1
+
+    :goto_0
+    iput-wide v4, v0, Lyd5;->a:J
+
+    sget-object p1, Lyd5;->o:[J
+
+    iput-object p1, v0, Lyd5;->d:Ljava/lang/Object;
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    :cond_1
+    iput-wide v4, v0, Lyd5;->a:J
 
-    return-object v0
+    add-int/lit8 v4, p1, -0x1
+
+    ushr-int/lit8 v4, v4, 0x6
+
+    and-int/lit8 v5, p1, 0x3f
+
+    new-array v6, v4, [J
+
+    if-eqz v5, :cond_2
+
+    add-int/lit8 v4, v4, -0x1
+
+    shl-long/2addr v1, p1
+
+    aput-wide v1, v6, v4
+
+    :cond_2
+    iput-object v6, v0, Lyd5;->d:Ljava/lang/Object;
 
     :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object v0, v3, Ll18;->a:Lyd5;
 
-    throw v0
-
-    :cond_1
-    return-object v0
+    return-void
 .end method

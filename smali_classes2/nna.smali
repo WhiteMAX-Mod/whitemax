@@ -1,248 +1,334 @@
 .class public final Lnna;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lpna;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public final b:J
 
-.field public final synthetic Y:J
-
-.field public final synthetic Z:J
-
-.field public final synthetic o:Lru/ok/tamtam/android/services/NotificationTamService;
-
-.field public final synthetic s0:Z
-
-.field public final synthetic t0:J
-
-.field public final synthetic u0:Ljava/lang/String;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lnna;->o:Lru/ok/tamtam/android/services/NotificationTamService;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lnna;->X:J
+    iput-wide p1, p0, Lnna;->b:J
 
-    iput-wide p4, p0, Lnna;->Y:J
-
-    iput-wide p6, p0, Lnna;->Z:J
-
-    iput-boolean p8, p0, Lnna;->s0:Z
-
-    iput-wide p9, p0, Lnna;->t0:J
-
-    iput-object p11, p0, Lnna;->u0:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p12}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lnna;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/util/Date;)Ljava/util/Date;
+    .locals 8
 
-    check-cast p1, Lf84;
+    new-instance v0, Ljava/util/Date;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/util/Date;->getYear()I
 
-    invoke-virtual {p0, p1, p2}, Lnna;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v1
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/util/Date;->getMonth()I
 
-    check-cast p1, Lnna;
+    move-result v2
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    invoke-virtual {p1}, Ljava/util/Date;->getDate()I
 
-    invoke-virtual {p1, p2}, Lnna;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v3
 
-    return-object p2
-.end method
+    sget p1, Lqa5;->d:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 13
+    sget-object p1, Lwa5;->X:Lwa5;
 
-    new-instance v0, Lnna;
+    iget-wide v4, p0, Lnna;->c:J
 
-    iget-wide v9, p0, Lnna;->t0:J
+    invoke-static {v4, v5, p1}, Lqa5;->o(JLwa5;)J
 
-    iget-object v11, p0, Lnna;->u0:Ljava/lang/String;
+    move-result-wide v6
 
-    iget-object v1, p0, Lnna;->o:Lru/ok/tamtam/android/services/NotificationTamService;
+    long-to-int p1, v6
 
-    iget-wide v2, p0, Lnna;->X:J
+    sget-object v6, Lwa5;->o:Lwa5;
 
-    iget-wide v4, p0, Lnna;->Y:J
+    invoke-static {v4, v5, v6}, Lqa5;->o(JLwa5;)J
 
-    iget-wide v6, p0, Lnna;->Z:J
+    move-result-wide v4
 
-    iget-boolean v8, p0, Lnna;->s0:Z
+    const/16 v6, 0x3c
 
-    move-object v12, p2
+    int-to-long v6, v6
 
-    invoke-direct/range {v0 .. v12}, Lnna;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+    rem-long/2addr v4, v6
+
+    long-to-int v5, v4
+
+    move v4, p1
+
+    invoke-direct/range {v0 .. v5}, Ljava/util/Date;-><init>(IIIII)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final b()Z
+    .locals 8
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnna;->o:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object v0, p1, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Lbwf;
-
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    move-object v1, v0
-
-    check-cast v1, Labd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x58
-
-    iget-wide v2, p0, Lnna;->X:J
-
-    iget-wide v4, p0, Lnna;->Y:J
-
-    iget-wide v6, p0, Lnna;->Z:J
-
-    const/4 v8, 0x0
-
-    iget-boolean v10, p0, Lnna;->s0:Z
-
-    invoke-static/range {v1 .. v11}, Labd;->e(Labd;JJJZZZI)J
-
-    iget-object v0, v1, Labd;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v0
 
-    check-cast v0, Ly7b;
+    invoke-virtual {p0, v0}, Lnna;->c(Ljava/util/Date;)Ljava/util/Date;
 
-    invoke-virtual {v0, v2, v3}, Ly7b;->a(J)V
+    move-result-object v1
 
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->s0:Lbwf;
+    invoke-virtual {p0, v0}, Lnna;->a(Ljava/util/Date;)Ljava/util/Date;
 
-    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p1
+    invoke-interface {v0, v1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    check-cast p1, Lqpa;
+    move-result v3
 
-    invoke-virtual {p1}, Lqpa;->e()Lrpa;
+    const-wide/16 v4, 0x1
 
-    move-result-object p1
+    if-ltz v3, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, v2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    sget-object v1, Lrpa;->d:Ljava/lang/String;
+    move-result v3
 
-    const-string v0, "onNotificationMarkAsRead: pushId="
-
-    const-string v2, ", eventKey="
-
-    iget-wide v3, p0, Lnna;->t0:J
-
-    iget-object v5, p0, Lnna;->u0:Ljava/lang/String;
-
-    invoke-static {v0, v3, v4, v2, v5}, La9h;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez v5, :cond_0
+    if-gtz v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {p1}, Lrpa;->b()Ldd;
+    invoke-virtual {v1, v2}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+
+    move-result v3
+
+    if-lez v3, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v6
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v3
+
+    sub-long/2addr v6, v3
+
+    invoke-virtual {v1, v6, v7}, Ljava/util/Date;->setTime(J)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v2, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+
+    move-result v3
+
+    if-gez v3, :cond_2
+
+    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v6
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v3
+
+    add-long/2addr v3, v6
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/Date;->setTime(J)V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v0, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+
+    move-result v1
+
+    if-ltz v1, :cond_3
+
+    invoke-virtual {v0, v2}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+
+    move-result v0
+
+    if-gez v0, :cond_3
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c(Ljava/util/Date;)Ljava/util/Date;
+    .locals 8
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-virtual {p1}, Ljava/util/Date;->getYear()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/util/Date;->getMonth()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Ljava/util/Date;->getDate()I
+
+    move-result v3
+
+    sget p1, Lqa5;->d:I
+
+    sget-object p1, Lwa5;->X:Lwa5;
+
+    iget-wide v4, p0, Lnna;->b:J
+
+    invoke-static {v4, v5, p1}, Lqa5;->o(JLwa5;)J
+
+    move-result-wide v6
+
+    long-to-int p1, v6
+
+    sget-object v6, Lwa5;->o:Lwa5;
+
+    invoke-static {v4, v5, v6}, Lqa5;->o(JLwa5;)J
+
+    move-result-wide v4
+
+    const/16 v6, 0x3c
+
+    int-to-long v6, v6
+
+    rem-long/2addr v4, v6
+
+    long-to-int v5, v4
+
+    move v4, p1
+
+    invoke-direct/range {v0 .. v5}, Ljava/util/Date;-><init>(IIIII)V
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnna;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnna;
+
+    iget-wide v3, p0, Lnna;->b:J
+
+    iget-wide v5, p1, Lnna;->b:J
+
+    invoke-static {v3, v4, v5, v6}, Lqa5;->f(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lnna;->c:J
+
+    iget-wide v5, p1, Lnna;->c:J
+
+    invoke-static {v3, v4, v5, v6}, Lqa5;->f(JJ)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    sget v0, Lqa5;->d:I
+
+    iget-wide v0, p0, Lnna;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lnna;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-wide v0, p0, Lnna;->b:J
+
+    invoke-static {v0, v1}, Lqa5;->p(J)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "Action"
+    iget-wide v1, p0, Lnna;->c:J
 
-    const-string v6, "trid"
+    invoke-static {v1, v2}, Lqa5;->p(J)Ljava/lang/String;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v1
 
-    move-result-object v3
+    const-string v2, ", endTime="
 
-    new-instance v4, Limb;
+    const-string v3, ")"
 
-    invoke-direct {v4, v6, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v4, "Schedule(startTime="
 
-    const-string v3, "eKey"
+    invoke-static {v4, v0, v2, v1, v3}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v6, Limb;
+    move-result-object v0
 
-    invoke-direct {v6, v3, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v3, "p_op"
-
-    const-string v5, "m_as_read"
-
-    new-instance v7, Limb;
-
-    invoke-direct {v7, v3, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v4, v6, v7}, [Limb;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lori;->a([Limb;)Lus;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Ldd;->b(Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "onNotificationMarkAsRead: failed"
-
-    invoke-static {v1, v2, v0}, Lwqi;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1}, Lrpa;->c()Lyi5;
-
-    move-result-object p1
-
-    new-instance v1, Lil4;
-
-    const-string v2, "failed to log mark as read"
-
-    invoke-direct {v1, v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast p1, Ly3b;
-
-    invoke-virtual {p1, v1}, Ly3b;->a(Ljava/lang/Throwable;)V
-
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v0
 .end method

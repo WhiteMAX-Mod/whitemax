@@ -1,87 +1,128 @@
 .class public final Lfuh;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lavh;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lb5g;
+
+.field public final synthetic Z:Landroid/view/View;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ler6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lb5g;
 
-    iput-boolean p1, p0, Lfuh;->a:Z
+    iput-object p1, p0, Lfuh;->Y:Lb5g;
+
+    iput-object p2, p0, Lfuh;->Z:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lplb;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lfuh;
+    invoke-virtual {p0, p1, p2}, Lfuh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    check-cast p1, Lfuh;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lfuh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lfuh;
+
+    iget-object v1, p0, Lfuh;->Y:Lb5g;
+
+    iget-object v2, p0, Lfuh;->Z:Landroid/view/View;
+
+    invoke-direct {v0, v1, v2, p2}, Lfuh;-><init>(Ler6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lfuh;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lfuh;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Lfuh;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-boolean v0, p0, Lfuh;->a:Z
+    iget-object p1, p0, Lfuh;->X:Ljava/lang/Object;
 
-    iget-boolean p1, p1, Lfuh;->a:Z
+    check-cast p1, Lplb;
 
-    if-eq v0, p1, :cond_2
+    iput v1, p0, Lfuh;->o:I
 
-    :goto_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Lfuh;->Y:Lb5g;
 
-    return p1
+    iget-object v1, p0, Lfuh;->Z:Landroid/view/View;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-interface {v0, v1, p1, p0}, Ler6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    sget-object v0, Lbc4;->a:Lbc4;
 
-    iget-boolean v0, p0, Lfuh;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "CloseScreen(isFromBridge="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lfuh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lxrf;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

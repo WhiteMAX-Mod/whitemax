@@ -1,39 +1,48 @@
 .class public final Lnu4;
-.super Lyr0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/Spatializer$OnSpatializerStateChangedListener;
+
+
+# instance fields
+.field public final synthetic a:Lxu4;
+
+
+# direct methods
+.method public constructor <init>(Lxu4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnu4;->a:Lxu4;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)F
-    .locals 1
+.method public final onSpatializerAvailableChanged(Landroid/media/Spatializer;Z)V
+    .locals 0
 
-    check-cast p1, Lou4;
+    sget-object p1, Lxu4;->k:Lzpb;
 
-    iget-object p1, p1, Lou4;->y0:Lp45;
+    iget-object p1, p0, Lnu4;->a:Lxu4;
 
-    iget p1, p1, Lp45;->b:F
+    invoke-virtual {p1}, Lxu4;->f()V
 
-    const v0, 0x461c4000    # 10000.0f
-
-    mul-float/2addr p1, v0
-
-    return p1
+    return-void
 .end method
 
-.method public final c(Ljava/lang/Object;F)V
-    .locals 1
+.method public final onSpatializerEnabledChanged(Landroid/media/Spatializer;Z)V
+    .locals 0
 
-    check-cast p1, Lou4;
+    sget-object p1, Lxu4;->k:Lzpb;
 
-    const v0, 0x461c4000    # 10000.0f
+    iget-object p1, p0, Lnu4;->a:Lxu4;
 
-    div-float/2addr p2, v0
-
-    iget-object v0, p1, Lou4;->y0:Lp45;
-
-    iput p2, v0, Lp45;->b:F
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-virtual {p1}, Lxu4;->f()V
 
     return-void
 .end method

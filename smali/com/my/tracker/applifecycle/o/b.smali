@@ -150,11 +150,11 @@
 
     move-result-object p0
 
-    new-instance p1, Lm1h;
+    new-instance p1, Lufh;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xb
 
-    invoke-direct {p1, v1, v0}, Lm1h;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lufh;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {p0, p1}, Lcom/my/tracker/core/AsyncCore;->onEngineWorker(Ljava/lang/Runnable;)V
 

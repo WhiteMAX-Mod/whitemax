@@ -1,41 +1,23 @@
 .class public final Lpge;
-.super Ldhe;
+.super Lf3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final k:J
+# static fields
+.field public static final c:Lpge;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p3, p4, p5}, Ldhe;-><init>(JLjava/util/List;)V
+    new-instance v0, Lpge;
 
-    iput-wide p1, p0, Lpge;->k:J
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lf3;-><init>(I)V
+
+    sput-object v0, Lpge;->c:Lpge;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lghe;
-    .locals 1
-
-    new-instance v0, Lqge;
-
-    invoke-direct {v0, p0}, Lqge;-><init>(Lpge;)V
-
-    return-object v0
-.end method
-
-.method public final b()Lehe;
-    .locals 1
-
-    new-instance v0, Lqge;
-
-    invoke-direct {v0, p0}, Lqge;-><init>(Lpge;)V
-
-    return-object v0
 .end method

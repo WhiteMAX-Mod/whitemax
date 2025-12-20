@@ -1,219 +1,167 @@
-.class public final Lkc5;
+.class public abstract Lkc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/TextWatcher;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public X:Z
-
-.field public final a:Landroid/widget/EditText;
-
-.field public final b:Z
-
-.field public c:Lic5;
-
-.field public d:I
-
-.field public o:I
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Z)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0x7fffffff
-
-    iput v0, p0, Lkc5;->d:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lkc5;->o:I
-
-    iput-object p1, p0, Lkc5;->a:Landroid/widget/EditText;
-
-    iput-boolean p2, p0, Lkc5;->b:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lkc5;->X:Z
-
-    return-void
-.end method
-
-.method public static a(Landroid/widget/EditText;I)V
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x1
+    const/16 v0, 0xe6
 
-    if-ne p1, v0, :cond_2
+    const/16 v1, 0xff
 
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
-
-    move-result p1
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
 
-    invoke-static {}, Lta5;->a()Lta5;
+    sput v0, Lkc5;->a:I
 
-    move-result-object v1
+    const/16 v0, 0x80
 
-    invoke-virtual {v1, p0}, Lta5;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    const/16 v1, 0x1b
 
-    if-ltz p1, :cond_0
+    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
-    if-ltz v0, :cond_0
+    move-result v0
 
-    invoke-static {p0, p1, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
-
-    return-void
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-static {p0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_1
-    if-ltz v0, :cond_2
-
-    invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    :cond_2
-    return-void
-.end method
-
-
-# virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+    sput v0, Lkc5;->b:I
 
     return-void
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+.method public static a(Lb6;)V
+    .locals 8
 
-    return-void
-.end method
+    new-instance v1, Le8g;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 7
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lkc5;->a:Landroid/widget/EditText;
+    invoke-direct {v1, v0, v0}, Le8g;-><init>(II)V
 
-    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
+    new-instance v2, Le8g;
 
-    move-result v1
+    sget v3, Lkc5;->a:I
 
-    if-nez v1, :cond_5
+    sget v4, Lkc5;->b:I
 
-    iget-boolean v1, p0, Lkc5;->X:Z
+    invoke-direct {v2, v3, v4}, Le8g;-><init>(II)V
 
-    if-eqz v1, :cond_5
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    iget-boolean v1, p0, Lkc5;->b:Z
+    move-result-object v3
 
-    if-nez v1, :cond_1
+    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    sget-object v1, Lta5;->m:Lta5;
+    move-result-object v4
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v3, v3, 0x30
+
+    const/4 v5, 0x1
+
+    const/16 v6, 0x20
+
+    if-ne v3, v6, :cond_0
+
+    move v3, v5
 
     goto :goto_0
 
     :cond_0
-    return-void
+    move v3, v5
 
-    :cond_1
+    move v5, v0
+
     :goto_0
-    if-gt p3, p4, :cond_5
+    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    instance-of p3, p1, Landroid/text/Spannable;
+    move-result-object v7
 
-    if-eqz p3, :cond_5
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-static {}, Lta5;->a()Lta5;
+    move-result-object v7
 
-    move-result-object p3
+    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
 
-    invoke-virtual {p3}, Lta5;->b()I
+    and-int/lit8 v7, v7, 0x30
 
-    move-result p3
+    if-ne v7, v6, :cond_1
 
-    if-eqz p3, :cond_3
-
-    const/4 v1, 0x1
-
-    if-eq p3, v1, :cond_2
-
-    const/4 p1, 0x3
-
-    if-eq p3, p1, :cond_3
+    move v6, v3
 
     goto :goto_1
 
+    :cond_1
+    move v6, v0
+
+    :goto_1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1e
+
+    if-lt v0, v3, :cond_2
+
+    new-instance v0, Loc5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_2
+
     :cond_2
-    move-object v4, p1
+    const/16 v3, 0x1d
 
-    check-cast v4, Landroid/text/Spannable;
+    if-lt v0, v3, :cond_3
 
-    invoke-static {}, Lta5;->a()Lta5;
+    new-instance v0, Lnc5;
 
-    move-result-object v1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    add-int v3, p2, p4
-
-    iget v5, p0, Lkc5;->d:I
-
-    iget v6, p0, Lkc5;->o:I
-
-    move v2, p2
-
-    invoke-virtual/range {v1 .. v6}, Lta5;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
-
-    return-void
+    goto :goto_2
 
     :cond_3
-    invoke-static {}, Lta5;->a()Lta5;
+    const/16 v3, 0x1c
 
-    move-result-object p1
+    if-lt v0, v3, :cond_4
 
-    iget-object p2, p0, Lkc5;->c:Lic5;
+    new-instance v0, Lmc5;
 
-    if-nez p2, :cond_4
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Lic5;
-
-    invoke-direct {p2, v0}, Lic5;-><init>(Landroid/widget/EditText;)V
-
-    iput-object p2, p0, Lkc5;->c:Lic5;
+    goto :goto_2
 
     :cond_4
-    iget-object p2, p0, Lkc5;->c:Lic5;
+    new-instance v0, Llc5;
 
-    invoke-virtual {p1, p2}, Lta5;->h(Lra5;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :cond_5
-    :goto_1
+    :goto_2
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v3
+
+    invoke-virtual/range {v0 .. v6}, Llc5;->b(Le8g;Le8g;Landroid/view/Window;Landroid/view/View;ZZ)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Llc5;->a(Landroid/view/Window;)V
+
     return-void
 .end method

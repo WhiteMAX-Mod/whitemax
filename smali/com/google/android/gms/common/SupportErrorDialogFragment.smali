@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public final v0()Landroid/app/Dialog;
+.method public final u0()Landroid/app/Dialog;
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->y1:Landroid/app/Dialog;
@@ -56,7 +56,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ls5j;->g(Ljava/lang/Object;)V
+    invoke-static {v1}, Lijj;->g(Ljava/lang/Object;)V
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 

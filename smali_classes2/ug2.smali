@@ -1,92 +1,110 @@
-.class public final Lug2;
+.class public final synthetic Lug2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwx3;
+
 
 # instance fields
-.field public final a:Ltw0;
+.field public final synthetic a:Lch2;
 
-.field public final b:J
+.field public final synthetic b:Ldn9;
 
-.field public final c:Ljve;
+.field public final synthetic c:Z
 
-.field public final d:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final e:Lgbd;
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(JLtw0;Llzf;)V
+.method public synthetic constructor <init>(Lch2;Ldn9;ZJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lug2;->a:Ltw0;
+    iput-object p1, p0, Lug2;->a:Lch2;
 
-    iput-wide p1, p0, Lug2;->b:J
+    iput-object p2, p0, Lug2;->b:Ldn9;
 
-    const/4 p1, 0x0
+    iput-boolean p3, p0, Lug2;->c:Z
 
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Lkve;->b(III)Ljve;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lug2;->c:Ljve;
-
-    check-cast p4, Lq2b;
-
-    invoke-virtual {p4}, Lq2b;->a()Lz74;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lug2;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p2, Lgbd;
-
-    invoke-direct {p2, p1}, Lgbd;-><init>(Le9a;)V
-
-    iput-object p2, p0, Lug2;->e:Lgbd;
-
-    invoke-virtual {p3, p0}, Ltw0;->d(Ljava/lang/Object;)V
+    iput-wide p4, p0, Lug2;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lcpd;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
+.method public final accept(Ljava/lang/Object;)V
+    .locals 7
 
-    iget-wide v0, p0, Lug2;->b:J
+    check-cast p1, Lhh2;
 
-    iget-wide v2, p1, Lcpd;->c:J
+    iget-object v0, p0, Lug2;->a:Lch2;
 
-    cmp-long p1, v0, v2
+    iget-object v1, p0, Lug2;->b:Ldn9;
 
-    if-eqz p1, :cond_0
+    if-nez v1, :cond_0
 
-    return-void
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p1, Lhh2;->j:J
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ltg2;
+    iget-wide v2, p1, Lhh2;->j:J
 
-    const/4 v0, 0x0
+    iget-object v4, v0, Lch2;->t:Lg35;
 
-    invoke-direct {p1, p0, v0}, Ltg2;-><init>(Lug2;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v4}, Lg35;->get()Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    move-result-object v4
 
-    iget-object v2, p0, Lug2;->d:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast v4, Lbn9;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    invoke-virtual {v4, v2, v3}, Lbn9;->l(J)Ldn9;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lug2;->c:Z
+
+    if-nez v3, :cond_1
+
+    if-eqz v2, :cond_1
+
+    iget-wide v3, v1, Ldn9;->c:J
+
+    iget-wide v5, v2, Ldn9;->c:J
+
+    cmp-long v2, v3, v5
+
+    if-lez v2, :cond_2
+
+    :cond_1
+    invoke-static {p1, v1}, Lch2;->q0(Lhh2;Ldn9;)V
+
+    :cond_2
+    :goto_0
+    iget-object p1, v0, Lch2;->n:Ljy0;
+
+    new-instance v0, Lra3;
+
+    iget-wide v1, p0, Lug2;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lra3;-><init>(Ljava/util/List;Z)V
+
+    invoke-virtual {p1, v0}, Ljy0;->c(Ljava/lang/Object;)V
 
     return-void
 .end method

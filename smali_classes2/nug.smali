@@ -1,24 +1,24 @@
-.class public final Lnug;
+.class public abstract Lnug;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpug;
 
-
-# static fields
-.field public static final a:Lnug;
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lnug;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnug;->a:Lnug;
+    iput-object p1, p0, Lnug;->a:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()Ljava/lang/Object;
 .end method

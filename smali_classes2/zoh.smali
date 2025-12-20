@@ -1,65 +1,33 @@
 .class public final Lzoh;
-.super Ldph;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lorg/webrtc/VideoSink;
 
-# static fields
-.field public static final c:Lzoh;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lzoh;
-
-    const-string v1, "permission_denied"
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ldph;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lzoh;->c:Lzoh;
-
-    return-void
-.end method
+# instance fields
+.field public volatile a:Lorg/webrtc/VideoSink;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lorg/webrtc/VideoFrame;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lzoh;->a:Lorg/webrtc/VideoSink;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    invoke-interface {v0, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
 
     :cond_0
-    instance-of p1, p1, Lzoh;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 0
 
-    const v0, -0x5a2e4a44
+    invoke-virtual {p0, p1}, Lzoh;->a(Lorg/webrtc/VideoFrame;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraPermissionDeny"
-
-    return-object v0
+    return-void
 .end method

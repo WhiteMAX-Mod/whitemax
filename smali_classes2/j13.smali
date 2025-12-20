@@ -1,57 +1,119 @@
 .class public final Lj13;
-.super Lq44;
+.super Lie0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public Y:Lxs;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lz13;
-
-.field public o:Ljava/lang/Object;
-
-.field public final synthetic s0:Lz13;
-
-.field public t0:I
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lz13;Lq44;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lj13;->s0:Lz13;
+    const/4 v0, 0x5
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+
+    iput-object p1, p0, Lj13;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lj13;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Lj13;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lj13;->t0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lj13;
 
-    iput p1, p0, Lj13;->t0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lj13;->s0:Lz13;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-static {p1, v0, p0}, Lz13;->a(Lz13;Lp03;Lq44;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lj13;
 
-    move-result-object p1
+    iget-object v1, p0, Lj13;->b:Ljava/lang/String;
 
-    return-object p1
+    iget-object v3, p1, Lj13;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lj13;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lj13;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lj13;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lj13;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", path="
+
+    const-string v1, ")"
+
+    const-string v2, "CropPhoto(uriAsString="
+
+    iget-object v3, p0, Lj13;->b:Ljava/lang/String;
+
+    iget-object v4, p0, Lj13;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,371 +1,203 @@
 .class public final Lfra;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvta;
-.implements Lpy4;
 
 
 # instance fields
-.field public X:Lpy4;
+.field public final a:Landroid/os/Bundle;
 
-.field public volatile Y:Z
+.field public b:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public volatile Z:Z
+.field public final c:[Lbud;
 
-.field public final a:Lyee;
+.field public final d:Z
 
-.field public final b:Ltm6;
+.field public final e:Z
 
-.field public final c:Ldra;
+.field public final f:I
 
-.field public final d:I
+.field public final g:Z
 
-.field public o:Lo1f;
+.field public final h:I
 
-.field public volatile s0:Z
+.field public final i:Ljava/lang/CharSequence;
 
-.field public t0:I
+.field public final j:Landroid/app/PendingIntent;
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Lyee;Ltm6;I)V
-    .locals 0
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lfra;->a:Lyee;
+    if-nez p1, :cond_0
 
-    iput-object p2, p0, Lfra;->b:Ltm6;
+    goto :goto_0
 
-    iput p3, p0, Lfra;->d:I
+    .line 1
+    :cond_0
+    const-string v1, ""
 
-    new-instance p2, Ldra;
+    invoke-static {v0, v1, p1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
 
-    const/4 p3, 0x1
+    move-result-object v0
 
-    invoke-direct {p2, p1, p0, p3}, Ldra;-><init>(Lvta;Ljava/util/concurrent/atomic/AtomicInteger;I)V
+    :goto_0
+    invoke-direct {p0, v0, p2, p3}, Lfra;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    iput-object p2, p0, Lfra;->c:Ldra;
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 12
+
+    .line 2
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v11}, Lfra;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbud;[Lbud;ZIZZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lbud;[Lbud;ZIZZZ)V
+    .locals 1
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 p6, 0x1
+
+    .line 4
+    iput-boolean p6, p0, Lfra;->e:Z
+
+    .line 5
+    iput-object p1, p0, Lfra;->b:Landroidx/core/graphics/drawable/IconCompat;
+
+    if-eqz p1, :cond_1
+
+    .line 6
+    iget p6, p1, Landroidx/core/graphics/drawable/IconCompat;->a:I
+
+    const/4 v0, -0x1
+
+    if-ne p6, v0, :cond_0
+
+    .line 7
+    iget-object p6, p1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    invoke-static {p6}, Ltf7;->d(Ljava/lang/Object;)I
+
+    move-result p6
+
+    :cond_0
+    const/4 v0, 0x2
+
+    if-ne p6, v0, :cond_1
+
+    .line 8
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->e()I
+
+    move-result p1
+
+    iput p1, p0, Lfra;->h:I
+
+    .line 9
+    :cond_1
+    invoke-static {p2}, Ltra;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfra;->i:Ljava/lang/CharSequence;
+
+    .line 10
+    iput-object p3, p0, Lfra;->j:Landroid/app/PendingIntent;
+
+    if-eqz p4, :cond_2
+
+    goto :goto_0
+
+    .line 11
+    :cond_2
+    new-instance p4, Landroid/os/Bundle;
+
+    invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
+
+    :goto_0
+    iput-object p4, p0, Lfra;->a:Landroid/os/Bundle;
+
+    .line 12
+    iput-object p5, p0, Lfra;->c:[Lbud;
+
+    .line 13
+    iput-boolean p7, p0, Lfra;->d:Z
+
+    .line 14
+    iput p8, p0, Lfra;->f:I
+
+    .line 15
+    iput-boolean p9, p0, Lfra;->e:Z
+
+    .line 16
+    iput-boolean p10, p0, Lfra;->g:Z
+
+    .line 17
+    iput-boolean p11, p0, Lfra;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a()Landroidx/core/graphics/drawable/IconCompat;
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-object v0, p0, Lfra;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    move-result v0
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lfra;->h:I
 
     if-eqz v0, :cond_0
 
-    goto :goto_2
+    const/4 v1, 0x0
 
-    :cond_0
-    iget-boolean v0, p0, Lfra;->Z:Z
+    const-string v2, ""
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v0}, Lo1f;->clear()V
-
-    return-void
-
-    :cond_1
-    iget-boolean v0, p0, Lfra;->Y:Z
-
-    if-nez v0, :cond_4
-
-    iget-boolean v0, p0, Lfra;->s0:Z
-
-    :try_start_0
-    iget-object v1, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v1}, Lo1f;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_2
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_3
-
-    if-eqz v3, :cond_3
-
-    iput-boolean v2, p0, Lfra;->Z:Z
-
-    iget-object v0, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {v0}, Lyee;->b()V
-
-    return-void
-
-    :cond_3
-    if-nez v3, :cond_4
-
-    :try_start_1
-    iget-object v0, p0, Lfra;->b:Ltm6;
-
-    invoke-interface {v0, v1}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2, v0}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object v0
 
-    const-string v1, "The mapper returned a null ObservableSource"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast v0, Llta;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iput-boolean v2, p0, Lfra;->Y:Z
-
-    iget-object v1, p0, Lfra;->c:Ldra;
-
-    invoke-interface {v0, v1}, Llta;->a(Lvta;)V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lfra;->dispose()V
-
-    iget-object v1, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v1}, Lo1f;->clear()V
-
-    iget-object v1, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {v1, v0}, Lyee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lfra;->dispose()V
-
-    iget-object v1, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v1}, Lo1f;->clear()V
-
-    iget-object v1, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {v1, v0}, Lyee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_4
-    :goto_1
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_2
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-boolean v0, p0, Lfra;->s0:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
+    iput-object v0, p0, Lfra;->b:Landroidx/core/graphics/drawable/IconCompat;
 
     :cond_0
-    const/4 v0, 0x1
+    iget-object v0, p0, Lfra;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    iput-boolean v0, p0, Lfra;->s0:Z
-
-    invoke-virtual {p0}, Lfra;->a()V
-
-    return-void
-.end method
-
-.method public final c(Lpy4;)V
-    .locals 2
-
-    iget-object v0, p0, Lfra;->X:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iput-object p1, p0, Lfra;->X:Lpy4;
-
-    instance-of v0, p1, Losc;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Losc;
-
-    const/4 v0, 0x3
-
-    invoke-interface {p1, v0}, Lpsc;->h(I)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iput v0, p0, Lfra;->t0:I
-
-    iput-object p1, p0, Lfra;->o:Lo1f;
-
-    iput-boolean v1, p0, Lfra;->s0:Z
-
-    iget-object p1, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {p1, p0}, Lyee;->c(Lpy4;)V
-
-    invoke-virtual {p0}, Lfra;->a()V
-
-    return-void
-
-    :cond_0
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    iput v0, p0, Lfra;->t0:I
-
-    iput-object p1, p0, Lfra;->o:Lo1f;
-
-    iget-object p1, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {p1, p0}, Lyee;->c(Lpy4;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Lr8f;
-
-    iget v0, p0, Lfra;->d:I
-
-    invoke-direct {p1, v0}, Lr8f;-><init>(I)V
-
-    iput-object p1, p0, Lfra;->o:Lo1f;
-
-    iget-object p1, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {p1, p0}, Lyee;->c(Lpy4;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lfra;->Z:Z
-
-    iget-object v0, p0, Lfra;->c:Ldra;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lfra;->X:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v0}, Lo1f;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lfra;->Z:Z
-
-    return v0
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lfra;->s0:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lfra;->t0:I
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lfra;->o:Lo1f;
-
-    invoke-interface {v0, p1}, Lo1f;->offer(Ljava/lang/Object;)Z
-
-    :cond_1
-    invoke-virtual {p0}, Lfra;->a()V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lfra;->s0:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lfra;->s0:Z
-
-    invoke-virtual {p0}, Lfra;->dispose()V
-
-    iget-object v0, p0, Lfra;->a:Lyee;
-
-    invoke-virtual {v0, p1}, Lyee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

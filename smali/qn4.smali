@@ -1,99 +1,177 @@
 .class public final Lqn4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lmid;
+.field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:I
-
-.field public final synthetic e:Landroid/view/ViewPropertyAnimator;
-
-.field public final synthetic f:Lun4;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lun4;Lmid;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/os/ConditionVariable;I)V
     .locals 0
 
-    iput-object p1, p0, Lqn4;->f:Lun4;
+    .line 1
+    iput p3, p0, Lqn4;->a:I
 
-    iput-object p2, p0, Lqn4;->a:Lmid;
+    iput-object p1, p0, Lqn4;->c:Ljava/lang/Object;
 
-    iput p3, p0, Lqn4;->b:I
+    iput-object p2, p0, Lqn4;->b:Ljava/lang/Object;
 
-    iput-object p4, p0, Lqn4;->c:Landroid/view/View;
+    const-string p1, "ExoPlayer:SimpleCacheInit"
 
-    iput p5, p0, Lqn4;->d:I
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    iput-object p6, p0, Lqn4;->e:Landroid/view/ViewPropertyAnimator;
+    return-void
+.end method
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+.method public constructor <init>(Lyn4;Landroid/media/AudioTrack;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqn4;->a:I
+
+    .line 2
+    iput-object p1, p0, Lqn4;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lqn4;->b:Ljava/lang/Object;
+
+    const-string p1, "ExoPlayer:AudioTrackReleaseThread"
+
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final run()V
     .locals 2
 
-    iget p1, p0, Lqn4;->b:I
+    iget v0, p0, Lqn4;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lqn4;->c:Landroid/view/View;
+    iget-object v0, p0, Lqn4;->c:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    check-cast v0, Lybf;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationX(F)V
+    monitor-enter v0
 
-    :cond_0
-    iget p1, p0, Lqn4;->d:I
+    :try_start_0
+    iget-object v1, p0, Lqn4;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_1
+    check-cast v1, Landroid/os/ConditionVariable;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
 
-    :cond_1
-    return-void
-.end method
+    iget-object v1, p0, Lqn4;->c:Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    check-cast v1, Lybf;
 
-    iget-object p1, p0, Lqn4;->e:Landroid/view/ViewPropertyAnimator;
+    invoke-static {v1}, Lybf;->a(Lybf;)V
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lqn4;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    check-cast v1, Lybf;
 
-    iget-object p1, p0, Lqn4;->f:Lun4;
+    iget-object v1, v1, Lybf;->b:Lc01;
 
-    iget-object v0, p0, Lqn4;->a:Lmid;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0}, Luhd;->c(Lmid;)V
-
-    iget-object v1, p1, Lun4;->p:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1}, Lun4;->j()V
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    :catchall_0
+    move-exception v1
 
-    iget-object p1, p0, Lqn4;->f:Lun4;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, Lqn4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lxbf;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lqn4;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/ConditionVariable;
+
+    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
+
+    iget-object v1, p0, Lqn4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lxbf;
+
+    invoke-static {v1}, Lxbf;->a(Lxbf;)V
+
+    iget-object v1, p0, Lqn4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lxbf;
+
+    iget-object v1, v1, Lxbf;->b:Lo68;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-exit v0
 
     return-void
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw v1
+
+    :pswitch_1
+    iget-object v0, p0, Lqn4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lyn4;
+
+    iget-object v1, p0, Lqn4;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/media/AudioTrack;
+
+    :try_start_2
+    invoke-virtual {v1}, Landroid/media/AudioTrack;->flush()V
+
+    invoke-virtual {v1}, Landroid/media/AudioTrack;->release()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    iget-object v0, v0, Lyn4;->h:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    return-void
+
+    :catchall_2
+    move-exception v1
+
+    iget-object v0, v0, Lyn4;->h:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

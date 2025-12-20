@@ -1,119 +1,181 @@
 .class public final Lt61;
-.super Lih;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final u0:Z
+.field public final synthetic X:Ld71;
+
+.field public final synthetic Y:Z
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ld71;ZLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-wide/16 v0, -0x1
+    iput-object p1, p0, Lt61;->X:Ld71;
 
-    const/4 v2, 0x1
+    iput-boolean p2, p0, Lt61;->Y:Z
 
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Lt61;-><init>(JZ)V
+    const/4 p1, 0x2
 
-    return-void
-.end method
-
-.method public constructor <init>(JZ)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lih;-><init>(JI)V
-
-    .line 3
-    iput-boolean p3, p0, Lt61;->u0:Z
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lt61;->u0:Z
-
-    return v0
-.end method
-
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 2
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-instance p5, Ljava/util/ArrayList;
-
-    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x2
-
-    new-array p4, p4, [F
-
-    fill-array-data p4, :array_0
-
-    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p4, :cond_1
-
-    if-eqz p2, :cond_1
-
-    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x1
-
-    new-array p4, p4, [F
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    aput v0, p4, v1
-
-    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    return-object p1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public final n(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lud2;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lt61;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lt61;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lt61;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lt61;
+
+    iget-object v1, p0, Lt61;->X:Ld71;
+
+    iget-boolean v2, p0, Lt61;->Y:Z
+
+    invoke-direct {v0, v1, v2, p2}, Lt61;-><init>(Ld71;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lt61;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lt61;->o:Ljava/lang/Object;
+
+    check-cast v1, Lud2;
+
+    iget-object v2, v0, Lt61;->X:Ld71;
+
+    iget-object v2, v2, Ld71;->k:Lhof;
+
+    iget-boolean v3, v0, Lt61;->Y:Z
+
+    :goto_0
+    invoke-virtual {v2}, Lhof;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v5, v4
+
+    check-cast v5, Lk61;
+
+    invoke-virtual {v1}, Lud2;->r0()V
+
+    iget-object v9, v1, Lud2;->t0:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    const-string v6, ""
+
+    :goto_1
+    move-object v13, v6
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {v1}, Lud2;->s0()V
+
+    iget-object v6, v1, Lud2;->w0:Ljava/lang/CharSequence;
+
+    goto :goto_1
+
+    :goto_2
+    iget-wide v6, v1, Lud2;->a:J
+
+    sget-object v8, Lgm0;->d:Lgm0;
+
+    sget-object v10, Ldm0;->a:Ldm0;
+
+    invoke-virtual {v1, v8, v10}, Lud2;->k(Lgm0;Ldm0;)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v1}, Lud2;->h()J
+
+    move-result-wide v14
+
+    xor-int/lit8 v8, v3, 0x1
+
+    iget-object v10, v1, Lud2;->b:Lzh2;
+
+    move-object/from16 p1, v1
+
+    iget-wide v0, v10, Lzh2;->a:J
+
+    new-instance v10, Ljava/lang/Long;
+
+    invoke-direct {v10, v6, v7}, Ljava/lang/Long;-><init>(J)V
+
+    move v6, v8
+
+    new-instance v8, Ljava/lang/Long;
+
+    invoke-direct {v8, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    new-instance v12, Ljava/lang/Long;
+
+    invoke-direct {v12, v14, v15}, Ljava/lang/Long;-><init>(J)V
+
+    iget-object v0, v5, Lk61;->d:Ljava/lang/CharSequence;
+
+    move v14, v6
+
+    new-instance v6, Lk61;
+
+    move-object v7, v10
+
+    move-object v10, v0
+
+    invoke-direct/range {v6 .. v14}, Lk61;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;Z)V
+
+    invoke-virtual {v2, v4, v6}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lv2h;->a:Lv2h;
+
+    return-object v0
+
+    :cond_1
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    goto :goto_0
 .end method

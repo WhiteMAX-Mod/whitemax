@@ -22,34 +22,34 @@
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager;",
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipantsDataProvider;",
         "Lkotlin/Function0;",
-        "Lqqg;",
+        "Lv2h;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "requestAttention",
-        "(Lcm6;Lem6;)V",
-        "Leje;",
+        "(Lmq6;Loq6;)V",
+        "Ljte;",
         "roomId",
         "joinRoom",
-        "(Leje;Lcm6;Lem6;)V",
+        "(Ljte;Lmq6;Loq6;)V",
         "leaveRoom",
-        "Lo7;",
+        "Lm7;",
         "params",
         "activateRooms",
-        "(Lo7;Lcm6;Lem6;)V",
-        "Lmtg;",
+        "(Lm7;Lmq6;Loq6;)V",
+        "Lc6h;",
         "updateRooms",
-        "(Lmtg;Lcm6;Lem6;)V",
+        "(Lc6h;Lmq6;Loq6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
         "moveParticipant",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lcm6;Lem6;)V",
-        "Lgld;",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lmq6;Loq6;)V",
+        "Luud;",
         "removeRooms",
-        "(Lgld;Lcm6;Lem6;)V",
+        "(Luud;Lmq6;Loq6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "assignParticipantsToRooms",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lcm6;Lem6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lmq6;Loq6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
         "getOwnActiveRoom",
         "()Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
@@ -74,13 +74,13 @@
 
 
 # virtual methods
-.method public abstract activateRooms(Lo7;Lcm6;Lem6;)V
+.method public abstract activateRooms(Lm7;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lo7;",
-            "Lcm6;",
-            "Lem6;",
+            "Lm7;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -89,13 +89,13 @@
 .method public abstract addListener(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$OwnRoomsListener;)V
 .end method
 
-.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lcm6;Lem6;)V
+.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
-            "Lcm6;",
-            "Lem6;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -107,36 +107,36 @@
 .method public abstract getOwnProposedRoom()Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
 .end method
 
-.method public abstract joinRoom(Leje;Lcm6;Lem6;)V
+.method public abstract joinRoom(Ljte;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Leje;",
-            "Lcm6;",
-            "Lem6;",
+            "Ljte;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract leaveRoom(Lcm6;Lem6;)V
+.method public abstract leaveRoom(Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcm6;",
-            "Lem6;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lcm6;Lem6;)V
+.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-            "Lcm6;",
-            "Lem6;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -145,36 +145,36 @@
 .method public abstract removeListener(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$OwnRoomsListener;)V
 .end method
 
-.method public abstract removeRooms(Lgld;Lcm6;Lem6;)V
+.method public abstract removeRooms(Luud;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lgld;",
-            "Lcm6;",
-            "Lem6;",
+            "Luud;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract requestAttention(Lcm6;Lem6;)V
+.method public abstract requestAttention(Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcm6;",
-            "Lem6;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract updateRooms(Lmtg;Lcm6;Lem6;)V
+.method public abstract updateRooms(Lc6h;Lmq6;Loq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmtg;",
-            "Lcm6;",
-            "Lem6;",
+            "Lc6h;",
+            "Lmq6;",
+            "Loq6;",
             ")V"
         }
     .end annotation

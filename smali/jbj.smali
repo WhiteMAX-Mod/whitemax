@@ -1,1129 +1,3414 @@
-.class public abstract Ljbj;
+.class public final Ljbj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final A:Lez5;
+
+.field public static final A0:Lez5;
+
+.field public static final B:Lez5;
+
+.field public static final B0:Lez5;
+
+.field public static final C:Lez5;
+
+.field public static final C0:Lez5;
+
+.field public static final D:Lez5;
+
+.field public static final D0:Lez5;
+
+.field public static final E:Lez5;
+
+.field public static final E0:Lez5;
+
+.field public static final F:Lez5;
+
+.field public static final F0:Lez5;
+
+.field public static final G:Lez5;
+
+.field public static final G0:Lez5;
+
+.field public static final H:Lez5;
+
+.field public static final H0:Lez5;
+
+.field public static final I:Lez5;
+
+.field public static final I0:Lez5;
+
+.field public static final J:Lez5;
+
+.field public static final J0:Lez5;
+
+.field public static final K:Lez5;
+
+.field public static final K0:Lez5;
+
+.field public static final L:Lez5;
+
+.field public static final L0:Lez5;
+
+.field public static final M:Lez5;
+
+.field public static final M0:Lez5;
+
+.field public static final N:Lez5;
+
+.field public static final N0:Lez5;
+
+.field public static final O:Lez5;
+
+.field public static final O0:Lez5;
+
+.field public static final P:Lez5;
+
+.field public static final P0:Lez5;
+
+.field public static final Q:Lez5;
+
+.field public static final Q0:Lez5;
+
+.field public static final R:Lez5;
+
+.field public static final R0:Lez5;
+
+.field public static final S:Lez5;
+
+.field public static final S0:Lez5;
+
+.field public static final T:Lez5;
+
+.field public static final T0:Lez5;
+
+.field public static final U:Lez5;
+
+.field public static final U0:Lez5;
+
+.field public static final V:Lez5;
+
+.field public static final V0:Lez5;
+
+.field public static final W:Lez5;
+
+.field public static final W0:Lez5;
+
+.field public static final X:Lez5;
+
+.field public static final X0:Lez5;
+
+.field public static final Y:Lez5;
+
+.field public static final Y0:Lez5;
+
+.field public static final Z:Lez5;
+
+.field public static final Z0:Lez5;
+
+.field public static final a:Ljbj;
+
+.field public static final a0:Lez5;
+
+.field public static final a1:Lez5;
+
+.field public static final b:Lez5;
+
+.field public static final b0:Lez5;
+
+.field public static final b1:Lez5;
+
+.field public static final c:Lez5;
+
+.field public static final c0:Lez5;
+
+.field public static final c1:Lez5;
+
+.field public static final d:Lez5;
+
+.field public static final d0:Lez5;
+
+.field public static final d1:Lez5;
+
+.field public static final e:Lez5;
+
+.field public static final e0:Lez5;
+
+.field public static final e1:Lez5;
+
+.field public static final f:Lez5;
+
+.field public static final f0:Lez5;
+
+.field public static final f1:Lez5;
+
+.field public static final g:Lez5;
+
+.field public static final g0:Lez5;
+
+.field public static final g1:Lez5;
+
+.field public static final h:Lez5;
+
+.field public static final h0:Lez5;
+
+.field public static final h1:Lez5;
+
+.field public static final i:Lez5;
+
+.field public static final i0:Lez5;
+
+.field public static final i1:Lez5;
+
+.field public static final j:Lez5;
+
+.field public static final j0:Lez5;
+
+.field public static final j1:Lez5;
+
+.field public static final k:Lez5;
+
+.field public static final k0:Lez5;
+
+.field public static final k1:Lez5;
+
+.field public static final l:Lez5;
+
+.field public static final l0:Lez5;
+
+.field public static final l1:Lez5;
+
+.field public static final m:Lez5;
+
+.field public static final m0:Lez5;
+
+.field public static final m1:Lez5;
+
+.field public static final n:Lez5;
+
+.field public static final n0:Lez5;
+
+.field public static final n1:Lez5;
+
+.field public static final o:Lez5;
+
+.field public static final o0:Lez5;
+
+.field public static final o1:Lez5;
+
+.field public static final p:Lez5;
+
+.field public static final p0:Lez5;
+
+.field public static final p1:Lez5;
+
+.field public static final q:Lez5;
+
+.field public static final q0:Lez5;
+
+.field public static final q1:Lez5;
+
+.field public static final r:Lez5;
+
+.field public static final r0:Lez5;
+
+.field public static final r1:Lez5;
+
+.field public static final s:Lez5;
+
+.field public static final s0:Lez5;
+
+.field public static final s1:Lez5;
+
+.field public static final t:Lez5;
+
+.field public static final t0:Lez5;
+
+.field public static final t1:Lez5;
+
+.field public static final u:Lez5;
+
+.field public static final u0:Lez5;
+
+.field public static final u1:Lez5;
+
+.field public static final v:Lez5;
+
+.field public static final v0:Lez5;
+
+.field public static final v1:Lez5;
+
+.field public static final w:Lez5;
+
+.field public static final w0:Lez5;
+
+.field public static final w1:Lez5;
+
+.field public static final x:Lez5;
+
+.field public static final x0:Lez5;
+
+.field public static final x1:Lez5;
+
+.field public static final y:Lez5;
+
+.field public static final y0:Lez5;
+
+.field public static final y1:Lez5;
+
+.field public static final z:Lez5;
+
+.field public static final z0:Lez5;
+
 
 # direct methods
-.method public static final a(Landroid/text/Spanned;)I
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance v0, Ljbj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ljbj;->a:Ljbj;
+
+    new-instance v0, Lyyi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+
+    const-class v1, Lqzi;
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    new-instance v2, Lez5;
 
-    move-result v0
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    move-result-object v0
 
-    move-result v1
+    const-string v3, "systemInfo"
 
-    const/4 v2, 0x0
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :try_start_0
-    const-class v3, Ljava/lang/Object;
+    sput-object v2, Ljbj;->b:Lez5;
 
-    invoke-interface {p0, v2, v1, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    new-instance v0, Lyyi;
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x2
 
-    goto :goto_0
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    :catchall_0
-    const/4 v1, 0x0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :goto_0
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    return v0
+    new-instance v2, Lez5;
 
-    :cond_0
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    array-length v3, v1
+    move-result-object v0
 
-    add-int/2addr v0, v3
+    const-string v3, "eventName"
 
-    array-length v3, v1
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :goto_1
-    if-ge v2, v3, :cond_3
+    sput-object v2, Ljbj;->c:Lez5;
 
-    aget-object v4, v1, v2
+    new-instance v0, Lyyi;
 
-    if-nez v4, :cond_1
+    const/16 v2, 0x25
 
-    goto :goto_2
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    :cond_1
-    if-eq v4, p0, :cond_2
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object v0
 
-    invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
+    new-instance v2, Lez5;
 
-    move-result v5
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    add-int/2addr v0, v5
+    move-result-object v0
 
-    :cond_2
-    mul-int/lit8 v0, v0, 0x1f
+    const-string v3, "isThickClient"
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result v5
+    sput-object v2, Ljbj;->d:Lez5;
 
-    add-int/2addr v5, v0
+    new-instance v0, Lyyi;
 
-    mul-int/lit8 v5, v5, 0x1f
+    const/16 v2, 0x3d
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    move-result v0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    add-int/2addr v0, v5
+    move-result-object v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v2, Lez5;
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v4
+    move-result-object v0
 
-    add-int/2addr v4, v0
+    const-string v3, "clientType"
 
-    move v0, v4
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :goto_2
-    add-int/lit8 v2, v2, 0x1
+    sput-object v2, Ljbj;->e:Lez5;
 
-    goto :goto_1
+    new-instance v0, Lyyi;
 
-    :cond_3
-    return v0
-.end method
+    const/4 v2, 0x3
 
-.method public static b(Ljava/lang/String;)I
-    .locals 21
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    move-object/from16 v0, p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    const/4 v1, -0x1
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    new-instance v2, Lez5;
 
-    return v1
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    :cond_0
-    sget-object v2, Lwz9;->a:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    const-string v3, "modelDownloadLogEvent"
 
-    move-result v2
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    const/4 v3, 0x2
+    sput-object v2, Ljbj;->f:Lez5;
 
-    const/4 v4, 0x1
+    new-instance v0, Lyyi;
 
-    const/4 v5, 0x0
+    const/16 v2, 0x14
 
-    sparse-switch v2, :sswitch_data_0
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    :goto_0
-    move v2, v1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    goto :goto_1
+    move-result-object v0
 
-    :sswitch_0
-    const-string v2, "audio/mp3"
+    new-instance v2, Lez5;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v2
+    move-result-object v0
 
-    if-nez v2, :cond_1
+    const-string v3, "customModelLoadLogEvent"
 
-    goto :goto_0
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_1
-    move v2, v3
+    sput-object v2, Ljbj;->g:Lez5;
 
-    goto :goto_1
-
-    :sswitch_1
-    const-string v2, "audio/x-wav"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v4
-
-    goto :goto_1
-
-    :sswitch_2
-    const-string v2, "audio/x-flac"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move v2, v5
-
-    :goto_1
-    const-string v6, "audio/flac"
-
-    const-string v7, "audio/wav"
-
-    const-string v8, "audio/mpeg"
-
-    packed-switch v2, :pswitch_data_0
-
-    goto :goto_2
-
-    :pswitch_0
-    move-object v0, v8
-
-    goto :goto_2
-
-    :pswitch_1
-    move-object v0, v7
-
-    goto :goto_2
-
-    :pswitch_2
-    move-object v0, v6
-
-    :goto_2
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    const/16 v9, 0xe
-
-    const/16 v10, 0xd
-
-    const/16 v11, 0xc
-
-    const/16 v12, 0xb
-
-    const/16 v13, 0xa
-
-    const/16 v14, 0x9
-
-    const/16 v15, 0x8
-
-    const/16 v16, 0x7
-
-    const/16 v17, 0x6
-
-    const/16 v18, 0x5
-
-    const/16 v19, 0x4
-
-    const/16 v20, 0x3
-
-    sparse-switch v2, :sswitch_data_1
-
-    :goto_3
-    move v3, v1
-
-    goto/16 :goto_4
-
-    :sswitch_3
-    const-string v2, "video/x-matroska"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    const/16 v3, 0x17
-
-    goto/16 :goto_4
-
-    :sswitch_4
-    const-string v2, "audio/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    const/16 v3, 0x16
-
-    goto/16 :goto_4
-
-    :sswitch_5
-    invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    const/16 v3, 0x15
-
-    goto/16 :goto_4
-
-    :sswitch_6
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    const/16 v3, 0x14
-
-    goto/16 :goto_4
-
-    :sswitch_7
-    const-string v2, "audio/eac3"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    const/16 v3, 0x13
-
-    goto/16 :goto_4
-
-    :sswitch_8
-    const-string v2, "audio/3gpp"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    const/16 v3, 0x12
-
-    goto/16 :goto_4
-
-    :sswitch_9
-    const-string v2, "video/mp4"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    goto :goto_3
-
-    :cond_a
-    const/16 v3, 0x11
-
-    goto/16 :goto_4
-
-    :sswitch_a
-    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    goto :goto_3
-
-    :cond_b
-    const/16 v3, 0x10
-
-    goto/16 :goto_4
-
-    :sswitch_b
-    const-string v2, "audio/ogg"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    goto :goto_3
-
-    :cond_c
-    const/16 v3, 0xf
-
-    goto/16 :goto_4
-
-    :sswitch_c
-    const-string v2, "audio/mp4"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    goto :goto_3
-
-    :cond_d
-    move v3, v9
-
-    goto/16 :goto_4
-
-    :sswitch_d
-    const-string v2, "audio/amr"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_e
-
-    goto/16 :goto_3
-
-    :cond_e
-    move v3, v10
-
-    goto/16 :goto_4
-
-    :sswitch_e
-    const-string v2, "audio/ac4"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_f
-
-    goto/16 :goto_3
-
-    :cond_f
-    move v3, v11
-
-    goto/16 :goto_4
-
-    :sswitch_f
-    const-string v2, "audio/ac3"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_10
-
-    goto/16 :goto_3
-
-    :cond_10
-    move v3, v12
-
-    goto/16 :goto_4
-
-    :sswitch_10
-    const-string v2, "video/x-flv"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_11
-
-    goto/16 :goto_3
-
-    :cond_11
-    move v3, v13
-
-    goto/16 :goto_4
-
-    :sswitch_11
-    const-string v2, "application/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_12
-
-    goto/16 :goto_3
-
-    :cond_12
-    move v3, v14
-
-    goto/16 :goto_4
-
-    :sswitch_12
-    const-string v2, "audio/x-matroska"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_13
-
-    goto/16 :goto_3
-
-    :cond_13
-    move v3, v15
-
-    goto/16 :goto_4
-
-    :sswitch_13
-    const-string v2, "text/vtt"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_14
-
-    goto/16 :goto_3
-
-    :cond_14
-    move/from16 v3, v16
-
-    goto :goto_4
-
-    :sswitch_14
-    const-string v2, "application/mp4"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_15
-
-    goto/16 :goto_3
-
-    :cond_15
-    move/from16 v3, v17
-
-    goto :goto_4
-
-    :sswitch_15
-    const-string v2, "image/jpeg"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_16
-
-    goto/16 :goto_3
-
-    :cond_16
-    move/from16 v3, v18
-
-    goto :goto_4
-
-    :sswitch_16
-    const-string v2, "audio/amr-wb"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_17
-
-    goto/16 :goto_3
-
-    :cond_17
-    move/from16 v3, v19
-
-    goto :goto_4
-
-    :sswitch_17
-    const-string v2, "video/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_18
-
-    goto/16 :goto_3
-
-    :cond_18
-    move/from16 v3, v20
-
-    goto :goto_4
-
-    :sswitch_18
-    const-string v2, "video/mp2t"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1b
-
-    goto/16 :goto_3
-
-    :sswitch_19
-    const-string v2, "video/mp2p"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_19
-
-    goto/16 :goto_3
-
-    :cond_19
-    move v3, v4
-
-    goto :goto_4
-
-    :sswitch_1a
-    const-string v2, "audio/eac3-joc"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1a
-
-    goto/16 :goto_3
-
-    :cond_1a
-    move v3, v5
-
-    :cond_1b
-    :goto_4
-    packed-switch v3, :pswitch_data_1
-
-    return v1
-
-    :pswitch_3
-    return v16
-
-    :pswitch_4
-    return v19
-
-    :pswitch_5
-    return v11
-
-    :pswitch_6
-    return v14
-
-    :pswitch_7
-    return v4
-
-    :pswitch_8
-    return v18
-
-    :pswitch_9
-    return v10
-
-    :pswitch_a
-    return v15
-
-    :pswitch_b
-    return v9
-
-    :pswitch_c
-    return v20
-
-    :pswitch_d
-    return v17
-
-    :pswitch_e
-    return v12
-
-    :pswitch_f
-    return v13
-
-    :pswitch_10
-    return v5
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x3c11ec0a -> :sswitch_2
-        -0x22f81362 -> :sswitch_1
-        0xb26c537 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-
-    :sswitch_data_1
-    .sparse-switch
-        -0x7e929daa -> :sswitch_1a
-        -0x6315f78b -> :sswitch_19
-        -0x6315f787 -> :sswitch_18
-        -0x63118f53 -> :sswitch_17
-        -0x5fc6f775 -> :sswitch_16
-        -0x58a7d764 -> :sswitch_15
-        -0x4a681e4e -> :sswitch_14
-        -0x3be2f26c -> :sswitch_13
-        -0x17118226 -> :sswitch_12
-        -0x2974308 -> :sswitch_11
-        0xd45707 -> :sswitch_10
-        0xb269698 -> :sswitch_f
-        0xb269699 -> :sswitch_e
-        0xb26980d -> :sswitch_d
-        0xb26c538 -> :sswitch_c
-        0xb26cbd6 -> :sswitch_b
-        0xb26e933 -> :sswitch_a
-        0x4f62635d -> :sswitch_9
-        0x59976a2d -> :sswitch_8
-        0x59ae0c65 -> :sswitch_7
-        0x59aeaa01 -> :sswitch_6
-        0x59b1e81e -> :sswitch_5
-        0x59b64a32 -> :sswitch_4
-        0x79909c15 -> :sswitch_3
-    .end sparse-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_d
-        :pswitch_d
-        :pswitch_8
-        :pswitch_10
-        :pswitch_7
-        :pswitch_c
-        :pswitch_a
-        :pswitch_6
-        :pswitch_5
-        :pswitch_a
-        :pswitch_c
-        :pswitch_10
-        :pswitch_4
-        :pswitch_3
-        :pswitch_d
-        :pswitch_d
-    .end packed-switch
-.end method
-
-.method public static c(Landroid/net/Uri;)I
-    .locals 6
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v0, -0x1
-
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    const-string v1, ".ac3"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_19
-
-    const-string v1, ".ec3"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_9
-
-    :cond_1
-    const-string v1, ".ac4"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    const-string v1, ".adts"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_18
-
-    const-string v1, ".aac"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto/16 :goto_8
-
-    :cond_3
-    const-string v1, ".amr"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_4
-    const-string v1, ".flac"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
+    new-instance v0, Lyyi;
 
     const/4 v2, 0x4
 
-    if-eqz v1, :cond_5
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    return v2
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :cond_5
-    const-string v1, ".flv"
+    move-result-object v0
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    new-instance v2, Lez5;
 
-    move-result v1
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    const/4 v3, 0x5
+    move-result-object v0
 
-    if-eqz v1, :cond_6
+    const-string v3, "customModelInferenceLogEvent"
 
-    return v3
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_6
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    sput-object v2, Ljbj;->h:Lez5;
 
-    move-result v1
+    new-instance v0, Lyyi;
 
-    sub-int/2addr v1, v2
+    const/16 v2, 0x1d
 
-    const-string v4, ".mk"
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    invoke-virtual {p0, v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_17
+    new-instance v2, Lez5;
 
-    const-string v1, ".webm"
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    const-string v3, "customModelCreateLogEvent"
 
-    if-eqz v1, :cond_7
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    goto/16 :goto_7
+    sput-object v2, Ljbj;->i:Lez5;
 
-    :cond_7
-    const-string v1, ".mp3"
+    new-instance v0, Lyyi;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    const/4 v2, 0x5
 
-    move-result v1
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    if-eqz v1, :cond_8
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    const/4 p0, 0x7
+    move-result-object v0
 
-    return p0
+    new-instance v2, Lez5;
 
-    :cond_8
-    const-string v1, ".mp4"
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v4
+    const-string v3, "onDeviceFaceDetectionLogEvent"
 
-    if-nez v4, :cond_16
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    sput-object v2, Ljbj;->j:Lez5;
 
-    move-result v4
+    new-instance v0, Lyyi;
 
-    sub-int/2addr v4, v2
+    const/16 v2, 0x3b
 
-    const-string v5, ".m4"
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    invoke-virtual {p0, v5, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result v4
+    move-result-object v0
 
-    if-nez v4, :cond_16
+    new-instance v2, Lez5;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v4
+    move-result-object v0
 
-    sub-int/2addr v4, v3
+    const-string v3, "onDeviceFaceLoadLogEvent"
 
-    invoke-virtual {p0, v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result v1
+    sput-object v2, Ljbj;->k:Lez5;
 
-    if-nez v1, :cond_16
+    new-instance v0, Lyyi;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    const/4 v2, 0x6
 
-    move-result v1
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    sub-int/2addr v1, v3
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    const-string v3, ".cmf"
+    move-result-object v0
 
-    invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    new-instance v2, Lez5;
 
-    move-result v1
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    if-eqz v1, :cond_9
+    move-result-object v0
 
-    goto/16 :goto_6
+    const-string v3, "onDeviceTextDetectionLogEvent"
 
-    :cond_9
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result v1
+    sput-object v2, Ljbj;->l:Lez5;
 
-    sub-int/2addr v1, v2
+    new-instance v0, Lyyi;
 
-    const-string v3, ".og"
+    const/16 v2, 0x4f
 
-    invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    move-result v1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    if-nez v1, :cond_15
+    move-result-object v0
 
-    const-string v1, ".opus"
+    new-instance v2, Lez5;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_a
+    const-string v3, "onDeviceTextDetectionLoadLogEvent"
 
-    goto/16 :goto_5
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_a
-    const-string v1, ".ps"
+    sput-object v2, Ljbj;->m:Lez5;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    new-instance v0, Lyyi;
 
-    move-result v1
+    const/4 v2, 0x7
 
-    if-nez v1, :cond_14
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    const-string v1, ".mpeg"
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    new-instance v2, Lez5;
 
-    if-nez v1, :cond_14
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    const-string v1, ".mpg"
+    move-result-object v0
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    const-string v3, "onDeviceBarcodeDetectionLogEvent"
 
-    move-result v1
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    if-nez v1, :cond_14
+    sput-object v2, Ljbj;->n:Lez5;
 
-    const-string v1, ".m2p"
+    new-instance v0, Lyyi;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    const/16 v2, 0x3a
 
-    move-result v1
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    if-eqz v1, :cond_b
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    goto :goto_4
+    move-result-object v0
 
-    :cond_b
-    const-string v1, ".ts"
+    new-instance v2, Lez5;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v3
+    move-result-object v0
 
-    if-nez v3, :cond_13
+    const-string v3, "onDeviceBarcodeLoadLogEvent"
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result v3
+    sput-object v2, Ljbj;->o:Lez5;
 
-    sub-int/2addr v3, v2
+    new-instance v0, Lyyi;
 
-    invoke-virtual {p0, v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    const/16 v2, 0x30
 
-    move-result v1
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    if-eqz v1, :cond_c
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    goto :goto_3
+    move-result-object v0
 
-    :cond_c
-    const-string v1, ".wav"
+    new-instance v2, Lez5;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_12
+    const-string v3, "onDeviceImageLabelCreateLogEvent"
 
-    const-string v1, ".wave"
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    sput-object v2, Ljbj;->p:Lez5;
 
-    move-result v1
+    new-instance v0, Lyyi;
 
-    if-eqz v1, :cond_d
+    const/16 v2, 0x31
 
-    goto :goto_2
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    :cond_d
-    const-string v1, ".vtt"
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    new-instance v2, Lez5;
 
-    if-nez v1, :cond_11
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    const-string v1, ".webvtt"
+    move-result-object v0
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    const-string v3, "onDeviceImageLabelLoadLogEvent"
 
-    move-result v1
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    if-eqz v1, :cond_e
+    sput-object v2, Ljbj;->q:Lez5;
 
-    goto :goto_1
+    new-instance v0, Lyyi;
 
-    :cond_e
-    const-string v1, ".jpg"
+    const/16 v2, 0x12
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    move-result v1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    if-nez v1, :cond_10
+    move-result-object v0
 
-    const-string v1, ".jpeg"
+    new-instance v2, Lez5;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_f
+    const-string v3, "onDeviceImageLabelDetectionLogEvent"
 
-    goto :goto_0
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_f
-    return v0
+    sput-object v2, Ljbj;->r:Lez5;
 
-    :cond_10
-    :goto_0
-    const/16 p0, 0xe
+    new-instance v0, Lyyi;
 
-    return p0
+    const/16 v2, 0x1a
 
-    :cond_11
-    :goto_1
-    const/16 p0, 0xd
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    return p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :cond_12
-    :goto_2
-    const/16 p0, 0xc
+    move-result-object v0
 
-    return p0
+    new-instance v2, Lez5;
 
-    :cond_13
-    :goto_3
-    const/16 p0, 0xb
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    return p0
+    move-result-object v0
 
-    :cond_14
-    :goto_4
-    const/16 p0, 0xa
+    const-string v3, "onDeviceObjectCreateLogEvent"
 
-    return p0
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    :cond_15
-    :goto_5
-    const/16 p0, 0x9
+    sput-object v2, Ljbj;->s:Lez5;
 
-    return p0
+    new-instance v0, Lyyi;
 
-    :cond_16
-    :goto_6
-    const/16 p0, 0x8
+    const/16 v2, 0x1b
 
-    return p0
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
 
-    :cond_17
-    :goto_7
-    const/4 p0, 0x6
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    return p0
+    move-result-object v0
 
-    :cond_18
-    :goto_8
-    const/4 p0, 0x2
+    new-instance v2, Lez5;
 
-    return p0
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
 
-    :cond_19
-    :goto_9
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return p0
+    const-string v3, "onDeviceObjectLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->t:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceObjectInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->u:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x2c
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDevicePoseDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->v:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x2d
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceSegmentationLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->w:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceSmartReplyLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->x:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceLanguageIdentificationLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->y:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceTranslationLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->z:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudFaceDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->A:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudCropHintDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->B:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudDocumentTextDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->C:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudImagePropertiesDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->D:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudImageLabelDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->E:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudLandmarkDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->F:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudLogoDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->G:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudSafeSearchDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->H:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudTextDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->I:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cloudWebSearchDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->J:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "automlImageLabelingCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->K:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "automlImageLabelingLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->L:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "automlImageLabelingInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->M:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x27
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "isModelDownloadedLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->N:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x28
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "deleteModelLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->O:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x1e
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedAutomlImageLabelingInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->P:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x1f
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedCustomModelInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->Q:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x20
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceFaceDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->R:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x21
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceBarcodeDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->S:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x22
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceImageLabelDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->T:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x23
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceObjectInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->U:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x24
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceTextDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->V:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x2e
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDevicePoseDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->W:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x2f
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceSegmentationLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->X:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x45
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "pipelineAccelerationInferenceEvents"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->Y:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x2a
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "remoteConfigLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->Z:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x32
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "inputImageConstructionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->a0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x33
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "leakedHandleEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->b0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x34
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "cameraSourceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->c0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x35
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageLabelOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->d0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x36
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "languageIdentificationOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->e0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x3c
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "faceDetectionOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->f0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x55
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "documentDetectionOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->g0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x56
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "documentCroppingOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->h0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x57
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "documentEnhancementOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->i0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x37
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "nlClassifierOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->j0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x38
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "nlClassifierClientLibraryLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->k0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x39
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "accelerationAllowlistLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->l0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x3e
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "toxicityDetectionCreateEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->m0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x3f
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "toxicityDetectionLoadEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->n0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x40
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "toxicityDetectionInferenceEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->o0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x41
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "barcodeDetectionOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->p0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x42
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "customImageLabelOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->q0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x43
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "codeScannerScanApiEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->r0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x44
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "codeScannerOptionalModuleEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->s0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x46
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceExplicitContentCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->t0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x47
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceExplicitContentLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->u0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x48
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceExplicitContentInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->v0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x49
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceExplicitContentLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->w0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x4a
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceFaceMeshCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->x0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x4b
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceFaceMeshLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->y0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x4c
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceFaceMeshLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->z0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x4d
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceFaceMeshLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->A0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x4e
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "smartReplyOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->B0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x50
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "textDetectionOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->C0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x51
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageQualityAnalysisCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->D0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x52
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageQualityAnalysisLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->E0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x53
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageQualityAnalysisLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->F0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x54
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceImageQualityAnalysisLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->G0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x58
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageQualityAnalysisOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->H0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x59
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageCaptioningOptionalModuleLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->I0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5a
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageCaptioningCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->J0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5b
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageCaptioningLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->K0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5c
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceImageCaptioningInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->L0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5d
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceImageCaptioningInferenceLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->M0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5e
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentDetectionCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->N0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x5f
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentDetectionLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->O0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x60
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->P0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x61
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceDocumentDetectionLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->Q0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x62
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentCroppingCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->R0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x63
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentCroppingLoadLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->S0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x64
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentCroppingLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->T0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x65
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "aggregatedOnDeviceDocumentCroppingLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->U0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x66
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "onDeviceDocumentEnhancementCreateLogEvent"
+
+    invoke-direct {v2, v3, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljbj;->V0:Lez5;
+
+    new-instance v0, Lyyi;
+
+    const/16 v2, 0x67
+
+    invoke-direct {v0, v2}, Lyyi;-><init>(I)V
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lez5;
+
+    invoke-static {v0}, Lc12;->q(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "onDeviceDocumentEnhancementLoadLogEvent"
+
+    invoke-direct {v1, v2, v0}, Lez5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ljbj;->W0:Lez5;
+
+    const-string v0, "onDeviceDocumentEnhancementLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x68
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->X0:Lez5;
+
+    const-string v0, "aggregatedOnDeviceDocumentEnhancementLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x69
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->Y0:Lez5;
+
+    const-string v0, "scannerAutoZoomEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6a
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->Z0:Lez5;
+
+    const-string v0, "lowLightAutoExposureComputationEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6b
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->a1:Lez5;
+
+    const-string v0, "lowLightFrameProcessEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6c
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->b1:Lez5;
+
+    const-string v0, "lowLightSceneDetectionEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6d
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->c1:Lez5;
+
+    const-string v0, "onDeviceStainRemovalLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6e
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->d1:Lez5;
+
+    const-string v0, "aggregatedOnDeviceStainRemovalLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x6f
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->e1:Lez5;
+
+    const-string v0, "stainRemovalOptionalModuleLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x70
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->f1:Lez5;
+
+    const-string v0, "onDeviceShadowRemovalLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x71
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->g1:Lez5;
+
+    const-string v0, "aggregatedOnDeviceShadowRemovalLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x72
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->h1:Lez5;
+
+    const-string v0, "shadowRemovalOptionalModuleLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x73
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->i1:Lez5;
+
+    const-string v0, "onDeviceDigitalInkSegmentationLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x74
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->j1:Lez5;
+
+    const-string v0, "onDeviceDocumentScannerStartLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x75
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->k1:Lez5;
+
+    const-string v0, "onDeviceDocumentScannerFinishLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x76
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->l1:Lez5;
+
+    const-string v0, "onDeviceDocumentScannerUiStartLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x77
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->m1:Lez5;
+
+    const-string v0, "onDeviceDocumentScannerUiFinishLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x78
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->n1:Lez5;
+
+    const-string v0, "documentScannerUiOptionalModuleSessionStartLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x79
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->o1:Lez5;
+
+    const-string v0, "documentScannerUiOptionalModuleSessionFinishLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7a
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->p1:Lez5;
+
+    const-string v0, "onDeviceDocumentScannerUiCreateLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7b
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->q1:Lez5;
+
+    const-string v0, "onDeviceSubjectSegmentationCreateLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7c
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->r1:Lez5;
+
+    const-string v0, "onDeviceSubjectSegmentationLoadLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7d
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->s1:Lez5;
+
+    const-string v0, "onDeviceSubjectSegmentationInferenceLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7e
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->t1:Lez5;
+
+    const-string v0, "aggregatedOnDeviceSubjectSegmentationLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x7f
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->u1:Lez5;
+
+    const-string v0, "subjectSegmentationOptionalModuleLogEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x80
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->v1:Lez5;
+
+    const-string v0, "documentScannerUiModuleScreenViewEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x81
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->w1:Lez5;
+
+    const-string v0, "documentScannerUiModuleScreenClickEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x82
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->x1:Lez5;
+
+    const-string v0, "documentScannerUiModuleScreenErrorEvent"
+
+    invoke-static {v0}, Lez5;->a(Ljava/lang/String;)Ljfc;
+
+    move-result-object v0
+
+    const/16 v1, 0x83
+
+    invoke-static {v1, v0}, Lxfh;->c(ILjfc;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Ljbj;->y1:Lez5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p1, Lhkj;
+
+    check-cast p2, Lxwa;
+
+    sget-object v0, Ljbj;->b:Lez5;
+
+    iget-object v1, p1, Lhkj;->a:Lnoj;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->c:Lez5;
+
+    iget-object v1, p1, Lhkj;->b:Lgkj;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->d:Lez5;
+
+    const/4 v1, 0x0
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->e:Lez5;
+
+    iget-object v2, p1, Lhkj;->c:Lekj;
+
+    invoke-interface {p2, v0, v2}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->f:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->g:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->h:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->i:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->j:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->k:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->l:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->m:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->n:Lez5;
+
+    iget-object v2, p1, Lhkj;->d:Lskj;
+
+    invoke-interface {p2, v0, v2}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->o:Lez5;
+
+    iget-object v2, p1, Lhkj;->e:Ltkj;
+
+    invoke-interface {p2, v0, v2}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->p:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->q:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->r:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->s:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->t:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->u:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->v:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->w:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->x:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->y:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->z:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->A:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->B:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->C:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->D:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->E:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->F:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->G:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->H:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->I:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->J:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->K:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->L:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->M:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->N:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->O:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->P:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->Q:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->R:Lez5;
+
+    invoke-interface {p2, v0, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object v0, Ljbj;->S:Lez5;
+
+    iget-object p1, p1, Lhkj;->f:Lq0j;
+
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->T:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->U:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->V:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->W:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->X:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->Y:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->Z:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->a0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->b0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->c0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->d0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->e0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->f0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->g0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->h0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->i0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->j0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->k0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->l0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->m0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->n0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->o0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->p0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->q0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->r0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->s0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->t0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->u0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->v0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->w0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->x0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->y0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->z0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->A0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->B0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->C0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->D0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->E0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->F0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->G0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->H0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->I0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->J0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->K0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->L0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->M0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->N0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->O0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->P0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->Q0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->R0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->S0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->T0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->U0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->V0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->W0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->X0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->Y0:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->Z0:Lez5;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p1, v0}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->a1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->b1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->c1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->d1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->e1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->f1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->g1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->h1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->i1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->j1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->k1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->l1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->m1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->n1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->o1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->p1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->q1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->r1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->s1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->t1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->u1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->v1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->w1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->x1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    sget-object p1, Ljbj;->y1:Lez5;
+
+    invoke-interface {p2, p1, v1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
+
+    return-void
 .end method

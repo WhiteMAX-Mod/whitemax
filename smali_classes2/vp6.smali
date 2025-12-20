@@ -1,58 +1,101 @@
-.class public final synthetic Lvp6;
+.class public final Lvp6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lace;
+.implements Lpi7;
 
 
-# instance fields
-.field public final synthetic a:Ltq6;
+# static fields
+.field public static final a:Lvp6;
+
+.field public static final b:[B
+
+.field public static final c:[B
+
+.field public static final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltq6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvp6;
 
-    iput-object p1, p0, Lvp6;->a:Ltq6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lvp6;->a:Lvp6;
+
+    sget-object v0, Lqd2;->b:Ljava/nio/charset/Charset;
+
+    const-string v1, "<svg"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    invoke-static {v1}, Lusi;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Lvp6;->b:[B
+
+    const-string v1, "<?xm"
+
+    invoke-static {v1}, Lusi;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Lvp6;->c:[B
+
+    sput v0, Lvp6;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Lfce;)V
-    .locals 4
+.method public final a(I[B)Lqi7;
+    .locals 1
 
-    iget-object v0, p0, Lvp6;->a:Ltq6;
+    sget-object p1, Lvp6;->b:[B
 
-    invoke-virtual {v0}, Ltq6;->v()Llzf;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    invoke-static {p2, p1, v0}, Lusi;->e([B[BI)Z
 
-    check-cast v1, Lq2b;
+    move-result p1
 
-    invoke-virtual {v1}, Lq2b;->f()Lz74;
+    if-nez p1, :cond_1
 
-    move-result-object v1
+    sget-object p1, Lvp6;->c:[B
 
-    iget-object v2, v0, Ltq6;->d:La84;
+    invoke-static {p2, p1, v0}, Lusi;->e([B[BI)Z
 
-    invoke-virtual {v1, v2}, Lp0;->plus(Lx74;)Lx74;
+    move-result p1
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    new-instance v2, Llq6;
+    goto :goto_0
 
-    const/4 v3, 0x0
+    :cond_0
+    sget-object p1, Lqi7;->c:Lqi7;
 
-    invoke-direct {v2, v0, p1, v3}, Llq6;-><init>(Ltq6;Lfce;Lkotlin/coroutines/Continuation;)V
+    return-object p1
 
-    const/4 p1, 0x2
+    :cond_1
+    :goto_0
+    sget-object p1, Lsfe;->a:Lqi7;
 
-    invoke-static {v0, v1, v2, p1}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    return-object p1
+.end method
 
-    return-void
+.method public final b()I
+    .locals 1
+
+    sget v0, Lvp6;->d:I
+
+    return v0
 .end method

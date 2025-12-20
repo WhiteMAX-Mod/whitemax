@@ -3,318 +3,290 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lnjd;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Ldjd;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Landroid/view/ViewGroup;
 
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/Long;
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwcb;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Lwcb;-><init>(I)V
-
-    sput-object v0, Lnjd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ldjd;Landroid/view/ViewGroup;II)V
     .locals 0
+
+    iput p4, p0, Lnjd;->a:I
+
+    iput-object p1, p0, Lnjd;->b:Ldjd;
+
+    iput-object p2, p0, Lnjd;->c:Landroid/view/ViewGroup;
+
+    iput p3, p0, Lnjd;->d:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lnjd;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p3, p0, Lnjd;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lnjd;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lnjd;->d:Ljava/lang/String;
-
-    iput-object p1, p0, Lnjd;->o:Ljava/lang/Long;
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public static a(Lnjd;Ljava/lang/Long;)Lnjd;
-    .locals 6
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v2, p0, Lnjd;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v3, p0, Lnjd;->b:Ljava/lang/String;
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v4, p0, Lnjd;->c:Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v5, p0, Lnjd;->d:Ljava/lang/String;
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lnjd;
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v5}, Lnjd;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnjd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnjd;
-
-    iget-object v1, p0, Lnjd;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lnjd;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lnjd;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lnjd;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lnjd;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lnjd;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lnjd;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lnjd;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lnjd;->o:Ljava/lang/Long;
-
-    iget-object p1, p1, Lnjd;->o:Ljava/lang/Long;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 3
 
-    iget-object v0, p0, Lnjd;->a:Ljava/lang/String;
+    iget p1, p0, Lnjd;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    packed-switch p1, :pswitch_data_0
 
-    move-result v0
+    iget-object p1, p0, Lnjd;->b:Ldjd;
 
-    const/16 v1, 0x1f
+    iget-object p1, p1, Ldjd;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lnjd;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lnjd;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lnjd;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lnjd;->o:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", phone="
-
-    const-string v1, ", name="
-
-    const-string v2, "RegistrationData(token="
-
-    iget-object v3, p0, Lnjd;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lnjd;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    const-string v1, ", surname="
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
 
-    const-string v2, ", photoId="
+    if-eqz v0, :cond_1
 
-    iget-object v3, p0, Lnjd;->c:Ljava/lang/String;
+    iget v2, p0, Lnjd;->d:I
 
-    iget-object v4, p0, Lnjd;->d:Ljava/lang/String;
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lho7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lnjd;->o:Ljava/lang/Long;
+    iget-object p1, p0, Lnjd;->c:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object p2, p0, Lnjd;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lnjd;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lnjd;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lnjd;->d:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lnjd;->o:Ljava/lang/Long;
-
-    if-nez p2, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 
     :cond_0
-    const/4 v0, 0x1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+    throw p1
 
-    move-result-wide v0
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object p1, p0, Lnjd;->b:Ldjd;
+
+    iget-object p1, p1, Ldjd;->e:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v0, :cond_3
+
+    iget v2, p0, Lnjd;->d:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lnjd;->c:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget p1, p0, Lnjd;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lnjd;->b:Ldjd;
+
+    iget-object p1, p1, Ldjd;->e:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v0, :cond_1
+
+    iget v2, p0, Lnjd;->d:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lnjd;->c:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object p1, p0, Lnjd;->b:Ldjd;
+
+    iget-object p1, p1, Ldjd;->e:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v0, :cond_3
+
+    iget v2, p0, Lnjd;->d:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lnjd;->c:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lnjd;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lnjd;->a:I
 
     return-void
 .end method

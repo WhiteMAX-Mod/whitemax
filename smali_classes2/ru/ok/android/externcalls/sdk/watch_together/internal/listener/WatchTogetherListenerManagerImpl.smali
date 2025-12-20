@@ -20,29 +20,29 @@
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/WatchTogetherListener;",
         "listener",
-        "Lqqg;",
+        "Lv2h;",
         "sendActualState",
         "(Lru/ok/android/externcalls/sdk/watch_together/listener/WatchTogetherListener;)V",
         "sendActualStateToAll",
         "()V",
-        "Lh3a;",
+        "Li9a;",
         "updates",
         "updateState",
-        "(Lh3a;)V",
+        "(Li9a;)V",
         "",
         "position",
-        "Lb3a;",
+        "Lc9a;",
         "getPosition",
-        "(Ljava/lang/Long;)Lb3a;",
-        "Lf3a;",
+        "(Ljava/lang/Long;)Lc9a;",
+        "Lg9a;",
         "startInfo",
         "onVideoStarted",
-        "(Lf3a;)V",
+        "(Lg9a;)V",
         "onVideoStatesUpdatedChanged",
-        "Li3a;",
+        "Lj9a;",
         "stopInfo",
         "onVideoStopped",
-        "(Li3a;)V",
+        "(Lj9a;)V",
         "addListener",
         "removeListener",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;",
@@ -107,7 +107,7 @@
 
     new-instance p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;
 
-    sget-object v0, Lid5;->a:Lid5;
+    sget-object v0, Ldh5;->a:Ldh5;
 
     invoke-direct {p1, v0}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;-><init>(Ljava/util/Map;)V
 
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method private final getPosition(Ljava/lang/Long;)Lb3a;
+.method private final getPosition(Ljava/lang/Long;)Lc9a;
     .locals 4
 
     if-eqz p1, :cond_1
@@ -148,7 +148,7 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lz2a;
+    new-instance v0, La9a;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -156,13 +156,13 @@
 
     sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v0, v1, v2}, Lz2a;-><init>(J)V
+    invoke-direct {v0, v1, v2}, La9a;-><init>(J)V
 
     return-object v0
 
     :cond_1
     :goto_0
-    sget-object p1, La3a;->a:La3a;
+    sget-object p1, Lb9a;->a:Lb9a;
 
     return-object p1
 .end method
@@ -172,11 +172,11 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->mainHandler:Landroid/os/Handler;
 
-    new-instance v1, Ln1h;
+    new-instance v1, Lqgh;
 
-    const/16 v2, 0xc
+    const/16 v2, 0x9
 
-    invoke-direct {v1, p0, v2, p1}, Ln1h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Lqgh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -250,14 +250,14 @@
     return-void
 .end method
 
-.method private final updateState(Lh3a;)V
+.method private final updateState(Li9a;)V
     .locals 12
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iget-object p1, p1, Lh3a;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Li9a;->a:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -275,15 +275,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lg3a;
+    check-cast v1, Lh9a;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->participantsStorage:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v3, v1, Lg3a;->a:Lnt1;
+    iget-object v3, v1, Lh9a;->a:Lrv1;
 
-    iget-object v3, v3, Lnt1;->b:Lti1;
+    iget-object v3, v3, Lrv1;->b:Lzk1;
 
-    invoke-virtual {v2, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lti1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v2, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v2
 
@@ -296,18 +296,18 @@
 
     move-result-object v4
 
-    iget-object v3, v1, Lg3a;->a:Lnt1;
+    iget-object v3, v1, Lh9a;->a:Lrv1;
 
-    iget-object v11, v3, Lnt1;->c:Ly2a;
+    iget-object v11, v3, Lrv1;->c:Lz8a;
 
     if-nez v11, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-object v3, v3, Lnt1;->a:Lcdh;
+    iget-object v3, v3, Lrv1;->a:Lwph;
 
-    sget-object v5, Le3a;->$EnumSwitchMapping$1:[I
+    sget-object v5, Lf9a;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
@@ -330,12 +330,12 @@
     goto :goto_1
 
     :cond_3
-    sget-object v3, Ld3a;->b:Ld3a;
+    sget-object v3, Le9a;->b:Le9a;
 
     goto :goto_1
 
     :cond_4
-    sget-object v3, Ld3a;->a:Ld3a;
+    sget-object v3, Le9a;->a:Le9a;
 
     :goto_1
     if-nez v3, :cond_5
@@ -364,15 +364,15 @@
 
     move-object v8, v7
 
-    check-cast v8, Lv2a;
+    check-cast v8, Lw8a;
 
-    iget-object v9, v8, Lv2a;->d:Ld3a;
+    iget-object v9, v8, Lw8a;->d:Le9a;
 
     if-ne v9, v3, :cond_6
 
-    iget-object v8, v8, Lv2a;->a:Ly2a;
+    iget-object v8, v8, Lw8a;->a:Lz8a;
 
-    invoke-virtual {v8, v11}, Ly2a;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v11}, Lz8a;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -383,29 +383,29 @@
     :cond_7
     move-object v9, v5
 
-    check-cast v9, Lv2a;
+    check-cast v9, Lw8a;
 
     new-instance v3, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
 
-    iget-object v2, v1, Lg3a;->d:Ljava/lang/Long;
+    iget-object v2, v1, Lh9a;->d:Ljava/lang/Long;
 
-    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->getPosition(Ljava/lang/Long;)Lb3a;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->getPosition(Ljava/lang/Long;)Lc9a;
 
     move-result-object v5
 
-    iget-boolean v2, v1, Lg3a;->c:Z
+    iget-boolean v2, v1, Lh9a;->c:Z
 
     xor-int/2addr v6, v2
 
-    iget v7, v1, Lg3a;->b:F
+    iget v7, v1, Lh9a;->b:F
 
-    invoke-static {v7}, Ll3a;->a(F)V
+    invoke-static {v7}, Lm9a;->a(F)V
 
-    iget-boolean v8, v1, Lg3a;->e:Z
+    iget-boolean v8, v1, Lh9a;->e:Z
 
     const/4 v10, 0x0
 
-    invoke-direct/range {v3 .. v10}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lb3a;ZFZLv2a;Ltk4;)V
+    invoke-direct/range {v3 .. v10}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lc9a;ZFZLw8a;Lro4;)V
 
     invoke-virtual {v0, v11, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -427,11 +427,11 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->participantsStorage:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lfje;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lkte;
 
     move-result-object v2
 
-    invoke-direct {v1, v4, v2, v9}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfje;Lv2a;)V
+    invoke-direct {v1, v4, v2, v9}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lw8a;)V
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -490,20 +490,20 @@
     return-object v0
 .end method
 
-.method public final onVideoStarted(Lf3a;)V
+.method public final onVideoStarted(Lg9a;)V
     .locals 12
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->participantsStorage:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Lf3a;->a:Lti1;
+    iget-object v1, p1, Lg9a;->a:Lzk1;
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lti1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzk1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v7, p1, Lf3a;->c:Lv2a;
+    iget-object v7, p1, Lg9a;->c:Lw8a;
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
@@ -521,13 +521,13 @@
 
     invoke-direct {v10, v1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
-    iget-object v11, v7, Lv2a;->a:Ly2a;
+    iget-object v11, v7, Lw8a;->a:Lz8a;
 
     new-instance v1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;
 
-    sget-object v3, La3a;->a:La3a;
+    sget-object v3, Lb9a;->a:Lb9a;
 
-    sget v4, Ll3a;->a:F
+    sget v4, Lm9a;->a:F
 
     const/4 v6, 0x1
 
@@ -537,7 +537,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v1 .. v8}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lb3a;ZFZLv2a;Ltk4;)V
+    invoke-direct/range {v1 .. v8}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lc9a;ZFZLw8a;Lro4;)V
 
     invoke-interface {v10, v11, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -553,9 +553,9 @@
 
     move-result-object v0
 
-    iget-object p1, p1, Lf3a;->b:Lfje;
+    iget-object p1, p1, Lg9a;->b:Lkte;
 
-    invoke-direct {v1, v0, p1, v7}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfje;Lv2a;)V
+    invoke-direct {v1, v0, p1, v7}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lw8a;)V
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -584,17 +584,17 @@
     return-void
 .end method
 
-.method public final onVideoStatesUpdatedChanged(Lh3a;)V
+.method public final onVideoStatesUpdatedChanged(Li9a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->updateState(Lh3a;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->updateState(Li9a;)V
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->sendActualStateToAll()V
 
     return-void
 .end method
 
-.method public final onVideoStopped(Li3a;)V
+.method public final onVideoStopped(Lj9a;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->movieStates:Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;
@@ -607,7 +607,7 @@
 
     invoke-direct {v1, v0}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
-    iget-object v0, p1, Li3a;->c:Ly2a;
+    iget-object v0, p1, Lj9a;->c:Lz8a;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -631,13 +631,13 @@
 
     move-result-object v0
 
-    iget-object v2, p1, Li3a;->b:Lfje;
+    iget-object v2, p1, Lj9a;->b:Lkte;
 
-    iget-object v3, p1, Li3a;->c:Ly2a;
+    iget-object v3, p1, Lj9a;->c:Lz8a;
 
-    iget-object p1, p1, Li3a;->d:Ld3a;
+    iget-object p1, p1, Lj9a;->d:Le9a;
 
-    invoke-direct {v1, v0, v2, v3, p1}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfje;Ly2a;Ld3a;)V
+    invoke-direct {v1, v0, v2, v3, p1}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lkte;Lz8a;Le9a;)V
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/watch_together/internal/listener/WatchTogetherListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 

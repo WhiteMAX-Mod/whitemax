@@ -1,119 +1,80 @@
-.class public abstract Lh6j;
+.class public final Lh6j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lh6j;
+
 
 # direct methods
-.method public static final a(I)Ly34;
-    .locals 1
-
-    sget-object v0, Lh44;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p0}, Laz1;->v(I)I
-
-    move-result p0
-
-    aget p0, v0, p0
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    new-instance p0, Lf44;
-
-    invoke-direct {p0}, Lf44;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Lh08;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p0, v0}, Lh08;-><init>(I)V
-
-    return-object p0
-.end method
-
-.method public static final b(Lesg;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lbya;
+    new-instance v0, Lh6j;
 
-    const/16 v1, 0x9
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lbya;-><init>(I)V
+    sput-object v0, Lh6j;->a:Lh6j;
+
+    new-instance v0, Lyyi;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    new-instance v0, Lcya;
+    const-class v1, Lqzi;
 
-    const/16 v1, 0x11
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lcya;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x1f5
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    new-instance v0, Lbya;
+    move-result-object v0
 
-    const/16 v1, 0xd
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lbya;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x1f6
+    const/4 v2, 0x3
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    new-instance v0, Lbya;
+    move-result-object v0
 
-    const/16 v1, 0xa
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lbya;-><init>(I)V
+    move-result-object v0
 
-    const/4 v1, 0x2
+    const/4 v2, 0x4
 
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    new-instance v0, Lbya;
+    move-result-object v0
 
-    const/16 v2, 0xb
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v2}, Lbya;-><init>(I)V
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
-
-    new-instance v0, Lbya;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v2}, Lbya;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
-
-    new-instance v0, Lcya;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lcya;-><init>(I)V
-
-    const/16 v1, 0x1f7
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

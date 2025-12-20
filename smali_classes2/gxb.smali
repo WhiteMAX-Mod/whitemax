@@ -1,93 +1,171 @@
 .class public final Lgxb;
-.super Ld2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhxb;
 
-# virtual methods
-.method public final F(Lfxb;)V
-    .locals 5
 
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-    check-cast v0, Lv0b;
+.field public final b:J
 
-    iget-wide v1, p1, Lfxb;->u0:J
+.field public final c:Llfa;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v1
+# direct methods
+.method public constructor <init>(Ljava/lang/String;JLlfa;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v1, p1, Lfxb;->t0:Z
+    iput-object p1, p0, Lgxb;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lv0b;->setActivated(Z)V
+    iput-wide p2, p0, Lgxb;->b:J
 
-    iget-object v1, p1, Lfxb;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lv0b;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lfxb;->d:Ls5g;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lv0b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v2}, Lv0b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-wide v1, p1, Lfxb;->b:J
-
-    iget-object v3, p1, Lfxb;->s0:Ljava/lang/CharSequence;
-
-    iget-object v4, p1, Lfxb;->o:Landroid/net/Uri;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-nez v4, :cond_2
-
-    :cond_1
-    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_2
-    invoke-virtual {v0, v1, v2, v3, v4}, Lv0b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    iget-boolean p1, p1, Lfxb;->Y:Z
-
-    invoke-virtual {v0, p1}, Lv0b;->setVerified(Z)V
+    iput-object p4, p0, Lgxb;->c:Llfa;
 
     return-void
 .end method
 
-.method public final bridge synthetic z(Lt98;)V
-    .locals 0
 
-    check-cast p1, Lfxb;
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lgxb;->F(Lfxb;)V
+    iget-object v0, p0, Lgxb;->a:Ljava/lang/String;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final b()Llfa;
+    .locals 1
+
+    iget-object v0, p0, Lgxb;->c:Llfa;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgxb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgxb;
+
+    iget-object v1, p0, Lgxb;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lgxb;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lgxb;->b:J
+
+    iget-wide v5, p1, Lgxb;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lgxb;->c:Llfa;
+
+    iget-object p1, p1, Lgxb;->c:Llfa;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lgxb;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lgxb;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lgxb;->c:Llfa;
+
+    invoke-virtual {v1}, Llfa;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "StartMetric(sliceTime="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lgxb;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", props="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgxb;->c:Llfa;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

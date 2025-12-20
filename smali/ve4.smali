@@ -1,373 +1,547 @@
 .class public final Lve4;
-.super Ljava/io/InputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lby0;
+
+
+# static fields
+.field public static final B0:Lve4;
+
+.field public static final C0:Lye3;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final A0:F
 
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final b:[B
+.field public final Y:I
 
-.field public c:Z
+.field public final Z:F
 
-.field public d:Z
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final o:Ljava/lang/Object;
+.field public final b:Landroid/text/Layout$Alignment;
+
+.field public final c:Landroid/text/Layout$Alignment;
+
+.field public final d:Landroid/graphics/Bitmap;
+
+.field public final o:F
+
+.field public final s0:I
+
+.field public final t0:F
+
+.field public final u0:F
+
+.field public final v0:Z
+
+.field public final w0:I
+
+.field public final x0:I
+
+.field public final y0:F
+
+.field public final z0:I
 
 
 # direct methods
-.method public constructor <init>(Lqe4;Lye4;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 18
 
-    const/4 v0, 0x0
+    new-instance v0, Lve4;
 
-    iput v0, p0, Lve4;->a:I
+    const-string v1, ""
 
-    .line 1
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    const/4 v2, 0x0
 
-    .line 2
-    iput-boolean v0, p0, Lve4;->c:Z
+    const v5, -0x800001
 
-    .line 3
-    iput-boolean v0, p0, Lve4;->d:Z
+    const/high16 v6, -0x80000000
 
-    .line 4
-    iput-object p1, p0, Lve4;->o:Ljava/lang/Object;
+    const/4 v14, 0x0
 
-    .line 5
-    iput-object p2, p0, Lve4;->X:Ljava/lang/Object;
+    const/high16 v15, -0x1000000
 
-    const/4 p1, 0x1
+    const/16 v17, 0x0
 
-    .line 6
-    new-array p1, p1, [B
+    move-object v3, v2
 
-    iput-object p1, p0, Lve4;->b:[B
+    move-object v4, v2
+
+    move v7, v6
+
+    move v8, v5
+
+    move v9, v6
+
+    move v10, v6
+
+    move v11, v5
+
+    move v12, v5
+
+    move v13, v5
+
+    move/from16 v16, v6
+
+    invoke-direct/range {v0 .. v17}, Lve4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
+
+    sput-object v0, Lve4;->B0:Lve4;
+
+    new-instance v0, Lye3;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lye3;-><init>(I)V
+
+    sput-object v0, Lve4;->C0:Lye3;
 
     return-void
 .end method
 
-.method public constructor <init>(Lse4;Lze4;)V
+.method public constructor <init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
     .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_1
+
+    :cond_0
+    if-nez p4, :cond_1
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lve4;->a:I
+    goto :goto_0
 
-    .line 7
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
-
+    :cond_1
     const/4 v0, 0x0
 
-    .line 8
-    iput-boolean v0, p0, Lve4;->c:Z
+    :goto_0
+    invoke-static {v0}, Ln5j;->b(Z)V
 
-    .line 9
-    iput-boolean v0, p0, Lve4;->d:Z
+    :goto_1
+    instance-of v0, p1, Landroid/text/Spanned;
 
-    .line 10
-    iput-object p1, p0, Lve4;->o:Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    .line 11
-    iput-object p2, p0, Lve4;->X:Ljava/lang/Object;
+    invoke-static {p1}, Landroid/text/SpannedString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannedString;
 
-    const/4 p1, 0x1
+    move-result-object p1
 
-    .line 12
-    new-array p1, p1, [B
+    iput-object p1, p0, Lve4;->a:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lve4;->b:[B
+    goto :goto_2
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lve4;->a:Ljava/lang/CharSequence;
+
+    goto :goto_2
+
+    :cond_3
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lve4;->a:Ljava/lang/CharSequence;
+
+    :goto_2
+    iput-object p2, p0, Lve4;->b:Landroid/text/Layout$Alignment;
+
+    iput-object p3, p0, Lve4;->c:Landroid/text/Layout$Alignment;
+
+    iput-object p4, p0, Lve4;->d:Landroid/graphics/Bitmap;
+
+    iput p5, p0, Lve4;->o:F
+
+    iput p6, p0, Lve4;->X:I
+
+    iput p7, p0, Lve4;->Y:I
+
+    iput p8, p0, Lve4;->Z:F
+
+    iput p9, p0, Lve4;->s0:I
+
+    iput p12, p0, Lve4;->t0:F
+
+    iput p13, p0, Lve4;->u0:F
+
+    iput-boolean p14, p0, Lve4;->v0:Z
+
+    move/from16 p1, p15
+
+    iput p1, p0, Lve4;->w0:I
+
+    iput p10, p0, Lve4;->x0:I
+
+    iput p11, p0, Lve4;->y0:F
+
+    move/from16 p1, p16
+
+    iput p1, p0, Lve4;->z0:I
+
+    move/from16 p1, p17
+
+    iput p1, p0, Lve4;->A0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
-
-    iget v0, p0, Lve4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lve4;->d:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
-
-    check-cast v0, Lse4;
-
-    invoke-interface {v0}, Lse4;->close()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lve4;->d:Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lve4;->d:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
-
-    check-cast v0, Lqe4;
-
-    invoke-interface {v0}, Lqe4;->close()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lve4;->d:Z
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l()V
+.method public final a()Lte4;
     .locals 2
 
-    iget v0, p0, Lve4;->a:I
+    new-instance v0, Lte4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p0, Lve4;->c:Z
+    iget-object v1, p0, Lve4;->a:Ljava/lang/CharSequence;
 
-    if-nez v0, :cond_0
+    iput-object v1, v0, Lte4;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
+    iget-object v1, p0, Lve4;->d:Landroid/graphics/Bitmap;
 
-    check-cast v0, Lse4;
+    iput-object v1, v0, Lte4;->b:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lve4;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lve4;->b:Landroid/text/Layout$Alignment;
 
-    check-cast v1, Lze4;
+    iput-object v1, v0, Lte4;->c:Landroid/text/Layout$Alignment;
 
-    invoke-interface {v0, v1}, Lse4;->H(Lze4;)J
+    iget-object v1, p0, Lve4;->c:Landroid/text/Layout$Alignment;
 
-    const/4 v0, 0x1
+    iput-object v1, v0, Lte4;->d:Landroid/text/Layout$Alignment;
 
-    iput-boolean v0, p0, Lve4;->c:Z
+    iget v1, p0, Lve4;->o:F
 
-    :cond_0
-    return-void
+    iput v1, v0, Lte4;->e:F
 
-    :pswitch_0
-    iget-boolean v0, p0, Lve4;->c:Z
+    iget v1, p0, Lve4;->X:I
 
-    if-nez v0, :cond_1
+    iput v1, v0, Lte4;->f:I
 
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
+    iget v1, p0, Lve4;->Y:I
 
-    check-cast v0, Lqe4;
+    iput v1, v0, Lte4;->g:I
 
-    iget-object v1, p0, Lve4;->X:Ljava/lang/Object;
+    iget v1, p0, Lve4;->Z:F
 
-    check-cast v1, Lye4;
+    iput v1, v0, Lte4;->h:F
 
-    invoke-interface {v0, v1}, Lqe4;->R(Lye4;)J
+    iget v1, p0, Lve4;->s0:I
 
-    const/4 v0, 0x1
+    iput v1, v0, Lte4;->i:I
 
-    iput-boolean v0, p0, Lve4;->c:Z
+    iget v1, p0, Lve4;->x0:I
 
-    :cond_1
-    return-void
+    iput v1, v0, Lte4;->j:I
 
-    nop
+    iget v1, p0, Lve4;->y0:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput v1, v0, Lte4;->k:F
+
+    iget v1, p0, Lve4;->t0:F
+
+    iput v1, v0, Lte4;->l:F
+
+    iget v1, p0, Lve4;->u0:F
+
+    iput v1, v0, Lte4;->m:F
+
+    iget-boolean v1, p0, Lve4;->v0:Z
+
+    iput-boolean v1, v0, Lte4;->n:Z
+
+    iget v1, p0, Lve4;->w0:I
+
+    iput v1, v0, Lte4;->o:I
+
+    iget v1, p0, Lve4;->z0:I
+
+    iput v1, v0, Lte4;->p:I
+
+    iget v1, p0, Lve4;->A0:F
+
+    iput v1, v0, Lte4;->q:F
+
+    return-object v0
 .end method
 
-.method public final read()I
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    iget v0, p0, Lve4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    .line 1
-    iget-object v0, p0, Lve4;->b:[B
+    return v0
 
-    array-length v1, v0
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_3
 
-    invoke-virtual {p0, v0, v2, v1}, Lve4;->read([BII)I
+    const-class v2, Lve4;
 
-    move-result v1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, -0x1
+    move-result-object v3
 
-    if-ne v1, v3, :cond_0
+    if-eq v2, v3, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    check-cast p1, Lve4;
+
+    iget-object v2, p1, Lve4;->d:Landroid/graphics/Bitmap;
+
+    iget-object v3, p0, Lve4;->a:Ljava/lang/CharSequence;
+
+    iget-object v4, p1, Lve4;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lve4;->b:Landroid/text/Layout$Alignment;
+
+    iget-object v4, p1, Lve4;->b:Landroid/text/Layout$Alignment;
+
+    if-ne v3, v4, :cond_3
+
+    iget-object v3, p0, Lve4;->c:Landroid/text/Layout$Alignment;
+
+    iget-object v4, p1, Lve4;->c:Landroid/text/Layout$Alignment;
+
+    if-ne v3, v4, :cond_3
+
+    iget-object v3, p0, Lve4;->d:Landroid/graphics/Bitmap;
+
+    if-nez v3, :cond_2
+
+    if-nez v2, :cond_3
 
     goto :goto_0
 
-    .line 2
-    :cond_0
-    aget-byte v0, v0, v2
+    :cond_2
+    if-eqz v2, :cond_3
 
-    and-int/lit16 v3, v0, 0xff
+    invoke-virtual {v3, v2}, Landroid/graphics/Bitmap;->sameAs(Landroid/graphics/Bitmap;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
 
     :goto_0
-    return v3
+    iget v2, p0, Lve4;->o:F
 
-    .line 3
-    :pswitch_0
-    iget-object v0, p0, Lve4;->b:[B
+    iget v3, p1, Lve4;->o:F
 
-    array-length v1, v0
+    cmpl-float v2, v2, v3
 
-    const/4 v2, 0x0
+    if-nez v2, :cond_3
 
-    invoke-virtual {p0, v0, v2, v1}, Lve4;->read([BII)I
+    iget v2, p0, Lve4;->X:I
+
+    iget v3, p1, Lve4;->X:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->Y:I
+
+    iget v3, p1, Lve4;->Y:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->Z:F
+
+    iget v3, p1, Lve4;->Z:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_3
+
+    iget v2, p0, Lve4;->s0:I
+
+    iget v3, p1, Lve4;->s0:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->t0:F
+
+    iget v3, p1, Lve4;->t0:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_3
+
+    iget v2, p0, Lve4;->u0:F
+
+    iget v3, p1, Lve4;->u0:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_3
+
+    iget-boolean v2, p0, Lve4;->v0:Z
+
+    iget-boolean v3, p1, Lve4;->v0:Z
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->w0:I
+
+    iget v3, p1, Lve4;->w0:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->x0:I
+
+    iget v3, p1, Lve4;->x0:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->y0:F
+
+    iget v3, p1, Lve4;->y0:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_3
+
+    iget v2, p0, Lve4;->z0:I
+
+    iget v3, p1, Lve4;->z0:I
+
+    if-ne v2, v3, :cond_3
+
+    iget v2, p0, Lve4;->A0:F
+
+    iget p1, p1, Lve4;->A0:F
+
+    cmpl-float p1, v2, p1
+
+    if-nez p1, :cond_3
+
+    return v0
+
+    :cond_3
+    :goto_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lve4;->o:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v6
+
+    iget v1, v0, Lve4;->X:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    iget v1, v0, Lve4;->Y:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    iget v1, v0, Lve4;->Z:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v9
+
+    iget v1, v0, Lve4;->s0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    iget v1, v0, Lve4;->t0:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v11
+
+    iget v1, v0, Lve4;->u0:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v12
+
+    iget-boolean v1, v0, Lve4;->v0:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v13
+
+    iget v1, v0, Lve4;->w0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v14
+
+    iget v1, v0, Lve4;->x0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v15
+
+    iget v1, v0, Lve4;->y0:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v16
+
+    iget v1, v0, Lve4;->z0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v17
+
+    iget v1, v0, Lve4;->A0:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v18
+
+    iget-object v2, v0, Lve4;->a:Ljava/lang/CharSequence;
+
+    iget-object v3, v0, Lve4;->b:Landroid/text/Layout$Alignment;
+
+    iget-object v4, v0, Lve4;->c:Landroid/text/Layout$Alignment;
+
+    iget-object v5, v0, Lve4;->d:Landroid/graphics/Bitmap;
+
+    filled-new-array/range {v2 .. v18}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v1
 
-    const/4 v3, -0x1
-
-    if-ne v1, v3, :cond_1
-
-    goto :goto_1
-
-    .line 4
-    :cond_1
-    aget-byte v0, v0, v2
-
-    and-int/lit16 v3, v0, 0xff
-
-    :goto_1
-    return v3
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final read([B)I
-    .locals 2
-
-    iget v0, p0, Lve4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    .line 5
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Lve4;->read([BII)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    .line 6
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Lve4;->read([BII)I
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    iget v0, p0, Lve4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 7
-    iget-boolean v0, p0, Lve4;->d:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Lhsi;->g(Z)V
-
-    .line 8
-    invoke-virtual {p0}, Lve4;->l()V
-
-    .line 9
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
-
-    check-cast v0, Lse4;
-
-    invoke-interface {v0, p1, p2, p3}, Lke4;->read([BII)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_0
-
-    move p1, p2
-
-    :cond_0
-    return p1
-
-    .line 10
-    :pswitch_0
-    iget-boolean v0, p0, Lve4;->d:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Lfsi;->d(Z)V
-
-    .line 11
-    invoke-virtual {p0}, Lve4;->l()V
-
-    .line 12
-    iget-object v0, p0, Lve4;->o:Ljava/lang/Object;
-
-    check-cast v0, Lqe4;
-
-    invoke-interface {v0, p1, p2, p3}, Lje4;->read([BII)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_1
-
-    move p1, p2
-
-    :cond_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method

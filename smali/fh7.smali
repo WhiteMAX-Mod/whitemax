@@ -2,123 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lksc;
-
 
 # static fields
-.field public static final d:Lfh7;
-
-
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
+.field public static final a:Lmh7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lfh7;
+    new-instance v0, Landroid/util/Size;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x280
 
-    const v1, 0x7fffffff
+    const/16 v2, 0x1e0
 
-    iput v1, v0, Lfh7;->a:I
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    const/4 v1, 0x1
+    sget-object v1, Lt56;->c:Lt56;
 
-    iput-boolean v1, v0, Lfh7;->b:Z
+    new-instance v2, Lrxd;
 
-    iput-boolean v1, v0, Lfh7;->c:Z
+    sget-object v3, Lcff;->c:Landroid/util/Size;
 
-    sput-object v0, Lfh7;->d:Lfh7;
+    invoke-direct {v2, v3}, Lrxd;-><init>(Landroid/util/Size;)V
 
-    return-void
-.end method
+    new-instance v3, Lqxd;
 
+    const/4 v4, 0x0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {v3, v1, v2, v4}, Lqxd;-><init>(Lt56;Lrxd;Lyx6;)V
 
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lfh7;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lfh7;
-
-    iget v0, p0, Lfh7;->a:I
-
-    iget v1, p1, Lfh7;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lfh7;->b:Z
-
-    iget-boolean v1, p1, Lfh7;->b:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lfh7;->c:Z
-
-    iget-boolean p1, p1, Lfh7;->c:Z
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lfh7;->a:I
-
-    iget-boolean v1, p0, Lfh7;->b:Z
+    new-instance v1, Leh7;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    invoke-direct {v1, v2}, Leh7;-><init>(I)V
 
-    const/high16 v1, 0x400000
+    sget-object v2, Lfj7;->E:Lta0;
 
-    goto :goto_0
+    iget-object v1, v1, Leh7;->b:Lgfa;
+
+    invoke-virtual {v1, v2, v0}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
+
+    sget-object v0, Lm9h;->l0:Lta0;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
+
+    sget-object v0, Lfj7;->z:Lta0;
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
+
+    sget-object v0, Lfj7;->H:Lta0;
+
+    invoke-virtual {v1, v0, v3}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
+
+    sget-object v0, Lub5;->d:Lub5;
+
+    invoke-virtual {v0, v0}, Lub5;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lvi7;->y:Lta0;
+
+    invoke-virtual {v1, v2, v0}, Lgfa;->v(Lta0;Ljava/lang/Object;)V
+
+    new-instance v0, Lmh7;
+
+    invoke-static {v1}, Lwpb;->c(Lkr3;)Lwpb;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lmh7;-><init>(Lwpb;)V
+
+    sput-object v0, Lfh7;->a:Lmh7;
+
+    return-void
 
     :cond_0
-    move v1, v2
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    :goto_0
-    xor-int/2addr v0, v1
+    const-string v1, "ImageAnalysis currently only supports SDR"
 
-    iget-boolean v1, p0, Lfh7;->c:Z
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_1
-
-    const/high16 v2, 0x800000
-
-    :cond_1
-    xor-int/2addr v0, v2
-
-    return v0
+    throw v0
 .end method

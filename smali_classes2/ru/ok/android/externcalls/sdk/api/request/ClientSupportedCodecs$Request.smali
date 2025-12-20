@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkm;
-.implements Lnua;
-.implements Lyl;
+.implements Lmm;
+.implements Lv0b;
+.implements Lzl;
 
 
 # annotations
@@ -21,9 +21,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkm;",
-        "Lnua;",
-        "Lyl;"
+        "Lmm;",
+        "Lv0b;",
+        "Lzl;"
     }
 .end annotation
 
@@ -33,9 +33,9 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;",
-        "Lkm;",
-        "Lnua;",
-        "Lyl;",
+        "Lmm;",
+        "Lv0b;",
+        "Lzl;",
         "Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;",
         "Lorg/json/JSONObject;",
         "json",
@@ -47,11 +47,11 @@
         "shouldGzip",
         "shouldReport",
         "canRepeat",
-        "Lgy7;",
+        "Lx28;",
         "writer",
-        "Lqqg;",
+        "Lv2h;",
         "writeParams",
-        "(Lgy7;)V",
+        "(Lx28;)V",
         "",
         "handleInterruptedIO",
         "()Ljava/lang/Object;",
@@ -60,17 +60,17 @@
         "getUri",
         "()Landroid/net/Uri;",
         "uri",
-        "Lnm;",
+        "Lpm;",
         "getScope",
-        "()Lnm;",
+        "()Lpm;",
         "scope",
         "",
         "getPriority",
         "()I",
         "priority",
-        "Lox7;",
+        "Lf28;",
         "getOkParser",
-        "()Lox7;",
+        "()Lf28;",
         "okParser",
         "calls-sdk_release"
     }
@@ -99,10 +99,10 @@
     return-void
 .end method
 
-.method private static final _get_okParser_$lambda$0(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+.method private static final _get_okParser_$lambda$0(Lo28;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
     .locals 3
 
-    invoke-static {p0}, Lq4j;->b(Lxx7;)Lorg/json/JSONObject;
+    invoke-static {p0}, Leij;->b(Lo28;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -121,10 +121,10 @@
     return-object v0
 .end method
 
-.method public static synthetic a(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+.method public static synthetic a(Lo28;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->_get_okParser_$lambda$0(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->_get_okParser_$lambda$0(Lo28;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
 
     move-result-object p0
 
@@ -141,36 +141,36 @@
     return v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Lul;
+.method public bridge synthetic getConfigExtractor()Lvl;
     .locals 1
 
-    sget-object v0, Lul;->f:Lrha;
+    sget-object v0, Lvl;->f:Ly0j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lox7;
+.method public bridge synthetic getFailParser()Lf28;
     .locals 1
 
-    sget-object v0, Ltha;->c:Ltha;
+    sget-object v0, Lxna;->c:Lxna;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lox7;
+.method public getOkParser()Lf28;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lox7;"
+            "Lf28;"
         }
     .end annotation
 
-    new-instance v0, Luy0;
+    new-instance v0, Lye3;
 
-    const/16 v1, 0x1d
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Luy0;-><init>(I)V
+    invoke-direct {v0, v1}, Lye3;-><init>(I)V
 
     return-object v0
 .end method
@@ -183,18 +183,18 @@
     return v0
 .end method
 
-.method public getScope()Lnm;
+.method public getScope()Lpm;
     .locals 1
 
-    sget-object v0, Lnm;->c:Lnm;
+    sget-object v0, Lpm;->c:Lpm;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lom;
+.method public bridge synthetic getScopeAfter()Lqm;
     .locals 1
 
-    sget-object v0, Lom;->a:Lom;
+    sget-object v0, Lqm;->a:Lqm;
 
     return-object v0
 .end method
@@ -204,7 +204,7 @@
 
     const-string v0, "vchat.clientSupportedCodecs"
 
-    invoke-static {v0}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lym;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -263,7 +263,7 @@
     return v0
 .end method
 
-.method public writeParams(Lgy7;)V
+.method public writeParams(Lx28;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -274,16 +274,16 @@
 
     const-string v0, "data"
 
-    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
+    invoke-interface {p1, v0}, Lx28;->p0(Ljava/lang/String;)Lx28;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->json:Lorg/json/JSONObject;
 
-    invoke-static {p1, v0}, Lr4j;->c(Lgy7;Lorg/json/JSONObject;)V
+    invoke-static {p1, v0}, Lfi3;->j(Lx28;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lgy7;)V
+.method public bridge synthetic writeSupplyParams(Lx28;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

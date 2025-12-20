@@ -1,137 +1,151 @@
-.class public final Lw04;
-.super Ljava/lang/Object;
+.class public final enum Lw04;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lw04;
+
+.field public static final enum Y:Lw04;
+
+.field public static final synthetic Z:[Lw04;
+
+.field public static final enum b:Lw04;
+
+.field public static final enum c:Lw04;
+
+.field public static final enum d:Lw04;
+
+.field public static final enum o:Lw04;
+
+
 # instance fields
-.field public final a:Lk18;
-
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw04;
 
-    iput-object p1, p0, Lw04;->a:Lk18;
+    const-string v1, "TT"
 
-    iput-object p2, p0, Lw04;->b:Lk18;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lw04;->c:Lk18;
+    invoke-direct {v0, v1, v2, v1}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object p4, p0, Lw04;->d:Lk18;
+    new-instance v1, Lw04;
+
+    const-string v2, "OFFICIAL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lw04;->b:Lw04;
+
+    new-instance v2, Lw04;
+
+    const-string v3, "PRIVATE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v3, Lw04;
+
+    const-string v4, "BOT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lw04;->c:Lw04;
+
+    new-instance v4, Lw04;
+
+    const-string v5, "SERVICE_ACCOUNT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lw04;->d:Lw04;
+
+    new-instance v5, Lw04;
+
+    const-string v6, "HAS_WEBAPP"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lw04;->o:Lw04;
+
+    new-instance v6, Lw04;
+
+    const-string v7, "RESTRICTED"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v7}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lw04;->X:Lw04;
+
+    new-instance v7, Lw04;
+
+    const-string v8, "NO_FORWARD"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v8}, Lw04;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lw04;->Y:Lw04;
+
+    filled-new-array/range {v0 .. v7}, [Lw04;
+
+    move-result-object v0
+
+    sput-object v0, Lw04;->Z:[Lw04;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final a(J)V
-    .locals 11
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lw04;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lw04;
+    .locals 1
 
     const-class v0, Lw04;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lw04;
+
+    return-object p0
+.end method
+
+.method public static values()[Lw04;
+    .locals 1
+
+    sget-object v0, Lw04;->Z:[Lw04;
+
+    invoke-virtual {v0}, [Lw04;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "unblock, id = "
+    check-cast v0, [Lw04;
 
-    invoke-static {p1, p2, v1, v0}, Lwy1;->q(JLjava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lw04;->a:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqv3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Li62;
-
-    const/16 v2, 0xe
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Li62;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1, p2, v1}, Lqv3;->c(JLgu3;)Lku3;
-
-    iget-object v0, p0, Lw04;->c:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhwa;
-
-    new-instance v1, Ly04;
-
-    invoke-virtual {v0}, Lhwa;->t()Lz7c;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lz7c;->a:Lpe8;
-
-    invoke-virtual {v2}, Lw4e;->k()J
-
-    move-result-wide v3
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-wide v5, p1
-
-    invoke-direct/range {v1 .. v10}, Ly04;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, Lhwa;->r(Lhwa;Lsm;)J
-
-    iget-object p1, p0, Lw04;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljzf;
-
-    new-instance p2, Ljava/lang/Long;
-
-    invoke-direct {p2, v5, v6}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljzf;->f(Ljava/util/Collection;)V
-
-    iget-object p1, p0, Lw04;->d:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltw0;
-
-    new-instance p2, Lt24;
-
-    invoke-direct {p2, v5, v6}, Lt24;-><init>(J)V
-
-    invoke-virtual {p1, p2}, Ltw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

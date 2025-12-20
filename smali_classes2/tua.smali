@@ -1,68 +1,26 @@
 .class public final Ltua;
-.super Ljava/lang/Object;
+.super Ladf;
 .source "SourceFile"
-
-# interfaces
-.implements Lem6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmbd;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lmbd;I)V
-    .locals 0
-
-    iput p2, p0, Ltua;->a:I
-
-    iput-object p1, p0, Ltua;->b:Lmbd;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final z(Lie8;)V
     .locals 1
 
-    iget v0, p0, Ltua;->a:I
+    instance-of v0, p1, Llua;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    check-cast p1, Ljava/lang/Throwable;
+    return-void
 
-    iget-object p1, p0, Ltua;->b:Lmbd;
+    :cond_0
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-    invoke-virtual {p1}, Lmbd;->d()V
+    check-cast v0, Lpze;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    check-cast p1, Lfze;
 
-    return-object p1
+    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    :try_start_0
-    iget-object p1, p0, Ltua;->b:Lmbd;
-
-    invoke-virtual {p1}, Lmbd;->d()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

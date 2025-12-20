@@ -1,154 +1,85 @@
 .class public final Leke;
-.super Ldke;
+.super Lcke;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/SortedSet;
+
+# instance fields
+.field public final j:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Lugd;JJJJLjava/util/List;JLjava/util/List;JJ)V
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-wide/from16 v2, p2
+
+    move-wide/from16 v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-object/from16 v10, p10
+
+    move-wide/from16 v11, p11
+
+    move-wide/from16 v13, p14
+
+    move-wide/from16 v15, p16
+
+    invoke-direct/range {v0 .. v16}, Lcke;-><init>(Lugd;JJJJLjava/util/List;JJJ)V
+
+    move-object/from16 v1, p13
+
+    iput-object v1, v0, Leke;->j:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final comparator()Ljava/util/Comparator;
+.method public final e(J)J
+    .locals 0
+
+    iget-object p1, p0, Leke;->j:Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    return-wide p1
+.end method
+
+.method public final i(Lhwd;J)Lugd;
+    .locals 2
+
+    iget-wide v0, p0, Lcke;->d:J
+
+    sub-long/2addr p2, v0
+
+    long-to-int p1, p2
+
+    iget-object p2, p0, Leke;->j:Ljava/util/List;
+
+    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lugd;
+
+    return-object p1
+.end method
+
+.method public final j()Z
     .locals 1
 
-    iget-object v0, p0, Ldke;->a:Ljava/util/Set;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljava/util/SortedSet;
-
-    invoke-interface {v0}, Ljava/util/SortedSet;->comparator()Ljava/util/Comparator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final first()Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Ldke;->a:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p0, Ldke;->b:Ll7c;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ll7c;->apply(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    return-object v2
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
-
-    new-instance v0, Leke;
-
-    iget-object v1, p0, Ldke;->a:Ljava/util/Set;
-
-    check-cast v1, Ljava/util/SortedSet;
-
-    invoke-interface {v1, p1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    move-result-object p1
-
-    iget-object v1, p0, Ldke;->b:Ll7c;
-
-    invoke-direct {v0, p1, v1}, Ldke;-><init>(Ljava/util/Set;Ll7c;)V
-
-    return-object v0
-.end method
-
-.method public final last()Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Ldke;->a:Ljava/util/Set;
-
-    check-cast v0, Ljava/util/SortedSet;
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/SortedSet;->last()Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget-object v2, p0, Ldke;->b:Ll7c;
-
-    invoke-interface {v2, v1}, Ll7c;->apply(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-interface {v0, v1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
-
-    new-instance v0, Leke;
-
-    iget-object v1, p0, Ldke;->a:Ljava/util/Set;
-
-    check-cast v1, Ljava/util/SortedSet;
-
-    invoke-interface {v1, p1, p2}, Ljava/util/SortedSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    move-result-object p1
-
-    iget-object p2, p0, Ldke;->b:Ll7c;
-
-    invoke-direct {v0, p1, p2}, Ldke;-><init>(Ljava/util/Set;Ll7c;)V
-
-    return-object v0
-.end method
-
-.method public final tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
-
-    new-instance v0, Leke;
-
-    iget-object v1, p0, Ldke;->a:Ljava/util/Set;
-
-    check-cast v1, Ljava/util/SortedSet;
-
-    invoke-interface {v1, p1}, Ljava/util/SortedSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    move-result-object p1
-
-    iget-object v1, p0, Ldke;->b:Ll7c;
-
-    invoke-direct {v0, p1, v1}, Ldke;-><init>(Ljava/util/Set;Ll7c;)V
-
-    return-object v0
+    return v0
 .end method

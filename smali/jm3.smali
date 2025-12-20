@@ -1,44 +1,59 @@
 .class public final Ljm3;
-.super Ljava/lang/Object;
+.super Lkm3;
 .source "SourceFile"
-
-# interfaces
-.implements Lvy9;
 
 
 # instance fields
-.field public final a:Li5i;
-
-.field public final b:Li5i;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Li5i;
-
-    new-instance v1, Luha;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v1, v2}, Luha;-><init>(I)V
-
-    invoke-direct {v0, v1}, Li5i;-><init>(Ljn8;)V
-
-    iput-object v0, p0, Ljm3;->a:Li5i;
-
-    new-instance v0, Li5i;
-
-    new-instance v1, Ltha;
-
-    invoke-direct {v1, v2}, Ltha;-><init>(I)V
-
-    invoke-direct {v0, v1}, Li5i;-><init>(Ljn8;)V
-
-    iput-object v0, p0, Ljm3;->b:Li5i;
+    iput p1, p0, Ljm3;->d:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(II)Lkm3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final b(JJ)Lkm3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lkm3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final d(ZZ)Lkm3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final e(ZZ)Lkm3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Ljm3;->d:I
+
+    return v0
 .end method

@@ -1,77 +1,73 @@
-.class public interface abstract Ldhb;
+.class public abstract Ldhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lghb;)V
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b(Lghb;)V
-.end method
+.field public static final b:I
 
-.method public abstract c(Lghb;)V
-.end method
+.field public static final c:I
 
-.method public abstract d(Lvgb;Lu5g;Z)V
-.end method
+.field public static final d:I
 
-.method public abstract e(Lone/video/exo/error/OneVideoExoPlaybackException;Luch;Lghb;)V
-.end method
+.field public static final e:I
 
-.method public abstract f(Lghb;)V
-.end method
+.field public static final f:I
 
-.method public abstract g(Lghb;F)V
-.end method
+.field public static final g:I
 
-.method public abstract h(Lvgb;Ladh;)V
-.end method
+.field public static final h:I
 
-.method public abstract i(Lghb;)V
-.end method
+.field public static final i:I
 
-.method public abstract j(Lghb;)V
-.end method
+.field public static final j:I
 
-.method public abstract k(Lvgb;Ladh;)V
-.end method
 
-.method public abstract l(Lghb;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract m(Lghb;I)V
-.end method
+    sget v0, Lldd;->permissions_allow_access:I
 
-.method public abstract n(Lghb;Z)V
-.end method
+    sput v0, Ldhb;->a:I
 
-.method public abstract o(Lvgb;Lj60;)V
-.end method
+    sget v0, Lldd;->permissions_audio_denied_title:I
 
-.method public abstract p(Lghb;)V
-.end method
+    sput v0, Ldhb;->b:I
 
-.method public abstract q(Lghb;Lchb;Lc32;Lc32;)V
-.end method
+    sget v0, Lldd;->permissions_audio_request_denied:I
 
-.method public abstract r(Lghb;)V
-.end method
+    sput v0, Ldhb;->c:I
 
-.method public abstract s(Lrl0;II)V
-.end method
+    sget v0, Lldd;->permissions_audio_title:I
 
-.method public abstract t(Lghb;J)V
-.end method
+    sput v0, Ldhb;->d:I
 
-.method public abstract u(Lghb;)V
-.end method
+    sget v0, Lldd;->permissions_dialog_no:I
 
-.method public abstract v(Lghb;)V
-.end method
+    sput v0, Ldhb;->e:I
 
-.method public abstract w(Lghb;Z)V
-.end method
+    sget v0, Lldd;->permissions_dialog_open_setting:I
 
-.method public abstract x(Lghb;I)V
+    sput v0, Ldhb;->f:I
+
+    sget v0, Lldd;->permissions_dialog_yes:I
+
+    sput v0, Ldhb;->g:I
+
+    sget v0, Lldd;->permissions_video_message_request:I
+
+    sput v0, Ldhb;->h:I
+
+    sget v0, Lldd;->permissions_video_message_request_only_camera_title:I
+
+    sput v0, Ldhb;->i:I
+
+    sget v0, Lldd;->permissions_video_message_request_title:I
+
+    sput v0, Ldhb;->j:I
+
+    return-void
 .end method

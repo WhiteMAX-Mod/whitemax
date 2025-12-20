@@ -1,19 +1,26 @@
 .class public final Lnd1;
-.super Lud1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lod1;
 
 
 # instance fields
-.field public final a:Lwd0;
+.field public final a:Z
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lwd0;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnd1;->a:Lwd0;
+    iput-boolean p1, p0, Lnd1;->a:Z
+
+    iput-boolean p2, p0, Lnd1;->b:Z
 
     return-void
 .end method
@@ -21,79 +28,85 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lnd1;
+    instance-of v0, p1, Lnd1;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lnd1;
 
-    iget-object v1, p0, Lnd1;->a:Lwd0;
+    iget-boolean v0, p0, Lnd1;->a:Z
 
-    iget-object p1, p1, Lnd1;->a:Lwd0;
+    iget-boolean v1, p1, Lnd1;->a:Z
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_2
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    return v0
+    iget-boolean v0, p0, Lnd1;->b:Z
+
+    iget-boolean p1, p1, Lnd1;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lnd1;->a:Lwd0;
+    iget-boolean v0, p0, Lnd1;->a:Z
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Lwd0;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lnd1;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Avatar(avatarInfo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnd1;->a:Lwd0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", goToActiveBeforeEnd="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "End(isCallAccepted="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v3, p0, Lnd1;->a:Z
+
+    iget-boolean v4, p0, Lnd1;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,61 +1,53 @@
 .class public final Lxo7;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public X:Ljava/lang/Object;
 
-.field public final b:Llv4;
+.field public Y:Ljava/lang/Object;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lyo7;
+
+.field public o:Ljava/lang/Object;
+
+.field public final synthetic s0:Lyo7;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Llv4;)V
+.method public constructor <init>(Lyo7;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxo7;->s0:Lyo7;
 
-    iput-object p1, p0, Lxo7;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lxo7;->b:Llv4;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)[B
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/16 v0, 0x8
+    iput-object p1, p0, Lxo7;->Z:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    iget p1, p0, Lxo7;->t0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, p1, p2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+    or-int/2addr p1, v0
 
-    iget-object p1, p0, Lxo7;->b:Llv4;
+    iput p1, p0, Lxo7;->t0:I
 
-    invoke-virtual {p1}, Llv4;->a()Ljava/lang/String;
+    iget-object p1, p0, Lxo7;->s0:Lyo7;
 
-    move-result-object p1
-
-    sget-object p2, Llb2;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p1
-
-    sget-object p2, Lone/me/callssdk/CallsSdkInitializer;->INSTANCE:Lone/me/callssdk/CallsSdkInitializer;
-
-    iget-object v1, p0, Lxo7;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v0
-
-    invoke-virtual {p2, v1, v0, p1}, Lone/me/callssdk/CallsSdkInitializer;->initializeSessionSeed(Landroid/content/Context;[B[B)[B
+    invoke-static {p1, p0}, Lyo7;->b(Lyo7;Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 

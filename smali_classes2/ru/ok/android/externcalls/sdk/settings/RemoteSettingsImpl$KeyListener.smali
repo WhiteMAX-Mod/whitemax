@@ -22,19 +22,19 @@
         "",
         "",
         "key",
-        "Ll2f;",
+        "Lidf;",
         "emitter",
         "<init>",
-        "(Ljava/lang/String;Ll2f;)V",
+        "(Ljava/lang/String;Lidf;)V",
         "",
         "values",
-        "Lqqg;",
+        "Lv2h;",
         "emit",
         "(Ljava/util/Map;)V",
         "Ljava/lang/String;",
         "getKey",
         "()Ljava/lang/String;",
-        "Ll2f;",
+        "Lidf;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -48,10 +48,10 @@
 
 
 # instance fields
-.field private final emitter:Ll2f;
+.field private final emitter:Lidf;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ll2f;"
+            "Lidf;"
         }
     .end annotation
 .end field
@@ -60,13 +60,13 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll2f;)V
+.method public constructor <init>(Ljava/lang/String;Lidf;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Ll2f;",
+            "Lidf;",
             ")V"
         }
     .end annotation
@@ -75,7 +75,7 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->key:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Ll2f;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lidf;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Ll2f;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lidf;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->key:Ljava/lang/String;
 
@@ -109,9 +109,9 @@
     const-string p1, ""
 
     :cond_0
-    check-cast v0, Li2f;
+    check-cast v0, Lfdf;
 
-    invoke-virtual {v0, p1}, Li2f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lfdf;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

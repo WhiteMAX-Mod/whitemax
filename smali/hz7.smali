@@ -1,33 +1,50 @@
-.class public Lhz7;
-.super Ljava/lang/Object;
+.class public final synthetic Lhz7;
+.super Lrr6;
 .source "SourceFile"
 
+# interfaces
+.implements Ler6;
 
-# instance fields
-.field public a:Lmbg;
 
-.field public final b:Ljava/security/PublicKey;
+# static fields
+.field public static final a:Lhz7;
 
 
 # direct methods
-.method public constructor <init>(Lmbg;Ljava/security/PublicKey;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhz7;
 
-    iput-object p1, p0, Lhz7;->a:Lmbg;
+    const-string v4, "onAwaitInternalRegFunc(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    iput-object p2, p0, Lhz7;->b:Ljava/security/PublicKey;
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Lkz7;
+
+    const-string v3, "onAwaitInternalRegFunc"
+
+    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lhz7;->a:Lhz7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/security/PublicKey;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lhz7;->b:Ljava/security/PublicKey;
+    check-cast p1, Lkz7;
 
-    return-object v0
+    check-cast p2, Lsle;
+
+    invoke-static {p1, p2, p3}, Lkz7;->access$onAwaitInternalRegFunc(Lkz7;Lsle;Ljava/lang/Object;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

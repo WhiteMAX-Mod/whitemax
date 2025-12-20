@@ -1,123 +1,131 @@
 .class public final Lvob;
-.super Ljava/lang/Object;
+.super Ljja;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final b:Landroid/content/Intent;
+
+.field public final c:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Intent;Landroid/net/Uri;)V
+    .locals 1
 
-    sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iput-object p1, p0, Lvob;->b:Landroid/content/Intent;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "copy"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "media"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvob;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvob;->a:Landroid/content/Context;
+    iput-object p2, p0, Lvob;->c:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lvob;->a:Landroid/content/Context;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Lvob;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :try_start_0
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    return-object v0
+    instance-of v1, p1, Lvob;
 
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v2
+    if-nez v1, :cond_1
 
-    const-string v3, "Failed to create dir="
+    return v2
 
-    const-string v4, " due to: "
+    :cond_1
+    check-cast p1, Lvob;
 
-    invoke-static {v3, v0, v4, v2}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lvob;->b:Landroid/content/Intent;
 
-    move-result-object v2
+    iget-object v3, p1, Lvob;->b:Landroid/content/Intent;
 
-    const/4 v3, 0x0
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result v1
 
-    const-string v4, "PathHelper"
+    if-nez v1, :cond_2
 
-    invoke-static {v4, v1, v2, v3}, Lwqi;->g(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lvob;->c:Landroid/net/Uri;
+
+    iget-object p1, p1, Lvob;->c:Landroid/net/Uri;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lvob;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lvob;->c:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenFile(intent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvob;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", uri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvob;->c:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

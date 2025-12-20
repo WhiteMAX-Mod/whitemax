@@ -1,19 +1,11 @@
-.class public final Lk4e;
+.class public interface abstract Lk4e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lw5;
+# virtual methods
+.method public abstract a(I[B)Ly52;
+.end method
 
-
-# direct methods
-.method public constructor <init>(Lw5;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk4e;->a:Lw5;
-
-    return-void
+.method public abstract c(JLe4e;)Laj;
 .end method

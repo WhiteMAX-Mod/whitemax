@@ -44,9 +44,9 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->p1(I)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->q1(I)V
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->q1(Z)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->r1(Z)V
 
     const/4 p1, 0x0
 
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final L0()Z
+.method public final M0()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -75,7 +75,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lmid;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lwrd;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     return-void
 
     :cond_1
-    instance-of v1, v1, Lt44;
+    instance-of v1, v1, Lo84;
 
     if-eqz v1, :cond_2
 

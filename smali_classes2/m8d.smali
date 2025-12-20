@@ -1,23 +1,14 @@
-.class public final Lm8d;
+.class public abstract Lm8d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final synthetic b:I
+.field public static oneme_bottom_sheet_popup:I = 0x7f0a05f2
 
+.field public static oneme_bottom_sheet_popup_card:I = 0x7f0a05f3
 
-# instance fields
-.field public final a:Lsua;
+.field public static oneme_bottom_sheet_popup_top_anchor:I = 0x7f0a05f4
 
+.field public static oneme_bottom_sheet_toolbar:I = 0x7f0a05f5
 
-# direct methods
-.method public constructor <init>(Lsua;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lm8d;->a:Lsua;
-
-    return-void
-.end method
+.field public static oneme_too_many_requests_bottomsheet_positive_button:I = 0x7f0a08b1

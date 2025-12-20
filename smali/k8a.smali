@@ -1,259 +1,155 @@
 .class public final Lk8a;
-.super Ljava/lang/Object;
+.super Lat7;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ScheduledFuture;
+.implements Lwe8;
+.implements Ljava/util/concurrent/Future;
 
 
 # instance fields
-.field public a:[J
+.field public final X:Ljava/util/concurrent/ScheduledFuture;
 
-.field public b:I
+.field public final o:Lu1;
+
+
+# direct methods
+.method public constructor <init>(Lu1;Ljava/util/concurrent/ScheduledFuture;)V
+    .locals 0
+
+    invoke-direct {p0}, Lat7;-><init>()V
+
+    iput-object p1, p0, Lk8a;->o:Lu1;
+
+    iput-object p2, p0, Lk8a;->X:Ljava/util/concurrent/ScheduledFuture;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(J)Z
-    .locals 7
+.method public final a()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lk8a;->a:[J
+    iget-object v0, p0, Lk8a;->o:Lu1;
 
-    iget v1, p0, Lk8a;->b:I
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final cancel(Z)Z
+    .locals 2
 
-    move v3, v2
+    invoke-virtual {p0, p1}, Lk8a;->f(Z)Z
 
-    :goto_0
-    const/4 v4, -0x1
+    move-result v0
 
-    if-ge v3, v1, :cond_1
+    if-eqz v0, :cond_0
 
-    aget-wide v5, v0, v3
+    iget-object v1, p0, Lk8a;->X:Ljava/util/concurrent/ScheduledFuture;
 
-    cmp-long v5, p1, v5
-
-    if-nez v5, :cond_0
-
-    goto :goto_1
+    invoke-interface {v1, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    return v0
+.end method
 
-    goto :goto_0
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    :cond_1
-    move v3, v4
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    :goto_1
-    if-ltz v3, :cond_4
+    iget-object v0, p0, Lk8a;->X:Ljava/util/concurrent/ScheduledFuture;
 
-    const/4 p1, 0x1
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    if-ltz v3, :cond_3
-
-    iget p2, p0, Lk8a;->b:I
-
-    if-ge v3, p2, :cond_3
-
-    iget-object v0, p0, Lk8a;->a:[J
-
-    aget-wide v1, v0, v3
-
-    add-int/lit8 v1, p2, -0x1
-
-    if-eq v3, v1, :cond_2
-
-    add-int/lit8 v1, v3, 0x1
-
-    sub-int/2addr p2, v1
-
-    invoke-static {v0, v1, v0, v3, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    iget p2, p0, Lk8a;->b:I
-
-    add-int/2addr p2, v4
-
-    iput p2, p0, Lk8a;->b:I
+    move-result p1
 
     return p1
-
-    :cond_3
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v0, "Index "
-
-    const-string v1, " must be in 0.."
-
-    invoke-static {v3, v0, v1}, Lho7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lk8a;->b:I
-
-    sub-int/2addr v1, p1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_4
-    return v2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
+.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    instance-of v0, p1, Lk8a;
+    iget-object v0, p0, Lk8a;->o:Lu1;
 
-    const/4 v1, 0x0
+    invoke-interface {v0, p1, p2}, Lwe8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    if-eqz v0, :cond_3
+    return-void
+.end method
 
-    check-cast p1, Lk8a;
+.method public final f(Z)Z
+    .locals 1
 
-    iget v0, p1, Lk8a;->b:I
+    iget-object v0, p0, Lk8a;->o:Lu1;
 
-    iget v2, p0, Lk8a;->b:I
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    if-eq v0, v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lk8a;->a:[J
-
-    iget-object p1, p1, Lk8a;->a:[J
-
-    invoke-static {v1, v2}, Ln7j;->h(II)Lto7;
-
-    move-result-object v2
-
-    iget v3, v2, Lro7;->a:I
-
-    iget v2, v2, Lro7;->b:I
-
-    if-gt v3, v2, :cond_2
-
-    :goto_0
-    aget-wide v4, v0, v3
-
-    aget-wide v6, p1, v3
-
-    cmp-long v4, v4, v6
-
-    if-eqz v4, :cond_1
-
-    return v1
-
-    :cond_1
-    if-eq v3, v2, :cond_2
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p1, 0x1
+    move-result p1
 
     return p1
-
-    :cond_3
-    :goto_1
-    return v1
 .end method
 
-.method public final hashCode()I
-    .locals 6
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lk8a;->a:[J
+    .line 1
+    iget-object v0, p0, Lk8a;->o:Lu1;
 
-    iget v1, p0, Lk8a;->b:I
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-wide v4, v0, v2
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v4
-
-    mul-int/lit8 v4, v4, 0x1f
-
-    add-int/2addr v3, v4
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v3
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lk8a;->a:[J
-
-    iget v2, p0, Lk8a;->b:I
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_2
-
-    aget-wide v4, v1, v3
-
-    const/4 v6, -0x1
-
-    if-ne v3, v6, :cond_0
-
-    const-string v1, "..."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v3, :cond_1
-
-    const-string v6, ", "
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 2
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 3
+    iget-object v0, p0, Lk8a;->o:Lu1;
+
+    .line 4
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
+
+    iget-object v0, p0, Lk8a;->X:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lk8a;->o:Lu1;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Lk8a;->o:Lu1;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    return v0
 .end method

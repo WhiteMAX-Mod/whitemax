@@ -1,5 +1,5 @@
 .class public final Lone/me/android/media/service/OneMeDownloadService;
-.super Lt25;
+.super Ls65;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Lone/me/android/media/service/OneMeDownloadService;",
-        "Lt25;",
+        "Ls65;",
         "<init>",
         "()V",
         "media_release"

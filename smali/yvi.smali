@@ -1,381 +1,257 @@
-.class public abstract Lyvi;
-.super Ljava/lang/Object;
+.class public final Lyvi;
+.super Leoi;
 .source "SourceFile"
 
 
+# instance fields
+.field public d:Lcom/google/android/gms/common/internal/a;
+
+.field public final e:I
+
+
 # direct methods
-.method public static a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
     .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v0, "com.google.android.gms.common.internal.IGmsCallbacks"
 
-    const/16 v1, 0x22
+    const/4 v1, 0x4
 
-    if-lt v0, v1, :cond_0
+    invoke-direct {p0, v0, v1}, Leoi;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p0, p1, p2}, Lhw0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    iput-object p1, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
 
-    move-result-object p0
+    iput p2, p0, Lyvi;->e:I
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 8
+
+    const/4 v0, -0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_7
+
+    const/4 v3, 0x2
+
+    if-eq p1, v3, :cond_6
+
+    const/4 v3, 0x3
+
+    if-eq p1, v3, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_0
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    return-object p0
+    move-result-object v3
+
+    sget-object v4, Lo9j;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v4}, Lhui;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v4
+
+    check-cast v4, Lo9j;
+
+    invoke-static {p2}, Lhui;->b(Landroid/os/Parcel;)V
+
+    iget-object p2, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
+
+    const-string v5, "onPostInitCompleteWithConnectionInfo can be called only once per call togetRemoteService"
+
+    invoke-static {p2, v5}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v4}, Lijj;->g(Ljava/lang/Object;)V
+
+    iput-object v4, p2, Lcom/google/android/gms/common/internal/a;->E0:Lo9j;
+
+    invoke-virtual {p2}, Lcom/google/android/gms/common/internal/a;->t()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    iget-object p2, v4, Lo9j;->d:Lbw3;
+
+    invoke-static {}, Ls2e;->D()Ls2e;
+
+    move-result-object v5
+
+    if-nez p2, :cond_1
+
+    move-object p2, v1
+
+    goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static b(Ltm9;)Lrl9;
-    .locals 13
-
-    const-string v0, ""
-
-    const-string v1, "payloadCatching catch error"
-
-    const-string v2, "ServerPayload/PayloadCatching"
-
-    invoke-static {p0}, Lefi;->m(Ltm9;)I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v7, v4
-
-    move v6, v5
-
-    move v8, v6
+    iget-object p2, p2, Lbw3;->a:Lt2e;
 
     :goto_0
-    if-ge v6, v3, :cond_f
+    monitor-enter v5
 
-    const/4 v9, 0x1
+    if-nez p2, :cond_4
 
     :try_start_0
-    invoke-static {p0}, Lefi;->o(Ltm9;)Ljava/lang/String;
+    sget-object p2, Ls2e;->d:Lt2e;
 
-    move-result-object v10
+    :cond_2
+    :goto_1
+    iput-object p2, v5, Ls2e;->b:Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_2
-
-    :catchall_0
-    move-exception v10
-
-    invoke-static {v2, v1, v10}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v11, Lvfe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
-
-    :goto_1
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_0
-
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lqwa;
-
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v10}, Lqwa;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_0
-    sget v11, Lctd;->a:I
-
-    invoke-static {v11}, Laz1;->v(I)I
-
-    move-result v11
-
-    if-eqz v11, :cond_2
-
-    if-eq v11, v9, :cond_1
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    throw v10
-
-    :cond_2
-    move-object v10, v4
-
-    :goto_2
-    const-string v11, "reaction"
-
-    invoke-static {v10, v11}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_7
-
-    :try_start_1
-    invoke-static {p0}, Lefi;->o(Ltm9;)Ljava/lang/String;
-
-    move-result-object v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-nez v7, :cond_6
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception v7
-
-    invoke-static {v2, v1, v7}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v10, Lvfe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v10}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v10
-
-    :goto_3
-    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_3
-
-    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lqwa;
-
-    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v7}, Lqwa;->a(Ljava/lang/Throwable;)V
+    :cond_3
+    monitor-exit v5
 
     goto :goto_3
 
-    :cond_3
-    sget v10, Lctd;->a:I
+    :catchall_0
+    move-exception p1
 
-    invoke-static {v10}, Laz1;->v(I)I
-
-    move-result v10
-
-    if-eqz v10, :cond_5
-
-    if-eq v10, v9, :cond_4
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    goto :goto_2
 
     :cond_4
-    throw v7
+    :try_start_1
+    iget-object v6, v5, Ls2e;->b:Ljava/lang/Object;
+
+    check-cast v6, Lt2e;
+
+    if-eqz v6, :cond_2
+
+    iget v6, v6, Lt2e;->a:I
+
+    iget v7, p2, Lt2e;->a:I
+
+    if-ge v6, v7, :cond_3
+
+    goto :goto_1
+
+    :goto_2
+    monitor-exit v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 
     :cond_5
-    :goto_4
-    move-object v7, v0
+    :goto_3
+    iget-object p2, v4, Lo9j;->a:Landroid/os/Bundle;
+
+    iget-object v4, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
+
+    const-string v5, "onPostInitComplete can be called only once per call to getRemoteService"
+
+    invoke-static {v4, v5}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v4, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
+
+    iget v5, p0, Lyvi;->e:I
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lezi;
+
+    invoke-direct {v6, v4, p1, v3, p2}, Lezi;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/IBinder;Landroid/os/Bundle;)V
+
+    iget-object p1, v4, Lcom/google/android/gms/common/internal/a;->o:Llsi;
+
+    invoke-virtual {p1, v2, v5, v0, v6}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    iput-object v1, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
+
+    goto :goto_4
 
     :cond_6
-    new-instance v9, Lql9;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    sget-object v10, Lvl9;->b:Lvl9;
+    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-direct {v9, v10, v7}, Lql9;-><init>(Lvl9;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lhui;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    move-object v7, v9
+    move-result-object p1
 
-    goto/16 :goto_8
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-static {p2}, Lhui;->b(Landroid/os/Parcel;)V
+
+    new-instance p1, Ljava/lang/Exception;
+
+    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
+
+    const-string p2, "GmsClient"
+
+    const-string v0, "received deprecated onAccountValidationComplete callback, ignoring"
+
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
 
     :cond_7
-    const-string v11, "count"
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    invoke-static {v10, v11}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v10
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    if-eqz v10, :cond_b
+    move-result-object v3
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object v4, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result-object v8
+    invoke-static {p2, v4}, Lhui;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    :try_start_2
-    invoke-static {p0, v5}, Lefi;->k(Ltm9;I)I
+    move-result-object v4
 
-    move-result v10
+    check-cast v4, Landroid/os/Bundle;
 
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Lhui;->b(Landroid/os/Parcel;)V
 
-    move-result-object v8
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    iget-object p2, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
 
-    goto :goto_6
+    const-string v5, "onPostInitComplete can be called only once per call to getRemoteService"
 
-    :catchall_2
-    move-exception v10
+    invoke-static {p2, v5}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v2, v1, v10}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object p2, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
 
-    sget-object v11, Lvfe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v5, p0, Lyvi;->e:I
 
-    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v11
+    new-instance v6, Lezi;
 
-    :goto_5
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v6, p2, p1, v3, v4}, Lezi;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/IBinder;Landroid/os/Bundle;)V
 
-    move-result v12
+    iget-object p1, p2, Lcom/google/android/gms/common/internal/a;->o:Llsi;
 
-    if-eqz v12, :cond_8
+    invoke-virtual {p1, v2, v5, v0, v6}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v12
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    check-cast v12, Lqwa;
+    iput-object v1, p0, Lyvi;->d:Lcom/google/android/gms/common/internal/a;
 
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_4
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    invoke-static {v10}, Lqwa;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_5
-
-    :cond_8
-    sget v11, Lctd;->a:I
-
-    invoke-static {v11}, Laz1;->v(I)I
-
-    move-result v11
-
-    if-eqz v11, :cond_a
-
-    if-eq v11, v9, :cond_9
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_9
-    throw v10
-
-    :cond_a
-    :goto_6
-    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
-
-    move-result v8
-
-    goto :goto_8
-
-    :cond_b
-    :try_start_3
-    invoke-virtual {p0}, Ltm9;->v()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    goto :goto_8
-
-    :catchall_3
-    move-exception v10
-
-    invoke-static {v2, v1, v10}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v11, Lvfe;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v11}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
-
-    :goto_7
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_c
-
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lqwa;
-
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v10}, Lqwa;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_7
-
-    :cond_c
-    sget v11, Lctd;->a:I
-
-    invoke-static {v11}, Laz1;->v(I)I
-
-    move-result v11
-
-    if-eqz v11, :cond_e
-
-    if-eq v11, v9, :cond_d
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_d
-    throw v10
-
-    :cond_e
-    :goto_8
-    add-int/lit8 v6, v6, 0x1
-
-    goto/16 :goto_0
-
-    :cond_f
-    new-instance p0, Lrl9;
-
-    if-eqz v7, :cond_10
-
-    invoke-direct {p0, v7, v8}, Lrl9;-><init>(Lql9;I)V
-
-    return-object p0
-
-    :cond_10
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "reaction is null"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return v2
 .end method

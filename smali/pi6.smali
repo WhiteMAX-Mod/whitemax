@@ -2,41 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwi6;
-
 
 # instance fields
-.field public final a:Ll48;
+.field public final a:Landroid/graphics/Typeface;
 
-.field public final b:Lwi6;
-
-.field public final c:Lmi6;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ll48;Lwi6;Lmi6;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpi6;->a:Ll48;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lpi6;->b:Lwi6;
+    .line 2
+    iput-object v0, p0, Lpi6;->a:Landroid/graphics/Typeface;
 
-    iput-object p3, p0, Lpi6;->c:Lmi6;
+    .line 3
+    iput p1, p0, Lpi6;->b:I
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/graphics/Typeface;)V
+    .locals 0
 
-# virtual methods
-.method public final b(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 1
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lpi6;->b:Lwi6;
+    .line 5
+    iput-object p1, p0, Lpi6;->a:Landroid/graphics/Typeface;
 
-    invoke-interface {v0, p1, p2}, Lwi6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+    const/4 p1, 0x0
+
+    .line 6
+    iput p1, p0, Lpi6;->b:I
 
     return-void
 .end method

@@ -1,385 +1,336 @@
 .class public final Lgsa;
-.super Ljava/lang/Object;
+.super Lhsa;
 .source "SourceFile"
-
-# interfaces
-.implements Lvta;
-.implements Lpy4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final e:Ljava/util/ArrayList;
 
-.field public final b:Lvta;
+.field public final f:Ljava/util/ArrayList;
 
-.field public final c:Ltm6;
+.field public final g:Lyzb;
 
-.field public d:Lpy4;
+.field public h:Ljava/lang/CharSequence;
+
+.field public i:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvta;Ltm6;I)V
-    .locals 0
+.method public constructor <init>(Lyzb;)V
+    .locals 1
 
-    iput p3, p0, Lgsa;->a:I
+    invoke-direct {p0}, Lhsa;-><init>()V
 
-    iput-object p1, p0, Lgsa;->b:Lvta;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lgsa;->c:Ltm6;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lgsa;->e:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lgsa;->f:Ljava/util/ArrayList;
+
+    iget-object v0, p1, Lyzb;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lgsa;->g:Lyzb;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "User\'s name must not be empty."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final a(Landroid/os/Bundle;)V
+    .locals 3
 
-    iget v0, p0, Lgsa;->a:I
+    invoke-super {p0, p1}, Lhsa;->a(Landroid/os/Bundle;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lgsa;->g:Lyzb;
 
-    iget-object v0, p0, Lgsa;->b:Lvta;
+    iget-object v1, v0, Lyzb;->a:Ljava/lang/CharSequence;
 
-    invoke-interface {v0}, Lvta;->b()V
+    const-string v2, "android.selfDisplayName"
 
-    return-void
+    invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
+    const-string v1, "android.messagingStyleUser"
 
-    sget-object v1, Lty4;->a:Lty4;
+    invoke-virtual {v0}, Lyzb;->b()Landroid/os/Bundle;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    :cond_0
-    iput-object v1, p0, Lgsa;->d:Lpy4;
+    const-string v0, "android.hiddenConversationTitle"
 
-    iget-object v0, p0, Lgsa;->b:Lvta;
+    iget-object v1, p0, Lgsa;->h:Ljava/lang/CharSequence;
 
-    invoke-interface {v0}, Lvta;->b()V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    :goto_0
-    return-void
+    iget-object v0, p0, Lgsa;->h:Ljava/lang/CharSequence;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-eqz v0, :cond_0
 
-.method public final c(Lpy4;)V
-    .locals 1
+    iget-object v0, p0, Lgsa;->i:Ljava/lang/Boolean;
 
-    iget v0, p0, Lgsa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lgsa;->d:Lpy4;
+    const-string v0, "android.conversationTitle"
 
-    iget-object p1, p0, Lgsa;->b:Lvta;
+    iget-object v1, p0, Lgsa;->h:Ljava/lang/CharSequence;
 
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lgsa;->d:Lpy4;
-
-    iget-object p1, p0, Lgsa;->b:Lvta;
-
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget v0, p0, Lgsa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    sget-object v0, Lty4;->a:Lty4;
-
-    iput-object v0, p0, Lgsa;->d:Lpy4;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget v0, p0, Lgsa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lgsa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lgsa;->b:Lvta;
-
-    invoke-interface {v0, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    sget-object v1, Lty4;->a:Lty4;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     :cond_0
-    :try_start_0
-    iget-object v0, p0, Lgsa;->c:Ltm6;
+    iget-object v0, p0, Lgsa;->e:Ljava/util/ArrayList;
 
-    invoke-interface {v0, p1}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Ljava/lang/Iterable;
+    if-nez v1, :cond_1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const-string v1, "android.messages"
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    :goto_0
-    :try_start_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-eqz v0, :cond_1
-
-    :try_start_2
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lfsa;->a(Ljava/util/ArrayList;)[Landroid/os/Bundle;
 
     move-result-object v0
 
-    const-string v1, "The iterator returned a null value"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    iget-object v1, p0, Lgsa;->b:Lvta;
-
-    invoke-interface {v1, v0}, Lvta;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lgsa;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lgsa;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lgsa;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lgsa;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
     :cond_1
-    :goto_1
-    return-void
+    iget-object v0, p0, Lgsa;->f:Ljava/util/ArrayList;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "android.messages.historic"
+
+    invoke-static {v0}, Lfsa;->a(Ljava/util/ArrayList;)[Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
+
+    :cond_2
+    iget-object v0, p0, Lgsa;->i:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_3
+
+    const-string v1, "android.isGroupConversation"
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    :cond_3
+    return-void
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 3
+.method public final b(Lwrg;)V
+    .locals 4
 
-    iget v0, p0, Lgsa;->a:I
+    iget-object v0, p0, Lhsa;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Ltra;
 
-    iget-object v0, p0, Lgsa;->b:Lvta;
+    const/16 v1, 0x1c
 
-    :try_start_0
-    iget-object v1, p0, Lgsa;->c:Ltm6;
+    const/4 v2, 0x0
 
-    invoke-interface {v1, p1}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, v0, Ltra;->a:Landroid/content/Context;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    new-instance v1, Ljava/lang/NullPointerException;
+    move-result-object v0
 
-    const-string v2, "The supplied value is null"
+    iget v0, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    if-ge v0, v1, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    iget-object v0, p0, Lgsa;->i:Ljava/lang/Boolean;
 
-    invoke-interface {v0, v1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgsa;->h:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_1
+
+    const/4 v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0, v1}, Lvta;->f(Ljava/lang/Object;)V
+    iget-object v0, p0, Lgsa;->i:Ljava/lang/Boolean;
 
-    invoke-interface {v0}, Lvta;->b()V
+    if-eqz v0, :cond_1
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :catchall_0
-    move-exception v1
+    move-result v2
 
-    invoke-static {v1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, v1}, [Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v2}, Lvta;->onError(Ljava/lang/Throwable;)V
-
+    :cond_1
     :goto_0
-    return-void
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :pswitch_0
-    iget-object v0, p0, Lgsa;->d:Lpy4;
+    move-result-object v0
 
-    sget-object v1, Lty4;->a:Lty4;
+    iput-object v0, p0, Lgsa;->i:Ljava/lang/Boolean;
 
-    if-ne v0, v1, :cond_1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lgsa;->g:Lyzb;
+
+    if-lt v0, v1, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lxzb;->b(Lyzb;)Landroid/app/Person;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcsa;->a(Landroid/app/Person;)Landroid/app/Notification$MessagingStyle;
+
+    move-result-object v0
 
     goto :goto_1
 
-    :cond_1
-    iput-object v1, p0, Lgsa;->d:Lpy4;
+    :cond_2
+    iget-object v0, v2, Lyzb;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lgsa;->b:Lvta;
+    invoke-static {v0}, Lasa;->b(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
 
-    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    move-result-object v0
 
     :goto_1
+    iget-object v2, p0, Lgsa;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lfsa;
+
+    invoke-virtual {v3}, Lfsa;->b()Landroid/app/Notification$MessagingStyle$Message;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lasa;->a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v2, p0, Lgsa;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lfsa;
+
+    invoke-virtual {v3}, Lfsa;->b()Landroid/app/Notification$MessagingStyle$Message;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lbsa;->a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
+
+    goto :goto_3
+
+    :cond_4
+    iget-object v2, p0, Lgsa;->i:Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v2, v1, :cond_6
+
+    :cond_5
+    iget-object v2, p0, Lgsa;->h:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v2}, Lasa;->c(Landroid/app/Notification$MessagingStyle;Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
+
+    :cond_6
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v2, v1, :cond_7
+
+    iget-object v1, p0, Lgsa;->i:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcsa;->b(Landroid/app/Notification$MessagingStyle;Z)Landroid/app/Notification$MessagingStyle;
+
+    :cond_7
+    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+
+    check-cast p1, Landroid/app/Notification$Builder;
+
+    invoke-virtual {v0, p1}, Landroid/app/Notification$Style;->setBuilder(Landroid/app/Notification$Builder;)V
+
     return-void
+.end method
 
-    nop
+.method public final c()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "androidx.core.app.NotificationCompat$MessagingStyle"
+
+    return-object v0
 .end method

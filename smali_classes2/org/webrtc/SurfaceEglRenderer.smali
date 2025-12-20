@@ -30,8 +30,26 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/webrtc/EglRenderer;-><init>(Ljava/lang/String;)V
 
+    .line 2
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/webrtc/SurfaceEglRenderer;->layoutLock:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/VideoFrameDrawer;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0, p1, p2}, Lorg/webrtc/EglRenderer;-><init>(Ljava/lang/String;Lorg/webrtc/VideoFrameDrawer;)V
+
+    .line 4
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -477,11 +495,11 @@
 
     invoke-direct {p1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance v0, Lbee;
+    new-instance v0, Lnoe;
 
-    const/16 v1, 0xe
+    const/16 v1, 0xc
 
-    invoke-direct {v0, v1, p1}, Lbee;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lnoe;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lorg/webrtc/EglRenderer;->releaseEglSurface(Ljava/lang/Runnable;)V
 

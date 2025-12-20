@@ -1,35 +1,36 @@
-.class public interface abstract Ld4h;
-.super Ljava/lang/Object;
+.class public final Ld4h;
+.super Lhjf;
 .source "SourceFile"
 
 
 # virtual methods
-.method public F(F)V
-    .locals 0
+.method public final a(Ljava/lang/CharSequence;)Z
+    .locals 1
 
-    return-void
-.end method
+    move-object v0, p1
 
-.method public L()V
-    .locals 0
+    check-cast v0, Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    invoke-static {v0}, Lzec;->v(Ljava/lang/CharSequence;)Z
 
-.method public abstract O()V
-.end method
+    move-result v0
 
-.method public abstract d(Landroidx/media3/common/VideoFrameProcessingException;)V
-.end method
+    if-nez v0, :cond_1
 
-.method public l(II)V
-    .locals 0
+    instance-of p1, p1, Lbfc;
 
-    return-void
-.end method
+    if-eqz p1, :cond_0
 
-.method public p(JZ)V
-    .locals 0
+    goto :goto_0
 
-    return-void
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -1,19 +1,11 @@
-.class public final Lbth;
+.class public interface abstract Lbth;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lzy7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lzy7;"
-        }
-    .end annotation
+.method public abstract a()V
+.end method
 
-    sget-object v0, Lath;->a:Lath;
-
-    return-object v0
+.method public abstract b()V
 .end method

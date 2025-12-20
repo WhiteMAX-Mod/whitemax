@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ltme;
+.field public final synthetic b:Lmme;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltme;I)V
+.method public synthetic constructor <init>(Lmme;I)V
     .locals 0
 
     iput p2, p0, Llme;->a:I
 
-    iput-object p1, p0, Llme;->b:Ltme;
+    iput-object p1, p0, Llme;->b:Lmme;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,95 +27,65 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    iget v0, p0, Llme;->a:I
+    iget p1, p0, Llme;->a:I
 
-    iget-object v1, p0, Llme;->b:Ltme;
+    packed-switch p1, :pswitch_data_0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Llme;->b:Lmme;
 
-    sget-object v0, Ltme;->z0:[Lyy7;
+    iget-object v0, p1, Lmme;->H0:Ljme;
 
-    iget-object v0, v1, Ltme;->d:Lk18;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lmme;->E0:Lbz8;
 
-    move-result-object v0
+    iget-object p1, p1, Lbz8;->v0:Lfx0;
 
-    check-cast v0, Liz5;
+    new-instance v1, Lqx8;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v0}, Lqx8;-><init>(Ljme;)V
 
-    iget-object v0, v0, Liz5;->c:Landroid/content/Context;
+    invoke-interface {p1, v1}, Lhne;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0}, Liz5;->b(Landroid/content/Context;)Ljava/lang/String;
+    :cond_0
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object p1, p0, Llme;->b:Lmme;
 
-    const-string v2, "ringtones"
-
-    invoke-static {v0, v2}, Liz5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v0
+    iget-object v0, p1, Lmme;->H0:Ljme;
 
     if-eqz v0, :cond_1
 
-    array-length v2, v0
+    iget-object p1, p1, Lmme;->E0:Lbz8;
 
-    const/4 v3, 0x0
+    iget-object v1, p1, Lbz8;->z0:Lhof;
 
-    :goto_0
-    if-ge v3, v2, :cond_0
+    invoke-virtual {v1}, Lhof;->getValue()Ljava/lang/Object;
 
-    aget-object v4, v0, v3
+    move-result-object v1
 
-    iget-object v5, v1, Ltme;->v0:Ljava/util/concurrent/ConcurrentHashMap;
+    check-cast v1, Ljava/util/List;
 
-    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
-    move-result-object v6
+    move-result v1
 
-    invoke-virtual {v5, v6, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lbz8;->v0:Lfx0;
 
-    add-int/lit8 v3, v3, 0x1
+    new-instance v2, Lux8;
 
-    goto :goto_0
+    invoke-direct {v2, v0, v1}, Lux8;-><init>(Ljme;I)V
 
-    :cond_0
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    goto :goto_1
+    invoke-interface {p1, v2}, Lhne;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    const/4 v0, 0x0
+    return-void
 
-    :goto_1
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, v1, Ltme;->o:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

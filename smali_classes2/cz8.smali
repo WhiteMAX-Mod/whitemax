@@ -1,113 +1,97 @@
-.class public final Lcz8;
-.super Ldtf;
+.class public final synthetic Lcz8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/gallery/MediaGalleryWidget;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lcz8;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
+    iput p2, p0, Lcz8;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lcz8;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lcz8;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    check-cast p1, Lap6;
+    iget p1, p0, Lcz8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p2, p0, Lcz8;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lcz8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p3, p0, Lcz8;->b:Ljava/lang/Object;
+
+    packed-switch p1, :pswitch_data_0
+
+    check-cast p3, Landroid/os/Handler;
+
+    check-cast p2, Lesd;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p3, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object p1, p2, Lesd;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    const-wide/16 p4, 0x12c
+
+    invoke-virtual {p3, p1, p4, p5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :pswitch_0
+    check-cast p3, Ldec;
+
+    check-cast p2, Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lp38;
+
+    if-eq p5, p9, :cond_0
+
+    invoke-virtual {p3}, Ldec;->getCallback()Lxdc;
 
     move-result-object p1
 
-    check-cast p1, Lcz8;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lcz8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lcz8;
-
-    iget-object v1, p0, Lcz8;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    invoke-direct {v0, v1, p2}, Lcz8;-><init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lcz8;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcz8;->o:Ljava/lang/Object;
-
-    check-cast p1, Lap6;
-
-    instance-of v0, p1, Lyo6;
-
-    if-nez v0, :cond_1
-
-    instance-of p1, p1, Lzo6;
-
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcz8;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
+    invoke-virtual {p2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0()Landroid/widget/LinearLayout;
 
-    iget-object v0, p1, Lone/me/sdk/gallery/MediaGalleryWidget;->a:Lk18;
+    move-result-object p2
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
-    move-result-object v0
+    move-result p2
 
-    check-cast v0, Lqsb;
-
-    new-instance v1, Ls2i;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, v2}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {v0, v1}, Lqsb;->k(Ls2i;)V
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lxdc;->m(I)V
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return-void
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    nop
 
-    throw p1
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

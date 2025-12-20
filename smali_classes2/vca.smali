@@ -1,265 +1,199 @@
-.class public abstract Lvca;
-.super Ljava/lang/Object;
+.class public final Lvca;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final a:Ljava/lang/String; = "vca"
 
-.field public static final b:Ljava/lang/ThreadLocal;
+# instance fields
+.field public X:Lyca;
 
-.field public static final c:Ljava/lang/ThreadLocal;
+.field public Y:I
+
+.field public final synthetic Z:Lyca;
+
+.field public o:Lsfa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyca;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    iput-object p1, p0, Lvca;->Z:Lyca;
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lvca;->b:Ljava/lang/ThreadLocal;
-
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lvca;->c:Ljava/lang/ThreadLocal;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Ljava/io/Closeable;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    if-eqz p0, :cond_0
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvca;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvca;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lvca;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lvca;
+
+    iget-object v0, p0, Lvca;->Z:Lyca;
+
+    invoke-direct {p1, v0, p2}, Lvca;-><init>(Lyca;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lvca;->Y:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    sget-object v4, Lbc4;->a:Lbc4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lvca;->o:Lsfa;
 
     :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    goto :goto_2
+
     :catchall_0
-    :cond_0
-    return-void
-.end method
+    move-exception p1
 
-.method public static final b(Ljava/io/File;Ljava/io/File;)V
-    .locals 7
-
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
+    goto :goto_3
 
     :cond_0
-    new-instance v0, Ljava/io/FileInputStream;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v0, p0, Lvca;->X:Lyca;
+
+    iget-object v2, p0, Lvca;->o:Lsfa;
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    move-object p1, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lvca;->Z:Lyca;
+
+    iget-object p1, v0, Lyca;->i:Lvfa;
+
+    iput-object p1, p0, Lvca;->o:Lsfa;
+
+    iput-object v0, p0, Lvca;->X:Lyca;
+
+    iput v2, p0, Lvca;->Y:I
+
+    invoke-virtual {p1, p0}, Lvfa;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v2
 
-    :try_start_0
-    new-instance p0, Ljava/io/FileOutputStream;
-
-    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    invoke-virtual {p0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
-
-    move-result-wide v5
-
-    const-wide/16 v3, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferFrom(Ljava/nio/channels/ReadableByteChannel;JJ)J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-interface {v1}, Ljava/io/Closeable;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-interface {v2}, Ljava/io/Closeable;->close()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    move-object p0, v0
-
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    :catchall_2
-    move-exception v0
-
-    move-object p1, v0
-
-    :try_start_4
-    invoke-static {v1, p0}, Lr4j;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_0
-    :try_start_5
-    throw p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :catchall_3
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-static {v2, p0}, Lr4j;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method public static c(Ljava/io/InputStream;)Ljava/lang/String;
-    .locals 8
-
-    sget-object v0, Lvca;->b:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [B
-
-    if-nez v1, :cond_0
-
-    const/high16 v1, 0x10000
-
-    new-array v1, v1, [B
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_0
-    :try_start_0
-    sget-object v2, Lvca;->c:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, [B
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    const/16 v3, 0x1000
-
-    new-array v3, v3, [B
-
-    invoke-virtual {v2, v3}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_1
-    move v2, v4
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
+    if-ne v2, v4, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    :goto_0
-    array-length v5, v3
-
-    invoke-virtual {p0, v3, v4, v5}, Ljava/io/InputStream;->read([BII)I
-
-    move-result v5
-
-    if-ltz v5, :cond_4
-
-    array-length v6, v1
-
-    add-int v7, v2, v5
-
-    if-ge v6, v7, :cond_3
-
-    array-length v6, v1
-
-    mul-int/lit8 v6, v6, 0x2
-
-    new-array v6, v6, [B
-
-    invoke-static {v1, v4, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    move-object v1, v6
-
     :cond_3
-    if-lez v5, :cond_2
-
-    invoke-static {v3, v4, v1, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move v2, v7
-
-    goto :goto_0
-
-    :cond_4
-    new-instance v0, Ljava/lang/String;
-
-    sget-object v3, Llb2;->a:Ljava/nio/charset/Charset;
-
-    invoke-direct {v0, v1, v4, v2, v3}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {p0}, Lvca;->a(Ljava/io/Closeable;)V
-
-    return-object v0
-
-    :goto_1
+    :goto_0
     :try_start_1
-    sget-object v1, Lvca;->a:Ljava/lang/String;
+    iget-object v2, v0, Lyca;->c:Laof;
 
-    const-string v2, "Can\'t read native media from resources"
+    invoke-interface {v2}, Laof;->getValue()Ljava/lang/Object;
 
-    invoke-static {v1, v2, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v2
+
+    check-cast v2, Lgw9;
+
+    new-instance v5, Lb17;
+
+    const/16 v6, 0x19
+
+    invoke-direct {v5, v6, v2}, Lb17;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lvca;->o:Lsfa;
+
+    iput-object v3, p0, Lvca;->X:Lyca;
+
+    iput v1, p0, Lvca;->Y:I
+
+    invoke-static {v0, v5, p0}, Lyca;->a(Lyca;Loq6;Ll84;)Ljava/lang/Object;
+
+    move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-static {p0}, Lvca;->a(Ljava/io/Closeable;)V
+    if-ne v0, v4, :cond_4
 
-    const/4 p0, 0x0
+    :goto_1
+    return-object v4
 
-    return-object p0
+    :cond_4
+    move-object v0, p1
+
+    :goto_2
+    invoke-interface {v0, v3}, Lsfa;->l(Ljava/lang/Object;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 
     :catchall_1
     move-exception v0
 
-    invoke-static {p0}, Lvca;->a(Ljava/io/Closeable;)V
+    move-object v7, v0
 
-    throw v0
+    move-object v0, p1
+
+    move-object p1, v7
+
+    :goto_3
+    invoke-interface {v0, v3}, Lsfa;->l(Ljava/lang/Object;)V
+
+    throw p1
 .end method

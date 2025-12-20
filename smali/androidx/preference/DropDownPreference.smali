@@ -11,7 +11,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    sget v0, Lbvc;->dropdownPreferenceStyle:I
+    sget v0, Ld4d;->dropdownPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/ListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 

@@ -1,51 +1,67 @@
-.class public final Ly5b;
-.super Lq44;
+.class public abstract synthetic Ly5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final synthetic Y:Ldh4;
-
-.field public Z:I
-
-.field public d:Ldh4;
-
-.field public o:Ljava/nio/file/Path;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Ldh4;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Ly5b;->Y:Ldh4;
+    invoke-static {}, Lx5b;->values()[Lx5b;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v3, 0x2
+
+    :try_start_1
+    aput v3, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Ly5b;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lw5b;->values()[Lw5b;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v3, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Ly5b;->$EnumSwitchMapping$1:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ly5b;->X:Ljava/lang/Object;
-
-    iget p1, p0, Ly5b;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ly5b;->Z:I
-
-    iget-object p1, p0, Ly5b;->Y:Ldh4;
-
-    invoke-static {p1, p0}, Ldh4;->a(Ldh4;Lq44;)V
-
-    sget-object p1, Lg84;->a:Lg84;
-
-    return-object p1
 .end method

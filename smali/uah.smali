@@ -1,58 +1,106 @@
-.class public interface abstract Luah;
+.class public final Luah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:J
+
+.field public static final c:Ljava/util/regex/Pattern;
+
+.field public static d:Luah;
+
+
+# instance fields
+.field public final a:Lhjf;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Luah;->b:J
+
+    const-string v0, "\\AA[\\w-]{38}\\z"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Luah;->c:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lhjf;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luah;->a:Lhjf;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public a()Lwqa;
-    .locals 1
+.method public final a(Lbc0;)Z
+    .locals 6
 
-    sget-object v0, Lbt3;->b:Lbt3;
+    iget-object v0, p1, Lbc0;->c:Ljava/lang/String;
 
-    return-object v0
-.end method
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-.method public abstract b(Lmsf;)V
-.end method
+    move-result v0
 
-.method public c(I)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public d()Lwqa;
-    .locals 1
+    :cond_0
+    iget-wide v0, p1, Lbc0;->f:J
 
-    sget-object v0, Lnb0;->f:Lbt3;
+    iget-wide v2, p1, Lbc0;->e:J
 
-    return-object v0
-.end method
+    add-long/2addr v0, v2
 
-.method public e()Lwqa;
-    .locals 2
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iget-object v2, p0, Luah;->a:Lhjf;
 
-    new-instance v1, Lbt3;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v1, v0}, Lbt3;-><init>(Ljava/lang/Object;)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object v1
-.end method
+    move-result-wide v2
 
-.method public f(Lmsf;Lf9g;)V
-    .locals 0
+    invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
-    invoke-interface {p0, p1}, Luah;->b(Lmsf;)V
+    move-result-wide v2
 
-    return-void
-.end method
+    sget-wide v4, Luah;->b:J
 
-.method public g(Ll22;)Lj1h;
-    .locals 0
+    add-long/2addr v2, v4
 
-    sget-object p1, Lj1h;->a:Li1h;
+    cmp-long p1, v0, v2
 
-    return-object p1
+    if-gez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

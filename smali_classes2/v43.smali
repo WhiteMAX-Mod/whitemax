@@ -1,112 +1,48 @@
 .class public final Lv43;
-.super Ldtf;
-.source "SourceFile"
-
-# interfaces
-.implements Lum6;
+.super Ll84;
 
 
 # instance fields
-.field public synthetic X:Lnx3;
+.field public final synthetic X:Luq1;
 
-.field public final synthetic o:I
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Luq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lv43;->o:I
+    iput-object p1, p0, Lv43;->X:Luq1;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lv43;->o:I
+    iput-object p1, p0, Lv43;->d:Ljava/lang/Object;
 
-    check-cast p1, Lnx3;
+    iget p1, p0, Lv43;->o:I
 
-    check-cast p2, Lqqg;
+    const/high16 v0, -0x80000000
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    or-int/2addr p1, v0
 
-    packed-switch v0, :pswitch_data_0
+    iput p1, p0, Lv43;->o:I
 
-    new-instance p2, Lv43;
+    iget-object p1, p0, Lv43;->X:Luq1;
 
-    const/4 v0, 0x3
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lv43;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lv43;->X:Lnx3;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p2, p1}, Lv43;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Luq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    new-instance p2, Lv43;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lv43;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lv43;->X:Lnx3;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p2, Lv43;->X:Lnx3;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lv43;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv43;->X:Lnx3;
-
-    iget-object p1, p1, Lnx3;->a:Ljava/util/List;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv43;->X:Lnx3;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

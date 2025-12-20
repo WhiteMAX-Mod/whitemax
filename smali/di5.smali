@@ -4,57 +4,31 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lej5;
 
-.field public final b:Ljava/lang/reflect/Method;
-
-.field public final c:I
-
-.field public d:Z
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
-    .locals 1
+.method public constructor <init>(Lej5;[B)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ldi5;->d:Z
 
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_0
 
-    iput-object p1, p0, Ldi5;->a:Ljava/lang/Object;
+    iput-object p1, p0, Ldi5;->a:Lej5;
 
-    iput-object p2, p0, Ldi5;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {p2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {p2}, Ljava/lang/reflect/Method;->hashCode()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, 0x1f
-
-    mul-int/lit8 p2, p2, 0x1f
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    add-int/2addr p1, p2
-
-    iput p1, p0, Ldi5;->c:I
+    iput-object p2, p0, Ldi5;->b:[B
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "EventHandler method cannot be null."
+    const-string p2, "bytes is null"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -63,7 +37,7 @@
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "EventHandler target cannot be null."
+    const-string p2, "encoding is null"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -72,148 +46,73 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-boolean v0, p0, Ldi5;->d:Z
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, p0, Ldi5;->b:Ljava/lang/reflect/Method;
-
-    iget-object v1, p0, Ldi5;->a:Ljava/lang/Object;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_1
-
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    instance-of v0, v0, Ljava/lang/Error;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Error;
-
-    throw p1
-
-    :cond_0
-    throw p1
-
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ldi5;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " has been invalidated and can no longer handle events."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 3
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
+    instance-of v0, p1, Ldi5;
+
     const/4 v1, 0x0
 
-    if-nez p1, :cond_1
+    if-nez v0, :cond_1
 
     return v1
 
     :cond_1
-    const-class v2, Ldi5;
+    check-cast p1, Ldi5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Ldi5;->a:Lej5;
 
-    move-result-object v3
+    iget-object v2, p1, Ldi5;->a:Lej5;
 
-    if-eq v2, v3, :cond_2
+    invoke-virtual {v0, v2}, Lej5;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     return v1
 
     :cond_2
-    check-cast p1, Ldi5;
+    iget-object v0, p0, Ldi5;->b:[B
 
-    iget-object v2, p0, Ldi5;->b:Ljava/lang/reflect/Method;
+    iget-object p1, p1, Ldi5;->b:[B
 
-    iget-object v3, p1, Ldi5;->b:Ljava/lang/reflect/Method;
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Ldi5;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Ldi5;->a:Ljava/lang/Object;
-
-    if-ne v2, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v1
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Ldi5;->c:I
+    iget-object v0, p0, Ldi5;->a:Lej5;
+
+    invoke-virtual {v0}, Lej5;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Ldi5;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
 
     return v0
 .end method
@@ -223,15 +122,15 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "[EventHandler "
+    const-string v1, "EncodedPayload{encoding="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ldi5;->b:Ljava/lang/reflect/Method;
+    iget-object v1, p0, Ldi5;->a:Lej5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "]"
+    const-string v1, ", bytes=[...]}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

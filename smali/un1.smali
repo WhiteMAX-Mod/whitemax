@@ -1,114 +1,70 @@
 .class public final Lun1;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lwo1;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method public constructor <init>(Lwo1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lun1;->X:Lwo1;
+    iput p2, p0, Lun1;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lun1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    check-cast p1, Lf2e;
+    iget p2, p0, Lun1;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p3, p0, Lun1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-virtual {p0, p1, p2}, Lun1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
+
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lj8c;
 
     move-result-object p1
 
-    check-cast p1, Lun1;
+    invoke-virtual {p1}, Lj8c;->c()V
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    return-void
 
-    invoke-virtual {p1, p2}, Lun1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    return-object p2
-.end method
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->O0:Ly0j;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lj8c;
 
-    new-instance v0, Lun1;
+    move-result-object p1
 
-    iget-object v1, p0, Lun1;->X:Lwo1;
+    invoke-virtual {p1}, Lj8c;->c()V
 
-    invoke-direct {v0, v1, p2}, Lun1;-><init>(Lwo1;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    iput-object p1, v0, Lun1;->o:Ljava/lang/Object;
+    nop
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lun1;->o:Ljava/lang/Object;
-
-    check-cast p1, Lf2e;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    iget-object p1, p0, Lun1;->X:Lwo1;
-
-    iget-object p1, p1, Lwo1;->L0:Lci5;
-
-    sget-object v0, Len1;->r:Lcn1;
-
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

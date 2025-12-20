@@ -36,11 +36,11 @@
 
 
 # instance fields
-.field public final a:Lk18;
+.field public final a:Ld68;
 
-.field public final b:Lka5;
+.field public final b:Lhj8;
 
-.field public final c:Leo7;
+.field public final c:Lvs7;
 
 
 # direct methods
@@ -53,57 +53,57 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILro4;)V
 
-    new-instance v0, Lefd;
+    new-instance v0, Lzze;
 
-    const/16 v1, 0x1d
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lefd;-><init>(I)V
+    invoke-direct {v0, v1}, Lzze;-><init>(I)V
 
-    new-instance v1, Lvdc;
+    new-instance v1, Lioc;
 
-    const/16 v2, 0x14
+    const/16 v2, 0x16
 
-    invoke-direct {v1, v2, v0}, Lvdc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lioc;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lrse;
+    const-class v0, Lp3f;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Lk18;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Ld68;
 
-    new-instance v0, Lka5;
+    new-instance v0, Lhj8;
 
-    sget-object v1, Lf1e;->x1:Lf1e;
+    sget-object v1, Lmbe;->x1:Lmbe;
 
-    invoke-direct {v0, v1}, Lka5;-><init>(Lf1e;)V
+    invoke-direct {v0, v1}, Lhj8;-><init>(Lmbe;)V
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->b:Lka5;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->b:Lhj8;
 
-    sget-object v0, Leo7;->f:Leo7;
+    sget-object v0, Lvs7;->f:Lvs7;
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->c:Leo7;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->c:Lvs7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Leo7;
+.method public final getInsetsConfig()Lvs7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->c:Leo7;
+    iget-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->c:Lvs7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lk1e;
+.method public final getScreenDelegate()Lrbe;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->b:Lka5;
+    iget-object v0, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->b:Lhj8;
 
     return-object v0
 .end method
@@ -111,43 +111,43 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    new-instance p1, Lj0c;
+    new-instance p1, Lk7c;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lj0c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lk7c;-><init>(Landroid/content/Context;)V
 
-    sget p2, La0d;->oneme_settings_privacy_setup_pin_code_root_view:I
+    sget p2, Ld9d;->oneme_settings_privacy_setup_pin_code_root_view:I
 
     invoke-virtual {p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    iget-object p2, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Lk18;
+    iget-object p2, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Ld68;
 
-    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lrse;
+    check-cast p2, Lp3f;
 
-    invoke-virtual {p1, p2}, Lj0c;->setListener(Liq3;)V
+    invoke-virtual {p1, p2}, Lk7c;->setListener(Lst3;)V
 
-    sget p2, Lo4d;->oneme_settings_privacy_onboarding_come_up_pin_code:I
+    sget p2, Ltdd;->oneme_settings_privacy_onboarding_come_up_pin_code:I
 
-    invoke-virtual {p1, p2}, Lj0c;->setTitle(I)V
+    invoke-virtual {p1, p2}, Lk7c;->setTitle(I)V
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lj0c;->setLocked(Z)V
+    invoke-virtual {p1, p2}, Lk7c;->setLocked(Z)V
 
-    new-instance p2, Ll3b;
+    new-instance p2, Lm3f;
 
-    const/16 p3, 0x1b
+    const/4 p3, 0x0
 
-    invoke-direct {p2, p1, p3, p0}, Ll3b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, p1, p3, p0}, Lm3f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Lj0c;->setOnBackPress(Lcm6;)V
+    invoke-virtual {p1, p2}, Lk7c;->setOnBackPress(Lmq6;)V
 
     return-object p1
 .end method
@@ -155,55 +155,55 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 3
 
-    iget-object p1, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Lk18;
+    iget-object p1, p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;->a:Ld68;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lrse;
+    check-cast p1, Lp3f;
 
-    iget-object p1, p1, Lrse;->o:Lci5;
+    iget-object p1, p1, Lp3f;->o:Lyl5;
 
-    new-instance v0, Ld53;
+    new-instance v0, Li83;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, p1, v1}, Ld53;-><init>(Lx26;I)V
+    invoke-direct {v0, p1, v1}, Li83;-><init>(Lf76;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lj48;->p()Ll48;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()La98;
 
     move-result-object p1
 
-    sget-object v1, Ll38;->d:Ll38;
-
-    invoke-static {v0, p1, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+    invoke-interface {p1}, La98;->p()Lc98;
 
     move-result-object p1
 
-    new-instance v0, Lpse;
+    sget-object v1, Lc88;->d:Lc88;
+
+    invoke-static {v0, p1, v1}, Lnu0;->a(Lf76;Lc98;Lc88;)Lxw1;
+
+    move-result-object p1
+
+    new-instance v0, Ln3f;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2, v1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2, v1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Lg56;
+    new-instance v1, Lo96;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    invoke-static {v1, p1}, Lqx0;->w(Lf76;Lac4;)Lglf;
 
     return-void
 .end method

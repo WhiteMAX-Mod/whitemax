@@ -1,117 +1,90 @@
 .class public final Lf47;
-.super Le93;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public t0:[B
+.field public a:J
 
-.field public volatile u0:Z
+.field public b:Z
 
-.field public v0:[B
+.field public c:I
+
+.field public d:J
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:J
+
+.field public k:J
+
+.field public l:Z
+
+.field public final m:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final c()V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lf47;->m:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lf47;->u0:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final load()V
-    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Le93;->s0:Lzdf;
+# virtual methods
+.method public a(I)V
+    .locals 9
 
-    iget-object v1, p0, Le93;->b:Lze4;
+    iget-wide v1, p0, Lf47;->k:J
 
-    invoke-virtual {v0, v1}, Lzdf;->H(Lze4;)J
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    const/4 v0, 0x0
+    cmp-long v0, v1, v3
 
-    move v1, v0
+    if-eqz v0, :cond_1
 
-    :cond_0
-    :goto_0
-    const/4 v2, -0x1
+    iget-wide v3, p0, Lf47;->a:J
 
-    if-eq v0, v2, :cond_2
+    iget-wide v5, p0, Lf47;->j:J
 
-    iget-boolean v0, p0, Lf47;->u0:Z
+    cmp-long v0, v3, v5
 
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lf47;->t0:[B
-
-    array-length v3, v0
-
-    add-int/lit16 v4, v1, 0x4000
-
-    const/16 v5, 0x4000
-
-    if-ge v3, v4, :cond_1
-
-    array-length v3, v0
-
-    add-int/2addr v3, v5
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lf47;->t0:[B
-
-    :cond_1
-    iget-object v0, p0, Le93;->s0:Lzdf;
-
-    iget-object v3, p0, Lf47;->t0:[B
-
-    invoke-virtual {v0, v3, v1, v5}, Lzdf;->read([BII)I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    add-int/2addr v1, v0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    move-wide v7, v3
 
-    goto :goto_1
+    iget-boolean v3, p0, Lf47;->l:Z
 
-    :cond_2
-    iget-boolean v0, p0, Lf47;->u0:Z
+    sub-long v4, v7, v5
 
-    if-nez v0, :cond_3
+    long-to-int v4, v4
 
-    iget-object v0, p0, Lf47;->t0:[B
+    iget-object v0, p0, Lf47;->m:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+    check-cast v0, Lirg;
 
-    move-result-object v0
+    const/4 v6, 0x0
 
-    iput-object v0, p0, Lf47;->v0:[B
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move v5, p1
 
-    :cond_3
-    iget-object v0, p0, Le93;->s0:Lzdf;
+    invoke-interface/range {v0 .. v6}, Lirg;->a(JIIILgrg;)V
 
-    invoke-static {v0}, Lz7j;->a(Lse4;)V
-
+    :cond_1
+    :goto_0
     return-void
-
-    :goto_1
-    iget-object v1, p0, Le93;->s0:Lzdf;
-
-    invoke-static {v1}, Lz7j;->a(Lse4;)V
-
-    throw v0
 .end method

@@ -1,95 +1,210 @@
 .class public final Lgtc;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lhtc;
+.implements Ler6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Lplb;
+
+.field public final synthetic Y:Landroid/widget/TextView;
+
+.field public final synthetic Z:Landroid/widget/TextView;
+
+.field public synthetic o:Landroid/widget/LinearLayout;
+
+.field public final synthetic s0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic t0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic u0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic v0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic w0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic x0:Landroid/graphics/drawable/RippleDrawable;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/RippleDrawable;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgtc;->Y:Landroid/widget/TextView;
 
-    iput-wide p1, p0, Lgtc;->a:J
+    iput-object p2, p0, Lgtc;->Z:Landroid/widget/TextView;
+
+    iput-object p3, p0, Lgtc;->s0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p4, p0, Lgtc;->t0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p5, p0, Lgtc;->u0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p6, p0, Lgtc;->v0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p7, p0, Lgtc;->w0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p8, p0, Lgtc;->x0:Landroid/graphics/drawable/RippleDrawable;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p9}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lplb;
 
-    return v0
+    move-object v9, p3
 
-    :cond_0
-    instance-of v1, p1, Lgtc;
+    check-cast v9, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    new-instance v0, Lgtc;
 
-    if-nez v1, :cond_1
+    iget-object v7, p0, Lgtc;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
-    return v2
+    iget-object v8, p0, Lgtc;->x0:Landroid/graphics/drawable/RippleDrawable;
 
-    :cond_1
-    check-cast p1, Lgtc;
+    iget-object v1, p0, Lgtc;->Y:Landroid/widget/TextView;
 
-    iget-wide v3, p0, Lgtc;->a:J
+    iget-object v2, p0, Lgtc;->Z:Landroid/widget/TextView;
 
-    iget-wide v5, p1, Lgtc;->a:J
+    iget-object v3, p0, Lgtc;->s0:Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-static {v3, v4, v5, v6}, Ls65;->e(JJ)Z
+    iget-object v4, p0, Lgtc;->t0:Landroid/graphics/drawable/ShapeDrawable;
 
-    move-result p1
+    iget-object v5, p0, Lgtc;->u0:Landroid/graphics/drawable/ShapeDrawable;
 
-    if-nez p1, :cond_2
+    iget-object v6, p0, Lgtc;->v0:Landroid/graphics/drawable/ShapeDrawable;
 
-    return v2
+    invoke-direct/range {v0 .. v9}, Lgtc;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/RippleDrawable;Lkotlin/coroutines/Continuation;)V
 
-    :cond_2
-    return v0
+    iput-object p1, v0, Lgtc;->o:Landroid/widget/LinearLayout;
+
+    iput-object p2, v0, Lgtc;->X:Lplb;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Lgtc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    sget v0, Ls65;->d:I
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-wide v0, p0, Lgtc;->a:J
+    iget-object p1, p0, Lgtc;->o:Landroid/widget/LinearLayout;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Lgtc;->X:Lplb;
 
-    move-result v0
+    invoke-interface {v0}, Lplb;->b()Lxf0;
 
-    return v0
-.end method
+    move-result-object v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget v1, v1, Lxf0;->k:I
 
-    iget-wide v0, p0, Lgtc;->a:J
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-static {v0, v1}, Ls65;->n(J)Ljava/lang/String;
+    invoke-interface {v0}, Lplb;->getText()Lifg;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "TakePhoto(captureTimeout="
+    iget p1, p1, Lifg;->g:I
 
-    const-string v2, ")"
+    iget-object v1, p0, Lgtc;->Y:Landroid/widget/TextView;
 
-    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    move-result-object v0
+    invoke-interface {v0}, Lplb;->getText()Lifg;
 
-    return-object v0
+    move-result-object p1
+
+    iget p1, p1, Lifg;->g:I
+
+    iget-object v1, p0, Lgtc;->Z:Landroid/widget/TextView;
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->h:I
+
+    iget-object v1, p0, Lgtc;->s0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, p1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->h:I
+
+    iget-object v1, p0, Lgtc;->t0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, p1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->h:I
+
+    iget-object v1, p0, Lgtc;->u0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, p1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->h:I
+
+    iget-object v1, p0, Lgtc;->v0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, p1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->h:I
+
+    iget-object v1, p0, Lgtc;->w0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, p1}, Lnsi;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-interface {v0}, Lplb;->c()Ltof;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ltof;->a:Lrof;
+
+    iget-object p1, p1, Lrof;->a:Lqof;
+
+    iget p1, p1, Lqof;->i:I
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lgtc;->x0:Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

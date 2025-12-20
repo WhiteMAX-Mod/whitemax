@@ -1,39 +1,57 @@
 .class public final Lnpe;
-.super Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lnpe;
+# instance fields
+.field public final a:Lrv1;
 
-.field public static final c:Lgi4;
+.field public final b:Lmpe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lrv1;Lmpe;)V
+    .locals 0
 
-    new-instance v0, Lnpe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    iput-object p1, p0, Lnpe;->a:Lrv1;
 
-    sput-object v0, Lnpe;->b:Lnpe;
+    iput-object p2, p0, Lnpe;->b:Lmpe;
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    new-array v1, v1, [Ljava/lang/String;
 
-    const/4 v2, 0x0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/16 v3, 0xe
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v4, ":settings/media"
+    const-string v1, "DisplayLayoutItem{videoTrackParticipantKey="
 
-    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnpe;->a:Lrv1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", layout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnpe;->b:Lmpe;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lnpe;->c:Lgi4;
-
-    return-void
+    return-object v0
 .end method

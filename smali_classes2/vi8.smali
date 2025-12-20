@@ -1,13 +1,8 @@
-.class public final Lvi8;
-.super Lugc;
+.class public interface abstract Lvi8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final bridge synthetic z(Lt98;)V
-    .locals 0
-
-    check-cast p1, Lti8;
-
-    return-void
+.method public abstract a()Z
 .end method

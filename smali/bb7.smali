@@ -1,407 +1,181 @@
 .class public final Lbb7;
-.super Ljava/lang/Object;
+.super Lkh;
 .source "SourceFile"
 
-# interfaces
-.implements Ldb7;
 
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-# instance fields
-.field public c:Landroid/os/IBinder;
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lkh;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    const-wide/16 v0, 0xc8
+
+    const/4 p1, 0x2
+
+    .line 2
+    invoke-direct {p0, v0, v1, p1}, Lkh;-><init>(JI)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final C(Lab7;)V
+.method public final b()Lc94;
     .locals 4
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    new-instance v0, Lbb7;
 
-    move-result-object v0
+    iget-wide v1, p0, Lkh;->d:J
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    iget-boolean v3, p0, Lkh;->t0:Z
 
-    move-result-object v1
-
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    check-cast p1, Lsx8;
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    iget-object p1, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    sget p1, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-void
-
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p1
-.end method
-
-.method public final I(Lab7;)V
-    .locals 4
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    check-cast p1, Lsx8;
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    iget-object p1, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    sget p1, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-void
-
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p1
-.end method
-
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
-
-    iget-object v0, p0, Lbb7;->c:Landroid/os/IBinder;
+    invoke-direct {v0, v1, v2, v3}, Lkh;-><init>(JZ)V
 
     return-object v0
 .end method
 
-.method public final getPlaybackState()Lf3c;
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
     .locals 5
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    move-result-object v0
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    const/4 p5, 0x2
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/16 v3, 0x1c
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget v2, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    sget-object v2, Lf3c;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v2, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lf3c;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :cond_1
     const/4 v2, 0x0
 
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    if-eqz p4, :cond_1
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    if-eqz p2, :cond_0
 
-    return-object v2
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    :goto_2
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    move-result v3
 
-    throw v2
-.end method
+    int-to-float v3, v3
 
-.method public final getRepeatMode()I
-    .locals 5
+    neg-float v3, v3
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    new-array v4, v1, [F
 
-    move-result-object v0
+    aput v3, v4, v0
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object v1
+    move-result-object p2
 
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/16 v3, 0x25
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget v2, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-eqz p3, :cond_4
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    move-result p4
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    int-to-float p4, p4
 
-    return v2
+    new-array p5, p5, [F
 
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    aput p4, p5, v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    aput v2, p5, v1
 
-    throw v2
-.end method
+    invoke-static {p3, p2, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-.method public final getShuffleMode()I
-    .locals 5
+    move-result-object p2
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/16 v3, 0x2f
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget v2, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return v2
-
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw v2
-.end method
-
-.method public final isCaptioningEnabled()Z
-    .locals 5
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    :try_start_0
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lbb7;->c:Landroid/os/IBinder;
-
-    const/16 v3, 0x2d
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget v2, La79;->d:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_1
-
-    const/4 v4, 0x1
+    return-object p1
 
     :cond_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    if-eqz p2, :cond_2
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    return v4
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
-    :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    move-result v3
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    int-to-float v3, v3
 
-    throw v2
+    new-array v4, v1, [F
+
+    aput v3, v4, v0
+
+    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p4
+
+    invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_2
+    if-eqz p3, :cond_4
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p2
+
+    goto :goto_0
+
+    :cond_3
+    move p2, v2
+
+    :goto_0
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    sub-float/2addr p2, v3
+
+    new-array p5, p5, [F
+
+    aput p2, p5, v0
+
+    aput v2, p5, v1
+
+    invoke-static {p3, p4, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_4
+    return-object p1
+.end method
+
+.method public final n(Landroid/view/View;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    return-void
 .end method

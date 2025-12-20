@@ -1,56 +1,45 @@
-.class public final synthetic Log;
-.super Ljava/lang/Object;
+.class public final Log;
+.super Landroid/util/IntProperty;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lfqi;
+.field public a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqi;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
+
     iput p2, p0, Log;->a:I
-
-    iput-object p1, p0, Log;->b:Lfqi;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Log;->a:I
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Log;->a:I
 
-    iget-object v0, p0, Log;->b:Lfqi;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Lfqi;->f()V
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final setValue(Ljava/lang/Object;I)V
+    .locals 0
+
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    iput p2, p0, Log;->a:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Log;->b:Lfqi;
-
-    invoke-virtual {v0}, Lfqi;->g()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,50 +1,56 @@
-.class public final Lx3g;
-.super Li3;
+.class public final synthetic Lx3g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final c:Lx3g;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lvv4;I)V
+    .locals 0
 
-    new-instance v0, Lx3g;
+    iput p2, p0, Lx3g;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lx3g;->b:Lvv4;
 
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v2, v1}, Li3;-><init>(ILjava/lang/Object;)V
-
-    sput-object v0, Lx3g;->c:Lx3g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i0()Z
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    iget v0, p0, Lx3g;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+    iget-object v0, p0, Lx3g;->b:Lvv4;
 
-    move-result v0
+    invoke-virtual {v0}, Lvv4;->b()V
 
-    const/4 v1, 0x1
+    return-void
 
-    if-ne v0, v1, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lx3g;->b:Lvv4;
 
-    return v1
+    invoke-virtual {v0}, Lvv4;->a()V
 
-    :cond_0
-    const/4 v0, 0x0
+    return-void
 
-    return v0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

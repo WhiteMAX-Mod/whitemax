@@ -1,58 +1,31 @@
 .class public final Lshi;
-.super Lb3;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final b:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final c:Ljava/lang/Object;
+.field public final b:Lnm5;
+
+.field public final c:Lky7;
+
+.field public final d:Lu7g;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v1}, Lb3;-><init>(ZI)V
-
-    iput-object p1, p0, Lshi;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lshi;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lshi;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lshi;->c:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lnm5;Lky7;Lu7g;)V
     .locals 0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iput-object p1, p0, Lshi;->a:Ljava/util/concurrent/Executor;
 
-    throw p1
+    iput-object p2, p0, Lshi;->b:Lnm5;
+
+    iput-object p3, p0, Lshi;->c:Lky7;
+
+    iput-object p4, p0, Lshi;->d:Lu7g;
+
+    return-void
 .end method

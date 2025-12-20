@@ -1,93 +1,23 @@
-.class public final Lq62;
+.class public abstract Lq62;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lo00;
-
-
-# instance fields
-.field public final a:Lgb4;
-
-.field public final b:I
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lo00;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const/4 v1, 0x6
+    const-string v1, "RESUME_TOKEN"
 
-    invoke-direct {v0, v1}, Lo00;-><init>(I)V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lq62;->c:Lo00;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
-    .locals 20
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p7, :cond_0
-
-    move/from16 v17, p8
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v1, -0x1000000
-
-    move/from16 v17, v1
-
-    :goto_0
-    new-instance v2, Lgb4;
-
-    const/4 v5, 0x0
-
-    const/4 v8, 0x0
-
-    const/high16 v12, -0x80000000
-
-    const v13, -0x800001
-
-    const v14, -0x800001
-
-    const/16 v19, 0x0
-
-    move-object v6, v5
-
-    move v15, v13
-
-    move/from16 v18, v12
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v4, p2
-
-    move/from16 v7, p3
-
-    move/from16 v9, p4
-
-    move/from16 v10, p5
-
-    move/from16 v11, p6
-
-    move/from16 v16, p7
-
-    invoke-direct/range {v2 .. v19}, Lgb4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
-
-    iput-object v2, v0, Lq62;->a:Lgb4;
-
-    move/from16 v1, p9
-
-    iput v1, v0, Lq62;->b:I
+    sput-object v0, Lq62;->a:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method

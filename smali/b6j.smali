@@ -1,248 +1,170 @@
-.class public abstract Lb6j;
-.super Ljava/lang/Object;
+.class public final enum Lb6j;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lkqi;
 
 
 # static fields
-.field public static a:Ljava/lang/String;
+.field public static final enum X:Lb6j;
 
-.field public static b:I
+.field public static final enum Y:Lb6j;
+
+.field public static final synthetic Z:[Lb6j;
+
+.field public static final enum b:Lb6j;
+
+.field public static final enum c:Lb6j;
+
+.field public static final enum d:Lb6j;
+
+.field public static final enum o:Lb6j;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public static final a(Landroid/database/Cursor;I)Landroid/net/Uri;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 13
 
-    :try_start_0
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    new-instance v0, Lb6j;
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, "UNKNOWN_FORMAT"
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :catchall_0
-    move-exception p0
+    invoke-direct {v0, v1, v2, v2}, Lb6j;-><init>(Ljava/lang/String;II)V
 
-    new-instance p1, Lipd;
+    sput-object v0, Lb6j;->b:Lb6j;
 
-    invoke-direct {p1, p0}, Lipd;-><init>(Ljava/lang/Throwable;)V
+    new-instance v1, Lb6j;
 
-    move-object p0, p1
+    const-string v2, "NV16"
 
-    :goto_0
-    nop
+    const/4 v3, 0x1
 
-    instance-of p1, p0, Lipd;
+    invoke-direct {v1, v2, v3, v3}, Lb6j;-><init>(Ljava/lang/String;II)V
 
-    const/4 v0, 0x0
+    sput-object v1, Lb6j;->c:Lb6j;
 
-    if-eqz p1, :cond_0
+    new-instance v2, Lb6j;
 
-    move-object p0, v0
+    const-string v3, "NV21"
 
-    :cond_0
-    check-cast p0, Ljava/lang/String;
+    const/4 v4, 0x2
 
-    if-eqz p0, :cond_2
+    invoke-direct {v2, v3, v4, v4}, Lb6j;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    sput-object v2, Lb6j;->d:Lb6j;
 
-    move-result p1
+    new-instance v3, Lb6j;
 
-    if-nez p1, :cond_1
+    const-string v4, "YV12"
 
-    goto :goto_1
+    const/4 v5, 0x3
 
-    :cond_1
-    :try_start_1
-    invoke-static {p0}, Lpbj;->c(Ljava/lang/String;)Z
+    invoke-direct {v3, v4, v5, v5}, Lb6j;-><init>(Ljava/lang/String;II)V
 
-    move-result p1
+    sput-object v3, Lb6j;->o:Lb6j;
 
-    if-eqz p1, :cond_2
+    new-instance v4, Lb6j;
 
-    invoke-static {p0}, Ltfi;->h(Ljava/lang/String;)Ljava/lang/String;
+    const-string v5, "YUV_420_888"
 
-    move-result-object p1
+    const/4 v6, 0x4
 
-    invoke-static {p1}, Lxpi;->q(Ljava/lang/String;)Landroid/net/Uri;
+    const/4 v7, 0x7
+
+    invoke-direct {v4, v5, v6, v7}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lb6j;->X:Lb6j;
+
+    new-instance v5, Lb6j;
+
+    const-string v8, "JPEG"
+
+    const/4 v9, 0x5
+
+    const/16 v10, 0x8
+
+    invoke-direct {v5, v8, v9, v10}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    move v8, v6
+
+    new-instance v6, Lb6j;
+
+    const-string v11, "BITMAP"
+
+    const/4 v12, 0x6
+
+    invoke-direct {v6, v11, v12, v8}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lb6j;->Y:Lb6j;
+
+    move v8, v7
+
+    new-instance v7, Lb6j;
+
+    const-string v11, "CM_SAMPLE_BUFFER_REF"
+
+    invoke-direct {v7, v11, v8, v9}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    new-instance v8, Lb6j;
+
+    const-string v9, "UI_IMAGE"
+
+    invoke-direct {v8, v9, v10, v12}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    new-instance v9, Lb6j;
+
+    const-string v10, "CV_PIXEL_BUFFER_REF"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11, v11}, Lb6j;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array/range {v0 .. v9}, [Lb6j;
 
     move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    goto :goto_1
+    sput-object v0, Lb6j;->Z:[Lb6j;
 
-    :catchall_1
-    move-exception p1
+    return-void
+.end method
 
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    const-string v2, "Failure Uri.fromFile(File("
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p3, p0, Lb6j;->a:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string p0, "))"
+.method public static values()[Lb6j;
+    .locals 1
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lb6j;->Z:[Lb6j;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Lb6j;->clone()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v1, "LocalMediaRepository:Cursor:getUri"
+    check-cast v0, [Lb6j;
 
-    invoke-static {v1, p0, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
     return-object v0
 .end method
 
-.method public static b()Ljava/lang/String;
-    .locals 5
 
-    const-string v0, "/proc/"
+# virtual methods
+.method public final d()I
+    .locals 1
 
-    sget-object v1, Lb6j;->a:Ljava/lang/String;
+    iget v0, p0, Lb6j;->a:I
 
-    if-nez v1, :cond_3
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1c
-
-    if-lt v1, v2, :cond_0
-
-    invoke-static {}, Li7c;->m()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lb6j;->a:Ljava/lang/String;
-
-    goto :goto_3
-
-    :cond_0
-    sget v1, Lb6j;->b:I
-
-    if-nez v1, :cond_1
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    sput v1, Lb6j;->b:I
-
-    :cond_1
-    const/4 v2, 0x0
-
-    if-gtz v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    :try_start_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, "/cmdline"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
-
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    new-instance v3, Ljava/io/BufferedReader;
-
-    new-instance v4, Ljava/io/FileReader;
-
-    invoke-direct {v4, v0}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v3, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
-
-    :try_start_2
-    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :try_start_3
-    invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ls5j;->g(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v2
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :catch_0
-    :goto_0
-    invoke-static {v3}, Lefi;->a(Ljava/io/Closeable;)V
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v0
-
-    move-object v2, v3
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception v0
-
-    :try_start_4
-    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-
-    throw v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :goto_1
-    invoke-static {v2}, Lefi;->a(Ljava/io/Closeable;)V
-
-    throw v0
-
-    :catch_1
-    move-object v3, v2
-
-    goto :goto_0
-
-    :goto_2
-    sput-object v2, Lb6j;->a:Ljava/lang/String;
-
-    :cond_3
-    :goto_3
-    sget-object v0, Lb6j;->a:Ljava/lang/String;
-
-    return-object v0
+    return v0
 .end method

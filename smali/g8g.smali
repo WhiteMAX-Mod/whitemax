@@ -2,31 +2,36 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz26;
 
-
-# instance fields
-.field public final a:Ljava/lang/Throwable;
+# static fields
+.field public static final a:Lg8g;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg8g;
 
-    iput-object p1, p0, Lg8g;->a:Ljava/lang/Throwable;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lg8g;->a:Lg8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lo8g;
+    .locals 2
 
-    iget-object p1, p0, Lg8g;->a:Ljava/lang/Throwable;
+    new-instance v0, Lo8g;
 
-    throw p1
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    invoke-direct {v0, v1}, Lo8g;-><init>(Landroid/os/Handler;)V
+
+    return-object v0
 .end method

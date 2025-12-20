@@ -1,19 +1,32 @@
-.class public final Lqc7;
+.class public abstract Lqc7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroidx/work/impl/WorkDatabase;
+# static fields
+.field public static final a:Lpc7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/work/impl/WorkDatabase;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lqc7;->a:Landroidx/work/impl/WorkDatabase;
+    new-instance v0, Lpc7;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lqc7;->a:Lpc7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Ldxe;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract b(Led7;)V
 .end method

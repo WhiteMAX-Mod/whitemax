@@ -1,64 +1,48 @@
-.class public final Lvha;
+.class public final synthetic Lvha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrf9;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static a:Lvha;
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/util/Map;
 
 
 # direct methods
-.method public static declared-synchronized b()Lvha;
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;JLjava/util/Map;)V
+    .locals 0
 
-    const-class v0, Lvha;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    monitor-enter v0
+    iput-object p1, p0, Lvha;->a:Ljava/lang/String;
 
-    :try_start_0
-    sget-object v1, Lvha;->a:Lvha;
+    iput-wide p2, p0, Lvha;->b:J
 
-    if-nez v1, :cond_0
+    iput-object p4, p0, Lvha;->c:Ljava/util/Map;
 
-    new-instance v1, Lvha;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    sput-object v1, Lvha;->a:Lvha;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    sget-object v1, Lvha;->a:Lvha;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqf9;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-object v0, p0, Lvha;->c:Ljava/util/Map;
+
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lvha;->a:Ljava/lang/String;
+
+    iget-wide v2, p0, Lvha;->b:J
+
+    invoke-static {v1, v2, v3, v0, p1}, Lcom/my/tracker/MyTracker;->b(Ljava/lang/String;JLjava/util/Map;Lcom/my/tracker/core/EngineCore;)V
 
     return-void
 .end method

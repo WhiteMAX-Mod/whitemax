@@ -1,563 +1,272 @@
-.class public abstract Lx2c;
-.super Ljava/lang/Object;
+.class public final Lx2c;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final a:Lvsb;
+
+# instance fields
+.field public final synthetic X:Lc3c;
+
+.field public final synthetic Y:Z
+
+.field public final synthetic Z:Z
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 39
+.method public constructor <init>(Lc3c;ZZLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v1, Limb;
+    iput-object p1, p0, Lx2c;->X:Lc3c;
 
-    const/16 v0, 0x3e8
+    iput-boolean p2, p0, Lx2c;->Y:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-boolean p3, p0, Lx2c;->Z:Z
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    sget-object v2, Lzgb;->a:Lzgb;
-
-    invoke-direct {v1, v0, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v2, Limb;
-
-    const/16 v0, 0x3e9
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v3, Lzgb;->b:Lzgb;
-
-    invoke-direct {v2, v0, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Limb;
-
-    const/16 v0, 0x3ea
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v4, Lzgb;->c:Lzgb;
-
-    invoke-direct {v3, v0, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Limb;
-
-    const/16 v0, 0x3eb
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v5, Lzgb;->d:Lzgb;
-
-    invoke-direct {v4, v0, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v5, Limb;
-
-    const/16 v0, 0x3ec
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v6, Lzgb;->o:Lzgb;
-
-    invoke-direct {v5, v0, v6}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v6, Limb;
-
-    const/16 v0, 0x7d0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v7, Lzgb;->X:Lzgb;
-
-    invoke-direct {v6, v0, v7}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v7, Limb;
-
-    const/16 v0, 0x7d1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v8, Lzgb;->Y:Lzgb;
-
-    invoke-direct {v7, v0, v8}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v8, Limb;
-
-    const/16 v0, 0x7d2
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v9, Lzgb;->Z:Lzgb;
-
-    invoke-direct {v8, v0, v9}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v9, Limb;
-
-    const/16 v0, 0x7d3
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v10, Lzgb;->s0:Lzgb;
-
-    invoke-direct {v9, v0, v10}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v10, Limb;
-
-    const/16 v0, 0x7d4
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v11, Lzgb;->t0:Lzgb;
-
-    invoke-direct {v10, v0, v11}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v11, Limb;
-
-    const/16 v0, 0x7d5
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v12, Lzgb;->u0:Lzgb;
-
-    invoke-direct {v11, v0, v12}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v12, Limb;
-
-    const/16 v0, 0x7d6
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v13, Lzgb;->v0:Lzgb;
-
-    invoke-direct {v12, v0, v13}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v13, Limb;
-
-    const/16 v0, 0x7d7
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v14, Lzgb;->w0:Lzgb;
-
-    invoke-direct {v13, v0, v14}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v14, Limb;
-
-    const/16 v0, 0x7d8
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v15, Lzgb;->x0:Lzgb;
-
-    invoke-direct {v14, v0, v15}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v15, Limb;
-
-    const/16 v0, 0xbb9
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    move-object/from16 v16, v1
-
-    sget-object v1, Lzgb;->y0:Lzgb;
-
-    invoke-direct {v15, v0, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v1, 0xbba
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    move-object/from16 v17, v2
-
-    sget-object v2, Lzgb;->z0:Lzgb;
-
-    invoke-direct {v0, v1, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0xbbb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v18, v0
-
-    sget-object v0, Lzgb;->A0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0xbbc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v19, v1
-
-    sget-object v1, Lzgb;->B0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0xfa1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v20, v0
-
-    sget-object v0, Lzgb;->C0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0xfa2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v21, v1
-
-    sget-object v1, Lzgb;->D0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0xfa3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v22, v0
-
-    sget-object v0, Lzgb;->E0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0xfa4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v23, v1
-
-    sget-object v1, Lzgb;->F0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0xfa5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v24, v0
-
-    sget-object v0, Lzgb;->G0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0xfa6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v25, v1
-
-    sget-object v1, Lzgb;->H0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1389
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v26, v0
-
-    sget-object v0, Lzgb;->I0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x138a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v27, v1
-
-    sget-object v1, Lzgb;->J0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1770
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v28, v0
-
-    sget-object v0, Lzgb;->K0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x1771
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v29, v1
-
-    sget-object v1, Lzgb;->L0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1772
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v30, v0
-
-    sget-object v0, Lzgb;->M0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x1773
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v31, v1
-
-    sget-object v1, Lzgb;->N0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1774
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v32, v0
-
-    sget-object v0, Lzgb;->O0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x1775
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v33, v1
-
-    sget-object v1, Lzgb;->P0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1776
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v34, v0
-
-    sget-object v0, Lzgb;->Q0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x1777
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v35, v1
-
-    sget-object v1, Lzgb;->R0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1778
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v36, v0
-
-    sget-object v0, Lzgb;->S0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Limb;
-
-    const/16 v2, 0x1b58
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v37, v1
-
-    sget-object v1, Lzgb;->T0:Lzgb;
-
-    invoke-direct {v0, v2, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Limb;
-
-    const/16 v2, 0x1b59
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v38, v0
-
-    sget-object v0, Lzgb;->U0:Lzgb;
-
-    invoke-direct {v1, v2, v0}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v19
-
-    move-object/from16 v19, v21
-
-    move-object/from16 v21, v23
-
-    move-object/from16 v23, v25
-
-    move-object/from16 v25, v27
-
-    move-object/from16 v27, v29
-
-    move-object/from16 v29, v31
-
-    move-object/from16 v31, v33
-
-    move-object/from16 v33, v35
-
-    move-object/from16 v35, v37
-
-    move-object/from16 v37, v1
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v18, v20
-
-    move-object/from16 v20, v22
-
-    move-object/from16 v22, v24
-
-    move-object/from16 v24, v26
-
-    move-object/from16 v26, v28
-
-    move-object/from16 v28, v30
-
-    move-object/from16 v30, v32
-
-    move-object/from16 v32, v34
-
-    move-object/from16 v34, v36
-
-    move-object/from16 v36, v38
-
-    filled-new-array/range {v1 .. v37}, [Limb;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lbbj;->b([Limb;)Lvsb;
-
-    move-result-object v0
-
-    sput-object v0, Lx2c;->a:Lvsb;
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lx2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lx2c;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lx2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lx2c;
+
+    iget-boolean v0, p0, Lx2c;->Y:Z
+
+    iget-boolean v1, p0, Lx2c;->Z:Z
+
+    iget-object v2, p0, Lx2c;->X:Lc3c;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lx2c;-><init>(Lc3c;ZZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 14
+
+    iget v0, p0, Lx2c;->o:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lx2c;->X:Lc3c;
+
+    sget-object v4, Lbc4;->a:Lbc4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto/16 :goto_6
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, v3, Lc3c;->b:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxx6;
+
+    iput v2, p0, Lx2c;->o:I
+
+    invoke-virtual {p1, p0}, Lxx6;->a(Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_3
+
+    goto/16 :goto_5
+
+    :cond_3
+    :goto_0
+    check-cast p1, Lpj8;
+
+    iget-object v0, v3, Lc3c;->Y:Lhof;
+
+    invoke-virtual {v0}, Lhof;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v5, v2
+
+    check-cast v5, Lu2c;
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_4
+
+    iget-wide v6, p1, Lpj8;->a:D
+
+    new-instance v8, Ljava/lang/Double;
+
+    invoke-direct {v8, v6, v7}, Ljava/lang/Double;-><init>(D)V
+
+    move-object v6, v8
+
+    goto :goto_1
+
+    :cond_4
+    move-object v6, v2
+
+    :goto_1
+    if-eqz p1, :cond_5
+
+    iget-wide v7, p1, Lpj8;->b:D
+
+    new-instance v9, Ljava/lang/Double;
+
+    invoke-direct {v9, v7, v8}, Ljava/lang/Double;-><init>(D)V
+
+    move-object v7, v9
+
+    goto :goto_2
+
+    :cond_5
+    move-object v7, v2
+
+    :goto_2
+    const/4 v12, 0x0
+
+    const/16 v13, 0x7c
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    invoke-static/range {v5 .. v13}, Lu2c;->a(Lu2c;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lbhg;Ljava/lang/String;ZI)Lu2c;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v2, v5}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    if-eqz p1, :cond_7
+
+    iget-object v0, v3, Lc3c;->t0:Lyl5;
+
+    new-instance v3, Lm2c;
+
+    iget-wide v4, p1, Lpj8;->a:D
+
+    iget-wide v6, p1, Lpj8;->b:D
+
+    iget-boolean p1, p0, Lx2c;->Y:Z
+
+    if-eqz p1, :cond_6
+
+    :goto_3
+    move-object v8, v2
+
+    goto :goto_4
+
+    :cond_6
+    new-instance v2, Ljava/lang/Float;
+
+    const/high16 p1, 0x41600000    # 14.0f
+
+    invoke-direct {v2, p1}, Ljava/lang/Float;-><init>(F)V
+
+    goto :goto_3
+
+    :goto_4
+    iget-boolean v9, p0, Lx2c;->Z:Z
+
+    invoke-direct/range {v3 .. v9}, Lm2c;-><init>(DDLjava/lang/Float;Z)V
+
+    invoke-static {v0, v3}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    goto :goto_6
+
+    :cond_7
+    iput v1, p0, Lx2c;->o:I
+
+    iget-object p1, v3, Lc3c;->o:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbbg;
+
+    check-cast p1, Lb9b;
+
+    invoke-virtual {p1}, Lb9b;->c()Llq8;
+
+    move-result-object p1
+
+    new-instance v0, Lb3c;
+
+    invoke-direct {v0, v3, v2}, Lb3c;-><init>(Lc3c;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v0, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_8
+
+    :goto_5
+    return-object v4
+
+    :cond_8
+    :goto_6
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

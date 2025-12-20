@@ -1,197 +1,263 @@
 .class public final Le72;
-.super Lrn5;
+.super Landroid/graphics/drawable/LayerDrawable;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic Y:[Lp38;
+
+
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public X:Landroid/graphics/LinearGradient;
+
+.field public final a:I
+
+.field public final b:Lok;
+
+.field public c:F
+
+.field public d:[I
+
+.field public final o:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Ljava/nio/ByteBuffer;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lifa;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v1, "isGradientEnabled"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v2, "isGradientEnabled()Z"
 
-    iput-object v0, p0, Le72;->a:Ljava/util/ArrayList;
+    const-class v3, Le72;
 
-    sget-object v0, Lkbg;->t0:Lkbg;
+    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-short v0, v0, Lkbg;->a:S
+    sget-object v1, Lfsd;->a:Lgsd;
 
-    const/4 v1, 0x2
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1, v0, v1}, Lrn5;->b(Ljava/nio/ByteBuffer;II)I
+    const/4 v1, 0x1
 
-    move-result v0
+    new-array v1, v1, [Lp38;
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+    const/4 v2, 0x0
 
-    move-result v2
+    aput-object v0, v1, v2
 
-    add-int/lit8 v3, v2, 0x2
+    sput-object v1, Le72;->Y:[Lp38;
 
-    const-string v4, "inconsistent length fields"
-
-    if-ne v0, v3, :cond_4
-
-    :goto_0
-    if-lez v2, :cond_3
-
-    if-lt v2, v1, :cond_2
-
-    add-int/lit8 v2, v2, -0x2
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v0
-
-    const v3, 0xffff
-
-    and-int/2addr v0, v3
-
-    if-gt v0, v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v3
-
-    if-gt v0, v3, :cond_0
-
-    new-array v3, v0, [B
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    sub-int/2addr v2, v0
-
-    :try_start_0
-    iget-object v0, p0, Le72;->a:Ljava/util/ArrayList;
-
-    new-instance v5, Ljavax/security/auth/x500/X500Principal;
-
-    invoke-direct {v5, v3}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v0, "authority not in DER format"
-
-    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
     return-void
+.end method
 
-    :cond_4
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw p1
+    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/ColorDrawable;-><init>()V
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
+
+    move-result v0
+
+    iput v0, p0, Le72;->a:I
+
+    new-instance v0, Lok;
+
+    invoke-direct {v0, p0}, Lok;-><init>(Le72;)V
+
+    iput-object v0, p0, Le72;->b:Lok;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Le72;->d:[I
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Le72;->o:Landroid/graphics/Paint;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()[B
-    .locals 4
+.method public final a(Z)V
+    .locals 2
 
-    iget-object v0, p0, Le72;->a:Ljava/util/ArrayList;
+    sget-object v0, Le72;->Y:[Lp38;
 
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    aget-object v0, v0, v1
 
-    new-instance v2, Ln0;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v3, 0x4
+    move-result-object p1
 
-    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+    iget-object v1, p0, Le72;->b:Lok;
 
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+    invoke-virtual {v1, p0, v0, p1}, Lf3;->O(Ljava/lang/Object;Lp38;Ljava/lang/Object;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+.method public final b()V
+    .locals 9
 
-    move-result v1
+    sget-object v0, Le72;->Y:[Lp38;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    const/4 v1, 0x0
 
-    move-result v2
+    aget-object v0, v0, v1
 
-    mul-int/lit8 v2, v2, 0x2
+    iget-object v0, p0, Le72;->b:Lok;
 
-    add-int/2addr v2, v1
+    iget-object v0, v0, Lf3;->b:Ljava/lang/Object;
 
-    add-int/lit8 v1, v2, 0x6
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v1
+    move-result v0
 
-    sget-object v3, Lkbg;->t0:Lkbg;
+    if-eqz v0, :cond_1
 
-    iget-short v3, v3, Lkbg;->a:S
+    iget v0, p0, Le72;->c:F
 
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    const/4 v1, 0x0
 
-    add-int/lit8 v3, v2, 0x2
+    cmpg-float v0, v0, v1
 
-    int-to-short v3, v3
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    goto :goto_0
 
-    int-to-short v2, v2
+    :cond_0
+    new-instance v1, Landroid/graphics/LinearGradient;
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    iget v5, p0, Le72;->c:F
 
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    iget-object v6, p0, Le72;->d:[I
+
+    const/4 v7, 0x0
+
+    sget-object v8, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v1 .. v8}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    iput-object v1, p0, Le72;->X:Landroid/graphics/LinearGradient;
+
+    iget-object v0, p0, Le72;->o:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Le72;->X:Landroid/graphics/LinearGradient;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->draw(Landroid/graphics/Canvas;)V
+
+    sget-object v0, Le72;->Y:[Lp38;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Le72;->b:Lok;
+
+    iget-object v0, v0, Lf3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Le72;->X:Landroid/graphics/LinearGradient;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    new-instance v2, Las;
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
-    const/4 v3, 0x1
+    move-result v0
 
-    invoke-direct {v2, v3, v1}, Las;-><init>(ILjava/nio/ByteBuffer;)V
+    int-to-float v4, v0
 
-    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
+    iget v5, p0, Le72;->c:F
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+    iget-object v6, p0, Le72;->o:Landroid/graphics/Paint;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    return-object v0
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p0}, Le72;->b()V
+
+    return-void
 .end method

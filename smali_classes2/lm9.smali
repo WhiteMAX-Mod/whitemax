@@ -2,144 +2,203 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luc8;
+
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZI)V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    iput p3, p0, Llm9;->a:I
+    iput p2, p0, Llm9;->a:I
 
-    packed-switch p3, :pswitch_data_0
+    iput-object p1, p0, Llm9;->b:Ljava/lang/Object;
 
-    .line 1
-    new-instance p3, Ly67;
+    iput-object p3, p0, Llm9;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x1
-
-    invoke-direct {p3, p1, v0}, Ly67;-><init>(Ljava/lang/String;I)V
-
-    .line 2
-    new-instance v0, Ly67;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Ly67;-><init>(Ljava/lang/String;I)V
-
-    const/4 v1, 0x0
-
-    .line 3
-    iput v1, p0, Llm9;->a:I
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-object p1, p0, Llm9;->c:Ljava/lang/String;
-
-    .line 6
-    iput-boolean p2, p0, Llm9;->b:Z
-
-    const/4 p1, 0x3
-
-    .line 7
-    invoke-static {p1, p3}, Lipi;->b(ILcm6;)Lk18;
-
-    .line 8
-    invoke-static {p1, v0}, Lipi;->b(ILcm6;)Lk18;
-
-    return-void
-
-    .line 9
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llm9;->c:Ljava/lang/String;
-
-    iput-boolean p2, p0, Llm9;->b:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(ZLjava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Llm9;->a:I
-
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    iput-boolean p1, p0, Llm9;->b:Z
-
-    .line 12
-    iput-object p2, p0, Llm9;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public final a(Lnn9;)V
+    .locals 4
 
     iget v0, p0, Llm9;->a:I
 
+    iget-object v1, p0, Llm9;->c:Ljava/lang/Object;
+
+    iget-object v2, p0, Llm9;->b:Ljava/lang/Object;
+
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v2, Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
 
     move-result-object v0
 
-    return-object v0
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, p1, v1, v2}, Luz9;->H(Lnn9;J)V
+
+    return-void
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v2, Liw9;
 
-    const-string v1, "MessageText(text=\'"
+    iget-object v0, v2, Liw9;->o:Li0a;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
 
-    const-string v1, "***"
+    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Li0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const-string v1, "\', bundled="
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Llm9;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0, p1, v1, v2}, Luz9;->H(Lnn9;J)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v2, Li0a;
+
+    check-cast v1, Lmm9;
+
+    iget-wide v0, v1, Lmm9;->J0:J
+
+    iget-object v2, v2, Li0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1, v0, v1}, Luz9;->H(Lnn9;J)V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Ljava/lang/String;Lyc8;Landroid/text/style/ClickableSpan;)V
+    .locals 12
+
+    iget p3, p0, Llm9;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    iget-object p3, p0, Llm9;->b:Ljava/lang/Object;
+
+    move-object v0, p3
+
+    check-cast v0, Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p0, Llm9;->c:Ljava/lang/Object;
+
+    check-cast p3, Lnh5;
+
+    iget-object v4, p3, Lnh5;->h:Lnz3;
+
+    const/4 v5, 0x4
+
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-static/range {v0 .. v5}, Lone/me/messages/list/ui/MessagesListWidget;->L0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lyc8;Ljava/lang/Long;Lnz3;I)V
+
+    return-void
+
+    :pswitch_0
+    move-object v7, p1
+
+    move-object v8, p2
+
+    iget-object p1, p0, Llm9;->b:Ljava/lang/Object;
+
+    check-cast p1, Liw9;
+
+    iget-object p1, p1, Liw9;->o:Li0a;
+
+    iget-object p2, p0, Llm9;->c:Ljava/lang/Object;
+
+    check-cast p2, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide p2, p2, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object v6, p1, Li0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-static/range {v6 .. v11}, Lone/me/messages/list/ui/MessagesListWidget;->L0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lyc8;Ljava/lang/Long;Lnz3;I)V
+
+    return-void
+
+    :pswitch_1
+    move-object v7, p1
+
+    move-object v8, p2
+
+    iget-object p1, p0, Llm9;->b:Ljava/lang/Object;
+
+    check-cast p1, Li0a;
+
+    iget-object p2, p0, Llm9;->c:Ljava/lang/Object;
+
+    check-cast p2, Lmm9;
+
+    iget-wide p2, p2, Lmm9;->J0:J
+
+    iget-object v6, p1, Li0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-static/range {v6 .. v11}, Lone/me/messages/list/ui/MessagesListWidget;->L0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lyc8;Ljava/lang/Long;Lnz3;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

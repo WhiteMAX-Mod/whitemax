@@ -1,136 +1,128 @@
-.class public final Lsu1;
-.super Lu92;
+.class public final synthetic Lsu1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public final X:Ldtf;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzu1;
 
 
 # direct methods
-.method public constructor <init>(Lsm6;Lx74;II)V
+.method public synthetic constructor <init>(Lzu1;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lu92;-><init>(Lsm6;Lx74;II)V
+    iput p2, p0, Lsu1;->a:I
 
-    check-cast p1, Ldtf;
+    iput-object p1, p0, Lsu1;->b:Lzu1;
 
-    iput-object p1, p0, Lsu1;->X:Ldtf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Lsac;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 4
 
-    instance-of v0, p2, Lru1;
+    iget v0, p0, Lsu1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
+
+    sget-object v2, Ldc3;->s0:Lole;
+
+    iget-object v3, p0, Lsu1;->b:Lzu1;
+
+    invoke-virtual {v2, v3}, Lole;->q(Landroid/view/View;)Lrbb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lrbb;->c:Lplb;
+
+    invoke-interface {v2}, Lplb;->b()Lxf0;
+
+    move-result-object v2
+
+    iget v2, v2, Lxf0;->f:I
+
+    const/4 v3, 0x0
+
+    filled-new-array {v2, v3, v3}, [I
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    sget-object v2, Ldc3;->s0:Lole;
+
+    iget-object v3, p0, Lsu1;->b:Lzu1;
+
+    invoke-virtual {v2, v3}, Lole;->q(Landroid/view/View;)Lrbb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lrbb;->c:Lplb;
+
+    invoke-interface {v2}, Lplb;->b()Lxf0;
+
+    move-result-object v2
+
+    iget v2, v2, Lxf0;->l:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lsu1;->b:Lzu1;
+
+    iget-object v0, v0, Lzu1;->k1:Lmq6;
 
     if-eqz v0, :cond_0
 
-    move-object v0, p2
+    invoke-interface {v0}, Lmq6;->invoke()Ljava/lang/Object;
 
-    check-cast v0, Lru1;
+    move-result-object v0
 
-    iget v1, v0, Lru1;->Y:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lru1;->Y:I
+    check-cast v0, Lphh;
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lru1;
-
-    check-cast p2, Lq44;
-
-    invoke-direct {v0, p0, p2}, Lru1;-><init>(Lsu1;Lq44;)V
+    const/4 v0, 0x0
 
     :goto_0
-    iget-object p2, v0, Lru1;->o:Ljava/lang/Object;
-
-    iget v1, v0, Lru1;->Y:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    iget-object p1, v0, Lru1;->d:Lsac;
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iput-object p1, v0, Lru1;->d:Lsac;
-
-    iput v2, v0, Lru1;->Y:I
-
-    invoke-super {p0, p1, v0}, Lu92;->j(Lsac;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p2, v0, :cond_3
-
     return-object v0
 
-    :cond_3
-    :goto_1
-    check-cast p1, Lpac;
+    nop
 
-    iget-object p1, p1, Lpac;->a:Lpv0;
-
-    invoke-virtual {p1}, Lpv0;->w()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "\'awaitClose { yourCallbackOrListener.cancel() }\' should be used in the end of callbackFlow block.\nOtherwise, a callback/listener may leak in case of external cancellation.\nSee callbackFlow API documentation for the details."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final k(Lx74;II)Lt92;
-    .locals 2
-
-    new-instance v0, Lsu1;
-
-    iget-object v1, p0, Lsu1;->X:Ldtf;
-
-    invoke-direct {v0, v1, p1, p2, p3}, Lsu1;-><init>(Lsm6;Lx74;II)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

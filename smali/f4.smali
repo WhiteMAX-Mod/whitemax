@@ -1,41 +1,135 @@
 .class public final Lf4;
-.super Ljava/lang/Object;
+.super Lo2j;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Throwable;
+# virtual methods
+.method public final a(Lh4;Ld4;Ld4;)Z
+    .locals 1
 
+    monitor-enter p1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    :try_start_0
+    iget-object v0, p1, Lh4;->b:Ld4;
 
-    new-instance v0, Lf4;
+    if-ne v0, p2, :cond_0
 
-    new-instance v1, Ld1;
+    iput-object p3, p1, Lh4;->b:Ld4;
 
-    const-string v2, "Failure occurred while trying to finish a future."
+    const/4 p2, 0x1
 
-    const/4 v3, 0x2
+    monitor-exit p1
 
-    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
+    return p2
 
-    invoke-direct {v0, v1}, Lf4;-><init>(Ljava/lang/Throwable;)V
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final b(Lh4;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lh4;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lh4;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final c(Lh4;Lg4;Lg4;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Lh4;->c:Lg4;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lh4;->c:Lg4;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final i(Lg4;Lg4;)V
+    .locals 0
+
+    iput-object p2, p1, Lg4;->b:Lg4;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+.method public final j(Lg4;Ljava/lang/Thread;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-boolean v0, Lk4;->d:Z
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lf4;->a:Ljava/lang/Throwable;
+    iput-object p2, p1, Lg4;->a:Ljava/lang/Thread;
 
     return-void
 .end method

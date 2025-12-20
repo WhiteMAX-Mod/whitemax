@@ -1,51 +1,122 @@
 .class public final Lv13;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loq6;
 
 
 # instance fields
-.field public final synthetic X:Lx13;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lx13;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljja;
 
 
 # direct methods
-.method public constructor <init>(Lx13;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;Ljja;I)V
     .locals 0
 
-    iput-object p1, p0, Lv13;->X:Lx13;
+    iput p3, p0, Lv13;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lv13;->b:Ljja;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lv13;->o:Ljava/lang/Object;
+    iget v0, p0, Lv13;->a:I
 
-    iget p1, p0, Lv13;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Lemf;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1}, Lemf;->M0()V
 
-    iput p1, p0, Lv13;->Y:I
+    iget-object v0, p0, Lv13;->b:Ljja;
 
-    iget-object p1, p0, Lv13;->X:Lx13;
+    check-cast v0, Lk13;
 
-    const/4 v0, 0x0
+    iget-wide v0, v0, Lk13;->b:J
 
-    invoke-virtual {p1, v0, p0}, Lx13;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v2, ":start-conversation/add-subscribers?id="
 
-    sget-object p1, Lg84;->a:Lg84;
+    invoke-static {v0, v1, v2}, Lgg9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lf3;->p0()Lim4;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Lemf;
+
+    invoke-virtual {p1}, Lemf;->M0()V
+
+    iget-object v0, p0, Lv13;->b:Ljja;
+
+    check-cast v0, Ll13;
+
+    iget-wide v0, v0, Ll13;->b:J
+
+    const-string v2, ":profile/edit/link?id="
+
+    const-string v3, "&type=local_chat&flow=create"
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lf3;->p0()Lim4;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Lemf;
+
+    invoke-virtual {p1}, Lemf;->M0()V
+
+    iget-object v0, p0, Lv13;->b:Ljja;
+
+    check-cast v0, Lm13;
+
+    iget-wide v0, v0, Lm13;->b:J
+
+    invoke-virtual {p1, v0, v1}, Lemf;->L0(J)Lem4;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lf3;->s0(Lem4;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

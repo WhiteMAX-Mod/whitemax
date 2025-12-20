@@ -1,3 +1,3 @@
 .class public final Loi8;
-.super Ln2;
+.super Lqi8;
 .source "SourceFile"

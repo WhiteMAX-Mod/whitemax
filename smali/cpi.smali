@@ -1,207 +1,181 @@
-.class public abstract Lcpi;
-.super Ljava/lang/Object;
+.class public final Lcpi;
+.super Ljoi;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lqk7;
+
+.field public final c:Lydg;
+
+.field public final d:Lgfj;
+
+
 # direct methods
-.method public static a(III)V
+.method public constructor <init>(ILqk7;Lydg;Lgfj;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Ljpi;-><init>(I)V
+
+    iput-object p3, p0, Lcpi;->c:Lydg;
+
+    iput-object p2, p0, Lcpi;->b:Lqk7;
+
+    iput-object p4, p0, Lcpi;->d:Lgfj;
+
+    const/4 p3, 0x2
+
+    if-ne p1, p3, :cond_1
+
+    iget-boolean p1, p2, Lqk7;->a:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Best-effort write calls cannot pass methods that should auto-resolve missing features."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    iget-object v0, p0, Lcpi;->d:Lgfj;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lg4j;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcpi;->c:Lydg;
+
+    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Lcpi;->c:Lydg;
+
+    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+.method public final c(Lgoi;)V
+    .locals 2
+
+    iget-object v0, p0, Lcpi;->c:Lydg;
+
+    :try_start_0
+    iget-object v1, p0, Lcpi;->b:Lqk7;
+
+    iget-object p1, p1, Lgoi;->d:Lgl;
+
+    invoke-virtual {v1, p1, v0}, Lqk7;->f(Lgl;Lydg;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :goto_0
+    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+
+    :goto_1
+    invoke-static {p1}, Ljpi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcpi;->a(Lcom/google/android/gms/common/api/Status;)V
+
+    return-void
+
+    :goto_2
+    throw p1
+.end method
+
+.method public final d(Lx1d;Z)V
     .locals 4
 
-    const-string v0, "fromIndex: "
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    if-ltz p0, :cond_1
+    move-result-object p2
 
-    if-gt p1, p2, :cond_1
+    iget-object v0, p1, Lx1d;->c:Ljava/lang/Object;
 
-    if-gt p0, p1, :cond_0
+    check-cast v0, Ljava/util/Map;
 
-    return-void
+    iget-object v1, p0, Lcpi;->c:Lydg;
 
-    :cond_0
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, " > toIndex: "
+    iget-object p2, v1, Lydg;->a:Ljpj;
 
-    invoke-static {v0, p0, p1, v1}, Lho7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    new-instance v0, La6e;
 
-    move-result-object p0
+    const/16 v2, 0xc
 
-    invoke-direct {p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v3, 0x0
 
-    throw p2
+    invoke-direct {v0, p1, v1, v3, v2}, La6e;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    :cond_1
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+    invoke-virtual {p2, v0}, Ljpj;->i(Lt1b;)Ljpj;
 
-    const-string v2, ", toIndex: "
-
-    const-string v3, ", size: "
-
-    invoke-static {v0, p0, v2, p1, v3}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public static final b(Landroid/app/Activity;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    :try_start_0
-    const-string v1, "input_method"
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public static final c(Landroid/view/View;)V
-    .locals 2
+.method public final f(Lgoi;)Z
+    .locals 0
 
-    if-nez p0, :cond_0
+    iget-object p1, p0, Lcpi;->b:Lqk7;
 
-    goto :goto_0
+    iget-boolean p1, p1, Lqk7;->a:Z
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
-
-    :try_start_0
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :goto_0
-    return-void
+    return p1
 .end method
 
-.method public static final d(Ljava/lang/String;)Ljava/util/Set;
-    .locals 7
+.method public final g(Lgoi;)[Ltx5;
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iget-object p1, p0, Lcpi;->b:Lqk7;
 
-    move-result v0
+    iget-object p1, p1, Lqk7;->c:[Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    check-cast p1, [Ltx5;
 
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    const-string v0, ","
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x4
-
-    invoke-static {p0, v0, v1, v1, v2}, Lvmf;->D(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
-
-    move-result v3
-
-    const/4 v4, -0x1
-
-    if-ne v3, v4, :cond_1
-
-    invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    new-instance v5, Lxs;
-
-    const/16 v6, 0xa
-
-    invoke-direct {v5, v6}, Lxs;-><init>(I)V
-
-    move v6, v1
-
-    :cond_2
-    invoke-virtual {p0, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lxs;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v6, v3, 0x1
-
-    invoke-static {p0, v0, v6, v1, v2}, Lvmf;->D(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
-
-    move-result v3
-
-    if-ne v3, v4, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    invoke-virtual {p0, v6, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v5, p0}, Lxs;->add(Ljava/lang/Object;)Z
-
-    return-object v5
+    return-object p1
 .end method

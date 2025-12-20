@@ -1,42 +1,42 @@
-.class public interface abstract annotation Lrg4;
+.class public final Lrg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/annotation/Annotation;
+.implements Ljava/io/Closeable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lrg4;
-        c = ""
-        f = ""
-        i = {}
-        l = {}
-        m = ""
-        n = {}
-        s = {}
-        v = 0x1
-    .end subannotation
-.end annotation
+# instance fields
+.field public X:Ljavax/inject/Provider;
 
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+.field public Y:Ljavax/inject/Provider;
+
+.field public a:Ljavax/inject/Provider;
+
+.field public b:Lzs7;
+
+.field public c:Ljavax/inject/Provider;
+
+.field public d:Lyqd;
+
+.field public o:Ljavax/inject/Provider;
 
 
 # virtual methods
-.method public abstract c()Ljava/lang/String;
-.end method
+.method public final close()V
+    .locals 1
 
-.method public abstract f()Ljava/lang/String;
-.end method
+    iget-object v0, p0, Lrg4;->X:Ljavax/inject/Provider;
 
-.method public abstract l()[I
-.end method
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-.method public abstract m()Ljava/lang/String;
-.end method
+    move-result-object v0
 
-.method public abstract v()I
+    check-cast v0, Lnm5;
+
+    check-cast v0, Ln6e;
+
+    invoke-virtual {v0}, Ln6e;->close()V
+
+    return-void
 .end method

@@ -1,49 +1,55 @@
-.class public final Lsra;
-.super Lk3;
+.class public abstract Lsra;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lgu3;
-
-.field public final c:Lgu3;
-
-.field public final d:Lp6;
-
-
 # direct methods
-.method public constructor <init>(Lvqa;Lgu3;Lgu3;Lp6;)V
+.method public static a(Landroid/media/AudioAttributes$Builder;)Landroid/media/AudioAttributes;
     .locals 0
 
-    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
+    invoke-virtual {p0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
-    iput-object p2, p0, Lsra;->b:Lgu3;
+    move-result-object p0
 
-    iput-object p3, p0, Lsra;->c:Lgu3;
-
-    iput-object p4, p0, Lsra;->d:Lp6;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b()Landroid/media/AudioAttributes$Builder;
+    .locals 1
 
-# virtual methods
-.method public final o(Lvta;)V
-    .locals 4
+    new-instance v0, Landroid/media/AudioAttributes$Builder;
 
-    new-instance v0, Lrra;
+    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    iget-object v1, p0, Lsra;->c:Lgu3;
+    return-object v0
+.end method
 
-    iget-object v2, p0, Lsra;->d:Lp6;
+.method public static c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    .locals 0
 
-    iget-object v3, p0, Lsra;->b:Lgu3;
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
-    invoke-direct {v0, p1, v3, v1, v2}, Lrra;-><init>(Lvta;Lgu3;Lgu3;Lp6;)V
+    move-result-object p0
 
-    iget-object p1, p0, Lk3;->a:Llta;
+    return-object p0
+.end method
 
-    invoke-interface {p1, v0}, Llta;->a(Lvta;)V
+.method public static d(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

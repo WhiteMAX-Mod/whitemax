@@ -3,42 +3,19 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+# static fields
+.field public static final e:Lel;
 
-.method public abstract b(Ljava/lang/String;)V
-.end method
 
-.method public abstract c()Z
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract d()V
-.end method
+    new-instance v0, Lel;
 
-.method public abstract disconnect()V
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract e(Lznd;)V
-.end method
+    sput-object v0, Lfl;->e:Lel;
 
-.method public abstract f(Luj0;)V
-.end method
-
-.method public abstract g()I
-.end method
-
-.method public abstract h()[Lqt5;
-.end method
-
-.method public abstract i()Ljava/lang/String;
-.end method
-
-.method public abstract isConnected()Z
-.end method
-
-.method public abstract j()Z
-.end method
-
-.method public abstract k(Lsa7;Ljava/util/Set;)V
+    return-void
 .end method

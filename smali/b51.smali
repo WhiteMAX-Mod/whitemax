@@ -1,61 +1,106 @@
 .class public final Lb51;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh51;
 
-# instance fields
-.field public X:Ljava/lang/String;
 
-.field public Y:Ljava/lang/CharSequence;
+# static fields
+.field public static final a:Lb51;
 
-.field public Z:Ljava/lang/Long;
+.field public static final b:I
 
-.field public d:Lc51;
+.field public static final c:I
 
-.field public o:Ljava/lang/String;
+.field public static final d:I
 
-.field public s0:I
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lc51;
-
-.field public v0:I
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Lc51;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lb51;->u0:Lc51;
+    new-instance v0, Lb51;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lb51;->a:Lb51;
+
+    const/16 v0, 0x36
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lb51;->b:I
+
+    const/16 v0, 0x1c
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lb51;->c:I
+
+    const/4 v0, 0x1
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lb51;->d:I
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lb51;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()I
     .locals 1
 
-    iput-object p1, p0, Lb51;->t0:Ljava/lang/Object;
+    sget v0, Lb51;->c:I
 
-    iget p1, p0, Lb51;->v0:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final b()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget v0, Lb51;->d:I
 
-    iput p1, p0, Lb51;->v0:I
+    return v0
+.end method
 
-    iget-object p1, p0, Lb51;->u0:Lc51;
+.method public final c()I
+    .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lb51;->b:I
 
-    invoke-static {p1, v0, p0}, Lc51;->a(Lc51;Lk58;Lq44;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final d()I
+    .locals 1
 
-    return-object p1
+    sget v0, Lb51;->e:I
+
+    return v0
 .end method

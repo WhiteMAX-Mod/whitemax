@@ -1,37 +1,23 @@
-.class public final Lkwf;
+.class public abstract Lkwf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lkwf;
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lkwf;
+    const-string v0, "StorageNotLowTracker"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Lkwf;->a:Lkwf;
+    move-result-object v0
+
+    sput-object v0, Lkwf;->a:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lvwf;
-    .locals 2
-
-    new-instance v0, Lvwf;
-
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
-    invoke-direct {v0, v1}, Lvwf;-><init>(Landroid/os/Handler;)V
-
-    return-object v0
 .end method

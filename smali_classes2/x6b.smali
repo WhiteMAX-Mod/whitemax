@@ -1,91 +1,80 @@
-.class public abstract Lx6b;
+.class public final synthetic Lx6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public final synthetic b:Loq6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILoq6;)V
+    .locals 0
 
-    sget v0, Lzyc;->media_editor_bottom_background_id:I
+    iput p1, p0, Lx6b;->a:I
 
-    sput v0, Lx6b;->a:I
+    iput-object p2, p0, Lx6b;->b:Loq6;
 
-    sget v0, Lzyc;->media_editor_close_id:I
-
-    sput v0, Lx6b;->b:I
-
-    sget v0, Lzyc;->media_editor_content_id:I
-
-    sput v0, Lx6b;->c:I
-
-    sget v0, Lzyc;->media_editor_crop_id:I
-
-    sput v0, Lx6b;->d:I
-
-    sget v0, Lzyc;->media_editor_done_id:I
-
-    sput v0, Lx6b;->e:I
-
-    sget v0, Lzyc;->media_editor_flip_horizontally_id:I
-
-    sput v0, Lx6b;->f:I
-
-    sget v0, Lzyc;->media_editor_reset_id:I
-
-    sput v0, Lx6b;->g:I
-
-    sget v0, Lzyc;->media_editor_rotate_id:I
-
-    sput v0, Lx6b;->h:I
-
-    sget v0, Lzyc;->media_picker_album_container_id:I
-
-    sput v0, Lx6b;->i:I
-
-    sget v0, Lzyc;->media_picker_container_id:I
-
-    sput v0, Lx6b;->j:I
-
-    sget v0, Lzyc;->media_picker_content_id:I
-
-    sput v0, Lx6b;->k:I
-
-    sget v0, Lzyc;->media_picker_divider_id:I
-
-    sput v0, Lx6b;->l:I
-
-    sget v0, Lzyc;->media_picker_toolbar_id:I
-
-    sput v0, Lx6b;->m:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget p1, p0, Lx6b;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lx6b;->b:Loq6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lx6b;->b:Loq6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lx6b;->b:Loq6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lx6b;->b:Loq6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

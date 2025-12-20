@@ -1,60 +1,61 @@
 .class public final Lw9i;
-.super Ljava/lang/Object;
+.super Ly9i;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Runnable;
-
-.field public volatile c:Z
-
-.field public d:I
-
-.field public final synthetic o:Lelb;
+# static fields
+.field public static final a:Lw9i;
 
 
 # direct methods
-.method public constructor <init>(Lelb;Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw9i;
 
-    iput-object p1, p0, Lw9i;->o:Lelb;
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
 
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lw9i;->c:Z
-
-    iput p1, p0, Lw9i;->d:I
-
-    iput-object p2, p0, Lw9i;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lw9i;->b:Ljava/lang/Runnable;
+    sput-object v0, Lw9i;->a:Lw9i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
-
-    iget-object v0, p0, Lw9i;->o:Lelb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lw9i;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lw9i;->c:Z
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lw9i;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x7af3fee5
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "TooLargeLink"
+
+    return-object v0
 .end method

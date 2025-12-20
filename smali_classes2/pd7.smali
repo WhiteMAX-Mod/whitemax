@@ -1,9 +1,15 @@
 .class public final Lpd7;
-.super Lm45;
+.super Ljava/util/zip/GZIPOutputStream;
 .source "SourceFile"
 
 
-# instance fields
-.field public g:I
+# virtual methods
+.method public final l()V
+    .locals 1
 
-.field public h:I
+    iget-object v0, p0, Ljava/util/zip/GZIPOutputStream;->def:Ljava/util/zip/Deflater;
+
+    invoke-virtual {v0}, Ljava/util/zip/Deflater;->end()V
+
+    return-void
+.end method

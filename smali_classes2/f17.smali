@@ -1,73 +1,127 @@
 .class public final Lf17;
-.super Lh17;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lf17;
+# instance fields
+.field public final synthetic a:Lg17;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lg17;)V
+    .locals 0
 
-    new-instance v0, Lf17;
+    iput-object p1, p0, Lf17;->a:Lg17;
 
-    sget v1, Lk1b;->p:I
-
-    new-instance v2, Ln5g;
-
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
-
-    sget v1, Lmvd;->M:I
-
-    new-instance v3, Ln5g;
-
-    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lh17;-><init>(Ln5g;Ln5g;)V
-
-    sput-object v0, Lf17;->c:Lf17;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    const-string p1, "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    return v0
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of p1, p1, Lf17;
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    if-nez p1, :cond_1
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_1
+
+    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_STATUS"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/common/api/Status;
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, p2
+
+    :goto_0
+    iget-object v1, p0, Lf17;->a:Lg17;
+
+    if-eqz v0, :cond_2
+
+    iget v2, v0, Lcom/google/android/gms/common/api/Status;->a:I
+
+    if-nez v2, :cond_2
+
+    iget-object v0, v1, Lg17;->d:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Le17;
+
+    invoke-direct {v2, v1, p1, p2}, Le17;-><init>(Lg17;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, p2, p2, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    return-void
+
+    :cond_2
+    iget-object v1, v1, Lg17;->e:Ljava/lang/String;
+
+    new-instance v2, Lgc4;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, p2
+
+    :goto_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onMessageReceived: error; status = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
-    return p1
+    new-array p1, p1, [Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    invoke-static {v1, v2, p2, p1}, Lm4j;->j(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x709adf5c
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Connecting"
-
-    return-object v0
+    return-void
 .end method

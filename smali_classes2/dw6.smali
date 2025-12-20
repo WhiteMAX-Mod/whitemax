@@ -1,58 +1,80 @@
-.class public final synthetic Ldw6;
-.super Ljava/lang/Object;
+.class public final Ldw6;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Llva;
-.implements Lnva;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Lqf8;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lqf8;)V
-    .locals 0
-
-    iput-object p1, p0, Ldw6;->a:Lqf8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ldw6;->a:Lqf8;
+    check-cast p1, Lyx3;
 
-    invoke-interface {v0, p1}, Lqf8;->t(Ljava/lang/Exception;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Ldw6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldw6;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Ldw6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public p(Lcom/google/android/gms/tasks/Task;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
+    new-instance v0, Ldw6;
 
-    move-result p1
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Ldw6;->a:Lqf8;
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ldw6;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldw6;->o:Ljava/lang/Object;
+
+    check-cast p1, Lyx3;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {v0}, Lqf8;->s()V
+    invoke-virtual {p1}, Lyx3;->C()Z
 
-    return-void
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    invoke-interface {v0, p1}, Lqf8;->t(Ljava/lang/Exception;)V
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

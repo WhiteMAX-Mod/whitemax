@@ -1,88 +1,95 @@
-.class public final Luc1;
-.super Lid0;
+.class public final synthetic Luc1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lb87;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(Lb87;I)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput p2, p0, Luc1;->a:I
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+    iput-object p1, p0, Luc1;->b:Lb87;
 
-    iput-object p1, p0, Luc1;->b:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Luc1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    sget-object v0, Lic1;->c:Lic1;
 
-    :cond_0
-    instance-of v1, p1, Luc1;
+    iget-object v1, p0, Luc1;->b:Lb87;
 
-    const/4 v2, 0x0
+    check-cast v1, Ly77;
 
-    if-nez v1, :cond_1
+    iget-object v1, v1, Ly77;->a:Ljava/lang/String;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Luc1;
-
-    iget-object v1, p0, Luc1;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Luc1;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Luc1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "StartNewCall(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Luc1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lf3;->p0()Lim4;
 
     move-result-object v0
 
+    const-string v2, ":call-join-link?link="
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :goto_0
+    sget-object v0, Lv2h;->a:Lv2h;
+
     return-object v0
+
+    :pswitch_0
+    sget-object v0, Lic1;->c:Lic1;
+
+    iget-object v1, p0, Luc1;->b:Lb87;
+
+    check-cast v1, Lx77;
+
+    iget-object v1, v1, Lx77;->e:Ljava/lang/String;
+
+    invoke-virtual {v0}, Lf3;->p0()Lim4;
+
+    move-result-object v0
+
+    const-string v2, ":call-join-link?link="
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

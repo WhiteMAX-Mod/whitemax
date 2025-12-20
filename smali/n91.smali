@@ -1,42 +1,64 @@
 .class public final Ln91;
-.super Lun4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo91;
 
-# instance fields
-.field public final synthetic t:Lp91;
+
+# static fields
+.field public static final a:Ln91;
 
 
 # direct methods
-.method public constructor <init>(Lp91;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ln91;->t:Lp91;
+    new-instance v0, Ln91;
 
-    invoke-direct {p0}, Lun4;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ln91;->a:Ln91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Ln91;->t:Lp91;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lp91;->K0:Lzib;
+    if-ne p0, p1, :cond_0
 
-    iget v0, v0, Lzib;->a:I
-
-    if-nez v0, :cond_0
-
-    const-wide/16 v0, 0x96
-
-    return-wide v0
+    return v0
 
     :cond_0
-    const-wide/16 v0, 0x0
+    instance-of p1, p1, Ln91;
 
-    return-wide v0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x293f37ba
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Restored"
+
+    return-object v0
 .end method

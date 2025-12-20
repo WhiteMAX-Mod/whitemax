@@ -1,238 +1,104 @@
 .class public final Lf9;
-.super Ljava/lang/Object;
+.super Lmf4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:Lf9;
-
-
 # instance fields
-.field public final a:Lfk6;
+.field public final v0:J
 
-.field public final b:Lfk6;
+.field public final w0:Ljava/lang/String;
 
-.field public final c:Lfk6;
-
-.field public final d:Z
-
-.field public final e:Lfk6;
+.field public final x0:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lf9;
-
-    sget-object v2, Lfk6;->u0:Lfk6;
-
-    const/4 v4, 0x0
-
-    sget-object v1, Lfk6;->c:Lfk6;
-
-    move-object v3, v1
-
-    move-object v5, v1
-
-    invoke-direct/range {v0 .. v5}, Lf9;-><init>(Lfk6;Lfk6;Lfk6;ZLfk6;)V
-
-    sput-object v0, Lf9;->f:Lf9;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lfk6;Lfk6;Lfk6;ZLfk6;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lone/me/profile/screens/addadmins/AddChatAdminsScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p5}, Lmf4;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-object p1, p0, Lf9;->a:Lfk6;
+    iput-wide p1, p0, Lf9;->v0:J
 
-    iput-object p2, p0, Lf9;->b:Lfk6;
+    iput-object p3, p0, Lf9;->w0:Ljava/lang/String;
 
-    iput-object p3, p0, Lf9;->c:Lfk6;
-
-    iput-boolean p4, p0, Lf9;->d:Z
-
-    iput-object p5, p0, Lf9;->e:Lfk6;
+    iput-object p4, p0, Lf9;->x0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final E(Lw3e;I)V
+    .locals 7
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lw3e;->n()Z
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lf9;
+    iget-object v0, p0, Lf9;->x0:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lg9;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lone/me/members/list/MembersListWidget;
+
+    new-instance p2, Lsh9;
+
+    sget-object v0, Ldt2;->b:Ldt2;
+
+    const/16 v2, 0xc
+
+    iget-wide v3, p0, Lf9;->v0:J
+
+    invoke-direct {p2, v3, v4, v0, v2}, Lsh9;-><init>(JLdt2;I)V
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Lf9;->w0:Ljava/lang/String;
+
+    invoke-direct {v1, v2, p2, v0}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Lsh9;Lro4;)V
+
+    sget-object p2, Lw84;->b:Lw84;
+
+    invoke-virtual {v1, p2}, Lx84;->setRetainViewMode(Lw84;)V
+
+    new-instance v0, Lz3e;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    const/4 v4, 0x0
 
-    :cond_1
-    check-cast p1, Lf9;
+    invoke-direct/range {v0 .. v6}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
 
-    iget-object v1, p0, Lf9;->a:Lfk6;
+    invoke-virtual {p1, v0}, Lw3e;->S(Lz3e;)V
 
-    iget-object v3, p1, Lf9;->a:Lfk6;
+    return-void
+.end method
 
-    if-eq v1, v3, :cond_2
+.method public final j()I
+    .locals 1
 
-    return v2
+    iget-object v0, p0, Lf9;->x0:Ljava/util/List;
 
-    :cond_2
-    iget-object v1, p0, Lf9;->b:Lfk6;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget-object v3, p1, Lf9;->b:Lfk6;
+    move-result v0
 
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lf9;->c:Lfk6;
-
-    iget-object v3, p1, Lf9;->c:Lfk6;
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lf9;->d:Z
-
-    iget-boolean v3, p1, Lf9;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lf9;->e:Lfk6;
-
-    iget-object p1, p1, Lf9;->e:Lfk6;
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
     return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lf9;->a:Lfk6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lf9;->b:Lfk6;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lf9;->c:Lfk6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lf9;->d:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lf9;->e:Lfk6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AdaptiveTrackSelectionConfig(minFrameSize="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lf9;->a:Lfk6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxFrameSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf9;->b:Lfk6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", minInitialFrameSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf9;->c:Lfk6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", adaptiveToViewport="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lf9;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", adaptiveToViewportMinFrameSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf9;->e:Lfk6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

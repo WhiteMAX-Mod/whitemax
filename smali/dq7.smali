@@ -1,73 +1,53 @@
 .class public final Ldq7;
-.super Lapd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld68;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public b:I
-
-.field public final synthetic c:Lsm6;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsm6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Ldq7;->c:Lsm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ldq7;->d:Ljava/lang/Object;
-
-    invoke-direct {p0, p3}, Lapd;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldq7;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final e()Z
+    .locals 1
 
-    iget v0, p0, Ldq7;->b:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x2
+    return v0
+.end method
 
-    const/4 v2, 0x1
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Ldq7;->a:Ljava/lang/Object;
 
-    if-ne v0, v2, :cond_0
+    return-object v0
+.end method
 
-    iput v1, p0, Ldq7;->b:I
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Ldq7;->a:Ljava/lang/Object;
 
-    return-object p1
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-object v0
 
-    const-string v0, "This coroutine had already completed"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iput v2, p0, Ldq7;->b:I
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldq7;->c:Lsm6;
-
-    invoke-static {v1, p1}, Luog;->d(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Ldq7;->d:Ljava/lang/Object;
-
-    invoke-interface {p1, v0, p0}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

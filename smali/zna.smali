@@ -3,62 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Ldk9;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr0;
+# static fields
+.field public static a:Lzna;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr0;I)V
-    .locals 0
+.method public static declared-synchronized b()Lzna;
+    .locals 2
 
-    iput p2, p0, Lzna;->a:I
+    const-class v0, Lzna;
 
-    iput-object p1, p0, Lzna;->b:Lr0;
+    monitor-enter v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    sget-object v1, Lzna;->a:Lzna;
 
-    return-void
+    if-nez v1, :cond_0
+
+    new-instance v1, Lzna;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Lzna;->a:Lzna;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lzna;->a:Lzna;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lck9;)V
+    .locals 0
 
-    iget v0, p0, Lzna;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lzna;->b:Lr0;
-
-    invoke-interface {p1}, Lpe4;->close()Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lzna;->b:Lr0;
-
-    invoke-interface {p1}, Lpe4;->close()Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

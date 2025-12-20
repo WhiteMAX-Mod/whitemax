@@ -1,64 +1,75 @@
 .class public final Ld7e;
-.super Ljava/lang/Object;
+.super Lrsh;
 .source "SourceFile"
-
-# interfaces
-.implements Lg7e;
 
 
 # static fields
-.field public static final a:Ld7e;
+.field public static final synthetic X:[Lp38;
+
+
+# instance fields
+.field public final b:Ld68;
+
+.field public final c:Ld68;
+
+.field public final d:Le7;
+
+.field public final o:Lyl5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    new-instance v0, Ld7e;
+    new-instance v0, Lifa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "enableSafeModeJob"
 
-    sput-object v0, Ld7e;->a:Ld7e;
+    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Ld7e;
+
+    invoke-direct {v0, v3, v1, v2}, Lifa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lfsd;->a:Lgsd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lp38;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Ld7e;->X:[Lp38;
 
     return-void
 .end method
 
+.method public constructor <init>(Ld68;Ld68;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0}, Lrsh;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ld7e;->b:Ld68;
 
-    if-ne p0, p1, :cond_0
+    iput-object p2, p0, Ld7e;->c:Ld68;
 
-    return v0
+    invoke-static {}, Llkj;->b()Le7;
 
-    :cond_0
-    instance-of p1, p1, Ld7e;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    iput-object p1, p0, Ld7e;->d:Le7;
 
-    const/4 p1, 0x0
+    new-instance p1, Lyl5;
 
-    return p1
+    const/4 p2, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-direct {p1, p2}, Lyl5;-><init>(I)V
 
-.method public final hashCode()I
-    .locals 1
+    iput-object p1, p0, Ld7e;->o:Lyl5;
 
-    const v0, 0x24f68a67
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "None"
-
-    return-object v0
+    return-void
 .end method

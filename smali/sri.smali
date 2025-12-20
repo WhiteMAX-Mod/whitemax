@@ -1,284 +1,439 @@
-.class public final Lsri;
+.class public abstract Lsri;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lhx5;
-
-
-# instance fields
-.field public final a:Lz8j;
-
-.field public final b:Ljava/lang/String;
+.field public static final a:[F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lhx5;
+    const/16 v0, 0x9
 
-    const-string v1, "ReviewService"
+    new-array v0, v0, [F
 
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lhx5;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lsri;->c:Lhx5;
+    sput-object v0, Lsri;->a:[F
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
+.method public static a(Landroid/graphics/Matrix;)F
+    .locals 6
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lsri;->b(Landroid/graphics/Matrix;I)F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    sget-object v4, Lsri;->a:[F
+
+    invoke-virtual {p0, v4}, Landroid/graphics/Matrix;->getValues([F)V
+
+    const/4 p0, 0x3
+
+    aget p0, v4, p0
+
+    float-to-double v4, p0
+
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v2
+
+    add-double/2addr v2, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    double-to-float p0, v0
+
+    return p0
+.end method
+
+.method public static b(Landroid/graphics/Matrix;I)F
+    .locals 1
+
+    sget-object v0, Lsri;->a:[F
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->getValues([F)V
+
+    aget p0, v0, p1
+
+    return p0
+.end method
+
+.method public static final c(Lclf;Ljava/util/List;)V
     .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "history\u2193"
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lclf;->u(Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    iput-object v0, p0, Lsri;->b:Ljava/lang/String;
+    move-result v0
 
-    const-string v0, "Play Store package is not found."
+    if-eqz v0, :cond_0
 
-    const-string v1, "com.android.vending"
+    const-string p1, "empty"
 
-    sget-object v2, Ltbj;->a:Lhx5;
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v4
-
-    iget-boolean v4, v4, Landroid/content/pm/ApplicationInfo;->enabled:Z
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-
-    if-nez v4, :cond_0
-
-    new-array p1, v3, [Ljava/lang/Object;
-
-    const-string v0, "Play Store package is disabled."
-
-    invoke-virtual {v2, v0, p1}, Lhx5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lclf;->u(Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    :try_start_1
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 v5, 0x40
-
-    invoke-virtual {v4, v1, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v4
-
-    iget-object v0, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-    :try_end_1
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-
-    if-eqz v0, :cond_7
-
-    array-length v4, v0
-
-    if-nez v4, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    move v6, v3
-
-    :goto_0
-    if-ge v6, v4, :cond_5
-
-    aget-object v7, v0, v6
-
-    invoke-virtual {v7}, Landroid/content/pm/Signature;->toByteArray()[B
-
-    move-result-object v7
-
-    :try_start_2
-    const-string v8, "SHA-256"
-
-    invoke-static {v8}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v8
-    :try_end_2
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_0
-
-    invoke-virtual {v8, v7}, Ljava/security/MessageDigest;->update([B)V
-
-    invoke-virtual {v8}, Ljava/security/MessageDigest;->digest()[B
-
-    move-result-object v7
-
-    const/16 v8, 0xb
-
-    invoke-static {v7, v8}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_1
-
-    :catch_0
-    const-string v7, ""
-
-    :goto_1
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v8, "8P1sW0EPJcslw7UzRsiXL64w-O50Ed-RBICtay1g24M"
-
-    invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_4
-
-    sget-object v8, Landroid/os/Build;->TAGS:Ljava/lang/String;
-
-    const-string v9, "dev-keys"
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_2
-
-    const-string v9, "test-keys"
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    :cond_2
-    const-string v8, "GXWy8XF3vIml3_MfnmSmyuKBpT3B0dWbHRR_4cgq-gA"
-
-    invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    :cond_3
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v2, "com.google.android.finsky.BIND_IN_APP_REVIEW_SERVICE"
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    new-instance v1, Lz8j;
-
-    sget-object v2, Lsri;->c:Lhx5;
-
-    invoke-direct {v1, p1, v2, v0}, Lz8j;-><init>(Landroid/content/Context;Lhx5;Landroid/content/Intent;)V
-
-    iput-object v1, p0, Lsri;->a:Lz8j;
-
-    return-void
-
-    :cond_5
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p1}, Lqri;->a(Ljava/util/List;)Lw77;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/CharSequence;
+    const-string v2, " "
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Lw77;->getId()J
+
+    move-result-wide v3
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    const-string v1, "\u2551\u2551"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    const/4 v3, 0x0
 
-    const-string v1, ", "
+    move v4, v3
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    move v5, v4
+
+    :goto_0
+    if-ge v4, v1, :cond_9
+
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lw77;
+
+    instance-of v7, v6, Lv77;
+
+    if-eqz v7, :cond_2
+
+    const-string v6, " GAP \u2551\u2551"
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    :cond_2
+    const/4 v7, 0x0
+
+    if-lez v4, :cond_3
+
+    add-int/lit8 v8, v4, -0x1
+
+    invoke-interface {p1, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lw77;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v8, v7
+
+    :goto_1
+    instance-of v9, v8, Lv77;
+
+    if-nez v9, :cond_4
+
+    if-nez v8, :cond_5
+
+    :cond_4
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v6}, Lw77;->getTime()J
+
+    move-result-wide v8
+
+    invoke-static {v8, v9}, Lclf;->i(J)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " - "
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move v5, v3
+
+    :cond_5
+    add-int/lit8 v5, v5, 0x1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    add-int/lit8 v8, v8, -0x1
+
+    if-ge v4, v8, :cond_6
+
+    add-int/lit8 v7, v4, 0x1
+
+    invoke-interface {p1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lw77;
+
     :cond_6
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    instance-of v8, v7, Lv77;
 
-    move-result-object p1
+    if-nez v8, :cond_7
 
-    const-string v0, "Play Store package certs are not valid. Found these sha256 certs: ["
-
-    const-string v1, "]."
-
-    invoke-static {v0, p1, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-array v0, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v2, p1, v0}, Lhx5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_4
+    if-nez v7, :cond_8
 
     :cond_7
-    :goto_3
-    new-array p1, v3, [Ljava/lang/Object;
+    invoke-interface {v6}, Lw77;->getTime()J
 
-    const-string v0, "Play Store package is not signed -- possibly self-built package. Could not verify."
+    move-result-wide v6
 
-    invoke-virtual {v2, v0, p1}, Lhx5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7}, Lclf;->i(J)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, " ("
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, ")"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, " \u2551\u2551"
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_8
+    :goto_2
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_9
+    invoke-static {p1}, Lqri;->b(Ljava/util/List;)Lw77;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_a
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lw77;->getId()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    :cond_a
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lclf;->u(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :catch_1
-    new-array p1, v3, [Ljava/lang/Object;
+.method public static final d(Lclf;Lt77;)V
+    .locals 4
 
-    invoke-virtual {v2, v0, p1}, Lhx5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v0, "bounds\u2193"
 
-    goto :goto_4
+    invoke-virtual {p0, v0}, Lclf;->u(Ljava/lang/String;)V
 
-    :catch_2
-    new-array p1, v3, [Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, p1}, Lhx5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v1, "firstId: "
 
-    :goto_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1}, Lt77;->g()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " \u2551\u2551 lastId: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lt77;->h()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " \u2551\u2551 chunks: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lt77;->j()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string p1, "empty"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    :cond_0
+    const-string v1, "\u2551\u2551"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lt77;->j()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lgc3;
+
+    const-string v2, " "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Lgc3;->a()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Lclf;->i(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " - "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Lgc3;->c()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Lclf;->i(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " \u2551\u2551"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lclf;->u(Ljava/lang/String;)V
+
     return-void
+.end method
+
+.method public static final e(Ljava/io/Reader;)Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/io/StringWriter;
+
+    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
+
+    const/16 v1, 0x2000
+
+    new-array v1, v1, [C
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    :goto_0
+    if-ltz v2, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Ljava/io/Writer;->write([CII)V
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

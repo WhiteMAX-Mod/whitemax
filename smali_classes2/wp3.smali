@@ -1,81 +1,79 @@
-.class public final synthetic Lwp3;
-.super Ljava/lang/Object;
+.class public final Lwp3;
+.super Landroid/view/TouchDelegate;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
-    .locals 0
+.method public constructor <init>(Luo9;)V
+    .locals 1
 
-    iput p2, p0, Lwp3;->a:I
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-object p1, p0, Lwp3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0, p1}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lwp3;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 2
 
-    iget v0, p0, Lwp3;->a:I
-
-    iget-object v1, p0, Lwp3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->X:[Lyy7;
-
-    new-instance v0, Ldq3;
-
-    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lhs;
-
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->X:[Lyy7;
-
-    const/4 v4, 0x0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ldq3;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->X:[Lyy7;
-
-    invoke-virtual {v1}, Lc54;->getOnBackPressedDispatcher()Ljva;
-
-    move-result-object v0
+    iget-object v0, p0, Lwp3;->a:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljva;->d()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object v0
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/TouchDelegate;
+
+    invoke-virtual {v1, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

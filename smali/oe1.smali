@@ -1,260 +1,90 @@
 .class public final Loe1;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-.field public final synthetic b:Lcda;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcda;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
     .locals 0
 
-    iput p2, p0, Loe1;->a:I
+    iput-object p2, p0, Loe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    iput-object p1, p0, Loe1;->b:Lcda;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Loe1;->a:I
+    check-cast p1, Lce1;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lkkc;->c:Lkkc;
+    invoke-virtual {p0, p1, p2}, Loe1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Loe1;->b:Lcda;
+    move-result-object p1
 
-    check-cast v1, Lukc;
+    check-cast p1, Loe1;
 
-    iget-wide v2, v1, Lukc;->b:J
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-boolean v1, v1, Lukc;->d:Z
+    invoke-virtual {p1, p2}, Loe1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Li3;->p0()Lii4;
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Loe1;
+
+    iget-object v1, p0, Loe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    invoke-direct {v0, p2, v1}, Loe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    iput-object p1, v0, Loe1;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Loe1;->o:Ljava/lang/Object;
+
+    check-cast p1, Lce1;
+
+    iget-object v0, p0, Loe1;->X:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lee1;
 
     move-result-object v0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    iget-object v1, p1, Lce1;->a:Ljava/lang/CharSequence;
 
-    const-string v5, ":call-chat?chat_id="
+    invoke-virtual {v0, v1}, Lee1;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lce1;->b:Lde1;
 
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lee1;->setIndicatorState(Lde1;)V
 
-    const-string v2, "&video_enabled="
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lkkc;->c:Lkkc;
-
-    iget-object v1, p0, Loe1;->b:Lcda;
-
-    check-cast v1, Lukc;
-
-    iget-object v1, v1, Lukc;->e:Ljava/lang/String;
-
-    invoke-virtual {v0}, Li3;->p0()Lii4;
-
-    move-result-object v0
-
-    const-string v2, ":call-join-link?link="
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lkkc;->c:Lkkc;
-
-    iget-object v1, p0, Loe1;->b:Lcda;
-
-    check-cast v1, Lukc;
-
-    iget-wide v2, v1, Lukc;->b:J
-
-    iget-boolean v1, v1, Lukc;->d:Z
-
-    invoke-virtual {v0}, Li3;->p0()Lii4;
-
-    move-result-object v0
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, ":call-user?opponent_id="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, "&video_enabled="
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Ly14;->c:Ly14;
-
-    iget-object v1, p0, Loe1;->b:Lcda;
-
-    check-cast v1, Lhaf;
-
-    iget-wide v2, v1, Lhaf;->b:J
-
-    iget-boolean v1, v1, Lhaf;->c:Z
-
-    invoke-virtual {v0, v2, v3, v1}, Ly14;->L0(JZ)V
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    :pswitch_3
-    sget-object v0, Lug1;->c:Lug1;
-
-    iget-object v1, p0, Loe1;->b:Lcda;
-
-    check-cast v1, Lpc1;
-
-    iget-object v2, v1, Lpc1;->b:Ljava/lang/String;
-
-    iget-boolean v3, v1, Lpc1;->c:Z
-
-    iget-boolean v4, v1, Lpc1;->d:Z
-
-    iget-boolean v5, v1, Lpc1;->e:Z
-
-    iget-boolean v1, v1, Lpc1;->f:Z
-
-    invoke-virtual {v0}, Li3;->p0()Lii4;
-
-    move-result-object v0
-
-    new-instance v6, Lhi4;
-
-    invoke-direct {v6}, Lhi4;-><init>()V
-
-    const-string v7, ":call-join-link"
-
-    iput-object v7, v6, Lhi4;->a:Ljava/lang/String;
-
-    const-string v7, "link"
-
-    invoke-virtual {v6, v2, v7}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "is_video_call"
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "video_enabled"
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "microphone_enabled"
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3, v2}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v2, "front_camera_enabled"
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1, v2}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "is_new"
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v6, v2, v1}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "replace_top"
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v6, v2, v1}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v6}, Lhi4;->a()Landroid/net/Uri;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lii4;->c(Landroid/net/Uri;Landroid/os/Bundle;)Z
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

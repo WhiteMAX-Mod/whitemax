@@ -1,358 +1,92 @@
-.class public final Lw06;
+.class public final synthetic Lw06;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls06;
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:Lenb;
+.field public final synthetic b:Lx06;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lenb;)V
+.method public synthetic constructor <init>(Lx06;I)V
     .locals 0
 
+    iput p2, p0, Lw06;->a:I
+
+    iput-object p1, p0, Lw06;->b:Lx06;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw06;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lw06;->b:Lenb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lw06;->a:Ljava/util/List;
+    iget v0, p0, Lw06;->a:I
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    iget-object v0, p0, Lw06;->b:Lx06;
 
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    move-result v1
+    const-string v1, "corner"
 
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls06;
-
-    invoke-interface {v1}, Ls06;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_2
-    :goto_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()V
-    .locals 2
-
-    invoke-virtual {p0}, Lw06;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lw06;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
 
-    move-result v1
+    :pswitch_0
+    iget-object v0, p0, Lw06;->b:Lx06;
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls06;
-
-    invoke-interface {v1}, Ls06;->b()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    invoke-virtual {p0}, Lw06;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lw06;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    move-result v1
+    const-string v1, "foreground"
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls06;
-
-    invoke-interface {v1}, Ls06;->c()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final d(Lvdf;)V
-    .locals 6
-
-    iget-object v0, p0, Lw06;->b:Lenb;
-
-    invoke-virtual {v0, p1}, Lenb;->p(Lvdf;)La7d;
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
 
     move-result-object v0
 
-    invoke-virtual {v0}, La7d;->c()Lu42;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_1
+    iget-object v0, p0, Lw06;->b:Lx06;
 
-    if-nez v1, :cond_0
-
-    goto/16 :goto_4
-
-    :cond_0
-    iget-object v0, v0, La7d;->c:Ljava/util/List;
-
-    invoke-static {v0, v1}, Llbj;->e(Ljava/util/List;Lu42;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-static {v0}, Llbj;->d(Ljava/util/List;)Lk5i;
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    const-string v1, "background"
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
 
     move-result-object v0
 
-    iget-object v1, v0, Lk5i;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-eqz v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lf9f;
-
-    iget-object v2, v2, Lh9f;->j:Ljava/math/BigInteger;
-
-    if-eqz v2, :cond_2
-
-    sget-object v5, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
-
-    invoke-virtual {v2, v5}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
-
-    move-result v2
-
-    if-lez v2, :cond_2
-
-    move v1, v4
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    move v1, v3
-
-    :goto_1
-    iget-object v0, v0, Lk5i;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_5
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lj9f;
-
-    iget-object v2, v2, Lh9f;->j:Ljava/math/BigInteger;
-
-    if-eqz v2, :cond_5
-
-    sget-object v5, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
-
-    invoke-virtual {v2, v5}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
-
-    move-result v2
-
-    if-lez v2, :cond_5
-
-    move v3, v4
-
-    :cond_6
-    :goto_2
-    if-nez v1, :cond_7
-
-    if-eqz v3, :cond_8
-
-    :cond_7
-    iget-object v0, p0, Lw06;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls06;
-
-    invoke-interface {v1, p1}, Ls06;->d(Lvdf;)V
-
-    goto :goto_3
-
-    :cond_8
-    :goto_4
-    return-void
-.end method
-
-.method public final e()V
-    .locals 2
-
-    invoke-virtual {p0}, Lw06;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lw06;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls06;
-
-    invoke-interface {v1}, Ls06;->e()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,139 +1,161 @@
-.class public final Lm9e;
+.class public abstract Lm9e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lm9e;
+.field public static final a:[J
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+.field public static final b:Llfa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lm9e;
+    const/4 v0, 0x2
 
-    const-wide/16 v1, 0x0
+    new-array v0, v0, [J
 
-    invoke-direct {v0, v1, v2, v1, v2}, Lm9e;-><init>(JJ)V
+    fill-array-data v0, :array_0
 
-    sput-object v0, Lm9e;->c:Lm9e;
+    sput-object v0, Lm9e;->a:[J
 
-    return-void
-.end method
+    new-instance v0, Llfa;
 
-.method public constructor <init>(JJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lm9e;->a:J
-
-    iput-wide p3, p0, Lm9e;->b:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    invoke-direct {v0, v1}, Llfa;-><init>(I)V
 
-    const-class v2, Lm9e;
+    sput-object v0, Lm9e;->b:Llfa;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    move-result-object v3
+    nop
 
-    if-eq v2, v3, :cond_1
+    :array_0
+    .array-data 8
+        -0x7f7f7f7f7f7f7f01L    # -2.937446524423077E-306
+        -0x1
+    .end array-data
+.end method
+
+.method public static final a(I)I
+    .locals 1
+
+    const/4 v0, 0x7
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_0
+    div-int/lit8 v0, p0, 0x8
+
+    sub-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static final b()Llfa;
+    .locals 1
+
+    new-instance v0, Llfa;
+
+    invoke-direct {v0}, Llfa;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static final varargs c([Lysb;)Llfa;
+    .locals 5
+
+    new-instance v0, Llfa;
+
+    array-length v1, p0
+
+    invoke-direct {v0, v1}, Llfa;-><init>(I)V
+
+    array-length v1, p0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, p0, v2
+
+    iget-object v4, v3, Lysb;->a:Ljava/lang/Object;
+
+    iget-object v3, v3, Lysb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0, v4, v3}, Llfa;->m(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lm9e;
-
-    iget-wide v2, p0, Lm9e;->a:J
-
-    iget-wide v4, p1, Lm9e;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lm9e;->b:J
-
-    iget-wide v4, p1, Lm9e;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lm9e;->a:J
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lm9e;->b:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "[timeUs="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lm9e;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", position="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lm9e;->b:J
-
-    const-string v3, "]"
-
-    invoke-static {v0, v1, v2, v3}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
+    :cond_0
     return-object v0
+.end method
+
+.method public static final d(I)I
+    .locals 0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_0
+    mul-int/lit8 p0, p0, 0x2
+
+    add-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
+.method public static final e(I)I
+    .locals 1
+
+    if-lez p0, :cond_0
+
+    const/4 v0, -0x1
+
+    invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
+
+    move-result p0
+
+    ushr-int p0, v0, p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final f(I)I
+    .locals 2
+
+    const/4 v0, 0x7
+
+    if-ne p0, v0, :cond_0
+
+    const/16 p0, 0x8
+
+    return p0
+
+    :cond_0
+    add-int/lit8 v1, p0, -0x1
+
+    div-int/2addr v1, v0
+
+    add-int/2addr v1, p0
+
+    return v1
 .end method

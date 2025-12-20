@@ -1,189 +1,72 @@
-.class public final enum Lraf;
-.super Ljava/lang/Enum;
+.class public final Lraf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-.implements Ljw0;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lraf;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final enum b:Lraf;
-
-.field public static final enum c:Lraf;
-
-.field public static final synthetic d:[Lraf;
-
-.field public static final synthetic o:Lzg5;
+.implements Lqaf;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lqt0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lraf;
-
-    const/4 v1, 0x0
-
-    const-string v2, "chat"
-
-    const-string v3, "CHAT"
-
-    invoke-direct {v0, v3, v1, v2}, Lraf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lraf;->b:Lraf;
-
-    new-instance v1, Lraf;
-
-    const/4 v2, 0x1
-
-    const-string v3, "channel"
-
-    const-string v4, "CHANNEL"
-
-    invoke-direct {v1, v4, v2, v3}, Lraf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lraf;->c:Lraf;
-
-    filled-new-array {v0, v1}, [Lraf;
-
-    move-result-object v0
-
-    sput-object v0, Lraf;->d:[Lraf;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lraf;->o:Lzg5;
-
-    new-instance v0, Lz6e;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lz6e;-><init>(I)V
-
-    sput-object v0, Lraf;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lqt0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lraf;->a:Ljava/lang/String;
+    iput-object p1, p0, Lraf;->a:Lqt0;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lraf;
-    .locals 1
-
-    const-class v0, Lraf;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lraf;
-
-    return-object p0
-.end method
-
-.method public static values()[Lraf;
-    .locals 1
-
-    sget-object v0, Lraf;->d:[Lraf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lraf;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 3
+.method public final a()Lorg/json/JSONObject;
+    .locals 5
 
-    sget-object v0, Lraf;->o:Lzg5;
+    new-instance v0, Lorg/json/JSONObject;
 
-    invoke-virtual {v0}, Li2;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "command"
+
+    const-string v2, "update-media-modifiers"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    :cond_0
-    move-object v1, v0
+    iget-object v1, p0, Lraf;->a:Lqt0;
 
-    check-cast v1, Lf2;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Lf2;->hasNext()Z
+    new-instance v2, Lorg/json/JSONObject;
 
-    move-result v2
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    if-eqz v2, :cond_1
+    :try_start_0
+    const-string v3, "denoise"
 
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+    iget-boolean v4, v1, Lqt0;->a:Z
 
-    move-result-object v1
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    check-cast v1, Lraf;
+    const-string v3, "denoiseAnn"
 
-    iget-object v2, v1, Lraf;->a:Ljava/lang/String;
+    iget-boolean v1, v1, Lqt0;->b:Z
 
-    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v2
+    :catch_0
+    const-string v1, "mediaModifiers"
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    return-object v1
+    move-result-object v0
 
-    :cond_1
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string v0, "Collection contains no element matching the predicate."
-
-    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

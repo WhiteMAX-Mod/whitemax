@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider<",
-            "Lml;",
+            "Lnl;",
             ">;"
         }
     .end annotation
@@ -37,10 +37,10 @@
 
 .field private volatile errorHandler:Lru/ok/android/onelog/OneLogErrorHandler;
 
-.field private volatile forceFallbackLogs:Lerf;
+.field private volatile forceFallbackLogs:Lt2g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lerf;"
+            "Lt2g;"
         }
     .end annotation
 .end field
@@ -186,7 +186,7 @@
         value = {
             "(",
             "Ljavax/inject/Provider<",
-            "Lml;",
+            "Lnl;",
             ">;)V"
         }
     .end annotation
@@ -224,7 +224,7 @@
     return-void
 .end method
 
-.method public getApiClient()Lml;
+.method public getApiClient()Lnl;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogImpl;->apiClient:Ljavax/inject/Provider;
@@ -239,7 +239,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lml;
+    check-cast v0, Lnl;
 
     if-eqz v0, :cond_0
 
@@ -279,7 +279,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lmri;->a()Landroid/app/Application;
+    invoke-static {}, Lu4j;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -410,12 +410,12 @@
     return-void
 .end method
 
-.method public setForceFallbackLogs(Lerf;)V
+.method public setForceFallbackLogs(Lt2g;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lerf;",
+            "Lt2g;",
             ")V"
         }
     .end annotation
@@ -483,11 +483,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Lawa;
+    new-instance v1, Lli6;
 
-    const/4 v2, 0x0
+    const/16 v2, 0x1b
 
-    invoke-direct {v1, v2, p1}, Lawa;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Lli6;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -513,11 +513,11 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lml;
+    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lnl;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lml;Ljava/util/Collection;)V
+    invoke-static {v0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lnl;Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -532,11 +532,11 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lml;
+    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lnl;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lml;Lru/ok/android/onelog/OneLogItem;)V
+    invoke-static {v0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lnl;Lru/ok/android/onelog/OneLogItem;)V
 
     return-void
 .end method

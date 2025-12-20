@@ -1,96 +1,125 @@
-.class public abstract Lwm;
+.class public final Lwm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/net/Uri;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const-string v0, "https://api.ok.ru"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iput-object p1, p0, Lwm;->a:Ljava/lang/String;
 
-    move-result-object v0
-
-    sput-object v0, Lwm;->a:Landroid/net/Uri;
+    iput-object p2, p0, Lwm;->b:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 3
 
-    const/16 v0, 0x2f
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    const/16 v2, 0x2e
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p0, v2, v0, v1}, Ldnf;->p(Ljava/lang/String;CCZ)Ljava/lang/String;
+    return v0
 
-    move-result-object p0
-
-    const-string v0, "ok://api/api/"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ok://api/api/"
+    :cond_0
+    instance-of v1, p1, Lwm;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwm;
+
+    iget-object v1, p0, Lwm;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lwm;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_2
 
-    const/16 p0, 0xd
+    return v2
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    :cond_2
+    iget-object v1, p0, Lwm;->b:Ljava/lang/String;
 
-    move-result-object p0
+    iget-object p1, p1, Lwm;->b:Ljava/lang/String;
 
-    const/16 v0, 0x2f
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/16 v1, 0x2e
+    move-result p1
 
-    invoke-static {p0, v0, v1, v2}, Ldnf;->p(Ljava/lang/String;CCZ)Ljava/lang/String;
+    if-nez p1, :cond_3
 
-    move-result-object p0
+    return v2
 
-    return-object p0
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lwm;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const-string v1, "Unknown uri "
+    move-result v0
 
-    invoke-static {p0, v1}, Lctd;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object p0
+    iget-object v1, p0, Lwm;->b:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    throw v0
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", apiEndpoint="
+
+    const-string v1, ")"
+
+    const-string v2, "Info(token="
+
+    iget-object v3, p0, Lwm;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lwm;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

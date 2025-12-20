@@ -6,8 +6,6 @@
 # instance fields
 .field private final cameraManager:Landroid/hardware/camera2/CameraManager;
 
-.field private final context:Landroid/content/Context;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)V
@@ -21,9 +19,6 @@
     invoke-direct {p0, p2, p3, v0, p4}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)V
 
     .line 2
-    iput-object p1, p0, Lorg/webrtc/Camera2Capturer;->context:Landroid/content/Context;
-
-    .line 3
     const-string p2, "camera"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -40,7 +35,7 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
     .locals 6
 
-    .line 4
+    .line 3
     new-instance v3, Lorg/webrtc/Camera2Enumerator;
 
     invoke-direct {v3, p1}, Lorg/webrtc/Camera2Enumerator;-><init>(Landroid/content/Context;)V
@@ -57,10 +52,7 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
 
-    .line 5
-    iput-object p1, v0, Lorg/webrtc/Camera2Capturer;->context:Landroid/content/Context;
-
-    .line 6
+    .line 4
     const-string p2, "camera"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

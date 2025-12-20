@@ -1,52 +1,45 @@
 .class public final Lwh9;
-.super Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+.super Lzp;
 .source "SourceFile"
 
-# interfaces
-.implements Lry2;
 
-
-# instance fields
-.field public final synthetic a:Landroid/graphics/drawable/Drawable;
+# static fields
+.field public static final a:Lwh9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lwh9;->a:Landroid/graphics/drawable/Drawable;
+    new-instance v0, Lwh9;
 
-    const/16 v5, 0xe
+    invoke-direct {v0}, Lzp;-><init>()V
 
-    const/4 v6, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;La16;ZZILtk4;)V
+    sput-object v0, Lwh9;->a:Lwh9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyt0;)V
-    .locals 1
+.method public final a()Ljava/util/concurrent/ExecutorService;
+    .locals 2
 
-    iget-object p1, p1, Lyt0;->b:Lzt0;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu5;
 
-    iget p1, p1, Lzt0;->i:I
+    move-result-object v0
 
-    iget-object v0, p0, Lwh9;->a:Landroid/graphics/drawable/Drawable;
+    const/16 v1, 0x3e
 
-    invoke-static {v0, p1}, Lcei;->k(Landroid/graphics/drawable/Drawable;I)V
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lpab;
+
+    invoke-virtual {v0}, Lpab;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
 .end method

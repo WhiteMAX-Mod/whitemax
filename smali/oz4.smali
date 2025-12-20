@@ -2,73 +2,52 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzy7;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Loz4;
+.field public final b:Ljava/lang/String;
 
-.field public static final b:Lj9c;
+.field public final c:J
+
+.field public d:J
+
+.field public e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public h:[I
+
+.field public final i:Ljava/util/TreeMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JIII[ILjava/util/TreeMap;)V
+    .locals 0
 
-    new-instance v0, Loz4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Loz4;->a:Ljava/lang/String;
 
-    sput-object v0, Loz4;->a:Loz4;
+    iput-object p2, p0, Loz4;->b:Ljava/lang/String;
 
-    new-instance v0, Lj9c;
+    iput-wide p3, p0, Loz4;->c:J
 
-    const-string v1, "kotlin.Double"
+    const-wide/16 p1, 0x0
 
-    sget-object v2, Lh9c;->e:Lh9c;
+    iput-wide p1, p0, Loz4;->d:J
 
-    invoke-direct {v0, v1, v2}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
+    iput p5, p0, Loz4;->e:I
 
-    sput-object v0, Loz4;->b:Lj9c;
+    iput p6, p0, Loz4;->f:I
 
-    return-void
-.end method
+    iput p7, p0, Loz4;->g:I
 
+    iput-object p8, p0, Loz4;->h:[I
 
-# virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->f(D)V
+    iput-object p9, p0, Loz4;->i:Ljava/util/TreeMap;
 
     return-void
-.end method
-
-.method public final b(Llh4;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-interface {p1}, Llh4;->C()D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final d()Lree;
-    .locals 1
-
-    sget-object v0, Loz4;->b:Lj9c;
-
-    return-object v0
 .end method

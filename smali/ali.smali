@@ -1,80 +1,110 @@
-.class public final Lali;
+.class public final synthetic Lali;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static final a:Lali;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Z
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:J
+
+.field public final synthetic g:Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
+    .locals 0
 
-    new-instance v0, Lali;
+    iput p9, p0, Lali;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lali;->b:J
 
-    sput-object v0, Lali;->a:Lali;
+    iput p3, p0, Lali;->c:I
 
-    new-instance v0, Ltci;
+    iput-boolean p4, p0, Lali;->d:Z
 
-    const/4 v1, 0x1
+    iput-boolean p5, p0, Lali;->e:Z
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    iput-wide p6, p0, Lali;->f:J
 
-    const-class v1, Lhdi;
+    iput-object p8, p0, Lali;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 20
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-object/from16 v0, p0
 
-    move-result-object p1
+    iget v1, v0, Lali;->a:I
 
-    throw p1
+    packed-switch v1, :pswitch_data_0
+
+    iget-object v9, v0, Lali;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v10, p1
+
+    check-cast v10, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v2, v0, Lali;->b:J
+
+    iget v4, v0, Lali;->c:I
+
+    iget-boolean v5, v0, Lali;->d:Z
+
+    iget-boolean v6, v0, Lali;->e:Z
+
+    iget-wide v7, v0, Lali;->f:J
+
+    invoke-static/range {v2 .. v10}, Lcom/my/tracker/core/b;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v1, v0, Lali;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v19, p1
+
+    check-cast v19, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v11, v0, Lali;->b:J
+
+    iget v13, v0, Lali;->c:I
+
+    iget-boolean v14, v0, Lali;->d:Z
+
+    iget-boolean v15, v0, Lali;->e:Z
+
+    iget-wide v2, v0, Lali;->f:J
+
+    move-object/from16 v18, v1
+
+    move-wide/from16 v16, v2
+
+    invoke-static/range {v11 .. v19}, Lcom/my/tracker/core/a;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

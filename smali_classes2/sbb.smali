@@ -1,85 +1,71 @@
-.class public abstract Lsbb;
+.class public abstract synthetic Lsbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_add:I
+    invoke-static {}, Li10;->values()[Li10;
 
-    sput v0, Lsbb;->a:I
+    move-result-object v0
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_bottom:I
+    array-length v0, v0
 
-    sput v0, Lsbb;->b:I
+    new-array v0, v0, [I
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_bottom_full:I
+    :try_start_0
+    sget-object v1, Li10;->b:Li10;
 
-    sput v0, Lsbb;->c:I
+    const/16 v1, 0x9
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_header:I
+    const/4 v2, 0x1
 
-    sput v0, Lsbb;->d:I
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_duration:I
+    :catch_0
+    :try_start_1
+    sget-object v1, Li10;->b:Li10;
 
-    sput v0, Lsbb;->e:I
+    const/4 v1, 0x6
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_format:I
+    const/4 v2, 0x2
 
-    sput v0, Lsbb;->f:I
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_size:I
+    :catch_1
+    :try_start_2
+    sget-object v1, Li10;->b:Li10;
 
-    sput v0, Lsbb;->g:I
+    const/16 v1, 0xa
 
-    sget v0, Lp4d;->oneme_settings_ringtone_default_section:I
+    const/4 v2, 0x3
 
-    sput v0, Lsbb;->h:I
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    sget v0, Lp4d;->oneme_settings_ringtone_low_volume_level:I
+    :catch_2
+    :try_start_3
+    sget-object v1, Li10;->b:Li10;
 
-    sput v0, Lsbb;->i:I
+    const/4 v1, 0x4
 
-    sget v0, Lp4d;->oneme_settings_ringtone_system_section:I
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    sput v0, Lsbb;->j:I
-
-    sget v0, Lp4d;->oneme_settings_ringtone_system_title:I
-
-    sput v0, Lsbb;->k:I
-
-    sget v0, Lp4d;->oneme_settings_ringtone_title:I
-
-    sput v0, Lsbb;->l:I
+    :catch_3
+    sput-object v0, Lsbb;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

@@ -1,25 +1,14 @@
-.class public final synthetic Lb84;
+.class public interface abstract Lb84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/BinaryOperator;
-
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract E(ILandroid/os/Bundle;)V
+.end method
 
-    check-cast p1, Lqt7;
+.method public onDismiss()V
+    .locals 0
 
-    check-cast p2, Lqt7;
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Lqt7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    return-object p2
+    return-void
 .end method

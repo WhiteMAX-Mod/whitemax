@@ -3,154 +3,91 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lte1;
+.implements Lqe1;
+.implements Lit1;
 
 
-# static fields
-.field public static final a:Lre1;
+# instance fields
+.field public final a:Ld68;
 
-.field public static final b:J
+.field public final b:Landroid/graphics/PointF;
 
-.field public static final c:Ln5g;
-
-.field public static final d:Ls18;
-
-.field public static final o:Lhoe;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ld68;Ld68;)V
+    .locals 2
 
-    new-instance v0, Lre1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lre1;->a:Ld68;
 
-    sput-object v0, Lre1;->a:Lre1;
+    new-instance v0, Lc00;
 
-    sget-wide v0, Lzza;->d:J
+    const/4 v1, 0x5
 
-    sput-wide v0, Lre1;->b:J
+    invoke-direct {v0, p1, v1}, Lc00;-><init>(Ld68;I)V
 
-    sget v0, Lmvd;->V1:I
+    const/4 v1, 0x3
 
-    new-instance v1, Ln5g;
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
 
-    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+    move-result-object v0
 
-    sput-object v1, Lre1;->c:Ln5g;
+    iput-object v0, p0, Lre1;->c:Ljava/lang/Object;
 
-    new-instance v0, Ls18;
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
 
-    sget v1, Lxza;->i:I
+    move-result-object p2
 
-    const/4 v2, 0x0
+    check-cast p2, Ldz1;
 
-    const/4 v3, 0x6
+    invoke-virtual {p2, p0}, Ldz1;->d(Lit1;)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls18;-><init>(III)V
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    sput-object v0, Lre1;->d:Ls18;
+    move-result-object p1
 
-    sget-object v0, Lhoe;->a:Lhoe;
+    check-cast p1, Landroid/content/Context;
 
-    sput-object v0, Lre1;->o:Lhoe;
+    invoke-static {p1}, Lgsh;->d(Landroid/content/Context;)Landroid/graphics/PointF;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lre1;->b:Landroid/graphics/PointF;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Lu18;
-    .locals 1
-
-    sget-object v0, Lre1;->d:Ls18;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lre1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
     .locals 2
 
-    sget-wide v0, Lre1;->b:J
+    invoke-super {p0, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
 
-    return-wide v0
-.end method
+    iget-object p1, p0, Lre1;->a:Ld68;
 
-.method public final getTitle()Ls5g;
-    .locals 1
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    sget-object v0, Lre1;->c:Ln5g;
+    move-result-object p1
 
-    return-object v0
-.end method
+    check-cast p1, Landroid/content/Context;
 
-.method public final getType()Lhoe;
-    .locals 1
+    invoke-static {p1}, Lgsh;->d(Landroid/content/Context;)Landroid/graphics/PointF;
 
-    sget-object v0, Lre1;->o:Lhoe;
+    move-result-object p1
 
-    return-object v0
-.end method
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v1, p0, Lre1;->b:Landroid/graphics/PointF;
 
-    const v0, 0x1f0af277
+    iput v0, v1, Landroid/graphics/PointF;->x:F
 
-    return v0
-.end method
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-.method public final m()I
-    .locals 1
+    iput p1, v1, Landroid/graphics/PointF;->y:F
 
-    sget v0, Lyza;->m:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "SendToChat"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x2
-
-    return v0
+    return-void
 .end method

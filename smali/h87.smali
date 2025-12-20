@@ -1,113 +1,86 @@
 .class public final Lh87;
-.super Lk2g;
+.super Li87;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
-
-.field public final synthetic f:I
-
-.field public final synthetic g:I
-
-.field public final synthetic h:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;III)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p5, p0, Lh87;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lh87;->h:Ljava/lang/Object;
-
-    iput p3, p0, Lh87;->f:I
-
-    iput p4, p0, Lh87;->g:I
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p2}, Lk2g;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Lh87;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lh87;->e:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lh87;->h:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lm87;
+    :cond_0
+    instance-of v1, p1, Lh87;
 
-    :try_start_0
-    iget v1, p0, Lh87;->f:I
+    const/4 v2, 0x0
 
-    iget v2, p0, Lh87;->g:I
+    if-nez v1, :cond_1
 
-    iget-object v3, v0, Lm87;->G0:Lu87;
+    return v2
 
-    invoke-virtual {v3, v1, v2}, Lu87;->P(II)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_1
+    check-cast p1, Lh87;
 
-    goto :goto_0
+    iget-object v1, p0, Lh87;->a:Ljava/lang/String;
 
-    :catch_0
-    move-exception v1
+    iget-object p1, p1, Lh87;->a:Ljava/lang/String;
 
-    const/4 v2, 0x2
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v2, v2, v1}, Lm87;->c(IILjava/io/IOException;)V
+    move-result p1
 
-    :goto_0
-    const-wide/16 v0, -0x1
+    if-nez p1, :cond_2
 
-    return-wide v0
+    return v2
 
-    :pswitch_0
-    iget-object v0, p0, Lh87;->h:Ljava/lang/Object;
+    :cond_2
+    return v0
+.end method
 
-    check-cast v0, Lvu2;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v0, Lvu2;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lh87;->a:Ljava/lang/String;
 
-    check-cast v0, Lm87;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget v1, p0, Lh87;->f:I
+    move-result v0
 
-    iget v2, p0, Lh87;->g:I
+    return v0
+.end method
 
-    :try_start_1
-    iget-object v3, v0, Lm87;->G0:Lu87;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v4, 0x1
+    const-string v0, "Time(time="
 
-    invoke-virtual {v3, v1, v2, v4}, Lu87;->y(IIZ)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v1, ")"
 
-    goto :goto_1
+    iget-object v2, p0, Lh87;->a:Ljava/lang/String;
 
-    :catch_1
-    move-exception v1
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x2
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v2, v1}, Lm87;->c(IILjava/io/IOException;)V
-
-    :goto_1
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

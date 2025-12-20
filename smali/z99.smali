@@ -3,64 +3,69 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp99;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lvp8;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public d:I
-
-.field public e:Z
+.field public final synthetic b:Lha9;
 
 
 # direct methods
-.method public constructor <init>(Lck0;Z)V
-    .locals 1
+.method public synthetic constructor <init>(Lha9;I)V
+    .locals 0
+
+    iput p2, p0, Lz99;->a:I
+
+    iput-object p1, p0, Lz99;->b:Lha9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lvp8;
-
-    invoke-direct {v0, p1, p2}, Lvp8;-><init>(Lck0;Z)V
-
-    iput-object v0, p0, Lz99;->a:Lvp8;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lz99;->c:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lz99;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ls9g;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lz99;->a:Lvp8;
+    iget p1, p0, Lz99;->a:I
 
-    iget-object v0, v0, Lvp8;->o:Lrp8;
+    packed-switch p1, :pswitch_data_0
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lz99;->b:Lha9;
 
-.method public final getUid()Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p1, Lha9;->s0:Lua9;
 
-    iget-object v0, p0, Lz99;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Lua9;->g()Z
 
-    return-object v0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lha9;->X:Lva9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lva9;->g(I)V
+
+    :cond_0
+    invoke-virtual {p1}, Llo;->dismiss()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lz99;->b:Lha9;
+
+    invoke-virtual {p1}, Llo;->dismiss()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

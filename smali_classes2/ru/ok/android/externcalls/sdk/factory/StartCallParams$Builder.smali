@@ -24,7 +24,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\r\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0019\u0010\u0008\u001a\u00020\u00002\n\u0010\u0007\u001a\u00060\u0005j\u0002`\u0006\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0017\u0010\u000c\u001a\u00020\u00002\u0008\u0010\u000b\u001a\u0004\u0018\u00010\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0019\u0010\u0010\u001a\u00020\u00002\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u000eH\u0007\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u00020\u00002\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0012\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0015\u0010\u0018\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0015\u0010\u001c\u001a\u00020\u00002\u0006\u0010\u001b\u001a\u00020\u001a\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u000f\u0010\u001e\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u001fR\u001e\u0010\u0007\u001a\n\u0018\u00010\u0005j\u0004\u0018\u0001`\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010 R\u0018\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010!R\u0018\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\"R\u0018\u0010\u0013\u001a\u0004\u0018\u00010\u00128\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010#R\u0016\u0010$\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u0018\u0010\u001b\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010&\u00a8\u0006\'"
+        "\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u000f\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0019\u0010\u0008\u001a\u00020\u00002\n\u0010\u0007\u001a\u00060\u0005j\u0002`\u0006\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0017\u0010\u000c\u001a\u00020\u00002\u0008\u0010\u000b\u001a\u0004\u0018\u00010\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0019\u0010\u0010\u001a\u00020\u00002\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u000eH\u0007\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u00020\u00002\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0012\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0015\u0010\u0018\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0015\u0010\u001c\u001a\u00020\u00002\u0006\u0010\u001b\u001a\u00020\u001a\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0015\u0010\u001e\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u0019J\u000f\u0010\u001f\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 R\u001e\u0010\u0007\u001a\n\u0018\u00010\u0005j\u0004\u0018\u0001`\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010!R\u0018\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010\"R\u0018\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010#R\u0018\u0010\u0013\u001a\u0004\u0018\u00010\u00128\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010$R\u0016\u0010%\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008%\u0010&R\u0018\u0010\u001b\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\'R\u0016\u0010(\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008(\u0010&\u00a8\u0006)"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
@@ -41,14 +41,14 @@
         "payload",
         "setPayload",
         "(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
-        "Lubg;",
+        "Ling;",
         "tokenProvider",
         "setTokenProvider",
-        "(Lubg;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
-        "Lvm;",
+        "(Ling;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
+        "Lxm;",
         "tokenInfoProvider",
         "setTokenInfoProvider",
-        "(Lvm;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
+        "(Lxm;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
         "",
         "isEnabled",
         "setWatchTogetherEnabledForAll",
@@ -57,15 +57,17 @@
         "chatId",
         "setChatId",
         "(J)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;",
+        "setWaitingForAdminEnabled",
         "build",
         "()Lru/ok/android/externcalls/sdk/factory/StartCallParams;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Ljava/lang/String;",
-        "Lubg;",
-        "Lvm;",
+        "Ling;",
+        "Lxm;",
         "isWatchTogetherEnabledForAll",
         "Z",
         "Ljava/lang/Long;",
+        "isWaitingForAdminEnabled",
         "calls-sdk_release"
     }
     k = 0x1
@@ -81,15 +83,17 @@
 # instance fields
 .field private chatId:Ljava/lang/Long;
 
+.field private isWaitingForAdminEnabled:Z
+
 .field private isWatchTogetherEnabledForAll:Z
 
 .field private opponentId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
 .field private payload:Ljava/lang/String;
 
-.field private tokenInfoProvider:Lvm;
+.field private tokenInfoProvider:Lxm;
 
-.field private tokenProvider:Lubg;
+.field private tokenProvider:Ling;
 
 
 # direct methods
@@ -115,7 +119,7 @@
 .end method
 
 .method public build()Lru/ok/android/externcalls/sdk/factory/StartCallParams;
-    .locals 19
+    .locals 20
 
     move-object/from16 v0, p0
 
@@ -145,77 +149,80 @@
     :goto_0
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getMyId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    move-result-object v10
-
-    if-eqz v10, :cond_4
-
-    .line 5
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lem6;
-
     move-result-object v11
 
-    if-eqz v11, :cond_3
+    if-eqz v11, :cond_4
 
-    .line 6
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lem6;
+    .line 5
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Loq6;
 
     move-result-object v12
 
-    if-eqz v12, :cond_2
+    if-eqz v12, :cond_3
+
+    .line 6
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Loq6;
+
+    move-result-object v13
+
+    if-eqz v13, :cond_2
 
     .line 7
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getShouldStartWithVideo()Z
 
-    move-result v16
+    move-result v17
 
     .line 8
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getEventListener()Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
-
-    move-result-object v14
+    iget-boolean v10, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->isWaitingForAdminEnabled:Z
 
     .line 9
-    iget-object v4, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->opponentId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    .line 10
-    iget-object v8, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->chatId:Ljava/lang/Long;
-
-    .line 11
-    iget-object v5, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->payload:Ljava/lang/String;
-
-    .line 12
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Lr52;
-
-    .line 13
-    iget-object v6, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenProvider:Lubg;
-
-    .line 14
-    iget-object v7, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenInfoProvider:Lvm;
-
-    .line 15
-    iget-boolean v9, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->isWatchTogetherEnabledForAll:Z
-
-    .line 16
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lhqa;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getEventListener()Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
     move-result-object v15
 
-    .line 17
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFieldTrials()Ljava/lang/String;
+    .line 10
+    iget-object v4, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->opponentId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    move-result-object v17
+    .line 11
+    iget-object v8, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->chatId:Ljava/lang/Long;
+
+    .line 12
+    iget-object v5, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->payload:Ljava/lang/String;
+
+    .line 13
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Lv72;
+
+    .line 14
+    iget-object v6, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenProvider:Ling;
+
+    .line 15
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenInfoProvider:Lxm;
+
+    .line 16
+    iget-boolean v9, v0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->isWatchTogetherEnabledForAll:Z
+
+    .line 17
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lpwa;
+
+    move-result-object v16
 
     .line 18
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFieldTrials()Ljava/lang/String;
+
+    move-result-object v18
+
+    .line 19
     new-instance v3, Lru/ok/android/externcalls/sdk/factory/StartCallParams;
 
-    const/16 v18, 0x0
+    const/16 v19, 0x0
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    invoke-direct/range {v3 .. v18}, Lru/ok/android/externcalls/sdk/factory/StartCallParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/String;Lubg;Lvm;Ljava/lang/Long;ZLru/ok/android/externcalls/sdk/id/ParticipantId;Lem6;Lem6;Lr52;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lhqa;ZLjava/lang/String;Ltk4;)V
+    invoke-direct/range {v3 .. v19}, Lru/ok/android/externcalls/sdk/factory/StartCallParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/String;Ling;Lxm;Ljava/lang/Long;ZZLru/ok/android/externcalls/sdk/id/ParticipantId;Loq6;Loq6;Lv72;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lpwa;ZLjava/lang/String;Lro4;)V
 
     return-object v3
 
-    .line 19
+    .line 20
     :cond_2
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -225,7 +232,7 @@
 
     throw v1
 
-    .line 20
+    .line 21
     :cond_3
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -235,7 +242,7 @@
 
     throw v1
 
-    .line 21
+    .line 22
     :cond_4
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -274,18 +281,26 @@
     return-object p0
 .end method
 
-.method public final setTokenInfoProvider(Lvm;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+.method public final setTokenInfoProvider(Lxm;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenInfoProvider:Lvm;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenInfoProvider:Lxm;
 
     return-object p0
 .end method
 
-.method public final setTokenProvider(Lubg;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+.method public final setTokenProvider(Ling;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenProvider:Lubg;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->tokenProvider:Ling;
+
+    return-object p0
+.end method
+
+.method public final setWaitingForAdminEnabled(Z)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+    .locals 0
+
+    iput-boolean p1, p0, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->isWaitingForAdminEnabled:Z
 
     return-object p0
 .end method

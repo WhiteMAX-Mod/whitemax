@@ -1,66 +1,64 @@
-.class public final synthetic Ldf1;
+.class public final Ldf1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Llf1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ldf1;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Ldf1;
 
-    iput v0, p0, Ldf1;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lhwd;Lav6;Luc2;)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x1
-
-    iput p1, p0, Ldf1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldf1;->a:Ldf1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Ldf1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    return v0
 
-    return p1
+    :cond_0
+    instance-of p1, p1, Ldf1;
 
-    :pswitch_0
-    sget-object p1, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Lb6a;
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    nop
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0xe84aa25
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "DeclineCall"
+
+    return-object v0
 .end method

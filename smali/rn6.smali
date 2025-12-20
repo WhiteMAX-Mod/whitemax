@@ -1,11 +1,27 @@
-.class public interface abstract Lrn6;
+.class public final Lrn6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;)V
-.end method
+# instance fields
+.field public final a:J
 
-.method public abstract onFailure(Ljava/lang/Throwable;)V
+.field public final b:Z
+
+.field public final c:I
+
+
+# direct methods
+.method public constructor <init>(IJZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p2, p0, Lrn6;->a:J
+
+    iput-boolean p4, p0, Lrn6;->b:Z
+
+    iput p1, p0, Lrn6;->c:I
+
+    return-void
 .end method

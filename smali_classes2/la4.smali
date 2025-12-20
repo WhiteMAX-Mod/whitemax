@@ -1,49 +1,57 @@
-.class public final Lla4;
-.super Lq44;
+.class public final synthetic Lla4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lux3;
 
 
 # instance fields
-.field public final synthetic X:Lva4;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lva4;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lvx3;
 
 
 # direct methods
-.method public constructor <init>(Lva4;Lq44;)V
+.method public synthetic constructor <init>(Lvx3;I)V
     .locals 0
 
-    iput-object p1, p0, Lla4;->X:Lva4;
+    iput p2, p0, Lla4;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lla4;->b:Lvx3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iput-object p1, p0, Lla4;->o:Ljava/lang/Object;
+    iget v0, p0, Lla4;->a:I
 
-    iget p1, p0, Lla4;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lla4;->b:Lvx3;
 
-    or-int/2addr p1, v0
+    check-cast p1, Ljava/lang/String;
 
-    iput p1, p0, Lla4;->Y:I
+    :goto_0
+    invoke-interface {v0, p1}, Lvx3;->accept(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lla4;->X:Lva4;
+    return-void
 
-    invoke-virtual {p1, p0}, Lva4;->j(Lq44;)Ljava/io/Serializable;
+    :pswitch_0
+    iget-object v0, p0, Lla4;->b:Lvx3;
 
-    move-result-object p1
+    check-cast p1, Ljava/lang/Throwable;
 
-    return-object p1
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

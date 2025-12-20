@@ -1,6 +1,14 @@
-.class public abstract Lrxc;
+.class public interface abstract annotation Lrxc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# static fields
-.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d1e
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lrxc;
+        intEncoding = .enum Lqxc;->a:Lqxc;
+    .end subannotation
+.end annotation

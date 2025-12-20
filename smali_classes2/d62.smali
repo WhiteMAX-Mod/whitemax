@@ -1,82 +1,69 @@
 .class public final Ld62;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public X:J
+
+.field public Y:J
+
+.field public Z:J
+
+.field public d:Le62;
+
+.field public o:J
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Le62;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Le62;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld62;->t0:Le62;
 
-    iput-boolean p1, p0, Ld62;->a:Z
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ld62;->s0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ld62;->u0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ld62;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ld62;->u0:I
 
-    if-nez v1, :cond_1
+    const-wide/16 v7, 0x0
 
-    return v2
+    const/4 v9, 0x0
 
-    :cond_1
-    check-cast p1, Ld62;
+    iget-object v0, p0, Ld62;->t0:Le62;
 
-    iget-boolean v1, p0, Ld62;->a:Z
+    const-wide/16 v1, 0x0
 
-    iget-boolean p1, p1, Ld62;->a:Z
+    const-wide/16 v3, 0x0
 
-    if-eq v1, p1, :cond_2
+    const-wide/16 v5, 0x0
 
-    return v2
+    move-object v10, p0
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual/range {v0 .. v10}, Le62;->a(JJJJLlid;Ll84;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    iget-boolean v0, p0, Ld62;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "SetSelection(selected="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Ld62;->a:Z
-
-    invoke-static {v0, v1, v2}, Lxrf;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

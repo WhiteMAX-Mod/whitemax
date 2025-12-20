@@ -1,66 +1,37 @@
 .class public final Llr8;
-.super Landroid/widget/ScrollView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/util/EnumSet;
+
+.field public final b:J
+
+.field public c:Ljava/util/ArrayList;
 
 
-# virtual methods
-.method public final onMeasure(II)V
-    .locals 2
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-    iget v0, p0, Llr8;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-lez v0, :cond_1
+    const-class v0, Lmr8;
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    iput-object v0, p0, Llr8;->a:Ljava/util/EnumSet;
 
-    iget p2, p0, Llr8;->a:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iput-object v0, p0, Llr8;->c:Ljava/util/ArrayList;
 
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    iget v1, p0, Llr8;->a:I
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p2
-
-    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p2
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    :goto_0
-    invoke-super {p0, p1, p2}, Landroid/widget/ScrollView;->onMeasure(II)V
-
-    return-void
-
-    :cond_1
-    invoke-super {p0, p1, p2}, Landroid/widget/ScrollView;->onMeasure(II)V
-
-    return-void
-.end method
-
-.method public final setMaxHeight(I)V
-    .locals 0
-
-    iput p1, p0, Llr8;->a:I
+    iput-wide p1, p0, Llr8;->b:J
 
     return-void
 .end method

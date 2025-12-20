@@ -1,36 +1,24 @@
-.class public final Lxd3;
+.class public final synthetic Lxd3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lzd3;
-
-.field public final synthetic c:Lpd7;
-
-.field public final synthetic d:Lld3;
-
-.field public final synthetic o:Ljd3;
+.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzd3;Lpd7;Lld3;Ljd3;I)V
+.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
     .locals 0
 
-    iput p5, p0, Lxd3;->a:I
+    iput p2, p0, Lxd3;->a:I
 
-    iput-object p1, p0, Lxd3;->b:Lzd3;
-
-    iput-object p2, p0, Lxd3;->c:Lpd7;
-
-    iput-object p3, p0, Lxd3;->d:Lld3;
-
-    iput-object p4, p0, Lxd3;->o:Ljd3;
+    iput-object p1, p0, Lxd3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,40 +27,85 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/view/View;)V
     .locals 5
 
-    iget v0, p0, Lxd3;->a:I
+    iget p1, p0, Lxd3;->a:I
 
-    iget-object v1, p0, Lxd3;->o:Ljd3;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v2, p0, Lxd3;->d:Lld3;
+    iget-object p1, p0, Lxd3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    iget-object v3, p0, Lxd3;->c:Lpd7;
+    const/4 v0, 0x1
 
-    iget-object v4, p0, Lxd3;->b:Lzd3;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lzd3;->l:[Lyy7;
-
-    invoke-virtual {v4, v1}, Lzd3;->i(Ljd3;)Lpd3;
-
-    move-result-object v0
-
-    invoke-static {v3, v2, v0}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
     return-void
 
     :pswitch_0
-    sget-object v0, Lzd3;->l:[Lyy7;
+    iget-object p1, p0, Lxd3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    invoke-virtual {v4, v1}, Lzd3;->i(Ljd3;)Lpd3;
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    invoke-virtual {p1}, Lx84;->getTargetController()Lx84;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lwd3;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lwd3;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v2
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    check-cast p1, Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {p1}, Lone/me/chats/search/ChatsListSearchScreen;->A0()Lg73;
+
+    move-result-object p1
+
+    iget-object v1, p1, Lg73;->W0:Lglf;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lm0;->isActive()Z
+
+    move-result v1
+
+    if-ne v1, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p1, Lg73;->S0:Ltb4;
+
+    new-instance v3, Ld63;
+
+    invoke-direct {v3, p1, v2}, Ld63;-><init>(Lg73;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v4, 0x2
+
+    invoke-static {v0, v1, v2, v3, v4}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
     move-result-object v0
 
-    invoke-static {v3, v2, v0}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
+    iput-object v0, p1, Lg73;->W0:Lglf;
 
+    :cond_2
+    :goto_1
     return-void
 
     nop

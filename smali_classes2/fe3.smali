@@ -1,675 +1,306 @@
 .class public final Lfe3;
-.super Ls19;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
-# interfaces
-.implements Lii9;
-.implements Lid3;
+
+# static fields
+.field public static final m:Ljava/lang/String;
 
 
 # instance fields
-.field public final x0:Lzd3;
+.field public final a:Lee3;
+
+.field public final b:Landroid/graphics/RectF;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Lrb9;
+
+.field public e:Landroid/text/Spannable;
+
+.field public f:Landroid/text/style/ClickableSpan;
+
+.field public g:Z
+
+.field public h:Lmq6;
+
+.field public i:Z
+
+.field public j:Ljava/lang/Runnable;
+
+.field public final k:Laz0;
+
+.field public final l:Landroid/view/GestureDetector;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0, p1}, Ls19;-><init>(Landroid/content/Context;)V
+    const-class v0, Lfe3;
 
-    new-instance v0, Lzd3;
+    invoke-static {v0}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
 
-    invoke-direct {v0, p1, p0}, Lzd3;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+    move-result-object v0
 
-    const/4 p1, 0x1
+    invoke-virtual {v0}, Lgd3;->c()Ljava/lang/String;
 
-    iput-boolean p1, v0, Lzd3;->e:Z
+    move-result-object v0
 
-    iput-object v0, p0, Lfe3;->x0:Lzd3;
-
-    return-void
-.end method
-
-.method public static final synthetic A(Lfe3;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+    sput-object v0, Lfe3;->m:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final synthetic B(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lee3;)V
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
+
+    iput-object p2, p0, Lfe3;->a:Lee3;
+
+    new-instance p2, Landroid/graphics/RectF;
+
+    invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p2, p0, Lfe3;->b:Landroid/graphics/RectF;
+
+    new-instance p2, Laz0;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p2, v0, p0}, Laz0;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lfe3;->k:Laz0;
+
+    new-instance v0, Landroid/view/GestureDetector;
+
+    invoke-direct {v0, p1, p2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+
+    iput-object v0, p0, Lfe3;->l:Landroid/view/GestureDetector;
 
     return-void
 .end method
 
-.method public static final synthetic y(Lfe3;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+.method public static final a(Lfe3;Lrb9;Landroid/text/Spannable;Landroid/view/MotionEvent;)Landroid/text/style/ClickableSpan;
+    .locals 6
 
-    invoke-super {p0, p1}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    iget-object p0, p0, Lfe3;->b:Landroid/graphics/RectF;
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public static final synthetic z(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 0
+    if-eqz p1, :cond_5
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    iget-object v1, p1, Lrb9;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    iget-object p1, p1, Lrb9;->c:Ljava/lang/Object;
+
+    check-cast p1, Landroid/text/Layout;
+
+    if-nez p1, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    sub-int/2addr p3, v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getScrollX()I
+
+    move-result v3
+
+    add-int/2addr v3, v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getScrollY()I
+
+    move-result v1
+
+    add-int/2addr v1, p3
+
+    invoke-virtual {p1, v1}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result p3
+
+    int-to-float v2, v3
+
+    :try_start_0
+    invoke-virtual {p1, p3, v2}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result v3
+
+    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineLeft(I)F
+
+    move-result v4
+
+    iput v4, p0, Landroid/graphics/RectF;->left:F
+
+    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineTop(I)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    iput v4, p0, Landroid/graphics/RectF;->top:F
+
+    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineMax(I)F
+
+    move-result v4
+
+    iget v5, p0, Landroid/graphics/RectF;->left:F
+
+    add-float/2addr v4, v5
+
+    iput v4, p0, Landroid/graphics/RectF;->right:F
+
+    invoke-virtual {p1, p3}, Landroid/text/Layout;->getLineBottom(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Landroid/graphics/RectF;->bottom:F
+
+    int-to-float p1, v1
+
+    invoke-virtual {p0, v2, p1}, Landroid/graphics/RectF;->contains(FF)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    const-class p0, Landroid/text/style/ClickableSpan;
+
+    invoke-interface {p2, v3, v3, p0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbt;->v([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/text/style/ClickableSpan;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_2
+    move-object p0, v0
+
+    goto :goto_1
+
+    :goto_0
+    new-instance p1, Lyyd;
+
+    invoke-direct {p1, p0}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p0, p1
+
+    :goto_1
+    invoke-static {p0}, Lazd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    sget-object p2, Lfe3;->m:Ljava/lang/String;
+
+    const-string p3, "findClickableSpanUnderTouch failed:"
+
+    invoke-static {p2, p3, p1}, Lm4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    instance-of p1, p0, Lyyd;
+
+    if-eqz p1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v0, p0
+
+    :goto_2
+    check-cast v0, Landroid/text/style/ClickableSpan;
+
+    :cond_5
+    :goto_3
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b(II)I
-    .locals 2
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    iget v1, v0, Lzd3;->c:I
-
-    invoke-virtual {v0, p1, p2}, Lzd3;->d(II)V
-
-    iget p1, v0, Lzd3;->d:I
-
-    return p1
-.end method
-
-.method public final e(Landroid/view/MotionEvent;[I)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p1
-
-    invoke-static {p1}, Lkti;->d(F)I
-
-    move-result p1
-
-    iget-object v1, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {v1, v0, p1, p2}, Lzd3;->g(II[I)V
-
-    return-void
-.end method
-
-.method public final i(Landroid/view/MotionEvent;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-super {p0, p1}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    new-instance v0, Lrb9;
 
-    return-void
+    new-instance v1, Ljava/lang/ref/WeakReference;
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Lbe3;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lbe3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    new-instance v0, Lce3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lce3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final o(Landroid/view/MotionEvent;)Ljd3;
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p1
-
-    invoke-static {p1}, Lkti;->d(F)I
-
-    move-result p1
-
-    iget-object v1, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {v1, v0, p1}, Lzd3;->b(II)Ljd3;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    const/16 v2, 0xa
 
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 18
+    invoke-direct {v0, v1, v2, p1}, Lrb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-object/from16 v1, p1
+    iput-object v0, p0, Lfe3;->d:Lrb9;
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    mul-float/2addr v2, v0
-
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Lqh9;
-
-    invoke-virtual {v0}, Lqh9;->a()[F
-
-    move-result-object v0
-
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    check-cast v3, Lqh9;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v3
-
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    check-cast v4, Lqh9;
-
-    iget v4, v4, Lqh9;->q:F
-
-    invoke-static {}, Ldw8;->a()[F
-
-    move-result-object v5
-
-    array-length v6, v5
-
-    const/4 v7, 0x0
-
-    move v8, v7
-
-    move v9, v8
-
-    :goto_0
-    if-ge v8, v6, :cond_0
-
-    aget v10, v5, v8
-
-    add-int/lit8 v10, v9, 0x1
-
-    invoke-static {}, Ldw8;->a()[F
-
-    move-result-object v11
-
-    aget v12, v0, v9
-
-    sub-float/2addr v12, v2
-
-    const/4 v13, 0x0
-
-    invoke-static {v13, v12}, Ljava/lang/Math;->max(FF)F
-
-    move-result v12
-
-    aput v12, v11, v9
-
-    add-int/lit8 v8, v8, 0x1
-
-    move v9, v10
-
-    goto :goto_0
+    iput-object p2, p0, Lfe3;->e:Landroid/text/Spannable;
 
     :cond_0
-    invoke-static {}, Ldw8;->b()Landroid/graphics/Path;
+    iget-object p1, p0, Lfe3;->l:Landroid/view/GestureDetector;
 
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/graphics/Path;->reset()V
-
-    iget v0, v3, Landroid/graphics/Rect;->left:I
-
-    int-to-float v0, v0
-
-    add-float v12, v0, v2
-
-    iget v0, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v0, v0
-
-    add-float v13, v0, v2
-
-    iget v0, v3, Landroid/graphics/Rect;->right:I
-
-    int-to-float v0, v0
-
-    sub-float v14, v0, v2
-
-    iget v0, v3, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v2
-
-    sub-float v15, v0, v4
-
-    invoke-static {}, Ldw8;->a()[F
-
-    move-result-object v16
-
-    sget-object v17, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
-
-    invoke-virtual/range {v11 .. v17}, Landroid/graphics/Path;->addRoundRect(FFFF[FLandroid/graphics/Path$Direction;)V
-
-    invoke-static {}, Ldw8;->b()Landroid/graphics/Path;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    :try_start_0
-    invoke-virtual/range {p0 .. p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    move-object/from16 v3, p0
-
-    :try_start_1
-    iget-object v0, v3, Lfe3;->x0:Lzd3;
-
-    iget-object v4, v0, Lzd3;->j:[F
-
-    array-length v4, v4
-
-    :goto_1
-    if-ge v7, v4, :cond_2
-
-    iget-object v5, v0, Lzd3;->f:Los0;
-
-    invoke-virtual {v5, v7}, Los0;->c(I)Lm45;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lm45;->d()Lqsd;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5, v1}, Lqsd;->draw(Landroid/graphics/Canvas;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_1
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v0
-
-    move-object/from16 v3, p0
-
-    :goto_2
-    invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    throw v0
-.end method
-
-.method public final onFinishTemporaryDetach()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onFinishTemporaryDetach()V
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    iget-object v0, v0, Lzd3;->f:Los0;
-
-    invoke-virtual {v0}, Los0;->i()V
-
-    return-void
-.end method
-
-.method public final onStartTemporaryDetach()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onStartTemporaryDetach()V
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {v0}, Lzd3;->a()V
-
-    return-void
-.end method
-
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 15
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-super/range {p0 .. p4}, Landroid/view/View;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Lde3;
-
-    const/4 v7, 0x0
-
-    move-object v2, p0
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v4, p2
-
-    move-wide/from16 v5, p3
-
-    invoke-direct/range {v1 .. v7}, Lde3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    new-instance v8, Lde3;
-
-    const/4 v14, 0x1
-
-    move-object v9, p0
-
-    move-object/from16 v10, p1
-
-    move-object/from16 v11, p2
-
-    move-wide/from16 v12, p3
-
-    invoke-direct/range {v8 .. v14}, Lde3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
-
-    invoke-virtual {p0, v8}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public setOnFinalImageSetCallback(Lem6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lem6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    iput-object p1, v0, Lzd3;->i:Lem6;
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {v0, p1}, Lzd3;->c(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p1, p3}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
-.end method
-
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
-
-    .line 4
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 5
-    invoke-super {p0, p1}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-
-    .line 6
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Lbe3;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, p1, v2}, Lbe3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    new-instance v0, Lce3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Lce3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 3
-
-    .line 1
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1, p2}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Lee3;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lee3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    new-instance v0, Lee3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lee3;-><init>(Lfe3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final v(IIII)J
-    .locals 0
-
-    iget-object p1, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {p1, p2}, Lzd3;->e(I)V
-
-    iget p2, p1, Lzd3;->c:I
-
-    iget p1, p1, Lzd3;->d:I
-
-    invoke-static {p2, p1}, Lbhi;->a(II)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
-
-    iget-object v0, p0, Lfe3;->x0:Lzd3;
-
-    invoke-virtual {v0, p1}, Lzd3;->l(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final x(Lws8;)V
-    .locals 4
-
-    check-cast p1, Lae3;
-
-    iget-object v0, p1, Lae3;->a:[F
-
-    iget-object p1, p1, Lae3;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lfe3;->x0:Lzd3;
-
-    iput-object v0, v1, Lzd3;->j:[F
-
-    iget-object v0, v1, Lzd3;->g:Lnk;
-
-    sget-object v2, Lzd3;->l:[Lyy7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v0, v1, v2, p1}, Li3;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
-
-    return-void
 .end method

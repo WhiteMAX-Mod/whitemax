@@ -1,41 +1,27 @@
 .class public final Ldpa;
-.super Ljava/lang/Object;
+.super Lxbg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ldpa;
-
-
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final c:J
 
-.field public final b:Ljava/util/List;
+.field public final d:Ljava/util/List;
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldpa;
-
-    sget-object v1, Lhd5;->a:Lhd5;
-
-    invoke-direct {v0, v1, v1}, Ldpa;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    sput-object v0, Ldpa;->c:Ldpa;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(JJLjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldpa;->a:Ljava/util/List;
+    iput-wide p1, p0, Ldpa;->c:J
 
-    iput-object p2, p0, Ldpa;->b:Ljava/util/List;
+    iput-object p5, p0, Ldpa;->d:Ljava/util/List;
+
+    iput-wide p3, p0, Ldpa;->o:J
 
     return-void
 .end method
@@ -43,7 +29,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -63,11 +49,11 @@
     :cond_1
     check-cast p1, Ldpa;
 
-    iget-object v1, p0, Ldpa;->a:Ljava/util/List;
+    iget-wide v3, p0, Ldpa;->c:J
 
-    iget-object v3, p1, Ldpa;->a:Ljava/util/List;
+    iget-wide v5, p1, Ldpa;->c:J
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4, v5, v6}, Lqa5;->f(JJ)Z
 
     move-result v1
 
@@ -76,36 +62,57 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Ldpa;->b:Ljava/util/List;
+    iget-object v1, p0, Ldpa;->d:Ljava/util/List;
 
-    iget-object p1, p1, Ldpa;->b:Ljava/util/List;
+    iget-object v3, p1, Ldpa;->d:Ljava/util/List;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_3
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
+    iget-wide v3, p0, Ldpa;->o:J
+
+    iget-wide v5, p1, Ldpa;->o:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Ldpa;->a:Ljava/util/List;
+    sget v0, Lqa5;->d:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-wide v0, p0, Ldpa;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Ldpa;->b:Ljava/util/List;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iget-object v2, p0, Ldpa;->d:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lq3g;->l(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-wide v1, p0, Ldpa;->o:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
@@ -115,31 +122,39 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Ldpa;->c:J
 
-    const-string v1, "PendingNotifications(insert="
+    invoke-static {v0, v1}, Lqa5;->p(J)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Ldpa;->a:Ljava/util/List;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "Response(showTime="
 
-    const-string v1, ", delete="
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ldpa;->b:Ljava/util/List;
+    const-string v0, ", banners="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    iget-object v0, p0, Ldpa;->d:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-wide v2, p0, Ldpa;->o:J
+
+    invoke-static {v1, v2, v3, v0}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

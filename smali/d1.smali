@@ -1,96 +1,61 @@
 .class public final Ld1;
-.super Ljava/lang/Throwable;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ld1;
+
+
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public c:Ld1;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
+
+    new-instance v0, Ld1;
+
+    invoke-direct {v0}, Ld1;-><init>()V
+
+    sput-object v0, Ld1;->d:Ld1;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput-object v0, p0, Ld1;->a:Ljava/lang/Runnable;
+
+    .line 6
+    iput-object v0, p0, Ld1;->b:Ljava/util/concurrent/Executor;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 0
 
     .line 1
-    const/4 v0, 0x6
-
-    iput v0, p0, Ld1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput p2, p0, Ld1;->a:I
-
-    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
-    .locals 0
+    iput-object p1, p0, Ld1;->a:Ljava/lang/Runnable;
 
     .line 3
-    iput p3, p0, Ld1;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object p2, p0, Ld1;->b:Ljava/util/concurrent/Executor;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
-    .locals 1
-
-    iget v0, p0, Ld1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_1
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_2
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_3
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

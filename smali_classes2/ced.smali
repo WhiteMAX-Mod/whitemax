@@ -1,140 +1,74 @@
-.class public final Lced;
+.class public abstract Lced;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Leed;
 
 
-# instance fields
-.field public final a:Ls5g;
+# static fields
+.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a7f
 
-.field public final b:Ljava/lang/Integer;
+.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a80
 
+.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a81
 
-# direct methods
-.method public constructor <init>(Ls5g;Ljava/lang/Integer;)V
-    .locals 0
+.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a82
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a83
 
-    iput-object p1, p0, Lced;->a:Ls5g;
+.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a84
 
-    iput-object p2, p0, Lced;->b:Ljava/lang/Integer;
+.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a85
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a86
 
+.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a87
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a88
 
-    const/4 v0, 0x1
+.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a89
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a8a
 
-    return v0
+.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a8b
 
-    :cond_0
-    instance-of v1, p1, Lced;
+.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a8c
 
-    const/4 v2, 0x0
+.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a8d
 
-    if-nez v1, :cond_1
+.field public static oneme_stickers_settings_recent_title:I = 0x7f130a8e
 
-    return v2
+.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a8f
 
-    :cond_1
-    check-cast p1, Lced;
+.field public static oneme_stickers_settings_sets_title:I = 0x7f130a90
 
-    iget-object v1, p0, Lced;->a:Ls5g;
+.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a91
 
-    iget-object v3, p1, Lced;->a:Ls5g;
+.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a92
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a93
 
-    move-result v1
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a94
 
-    if-nez v1, :cond_2
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a95
 
-    return v2
+.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a96
 
-    :cond_2
-    iget-object v1, p0, Lced;->b:Ljava/lang/Integer;
+.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a97
 
-    iget-object p1, p1, Lced;->b:Ljava/lang/Integer;
+.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a98
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a99
 
-    move-result p1
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a9a
 
-    if-nez p1, :cond_3
+.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a9b
 
-    return v2
+.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a9c
 
-    :cond_3
-    return v0
-.end method
+.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a9d
 
-.method public final hashCode()I
-    .locals 2
+.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a9e
 
-    iget-object v0, p0, Lced;->a:Ls5g;
+.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a9f
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130aa1
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lced;->b:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(textSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lced;->a:Ls5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lced;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130aa2

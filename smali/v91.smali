@@ -1,54 +1,97 @@
-.class public final synthetic Lv91;
+.class public final Lv91;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmi4;
+.implements Lx91;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Long;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Z
+.field public final a:Ljava/util/Set;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Ljava/util/Set;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lv91;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lv91;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lv91;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lv91;->d:Z
+    iput-object p1, p0, Lv91;->a:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lv91;->a:Ljava/lang/Long;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lv91;->b:Ljava/lang/String;
+    return v0
 
-    iget-object v3, p0, Lv91;->c:Ljava/lang/String;
+    :cond_0
+    instance-of v1, p1, Lv91;
 
-    iget-boolean v4, p0, Lv91;->d:Z
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lv91;
+
+    iget-object v1, p0, Lv91;->a:Ljava/util/Set;
+
+    iget-object p1, p1, Lv91;->a:Ljava/util/Set;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lv91;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UpdateContacts(contactIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lv91;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

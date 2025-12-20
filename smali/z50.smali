@@ -2,109 +2,110 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luqa;
+
+# static fields
+.field public static final e:Lz50;
 
 
 # instance fields
-.field public final synthetic a:Lwe5;
+.field public final a:I
 
-.field public final synthetic b:La60;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(La60;Lwe5;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz50;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1, v1}, Lz50;-><init>(III)V
+
+    sput-object v0, Lz50;->e:Lz50;
+
+    return-void
+.end method
+
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz50;->b:La60;
+    iput p1, p0, Lz50;->a:I
 
-    iput-object p2, p0, Lz50;->a:Lwe5;
+    iput p2, p0, Lz50;->b:I
+
+    iput p3, p0, Lz50;->c:I
+
+    invoke-static {p3}, Loah;->z(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p3, p2}, Loah;->u(II)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    iput p1, p0, Lz50;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Ldv0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v1, 0x53
 
-    iget-object v0, p0, Lz50;->b:La60;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v1, v0, La60;->l:Lwe5;
+    const-string v1, "AudioFormat[sampleRate="
 
-    iget-object v2, p0, Lz50;->a:Lwe5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v1, v2, :cond_0
+    iget v1, p0, Lz50;->a:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, "Receive BufferProvider state change: "
+    const-string v1, ", channelCount="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, La60;->h:Ldv0;
+    iget v1, p0, Lz50;->b:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, " to "
+    const-string v1, ", encoding="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lz50;->c:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const/16 v1, 0x5d
 
-    const-string v2, "AudioSource"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v1}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, v0, La60;->h:Ldv0;
+    move-result-object v0
 
-    if-eq v1, p1, :cond_0
-
-    iput-object p1, v0, La60;->h:Ldv0;
-
-    invoke-virtual {v0}, La60;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-object v0, p0, Lz50;->b:La60;
-
-    iget-object v1, v0, La60;->l:Lwe5;
-
-    iget-object v2, p0, Lz50;->a:Lwe5;
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v1, v0, La60;->j:Ljava/util/concurrent/Executor;
-
-    iget-object v0, v0, La60;->k:Lenb;
-
-    if-eqz v1, :cond_0
-
-    if-eqz v0, :cond_0
-
-    new-instance v2, Lud;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v2, v0, v3, p1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

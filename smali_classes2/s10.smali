@@ -26,18 +26,12 @@
 
 .field public static final enum u0:Ls10;
 
-.field public static final enum v0:Ls10;
-
-.field public static final enum w0:Ls10;
-
-.field public static final enum x0:Ls10;
-
-.field public static final synthetic y0:[Ls10;
+.field public static final synthetic v0:[Ls10;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 16
+    .locals 13
 
     new-instance v0, Ls10;
 
@@ -51,7 +45,7 @@
 
     new-instance v1, Ls10;
 
-    const-string v2, "CONTROL"
+    const-string v2, "NEW"
 
     const/4 v3, 0x1
 
@@ -61,7 +55,7 @@
 
     new-instance v2, Ls10;
 
-    const-string v3, "PHOTO"
+    const-string v3, "ADD"
 
     const/4 v4, 0x2
 
@@ -71,7 +65,7 @@
 
     new-instance v3, Ls10;
 
-    const-string v4, "VIDEO"
+    const-string v4, "REMOVE"
 
     const/4 v5, 0x3
 
@@ -81,7 +75,7 @@
 
     new-instance v4, Ls10;
 
-    const-string v5, "AUDIO"
+    const-string v5, "LEAVE"
 
     const/4 v6, 0x4
 
@@ -91,7 +85,7 @@
 
     new-instance v5, Ls10;
 
-    const-string v6, "STICKER"
+    const-string v6, "TITLE"
 
     const/4 v7, 0x5
 
@@ -101,7 +95,7 @@
 
     new-instance v6, Ls10;
 
-    const-string v7, "SHARE"
+    const-string v7, "ICON"
 
     const/4 v8, 0x6
 
@@ -111,7 +105,7 @@
 
     new-instance v7, Ls10;
 
-    const-string v8, "CALL"
+    const-string v8, "SYSTEM"
 
     const/4 v9, 0x7
 
@@ -121,7 +115,7 @@
 
     new-instance v8, Ls10;
 
-    const-string v9, "APP"
+    const-string v9, "JOIN_BY_LINK"
 
     const/16 v10, 0x8
 
@@ -131,7 +125,7 @@
 
     new-instance v9, Ls10;
 
-    const-string v10, "FILE"
+    const-string v10, "PIN"
 
     const/16 v11, 0x9
 
@@ -141,7 +135,7 @@
 
     new-instance v10, Ls10;
 
-    const-string v11, "CONTACT"
+    const-string v11, "BOT_STARTED"
 
     const/16 v12, 0xa
 
@@ -149,41 +143,11 @@
 
     sput-object v10, Ls10;->u0:Ls10;
 
-    new-instance v11, Ls10;
-
-    const-string v12, "PRESENT"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Ls10;->v0:Ls10;
-
-    new-instance v12, Ls10;
-
-    const-string v13, "LOCATION"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Ls10;->w0:Ls10;
-
-    new-instance v13, Ls10;
-
-    const-string v14, "WIDGET"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v13, v14, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v13, Ls10;->x0:Ls10;
-
-    filled-new-array/range {v0 .. v13}, [Ls10;
+    filled-new-array/range {v0 .. v10}, [Ls10;
 
     move-result-object v0
 
-    sput-object v0, Ls10;->y0:[Ls10;
+    sput-object v0, Ls10;->v0:[Ls10;
 
     return-void
 .end method
@@ -205,7 +169,7 @@
 .method public static values()[Ls10;
     .locals 1
 
-    sget-object v0, Ls10;->y0:[Ls10;
+    sget-object v0, Ls10;->v0:[Ls10;
 
     invoke-virtual {v0}, [Ls10;->clone()Ljava/lang/Object;
 

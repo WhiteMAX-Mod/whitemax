@@ -483,11 +483,11 @@
 
     iget-object v0, p0, Lorg/webrtc/TextureBufferImpl;->toI420Handler:Landroid/os/Handler;
 
-    new-instance v1, Ltv0;
+    new-instance v1, Ljx0;
 
-    const/16 v2, 0xe
+    const/16 v2, 0xc
 
-    invoke-direct {v1, v2, p0}, Ltv0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ljx0;-><init>(ILjava/lang/Object;)V
 
     invoke-static {v0, v1}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 

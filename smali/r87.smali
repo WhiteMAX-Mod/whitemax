@@ -1,408 +1,117 @@
 .class public final Lr87;
-.super Ljava/lang/Object;
+.super Lhc3;
 .source "SourceFile"
-
-# interfaces
-.implements Lx6f;
 
 
 # instance fields
-.field public final synthetic X:Lt87;
+.field public t0:[B
 
-.field public final a:Lqu0;
+.field public volatile u0:Z
 
-.field public final b:Lqu0;
-
-.field public c:Z
-
-.field public final d:J
-
-.field public o:Z
-
-
-# direct methods
-.method public constructor <init>(Lt87;JZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lr87;->X:Lt87;
-
-    iput-wide p2, p0, Lr87;->d:J
-
-    iput-boolean p4, p0, Lr87;->o:Z
-
-    new-instance p1, Lqu0;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lr87;->a:Lqu0;
-
-    new-instance p1, Lqu0;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lr87;->b:Lqu0;
-
-    return-void
-.end method
+.field public v0:[B
 
 
 # virtual methods
-.method public final b(Lqu0;J)J
-    .locals 16
+.method public final a()V
+    .locals 1
 
-    move-object/from16 v1, p0
+    const/4 v0, 0x1
 
-    move-wide/from16 v2, p2
+    iput-boolean v0, p0, Lr87;->u0:Z
 
-    const-wide/16 v4, 0x0
+    return-void
+.end method
 
-    cmp-long v0, v2, v4
-
-    if-ltz v0, :cond_9
-
-    :goto_0
-    iget-object v6, v1, Lr87;->X:Lt87;
-
-    monitor-enter v6
+.method public final load()V
+    .locals 6
 
     :try_start_0
-    iget-object v0, v1, Lr87;->X:Lt87;
+    iget-object v0, p0, Lhc3;->s0:Lmpf;
 
-    iget-object v0, v0, Lt87;->i:Ls87;
+    iget-object v1, p0, Lhc3;->b:Lzi4;
 
-    invoke-virtual {v0}, Lwx;->i()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-virtual {v0, v1}, Lmpf;->G(Lzi4;)J
 
-    :try_start_1
-    iget-object v0, v1, Lr87;->X:Lt87;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lt87;->f()I
+    move v1, v0
+
+    :cond_0
+    :goto_0
+    const/4 v2, -0x1
+
+    if-eq v0, v2, :cond_2
+
+    iget-boolean v0, p0, Lr87;->u0:Z
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lr87;->t0:[B
+
+    array-length v3, v0
+
+    add-int/lit16 v4, v1, 0x4000
+
+    const/16 v5, 0x4000
+
+    if-ge v3, v4, :cond_1
+
+    array-length v3, v0
+
+    add-int/2addr v3, v5
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lr87;->t0:[B
+
+    :cond_1
+    iget-object v0, p0, Lhc3;->s0:Lmpf;
+
+    iget-object v3, p0, Lr87;->t0:[B
+
+    invoke-virtual {v0, v3, v1, v5}, Lmpf;->read([BII)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eq v0, v2, :cond_0
 
-    iget-object v0, v1, Lr87;->X:Lt87;
-
-    iget-object v0, v0, Lt87;->l:Ljava/io/IOException;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lokhttp3/internal/http2/StreamResetException;
-
-    iget-object v7, v1, Lr87;->X:Lt87;
-
-    invoke-virtual {v7}, Lt87;->f()I
-
-    move-result v7
-
-    invoke-direct {v0, v7}, Lokhttp3/internal/http2/StreamResetException;-><init>(I)V
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto/16 :goto_3
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    iget-boolean v7, v1, Lr87;->c:Z
-
-    if-nez v7, :cond_8
-
-    iget-object v7, v1, Lr87;->b:Lqu0;
-
-    iget-wide v8, v7, Lqu0;->b:J
-
-    cmp-long v10, v8, v4
-
-    const/4 v11, 0x0
-
-    const-wide/16 v12, -0x1
-
-    if-lez v10, :cond_2
-
-    invoke-static {v2, v3, v8, v9}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v8
-
-    move-object/from16 v10, p1
-
-    invoke-virtual {v7, v10, v8, v9}, Lqu0;->b(Lqu0;J)J
-
-    move-result-wide v7
-
-    iget-object v9, v1, Lr87;->X:Lt87;
-
-    iget-wide v14, v9, Lt87;->a:J
-
-    add-long/2addr v14, v7
-
-    iput-wide v14, v9, Lt87;->a:J
-
-    iget-wide v4, v9, Lt87;->b:J
-
-    sub-long/2addr v14, v4
-
-    if-nez v0, :cond_4
-
-    iget-object v4, v9, Lt87;->n:Lm87;
-
-    iget-object v4, v4, Lm87;->z0:Lyme;
-
-    invoke-virtual {v4}, Lyme;->a()I
-
-    move-result v4
-
-    div-int/lit8 v4, v4, 0x2
-
-    int-to-long v4, v4
-
-    cmp-long v4, v14, v4
-
-    if-ltz v4, :cond_4
-
-    iget-object v4, v1, Lr87;->X:Lt87;
-
-    iget-object v5, v4, Lt87;->n:Lm87;
-
-    iget v4, v4, Lt87;->m:I
-
-    invoke-virtual {v5, v4, v14, v15}, Lm87;->Q(IJ)V
-
-    iget-object v4, v1, Lr87;->X:Lt87;
-
-    iget-wide v14, v4, Lt87;->a:J
-
-    iput-wide v14, v4, Lt87;->b:J
-
-    goto :goto_2
-
-    :cond_2
-    move-object/from16 v10, p1
-
-    iget-boolean v4, v1, Lr87;->o:Z
-
-    if-nez v4, :cond_3
-
-    if-nez v0, :cond_3
-
-    iget-object v4, v1, Lr87;->X:Lt87;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {v4}, Ljava/lang/Object;->wait()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    const/4 v11, 0x1
-
-    :cond_3
-    move-wide v7, v12
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_3
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    new-instance v0, Ljava/io/InterruptedIOException;
-
-    invoke-direct {v0}, Ljava/io/InterruptedIOException;-><init>()V
-
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :cond_4
-    :goto_2
-    :try_start_4
-    iget-object v4, v1, Lr87;->X:Lt87;
-
-    iget-object v4, v4, Lt87;->i:Ls87;
-
-    invoke-virtual {v4}, Ls87;->l()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    monitor-exit v6
-
-    if-eqz v11, :cond_5
-
-    const-wide/16 v4, 0x0
-
-    goto/16 :goto_0
-
-    :cond_5
-    cmp-long v2, v7, v12
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v1, v7, v8}, Lr87;->c(J)V
-
-    return-wide v7
-
-    :cond_6
-    if-nez v0, :cond_7
-
-    return-wide v12
-
-    :cond_7
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_8
-    :try_start_5
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v2, "stream closed"
-
-    invoke-direct {v0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    :goto_3
-    :try_start_6
-    iget-object v2, v1, Lr87;->X:Lt87;
-
-    iget-object v2, v2, Lt87;->i:Ls87;
-
-    invoke-virtual {v2}, Ls87;->l()V
-
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    :goto_4
-    monitor-exit v6
-
-    throw v0
-
-    :cond_9
-    const-string v0, "byteCount < 0: "
-
-    invoke-static {v2, v3, v0}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-.end method
-
-.method public final c(J)V
-    .locals 1
-
-    sget-object v0, Lyxg;->a:[B
-
-    iget-object v0, p0, Lr87;->X:Lt87;
-
-    iget-object v0, v0, Lt87;->n:Lm87;
-
-    invoke-virtual {v0, p1, p2}, Lm87;->w(J)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 4
-
-    iget-object v0, p0, Lr87;->X:Lt87;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lr87;->c:Z
-
-    iget-object v1, p0, Lr87;->b:Lqu0;
-
-    iget-wide v2, v1, Lqu0;->b:J
-
-    invoke-virtual {v1}, Lqu0;->l()V
-
-    iget-object v1, p0, Lr87;->X:Lt87;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, v2, v0
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0, v2, v3}, Lr87;->c(J)V
-
-    :cond_0
-    iget-object v0, p0, Lr87;->X:Lt87;
-
-    invoke-virtual {v0}, Lt87;->a()V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
+    add-int/2addr v1, v0
 
     goto :goto_0
 
-    :cond_1
-    :try_start_1
-    new-instance v1, Ljava/lang/NullPointerException;
+    :catchall_0
+    move-exception v0
 
-    const-string v2, "null cannot be cast to non-null type java.lang.Object"
+    goto :goto_1
 
-    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    :cond_2
+    iget-boolean v0, p0, Lr87;->u0:Z
 
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-nez v0, :cond_3
 
-    :goto_0
-    monitor-exit v0
+    iget-object v0, p0, Lr87;->t0:[B
 
-    throw v1
-.end method
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-.method public final m()Lu9g;
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lr87;->X:Lt87;
+    iput-object v0, p0, Lr87;->v0:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, v0, Lt87;->i:Ls87;
+    :cond_3
+    iget-object v0, p0, Lhc3;->s0:Lmpf;
 
-    return-object v0
+    invoke-static {v0}, Lhlj;->a(Lsi4;)V
+
+    return-void
+
+    :goto_1
+    iget-object v1, p0, Lhc3;->s0:Lmpf;
+
+    invoke-static {v1}, Lhlj;->a(Lsi4;)V
+
+    throw v0
 .end method

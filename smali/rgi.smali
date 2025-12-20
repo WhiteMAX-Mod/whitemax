@@ -1,19 +1,57 @@
-.class public abstract Lrgi;
-.super Ljava/lang/Object;
+.class public final Lrgi;
+.super Lpgi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lpgi;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lahi;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p1}, Lpgi;-><init>(Lahi;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public c(ILts7;)V
     .locals 1
 
-    const-class v0, Lrgi;
+    iget-object v0, p0, Lpgi;->c:Landroid/view/WindowInsets$Builder;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1}, Lzgi;->a(I)I
+
+    move-result p1
+
+    invoke-virtual {p2}, Lts7;->d()Landroid/graphics/Insets;
+
+    move-result-object p2
+
+    invoke-static {v0, p1, p2}, Lzrb;->v(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public i(IZ)V
+    .locals 1
+
+    iget-object v0, p0, Lpgi;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-static {p1}, Lzgi;->a(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1, p2}, Lqgi;->f(Landroid/view/WindowInsets$Builder;IZ)V
 
     return-void
 .end method

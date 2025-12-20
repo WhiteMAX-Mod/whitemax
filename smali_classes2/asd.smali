@@ -1,63 +1,97 @@
 .class public final Lasd;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqb4;
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
-
-.field public Y:Ljava/util/Collection;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lbsd;
-
-.field public o:Ljava/util/Collection;
-
-.field public final synthetic s0:Lbsd;
-
-.field public t0:I
+.field public final a:Lsfa;
 
 
 # direct methods
-.method public constructor <init>(Lbsd;Lq44;)V
+.method public constructor <init>(Lsfa;)V
     .locals 0
 
-    iput-object p1, p0, Lasd;->s0:Lbsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lasd;->a:Lsfa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object p1, p0, Lasd;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lasd;->t0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lasd;
 
-    iput p1, p0, Lasd;->t0:I
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v4, 0x0
+    return v2
 
-    iget-object v0, p0, Lasd;->s0:Lbsd;
+    :cond_1
+    check-cast p1, Lasd;
 
-    const-wide/16 v1, 0x0
+    iget-object v1, p0, Lasd;->a:Lsfa;
 
-    move-object v5, p0
+    iget-object p1, p1, Lasd;->a:Lsfa;
 
-    invoke-virtual/range {v0 .. v5}, Lbsd;->q(JLjava/util/Collection;Ljava/util/Set;Lq44;)Ljava/lang/Object;
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result p1
 
-    return-object p1
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lasd;->a:Lsfa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReentrantMutexContextKey(mutex="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lasd;->a:Lsfa;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

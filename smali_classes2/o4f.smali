@@ -1,146 +1,52 @@
 .class public final Lo4f;
-.super Li3;
+.super Lf3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic d:Lp4f;
+# static fields
+.field public static final c:Lo4f;
 
 
 # direct methods
-.method public constructor <init>(Lp4f;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lo4f;->c:I
+    new-instance v0, Lo4f;
 
-    packed-switch p2, :pswitch_data_0
+    const/16 v1, 0xa
 
-    const/4 p2, 0x0
+    invoke-direct {v0, v1}, Lf3;-><init>(I)V
 
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lo4f;->d:Lp4f;
-
-    const/16 p1, 0xc
-
-    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lo4f;->c:Lo4f;
 
     return-void
-
-    :pswitch_0
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lo4f;->d:Lp4f;
-
-    const/16 p1, 0xc
-
-    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lo4f;->d:Lp4f;
-
-    const/16 p1, 0xc
-
-    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final L0()V
+    .locals 3
 
-    iget v0, p0, Lo4f;->c:I
+    invoke-virtual {p0}, Lf3;->p0()Lim4;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lim4;->d()Z
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object p1, p0, Lo4f;->d:Lp4f;
+    invoke-virtual {p0}, Lf3;->p0()Lim4;
 
-    invoke-virtual {p1}, Lp4f;->a()I
+    move-result-object v0
 
-    move-result p2
+    const-string v1, ":chat-list"
 
-    iput p2, p1, Lp4f;->e:I
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lim4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     :cond_0
     return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lo4f;->d:Lp4f;
-
-    iget p2, p1, Lp4f;->d:F
-
-    invoke-virtual {p1, p2}, Lp4f;->c(F)V
-
-    invoke-virtual {p1}, Lp4f;->a()I
-
-    move-result p2
-
-    iput p2, p1, Lp4f;->e:I
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    iget-object p1, p0, Lo4f;->d:Lp4f;
-
-    iget p2, p1, Lp4f;->d:F
-
-    invoke-virtual {p1, p2}, Lp4f;->c(F)V
-
-    invoke-virtual {p1}, Lp4f;->a()I
-
-    move-result p2
-
-    iput p2, p1, Lp4f;->e:I
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

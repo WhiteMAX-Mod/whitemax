@@ -1,69 +1,53 @@
 .class public final Lyqa;
-.super Lk3;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final c:Lm7c;
+.field public final synthetic Y:Lzqa;
+
+.field public Z:I
+
+.field public d:Lzqa;
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvqa;Lm7c;I)V
+.method public constructor <init>(Lzqa;Ll84;)V
     .locals 0
 
-    iput p3, p0, Lyqa;->b:I
+    iput-object p1, p0, Lyqa;->Y:Lzqa;
 
-    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
-
-    iput-object p2, p0, Lyqa;->c:Lm7c;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lvta;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lyqa;->b:I
+    iput-object p1, p0, Lyqa;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lyqa;->Z:I
 
-    new-instance v0, Lzra;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lyqa;->c:Lm7c;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lyqa;->Z:I
 
-    invoke-direct {v0, p1, v1, v2}, Lzra;-><init>(Lvta;Ljava/lang/Object;I)V
+    iget-object p1, p0, Lyqa;->Y:Lzqa;
 
-    iget-object p1, p0, Lk3;->a:Llta;
+    const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Llta;->a(Lvta;)V
+    invoke-virtual {p1, v0, p0}, Lzqa;->h(Ljava/lang/String;Ll84;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    new-instance v0, Lxqa;
-
-    iget-object v1, p0, Lyqa;->c:Lm7c;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Lxqa;-><init>(Ljava/lang/Object;Lm7c;I)V
-
-    iget-object p1, p0, Lk3;->a:Llta;
-
-    invoke-interface {p1, v0}, Llta;->a(Lvta;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

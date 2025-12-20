@@ -1,24 +1,60 @@
-.class public final synthetic Lip4;
+.class public final Lip4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfr8;
+.implements Ljava/io/Closeable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lip4;->a:I
+
+    iput-object p2, p0, Lip4;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()Landroid/graphics/Matrix;
-    .locals 3
+.method public final close()V
+    .locals 1
 
-    new-instance v0, Landroid/graphics/Matrix;
+    iget v0, p0, Lip4;->a:I
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iget-object v0, p0, Lip4;->b:Ljava/lang/Object;
 
-    const/high16 v2, -0x40800000    # -1.0f
+    check-cast v0, Ljava/net/HttpURLConnection;
 
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->setScale(FF)V
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    return-object v0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lip4;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/database/Cursor;
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

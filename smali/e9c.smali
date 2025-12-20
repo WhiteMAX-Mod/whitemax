@@ -1,30 +1,54 @@
-.class public abstract Le9c;
-.super Ljava/lang/Object;
+.class public final Le9c;
+.super Lw0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final m:Lhj7;
+
+.field public final n:Lfp3;
+
+
 # direct methods
-.method public static synthetic c(Le9c;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lfp3;Lhj7;)V
+    .locals 0
 
-    invoke-virtual {p0}, Le9c;->d()I
+    invoke-direct {p0, p1}, Lw0;-><init>(Landroid/content/Context;)V
 
-    move-result v0
+    iput-object p3, p0, Le9c;->m:Lhj7;
 
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0}, Le9c;->b(I)V
+    iput-object p2, p0, Le9c;->n:Lfp3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
-.end method
+.method public final c(Landroid/net/Uri;)V
+    .locals 1
 
-.method public abstract b(I)V
-.end method
+    if-nez p1, :cond_0
 
-.method public abstract d()I
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lw0;->b:Lvj7;
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lwj7;->d(Landroid/net/Uri;)Lwj7;
+
+    move-result-object p1
+
+    sget-object v0, Lw2e;->d:Lw2e;
+
+    iput-object v0, p1, Lwj7;->e:Lw2e;
+
+    invoke-virtual {p1}, Lwj7;->a()Lvj7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw0;->b:Lvj7;
+
+    return-void
 .end method

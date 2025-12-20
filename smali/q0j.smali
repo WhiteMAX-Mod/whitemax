@@ -2,79 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final a:Ln0j;
 
-# static fields
-.field public static final a:Lq0j;
+.field public final b:Ljava/lang/Integer;
+
+.field public final c:Lfjj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lke5;)V
+    .locals 1
 
-    new-instance v0, Lq0j;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lke5;->b:Ljava/lang/Object;
 
-    sput-object v0, Lq0j;->a:Lq0j;
+    check-cast v0, Ln0j;
 
-    new-instance v0, Lmli;
+    iput-object v0, p0, Lq0j;->a:Ln0j;
 
-    const/4 v1, 0x1
+    iget-object v0, p1, Lke5;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+    check-cast v0, Ljava/lang/Integer;
 
-    const-class v1, Lemi;
+    iput-object v0, p0, Lq0j;->b:Ljava/lang/Integer;
 
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+    iget-object p1, p1, Lke5;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Lfjj;
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lq0j;->c:Lfjj;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

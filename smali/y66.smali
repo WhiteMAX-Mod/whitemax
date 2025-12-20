@@ -1,85 +1,87 @@
-.class public final Ly66;
+.class public abstract Ly66;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvta;
-.implements Lcof;
 
-
-# instance fields
-.field public final a:Laof;
-
-.field public b:Lpy4;
+# static fields
+.field public static final a:[F
 
 
 # direct methods
-.method public constructor <init>(Laof;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lm9e;->a:[J
 
-    iput-object p1, p0, Ly66;->a:Laof;
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    invoke-static {v1}, Lm9e;->f(I)I
 
+    move-result v2
 
-# virtual methods
-.method public final b()V
-    .locals 1
+    if-lez v2, :cond_0
 
-    iget-object v0, p0, Ly66;->a:Laof;
+    invoke-static {v2}, Lm9e;->e(I)I
 
-    invoke-interface {v0}, Laof;->b()V
+    move-result v2
 
-    return-void
-.end method
+    const/4 v3, 0x7
 
-.method public final c(Lpy4;)V
-    .locals 0
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
-    iput-object p1, p0, Ly66;->b:Lpy4;
+    move-result v2
 
-    iget-object p1, p0, Ly66;->a:Laof;
+    goto :goto_0
 
-    invoke-interface {p1, p0}, Laof;->d(Lcof;)V
+    :cond_0
+    move v2, v1
 
-    return-void
-.end method
+    :goto_0
+    if-nez v2, :cond_1
 
-.method public final cancel()V
-    .locals 1
+    goto :goto_1
 
-    iget-object v0, p0, Ly66;->b:Lpy4;
+    :cond_1
+    add-int/lit8 v0, v2, 0xf
 
-    invoke-interface {v0}, Lpy4;->dispose()V
+    and-int/lit8 v0, v0, -0x8
 
-    return-void
-.end method
+    shr-int/lit8 v0, v0, 0x3
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+    new-array v3, v0, [J
 
-    iget-object v0, p0, Ly66;->a:Laof;
+    const-wide v4, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    invoke-interface {v0, p1}, Laof;->f(Ljava/lang/Object;)V
+    invoke-static {v3, v1, v0, v4, v5}, Ljava/util/Arrays;->fill([JIIJ)V
 
-    return-void
-.end method
+    move-object v0, v3
 
-.method public final g(J)V
-    .locals 0
+    :goto_1
+    shr-int/lit8 v3, v2, 0x3
 
-    return-void
-.end method
+    and-int/lit8 v4, v2, 0x7
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    shl-int/lit8 v4, v4, 0x3
 
-    iget-object v0, p0, Ly66;->a:Laof;
+    aget-wide v5, v0, v3
 
-    invoke-interface {v0, p1}, Laof;->onError(Ljava/lang/Throwable;)V
+    const-wide/16 v7, 0xff
+
+    shl-long/2addr v7, v4
+
+    not-long v9, v7
+
+    and-long v4, v5, v9
+
+    or-long/2addr v4, v7
+
+    aput-wide v4, v0, v3
+
+    new-array v0, v2, [F
+
+    new-array v0, v1, [F
+
+    sput-object v0, Ly66;->a:[F
 
     return-void
 .end method

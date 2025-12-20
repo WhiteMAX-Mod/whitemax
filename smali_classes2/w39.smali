@@ -1,97 +1,122 @@
-.class public final enum Lw39;
-.super Ljava/lang/Enum;
+.class public final Lw39;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Let5;
+.implements Ljava/io/Closeable;
 
-# static fields
-.field public static final enum a:Lw39;
 
-.field public static final enum b:Lw39;
+# instance fields
+.field public final a:Let5;
 
-.field public static final enum c:Lw39;
+.field public final b:Lv39;
 
-.field public static final enum d:Lw39;
+.field public final c:Landroid/net/Uri;
 
-.field public static final synthetic o:[Lw39;
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Let5;Lv39;)V
+    .locals 0
 
-    new-instance v0, Lw39;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "GIF"
+    iput-object p1, p0, Lw39;->a:Let5;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lw39;->b:Lv39;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object p1, p2, Lv39;->a:Lbp4;
 
-    sput-object v0, Lw39;->a:Lw39;
+    invoke-virtual {p1}, Lbp4;->getUri()Landroid/net/Uri;
 
-    new-instance v1, Lw39;
+    move-result-object p1
 
-    const-string v2, "STICKER"
+    if-eqz p1, :cond_0
 
-    const/4 v3, 0x1
+    iput-object p1, p0, Lw39;->c:Landroid/net/Uri;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-wide p1, p2, Lv39;->b:J
 
-    sput-object v1, Lw39;->b:Lw39;
+    iput-wide p1, p0, Lw39;->d:J
 
-    new-instance v2, Lw39;
+    return-void
 
-    const-string v3, "VIDEO"
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v4, 0x2
+    const-string p2, "Required value was null."
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sput-object v2, Lw39;->c:Lw39;
+    throw p1
+.end method
 
-    new-instance v3, Lw39;
 
-    const-string v4, "PIP"
+# virtual methods
+.method public final E(Lit5;)V
+    .locals 1
 
-    const/4 v5, 0x3
+    iget-object v0, p0, Lw39;->a:Let5;
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lw39;->d:Lw39;
-
-    filled-new-array {v0, v1, v2, v3}, [Lw39;
-
-    move-result-object v0
-
-    sput-object v0, Lw39;->o:[Lw39;
+    invoke-interface {v0, p1}, Let5;->E(Lit5;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lw39;
+.method public final c0(Lgt5;Ll7;)I
     .locals 1
 
-    const-class v0, Lw39;
+    iget-object v0, p0, Lw39;->a:Let5;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-interface {v0, p1, p2}, Let5;->c0(Lgt5;Ll7;)I
 
-    move-result-object p0
+    move-result p1
 
-    check-cast p0, Lw39;
-
-    return-object p0
+    return p1
 .end method
 
-.method public static values()[Lw39;
+.method public final close()V
+    .locals 0
+
+    invoke-virtual {p0}, Lw39;->release()V
+
+    return-void
+.end method
+
+.method public final d(JJ)V
     .locals 1
 
-    sget-object v0, Lw39;->o:[Lw39;
+    iget-object v0, p0, Lw39;->a:Let5;
 
-    invoke-virtual {v0}, [Lw39;->clone()Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Let5;->d(JJ)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, [Lw39;
+.method public final l(Lgt5;)Z
+    .locals 1
 
-    return-object v0
+    iget-object v0, p0, Lw39;->a:Let5;
+
+    invoke-interface {v0, p1}, Let5;->l(Lgt5;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget-object v0, p0, Lw39;->a:Let5;
+
+    invoke-interface {v0}, Let5;->release()V
+
+    iget-object v0, p0, Lw39;->b:Lv39;
+
+    invoke-virtual {v0}, Lv39;->close()V
+
+    return-void
 .end method

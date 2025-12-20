@@ -1,48 +1,56 @@
-.class public final Lyi7;
-.super Lq44;
+.class public final synthetic Lyi7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lw3;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lbj7;
 
 
 # direct methods
-.method public constructor <init>(Lw3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lbj7;I)V
     .locals 0
 
-    iput-object p1, p0, Lyi7;->X:Lw3;
+    iput p2, p0, Lyi7;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lyi7;->b:Lbj7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Lyi7;->d:Ljava/lang/Object;
+    iget v0, p0, Lyi7;->a:I
 
-    iget p1, p0, Lyi7;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lyi7;->b:Lbj7;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput p1, p0, Lyi7;->o:I
+    return-void
 
-    iget-object p1, p0, Lyi7;->X:Lw3;
+    :pswitch_0
+    iget-object v0, p0, Lyi7;->b:Lbj7;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lbj7;->d()V
 
-    invoke-virtual {p1, v0, p0}, Lw3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

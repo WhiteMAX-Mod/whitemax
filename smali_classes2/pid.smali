@@ -3,70 +3,61 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv74;
+.implements Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;
 
 
 # instance fields
-.field public final a:Lqid;
+.field public a:Z
+
+.field public final synthetic b:Lqid;
+
+.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
 
 
 # direct methods
-.method public constructor <init>(Lqid;)V
+.method public constructor <init>(Lqid;Lone/me/rlottie/RLottieImageView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpid;->a:Lqid;
+    iput-object p1, p0, Lpid;->b:Lqid;
+
+    iput-object p2, p0, Lpid;->c:Lone/me/rlottie/RLottieImageView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lsm6;)Ljava/lang/Object;
-    .locals 0
+.method public final onAllFramesRendered(Lone/me/rlottie/RLottieDrawable;Z)V
+    .locals 2
 
-    invoke-interface {p2, p1, p0}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lpid;->b:Lqid;
 
-    move-result-object p1
+    iget-object p2, p1, Lqid;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
+    iget-boolean v0, p0, Lpid;->a:Z
 
-.method public final get(Lw74;)Lv74;
-    .locals 0
+    const-string v1, "Reaction effect. OnAllFramesRendered, called:"
 
-    invoke-static {p0, p1}, Ly6j;->a(Lv74;Lw74;)Lv74;
+    invoke-static {v1, p2, v0}, Lqf7;->q(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    move-result-object p1
+    iget-boolean p2, p0, Lpid;->a:Z
 
-    return-object p1
-.end method
+    if-eqz p2, :cond_0
 
-.method public final getKey()Lw74;
-    .locals 1
+    return-void
 
-    iget-object v0, p0, Lpid;->a:Lqid;
+    :cond_0
+    new-instance p2, Lxe5;
 
-    return-object v0
-.end method
+    const/16 v0, 0x1c
 
-.method public final minusKey(Lw74;)Lx74;
-    .locals 0
+    iget-object v1, p0, Lpid;->c:Lone/me/rlottie/RLottieImageView;
 
-    invoke-static {p0, p1}, Ly6j;->b(Lv74;Lw74;)Lx74;
+    invoke-direct {p2, p0, p1, v1, v0}, Lxe5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    return-object p1
-.end method
-
-.method public final plus(Lx74;)Lx74;
-    .locals 0
-
-    invoke-static {p0, p1}, Lx6j;->b(Lx74;Lx74;)Lx74;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,69 +1,63 @@
-.class public final Lfn4;
+.class public final synthetic Lfn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loe4;
+.implements Lef8;
+.implements Lic9;
 
 
 # instance fields
-.field public final a:Lh79;
+.field public final synthetic a:F
 
-.field public b:Lwgg;
-
-.field public c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;F)V
+    .locals 0
+
+    iput-object p1, p0, Lfn4;->b:Ljava/lang/Object;
+
+    iput p2, p0, Lfn4;->a:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lh79;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lh79;-><init>(I)V
-
-    iput-object v0, p0, Lfn4;->a:Lh79;
-
-    const/16 v0, 0x1f40
-
-    iput v0, p0, Lfn4;->d:I
-
-    iput v0, p0, Lfn4;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lse4;
-    .locals 5
+.method public b(Leb9;)V
+    .locals 1
 
-    new-instance v0, Ljn4;
+    iget-object p1, p0, Lfn4;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lfn4;->c:Ljava/lang/String;
+    check-cast p1, Ljc9;
 
-    iget v2, p0, Lfn4;->d:I
+    iget-object p1, p1, Ljc9;->g:Lxb9;
 
-    iget v3, p0, Lfn4;->e:I
+    iget-object p1, p1, Lxb9;->t:Lccc;
 
-    iget-object v4, p0, Lfn4;->a:Lh79;
+    iget v0, p0, Lfn4;->a:F
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljn4;-><init>(Ljava/lang/String;IILh79;)V
+    invoke-virtual {p1, v0}, Lccc;->i0(F)V
 
-    iget-object v1, p0, Lfn4;->b:Lwgg;
+    return-void
+.end method
 
-    if-eqz v1, :cond_0
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {v0, v1}, Lmj0;->I(Lwgg;)V
+    iget-object v0, p0, Lfn4;->b:Ljava/lang/Object;
 
-    :cond_0
-    return-object v0
+    check-cast v0, Lld;
+
+    iget v1, p0, Lfn4;->a:F
+
+    check-cast p1, Lmd;
+
+    invoke-interface {p1, v0, v1}, Lmd;->w0(Lld;F)V
+
+    return-void
 .end method

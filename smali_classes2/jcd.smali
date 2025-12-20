@@ -1,387 +1,158 @@
-.class public final Ljcd;
-.super Landroid/widget/LinearLayout;
-.source "SourceFile"
+.class public abstract Ljcd;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lu6g;
 
+# static fields
+.field public static cancel:I = 0x7f1302a8
 
-# instance fields
-.field public final a:Luxa;
+.field public static channel_close_title:I = 0x7f1302c3
 
-.field public final b:Landroid/widget/TextView;
+.field public static channel_delete_for_all:I = 0x7f1302c6
 
+.field public static channel_delete_title:I = 0x7f1302c7
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+.field public static channel_leave_title:I = 0x7f1302cf
 
-    const/4 v0, 0x0
+.field public static channel_move_rights_and_leave:I = 0x7f1302d3
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.field public static chat_clear_history_snackbar_title:I = 0x7f130303
 
-    new-instance v0, Luxa;
+.field public static chat_delete_confirm:I = 0x7f130310
 
-    invoke-direct {v0, p1}, Luxa;-><init>(Landroid/content/Context;)V
+.field public static chat_delete_for_all:I = 0x7f130311
 
-    invoke-static {}, Landroid/view/View;->generateViewId()I
+.field public static chat_delete_for_all_title:I = 0x7f130312
 
-    move-result v1
+.field public static chat_delete_for_both:I = 0x7f130313
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+.field public static chat_delete_for_self:I = 0x7f130314
 
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+.field public static chat_delete_title:I = 0x7f130315
 
-    const/16 v2, 0x40
+.field public static chat_leave_cancel:I = 0x7f130328
 
-    int-to-float v2, v2
+.field public static chat_leave_title:I = 0x7f13032b
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+.field public static chat_list_confirm_clear_saved_messages_history_negative_button:I = 0x7f13032c
 
-    move-result-object v3
+.field public static chat_list_confirm_clear_saved_messages_history_subtitle:I = 0x7f13032d
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static chat_list_confirm_clear_saved_messages_history_title:I = 0x7f13032e
 
-    move-result-object v3
+.field public static chat_list_toolbar_title:I = 0x7f13032f
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+.field public static chat_list_toolbar_transition_name:I = 0x7f130330
 
-    mul-float/2addr v3, v2
+.field public static chat_move_rights_and_leave:I = 0x7f13034b
 
-    invoke-static {v3}, Lkti;->d(F)I
+.field public static chats_list_empty_state_action:I = 0x7f1303d3
 
-    move-result v3
+.field public static chats_list_empty_state_title:I = 0x7f1303d4
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+.field public static chats_list_search_clear_recent_dialog_confirm_text:I = 0x7f1303d5
 
-    move-result-object v4
+.field public static chats_list_search_clear_recent_dialog_title:I = 0x7f1303d6
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static chats_list_search_contacts_header:I = 0x7f1303d7
 
-    move-result-object v4
+.field public static chats_list_search_hint:I = 0x7f1303d8
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static chats_list_search_messages_header:I = 0x7f1303d9
 
-    mul-float/2addr v2, v4
+.field public static chats_list_search_recent_header:I = 0x7f1303da
 
-    invoke-static {v2}, Lkti;->d(F)I
+.field public static chats_list_search_recent_header_clear:I = 0x7f1303db
 
-    move-result v2
+.field public static confirmation_block:I = 0x7f130404
 
-    invoke-direct {v1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+.field public static confirmation_close:I = 0x7f130405
 
-    const/16 v2, 0x11
+.field public static confirmation_close_channel:I = 0x7f130406
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+.field public static confirmation_leave_channel:I = 0x7f130407
 
-    const/16 v3, 0x8
+.field public static confirmation_leave_chat:I = 0x7f130408
 
-    int-to-float v3, v3
+.field public static contact_block_title:I = 0x7f130419
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+.field public static contact_blocked_snackbar_title:I = 0x7f13041b
 
-    move-result-object v4
+.field public static contact_empty_last_seen:I = 0x7f13041c
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static contacts_picker_search_hint:I = 0x7f130439
 
-    move-result-object v4
+.field public static contacts_picker_send_btn_title:I = 0x7f13043a
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static contacts_picker_toolbar_title:I = 0x7f13043b
 
-    mul-float/2addr v3, v4
+.field public static dialog_delete_title:I = 0x7f130468
 
-    invoke-static {v3}, Lkti;->d(F)I
+.field public static notifications_1_day:I = 0x7f130795
 
-    move-result v3
+.field public static notifications_1_hour:I = 0x7f130796
 
-    const/4 v4, 0x0
+.field public static notifications_4_hour:I = 0x7f130797
 
-    invoke-virtual {v1, v4, v4, v4, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+.field public static notifications_disable:I = 0x7f130799
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static notifications_infinite:I = 0x7f1307a1
 
-    sget-object v1, Lkxa;->a:Lkxa;
+.field public static picker_chats_add_button:I = 0x7f130b15
 
-    invoke-virtual {v0, v1}, Luxa;->setAvatarShape(Lnxa;)V
+.field public static picker_chats_adding_disabled_bot:I = 0x7f130b16
 
-    iput-object v0, p0, Ljcd;->a:Luxa;
+.field public static picker_chats_adding_disabled_bot_official:I = 0x7f130b17
 
-    new-instance v1, Landroid/widget/TextView;
+.field public static picker_chats_adding_disabled_default:I = 0x7f130b18
 
-    invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+.field public static picker_chats_adding_disabled_to_channel_bot:I = 0x7f130b19
 
-    invoke-static {}, Landroid/view/View;->generateViewId()I
+.field public static picker_chats_adding_disabled_to_channel_bot_official:I = 0x7f130b1a
 
-    move-result p1
+.field public static picker_chats_adding_disabled_to_channel_default:I = 0x7f130b1b
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setId(I)V
+.field public static picker_chats_confirm_close:I = 0x7f130b1c
 
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
+.field public static picker_chats_confirmation_close_title:I = 0x7f130b1d
 
-    const/4 v3, -0x2
+.field public static picker_chats_creating_disabled_bot:I = 0x7f130b1e
 
-    invoke-direct {p1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+.field public static picker_chats_creating_disabled_bot_official:I = 0x7f130b1f
 
-    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
+.field public static picker_chats_creating_disabled_channel_bot:I = 0x7f130b20
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static picker_chats_creating_disabled_channel_bot_official:I = 0x7f130b21
 
-    const/16 p1, 0x52
+.field public static picker_chats_creating_disabled_channel_default:I = 0x7f130b22
 
-    int-to-float p1, p1
+.field public static picker_chats_creating_disabled_default:I = 0x7f130b23
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+.field public static picker_chats_forward_disabled_bot:I = 0x7f130b24
 
-    move-result-object v4
+.field public static picker_chats_forward_disabled_bot_official:I = 0x7f130b25
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static picker_chats_forward_disabled_channel:I = 0x7f130b26
 
-    move-result-object v4
+.field public static picker_chats_forward_disabled_default:I = 0x7f130b27
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static picker_chats_forward_from_channel:I = 0x7f130b28
 
-    mul-float/2addr v4, p1
+.field public static picker_chats_forward_from_self:I = 0x7f130b29
 
-    invoke-static {v4}, Lkti;->d(F)I
+.field public static picker_chats_forward_from_somebody:I = 0x7f130b2a
 
-    move-result v4
+.field public static picker_chats_forward_quote_title:I = 0x7f130b2b
 
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setMaxWidth(I)V
+.field public static picker_chats_forward_title:I = 0x7f130b2c
 
-    const/4 v4, 0x1
+.field public static picker_chats_list_share_contact:I = 0x7f130b2d
 
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setSingleLine(Z)V
+.field public static picker_chats_list_share_images_and_videos:I = 0x7f130b2e
 
-    sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+.field public static picker_chats_list_share_link:I = 0x7f130b2f
 
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+.field public static picker_chats_message_hint:I = 0x7f130b30
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
+.field public static picker_chats_search_hint:I = 0x7f130b31
 
-    sget-object v2, Ldpg;->p:Lt5g;
-
-    invoke-static {v2, v1}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
-
-    sget-object v2, La93;->s0:Lv1a;
-
-    invoke-virtual {v2, v1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lyeb;->getText()Lu3g;
-
-    move-result-object v2
-
-    iget v2, v2, Lu3g;->e:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iput-object v1, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v4
-
-    invoke-static {p1}, Lkti;->d(F)I
-
-    move-result p1
-
-    invoke-direct {v2, p1, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getAvatar()Luxa;
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->a:Luxa;
-
-    return-object v0
-.end method
-
-.method public final getName()Landroid/widget/TextView;
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method public final onMeasure(II)V
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    invoke-static {v0}, Lb6g;->c(Landroid/widget/TextView;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljcd;->setVerified(Z)V
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lyeb;)V
-    .locals 1
-
-    invoke-interface {p1}, Lyeb;->getText()Lu3g;
-
-    move-result-object p1
-
-    iget p1, p1, Lu3g;->e:I
-
-    iget-object v0, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-.end method
-
-.method public final setAbbreviation(Lmc0;)V
-    .locals 2
-
-    iget-object v0, p0, Ljcd;->a:Luxa;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Luxa;->l(Lmc0;Z)V
-
-    return-void
-.end method
-
-.method public final setAvatar(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->a:Luxa;
-
-    invoke-virtual {v0, p1}, Luxa;->setAvatarUrl(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final setAvatarShape(Lnxa;)V
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->a:Luxa;
-
-    invoke-virtual {v0, p1}, Luxa;->setAvatarShape(Lnxa;)V
-
-    return-void
-.end method
-
-.method public final setName(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final setOnline(Z)V
-    .locals 1
-
-    iget-object v0, p0, Ljcd;->a:Luxa;
-
-    invoke-virtual {v0, p1}, Luxa;->setOnlineBadgeVisibility(Z)V
-
-    return-void
-.end method
-
-.method public final setVerified(Z)V
-    .locals 4
-
-    iget-object v0, p0, Ljcd;->b:Landroid/widget/TextView;
-
-    invoke-static {v0}, Lb6g;->e(Landroid/widget/TextView;)F
-
-    move-result v1
-
-    invoke-static {v1}, Lkpi;->r(F)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_1
-
-    invoke-static {v0}, Lb6g;->a(Landroid/widget/TextView;)Lxzg;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    iget v3, v3, Lxzg;->a:I
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v2
-
-    :goto_0
-    if-ne v3, v1, :cond_1
-
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_3
-
-    invoke-static {v0}, Lb6g;->a(Landroid/widget/TextView;)Lxzg;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget v2, p1, Lxzg;->a:I
-
-    :cond_2
-    if-eq v2, v1, :cond_3
-
-    new-instance p1, Lxzg;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget-object v3, Luha;->z0:Luha;
-
-    invoke-direct {p1, v2, v1, v3}, Lxzg;-><init>(Landroid/content/Context;ILwzg;)V
-
-    goto :goto_1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :goto_1
-    invoke-static {v0, p1}, Lb6g;->d(Landroid/widget/TextView;Lxzg;)V
-
-    return-void
-.end method
+.field public static picker_chats_toolbar_title:I = 0x7f130b32

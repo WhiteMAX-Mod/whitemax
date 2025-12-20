@@ -1,104 +1,209 @@
-.class public final synthetic Ltfa;
-.super Ljava/lang/Object;
+.class public final Ltfa;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lhfa;
-.implements Len6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Loga;
+.field public X:Ljava/lang/Object;
+
+.field public Y:Lb5g;
+
+.field public Z:I
+
+.field public o:Lsfa;
+
+.field public final synthetic s0:Lsfa;
+
+.field public final synthetic t0:Lb5g;
 
 
 # direct methods
-.method public constructor <init>(Loga;)V
+.method public constructor <init>(Lsfa;Loq6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltfa;->s0:Lsfa;
 
-    iput-object p1, p0, Ltfa;->a:Loga;
+    check-cast p2, Lb5g;
+
+    iput-object p2, p0, Ltfa;->t0:Lb5g;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzea;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ltfa;->a:Loga;
+    check-cast p1, Lac4;
 
-    invoke-virtual {v0, p1}, Loga;->y(Lzea;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lhfa;
-
-    if-eqz v0, :cond_0
-
-    instance-of v0, p1, Len6;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Ltfa;->getFunctionDelegate()Lxm6;
-
-    move-result-object v0
-
-    check-cast p1, Len6;
-
-    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
+    invoke-virtual {p0, p1, p2}, Ltfa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Ltfa;
 
-    move-result p1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    return p1
+    invoke-virtual {p1, p2}, Ltfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ltfa;
+
+    iget-object v0, p0, Ltfa;->s0:Lsfa;
+
+    iget-object v1, p0, Ltfa;->t0:Lb5g;
+
+    invoke-direct {p1, v0, v1, p2}, Ltfa;-><init>(Lsfa;Loq6;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Ltfa;->Z:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lbc4;->a:Lbc4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Ltfa;->X:Ljava/lang/Object;
+
+    iget-object v1, p0, Ltfa;->o:Lsfa;
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return p1
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public final getFunctionDelegate()Lxm6;
-    .locals 7
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lhn6;
+    throw p1
 
-    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
+    :cond_1
+    iget-object v0, p0, Ltfa;->Y:Lb5g;
 
-    const/4 v2, 0x0
+    check-cast v0, Loq6;
 
-    const/4 v1, 0x1
+    iget-object v3, p0, Ltfa;->X:Ljava/lang/Object;
 
-    const-class v3, Loga;
+    iget-object v5, p0, Ltfa;->o:Lsfa;
 
-    iget-object v4, p0, Ltfa;->a:Loga;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v5, "selectAvatar"
+    move-object p1, v5
 
-    invoke-direct/range {v0 .. v6}, Lgn6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_0
 
-    return-object v0
-.end method
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object p1, p0, Ltfa;->s0:Lsfa;
 
-    invoke-virtual {p0}, Ltfa;->getFunctionDelegate()Lxm6;
+    iput-object p1, p0, Ltfa;->o:Lsfa;
+
+    iput-object v1, p0, Ltfa;->X:Ljava/lang/Object;
+
+    iget-object v0, p0, Ltfa;->t0:Lb5g;
+
+    iput-object v0, p0, Ltfa;->Y:Lb5g;
+
+    iput v3, p0, Ltfa;->Z:I
+
+    invoke-interface {p1, p0}, Lsfa;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-ne v3, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move-object v3, v1
+
+    :goto_0
+    :try_start_1
+    iput-object p1, p0, Ltfa;->o:Lsfa;
+
+    iput-object v3, p0, Ltfa;->X:Ljava/lang/Object;
+
+    iput-object v1, p0, Ltfa;->Y:Lb5g;
+
+    iput v2, p0, Ltfa;->Z:I
+
+    invoke-interface {v0, p0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    if-ne v0, v4, :cond_4
 
-    move-result v0
+    :goto_1
+    return-object v4
 
-    return v0
+    :cond_4
+    move-object v1, p1
+
+    move-object p1, v0
+
+    move-object v0, v3
+
+    :goto_2
+    invoke-interface {v1, v0}, Lsfa;->l(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :catchall_1
+    move-exception v0
+
+    move-object v1, p1
+
+    move-object p1, v0
+
+    move-object v0, v3
+
+    :goto_3
+    invoke-interface {v1, v0}, Lsfa;->l(Ljava/lang/Object;)V
+
+    throw p1
 .end method

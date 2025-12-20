@@ -3,43 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lft1;
+.implements Lyd9;
 
 
 # instance fields
-.field public final synthetic a:Lytd;
+.field public final a:Ljava/lang/Object;
+
+.field public b:Lflg;
 
 
 # direct methods
-.method public constructor <init>(Lytd;)V
+.method public constructor <init>(Ljava/lang/Object;Lflg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwp5;->a:Lytd;
+    iput-object p1, p0, Lwp5;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lwp5;->b:Lflg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(Lzi1;)V
+.method public final a()Lflg;
     .locals 1
 
-    iget-object p1, p0, Lwp5;->a:Lytd;
+    iget-object v0, p0, Lwp5;->b:Lflg;
 
-    invoke-static {p1}, Lbx1;->a(Lytd;)Z
+    return-object v0
+.end method
 
-    move-result p1
+.method public final getUid()Ljava/lang/Object;
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lwp5;->a:Ljava/lang/Object;
 
-    sget-object p1, Lug1;->c:Lug1;
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v0}, Lug1;->L0(Lug1;I)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

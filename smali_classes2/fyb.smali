@@ -1,137 +1,82 @@
 .class public final Lfyb;
-.super Lxfh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lhbd;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lc5b;Llzf;Lg5b;)V
-    .locals 8
+.method public constructor <init>(Z)V
+    .locals 0
 
-    invoke-direct {p0}, Lxfh;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lpa6;
-
-    iget-object p4, p4, Lg5b;->a:Landroid/content/Context;
-
-    sget v1, Lmvd;->Y:I
-
-    invoke-virtual {p4, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-class p4, Lra6;
-
-    invoke-static {p4}, Ljava/util/EnumSet;->allOf(Ljava/lang/Class;)Ljava/util/EnumSet;
-
-    move-result-object v5
-
-    const-string v1, "all.chat.folder"
-
-    const/4 v3, 0x0
-
-    sget-object v4, Lu84;->b:Lu84;
-
-    invoke-direct/range {v0 .. v5}, Lpa6;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Lu84;Ljava/util/Set;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p4
-
-    invoke-static {p4}, Lucf;->a(Ljava/lang/Object;)Ltcf;
-
-    move-result-object v2
-
-    new-instance p4, Lhbd;
-
-    invoke-direct {p4, v2}, Lhbd;-><init>(Lf9a;)V
-
-    iput-object p4, p0, Lfyb;->b:Lhbd;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lva4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lva4;->v0:Lhbd;
-
-    new-instance p4, Ld53;
-
-    const/16 v0, 0xd
-
-    invoke-direct {p4, p1, v0}, Ld53;-><init>(Lx26;I)V
-
-    iget-object p1, p2, Lc5b;->g:Lhbd;
-
-    new-instance p2, Lxnb;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, p1, v0}, Lxnb;-><init>(Lx26;I)V
-
-    new-instance p1, Ls3;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x16
-
-    invoke-direct {p1, p0, v0, v1}, Ls3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v0, Lz41;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p4, p2, p1, v1}, Lz41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    check-cast p3, Lq2b;
-
-    invoke-virtual {p3}, Lq2b;->a()Lz74;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lgw0;->u(Lx26;Lx74;)Lx26;
-
-    move-result-object p1
-
-    new-instance v0, Lir9;
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0xa
-
-    const/4 v1, 0x2
-
-    const-class v3, Lf9a;
-
-    const-string v4, "emit"
-
-    const-string v5, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    invoke-direct/range {v0 .. v7}, Lir9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p2, Lg56;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p2, p1, v0, p4}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    invoke-virtual {p3}, Lq2b;->c()Lwl8;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lgw0;->u(Lx26;Lx74;)Lx26;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p1, p2}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+    iput-boolean p1, p0, Lfyb;->a:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfyb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfyb;
+
+    iget-boolean v1, p0, Lfyb;->a:Z
+
+    iget-boolean p1, p1, Lfyb;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lfyb;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ContactsPermissionChange(isGranted="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lfyb;->a:Z
+
+    invoke-static {v0, v1, v2}, Lq3g;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,63 +1,43 @@
-.class public final La10;
+.class public abstract synthetic La10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:J
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(La10;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lb10;->values()[Lb10;
 
-    iget-object v0, p1, La10;->a:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object v0, p0, La10;->a:Ljava/lang/String;
+    array-length v0, v0
 
-    iget-wide v0, p1, La10;->b:J
+    new-array v0, v0, [I
 
-    iput-wide v0, p0, La10;->b:J
+    const/4 v1, 0x1
 
-    iget-object v0, p1, La10;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, La10;->c:Ljava/lang/String;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p1, La10;->f:Ljava/lang/String;
+    :catch_0
+    const/4 v2, 0x2
 
-    iput-object v0, p0, La10;->f:Ljava/lang/String;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p1, La10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, La10;->g:Ljava/lang/String;
-
-    iget-object v0, p1, La10;->h:Ljava/lang/String;
-
-    iput-object v0, p0, La10;->h:Ljava/lang/String;
-
-    iget-object v0, p1, La10;->d:Ljava/lang/String;
-
-    iput-object v0, p0, La10;->d:Ljava/lang/String;
-
-    iget-object p1, p1, La10;->e:Ljava/lang/String;
-
-    iput-object p1, p0, La10;->e:Ljava/lang/String;
+    :catch_1
+    sput-object v0, La10;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

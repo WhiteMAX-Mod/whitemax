@@ -1,69 +1,83 @@
-.class public final Lede;
-.super Lq44;
+.class public final synthetic Lede;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public X:Ldx0;
+.field public final synthetic a:I
 
-.field public Y:Lyw0;
-
-.field public Z:Lsi9;
-
-.field public d:Lfde;
-
-.field public o:Ljava/lang/String;
-
-.field public s0:J
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lfde;
-
-.field public v0:I
+.field public final synthetic b:Loq6;
 
 
 # direct methods
-.method public constructor <init>(Lfde;Lq44;)V
+.method public synthetic constructor <init>(ILoq6;)V
     .locals 0
 
-    iput-object p1, p0, Lede;->u0:Lfde;
+    iput p1, p0, Lede;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lede;->b:Loq6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lede;->t0:Ljava/lang/Object;
+    iget v0, p0, Lede;->a:I
 
-    iget p1, p0, Lede;->v0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lede;->b:Loq6;
 
-    or-int/2addr p1, v0
+    sget-object v1, Lemf;->c:Lemf;
 
-    iput p1, p0, Lede;->v0:I
+    invoke-interface {v0, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    :goto_0
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    const/4 v5, 0x0
+    return-object v0
 
-    iget-object v0, p0, Lede;->u0:Lfde;
+    :pswitch_0
+    iget-object v0, p0, Lede;->b:Loq6;
 
-    const-wide/16 v1, 0x0
+    sget-object v1, Lfde;->c:Lfde;
 
-    const/4 v3, 0x0
+    invoke-interface {v0, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v6, p0
+    goto :goto_0
 
-    invoke-virtual/range {v0 .. v6}, Lfde;->x(JLjava/lang/String;Ldx0;Lyw0;Lq44;)Ljava/lang/Object;
+    :pswitch_1
+    iget-object v0, p0, Lede;->b:Loq6;
 
-    move-result-object p1
+    sget-object v1, Lfde;->b:Lfde;
 
-    return-object p1
+    invoke-interface {v0, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lede;->b:Loq6;
+
+    sget-object v1, Lfde;->a:Lfde;
+
+    invoke-interface {v0, v1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

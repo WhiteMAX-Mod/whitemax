@@ -1,63 +1,91 @@
-.class public final Lvc8;
-.super Lq44;
+.class public final synthetic Lvc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lor6;
 
 
 # instance fields
-.field public X:Ljava/util/LinkedHashMap;
-
-.field public Y:J
-
-.field public Z:I
-
-.field public d:Lwc8;
-
-.field public o:Ljava/util/ArrayList;
-
-.field public s0:I
-
-.field public t0:I
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Lwc8;
-
-.field public w0:I
+.field public final synthetic a:Lxc8;
 
 
 # direct methods
-.method public constructor <init>(Lwc8;Lq44;)V
+.method public constructor <init>(Lxc8;)V
     .locals 0
 
-    iput-object p1, p0, Lvc8;->v0:Lwc8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvc8;->a:Lxc8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lvc8;->u0:Ljava/lang/Object;
+    instance-of v0, p1, Lvc8;
 
-    iget p1, p0, Lvc8;->w0:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Lvc8;->getFunctionDelegate()Lhr6;
 
-    iput p1, p0, Lvc8;->w0:I
+    move-result-object v0
 
-    iget-object p1, p0, Lvc8;->v0:Lwc8;
+    check-cast p1, Lor6;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lwc8;->O0(Ljava/util/ArrayList;Lq44;)Ljava/io/Serializable;
+    invoke-interface {p1}, Lor6;->getFunctionDelegate()Lhr6;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lhr6;
+    .locals 7
+
+    new-instance v0, Lrr6;
+
+    const-string v6, "onProfileTagClicked(Landroid/view/View;Ljava/lang/String;)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x2
+
+    const-class v3, Lxc8;
+
+    iget-object v4, p0, Lvc8;->a:Lxc8;
+
+    const-string v5, "onProfileTagClicked"
+
+    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lvc8;->getFunctionDelegate()Lhr6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

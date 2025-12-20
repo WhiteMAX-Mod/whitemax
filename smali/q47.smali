@@ -1,3 +1,3 @@
-.class public final Lq47;
-.super Lp57;
+.class public interface abstract Lq47;
+.super Ljava/lang/Object;
 .source "SourceFile"

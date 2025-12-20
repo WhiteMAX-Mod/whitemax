@@ -1,117 +1,160 @@
-.class public abstract synthetic Lp9i;
+.class public final Lp9i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:[I
+.field public static final Companion:Lo9i;
 
-.field public static final synthetic b:[I
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    invoke-static {}, Lcdh;->values()[Lcdh;
+    new-instance v0, Lo9i;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    sput-object v0, Lp9i;->Companion:Lo9i;
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    sput-object v0, Lp9i;->b:[I
+.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
+    .locals 2
 
-    const/4 v1, 0x1
+    and-int/lit8 v0, p2, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lp9i;->a:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lp9i;->b:Z
+
+    return-void
+
+    :cond_0
+    sget-object p1, Ln9i;->a:Ln9i;
+
+    invoke-virtual {p1}, Ln9i;->d()Lvoe;
+
+    move-result-object p1
+
+    invoke-static {p2, v1, p1}, Lvij;->b(IILvoe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lp9i;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v0, 0x2
+    return v2
 
-    :try_start_1
-    sget-object v3, Lp9i;->b:[I
+    :cond_1
+    check-cast p1, Lp9i;
 
-    aput v0, v3, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object v1, p0, Lp9i;->a:Ljava/lang/String;
 
-    :catch_1
-    const/4 v3, 0x3
+    iget-object v3, p1, Lp9i;->a:Ljava/lang/String;
 
-    :try_start_2
-    sget-object v4, Lp9i;->b:[I
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aput v3, v4, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result v1
 
-    :catch_2
-    const/4 v4, 0x4
+    if-nez v1, :cond_2
 
-    :try_start_3
-    sget-object v5, Lp9i;->b:[I
+    return v2
 
-    aput v4, v5, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    :cond_2
+    iget-boolean v1, p0, Lp9i;->b:Z
 
-    :catch_3
-    :try_start_4
-    sget-object v5, Lp9i;->b:[I
+    iget-boolean p1, p1, Lp9i;->b:Z
 
-    const/4 v6, 0x5
+    if-eq v1, p1, :cond_3
 
-    aput v6, v5, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    return v2
 
-    :catch_4
-    invoke-static {}, Lh29;->values()[Lh29;
+    :cond_3
+    return v0
+.end method
 
-    move-result-object v5
+.method public final hashCode()I
+    .locals 2
 
-    array-length v5, v5
+    iget-object v0, p0, Lp9i;->a:Ljava/lang/String;
 
-    new-array v5, v5, [I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    sput-object v5, Lp9i;->a:[I
+    move-result v0
 
-    :try_start_5
-    aput v1, v5, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    mul-int/lit8 v0, v0, 0x1f
 
-    :catch_5
-    :try_start_6
-    sget-object v2, Lp9i;->a:[I
+    iget-boolean v1, p0, Lp9i;->b:Z
 
-    aput v0, v2, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :catch_6
-    :try_start_7
-    sget-object v1, Lp9i;->a:[I
+    move-result v1
 
-    aput v3, v1, v0
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    add-int/2addr v1, v0
 
-    :catch_7
-    :try_start_8
-    sget-object v0, Lp9i;->a:[I
+    return v1
+.end method
 
-    aput v4, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :catch_8
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppSetupScreenCaptureBehaviorRequest(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lp9i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isScreenCaptureEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lp9i;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

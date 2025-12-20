@@ -1,162 +1,73 @@
-.class public final Ltgc;
-.super Ljava/lang/Object;
+.class public final enum Ltgc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ln5g;
+# static fields
+.field public static final enum a:Ltgc;
 
-.field public final b:I
+.field public static final enum b:Ltgc;
 
-.field public final c:Li62;
+.field public static final synthetic c:[Ltgc;
 
 
 # direct methods
-.method public constructor <init>(Ln5g;ILi62;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltgc;
 
-    iput-object p1, p0, Ltgc;->a:Ln5g;
+    const-string v1, "Gallery"
 
-    iput p2, p0, Ltgc;->b:I
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Ltgc;->c:Li62;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ltgc;->a:Ltgc;
+
+    new-instance v1, Ltgc;
+
+    const-string v2, "Permissions"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ltgc;->b:Ltgc;
+
+    filled-new-array {v0, v1}, [Ltgc;
+
+    move-result-object v0
+
+    sput-object v0, Ltgc;->c:[Ltgc;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ltgc;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-class v0, Ltgc;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Ltgc;
+    check-cast p0, Ltgc;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ltgc;
-
-    iget-object v0, p0, Ltgc;->a:Ln5g;
-
-    iget-object v1, p1, Ltgc;->a:Ln5g;
-
-    invoke-virtual {v0, v1}, Ln5g;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ltgc;->b:I
-
-    iget v1, p1, Ltgc;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ltgc;->c:Li62;
-
-    iget-object p1, p1, Ltgc;->c:Li62;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Ltgc;
+    .locals 1
 
-    iget-object v0, p0, Ltgc;->a:Ln5g;
+    sget-object v0, Ltgc;->c:[Ltgc;
 
-    iget v0, v0, Ln5g;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltgc;->b:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Ltgc;->c:Li62;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancellableSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltgc;->a:Ln5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottomMargin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltgc;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltgc;->c:Li62;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Ltgc;
 
     return-object v0
 .end method

@@ -1,149 +1,353 @@
 .class public final Lnv2;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic o:Lone/me/chatscreen/ChatScreen;
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+.method public constructor <init>(ZZZZZZZZZZZZ)V
     .locals 0
 
-    iput-object p2, p0, Lnv2;->o:Lone/me/chatscreen/ChatScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-boolean p1, p0, Lnv2;->a:Z
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lnv2;->b:Z
+
+    iput-boolean p3, p0, Lnv2;->c:Z
+
+    iput-boolean p4, p0, Lnv2;->d:Z
+
+    iput-boolean p5, p0, Lnv2;->e:Z
+
+    iput-boolean p6, p0, Lnv2;->f:Z
+
+    iput-boolean p7, p0, Lnv2;->g:Z
+
+    iput-boolean p8, p0, Lnv2;->h:Z
+
+    iput-boolean p9, p0, Lnv2;->i:Z
+
+    iput-boolean p10, p0, Lnv2;->j:Z
+
+    iput-boolean p11, p0, Lnv2;->k:Z
+
+    iput-boolean p12, p0, Lnv2;->l:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lz26;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnv2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnv2;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lnv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lnv2;
-
-    iget-object v0, p0, Lnv2;->o:Lone/me/chatscreen/ChatScreen;
-
-    invoke-direct {p1, p2, v0}, Lnv2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lnv2;->o:Lone/me/chatscreen/ChatScreen;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1}, Lari;->b(Lc54;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lwqi;->a:Ll6b;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v2, Llg8;->d:Llg8;
+    instance-of v1, p1, Lnv2;
 
-    invoke-virtual {v0, v2}, Ll6b;->b(Llg8;)Z
+    const/4 v2, 0x0
 
-    move-result v3
+    if-nez v1, :cond_1
 
-    if-eqz v3, :cond_1
-
-    const-string v3, "Start subscribing on viewModel.events"
-
-    invoke-virtual {v0, v2, p1, v3, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-object p1, p0, Lnv2;->o:Lone/me/chatscreen/ChatScreen;
+    check-cast p1, Lnv2;
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->l1:[Lyy7;
+    iget-boolean v1, p0, Lnv2;->a:Z
 
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->g1()Lzx2;
+    iget-boolean v3, p1, Lnv2;->a:Z
 
-    move-result-object p1
+    if-eq v1, v3, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v2
 
-    const-class v0, Lzx2;
+    :cond_2
+    iget-boolean v1, p0, Lnv2;->b:Z
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-boolean v3, p1, Lnv2;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lnv2;->c:Z
+
+    iget-boolean v3, p1, Lnv2;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lnv2;->d:Z
+
+    iget-boolean v3, p1, Lnv2;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lnv2;->e:Z
+
+    iget-boolean v3, p1, Lnv2;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lnv2;->f:Z
+
+    iget-boolean v3, p1, Lnv2;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lnv2;->g:Z
+
+    iget-boolean v3, p1, Lnv2;->g:Z
+
+    if-eq v1, v3, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-boolean v1, p0, Lnv2;->h:Z
+
+    iget-boolean v3, p1, Lnv2;->h:Z
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-boolean v1, p0, Lnv2;->i:Z
+
+    iget-boolean v3, p1, Lnv2;->i:Z
+
+    if-eq v1, v3, :cond_a
+
+    return v2
+
+    :cond_a
+    iget-boolean v1, p0, Lnv2;->j:Z
+
+    iget-boolean v3, p1, Lnv2;->j:Z
+
+    if-eq v1, v3, :cond_b
+
+    return v2
+
+    :cond_b
+    iget-boolean v1, p0, Lnv2;->k:Z
+
+    iget-boolean v3, p1, Lnv2;->k:Z
+
+    if-eq v1, v3, :cond_c
+
+    return v2
+
+    :cond_c
+    iget-boolean v1, p0, Lnv2;->l:Z
+
+    iget-boolean p1, p1, Lnv2;->l:Z
+
+    if-eq v1, p1, :cond_d
+
+    return v2
+
+    :cond_d
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Lnv2;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lnv2;->b:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->c:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->d:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->e:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->f:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->g:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->h:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->i:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->j:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lnv2;->k:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lnv2;->l:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", onlyOwnerCanChangeIconTitle="
+
+    const-string v1, ", official="
+
+    const-string v2, "ChatOptions(signAdmin="
+
+    iget-boolean v3, p0, Lnv2;->a:Z
+
+    iget-boolean v4, p0, Lnv2;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lqf7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v2, "restore draft"
+    const-string v1, ", onlyAdminCanAddMember="
 
-    invoke-static {v0, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, ", allCanPinMessage="
 
-    invoke-virtual {p1}, Lzx2;->y()Llzf;
+    iget-boolean v3, p0, Lnv2;->c:Z
+
+    iget-boolean v4, p0, Lnv2;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", ok="
+
+    const-string v2, ", onlyAdminCanCall="
+
+    iget-boolean v3, p0, Lnv2;->e:Z
+
+    iget-boolean v4, p0, Lnv2;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", sentByPhone="
+
+    const-string v2, ", serviceChat="
+
+    iget-boolean v3, p0, Lnv2;->g:Z
+
+    iget-boolean v4, p0, Lnv2;->h:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", membersCanSeePrivateLink="
+
+    const-string v2, ", contentLevelChat="
+
+    iget-boolean v3, p0, Lnv2;->i:Z
+
+    iget-boolean v4, p0, Lnv2;->j:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", aPlusChannel="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lnv2;->k:Z
+
+    iget-boolean v4, p0, Lnv2;->l:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lxd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lq2b;
-
-    invoke-virtual {v0}, Lq2b;->b()Lz74;
-
-    move-result-object v0
-
-    sget-object v2, Li84;->b:Li84;
-
-    new-instance v3, Lax2;
-
-    invoke-direct {v3, p1, v1}, Lax2;-><init>(Lzx2;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v1, p1, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v0, v2, v3}, Lsvi;->d(Lf84;Lx74;Li84;Lsm6;)Lx9f;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lzx2;->W0:Lt9f;
-
-    sget-object v2, Lzx2;->h1:[Lyy7;
-
-    const/16 v3, 0xa
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v0
 .end method

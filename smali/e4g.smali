@@ -1,69 +1,64 @@
-.class public final Le4g;
+.class public final synthetic Le4g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Li4g;
 
-.field public final c:I
+.field public final synthetic c:Lwc0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Li4g;Lwc0;I)V
+    .locals 0
 
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
+    iput p3, p0, Le4g;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Le4g;->b:Li4g;
 
-    const/16 v1, 0x24
+    iput-object p2, p0, Le4g;->c:Lwc0;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Le4g;->d:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Le4g;->e:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Le4g;->f:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(III)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput p1, p0, Le4g;->a:I
+    iget v0, p0, Le4g;->a:I
 
-    iput p2, p0, Le4g;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    iput p3, p0, Le4g;->c:I
+    iget-object v0, p0, Le4g;->b:Li4g;
+
+    iget-object v1, p0, Le4g;->c:Lwc0;
+
+    invoke-interface {v0, v1}, Li4g;->d(Lwc0;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Le4g;->b:Li4g;
+
+    iget-object v1, p0, Le4g;->c:Lwc0;
+
+    invoke-interface {v0, v1}, Li4g;->d(Lwc0;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

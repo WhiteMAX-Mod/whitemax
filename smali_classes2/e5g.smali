@@ -1,31 +1,55 @@
 .class public final Le5g;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lkr8;
+.field public X:Lm74;
 
-.field public final b:Lhd5;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lw5g;
+
+.field public d:Lw5g;
+
+.field public o:Lk6h;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lw5g;Ll84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Le5g;->Z:Lw5g;
 
-    new-instance v0, Lkr8;
-
-    const/16 v1, 0x3e8
-
-    invoke-direct {v0, v1}, Lkr8;-><init>(I)V
-
-    iput-object v0, p0, Le5g;->a:Lkr8;
-
-    sget-object v0, Lhd5;->a:Lhd5;
-
-    iput-object v0, p0, Le5g;->b:Lhd5;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Le5g;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Le5g;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Le5g;->s0:I
+
+    iget-object p1, p0, Le5g;->Z:Lw5g;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lw5g;->e(Lk6h;Lm74;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

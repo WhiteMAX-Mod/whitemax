@@ -2,85 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt98;
 
+# instance fields
+.field public a:F
 
-# static fields
-.field public static final a:Lnde;
+.field public b:I
 
-.field public static final b:I
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IFI)V
+    .locals 0
 
-    new-instance v0, Lnde;
+    iput p2, p0, Lnde;->a:F
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lnde;->b:I
 
-    sput-object v0, Lnde;->a:Lnde;
+    iput p3, p0, Lnde;->c:I
 
-    sget v0, Lvxc;->send_report_view_type:I
-
-    sput v0, Lnde;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnde;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x73ce51b3
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lnde;->b:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "SendSupportReport"
-
-    return-object v0
 .end method

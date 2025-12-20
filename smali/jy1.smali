@@ -1,55 +1,48 @@
-.class public final synthetic Ljy1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqy1;
+.class public final Ljy1;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic X:Luq1;
 
-.field public final synthetic b:Ltu1;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JLtu1;)V
+.method public constructor <init>(Luq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljy1;->X:Luq1;
 
-    iput-wide p1, p0, Ljy1;->a:J
-
-    iput-object p3, p0, Ljy1;->b:Ltu1;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Ljy1;->a:J
+    iput-object p1, p0, Ljy1;->d:Ljava/lang/Object;
 
-    invoke-static {p1, v0, v1}, Lry1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+    iget p1, p0, Ljy1;->o:I
 
-    move-result p1
+    const/high16 v0, -0x80000000
 
-    if-eqz p1, :cond_0
+    or-int/2addr p1, v0
 
-    const/4 p1, 0x0
+    iput p1, p0, Ljy1;->o:I
 
-    iget-object v0, p0, Ljy1;->b:Ltu1;
+    iget-object p1, p0, Ljy1;->X:Luq1;
 
-    invoke-virtual {v0, p1}, Ltu1;->b(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    const/4 p1, 0x1
+    invoke-virtual {p1, v0, p0}, Luq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return p1
+    move-result-object p1
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object p1
 .end method

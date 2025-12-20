@@ -1,289 +1,57 @@
-.class public final synthetic Lum8;
-.super Ljava/lang/Object;
+.class public final Lum8;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lgu3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic b:Lzm8;
+.field public Y:[B
 
-.field public final synthetic c:J
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final synthetic d:Ljava/lang/String;
+.field public d:Lvm8;
+
+.field public o:Ljava/io/Serializable;
+
+.field public final synthetic s0:Lvm8;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzm8;JLjava/lang/String;I)V
+.method public constructor <init>(Lvm8;Ll84;)V
     .locals 0
 
-    iput p5, p0, Lum8;->a:I
+    iput-object p1, p0, Lum8;->s0:Lvm8;
 
-    iput-object p1, p0, Lum8;->b:Lzm8;
-
-    iput-wide p2, p0, Lum8;->c:J
-
-    iput-object p4, p0, Lum8;->d:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lum8;->a:I
+    iput-object p1, p0, Lum8;->Z:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lum8;->t0:I
 
-    iget-object v0, p0, Lum8;->b:Lzm8;
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lum8;->c:J
+    or-int/2addr p1, v0
 
-    iget-object v3, p0, Lum8;->d:Ljava/lang/String;
+    iput p1, p0, Lum8;->t0:I
 
-    check-cast p1, Ljava/util/List;
+    iget-object p1, p0, Lum8;->s0:Lvm8;
 
-    const-string v4, "zm8"
+    const/4 v0, 0x0
 
-    const-string v5, "searchChats %d, finish %dms"
+    invoke-virtual {p1, v0, v0, p0}, Lvm8;->a(Ljava/lang/String;Ljava/lang/String;Ll84;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    move-result-object p1
 
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    sub-long/2addr v7, v1
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    filled-new-array {v6, v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v4, v5, v1}, Lwqi;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-object p1, v0, Lzm8;->o:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    iget-object v1, v0, Lzm8;->e:Ltw0;
-
-    invoke-virtual {v1, v0}, Ltw0;->d(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    iget-object v0, v0, Lzm8;->i:Lrm8;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, v3, p1}, Lrm8;->d(Ljava/lang/String;Ljava/util/List;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lum8;->b:Lzm8;
-
-    iget-wide v1, p0, Lum8;->c:J
-
-    iget-object v3, p0, Lum8;->d:Ljava/lang/String;
-
-    check-cast p1, Lwm8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v4, "zm8"
-
-    const-string v5, "searchChatsAndMessages %d, finish %d ms"
-
-    monitor-enter p1
-
-    :try_start_1
-    iget-object v6, p1, Lwm8;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p1
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v1
-
-    invoke-virtual {v7, v8, v9}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    filled-new-array {v6, v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v4, v5, v1}, Lwqi;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    iget-object v2, p1, Lwm8;->c:Ljava/util/ArrayList;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v1, v0, Lzm8;->n:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    :try_start_2
-    iget-object v2, v0, Lzm8;->e:Ltw0;
-
-    invoke-virtual {v2, v0}, Ltw0;->d(Ljava/lang/Object;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    :catch_1
-    :cond_2
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_4
-
-    monitor-enter p1
-
-    :try_start_3
-    iget-object v2, p1, Lwm8;->a:Ljava/util/EnumSet;
-
-    sget-object v5, Lxm8;->a:Lxm8;
-
-    invoke-virtual {v2, v5}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p1, Lwm8;->a:Ljava/util/EnumSet;
-
-    sget-object v5, Lxm8;->c:Lxm8;
-
-    invoke-virtual {v2, v5}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p1, Lwm8;->a:Ljava/util/EnumSet;
-
-    sget-object v5, Lxm8;->b:Lxm8;
-
-    invoke-virtual {v2, v5}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    if-eqz v2, :cond_3
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_3
-    move v2, v4
-
-    :goto_0
-    monitor-exit p1
-
-    if-nez v2, :cond_4
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_4
-    monitor-exit p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw v0
-
-    :cond_4
-    iget-object p1, v0, Lzm8;->i:Lrm8;
-
-    if-eqz p1, :cond_5
-
-    const-string p1, "zm8"
-
-    const-string v2, "searchChatsAndMessages, notify listener"
-
-    new-array v5, v4, [Ljava/lang/Object;
-
-    invoke-static {p1, v2, v5}, Lwqi;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lzm8;->i:Lrm8;
-
-    invoke-interface {p1, v3, v1, v4}, Lrm8;->f(Ljava/lang/String;Ljava/util/List;Z)V
-
-    :cond_5
-    :goto_2
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_5
-    monitor-exit p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

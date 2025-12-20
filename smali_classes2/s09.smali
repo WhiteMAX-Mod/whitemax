@@ -1,61 +1,71 @@
-.class public final Ls09;
+.class public abstract Ls09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lt09;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-.field public final b:Lik9;
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lt09;Lik9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz48;
 
-    iput-object p1, p0, Ls09;->a:Lt09;
+    const/16 v1, 0x13
 
-    iput-object p2, p0, Ls09;->b:Lik9;
+    invoke-direct {v0, v1}, Lz48;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
+
+    move-result-object v0
+
+    sput-object v0, Ls09;->a:Ljava/lang/Object;
+
+    new-instance v0, Lz48;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Lz48;-><init>(I)V
+
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
+
+    move-result-object v0
+
+    sput-object v0, Ls09;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a()[F
+    .locals 1
 
-# virtual methods
-.method public final a(Lv38;)V
-    .locals 9
+    sget-object v0, Ls09;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ls09;->a:Lt09;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    iget-object v0, v0, Lt09;->o:Lci5;
+    move-result-object v0
 
-    new-instance v1, Lzr0;
+    check-cast v0, [F
 
-    const/4 v7, 0x4
+    return-object v0
+.end method
 
-    const/16 v8, 0x16
+.method public static final b()Landroid/graphics/Path;
+    .locals 1
 
-    const/4 v2, 0x2
+    sget-object v0, Ls09;->a:Ljava/lang/Object;
 
-    const-class v4, Ls09;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    const-string v5, "handleMediaKeyboardEvents"
+    move-result-object v0
 
-    const-string v6, "handleMediaKeyboardEvents(Lone/me/sdk/arch/event/Event;)V"
+    check-cast v0, Landroid/graphics/Path;
 
-    move-object v3, p0
-
-    invoke-direct/range {v1 .. v8}, Lzr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Lg56;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v1, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    invoke-static {v2, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
-
-    return-void
+    return-object v0
 .end method

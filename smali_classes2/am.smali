@@ -1,63 +1,148 @@
 .class public final Lam;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzl;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final a:Ljm;
 
-.field public Y:Loje;
+.field public final b:Lf28;
 
-.field public Z:Lem6;
 
-.field public d:Lhwa;
+# direct methods
+.method public constructor <init>(Ljm;Lf28;)V
+    .locals 0
 
-.field public o:Ln2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public s0:Ll0g;
+    iput-object p1, p0, Lam;->a:Ljm;
 
-.field public t0:J
+    iput-object p2, p0, Lam;->b:Lf28;
 
-.field public u0:I
-
-.field public v0:I
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public x0:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final getFailParser()Lf28;
+    .locals 1
 
-    iput-object p1, p0, Lam;->w0:Ljava/lang/Object;
+    sget-object v0, Lxna;->c:Lxna;
 
-    iget p1, p0, Lam;->x0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final getOkParser()Lf28;
+    .locals 1
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lam;->b:Lf28;
 
-    iput p1, p0, Lam;->x0:I
+    return-object v0
+.end method
 
-    const/4 v5, 0x0
+.method public final getPriority()I
+    .locals 1
 
-    const/4 v6, 0x0
+    iget-object v0, p0, Lam;->a:Ljm;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljm;->getPriority()I
 
-    const/4 v1, 0x0
+    move-result v0
 
-    const-wide/16 v2, 0x0
+    return v0
+.end method
 
-    const/4 v4, 0x0
+.method public final getScope()Lpm;
+    .locals 1
 
-    move-object v7, p0
+    iget-object v0, p0, Lam;->a:Ljm;
 
-    invoke-static/range {v0 .. v7}, Lari;->c(Lhwa;Lfh2;JILjava/lang/String;Loje;Lq44;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljm;->getScope()Lpm;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0}, Ljm;->getUri()Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final shouldGzip()Z
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0}, Ljm;->shouldGzip()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final shouldPost()Z
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0}, Ljm;->shouldPost()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final willWriteParams()Z
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0}, Ljm;->willWriteParams()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final willWriteSupplyParams()Z
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0}, Ljm;->willWriteSupplyParams()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final writeParams(Lx28;)V
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0, p1}, Ljm;->writeParams(Lx28;)V
+
+    return-void
+.end method
+
+.method public final writeSupplyParams(Lx28;)V
+    .locals 1
+
+    iget-object v0, p0, Lam;->a:Ljm;
+
+    invoke-interface {v0, p1}, Ljm;->writeSupplyParams(Lx28;)V
+
+    return-void
 .end method

@@ -3,109 +3,120 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public final synthetic a:I
 
-.field public final b:Landroid/content/SharedPreferences;
+.field public final synthetic b:Ldi7;
 
-.field public final c:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public final synthetic c:F
 
 
 # direct methods
-.method public constructor <init>(Lk18;Landroid/content/Context;)V
-    .locals 1
+.method public synthetic constructor <init>(Ldi7;FI)V
+    .locals 0
+
+    iput p3, p0, Lbi7;->a:I
+
+    iput-object p1, p0, Lbi7;->b:Ldi7;
+
+    iput p2, p0, Lbi7;->c:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbi7;->a:Lk18;
-
-    const-string p1, "app_crash_prefs"
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbi7;->b:Landroid/content/SharedPreferences;
-
-    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbi7;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 5
+.method public final run()V
+    .locals 3
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget v0, p0, Lbi7;->a:I
 
-    move-result-wide v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lbi7;->b:Landroid/content/SharedPreferences;
+    sget-object v0, Lvh7;->a:Lvh7;
 
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v1, p0, Lbi7;->b:Ldi7;
 
-    move-result-object v2
+    invoke-static {v1, v0}, Ldi7;->l(Ldi7;Lxh7;)V
 
-    const-string v3, "pref_last_crash_time"
+    iget-object v0, v1, Ldi7;->N0:Ljava/lang/Object;
 
-    invoke-interface {v2, v3, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Ld68;->e()Z
 
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    iget-object v0, p0, Lbi7;->a:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpb3;
-
-    instance-of v1, p2, Ljava/lang/OutOfMemoryError;
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    const/4 v1, 0x2
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
+
+    check-cast v0, Lh10;
+
+    const/16 v1, 0x2710
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lbi7;->c:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Ln7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
     :cond_0
-    const/4 v1, 0x1
+    return-void
 
-    :goto_0
-    check-cast v0, Lw4e;
+    :pswitch_0
+    sget-object v0, Lvh7;->a:Lvh7;
 
-    iget-object v2, v0, Lw4e;->i0:Lfde;
+    iget-object v1, p0, Lbi7;->b:Ldi7;
 
-    sget-object v3, Lw4e;->m0:[Lyy7;
+    invoke-static {v1, v0}, Ldi7;->l(Ldi7;Lxh7;)V
 
-    const/16 v4, 0x34
+    iget-object v0, v1, Ldi7;->N0:Ljava/lang/Object;
 
-    aget-object v3, v3, v4
+    invoke-interface {v0}, Ld68;->e()Z
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object v1
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v2, v0, v3, v1}, Lfde;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lbi7;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lh10;
 
-    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    const/16 v1, 0x2710
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lbi7;->c:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Ln7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
     :cond_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

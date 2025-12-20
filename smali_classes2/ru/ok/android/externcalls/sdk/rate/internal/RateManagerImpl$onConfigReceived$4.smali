@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;
-.implements Len6;
+.implements Lor6;
 
 
 # annotations
@@ -62,21 +62,21 @@
 
     if-eqz v0, :cond_0
 
-    instance-of v0, p1, Len6;
+    instance-of v0, p1, Lor6;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$4;->getFunctionDelegate()Lxm6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$4;->getFunctionDelegate()Lhr6;
 
     move-result-object v0
 
-    check-cast p1, Len6;
+    check-cast p1, Lor6;
 
-    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
+    invoke-interface {p1}, Lor6;->getFunctionDelegate()Lhr6;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -88,16 +88,16 @@
     return p1
 .end method
 
-.method public final getFunctionDelegate()Lxm6;
+.method public final getFunctionDelegate()Lhr6;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lxm6;"
+            "Lhr6;"
         }
     .end annotation
 
-    new-instance v0, Lhn6;
+    new-instance v0, Lrr6;
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$4;->$tmp0:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;
 
@@ -111,7 +111,7 @@
 
     const-string v5, "addRateHint"
 
-    invoke-direct/range {v0 .. v6}, Lgn6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -119,7 +119,7 @@
 .method public final hashCode()I
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$4;->getFunctionDelegate()Lxm6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$onConfigReceived$4;->getFunctionDelegate()Lhr6;
 
     move-result-object v0
 

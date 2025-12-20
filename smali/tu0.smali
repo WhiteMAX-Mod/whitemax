@@ -1,106 +1,204 @@
-.class public final synthetic Ltu0;
+.class public final Ltu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luu1;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public b:I
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+.method public constructor <init>(IILrb4;Lf76;)V
     .locals 0
 
-    iput p2, p0, Ltu0;->a:I
-
-    iput-object p1, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p4, p0, Ltu0;->c:Ljava/lang/Object;
+
+    .line 3
+    iput p1, p0, Ltu0;->a:I
+
+    .line 4
+    iput p2, p0, Ltu0;->b:I
+
+    .line 5
+    iput-object p3, p0, Ltu0;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(II[F[F)V
+    .locals 6
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput p1, p0, Ltu0;->a:I
+
+    .line 8
+    array-length p1, p3
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x2
+
+    mul-long/2addr v0, v2
+
+    array-length p1, p4
+
+    int-to-long v2, p1
+
+    const-wide/16 v4, 0x3
+
+    mul-long/2addr v2, v4
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ln5j;->b(Z)V
+
+    .line 9
+    iput-object p3, p0, Ltu0;->c:Ljava/lang/Object;
+
+    .line 10
+    iput-object p4, p0, Ltu0;->d:Ljava/lang/Object;
+
+    .line 11
+    iput p2, p0, Ltu0;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(Ltu1;)Ljava/lang/String;
-    .locals 2
+.method public a()Lwsg;
+    .locals 5
 
-    iget v0, p0, Ltu0;->a:I
+    new-instance v0, Lwsg;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Ltu0;->a:I
 
-    iget-object v0, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v2, p0, Ltu0;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    check-cast v2, Ljava/lang/String;
 
-    const-string p1, "Terminate InputBuffer"
+    iget-object v3, p0, Ltu0;->d:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v3, Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget v4, p0, Ltu0;->b:I
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-direct {v0, v2, v1, v4, v3}, Lwsg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const-string p1, "mReleasedFuture"
+    return-object v0
+.end method
 
-    return-object p1
+.method public b(Ljava/lang/String;)V
+    .locals 3
 
-    :pswitch_1
-    iget-object v0, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {p1}, Lx5a;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result-object p1
 
-    const-string p1, "acquireInputBuffer"
+    if-eqz p1, :cond_1
 
-    return-object p1
+    invoke-static {p1}, Lx5a;->i(Ljava/lang/String;)Z
 
-    :pswitch_2
-    iget-object v0, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result v0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    const-string p1, "Data closed"
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    const/4 v0, 0x0
 
-    :pswitch_3
-    new-instance v0, Lwz1;
+    goto :goto_1
 
-    const/4 v1, 0x0
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v1, p1}, Lwz1;-><init>(ILjava/lang/Object;)V
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v2, "Not an audio MIME type: "
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string p1, "OnScreenFlashUiApplied"
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_4
-    iget-object v0, p0, Ltu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Lp5j;->a(Ljava/lang/Object;Z)V
 
-    const-string p1, "Data closed"
+    iput-object p1, p0, Ltu0;->c:Ljava/lang/Object;
 
-    return-object p1
+    return-void
+.end method
 
-    nop
+.method public c(Ljava/lang/String;)V
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1}, Lx5a;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Lx5a;->m(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Not a video MIME type: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lp5j;->a(Ljava/lang/Object;Z)V
+
+    iput-object p1, p0, Ltu0;->d:Ljava/lang/Object;
+
+    return-void
 .end method

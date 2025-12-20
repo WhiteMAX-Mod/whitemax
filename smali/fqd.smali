@@ -1,141 +1,130 @@
-.class public final Lfqd;
-.super Lf3;
+.class public final synthetic Lfqd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:Lg16;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public synthetic constructor <init>(Lg16;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfqd;->a:Ljava/util/List;
+    iput-object p1, p0, Lfqd;->a:Lg16;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
+.method public final a(ILv52;)Landroid/media/MediaMuxer;
+    .locals 3
 
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+    sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+    iget-object v0, p0, Lfqd;->a:Lg16;
 
-    move-result p1
+    instance-of v1, v0, Lg16;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object p1
+    iget-object v0, v0, Lg16;->b:Lfb0;
 
-    return-object p1
-.end method
+    iget-object v0, v0, Lfb0;->c:Ljava/io/File;
 
-.method public final add(ILjava/lang/Object;)V
-    .locals 1
+    invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+    move-result-object v1
 
-    invoke-static {p1, p0}, Lue3;->z(ILjava/util/List;)I
-
-    move-result p1
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    return-void
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
-
-    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
-
-    move-result p1
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getSize()I
-    .locals 1
-
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
-
-    new-instance v0, Leqd;
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lfqd;I)V
+    goto :goto_0
 
-    return-object v0
-.end method
+    :cond_0
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
-.method public final listIterator()Ljava/util/ListIterator;
-    .locals 2
+    move-result v2
 
-    .line 1
-    new-instance v0, Leqd;
+    if-eqz v2, :cond_1
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
-    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lfqd;I)V
+    move-result v1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 1
+    :cond_1
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 2
-    new-instance v0, Leqd;
+    move-result v1
 
-    invoke-direct {v0, p0, p1}, Leqd;-><init>(Lfqd;I)V
+    :goto_0
+    if-nez v1, :cond_2
 
-    return-object v0
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const-string v2, "Failed to create folder for "
 
-    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v2
 
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Recorder"
+
+    invoke-static {v2, v1}, Lw4j;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    new-instance v1, Landroid/media/MediaMuxer;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, p1}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
+
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 
-    return-object p1
+    iget-object p2, p2, Lv52;->b:Ljava/lang/Object;
+
+    check-cast p2, Lkqd;
+
+    iput-object p1, p2, Lkqd;->I:Landroid/net/Uri;
+
+    return-object v1
+
+    :cond_3
+    new-instance p1, Ljava/lang/AssertionError;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "Invalid output options type: "
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p1
 .end method

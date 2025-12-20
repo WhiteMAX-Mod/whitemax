@@ -1,83 +1,183 @@
-.class public final Le2j;
-.super Ll4;
+.class public abstract Le2j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Le2j;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:I
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final h(Lkotlinx/coroutines/internal/ScopeCoroutine;Lkotlinx/coroutines/internal/ScopeCoroutine;Lcr6;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lobh;
+    const/4 v0, 0x2
 
-    const/16 v1, 0x17
+    :try_start_0
+    invoke-static {v0, p2}, La1h;->f(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Lobh;-><init>(I)V
+    invoke-interface {p2, p1, p0}, Lcr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput-object v0, Le2j;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance p2, Ljo3;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v0}, Ljo3;-><init>(Ljava/lang/Throwable;Z)V
+
+    move-object p1, p2
+
+    :goto_0
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lkz7;->makeCompletingOnce$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Llz7;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    instance-of p1, p0, Ljo3;
+
+    if-nez p1, :cond_2
+
+    invoke-static {p0}, Llz7;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    :goto_1
+    return-object p2
+
+    :cond_2
+    check-cast p0, Ljo3;
+
+    iget-object p0, p0, Ljo3;->a:Ljava/lang/Throwable;
+
+    throw p0
+.end method
+
+.method public static i(I)Ljava/lang/String;
+    .locals 0
+
+    sparse-switch p0, :sswitch_data_0
+
+    new-instance p0, Ljava/lang/AssertionError;
+
+    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw p0
+
+    :sswitch_0
+    const-string p0, "`}`"
+
+    return-object p0
+
+    :sswitch_1
+    const-string p0, "`{`"
+
+    return-object p0
+
+    :sswitch_2
+    const-string p0, "null"
+
+    return-object p0
+
+    :sswitch_3
+    const-string p0, "boolean"
+
+    return-object p0
+
+    :sswitch_4
+    const-string p0, "`]`"
+
+    return-object p0
+
+    :sswitch_5
+    const-string p0, "`[`"
+
+    return-object p0
+
+    :sswitch_6
+    const-string p0, "`:`"
+
+    return-object p0
+
+    :sswitch_7
+    const-string p0, "number"
+
+    return-object p0
+
+    :sswitch_8
+    const-string p0, "`,`"
+
+    return-object p0
+
+    :sswitch_9
+    const-string p0, "name"
+
+    return-object p0
+
+    :sswitch_a
+    const-string p0, "string"
+
+    return-object p0
+
+    :sswitch_b
+    const-string p0, "eof"
+
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_b
+        0x22 -> :sswitch_a
+        0x27 -> :sswitch_9
+        0x2c -> :sswitch_8
+        0x31 -> :sswitch_7
+        0x3a -> :sswitch_6
+        0x5b -> :sswitch_5
+        0x5d -> :sswitch_4
+        0x62 -> :sswitch_3
+        0x6e -> :sswitch_2
+        0x7b -> :sswitch_1
+        0x7d -> :sswitch_0
+    .end sparse-switch
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public abstract a(Lu1;Ld1;Ld1;)Z
+.end method
 
-    const/16 p2, 0x4f45
+.method public abstract b(Lu1;Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
 
-    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
+.method public abstract c(Lu1;Ls1;Ls1;)Z
+.end method
 
-    move-result p2
+.method public abstract d(Lu1;)Ld1;
+.end method
 
-    iget v0, p0, Le2j;->a:I
+.method public abstract e(Lu1;)Ls1;
+.end method
 
-    const/4 v1, 0x2
+.method public abstract f(Ls1;Ls1;)V
+.end method
 
-    const/4 v2, 0x4
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x3
-
-    iget-object v1, p0, Le2j;->b:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    iget-object v0, p0, Le2j;->c:Ljava/lang/String;
-
-    invoke-static {p1, v2, v0}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v0, 0x5
-
-    iget-object v1, p0, Le2j;->d:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
-
-    return-void
+.method public abstract g(Ls1;Ljava/lang/Thread;)V
 .end method

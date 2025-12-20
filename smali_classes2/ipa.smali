@@ -1,49 +1,65 @@
 .class public final Lipa;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:[Lp38;
+
+.field public static final d:Ljava/lang/String;
+
+
 # instance fields
-.field public X:I
+.field public final a:Ljy0;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lqpa;
+.field public final b:Lg35;
 
 
 # direct methods
-.method public constructor <init>(Lqpa;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lipa;->o:Lqpa;
+    new-instance v0, Lgxc;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-class v1, Lipa;
+
+    const-string v2, "chats"
+
+    const-string v3, "getChats()Lru/ok/tamtam/chats/ChatController;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lfsd;->a:Lgsd;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Lp38;
+
+    aput-object v0, v2, v4
+
+    sput-object v2, Lipa;->c:[Lp38;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lipa;->d:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljy0;Lg35;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lipa;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lipa;->a:Ljy0;
 
-    iget p1, p0, Lipa;->X:I
+    iput-object p2, p0, Lipa;->b:Lg35;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lipa;->X:I
-
-    iget-object p1, p0, Lipa;->o:Lqpa;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lqpa;->a(Lqpa;Ljava/util/List;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

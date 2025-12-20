@@ -1,181 +1,160 @@
 .class public final Lhta;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvta;
+
+# static fields
+.field public static final c:Ljava/lang/Object;
+
+.field public static d:Ljava/lang/String;
+
+.field public static e:Ljava/util/HashSet;
+
+.field public static final f:Ljava/lang/Object;
+
+.field public static g:Lgta;
 
 
 # instance fields
-.field public final a:Lvta;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Ln42;
-
-.field public final c:Llta;
-
-.field public final d:Lm7c;
-
-.field public o:J
+.field public final b:Landroid/app/NotificationManager;
 
 
 # direct methods
-.method public constructor <init>(Lvta;JLm7c;Ln42;Llta;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lhta;->a:Lvta;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lhta;->b:Ln42;
+    sput-object v0, Lhta;->c:Ljava/lang/Object;
 
-    iput-object p6, p0, Lhta;->c:Llta;
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p4, p0, Lhta;->d:Lm7c;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-wide p2, p0, Lhta;->o:J
+    sput-object v0, Lhta;->e:Ljava/util/HashSet;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhta;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhta;->a:Landroid/content/Context;
+
+    const-string v0, "notification"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/NotificationManager;
+
+    iput-object p1, p0, Lhta;->b:Landroid/app/NotificationManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a(Ljava/lang/String;ILandroid/app/Notification;)V
+    .locals 4
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-object v0, p0, Lhta;->b:Landroid/app/NotificationManager;
 
-    move-result v0
+    iget-object v1, p3, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    if-nez v0, :cond_2
+    if-eqz v1, :cond_1
 
-    const/4 v0, 0x1
+    const-string v2, "android.support.useSideChannel"
 
-    :cond_0
-    iget-object v1, p0, Lhta;->b:Ln42;
-
-    invoke-virtual {v1}, Ln42;->e()Z
+    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    new-instance v1, Ldta;
+
+    iget-object v2, p0, Lhta;->a:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, p2, p1, p3}, Ldta;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+
+    sget-object v2, Lhta;->f:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    sget-object p3, Lhta;->g:Lgta;
+
+    if-nez p3, :cond_0
+
+    new-instance p3, Lgta;
+
+    iget-object v3, p0, Lhta;->a:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {p3, v3}, Lgta;-><init>(Landroid/content/Context;)V
+
+    sput-object p3, Lhta;->g:Lgta;
+
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Lhta;->c:Llta;
+    :catchall_0
+    move-exception p1
 
-    invoke-interface {v1, p0}, Llta;->a(Lvta;)V
-
-    neg-int v0, v0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lhta;->a:Lvta;
-
-    invoke-interface {v0}, Lvta;->b()V
-
-    return-void
-.end method
-
-.method public final c(Lpy4;)V
-    .locals 1
-
-    iget-object v0, p0, Lhta;->b:Ln42;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Lty4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lhta;->a:Lvta;
-
-    invoke-interface {v0, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-wide v0, p0, Lhta;->o:J
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    sub-long v2, v0, v2
-
-    iput-wide v2, p0, Lhta;->o:J
+    goto :goto_1
 
     :cond_0
-    const-wide/16 v2, 0x0
+    :goto_0
+    sget-object p3, Lhta;->g:Lgta;
 
-    cmp-long v0, v0, v2
+    iget-object p3, p3, Lgta;->b:Landroid/os/Handler;
 
-    iget-object v1, p0, Lhta;->a:Lvta;
+    const/4 v3, 0x0
 
-    if-nez v0, :cond_1
+    invoke-virtual {p3, v3, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-interface {v1, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    move-result-object p3
 
-    return-void
+    invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
 
-    :cond_1
-    :try_start_0
-    iget-object v0, p0, Lhta;->d:Lm7c;
-
-    invoke-interface {v0, p1}, Lm7c;->test(Ljava/lang/Object;)Z
-
-    move-result v0
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_2
-
-    invoke-interface {v1, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1, p2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
 
     return-void
 
-    :cond_2
-    invoke-virtual {p0}, Lhta;->a()V
+    :goto_1
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
+    throw p1
 
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
-
-    invoke-interface {v1, v2}, Lvta;->onError(Ljava/lang/Throwable;)V
+    :cond_1
+    invoke-virtual {v0, p1, p2, p3}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
     return-void
 .end method

@@ -1,73 +1,76 @@
-.class public final Llgi;
-.super Lui3;
+.class public abstract Llgi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:I
 
-.field public final synthetic Y:Lwi3;
+.field public b:F
+
+.field public final c:Landroid/view/animation/Interpolator;
+
+.field public final d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwi3;I)V
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
     .locals 0
 
-    iput p2, p0, Llgi;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llgi;->Y:Lwi3;
+    iput p1, p0, Llgi;->a:I
 
-    const/4 p2, 0x0
+    iput-object p2, p0, Llgi;->c:Landroid/view/animation/Interpolator;
 
-    invoke-direct {p0, p1, p2}, Lui3;-><init>(Lwi3;B)V
+    iput-wide p3, p0, Llgi;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I)Ljava/lang/Object;
+.method public a()J
     .locals 2
 
-    iget v0, p0, Llgi;->X:I
+    iget-wide v0, p0, Llgi;->d:J
 
-    iget-object v1, p0, Llgi;->Y:Lwi3;
+    return-wide v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public b()F
+    .locals 2
 
-    sget-object v0, Lwi3;->v0:Ljava/lang/Object;
+    iget-object v0, p0, Llgi;->c:Landroid/view/animation/Interpolator;
 
-    invoke-virtual {v1}, Lwi3;->n()[Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget v1, p0, Llgi;->b:F
 
-    aget-object p1, v0, p1
+    invoke-interface {v0, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
-    return-object p1
+    move-result v0
 
-    :pswitch_0
-    new-instance v0, Lihi;
+    return v0
 
-    invoke-direct {v0, v1, p1}, Lihi;-><init>(Lwi3;I)V
+    :cond_0
+    iget v0, p0, Llgi;->b:F
 
-    return-object v0
+    return v0
+.end method
 
-    :pswitch_1
-    sget-object v0, Lwi3;->v0:Ljava/lang/Object;
+.method public c()I
+    .locals 1
 
-    invoke-virtual {v1}, Lwi3;->m()[Ljava/lang/Object;
+    iget v0, p0, Llgi;->a:I
 
-    move-result-object v0
+    return v0
+.end method
 
-    aget-object p1, v0, p1
+.method public d(F)V
+    .locals 0
 
-    return-object p1
+    iput p1, p0, Llgi;->b:F
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

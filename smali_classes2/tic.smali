@@ -1,57 +1,23 @@
 .class public final Ltic;
-.super Lmjc;
+.super Lkk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final b:J
 
-.field public final b:Lem6;
-
-.field public final c:Lt5g;
-
-.field public final d:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
-
-    .line 6
-    new-instance v0, Ldga;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Ldga;-><init>(I)V
-
-    .line 7
-    sget-object v1, Ldpg;->q:Lt5g;
-
-    .line 8
-    invoke-direct {p0, p1, v0, v1}, Ltic;-><init>(ILem6;Lt5g;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ILem6;Lt5g;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkk0;-><init>()V
 
-    .line 2
-    iput p1, p0, Ltic;->a:I
+    iput-wide p1, p0, Ltic;->b:J
 
-    .line 3
-    iput-object p2, p0, Ltic;->b:Lem6;
-
-    .line 4
-    iput-object p3, p0, Ltic;->c:Lt5g;
-
-    const/4 p1, 0x4
-
-    .line 5
-    iput p1, p0, Ltic;->d:I
+    iput-wide p3, p0, Ltic;->c:J
 
     return-void
 .end method
@@ -59,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -79,128 +45,71 @@
     :cond_1
     check-cast p1, Ltic;
 
-    iget v1, p0, Ltic;->a:I
+    iget-wide v3, p0, Ltic;->b:J
 
-    iget v3, p1, Ltic;->a:I
+    iget-wide v5, p1, Ltic;->b:J
 
-    if-eq v1, v3, :cond_2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Ltic;->b:Lem6;
+    iget-wide v3, p0, Ltic;->c:J
 
-    iget-object v3, p1, Ltic;->b:Lem6;
+    iget-wide v5, p1, Ltic;->c:J
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result v1
-
-    if-nez v1, :cond_3
+    if-eqz p1, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Ltic;->c:Lt5g;
-
-    iget-object p1, p1, Ltic;->c:Lt5g;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const/4 v0, 0x4
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Ltic;->a:I
+    iget-wide v0, p0, Ltic;->b:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Ltic;->b:Lem6;
+    iget-wide v1, p0, Ltic;->c:J
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ltic;->c:Lt5g;
-
-    invoke-virtual {v0}, Lt5g;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Ltic;->d:I
-
-    return v0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
 
-    const-string v1, "Section(title="
+    const-string v1, ", photoId="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Ltic;->b:J
 
-    iget v1, p0, Ltic;->a:I
+    invoke-static {v2, v3, v0, v1}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textColor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltic;->b:Lem6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", typography="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltic;->c:Lt5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Ltic;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

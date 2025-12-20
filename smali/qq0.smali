@@ -1,101 +1,217 @@
-.class public final Lqq0;
-.super Ljava/util/concurrent/CountDownLatch;
+.class public abstract synthetic Lqq0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvta;
-.implements Lpy4;
 
-
-# instance fields
-.field public a:Ljava/lang/Object;
-
-.field public b:Ljava/lang/Throwable;
-
-.field public c:Lpy4;
-
-.field public volatile d:Z
-
-
-# virtual methods
-.method public final b()V
+# direct methods
+.method public static bridge synthetic a(Landroid/graphics/Gainmap;)F
     .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getDisplayRatioForFullHdr()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic b(Landroid/content/Context;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getDeviceId()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic c(Landroid/content/Context;I)Landroid/content/Context;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->createDeviceContext(I)Landroid/content/Context;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic d(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGainmapContents()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic e(Landroid/graphics/Bitmap;)Landroid/graphics/Gainmap;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGainmap()Landroid/graphics/Gainmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/graphics/Gainmap;
+    .locals 0
+
+    check-cast p0, Landroid/graphics/Gainmap;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic g()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AVAILABLE_SETTINGS_OVERRIDES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic h()Landroid/hardware/camera2/CaptureRequest$Key;
+    .locals 1
+
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SETTINGS_OVERRIDE:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic i(Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/ClassValue;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic j()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/util/concurrent/locks/LockSupport;->setCurrentBlocker(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final c(Lpy4;)V
-    .locals 1
+.method public static bridge synthetic k(Landroid/media/AudioTrack$Builder;Landroid/content/Context;)V
+    .locals 0
 
-    iput-object p1, p0, Lqq0;->c:Lpy4;
+    invoke-virtual {p0, p1}, Landroid/media/AudioTrack$Builder;->setContext(Landroid/content/Context;)Landroid/media/AudioTrack$Builder;
 
-    iget-boolean v0, p0, Lqq0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lpy4;->dispose()V
-
-    :cond_0
     return-void
 .end method
 
-.method public final dispose()V
+.method public static bridge synthetic l(Lone/me/android/deeplink/LinkInterceptorActivity;)V
     .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v0, v0}, Landroid/app/Activity;->overrideActivityTransition(III)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Lone/me/sdk/concurrent/LinkedTransferQueue34;)V
+    .locals 0
+
+    invoke-static {p0}, Ljava/util/concurrent/locks/LockSupport;->setCurrentBlocker(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic n(Landroid/app/NotificationManager;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->canUseFullScreenIntent()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic o(Landroid/graphics/Bitmap;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasGainmap()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic p(Landroid/graphics/Gainmap;)[F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGamma()[F
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic q(Landroid/graphics/Gainmap;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getMinDisplayRatioForHdrTransition()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic r(Lone/me/android/deeplink/LinkInterceptorActivity;)V
+    .locals 2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lqq0;->d:Z
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lqq0;->c:Lpy4;
+    invoke-virtual {p0, v0, v1, v1}, Landroid/app/Activity;->overrideActivityTransition(III)V
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    :cond_0
     return-void
 .end method
 
-.method public final e()Z
-    .locals 1
+.method public static bridge synthetic s(Landroid/graphics/Gainmap;)[F
+    .locals 0
 
-    iget-boolean v0, p0, Lqq0;->d:Z
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMax()[F
 
-    return v0
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+.method public static bridge synthetic t(Landroid/graphics/Gainmap;)[F
+    .locals 0
 
-    iget-object v0, p0, Lqq0;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMin()[F
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    iput-object p1, p0, Lqq0;->a:Ljava/lang/Object;
-
-    iget-object p1, p0, Lqq0;->c:Lpy4;
-
-    invoke-interface {p1}, Lpy4;->dispose()V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public static bridge synthetic u(Landroid/graphics/Gainmap;)[F
+    .locals 0
 
-    iget-object v0, p0, Lqq0;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonHdr()[F
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    iput-object p1, p0, Lqq0;->b:Ljava/lang/Throwable;
+    return-object p0
+.end method
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+.method public static bridge synthetic v(Landroid/graphics/Gainmap;)[F
+    .locals 0
 
-    return-void
+    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonSdr()[F
+
+    move-result-object p0
+
+    return-object p0
 .end method

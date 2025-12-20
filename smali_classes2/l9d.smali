@@ -1,54 +1,8 @@
-.class public final Ll9d;
+.class public abstract Ll9d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lt98;
 
 
 # static fields
-.field public static final a:Ll9d;
+.field public static oneme_stickers_search_stickers_list:I = 0x7f0a0883
 
-.field public static final b:I
-
-.field public static final c:J
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ll9d;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll9d;->a:Ll9d;
-
-    sget v0, Lcvd;->a:I
-
-    sput v0, Ll9d;->b:I
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    sput-wide v0, Ll9d;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Ll9d;->c:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Ll9d;->b:I
-
-    return v0
-.end method
+.field public static oneme_stickers_search_toolbar:I = 0x7f0a0884

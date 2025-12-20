@@ -1,76 +1,70 @@
-.class public abstract Lo7j;
+.class public final Lo7j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lo7j;
+
 
 # direct methods
-.method public static a(FFF)F
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/high16 v0, 0x40000000    # 2.0f
+    new-instance v0, Lo7j;
 
-    div-float/2addr p2, v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    div-float/2addr p0, p2
+    sput-object v0, Lo7j;->a:Lo7j;
 
-    const/high16 p2, 0x3f800000    # 1.0f
+    new-instance v0, Lyyi;
 
-    cmpg-float p2, p0, p2
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    div-float/2addr p1, v0
+    const-class v1, Lqzi;
 
-    if-gez p2, :cond_0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    mul-float/2addr p1, p0
+    move-result-object v0
 
-    mul-float/2addr p1, p0
+    const/4 v2, 0x2
 
-    mul-float/2addr p1, p0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    add-float/2addr p1, v1
+    move-result-object v0
 
-    return p1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    :cond_0
-    sub-float/2addr p0, v0
+    move-result-object v0
 
-    mul-float p2, p0, p0
+    const/4 v2, 0x3
 
-    mul-float/2addr p2, p0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    add-float/2addr p2, v0
+    move-result-object v0
 
-    mul-float/2addr p2, p1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    add-float/2addr p2, v1
+    move-result-object v0
 
-    return p2
-.end method
-
-.method public static final b(Lesg;)V
-    .locals 2
-
-    new-instance v0, Lcya;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lcya;-><init>(I)V
-
-    const/16 v1, 0x197
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lcya;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lcya;-><init>(I)V
-
-    const/16 v1, 0x1e2
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

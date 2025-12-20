@@ -1,97 +1,51 @@
 .class public final Lfj9;
-.super Landroid/text/style/ClickableSpan;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcj9;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:I
+.field public final synthetic Y:Lmii;
 
-.field public c:Lg88;
+.field public Z:I
+
+.field public d:Lmii;
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcj9;I)V
+.method public constructor <init>(Lmii;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p1, p0, Lfj9;->Y:Lmii;
 
-    iput-object p1, p0, Lfj9;->a:Lcj9;
-
-    iput p2, p0, Lfj9;->b:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 8
-
-    iget-object v0, p0, Lfj9;->c:Lg88;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lg88;->a:Lh88;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    sget-object v3, Lh88;->d:Ln7;
-
-    iget-wide v4, v3, Ln7;->a:J
-
-    sub-long v4, v1, v4
-
-    const-wide/16 v6, 0x12c
-
-    cmp-long v4, v4, v6
-
-    if-lez v4, :cond_2
-
-    iput-wide v1, v3, Ln7;->a:J
-
-    iget-object v0, v0, Lh88;->a:Le88;
-
-    if-nez v0, :cond_1
-
-    instance-of v0, p1, Le88;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Le88;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object p1, p0, Lfj9;->a:Lcj9;
-
-    invoke-interface {v0, p1}, Le88;->a(Lcj9;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lfj9;->b:I
+    iput-object p1, p0, Lfj9;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    iget p1, p0, Lfj9;->Z:I
 
-    const/4 v0, 0x1
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lfj9;->Z:I
+
+    iget-object p1, p0, Lfj9;->Y:Lmii;
+
+    invoke-static {p1, p0}, Lmii;->e(Lmii;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

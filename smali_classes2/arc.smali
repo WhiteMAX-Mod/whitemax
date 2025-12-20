@@ -1,83 +1,131 @@
 .class public final Larc;
-.super Lq44;
+.super Ldrc;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lerc;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Landroid/graphics/Bitmap;
-
-.field public d:Lone/me/sdk/uikit/qr/QrCodeGenerator;
-
-.field public o:Liz5;
-
-.field public s0:Landroid/graphics/Bitmap;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
-
-.field public v0:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Lq44;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Larc;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Larc;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iput-object p1, p0, Larc;->t0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Larc;->v0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Larc;
 
-    iput p1, p0, Larc;->v0:I
+    if-nez v1, :cond_1
 
-    const/4 v10, 0x0
+    goto :goto_0
 
-    const/4 v11, 0x0
+    :cond_1
+    check-cast p1, Larc;
 
-    iget-object v0, p0, Larc;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    iget v1, p0, Larc;->a:I
 
-    const/4 v1, 0x0
+    iget p1, p1, Larc;->a:I
 
-    const/4 v2, 0x0
+    if-eq v1, p1, :cond_2
 
-    const/4 v3, 0x0
+    :goto_0
+    const/4 p1, 0x0
 
-    const/4 v4, 0x0
+    return p1
 
-    const/4 v5, 0x0
+    :cond_2
+    return v0
+.end method
 
-    const/4 v6, 0x0
+.method public final getItemId()J
+    .locals 2
 
-    const/4 v7, 0x0
+    const/16 v0, 0x80
 
-    const/4 v8, 0x0
+    int-to-long v0, v0
 
-    const/4 v9, 0x0
+    return-wide v0
+.end method
 
-    move-object v12, p0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual/range {v0 .. v12}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->f(Landroid/content/Context;ILiz5;Llzf;Lerc;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lq44;)Ljava/lang/Object;
+    iget v0, p0, Larc;->a:I
 
-    move-result-object p1
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    return-object p1
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, -0x7fffff80
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const v0, -0x7fffff80
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const v0, -0x7fffff80
+
+    invoke-static {v0}, Likj;->c(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "ParticipantsCount(count="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Larc;->a:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", itemViewType="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

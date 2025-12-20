@@ -2,40 +2,73 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
 
-    if-ne p0, p1, :cond_0
+# instance fields
+.field public final a:Ljava/lang/String;
 
-    const/4 p1, 0x1
+.field public final b:I
 
-    return p1
+.field public final c:I
 
-    :cond_0
-    instance-of v0, p1, Le09;
+.field public final d:Llc9;
 
-    if-nez v0, :cond_1
+.field public final e:Lk09;
 
-    const/4 p1, 0x0
+.field public final f:Ljava/util/HashMap;
 
-    return p1
+.field public final synthetic g:Luc9;
 
-    :cond_1
-    check-cast p1, Le09;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# direct methods
+.method public constructor <init>(Luc9;Ljava/lang/String;IILl09;)V
+    .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    throw p1
+    iput-object p1, p0, Le09;->g:Luc9;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Le09;->f:Ljava/util/HashMap;
+
+    iput-object p2, p0, Le09;->a:Ljava/lang/String;
+
+    iput p3, p0, Le09;->b:I
+
+    iput p4, p0, Le09;->c:I
+
+    new-instance p1, Llc9;
+
+    invoke-direct {p1, p2, p3, p4}, Llc9;-><init>(Ljava/lang/String;II)V
+
+    iput-object p1, p0, Le09;->d:Llc9;
+
+    iput-object p5, p0, Le09;->e:Lk09;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final binderDied()V
+    .locals 3
 
-    throw v0
+    iget-object v0, p0, Le09;->g:Luc9;
+
+    iget-object v0, v0, Luc9;->Y:Lty;
+
+    new-instance v1, Lof8;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p0}, Lof8;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

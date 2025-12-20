@@ -1,53 +1,50 @@
-.class public final Lhw;
-.super Lq44;
+.class public final synthetic Lhw;
+.super Lrr6;
 .source "SourceFile"
 
+# interfaces
+.implements Loq6;
 
-# instance fields
-.field public X:J
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lxw;
-
-.field public d:Lxw;
-
-.field public o:Ljava/util/Collection;
-
-.field public s0:I
+# static fields
+.field public static final a:Lhw;
 
 
 # direct methods
-.method public constructor <init>(Lxw;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lhw;->Z:Lxw;
+    new-instance v0, Lhw;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v4, "getId()J"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lw77;
+
+    const-string v3, "getId"
+
+    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lhw;->a:Lhw;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iput-object p1, p0, Lhw;->Y:Ljava/lang/Object;
+    check-cast p1, Lw77;
 
-    iget p1, p0, Lhw;->s0:I
+    invoke-interface {p1}, Lw77;->getId()J
 
-    const/high16 v0, -0x80000000
+    move-result-wide v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lhw;->s0:I
-
-    iget-object p1, p0, Lhw;->Z:Lxw;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lxw;->t(JLq44;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 

@@ -1,169 +1,98 @@
 .class public final Lty6;
-.super Ll4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lty6;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lunh;
 
 
 # instance fields
-.field public X:F
+.field public final synthetic a:I
 
-.field public Y:F
+.field public final synthetic b:Lwnh;
 
-.field public Z:Z
-
-.field public a:Lxo0;
-
-.field public b:Lcom/google/android/gms/maps/model/LatLng;
-
-.field public c:F
-
-.field public d:F
-
-.field public o:Lcom/google/android/gms/maps/model/LatLngBounds;
-
-.field public s0:F
-
-.field public t0:F
-
-.field public u0:F
-
-.field public v0:Z
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;Lwnh;I)V
+    .locals 0
 
-    new-instance v0, Lwci;
+    iput p3, p0, Lty6;->a:I
 
-    const/16 v1, 0x18
+    iput-object p1, p0, Lty6;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lwci;-><init>(I)V
+    iput-object p2, p0, Lty6;->b:Lwnh;
 
-    sput-object v0, Lty6;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+.method public final c()V
+    .locals 2
 
-    const/16 v0, 0x4f45
+    iget v0, p0, Lty6;->a:I
 
-    invoke-static {p1, v0}, La9j;->k(Landroid/os/Parcel;I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lty6;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Lty6;->a:Lxo0;
+    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-    iget-object v1, v1, Lxo0;->a:Lkb7;
+    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->Z:Lqg8;
 
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    invoke-virtual {v0}, Lqg8;->u()V
 
-    const/4 v2, 0x2
+    :cond_0
+    iget-object v0, p0, Lty6;->b:Lwnh;
 
-    invoke-static {p1, v2, v1}, La9j;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lty6;->b:Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-static {p1, v1, v2, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    iget v1, p0, Lty6;->c:F
-
-    const/4 v2, 0x4
-
-    invoke-static {p1, v2, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget v1, p0, Lty6;->d:F
-
-    const/4 v3, 0x5
-
-    invoke-static {p1, v3, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
-
-    const/4 v1, 0x6
-
-    iget-object v3, p0, Lty6;->o:Lcom/google/android/gms/maps/model/LatLngBounds;
-
-    invoke-static {p1, v1, v3, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    iget p2, p0, Lty6;->X:F
-
-    const/4 v1, 0x7
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget p2, p0, Lty6;->Y:F
-
-    const/16 v1, 0x8
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-boolean p2, p0, Lty6;->Z:Z
-
-    const/16 v1, 0x9
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lty6;->s0:F
-
-    const/16 v1, 0xa
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget p2, p0, Lty6;->t0:F
-
-    const/16 v1, 0xb
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget p2, p0, Lty6;->u0:F
-
-    const/16 v1, 0xc
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-boolean p2, p0, Lty6;->v0:Z
-
-    const/16 v1, 0xd
-
-    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, v0}, La9j;->l(Landroid/os/Parcel;I)V
+    invoke-interface {v0, p0}, Lwnh;->B(Lunh;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lty6;->c:Ljava/lang/Object;
+
+    check-cast v0, Lkqh;
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Lkqh;->c(Z)V
+
+    iget-object v0, p0, Lty6;->b:Lwnh;
+
+    invoke-interface {v0, p0}, Lwnh;->B(Lunh;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lty6;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/chatmedia/viewer/photo/GifViewerWidget;
+
+    iget-object v0, v0, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->Z:Lqg8;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lqg8;->u()V
+
+    :cond_1
+    iget-object v0, p0, Lty6;->b:Lwnh;
+
+    invoke-interface {v0, p0}, Lwnh;->B(Lunh;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

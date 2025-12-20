@@ -17,7 +17,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/ProximityTracker;",
         "",
-        "Lqqg;",
+        "Lv2h;",
         "stopTrackingProximity",
         "()V",
         "startTrackingProximity",

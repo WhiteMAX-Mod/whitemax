@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmze;
+.implements Ljaf;
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/f;->b:Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->K(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;Lorg/json/JSONObject;)V
 
     return-void
 .end method

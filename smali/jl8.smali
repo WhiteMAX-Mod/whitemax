@@ -1,97 +1,114 @@
-.class public final synthetic Ljl8;
-.super Lsoc;
+.class public final Ljl8;
+.super Ljava/io/Writer;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/StringBuilder;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p2, p0, Ljl8;->a:I
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
-    move-object p2, p4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object p4, p5
+    const/16 v1, 0x80
 
-    move-object p5, p6
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    move p6, p1
+    iput-object v0, p0, Ljl8;->b:Ljava/lang/StringBuilder;
 
-    move-object p1, p0
+    const-string v0, "FragmentManager"
 
-    invoke-direct/range {p1 .. p6}, Luoc;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-object v0, p0, Ljl8;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final close()V
+    .locals 0
 
-    iget v0, p0, Ljl8;->a:I
+    invoke-virtual {p0}, Ljl8;->l()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lnu1;->receiver:Ljava/lang/Object;
+.method public final flush()V
+    .locals 0
 
-    check-cast v0, Lx9d;
+    invoke-virtual {p0}, Ljl8;->l()V
 
-    iget-object v0, v0, Lx9d;->c:Lnif;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ll98;->j()I
+.method public final l()V
+    .locals 3
 
-    move-result v0
+    iget-object v0, p0, Ljl8;->b:Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x8
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    if-le v0, v1, :cond_0
+    move-result v1
 
-    const/4 v0, 0x1
+    if-lez v1, :cond_0
 
-    goto :goto_0
+    iget-object v1, p0, Ljl8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
     :cond_0
+    return-void
+.end method
+
+.method public final write([CII)V
+    .locals 3
+
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-ge v0, p3, :cond_1
 
-    move-result-object v0
+    add-int v1, p2, v0
 
-    return-object v0
+    aget-char v1, p1, v1
 
-    :pswitch_0
-    iget-object v0, p0, Lnu1;->receiver:Ljava/lang/Object;
+    const/16 v2, 0xa
 
-    check-cast v0, Lvwa;
+    if-ne v1, v2, :cond_0
 
-    iget-object v0, v0, Lvwa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-virtual {p0}, Ljl8;->l()V
 
-    return-object v0
+    goto :goto_1
 
-    :pswitch_1
-    iget-object v0, p0, Lnu1;->receiver:Ljava/lang/Object;
+    :cond_0
+    iget-object v2, p0, Ljl8;->b:Ljava/lang/StringBuilder;
 
-    check-cast v0, Lone/me/android/MainActivity;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget v1, Lone/me/android/MainActivity;->a1:I
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v0}, Lone/me/android/MainActivity;->O()Leud;
+    goto :goto_0
 
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

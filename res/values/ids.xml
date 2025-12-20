@@ -292,6 +292,7 @@
     <item type="id" name="call_name" />
     <item type="id" name="call_name_layout" />
     <item type="id" name="call_network_status" />
+    <item type="id" name="call_not_contact_warning" />
     <item type="id" name="call_opponent" />
     <item type="id" name="call_opponent_info_buttons" />
     <item type="id" name="call_opponents" />
@@ -629,14 +630,6 @@
     <item type="id" name="edit_menu_item" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_id" />
-    <item type="id" name="emoji_choose_view__rv_grid" />
-    <item type="id" name="emoji_item_view__tv_emoji" />
-    <item type="id" name="emoji_panel_view__cs_tabs_holder" />
-    <item type="id" name="emoji_panel_view__top_separator" />
-    <item type="id" name="emoji_view__delimiter" />
-    <item type="id" name="emoji_view__ib_add" />
-    <item type="id" name="emoji_view__tl_tabs" />
-    <item type="id" name="emoji_view__vp_pages" />
     <item type="id" name="end_padder" />
     <item type="id" name="exo_ad_overlay" />
     <item type="id" name="exo_artwork" />
@@ -1547,6 +1540,7 @@
     <item type="id" name="oneme_main_settings_container" />
     <item type="id" name="oneme_media_keyboard" />
     <item type="id" name="oneme_media_keyboard_bottom_panel" />
+    <item type="id" name="oneme_media_keyboard_close_action" />
     <item type="id" name="oneme_media_keyboard_emoji_container" />
     <item type="id" name="oneme_media_keyboard_emoji_list" />
     <item type="id" name="oneme_media_keyboard_emoji_tabs" />
@@ -1573,7 +1567,20 @@
     <item type="id" name="oneme_message_input_right_outer_icon" />
     <item type="id" name="oneme_message_input_right_video_msg_icon" />
     <item type="id" name="oneme_message_input_view_id" />
+    <item type="id" name="oneme_messages_settings_container" />
     <item type="id" name="oneme_messages_settings_content_recycler" />
+    <item type="id" name="oneme_messages_settings_effects" />
+    <item type="id" name="oneme_messages_settings_fast_reaction_choose" />
+    <item type="id" name="oneme_messages_settings_fast_reaction_enable" />
+    <item type="id" name="oneme_messages_settings_header_item" />
+    <item type="id" name="oneme_messages_settings_highlight" />
+    <item type="id" name="oneme_messages_settings_linear" />
+    <item type="id" name="oneme_messages_settings_need_divider_above_vh" />
+    <item type="id" name="oneme_messages_settings_reaction_image" />
+    <item type="id" name="oneme_messages_settings_reaction_title" />
+    <item type="id" name="oneme_messages_settings_send_by_enter" />
+    <item type="id" name="oneme_messages_settings_setting_item" />
+    <item type="id" name="oneme_messages_settings_stickers" />
     <item type="id" name="oneme_messages_settings_toolbar" />
     <item type="id" name="oneme_middle_banner_background" />
     <item type="id" name="oneme_middle_banner_close_button" />
@@ -1718,6 +1725,7 @@
     <item type="id" name="oneme_settings_privacy_black_list_unblock_cancel_action" />
     <item type="id" name="oneme_settings_privacy_content_level_access" />
     <item type="id" name="oneme_settings_privacy_enter_pin_code_root" />
+    <item type="id" name="oneme_settings_privacy_family_protection" />
     <item type="id" name="oneme_settings_privacy_info_header" />
     <item type="id" name="oneme_settings_privacy_onboarding_content" />
     <item type="id" name="oneme_settings_privacy_onboarding_content_subtitle" />
@@ -1736,7 +1744,6 @@
     <item type="id" name="oneme_settings_privacy_onboarding_top_guideline" />
     <item type="id" name="oneme_settings_privacy_onboarding_without_code_button" />
     <item type="id" name="oneme_settings_privacy_pin_code_toolbar" />
-    <item type="id" name="oneme_settings_privacy_safe_files" />
     <item type="id" name="oneme_settings_privacy_screen_add_me_to_chat" />
     <item type="id" name="oneme_settings_privacy_screen_black_list" />
     <item type="id" name="oneme_settings_privacy_screen_blacklist" />
@@ -1753,8 +1760,6 @@
     <item type="id" name="oneme_settings_privacy_screen_dialog_online_button_nobody" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_online_never_accept_btn" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_online_never_cancel_btn" />
-    <item type="id" name="oneme_settings_privacy_screen_dialog_safe_file_no_btn" />
-    <item type="id" name="oneme_settings_privacy_screen_dialog_safe_file_yes_btn" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_search_by_phone_all" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_search_by_phone_contacts" />
     <item type="id" name="oneme_settings_privacy_screen_finished_sessions" />
@@ -1898,6 +1903,7 @@
     <item type="id" name="oneme_startconversation_toolbar" />
     <item type="id" name="oneme_startconversations_create_channel" />
     <item type="id" name="oneme_startconversations_create_chat" />
+    <item type="id" name="oneme_startconversations_create_group_call" />
     <item type="id" name="oneme_stickers_preview_action_favorite" />
     <item type="id" name="oneme_stickers_preview_action_forward" />
     <item type="id" name="oneme_stickers_preview_action_send" />
@@ -1995,11 +2001,12 @@
     <item type="id" name="open_search_view_status_bar_spacer" />
     <item type="id" name="open_search_view_toolbar" />
     <item type="id" name="open_search_view_toolbar_container" />
-    <item type="id" name="page_view__rv_content" />
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="paste" />
     <item type="id" name="photo" />
+    <item type="id" name="pinbars_block_user_confirmation_sheet_cancel" />
+    <item type="id" name="pinbars_block_user_confirmation_sheet_confirm" />
     <item type="id" name="pinbars_group_call_bar" />
     <item type="id" name="pinbars_group_call_bar_button" />
     <item type="id" name="pinbars_group_call_bar_divider" />
@@ -2025,6 +2032,8 @@
     <item type="id" name="presense_accent" />
     <item type="id" name="presense_bg" />
     <item type="id" name="pressed" />
+    <item type="id" name="profile_action_primary" />
+    <item type="id" name="profile_action_secondary" />
     <item type="id" name="profile_add_admins_empty_search_view" />
     <item type="id" name="profile_add_admins_from_contacts_list" />
     <item type="id" name="profile_add_admins_tab_chat_members" />
@@ -2139,6 +2148,28 @@
     <item type="id" name="profile_edit_member_permissions_pin_message" />
     <item type="id" name="profile_edit_member_permissions_see_private_link" />
     <item type="id" name="profile_edit_oneme_toolbar" />
+    <item type="id" name="profile_edit_reactions" />
+    <item type="id" name="profile_edit_reactions_settings_activation_switch" />
+    <item type="id" name="profile_edit_reactions_settings_added_reactions" />
+    <item type="id" name="profile_edit_reactions_settings_added_reactions_title" />
+    <item type="id" name="profile_edit_reactions_settings_constraint_layout" />
+    <item type="id" name="profile_edit_reactions_settings_count_slider" />
+    <item type="id" name="profile_edit_reactions_settings_count_slider_current_value" />
+    <item type="id" name="profile_edit_reactions_settings_count_slider_max_value" />
+    <item type="id" name="profile_edit_reactions_settings_count_slider_min_value" />
+    <item type="id" name="profile_edit_reactions_settings_error_view" />
+    <item type="id" name="profile_edit_reactions_settings_exit_without_save" />
+    <item type="id" name="profile_edit_reactions_settings_linear_layout" />
+    <item type="id" name="profile_edit_reactions_settings_loading_container" />
+    <item type="id" name="profile_edit_reactions_settings_loading_reactions_container" />
+    <item type="id" name="profile_edit_reactions_settings_media_keyboard_container" />
+    <item type="id" name="profile_edit_reactions_settings_save" />
+    <item type="id" name="profile_edit_reactions_settings_save_and_exit" />
+    <item type="id" name="profile_edit_reactions_settings_scrollview" />
+    <item type="id" name="profile_edit_reactions_settings_slider_container" />
+    <item type="id" name="profile_edit_reactions_settings_slider_title" />
+    <item type="id" name="profile_edit_reactions_settings_to_default_settings" />
+    <item type="id" name="profile_edit_reactions_settings_toolbar" />
     <item type="id" name="profile_edit_recycler_view" />
     <item type="id" name="profile_edit_selectable_item_checkbox" />
     <item type="id" name="profile_edit_selectable_item_subtitle" />
@@ -2272,12 +2303,6 @@
     <item type="id" name="quick_camera_view__cv_camera" />
     <item type="id" name="radio" />
     <item type="id" name="reactions_bubble" />
-    <item type="id" name="recents_page__b_all_stickers" />
-    <item type="id" name="recents_page__g_empty_stickers" />
-    <item type="id" name="recents_page__im_decoration_end" />
-    <item type="id" name="recents_page__im_decoration_start" />
-    <item type="id" name="recents_page__rv_grid" />
-    <item type="id" name="recents_page__tv_no_stickers" />
     <item type="id" name="rect" />
     <item type="id" name="recycler_countryDialog" />
     <item type="id" name="recycler_view" />
@@ -2678,6 +2703,15 @@
     <item type="id" name="setting_sticker_favorite" />
     <item type="id" name="setting_sticker_recent" />
     <item type="id" name="setting_version" />
+    <item type="id" name="settings_devices_allow_camera_permission_btn" />
+    <item type="id" name="settings_devices_auth_hint_accept_button" />
+    <item type="id" name="settings_devices_auth_hint_deny_button" />
+    <item type="id" name="settings_devices_deny_camera_permission_btn" />
+    <item type="id" name="settings_devices_recycler_header_viewtype" />
+    <item type="id" name="settings_devices_recycler_session_item_viewtype" />
+    <item type="id" name="settings_devices_recycler_view" />
+    <item type="id" name="settings_devices_scan_qr_btn" />
+    <item type="id" name="settings_devices_toolbar" />
     <item type="id" name="settings_media" />
     <item type="id" name="settings_notifications" />
     <item type="id" name="settings_stickers" />
@@ -2687,11 +2721,6 @@
     <item type="id" name="short_divider" />
     <item type="id" name="shortcut" />
     <item type="id" name="simple_drawee_view" />
-    <item type="id" name="smiles_page_view__delete" />
-    <item type="id" name="smiles_page_view__delimiter" />
-    <item type="id" name="smiles_page_view__rv_grid" />
-    <item type="id" name="smiles_page_view__tabs" />
-    <item type="id" name="smiles_page_view__tabs_holder" />
     <item type="id" name="snackbar_action" />
     <item type="id" name="snackbar_text" />
     <item type="id" name="spacer" />

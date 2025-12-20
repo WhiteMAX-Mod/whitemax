@@ -1,341 +1,296 @@
-.class public final Lkv8;
-.super Landroid/media/browse/MediaBrowser$ConnectionCallback;
+.class public Lkv8;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljkc;
+.field public a:Lv3f;
+
+.field public b:Lbe5;
+
+.field public c:Landroid/content/res/ColorStateList;
+
+.field public d:Landroid/content/res/ColorStateList;
+
+.field public e:Landroid/content/res/ColorStateList;
+
+.field public f:Landroid/graphics/PorterDuff$Mode;
+
+.field public g:Landroid/graphics/Rect;
+
+.field public final h:F
+
+.field public i:F
+
+.field public j:F
+
+.field public k:I
+
+.field public l:F
+
+.field public m:F
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public final q:Landroid/graphics/Paint$Style;
 
 
 # direct methods
-.method public constructor <init>(Ljkc;)V
-    .locals 0
+.method public constructor <init>(Lkv8;)V
+    .locals 2
 
-    iput-object p1, p0, Lkv8;->a:Ljkc;
+    .line 18
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    invoke-direct {p0}, Landroid/media/browse/MediaBrowser$ConnectionCallback;-><init>()V
+    const/4 v0, 0x0
+
+    .line 19
+    iput-object v0, p0, Lkv8;->c:Landroid/content/res/ColorStateList;
+
+    .line 20
+    iput-object v0, p0, Lkv8;->d:Landroid/content/res/ColorStateList;
+
+    .line 21
+    iput-object v0, p0, Lkv8;->e:Landroid/content/res/ColorStateList;
+
+    .line 22
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v1, p0, Lkv8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 23
+    iput-object v0, p0, Lkv8;->g:Landroid/graphics/Rect;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 24
+    iput v0, p0, Lkv8;->h:F
+
+    .line 25
+    iput v0, p0, Lkv8;->i:F
+
+    const/16 v0, 0xff
+
+    .line 26
+    iput v0, p0, Lkv8;->k:I
+
+    const/4 v0, 0x0
+
+    .line 27
+    iput v0, p0, Lkv8;->l:F
+
+    .line 28
+    iput v0, p0, Lkv8;->m:F
+
+    const/4 v0, 0x0
+
+    .line 29
+    iput v0, p0, Lkv8;->n:I
+
+    .line 30
+    iput v0, p0, Lkv8;->o:I
+
+    .line 31
+    iput v0, p0, Lkv8;->p:I
+
+    .line 32
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Lkv8;->q:Landroid/graphics/Paint$Style;
+
+    .line 33
+    iget-object v0, p1, Lkv8;->a:Lv3f;
+
+    iput-object v0, p0, Lkv8;->a:Lv3f;
+
+    .line 34
+    iget-object v0, p1, Lkv8;->b:Lbe5;
+
+    iput-object v0, p0, Lkv8;->b:Lbe5;
+
+    .line 35
+    iget v0, p1, Lkv8;->j:F
+
+    iput v0, p0, Lkv8;->j:F
+
+    .line 36
+    iget-object v0, p1, Lkv8;->c:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lkv8;->c:Landroid/content/res/ColorStateList;
+
+    .line 37
+    iget-object v0, p1, Lkv8;->d:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lkv8;->d:Landroid/content/res/ColorStateList;
+
+    .line 38
+    iget-object v0, p1, Lkv8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v0, p0, Lkv8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 39
+    iget-object v0, p1, Lkv8;->e:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lkv8;->e:Landroid/content/res/ColorStateList;
+
+    .line 40
+    iget v0, p1, Lkv8;->k:I
+
+    iput v0, p0, Lkv8;->k:I
+
+    .line 41
+    iget v0, p1, Lkv8;->h:F
+
+    iput v0, p0, Lkv8;->h:F
+
+    .line 42
+    iget v0, p1, Lkv8;->p:I
+
+    iput v0, p0, Lkv8;->p:I
+
+    .line 43
+    iget v0, p1, Lkv8;->n:I
+
+    iput v0, p0, Lkv8;->n:I
+
+    .line 44
+    iget v0, p1, Lkv8;->i:F
+
+    iput v0, p0, Lkv8;->i:F
+
+    .line 45
+    iget v0, p1, Lkv8;->l:F
+
+    iput v0, p0, Lkv8;->l:F
+
+    .line 46
+    iget v0, p1, Lkv8;->m:F
+
+    iput v0, p0, Lkv8;->m:F
+
+    .line 47
+    iget v0, p1, Lkv8;->o:I
+
+    iput v0, p0, Lkv8;->o:I
+
+    .line 48
+    iget-object v0, p1, Lkv8;->q:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Lkv8;->q:Landroid/graphics/Paint$Style;
+
+    .line 49
+    iget-object v0, p1, Lkv8;->g:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    .line 50
+    new-instance v0, Landroid/graphics/Rect;
+
+    iget-object p1, p1, Lkv8;->g:Landroid/graphics/Rect;
+
+    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    iput-object v0, p0, Lkv8;->g:Landroid/graphics/Rect;
+
+    :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Lv3f;)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-object v0, p0, Lkv8;->c:Landroid/content/res/ColorStateList;
+
+    .line 3
+    iput-object v0, p0, Lkv8;->d:Landroid/content/res/ColorStateList;
+
+    .line 4
+    iput-object v0, p0, Lkv8;->e:Landroid/content/res/ColorStateList;
+
+    .line 5
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v1, p0, Lkv8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 6
+    iput-object v0, p0, Lkv8;->g:Landroid/graphics/Rect;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 7
+    iput v1, p0, Lkv8;->h:F
+
+    .line 8
+    iput v1, p0, Lkv8;->i:F
+
+    const/16 v1, 0xff
+
+    .line 9
+    iput v1, p0, Lkv8;->k:I
+
+    const/4 v1, 0x0
+
+    .line 10
+    iput v1, p0, Lkv8;->l:F
+
+    .line 11
+    iput v1, p0, Lkv8;->m:F
+
+    const/4 v1, 0x0
+
+    .line 12
+    iput v1, p0, Lkv8;->n:I
+
+    .line 13
+    iput v1, p0, Lkv8;->o:I
+
+    .line 14
+    iput v1, p0, Lkv8;->p:I
+
+    .line 15
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v1, p0, Lkv8;->q:Landroid/graphics/Paint$Style;
+
+    .line 16
+    iput-object p1, p0, Lkv8;->a:Lv3f;
+
+    .line 17
+    iput-object v0, p0, Lkv8;->b:Lbe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConnected()V
-    .locals 12
+.method public final getChangingConfigurations()I
+    .locals 1
 
-    iget-object v0, p0, Lkv8;->a:Ljkc;
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Ljkc;->b:Ljava/lang/Object;
-
-    check-cast v1, Llv8;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_4
-
-    const-string v4, "MediaBrowserCompat"
-
-    iget-object v5, v1, Llv8;->d:Ljv8;
-
-    iget-object v6, v1, Llv8;->b:Landroid/media/browse/MediaBrowser;
-
-    :try_start_0
-    invoke-virtual {v6}, Landroid/media/browse/MediaBrowser;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v7
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
-
-    if-nez v7, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    const-string v8, "extra_service_version"
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v7, v8, v9}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    const-string v8, "extra_messenger"
-
-    invoke-virtual {v7, v8}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v8
-
-    if-eqz v8, :cond_1
-
-    new-instance v9, Ls7c;
-
-    iget-object v10, v1, Llv8;->c:Landroid/os/Bundle;
-
-    invoke-direct {v9}, Ljava/lang/Object;-><init>()V
-
-    new-instance v11, Landroid/os/Messenger;
-
-    invoke-direct {v11, v8}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
-
-    iput-object v11, v9, Ls7c;->a:Ljava/lang/Object;
-
-    iput-object v10, v9, Ls7c;->b:Ljava/lang/Object;
-
-    iput-object v9, v1, Llv8;->f:Ls7c;
-
-    new-instance v8, Landroid/os/Messenger;
-
-    invoke-direct {v8, v5}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
-
-    iput-object v8, v1, Llv8;->g:Landroid/os/Messenger;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v10, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v10, v8}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v10, v5, Ljv8;->c:Ljava/lang/Object;
-
-    :try_start_1
-    iget-object v5, v1, Llv8;->a:Landroid/content/Context;
-
-    new-instance v10, Landroid/os/Bundle;
-
-    invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
-
-    const-string v11, "data_package_name"
-
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v10, v11, v5}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v5, "data_calling_pid"
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v11
-
-    invoke-virtual {v10, v5, v11}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v5, "data_root_hints"
-
-    iget-object v11, v9, Ls7c;->b:Ljava/lang/Object;
-
-    check-cast v11, Landroid/os/Bundle;
-
-    invoke-virtual {v10, v5, v11}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v5
-
-    const/4 v11, 0x6
-
-    iput v11, v5, Landroid/os/Message;->what:I
-
-    iput v2, v5, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v5, v10}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iput-object v8, v5, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
-
-    iget-object v8, v9, Ls7c;->a:Ljava/lang/Object;
-
-    check-cast v8, Landroid/os/Messenger;
-
-    invoke-virtual {v8, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-string v5, "Remote error registering client messenger."
-
-    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    :goto_0
-    const-string v4, "extra_session_binder"
-
-    invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v4
-
-    sget v5, La79;->d:I
-
-    if-nez v4, :cond_2
-
-    move-object v5, v3
-
-    goto :goto_1
-
-    :cond_2
-    const-string v5, "android.support.v4.media.session.IMediaSession"
-
-    invoke-interface {v4, v5}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_3
-
-    instance-of v7, v5, Ldb7;
-
-    if-eqz v7, :cond_3
-
-    check-cast v5, Ldb7;
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v5, Lbb7;
-
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
-
-    iput-object v4, v5, Lbb7;->c:Landroid/os/IBinder;
-
-    :goto_1
-    if-eqz v5, :cond_4
-
-    invoke-virtual {v6}, Landroid/media/browse/MediaBrowser;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v4
-
-    new-instance v6, Lg79;
-
-    invoke-direct {v6, v4, v5}, Lg79;-><init>(Landroid/media/session/MediaSession$Token;Ldb7;)V
-
-    iput-object v6, v1, Llv8;->h:Lg79;
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v1
-
-    const-string v5, "Unexpected IllegalStateException"
-
-    invoke-static {v4, v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_4
-    :goto_2
-    iget-object v0, v0, Ljkc;->c:Ljava/lang/Object;
-
-    check-cast v0, Lry8;
-
-    iget-object v1, v0, Lry8;->j:Lnv8;
-
-    if-eqz v1, :cond_6
-
-    iget-object v1, v1, Lnv8;->a:Llv8;
-
-    iget-object v4, v1, Llv8;->h:Lg79;
-
-    if-nez v4, :cond_5
-
-    iget-object v4, v1, Llv8;->b:Landroid/media/browse/MediaBrowser;
-
-    invoke-virtual {v4}, Landroid/media/browse/MediaBrowser;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v4
-
-    new-instance v5, Lg79;
-
-    invoke-direct {v5, v4, v3}, Lg79;-><init>(Landroid/media/session/MediaSession$Token;Ldb7;)V
-
-    iput-object v5, v1, Llv8;->h:Lg79;
-
-    :cond_5
-    iget-object v1, v1, Llv8;->h:Lg79;
-
-    iget-object v3, v0, Lry8;->b:Lpx8;
-
-    new-instance v4, Lqz5;
-
-    const/16 v5, 0x17
-
-    invoke-direct {v4, v0, v5, v1}, Lqz5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v4}, Lpx8;->z(Ljava/lang/Runnable;)V
-
-    iget-object v1, v3, Lpx8;->o:Landroid/os/Handler;
-
-    new-instance v3, Loy8;
-
-    invoke-direct {v3, v0, v2}, Loy8;-><init>(Lry8;I)V
-
-    const-wide/16 v4, 0x1f4
-
-    invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_6
-    return-void
+    return v0
 .end method
 
-.method public final onConnectionFailed()V
+.method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    iget-object v0, p0, Lkv8;->a:Ljkc;
+    new-instance v0, Llv8;
 
-    iget-object v1, v0, Ljkc;->b:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Llv8;-><init>(Lkv8;)V
 
-    check-cast v1, Llv8;
+    const/4 v1, 0x1
 
-    if-eqz v1, :cond_0
+    iput-boolean v1, v0, Llv8;->o:Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_0
-    iget-object v0, v0, Ljkc;->c:Ljava/lang/Object;
-
-    check-cast v0, Lry8;
-
-    iget-object v0, v0, Lry8;->b:Lpx8;
-
-    invoke-virtual {v0}, Lpx8;->w()V
-
-    return-void
-.end method
-
-.method public final onConnectionSuspended()V
-    .locals 4
-
-    iget-object v0, p0, Lkv8;->a:Ljkc;
-
-    iget-object v1, v0, Ljkc;->b:Ljava/lang/Object;
-
-    check-cast v1, Llv8;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Llv8;->f:Ls7c;
-
-    iput-object v2, v1, Llv8;->g:Landroid/os/Messenger;
-
-    iput-object v2, v1, Llv8;->h:Lg79;
-
-    iget-object v1, v1, Llv8;->d:Ljv8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v3, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v3, v1, Ljv8;->c:Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, v0, Ljkc;->c:Ljava/lang/Object;
-
-    check-cast v0, Lry8;
-
-    iget-object v0, v0, Lry8;->b:Lpx8;
-
-    invoke-virtual {v0}, Lpx8;->w()V
-
-    return-void
+    return-object v0
 .end method

@@ -4,30 +4,44 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:La98;
 
-.field public final b:I
-
-.field public final c:Z
-
-.field public final d:Z
+.field public final b:Lqa0;
 
 
 # direct methods
-.method public constructor <init>(IIZZ)V
+.method public constructor <init>(La98;Lqa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lpb0;->a:I
+    if-eqz p1, :cond_1
 
-    iput p2, p0, Lpb0;->b:I
+    iput-object p1, p0, Lpb0;->a:La98;
 
-    iput-boolean p3, p0, Lpb0;->c:Z
+    if-eqz p2, :cond_0
 
-    iput-boolean p4, p0, Lpb0;->d:Z
+    iput-object p2, p0, Lpb0;->b:Lqa0;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null lifecycleOwner"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -50,29 +64,25 @@
 
     check-cast p1, Lpb0;
 
-    iget v1, p0, Lpb0;->a:I
+    iget-object v1, p0, Lpb0;->a:La98;
 
-    iget v3, p1, Lpb0;->a:I
+    iget-object v3, p1, Lpb0;->a:La98;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Lpb0;->b:I
+    move-result v1
 
-    iget v3, p1, Lpb0;->b:I
+    if-eqz v1, :cond_1
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    iget-boolean v1, p0, Lpb0;->c:Z
+    iget-object p1, p1, Lpb0;->b:Lqa0;
 
-    iget-boolean v3, p1, Lpb0;->c:Z
+    invoke-virtual {v1, p1}, Lqa0;->equals(Ljava/lang/Object;)Z
 
-    if-ne v1, v3, :cond_1
+    move-result p1
 
-    iget-boolean v1, p0, Lpb0;->d:Z
-
-    iget-boolean p1, p1, Lpb0;->d:Z
-
-    if-ne v1, p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -81,9 +91,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 2
 
-    iget v0, p0, Lpb0;->a:I
+    iget-object v0, p0, Lpb0;->a:La98;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -91,82 +105,43 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lpb0;->b:I
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    xor-int/2addr v0, v2
+    invoke-virtual {v1}, Lqa0;->hashCode()I
 
-    mul-int/2addr v0, v1
+    move-result v1
 
-    iget-boolean v2, p0, Lpb0;->c:Z
-
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v3
-
-    :goto_0
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lpb0;->d:Z
-
-    if-eqz v1, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FeatureSettings{cameraMode="
+    const-string v1, "Key{lifecycleOwner="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lpb0;->a:I
+    iget-object v1, p0, Lpb0;->a:La98;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", requiredMaxBitDepth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lpb0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", previewStabilizationOn="
+    const-string v1, ", cameraId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lpb0;->c:Z
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", ultraHdrOn="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lpb0;->d:Z
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

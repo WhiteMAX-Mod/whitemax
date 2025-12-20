@@ -1,43 +1,49 @@
-.class public final Lm5e;
-.super Landroid/widget/FrameLayout;
+.class public abstract Lm5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu6g;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
 
 
-# virtual methods
-.method public final onThemeChanged(Lyeb;)V
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lued;->TamTamTheme_Base_Dark:I
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    sput v0, Lm5e;->a:I
 
-    move-result-object v0
+    sget v0, Lued;->TamTamTheme_Base_PopupNotification:I
 
-    instance-of v1, v0, Landroid/widget/ProgressBar;
+    sput v0, Lm5e;->b:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lued;->Theme_Transparent:I
 
-    check-cast v0, Landroid/widget/ProgressBar;
+    sput v0, Lm5e;->c:I
 
-    goto :goto_0
+    sget v0, Lued;->Theme_Transparent_DarkMenuOverflow:I
 
-    :cond_0
-    const/4 v0, 0x0
+    sput v0, Lm5e;->d:I
 
-    :goto_0
-    if-eqz v0, :cond_1
+    sget v0, Lued;->Theme_Transparent_WhiteMenuOverflow:I
 
-    invoke-interface {p1}, Lyeb;->getIcon()Lnb7;
+    sput v0, Lm5e;->e:I
 
-    move-result-object p1
+    sget v0, Lued;->Theme_Transparent_WhiteMenuOverflow_NoCaps:I
 
-    iget p1, p1, Lnb7;->i:I
+    sput v0, Lm5e;->f:I
 
-    invoke-static {v0, p1}, Lcei;->l(Landroid/widget/ProgressBar;I)V
-
-    :cond_1
     return-void
 .end method

@@ -1,117 +1,90 @@
-.class public final enum Ljm9;
-.super Ljava/lang/Enum;
+.class public final synthetic Ljm9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Ljm9;
-
-.field public static final enum b:Ljm9;
-
-.field public static final enum c:Ljm9;
-
-.field public static final enum d:Ljm9;
-
-.field public static final enum o:Ljm9;
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmm9;
+
+.field public final synthetic c:Li0a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Li0a;Lmm9;)V
+    .locals 1
 
-    new-instance v0, Ljm9;
+    .line 2
+    const/4 v0, 0x0
 
-    const-string v1, "ACTIVE"
+    iput v0, p0, Ljm9;->a:I
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v2}, Ljm9;-><init>(Ljava/lang/String;II)V
+    iput-object p1, p0, Ljm9;->c:Li0a;
 
-    sput-object v0, Ljm9;->b:Ljm9;
-
-    new-instance v1, Ljm9;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0xa
-
-    const-string v4, "DELETED"
-
-    invoke-direct {v1, v4, v2, v3}, Ljm9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Ljm9;->c:Ljm9;
-
-    new-instance v2, Ljm9;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x14
-
-    const-string v5, "EDITED"
-
-    invoke-direct {v2, v5, v3, v4}, Ljm9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Ljm9;->d:Ljm9;
-
-    new-instance v3, Ljm9;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x1e
-
-    const-string v6, "DELAYED_FIRE_ERROR"
-
-    invoke-direct {v3, v6, v4, v5}, Ljm9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Ljm9;->o:Ljm9;
-
-    filled-new-array {v0, v1, v2, v3}, [Ljm9;
-
-    move-result-object v0
-
-    sput-object v0, Ljm9;->X:[Ljm9;
+    iput-object p2, p0, Ljm9;->b:Lmm9;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public synthetic constructor <init>(Lmm9;Li0a;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 1
+    const/4 v0, 0x1
 
-    iput p3, p0, Ljm9;->a:I
+    iput v0, p0, Ljm9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljm9;->b:Lmm9;
+
+    iput-object p2, p0, Ljm9;->c:Li0a;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljm9;
-    .locals 1
 
-    const-class v0, Ljm9;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Ljm9;->a:I
 
-    move-result-object p0
+    iget-object v0, p0, Ljm9;->c:Li0a;
 
-    check-cast p0, Ljm9;
+    iget-object v1, p0, Ljm9;->b:Lmm9;
 
-    return-object p0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public static values()[Ljm9;
-    .locals 1
+    const/4 p1, 0x0
 
-    sget-object v0, Ljm9;->X:[Ljm9;
+    invoke-virtual {v1, v0, p1}, Lmm9;->K(Li0a;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-wide v1, v1, Lmm9;->J0:J
 
-    check-cast v0, [Ljm9;
+    iget-object p1, v0, Li0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    return-object v0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Lp38;
+
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Luz9;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, v2}, Luz9;->M(J)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

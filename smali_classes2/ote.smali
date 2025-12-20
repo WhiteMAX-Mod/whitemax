@@ -1,51 +1,31 @@
 .class public final Lote;
-.super Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lote;
+# instance fields
+.field public final a:Ljava/util/Set;
 
-.field public static final c:Lgi4;
+.field public final b:I
 
-.field public static final d:Lgi4;
+.field public final c:Lfbf;
+
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/util/Set;ILfbf;Z)V
+    .locals 0
 
-    new-instance v0, Lote;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lki4;-><init>()V
+    iput-object p1, p0, Lote;->a:Ljava/util/Set;
 
-    sput-object v0, Lote;->b:Lote;
+    iput p2, p0, Lote;->b:I
 
-    const/4 v1, 0x0
+    iput-object p3, p0, Lote;->c:Lfbf;
 
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":chats/share"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v2
-
-    sput-object v2, Lote;->c:Lgi4;
-
-    const-string v2, ":share"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Lote;->d:Lgi4;
+    iput-boolean p4, p0, Lote;->d:Z
 
     return-void
 .end method

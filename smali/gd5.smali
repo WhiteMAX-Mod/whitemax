@@ -2,114 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/ListIterator;
-.implements Lmy7;
 
-
-# static fields
-.field public static final a:Lgd5;
+# instance fields
+.field public final a:Lltd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Luz6;)V
+    .locals 2
 
-    new-instance v0, Lgd5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Luz6;->b:Ljava/lang/Object;
 
-    sput-object v0, Lgd5;->a:Lgd5;
+    check-cast p1, Lxk7;
+
+    invoke-virtual {p1}, Lxk7;->i()Lltd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgd5;->a:Lltd;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "The sequence must contain at least one EditedMediaItem."
+
+    invoke-static {v1, v0}, Lp5j;->a(Ljava/lang/Object;Z)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lltd;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfd5;
+
+    iget-object p1, p1, Lfd5;->a:Lz49;
+
+    invoke-static {p1}, Lfd5;->c(Lz49;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    const-string v0, "If the first item in the sequence is a Gap, then forceAudioTrack or forceVideoTrack flag must be set"
+
+    invoke-static {v0, p1}, Lp5j;->a(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final hasNext()Z
-    .locals 1
+.method public final a()Z
+    .locals 4
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    move v1, v0
 
-.method public final hasPrevious()Z
-    .locals 1
+    :goto_0
+    iget-object v2, p0, Lgd5;->a:Lltd;
 
-    const/4 v0, 0x0
+    iget v3, v2, Lltd;->d:I
 
-    return v0
-.end method
+    if-ge v1, v3, :cond_1
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v2, v1}, Lltd;->get(I)Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    move-result-object v2
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    check-cast v2, Lfd5;
 
-    throw v0
-.end method
+    iget-object v2, v2, Lfd5;->a:Lz49;
 
-.method public final nextIndex()I
-    .locals 1
+    invoke-static {v2}, Lfd5;->c(Lz49;)Z
 
-    const/4 v0, 0x0
+    move-result v2
 
-    return v0
-.end method
+    if-eqz v2, :cond_0
 
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    const/4 v0, -0x1
+    const/4 v0, 0x1
 
     return v0
-.end method
 
-.method public final remove()V
-    .locals 2
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    goto :goto_0
 
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final bridge synthetic set(Ljava/lang/Object;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :cond_1
+    return v0
 .end method

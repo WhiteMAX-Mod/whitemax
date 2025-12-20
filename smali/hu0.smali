@@ -1,134 +1,87 @@
 .class public final Lhu0;
-.super Lkk0;
+.super Leu0;
 .source "SourceFile"
 
-# interfaces
-.implements Lnp0;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lrf9;Lw5c;Lwha;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lkk0;-><init>(Lrf9;Lw5c;Lx5c;)V
+    iput p1, p0, Lhu0;->a:I
 
-    invoke-interface {p1, p0}, Lrf9;->a(Lqf9;)V
+    iput-object p2, p0, Lhu0;->b:Ljava/lang/Object;
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final d(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(I)Ljava/lang/Object;
-    .locals 4
-
-    int-to-double v0, p1
-
-    const-wide/high16 v2, 0x4000000000000000L    # 2.0
-
-    div-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v0
-
-    double-to-int p1, v0
-
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final g(Ljava/lang/Object;)V
+.method public final b(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+    iget p1, p0, Lhu0;->a:I
 
     return-void
 .end method
 
-.method public final i(I)I
+.method public final c(Landroid/view/View;I)V
     .locals 0
 
-    return p1
-.end method
+    iget p1, p0, Lhu0;->a:I
 
-.method public final j(Ljava/lang/Object;)I
-    .locals 0
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    const/4 p1, 0x5
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p2, p1, :cond_0
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    iget-object p1, p0, Lhu0;->b:Ljava/lang/Object;
 
-    move-result p1
+    check-cast p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    return p1
-.end method
-
-.method public final k(I)I
-    .locals 0
-
-    return p1
-.end method
-
-.method public final l(Lfu0;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-super {p0, p1}, Lkk0;->l(Lfu0;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->eraseColor(I)V
+    invoke-virtual {p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->x0()V
 
     :cond_0
-    return-object p1
-.end method
+    return-void
 
-.method public final n(Ljava/lang/Object;)Z
-    .locals 1
+    :pswitch_0
+    const/4 p1, 0x5
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    if-ne p2, p1, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lhu0;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
+    check-cast p1, Lju0;
 
-    move-result v0
+    invoke-virtual {p1}, Lju0;->cancel()V
 
-    if-nez v0, :cond_0
+    :cond_1
+    return-void
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
+    nop
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

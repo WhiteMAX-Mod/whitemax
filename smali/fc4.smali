@@ -1,386 +1,136 @@
 .class public final Lfc4;
-.super Lhc4;
+.super Lb5g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lfc4;
-
-.field public static final d:Lfc4;
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic X:Landroidx/work/CoroutineWorker;
+
+.field public o:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lfc4;
-
-    const-string v1, ""
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lfc4;-><init>(Ljava/lang/Comparable;I)V
-
-    sput-object v0, Lfc4;->c:Lfc4;
-
-    new-instance v0, Lfc4;
-
-    const-string v1, ""
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lfc4;-><init>(Ljava/lang/Comparable;I)V
-
-    sput-object v0, Lfc4;->d:Lfc4;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Comparable;I)V
+.method public constructor <init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lfc4;->b:I
+    iput-object p1, p0, Lfc4;->X:Landroidx/work/CoroutineWorker;
 
-    invoke-direct {p0, p1}, Lhc4;-><init>(Ljava/lang/Comparable;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lhc4;)I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfc4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfc4;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lfc4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lfc4;->b:I
+    new-instance p1, Lfc4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lfc4;->X:Landroidx/work/CoroutineWorker;
 
-    invoke-super {p0, p1}, Lhc4;->a(Lhc4;)I
+    invoke-direct {p1, v0, p2}, Lfc4;-><init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
+    return-object p1
+.end method
 
-    return p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    :pswitch_0
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lfc4;->X:Landroidx/work/CoroutineWorker;
 
-    const/4 p1, 0x0
+    iget-object v1, v0, Landroidx/work/CoroutineWorker;->X:Loue;
+
+    iget v2, p0, Lfc4;->o:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, -0x1
-
-    :goto_0
-    return p1
-
-    :pswitch_1
-    if-ne p1, p0, :cond_1
-
-    const/4 p1, 0x0
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
-    :cond_1
-    const/4 p1, 0x1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_1
-    return p1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Ljava/lang/StringBuilder;)V
-    .locals 1
-
-    iget v0, p0, Lfc4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/16 v0, 0x5b
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    return-void
-
-    :pswitch_0
-    const-string v0, "(-\u221e"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-
-    :pswitch_1
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.method public compareTo(Ljava/lang/Object;)I
-    .locals 1
+    :try_start_1
+    iput v3, p0, Lfc4;->o:I
 
-    iget v0, p0, Lfc4;->b:I
+    invoke-virtual {v0, p0}, Landroidx/work/CoroutineWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-super {p0, p1}, Lhc4;->compareTo(Ljava/lang/Object;)I
+    sget-object v0, Lbc4;->a:Lbc4;
 
-    move-result p1
+    if-ne p1, v0, :cond_2
 
-    return p1
+    return-object v0
 
-    :pswitch_0
-    check-cast p1, Lhc4;
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, -0x1
-
+    :cond_2
     :goto_0
-    return p1
+    :try_start_2
+    check-cast p1, Laf8;
 
-    :pswitch_1
-    check-cast p1, Lhc4;
+    invoke-virtual {v1, p1}, Loue;->i(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    if-ne p1, p0, :cond_1
-
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x1
+    goto :goto_2
 
     :goto_1
-    return p1
+    invoke-virtual {v1, p1}, Loue;->j(Ljava/lang/Throwable;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    :goto_2
+    sget-object p1, Lv2h;->a:Lv2h;
 
-.method public final d(Ljava/lang/StringBuilder;)V
-    .locals 1
-
-    iget v0, p0, Lfc4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v0, 0x29
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_1
-    const-string v0, "+\u221e)"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public e()Ljava/lang/Comparable;
-    .locals 2
-
-    iget v0, p0, Lfc4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lhc4;->e()Ljava/lang/Comparable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "range unbounded on this side"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "range unbounded on this side"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g(Ljava/lang/Comparable;)Z
-    .locals 3
-
-    iget v0, p0, Lfc4;->b:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    sget v0, Lo7d;->c:I
-
-    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-gtz p1, :cond_0
-
-    move v1, v2
-
-    :cond_0
-    return v1
-
-    :pswitch_0
-    return v2
-
-    :pswitch_1
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lfc4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_1
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget v0, p0, Lfc4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "\\"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhc4;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "-\u221e"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "+\u221e"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

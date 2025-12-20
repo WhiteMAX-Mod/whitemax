@@ -1,128 +1,118 @@
 .class public final Lf23;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Landroid/graphics/RectF;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic Y:Landroid/graphics/Rect;
 
-.field public final synthetic c:Lg23;
+.field public final synthetic o:Li23;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lg23;I)V
+.method public constructor <init>(Li23;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lf23;->a:I
+    iput-object p1, p0, Lf23;->o:Li23;
 
-    iput-object p1, p0, Lf23;->b:Landroid/view/View;
+    iput-object p2, p0, Lf23;->X:Landroid/graphics/RectF;
 
-    iput-object p2, p0, Lf23;->c:Lg23;
+    iput-object p3, p0, Lf23;->Y:Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lf23;->a:I
+    check-cast p1, Lac4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lf23;->c:Lg23;
+    invoke-virtual {p0, p1, p2}, Lf23;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Lg23;->b:Ll53;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ll53;->invoke()Ljava/lang/Object;
+    check-cast p1, Lf23;
 
-    move-result-object v1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    check-cast v1, Ljava/lang/Boolean;
+    invoke-virtual {p1, p2}, Lf23;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-object p2
+.end method
 
-    move-result v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    if-eqz v1, :cond_0
+    new-instance p1, Lf23;
 
-    sget-object v1, Le03;->a:Le03;
+    iget-object v0, p0, Lf23;->X:Landroid/graphics/RectF;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+    iget-object v1, p0, Lf23;->Y:Landroid/graphics/Rect;
 
-    move-result-object v1
+    iget-object v2, p0, Lf23;->o:Li23;
 
-    const/4 v2, 0x2
+    invoke-direct {p1, v2, v0, v1, p2}, Lf23;-><init>(Li23;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    check-cast v1, Lnm8;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    new-instance v2, Lbrb;
+    iget-object p1, p0, Lf23;->o:Li23;
 
-    const/4 v3, 0x1
+    sget-object v0, Li23;->H0:[Lp38;
 
-    invoke-direct {v2, v3}, Lbrb;-><init>(I)V
+    invoke-virtual {p1}, Li23;->u()Lp36;
 
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    move-result-object p1
+
+    iget-object v0, p0, Lf23;->o:Li23;
+
+    iget-object v0, v0, Li23;->E0:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lp36;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lnm8;->b(Ljava/util/List;)V
+    iget-object v1, p0, Lf23;->o:Li23;
 
-    iget-boolean v1, v0, Lg23;->d:Z
+    iget-object v4, p0, Lf23;->X:Landroid/graphics/RectF;
 
-    if-eqz v1, :cond_0
+    iget-object v3, p0, Lf23;->Y:Landroid/graphics/Rect;
 
-    iget-object v1, v0, Lg23;->a:Landroidx/recyclerview/widget/RecyclerView;
+    new-instance v0, Le23;
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lyhd;)V
+    const/4 v5, 0x0
 
-    :cond_0
-    return-void
+    invoke-direct/range {v0 .. v5}, Le23;-><init>(Li23;Ljava/lang/String;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lf23;->c:Lg23;
+    const/4 p1, 0x3
 
-    iget-object v1, v0, Lg23;->c:Lk18;
+    const/4 v2, 0x0
 
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v2, v0, p1}, Lrsh;->o(Lrsh;Lrb4;Lcr6;I)Lglf;
 
-    move-result-object v1
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    check-cast v1, Lis7;
-
-    const-string v2, "main"
-
-    const-string v3, "invite_friends"
-
-    const-string v4, "show"
-
-    invoke-virtual {v1, v4, v2, v3}, Lis7;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v1, v0, Lg23;->o:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lg23;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lyhd;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

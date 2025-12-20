@@ -1,24 +1,26 @@
 .class public final Lpt9;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic o:Lvu9;
+.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lvu9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lpt9;->o:Lvu9;
+    iput-object p2, p0, Lpt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf84;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lpt9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +38,7 @@
 
     check-cast p1, Lpt9;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lpt9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,55 +46,90 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lpt9;
+    new-instance v0, Lpt9;
 
-    iget-object v0, p0, Lpt9;->o:Lvu9;
+    iget-object v1, p0, Lpt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p1, v0, p2}, Lpt9;-><init>(Lvu9;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lpt9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    return-object p1
+    iput-object p1, v0, Lpt9;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    sget-object p1, Lvu9;->U1:[Lyy7;
+    iget-object p1, p0, Lpt9;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lpt9;->o:Lvu9;
+    check-cast p1, Lul5;
 
-    iget-object v0, p1, Lvu9;->K0:Lk18;
+    if-eqz p1, :cond_0
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lul5;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Lur9;
 
-    check-cast v0, Lccb;
+    goto :goto_0
 
-    new-instance v1, Lqcb;
+    :cond_0
+    const/4 p1, 0x0
 
-    sget v2, Lyud;->O1:I
+    :goto_0
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
 
-    invoke-direct {v1, v2}, Lqcb;-><init>(I)V
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v0, v1}, Lccb;->e(Lucb;)V
+    iget-object p1, p1, Lur9;->a:Lio9;
 
-    sget v1, Ll7b;->y0:I
+    goto :goto_1
 
-    new-instance v2, Ln5g;
+    :cond_1
+    sget-object p1, Lio9;->a:Lio9;
 
-    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+    :goto_1
+    iget-object v0, p0, Lpt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-virtual {v0, v2}, Lccb;->g(Ls5g;)V
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0()Luo9;
 
-    invoke-virtual {p1, v0}, Lvu9;->R(Lccb;)V
+    move-result-object v1
 
-    invoke-virtual {v0}, Lccb;->i()Lbcb;
+    invoke-virtual {v1, p1}, Luo9;->setEmojiExpandableState(Lio9;)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    sget-object v1, Lio9;->b:Lio9;
+
+    if-ne p1, v1, :cond_2
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0()Luo9;
+
+    move-result-object p1
+
+    new-instance v1, Lct9;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v0, v2}, Lct9;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    iget-object p1, p1, Luo9;->d:Lro9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
+
+    new-instance v0, Lae3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Lae3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    :cond_2
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
 .end method

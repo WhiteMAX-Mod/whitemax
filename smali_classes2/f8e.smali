@@ -2,89 +2,91 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh8e;
-
 
 # instance fields
-.field public final X:Z
+.field public final a:Ljava/lang/String;
 
-.field public final Y:J
+.field public final b:Ld68;
 
-.field public final Z:I
+.field public final c:Ld68;
 
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final d:Ld68;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method public constructor <init>(Ld68;Ld68;Ld68;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lf8e;->a:J
+    const-class v0, Lf8e;
 
-    iput-object p3, p0, Lf8e;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p4, p0, Lf8e;->c:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p5, p0, Lf8e;->d:Ljava/lang/String;
+    iput-object v0, p0, Lf8e;->a:Ljava/lang/String;
 
-    iput-object p6, p0, Lf8e;->o:Ljava/lang/String;
+    iput-object p1, p0, Lf8e;->b:Ld68;
 
-    iput-boolean p7, p0, Lf8e;->X:Z
+    iput-object p2, p0, Lf8e;->c:Ld68;
 
-    const-wide/16 p3, 0x0
-
-    cmp-long p3, p1, p3
-
-    if-gez p3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    neg-long p1, p1
-
-    :goto_0
-    iput-wide p1, p0, Lf8e;->Y:J
-
-    sget p1, Ludb;->r:I
-
-    iput p1, p0, Lf8e;->Z:I
+    iput-object p3, p0, Lf8e;->d:Ld68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()I
-    .locals 1
+.method public final a(JLjava/lang/String;JJZLb5g;)Ljava/lang/Object;
+    .locals 12
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lf8e;->d:Ld68;
 
-    return v0
-.end method
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-.method public final getItemId()J
-    .locals 2
+    move-result-object v0
 
-    iget-wide v0, p0, Lf8e;->Y:J
+    check-cast v0, Lbbg;
 
-    return-wide v0
-.end method
+    check-cast v0, Lb9b;
 
-.method public final m()I
-    .locals 1
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
 
-    iget v0, p0, Lf8e;->Z:I
+    move-result-object v0
 
-    return v0
+    new-instance v1, Le8e;
+
+    const/4 v11, 0x0
+
+    move-object v2, p0
+
+    move-wide v8, p1
+
+    move-object v7, p3
+
+    move-wide/from16 v5, p4
+
+    move-wide/from16 v3, p6
+
+    move/from16 v10, p8
+
+    invoke-direct/range {v1 .. v11}, Le8e;-><init>(Lf8e;JJLjava/lang/String;JZLkotlin/coroutines/Continuation;)V
+
+    move-object/from16 p1, p9
+
+    invoke-static {v0, v1, p1}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

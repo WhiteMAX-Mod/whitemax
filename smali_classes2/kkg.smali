@@ -1,105 +1,83 @@
 .class public final Lkkg;
-.super Ldtf;
+.super Lbe8;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
-
-
-# instance fields
-.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Lkkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    sget-object v0, Lyj4;->h:Lyj4;
 
-    const/4 p2, 0x2
+    invoke-direct {p0, v0}, Lbe8;-><init>(Lomj;)V
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lzqd;->A(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final k(I)J
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkkg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Lbe8;->C(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkkg;
+    check-cast p1, Likg;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iget p1, p1, Likg;->a:I
 
-    invoke-virtual {p1, p2}, Lkkg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    int-to-long v0, p1
 
-    return-object p2
+    return-wide v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final r(Lwrd;I)V
+    .locals 0
+
+    check-cast p1, Ljkg;
+
+    iget-object p1, p1, Ljkg;->E0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0, p2}, Lbe8;->C(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Likg;
+
+    iget-object p2, p2, Likg;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Lwrd;
     .locals 2
 
-    new-instance v0, Lkkg;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object v1, p0, Lkkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    move-result-object p2
 
-    invoke-direct {v0, p2, v1}, Lkkg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    iput-object p1, v0, Lkkg;->o:Ljava/lang/Object;
+    move-result-object p2
 
-    return-object v0
-.end method
+    sget v0, Lrad;->number_item:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    const/4 v1, 0x0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    iget-object p1, p0, Lkkg;->o:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Ljava/lang/Boolean;
+    new-instance p2, Ljkg;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-direct {p2, p1}, Ljkg;-><init>(Landroid/view/View;)V
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lkkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    iget-object v0, p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lbbd;
-
-    sget-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lyy7;
-
-    const/4 v2, 0x1
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p1, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ScrollView;
-
-    new-instance v1, Lbee;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v1, v2, p1}, Lbee;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object p2
 .end method

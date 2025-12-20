@@ -23,36 +23,36 @@
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
         "okApiService",
-        "Ly6d;",
+        "Lcgd;",
         "log",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Ly6d;)V",
-        "Lqqg;",
+        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lcgd;)V",
+        "Lv2h;",
         "drainEmitters",
         "()V",
         "requestReadSettings",
         "",
         "key",
-        "Le2f;",
+        "Lbdf;",
         "get",
-        "(Ljava/lang/String;)Le2f;",
+        "(Ljava/lang/String;)Lbdf;",
         "release",
         "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
-        "Ly6d;",
+        "Lcgd;",
         "",
         "cachedSettings",
         "Ljava/util/Map;",
-        "Lpy4;",
+        "Ll25;",
         "requestSettingsDisposable",
-        "Lpy4;",
+        "Ll25;",
         "Ljava/util/concurrent/CopyOnWriteArrayList;",
         "Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;",
         "listeners",
         "Ljava/util/concurrent/CopyOnWriteArrayList;",
-        "Lnm0;",
+        "Lmn0;",
         "",
         "wantedSettings",
-        "Lnm0;",
+        "Lmn0;",
         "Companion",
         "KeyListener",
         "calls-sdk_release"
@@ -98,16 +98,16 @@
     .end annotation
 .end field
 
-.field private final log:Ly6d;
+.field private final log:Lcgd;
 
 .field private final okApiService:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
-.field private final requestSettingsDisposable:Lpy4;
+.field private final requestSettingsDisposable:Ll25;
 
-.field private final wantedSettings:Lnm0;
+.field private final wantedSettings:Lmn0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lnm0;"
+            "Lmn0;"
         }
     .end annotation
 .end field
@@ -121,21 +121,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$Companion;-><init>(Ltk4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$Companion;-><init>(Lro4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->Companion:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Ly6d;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lcgd;)V
     .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Ly6d;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Lcgd;
 
     new-instance p1, Ljava/util/LinkedHashMap;
 
@@ -149,17 +149,17 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    sget-object p1, Lrd5;->a:Lrd5;
+    sget-object p1, Lmh5;->a:Lmh5;
 
-    invoke-static {p1}, Lnm0;->t(Ljava/lang/Object;)Lnm0;
+    invoke-static {p1}, Lmn0;->s(Ljava/lang/Object;)Lmn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->wantedSettings:Lnm0;
+    iput-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->wantedSettings:Lmn0;
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Lu0e;->a()Lj0e;
+    invoke-static {}, Lbbe;->a()Lqae;
 
     move-result-object v5
 
@@ -171,15 +171,15 @@
 
     invoke-static {v5, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    new-instance v0, Ljta;
+    new-instance v0, Lpza;
 
     const-wide/16 v2, 0x64
 
-    invoke-direct/range {v0 .. v5}, Ljta;-><init>(Lvqa;JLjava/util/concurrent/TimeUnit;Lj0e;)V
+    invoke-direct/range {v0 .. v5}, Lpza;-><init>(Lcxa;JLjava/util/concurrent/TimeUnit;Lqae;)V
 
     sget-object p1, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$1;->INSTANCE:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$1;
 
-    invoke-virtual {v0, p1}, Lvqa;->g(Lm7c;)Lyqa;
+    invoke-virtual {v0, p1}, Lcxa;->g(Ldfc;)Lfxa;
 
     move-result-object p1
 
@@ -187,17 +187,17 @@
 
     invoke-direct {p2, p0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;-><init>(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)V
 
-    new-instance v0, Lora;
+    new-instance v0, Lvxa;
 
-    const/4 v1, 0x3
+    const/4 v1, 0x2
 
-    invoke-direct {v0, p1, p2, v1}, Lora;-><init>(Lvqa;Ltm6;I)V
+    invoke-direct {v0, p1, p2, v1}, Lvxa;-><init>(Lcxa;Ldr6;I)V
 
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lvqa;->l(Lj0e;)Lssa;
+    invoke-virtual {v0, p1}, Lcxa;->l(Lqae;)Lzya;
 
     move-result-object p1
 
@@ -209,15 +209,15 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$4;-><init>(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)V
 
-    new-instance v1, Lv08;
+    new-instance v1, Lo58;
 
-    sget-object v2, Lpdf;->d:Ljn6;
+    sget-object v2, Lz7f;->f:Ltr6;
 
-    invoke-direct {v1, p2, v0, v2}, Lv08;-><init>(Lgu3;Lgu3;Lp6;)V
+    invoke-direct {v1, p2, v0, v2}, Lo58;-><init>(Lux3;Lux3;Ln6;)V
 
-    invoke-virtual {p1, v1}, Lvqa;->a(Lvta;)V
+    invoke-virtual {p1, v1}, Lcxa;->a(Lc0b;)V
 
-    iput-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->requestSettingsDisposable:Lpy4;
+    iput-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->requestSettingsDisposable:Ll25;
 
     return-void
 .end method
@@ -246,10 +246,10 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Ly6d;
+.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lcgd;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Ly6d;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Lcgd;
 
     return-object p0
 .end method
@@ -262,10 +262,10 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Li2f;)V
+.method public static synthetic b(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Lfdf;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->get$lambda$1(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Ll2f;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->get$lambda$1(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Lidf;)V
 
     return-void
 .end method
@@ -306,12 +306,12 @@
     return-void
 .end method
 
-.method private static final get$lambda$1(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Ll2f;)V
+.method private static final get$lambda$1(Ljava/lang/String;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Lidf;)V
     .locals 2
 
     new-instance v0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;
 
-    invoke-direct {v0, p0, p2}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;-><init>(Ljava/lang/String;Ll2f;)V
+    invoke-direct {v0, p0, p2}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;-><init>(Ljava/lang/String;Lidf;)V
 
     iget-object v1, p1, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->cachedSettings:Ljava/util/Map;
 
@@ -336,15 +336,17 @@
 
     invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/settings/a;-><init>(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;)V
 
-    check-cast p2, Li2f;
+    check-cast p2, Lfdf;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Ln42;
+    new-instance v0, Lr62;
 
-    invoke-direct {v0, p0}, Ln42;-><init>(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    invoke-static {p2, v0}, Lty4;->g(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)V
+    invoke-direct {v0, v1, p0}, Lr62;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2, v0}, Lp25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lr62;)V
 
     invoke-direct {p1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->requestReadSettings()V
 
@@ -370,7 +372,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
     move-result v2
 
@@ -402,7 +404,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lue3;->h0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1}, Lei3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -412,9 +414,9 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->wantedSettings:Lnm0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->wantedSettings:Lmn0;
 
-    invoke-virtual {v1, v0}, Lnm0;->f(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lmn0;->d(Ljava/lang/Object;)V
 
     :cond_1
     return-void
@@ -422,18 +424,18 @@
 
 
 # virtual methods
-.method public get(Ljava/lang/String;)Le2f;
+.method public get(Ljava/lang/String;)Lbdf;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Le2f;"
+            "Lbdf;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Ly6d;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->log:Lcgd;
 
     const-string v1, "Request for a key "
 
@@ -443,33 +445,33 @@
 
     const-string v2, "RemoteSettings"
 
-    invoke-interface {v0, v2, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lcgd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lz9a;
+    new-instance v0, Lhga;
 
     const/16 v1, 0xe
 
-    invoke-direct {v0, p1, v1, p0}, Lz9a;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, p0}, Lhga;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance p1, Lwk3;
+    new-instance p1, Lgo3;
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, v1, v0}, Lwk3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lgo3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Le2f;->m(Lj0e;)Lu2f;
+    invoke-virtual {p1, v0}, Lbdf;->n(Lqae;)Ltdf;
 
     move-result-object p1
 
-    invoke-static {}, Lde;->a()Lj0e;
+    invoke-static {}, Lge;->a()Lqae;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Le2f;->i(Lj0e;)Lu2f;
+    invoke-virtual {p1, v0}, Lbdf;->i(Lqae;)Ltdf;
 
     move-result-object p1
 
@@ -479,9 +481,9 @@
 .method public final release()V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->requestSettingsDisposable:Lpy4;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->requestSettingsDisposable:Ll25;
 
-    invoke-interface {v0}, Lpy4;->dispose()V
+    invoke-interface {v0}, Ll25;->dispose()V
 
     return-void
 .end method

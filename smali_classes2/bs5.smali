@@ -1,116 +1,88 @@
-.class public final synthetic Lbs5;
-.super Ljava/lang/Object;
+.class public final Lbs5;
+.super Ljja;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput p4, p0, Lbs5;->a:I
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    iput-object p1, p0, Lbs5;->c:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Ljja;-><init>(Ljava/lang/Object;)V
 
-    iput-wide p2, p0, Lbs5;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbs5;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lbs5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lbs5;->c:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lps5;
+    :cond_0
+    instance-of v1, p1, Lbs5;
 
-    iget-object v0, v0, Lps5;->b:Lkz4;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lkz4;->get()Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object v0
+    return v2
 
-    check-cast v0, Ltef;
+    :cond_1
+    check-cast p1, Lbs5;
 
-    iget-wide v1, p0, Lbs5;->b:J
+    iget-object v1, p0, Lbs5;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object p1, p1, Lbs5;->b:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    move-result p1
 
-    move-result-object v1
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0, v1}, Ltef;->d(Ljava/util/List;)Lu2f;
+    return v2
 
-    move-result-object v0
+    :cond_2
+    return v0
+.end method
 
-    return-object v0
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lbs5;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lbs5;->b:Ljava/lang/String;
 
-    check-cast v0, Lgs5;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-object v0, v0, Lgs5;->a:Lhwa;
+    move-result v0
 
-    new-instance v1, Lcu;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lhwa;->t()Lz7c;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object v2
+    const-string v0, "ExternalCallback(params="
 
-    iget-object v2, v2, Lz7c;->a:Lpe8;
+    const-string v1, ")"
 
-    invoke-virtual {v2}, Lw4e;->k()J
+    iget-object v2, p0, Lbs5;->b:Ljava/lang/String;
 
-    move-result-wide v3
-
-    const/4 v2, 0x5
-
-    iget-wide v5, p0, Lbs5;->b:J
-
-    invoke-direct/range {v1 .. v6}, Lcu;-><init>(IJJ)V
-
-    invoke-virtual {v0}, Lhwa;->u()Lm1g;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3, v2}, Lm1g;->d(Lm1g;Lsm;ZI)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

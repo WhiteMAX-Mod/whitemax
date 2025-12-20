@@ -26,8 +26,6 @@
 
 .field private final renderMatrix:Landroid/graphics/Matrix;
 
-.field private final renderSize:Landroid/graphics/Point;
-
 .field private renderWidth:I
 
 .field private final yuvUploader:Lorg/webrtc/VideoFrameDrawer$YuvUploader;
@@ -70,12 +68,6 @@
     new-array v0, v0, [F
 
     iput-object v0, p0, Lorg/webrtc/VideoFrameDrawer;->dstPoints:[F
-
-    new-instance v0, Landroid/graphics/Point;
-
-    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
-
-    iput-object v0, p0, Lorg/webrtc/VideoFrameDrawer;->renderSize:Landroid/graphics/Point;
 
     new-instance v0, Lorg/webrtc/VideoFrameDrawer$YuvUploader;
 

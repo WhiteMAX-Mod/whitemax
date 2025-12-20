@@ -1,80 +1,61 @@
 .class public final Ls3b;
-.super Ljava/lang/Object;
+.super Lt3b;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-.field public final synthetic c:Lpe7;
-
-.field public final synthetic d:Landroid/graphics/drawable/Animatable;
+# static fields
+.field public static final a:Ls3b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lpe7;Landroid/graphics/drawable/Animatable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p5, p0, Ls3b;->a:I
+    new-instance v0, Ls3b;
 
-    iput-object p1, p0, Ls3b;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ls3b;->c:Lpe7;
-
-    iput-object p4, p0, Ls3b;->d:Landroid/graphics/drawable/Animatable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ls3b;->a:Ls3b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ls3b;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Ls3b;->c:Lpe7;
+    return v0
 
-    iget-object v1, p0, Ls3b;->d:Landroid/graphics/drawable/Animatable;
+    :cond_0
+    instance-of p1, p1, Ls3b;
 
-    iget-object v2, p0, Ls3b;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lpe7;Landroid/graphics/drawable/Animatable;)V
+    const/4 p1, 0x0
 
-    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
+    return p1
 
-    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
+    :cond_1
+    return v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Ls3b;->c:Lpe7;
+    const v0, -0x581272ac
 
-    iget-object v1, p0, Ls3b;->d:Landroid/graphics/drawable/Animatable;
+    return v0
+.end method
 
-    iget-object v2, p0, Ls3b;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lpe7;Landroid/graphics/drawable/Animatable;)V
+    const-string v0, "Squircle"
 
-    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

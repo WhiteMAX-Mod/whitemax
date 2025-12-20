@@ -1,146 +1,40 @@
-.class public final La9d;
+.class public abstract La9d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a078c
 
-.field public final synthetic b:F
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a078d
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a078e
 
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a078f
 
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
-    .locals 0
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0790
 
-    iput p3, p0, La9d;->a:I
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a0791
 
-    iput-object p1, p0, La9d;->c:Ljava/lang/Object;
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a0792
 
-    iput p2, p0, La9d;->b:F
+.field public static oneme_settings_container:I = 0x7f0a0793
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a079b
 
-    return-void
-.end method
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a079c
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_toolbar:I = 0x7f0a0836
 
-    return-void
-.end method
+.field public static oneme_settings_topbar:I = 0x7f0a0837
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a0838
 
-    return-void
-.end method
+.field public static oneme_settings_topbar_container:I = 0x7f0a0839
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a083a
 
-    return-void
-.end method
+.field public static oneme_settings_topbar_name:I = 0x7f0a083b
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_topbar_nick:I = 0x7f0a083c
 
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, La9d;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, La9d;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, La9d;->c:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lyy7;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    iget v0, p0, La9d;->b:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, La9d;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, La9d;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, La9d;->c:Ljava/lang/Object;
-
-    check-cast p1, Lc9d;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lc9d;->a:Z
-
-    iget v0, p0, La9d;->b:F
-
-    iput v0, p1, Lc9d;->d:F
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_settings_topbar_phone:I = 0x7f0a083d

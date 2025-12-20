@@ -3,169 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lccj;
+.implements Lwwa;
 
 
-# instance fields
-.field public final a:Ll18;
-
-.field public final b:Ll18;
-
-.field public final c:Lbcj;
+# static fields
+.field public static final a:Lgcj;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbcj;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgcj;
 
-    iput-object p2, p0, Lgcj;->c:Lbcj;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p2, Ldy0;->e:Ldy0;
+    sput-object v0, Lgcj;->a:Lgcj;
 
-    invoke-static {p1}, Lmig;->b(Landroid/content/Context;)V
+    new-instance v0, Lyyi;
 
-    invoke-static {}, Lmig;->a()Lmig;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Lmig;->c(Lbe5;)Ljig;
+    const-class v1, Lqzi;
 
-    move-result-object p1
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    sget-object p2, Ldy0;->d:Ljava/util/Set;
+    move-result-object v0
 
-    new-instance v0, Lgf5;
+    const/4 v2, 0x2
 
-    const-string v1, "json"
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result p2
+    move-result-object v0
 
-    if-eqz p2, :cond_0
+    const/4 v2, 0x3
 
-    new-instance p2, Ll18;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    new-instance v0, Lf1j;
+    move-result-object v0
 
-    const/4 v1, 0x2
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, p1, v1}, Lf1j;-><init>(Ljig;I)V
+    move-result-object v0
 
-    invoke-direct {p2, v0}, Ll18;-><init>(Lrpc;)V
+    const/4 v2, 0x4
 
-    iput-object p2, p0, Lgcj;->a:Ll18;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    :cond_0
-    new-instance p2, Ll18;
+    move-result-object v0
 
-    new-instance v0, Lf1j;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    invoke-direct {v0, p1, v1}, Lf1j;-><init>(Ljig;I)V
-
-    invoke-direct {p2, v0}, Ll18;-><init>(Lrpc;)V
-
-    iput-object p2, p0, Lgcj;->b:Ll18;
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llk6;)V
-    .locals 6
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lgcj;->c:Lbcj;
-
-    iget v0, v0, Lbcj;->b:I
-
-    sget-object v1, Ll9c;->b:Ll9c;
-
-    sget-object v2, Ll9c;->a:Ll9c;
-
-    const/4 v3, 0x0
-
-    if-nez v0, :cond_2
-
-    iget-object v4, p0, Lgcj;->a:Ll18;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Ll18;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lkig;
-
-    iget v5, p1, Llk6;->b:I
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {p1, v0}, Llk6;->b0(I)[B
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    new-instance v0, Laa0;
-
-    invoke-direct {v0, p1, v2, v3}, Laa0;-><init>(Ljava/lang/Object;Ll9c;Ldb0;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, v0}, Llk6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Laa0;
-
-    invoke-direct {v0, p1, v1, v3}, Laa0;-><init>(Ljava/lang/Object;Ll9c;Ldb0;)V
-
-    :goto_0
-    invoke-virtual {v4, v0}, Lkig;->a(Laa0;)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    iget-object v4, p0, Lgcj;->b:Ll18;
-
-    invoke-virtual {v4}, Ll18;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lkig;
-
-    iget v5, p1, Llk6;->b:I
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Llk6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Laa0;
-
-    invoke-direct {v0, p1, v2, v3}, Laa0;-><init>(Ljava/lang/Object;Ll9c;Ldb0;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1, v0}, Llk6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Laa0;
-
-    invoke-direct {v0, p1, v1, v3}, Laa0;-><init>(Ljava/lang/Object;Ll9c;Ldb0;)V
-
-    :goto_1
-    invoke-virtual {v4, v0}, Lkig;->a(Laa0;)V
-
-    return-void
+    throw p1
 .end method

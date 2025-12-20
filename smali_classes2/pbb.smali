@@ -36,116 +36,74 @@
 
 .field public static final p:I
 
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lm4d;->oneme_setting_item_about:I
+    sget v0, Lrcd;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
     sput v0, Lpbb;->a:I
 
-    sget v0, Lm4d;->oneme_setting_item_appearance:I
+    sget v0, Lrcd;->oneme_folder_list_recommended_folders_section_title:I
 
     sput v0, Lpbb;->b:I
 
-    sget v0, Lm4d;->oneme_setting_item_battery:I
+    sget v0, Lrcd;->oneme_folder_list_toolbar_title:I
 
     sput v0, Lpbb;->c:I
 
-    sget v0, Lm4d;->oneme_setting_item_esia_connected_title:I
+    sget v0, Lrcd;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
     sput v0, Lpbb;->d:I
 
-    sget v0, Lm4d;->oneme_setting_item_esia_not_connected_subtitle:I
+    sget v0, Lrcd;->oneme_folders_delete_folder_bottom_sheet_description:I
 
     sput v0, Lpbb;->e:I
 
-    sget v0, Lm4d;->oneme_setting_item_esia_not_connected_title:I
+    sget v0, Lrcd;->oneme_folders_edit_add_chats_button:I
 
     sput v0, Lpbb;->f:I
 
-    sget v0, Lm4d;->oneme_setting_item_folders:I
+    sget v0, Lrcd;->oneme_folders_edit_create_button:I
 
     sput v0, Lpbb;->g:I
 
-    sget v0, Lm4d;->oneme_setting_item_invite_friends_title:I
+    sget v0, Lrcd;->oneme_folders_edit_delete_button:I
 
     sput v0, Lpbb;->h:I
 
-    sget v0, Lm4d;->oneme_setting_item_messages:I
+    sget v0, Lrcd;->oneme_folders_edit_name_hint:I
 
     sput v0, Lpbb;->i:I
 
-    sget v0, Lm4d;->oneme_setting_item_notification:I
+    sget v0, Lrcd;->oneme_folders_edit_toolbar_title_creation:I
 
     sput v0, Lpbb;->j:I
 
-    sget v0, Lm4d;->oneme_setting_item_notification_and_sound:I
+    sget v0, Lrcd;->oneme_folders_edit_toolbar_title_edit:I
 
     sput v0, Lpbb;->k:I
 
-    sget v0, Lm4d;->oneme_setting_item_privacy:I
+    sget v0, Lrcd;->oneme_folders_list_create_folder:I
 
     sput v0, Lpbb;->l:I
 
-    sget v0, Lm4d;->oneme_setting_item_storage:I
+    sget v0, Lrcd;->oneme_folders_list_menu_action_change:I
 
     sput v0, Lpbb;->m:I
 
-    sget v0, Lm4d;->oneme_setting_item_support:I
+    sget v0, Lrcd;->oneme_folders_list_menu_action_delete_folder:I
 
     sput v0, Lpbb;->n:I
 
-    sget v0, Lm4d;->oneme_settings_cant_open_camera:I
+    sget v0, Lrcd;->oneme_folders_picker_empty_title:I
 
     sput v0, Lpbb;->o:I
 
-    sget v0, Lm4d;->oneme_settings_change_avatar_error:I
+    sget v0, Lrcd;->oneme_folders_picker_toolbar_title:I
 
     sput v0, Lpbb;->p:I
-
-    sget v0, Lm4d;->oneme_settings_change_avatar_success:I
-
-    sput v0, Lpbb;->q:I
-
-    sget v0, Lm4d;->oneme_settings_change_avatar_title:I
-
-    sput v0, Lpbb;->r:I
-
-    sget v0, Lm4d;->oneme_settings_change_avatar_upload_from_camera:I
-
-    sput v0, Lpbb;->s:I
-
-    sget v0, Lm4d;->oneme_settings_change_avatar_upload_from_gallery:I
-
-    sput v0, Lpbb;->t:I
-
-    sget v0, Lm4d;->oneme_settings_change_avatar_upload_from_neuroavatars:I
-
-    sput v0, Lpbb;->u:I
-
-    sget v0, Lm4d;->oneme_settings_link_copied_snackbar_title:I
-
-    sput v0, Lpbb;->v:I
-
-    sget v0, Lm4d;->oneme_settings_phonenumber_copied_snackbar_title:I
-
-    sput v0, Lpbb;->w:I
 
     return-void
 .end method

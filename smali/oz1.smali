@@ -3,90 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq02;
+.implements La98;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final synthetic a:I
 
-.field public final b:Lsz1;
-
-.field public final c:I
+.field public final b:Lc98;
 
 
 # direct methods
-.method public constructor <init>(Lsz1;Lqee;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Loz1;->a:I
+
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loz1;->b:Lsz1;
+    .line 6
+    new-instance v0, Lc98;
 
-    iput-object p2, p0, Loz1;->a:Ljava/util/concurrent/Executor;
+    invoke-direct {v0, p0}, Lc98;-><init>(La98;)V
 
-    iput p3, p0, Loz1;->c:I
+    iput-object v0, p0, Loz1;->b:Lc98;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Loz1;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Lc98;
+
+    invoke-direct {v0, p0}, Lc98;-><init>(La98;)V
+
+    iput-object v0, p0, Loz1;->b:Lc98;
+
+    .line 3
+    new-instance v0, Lh94;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lh94;-><init>(ILjava/lang/Object;)V
+
+    .line 4
+    invoke-virtual {p1, v0}, Lx84;->addLifecycleListener(Lv84;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lha8;
-    .locals 4
+.method public final p()Lc98;
+    .locals 1
 
-    const-string v0, "Camera2CapturePipeline"
+    iget v0, p0, Loz1;->a:I
 
-    const-string v1, "invokePreCapture"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Loz1;->b:Lsz1;
-
-    iget v1, p0, Loz1;->c:I
-
-    invoke-virtual {v0, v1}, Lsz1;->a(I)Lha8;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lsn6;->a(Lha8;)Lsn6;
-
-    move-result-object v0
-
-    new-instance v1, Llz1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Llz1;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lusd;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3, v1}, Lusd;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Loz1;->a:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v2, v1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
-
-    move-result-object v0
+    iget-object v0, p0, Loz1;->b:Lc98;
 
     return-object v0
-.end method
 
-.method public final b()Lha8;
-    .locals 2
-
-    new-instance v0, Lxtd;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1, p0}, Lxtd;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lixi;->a(Luu1;)Lwu1;
-
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Loz1;->b:Lc98;
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

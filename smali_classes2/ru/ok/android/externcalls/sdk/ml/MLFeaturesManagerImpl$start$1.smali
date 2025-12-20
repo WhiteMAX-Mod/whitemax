@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgu3;
+.implements Lux3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lgu3;"
+        "Lux3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;",
         "it",
-        "Lqqg;",
+        "Lv2h;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;)V",
         "<anonymous>"

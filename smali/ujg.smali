@@ -1,55 +1,133 @@
 .class public final Lujg;
-.super Ljava/lang/Object;
+.super Lqw4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:F
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:F
-
-.field public final j:I
+.field public final synthetic c:Lvjg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;FFIIFFIFI)V
+.method public constructor <init>(Lvjg;Lzj0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lujg;->c:Lvjg;
 
-    iput-object p1, p0, Lujg;->a:Ljava/lang/String;
-
-    iput p2, p0, Lujg;->b:F
-
-    iput p3, p0, Lujg;->c:F
-
-    iput p4, p0, Lujg;->d:I
-
-    iput p5, p0, Lujg;->e:I
-
-    iput p6, p0, Lujg;->f:F
-
-    iput p7, p0, Lujg;->g:F
-
-    iput p8, p0, Lujg;->h:I
-
-    iput p9, p0, Lujg;->i:F
-
-    iput p10, p0, Lujg;->j:I
+    invoke-direct {p0, p2}, Lqw4;-><init>(Lzj0;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final d()V
+    .locals 1
+
+    iget-object v0, p0, Lqw4;->b:Lzj0;
+
+    invoke-virtual {v0}, Lzj0;->c()V
+
+    invoke-virtual {p0}, Lujg;->m()V
+
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lqw4;->b:Lzj0;
+
+    invoke-virtual {v0, p1}, Lzj0;->e(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Lujg;->m()V
+
+    return-void
+.end method
+
+.method public final h(ILjava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lqw4;->b:Lzj0;
+
+    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lzj0;->a(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lujg;->m()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final m()V
+    .locals 5
+
+    iget-object v0, p0, Lujg;->c:Lvjg;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lujg;->c:Lvjg;
+
+    iget-object v1, v1, Lvjg;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Pair;
+
+    if-nez v1, :cond_0
+
+    iget-object v2, p0, Lujg;->c:Lvjg;
+
+    iget v3, v2, Lvjg;->b:I
+
+    add-int/lit8 v3, v3, -0x1
+
+    iput v3, v2, Lvjg;->b:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, p0, Lujg;->c:Lvjg;
+
+    iget-object v0, v0, Lvjg;->d:Ljava/util/concurrent/Executor;
+
+    new-instance v2, Ljrf;
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p0, v1, v4, v3}, Ljrf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_1
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

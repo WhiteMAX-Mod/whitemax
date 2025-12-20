@@ -1,92 +1,98 @@
 .class public final Ll6;
-.super Landroid/app/SharedElementCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwx3;
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/Rect;
-
-.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
     .locals 0
 
-    iput-object p1, p0, Ll6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ll6;->a:Landroid/graphics/Rect;
-
-    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
+    iput-object p1, p0, Ll6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    if-eqz p2, :cond_0
+    check-cast p1, Lg1d;
 
-    iget-object p1, p0, Ll6;->a:Landroid/graphics/Rect;
+    iget-object v0, p0, Ll6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    if-eqz p1, :cond_0
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lmga;
 
-    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p2
+    invoke-virtual {p1}, Lg1d;->toString()Ljava/lang/String;
 
-    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    move-result-object v1
 
-    move-result-object p2
+    filled-new-array {v1}, [Ljava/lang/Object;
 
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v1
 
-    move-result v0
+    const-string v2, "mga"
 
-    if-eqz v0, :cond_0
+    const-string v3, "onQualitySelected: %s"
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v2, v3, v1}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lmga;->s0:Lcfh;
+
+    invoke-virtual {v1}, Lcfh;->a()Lk20;
+
+    move-result-object v1
+
+    iput-object p1, v1, Lk20;->c:Lg1d;
+
+    new-instance v2, Lcfh;
+
+    invoke-direct {v2, v1}, Lcfh;-><init>(Lk20;)V
+
+    iput-object v2, v0, Lmga;->s0:Lcfh;
+
+    invoke-virtual {v0}, Lmga;->O0()V
+
+    new-instance v1, Lv32;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, p1}, Lv32;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lmga;->P0(Lnr6;)V
+
+    new-instance p1, Lgga;
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v0, v1}, Lgga;-><init>(Lmga;I)V
+
+    invoke-virtual {v0, p1}, Lmga;->P0(Lnr6;)V
+
+    iget-object p1, v0, Lmga;->u0:Lgd;
+
+    iget-object v0, v0, Lmga;->s0:Lcfh;
+
+    iget-object v0, v0, Lcfh;->a:Lg1d;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    const-string v1, "VIDEO_UPLOAD_QUALITY_SELECTED"
 
-    invoke-static {p1, v0}, Lyni;->c(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-virtual {p1, v1, v0}, Lgd;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRejectSharedElements(Ljava/util/List;)V
-    .locals 3
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Ll6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Landroidx/viewpager2/widget/ViewPager2;
-
-    new-instance v0, Lo3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lo3;-><init>(ILjava/lang/Object;)V
-
-    const-wide/16 v1, 0x64
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_0
     return-void
 .end method

@@ -1,11 +1,11 @@
-.class public final Lja7;
-.super Ltu5;
+.class public interface abstract Lja7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public d:J
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public e:J
-
-.field public f:J
+.method public abstract e(Landroid/net/Uri;Lcg8;Z)Z
+.end method

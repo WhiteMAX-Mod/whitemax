@@ -1,81 +1,44 @@
-.class public final Lsc8;
-.super Lq44;
+.class public final synthetic Lsc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqc8;
 
 
 # instance fields
-.field public A0:I
+.field public final synthetic a:Lxc8;
 
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ljava/io/Serializable;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:I
-
-.field public u0:I
-
-.field public v0:Z
-
-.field public w0:J
-
-.field public x0:J
-
-.field public synthetic y0:Ljava/lang/Object;
-
-.field public final synthetic z0:Lwc8;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwc8;Lq44;)V
+.method public synthetic constructor <init>(Lxc8;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lsc8;->z0:Lwc8;
+    iput-object p1, p0, Lsc8;->a:Lxc8;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lsc8;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public b(Landroid/view/View;Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Lsc8;->y0:Ljava/lang/Object;
+    sget-object v0, Lyc8;->X:Lyc8;
 
-    iget p1, p0, Lsc8;->A0:I
+    iget-object v1, p0, Lsc8;->b:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast v1, Landroid/text/style/ClickableSpan;
 
-    or-int/2addr p1, v0
+    iget-object v2, p0, Lsc8;->a:Lxc8;
 
-    iput p1, p0, Lsc8;->A0:I
+    invoke-virtual {v2, p1, p2, v0, v1}, Lxc8;->b(Landroid/view/View;Ljava/lang/String;Lyc8;Landroid/text/style/ClickableSpan;)V
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lsc8;->z0:Lwc8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Lwc8;->L0(Lpb2;Ljava/util/List;Ljava/util/List;IZLq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,36 +1,32 @@
 .class public final Lwyh;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lazh;
+.field public final synthetic Y:Z
 
-.field public final synthetic Z:Lqyh;
+.field public final synthetic Z:Lnzh;
 
-.field public o:I
-
-.field public final synthetic s0:Lmyh;
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmyh;Lqyh;Lazh;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lnzh;Lkotlin/coroutines/Continuation;Z)V
     .locals 0
 
-    iput-object p3, p0, Lwyh;->Y:Lazh;
+    iput-boolean p3, p0, Lwyh;->Y:Z
 
-    iput-object p2, p0, Lwyh;->Z:Lqyh;
-
-    iput-object p1, p0, Lwyh;->s0:Lmyh;
+    iput-object p1, p0, Lwyh;->Z:Lnzh;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -40,7 +36,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lac4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -50,7 +46,7 @@
 
     check-cast p1, Lwyh;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lwyh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,37 +56,47 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lwyh;
+    new-instance p1, Lwyh;
 
-    iget-object v1, p0, Lwyh;->Z:Lqyh;
+    iget-boolean v0, p0, Lwyh;->Y:Z
 
-    iget-object v2, p0, Lwyh;->s0:Lmyh;
+    iget-object v1, p0, Lwyh;->Z:Lnzh;
 
-    iget-object v3, p0, Lwyh;->Y:Lazh;
+    invoke-direct {p1, v1, p2, v0}, Lwyh;-><init>(Lnzh;Lkotlin/coroutines/Continuation;Z)V
 
-    invoke-direct {v0, v2, v1, v3, p2}, Lwyh;-><init>(Lmyh;Lqyh;Lazh;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lwyh;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 9
 
-    iget v0, p0, Lwyh;->o:I
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    const/4 v1, 0x1
+    sget-object v1, Lbc4;->a:Lbc4;
 
-    if-eqz v0, :cond_1
+    iget v2, p0, Lwyh;->X:I
 
-    if-ne v0, v1, :cond_0
+    const/4 v3, 0x3
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 v4, 0x2
 
-    goto :goto_0
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    if-eqz v2, :cond_3
+
+    if-eq v2, v5, :cond_2
+
+    if-eq v2, v4, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto/16 :goto_9
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -102,49 +108,272 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object v2, p0, Lwyh;->o:Ljava/lang/String;
 
-    iget-object p1, p0, Lwyh;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lwyh;->Y:Lazh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lazh;->f(Ljava/lang/Throwable;)Law7;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lazh;->g()Lxh3;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lazh;->e:Lpv0;
-
-    iget-object p1, p0, Lwyh;->s0:Lmyh;
-
-    iget-object v6, p1, Lmyh;->b:Ljava/lang/String;
-
-    iput v1, p0, Lwyh;->o:I
-
-    iget-object v5, p0, Lwyh;->Z:Lqyh;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lxh3;->a(Ln92;Law7;Lpsh;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Landroid/security/keystore/UserNotAuthenticatedException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    :catch_0
+    move-exception p1
 
-    return-object p1
+    goto/16 :goto_7
+
+    :cond_2
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Lwyh;->Y:Z
+
+    if-nez p1, :cond_a
+
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    invoke-virtual {p1}, Lnzh;->e()Lbbg;
+
+    move-result-object p1
+
+    check-cast p1, Lb9b;
+
+    invoke-virtual {p1}, Lb9b;->b()Ltb4;
+
+    move-result-object p1
+
+    new-instance v2, Lvyh;
+
+    iget-object v3, p0, Lwyh;->Z:Lnzh;
+
+    invoke-direct {v2, v3, v6}, Lvyh;-><init>(Lnzh;Lkotlin/coroutines/Continuation;)V
+
+    iput v5, p0, Lwyh;->X:I
+
+    invoke-static {p1, v2, p0}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_4
+
+    goto/16 :goto_8
+
+    :cond_4
+    :goto_0
+    check-cast p1, Lozh;
+
+    iget-object v1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object v1, v1, Lnzh;->m:Lh08;
+
+    instance-of v2, v1, Lmp0;
+
+    if-eqz v2, :cond_5
+
+    check-cast v1, Lmp0;
+
+    goto :goto_1
+
+    :cond_5
+    move-object v1, v6
+
+    :goto_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_8
+
+    new-instance v3, Lsp0;
+
+    iget-object v4, p0, Lwyh;->Z:Lnzh;
+
+    invoke-virtual {v4}, Lnzh;->f()Z
+
+    move-result v4
+
+    iget-object p1, p1, Lozh;->d:Ljava/lang/String;
+
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move p1, v2
+
+    goto :goto_3
+
+    :cond_7
+    :goto_2
+    move p1, v5
+
+    :goto_3
+    xor-int/2addr p1, v5
+
+    invoke-direct {v3, v4, v5, v2, p1}, Lsp0;-><init>(ZZZZ)V
+
+    invoke-virtual {v1, v3}, Lh08;->a(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_8
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object p1, p1, Lnzh;->m:Lh08;
+
+    if-eqz p1, :cond_9
+
+    new-instance v1, Luh8;
+
+    invoke-direct {v1}, Luh8;-><init>()V
+
+    invoke-virtual {p1, v1}, Lh08;->b(Ljava/lang/Throwable;)V
+
+    :cond_9
+    :goto_4
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iput-object v6, p1, Lnzh;->m:Lh08;
+
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object p1, p1, Lnzh;->j:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljhc;
+
+    iget-object v1, p0, Lwyh;->Z:Lnzh;
+
+    iget-wide v3, v1, Lnzh;->b:J
+
+    invoke-virtual {p1, v3, v4, v2}, Ljhc;->a(JZ)V
+
+    return-object v0
+
+    :cond_a
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object p1, p1, Lnzh;->m:Lh08;
+
+    instance-of v2, p1, Lmp0;
+
+    if-eqz v2, :cond_b
+
+    check-cast p1, Lmp0;
+
+    goto :goto_5
+
+    :cond_b
+    move-object p1, v6
+
+    :goto_5
+    if-eqz p1, :cond_c
+
+    iget-object p1, p1, Lmp0;->d:Ljava/lang/String;
+
+    goto :goto_6
+
+    :cond_c
+    move-object p1, v6
+
+    :goto_6
+    invoke-static {p1}, Lnzh;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :try_start_1
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object p1, p1, Lnzh;->f:Lg3i;
+
+    invoke-virtual {p1, v6, v5}, Lg3i;->q(Ljava/lang/String;Z)Lhp0;
+
+    move-result-object p1
+
+    iget-object v5, p0, Lwyh;->Z:Lnzh;
+
+    iget-object v7, v5, Lnzh;->k:Lh6f;
+
+    new-instance v8, Llyh;
+
+    iget-object v5, v5, Lnzh;->e:Lpkd;
+
+    iget-object v5, v5, Lpkd;->a:Laof;
+
+    invoke-interface {v5}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    invoke-direct {v8, p1, v5, v2}, Llyh;-><init>(Lhp0;Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v2, p0, Lwyh;->o:Ljava/lang/String;
+
+    iput v4, p0, Lwyh;->X:I
+
+    invoke-virtual {v7, v8, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Landroid/security/keystore/UserNotAuthenticatedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-ne p1, v1, :cond_d
+
+    goto :goto_8
+
+    :goto_7
+    iget-object v4, p0, Lwyh;->Z:Lnzh;
+
+    iget-object v4, v4, Lnzh;->g:Ljava/lang/String;
+
+    const-string v5, "Can\'t webapp access request to biometry, try request biometry without crypto"
+
+    invoke-static {v4, v5, p1}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lwyh;->Z:Lnzh;
+
+    iget-object v4, p1, Lnzh;->k:Lh6f;
+
+    new-instance v5, Llyh;
+
+    iget-object p1, p1, Lnzh;->e:Lpkd;
+
+    iget-object p1, p1, Lpkd;->a:Laof;
+
+    invoke-interface {p1}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-direct {v5, v6, p1, v2}, Llyh;-><init>(Lhp0;Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v6, p0, Lwyh;->o:Ljava/lang/String;
+
+    iput v3, p0, Lwyh;->X:I
+
+    invoke-virtual {v4, v5, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_d
+
+    :goto_8
+    return-object v1
+
+    :cond_d
+    :goto_9
+    return-object v0
 .end method

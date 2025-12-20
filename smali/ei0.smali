@@ -1,24 +1,26 @@
 .class public final Lei0;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic o:Lhi0;
+.field public final synthetic X:Lmi0;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lhi0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmi0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lei0;->o:Lhi0;
+    iput-object p1, p0, Lei0;->X:Lmi0;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf84;
+    check-cast p1, Lac4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +40,7 @@
 
     check-cast p1, Lei0;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lei0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,105 +54,61 @@
 
     new-instance p1, Lei0;
 
-    iget-object v0, p0, Lei0;->o:Lhi0;
+    iget-object v0, p0, Lei0;->X:Lmi0;
 
-    invoke-direct {p1, v0, p2}, Lei0;-><init>(Lhi0;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lei0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 2
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lei0;->o:I
 
-    iget-object p1, p0, Lei0;->o:Lhi0;
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Lhi0;->c:Lk18;
+    if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lso4;
-
-    iget-object p1, p1, Lso4;->a:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcsd;
-
-    invoke-virtual {p1}, Lcsd;->c()Lsub;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    const-string v1, "SELECT COUNT(*) FROM phones"
-
-    invoke-static {v0, v1}, Ldsd;->c(ILjava/lang/String;)Ldsd;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lsub;->a:Llrd;
-
-    invoke-virtual {p1}, Llrd;->b()V
-
-    invoke-virtual {p1, v1}, Llrd;->n(Lrrf;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    :try_start_0
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    const-wide/16 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
     :cond_0
-    move-wide v5, v3
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v1}, Ldsd;->y()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    cmp-long p1, v5, v3
-
-    if-nez p1, :cond_1
-
-    const/4 v0, 0x1
+    throw p1
 
     :cond_1
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lei0;->X:Lmi0;
+
+    iget-object p1, p1, Lmi0;->b:Lh6f;
+
+    iput v1, p0, Lei0;->o:I
+
+    sget-object v0, Lzh0;->a:Lzh0;
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
     return-object p1
-
-    :goto_1
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Ldsd;->y()V
-
-    throw v0
 .end method

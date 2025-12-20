@@ -1,116 +1,35 @@
-.class public final synthetic Lech;
+.class public abstract Lech;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvhb;
-
-.field public final synthetic c:Lnh4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lvhb;Lnh4;I)V
+.method public static a(Landroid/view/VelocityTracker;I)F
     .locals 0
 
-    iput p3, p0, Lech;->a:I
+    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getAxisVelocity(I)F
 
-    iput-object p1, p0, Lech;->b:Lvhb;
+    move-result p0
 
-    iput-object p2, p0, Lech;->c:Lnh4;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/view/VelocityTracker;II)F
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    invoke-virtual {p0, p1, p2}, Landroid/view/VelocityTracker;->getAxisVelocity(II)F
 
-    iget v0, p0, Lech;->a:I
+    move-result p0
 
-    packed-switch v0, :pswitch_data_0
+    return p0
+.end method
 
-    iget-object v0, p0, Lech;->b:Lvhb;
+.method public static c(Landroid/view/VelocityTracker;I)Z
+    .locals 0
 
-    iget-object v1, p0, Lech;->c:Lnh4;
+    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->isAxisSupported(I)Z
 
-    monitor-enter v1
+    move-result p0
 
-    monitor-exit v1
-
-    iget-object v0, v0, Lvhb;->c:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    sget-object v2, Lzxg;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lyl5;->a:Lem5;
-
-    iget-object v0, v0, Lem5;->D0:Lnj4;
-
-    iget-object v2, v0, Lnj4;->d:Lra3;
-
-    iget-object v2, v2, Lra3;->e:Ljava/lang/Object;
-
-    check-cast v2, Ld99;
-
-    invoke-virtual {v0, v2}, Lnj4;->E(Ld99;)Lid;
-
-    move-result-object v2
-
-    new-instance v3, Li00;
-
-    const/16 v4, 0x16
-
-    invoke-direct {v3, v2, v4, v1}, Li00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const/16 v1, 0x3fc
-
-    invoke-virtual {v0, v2, v1, v3}, Lnj4;->I(Lid;ILpa8;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lech;->b:Lvhb;
-
-    iget-object v1, p0, Lech;->c:Lnh4;
-
-    iget-object v0, v0, Lvhb;->c:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    sget-object v2, Lzxg;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lyl5;->a:Lem5;
-
-    iget-object v0, v0, Lem5;->D0:Lnj4;
-
-    invoke-virtual {v0}, Lnj4;->H()Lid;
-
-    move-result-object v2
-
-    new-instance v3, Lbj4;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v2, v1, v4}, Lbj4;-><init>(Lid;Lnh4;I)V
-
-    const/16 v1, 0x3f7
-
-    invoke-virtual {v0, v2, v1, v3}, Lnj4;->I(Lid;ILpa8;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

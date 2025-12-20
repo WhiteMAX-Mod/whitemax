@@ -1,541 +1,356 @@
 .class public final Liu0;
-.super Ljava/lang/Object;
+.super Leu0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/Boolean;
 
-.field public Y:I
+.field public final b:Lahi;
 
-.field public a:Lqu0;
+.field public c:Landroid/view/Window;
 
-.field public b:Z
-
-.field public c:Lw9e;
-
-.field public d:J
-
-.field public o:[B
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroid/view/View;Lahi;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, -0x1
+    iput-object p2, p0, Liu0;->b:Lahi;
 
-    iput-wide v0, p0, Liu0;->d:J
+    invoke-static {p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->C(Landroid/view/View;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    const/4 v0, -0x1
+    move-result-object p2
 
-    iput v0, p0, Liu0;->X:I
+    iget-object p2, p2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->i:Llv8;
 
-    iput v0, p0, Liu0;->Y:I
+    if-eqz p2, :cond_0
+
+    iget-object p2, p2, Llv8;->a:Lkv8;
+
+    iget-object p2, p2, Lkv8;->c:Landroid/content/res/ColorStateList;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p2, Lash;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p1}, Lorh;->g(Landroid/view/View;)Landroid/content/res/ColorStateList;
+
+    move-result-object p2
+
+    :goto_0
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result p1
+
+    invoke-static {p1}, Lu6j;->e(I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iput-object p1, p0, Liu0;->a:Ljava/lang/Boolean;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lbnj;->a(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    move-object p1, p2
+
+    :goto_1
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-static {p1}, Lu6j;->e(I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iput-object p1, p0, Liu0;->a:Ljava/lang/Boolean;
+
+    return-void
+
+    :cond_3
+    iput-object p2, p0, Liu0;->a:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(J)V
-    .locals 14
+.method public final a(Landroid/view/View;)V
+    .locals 0
 
-    move-wide v0, p1
+    invoke-virtual {p0, p1}, Liu0;->d(Landroid/view/View;)V
 
-    iget-object v2, p0, Liu0;->a:Lqu0;
+    return-void
+.end method
 
-    if-eqz v2, :cond_7
+.method public final b(Landroid/view/View;)V
+    .locals 0
 
-    iget-boolean v3, p0, Liu0;->b:Z
+    invoke-virtual {p0, p1}, Liu0;->d(Landroid/view/View;)V
 
-    if-eqz v3, :cond_6
+    return-void
+.end method
 
-    iget-wide v3, v2, Lqu0;->b:J
+.method public final c(Landroid/view/View;I)V
+    .locals 0
 
-    cmp-long v5, v0, v3
+    invoke-virtual {p0, p1}, Liu0;->d(Landroid/view/View;)V
 
-    const-wide/16 v6, 0x0
+    return-void
+.end method
 
-    if-gtz v5, :cond_3
+.method public final d(Landroid/view/View;)V
+    .locals 6
 
-    cmp-long v5, v0, v6
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
-    if-ltz v5, :cond_2
+    move-result v0
 
-    sub-long/2addr v3, v0
+    iget-object v1, p0, Liu0;->b:Lahi;
 
-    :goto_0
-    cmp-long v5, v3, v6
+    invoke-virtual {v1}, Lahi;->d()I
 
-    if-lez v5, :cond_1
+    move-result v2
 
-    iget-object v5, v2, Lqu0;->a:Lw9e;
+    const/16 v3, 0x1e
 
-    iget-object v5, v5, Lw9e;->g:Lw9e;
+    if-ge v0, v2, :cond_3
 
-    iget v8, v5, Lw9e;->c:I
+    iget-object v0, p0, Liu0;->c:Landroid/view/Window;
 
-    iget v9, v5, Lw9e;->b:I
+    if-eqz v0, :cond_2
 
-    sub-int v9, v8, v9
+    iget-object v2, p0, Liu0;->a:Ljava/lang/Boolean;
 
-    int-to-long v9, v9
+    if-nez v2, :cond_0
 
-    cmp-long v11, v9, v3
-
-    if-gtz v11, :cond_0
-
-    invoke-virtual {v5}, Lw9e;->a()Lw9e;
-
-    move-result-object v8
-
-    iput-object v8, v2, Lqu0;->a:Lw9e;
-
-    invoke-static {v5}, Loae;->a(Lw9e;)V
-
-    sub-long/2addr v3, v9
+    iget-boolean v2, p0, Liu0;->d:Z
 
     goto :goto_0
 
     :cond_0
-    long-to-int v3, v3
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sub-int/2addr v8, v3
+    move-result v2
 
-    iput v8, v5, Lw9e;->c:I
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    :cond_1
-    const/4 v3, 0x0
+    move-result-object v4
 
-    iput-object v3, p0, Liu0;->c:Lw9e;
+    new-instance v5, Lxp8;
 
-    iput-wide v0, p0, Liu0;->d:J
+    invoke-direct {v5, v4}, Lxp8;-><init>(Landroid/view/View;)V
 
-    iput-object v3, p0, Liu0;->o:[B
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v3, -0x1
+    if-lt v4, v3, :cond_1
 
-    iput v3, p0, Liu0;->X:I
+    new-instance v3, Lchi;
 
-    iput v3, p0, Liu0;->Y:I
+    invoke-static {v0}, Lqgi;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
 
-    goto :goto_2
+    move-result-object v4
 
-    :cond_2
-    const-string v2, "newSize < 0: "
+    invoke-direct {v3, v4, v5}, Lchi;-><init>(Landroid/view/WindowInsetsController;Lxp8;)V
 
-    invoke-static {v0, v1, v2}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_3
-    if-lez v5, :cond_5
-
-    sub-long v8, v0, v3
-
-    const/4 v5, 0x1
-
-    move v10, v5
-
-    :goto_1
-    cmp-long v11, v8, v6
-
-    if-lez v11, :cond_5
-
-    invoke-virtual {v2, v5}, Lqu0;->m0(I)Lw9e;
-
-    move-result-object v11
-
-    iget v12, v11, Lw9e;->c:I
-
-    rsub-int v12, v12, 0x2000
-
-    int-to-long v12, v12
-
-    invoke-static {v8, v9, v12, v13}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v12
-
-    long-to-int v12, v12
-
-    iget v13, v11, Lw9e;->c:I
-
-    add-int/2addr v13, v12
-
-    iput v13, v11, Lw9e;->c:I
-
-    int-to-long v5, v12
-
-    sub-long/2addr v8, v5
-
-    if-eqz v10, :cond_4
-
-    iput-object v11, p0, Liu0;->c:Lw9e;
-
-    iput-wide v3, p0, Liu0;->d:J
-
-    iget-object v5, v11, Lw9e;->a:[B
-
-    iput-object v5, p0, Liu0;->o:[B
-
-    sub-int v5, v13, v12
-
-    iput v5, p0, Liu0;->X:I
-
-    iput v13, p0, Liu0;->Y:I
-
-    const/4 v10, 0x0
-
-    :cond_4
-    const/4 v5, 0x1
-
-    const-wide/16 v6, 0x0
+    iput-object v0, v3, Lchi;->c:Landroid/view/Window;
 
     goto :goto_1
 
-    :cond_5
-    :goto_2
-    iput-wide v0, v2, Lqu0;->b:J
-
-    return-void
-
-    :cond_6
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "resizeBuffer() only permitted for read/write buffers"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_7
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "not attached to a buffer"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final close()V
-    .locals 3
-
-    iget-object v0, p0, Liu0;->a:Lqu0;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Liu0;->a:Lqu0;
-
-    iput-object v0, p0, Liu0;->c:Lw9e;
-
-    const-wide/16 v1, -0x1
-
-    iput-wide v1, p0, Liu0;->d:J
-
-    iput-object v0, p0, Liu0;->o:[B
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Liu0;->X:I
-
-    iput v0, p0, Liu0;->Y:I
-
-    return-void
-
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v3, Lbhi;
 
-    const-string v1, "not attached to a buffer"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final d(J)I
-    .locals 13
-
-    iget-object v0, p0, Liu0;->a:Lqu0;
-
-    if-eqz v0, :cond_a
-
-    const/4 v1, -0x1
-
-    int-to-long v2, v1
-
-    cmp-long v2, p1, v2
-
-    if-ltz v2, :cond_9
-
-    iget-wide v2, v0, Lqu0;->b:J
-
-    cmp-long v4, p1, v2
-
-    if-gtz v4, :cond_9
-
-    const-wide/16 v5, -0x1
-
-    cmp-long v5, p1, v5
-
-    if-eqz v5, :cond_8
-
-    if-nez v4, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    iget-object v1, v0, Lqu0;->a:Lw9e;
-
-    iget-object v4, p0, Liu0;->c:Lw9e;
-
-    const-wide/16 v5, 0x0
-
-    if-eqz v4, :cond_2
-
-    iget-wide v7, p0, Liu0;->d:J
-
-    iget v9, p0, Liu0;->X:I
-
-    iget v10, v4, Lw9e;->b:I
-
-    sub-int/2addr v9, v10
-
-    int-to-long v9, v9
-
-    sub-long/2addr v7, v9
-
-    cmp-long v9, v7, p1
-
-    if-lez v9, :cond_1
-
-    move-object v2, v4
-
-    move-object v4, v1
-
-    move-object v1, v2
-
-    move-wide v2, v7
-
-    goto :goto_0
-
-    :cond_1
-    move-wide v5, v7
-
-    goto :goto_0
-
-    :cond_2
-    move-object v4, v1
-
-    :goto_0
-    sub-long v7, v2, p1
-
-    sub-long v9, p1, v5
-
-    cmp-long v7, v7, v9
-
-    if-lez v7, :cond_3
+    invoke-direct {v3, v0, v5}, Lbhi;-><init>(Landroid/view/Window;Lxp8;)V
 
     :goto_1
-    iget v1, v4, Lw9e;->c:I
+    invoke-virtual {v3, v2}, Le7j;->f(Z)V
 
-    iget v2, v4, Lw9e;->b:I
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Lahi;->d()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v2
 
     sub-int/2addr v1, v2
 
-    int-to-long v1, v1
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
-    add-long/2addr v1, v5
+    move-result v2
 
-    cmp-long v3, p1, v1
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
-    if-ltz v3, :cond_5
+    move-result v3
 
-    iget-object v4, v4, Lw9e;->f:Lw9e;
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
 
-    move-wide v5, v1
-
-    goto :goto_1
+    return-void
 
     :cond_3
-    :goto_2
-    cmp-long v4, v2, p1
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
-    if-lez v4, :cond_4
+    move-result v0
 
-    iget-object v1, v1, Lw9e;->g:Lw9e;
+    if-eqz v0, :cond_6
 
-    iget v4, v1, Lw9e;->c:I
+    iget-object v0, p0, Liu0;->c:Landroid/view/Window;
 
-    iget v5, v1, Lw9e;->b:I
+    if-eqz v0, :cond_5
 
-    sub-int/2addr v4, v5
+    iget-boolean v1, p0, Liu0;->d:Z
 
-    int-to-long v4, v4
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    sub-long/2addr v2, v4
+    move-result-object v2
+
+    new-instance v4, Lxp8;
+
+    invoke-direct {v4, v2}, Lxp8;-><init>(Landroid/view/View;)V
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v2, v3, :cond_4
+
+    new-instance v2, Lchi;
+
+    invoke-static {v0}, Lqgi;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v4}, Lchi;-><init>(Landroid/view/WindowInsetsController;Lxp8;)V
+
+    iput-object v0, v2, Lchi;->c:Landroid/view/Window;
 
     goto :goto_2
 
     :cond_4
-    move-object v4, v1
+    new-instance v2, Lbhi;
 
-    move-wide v5, v2
+    invoke-direct {v2, v0, v4}, Lbhi;-><init>(Landroid/view/Window;Lxp8;)V
+
+    :goto_2
+    invoke-virtual {v2, v1}, Le7j;->f(Z)V
 
     :cond_5
-    iget-boolean v1, p0, Liu0;->b:Z
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
-    if-eqz v1, :cond_7
+    move-result v0
 
-    iget-boolean v1, v4, Lw9e;->d:Z
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
-    if-eqz v1, :cond_7
+    move-result v1
 
-    new-instance v7, Lw9e;
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
-    iget-object v1, v4, Lw9e;->a:[B
+    move-result v2
 
-    array-length v2, v1
+    const/4 v3, 0x0
 
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v8
-
-    iget v9, v4, Lw9e;->b:I
-
-    iget v10, v4, Lw9e;->c:I
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x1
-
-    invoke-direct/range {v7 .. v12}, Lw9e;-><init>([BIIZZ)V
-
-    iget-object v1, v0, Lqu0;->a:Lw9e;
-
-    if-ne v1, v4, :cond_6
-
-    iput-object v7, v0, Lqu0;->a:Lw9e;
+    invoke-virtual {p1, v0, v3, v1, v2}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_6
-    invoke-virtual {v4, v7}, Lw9e;->b(Lw9e;)V
+    return-void
+.end method
 
-    iget-object v0, v7, Lw9e;->g:Lw9e;
+.method public final e(Landroid/view/Window;)V
+    .locals 3
 
-    invoke-virtual {v0}, Lw9e;->a()Lw9e;
+    iget-object v0, p0, Liu0;->c:Landroid/view/Window;
 
-    move-object v4, v7
+    if-ne v0, p1, :cond_0
 
-    :cond_7
-    iput-object v4, p0, Liu0;->c:Lw9e;
+    goto :goto_1
 
-    iput-wide p1, p0, Liu0;->d:J
+    :cond_0
+    iput-object p1, p0, Liu0;->c:Landroid/view/Window;
 
-    iget-object v0, v4, Lw9e;->a:[B
+    if-eqz p1, :cond_2
 
-    iput-object v0, p0, Liu0;->o:[B
+    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    iget v0, v4, Lw9e;->b:I
+    move-result-object v0
 
-    sub-long/2addr p1, v5
+    new-instance v1, Lxp8;
 
-    long-to-int p1, p1
+    invoke-direct {v1, v0}, Lxp8;-><init>(Landroid/view/View;)V
 
-    add-int/2addr v0, p1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput v0, p0, Liu0;->X:I
+    const/16 v2, 0x1e
 
-    iget p1, v4, Lw9e;->c:I
+    if-lt v0, v2, :cond_1
 
-    iput p1, p0, Liu0;->Y:I
+    new-instance v0, Lchi;
 
-    sub-int/2addr p1, v0
+    invoke-static {p1}, Lqgi;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
 
-    return p1
+    move-result-object v2
 
-    :cond_8
-    :goto_3
-    const/4 v0, 0x0
+    invoke-direct {v0, v2, v1}, Lchi;-><init>(Landroid/view/WindowInsetsController;Lxp8;)V
 
-    iput-object v0, p0, Liu0;->c:Lw9e;
+    iput-object p1, v0, Lchi;->c:Landroid/view/Window;
 
-    iput-wide p1, p0, Liu0;->d:J
+    goto :goto_0
 
-    iput-object v0, p0, Liu0;->o:[B
+    :cond_1
+    new-instance v0, Lbhi;
 
-    iput v1, p0, Liu0;->X:I
+    invoke-direct {v0, p1, v1}, Lbhi;-><init>(Landroid/view/Window;Lxp8;)V
 
-    iput v1, p0, Liu0;->Y:I
+    :goto_0
+    invoke-virtual {v0}, Le7j;->d()Z
 
-    return v1
+    move-result p1
 
-    :cond_9
-    new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    iput-boolean p1, p0, Liu0;->d:Z
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iget-wide v2, v0, Lqu0;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p2, 0x2
-
-    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string p2, "offset=%s > size=%s"
-
-    invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_a
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "not attached to a buffer"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :cond_2
+    :goto_1
+    return-void
 .end method

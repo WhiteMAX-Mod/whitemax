@@ -1,369 +1,209 @@
-.class public final synthetic Lj81;
+.class public final Lj81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lk81;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbhg;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lbhg;)V
+    .locals 1
 
-    iput p1, p0, Lj81;->a:I
-
-    iput-object p2, p0, Lj81;->b:Ljava/lang/Object;
+    sget v0, Lt6b;->u:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj81;->a:Lbhg;
+
+    sget p1, Ls6b;->F:I
+
+    iput p1, p0, Lj81;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 2
+.method public final a()I
+    .locals 1
 
-    iget v0, p0, Lj81;->a:I
+    const/4 v0, 0x4
 
-    iget-object v1, p0, Lj81;->b:Ljava/lang/Object;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast v1, La9c;
+    const/4 v0, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p0, p1, :cond_0
 
-    sub-int/2addr p4, p2
-
-    sub-int/2addr p8, p6
-
-    if-ne p4, p8, :cond_0
-
-    sub-int/2addr p5, p3
-
-    sub-int/2addr p9, p7
-
-    if-eq p5, p9, :cond_1
+    return v0
 
     :cond_0
-    invoke-virtual {v1}, La9c;->b()V
+    instance-of v1, p1, Lj81;
 
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, La9c;->a(Z)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    check-cast v1, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lyy7;
-
-    iget-object p1, v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->x0:Lsn0;
-
-    sget-object p2, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lyy7;
-
-    const/4 p4, 0x7
-
-    aget-object p2, p2, p4
-
-    invoke-virtual {p1}, Lsn0;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lf82;
-
-    sub-int/2addr p5, p3
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result p3
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result p4
-
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v1, Lone/me/chatscreen/ChatScreen;
-
-    iget-object p2, v1, Lone/me/chatscreen/ChatScreen;->W0:Lbbd;
-
-    sget-object p3, Lone/me/chatscreen/ChatScreen;->l1:[Lyy7;
-
-    invoke-virtual {v1}, Lc54;->getView()Landroid/view/View;
-
-    move-result-object p3
-
-    if-nez p3, :cond_2
-
-    goto/16 :goto_3
-
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p3
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result p4
-
-    sub-int/2addr p3, p4
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->c1()Landroid/view/ViewGroup;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p4
-
-    instance-of p5, p4, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 p6, 0x0
-
-    if-eqz p5, :cond_3
-
-    check-cast p4, Landroid/view/ViewGroup$MarginLayoutParams;
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_3
-    move-object p4, p6
+    :cond_1
+    check-cast p1, Lj81;
 
-    :goto_0
-    const/4 p5, 0x0
+    iget-object v1, p0, Lj81;->a:Lbhg;
 
-    if-eqz p4, :cond_4
+    iget-object p1, p1, Lj81;->a:Lbhg;
 
-    iget p4, p4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_1
-
-    :cond_4
-    move p4, p5
-
-    :goto_1
-    if-eq p3, p4, :cond_5
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->c1()Landroid/view/ViewGroup;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p4
-
-    check-cast p4, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/16 p7, 0x30
-
-    int-to-float p7, p7
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object p8
-
-    invoke-virtual {p8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p8
-
-    iget p8, p8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p7, p8
-
-    invoke-static {p7}, Lkti;->d(F)I
-
-    move-result p7
-
-    invoke-static {p3, p7}, Ljava/lang/Math;->max(II)I
-
-    move-result p7
-
-    iput p7, p4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    :cond_5
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Lf82;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p4
-
-    instance-of p7, p4, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p7, :cond_6
-
-    check-cast p4, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
-
-    :cond_6
-    move-object p4, p6
-
-    :goto_2
-    if-eqz p4, :cond_7
-
-    iget p5, p4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    :cond_7
-    if-eq p3, p5, :cond_9
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Lf82;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p4
-
-    instance-of p5, p4, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p5, :cond_8
-
-    move-object p6, p4
-
-    check-cast p6, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    :cond_8
-    if-eqz p6, :cond_9
-
-    iput p3, p6, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    :cond_9
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p3
-
-    sget-object p4, Lone/me/chatscreen/ChatScreen;->l1:[Lyy7;
-
-    const/16 p5, 0x10
-
-    aget-object p6, p4, p5
-
-    invoke-interface {p2, v1, p6}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object p6
-
-    check-cast p6, Landroid/widget/LinearLayout;
-
-    invoke-virtual {p6}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result p6
-
-    if-eq p3, p6, :cond_a
-
-    aget-object p3, p4, p5
-
-    invoke-interface {p2, v1, p3}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v1, p1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-virtual {p2}, Landroid/view/View;->getPaddingLeft()I
+    if-nez p1, :cond_2
 
-    move-result p3
+    goto :goto_0
 
-    invoke-virtual {p2}, Landroid/view/View;->getPaddingTop()I
+    :cond_2
+    sget-wide v1, Lt6b;->p:J
 
-    move-result p4
+    cmp-long p1, v1, v1
 
-    invoke-virtual {p2}, Landroid/view/View;->getPaddingRight()I
+    if-eqz p1, :cond_3
 
-    move-result p5
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p2, p3, p4, p5, p1}, Landroid/view/View;->setPadding(IIII)V
+    return p1
 
-    :cond_a
-    :goto_3
-    return-void
+    :cond_3
+    return v0
+.end method
 
-    :pswitch_2
-    check-cast v1, Lcom/google/android/material/carousel/CarouselLayoutManager;
+.method public final g()Z
+    .locals 1
 
-    if-ne p2, p6, :cond_b
+    const/4 v0, 0x0
 
-    if-ne p3, p7, :cond_b
+    return v0
+.end method
 
-    if-ne p4, p8, :cond_b
+.method public final getItemId()J
+    .locals 2
 
-    if-eq p5, p9, :cond_c
+    sget-wide v0, Lt6b;->p:J
 
-    :cond_b
-    new-instance p2, Lvy1;
+    return-wide v0
+.end method
 
-    const/16 p3, 0xd
+.method public final getTitle()Lghg;
+    .locals 1
 
-    invoke-direct {p2, p3, v1}, Lvy1;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lj81;->a:Lbhg;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    return-object v0
+.end method
 
-    :cond_c
-    return-void
+.method public final hashCode()I
+    .locals 4
 
-    :pswitch_3
-    check-cast v1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+    iget-object v0, p0, Lj81;->a:Lbhg;
 
-    iget-object p1, v1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->d:Ljava/util/ArrayList;
+    iget v0, v0, Lbhg;->c:I
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object p1
+    move-result v0
 
-    :goto_4
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    const/16 v1, 0x1f
 
-    move-result p2
+    mul-int/2addr v0, v1
 
-    if-eqz p2, :cond_d
+    const/4 v2, 0x0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    move-result-object p2
+    move-result v0
 
-    check-cast p2, Lnl1;
+    sget-wide v2, Lt6b;->p:J
 
-    iget-object p2, p2, Lnl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
 
-    sget-object p3, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
+    move-result v0
 
-    invoke-virtual {p2}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Li1c;
+    const/4 v1, 0x4
 
-    move-result-object p2
+    invoke-static {v1}, Lc12;->w(I)I
 
-    invoke-virtual {p2}, Li1c;->c()V
+    move-result v1
 
-    goto :goto_4
+    add-int/2addr v1, v0
 
-    :cond_d
-    return-void
+    return v1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lj81;->b:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-wide v0, Lt6b;->p:J
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Header(title="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lj81;->a:Lbhg;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", sectionId=0, itemId="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", sectionItemType="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, La3e;->u(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,105 +1,61 @@
 .class public final Lf4b;
-.super Ljava/lang/Object;
+.super Ledj;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final synthetic d:Lg4b;
+# static fields
+.field public static final a:Lf4b;
 
 
 # direct methods
-.method public constructor <init>(Lg4b;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lf4b;->a:I
+    new-instance v0, Lf4b;
 
-    packed-switch p2, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf4b;->d:Lg4b;
-
-    iget-object p1, p1, Lg4b;->a:Lm69;
-
-    iget-wide v0, p1, Lm69;->d:J
-
-    iput-wide v0, p0, Lf4b;->b:J
-
-    iget-wide p1, p1, Lm69;->c:J
-
-    iput-wide p1, p0, Lf4b;->c:J
+    sput-object v0, Lf4b;->a:Lf4b;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf4b;->d:Lg4b;
-
-    iget-object p1, p1, Lg4b;->a:Lm69;
-
-    iget-wide v0, p1, Lm69;->d:J
-
-    iput-wide v0, p0, Lf4b;->b:J
-
-    iget-wide p1, p1, Lm69;->c:J
-
-    iput-wide p1, p0, Lf4b;->c:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lf4b;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lf4b;->d:Lg4b;
+    return v0
 
-    iget-object v0, v0, Lg4b;->a:Lm69;
+    :cond_0
+    instance-of p1, p1, Lf4b;
 
-    iget-object v0, v0, Lm69;->o:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    check-cast v0, Lem6;
+    const/4 p1, 0x0
 
-    invoke-interface {v0, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    return-void
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lf4b;->d:Lg4b;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v0, Lg4b;->a:Lm69;
+    const v0, 0x5bcc451e
 
-    iget-object v0, v0, Lm69;->o:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v0, Lem6;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {v0, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "None"
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

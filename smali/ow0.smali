@@ -1,132 +1,176 @@
 .class public final Low0;
-.super Ljava/lang/Object;
+.super Lg2;
 .source "SourceFile"
-
-# interfaces
-.implements Lsfg;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic c:I
 
-.field public final b:Lhf6;
-
-.field public final c:Ljx4;
-
-.field public d:Lhf6;
-
-.field public e:Lsfg;
-
-.field public f:J
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IILhf6;)V
-    .locals 0
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput p2, p0, Low0;->a:I
+    iput v0, p0, Low0;->c:I
 
-    iput-object p3, p0, Low0;->b:Lhf6;
+    .line 1
+    invoke-direct {p0, p1, p2}, Lg2;-><init>(II)V
 
-    new-instance p1, Ljx4;
+    .line 2
+    iput-object p3, p0, Low0;->d:Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljx4;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Low0;->c:Ljx4;
+.method public constructor <init>(ILjava/lang/Object;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Low0;->c:I
+
+    .line 3
+    invoke-direct {p0, p1, v0}, Lg2;-><init>(II)V
+
+    iput-object p2, p0, Low0;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JIIILqfg;)V
-    .locals 8
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    iget-wide v0, p0, Low0;->f:J
+    iget v0, p0, Low0;->c:I
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    packed-switch v0, :pswitch_data_0
 
-    cmp-long v2, v0, v2
+    invoke-virtual {p0}, Lg2;->hasNext()Z
 
-    if-eqz v2, :cond_0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    iget-object v0, p0, Low0;->c:Ljx4;
-
-    iput-object v0, p0, Low0;->e:Lsfg;
-
-    :cond_0
-    iget-object v1, p0, Low0;->e:Lsfg;
-
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
-
-    move-wide v2, p1
-
-    move v4, p3
-
-    move v5, p4
-
-    move v6, p5
-
-    move-object v7, p6
-
-    invoke-interface/range {v1 .. v7}, Lsfg;->a(JIIILqfg;)V
-
-    return-void
-.end method
-
-.method public final b(Lumb;II)V
-    .locals 1
-
-    iget-object p3, p0, Low0;->e:Lsfg;
-
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p3, p1, p2, v0}, Lsfg;->b(Lumb;II)V
-
-    return-void
-.end method
-
-.method public final c(Lke4;IZ)I
-    .locals 2
-
-    iget-object v0, p0, Low0;->e:Lsfg;
-
-    sget-object v1, Lzxg;->a:Ljava/lang/String;
-
-    invoke-interface {v0, p1, p2, p3}, Lsfg;->c(Lke4;IZ)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d(Lhf6;)V
-    .locals 2
-
-    iget-object v0, p0, Low0;->b:Lhf6;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lhf6;->e(Lhf6;)Lhf6;
+    iget v0, p0, Lg2;->a:I
 
-    move-result-object p1
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lg2;->a:I
+
+    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+
+    return-object v0
 
     :cond_0
-    iput-object p1, p0, Low0;->d:Lhf6;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    iget-object v0, p0, Low0;->e:Lsfg;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    sget-object v1, Lzxg;->a:Ljava/lang/String;
+    throw v0
 
-    invoke-interface {v0, p1}, Lsfg;->d(Lhf6;)V
+    :pswitch_0
+    invoke-virtual {p0}, Lg2;->hasNext()Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lg2;->a:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lg2;->a:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Low0;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lg2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lg2;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lg2;->a:I
+
+    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lg2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Low0;->d:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lg2;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lg2;->a:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

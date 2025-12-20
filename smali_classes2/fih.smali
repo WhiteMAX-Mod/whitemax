@@ -1,130 +1,75 @@
-.class public final Lfih;
+.class public abstract synthetic Lfih;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic d:Lhih;
-
-.field public final synthetic o:Landroid/view/View;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lhih;Landroid/view/View;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p5, p0, Lfih;->a:I
+    invoke-static {}, Lqlh;->values()[Lqlh;
 
-    iput-object p1, p0, Lfih;->b:Landroid/view/View;
+    move-result-object v0
 
-    iput-object p2, p0, Lfih;->c:Landroid/view/ViewTreeObserver;
+    array-length v0, v0
 
-    iput-object p3, p0, Lfih;->d:Lhih;
+    new-array v0, v0, [I
 
-    iput-object p4, p0, Lfih;->o:Landroid/view/View;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v1, 0x2
+
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/4 v2, 0x6
+
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    sput-object v0, Lfih;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-.method private final a(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
-
-    iget v0, p0, Lfih;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lfih;->b:Landroid/view/View;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    iget-object v5, p0, Lfih;->o:Landroid/view/View;
-
-    iget-object v4, p0, Lfih;->d:Lhih;
-
-    iget-object v3, p0, Lfih;->c:Landroid/view/ViewTreeObserver;
-
-    if-nez v0, :cond_0
-
-    invoke-static {v4, v5, v3}, Ldy;->c(Lhih;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Lfih;
-
-    const/4 v6, 0x1
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, Lfih;-><init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lhih;Landroid/view/View;I)V
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
-
-    iget p1, p0, Lfih;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lfih;->b:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object p1, p0, Lfih;->d:Lhih;
-
-    iget-object v0, p0, Lfih;->o:Landroid/view/View;
-
-    iget-object v1, p0, Lfih;->c:Landroid/view/ViewTreeObserver;
-
-    invoke-static {p1, v0, v1}, Ldy;->c(Lhih;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

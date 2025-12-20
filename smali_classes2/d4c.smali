@@ -1,20 +1,19 @@
-.class public interface abstract Ld4c;
+.class public abstract Ld4c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()V
-.end method
 
-.method public abstract c()Lei4;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract d(Ld3c;)V
-.end method
+    sget v0, Ls7b;->a0:I
 
-.method public abstract pause()V
+    sput v0, Ld4c;->a:I
+
+    return-void
 .end method

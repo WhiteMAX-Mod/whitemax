@@ -1,68 +1,99 @@
 .class public final Loh7;
-.super Ljava/lang/Object;
+.super Lql6;
 .source "SourceFile"
 
-# interfaces
-.implements Lp9a;
+
+# instance fields
+.field public final synthetic d:I
+
+.field public final o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lnj7;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Loh7;->d:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lql6;-><init>(Lnj7;)V
+
+    .line 2
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Loh7;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnj7;Lph7;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Loh7;->d:I
+
+    .line 3
+    invoke-direct {p0, p1}, Lql6;-><init>(Lnj7;)V
+
+    .line 4
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Loh7;->o:Ljava/lang/Object;
+
+    .line 5
+    new-instance p1, Lnh7;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, p0}, Lnh7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Lql6;->d(Lpl6;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I)Lzjd;
-    .locals 1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
-
-    sget-object p1, Lw3a;->Y:Lzjd;
-
-    return-object p1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    sget-object p1, Lw3a;->Z:Lzjd;
-
-    return-object p1
-
-    :cond_1
-    sget-object p1, Lwg7;->b:Lt76;
-
-    sget-object p1, Lzjd;->o:Lzjd;
-
-    return-object p1
-.end method
-
-.method public final b(Ljava/lang/String;)Ls9a;
+.method public close()V
     .locals 2
 
-    :try_start_0
-    new-instance v0, Ljava/io/FileOutputStream;
+    iget v0, p0, Loh7;->d:I
 
-    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance p1, Lw3a;
+    invoke-super {p0}, Lql6;->close()V
 
-    invoke-direct {p1, v0}, Lw3a;-><init>(Ljava/io/FileOutputStream;)V
+    return-void
 
-    new-instance v0, Lph7;
+    :pswitch_0
+    iget-object v0, p0, Loh7;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Lph7;-><init>(Lw3a;)V
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object v0
+    const/4 v1, 0x1
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    new-instance v0, Landroidx/media3/muxer/MuxerException;
+    move-result v0
 
-    const-string v1, "Error creating file output stream"
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-super {p0}, Lql6;->close()V
 
-    throw v0
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

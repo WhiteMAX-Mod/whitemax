@@ -1,57 +1,149 @@
 .class public final Ldu6;
-.super Lq44;
+.super Leu6;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
+.field public final E0:Ldv6;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public F0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-.field public final synthetic Z:Lfu6;
+.field public final G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public d:Lfu6;
-
-.field public o:Lil0;
-
-.field public s0:I
+.field public final H0:Lone/me/sdk/gallery/view/VideoInfoTextView;
 
 
 # direct methods
-.method public constructor <init>(Lfu6;Lq44;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Ldv6;)V
+    .locals 5
 
-    iput-object p1, p0, Ldu6;->Z:Lfu6;
+    invoke-direct {p0, p1}, Lwrd;-><init>(Landroid/view/View;)V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ldu6;->E0:Ldv6;
 
-    return-void
-.end method
+    sget v0, Lugb;->e:I
 
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result-object v0
 
-    iput-object p1, p0, Ldu6;->Y:Ljava/lang/Object;
+    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iget p1, p0, Ldu6;->s0:I
+    iput-object v0, p0, Ldu6;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    const/high16 v0, -0x80000000
+    sget v1, Lugb;->c:I
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iput p1, p0, Ldu6;->s0:I
+    move-result-object v1
 
-    const-wide/16 v0, 0x0
+    check-cast v1, Landroid/view/ViewStub;
 
-    const/4 p1, 0x0
+    sget v2, Lugb;->f:I
 
-    iget-object v2, p0, Ldu6;->Z:Lfu6;
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Lfu6;->a(JLil0;Lq44;)Ljava/lang/Object;
+    move-result-object v2
+
+    check-cast v2, Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    iput-object v2, p0, Ldu6;->H0:Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lh5e;->a0:I
+
+    invoke-static {v2, v3}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v3, Lyt4;->e0:Lyt4;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget-object v4, Lbdg;->a0:Lz7g;
+
+    invoke-static {v3}, Ldpf;->t(Landroid/content/Context;)Lbdg;
+
+    move-result-object v3
+
+    :goto_0
+    iget v3, v3, Lbdg;->w:I
+
+    const v4, 0x3e99999a    # 0.3f
+
+    invoke-static {v3, v4}, Lfij;->b(IF)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    invoke-virtual {v0}, Ln85;->getHierarchy()Lk85;
+
+    move-result-object v3
+
+    check-cast v3, Lqv6;
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v2, v4}, Lqv6;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    sget-object p1, Lyt4;->e0:Lyt4;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    return-object p1
+    sget-object v2, Lbdg;->a0:Lz7g;
+
+    invoke-static {p1}, Ldpf;->t(Landroid/content/Context;)Lbdg;
+
+    move-result-object p1
+
+    :goto_1
+    iget p1, p1, Lbdg;->H:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object p1, p2, Ldv6;->b:Lht6;
+
+    iget-boolean p1, p1, Lht6;->c:Z
+
+    if-eqz p1, :cond_3
+
+    new-instance p1, Lcu6;
+
+    invoke-direct {p1, p0}, Lcu6;-><init>(Ldu6;)V
+
+    invoke-virtual {v1, p1}, Landroid/view/ViewStub;->setOnInflateListener(Landroid/view/ViewStub$OnInflateListener;)V
+
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    :cond_3
+    return-void
 .end method

@@ -1,94 +1,61 @@
 .class public final Llsb;
-.super Ldtf;
+.super Lpsb;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
-
-# instance fields
-.field public final synthetic X:Lmsb;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Llsb;
 
 
 # direct methods
-.method public constructor <init>(Lmsb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Llsb;->X:Lmsb;
+    new-instance v0, Llsb;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Llsb;->a:Llsb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lnsb;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Llsb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llsb;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Llsb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Llsb;
-
-    iget-object v1, p0, Llsb;->X:Lmsb;
-
-    invoke-direct {v0, v1, p2}, Llsb;-><init>(Lmsb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Llsb;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llsb;->o:Ljava/lang/Object;
-
-    check-cast p1, Lnsb;
-
-    sget-object v0, Lnsb;->a:Lnsb;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const-string p1, "denied"
+    instance-of p1, p1, Llsb;
 
-    :goto_0
-    iget-object v0, p0, Llsb;->X:Lmsb;
+    if-nez p1, :cond_1
 
-    const-string v1, "geo"
+    const/4 p1, 0x0
 
-    invoke-static {v0, v1, p1}, Lmsb;->a(Lmsb;Ljava/lang/String;Ljava/lang/String;)V
+    return p1
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    :cond_1
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x635de3a1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Error"
+
+    return-object v0
 .end method

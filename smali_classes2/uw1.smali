@@ -1,54 +1,53 @@
 .class public final Luw1;
-.super Ljava/lang/Object;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final X:Llz7;
+.field public final b:J
 
-.field public a:Ljf2;
-
-.field public b:J
-
-.field public c:J
-
-.field public volatile d:Z
-
-.field public volatile o:Z
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkk0;-><init>()V
 
-    new-instance v0, Ljf2;
+    iput-wide p1, p0, Luw1;->b:J
 
-    const-wide/16 v1, 0x0
-
-    invoke-direct {v0, v1, v2, v1, v2}, Ljf2;-><init>(JJ)V
-
-    iput-object v0, p0, Luw1;->a:Ljf2;
-
-    iput-wide v1, p0, Luw1;->b:J
-
-    iput-wide v1, p0, Luw1;->c:J
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Luw1;->d:Z
-
-    iput-boolean v0, p0, Luw1;->o:Z
-
-    new-instance v0, Llz7;
-
-    invoke-direct {v0}, Llz7;-><init>()V
-
-    iput-object v0, p0, Luw1;->X:Llz7;
+    iput-object p3, p0, Luw1;->c:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallbackAnswerEvent{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Luw1;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luw1;->c:Ljava/lang/String;
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lzy4;->l(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

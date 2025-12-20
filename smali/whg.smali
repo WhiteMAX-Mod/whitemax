@@ -3,35 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrhg;
+.implements Landroid/text/TextWatcher;
 
 
 # virtual methods
-.method public a(Lshg;)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
     return-void
 .end method
 
-.method public b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Lshg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Lshg;)V
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
     return-void

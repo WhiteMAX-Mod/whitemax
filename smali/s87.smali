@@ -1,294 +1,95 @@
 .class public final Ls87;
-.super Lwx;
+.super Luk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic k:I
+.field public final X:J
 
-.field public final l:Ljava/lang/Object;
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 7
 
-    iput p1, p0, Ls87;->k:I
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    iput-object p2, p0, Ls87;->l:Ljava/lang/Object;
+    move-result v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    add-int/lit8 v0, v0, -0x1
+
+    int-to-long v5, v0
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    move-object v1, p0
+
+    invoke-direct/range {v1 .. v6}, Luk0;-><init>(IJJ)V
+
+    iput-wide p1, v1, Ls87;->X:J
+
+    iput-object p3, v1, Ls87;->o:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k()V
-    .locals 6
+.method public final b()J
+    .locals 4
 
-    iget v0, p0, Ls87;->k:I
+    invoke-virtual {p0}, Luk0;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v0, p0, Luk0;->d:J
 
-    const-string v0, "Failed to close timed out socket "
+    long-to-int v0, v0
 
-    iget-object v1, p0, Ls87;->l:Ljava/lang/Object;
+    iget-object v1, p0, Ls87;->o:Ljava/util/List;
 
-    check-cast v1, Ljava/net/Socket;
-
-    :try_start_0
-    invoke-virtual {v1}, Ljava/net/Socket;->close()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    sget-object v3, Lyua;->a:Ljava/util/logging/Logger;
-
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    const-string v5, "getsockname failed"
-
-    invoke-static {v3, v5, v4}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v3
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v4
-
-    :goto_0
-    if-eqz v3, :cond_1
-
-    const/4 v4, 0x1
-
-    :cond_1
-    if-eqz v4, :cond_2
-
-    sget-object v3, Lyua;->a:Ljava/util/logging/Logger;
-
-    sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v3, v4, v0, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Lq97;
 
-    goto :goto_1
+    iget-wide v0, v0, Lq97;->o:J
 
-    :cond_2
-    throw v2
+    iget-wide v2, p0, Ls87;->X:J
 
-    :catch_1
-    move-exception v2
+    add-long/2addr v2, v0
 
-    sget-object v3, Lyua;->a:Ljava/util/logging/Logger;
+    return-wide v2
+.end method
 
-    sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+.method public final c()J
+    .locals 5
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Luk0;->a()V
 
-    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p0, Luk0;->d:J
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    long-to-int v0, v0
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Ls87;->o:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v3, v4, v0, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Lq97;
 
-    :goto_1
-    return-void
+    iget-wide v1, p0, Ls87;->X:J
 
-    :pswitch_0
-    iget-object v0, p0, Ls87;->l:Ljava/lang/Object;
-
-    check-cast v0, Lmbd;
-
-    invoke-virtual {v0}, Lmbd;->d()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ls87;->l:Ljava/lang/Object;
-
-    check-cast v0, Lt87;
-
-    const/16 v1, 0x9
-
-    invoke-virtual {v0, v1}, Lt87;->e(I)V
-
-    iget-object v0, p0, Ls87;->l:Ljava/lang/Object;
-
-    check-cast v0, Lt87;
-
-    iget-object v0, v0, Lt87;->n:Lm87;
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-wide v1, v0, Lm87;->x0:J
-
-    iget-wide v3, v0, Lm87;->w0:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    cmp-long v1, v1, v3
-
-    if-gez v1, :cond_3
-
-    monitor-exit v0
-
-    goto :goto_2
-
-    :cond_3
-    const-wide/16 v1, 0x1
-
-    add-long/2addr v3, v1
-
-    :try_start_2
-    iput-wide v3, v0, Lm87;->w0:J
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v1
-
-    const v3, 0x3b9aca00
-
-    int-to-long v3, v3
+    iget-wide v3, v0, Lq97;->o:J
 
     add-long/2addr v1, v3
 
-    iput-wide v1, v0, Lm87;->y0:J
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    iget-wide v3, v0, Lq97;->c:J
 
-    monitor-exit v0
+    add-long/2addr v1, v3
 
-    iget-object v1, v0, Lm87;->Z:Ly2g;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v3, v0, Lm87;->c:Ljava/lang/String;
-
-    const-string v4, " ping"
-
-    invoke-static {v2, v3, v4}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lk87;
-
-    invoke-direct {v3, v2, v0}, Lk87;-><init>(Ljava/lang/String;Lm87;)V
-
-    const-wide/16 v4, 0x0
-
-    invoke-virtual {v1, v3, v4, v5}, Ly2g;->c(Lk2g;J)V
-
-    :goto_2
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public l()V
-    .locals 1
-
-    invoke-virtual {p0}, Lwx;->j()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ls87;->m(Ljava/io/IOException;)Ljava/io/IOException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public m(Ljava/io/IOException;)Ljava/io/IOException;
-    .locals 2
-
-    iget v0, p0, Ls87;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/net/SocketTimeoutException;
-
-    const-string v1, "timeout"
-
-    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    :cond_0
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/net/SocketTimeoutException;
-
-    const-string v1, "timeout"
-
-    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    :cond_1
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v1
 .end method

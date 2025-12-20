@@ -1,102 +1,51 @@
-.class public final synthetic Lqre;
-.super Ljava/lang/Object;
+.class public final Lqre;
+.super Lhre;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lrre;
+.field public l:Lcii;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lrre;I)V
+.method public constructor <init>(JLa3;)V
     .locals 0
 
-    iput p3, p0, Lqre;->a:I
+    invoke-static {p3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    iput-object p1, p0, Lqre;->b:Landroid/content/Context;
+    move-result-object p3
 
-    iput-object p2, p0, Lqre;->c:Lrre;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lhre;-><init>(JLjava/util/List;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final a()Lkre;
+    .locals 2
 
-    iget v0, p0, Lqre;->a:I
+    new-instance v0, Lrre;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0}, Lire;-><init>(Lhre;)V
 
-    new-instance v0, Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object v1, p0, Lqre;->l:Lcii;
 
-    iget-object v1, p0, Lqre;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lcom/facebook/drawee/view/SimpleDraweeView;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lqab;->r:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    iget-object v1, p0, Lqre;->c:Lrre;
-
-    invoke-static {v0, v1}, Lfqi;->d(Landroid/view/View;Landroid/view/ViewGroup;)V
+    iput-object v1, v0, Lrre;->z0:Lcii;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Landroid/widget/TextView;
+.method public final b()Lire;
+    .locals 2
 
-    iget-object v1, p0, Lqre;->b:Landroid/content/Context;
+    new-instance v0, Lrre;
 
-    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lire;-><init>(Lhre;)V
 
-    sget v1, Lqab;->s:I
+    iget-object v1, p0, Lqre;->l:Lcii;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x2
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v1, Ldpg;->F:Lt5g;
-
-    invoke-static {v1, v0}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
-
-    new-instance v1, Lipe;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x5
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v2, v4, v3}, Lipe;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Ltqi;->c(Lum6;Landroid/view/View;)V
-
-    iget-object v1, p0, Lqre;->c:Lrre;
-
-    invoke-static {v0, v1}, Lfqi;->d(Landroid/view/View;Landroid/view/ViewGroup;)V
+    iput-object v1, v0, Lrre;->z0:Lcii;
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

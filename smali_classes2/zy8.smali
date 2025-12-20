@@ -1,23 +1,48 @@
 .class public final Lzy8;
-.super Lscout/Component;
-.source "SourceFile"
+.super Ll84;
 
 
-# static fields
-.field public static final a:Lzy8;
+# instance fields
+.field public final synthetic X:Lgr7;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lgr7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lzy8;
+    iput-object p1, p0, Lzy8;->X:Lgr7;
 
-    sget-object v1, Lyy8;->a:La1e;
-
-    invoke-direct {v0, v1}, Lscout/Component;-><init>(La1e;)V
-
-    sput-object v0, Lzy8;->a:Lzy8;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lzy8;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lzy8;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzy8;->o:I
+
+    iget-object p1, p0, Lzy8;->X:Lgr7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lgr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

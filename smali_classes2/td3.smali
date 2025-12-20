@@ -1,128 +1,57 @@
 .class public final Ltd3;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Laf4;
 
 
 # instance fields
-.field public final synthetic a:Lpd7;
+.field public X:J
 
-.field public final synthetic b:Lld3;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvd3;
+
+.field public d:Lvd3;
+
+.field public o:Ljava/lang/Long;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lzd3;Lpd7;Lld3;)V
+.method public constructor <init>(Lvd3;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltd3;->Z:Lvd3;
 
-    iput-object p2, p0, Ltd3;->a:Lpd7;
-
-    iput-object p3, p0, Ltd3;->b:Lld3;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpe4;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    check-cast p1, Lr0;
+    iput-object p1, p0, Ltd3;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lr0;->c()F
+    iget p1, p0, Ltd3;->s0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Lr0;->g()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Ltd3;->s0:I
 
-    if-nez v1, :cond_0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1}, Lr0;->f()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    const v1, 0x3f7d70a4    # 0.99f
+    iget-object v2, p0, Ltd3;->Z:Lvd3;
 
-    cmpg-float v1, v0, v1
+    invoke-virtual {v2, v0, v1, p1, p0}, Lvd3;->i(JLz9b;Ll84;)Ljava/lang/Object;
 
-    if-gez v1, :cond_2
+    move-result-object p1
 
-    if-eqz p1, :cond_2
-
-    const/16 p1, 0x2710
-
-    int-to-float p1, p1
-
-    mul-float/2addr v0, p1
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result p1
-
-    sget-object v0, Lzd3;->l:[Lyy7;
-
-    iget-object v0, p0, Ltd3;->b:Lld3;
-
-    iget-object v1, v0, Lld3;->b:Lpd3;
-
-    sget-object v2, Lnd3;->a:Lnd3;
-
-    invoke-static {v1, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Ltd3;->a:Lpd7;
-
-    invoke-static {v1, v0, v2}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
-
-    :cond_1
-    iget-object v0, v0, Lld3;->c:Ljdc;
-
-    iget-object v0, v0, Ljdc;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr00;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final b(Lpe4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d(Lpe4;)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

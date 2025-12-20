@@ -1,70 +1,72 @@
 .class public abstract Landroidx/work/Worker;
-.super Lma8;
+.super Lbf8;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Like;
+.field public o:Loue;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lma8;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
+    invoke-direct {p0, p1, p2}, Lbf8;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lla8;
-.end method
+.method public final a()Lwe8;
+    .locals 5
 
-.method public final getForegroundInfoAsync()Lha8;
-    .locals 4
-
-    new-instance v0, Like;
+    new-instance v0, Loue;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Lma8;->getBackgroundExecutor()Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Lbf8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object v1
+    iget-object v1, v1, Landroidx/work/WorkerParameters;->d:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lowf;
+    new-instance v2, Ljrf;
 
-    const/4 v3, 0x4
+    const/4 v3, 0x7
 
-    invoke-direct {v2, p0, v3, v0}, Lowf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p0, v0, v4, v3}, Ljrf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-object v0
 .end method
 
-.method public final startWork()Lha8;
+.method public final c()Loue;
     .locals 3
 
-    new-instance v0, Like;
+    new-instance v0, Loue;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Landroidx/work/Worker;->a:Like;
+    iput-object v0, p0, Landroidx/work/Worker;->o:Loue;
 
-    invoke-virtual {p0}, Lma8;->getBackgroundExecutor()Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lbf8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object v0
+    iget-object v0, v0, Landroidx/work/WorkerParameters;->d:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lthg;
+    new-instance v1, Lesh;
 
-    const/4 v2, 0x4
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, p0}, Lthg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lesh;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Landroidx/work/Worker;->a:Like;
+    iget-object v0, p0, Landroidx/work/Worker;->o:Loue;
 
     return-object v0
+.end method
+
+.method public abstract g()Laf8;
 .end method

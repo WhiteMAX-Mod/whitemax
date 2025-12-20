@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/wt/WTSignaling;
-.super Lq0f;
+.super Lnbf;
 .source "SourceFile"
 
 
@@ -13,33 +13,37 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 32\u00020\u0001:\u000243Bc\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\u000c\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\u0004\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0015\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u000f\u0010\u0018\u001a\u00020\u0011H\u0014\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u001f\u0010\u001e\u001a\u00020\u00112\u0006\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u001d\u001a\u00020\u001cH\u0014\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u001f\u0010$\u001a\u00020#2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010\"\u001a\u00020!H\u0014\u00a2\u0006\u0004\u0008$\u0010%J#\u0010(\u001a\u00020#2\u0012\u0010\'\u001a\u000e\u0012\u0004\u0012\u00020\u001c\u0012\u0004\u0012\u00020#0&H\u0014\u00a2\u0006\u0004\u0008(\u0010)J\u000f\u0010*\u001a\u00020#H\u0014\u00a2\u0006\u0004\u0008*\u0010+J\u0017\u0010-\u001a\u00020\u00112\u0006\u0010,\u001a\u00020\u001cH\u0014\u00a2\u0006\u0004\u0008-\u0010.R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010/R\u0018\u00101\u001a\u0004\u0018\u0001008\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00081\u00102\u00a8\u00065"
+        "\u0000v\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 72\u00020\u0001:\u000287B{\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\u000c\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\u0004\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0015\u001a\u00020\u0011\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0018\u001a\u00020\u0011\u0012\u0006\u0010\u0019\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u000f\u0010\u001c\u001a\u00020\u0011H\u0014\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u001f\u0010\"\u001a\u00020\u00112\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010!\u001a\u00020 H\u0014\u00a2\u0006\u0004\u0008\"\u0010#J\u001f\u0010(\u001a\u00020\'2\u0006\u0010$\u001a\u00020 2\u0006\u0010&\u001a\u00020%H\u0014\u00a2\u0006\u0004\u0008(\u0010)J#\u0010,\u001a\u00020\'2\u0012\u0010+\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\'0*H\u0014\u00a2\u0006\u0004\u0008,\u0010-J\u000f\u0010.\u001a\u00020\'H\u0014\u00a2\u0006\u0004\u0008.\u0010/J\u0017\u00101\u001a\u00020\u00112\u0006\u00100\u001a\u00020 H\u0014\u00a2\u0006\u0004\u00081\u00102R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u00103R\u0018\u00105\u001a\u0004\u0018\u0001048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00085\u00106\u00a8\u00069"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/WTSignaling;",
-        "Lq0f;",
-        "Lv87;",
+        "Lnbf;",
+        "Lgd7;",
         "client",
         "",
         "timeoutMS",
         "Ljava/lang/Runnable;",
         "reconnectTimeoutAction",
-        "Lm0f;",
+        "Ljbf;",
         "signalingStat",
         "Ljava/util/concurrent/ExecutorService;",
         "executor",
-        "Ly6d;",
+        "Lcgd;",
         "log",
-        "Lz6d;",
+        "Ldgd;",
         "logConfiguration",
         "serverPingTimeoutMs",
         "",
         "isFastRecoverEnabled",
-        "Lag5;",
+        "Lyj5;",
         "endpointParameters",
         "isReplaceParametersInEndpointEnabled",
+        "Lnkg;",
+        "timeProvider",
+        "isSummaryStatsEnabled",
+        "isSignalingLogThrottlingEnabled",
         "<init>",
-        "(Lv87;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;Z)V",
+        "(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V",
         "isFallbackSupported",
         "()Z",
         "",
@@ -49,21 +53,21 @@
         "safelyCloseSocketWithCodeAndReason",
         "(ILjava/lang/String;)Z",
         "endpoint",
-        "Lp0f;",
+        "Lmbf;",
         "listener",
-        "Lqqg;",
+        "Lv2h;",
         "safelyCreateNewSocket",
-        "(Ljava/lang/String;Lp0f;)V",
+        "(Ljava/lang/String;Lmbf;)V",
         "Lkotlin/Function1;",
         "action",
         "safelyDoIfSocketExists",
-        "(Lem6;)V",
+        "(Loq6;)V",
         "safelyResetSocketReference",
         "()V",
         "cmd",
         "safelySendSocketMessage",
         "(Ljava/lang/String;)Z",
-        "Lv87;",
+        "Lgd7;",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
         "socket",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
@@ -88,7 +92,7 @@
 
 
 # instance fields
-.field private final client:Lv87;
+.field private final client:Lgd7;
 
 .field private socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
@@ -101,18 +105,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Ltk4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Lro4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->Companion:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;
 
     return-void
 .end method
 
-.method private constructor <init>(Lv87;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;Z)V
-    .locals 15
+.method private constructor <init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V
+    .locals 18
 
     .line 2
-    new-instance v14, Ll0f;
+    new-instance v0, Libf;
 
     .line 3
     const-string v5, "webtransport_failed_exception"
@@ -129,14 +133,10 @@
 
     const-string v4, "webtransport_failed_pings"
 
-    move-object v0, v14
-
-    invoke-direct/range {v0 .. v6}, Ll0f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Libf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    const-string v1, "WT"
-
-    move-object v0, p0
+    sget-object v1, Lgug;->a:Lgug;
 
     move-wide/from16 v2, p2
 
@@ -158,22 +158,32 @@
 
     move/from16 v13, p13
 
-    invoke-direct/range {v0 .. v14}, Lq0f;-><init>(Ljava/lang/String;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;ZLl0f;)V
+    move-object/from16 v15, p14
+
+    move/from16 v16, p15
+
+    move/from16 v17, p16
+
+    move-object v14, v0
+
+    move-object/from16 v0, p0
+
+    invoke-direct/range {v0 .. v17}, Lnbf;-><init>(Lhug;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLibf;Lnkg;ZZ)V
 
     move-object/from16 v1, p1
 
     .line 7
-    iput-object v1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lv87;
+    iput-object v1, v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lgd7;
 
     .line 8
-    sget v1, Le5j;->a:I
+    sget v1, Ltij;->a:I
 
     const/4 v2, 0x2
 
     if-nez v1, :cond_0
 
     .line 9
-    sput v2, Le5j;->a:I
+    sput v2, Ltij;->a:I
 
     return-void
 
@@ -193,11 +203,11 @@
     throw v1
 .end method
 
-.method public synthetic constructor <init>(Lv87;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;ZLtk4;)V
+.method public synthetic constructor <init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZLro4;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p13}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lv87;JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;Z)V
+    invoke-direct/range {p0 .. p16}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lgd7;JLjava/lang/Runnable;Ljbf;Ljava/util/concurrent/ExecutorService;Lcgd;Ldgd;JZLyj5;ZLnkg;ZZ)V
 
     return-void
 .end method
@@ -205,7 +215,7 @@
 .method public static final synthetic access$init(Lru/ok/android/externcalls/sdk/wt/WTSignaling;)V
     .locals 0
 
-    invoke-virtual {p0}, Lq0f;->init()V
+    invoke-virtual {p0}, Lnbf;->init()V
 
     return-void
 .end method
@@ -267,44 +277,44 @@
     return p1
 .end method
 
-.method public safelyCreateNewSocket(Ljava/lang/String;Lp0f;)V
+.method public safelyCreateNewSocket(Ljava/lang/String;Lmbf;)V
     .locals 6
 
     new-instance v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
-    invoke-virtual {p0}, Lq0f;->getLog()Ly6d;
+    invoke-virtual {p0}, Lnbf;->getLog()Lcgd;
 
     move-result-object v2
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lv87;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lgd7;
 
     new-instance v4, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;
 
-    invoke-virtual {p0}, Lq0f;->getLog()Ly6d;
+    invoke-virtual {p0}, Lnbf;->getLog()Lcgd;
 
     move-result-object v1
 
-    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Ly6d;)V
+    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Lcgd;)V
 
     new-instance v5, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;
 
-    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lp0f;)V
+    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lmbf;)V
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Ly6d;Lv87;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lcgd;Lgd7;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
     return-void
 .end method
 
-.method public safelyDoIfSocketExists(Lem6;)V
+.method public safelyDoIfSocketExists(Loq6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lem6;",
+            "Loq6;",
             ")V"
         }
     .end annotation
@@ -317,7 +327,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

@@ -1,64 +1,68 @@
-.class public final Lhha;
+.class public final synthetic Lhha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llha;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final b:Lhha;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmha;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lmha;I)V
+    .locals 0
 
-    new-instance v0, Lhha;
+    iput p2, p0, Lhha;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhha;->b:Lmha;
 
-    sput-object v0, Lhha;->b:Lhha;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, Lhha;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    new-instance p1, Lyk0;
 
-    :cond_0
-    instance-of p1, p1, Lhha;
+    const/16 v0, 0x1d
 
-    if-nez p1, :cond_1
+    invoke-direct {p1, v0}, Lyk0;-><init>(I)V
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lhha;->b:Lmha;
 
-    return p1
+    invoke-virtual {v0, p1}, Lg3;->j(Lxx3;)V
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_0
+    new-instance p1, Lyk0;
 
-    const v0, -0x3fe4569e
+    const/16 v0, 0x1a
 
-    return v0
-.end method
+    invoke-direct {p1, v0}, Lyk0;-><init>(I)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object v0, p0, Lhha;->b:Lmha;
 
-    const-string v0, "Disabled"
+    invoke-virtual {v0, p1}, Lg3;->j(Lxx3;)V
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

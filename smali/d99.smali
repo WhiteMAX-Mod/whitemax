@@ -4,246 +4,173 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public final synthetic b:Landroid/view/KeyEvent$Callback;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Object;)V
-    .locals 7
-
-    const/4 v3, -0x1
-
-    const/4 v6, -0x1
-
-    const/4 v2, -0x1
-
-    move-object v0, p0
-
-    move-wide v4, p1
-
-    move-object v1, p3
-
-    .line 2
-    invoke-direct/range {v0 .. v6}, Ld99;-><init>(Ljava/lang/Object;IIJI)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    .line 1
-    invoke-direct {p0, v0, v1, p1}, Ld99;-><init>(JLjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;IIJI)V
+.method public synthetic constructor <init>(Landroid/view/KeyEvent$Callback;I)V
     .locals 0
 
-    .line 4
+    iput p2, p0, Ld99;->a:I
+
+    iput-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-object p1, p0, Ld99;->a:Ljava/lang/Object;
-
-    .line 6
-    iput p2, p0, Ld99;->b:I
-
-    .line 7
-    iput p3, p0, Ld99;->c:I
-
-    .line 8
-    iput-wide p4, p0, Ld99;->d:J
-
-    .line 9
-    iput p6, p0, Ld99;->e:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;JI)V
-    .locals 7
+.method public static a(II)I
+    .locals 1
 
-    const/4 v2, -0x1
+    const/16 v0, 0x1f
 
-    const/4 v3, -0x1
+    invoke-static {p0, p1, v0}, Lq3g;->k(III)I
 
-    move-object v0, p0
+    move-result p0
 
-    move-object v1, p1
+    return p0
+.end method
 
-    move-wide v4, p2
-
-    move v6, p4
-
-    .line 3
-    invoke-direct/range {v0 .. v6}, Ld99;-><init>(Ljava/lang/Object;IIJI)V
+.method private final k()V
+    .locals 0
 
     return-void
+.end method
+
+.method public static final m(Ljava/lang/Boolean;)Z
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ld99;
-    .locals 8
+.method public final b()V
+    .locals 0
 
-    iget-object v0, p0, Ld99;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance v1, Ld99;
-
-    iget-wide v5, p0, Ld99;->d:J
-
-    iget v7, p0, Ld99;->e:I
-
-    iget v3, p0, Ld99;->b:I
-
-    iget v4, p0, Ld99;->c:I
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v7}, Ld99;-><init>(Ljava/lang/Object;IIJI)V
-
-    return-object v1
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 2
+.method public final c()V
+    .locals 0
 
-    iget v0, p0, Ld99;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final d()V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ld99;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ld99;
-
-    iget-object v1, p0, Ld99;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Ld99;->a:Ljava/lang/Object;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Ld99;->b:I
-
-    iget v3, p1, Ld99;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Ld99;->c:I
-
-    iget v3, p1, Ld99;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-wide v3, p0, Ld99;->d:J
-
-    iget-wide v5, p1, Ld99;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Ld99;->e:I
-
-    iget p1, p1, Ld99;->e:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final e()V
+    .locals 0
 
-    iget-object v0, p0, Ld99;->a:Ljava/lang/Object;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+.method public final f()V
+    .locals 0
 
-    move-result v0
+    return-void
+.end method
 
-    add-int/lit16 v0, v0, 0x20f
+.method public g(Lua9;)V
+    .locals 1
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v0, p0, Ld99;->a:I
 
-    iget v1, p0, Ld99;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    add-int/2addr v0, v1
+    :pswitch_0
+    return-void
 
-    mul-int/lit8 v0, v0, 0x1f
+    :pswitch_1
+    iget-object v0, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
 
-    iget v1, p0, Ld99;->c:I
+    check-cast v0, Lha9;
 
-    add-int/2addr v0, v1
+    iput-object p1, v0, Lha9;->s0:Lua9;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0}, Lha9;->o()V
 
-    iget-wide v1, p0, Ld99;->d:J
+    invoke-virtual {v0}, Lha9;->m()V
 
-    long-to-int v1, v1
+    return-void
 
-    add-int/2addr v0, v1
+    :pswitch_2
+    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p1, Ly99;
 
-    iget v1, p0, Ld99;->e:I
+    invoke-virtual {p1}, Llo;->dismiss()V
 
-    add-int/2addr v0, v1
+    return-void
 
-    return v0
+    :pswitch_3
+    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p1, Lh99;
+
+    invoke-virtual {p1}, Llo;->dismiss()V
+
+    return-void
+
+    :pswitch_4
+    iget-object p1, p0, Ld99;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p1, Lf99;
+
+    invoke-virtual {p1}, Lf99;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_0
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final h(Lua9;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final j(Lua9;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final l()V
+    .locals 0
+
+    return-void
 .end method

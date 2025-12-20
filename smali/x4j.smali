@@ -1,71 +1,70 @@
-.class public abstract Lx4j;
+.class public final Lx4j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
 
 # static fields
-.field public static a:Lhrb;
+.field public static final a:Lx4j;
 
 
 # direct methods
-.method public static final a(Lz26;Lcm6;Lum6;Lkotlin/coroutines/Continuation;[Lx26;)Ljava/lang/Object;
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lwf3;
+    new-instance v0, Lx4j;
 
-    const/4 v4, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-object v1, p0
+    sput-object v0, Lx4j;->a:Lx4j;
 
-    move-object v2, p1
+    new-instance v0, Lyyi;
 
-    move-object v3, p2
+    const/4 v1, 0x1
 
-    move-object v5, p4
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-direct/range {v0 .. v5}, Lwf3;-><init>(Lz26;Lcm6;Lum6;Lkotlin/coroutines/Continuation;[Lx26;)V
+    const-class v1, Lqzi;
 
-    new-instance p0, Ld36;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lx74;
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lx74;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p0, p0, v0}, Lsni;->b(Lkotlinx/coroutines/internal/ScopeCoroutine;Lkotlinx/coroutines/internal/ScopeCoroutine;Lsm6;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lg84;->a:Lg84;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lqqg;->a:Lqqg;
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/content/Context;)Lhrb;
-    .locals 1
-
-    sget-object v0, Lx4j;->a:Lhrb;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lhrb;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lhrb;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lx4j;->a:Lhrb;
-
-    :cond_0
-    return-object v0
+    throw p1
 .end method

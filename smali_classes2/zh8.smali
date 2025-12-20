@@ -1,46 +1,34 @@
 .class public final synthetic Lzh8;
-.super Ljava/lang/Object;
+.super Lrr6;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Loq6;
 
 
-# instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:I
-
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:I
+# static fields
+.field public static final a:Lzh8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzh8;
 
-    iput-object p1, p0, Lzh8;->a:Ljava/lang/String;
+    const-string v4, "<init>(Ljava/lang/Throwable;)V"
 
-    iput-object p2, p0, Lzh8;->b:Ljava/lang/String;
+    const/4 v5, 0x0
 
-    iput-object p3, p0, Lzh8;->c:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iput-object p4, p0, Lzh8;->d:Ljava/lang/String;
+    const-class v2, Luh8;
 
-    iput p5, p0, Lzh8;->o:I
+    const-string v3, "<init>"
 
-    iput p6, p0, Lzh8;->X:I
+    invoke-direct/range {v0 .. v5}, Lrr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    iput p7, p0, Lzh8;->Y:I
+    sput-object v0, Lzh8;->a:Lzh8;
 
     return-void
 .end method
@@ -48,85 +36,15 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
-    check-cast p1, Lhi4;
+    check-cast p1, Ljava/lang/Throwable;
 
-    const-string v0, ":twofa/auth/password/check"
+    new-instance v0, Luh8;
 
-    iput-object v0, p1, Lhi4;->a:Ljava/lang/String;
+    const-string v1, "\u041d\u0435\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430"
 
-    const-string v0, "track_id"
+    invoke-direct {v0, v1, p1}, Luh8;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v1, p0, Lzh8;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p1, Lhi4;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lzh8;->b:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "hint="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v0, "email"
-
-    iget-object v1, p0, Lzh8;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "phone"
-
-    iget-object v1, p0, Lzh8;->d:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "p_mn_l"
-
-    iget v1, p0, Lzh8;->o:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "p_mx_l"
-
-    iget v1, p0, Lzh8;->X:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "h_mx_l"
-
-    iget v1, p0, Lzh8;->Y:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-object v0
 .end method

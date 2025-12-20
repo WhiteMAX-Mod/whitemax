@@ -1,53 +1,51 @@
-.class public final Lqw4;
-.super Ljava/lang/Object;
+.class public abstract Lqw4;
+.super Lzj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Ly6i;
-
-.field public c:Landroid/view/VelocityTracker;
-
-.field public d:F
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public final h:[I
+.field public final b:Lzj0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ly6i;)V
-    .locals 2
+.method public constructor <init>(Lzj0;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lzj0;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lqw4;->b:Lzj0;
 
-    iput v0, p0, Lqw4;->e:I
+    return-void
+.end method
 
-    iput v0, p0, Lqw4;->f:I
 
-    iput v0, p0, Lqw4;->g:I
+# virtual methods
+.method public d()V
+    .locals 1
 
-    const v0, 0x7fffffff
+    iget-object v0, p0, Lqw4;->b:Lzj0;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lzj0;->c()V
 
-    filled-new-array {v0, v1}, [I
+    return-void
+.end method
 
-    move-result-object v0
+.method public f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iput-object v0, p0, Lqw4;->h:[I
+    iget-object v0, p0, Lqw4;->b:Lzj0;
 
-    iput-object p1, p0, Lqw4;->a:Landroid/content/Context;
+    invoke-virtual {v0, p1}, Lzj0;->e(Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Lqw4;->b:Ly6i;
+    return-void
+.end method
+
+.method public j(F)V
+    .locals 1
+
+    iget-object v0, p0, Lqw4;->b:Lzj0;
+
+    invoke-virtual {v0, p1}, Lzj0;->i(F)V
 
     return-void
 .end method

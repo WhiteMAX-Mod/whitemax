@@ -1,136 +1,120 @@
-.class public final Lb78;
-.super Ldtf;
+.class public final synthetic Lb78;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lmm4;
 
 
 # instance fields
-.field public final synthetic X:Ls78;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
+.field public final synthetic b:J
 
-.field public final synthetic Z:J
-
-.field public final synthetic o:J
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(JLs78;JJLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>(IJ)V
+    .locals 1
 
-    iput-wide p1, p0, Lb78;->o:J
+    .line 1
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lb78;->X:Ls78;
+    iput v0, p0, Lb78;->a:I
 
-    iput-wide p4, p0, Lb78;->Y:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p6, p0, Lb78;->Z:J
+    iput p1, p0, Lb78;->c:I
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lb78;->b:J
 
-    invoke-direct {p0, p1, p8}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JI)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lb78;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lb78;->b:J
+
+    iput p3, p0, Lb78;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lb78;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lb78;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lb78;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
-
-    new-instance v0, Lb78;
-
-    iget-wide v4, p0, Lb78;->Y:J
-
-    iget-wide v6, p0, Lb78;->Z:J
-
-    iget-wide v1, p0, Lb78;->o:J
-
-    iget-object v3, p0, Lb78;->X:Ls78;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Lb78;-><init>(JLs78;JJLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/lang/Object;
     .locals 5
 
-    iget-object v0, p0, Lb78;->X:Ls78;
+    iget v0, p0, Lb78;->a:I
 
-    iget-object v0, v0, Ls78;->c:Lk18;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    new-instance v0, Lone/me/location/map/pick/PickLocationScreen;
 
-    iget-wide v1, p0, Lb78;->o:J
+    iget-wide v1, p0, Lb78;->b:J
 
-    const-wide/16 v3, 0x0
+    iget v3, p0, Lb78;->c:I
 
-    cmp-long p1, v1, v3
+    invoke-direct {v0, v1, v2, v3}, Lone/me/location/map/pick/PickLocationScreen;-><init>(JI)V
 
-    iget-wide v1, p0, Lb78;->Y:J
+    return-object v0
 
-    if-lez p1, :cond_0
+    :pswitch_0
+    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iget v1, p0, Lb78;->c:I
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast p1, Lqi9;
+    move-result-object v1
 
-    invoke-virtual {p1, v1, v2}, Lqi9;->m(J)Lsi9;
+    new-instance v2, Lysb;
 
-    move-result-object p1
+    const-string v3, "ru.ok.tamtam.extra.REQUEST_CODE"
 
-    return-object p1
+    invoke-direct {v2, v3, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_0
-    cmp-long p1, v1, v3
+    iget-wide v3, p0, Lb78;->b:J
 
-    if-lez p1, :cond_1
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    new-instance v3, Lysb;
 
-    check-cast p1, Lqi9;
+    const-string v4, "ru.ok.tamtam.extra.CHAT_ID"
 
-    iget-wide v3, p0, Lb78;->Z:J
+    invoke-direct {v3, v4, v1}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v3, v4, v1, v2}, Lqi9;->i(JJ)Lsi9;
+    filled-new-array {v2, v3}, [Lysb;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    invoke-static {v1}, Lg9j;->b([Lysb;)Landroid/os/Bundle;
 
-    :cond_1
-    const/4 p1, 0x0
+    move-result-object v1
 
-    return-object p1
+    const v2, 0x7a3a1dca
+
+    const-class v3, Lru/ok/messages/location/FrgLocationMap;
+
+    const-string v4, "ru.ok.messages.location.FrgLocationMap"
+
+    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

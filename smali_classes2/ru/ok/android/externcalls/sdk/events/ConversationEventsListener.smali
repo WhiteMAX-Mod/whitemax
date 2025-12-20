@@ -15,6 +15,12 @@
 
 
 # virtual methods
+.method public onAdminInCallChanged(Z)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onAnonJoinForbiddenChanged(Z)V
     .locals 0
 
@@ -91,6 +97,8 @@
 
 .method public onCameraBusy()V
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     return-void
 .end method
@@ -196,7 +204,7 @@
     return-void
 .end method
 
-.method public onMuteChanged(Lh9a;)V
+.method public onMuteChanged(Lqfa;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -204,7 +212,7 @@
     return-void
 .end method
 
-.method public onMuteStateInitialized(Lh9a;)V
+.method public onMuteStateInitialized(Lqfa;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -330,7 +338,13 @@
     return-void
 .end method
 
-.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvi1;)V
+.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbl1;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onWaitForAdminEnabled()V
     .locals 0
 
     return-void

@@ -1,82 +1,56 @@
-.class public final Lvpd;
+.class public final synthetic Lvpd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lvpd;
-
-.field public static final e:Lvpd;
-
-.field public static final f:Lvpd;
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
+.field public final synthetic b:Lwpd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lwpd;I)V
+    .locals 0
 
-    new-instance v0, Lvpd;
+    iput p2, p0, Lvpd;->a:I
 
-    const-wide/16 v1, 0x0
+    iput-object p1, p0, Lvpd;->b:Lwpd;
 
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v3}, Lvpd;-><init>(JZZ)V
-
-    sput-object v0, Lvpd;->d:Lvpd;
-
-    new-instance v0, Lvpd;
-
-    const-wide/16 v4, 0x1f4
-
-    const/4 v6, 0x1
-
-    invoke-direct {v0, v4, v5, v6, v3}, Lvpd;-><init>(JZZ)V
-
-    sput-object v0, Lvpd;->e:Lvpd;
-
-    new-instance v0, Lvpd;
-
-    const-wide/16 v4, 0x64
-
-    invoke-direct {v0, v4, v5, v6, v3}, Lvpd;-><init>(JZZ)V
-
-    new-instance v0, Lvpd;
-
-    invoke-direct {v0, v1, v2, v3, v6}, Lvpd;-><init>(JZZ)V
-
-    sput-object v0, Lvpd;->f:Lvpd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(JZZ)V
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget p1, p0, Lvpd;->a:I
 
-    iput-boolean p3, p0, Lvpd;->b:Z
+    packed-switch p1, :pswitch_data_0
 
-    iput-wide p1, p0, Lvpd;->a:J
+    iget-object p1, p0, Lvpd;->b:Lwpd;
 
-    if-eqz p4, :cond_0
-
-    xor-int/lit8 p1, p3, 0x1
-
-    const-string p2, "shouldRetry must be false when completeWithoutFailure is set to true"
-
-    invoke-static {p2, p1}, Lz5j;->a(Ljava/lang/String;Z)V
-
-    :cond_0
-    iput-boolean p4, p0, Lvpd;->c:Z
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lvpd;->b:Lwpd;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

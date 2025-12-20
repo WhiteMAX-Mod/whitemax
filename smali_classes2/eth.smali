@@ -1,98 +1,211 @@
-.class public final enum Leth;
-.super Ljava/lang/Enum;
+.class public final Leth;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpsh;
+.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Landroid/text/TextWatcher;
 
 
-# static fields
-.field public static final enum a:Leth;
-
-.field public static final synthetic b:[Leth;
-
-.field public static final synthetic c:Lzg5;
+# instance fields
+.field public final a:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
-    new-instance v0, Leth;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "REQUEST_PHONE"
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object v0, p0, Leth;->a:Ljava/lang/ref/WeakReference;
 
-    sput-object v0, Leth;->a:Leth;
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    filled-new-array {v0}, [Leth;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    sput-object v0, Leth;->b:[Leth;
+    invoke-static {p1}, Leth;->a(Landroid/widget/TextView;)V
 
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Leth;->c:Lzg5;
-
+    :cond_0
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Leth;
-    .locals 1
+.method public static a(Landroid/widget/TextView;)V
+    .locals 4
 
-    const-class v0, Leth;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Leth;
-
-    return-object p0
-.end method
-
-.method public static values()[Leth;
-    .locals 1
-
-    sget-object v0, Leth;->b:[Leth;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    check-cast v0, [Leth;
+    instance-of v1, v0, Landroid/text/Spanned;
 
-    return-object v0
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Lcth;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
+
+    :cond_1
+    if-nez v2, :cond_2
+
+    new-array v2, v1, [Lcth;
+
+    :cond_2
+    array-length v0, v2
+
+    :goto_1
+    if-ge v1, v0, :cond_3
+
+    aget-object v3, v2, v1
+
+    check-cast v3, Lcth;
+
+    invoke-interface {v3, p0}, Lcth;->attach(Landroid/view/View;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Leth;->a:Ljava/lang/ref/WeakReference;
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p1}, Leth;->a(Landroid/widget/TextView;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    const-string v0, "WebAppRequestPhone"
-
-    return-object v0
+    return-void
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    const-string v0, "request_phone"
+    return-void
+.end method
 
-    return-object v0
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
+
+    check-cast p1, Landroid/widget/TextView;
+
+    invoke-static {p1}, Leth;->a(Landroid/widget/TextView;)V
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 4
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/text/Spanned;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v3
+
+    :goto_0
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const-class v3, Lcth;
+
+    invoke-interface {v1, v2, v0, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v3
+
+    :cond_1
+    if-nez v3, :cond_2
+
+    new-array v3, v2, [Lcth;
+
+    :cond_2
+    array-length v0, v3
+
+    :goto_1
+    if-ge v2, v0, :cond_3
+
+    aget-object v1, v3, v2
+
+    check-cast v1, Lcth;
+
+    invoke-interface {v1, p1}, Lcth;->detach(Landroid/view/View;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-void
 .end method

@@ -1,99 +1,51 @@
 .class public final Lbkh;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Loud;
 
 
 # instance fields
-.field public final a:Lh3a;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ldkh;
+
+.field public Z:I
+
+.field public d:Ldkh;
+
+.field public o:Lvfa;
 
 
 # direct methods
-.method public constructor <init>(Lh3a;)V
+.method public constructor <init>(Ldkh;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbkh;->Y:Ldkh;
 
-    iput-object p1, p0, Lbkh;->a:Lh3a;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbkh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbkh;
-
-    iget-object v1, p0, Lbkh;->a:Lh3a;
-
-    iget-object p1, p1, Lbkh;->a:Lh3a;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lbkh;->a:Lh3a;
+    iput-object p1, p0, Lbkh;->X:Ljava/lang/Object;
 
-    iget-object v0, v0, Lh3a;->a:Ljava/util/ArrayList;
+    iget p1, p0, Lbkh;->Z:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    return v0
-.end method
+    iput p1, p0, Lbkh;->Z:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p1, p0, Lbkh;->Y:Ldkh;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ldkh;->g(Ll84;)Ljava/lang/Object;
 
-    const-string v1, "WatchTogetherUpdateNotification(updates="
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lbkh;->a:Lh3a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

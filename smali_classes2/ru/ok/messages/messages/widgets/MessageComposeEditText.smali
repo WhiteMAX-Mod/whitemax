@@ -1,88 +1,27 @@
 .class public Lru/ok/messages/messages/widgets/MessageComposeEditText;
-.super Lza5;
+.super Lqi;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic w0:I
+.field public static final synthetic v0:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lfvc;->editTextStyle:I
+    sget v0, Lh4d;->editTextStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lri;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lqi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    check-cast p1, Lfzf;
-
-    check-cast p1, Lone/me/android/OneMeApplication;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Ly4e;->a:Ly4e;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
+    invoke-static {}, Lbn;->a()Laq3;
 
     move-result-object p1
 
-    const/16 p2, 0x1b9
+    check-cast p1, Ld8b;
 
-    invoke-virtual {p1, p2}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvb5;
-
-    iget-boolean p2, p1, Lvb5;->e:Z
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Ljc5;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0, p1}, Ljc5;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p2}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    :cond_0
-    invoke-static {}, Lzm;->a()Lqm3;
-
-    move-result-object p1
-
-    check-cast p1, Lt1b;
-
-    invoke-virtual {p1}, Lt1b;->a()Ldd;
-
-    sget-object p1, Lzm;->d:Lzm;
-
-    iget-object p1, p1, Lzm;->b:Lk18;
-
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lz7c;
-
-    iget-object p1, p1, Lz7c;->c:Lsxg;
-
-    const/4 p2, 0x0
-
-    iget-object p1, p1, Lc4;->g:Ln18;
-
-    const-string v0, "app.messages.replace.emoji"
-
-    invoke-virtual {p1, v0, p2}, Ln18;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lza5;->setReplaceTextSmiles(Z)V
+    invoke-virtual {p1}, Ld8b;->a()Lgd;
 
     return-void
 .end method
@@ -115,13 +54,13 @@
 
     iput-object v1, p1, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
 
-    new-instance p1, Lp89;
+    new-instance p1, Led9;
 
-    invoke-direct {p1, p0}, Lp89;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
+    invoke-direct {p1, p0}, Led9;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
 
-    new-instance v1, Ljm7;
+    new-instance v1, Luq7;
 
-    invoke-direct {v1, v0, p1}, Ljm7;-><init>(Landroid/view/inputmethod/InputConnection;Lkm7;)V
+    invoke-direct {v1, v0, p1}, Luq7;-><init>(Landroid/view/inputmethod/InputConnection;Lvq7;)V
 
     return-object v1
 .end method
@@ -177,19 +116,42 @@
     return-void
 .end method
 
-.method public setListener(Lfi9;)V
+.method public final onTextContextMenuItem(I)Z
+    .locals 1
+
+    const v0, 0x1020022
+
+    if-ne p1, v0, :cond_0
+
+    const p1, 0x1020031
+
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setListener(Lqm9;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setMIUITextSelectListener(Lgi9;)V
+.method public setMIUITextSelectListener(Lrm9;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setTextSelectListener(Lhi9;)V
+.method public setTextSelectListener(Lsm9;)V
     .locals 0
 
     return-void

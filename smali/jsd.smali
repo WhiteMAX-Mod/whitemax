@@ -1,37 +1,48 @@
 .class public final Ljsd;
-.super Ljava/lang/Object;
+.super Ljava/util/LinkedHashMap;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljsd;
-
-.field public static final b:Ljava/util/Set;
+# instance fields
+.field public final synthetic a:Laj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Laj;I)V
+    .locals 1
 
-    new-instance v0, Ljsd;
+    iput-object p1, p0, Ljsd;->a:Laj;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/high16 p1, 0x3f400000    # 0.75f
 
-    sput-object v0, Ljsd;->a:Ljsd;
+    const/4 v0, 0x1
 
-    const-string v0, "android.intent.action.SEND_MULTIPLE"
-
-    const-string v1, "android.intent.action.SEND"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Ljsd;->b:Ljava/util/Set;
+    invoke-direct {p0, p2, p1, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+
+    move-result p1
+
+    iget-object v0, p0, Ljsd;->a:Laj;
+
+    iget v0, v0, Laj;->b:I
+
+    if-le p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

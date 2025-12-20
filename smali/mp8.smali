@@ -1,281 +1,641 @@
 .class public Lmp8;
-.super Ll4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lmp8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public A0:I
+.field public final a:I
 
-.field public B0:Ljava/lang/String;
+.field public final b:Ll5;
 
-.field public C0:F
+.field public final c:Lqf3;
 
-.field public X:F
+.field public d:I
 
-.field public Y:Z
+.field public e:I
 
-.field public Z:Z
-
-.field public a:Lcom/google/android/gms/maps/model/LatLng;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Lxo0;
-
-.field public o:F
-
-.field public s0:Z
-
-.field public t0:F
-
-.field public u0:F
-
-.field public v0:F
-
-.field public w0:F
-
-.field public x0:F
-
-.field public y0:I
-
-.field public z0:Landroid/view/View;
+.field public f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 2
-
-    new-instance v0, Lk3j;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lk3j;-><init>(I)V
-
-    sput-object v0, Lmp8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, 0x3f000000    # 0.5f
+    iput p1, p0, Lmp8;->a:I
 
-    iput v0, p0, Lmp8;->o:F
+    if-lez p1, :cond_0
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    new-instance p1, Ll5;
 
-    iput v1, p0, Lmp8;->X:F
+    const/16 v0, 0x12
 
-    const/4 v2, 0x1
+    invoke-direct {p1, v0}, Ll5;-><init>(I)V
 
-    iput-boolean v2, p0, Lmp8;->Z:Z
+    iput-object p1, p0, Lmp8;->b:Ll5;
 
-    const/4 v2, 0x0
+    new-instance p1, Lqf3;
 
-    iput-boolean v2, p0, Lmp8;->s0:Z
+    const/16 v0, 0x18
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    iput v3, p0, Lmp8;->t0:F
+    invoke-direct {p1, v0, v1}, Lqf3;-><init>(IB)V
 
-    iput v0, p0, Lmp8;->u0:F
-
-    iput v3, p0, Lmp8;->v0:F
-
-    iput v1, p0, Lmp8;->w0:F
-
-    iput v2, p0, Lmp8;->y0:I
+    iput-object p1, p0, Lmp8;->c:Lqf3;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "maxSize <= 0"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/16 v0, 0x4f45
+    const/4 p1, 0x0
 
-    invoke-static {p1, v0}, La9j;->k(Landroid/os/Parcel;I)I
+    return-object p1
+.end method
 
-    move-result v0
+.method public b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v1, 0x2
+    return-void
+.end method
 
-    iget-object v2, p0, Lmp8;->a:Lcom/google/android/gms/maps/model/LatLng;
+.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {p1, v1, v2, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    iget-object v0, p0, Lmp8;->c:Lqf3;
 
-    const/4 p2, 0x3
+    monitor-enter v0
 
-    iget-object v1, p0, Lmp8;->b:Ljava/lang/String;
+    :try_start_0
+    iget-object v1, p0, Lmp8;->b:Ll5;
 
-    invoke-static {p1, p2, v1}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
 
-    iget-object p2, p0, Lmp8;->c:Ljava/lang/String;
+    check-cast v1, Ljava/util/LinkedHashMap;
 
-    const/4 v1, 0x4
+    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1, v1, p2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    move-result-object v1
 
-    iget-object p2, p0, Lmp8;->d:Lxo0;
+    if-eqz v1, :cond_0
 
-    if-nez p2, :cond_0
+    iget p1, p0, Lmp8;->e:I
 
-    const/4 p2, 0x0
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lmp8;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :try_start_1
+    iget v1, p0, Lmp8;->f:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lmp8;->f:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    invoke-virtual {p0, p1}, Lmp8;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    iget-object v1, p0, Lmp8;->c:Lqf3;
+
+    monitor-enter v1
+
+    :try_start_2
+    iget-object v2, p0, Lmp8;->b:Ll5;
+
+    iget-object v2, v2, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v2, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v3, p0, Lmp8;->b:Ll5;
+
+    iget-object v3, v3, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3, p1, v2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_0
-    iget-object p2, p2, Lxo0;->a:Lkb7;
+    :catchall_1
+    move-exception p1
 
-    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    goto :goto_1
 
-    move-result-object p2
+    :cond_2
+    iget v3, p0, Lmp8;->d:I
+
+    invoke-virtual {p0, p1, v0}, Lmp8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    iput v3, p0, Lmp8;->d:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :goto_0
-    const/4 v2, 0x5
+    monitor-exit v1
 
-    invoke-static {p1, v2, p2}, La9j;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    if-eqz v2, :cond_3
 
-    iget p2, p0, Lmp8;->o:F
+    const/4 v1, 0x0
 
-    const/4 v2, 0x6
+    invoke-virtual {p0, v1, p1, v0, v2}, Lmp8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    return-object v2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    :cond_3
+    iget p1, p0, Lmp8;->a:I
 
-    iget p2, p0, Lmp8;->X:F
+    invoke-virtual {p0, p1}, Lmp8;->i(I)V
 
-    const/4 v2, 0x7
+    return-object v0
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    :goto_1
+    monitor-exit v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    throw p1
 
-    iget-boolean p2, p0, Lmp8;->Y:Z
+    :goto_2
+    monitor-exit v0
 
-    const/16 v2, 0x8
+    throw p1
+.end method
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+.method public final d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lmp8;->c:Lqf3;
 
-    iget-boolean p2, p0, Lmp8;->Z:Z
+    monitor-enter v0
 
-    const/16 v2, 0x9
+    :try_start_0
+    iget v1, p0, Lmp8;->d:I
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    invoke-virtual {p0, p1, p2}, Lmp8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v2
 
-    iget-boolean p2, p0, Lmp8;->s0:Z
+    add-int/2addr v1, v2
 
-    const/16 v2, 0xa
+    iput v1, p0, Lmp8;->d:I
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    iget-object v1, p0, Lmp8;->b:Ll5;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
 
-    iget p2, p0, Lmp8;->t0:F
+    check-cast v1, Ljava/util/LinkedHashMap;
 
-    const/16 v2, 0xb
+    invoke-virtual {v1, p1, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    if-eqz v1, :cond_0
 
-    iget p2, p0, Lmp8;->u0:F
+    iget v2, p0, Lmp8;->d:I
 
-    const/16 v2, 0xc
+    invoke-virtual {p0, p1, v1}, Lmp8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    move-result v3
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    sub-int/2addr v2, v3
 
-    iget p2, p0, Lmp8;->v0:F
+    iput v2, p0, Lmp8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v2, 0xd
+    goto :goto_0
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    goto :goto_1
 
-    iget p2, p0, Lmp8;->w0:F
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    const/16 v2, 0xe
+    if-eqz v1, :cond_1
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p0, v0, p1, v1, p2}, Lmp8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget p2, p0, Lmp8;->x0:F
+    :cond_1
+    iget p1, p0, Lmp8;->a:I
 
-    const/16 v2, 0xf
+    invoke-virtual {p0, p1}, Lmp8;->i(I)V
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    return-object v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    :goto_1
+    monitor-exit v0
 
-    iget p2, p0, Lmp8;->y0:I
+    throw p1
+.end method
 
-    const/16 v2, 0x11
+.method public final e(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    iget-object v0, p0, Lmp8;->c:Lqf3;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    monitor-enter v0
 
-    iget-object p2, p0, Lmp8;->z0:Landroid/view/View;
+    :try_start_0
+    iget-object v1, p0, Lmp8;->b:Ll5;
 
-    new-instance v2, Ltqa;
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
 
-    invoke-direct {v2, p2}, Ltqa;-><init>(Ljava/lang/Object;)V
+    check-cast v1, Ljava/util/LinkedHashMap;
 
-    const/16 p2, 0x12
+    invoke-virtual {v1, p1}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1, p2, v2}, La9j;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    move-result-object v1
 
-    iget p2, p0, Lmp8;->A0:I
+    if-eqz v1, :cond_0
 
-    const/16 v2, 0x13
+    iget v2, p0, Lmp8;->d:I
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    invoke-virtual {p0, p1, v1}, Lmp8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v3
 
-    const/16 p2, 0x14
+    sub-int/2addr v2, v3
 
-    iget-object v2, p0, Lmp8;->B0:Ljava/lang/String;
+    iput v2, p0, Lmp8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, p2, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    goto :goto_0
 
-    iget p2, p0, Lmp8;->C0:F
+    :catchall_0
+    move-exception p1
 
-    const/16 v2, 0x15
+    goto :goto_1
 
-    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    if-eqz v1, :cond_1
 
-    invoke-static {p1, v0}, La9j;->l(Landroid/os/Parcel;I)V
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, p1, v1, v2}, Lmp8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_1
+    return-object v1
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final f(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
+
+    invoke-virtual {p0, p2}, Lmp8;->h(Ljava/lang/Object;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Negative size: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p1, 0x3d
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final g()I
+    .locals 2
+
+    iget-object v0, p0, Lmp8;->c:Lqf3;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Lmp8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public h(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final i(I)V
+    .locals 5
+
+    :goto_0
+    iget-object v0, p0, Lmp8;->c:Lqf3;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Lmp8;->d:I
+
+    if-ltz v1, :cond_4
+
+    iget-object v1, p0, Lmp8;->b:Ll5;
+
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lmp8;->d:I
+
+    if-nez v1, :cond_4
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_0
+    :goto_1
+    iget v1, p0, Lmp8;->d:I
+
+    if-le v1, p1, :cond_3
+
+    iget-object v1, p0, Lmp8;->b:Ll5;
+
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v1, p0, Lmp8;->b:Ll5;
+
+    iget-object v1, v1, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lei3;->E(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_2
+
+    monitor-exit v0
 
     return-void
+
+    :cond_2
+    :try_start_1
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lmp8;->b:Ll5;
+
+    iget-object v3, v3, Ll5;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget v3, p0, Lmp8;->d:I
+
+    invoke-virtual {p0, v2, v1}, Lmp8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    iput v3, p0, Lmp8;->d:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p0, v3, v2, v1, v0}, Lmp8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :cond_4
+    :try_start_2
+    const-string p1, "LruCache.sizeOf() is reporting inconsistent results!"
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_3
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "LruCache[maxSize="
+
+    iget-object v1, p0, Lmp8;->c:Lqf3;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, p0, Lmp8;->e:I
+
+    iget v3, p0, Lmp8;->f:I
+
+    add-int/2addr v3, v2
+
+    if-eqz v3, :cond_0
+
+    mul-int/lit8 v2, v2, 0x64
+
+    div-int/2addr v2, v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lmp8;->a:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",hits="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lmp8;->e:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",misses="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lmp8;->f:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",hitRate="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "%]"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-object v0
+
+    :goto_1
+    monitor-exit v1
+
+    throw v0
 .end method

@@ -1,85 +1,116 @@
-.class public final enum Lyb1;
-.super Ljava/lang/Enum;
+.class public final Lyb1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lyb1;
+# instance fields
+.field public final a:Ld68;
 
-.field public static final enum b:Lyb1;
-
-.field public static final enum c:Lyb1;
-
-.field public static final synthetic d:[Lyb1;
+.field public final b:Ld68;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ld68;Ld68;)V
+    .locals 0
 
-    new-instance v0, Lyb1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "CALLING"
+    iput-object p1, p0, Lyb1;->a:Ld68;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lyb1;->a:Lyb1;
-
-    new-instance v1, Lyb1;
-
-    const-string v2, "ACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lyb1;->b:Lyb1;
-
-    new-instance v2, Lyb1;
-
-    const-string v3, "NO_CONNECTION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lyb1;->c:Lyb1;
-
-    filled-new-array {v0, v1, v2}, [Lyb1;
-
-    move-result-object v0
-
-    sput-object v0, Lyb1;->d:[Lyb1;
+    iput-object p2, p0, Lyb1;->b:Ld68;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyb1;
-    .locals 1
 
-    const-class v0, Lyb1;
+# virtual methods
+.method public final a()V
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const-string v0, "HandleSilenceMode"
 
-    move-result-object p0
+    const-string v1, "try mute ringtones"
 
-    check-cast p0, Lyb1;
+    invoke-static {v0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p0
-.end method
+    iget-object v0, p0, Lyb1;->b:Ld68;
 
-.method public static values()[Lyb1;
-    .locals 1
-
-    sget-object v0, Lyb1;->d:[Lyb1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lyb1;
+    check-cast v0, Le0e;
 
-    return-object v0
+    invoke-virtual {v0}, Le0e;->a()Ljn1;
+
+    move-result-object v0
+
+    sget-object v1, Lxk8;->d:Lxk8;
+
+    iget-object v2, v0, Ljn1;->j:Landroid/media/MediaPlayer;
+
+    const/4 v3, 0x0
+
+    const-string v4, "RingtoneManagerTag"
+
+    if-nez v2, :cond_3
+
+    iget-object v2, v0, Ljn1;->h:Lz7g;
+
+    invoke-virtual {v2}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Vibrator;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object v0, Lm4j;->a:Lvcb;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lvcb;->b(Lxk8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const-string v2, " mute already set"
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    :goto_1
+    sget-object v2, Lm4j;->a:Lvcb;
+
+    if-nez v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v2, v1}, Lvcb;->b(Lxk8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    const-string v5, " set mute"
+
+    invoke-virtual {v2, v1, v4, v5, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_2
+    invoke-virtual {v0}, Ljn1;->e()V
+
+    return-void
 .end method

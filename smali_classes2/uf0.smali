@@ -1,98 +1,60 @@
 .class public final Luf0;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/List;
+.field public final a:J
 
-.field public final synthetic o:Luid;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Luid;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Luf0;->o:Luid;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Luf0;->X:Ljava/util/List;
+    iput-wide p1, p0, Luf0;->a:J
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Luf0;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Luf0;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    check-cast p1, Lf84;
+    const-string v0, "Background{id="
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, ", url="
 
-    invoke-virtual {p0, p1, p2}, Luf0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v2, p0, Luf0;->a:J
 
-    move-result-object p1
+    iget-object v4, p0, Luf0;->b:Ljava/lang/String;
 
-    check-cast p1, Luf0;
+    invoke-static {v0, v2, v3, v1, v4}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Luf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", color="
 
-    move-result-object p1
+    const-string v2, "}"
 
-    return-object p1
-.end method
+    iget-object v3, p0, Luf0;->c:Ljava/lang/String;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {v0, v1, v3, v2}, La3e;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance p1, Luf0;
+    move-result-object v0
 
-    iget-object v0, p0, Luf0;->o:Luid;
-
-    iget-object v1, p0, Luf0;->X:Ljava/util/List;
-
-    invoke-direct {p1, v0, v1, p2}, Luf0;-><init>(Luid;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Luf0;->o:Luid;
-
-    iget-object p1, p1, Luid;->a:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->g()Lg5i;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lg5i;->g()Landroidx/work/impl/model/WorkersQueueDao;
-
-    move-result-object p1
-
-    iget-object v0, p0, Luf0;->X:Ljava/util/List;
-
-    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->contains(Ljava/util/List;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

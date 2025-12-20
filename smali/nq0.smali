@@ -1,6 +1,6 @@
-.class public interface abstract annotation Lnq0;
+.class public interface abstract Lnq0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/annotation/Annotation;
+.implements Lycc;

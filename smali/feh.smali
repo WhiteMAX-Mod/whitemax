@@ -1,105 +1,149 @@
 .class public final Lfeh;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lbxa;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+.field public a:Lu32;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public b:Z
 
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
-    .locals 0
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iput-object p2, p0, Lfeh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 p2, 0x2
+    invoke-static {}, Ltsi;->d()Z
 
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result v0
+
+    const-string v1, "SourceStreamRequirementObserver can be updated from main thread only"
+
+    invoke-static {v1, v0}, Lpjj;->f(Ljava/lang/String;Z)V
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    iget-boolean v0, p0, Lfeh;->b:Z
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Lfeh;->b:Z
+
+    iget-object v0, p0, Lfeh;->a:Lu32;
+
+    if-eqz v0, :cond_2
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {v0}, Lu32;->o()V
+
+    return-void
+
+    :cond_1
+    invoke-interface {v0}, Lu32;->a()V
+
+    return-void
+
+    :cond_2
+    const-string p1, "VideoCapture"
+
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {p1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
+.method public final b()V
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfeh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfeh;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lfeh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lfeh;
-
-    iget-object v1, p0, Lfeh;->X:Lone/me/chatmedia/viewer/VideoWebViewScreen;
-
-    invoke-direct {v0, p2, v1}, Lfeh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
-
-    iput-object p1, v0, Lfeh;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfeh;->o:Ljava/lang/Object;
-
-    check-cast p1, Lcda;
-
-    sget-object v0, Ljc3;->b:Ljc3;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {}, Ltsi;->d()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "SourceStreamRequirementObserver can be closed from main thread only"
 
-    sget-object p1, Lko2;->c:Lko2;
+    invoke-static {v1, v0}, Lpjj;->f(Ljava/lang/String;Z)V
 
-    invoke-virtual {p1}, Li3;->p0()Lii4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "SourceStreamRequirementObserver#close: mIsSourceStreamRequired = "
 
-    invoke-virtual {p1}, Lii4;->d()Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lfeh;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VideoCapture"
+
+    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lfeh;->a:Lu32;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "SourceStreamRequirementObserver#close: Already closed!"
+
+    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-boolean v2, p0, Lfeh;->b:Z
+
+    if-nez v2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    instance-of v0, p1, Lei4;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lko2;->c:Lko2;
-
-    check-cast p1, Lei4;
-
-    invoke-virtual {v0, p1}, Li3;->s0(Lei4;)V
-
     :cond_1
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    const/4 v2, 0x0
 
-    return-object p1
+    iput-boolean v2, p0, Lfeh;->b:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lu32;->a()V
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {v1, v0}, Lw4j;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lfeh;->a:Lu32;
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    const-string v0, "VideoCapture"
+
+    const-string v1, "SourceStreamRequirementObserver#onError"
+
+    invoke-static {v0, v1, p1}, Lw4j;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

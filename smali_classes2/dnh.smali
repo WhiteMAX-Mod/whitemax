@@ -1,189 +1,122 @@
-.class public final synthetic Ldnh;
+.class public final Ldnh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lar6;
+.implements Loq6;
 
 
-# static fields
-.field public static final a:Ldnh;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lree;
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+    .locals 0
 
-    new-instance v0, Ldnh;
+    iput p2, p0, Ldnh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldnh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    sput-object v0, Ldnh;->a:Ldnh;
-
-    new-instance v1, Lj5c;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryGetInfoRequest"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lj5c;-><init>(Ljava/lang/String;Lar6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ldnh;->descriptor:Lree;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    check-cast p2, Lfnh;
+    iget v0, p0, Ldnh;->a:I
 
-    sget-object v0, Ldnh;->descriptor:Lree;
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lree;)Lkotlinx/serialization/json/internal/b;
+    const/16 v2, 0x8
 
-    move-result-object p1
+    const/4 v3, 0x1
 
-    sget-object v1, Lrmf;->a:Lrmf;
+    iget-object v4, p0, Ldnh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iget-object v2, p2, Lfnh;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v3, 0x0
+    check-cast p1, Landroid/widget/ImageView;
 
-    invoke-virtual {p1, v0, v3, v1, v2}, Lkotlinx/serialization/json/internal/b;->n(Lree;ILzy7;Ljava/lang/Object;)V
+    sget v0, Lw7b;->B:I
 
-    iget-object p2, p2, Lfnh;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lree;ILjava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+    new-instance v0, Lcnh;
 
-    return-void
-.end method
+    invoke-direct {v0, v4, v3}, Lcnh;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-.method public final b(Llh4;)Ljava/lang/Object;
-    .locals 9
+    invoke-static {p1, v0}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    sget-object v0, Ldnh;->descriptor:Lree;
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {p1, v0}, Llh4;->r(Lree;)Lyl3;
+    return-object v1
 
-    move-result-object p1
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
 
-    const/4 v1, 0x1
+    sget v0, Lw7b;->z:I
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    const/4 v3, 0x0
+    sget v0, Lx4e;->i:I
 
-    move v5, v1
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    move v6, v2
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lp38;
 
-    move-object v4, v3
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    :goto_0
-    if-eqz v5, :cond_3
+    move-result-object v0
 
-    invoke-interface {p1, v0}, Lyl3;->e(Lree;)I
+    const-string v5, "camera"
 
-    move-result v7
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    const/4 v8, -0x1
+    move-result-object v0
 
-    if-eq v7, v8, :cond_2
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
 
-    if-eqz v7, :cond_1
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
 
-    if-ne v7, v1, :cond_0
+    move-result-object v0
 
-    invoke-interface {p1, v0, v1}, Lyl3;->j(Lree;I)Ljava/lang/String;
+    array-length v0, v0
 
-    move-result-object v4
+    const/4 v5, 0x0
 
-    or-int/lit8 v6, v6, 0x2
+    if-le v0, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    move v3, v5
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    :goto_0
+    invoke-virtual {p1, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    throw p1
+    new-instance v0, Lcnh;
 
-    :cond_1
-    sget-object v7, Lrmf;->a:Lrmf;
+    invoke-direct {v0, v4, v5}, Lcnh;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-    invoke-interface {p1, v0, v2, v7, v3}, Lyl3;->w(Lree;ILzy7;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lnlj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    move-result-object v3
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    check-cast v3, Ljava/lang/String;
+    return-object v1
 
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {p1, v0}, Lyl3;->m(Lree;)V
-
-    new-instance p1, Lfnh;
-
-    invoke-direct {p1, v6, v3, v4}, Lfnh;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final c()[Lzy7;
-    .locals 4
-
-    sget-object v0, Lrmf;->a:Lrmf;
-
-    invoke-static {v0}, Lwvi;->b(Lzy7;)Lzy7;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Lzy7;
-
-    const/4 v3, 0x0
-
-    aput-object v1, v2, v3
-
-    const/4 v1, 0x1
-
-    aput-object v0, v2, v1
-
-    return-object v2
-.end method
-
-.method public final d()Lree;
-    .locals 1
-
-    sget-object v0, Ldnh;->descriptor:Lree;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -13,13 +13,13 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Llba;
+    new-instance v0, Ltha;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Llba;-><init>(I)V
+    invoke-direct {v0, v1}, Ltha;-><init>(I)V
 
-    new-instance v1, Lpba;
+    new-instance v1, Lxha;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
@@ -118,11 +118,11 @@
 
     move-result-object v1
 
-    new-instance v2, Loba;
+    new-instance v2, Lwha;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, v3, v1}, Loba;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, v1}, Lwha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {v0, v2}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 

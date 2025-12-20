@@ -1,9 +1,14 @@
-.class public final Lpgh;
-.super Landroid/view/ViewGroup$LayoutParams;
+.class public final synthetic Lpgh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsgh;
 
-# instance fields
-.field public a:Z
 
-.field public b:I
+# virtual methods
+.method public final run()V
+    .locals 0
+
+    return-void
+.end method

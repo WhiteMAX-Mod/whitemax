@@ -3,248 +3,185 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz26;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Z
 
-.field public final synthetic b:Lz26;
-
-.field public final synthetic c:Lno9;
+.field public final synthetic b:Luo9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz26;Lno9;I)V
+.method public constructor <init>(Luo9;)V
     .locals 0
 
-    iput p3, p0, Lho9;->a:I
-
-    iput-object p1, p0, Lho9;->b:Lz26;
-
-    iput-object p2, p0, Lho9;->c:Lno9;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lho9;->b:Luo9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 5
 
-    iget v0, p0, Lho9;->a:I
+    sget-object v0, Ldc3;->s0:Lole;
 
-    sget-object v1, Lqqg;->a:Lqqg;
+    if-eqz p1, :cond_0
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Ls9j;->a(Landroid/text/Editable;)V
 
-    iget-object v3, p0, Lho9;->c:Lno9;
+    :cond_0
+    iget-object v1, p0, Lho9;->b:Luo9;
 
-    iget-object v4, p0, Lho9;->b:Lz26;
+    iget-object v2, v1, Luo9;->L0:Lhof;
 
-    const-string v5, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v3, v1, Luo9;->d:Lro9;
 
-    sget-object v6, Lg84;->a:Lg84;
+    invoke-virtual {v3}, Landroid/widget/TextView;->getSelectionEnd()I
 
-    const/high16 v7, -0x80000000
+    move-result v3
 
-    const/4 v8, 0x1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v9, 0x2
+    move-result-object v3
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v4, 0x0
 
-    instance-of v0, p2, Ljo9;
+    invoke-virtual {v2, v4, v3}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    iget-object v2, v1, Luo9;->J0:Lhof;
 
-    move-object v0, p2
+    if-eqz p1, :cond_1
 
-    check-cast v0, Ljo9;
+    invoke-static {p1}, Lqcj;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    iget v10, v0, Ljo9;->o:I
+    move-result-object v3
 
-    and-int v11, v10, v7
+    goto :goto_0
 
-    if-eqz v11, :cond_0
+    :cond_1
+    move-object v3, v4
 
-    sub-int/2addr v10, v7
+    :goto_0
+    invoke-virtual {v2, v3}, Lhof;->setValue(Ljava/lang/Object;)V
 
-    iput v10, v0, Ljo9;->o:I
+    if-eqz p1, :cond_3
+
+    invoke-static {p1}, Liyf;->G(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v2, p0, Lho9;->a:Z
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Luo9;->k(Lplb;)V
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    invoke-virtual {v0, v1}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Luo9;->k(Lplb;)V
+
+    :cond_4
+    :goto_2
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    const-class v2, Lpe;
+
+    invoke-interface {p1, v1, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    if-nez v4, :cond_5
+
+    new-array v4, v1, [Lpe;
+
+    :cond_5
+    check-cast v4, [Lpe;
+
+    array-length p1, v4
+
+    :goto_3
+    if-ge v1, p1, :cond_6
+
+    aget-object v0, v4, v1
+
+    check-cast v0, Lqk;
+
+    iget-object v0, v0, Lqk;->b:Lpk;
+
+    invoke-virtual {v0}, Lpk;->start()V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Liyf;->G(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljo9;
-
-    invoke-direct {v0, p0, p2}, Ljo9;-><init>(Lho9;Lkotlin/coroutines/Continuation;)V
-
-    :goto_0
-    iget-object p2, v0, Ljo9;->d:Ljava/lang/Object;
-
-    iget v7, v0, Ljo9;->o:I
-
-    if-eqz v7, :cond_3
-
-    if-eq v7, v8, :cond_2
-
-    if-ne v7, v9, :cond_1
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    iget-object v4, v0, Ljo9;->X:Lz26;
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_3
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
+    :cond_1
+    :goto_0
+    move p1, p2
 
-    check-cast p1, Lpn9;
-
-    iput-object v4, v0, Ljo9;->X:Lz26;
-
-    iput v8, v0, Ljo9;->o:I
-
-    invoke-static {v3, p1, v0}, Lno9;->u(Lno9;Lpn9;Lq44;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-ne p2, v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
     :goto_1
-    iput-object v2, v0, Ljo9;->X:Lz26;
+    xor-int/2addr p1, p2
 
-    iput v9, v0, Ljo9;->o:I
+    iput-boolean p1, p0, Lho9;->a:Z
 
-    invoke-interface {v4, p2, v0}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    if-ne p1, v6, :cond_5
-
-    :goto_2
-    move-object v1, v6
-
-    :cond_5
-    :goto_3
-    return-object v1
-
-    :pswitch_0
-    instance-of v0, p2, Lgo9;
-
-    if-eqz v0, :cond_6
-
-    move-object v0, p2
-
-    check-cast v0, Lgo9;
-
-    iget v10, v0, Lgo9;->o:I
-
-    and-int v11, v10, v7
-
-    if-eqz v11, :cond_6
-
-    sub-int/2addr v10, v7
-
-    iput v10, v0, Lgo9;->o:I
-
-    goto :goto_4
-
-    :cond_6
-    new-instance v0, Lgo9;
-
-    invoke-direct {v0, p0, p2}, Lgo9;-><init>(Lho9;Lkotlin/coroutines/Continuation;)V
-
-    :goto_4
-    iget-object p2, v0, Lgo9;->d:Ljava/lang/Object;
-
-    iget v7, v0, Lgo9;->o:I
-
-    if-eqz v7, :cond_9
-
-    if-eq v7, v8, :cond_8
-
-    if-ne v7, v9, :cond_7
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_7
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    iget-object v4, v0, Lgo9;->X:Lz26;
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_5
-
-    :cond_9
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    check-cast p1, Ljava/lang/Long;
-
-    iput-object v4, v0, Lgo9;->X:Lz26;
-
-    iput v8, v0, Lgo9;->o:I
-
-    sget-object p2, Lno9;->X0:[Lyy7;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v3, p1, p2, v0}, Lno9;->A(Ljava/lang/Long;ZLq44;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-ne p2, v6, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    :goto_5
-    iput-object v2, v0, Lgo9;->X:Lz26;
-
-    iput v9, v0, Lgo9;->o:I
-
-    invoke-interface {v4, p2, v0}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_b
-
-    :goto_6
-    move-object v1, v6
-
-    :cond_b
-    :goto_7
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,41 +1,19 @@
-.class public interface abstract Lyeb;
+.class public abstract Lyeb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lsy2;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Lbf0;
-.end method
 
-.method public abstract c()Lfdf;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract d()Lcx6;
-.end method
+    sget v0, Ljbd;->pinbars_group_call_participants_count:I
 
-.method public abstract e()Lw4;
-.end method
+    sput v0, Lyeb;->a:I
 
-.method public abstract f()Lm0h;
-.end method
-
-.method public abstract g(I)I
-.end method
-
-.method public abstract getIcon()Lnb7;
-.end method
-
-.method public abstract getName()Ljava/lang/String;
-.end method
-
-.method public abstract getText()Lu3g;
-.end method
-
-.method public abstract h()Lkf3;
-.end method
-
-.method public abstract i()Lgnf;
+    return-void
 .end method

@@ -1,154 +1,281 @@
-.class public final Lym4;
+.class public final synthetic Lym4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ly57;
+.implements Ldf8;
+.implements Lru4;
 
 
 # instance fields
-.field public final synthetic a:Lbn4;
+.field public final synthetic a:Z
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(Lbn4;)V
+.method public synthetic constructor <init>(Lkd;Ldg8;Lz59;Ljava/io/IOException;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lym4;->a:Lbn4;
+    iput-object p2, p0, Lym4;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lym4;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lym4;->d:Ljava/io/Serializable;
+
+    iput-boolean p5, p0, Lym4;->a:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lxu4;Lku4;Z[I)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lym4;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lym4;->c:Ljava/lang/Object;
+
+    iput-boolean p3, p0, Lym4;->a:Z
+
+    iput-object p4, p0, Lym4;->d:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public g(ILarg;[I)Lltd;
+    .locals 11
 
-    iget-object v0, p0, Lym4;->a:Lbn4;
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lbn4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast v0, Lxu4;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lym4;->c:Ljava/lang/Object;
 
-    return-void
-.end method
+    move-object v6, v1
 
-.method public final b(Landroid/net/Uri;Lsb8;Z)Z
-    .locals 9
+    check-cast v6, Lku4;
 
-    iget-object p3, p0, Lym4;->a:Lbn4;
+    iget-object v1, p0, Lym4;->d:Ljava/io/Serializable;
 
-    iget-object v0, p3, Lbn4;->b:Ljava/util/HashMap;
+    check-cast v1, [I
 
-    iget-object v1, p3, Lbn4;->y0:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Li57;
+    new-instance v9, Lcu4;
 
-    const/4 v4, 0x0
+    invoke-direct {v9, v0, v6}, Lcu4;-><init>(Lxu4;Lku4;)V
 
-    if-nez v1, :cond_2
+    aget v10, v1, p1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-static {}, Lal7;->i()Lxk7;
 
-    move-result-wide v1
+    move-result-object v0
 
-    iget-object v3, p3, Lbn4;->x0:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v3, Lq57;
-
-    sget-object v5, Lzxg;->a:Ljava/lang/String;
-
-    iget-object v3, v3, Lq57;->e:Ljava/util/List;
-
-    move v5, v4
-
-    move v6, v5
+    move v5, v1
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    iget v1, p2, Larg;->a:I
 
-    move-result v7
+    if-ge v5, v1, :cond_0
 
-    if-ge v5, v7, :cond_1
+    new-instance v2, Leu4;
 
-    invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    aget v7, p3, v5
 
-    move-result-object v7
+    iget-boolean v8, p0, Lym4;->a:Z
 
-    check-cast v7, Lo57;
+    move v3, p1
 
-    iget-object v7, v7, Lo57;->a:Landroid/net/Uri;
+    move-object v4, p2
 
-    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct/range {v2 .. v10}, Leu4;-><init>(ILarg;ILku4;IZLcu4;I)V
 
-    move-result-object v7
+    invoke-virtual {v0, v2}, Lqk7;->a(Ljava/lang/Object;)V
 
-    check-cast v7, Lan4;
-
-    if-eqz v7, :cond_0
-
-    iget-wide v7, v7, Lan4;->Z:J
-
-    cmp-long v7, v1, v7
-
-    if-gez v7, :cond_0
-
-    add-int/lit8 v6, v6, 0x1
-
-    :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_1
-    new-instance v2, Lnc5;
-
-    iget-object v1, p3, Lbn4;->x0:Ljava/lang/Object;
-
-    check-cast v1, Lq57;
-
-    iget-object v1, v1, Lq57;->e:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    const/4 v7, 0x3
-
-    const/4 v3, 0x1
-
-    invoke-direct/range {v2 .. v7}, Lnc5;-><init>(IIIII)V
-
-    iget-object p3, p3, Lbn4;->t0:Ljava/lang/Object;
-
-    check-cast p3, Ltha;
-
-    invoke-virtual {p3, v2, p2}, Ltha;->p(Lnc5;Lsb8;)Ly21;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_2
-
-    iget p3, p2, Ly21;->b:I
-
-    const/4 v1, 0x2
-
-    if-ne p3, v1, :cond_2
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Lxk7;->i()Lltd;
 
     move-result-object p1
 
-    check-cast p1, Lan4;
+    return-object p1
+.end method
 
-    if-eqz p1, :cond_2
+.method public invoke(Ljava/lang/Object;)V
+    .locals 6
 
-    iget-wide p2, p2, Ly21;->c:J
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
 
-    invoke-static {p1, p2, p3}, Lan4;->a(Lan4;J)Z
+    check-cast v0, Ldg8;
 
-    :cond_2
-    return v4
+    iget-object v1, p0, Lym4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lz59;
+
+    iget-object v2, p0, Lym4;->d:Ljava/io/Serializable;
+
+    check-cast v2, Ljava/io/IOException;
+
+    check-cast p1, Lap5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v3, "MediaLoadData{dataType="
+
+    invoke-direct {p1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v3, v1, Lz59;->a:I
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", trackType="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v1, Lz59;->b:I
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", trackFormat="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, v1, Lz59;->g:Ljava/lang/Object;
+
+    check-cast v3, Lqj6;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", trackSelectionReason="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v1, Lz59;->c:I
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", trackSelectionData="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, v1, Lz59;->d:Ljava/lang/Object;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mediaStartTimeMs="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, v1, Lz59;->e:J
+
+    invoke-virtual {p1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mediaEndTimeMs="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, v1, Lz59;->f:J
+
+    const-string v1, "}"
+
+    invoke-static {p1, v3, v4, v1}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "LoadEventInfo{loadTaskId"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v4, v0, Ldg8;->a:J
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, ", dataSpec"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v0, Ldg8;->b:Lyi4;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", uri"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v0, Ldg8;->c:Landroid/net/Uri;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", responseHeaders"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v0, Ldg8;->d:Ljava/util/Map;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", elapsedRealtimeMs"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, v0, Ldg8;->e:J
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, ", loadDurationMs"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, v0, Ldg8;->f:J
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, ", bytesLoaded"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, v0, Ldg8;->g:J
+
+    invoke-static {v3, v4, v5, v1}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lym4;->a:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    filled-new-array {v1, v0, p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "ap5"
+
+    const-string v1, "onLoadError, wasCanceled %b, loadEventInfo = %s, mediaLoadData = %s"
+
+    invoke-static {v0, v2, v1, p1}, Lm4j;->j(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
 .end method

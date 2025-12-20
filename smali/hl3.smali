@@ -1,154 +1,99 @@
-.class public final synthetic Lhl3;
+.class public abstract Lhl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb48;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lhl3;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p1, p0, Lhl3;->b:Ljava/lang/Object;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iput-object p3, p0, Lhl3;->c:Ljava/lang/Object;
+    move-result-wide v1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    long-to-int v1, v1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lhl3;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/res/Resources;I)Z
+    .locals 5
 
-# virtual methods
-.method public final d(Lj48;Lk38;)V
-    .locals 4
+    const-string v0, "FirebaseMessaging"
 
-    iget v0, p0, Lhl3;->a:I
+    const-string v1, "Adaptive icons cannot be used in notifications. Ignoring icon id: "
 
-    packed-switch v0, :pswitch_data_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object p2, p0, Lhl3;->b:Ljava/lang/Object;
+    const/16 v3, 0x1a
 
-    check-cast p2, Lq38;
+    const/4 v4, 0x1
 
-    iget-object v0, p0, Lhl3;->c:Ljava/lang/Object;
+    if-eq v2, v3, :cond_0
 
-    check-cast v0, Lqt7;
-
-    iget-object v1, p2, Lq38;->c:Lay4;
-
-    invoke-interface {p1}, Lj48;->p()Ll48;
-
-    move-result-object v2
-
-    iget-object v2, v2, Ll48;->d:Ll38;
-
-    sget-object v3, Ll38;->a:Ll38;
-
-    if-ne v2, v3, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-interface {v0, p1}, Lqt7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    invoke-virtual {p2}, Lq38;->a()V
-
-    goto :goto_0
+    return v4
 
     :cond_0
-    invoke-interface {p1}, Lj48;->p()Ll48;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    iget-object p1, p1, Ll48;->d:Ll38;
+    :try_start_0
+    invoke-virtual {p0, p1, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-    iget-object p2, p2, Lq38;->b:Ll38;
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    instance-of p0, p0, Landroid/graphics/drawable/AdaptiveIconDrawable;
 
-    move-result p1
+    if-eqz p0, :cond_1
 
-    if-gez p1, :cond_1
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x1
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-boolean p1, v1, Lay4;->a:Z
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v3
 
     :cond_1
-    iget-boolean p1, v1, Lay4;->a:Z
+    return v4
 
-    if-nez p1, :cond_2
+    :catch_0
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v1, "Couldn\'t find resource "
 
-    :cond_2
-    iget-boolean p1, v1, Lay4;->b:Z
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez p1, :cond_3
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string p1, ", treating it as an invalid icon"
 
-    iput-boolean p1, v1, Lay4;->a:Z
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lay4;->a()V
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_0
-    return-void
+    move-result-object p0
 
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string p2, "Cannot resume a finished dispatcher"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    iget-object p1, p0, Lhl3;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljva;
-
-    iget-object v0, p0, Lhl3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/fragment/app/b;
-
-    sget-object v1, Lk38;->ON_CREATE:Lk38;
-
-    if-ne p2, v1, :cond_4
-
-    sget-object p2, Lil3;->a:Lil3;
-
-    invoke-virtual {p2, v0}, Lil3;->a(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p2
-
-    iput-object p2, p1, Ljva;->e:Landroid/window/OnBackInvokedDispatcher;
-
-    iget-boolean p2, p1, Ljva;->g:Z
-
-    invoke-virtual {p1, p2}, Ljva;->e(Z)V
-
-    :cond_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v3
 .end method

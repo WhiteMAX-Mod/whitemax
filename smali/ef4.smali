@@ -1,162 +1,306 @@
-.class public final Lef4;
-.super Latc;
+.class public abstract Lef4;
+.super Landroid/widget/BaseAdapter;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/Filterable;
 
 
 # instance fields
-.field public a:[B
+.field public X:Ldf4;
+
+.field public Y:Lff4;
+
+.field public a:Z
+
+.field public b:Z
+
+.field public c:Landroid/database/Cursor;
+
+.field public d:I
+
+.field public o:Lay;
 
 
 # virtual methods
-.method public final a(Lysc;Lbtc;Lbj;)V
+.method public abstract a(Landroid/view/View;Landroid/database/Cursor;)V
+.end method
+
+.method public b(Landroid/database/Cursor;)V
     .locals 2
 
-    iget p2, p1, Lysc;->F0:I
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
 
-    const/4 p3, 0x3
+    if-ne p1, v0, :cond_0
 
-    if-eq p2, p3, :cond_1
-
-    iget p2, p1, Lysc;->F0:I
-
-    const/4 p3, 0x4
-
-    if-ne p2, p3, :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/16 p2, 0xa
+    if-eqz v0, :cond_2
 
-    int-to-long p2, p2
+    iget-object v1, p0, Lef4;->o:Lay;
 
-    const-string v0, "Datagram frame received, but datagram extension is not enabled"
+    if-eqz v1, :cond_1
 
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, p2, p3, v0, v1}, Lysc;->f(JLjava/lang/String;I)V
-
-    return-void
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     :cond_1
+    iget-object v1, p0, Lef4;->X:Ldf4;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_2
+    iput-object p1, p0, Lef4;->c:Landroid/database/Cursor;
+
+    if-eqz p1, :cond_5
+
+    iget-object v1, p0, Lef4;->o:Lay;
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
+
+    :cond_3
+    iget-object v1, p0, Lef4;->X:Ldf4;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_4
+    const-string v1, "_id"
+
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result p1
+
+    iput p1, p0, Lef4;->d:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lef4;->a:Z
+
+    invoke-virtual {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    goto :goto_0
+
+    :cond_5
+    const/4 p1, -0x1
+
+    iput p1, p0, Lef4;->d:I
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lef4;->a:Z
+
+    invoke-virtual {p0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
+
     :goto_0
-    iget-object p1, p1, Lysc;->c:Lbh8;
+    if-eqz v0, :cond_6
 
-    const-string p2, "Received datagram frame, but no handler is set"
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    invoke-interface {p1, p2}, Lbh8;->warn(Ljava/lang/String;)V
-
+    :cond_6
     return-void
 .end method
 
-.method public final c()I
-    .locals 2
+.method public abstract c(Landroid/database/Cursor;)Ljava/lang/String;
+.end method
 
-    iget-object v0, p0, Lef4;->a:[B
+.method public abstract d(Landroid/view/ViewGroup;)Landroid/view/View;
+.end method
 
-    array-length v0, v0
+.method public final getCount()I
+    .locals 1
 
-    int-to-long v0, v0
+    iget-boolean v0, p0, Lef4;->a:Z
 
-    invoke-static {v0, v1}, Lepi;->a(J)I
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    add-int/lit8 v0, v0, 0x1
+    return v0
 
-    iget-object v1, p0, Lef4;->a:[B
-
-    array-length v1, v1
-
-    add-int/2addr v0, v1
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final g(Ljava/nio/ByteBuffer;)V
+.method public getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
 
-    const/16 v0, 0x31
+    iget-boolean v0, p0, Lef4;->a:Z
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lef4;->a:[B
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
 
-    array-length v0, v0
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    invoke-static {v0, p1}, Lepi;->b(ILjava/nio/ByteBuffer;)I
+    if-nez p2, :cond_0
 
-    iget-object v0, p0, Lef4;->a:[B
+    move-object p1, p0
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    check-cast p1, Lt1g;
 
-    return-void
-.end method
+    iget p2, p1, Lt1g;->s0:I
 
-.method public final h(Ljava/nio/ByteBuffer;)V
-    .locals 2
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lepi;->g(Ljava/nio/ByteBuffer;)I
+    iget-object p1, p1, Lt1g;->t0:Landroid/view/LayoutInflater;
 
-    move-result v0
+    invoke-virtual {p1, p2, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    const/16 v1, 0x31
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lepi;->g(Ljava/nio/ByteBuffer;)I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lef4;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    return-void
+    move-result-object p2
 
     :cond_0
-    const/16 v1, 0x30
+    iget-object p1, p0, Lef4;->c:Landroid/database/Cursor;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {p0, p2, p1}, Lef4;->a(Landroid/view/View;Landroid/database/Cursor;)V
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    return-object p2
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final getFilter()Landroid/widget/Filter;
+    .locals 1
+
+    iget-object v0, p0, Lef4;->Y:Lff4;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lff4;
+
+    invoke-direct {v0}, Landroid/widget/Filter;-><init>()V
+
+    iput-object p0, v0, Lff4;->a:Lef4;
+
+    iput-object v0, p0, Lef4;->Y:Lff4;
+
+    :cond_0
+    iget-object v0, p0, Lef4;->Y:Lff4;
+
+    return-object v0
+.end method
+
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-boolean v0, p0, Lef4;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    iget-object p1, p0, Lef4;->c:Landroid/database/Cursor;
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final getItemId(I)J
+    .locals 3
+
+    iget-boolean v0, p0, Lef4;->a:Z
+
+    const-wide/16 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lef4;->c:Landroid/database/Cursor;
+
+    iget v0, p0, Lef4;->d:I
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    return-wide v1
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 1
+
+    iget-boolean v0, p0, Lef4;->a:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lef4;->c:Landroid/database/Cursor;
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
     move-result v0
 
-    new-array v0, v0, [B
+    if-eqz v0, :cond_1
 
-    iput-object v0, p0, Lef4;->a:[B
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p3}, Lef4;->d(Landroid/view/ViewGroup;)Landroid/view/View;
 
-    return-void
+    move-result-object p2
+
+    :cond_0
+    iget-object p1, p0, Lef4;->c:Landroid/database/Cursor;
+
+    invoke-virtual {p0, p2, p1}, Lef4;->a(Landroid/view/View;Landroid/database/Cursor;)V
+
+    return-object p2
 
     :cond_1
-    new-instance p1, Ltech/kwik/core/impl/ImplementationError;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p1}, Ltech/kwik/core/impl/ImplementationError;-><init>()V
+    const-string p3, "couldn\'t move cursor to position "
+
+    invoke-static {p1, p3}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "this should only be called when the cursor is valid"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lef4;->a:[B
-
-    invoke-static {v0}, Luwi;->a([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "DatagramFrame ["
-
-    const-string v2, "]"
-
-    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

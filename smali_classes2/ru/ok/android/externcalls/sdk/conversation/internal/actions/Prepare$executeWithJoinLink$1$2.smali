@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltm6;
+.implements Ldr6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Le2f;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lbdf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Ltm6;"
+        "Ldr6;"
     }
 .end annotation
 
@@ -35,9 +35,9 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "it",
-        "Lajb;",
+        "Lrpb;",
         "apply",
-        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lajb;",
+        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lrpb;",
         "<anonymous>"
     }
     k = 0x3
@@ -83,34 +83,34 @@
 
 
 # virtual methods
-.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lajb;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
-            ")",
-            "Lajb;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lajb;
-
-    invoke-direct {v0, p1}, Lajb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-
-    return-object v0
-.end method
-
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 2
     check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lajb;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lrpb;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lrpb;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
+            ")",
+            "Lrpb;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lrpb;
+
+    invoke-direct {v0, p1}, Lrpb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+
+    return-object v0
 .end method

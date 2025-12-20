@@ -1,129 +1,107 @@
 .class public final Lvmc;
-.super Ldtf;
+.super Lkm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# static fields
+.field public static final b:Lvmc;
 
-# instance fields
-.field public final synthetic X:Lpnc;
+.field public static final c:Lgm4;
 
-.field public o:I
+.field public static final d:Lgm4;
+
+.field public static final e:Lgm4;
+
+.field public static final f:Lgm4;
+
+.field public static final g:Lgm4;
 
 
 # direct methods
-.method public constructor <init>(Lpnc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lvmc;->X:Lpnc;
+    new-instance v0, Lvmc;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Lkm4;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lvmc;->b:Lvmc;
+
+    const-string v1, "id"
+
+    const-string v2, "type"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, ":profile/edit"
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0xe
+
+    invoke-static {v0, v4, v3, v5, v6}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v3
+
+    sput-object v3, Lvmc;->c:Lgm4;
+
+    const-string v3, ":profile/member_permissions"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v3, v4, v5, v6}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v3
+
+    sput-object v3, Lvmc;->d:Lgm4;
+
+    const-string v3, "flow"
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":profile/edit/link"
+
+    invoke-static {v0, v3, v2, v5, v6}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v2
+
+    sput-object v2, Lvmc;->e:Lgm4;
+
+    const-string v2, "contact_id"
+
+    const-string v3, "permissions_type"
+
+    const-string v4, "chat_id"
+
+    filled-new-array {v4, v2, v3}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":profile/edit/admin_permission"
+
+    invoke-static {v0, v3, v2, v5, v6}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v2
+
+    sput-object v2, Lvmc;->f:Lgm4;
+
+    const-string v2, ":profile/edit/reactions"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1, v5, v6}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v0
+
+    sput-object v0, Lvmc;->g:Lgm4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvmc;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lvmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lvmc;
-
-    iget-object v0, p0, Lvmc;->X:Lpnc;
-
-    invoke-direct {p1, v0, p2}, Lvmc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lvmc;->o:I
-
-    iget-object v1, p0, Lvmc;->X:Lpnc;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v1, Lpnc;->T0:Lyac;
-
-    iput v2, p0, Lvmc;->o:I
-
-    invoke-virtual {p1, p0}, Lyac;->n(Ldtf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lpb2;
-
-    sget-object v0, Lqqg;->a:Lqqg;
-
-    if-nez p1, :cond_3
-
-    return-object v0
-
-    :cond_3
-    iget-object v1, v1, Lpnc;->F0:Lci5;
-
-    new-instance v2, Lokc;
-
-    iget-wide v3, p1, Lpb2;->a:J
-
-    invoke-direct {v2, v3, v4}, Lokc;-><init>(J)V
-
-    invoke-static {v1, v2}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    return-object v0
 .end method

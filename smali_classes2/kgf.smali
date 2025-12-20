@@ -2,94 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmgf;
+
 
 # instance fields
-.field public final a:Lq9b;
+.field public final a:Lcm8;
 
 
 # direct methods
-.method public constructor <init>(Lq9b;)V
+.method public constructor <init>(Lcm8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkgf;->a:Lq9b;
+    iput-object p1, p0, Lkgf;->a:Lcm8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([J)Lwr8;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lkgf;->a:Lq9b;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lq9b;->w()Lwk3;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    new-instance v1, Lvef;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Lvef;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Le2f;->h(Ltm6;)Lm2f;
-
-    move-result-object v0
-
-    new-instance v1, Lu4e;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v1, v2, p1}, Lu4e;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lwr8;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v0, v1, v2}, Lwr8;-><init>(Ljava/lang/Object;Ltm6;I)V
-
-    new-instance v0, Lvef;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lvef;-><init>(I)V
-
-    new-instance v1, Lvr8;
+    :cond_0
+    instance-of v1, p1, Lkgf;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v0, v2}, Lvr8;-><init>(Ljava/lang/Object;Ltm6;I)V
+    if-nez v1, :cond_1
 
-    new-instance p1, Lvef;
+    return v2
 
-    const/16 v0, 0x9
+    :cond_1
+    check-cast p1, Lkgf;
 
-    invoke-direct {p1, v0}, Lvef;-><init>(I)V
+    iget-object v1, p0, Lkgf;->a:Lcm8;
 
-    new-instance v0, Lora;
+    iget-object p1, p1, Lkgf;->a:Lcm8;
 
-    const/4 v2, 0x5
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1, p1, v2}, Lora;-><init>(Lvqa;Ltm6;I)V
+    move-result p1
 
-    invoke-virtual {v0}, Lvqa;->s()Lzqa;
+    if-nez p1, :cond_2
 
-    move-result-object p1
+    return v2
 
-    new-instance v0, Lvef;
+    :cond_2
+    return v0
+.end method
 
-    const/16 v1, 0xa
+.method public final hashCode()I
+    .locals 1
 
-    invoke-direct {v0, v1}, Lvef;-><init>(I)V
+    iget-object v0, p0, Lkgf;->a:Lcm8;
 
-    new-instance v1, Lwr8;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/4 v2, 0x1
+    move-result v0
 
-    invoke-direct {v1, p1, v0, v2}, Lwr8;-><init>(Ljava/lang/Object;Ltm6;I)V
+    return v0
+.end method
 
-    return-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Error(error="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkgf;->a:Lcm8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

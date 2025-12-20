@@ -1,104 +1,58 @@
-.class public final Ltd5;
+.class public final synthetic Ltd5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd5;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lfff;
+.field public final synthetic a:Lorg/webrtc/EglRenderer;
+
+.field public final synthetic b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+.field public final synthetic c:Lorg/webrtc/EglRenderer$FrameListener;
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Lfff;)V
+.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltd5;->a:Lfff;
+    iput-object p1, p0, Ltd5;->a:Lorg/webrtc/EglRenderer;
+
+    iput-object p2, p0, Ltd5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+    iput-object p3, p0, Ltd5;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    iput p4, p0, Ltd5;->d:F
+
+    iput-boolean p5, p0, Ltd5;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Ltd5;->d:F
 
-    if-ne p0, p1, :cond_0
+    iget-boolean v1, p0, Ltd5;->o:Z
 
-    return v0
+    iget-object v2, p0, Ltd5;->a:Lorg/webrtc/EglRenderer;
 
-    :cond_0
-    instance-of v1, p1, Ltd5;
+    iget-object v3, p0, Ltd5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-    const/4 v2, 0x0
+    iget-object v4, p0, Ltd5;->c:Lorg/webrtc/EglRenderer$FrameListener;
 
-    if-nez v1, :cond_1
+    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->e(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ltd5;
-
-    iget-object v1, p0, Ltd5;->a:Lfff;
-
-    iget-object p1, p1, Ltd5;->a:Lfff;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ltd5;->a:Lfff;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Lfff;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "EmptyDialog(sticker="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltd5;->a:Lfff;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

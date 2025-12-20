@@ -1,112 +1,68 @@
 .class public final La24;
-.super Ldtf;
+.super Ladf;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# virtual methods
+.method public final F(Lo14;)V
+    .locals 5
 
-# instance fields
-.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-.field public synthetic o:Ljava/lang/Object;
+    check-cast v0, Le7b;
 
+    iget-wide v1, p1, Lo14;->a:J
 
-# direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    iput-object p1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    move-result v3
 
-    const/4 p1, 0x2
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v3, p1, Lo14;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v3}, Le7b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v3, p1, Lo14;->o:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v3}, Le7b;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v3, p1, Lo14;->s0:Z
+
+    invoke-virtual {v0, v3}, Le7b;->setVerified(Z)V
+
+    invoke-virtual {v0}, Le7b;->f()V
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Le7b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v4, p1, Lo14;->t0:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lo14;->Y:Landroid/net/Uri;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_0
+    invoke-virtual {v0, v1, v2, v4, v3}, Le7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Le7b;->setSelectionEnabled(Z)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final bridge synthetic z(Lie8;)V
     .locals 0
 
-    check-cast p1, Ljava/util/Set;
+    check-cast p1, Lo14;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, La24;->F(Lo14;)V
 
-    invoke-virtual {p0, p1, p2}, La24;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, La24;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, La24;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, La24;
-
-    iget-object v1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-direct {v0, v1, p2}, La24;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, La24;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, La24;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    sget v2, Lk1b;->F:I
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v2, Ljava/lang/Integer;
-
-    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

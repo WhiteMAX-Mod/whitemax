@@ -1,137 +1,78 @@
-.class public final synthetic Lvn8;
-.super Ljava/lang/Object;
+.class public final Lvn8;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lgu3;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Lyn8;
-
-.field public final synthetic c:J
-
-
-# direct methods
-.method public synthetic constructor <init>(ZLyn8;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lvn8;->a:Z
-
-    iput-object p2, p0, Lvn8;->b:Lyn8;
-
-    iput-wide p3, p0, Lvn8;->c:J
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Ljava/util/Map;
+    check-cast p1, Ljava/io/File;
 
-    iget-boolean v0, p0, Lvn8;->a:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lvn8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lco8;->a:Lco8;
+    move-result-object p1
 
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lvn8;
 
-    move-result-object v1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    check-cast v1, Lxo0;
+    invoke-virtual {p1, p2}, Lvn8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    sget-object v1, Lco8;->c:Lco8;
+    return-object p1
+.end method
 
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Lvn8;
 
-    check-cast v1, Lxo0;
+    const/4 v1, 0x2
 
-    :goto_0
-    iget-object v2, p0, Lvn8;->b:Lyn8;
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget-object v2, v2, Lyn8;->e:Ljava/util/LinkedHashMap;
+    iput-object p1, v0, Lvn8;->o:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result-object v2
+    iget-object p1, p0, Lvn8;->o:Ljava/lang/Object;
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Ljava/io/File;
 
-    move-result v3
+    new-instance v0, Lb2e;
 
-    if-eqz v3, :cond_3
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v3
+    invoke-direct {v0, p1}, Lb2e;-><init>(Ljava/lang/String;)V
 
-    check-cast v3, Lxn8;
+    new-instance p1, Lkag;
 
-    iget-object v4, v3, Lxn8;->a:Lkp8;
+    const/4 v1, 0x0
 
-    iget-object v3, v3, Lxn8;->b:Lhp8;
+    invoke-direct {p1, v0, v1}, Lkag;-><init>(Lb2e;Lkotlin/coroutines/Continuation;)V
 
-    iget-wide v4, v4, Lkp8;->j:J
+    new-instance v0, Lt6e;
 
-    iget-wide v6, p0, Lvn8;->c:J
+    invoke-direct {v0, p1}, Lt6e;-><init>(Lcr6;)V
 
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_2
-
-    if-eqz v0, :cond_1
-
-    sget-object v4, Lco8;->b:Lco8;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxo0;
-
-    invoke-virtual {v3, v4}, Lhp8;->b(Lxo0;)V
-
-    goto :goto_2
-
-    :cond_1
-    sget-object v4, Lco8;->d:Lco8;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxo0;
-
-    invoke-virtual {v3, v4}, Lhp8;->b(Lxo0;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3, v1}, Lhp8;->b(Lxo0;)V
-
-    :goto_2
-    invoke-virtual {v3}, Lhp8;->d()V
-
-    goto :goto_1
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

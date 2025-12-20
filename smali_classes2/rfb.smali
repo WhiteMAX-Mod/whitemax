@@ -1,26 +1,21 @@
 .class public final Lrfb;
-.super Ljava/lang/Object;
+.super Lsfb;
 .source "SourceFile"
 
-# interfaces
-.implements Lufb;
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lem6;
+# static fields
+.field public static final a:Lrfb;
 
 
 # direct methods
-.method public constructor <init>(ILem6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrfb;
 
-    iput p1, p0, Lrfb;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrfb;->b:Lem6;
+    sput-object v0, Lrfb;->a:Lrfb;
 
     return-void
 .end method
@@ -28,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -37,37 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lrfb;
+    instance-of p1, p1, Lrfb;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lrfb;
-
-    iget p1, p1, Lrfb;->a:I
-
-    iget v1, p0, Lrfb;->a:I
-
-    if-ne v1, p1, :cond_2
-
     return v0
-
-    :cond_2
-    return v2
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lrfb;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
+    const v0, 0x77f7ff3c
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Themed"
+
+    return-object v0
 .end method

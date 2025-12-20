@@ -2,198 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:J
+.field public final b:Lp34;
 
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lq34;->a:I
+.method public constructor <init>(Ljava/lang/String;Lp34;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lq34;->a:Ljava/lang/String;
 
-.method public constructor <init>(Lq34;)V
-    .locals 2
+    iput-object p2, p0, Lq34;->b:Lp34;
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lq34;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iget-wide v0, p1, Lq34;->b:J
-
-    iput-wide v0, p0, Lq34;->b:J
-
-    .line 4
-    iget-object v0, p1, Lq34;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lq34;->c:Ljava/lang/String;
-
-    .line 5
-    iget-object v0, p1, Lq34;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lq34;->d:Ljava/lang/String;
-
-    .line 6
-    iget-object p1, p1, Lq34;->e:Ljava/lang/String;
-
-    iput-object p1, p0, Lq34;->e:Ljava/lang/String;
+    iput-object p3, p0, Lq34;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
+.method public final a()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lq34;->d:Ljava/lang/String;
+    sget-object v0, Lp34;->b:Lp34;
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lq34;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    iget-object v2, p0, Lq34;->b:Lp34;
 
-    move-result v1
+    if-eq v2, v0, :cond_0
 
-    if-nez v1, :cond_0
+    sget-object v0, Lp34;->a:Lp34;
 
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "image/"
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "djvu"
-
-    invoke-static {v0, v1, v2}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
-
-    :goto_1
-    return v2
-.end method
-
-.method public b()Z
-    .locals 3
-
-    iget-object v0, p0, Lq34;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    if-ne v2, v0, :cond_1
 
     :cond_0
-    const-string v1, "video/"
+    iget-object v0, p0, Lq34;->c:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    invoke-static {v0}, Ltri;->g(Ljava/lang/CharSequence;)Z
 
-    invoke-static {v0, v1, v2}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
+    move-result v2
 
-    move-result v0
+    if-eqz v2, :cond_1
 
-    if-eqz v0, :cond_1
+    const-string v2, " "
 
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
-
-    :goto_1
-    return v2
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 7
-
-    iget v0, p0, Lq34;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lzy4;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    :pswitch_0
-    iget-wide v0, p0, Lq34;->b:J
+    :cond_1
+    return-object v1
+.end method
 
-    iget-object v2, p0, Lq34;->c:Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v3, p0, Lq34;->d:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lq34;->e:Ljava/lang/String;
+    const-string v1, "{firstName=\'"
 
-    const-string v5, "ContentUriParams{contentLength="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v6, ", contentName=\'"
-
-    invoke-static {v5, v0, v1, v6, v2}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\', mimeType=\'"
-
-    const-string v2, "\', path=\'"
-
-    invoke-static {v0, v1, v3, v2, v4}, Lho7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "\'}"
+    iget-object v1, p0, Lq34;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "\', type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lq34;->b:Lp34;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', lastName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    iget-object v2, p0, Lq34;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

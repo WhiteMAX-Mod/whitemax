@@ -1,64 +1,58 @@
-.class public final Lvdd;
+.class public abstract Lvdd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lxdd;
 
 
 # static fields
-.field public static final a:Lvdd;
+.field public static oneme_settings_storage_action_one_month:I = 0x7f130a09
 
+.field public static oneme_settings_storage_action_one_week:I = 0x7f130a0a
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_settings_storage_action_six_month:I = 0x7f130a0b
 
-    new-instance v0, Lvdd;
+.field public static oneme_settings_storage_action_unlimited:I = 0x7f130a0c
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_storage_audio_messages:I = 0x7f130a0d
 
-    sput-object v0, Lvdd;->a:Lvdd;
+.field public static oneme_settings_storage_clear_cache:I = 0x7f130a0e
 
-    return-void
-.end method
+.field public static oneme_settings_storage_clear_cache_dialog_action_clear:I = 0x7f130a0f
 
+.field public static oneme_settings_storage_clear_cache_dialog_all_title:I = 0x7f130a10
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_settings_storage_clear_cache_dialog_audio_title:I = 0x7f130a11
 
-    const/4 v0, 0x1
+.field public static oneme_settings_storage_clear_cache_dialog_desc:I = 0x7f130a12
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_settings_storage_clear_cache_dialog_files_title:I = 0x7f130a13
 
-    return v0
+.field public static oneme_settings_storage_clear_cache_dialog_gif_title:I = 0x7f130a14
 
-    :cond_0
-    instance-of p1, p1, Lvdd;
+.field public static oneme_settings_storage_clear_cache_dialog_images_title:I = 0x7f130a15
 
-    if-nez p1, :cond_1
+.field public static oneme_settings_storage_clear_cache_dialog_music_title:I = 0x7f130a16
 
-    const/4 p1, 0x0
+.field public static oneme_settings_storage_clear_cache_dialog_stickers_title:I = 0x7f130a17
 
-    return p1
+.field public static oneme_settings_storage_clear_cache_dialog_video_title:I = 0x7f130a18
 
-    :cond_1
-    return v0
-.end method
+.field public static oneme_settings_storage_clear_cache_success_snackbar:I = 0x7f130a19
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_settings_storage_files:I = 0x7f130a1a
 
-    const v0, -0x310be90a
+.field public static oneme_settings_storage_gif:I = 0x7f130a1b
 
-    return v0
-.end method
+.field public static oneme_settings_storage_images:I = 0x7f130a1c
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static oneme_settings_storage_music:I = 0x7f130a1d
 
-    const-string v0, "PauseWithoutResume"
+.field public static oneme_settings_storage_screen_data_section:I = 0x7f130a1e
 
-    return-object v0
-.end method
+.field public static oneme_settings_storage_screen_preserve_media_cache_desc:I = 0x7f130a1f
+
+.field public static oneme_settings_storage_screen_preserve_media_cache_title:I = 0x7f130a20
+
+.field public static oneme_settings_storage_screen_toolbar_title:I = 0x7f130a21
+
+.field public static oneme_settings_storage_stickers:I = 0x7f130a22
+
+.field public static oneme_settings_storage_video:I = 0x7f130a23

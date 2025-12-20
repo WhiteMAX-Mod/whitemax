@@ -3,74 +3,129 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmi4;
+.implements Loq6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
+.field public final synthetic b:Liw5;
 
-.field public final synthetic a:Landroid/net/Uri;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:J
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+.method public synthetic constructor <init>(Liw5;Ljava/util/List;I)V
     .locals 0
 
+    iput p3, p0, Lgw5;->a:I
+
+    iput-object p1, p0, Lgw5;->b:Liw5;
+
+    iput-object p2, p0, Lgw5;->c:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgw5;->a:Landroid/net/Uri;
-
-    iput-wide p2, p0, Lgw5;->b:J
-
-    iput-wide p4, p0, Lgw5;->c:J
-
-    iput-object p6, p0, Lgw5;->d:Ljava/lang/String;
-
-    iput-wide p7, p0, Lgw5;->o:J
-
-    iput-object p9, p0, Lgw5;->X:Ljava/lang/String;
-
-    iput-wide p10, p0, Lgw5;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lgw5;->a:Landroid/net/Uri;
+    iget v0, p0, Lgw5;->a:I
 
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    check-cast p1, Lj6e;
 
-    move-result-object v10
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;
+    iget-object p1, p0, Lgw5;->b:Liw5;
 
-    iget-wide v2, p0, Lgw5;->b:J
+    iget-object v0, p1, Liw5;->a:Le1e;
 
-    iget-wide v4, p0, Lgw5;->c:J
+    new-instance v1, Lj75;
 
-    iget-object v6, p0, Lgw5;->d:Ljava/lang/String;
+    const/4 v2, 0x7
 
-    iget-wide v7, p0, Lgw5;->o:J
+    invoke-direct {v1, v2}, Lj75;-><init>(I)V
 
-    iget-object v9, p0, Lgw5;->X:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iget-wide v11, p0, Lgw5;->Y:J
+    const/4 v3, 0x1
 
-    invoke-direct/range {v1 .. v12}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;-><init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v0, v2, v3, v1}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
 
-    return-object v1
+    const-wide/16 v4, 0x0
+
+    iget-object v1, p0, Lgw5;->c:Ljava/util/List;
+
+    invoke-static {v4, v5, v1}, Liw5;->b(JLjava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v4, Lew5;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p1, v1, v5}, Lew5;-><init>(Liw5;Ljava/util/ArrayList;I)V
+
+    invoke-static {v0, v2, v3, v4}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
+
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Lgw5;->b:Liw5;
+
+    iget-object v0, p1, Liw5;->a:Le1e;
+
+    new-instance v1, Lj75;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, v2}, Lj75;-><init>(I)V
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, v3, v1}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    int-to-long v1, v1
+
+    iget-object v3, p0, Lgw5;->c:Ljava/util/List;
+
+    invoke-static {v1, v2, v3}, Liw5;->b(JLjava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v2, Lew5;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p1, v1, v3}, Lew5;-><init>(Liw5;Ljava/util/ArrayList;I)V
+
+    invoke-static {v0, v2}, Lqmj;->a(Le1e;Loq6;)Lvn3;
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

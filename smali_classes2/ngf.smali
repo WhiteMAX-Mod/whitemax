@@ -1,123 +1,73 @@
-.class public final Lngf;
-.super Ll0g;
+.class public final synthetic Lngf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loq6;
 
 
 # instance fields
-.field public c:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public d:J
+.field public final synthetic b:Lugf;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ltm9;)V
+.method public synthetic constructor <init>(Lugf;II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
+    iput p3, p0, Lngf;->a:I
+
+    iput-object p1, p0, Lngf;->b:Lugf;
+
+    iput p2, p0, Lngf;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lngf;->a:I
 
-    const-string v0, "marker"
+    check-cast p1, Lwq7;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lngf;->b:Lugf;
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "stickers"
+    iget v0, p0, Lngf;->c:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ltm9;->v()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lefi;->f(Ltm9;)I
-
-    move-result p2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lngf;->c:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
+    invoke-static {p1, v0}, Lugf;->a(Lwq7;I)V
 
     :goto_0
-    if-ge v0, p2, :cond_1
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    iget-object v1, p0, Lngf;->c:Ljava/util/ArrayList;
+    return-object p1
 
-    invoke-virtual {p1}, Ltm9;->t0()J
+    :pswitch_0
+    iget-object v0, p0, Lngf;->b:Lugf;
 
-    move-result-wide v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget v0, p0, Lngf;->c:I
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {p1, v0}, Lugf;->a(Lwq7;I)V
 
     goto :goto_0
 
-    :cond_1
-    return-void
+    nop
 
-    :cond_2
-    invoke-virtual {p1}, Ltm9;->t0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lngf;->d:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lngf;->c:Ljava/util/ArrayList;
-
-    iget-wide v1, p0, Lngf;->d:J
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{stickerIds="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", marker="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

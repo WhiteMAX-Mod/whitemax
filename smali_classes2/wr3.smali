@@ -2,113 +2,70 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltr3;
-
 
 # instance fields
-.field public final synthetic a:Lur3;
+.field public final a:Lh6f;
 
-.field public final synthetic b:Ll42;
-
-.field public final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lur3;Ll42;Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method public constructor <init>(Ld68;Lbbg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwr3;->a:Lur3;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lwr3;->b:Ll42;
+    const/4 v1, 0x7
 
-    iput-object p3, p0, Lwr3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwr3;->a:Lh6f;
+
+    check-cast p2, Lb9b;
+
+    invoke-virtual {p2}, Lb9b;->a()Ltb4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lwr3;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljy0;
+
+    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final onEvent(Lrr3;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
 
-    iget-object v0, p0, Lwr3;->a:Lur3;
+    new-instance p1, Lvr3;
 
-    invoke-interface {v0}, Lur3;->f()Z
+    const/4 v0, 0x0
 
-    move-result v1
+    invoke-direct {p1, p0, v0}, Lvr3;-><init>(Lwr3;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x3
 
-    invoke-interface {v0, p0}, Lur3;->e(Ltr3;)V
+    iget-object v2, p0, Lwr3;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v0, p0, Lwr3;->b:Ll42;
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    invoke-virtual {v0}, Ll42;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lwr3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 4
-
-    iget-object v0, p0, Lwr3;->a:Lur3;
-
-    invoke-interface {v0}, Lur3;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, p0}, Lur3;->e(Ltr3;)V
-
-    iget-object v0, p0, Lwr3;->b:Ll42;
-
-    invoke-virtual {v0}, Ll42;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lwr3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
     return-void
 .end method

@@ -3,9 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzy7;
-
-
-# virtual methods
-.method public abstract c()[Lzy7;
-.end method
+.implements Lhr6;

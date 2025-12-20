@@ -2,22 +2,55 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ls00;
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lbkb;
 
 
 # direct methods
-.method public constructor <init>(JLs00;)V
+.method public synthetic constructor <init>(Lbkb;I)V
     .locals 0
+
+    iput p2, p0, Lakb;->a:I
+
+    iput-object p1, p0, Lakb;->b:Lbkb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lakb;->a:Ls00;
+    return-void
+.end method
 
-    iput-wide p1, p0, Lakb;->b:J
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lakb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lakb;->b:Lbkb;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lakb;->b:Lbkb;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

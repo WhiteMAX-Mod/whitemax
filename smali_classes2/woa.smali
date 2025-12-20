@@ -1,82 +1,132 @@
 .class public final Lwoa;
-.super Ldtf;
+.super Ljava/io/Writer;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
-
-# instance fields
-.field public final synthetic X:Lcpa;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lwoa;
 
 
 # direct methods
-.method public constructor <init>(Lcpa;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lwoa;->X:Lcpa;
+    new-instance v0, Lwoa;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/io/Writer;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lwoa;->a:Lwoa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final append(C)Ljava/io/Writer;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwoa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwoa;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lwoa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    .line 4
+    return-object p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+    .locals 0
 
-    new-instance v0, Lwoa;
+    .line 5
+    return-object p0
+.end method
 
-    iget-object v1, p0, Lwoa;->X:Lcpa;
+.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+    .locals 0
 
-    invoke-direct {v0, v1, p2}, Lwoa;-><init>(Lcpa;Lkotlin/coroutines/Continuation;)V
+    .line 6
+    return-object p0
+.end method
 
-    iput-object p1, v0, Lwoa;->o:Ljava/lang/Object;
+.method public final append(C)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 1
+    return-object p0
+.end method
+
+.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 2
+    return-object p0
+.end method
+
+.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 3
+    return-object p0
+.end method
+
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final flush()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-class v0, Lwoa;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final write(I)V
+    .locals 0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    .line 1
+    return-void
+.end method
 
-    iget-object p1, p0, Lwoa;->o:Ljava/lang/Object;
+.method public final write(Ljava/lang/String;)V
+    .locals 0
 
-    check-cast p1, Ljava/util/List;
+    .line 4
+    return-void
+.end method
 
-    iget-object v0, p0, Lwoa;->X:Lcpa;
+.method public final write(Ljava/lang/String;II)V
+    .locals 0
 
-    iget-object v0, v0, Lcpa;->Z:Ltcf;
+    .line 5
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Ltcf;->setValue(Ljava/lang/Object;)V
+.method public final write([C)V
+    .locals 0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    .line 2
+    return-void
+.end method
 
-    return-object p1
+.method public final write([CII)V
+    .locals 0
+
+    .line 3
+    return-void
 .end method

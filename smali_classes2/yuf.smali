@@ -1,193 +1,265 @@
 .class public final Lyuf;
-.super Lh54;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final d:Lar8;
+.field public final synthetic X:Lavf;
 
-.field public final o:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lavf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lyuf;->X:Lavf;
 
-    .line 1
-    invoke-direct {p0, v0}, Lyuf;-><init>(I)V
+    const/4 p1, 0x2
 
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    .line 2
-    new-instance p1, Lar8;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lar8;-><init>(I)V
-
-    .line 3
-    invoke-direct {p0}, Lh54;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lyuf;->d:Lar8;
-
-    .line 5
-    const-class p1, Lyuf;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 6
-    iput-object p1, p0, Lyuf;->o:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyuf;->d:Lar8;
+    check-cast p1, Llvg;
 
-    invoke-virtual {v0}, Lih;->a()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lyuf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lyuf;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lyuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final f(Lh54;Lc54;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lyuf;->d:Lar8;
+    new-instance v0, Lyuf;
 
-    invoke-virtual {v0, p1, p2}, Lih;->f(Lh54;Lc54;)V
+    iget-object v1, p0, Lyuf;->X:Lavf;
 
-    return-void
+    invoke-direct {v0, v1, p2}, Lyuf;-><init>(Lavf;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lyuf;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf54;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 12
 
-    sget-object v0, Llg8;->d:Llg8;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Lyuf;->o:Ljava/lang/Object;
 
-    if-nez p2, :cond_2
+    check-cast p1, Llvg;
 
-    if-nez p4, :cond_2
+    iget-object v0, p1, Llvg;->a:Ljava/lang/Object;
 
-    iget-object p1, p0, Lyuf;->o:Ljava/lang/String;
+    check-cast v0, Ljava/util/List;
 
-    sget-object p2, Lwqi;->a:Ll6b;
+    iget-object v1, p1, Llvg;->b:Ljava/lang/Object;
 
-    if-nez p2, :cond_0
+    check-cast v1, Lytf;
 
-    goto :goto_0
+    iget-object p1, p1, Llvg;->c:Ljava/lang/Object;
 
-    :cond_0
-    invoke-virtual {p2, v0}, Ll6b;->b(Llg8;)Z
+    check-cast p1, Ljava/util/List;
 
-    move-result p3
+    iget-object v2, p0, Lyuf;->X:Lavf;
 
-    if-eqz p3, :cond_1
+    const-class v3, Lavf;
 
-    const-string p3, "Already swiped controller manually, skip performChange"
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {p2, v0, p1, p3, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v3
 
-    :cond_1
-    :goto_0
-    invoke-virtual/range {p5 .. p5}, Lf54;->d()V
+    sget-object v4, Lm4j;->a:Lvcb;
 
-    return-void
+    const/4 v5, 0x1
 
-    :cond_2
-    if-nez p2, :cond_5
+    const/4 v6, 0x0
 
-    if-eqz p4, :cond_5
-
-    iget-object v2, p0, Lyuf;->o:Ljava/lang/String;
-
-    sget-object v3, Lwqi;->a:Ll6b;
-
-    if-nez v3, :cond_3
+    if-nez v4, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    sget-object v7, Lxk8;->d:Lxk8;
+
+    invoke-virtual {v4, v7}, Lvcb;->b(Lxk8;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v9, Lbuf;->k:Lytf;
+
+    if-ne v1, v9, :cond_1
+
+    move v9, v5
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v9, 0x0
+
+    :goto_0
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    const-string v11, "Showcase content. Sets size from sections:"
+
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", search in initial:"
+
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v7, v3, v8, v6}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lbuf;->k:Lytf;
+
+    if-ne v1, v3, :cond_4
+
+    invoke-static {v0, p1}, Lavf;->t(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget-object p1, Ly9f;->c:Ly9f;
+
+    goto :goto_6
+
     :cond_3
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    new-instance v0, Ly9f;
 
-    move-result v4
+    const/4 v1, 0x2
 
-    if-eqz v4, :cond_4
+    invoke-direct {v0, v1, p1}, Ly9f;-><init>(ILjava/util/List;)V
 
-    const-string v4, "Showing controller without animation"
+    move-object p1, v0
 
-    invoke-virtual {v3, v0, v2, v4, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_6
 
     :cond_4
-    :goto_1
-    new-instance v5, Lc2f;
+    iget-boolean v0, v1, Lytf;->b:Z
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_5
 
-    invoke-direct {v5, v0}, Lc2f;-><init>(Z)V
+    iget-object p1, v2, Lavf;->u0:Lhof;
 
-    move-object v6, p1
+    invoke-virtual {p1}, Lhof;->getValue()Ljava/lang/Object;
 
-    move-object v7, p2
+    move-result-object p1
 
-    move-object v8, p3
+    check-cast p1, Ly9f;
 
-    move/from16 v9, p4
+    iget-object v0, p1, Ly9f;->b:Ljava/util/List;
 
-    move-object/from16 v10, p5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual/range {v5 .. v10}, Lc2f;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf54;)V
+    new-instance p1, Ly9f;
 
-    return-void
+    invoke-direct {p1, v5, v0}, Ly9f;-><init>(ILjava/util/List;)V
+
+    goto :goto_6
 
     :cond_5
-    iget-object v6, p0, Lyuf;->d:Lar8;
+    sget-object v0, Lch5;->a:Lch5;
 
-    move-object v7, p1
+    iget-object v3, v1, Lytf;->a:Ljava/util/List;
 
-    move-object v8, p2
+    const/4 v4, 0x4
 
-    move-object v9, p3
+    if-eqz v3, :cond_7
 
-    move/from16 v10, p4
+    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
 
-    move-object/from16 v11, p5
+    move-result v3
 
-    invoke-virtual/range {v6 .. v11}, Lih;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf54;)V
+    if-eqz v3, :cond_6
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final h(Landroid/os/Bundle;)V
-    .locals 1
+    :cond_6
+    const/4 v3, 0x3
 
-    iget-object v0, p0, Lyuf;->d:Lar8;
+    goto :goto_3
 
-    invoke-virtual {v0, p1}, Lih;->h(Landroid/os/Bundle;)V
+    :cond_7
+    :goto_2
+    move v3, v4
 
-    return-void
-.end method
+    :goto_3
+    if-ne v3, v4, :cond_8
 
-.method public final i(Landroid/os/Bundle;)V
-    .locals 1
+    goto :goto_5
 
-    iget-object v0, p0, Lyuf;->d:Lar8;
+    :cond_8
+    iget-object v1, v1, Lytf;->a:Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Lih;->i(Landroid/os/Bundle;)V
+    if-nez v1, :cond_9
 
-    return-void
+    goto :goto_4
+
+    :cond_9
+    move-object v0, v1
+
+    :goto_4
+    invoke-static {v0, p1}, Lavf;->t(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    :goto_5
+    new-instance p1, Ly9f;
+
+    invoke-direct {p1, v3, v0}, Ly9f;-><init>(ILjava/util/List;)V
+
+    :goto_6
+    iget-object v0, v2, Lavf;->u0:Lhof;
+
+    invoke-virtual {v0, v6, p1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

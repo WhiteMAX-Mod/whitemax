@@ -1,327 +1,296 @@
-.class public final enum Lrb2;
-.super Ljava/lang/Enum;
+.class public final Lrb2;
+.super Llqe;
 .source "SourceFile"
 
+# interfaces
+.implements Lgzb;
 
-# static fields
-.field public static final enum A0:Lrb2;
 
-.field public static final enum B0:Lrb2;
+# instance fields
+.field public final X:J
 
-.field public static final enum C0:Lrb2;
+.field public final Y:Ljava/lang/String;
 
-.field public static final enum D0:Lrb2;
+.field public Z:Lo58;
 
-.field public static final synthetic E0:[Lrb2;
+.field public final b:J
 
-.field public static final enum X:Lrb2;
+.field public final c:Ljava/lang/String;
 
-.field public static final enum Y:Lrb2;
+.field public final d:J
 
-.field public static final enum Z:Lrb2;
-
-.field public static final enum a:Lrb2;
-
-.field public static final enum b:Lrb2;
-
-.field public static final enum c:Lrb2;
-
-.field public static final enum d:Lrb2;
-
-.field public static final enum o:Lrb2;
-
-.field public static final enum s0:Lrb2;
-
-.field public static final enum t0:Lrb2;
-
-.field public static final enum u0:Lrb2;
-
-.field public static final enum v0:Lrb2;
-
-.field public static final enum w0:Lrb2;
-
-.field public static final enum x0:Lrb2;
-
-.field public static final enum y0:Lrb2;
-
-.field public static final enum z0:Lrb2;
+.field public final o:Ld20;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 23
+.method public synthetic constructor <init>(JLjava/lang/String;JLd20;)V
+    .locals 9
 
-    new-instance v1, Lrb2;
+    .line 1
+    invoke-static {p3}, Lzoj;->d(Ljava/lang/String;)J
 
-    const-string v0, "ADD_TO_FOLDER"
+    move-result-wide v7
 
-    const/4 v2, 0x0
+    move-object v0, p0
 
-    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-wide v1, p1
 
-    sput-object v1, Lrb2;->a:Lrb2;
+    move-object v3, p3
 
-    new-instance v2, Lrb2;
+    move-wide v4, p4
 
-    const-string v0, "REMOVE_FROM_FOLDER"
+    move-object v6, p6
 
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lrb2;
-
-    const-string v0, "ADD_FAVORITE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lrb2;->b:Lrb2;
-
-    new-instance v4, Lrb2;
-
-    const-string v0, "REMOVE_FAVORITE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lrb2;->c:Lrb2;
-
-    new-instance v5, Lrb2;
-
-    const-string v0, "MARK_AS_UNREAD"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lrb2;->d:Lrb2;
-
-    new-instance v6, Lrb2;
-
-    const-string v0, "MARK_AS_READ"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lrb2;->o:Lrb2;
-
-    new-instance v7, Lrb2;
-
-    const-string v0, "MUTE"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lrb2;->X:Lrb2;
-
-    new-instance v8, Lrb2;
-
-    const-string v0, "UNMUTE"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lrb2;->Y:Lrb2;
-
-    new-instance v9, Lrb2;
-
-    const-string v0, "LEAVE_CHAT"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lrb2;->Z:Lrb2;
-
-    new-instance v10, Lrb2;
-
-    const-string v0, "LEAVE_CHANNEL"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Lrb2;->s0:Lrb2;
-
-    new-instance v11, Lrb2;
-
-    const-string v0, "UNSUBSCRIBE_CHANNEL"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Lrb2;->t0:Lrb2;
-
-    new-instance v12, Lrb2;
-
-    const-string v0, "DELETE_CHANNEL"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Lrb2;->u0:Lrb2;
-
-    new-instance v13, Lrb2;
-
-    const-string v0, "DELETE_FOR_ALL"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v13, Lrb2;->v0:Lrb2;
-
-    new-instance v14, Lrb2;
-
-    const-string v0, "DELETE_CHAT"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v14, Lrb2;->w0:Lrb2;
-
-    new-instance v15, Lrb2;
-
-    const-string v0, "BLOCK"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xe
-
-    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v15, Lrb2;->x0:Lrb2;
-
-    new-instance v0, Lrb2;
-
-    const-string v1, "SELECT"
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lrb2;->y0:Lrb2;
-
-    new-instance v1, Lrb2;
-
-    const-string v2, "REPORT"
-
-    move-object/from16 v18, v0
-
-    const/16 v0, 0x10
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrb2;->z0:Lrb2;
-
-    new-instance v0, Lrb2;
-
-    const-string v2, "CLEAR_HISTORY"
-
-    move-object/from16 v19, v1
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lrb2;->A0:Lrb2;
-
-    new-instance v1, Lrb2;
-
-    const-string v2, "SUSPEND_BOT"
-
-    move-object/from16 v20, v0
-
-    const/16 v0, 0x12
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrb2;->B0:Lrb2;
-
-    new-instance v0, Lrb2;
-
-    const-string v2, "SUSPEND_AND_DELETE_BOT"
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lrb2;->C0:Lrb2;
-
-    new-instance v1, Lrb2;
-
-    const-string v2, "CLEAR_SAVED_MESSAGES"
-
-    move-object/from16 v22, v0
-
-    const/16 v0, 0x14
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrb2;->D0:Lrb2;
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v19
-
-    move-object/from16 v19, v21
-
-    move-object/from16 v21, v1
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v18, v20
-
-    move-object/from16 v20, v22
-
-    filled-new-array/range {v1 .. v21}, [Lrb2;
-
-    move-result-object v0
-
-    sput-object v0, Lrb2;->E0:[Lrb2;
+    .line 2
+    invoke-direct/range {v0 .. v8}, Lrb2;-><init>(JLjava/lang/String;JLd20;J)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrb2;
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;JLd20;J)V
+    .locals 0
 
-    const-class v0, Lrb2;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 4
+    iput-wide p1, p0, Lrb2;->b:J
 
-    move-result-object p0
+    .line 5
+    iput-object p3, p0, Lrb2;->c:Ljava/lang/String;
 
-    check-cast p0, Lrb2;
+    .line 6
+    iput-wide p4, p0, Lrb2;->d:J
 
-    return-object p0
+    .line 7
+    iput-object p6, p0, Lrb2;->o:Ld20;
+
+    .line 8
+    iput-wide p7, p0, Lrb2;->X:J
+
+    .line 9
+    const-class p1, Lrb2;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 10
+    iput-object p1, p0, Lrb2;->Y:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public static values()[Lrb2;
+
+# virtual methods
+.method public final c()I
     .locals 1
 
-    sget-object v0, Lrb2;->E0:[Lrb2;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final f()[B
+    .locals 4
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;-><init>()V
+
+    iget-wide v1, p0, Lrb2;->b:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->requestId:J
+
+    iget-object v1, p0, Lrb2;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const-string v1, ""
+
+    :cond_0
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->file:Ljava/lang/String;
+
+    iget-wide v1, p0, Lrb2;->d:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->chatId:J
+
+    iget-object v1, p0, Lrb2;->o:Ld20;
+
+    if-eqz v1, :cond_1
+
+    new-instance v2, Lru/ok/tamtam/nano/Tasks$Rect;
+
+    invoke-direct {v2}, Lru/ok/tamtam/nano/Tasks$Rect;-><init>()V
+
+    iget v3, v1, Ld20;->b:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v3, v1, Ld20;->c:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v3, v1, Ld20;->d:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v1, v1, Ld20;->e:F
+
+    iput v1, v2, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+
+    :cond_1
+    iget-wide v1, p0, Lrb2;->X:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->lastModified:J
+
+    invoke-static {v0}, Lsp9;->toByteArray(Lsp9;)[B
 
     move-result-object v0
 
-    check-cast v0, [Lrb2;
+    return-object v0
+.end method
+
+.method public final g()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lrb2;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lhzb;
+    .locals 1
+
+    sget-object v0, Lhzb;->M0:Lhzb;
 
     return-object v0
+.end method
+
+.method public final t()V
+    .locals 1
+
+    iget-object v0, p0, Lrb2;->Z:Lo58;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lrb2;->Z:Lo58;
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 6
+
+    const-string v5, ""
+
+    iget-object v0, p0, Lrb2;->c:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    move-object v1, v5
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :goto_0
+    new-instance v0, Lu6h;
+
+    iget-wide v2, p0, Lrb2;->X:J
+
+    sget-object v4, Lo8h;->o:Lo8h;
+
+    invoke-direct/range {v0 .. v5}, Lu6h;-><init>(Ljava/lang/String;JLo8h;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrb2;->Z:Lo58;
+
+    if-eqz v1, :cond_1
+
+    invoke-static {v1}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    :cond_1
+    iget-object v1, p0, Llqe;->a:Lmqe;
+
+    if-eqz v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_1
+    iget-object v1, v1, Lmqe;->u:Ld68;
+
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lt6h;
+
+    invoke-virtual {v1, v0}, Lt6h;->e(Lu6h;)Lcxa;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Llqe;->o()Lybg;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v1, Lzbg;
+
+    invoke-virtual {v1}, Lzbg;->a()Lqae;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcxa;->l(Lqae;)Lzya;
+
+    move-result-object v0
+
+    new-instance v1, Lclf;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v2, p0}, Lclf;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Ll5;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, v3, p0}, Ll5;-><init>(ILjava/lang/Object;)V
+
+    new-instance v3, Lo58;
+
+    sget-object v4, Lz7f;->f:Ltr6;
+
+    invoke-direct {v3, v1, v2, v4}, Lo58;-><init>(Lux3;Lux3;Ln6;)V
+
+    invoke-virtual {v0, v3}, Lcxa;->a(Lc0b;)V
+
+    iput-object v3, p0, Lrb2;->Z:Lo58;
+
+    return-void
 .end method

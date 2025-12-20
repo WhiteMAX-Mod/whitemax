@@ -1,131 +1,109 @@
-.class public final Leib;
-.super Lcda;
+.class public abstract Leib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Landroid/content/Intent;
+# static fields
+.field public static final a:I
 
-.field public final c:Landroid/net/Uri;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Landroid/net/Uri;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    sget v0, La9d;->oneme_settings_change_avatar_cancel:I
 
-    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
+    sput v0, Leib;->a:I
 
-    iput-object p1, p0, Leib;->b:Landroid/content/Intent;
+    sget v0, La9d;->oneme_settings_change_avatar_upload_from_camera:I
 
-    iput-object p2, p0, Leib;->c:Landroid/net/Uri;
+    sput v0, Leib;->b:I
+
+    sget v0, La9d;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Leib;->c:I
+
+    sget v0, La9d;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Leib;->d:I
+
+    sget v0, La9d;->oneme_settings_collapsingstoolbar:I
+
+    sput v0, Leib;->e:I
+
+    sget v0, La9d;->oneme_settings_container:I
+
+    sput v0, Leib;->f:I
+
+    sget v0, La9d;->oneme_settings_list_screen_appbar:I
+
+    sput v0, Leib;->g:I
+
+    sget v0, La9d;->oneme_settings_list_screen_pinned_toolbar:I
+
+    sput v0, Leib;->h:I
+
+    sget v0, La9d;->oneme_settings_toolbar:I
+
+    sput v0, Leib;->i:I
+
+    sget v0, La9d;->oneme_settings_topbar:I
+
+    sput v0, Leib;->j:I
+
+    sget v0, La9d;->oneme_settings_topbar_avatar:I
+
+    sput v0, Leib;->k:I
+
+    sget v0, La9d;->oneme_settings_topbar_container:I
+
+    sput v0, Leib;->l:I
+
+    sget v0, La9d;->oneme_settings_topbar_dotdivider:I
+
+    sput v0, Leib;->m:I
+
+    sget v0, La9d;->oneme_settings_topbar_name:I
+
+    sput v0, Leib;->n:I
+
+    sget v0, La9d;->oneme_settings_topbar_nick:I
+
+    sput v0, Leib;->o:I
+
+    sget v0, La9d;->oneme_settings_topbar_phone:I
+
+    sput v0, Leib;->p:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Leib;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Leib;
-
-    iget-object v1, p0, Leib;->b:Landroid/content/Intent;
-
-    iget-object v3, p1, Leib;->b:Landroid/content/Intent;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Leib;->c:Landroid/net/Uri;
-
-    iget-object p1, p1, Leib;->c:Landroid/net/Uri;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Leib;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Leib;->c:Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenFile(intent="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Leib;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uri="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Leib;->c:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

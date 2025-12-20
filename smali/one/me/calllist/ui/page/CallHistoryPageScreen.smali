@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lg44;
-.implements Lqq3;
-.implements Ls3e;
+.implements Lb84;
+.implements Lau3;
+.implements Lzde;
 
 
 # annotations
@@ -16,15 +16,15 @@
     d2 = {
         "Lone/me/calllist/ui/page/CallHistoryPageScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lg44;",
-        "Lqq3;",
-        "Ls3e;",
+        "Lb84;",
+        "Lau3;",
+        "Lzde;",
         "<init>",
         "()V",
-        "Lbb1;",
+        "Lgd1;",
         "type",
-        "(Lbb1;)V",
-        "v17",
+        "(Lgd1;)V",
+        "xna",
         "call-list_release"
     }
     k = 0x1
@@ -38,40 +38,40 @@
 
 
 # static fields
-.field public static final u0:Lv17;
+.field public static final u0:Lxna;
 
-.field public static final synthetic v0:[Lyy7;
+.field public static final synthetic v0:[Lp38;
 
 .field public static final w0:I
 
 
 # instance fields
-.field public final X:Lbbd;
+.field public final X:Ljkd;
 
-.field public final Y:Lbwf;
+.field public final Y:Lz7g;
 
 .field public final Z:Ljava/lang/Object;
 
-.field public final a:Lk18;
+.field public final a:Ld68;
 
-.field public final b:Lk18;
+.field public final b:Ld68;
 
 .field public final c:Ljava/lang/Object;
 
-.field public d:Locg;
+.field public d:Leog;
 
-.field public final o:Lund;
+.field public final o:Ljxd;
 
-.field public final s0:Lhs;
+.field public final s0:Lks;
 
-.field public t0:Lz34;
+.field public t0:Lv74;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Ltoc;
+    new-instance v0, Lgxc;
 
     const-class v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
@@ -81,21 +81,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lvid;->a:Lwid;
+    sget-object v2, Lfsd;->a:Lgsd;
 
     const-string v3, "typeArg"
 
     const-string v5, "getTypeArg()Ljava/lang/String;"
 
-    invoke-static {v2, v1, v3, v5}, Lu45;->h(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lz8a;
+    invoke-static {v2, v1, v3, v5}, Lzy4;->h(Lgsd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lifa;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lyy7;
+    new-array v2, v2, [Lp38;
 
     aput-object v0, v2, v4
 
@@ -103,15 +103,15 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lyy7;
+    sput-object v2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lp38;
 
-    new-instance v1, Lv17;
+    new-instance v1, Lxna;
 
     const/16 v2, 0xf
 
-    invoke-direct {v1, v2, v4}, Lv17;-><init>(IB)V
+    invoke-direct {v1, v2}, Lxna;-><init>(I)V
 
-    sput-object v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lv17;
+    sput-object v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lxna;
 
     sput v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->w0:I
 
@@ -128,54 +128,54 @@
     const/4 v2, 0x3
 
     .line 1
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILro4;)V
 
     .line 2
     const-string v1, "call_history_scope_id"
 
     .line 3
-    const-class v3, Lza1;
+    const-class v3, Lfd1;
 
     .line 4
-    invoke-virtual {p0, v1, v3, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, v1, v3, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object v0
 
     .line 5
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->a:Lk18;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->a:Ld68;
 
     .line 6
-    new-instance v0, Lja1;
+    new-instance v0, Lpc1;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lja1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+    invoke-direct {v0, p0, v1}, Lpc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
     .line 7
-    new-instance v1, Lq;
+    new-instance v1, Lo;
 
     const/16 v3, 0xc
 
-    invoke-direct {v1, v3, v0}, Lq;-><init>(ILcm6;)V
+    invoke-direct {v1, v3, v0}, Lo;-><init>(ILmq6;)V
 
-    const-class v0, Lpa1;
+    const-class v0, Lvc1;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lmq6;)Ld68;
 
     move-result-object v0
 
     .line 8
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->b:Lk18;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->b:Ld68;
 
     .line 9
-    new-instance v0, Lja1;
+    new-instance v0, Lpc1;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lja1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+    invoke-direct {v0, p0, v1}, Lpc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
     .line 10
-    invoke-static {v2, v0}, Lipi;->b(ILcm6;)Lk18;
+    invoke-static {v2, v0}, Lv2j;->c(ILmq6;)Ld68;
 
     move-result-object v0
 
@@ -183,53 +183,53 @@
     iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
 
     .line 12
-    new-instance v0, Lja1;
+    new-instance v0, Lpc1;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p0, v1}, Lja1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+    invoke-direct {v0, p0, v1}, Lpc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
     .line 13
-    new-instance v1, Lund;
+    new-instance v1, Ljxd;
 
-    invoke-direct {v1, v0}, Lund;-><init>(Lcm6;)V
+    invoke-direct {v1, v0}, Ljxd;-><init>(Lmq6;)V
 
     .line 14
-    iput-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Lund;
+    iput-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Ljxd;
 
     .line 15
-    sget v0, Lbyc;->call_history_list:I
+    sget v0, Ld7d;->call_history_list:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljkd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->X:Lbbd;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->X:Ljkd;
 
     .line 16
-    new-instance v0, Lja1;
+    new-instance v0, Lpc1;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1}, Lja1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+    invoke-direct {v0, p0, v1}, Lpc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
     .line 17
-    new-instance v1, Lbwf;
+    new-instance v1, Lz7g;
 
-    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
 
     .line 18
-    iput-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Y:Lbwf;
+    iput-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Y:Lz7g;
 
     .line 19
-    new-instance v0, Lg31;
+    new-instance v0, Lv41;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lg31;-><init>(I)V
+    invoke-direct {v0, v1}, Lv41;-><init>(I)V
 
     .line 20
-    invoke-static {v2, v0}, Lipi;->b(ILcm6;)Lk18;
+    invoke-static {v2, v0}, Lv2j;->c(ILmq6;)Ld68;
 
     move-result-object v0
 
@@ -237,21 +237,21 @@
     iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Z:Ljava/lang/Object;
 
     .line 22
-    new-instance v0, Lhs;
+    new-instance v0, Lks;
 
     const-class v1, Ljava/lang/String;
 
     const-string v2, "type_arg"
 
-    invoke-direct {v0, v1, v2}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lks;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 23
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lhs;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lks;
 
     return-void
 .end method
 
-.method public constructor <init>(Lbb1;)V
+.method public constructor <init>(Lgd1;)V
     .locals 3
 
     .line 24
@@ -263,57 +263,77 @@
     move-result-object p1
 
     .line 26
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lhs;
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lks;
 
-    sget-object v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lyy7;
+    sget-object v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lp38;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-virtual {v0, p0, p1}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p1}, Lks;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0()Lza1;
-    .locals 1
+.method public final A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    .locals 2
 
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->a:Lk18;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lp38;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->X:Ljkd;
+
+    invoke-interface {v1, p0, v0}, Ljkd;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lza1;
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     return-object v0
 .end method
 
-.method public final B0()Lpa1;
+.method public final B0()Lfd1;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->b:Lk18;
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->a:Ld68;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lpa1;
+    check-cast v0, Lfd1;
 
     return-object v0
 .end method
 
-.method public final C(ILandroid/os/Bundle;)V
+.method public final C0()Lvc1;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->b:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvc1;
+
+    return-object v0
+.end method
+
+.method public final E(ILandroid/os/Bundle;)V
     .locals 6
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object p2
 
-    iget-object p2, p2, Lpa1;->x0:Ljava/lang/Long;
+    iget-object p2, p2, Lvc1;->x0:Ljava/lang/Long;
 
     if-eqz p2, :cond_3
 
@@ -323,19 +343,19 @@
 
     const/4 p2, 0x0
 
-    iput-object p2, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lz34;
+    iput-object p2, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lv74;
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
-
-    move-result-object v2
-
-    iput-object p2, v2, Lpa1;->x0:Ljava/lang/Long;
-
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0, v1}, Lpa1;->t(J)Lo37;
+    iput-object p2, v2, Lvc1;->x0:Ljava/lang/Long;
+
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Lvc1;->s(J)Lb87;
 
     move-result-object v2
 
@@ -348,49 +368,49 @@
 
     if-ne p1, v3, :cond_2
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lza1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lfd1;
 
     move-result-object p1
 
-    iget-object v3, p1, Lza1;->o:Ltcf;
+    iget-object v3, p1, Lfd1;->o:Lhof;
 
     :cond_1
-    invoke-virtual {v3}, Ltcf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lhof;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     move-object p2, p1
 
-    check-cast p2, Lxa1;
+    check-cast p2, Ldd1;
 
-    iget-object v4, p2, Lxa1;->b:Ljava/util/Map;
+    iget-object v4, p2, Ldd1;->b:Ljava/util/Map;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p2, Lxa1;
+    new-instance p2, Ldd1;
 
     const/4 v5, 0x1
 
-    invoke-direct {p2, v5, v4}, Lxa1;-><init>(ZLjava/util/Map;)V
+    invoke-direct {p2, v5, v4}, Ldd1;-><init>(ZLjava/util/Map;)V
 
-    invoke-virtual {v3, p1, p2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1, p2}, Lhof;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lza1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lfd1;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v1, v2}, Lza1;->t(JLo37;)V
+    invoke-virtual {p1, v0, v1, v2}, Lfd1;->s(JLb87;)V
 
     return-void
 
     :cond_2
     if-nez p1, :cond_3
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lza1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lfd1;
 
     move-result-object p1
 
@@ -398,25 +418,41 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v2, Lya1;
+    new-instance v2, Led1;
 
-    invoke-direct {v2, p1, v0, p2}, Lya1;-><init>(Lza1;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, p1, v0, p2}, Led1;-><init>(Lfd1;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x3
 
-    invoke-static {v1, p2, p2, v2, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    invoke-static {v1, p2, p2, v2, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method public final f0()V
+.method public final g(ILandroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p2, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
+
+    invoke-interface {p2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lpl1;
+
+    invoke-virtual {p2, p1}, Lpl1;->h(I)Z
+
+    return-void
+.end method
+
+.method public final g0()V
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
@@ -427,32 +463,16 @@
     return-void
 .end method
 
-.method public final g(ILandroid/os/Bundle;)V
-    .locals 0
-
-    iget-object p2, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lkj1;
-
-    invoke-virtual {p2, p1}, Lkj1;->g(I)Z
-
-    return-void
-.end method
-
 .method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 4
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onActivityPaused(Landroid/app/Activity;)V
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object p1
 
-    iget-object v0, p1, Lpa1;->b:Lbb1;
+    iget-object v0, p1, Lvc1;->b:Lgd1;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -468,21 +488,21 @@
 
     const-string v1, "CallHistoryPageViewModel"
 
-    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p1, Lpa1;->o:Lvw1;
+    iget-object v0, p1, Lvc1;->o:Lzy1;
 
-    iget-object v1, v0, Lvw1;->y0:Lj0e;
+    iget-object v1, v0, Lzy1;->y0:Lqae;
 
-    new-instance v2, Ltw1;
+    new-instance v2, Lxy1;
 
     const/4 v3, 0x4
 
-    invoke-direct {v2, v0, v3}, Ltw1;-><init>(Lvw1;I)V
+    invoke-direct {v2, v0, v3}, Lxy1;-><init>(Lzy1;I)V
 
-    invoke-virtual {v1, v2}, Lj0e;->b(Ljava/lang/Runnable;)Lpy4;
+    invoke-virtual {v1, v2}, Lqae;->b(Ljava/lang/Runnable;)Ll25;
 
-    iget-object v0, v0, Lvw1;->X:Ljava/util/HashSet;
+    iget-object v0, v0, Lzy1;->X:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
@@ -494,11 +514,11 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onActivityResumed(Landroid/app/Activity;)V
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lpa1;->w()V
+    invoke-virtual {p1}, Lvc1;->v()V
 
     return-void
 .end method
@@ -514,13 +534,13 @@
 
     invoke-direct {p2, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Lund;
+    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Ljxd;
 
-    invoke-virtual {p1}, Lund;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljxd;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lx3b;
+    check-cast p1, Lhab;
 
     const/4 p3, -0x1
 
@@ -541,7 +561,7 @@
 
     invoke-direct {p1, v0, v1, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget v0, Lbyc;->call_history_list:I
+    sget v0, Ld7d;->call_history_list:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
@@ -553,19 +573,19 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Lund;
+    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Ljxd;
 
-    invoke-virtual {p1}, Lund;->reset()V
+    invoke-virtual {p1}, Ljxd;->reset()V
 
-    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->d:Locg;
+    iget-object p1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->d:Leog;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lws7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, v0}, Lox7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
     return-void
@@ -576,13 +596,13 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lz34;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lv74;
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object v1
 
-    iput-object v0, v1, Lpa1;->x0:Ljava/lang/Long;
+    iput-object v0, v1, Lvc1;->x0:Ljava/lang/Long;
 
     return-void
 .end method
@@ -590,17 +610,17 @@
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
     .locals 1
 
-    invoke-super {p0, p1, p2, p3}, Lc54;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-super {p0, p1, p2, p3}, Lx84;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkj1;
+    check-cast v0, Lpl1;
 
-    invoke-virtual {v0, p1, p2, p3}, Lkj1;->b(I[Ljava/lang/String;[I)Z
+    invoke-virtual {v0, p1, p2, p3}, Lpl1;->b(I[Ljava/lang/String;[I)Z
 
     return-void
 .end method
@@ -608,7 +628,7 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 6
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
@@ -620,42 +640,42 @@
 
     invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Y:Lbwf;
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Y:Lz7g;
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lha1;
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lphd;)V
-
-    invoke-static {p1}, Lx7j;->c(Landroidx/recyclerview/widget/RecyclerView;)Locg;
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->d:Locg;
+    check-cast v0, Lnc1;
 
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Lund;
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lzqd;)V
 
-    invoke-virtual {v0}, Lund;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Lmlj;->c(Landroidx/recyclerview/widget/RecyclerView;)Leog;
 
     move-result-object v0
 
-    check-cast v0, Lx3b;
+    iput-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->d:Leog;
+
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Ljxd;
+
+    invoke-virtual {v0}, Ljxd;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhab;
 
     if-eqz v0, :cond_0
 
     invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setEmptyView(Landroid/view/View;)V
 
     :cond_0
-    new-instance v0, Lma1;
+    new-instance v0, Lsc1;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lma1;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v0, p0, v1}, Lsc1;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lsf5;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lqj5;)V
 
     const/4 v0, 0x1
 
@@ -669,7 +689,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -681,13 +701,13 @@
 
     mul-float/2addr v3, v1
 
-    invoke-static {v3}, Lkti;->d(F)I
+    invoke-static {v3}, Ln7j;->c(F)I
 
     move-result v3
 
     int-to-float v2, v2
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -699,11 +719,11 @@
 
     mul-float/2addr v4, v2
 
-    invoke-static {v4}, Lkti;->d(F)I
+    invoke-static {v4}, Ln7j;->c(F)I
 
     move-result v4
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -715,11 +735,11 @@
 
     mul-float/2addr v1, v5
 
-    invoke-static {v1}, Lkti;->d(F)I
+    invoke-static {v1}, Ln7j;->c(F)I
 
     move-result v1
 
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -731,119 +751,119 @@
 
     mul-float/2addr v2, v5
 
-    invoke-static {v2}, Lkti;->d(F)I
+    invoke-static {v2}, Ln7j;->c(F)I
 
     move-result v2
 
     invoke-virtual {p1, v3, v4, v1, v2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setPadding(IIII)V
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object p1
 
-    iget-object p1, p1, Lpa1;->u0:Ltcf;
+    iget-object p1, p1, Lvc1;->u0:Lhof;
 
-    new-instance v1, Lka1;
+    new-instance v1, Lqc1;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lka1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p0, v2}, Lqc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v3, Lg56;
+    new-instance v3, Lo96;
 
-    invoke-direct {v3, p1, v1, v0}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v3, p1, v1, v0}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lvpi;->b(Lg56;Lv38;)Lx9f;
-
-    sget-object p1, Lbb1;->b:Lbb1;
-
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    iget-object p1, p1, Lpa1;->b:Lbb1;
+    invoke-static {v3, p1}, Lj3j;->b(Lo96;Lm88;)Lglf;
 
-    sget-object v1, Lbb1;->b:Lbb1;
+    sget-object p1, Lgd1;->b:Lgd1;
+
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lvc1;->b:Lgd1;
+
+    sget-object v1, Lgd1;->b:Lgd1;
 
     if-ne p1, v1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lpa1;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->C0()Lvc1;
 
     move-result-object p1
 
-    iget-object p1, p1, Lpa1;->w0:Ltcf;
+    iget-object p1, p1, Lvc1;->w0:Lhof;
 
-    new-instance v1, Lla1;
+    new-instance v1, Lrc1;
 
-    invoke-direct {v1, p0, v2}, Lla1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p0, v2}, Lrc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v2, Lg56;
+    new-instance v2, Lo96;
 
-    invoke-direct {v2, p1, v1, v0}, Lg56;-><init>(Lx26;Lsm6;I)V
+    invoke-direct {v2, p1, v1, v0}, Lo96;-><init>(Lf76;Lcr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lm88;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Lvpi;->b(Lg56;Lv38;)Lx9f;
+    invoke-static {v2, p1}, Lj3j;->b(Lo96;Lm88;)Lglf;
 
     :cond_1
     return-void
 .end method
 
-.method public final y0()Lbb1;
+.method public final z0()Lgd1;
     .locals 4
 
-    sget-object v0, Lbb1;->b:Lbb1;
+    sget-object v0, Lgd1;->b:Lgd1;
 
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lyy7;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lp38;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lhs;
+    iget-object v0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->s0:Lks;
 
-    invoke-virtual {v0, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    sget-object v1, Lbb1;->o:Lzg5;
+    sget-object v1, Lgd1;->o:Lwk5;
 
-    invoke-virtual {v1}, Li2;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Lf2;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
     :cond_0
     move-object v2, v1
 
-    check-cast v2, Lf2;
+    check-cast v2, Lc2;
 
-    invoke-virtual {v2}, Lf2;->hasNext()Z
+    invoke-virtual {v2}, Lc2;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
+    invoke-virtual {v2}, Lc2;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     move-object v3, v2
 
-    check-cast v3, Lbb1;
+    check-cast v3, Lgd1;
 
     invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v0}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -855,34 +875,14 @@
     const/4 v2, 0x0
 
     :goto_0
-    check-cast v2, Lbb1;
+    check-cast v2, Lgd1;
 
     if-nez v2, :cond_2
 
-    sget-object v0, Lbb1;->b:Lbb1;
+    sget-object v0, Lgd1;->b:Lgd1;
 
     return-object v0
 
     :cond_2
     return-object v2
-.end method
-
-.method public final z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-    .locals 2
-
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:[Lyy7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->X:Lbbd;
-
-    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    return-object v0
 .end method

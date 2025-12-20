@@ -1,89 +1,128 @@
-.class public final Ljuh;
-.super Ljava/lang/Object;
+.class public final synthetic Ljuh;
+.super Lrr6;
 .source "SourceFile"
 
 # interfaces
-.implements Lavh;
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lkuh;)V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ljuh;->a:Ljava/lang/String;
+    iput v0, p0, Ljuh;->a:I
+
+    iput-object p1, p0, Ljuh;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Ljuh;->b:Landroid/view/View;
+
+    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    .line 2
+    const-class v4, Lvu7;
+
+    const-string v6, "dispose"
+
+    move-object v1, p0
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lavh;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ljuh;->a:I
+
+    iput-object p1, p0, Ljuh;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Ljuh;->b:Landroid/view/View;
+
+    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    .line 1
+    const-class v4, Lvu7;
+
+    const-string v6, "dispose"
+
+    move-object v1, p0
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lqr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Ljuh;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lsw1;->receiver:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Ljuh;
+    check-cast v0, Landroid/view/ViewTreeObserver;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Ljuh;->c:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v1, Lavh;
 
-    return v2
+    iget-object v2, p0, Ljuh;->b:Landroid/view/View;
 
-    :cond_1
-    check-cast p1, Ljuh;
+    invoke-static {v1, v2, v0}, Lsy;->c(Lavh;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
 
-    iget-object v1, p0, Ljuh;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Ljuh;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ljuh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenLinkExternal(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Ljuh;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lv2h;->a:Lv2h;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsw1;->receiver:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+    iget-object v1, p0, Ljuh;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/ViewTreeObserver;
+
+    iget-object v2, p0, Ljuh;->b:Landroid/view/View;
+
+    invoke-static {v0, v1, v2}, Lluh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+
+    sget-object v0, Lv2h;->a:Lv2h;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

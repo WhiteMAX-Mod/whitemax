@@ -1,97 +1,52 @@
-.class public final Lzdd;
+.class public abstract Lzdd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Leed;
 
 
-# instance fields
-.field public final a:Ld3;
+# static fields
+.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a5c
 
+.field public static oneme_startconversation_channel_create_error:I = 0x7f130a5d
 
-# direct methods
-.method public constructor <init>(Ld3;)V
-    .locals 0
+.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f130a5e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a5f
 
-    iput-object p1, p0, Lzdd;->a:Ld3;
+.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a60
 
-    return-void
-.end method
+.field public static oneme_startconversation_title:I = 0x7f130a61
 
+.field public static oneme_startconversations_chat_members:I = 0x7f130a62
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a63
 
-    const/4 v0, 0x1
+.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a64
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a65
 
-    return v0
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a66
 
-    :cond_0
-    instance-of v1, p1, Lzdd;
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a67
 
-    const/4 v2, 0x0
+.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130a68
 
-    if-nez v1, :cond_1
+.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130a69
 
-    return v2
+.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130a6a
 
-    :cond_1
-    check-cast p1, Lzdd;
+.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130a6b
 
-    iget-object v1, p0, Lzdd;->a:Ld3;
+.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130a6c
 
-    iget-object p1, p1, Lzdd;->a:Ld3;
+.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130a6d
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130a6e
 
-    move-result p1
+.field public static oneme_startconversations_continue_create_chat:I = 0x7f130a6f
 
-    if-nez p1, :cond_2
+.field public static oneme_startconversations_create_empty_chat:I = 0x7f130a70
 
-    return v2
+.field public static oneme_startconversations_member_search_hint:I = 0x7f130a71
 
-    :cond_2
-    return v0
-.end method
+.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130a72
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lzdd;->a:Ld3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OnMediaMessageSend(media="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzdd;->a:Ld3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_startconversations_search_hint:I = 0x7f130a73

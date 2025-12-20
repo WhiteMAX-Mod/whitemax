@@ -1,326 +1,133 @@
-.class public abstract Lwoi;
-.super Ljava/lang/Object;
+.class public final Lwoi;
+.super Lz7a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Landroid/content/Context;
+
+.field public final synthetic c:Lg07;
+
+
 # direct methods
-.method public static d(Ljava/lang/Class;)Lyfh;
-    .locals 4
+.method public constructor <init>(Lg07;Landroid/content/Context;)V
+    .locals 1
 
-    const-string v0, "Cannot create an instance of "
+    iput-object p1, p0, Lwoi;->c:Lg07;
 
-    const/4 v1, 0x0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    :try_start_0
-    invoke-virtual {p0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    move-result-object p1
 
-    move-result-object v2
+    if-nez p1, :cond_0
 
-    invoke-virtual {v2, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v1
-
-    check-cast v1, Lyfh;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_2
-
-    :goto_0
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v2, p0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :goto_1
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v2, p0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :goto_2
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v2, p0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v2
-.end method
-
-.method public static final i(Lyyg;Lwuf;)Lb7g;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iget-object v2, v0, Lyyg;->b:Lvyg;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    new-instance v4, Ly6g;
-
-    iget-object v5, v2, Lvyg;->a:[I
-
-    iget v2, v2, Lvyg;->b:F
-
-    invoke-direct {v4, v5, v2}, Ly6g;-><init>([IF)V
-
-    move-object v8, v4
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    move-object v8, v3
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
 
     :goto_0
-    iget-object v2, v0, Lyyg;->a:Lxyg;
+    const/4 v0, 0x2
 
-    if-eqz v2, :cond_2
+    invoke-direct {p0, p1, v0}, Lz7a;-><init>(Landroid/os/Looper;I)V
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    new-instance v2, La7g;
+    move-result-object p1
 
-    invoke-direct {v2, v1}, La7g;-><init>(Lwuf;)V
+    iput-object p1, p0, Lwoi;->b:Landroid/content/Context;
 
-    goto :goto_1
-
-    :cond_1
-    move-object v2, v3
-
-    :goto_1
-    move-object v7, v2
-
-    goto :goto_2
-
-    :cond_2
-    move-object v7, v3
-
-    :goto_2
-    iget-object v1, v0, Lyyg;->d:Ljava/util/List;
-
-    const/16 v2, 0xa
-
-    if-eqz v1, :cond_4
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-static {v1, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lwyg;
-
-    iget v10, v5, Lwyg;->a:F
-
-    iget v11, v5, Lwyg;->b:F
-
-    iget v12, v5, Lwyg;->c:F
-
-    iget v13, v5, Lwyg;->d:F
-
-    iget-object v15, v5, Lwyg;->g:[F
-
-    iget-object v6, v5, Lwyg;->f:[I
-
-    iget v14, v5, Lwyg;->e:F
-
-    new-instance v9, Lz6g;
-
-    move-object/from16 v16, v6
-
-    invoke-direct/range {v9 .. v16}, Lz6g;-><init>(FFFFF[F[I)V
-
-    invoke-interface {v4, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_3
-    move-object v10, v4
-
-    goto :goto_4
-
-    :cond_4
-    move-object v10, v3
-
-    :goto_4
-    iget-object v1, v0, Lyyg;->e:Ljava/util/List;
-
-    if-eqz v1, :cond_6
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-static {v1, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v4, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_5
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwyg;
-
-    iget v12, v2, Lwyg;->a:F
-
-    iget v13, v2, Lwyg;->b:F
-
-    iget v14, v2, Lwyg;->c:F
-
-    iget v15, v2, Lwyg;->d:F
-
-    iget-object v5, v2, Lwyg;->f:[I
-
-    iget-object v6, v2, Lwyg;->g:[F
-
-    iget v2, v2, Lwyg;->e:F
-
-    new-instance v11, Lz6g;
-
-    move/from16 v16, v2
-
-    move-object/from16 v18, v5
-
-    move-object/from16 v17, v6
-
-    invoke-direct/range {v11 .. v18}, Lz6g;-><init>(FFFFF[F[I)V
-
-    invoke-interface {v4, v11}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_5
-    move-object v11, v4
-
-    goto :goto_6
-
-    :cond_6
-    move-object v11, v3
-
-    :goto_6
-    iget-object v1, v0, Lyyg;->c:Lvyg;
-
-    if-eqz v1, :cond_7
-
-    new-instance v3, Ly6g;
-
-    iget-object v2, v1, Lvyg;->a:[I
-
-    iget v1, v1, Lvyg;->b:F
-
-    invoke-direct {v3, v2, v1}, Ly6g;-><init>([IF)V
-
-    :cond_7
-    move-object v9, v3
-
-    iget-object v12, v0, Lyyg;->f:Ljava/lang/Integer;
-
-    new-instance v6, Lb7g;
-
-    invoke-direct/range {v6 .. v12}, Lb7g;-><init>(La7g;Ly6g;Ly6g;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;)V
-
-    return-object v6
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lx1;Lg1;Lg1;)Z
-.end method
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 5
 
-.method public abstract b(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
-.end method
+    iget p1, p1, Landroid/os/Message;->what:I
 
-.method public abstract c(Lx1;Lv1;Lv1;)Z
-.end method
+    const/4 v0, 0x1
 
-.method public abstract e(Lx1;)Lg1;
-.end method
+    if-eq p1, v0, :cond_0
 
-.method public abstract f(Lx1;)Lv1;
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public abstract g(Lv1;Lv1;)V
-.end method
+    const-string v1, "Don\'t know how to handle this message: "
 
-.method public abstract h(Lv1;Ljava/lang/Thread;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "GoogleApiAvailability"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    sget p1, Lh07;->a:I
+
+    iget-object v1, p0, Lwoi;->c:Lg07;
+
+    iget-object v2, p0, Lwoi;->b:Landroid/content/Context;
+
+    invoke-virtual {v1, v2, p1}, Lh07;->c(Landroid/content/Context;I)I
+
+    move-result p1
+
+    sget v3, Lx07;->e:I
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x9
+
+    if-eq p1, v0, :cond_1
+
+    return-void
+
+    :cond_1
+    const-string v0, "n"
+
+    invoke-virtual {v1, p1, v2, v0}, Lh07;->b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 v3, 0xc000000
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v4, v0, v3}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v1, v2, p1, v0}, Lg07;->g(Landroid/content/Context;ILandroid/app/PendingIntent;)V
+
+    return-void
 .end method

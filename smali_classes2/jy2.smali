@@ -1,162 +1,119 @@
-.class public final Ljy2;
-.super Lsm;
+.class public final synthetic Ljy2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj1g;
-.implements Ltsb;
+.implements Loq6;
 
 
 # instance fields
-.field public final d:J
+.field public final synthetic a:I
 
-.field public final o:Z
+.field public final synthetic b:Lm03;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJZ)V
+.method public synthetic constructor <init>(Lm03;JLjava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lsm;-><init>(J)V
+    iput p5, p0, Ljy2;->a:I
 
-    iput-wide p3, p0, Ljy2;->d:J
+    iput-object p1, p0, Ljy2;->b:Lm03;
 
-    iput-boolean p5, p0, Ljy2;->o:Z
+    iput-wide p2, p0, Ljy2;->c:J
+
+    iput-object p4, p0, Ljy2;->d:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Ljy2;->a:I
 
-    return v0
-.end method
+    check-cast p1, Landroid/view/View;
 
-.method public final d(Ll0g;)V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object p1, p0, Ljy2;->b:Lm03;
 
-.method public final e(Lpzf;)V
-    .locals 4
+    iget-object p1, p1, Lm03;->f1:Lyl5;
 
-    invoke-virtual {p0}, Lsm;->k()Ltw0;
+    new-instance v0, Lvy2;
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    new-instance v1, Lrj0;
+    const/16 v1, 0x9
 
-    iget-wide v2, p0, Lsm;->a:J
+    iget-wide v4, p0, Ljy2;->c:J
 
-    invoke-direct {v1, v2, v3, p1}, Lrj0;-><init>(JLpzf;)V
+    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
 
-    iget-object p1, p1, Lpzf;->b:Ljava/lang/String;
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lqaj;->c(Ljava/lang/String;)Z
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    move-result p1
+    return-object p1
 
-    if-nez p1, :cond_0
+    :pswitch_0
+    iget-object p1, p0, Ljy2;->b:Lm03;
 
-    invoke-virtual {p0}, Ljy2;->f()V
+    iget-object p1, p1, Lm03;->f1:Lyl5;
 
-    :cond_0
-    return-void
-.end method
+    new-instance v0, Lvy2;
 
-.method public final f()V
-    .locals 3
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p0}, Lsm;->r()La3g;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    iget-wide v4, p0, Ljy2;->c:J
 
-    iget-wide v1, p0, Lsm;->a:J
+    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, La3g;->d(J)V
+    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
 
-    return-void
-.end method
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
 
-.method public final g()[B
-    .locals 3
+    goto :goto_0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;
+    :pswitch_1
+    iget-object p1, p0, Ljy2;->b:Lm03;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;-><init>()V
+    iget-object p1, p1, Lm03;->f1:Lyl5;
 
-    iget-wide v1, p0, Lsm;->a:J
+    new-instance v0, Lvy2;
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->requestId:J
+    const-wide/16 v2, 0x0
 
-    iget-wide v1, p0, Ljy2;->d:J
+    const/16 v1, 0x9
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->chatServerId:J
+    iget-wide v4, p0, Ljy2;->c:J
 
-    iget-boolean v1, p0, Ljy2;->o:Z
+    iget-object v6, p0, Ljy2;->d:Ljava/lang/String;
 
-    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->subscribe:Z
+    invoke-direct/range {v0 .. v6}, Lvy2;-><init>(IJJLjava/lang/String;)V
 
-    invoke-static {v0}, Lfl9;->toByteArray(Lfl9;)[B
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
 
-    move-result-object v0
+    goto :goto_0
 
-    return-object v0
-.end method
+    nop
 
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lsm;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lusb;
-    .locals 1
-
-    sget-object v0, Lusb;->D0:Lusb;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Ln2;
-    .locals 4
-
-    new-instance v0, Lfh2;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v1, v2}, Lfh2;-><init>(Lxhb;I)V
-
-    const-string v1, "chatId"
-
-    iget-wide v2, p0, Ljy2;->d:J
-
-    invoke-virtual {v0, v2, v3, v1}, Ln2;->t(JLjava/lang/String;)V
-
-    const-string v1, "subscribe"
-
-    iget-boolean v2, p0, Ljy2;->o:Z
-
-    invoke-virtual {v0, v1, v2}, Ln2;->i(Ljava/lang/String;Z)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

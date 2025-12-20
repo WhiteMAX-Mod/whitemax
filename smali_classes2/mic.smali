@@ -2,224 +2,173 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz26;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lx04;
 
-.field public final synthetic b:Lz26;
+.field public final b:Ljava/util/LinkedHashMap;
 
-.field public final synthetic c:Lqic;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz26;Lqic;I)V
+.method public constructor <init>(Lx04;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput p3, p0, Lmic;->a:I
-
-    iput-object p1, p0, Lmic;->b:Lz26;
-
-    iput-object p2, p0, Lmic;->c:Lqic;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmic;->a:Lx04;
+
+    iput-object p2, p0, Lmic;->b:Ljava/util/LinkedHashMap;
+
+    iput-object p3, p0, Lmic;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lmic;->a:I
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Lqqg;->a:Lqqg;
+    goto :goto_1
 
-    iget-object v2, p0, Lmic;->c:Lqic;
+    :cond_0
+    instance-of v0, p1, Lmic;
 
-    iget-object v3, p0, Lmic;->b:Lz26;
+    if-nez v0, :cond_1
 
-    const-string v4, "call to \'resume\' before \'invoke\' with coroutine"
+    goto :goto_0
 
-    sget-object v5, Lg84;->a:Lg84;
+    :cond_1
+    check-cast p1, Lmic;
 
-    const/high16 v6, -0x80000000
+    iget-object v0, p0, Lmic;->a:Lx04;
 
-    const/4 v7, 0x1
+    iget-object v1, p1, Lmic;->a:Lx04;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    instance-of v0, p2, Lnic;
+    move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_2
 
-    move-object v0, p2
+    goto :goto_0
 
-    check-cast v0, Lnic;
+    :cond_2
+    iget-object v0, p0, Lmic;->b:Ljava/util/LinkedHashMap;
 
-    iget v8, v0, Lnic;->o:I
+    iget-object v1, p1, Lmic;->b:Ljava/util/LinkedHashMap;
 
-    and-int v9, v8, v6
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v9, :cond_0
+    move-result v0
 
-    sub-int/2addr v8, v6
+    if-nez v0, :cond_3
 
-    iput v8, v0, Lnic;->o:I
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lmic;->c:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lmic;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lmic;->a:Lx04;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lnic;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v0, p0, p2}, Lnic;-><init>(Lmic;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
     :goto_0
-    iget-object p2, v0, Lnic;->d:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v6, v0, Lnic;->o:I
+    iget-object v1, p0, Lmic;->b:Ljava/util/LinkedHashMap;
 
-    if-eqz v6, :cond_2
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    if-ne v6, v7, :cond_1
+    move-result v1
 
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
+    add-int/2addr v1, v0
 
-    goto :goto_2
+    mul-int/lit8 v1, v1, 0x1f
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lmic;->c:Ljava/util/ArrayList;
 
-    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    throw p1
+    move-result v0
 
-    :cond_2
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
+    add-int/2addr v0, v1
 
-    check-cast p1, Lsi0;
+    return v0
+.end method
 
-    if-eqz p1, :cond_5
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-wide p1, p1, Lsi0;->a:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, v2, Lqic;->A0:Ljava/util/concurrent/atomic/AtomicLong;
+    const-string v1, "Profile(contactInfo="
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-wide v8
+    iget-object v1, p0, Lmic;->a:Lx04;
 
-    cmp-long p1, p1, v8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_3
+    const-string v1, ", restrictions="
 
-    sget-object p1, Lu94;->a:Lu94;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    iget-object v1, p0, Lmic;->b:Ljava/util/LinkedHashMap;
 
-    :cond_3
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    if-eqz p1, :cond_4
+    const-string v1, ", profileOptions="
 
-    iput v7, v0, Lnic;->o:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v3, p1, v0}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lmic;->c:Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-ne p1, v5, :cond_4
+    const-string v1, ")"
 
-    move-object v1, v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
-    :goto_2
-    return-object v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    move-result-object v0
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    instance-of v0, p2, Llic;
-
-    if-eqz v0, :cond_6
-
-    move-object v0, p2
-
-    check-cast v0, Llic;
-
-    iget v8, v0, Llic;->o:I
-
-    and-int v9, v8, v6
-
-    if-eqz v9, :cond_6
-
-    sub-int/2addr v8, v6
-
-    iput v8, v0, Llic;->o:I
-
-    goto :goto_3
-
-    :cond_6
-    new-instance v0, Llic;
-
-    invoke-direct {v0, p0, p2}, Llic;-><init>(Lmic;Lkotlin/coroutines/Continuation;)V
-
-    :goto_3
-    iget-object p2, v0, Llic;->d:Ljava/lang/Object;
-
-    iget v6, v0, Llic;->o:I
-
-    if-eqz v6, :cond_8
-
-    if-ne v6, v7, :cond_7
-
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    invoke-static {p2}, Lg8j;->b(Ljava/lang/Object;)V
-
-    check-cast p1, Lpb2;
-
-    sget-object p2, Lqic;->H0:[Lyy7;
-
-    invoke-virtual {v2, p1}, Lqic;->t(Lpb2;)V
-
-    iput v7, v0, Llic;->o:I
-
-    invoke-interface {v3, v1, v0}, Lz26;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_9
-
-    move-object v1, v5
-
-    :cond_9
-    :goto_4
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

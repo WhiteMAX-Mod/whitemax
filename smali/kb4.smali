@@ -2,51 +2,126 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Iterable;
+
 
 # instance fields
-.field public final a:Lwg7;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:J
+.field public final b:Ljava/util/HashMap;
 
-.field public final c:J
+.field public c:Ljava/util/Set;
 
-.field public final d:J
+.field public d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p5}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+    new-instance v0, Ljava/lang/Object;
 
-    move-result-object p5
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lkb4;->a:Lwg7;
+    iput-object v0, p0, Lkb4;->a:Ljava/lang/Object;
 
-    iput-wide p1, p0, Lkb4;->b:J
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-wide p3, p0, Lkb4;->c:J
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    iput-object v0, p0, Lkb4;->b:Ljava/util/HashMap;
 
-    cmp-long p5, p1, v0
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-    if-eqz p5, :cond_1
+    iput-object v0, p0, Lkb4;->c:Ljava/util/Set;
 
-    cmp-long p5, p3, v0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    if-nez p5, :cond_0
+    iput-object v0, p0, Lkb4;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lb95;)I
+    .locals 2
+
+    iget-object v0, p0, Lkb4;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lkb4;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lkb4;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    add-long v0, p1, p3
+    const/4 p1, 0x0
 
-    :cond_1
     :goto_0
-    iput-wide v0, p0, Lkb4;->d:J
+    monitor-exit v0
 
-    return-void
+    return p1
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Lkb4;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lkb4;->d:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

@@ -47,7 +47,7 @@
 
 # virtual methods
 .method public declared-synchronized run()V
-    .locals 4
+    .locals 3
 
     const-string v0, "Invalid surface: "
 
@@ -60,7 +60,7 @@
 
     iget-object v1, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v1}, Lorg/webrtc/EglRenderer;->h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+    invoke-static {v1}, Lorg/webrtc/EglRenderer;->i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
 
     move-result-object v1
 
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v1}, Lorg/webrtc/EglRenderer;->h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+    invoke-static {v1}, Lorg/webrtc/EglRenderer;->i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v0}, Lorg/webrtc/EglRenderer;->h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+    invoke-static {v0}, Lorg/webrtc/EglRenderer;->i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v0}, Lorg/webrtc/EglRenderer;->h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+    invoke-static {v0}, Lorg/webrtc/EglRenderer;->i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
     :goto_0
     iget-object v0, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v0}, Lorg/webrtc/EglRenderer;->h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+    invoke-static {v0}, Lorg/webrtc/EglRenderer;->i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
 
     move-result-object v0
 
@@ -142,13 +142,11 @@
 
     iget-object v2, p0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;->surface:Ljava/lang/Object;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

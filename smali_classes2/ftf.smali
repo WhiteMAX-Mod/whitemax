@@ -1,55 +1,110 @@
 .class public final Lftf;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldm4;
 
-# instance fields
-.field public X:Lq34;
 
-.field public synthetic Y:Ljava/lang/Object;
+# static fields
+.field public static final a:Lftf;
 
-.field public final synthetic Z:Lytf;
-
-.field public d:Lytf;
-
-.field public o:Lttg;
-
-.field public s0:I
+.field public static final b:Lgtf;
 
 
 # direct methods
-.method public constructor <init>(Lytf;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lftf;->Z:Lytf;
+    new-instance v0, Lftf;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lftf;->a:Lftf;
+
+    sget-object v0, Lgtf;->b:Lgtf;
+
+    sput-object v0, Lftf;->b:Lgtf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lkm4;
     .locals 1
 
-    iput-object p1, p0, Lftf;->Y:Ljava/lang/Object;
+    sget-object v0, Lftf;->b:Lgtf;
 
-    iget p1, p0, Lftf;->s0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
+    .locals 9
 
-    or-int/2addr p1, v0
+    sget-object v0, Lftf;->b:Lgtf;
 
-    iput p1, p0, Lftf;->s0:I
+    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
 
-    iget-object p1, p0, Lftf;->Z:Lytf;
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x0
+    move-result v0
 
-    invoke-virtual {p1, v0, v0, p0}, Lytf;->e(Lttg;Lq34;Lq44;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    const/4 p1, 0x0
 
     return-object p1
+
+    :cond_0
+    sget-object v0, Lgtf;->b:Lgtf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lgtf;->c:Lgm4;
+
+    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lnm4;
+
+    new-instance v7, Lqr1;
+
+    const/16 v0, 0xc
+
+    invoke-direct {v7, p3, v0}, Lqr1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v3}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

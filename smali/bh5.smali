@@ -1,74 +1,115 @@
-.class public Lbh5;
-.super Landroid/app/DialogFragment;
+.class public final Lbh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/ListIterator;
+.implements Ld38;
 
-# instance fields
-.field public a:Landroid/app/Dialog;
 
-.field public b:Landroid/content/DialogInterface$OnCancelListener;
-
-.field public c:Landroid/app/AlertDialog;
+# static fields
+.field public static final a:Lbh5;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
+    new-instance v0, Lbh5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lbh5;->a:Lbh5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public final bridge synthetic add(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lbh5;->b:Landroid/content/DialogInterface$OnCancelListener;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    if-eqz v0, :cond_0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    return-void
+    throw p1
 .end method
 
-.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+.method public final hasNext()Z
     .locals 1
 
-    iget-object p1, p0, Lbh5;->a:Landroid/app/Dialog;
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_1
+    return v0
+.end method
 
-    const/4 p1, 0x0
+.method public final hasPrevious()Z
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lbh5;->c:Landroid/app/AlertDialog;
+    return v0
+.end method
 
-    if-nez p1, :cond_0
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    new-instance p1, Landroid/app/AlertDialog$Builder;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    move-result-object v0
+    throw v0
+.end method
 
-    invoke-static {v0}, Ls5j;->g(Ljava/lang/Object;)V
+.method public final nextIndex()I
+    .locals 1
 
-    invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final previous()Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lbh5;->c:Landroid/app/AlertDialog;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    :cond_0
-    iget-object p1, p0, Lbh5;->c:Landroid/app/AlertDialog;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    :cond_1
-    return-object p1
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final bridge synthetic set(Ljava/lang/Object;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

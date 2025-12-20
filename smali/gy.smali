@@ -1,31 +1,40 @@
 .class public final Lgy;
-.super Ljava/lang/Object;
+.super Law4;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public final c:Landroid/media/MediaCodec$CryptoInfo;
-
-.field public d:J
-
-.field public e:I
+.field public final c:Lhy;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lc0b;Lhy;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Law4;-><init>(Lc0b;)V
 
-    new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
+    iput-object p2, p0, Lgy;->c:Lhy;
 
-    invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lgy;->c:Landroid/media/MediaCodec$CryptoInfo;
 
+# virtual methods
+.method public final dispose()V
+    .locals 2
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndSet(I)I
+
+    move-result v1
+
+    if-eq v1, v0, :cond_0
+
+    iget-object v0, p0, Lgy;->c:Lhy;
+
+    invoke-virtual {v0, p0}, Lhy;->s(Lgy;)V
+
+    :cond_0
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/settings/view/LedSeekBar;
-.super Lso;
+.super Luo;
 .source "SourceFile"
 
 # interfaces
@@ -18,21 +18,21 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    invoke-direct {p0, p1, p2}, Lso;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Luo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lzm;->a()Lqm3;
-
-    move-result-object p1
-
-    check-cast p1, Lt1b;
-
-    invoke-virtual {p1}, Lt1b;->j()Lz7c;
+    invoke-static {}, Lbn;->a()Laq3;
 
     move-result-object p1
 
-    iget-object p1, p1, Lz7c;->c:Lsxg;
+    check-cast p1, Ld8b;
 
-    invoke-virtual {p1}, Lsxg;->l()[I
+    invoke-virtual {p1}, Ld8b;->j()Lpfc;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpfc;->c:Ljah;
+
+    invoke-virtual {p1}, Ljah;->l()[I
 
     move-result-object p1
 
@@ -40,13 +40,13 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lrw4;->a()Lrw4;
+    invoke-static {}, Ln05;->a()Ln05;
 
     move-result-object p1
 
-    iget p2, p1, Lrw4;->l:I
+    iget p2, p1, Ln05;->l:I
 
-    iget p1, p1, Lrw4;->b:I
+    iget p1, p1, Ln05;->b:I
 
     iput p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->b:I
 
@@ -54,7 +54,7 @@
 
     move-result-object p1
 
-    sget v0, Lhvd;->d:I
+    sget v0, Lg5e;->d:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -66,9 +66,9 @@
 
     invoke-virtual {p0, p1, v0, p1, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance p1, Lq6;
+    new-instance p1, Lo6;
 
-    invoke-direct {p1, p0}, Lq6;-><init>(Lru/ok/messages/settings/view/LedSeekBar;)V
+    invoke-direct {p1, p0}, Lo6;-><init>(Lru/ok/messages/settings/view/LedSeekBar;)V
 
     invoke-virtual {p0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -291,7 +291,7 @@
     return-void
 .end method
 
-.method public setListener(Ly18;)V
+.method public setListener(Lr68;)V
     .locals 0
 
     return-void

@@ -1,15 +1,51 @@
-.class public abstract Lrb7;
-.super Ljava/lang/Object;
+.class public final Lrb7;
+.super Ll84;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lsb7;
+
+.field public Y:I
+
+.field public d:Lesd;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
 # direct methods
-.method public static a(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+.method public constructor <init>(Lsb7;Ll84;)V
     .locals 0
 
-    invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithAdaptiveBitmapContentUri(Landroid/net/Uri;)Landroid/graphics/drawable/Icon;
+    iput-object p1, p0, Lrb7;->X:Lsb7;
 
-    move-result-object p0
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lrb7;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lrb7;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrb7;->Y:I
+
+    iget-object p1, p0, Lrb7;->X:Lsb7;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lsb7;->a(Lsb7;Ljava/lang/String;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

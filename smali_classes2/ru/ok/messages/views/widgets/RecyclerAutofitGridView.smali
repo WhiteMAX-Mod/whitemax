@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/views/widgets/RecyclerAutofitGridView;
-.super Lyf5;
+.super Lwj5;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lyf5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lwj5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -55,7 +55,7 @@
 
     invoke-direct {p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Lyf5;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    invoke-virtual {p0, p1}, Lwj5;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/GridLayoutManager;
 
-    invoke-virtual {v1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->B1(I)V
+    invoke-virtual {v1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->C1(I)V
 
     :cond_1
     instance-of p2, p1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
@@ -136,7 +136,7 @@
     :cond_2
     check-cast p1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->k1(I)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->l1(I)V
 
     :cond_3
     return-void

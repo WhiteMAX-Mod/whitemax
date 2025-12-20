@@ -1,122 +1,85 @@
-.class public final Lg72;
-.super Ljava/lang/Object;
+.class public final enum Lg72;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lg72;
+.field public static final enum a:Lg72;
 
+.field public static final enum b:Lg72;
 
-# instance fields
-.field public final a:Ljava/util/Set;
+.field public static final enum c:Lg72;
 
-.field public final b:Lwyi;
+.field public static final synthetic d:[Lg72;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Lg72;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v1, Lg72;
-
-    invoke-static {v0}, Lue3;->h0(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object v0
+    const-string v1, "COLLAPSED"
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2}, Lg72;-><init>(Ljava/util/Set;Lwyi;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lg72;->c:Lg72;
+    sput-object v0, Lg72;->a:Lg72;
+
+    new-instance v1, Lg72;
+
+    const-string v2, "EXPANDED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lg72;->b:Lg72;
+
+    new-instance v2, Lg72;
+
+    const-string v3, "MAX_EXPANDED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lg72;->c:Lg72;
+
+    filled-new-array {v0, v1, v2}, [Lg72;
+
+    move-result-object v0
+
+    sput-object v0, Lg72;->d:[Lg72;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Set;Lwyi;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lg72;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lg72;
 
-    iput-object p1, p0, Lg72;->a:Ljava/util/Set;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object p2, p0, Lg72;->b:Lwyi;
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lg72;
+
+    return-object p0
 .end method
 
+.method public static values()[Lg72;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    sget-object v0, Lg72;->d:[Lg72;
 
-    instance-of v0, p1, Lg72;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    check-cast p1, Lg72;
+    check-cast v0, [Lg72;
 
-    iget-object v0, p1, Lg72;->a:Ljava/util/Set;
-
-    iget-object v1, p0, Lg72;->a:Ljava/util/Set;
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lg72;->b:Lwyi;
-
-    iget-object v0, p0, Lg72;->b:Lwyi;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lg72;->a:Ljava/util/Set;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x5ed
-
-    mul-int/lit8 v0, v0, 0x29
-
-    iget-object v1, p0, Lg72;->b:Lwyi;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method

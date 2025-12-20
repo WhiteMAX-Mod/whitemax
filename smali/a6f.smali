@@ -1,59 +1,137 @@
-.class public abstract synthetic La6f;
+.class public final La6f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Landroid/view/View;
+
+.field public b:Landroid/view/ViewTreeObserver;
+
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/View;Ljava/lang/Runnable;)V
+    .locals 0
 
-    invoke-static {}, Lecb;->values()[Lecb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La6f;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iput-object p1, p0, La6f;->b:Landroid/view/ViewTreeObserver;
+
+    iput-object p2, p0, La6f;->c:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Ljava/lang/Runnable;)V
+    .locals 1
+
+    new-instance v0, La6f;
+
+    invoke-direct {v0, p0, p1}, La6f;-><init>(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onPreDraw()Z
+    .locals 2
+
+    iget-object v0, p0, La6f;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v0
+
+    iget-object v1, p0, La6f;->a:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, La6f;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    new-array v0, v0, [I
+    :goto_0
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const/4 v1, 0x1
+    iget-object v0, p0, La6f;->c:Ljava/lang/Runnable;
 
-    const/4 v2, 0x0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v0
+.end method
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object p1
 
-    :catch_2
-    const/4 v2, 0x4
+    iput-object p1, p0, La6f;->b:Landroid/view/ViewTreeObserver;
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    return-void
+.end method
 
-    :catch_3
-    sput-object v0, La6f;->$EnumSwitchMapping$0:[I
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, La6f;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result p1
+
+    iget-object v0, p0, La6f;->a:Landroid/view/View;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, La6f;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    :goto_0
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    sget v0, Lm5d;->Widget_MaterialComponents_Toolbar:I
+    sget v0, Lred;->Widget_MaterialComponents_Toolbar:I
 
     sput v0, Lcom/google/android/material/appbar/MaterialToolbar;->m1:I
 
@@ -57,11 +57,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 6
 
-    sget v3, Ldvc;->toolbarStyle:I
+    sget v3, Lf4d;->toolbarStyle:I
 
     sget v4, Lcom/google/android/material/appbar/MaterialToolbar;->m1:I
 
-    invoke-static {p1, p2, v3, v4}, Ler8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, v3, v4}, Ltv8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    sget-object v2, Lz5d;->MaterialToolbar:[I
+    sget-object v2, Lefd;->MaterialToolbar:[I
 
     const/4 p1, 0x0
 
@@ -79,11 +79,11 @@
 
     move-object v1, p2
 
-    invoke-static/range {v0 .. v5}, Ld7g;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    invoke-static/range {v0 .. v5}, Lsig;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v1, Lz5d;->MaterialToolbar_navigationIconTint:I
+    sget v1, Lefd;->MaterialToolbar_navigationIconTint:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -93,7 +93,7 @@
 
     if-eqz v1, :cond_0
 
-    sget v1, Lz5d;->MaterialToolbar_navigationIconTint:I
+    sget v1, Lefd;->MaterialToolbar_navigationIconTint:I
 
     invoke-virtual {p2, v1, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -102,7 +102,7 @@
     invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/MaterialToolbar;->setNavigationIconTint(I)V
 
     :cond_0
-    sget v1, Lz5d;->MaterialToolbar_titleCentered:I
+    sget v1, Lefd;->MaterialToolbar_titleCentered:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -110,7 +110,7 @@
 
     iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->i1:Z
 
-    sget v1, Lz5d;->MaterialToolbar_subtitleCentered:I
+    sget v1, Lefd;->MaterialToolbar_subtitleCentered:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -118,7 +118,7 @@
 
     iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->j1:Z
 
-    sget v1, Lz5d;->MaterialToolbar_logoScaleType:I
+    sget v1, Lefd;->MaterialToolbar_logoScaleType:I
 
     invoke-virtual {p2, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -137,7 +137,7 @@
     iput-object v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->k1:Landroid/widget/ImageView$ScaleType;
 
     :cond_1
-    sget v1, Lz5d;->MaterialToolbar_logoAdjustViewBounds:I
+    sget v1, Lefd;->MaterialToolbar_logoAdjustViewBounds:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -145,7 +145,7 @@
 
     if-eqz v1, :cond_2
 
-    sget v1, Lz5d;->MaterialToolbar_logoAdjustViewBounds:I
+    sget v1, Lefd;->MaterialToolbar_logoAdjustViewBounds:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -173,28 +173,28 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p2}, Lr9j;->b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+    invoke-static {p2}, Lbnj;->a(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
     :goto_0
     if-eqz p1, :cond_4
 
-    new-instance p2, Lwq8;
+    new-instance p2, Llv8;
 
-    invoke-direct {p2}, Lwq8;-><init>()V
+    invoke-direct {p2}, Llv8;-><init>()V
 
-    invoke-virtual {p2, p1}, Lwq8;->k(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p2, p1}, Llv8;->k(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {p2, v0}, Lwq8;->i(Landroid/content/Context;)V
+    invoke-virtual {p2, v0}, Llv8;->i(Landroid/content/Context;)V
 
-    sget-object p1, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lash;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {p0}, Lveh;->i(Landroid/view/View;)F
+    invoke-static {p0}, Lorh;->i(Landroid/view/View;)F
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lwq8;->j(F)V
+    invoke-virtual {p2, p1}, Llv8;->j(F)V
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -227,24 +227,24 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lvf9;
+    instance-of v1, v0, Lhk9;
 
     if-eqz v1, :cond_0
 
     move-object v2, v0
 
-    check-cast v2, Lvf9;
+    check-cast v2, Lhk9;
 
-    invoke-virtual {v2}, Lvf9;->w()V
+    invoke-virtual {v2}, Lhk9;->w()V
 
     :cond_0
     invoke-super {p0, p1}, Landroidx/appcompat/widget/Toolbar;->m(I)V
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lvf9;
+    check-cast v0, Lhk9;
 
-    invoke-virtual {v0}, Lvf9;->v()V
+    invoke-virtual {v0}, Lhk9;->v()V
 
     :cond_1
     return-void
@@ -259,13 +259,13 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lwq8;
+    instance-of v1, v0, Llv8;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lwq8;
+    check-cast v0, Llv8;
 
-    invoke-static {p0, v0}, Liti;->c(Landroid/view/View;Lwq8;)V
+    invoke-static {p0, v0}, Le7j;->g(Landroid/view/View;Llv8;)V
 
     :cond_0
     return-void
@@ -297,7 +297,7 @@
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Ljni;->e(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-static {p0, p2}, Ls0j;->c(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -305,7 +305,7 @@
 
     move-result p5
 
-    sget-object v0, Ljni;->a:Lvs6;
+    sget-object v0, Ls0j;->a:Lrng;
 
     if-eqz p5, :cond_1
 
@@ -325,7 +325,7 @@
 
     move-result-object p5
 
-    invoke-static {p0, p5}, Ljni;->e(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-static {p0, p5}, Ls0j;->c(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
     move-result-object p5
 
@@ -560,13 +560,13 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lwq8;
+    instance-of v1, v0, Llv8;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lwq8;
+    check-cast v0, Llv8;
 
-    invoke-virtual {v0, p1}, Lwq8;->j(F)V
+    invoke-virtual {v0, p1}, Llv8;->j(F)V
 
     :cond_0
     return-void
@@ -637,7 +637,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lt35;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
     invoke-super {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V

@@ -1,452 +1,94 @@
-.class public final Lzl3;
+.class public abstract Lzl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpy4;
-.implements Lqy4;
 
-
-# instance fields
-.field public a:Lso0;
-
-.field public volatile b:Z
+# static fields
+.field public static final a:Lc07;
 
 
 # direct methods
-.method public static f(Lso0;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 4
 
-    if-nez p0, :cond_0
+    new-instance v0, Lc07;
 
-    goto :goto_2
-
-    :cond_0
-    iget-object p0, p0, Lso0;->d:Ljava/lang/Object;
-
-    check-cast p0, [Ljava/lang/Object;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
+    const-string v1, ""
 
     const/4 v2, 0x0
 
-    move v3, v1
+    const-string v3, "CommonUtils"
 
-    :goto_0
-    if-ge v3, v0, :cond_3
+    invoke-direct {v0, v3, v1, v2}, Lc07;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    aget-object v4, p0, v3
+    sput-object v0, Lzl3;->a:Lc07;
 
-    instance-of v5, v4, Lpy4;
-
-    if-eqz v5, :cond_2
-
-    :try_start_0
-    check-cast v4, Lpy4;
-
-    invoke-interface {v4}, Lpy4;->dispose()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v4
-
-    invoke-static {v4}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    if-nez v2, :cond_1
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    :cond_1
-    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_4
-
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Throwable;
-
-    invoke-static {p0}, Lbj5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_4
-    new-instance p0, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    invoke-direct {p0, v2}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>(Ljava/util/List;)V
-
-    throw p0
-
-    :cond_5
-    :goto_2
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lpy4;)Z
-    .locals 5
-
-    const-string v0, "disposable is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-nez v0, :cond_2
-
-    monitor-enter p0
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
 
     :try_start_0
-    iget-boolean v0, p0, Lzl3;->b:Z
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    iget-object v0, p0, Lzl3;->a:Lso0;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    new-instance v0, Lso0;
+    invoke-virtual {v0, p0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    const/16 v2, 0xf
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    invoke-static {v2}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result v2
-
-    rsub-int/lit8 v2, v2, 0x20
-
-    shl-int v2, v1, v2
-
-    add-int/lit8 v3, v2, -0x1
-
-    iput v3, v0, Lso0;->a:I
-
-    int-to-float v3, v2
-
-    const/high16 v4, 0x3f400000    # 0.75f
-
-    mul-float/2addr v4, v3
-
-    float-to-int v3, v4
-
-    iput v3, v0, Lso0;->c:I
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    iput-object v2, v0, Lso0;->d:Ljava/lang/Object;
-
-    iput-object v0, p0, Lzl3;->a:Lso0;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v0, p1}, Lso0;->a(Lpy4;)V
-
-    monitor-exit p0
-
-    return v1
-
-    :cond_1
-    monitor-exit p0
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit p0
+    move-result-object p0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw p1
+    return-object p0
 
-    :cond_2
-    :goto_2
-    invoke-interface {p1}, Lpy4;->dispose()V
+    :catch_0
+    move-exception p0
 
-    const/4 p1, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return p1
-.end method
+    move-result-object p0
 
-.method public final b(Lpy4;)Z
-    .locals 1
+    const-string v0, "Exception thrown when trying to get app version "
 
-    invoke-virtual {p0, p1}, Lzl3;->c(Lpy4;)Z
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x6
+
+    sget-object v1, Lzl3;->a:Lc07;
+
+    iget-object v2, v1, Lc07;->b:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Lpy4;->dispose()V
+    invoke-virtual {v1, p0}, Lc07;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 p1, 0x1
+    move-result-object p0
 
-    return p1
+    const-string v0, "CommonUtils"
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final c(Lpy4;)Z
-    .locals 7
-
-    const-string v0, "disposable is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return v1
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    monitor-enter p0
+    const-string p0, ""
 
-    :try_start_0
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-eqz v0, :cond_1
-
-    monitor-exit p0
-
-    return v1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    iget-object v0, p0, Lzl3;->a:Lso0;
-
-    if-eqz v0, :cond_5
-
-    iget-object v2, v0, Lso0;->d:Ljava/lang/Object;
-
-    check-cast v2, [Ljava/lang/Object;
-
-    iget v3, v0, Lso0;->a:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v4
-
-    const v5, -0x61c88647
-
-    mul-int/2addr v4, v5
-
-    ushr-int/lit8 v5, v4, 0x10
-
-    xor-int/2addr v4, v5
-
-    and-int/2addr v4, v3
-
-    aget-object v5, v2, v4
-
-    if-nez v5, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v5, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v0, v4, v3, v2}, Lso0;->c(II[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    add-int/2addr v4, v6
-
-    and-int/2addr v4, v3
-
-    aget-object v5, v2, v4
-
-    if-nez v5, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v5, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v0, v4, v3, v2}, Lso0;->c(II[Ljava/lang/Object;)V
-
-    :goto_0
-    monitor-exit p0
-
-    return v6
-
-    :cond_5
-    :goto_1
-    monitor-exit p0
-
-    return v1
-
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final d()V
-    .locals 2
-
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-eqz v0, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lzl3;->a:Lso0;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lzl3;->a:Lso0;
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v0}, Lzl3;->f(Lso0;)V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final dispose()V
-    .locals 2
-
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    if-eqz v0, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lzl3;->b:Z
-
-    iget-object v0, p0, Lzl3;->a:Lso0;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lzl3;->a:Lso0;
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v0}, Lzl3;->f(Lso0;)V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lzl3;->b:Z
-
-    return v0
+    return-object p0
 .end method

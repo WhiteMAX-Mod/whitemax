@@ -58,7 +58,7 @@
 
     sput-object v0, Lone/me/rlottie/NativeLibraryLoader$Companion;->$$INSTANCE:Lone/me/rlottie/NativeLibraryLoader$Companion;
 
-    new-instance v0, Lmca;
+    new-instance v0, Ltia;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -90,11 +90,11 @@
     :catchall_0
     move-exception p0
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lrca;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lyia;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lrca;->d(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0}, Lyia;->r(Ljava/lang/Throwable;)V
 
     return-void
 .end method

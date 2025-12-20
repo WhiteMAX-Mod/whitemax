@@ -1,140 +1,120 @@
-.class public final Litb;
-.super Lj2;
+.class public Litb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Litb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final c:[Ljava/lang/Object;
+.field public final a:I
 
-.field public final d:Ltig;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lj2;-><init>(II)V
+    new-instance v0, Lnjb;
 
-    iput-object p5, p0, Litb;->c:[Ljava/lang/Object;
+    const/4 v1, 0x4
 
-    add-int/lit8 p2, p2, -0x1
+    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
 
-    and-int/lit8 p2, p2, -0x20
+    sput-object v0, Litb;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    if-le p1, p2, :cond_0
+    return-void
+.end method
 
-    move p1, p2
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    :cond_0
-    new-instance p5, Ltig;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p5, p4, p1, p2, p3}, Ltig;-><init>([Ljava/lang/Object;III)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    iput-object p5, p0, Litb;->d:Ltig;
+    move-result v0
+
+    iput v0, p0, Litb;->a:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Litb;->c:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Litb;->d:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Litb;->o:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Litb;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    invoke-virtual {p0}, Lj2;->hasNext()Z
+    const/4 v0, 0x0
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Litb;->d:Ltig;
-
-    invoke-virtual {v0}, Lj2;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, p0, Lj2;->a:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lj2;->a:I
-
-    invoke-virtual {v0}, Ltig;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    iget v1, p0, Lj2;->a:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lj2;->a:I
-
-    iget v0, v0, Lj2;->b:I
-
-    sub-int/2addr v1, v0
-
-    iget-object v0, p0, Litb;->c:[Ljava/lang/Object;
-
-    aget-object v0, v0, v1
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return v0
 .end method
 
-.method public final previous()Ljava/lang/Object;
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {p0}, Lj2;->hasPrevious()Z
+    iget p2, p0, Litb;->a:I
 
-    move-result v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz v0, :cond_1
+    iget p2, p0, Litb;->c:I
 
-    iget v0, p0, Lj2;->a:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, p0, Litb;->d:Ltig;
+    iget p2, p0, Litb;->d:I
 
-    iget v2, v1, Lj2;->b:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-le v0, v2, :cond_0
+    iget p2, p0, Litb;->o:I
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iput v0, p0, Lj2;->a:I
+    iget p2, p0, Litb;->b:I
 
-    sub-int/2addr v0, v2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, p0, Litb;->c:[Ljava/lang/Object;
-
-    aget-object v0, v1, v0
-
-    return-object v0
-
-    :cond_0
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lj2;->a:I
-
-    invoke-virtual {v1}, Ltig;->previous()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return-void
 .end method

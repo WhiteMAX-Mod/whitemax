@@ -1,150 +1,79 @@
-.class public final Lvbb;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.class public abstract Lvbb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public d:F
+# static fields
+.field public static final a:I
 
-.field public o:Landroid/graphics/Path;
+.field public static final b:I
 
-.field public s0:I
+.field public static final c:I
 
-.field public final t0:Landroid/graphics/Paint;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    sput v0, Lvbb;->a:I
 
-    sget-object p1, La93;->s0:Lv1a;
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
-    invoke-virtual {p1, p0}, Lv1a;->y(Landroid/view/View;)Lyeb;
+    sput v0, Lvbb;->b:I
 
-    move-result-object p1
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
 
-    invoke-interface {p1}, Lyeb;->f()Lm0h;
+    sput v0, Lvbb;->c:I
 
-    const/high16 p1, 0x29000000
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
 
-    iput p1, p0, Lvbb;->s0:I
+    sput v0, Lvbb;->d:I
 
-    new-instance p1, Landroid/graphics/Paint;
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    sput v0, Lvbb;->e:I
 
-    const/4 v1, 0x0
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    sput v0, Lvbb;->f:I
 
-    iput-object p1, p0, Lvbb;->t0:Landroid/graphics/Paint;
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_rate_view_title:I
 
-    new-instance p1, Lkga;
+    sput v0, Lvbb;->g:I
 
-    const/4 v1, 0x3
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view:I
 
-    const/4 v2, 0x3
+    sput v0, Lvbb;->h:I
 
-    invoke-direct {p1, v1, v0, v2}, Lkga;-><init>(ILkotlin/coroutines/Continuation;I)V
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
 
-    invoke-static {p1, p0}, Ltqi;->c(Lum6;Landroid/view/View;)V
+    sput v0, Lvbb;->i:I
 
-    return-void
-.end method
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_icon:I
 
+    sput v0, Lvbb;->j:I
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 6
+    sget v0, Lu7d;->fake_in_app_review_bottom_sheet_thank_view_title:I
 
-    iget-object v0, p0, Lvbb;->o:Landroid/graphics/Path;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lvbb;->d:F
-
-    div-float/2addr v1, v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {p1, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v3, 0x0
-
-    mul-float/2addr v2, v3
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    iget v3, p0, Lvbb;->s0:I
-
-    iget-object v5, p0, Lvbb;->t0:Landroid/graphics/Paint;
-
-    invoke-virtual {v5, v1, v2, v4, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
-
-    invoke-virtual {p1, v0, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    invoke-virtual {v5}, Landroid/graphics/Paint;->clearShadowLayer()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    sput v0, Lvbb;->k:I
 
     return-void
 .end method

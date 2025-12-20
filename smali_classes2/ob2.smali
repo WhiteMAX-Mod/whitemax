@@ -1,87 +1,53 @@
 .class public final Lob2;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public A:J
+.field public final synthetic X:Lqb2;
 
-.field public B:Ljava/util/LinkedHashMap;
+.field public Y:I
 
-.field public C:Lj2h;
+.field public d:Lqb2;
 
-.field public D:Z
+.field public synthetic o:Ljava/lang/Object;
 
-.field public E:Z
 
-.field public F:J
+# direct methods
+.method public constructor <init>(Lqb2;Ll84;)V
+    .locals 0
 
-.field public G:Ljava/util/LinkedHashMap;
+    iput-object p1, p0, Lob2;->X:Lqb2;
 
-.field public H:J
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public I:Z
+    return-void
+.end method
 
-.field public J:J
 
-.field public K:Ljava/lang/String;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.field public L:J
+    iput-object p1, p0, Lob2;->o:Ljava/lang/Object;
 
-.field public M:J
+    iget p1, p0, Lob2;->Y:I
 
-.field public N:I
+    const/high16 v0, -0x80000000
 
-.field public O:I
+    or-int/2addr p1, v0
 
-.field public a:J
+    iput p1, p0, Lob2;->Y:I
 
-.field public b:Ljava/lang/String;
+    const/4 p1, 0x0
 
-.field public c:J
+    const/4 v0, 0x0
 
-.field public d:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lob2;->X:Lqb2;
 
-.field public e:J
+    invoke-static {v1, p1, v0, p0}, Lqb2;->s(Lqb2;Lp23;ZLl84;)Ljava/lang/Object;
 
-.field public f:Ljava/lang/String;
+    move-result-object p1
 
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/lang/String;
-
-.field public i:Lfh9;
-
-.field public j:J
-
-.field public k:J
-
-.field public l:I
-
-.field public m:J
-
-.field public n:Ljava/lang/String;
-
-.field public o:Lhfd;
-
-.field public p:I
-
-.field public q:Lfz6;
-
-.field public r:I
-
-.field public s:Ljava/lang/String;
-
-.field public t:Lsz;
-
-.field public u:I
-
-.field public v:Lkt2;
-
-.field public w:Lfh9;
-
-.field public x:Z
-
-.field public y:Z
-
-.field public z:Z
+    return-object p1
+.end method

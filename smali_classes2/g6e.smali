@@ -1,49 +1,49 @@
-.class public final Lg6e;
-.super Lq44;
+.class public final synthetic Lg6e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lco3;
+.implements Lux3;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lh6e;
+.field public final synthetic a:Ln6;
 
 
 # direct methods
-.method public constructor <init>(Lh6e;Lq44;)V
+.method public synthetic constructor <init>(Ln6;)V
     .locals 0
 
-    iput-object p1, p0, Lg6e;->o:Lh6e;
+    iput-object p1, p0, Lg6e;->a:Ln6;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public accept(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Lv2h;
+
+    iget-object p1, p0, Lg6e;->a:Ln6;
+
+    invoke-interface {p1}, Ln6;->run()V
+
+    return-void
+.end method
+
+.method public b(Lun3;)V
     .locals 1
 
-    iput-object p1, p0, Lg6e;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lg6e;->a:Ln6;
 
-    iget p1, p0, Lg6e;->X:I
+    invoke-interface {v0}, Ln6;->run()V
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Lun3;->b()V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lg6e;->X:I
-
-    iget-object p1, p0, Lg6e;->o:Lh6e;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lh6e;->b(Lh6e;Ljava/lang/Throwable;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

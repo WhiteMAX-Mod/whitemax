@@ -1,82 +1,90 @@
-.class public final enum Lbx4;
-.super Ljava/lang/Enum;
+.class public final Lbx4;
+.super Lh4;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
-# static fields
-.field public static final enum a:Lbx4;
-
-.field public static final synthetic b:[Lbx4;
+# instance fields
+.field public final Z:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lax4;)V
+    .locals 2
 
-    new-instance v0, Lbx4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    new-instance v0, Luz6;
 
-    const/4 v2, 0x0
+    const/16 v1, 0xd
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, p0}, Luz6;-><init>(ILjava/lang/Object;)V
 
-    sput-object v0, Lbx4;->a:Lbx4;
+    invoke-interface {p1, v0}, Lax4;->b(Luz6;)Ljava/util/concurrent/ScheduledFuture;
 
-    filled-new-array {v0}, [Lbx4;
+    move-result-object p1
 
-    move-result-object v0
-
-    sput-object v0, Lbx4;->b:[Lbx4;
+    iput-object p1, p0, Lbx4;->Z:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lbx4;
-    .locals 1
-
-    const-class v0, Lbx4;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbx4;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbx4;
-    .locals 1
-
-    sget-object v0, Lbx4;->b:[Lbx4;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbx4;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+.method public final c()V
+    .locals 3
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    iget-object v0, p0, Lbx4;->Z:Ljava/util/concurrent/ScheduledFuture;
+
+    iget-object v1, p0, Lh4;->a:Ljava/lang/Object;
+
+    instance-of v2, v1, Lb4;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Lb4;
+
+    iget-boolean v1, v1, Lb4;->a:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    const-string v0, "DirectExecutor"
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    return-object v0
+    iget-object v0, p0, Lbx4;->Z:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
+
+    iget-object v0, p0, Lbx4;->Z:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

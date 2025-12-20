@@ -1,77 +1,120 @@
-.class public final synthetic Liba;
+.class public abstract Liba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lju3;
-
-
-# instance fields
-.field public final synthetic a:J
-
 
 # direct methods
-.method public synthetic constructor <init>(J)V
-    .locals 0
+.method public static a([B)Lkba;
+    .locals 17
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
 
-    iput-wide p1, p0, Liba;->a:J
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgReact;-><init>()V
 
-    return-void
-.end method
+    move-object/from16 v1, p0
 
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
-
-    check-cast p1, Lnaa;
-
-    iget-wide v0, p0, Liba;->a:J
-
-    iput-wide v0, p1, Lnaa;->Z:J
-
-    iget-object v2, p1, Lnaa;->X:Lxd8;
-
-    invoke-virtual {v2}, Lxd8;->d()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p1}, Lnaa;->D0()V
-
-    :cond_0
-    iget-object v2, p1, Li3;->b:Ljava/lang/Object;
-
-    check-cast v2, Loaa;
-
-    check-cast v2, Lkba;
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Lml6;->c(J)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v2, v2, Lkba;->v0:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lnaa;->L0()V
-
-    iget-object p1, p1, Lnaa;->u0:Llqc;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :try_start_0
+    invoke-static {v0, v1}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Llqc;->f(Ljava/lang/Object;)V
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    new-instance v1, Lkba;
+
+    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->requestId:J
+
+    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatId:J
+
+    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageId:J
+
+    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatServerId:J
+
+    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageServerId:J
+
+    new-instance v12, Ldq9;
+
+    iget v13, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reactionType:I
+
+    sget-object v14, Liq9;->d:Lwk5;
+
+    invoke-virtual {v14}, Lf2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v14
+
+    :goto_0
+    move-object v15, v14
+
+    check-cast v15, Lc2;
+
+    invoke-virtual {v15}, Lc2;->hasNext()Z
+
+    move-result v16
+
+    if-eqz v16, :cond_1
+
+    invoke-virtual {v15}, Lc2;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    move-object/from16 p0, v1
+
+    move-object v1, v15
+
+    check-cast v1, Liq9;
+
+    iget v1, v1, Liq9;->a:I
+
+    if-ne v1, v13, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move-object/from16 v1, p0
+
+    goto :goto_0
+
+    :cond_1
+    move-object/from16 p0, v1
+
+    const/4 v15, 0x0
+
+    :goto_1
+    check-cast v15, Liq9;
+
+    if-eqz v15, :cond_2
+
+    iget-object v0, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reaction:Ljava/lang/String;
+
+    invoke-direct {v12, v15, v0}, Ldq9;-><init>(Liq9;Ljava/lang/String;)V
+
+    move-object/from16 v1, p0
+
+    invoke-direct/range {v1 .. v12}, Lkba;-><init>(JJJJJLdq9;)V
+
+    return-object v1
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unknown reactionType = "
+
+    invoke-static {v13, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

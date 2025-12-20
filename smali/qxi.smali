@@ -1,141 +1,235 @@
-.class public abstract Lqxi;
-.super Ljava/lang/Object;
+.class public final Lqxi;
+.super Lyni;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Lt22;Ljava/lang/String;)Z
-    .locals 4
+# virtual methods
+.method public final Y()Lhsi;
+    .locals 5
 
-    const-string v0, "robolectric"
+    const/4 v0, 0x4
 
-    sget-object v1, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v0
+    invoke-virtual {p0, v1, v0}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    return v1
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Lt22;->b(Ljava/lang/String;)Li12;
+    const-string v2, "com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate"
 
-    move-result-object p0
+    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_CAPABILITIES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    move-result-object v3
 
-    invoke-virtual {p0, p1}, Li12;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    instance-of v4, v3, Lhsi;
 
-    move-result-object p0
+    if-eqz v4, :cond_1
 
-    check-cast p0, [I
-    :try_end_0
-    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_0 .. :try_end_0} :catch_0
+    move-object v1, v3
+
+    check-cast v1, Lhsi;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Lhsi;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, v1, v2, v4}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object v1
+.end method
+
+.method public final Z(Laxa;)Lr9j;
+    .locals 4
+
+    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, v0, p1}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IMapFragmentDelegate"
+
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lr9j;
+
+    if-eqz v3, :cond_1
+
+    move-object v0, v2
+
+    check-cast v0, Lr9j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lr9j;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v1, v3}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v0, v2
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+.end method
+
+.method public final a0(Laxa;)Lwbj;
+    .locals 4
+
+    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lxti;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
     const/4 p1, 0x0
 
-    if-eqz p0, :cond_2
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    array-length v0, p0
+    const/4 p1, 0x3
 
-    move v2, p1
+    invoke-virtual {p0, v0, p1}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    :goto_0
-    if-ge v2, v0, :cond_2
+    move-result-object p1
 
-    aget v3, p0, v2
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    if-nez v3, :cond_1
+    move-result-object v0
 
-    return v1
+    if-nez v0, :cond_0
 
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return p1
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Landroidx/camera/core/InitializationException;
-
-    new-instance v0, Landroidx/camera/core/CameraUnavailableException;
-
-    invoke-direct {v0, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-direct {p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method public static b(Lry9;)Z
-    .locals 6
-
-    instance-of v0, p0, Lx3a;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Lv3a;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Ly3a;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Ly3a;
-
-    iget-wide v2, v0, Ly3a;->a:J
-
-    const-wide v4, 0xffffffffL
-
-    cmp-long v2, v2, v4
-
-    if-gtz v2, :cond_0
-
-    iget-wide v2, v0, Ly3a;->b:J
-
-    cmp-long v0, v2, v4
-
-    if-gtz v0, :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lks8;
+    const-string v1, "com.google.android.gms.maps.internal.IMapViewDelegate"
 
-    if-eqz v0, :cond_1
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    check-cast p0, Lks8;
+    move-result-object v2
 
-    iget p0, p0, Lks8;->d:I
+    instance-of v3, v2, Lwbj;
 
-    if-eq p0, v1, :cond_2
+    if-eqz v3, :cond_1
 
-    const/16 v0, 0x17
+    move-object v0, v2
 
-    if-ne p0, v0, :cond_1
+    check-cast v0, Lwbj;
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    new-instance v2, Lwbj;
 
-    return p0
+    const/4 v3, 0x3
 
-    :cond_2
+    invoke-direct {v2, v0, v1, v3}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v0, v2
+
     :goto_0
-    return v1
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+.end method
+
+.method public final b0()Lp9j;
+    .locals 5
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p0}, Lyni;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1, v0}, Lyni;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    sget v2, Lj7j;->d:I
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "com.google.android.gms.maps.model.internal.IBitmapDescriptorFactoryDelegate"
+
+    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lp9j;
+
+    if-eqz v4, :cond_1
+
+    move-object v1, v3
+
+    check-cast v1, Lp9j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Lh5j;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, v1, v2, v4}, Lyni;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object v1
 .end method

@@ -1,349 +1,106 @@
 .class public final Lg51;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn1;
-.implements Lhn1;
+.implements Lh51;
+
+
+# static fields
+.field public static final a:Lg51;
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lg51;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lg51;->a:Lg51;
+
+    const/16 v0, 0x40
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->b:I
+
+    const/16 v0, 0x20
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->c:I
+
+    const/4 v0, 0x4
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->d:I
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, La3e;->e(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->e:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 2
+.method public final a()I
+    .locals 1
 
-    if-nez p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->o:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljn1;
-
-    invoke-interface {v0, p1}, Ljn1;->a(Z)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final c(Z)V
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->X:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljn1;
-
-    invoke-interface {v0, p1}, Ljn1;->c(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Landroid/graphics/RectF;Z)V
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->t0:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhn1;
-
-    invoke-interface {v0, p1, p2}, Lhn1;->d(Landroid/graphics/RectF;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(Z)V
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->d:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhn1;
-
-    invoke-interface {v0, p1}, Lhn1;->e(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Lo98;ZJ)V
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->Y:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhn1;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lhn1;->f(Lo98;ZJ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(Lo98;ZJ)V
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->Z:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljn1;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Ljn1;->g(Lo98;ZJ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public getShouldScaleMainOpponent()Z
-    .locals 2
-
-    new-instance v0, Lat;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Lzx0;->s0:Lzx0;
-
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
-
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :cond_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhn1;
-
-    invoke-interface {v0}, Lhn1;->getShouldScaleMainOpponent()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
+    sget v0, Lg51;->c:I
 
     return v0
 .end method
 
-.method public final o(Z)V
-    .locals 2
+.method public final b()I
+    .locals 1
 
-    if-nez p1, :cond_0
+    sget v0, Lg51;->d:I
 
-    goto :goto_1
+    return v0
+.end method
 
-    :cond_0
-    new-instance v0, Lat;
+.method public final c()I
+    .locals 1
 
-    const/16 v1, 0x8
+    sget v0, Lg51;->b:I
 
-    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+    return v0
+.end method
 
-    sget-object v1, Lzx0;->c:Lzx0;
+.method public final d()I
+    .locals 1
 
-    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+    sget v0, Lg51;->e:I
 
-    move-result-object v0
-
-    new-instance v1, Lnz5;
-
-    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lnz5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhn1;
-
-    invoke-interface {v0, p1}, Lhn1;->o(Z)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
+    return v0
 .end method

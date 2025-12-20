@@ -1,19 +1,26 @@
 .class public final Lk0g;
-.super Ll0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
 # virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "empty"
+    new-instance v0, Ll0g;
+
+    invoke-direct {v0, p1}, Ll0g;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
+.end method
+
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    new-array p1, p1, [Ll0g;
+
+    return-object p1
 .end method

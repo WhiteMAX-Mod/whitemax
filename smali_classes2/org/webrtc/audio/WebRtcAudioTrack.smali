@@ -223,11 +223,11 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p1}, Lyhh;->a(Landroid/media/AudioAttributes;)I
+    invoke-static {p1}, Lruh;->a(Landroid/media/AudioAttributes;)I
 
     move-result p1
 
-    invoke-static {p0, p1}, Lyhh;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    invoke-static {p0, p1}, Lruh;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p0
 
@@ -999,7 +999,7 @@
 
     const-string v6, "AudioTrack: session ID: "
 
-    invoke-static {v6, v0, v4, v1, v5}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v0, v4, v1, v5}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1197,21 +1197,25 @@
 .method private reportWebRtcAudioTrackStartError(Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStartErrorCode;Ljava/lang/String;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v1, "Start playout error: "
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "Start playout error: "
 
-    const-string v1, ". "
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ". "
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1375,7 +1379,7 @@
 
     const-string v3, "AudioTrack.play failed - incorrect state :"
 
-    invoke-static {v1, v3}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1396,7 +1400,7 @@
 
     const-string v3, "AudioTrack.play failed: "
 
-    invoke-static {v3, v0}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

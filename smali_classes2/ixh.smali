@@ -1,152 +1,194 @@
-.class public final enum Lixh;
-.super Ljava/lang/Enum;
+.class public final Lixh;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lpsh;
-
-
-# static fields
-.field public static final synthetic X:[Lixh;
-
-.field public static final synthetic Y:Lzg5;
-
-.field public static final enum d:Lixh;
-
-.field public static final enum o:Lixh;
+.implements Ler6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Lkxh;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/Integer;
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    new-instance v0, Lixh;
+    .line 1
+    const/4 v0, 0x0
 
-    const/16 v1, 0xe
+    iput v0, p0, Lixh;->o:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "SHARE"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppShare"
-
-    const-string v4, "web_app_share"
-
-    invoke-direct/range {v0 .. v5}, Lixh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Lixh;->d:Lixh;
-
-    new-instance v1, Lixh;
-
-    const/16 v2, 0xf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "MAX_SHARE"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppMaxShare"
-
-    const-string v5, "web_app_max_share"
-
-    invoke-direct/range {v1 .. v6}, Lixh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lixh;->o:Lixh;
-
-    filled-new-array {v0, v1}, [Lixh;
-
-    move-result-object v0
-
-    sput-object v0, Lixh;->X:[Lixh;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lixh;->Y:Lzg5;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+.method public constructor <init>(Lkxh;Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x1
 
-    iput-object p3, p0, Lixh;->a:Ljava/lang/String;
+    iput v0, p0, Lixh;->o:I
 
-    iput-object p4, p0, Lixh;->b:Ljava/lang/String;
+    .line 2
+    iput-object p1, p0, Lixh;->X:Lkxh;
 
-    iput-object p5, p0, Lixh;->c:Ljava/lang/Integer;
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lixh;
-    .locals 1
-
-    const-class v0, Lixh;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lixh;
-
-    return-object p0
-.end method
-
-.method public static values()[Lixh;
-    .locals 1
-
-    sget-object v0, Lixh;->X:[Lixh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lixh;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lixh;->c:Ljava/lang/Integer;
+    iget v0, p0, Lixh;->o:I
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/widget/TextView;
+
+    check-cast p2, Lplb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p1, Lixh;
+
+    iget-object p2, p0, Lixh;->X:Lkxh;
+
+    invoke-direct {p1, p2, p3}, Lixh;-><init>(Lkxh;Lkotlin/coroutines/Continuation;)V
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lixh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    check-cast p1, Lkxh;
+
+    check-cast p2, Lplb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p2, Lixh;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p2, v0, p3}, Lixh;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, p2, Lixh;->X:Lkxh;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p2, p1}, Lixh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lixh;->a:Ljava/lang/String;
+    iget v0, p0, Lixh;->o:I
 
-    return-object v0
-.end method
+    sget-object v1, Lv2h;->a:Lv2h;
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lixh;->b:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lixh;->X:Lkxh;
+
+    iget-object v0, p1, Lkxh;->c:Ljxh;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lrod;
+
+    iget-object v0, v0, Lrod;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    sget-object v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Liod;
+
+    move-result-object v0
+
+    iget-object v0, v0, Liod;->y0:Lpkd;
+
+    iget-object v0, v0, Lpkd;->a:Laof;
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Laod;
+
+    :cond_0
+    instance-of v0, v2, Lwnd;
+
+    invoke-virtual {p1, v0}, Lkxh;->setDurationColor(Z)V
+
+    return-object v1
+
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lixh;->X:Lkxh;
+
+    iget-object v0, p1, Lkxh;->c:Ljxh;
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lrod;
+
+    iget-object v0, v0, Lrod;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    sget-object v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Lp38;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Liod;
+
+    move-result-object v0
+
+    iget-object v0, v0, Liod;->y0:Lpkd;
+
+    iget-object v0, v0, Lpkd;->a:Laof;
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Laod;
+
+    :cond_1
+    instance-of v0, v2, Lwnd;
+
+    invoke-virtual {p1, v0}, Lkxh;->setBackgroundColor(Z)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

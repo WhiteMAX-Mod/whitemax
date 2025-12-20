@@ -1,124 +1,128 @@
-.class public final synthetic Lqve;
-.super Ljava/lang/Object;
+.class public final Lqve;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lyve;
 
-.field public final synthetic b:Lrve;
+.field public final synthetic Y:Z
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrve;I)V
+.method public constructor <init>(Lyve;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lqve;->a:I
+    iput-object p1, p0, Lqve;->X:Lyve;
 
-    iput-object p1, p0, Lqve;->b:Lrve;
+    iput-boolean p2, p0, Lqve;->Y:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqve;->a:I
+    check-cast p1, Lac4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lqve;->b:Lrve;
+    invoke-virtual {p0, p1, p2}, Lqve;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Lrve;->b:Ly6d;
+    move-result-object p1
 
-    const-string v2, "releaseInternal"
+    check-cast p1, Lqve;
 
-    const-string v3, "SharedPeerConnectionFac"
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-interface {v1, v3, v2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lqve;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, v0, Lrve;->d:Lorg/webrtc/PeerConnectionFactory;
+    move-result-object p1
 
-    const/4 v2, 0x0
+    return-object p1
+.end method
 
-    if-eqz v1, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v4, v0, Lrve;->i:Lys4;
+    new-instance p1, Lqve;
 
-    iget-object v5, v0, Lrve;->j:Lnob;
+    iget-object v0, p0, Lqve;->X:Lyve;
 
-    invoke-virtual {v4, v5}, Lys4;->b(Lns8;)V
+    iget-boolean v1, p0, Lqve;->Y:Z
 
-    invoke-virtual {v1}, Lorg/webrtc/PeerConnectionFactory;->dispose()V
+    invoke-direct {p1, v0, v1, p2}, Lqve;-><init>(Lyve;ZLkotlin/coroutines/Continuation;)V
 
-    iget-object v4, v0, Lrve;->b:Ly6d;
+    return-object p1
+.end method
 
-    new-instance v5, Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    iget v0, p0, Lqve;->o:I
 
-    invoke-static {v1}, Lw0a;->c(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, v1, :cond_0
 
-    const-string v1, " was disposed."
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v4, v3, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v2, v0, Lrve;->d:Lorg/webrtc/PeerConnectionFactory;
+    goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lrve;->l:Lv08;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz v1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-static {v1}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    iget-object v1, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_2
+    sget-object p1, Lyve;->A0:[Lp38;
 
-    invoke-interface {v1}, Lorg/webrtc/audio/AudioDeviceModule;->release()V
+    iget-object p1, p0, Lqve;->X:Lyve;
 
-    iput-object v2, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+    invoke-virtual {p1}, Lyve;->t()Ljah;
+
+    move-result-object v0
+
+    const-string v2, "app.media.autoplay.gif"
+
+    iget-boolean v3, p0, Lqve;->Y:Z
+
+    invoke-virtual {v0, v2, v3}, Lz3;->f(Ljava/lang/String;Z)V
+
+    iput v1, p0, Lqve;->o:I
+
+    invoke-static {p1, p0}, Lyve;->s(Lyve;Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    return-void
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    :pswitch_0
-    iget-object v0, p0, Lqve;->b:Lrve;
-
-    iget-object v0, v0, Lrve;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->restartAudioRecording(Z)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

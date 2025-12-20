@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lmq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final synthetic b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;I)V
+.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;I)V
     .locals 0
 
     iput p2, p0, Lyz4;->a:I
 
-    iput-object p1, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iput-object p1, p0, Lyz4;->b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,405 +28,131 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 5
+    .locals 8
 
     iget v0, p0, Lyz4;->a:I
 
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Lyz4;->b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    sget-object v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->X:[Lp38;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-result-object v0
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    check-cast v0, Ly4e;
+    move-result-object v3
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v3, v4, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/16 v1, 0x8f
+    sget v1, Lleb;->j:I
 
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    move-result-object v0
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
-    check-cast v0, Lqi9;
+    const/4 v3, -0x1
+
+    invoke-direct {v1, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
+
+    iget-object v1, v2, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->c:Lhze;
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lzqd;)V
+
+    new-instance v4, Lwp4;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v4, v1}, Lwp4;-><init>(I)V
+
+    new-instance v2, Lije;
+
+    sget-object v1, Ldc3;->s0:Lole;
+
+    invoke-virtual {v1, v0}, Lole;->n(Landroid/view/View;)Lplb;
+
+    move-result-object v3
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x1c
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v2 .. v7}, Lije;-><init>(Lplb;Lgje;Loq6;Lqfe;I)V
+
+    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
+
+    new-instance v1, La21;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2}, La21;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lfrd;)V
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    sget-object v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->X:[Lp38;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+    new-instance v0, Lpmb;
 
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x89
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqx5;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Ly4e;->e()Lqw5;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-wide v1, v0, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->a:J
-
-    iget-wide v3, v0, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b:J
-
-    xor-long v0, v1, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const v1, 0x388797ff
-
-    add-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lma8;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lc5i;->d(Landroid/content/Context;)Lc5i;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lma8;->getId()Ljava/util/UUID;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lc5i;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lsxd;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const/16 v3, 0x1bb
+    invoke-direct {v0, v2, v1}, Lpmb;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v2, v3}, Lw5;->c(I)Ljava/lang/Object;
+    sget v1, Lleb;->l:I
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    check-cast v2, Ld1e;
+    sget-object v1, Lhmb;->b:Lhmb;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {v0, v1}, Lpmb;->setForm(Lhmb;)V
 
-    move-result-object v3
+    sget v1, Lneb;->k:I
 
-    const/16 v4, 0x8
+    invoke-virtual {v0, v1}, Lpmb;->setTitle(I)V
 
-    invoke-virtual {v3, v4}, Lw5;->c(I)Ljava/lang/Object;
+    new-instance v1, Lxlb;
 
-    move-result-object v3
+    new-instance v2, Li43;
 
-    check-cast v3, Llzf;
+    const/16 v3, 0x1b
 
-    check-cast v3, Lq2b;
+    invoke-direct {v2, v3}, Li43;-><init>(I)V
 
-    invoke-virtual {v3}, Lq2b;->b()Lz74;
+    invoke-direct {v1, v2}, Lxlb;-><init>(Loq6;)V
 
-    move-result-object v3
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v4, 0x1bc
-
-    invoke-virtual {v0, v4}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvob;
-
-    invoke-direct {v1, v2, v3, v0}, Lsxd;-><init>(Ld1e;Lz74;Lvob;)V
-
-    return-object v1
-
-    :pswitch_5
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x186
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzz;
+    invoke-virtual {v0, v1}, Lpmb;->setLeftActions(Ldmb;)V
 
     return-object v0
 
-    :pswitch_6
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x8b
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lur3;
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Ly4e;->j()Llzf;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x165
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmw5;
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x31
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltw0;
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x4f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhwa;
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x18f
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lu6b;
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x1b8
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lctf;
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Ly4e;->c()Lve2;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
-
-    move-result-object v0
-
-    check-cast v0, Ly4e;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x6d
-
-    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lw63;
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,128 +1,243 @@
-.class public abstract Lbvc;
+.class public final Lbvc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static adjustable:I = 0x7f040030
+# instance fields
+.field public final a:I
 
-.field public static allowDividerAbove:I = 0x7f040038
+.field public final b:I
 
-.field public static allowDividerAfterLastItem:I = 0x7f040039
+.field public final c:J
 
-.field public static allowDividerBelow:I = 0x7f04003a
+.field public final d:J
 
-.field public static checkBoxPreferenceStyle:I = 0x7f040269
 
-.field public static defaultValue:I = 0x7f04033d
+# direct methods
+.method public constructor <init>(IIJJ)V
+    .locals 0
 
-.field public static dependency:I = 0x7f040341
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static dialogIcon:I = 0x7f040344
+    iput p1, p0, Lbvc;->a:I
 
-.field public static dialogLayout:I = 0x7f040345
+    iput p2, p0, Lbvc;->b:I
 
-.field public static dialogMessage:I = 0x7f040346
+    iput-wide p3, p0, Lbvc;->c:J
 
-.field public static dialogPreferenceStyle:I = 0x7f040347
+    iput-wide p5, p0, Lbvc;->d:J
 
-.field public static dialogTitle:I = 0x7f04034a
+    return-void
+.end method
 
-.field public static disableDependentsState:I = 0x7f04034b
+.method public static a(Ljava/io/File;)Lbvc;
+    .locals 9
 
-.field public static dropdownPreferenceStyle:I = 0x7f04036b
+    new-instance v1, Ljava/io/DataInputStream;
 
-.field public static editTextPreferenceStyle:I = 0x7f040370
+    new-instance v0, Ljava/io/FileInputStream;
 
-.field public static enableCopying:I = 0x7f040378
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-.field public static enabled:I = 0x7f04037a
+    invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-.field public static entries:I = 0x7f040386
+    :try_start_0
+    new-instance v2, Lbvc;
 
-.field public static entryValues:I = 0x7f040387
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
-.field public static fragment:I = 0x7f0403f3
+    move-result v3
 
-.field public static icon:I = 0x7f040542
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
-.field public static iconSpaceReserved:I = 0x7f040547
+    move-result v4
 
-.field public static initialExpandedChildrenCount:I = 0x7f04055f
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
 
-.field public static isPreferenceVisible:I = 0x7f040565
+    move-result-wide v5
 
-.field public static key:I = 0x7f040587
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
 
-.field public static layout:I = 0x7f040596
+    move-result-wide v7
 
-.field public static maxHeight:I = 0x7f04064a
+    invoke-direct/range {v2 .. v8}, Lbvc;-><init>(IIJJ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static maxWidth:I = 0x7f040650
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
-.field public static min:I = 0x7f040666
+    return-object v2
 
-.field public static negativeButtonText:I = 0x7f0406ae
+    :catchall_0
+    move-exception v0
 
-.field public static order:I = 0x7f0406bd
+    move-object p0, v0
 
-.field public static orderingFromXml:I = 0x7f0406be
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-.field public static persistent:I = 0x7f0406dd
+    goto :goto_0
 
-.field public static positiveButtonText:I = 0x7f0406ef
+    :catchall_1
+    move-exception v0
 
-.field public static preferenceCategoryStyle:I = 0x7f0406f1
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-.field public static preferenceCategoryTitleTextAppearance:I = 0x7f0406f2
+    :goto_0
+    throw p0
+.end method
 
-.field public static preferenceCategoryTitleTextColor:I = 0x7f0406f3
 
-.field public static preferenceFragmentCompatStyle:I = 0x7f0406f4
+# virtual methods
+.method public final b(Ljava/io/File;)V
+    .locals 3
 
-.field public static preferenceFragmentListStyle:I = 0x7f0406f5
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-.field public static preferenceFragmentStyle:I = 0x7f0406f6
+    new-instance v0, Ljava/io/DataOutputStream;
 
-.field public static preferenceInformationStyle:I = 0x7f0406f7
+    new-instance v1, Ljava/io/FileOutputStream;
 
-.field public static preferenceScreenStyle:I = 0x7f0406f8
+    invoke-direct {v1, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-.field public static preferenceStyle:I = 0x7f0406f9
+    invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-.field public static preferenceTheme:I = 0x7f0406fa
+    :try_start_0
+    iget p1, p0, Lbvc;->a:I
 
-.field public static seekBarIncrement:I = 0x7f040749
+    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-.field public static seekBarPreferenceStyle:I = 0x7f04074a
+    iget p1, p0, Lbvc;->b:I
 
-.field public static selectable:I = 0x7f04074c
+    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-.field public static selectableItemBackground:I = 0x7f04074d
+    iget-wide v1, p0, Lbvc;->c:J
 
-.field public static shouldDisableView:I = 0x7f04075f
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-.field public static showSeekBarValue:I = 0x7f04076b
+    iget-wide v1, p0, Lbvc;->d:J
 
-.field public static singleLineTitle:I = 0x7f040781
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static summary:I = 0x7f0407fe
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-.field public static summaryOff:I = 0x7f0407ff
+    return-void
 
-.field public static summaryOn:I = 0x7f040800
+    :catchall_0
+    move-exception p1
 
-.field public static switchPreferenceCompatStyle:I = 0x7f040804
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-.field public static switchPreferenceStyle:I = 0x7f040805
+    goto :goto_0
 
-.field public static switchTextOff:I = 0x7f040808
+    :catchall_1
+    move-exception v0
 
-.field public static switchTextOn:I = 0x7f040809
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-.field public static title:I = 0x7f04088b
+    :goto_0
+    throw p1
+.end method
 
-.field public static updatesContinuously:I = 0x7f0408ce
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-.field public static useSimpleSummaryProvider:I = 0x7f0408d3
+    const/4 v0, 0x1
 
-.field public static widgetLayout:I = 0x7f0408ea
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    instance-of v2, p1, Lbvc;
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lbvc;
+
+    iget v2, p0, Lbvc;->b:I
+
+    iget v3, p1, Lbvc;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-wide v2, p0, Lbvc;->c:J
+
+    iget-wide v4, p1, Lbvc;->c:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lbvc;->a:I
+
+    iget v3, p1, Lbvc;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-wide v2, p0, Lbvc;->d:J
+
+    iget-wide v4, p1, Lbvc;->d:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget v0, p0, Lbvc;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lbvc;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iget v2, p0, Lbvc;->a:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iget-wide v3, p0, Lbvc;->d:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method

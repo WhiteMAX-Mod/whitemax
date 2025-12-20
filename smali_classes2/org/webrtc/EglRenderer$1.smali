@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer$1;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v0}, Lorg/webrtc/EglRenderer;->k(Lorg/webrtc/EglRenderer;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/webrtc/EglRenderer;->l(Lorg/webrtc/EglRenderer;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/EglRenderer$1;->this$0:Lorg/webrtc/EglRenderer;
 
-    invoke-static {v1}, Lorg/webrtc/EglRenderer;->l(Lorg/webrtc/EglRenderer;)V
+    invoke-static {v1}, Lorg/webrtc/EglRenderer;->m(Lorg/webrtc/EglRenderer;)V
 
     monitor-exit v0
 

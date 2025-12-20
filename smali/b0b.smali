@@ -1,139 +1,49 @@
-.class public abstract Lb0b;
-.super Ljava/lang/Object;
+.class public final Lb0b;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
+.field public final synthetic o:Ls2e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ls2e;Ll84;)V
+    .locals 0
 
-    sget v0, Ly2d;->call_history_call_create_banner_permission_denied_subtitle:I
+    iput-object p1, p0, Lb0b;->o:Ls2e;
 
-    sput v0, Lb0b;->a:I
-
-    sget v0, Ly2d;->call_history_call_create_banner_permission_denied_title:I
-
-    sput v0, Lb0b;->b:I
-
-    sget v0, Ly2d;->call_history_call_create_banner_subtitle:I
-
-    sput v0, Lb0b;->c:I
-
-    sget v0, Ly2d;->call_history_call_create_banner_title:I
-
-    sput v0, Lb0b;->d:I
-
-    sget v0, Ly2d;->call_history_info_copy_link:I
-
-    sput v0, Lb0b;->e:I
-
-    sget v0, Ly2d;->call_history_info_create_failed:I
-
-    sput v0, Lb0b;->f:I
-
-    sget v0, Ly2d;->call_history_info_creating:I
-
-    sput v0, Lb0b;->g:I
-
-    sget v0, Ly2d;->call_history_info_join_call:I
-
-    sput v0, Lb0b;->h:I
-
-    sget v0, Ly2d;->call_history_info_open_call_chat_title:I
-
-    sput v0, Lb0b;->i:I
-
-    sget v0, Ly2d;->call_history_info_share:I
-
-    sput v0, Lb0b;->j:I
-
-    sget v0, Ly2d;->call_history_info_start_call:I
-
-    sput v0, Lb0b;->k:I
-
-    sget v0, Ly2d;->call_history_info_title:I
-
-    sput v0, Lb0b;->l:I
-
-    sget v0, Ly2d;->call_history_info_try_load_link_again:I
-
-    sput v0, Lb0b;->m:I
-
-    sget v0, Ly2d;->call_history_item_call_count_no_users:I
-
-    sput v0, Lb0b;->n:I
-
-    sget v0, Ly2d;->call_history_item_call_link_call_description:I
-
-    sput v0, Lb0b;->o:I
-
-    sget v0, Ly2d;->call_history_link_action_error:I
-
-    sput v0, Lb0b;->p:I
-
-    sget v0, Ly2d;->call_history_link_coped:I
-
-    sput v0, Lb0b;->q:I
-
-    sget v0, Ly2d;->call_history_link_send_title:I
-
-    sput v0, Lb0b;->r:I
-
-    sget v0, Ly2d;->call_presettings_call_save_changes:I
-
-    sput v0, Lb0b;->s:I
-
-    sget v0, Ly2d;->call_presettings_change_call_name_empty_error:I
-
-    sput v0, Lb0b;->t:I
-
-    sget v0, Ly2d;->call_presettings_change_call_name_title:I
-
-    sput v0, Lb0b;->u:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lb0b;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lb0b;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lb0b;->X:I
+
+    iget-object p1, p0, Lb0b;->o:Ls2e;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ls2e;->B(Ldy;Ll84;)V
+
+    sget-object p1, Lbc4;->a:Lbc4;
+
+    return-object p1
 .end method

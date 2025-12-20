@@ -1,144 +1,132 @@
 .class public final Let2;
-.super Ljkf;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Lu6g;
 
 
 # instance fields
-.field public final d:Landroid/widget/TextView;
+.field public c:Ljava/util/ArrayList;
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 5
+.method public constructor <init>(Lgr9;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Ljkf;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
-    iput-object p1, p0, Let2;->d:Landroid/widget/TextView;
+    const-wide/16 v0, -0x1
 
-    new-instance v0, Lxhd;
+    iput-wide v0, p0, Let2;->d:J
 
-    const/4 v1, -0x1
+    iget-object p1, p0, Let2;->c:Ljava/util/ArrayList;
 
-    const/4 v2, -0x2
+    if-nez p1, :cond_0
 
-    invoke-direct {v0, v1, v2}, Lxhd;-><init>(II)V
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    const/16 v0, 0x10
+    iput-object p1, p0, Let2;->c:Ljava/util/ArrayList;
 
-    int-to-float v0, v0
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lkti;->d(F)I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lkti;->d(F)I
-
-    move-result v3
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lkti;->d(F)I
-
-    move-result v0
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lkti;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {p1, v1, v3, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    sget-object v0, Ldpg;->k:Lt5g;
-
-    invoke-static {v0, p1}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
-
-    sget-object v0, La93;->s0:Lv1a;
-
-    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Let2;->onThemeChanged(Lyeb;)V
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lyeb;)V
-    .locals 2
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 3
 
-    invoke-interface {p1}, Lyeb;->getText()Lu3g;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "marker"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "members"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lgr9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lisi;->g(Lgr9;)I
+
+    move-result p2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Let2;->c:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_1
+
+    iget-object v1, p0, Let2;->c:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Lct2;->a(Lgr9;)Lct2;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+
+    :cond_2
+    invoke-virtual {p1}, Lgr9;->K0()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Let2;->d:J
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Let2;->c:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Lvki;->a(Ljava/util/Collection;)I
+
+    move-result v0
+
+    iget-wide v1, p0, Let2;->d:J
+
+    const-string v3, "{members="
+
+    const-string v4, ", marker="
+
+    invoke-static {v0, v1, v2, v3, v4}, Lzy4;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v0, v0, Lu3g;->i:I
+    const-string v1, "}"
 
-    iget-object v1, p0, Let2;->d:Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {p1}, Lyeb;->b()Lbf0;
+    move-result-object v0
 
-    move-result-object p1
-
-    iget p1, p1, Lbf0;->k:I
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-void
+    return-object v0
 .end method

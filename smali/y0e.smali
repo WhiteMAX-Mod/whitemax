@@ -1,44 +1,75 @@
 .class public final Ly0e;
-.super Lu08;
+.super Ldz;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:La1e;
-
-.field public final synthetic b:I
+.field public final synthetic c:Lj02;
 
 
 # direct methods
-.method public constructor <init>(ILa1e;)V
+.method public constructor <init>(Lj02;I)V
     .locals 0
 
-    iput-object p2, p0, Ly0e;->a:La1e;
+    iput-object p1, p0, Ly0e;->c:Lj02;
 
-    iput p1, p0, Ly0e;->b:I
+    const/4 p1, 0x5
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p2, p1}, Ldz;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final q(Lap6;)V
+    .locals 1
+
+    new-instance v0, Ld3g;
+
+    invoke-direct {v0, p1}, Ld3g;-><init>(Lf3g;)V
+
+    iget-object p1, p0, Ly0e;->c:Lj02;
+
+    invoke-virtual {p1, v0}, Lj02;->h(Lj6e;)V
+
+    return-void
+.end method
+
+.method public final r(Lap6;II)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Ly0e;->u(Lap6;II)V
+
+    return-void
+.end method
+
+.method public final t(Lap6;)V
     .locals 2
 
-    iget-object v0, p0, Ly0e;->a:La1e;
+    new-instance v0, Ld3g;
 
-    iget v1, p0, Ly0e;->b:I
+    invoke-direct {v0, p1}, Ld3g;-><init>(Lf3g;)V
 
-    invoke-virtual {v0, v1}, La1e;->b(I)Ljava/util/ArrayList;
+    iget-object v1, p0, Ly0e;->c:Lj02;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lj02;->j(Lj6e;)V
 
-    return-object v0
+    iput-object p1, v1, Lj02;->g:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final u(Lap6;II)V
+    .locals 1
+
+    new-instance v0, Ld3g;
+
+    invoke-direct {v0, p1}, Ld3g;-><init>(Lf3g;)V
+
+    iget-object p1, p0, Ly0e;->c:Lj02;
+
+    invoke-virtual {p1, p2, p3, v0}, Lj02;->i(IILj6e;)V
+
+    return-void
 .end method

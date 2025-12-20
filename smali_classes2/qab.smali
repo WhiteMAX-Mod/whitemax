@@ -1,133 +1,96 @@
-.class public abstract Lqab;
+.class public final synthetic Lqab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Thread$UncaughtExceptionHandler;I)V
+    .locals 0
 
-    sget v0, Lvzc;->oneme_section_description:I
+    iput p3, p0, Lqab;->a:I
 
-    sput v0, Lqab;->a:I
+    iput-object p1, p0, Lqab;->c:Ljava/lang/Object;
 
-    sget v0, Lvzc;->oneme_section_end_arrow:I
+    iput-object p2, p0, Lqab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    sput v0, Lqab;->b:I
-
-    sget v0, Lvzc;->oneme_section_end_checkbox:I
-
-    sput v0, Lqab;->c:I
-
-    sget v0, Lvzc;->oneme_section_end_container:I
-
-    sput v0, Lqab;->d:I
-
-    sget v0, Lvzc;->oneme_section_end_custom_icon:I
-
-    sput v0, Lqab;->e:I
-
-    sget v0, Lvzc;->oneme_section_end_text:I
-
-    sput v0, Lqab;->f:I
-
-    sget v0, Lvzc;->oneme_section_name_viewtype:I
-
-    sput v0, Lqab;->g:I
-
-    sget v0, Lvzc;->oneme_section_start_icon:I
-
-    sput v0, Lqab;->h:I
-
-    sget v0, Lvzc;->oneme_section_title:I
-
-    sput v0, Lqab;->i:I
-
-    sget v0, Lvzc;->oneme_section_upper_text:I
-
-    sput v0, Lqab;->j:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_container:I
-
-    sput v0, Lqab;->k:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_counter:I
-
-    sput v0, Lqab;->l:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_end_custom_icon:I
-
-    sput v0, Lqab;->m:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_end_icon:I
-
-    sput v0, Lqab;->n:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_end_radio:I
-
-    sput v0, Lqab;->o:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_end_switch:I
-
-    sput v0, Lqab;->p:I
-
-    sget v0, Lvzc;->oneme_settings_itemcontent_end_text:I
-
-    sput v0, Lqab;->q:I
-
-    sget v0, Lvzc;->oneme_settings_sectionname_iconview:I
-
-    sput v0, Lqab;->r:I
-
-    sget v0, Lvzc;->oneme_settings_sectionname_textview:I
-
-    sput v0, Lqab;->s:I
-
-    sget v0, Lvzc;->oneme_settingslist_rv:I
-
-    sput v0, Lqab;->t:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 8
+
+    iget v0, p0, Lqab;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqab;->c:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Ldl4;
+
+    new-instance v1, Ljcb;
+
+    const/4 v6, 0x0
+
+    iget-object v4, p0, Lqab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    move-object v5, p1
+
+    move-object v2, p2
+
+    invoke-direct/range {v1 .. v6}, Ljcb;-><init>(Ljava/lang/Throwable;Ldl4;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v1}, Ly8j;->g(Lcr6;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    move-object v5, p1
+
+    move-object v2, p2
+
+    iget-object p1, p0, Lqab;->c:Ljava/lang/Object;
+
+    move-object v4, p1
+
+    check-cast v4, Lhbb;
+
+    move-object v3, v2
+
+    new-instance v2, Lyab;
+
+    const/4 v7, 0x0
+
+    move-object v6, v5
+
+    iget-object v5, p0, Lqab;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    invoke-direct/range {v2 .. v7}, Lyab;-><init>(Ljava/lang/Throwable;Lhbb;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2}, Ly8j;->g(Lcr6;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

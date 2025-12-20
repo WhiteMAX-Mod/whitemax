@@ -1,76 +1,51 @@
-.class public final Lf6f;
-.super Lg6f;
+.class public abstract synthetic Lf6f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
+
+
 # direct methods
-.method public static a(Ljava/lang/String;Landroid/content/Context;[Lh6f;)Lf6f;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 4
 
-    const-string v0, "couldn\'t find DSO to load: "
+    const/4 v0, 0x3
 
-    const-string v1, "\n\texisting SO sources: "
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    invoke-static {v0, p0, v1}, Laz1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v0
+    array-length v1, v1
 
-    const/4 v1, 0x0
+    new-array v1, v1, [I
 
-    :goto_0
-    array-length v2, p2
+    const/4 v2, 0x1
 
-    if-ge v1, v2, :cond_0
+    const/4 v3, 0x0
 
-    const-string v2, "\n\t\tSoSource "
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :try_start_1
+    aput v3, v1, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    const-string v2, ": "
+    :catch_1
+    :try_start_2
+    aput v0, v1, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_2
+    sput-object v1, Lf6f;->$EnumSwitchMapping$0:[I
 
-    aget-object v2, p2, v1
-
-    invoke-virtual {v2}, Lh6f;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    const-string p2, "\n\tNative lib dir: "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "\n"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    new-instance p1, Lf6f;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p0, p2}, Lg6f;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
+    return-void
 .end method

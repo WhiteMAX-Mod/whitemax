@@ -1,166 +1,231 @@
-.class public abstract Leac;
+.class public final Leac;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final d:Leac;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "ProcessUtils"
+    new-instance v0, Leac;
 
-    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-direct {v0, v1}, Leac;-><init>(F)V
+
+    sput-object v0, Leac;->d:Leac;
+
+    sget-object v0, Lqah;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Leac;->a:Ljava/lang/String;
+    sput-object v0, Leac;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Leac;->f:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;)Z
-    .locals 5
+.method public constructor <init>(F)V
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    const/16 v1, 0x1c
+    .line 1
+    invoke-direct {p0, p1, v0}, Leac;-><init>(FF)V
 
-    if-lt v0, v1, :cond_0
+    return-void
+.end method
 
-    sget-object v0, Lhl;->a:Lhl;
+.method public constructor <init>(FF)V
+    .locals 4
 
-    invoke-virtual {v0}, Lhl;->a()Ljava/lang/String;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_0
     const/4 v0, 0x0
 
-    :try_start_0
-    const-string v1, "android.app.ActivityThread"
+    cmpl-float v1, p1, v0
 
-    const-class v2, Lz4i;
+    const/4 v2, 0x0
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    const/4 v3, 0x1
 
-    move-result-object v2
+    if-lez v1, :cond_0
 
-    const/4 v3, 0x0
-
-    invoke-static {v1, v3, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v2, "currentProcessName"
-
-    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {v1, v0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object v0, v1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v2
-
-    sget-object v3, Leac;->a:Ljava/lang/String;
-
-    const-string v4, "Unable to check ActivityThread for processName"
-
-    invoke-virtual {v2, v3, v4, v1}, Lcei;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    const-string v2, "activity"
-
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/app/ActivityManager;
-
-    invoke-virtual {v2}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    check-cast v4, Landroid/app/ActivityManager$RunningAppProcessInfo;
-
-    iget v4, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
-
-    if-ne v4, v1, :cond_2
+    move v1, v3
 
     goto :goto_0
 
-    :cond_3
-    move-object v3, v0
+    :cond_0
+    move v1, v2
 
+    .line 3
     :goto_0
-    check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
+    invoke-static {v1}, Lp5j;->b(Z)V
 
-    if-eqz v3, :cond_4
+    cmpl-float v0, p2, v0
 
-    iget-object v0, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
+    if-lez v0, :cond_1
 
-    :cond_4
-    :goto_1
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    move v2, v3
 
-    move-result-object p0
+    .line 4
+    :cond_1
+    invoke-static {v2}, Lp5j;->b(Z)V
 
-    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
+    .line 5
+    iput p1, p0, Leac;->a:F
 
-    invoke-static {v0, p0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 6
+    iput p2, p0, Leac;->b:F
 
-    move-result p0
+    const/high16 p2, 0x447a0000    # 1000.0f
 
-    return p0
+    mul-float/2addr p1, p2
+
+    .line 7
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    iput p1, p0, Leac;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Leac;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Leac;
+
+    iget v2, p0, Leac;->a:F
+
+    iget v3, p1, Leac;->a:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Leac;->b:F
+
+    iget p1, p1, Leac;->b:F
+
+    cmpl-float p1, v2, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Leac;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Leac;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Leac;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    iget v1, p0, Leac;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lqah;->a:Ljava/lang/String;
+
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v2, "PlaybackParameters(speed=%.2f, pitch=%.2f)"
+
+    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

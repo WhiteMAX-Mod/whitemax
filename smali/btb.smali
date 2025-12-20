@@ -1,3 +1,3 @@
 .class public final Lbtb;
-.super Lysb;
+.super Ljava/lang/Object;
 .source "SourceFile"

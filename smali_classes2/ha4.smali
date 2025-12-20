@@ -1,61 +1,60 @@
-.class public final Lha4;
-.super Lq44;
+.class public final synthetic Lha4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvx3;
 
 
 # instance fields
-.field public X:Lva4;
+.field public final synthetic a:I
 
-.field public Y:Lj9a;
-
-.field public Z:J
-
-.field public d:Lva4;
-
-.field public o:Ljava/lang/Object;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lva4;
-
-.field public u0:I
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
 
 
 # direct methods
-.method public constructor <init>(Lva4;Lq44;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;I)V
     .locals 0
 
-    iput-object p1, p0, Lha4;->t0:Lva4;
+    iput p2, p0, Lha4;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iput-object p1, p0, Lha4;->s0:Ljava/lang/Object;
+    iget v0, p0, Lha4;->a:I
 
-    iget p1, p0, Lha4;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
 
-    or-int/2addr p1, v0
+    check-cast p1, Ljava/lang/Throwable;
 
-    iput p1, p0, Lha4;->u0:I
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->j(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Ljava/lang/Throwable;)V
 
-    const-wide/16 v0, 0x0
+    return-void
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
 
-    iget-object v2, p0, Lha4;->t0:Lva4;
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Lva4;->e(JLjava/lang/String;Lq44;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->n(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

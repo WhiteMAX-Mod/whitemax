@@ -1,23 +1,14 @@
 .class public abstract Lscd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lhdd;
+# static fields
+.field public static oneme_in_app_review_close:I = 0x7f13085d
 
-.field public final b:J
+.field public static oneme_in_app_review_not_now:I = 0x7f13085e
 
+.field public static oneme_in_app_review_send:I = 0x7f13085f
 
-# direct methods
-.method public constructor <init>(Lhdd;J)V
-    .locals 0
+.field public static oneme_in_app_review_subtitle:I = 0x7f130860
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lscd;->a:Lhdd;
-
-    iput-wide p2, p0, Lscd;->b:J
-
-    return-void
-.end method
+.field public static oneme_in_app_review_thanks:I = 0x7f130861

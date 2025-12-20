@@ -2,85 +2,85 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/TextWatcher;
-
 
 # instance fields
-.field public a:Z
+.field public final a:Ld68;
+
+.field public final b:Ld68;
+
+.field public final c:Ld68;
+
+.field public final d:Ld68;
+
+
+# direct methods
+.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxc5;->a:Ld68;
+
+    iput-object p2, p0, Lxc5;->b:Ld68;
+
+    iput-object p3, p0, Lxc5;->c:Ld68;
+
+    iput-object p4, p0, Lxc5;->d:Ld68;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 7
+.method public final a(JJLjava/lang/CharSequence;Ljava/util/List;ZLb5g;)Ljava/lang/Object;
+    .locals 11
 
-    iget-boolean v0, p0, Lxc5;->a:Z
+    iget-object v0, p0, Lxc5;->c:Ld68;
 
-    if-nez v0, :cond_2
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Lxc5;->a:Z
+    check-cast v0, Lbbg;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v0, Lb9b;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    move v3, v2
+    new-instance v1, Lwc5;
 
-    :goto_0
-    const/16 v4, 0x42
+    const/4 v10, 0x0
 
-    if-ge v3, v4, :cond_1
+    move-object v2, p0
 
-    sget-object v4, La6a;->a:[[Ljava/lang/String;
+    move-wide v3, p1
 
-    aget-object v4, v4, v3
+    move-wide v5, p3
 
-    aget-object v5, v4, v2
+    move-object/from16 v7, p5
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    move-object/from16 v9, p6
 
-    move-result v5
+    move/from16 v8, p7
 
-    const/4 v6, -0x1
+    invoke-direct/range {v1 .. v10}, Lwc5;-><init>(Lxc5;JJLjava/lang/CharSequence;ZLjava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    if-eq v5, v6, :cond_0
+    move-object/from16 p1, p8
 
-    aget-object v6, v4, v2
+    invoke-static {v0, v1, p1}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    move-result-object p1
 
-    move-result v6
+    sget-object p2, Lbc4;->a:Lbc4;
 
-    add-int/2addr v6, v5
+    if-ne p1, p2, :cond_0
 
-    aget-object v4, v4, v0
-
-    invoke-interface {p1, v5, v6, v4}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    return-object p1
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    goto :goto_0
-
-    :cond_1
-    iput-boolean v2, p0, Lxc5;->a:Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

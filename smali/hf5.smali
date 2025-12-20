@@ -1,143 +1,148 @@
-.class public final enum Lhf5;
-.super Ljava/lang/Enum;
+.class public final Lhf5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/InputFilter;
 
-# static fields
-.field public static final enum a:Lhf5;
 
-.field public static final enum b:Lhf5;
+# instance fields
+.field public final a:Landroid/widget/TextView;
 
-.field public static final enum c:Lhf5;
-
-.field public static final enum d:Lhf5;
-
-.field public static final synthetic o:[Lhf5;
+.field public b:Lff5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 0
 
-    new-instance v0, Lhf5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Initial"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lhf5;->a:Lhf5;
-
-    new-instance v1, Lhf5;
-
-    const-string v2, "ZeroRTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lhf5;->b:Lhf5;
-
-    new-instance v2, Lhf5;
-
-    const-string v3, "Handshake"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lhf5;->c:Lhf5;
-
-    new-instance v3, Lhf5;
-
-    const-string v4, "App"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lhf5;->d:Lhf5;
-
-    filled-new-array {v0, v1, v2, v3}, [Lhf5;
-
-    move-result-object v0
-
-    sput-object v0, Lhf5;->o:[Lhf5;
+    iput-object p1, p0, Lhf5;->a:Landroid/widget/TextView;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhf5;
-    .locals 1
 
-    const-class v0, Lhf5;
+# virtual methods
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lhf5;->a:Landroid/widget/TextView;
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
 
-    check-cast p0, Lhf5;
+    move-result v1
 
-    return-object p0
-.end method
+    if-eqz v1, :cond_0
 
-.method public static values()[Lhf5;
-    .locals 1
+    goto :goto_2
 
-    sget-object v0, Lhf5;->o:[Lhf5;
+    :cond_0
+    invoke-static {}, Lue5;->a()Lue5;
 
-    invoke-virtual {v0}, [Lhf5;->clone()Ljava/lang/Object;
+    move-result-object v1
+
+    invoke-virtual {v1}, Lue5;->b()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    const/4 p2, 0x3
+
+    if-eq v1, p2, :cond_5
+
+    goto :goto_2
+
+    :cond_1
+    if-nez p6, :cond_2
+
+    if-nez p5, :cond_2
+
+    invoke-interface {p4}, Ljava/lang/CharSequence;->length()I
+
+    move-result p4
+
+    if-nez p4, :cond_2
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p4
+
+    if-ne p1, p4, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    if-eqz p1, :cond_4
+
+    if-nez p2, :cond_3
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p4
+
+    if-ne p3, p4, :cond_3
+
+    :goto_0
+    move-object v3, p1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :goto_1
+    invoke-static {}, Lue5;->a()Lue5;
 
     move-result-object v0
 
-    check-cast v0, [Lhf5;
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
-    return-object v0
-.end method
+    move-result v2
 
+    const v4, 0x7fffffff
 
-# virtual methods
-.method public final a()Lm5c;
-    .locals 3
+    const/4 v5, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual/range {v0 .. v5}, Lue5;->e(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_3
+    move-result-object p1
 
-    const/4 v1, 0x1
+    :cond_4
+    :goto_2
+    return-object p1
 
-    sget-object v2, Lm5c;->c:Lm5c;
+    :cond_5
+    invoke-static {}, Lue5;->a()Lue5;
 
-    if-eq v0, v1, :cond_2
+    move-result-object p2
 
-    const/4 v1, 0x2
+    iget-object p3, p0, Lhf5;->b:Lff5;
 
-    if-eq v0, v1, :cond_1
+    if-nez p3, :cond_6
 
-    const/4 v1, 0x3
+    new-instance p3, Lff5;
 
-    if-eq v0, v1, :cond_0
+    invoke-direct {p3, v0, p0}, Lff5;-><init>(Landroid/widget/TextView;Lhf5;)V
 
-    const/4 v0, 0x0
+    iput-object p3, p0, Lhf5;->b:Lff5;
 
-    return-object v0
+    :cond_6
+    iget-object p3, p0, Lhf5;->b:Lff5;
 
-    :cond_0
-    return-object v2
+    invoke-virtual {p2, p3}, Lue5;->g(Lse5;)V
 
-    :cond_1
-    sget-object v0, Lm5c;->b:Lm5c;
-
-    return-object v0
-
-    :cond_2
-    return-object v2
-
-    :cond_3
-    sget-object v0, Lm5c;->a:Lm5c;
-
-    return-object v0
+    return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu1g;
+.implements Lfdg;
 
 
 # annotations
@@ -14,7 +14,7 @@
     d2 = {
         "Lru/ok/TamBottomSheetDialogFragment;",
         "Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;",
-        "Lu1g;",
+        "Lfdg;",
         "ui-utils_release"
     }
     k = 0x1
@@ -73,10 +73,10 @@
     return-object p1
 .end method
 
-.method public final u0()I
+.method public final t0()I
     .locals 1
 
-    sget v0, Lr5d;->UiUtils_LightBottomSheetDialog:I
+    sget v0, Lwed;->UiUtils_LightBottomSheetDialog:I
 
     return v0
 .end method

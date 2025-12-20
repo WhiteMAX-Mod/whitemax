@@ -3,149 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltnd;
+.implements Lvnd;
 
 
-# instance fields
-.field public final a:Lcm6;
-
-.field public volatile b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lund;
 
 
 # direct methods
-.method public constructor <init>(Lcm6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lund;
 
-    iput-object p1, p0, Lund;->a:Lcm6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p1, Lkc3;->A0:Lkc3;
-
-    iput-object p1, p0, Lund;->b:Ljava/lang/Object;
-
-    iput-object p0, p0, Lund;->c:Ljava/lang/Object;
+    sput-object v0, Lund;->a:Lund;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Z
-    .locals 2
-
-    iget-object v0, p0, Lund;->b:Ljava/lang/Object;
-
-    sget-object v1, Lkc3;->A0:Lkc3;
-
-    if-eq v0, v1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lund;
 
-    return v0
-.end method
+    if-nez p1, :cond_1
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 3
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lund;->b:Ljava/lang/Object;
-
-    sget-object v1, Lkc3;->A0:Lkc3;
-
-    if-eq v0, v1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lund;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v2, p0, Lund;->b:Ljava/lang/Object;
-
-    if-eq v2, v1, :cond_1
-
-    goto :goto_0
+    return p1
 
     :cond_1
-    iget-object v1, p0, Lund;->a:Lcm6;
-
-    invoke-interface {v1}, Lcm6;->invoke()Ljava/lang/Object;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lund;->b:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit v0
-
-    return-object v2
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
+    return v0
 .end method
 
-.method public final reset()V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Lund;->c:Ljava/lang/Object;
+    const v0, 0x4fb612c0
 
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lkc3;->A0:Lkc3;
-
-    iput-object v1, p0, Lund;->b:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Lund;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lund;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Lazy value not initialized yet."
+    const-string v0, "ShowCloseConfirmationDialog"
 
     return-object v0
 .end method

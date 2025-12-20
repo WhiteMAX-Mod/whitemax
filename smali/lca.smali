@@ -2,142 +2,238 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/ServiceConnection;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public volatile b:I
-
-.field public final c:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Llca;->a:I
+
+    iput-object p2, p0, Llca;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llca;->a:Landroid/content/Context;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Llca;->b:I
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llca;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkca;)Z
-    .locals 6
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 3
 
-    iget v0, p0, Llca;->b:I
+    iget v0, p0, Llca;->a:I
 
-    const/4 v1, 0x2
+    const-string v1, "ServiceConnectionImpl.onServiceConnected(%s)"
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Llca;->b:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v0, v3, :cond_0
+    check-cast v2, Lupj;
 
-    goto :goto_1
+    iget-object v0, v2, Lupj;->b:Lswe;
 
-    :cond_0
-    iget-object v0, p0, Llca;->c:Ljava/lang/Object;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    monitor-enter v0
+    move-result-object p1
 
-    :try_start_0
-    iget v4, p0, Llca;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    invoke-virtual {v0, v1, p1}, Lswe;->b(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eq v4, v3, :cond_1
+    new-instance p1, Ljmj;
 
-    monitor-exit v0
+    invoke-direct {p1, p0, p2}, Ljmj;-><init>(Llca;Landroid/os/IBinder;)V
 
-    goto :goto_1
+    invoke-virtual {v2}, Lupj;->a()Landroid/os/Handler;
 
-    :cond_1
-    :try_start_1
-    iget-object v4, p0, Llca;->a:Landroid/content/Context;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object p2
 
-    :try_start_2
-    invoke-static {v4, v2}, Lcom/facebook/soloader/SoLoader;->g(Landroid/content/Context;I)V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :try_start_3
-    iput v1, p0, Llca;->b:I
+    return-void
+
+    :pswitch_0
+    check-cast v2, Lkmj;
+
+    iget-object v0, v2, Lkmj;->b:Lzz7;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Lzz7;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance p1, Lbzi;
+
+    invoke-direct {p1, p0, p2}, Lbzi;-><init>(Llca;Landroid/os/IBinder;)V
+
+    invoke-virtual {v2}, Lkmj;->a()Landroid/os/Handler;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_1
+    check-cast v2, Li78;
+
+    sget p1, Lmca;->d:I
+
+    sget-object p1, Lnf7;->b:Ljava/lang/String;
+
+    invoke-interface {p2, p1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    instance-of v0, p1, Lnf7;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lnf7;
 
     goto :goto_0
 
-    :catch_0
-    move-exception v4
+    :cond_0
+    new-instance p1, Lmf7;
 
-    new-instance v5, Ljava/lang/RuntimeException;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v5, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :catchall_0
-    const/4 v4, 0x3
-
-    :try_start_4
-    iput v4, p0, Llca;->b:I
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    iput-object p2, p1, Lmf7;->c:Landroid/os/IBinder;
 
     :goto_0
-    monitor-exit v0
+    iput-object p1, v2, Li78;->g:Ljava/lang/Object;
 
-    :goto_1
-    iget v0, p0, Llca;->b:I
+    :try_start_0
+    iget-object p2, v2, Li78;->j:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    check-cast p2, Ljca;
 
-    return v2
+    iget-object v0, v2, Li78;->b:Ljava/lang/Object;
 
-    :cond_2
-    :try_start_5
-    iget-object p1, p1, Lkca;->a:Ljava/lang/String;
+    check-cast v0, Ljava/lang/String;
 
-    sget-boolean v0, Lcom/facebook/soloader/SoLoader;->k:Z
+    invoke-interface {p1, p2, v0}, Lnf7;->n(Llf7;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_3
+    move-result p1
 
-    invoke-static {v2, p1}, Lcom/facebook/soloader/SoLoader;->m(ILjava/lang/String;)Z
+    iput p1, v2, Li78;->a:I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_3
-    invoke-static {p1}, Lnca;->b(Ljava/lang/String;)Z
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :goto_2
-    move v2, v3
-
-    :catchall_1
-    return v2
-
-    :catchall_2
+    :catch_0
     move-exception p1
 
-    monitor-exit v0
+    const-string p2, "ROOM"
 
-    throw p1
+    const-string v0, "Cannot register multi-instance invalidation callback"
+
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 3
+
+    iget v0, p0, Llca;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llca;->b:Ljava/lang/Object;
+
+    check-cast v0, Lupj;
+
+    iget-object v1, v0, Lupj;->b:Lswe;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+
+    invoke-virtual {v1, v2, p1}, Lswe;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance p1, Lckj;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lckj;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lupj;->a()Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llca;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkmj;
+
+    iget-object v1, v0, Lkmj;->b:Lzz7;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+
+    invoke-virtual {v1, v2, p1}, Lzz7;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance p1, Lmfj;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lmfj;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lkmj;->a()Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Llca;->b:Ljava/lang/Object;
+
+    check-cast p1, Li78;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Li78;->g:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

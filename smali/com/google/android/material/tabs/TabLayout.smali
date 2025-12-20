@@ -4,14 +4,14 @@
 
 
 # annotations
-.annotation runtime Lngh;
+.annotation runtime Lhth;
 .end annotation
 
 
 # static fields
 .field public static final g1:I
 
-.field public static final h1:Le6c;
+.field public static final h1:Ltdc;
 
 
 # instance fields
@@ -55,15 +55,15 @@
 
 .field public T0:Z
 
-.field public U0:Lcyf;
+.field public U0:Lskf;
 
 .field public final V0:Landroid/animation/TimeInterpolator;
 
-.field public W0:Lfyf;
+.field public W0:Lw9g;
 
 .field public final X0:Ljava/util/ArrayList;
 
-.field public Y0:Lnd6;
+.field public Y0:Lwh6;
 
 .field public Z0:Landroid/animation/ValueAnimator;
 
@@ -73,19 +73,19 @@
 
 .field public final b:Ljava/util/ArrayList;
 
-.field public b1:Ljyf;
+.field public b1:Laag;
 
-.field public c:Liyf;
+.field public c:Lz9g;
 
-.field public c1:Leyf;
+.field public c1:Lv9g;
 
-.field public final d:Lhyf;
+.field public final d:Ly9g;
 
 .field public d1:Z
 
 .field public e1:I
 
-.field public final f1:Ld6c;
+.field public final f1:Lsdc;
 
 .field public final o:I
 
@@ -110,17 +110,17 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Lm5d;->Widget_Design_TabLayout:I
+    sget v0, Lred;->Widget_Design_TabLayout:I
 
     sput v0, Lcom/google/android/material/tabs/TabLayout;->g1:I
 
-    new-instance v0, Le6c;
+    new-instance v0, Ltdc;
 
     const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Le6c;-><init>(I)V
+    invoke-direct {v0, v1}, Ltdc;-><init>(I)V
 
-    sput-object v0, Lcom/google/android/material/tabs/TabLayout;->h1:Le6c;
+    sput-object v0, Lcom/google/android/material/tabs/TabLayout;->h1:Ltdc;
 
     return-void
 .end method
@@ -128,11 +128,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 8
 
-    sget v3, Ldvc;->tabStyle:I
+    sget v3, Lf4d;->tabStyle:I
 
     sget v4, Lcom/google/android/material/tabs/TabLayout;->g1:I
 
-    invoke-static {p1, p2, v3, v4}, Ler8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, v3, v4}, Ltv8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
@@ -166,13 +166,13 @@
 
     iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->X0:Ljava/util/ArrayList;
 
-    new-instance v0, Ld6c;
+    new-instance v0, Lsdc;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, v1}, Ld6c;-><init>(I)V
+    invoke-direct {v0, v1}, Lsdc;-><init>(I)V
 
-    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Ld6c;
+    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Lsdc;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -180,11 +180,11 @@
 
     invoke-virtual {p0, v6}, Landroid/view/View;->setHorizontalScrollBarEnabled(Z)V
 
-    new-instance v7, Lhyf;
+    new-instance v7, Ly9g;
 
-    invoke-direct {v7, p0, v0}, Lhyf;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroid/content/Context;)V
+    invoke-direct {v7, p0, v0}, Ly9g;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroid/content/Context;)V
 
-    iput-object v7, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iput-object v7, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -194,9 +194,9 @@
 
     invoke-super {p0, v7, v6, v1}, Landroid/widget/HorizontalScrollView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v2, Lz5d;->TabLayout:[I
+    sget-object v2, Lefd;->TabLayout:[I
 
-    sget v1, Lz5d;->TabLayout_tabTextAppearance:I
+    sget v1, Lefd;->TabLayout_tabTextAppearance:I
 
     filled-new-array {v1}, [I
 
@@ -204,7 +204,7 @@
 
     move-object v1, p2
 
-    invoke-static/range {v0 .. v5}, Ld7g;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    invoke-static/range {v0 .. v5}, Lsig;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
@@ -212,40 +212,40 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lr9j;->b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Lbnj;->a(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Lwq8;
+    new-instance v2, Llv8;
 
-    invoke-direct {v2}, Lwq8;-><init>()V
+    invoke-direct {v2}, Llv8;-><init>()V
 
-    invoke-virtual {v2, v1}, Lwq8;->k(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v1}, Llv8;->k(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {v2, v0}, Lwq8;->i(Landroid/content/Context;)V
+    invoke-virtual {v2, v0}, Llv8;->i(Landroid/content/Context;)V
 
-    sget-object v1, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v1, Lash;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {p0}, Lveh;->i(Landroid/view/View;)F
+    invoke-static {p0}, Lorh;->i(Landroid/view/View;)F
 
     move-result v1
 
-    invoke-virtual {v2, v1}, Lwq8;->j(F)V
+    invoke-virtual {v2, v1}, Llv8;->j(F)V
 
     invoke-virtual {p0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    sget v1, Lz5d;->TabLayout_tabIndicator:I
+    sget v1, Lefd;->TabLayout_tabIndicator:I
 
-    invoke-static {v0, p2, v1}, Lgti;->e(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p2, v1}, Lw6j;->e(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicator(Landroid/graphics/drawable/Drawable;)V
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorColor:I
+    sget v1, Lefd;->TabLayout_tabIndicatorColor:I
 
     invoke-virtual {p2, v1, v6}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -253,15 +253,15 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorHeight:I
+    sget v1, Lefd;->TabLayout_tabIndicatorHeight:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
-    invoke-virtual {v7, v1}, Lhyf;->b(I)V
+    invoke-virtual {v7, v1}, Ly9g;->b(I)V
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorGravity:I
+    sget v1, Lefd;->TabLayout_tabIndicatorGravity:I
 
     invoke-virtual {p2, v1, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -269,7 +269,7 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorGravity(I)V
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorAnimationMode:I
+    sget v1, Lefd;->TabLayout_tabIndicatorAnimationMode:I
 
     invoke-virtual {p2, v1, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -277,7 +277,7 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorAnimationMode(I)V
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorFullWidth:I
+    sget v1, Lefd;->TabLayout_tabIndicatorFullWidth:I
 
     const/4 v2, 0x1
 
@@ -287,7 +287,7 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorFullWidth(Z)V
 
-    sget v1, Lz5d;->TabLayout_tabPadding:I
+    sget v1, Lefd;->TabLayout_tabPadding:I
 
     invoke-virtual {p2, v1, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -301,7 +301,7 @@
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->o:I
 
-    sget v3, Lz5d;->TabLayout_tabPaddingStart:I
+    sget v3, Lefd;->TabLayout_tabPaddingStart:I
 
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -309,7 +309,7 @@
 
     iput v3, p0, Lcom/google/android/material/tabs/TabLayout;->o:I
 
-    sget v3, Lz5d;->TabLayout_tabPaddingTop:I
+    sget v3, Lefd;->TabLayout_tabPaddingTop:I
 
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -317,7 +317,7 @@
 
     iput v3, p0, Lcom/google/android/material/tabs/TabLayout;->s0:I
 
-    sget v3, Lz5d;->TabLayout_tabPaddingEnd:I
+    sget v3, Lefd;->TabLayout_tabPaddingEnd:I
 
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -325,7 +325,7 @@
 
     iput v3, p0, Lcom/google/android/material/tabs/TabLayout;->t0:I
 
-    sget v3, Lz5d;->TabLayout_tabPaddingBottom:I
+    sget v3, Lefd;->TabLayout_tabPaddingBottom:I
 
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -333,29 +333,29 @@
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->u0:I
 
-    sget v1, Ldvc;->isMaterial3Theme:I
+    sget v1, Lf4d;->isMaterial3Theme:I
 
-    invoke-static {v1, v0, v6}, Lwsi;->f(ILandroid/content/Context;Z)Z
+    invoke-static {v1, v0, v6}, Ls6j;->d(ILandroid/content/Context;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    sget v1, Ldvc;->textAppearanceTitleSmall:I
+    sget v1, Lf4d;->textAppearanceTitleSmall:I
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->v0:I
 
     goto :goto_0
 
     :cond_1
-    sget v1, Ldvc;->textAppearanceButton:I
+    sget v1, Lf4d;->textAppearanceButton:I
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->v0:I
 
     :goto_0
-    sget v1, Lz5d;->TabLayout_tabTextAppearance:I
+    sget v1, Lefd;->TabLayout_tabTextAppearance:I
 
-    sget v3, Lm5d;->TextAppearance_Design_Tab:I
+    sget v3, Lred;->TextAppearance_Design_Tab:I
 
     invoke-virtual {p2, v1, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -363,14 +363,14 @@
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->w0:I
 
-    sget-object v3, Lo6d;->TextAppearance:[I
+    sget-object v3, Ltfd;->TextAppearance:[I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
     :try_start_0
-    sget v4, Lo6d;->TextAppearance_android_textSize:I
+    sget v4, Ltfd;->TextAppearance_android_textSize:I
 
     invoke-virtual {v3, v4, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -380,9 +380,9 @@
 
     iput v4, p0, Lcom/google/android/material/tabs/TabLayout;->D0:F
 
-    sget v5, Lo6d;->TextAppearance_android_textColor:I
+    sget v5, Ltfd;->TextAppearance_android_textColor:I
 
-    invoke-static {v0, v3, v5}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v3, v5}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v5
 
@@ -392,7 +392,7 @@
 
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
-    sget v3, Lz5d;->TabLayout_tabSelectedTextAppearance:I
+    sget v3, Lefd;->TabLayout_tabSelectedTextAppearance:I
 
     invoke-virtual {p2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -400,7 +400,7 @@
 
     if-eqz v3, :cond_2
 
-    sget v3, Lz5d;->TabLayout_tabSelectedTextAppearance:I
+    sget v3, Lefd;->TabLayout_tabSelectedTextAppearance:I
 
     invoke-virtual {p2, v3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -413,22 +413,22 @@
 
     if-eq v1, p1, :cond_4
 
-    sget-object v3, Lo6d;->TextAppearance:[I
+    sget-object v3, Ltfd;->TextAppearance:[I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
     :try_start_1
-    sget v3, Lo6d;->TextAppearance_android_textSize:I
+    sget v3, Ltfd;->TextAppearance_android_textSize:I
 
     float-to-int v4, v4
 
     invoke-virtual {v1, v3, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
-    sget v3, Lo6d;->TextAppearance_android_textColor:I
+    sget v3, Ltfd;->TextAppearance_android_textColor:I
 
-    invoke-static {v0, v1, v3}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v1, v3}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
@@ -484,7 +484,7 @@
 
     :cond_4
     :goto_3
-    sget v1, Lz5d;->TabLayout_tabTextColor:I
+    sget v1, Lefd;->TabLayout_tabTextColor:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -492,16 +492,16 @@
 
     if-eqz v1, :cond_5
 
-    sget v1, Lz5d;->TabLayout_tabTextColor:I
+    sget v1, Lefd;->TabLayout_tabTextColor:I
 
-    invoke-static {v0, p2, v1}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p2, v1}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->y0:Landroid/content/res/ColorStateList;
 
     :cond_5
-    sget v1, Lz5d;->TabLayout_tabSelectedTextColor:I
+    sget v1, Lefd;->TabLayout_tabSelectedTextColor:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -509,7 +509,7 @@
 
     if-eqz v1, :cond_6
 
-    sget v1, Lz5d;->TabLayout_tabSelectedTextColor:I
+    sget v1, Lefd;->TabLayout_tabSelectedTextColor:I
 
     invoke-virtual {p2, v1, v6}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -528,15 +528,15 @@
     iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->y0:Landroid/content/res/ColorStateList;
 
     :cond_6
-    sget v1, Lz5d;->TabLayout_tabIconTint:I
+    sget v1, Lefd;->TabLayout_tabIconTint:I
 
-    invoke-static {v0, p2, v1}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p2, v1}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->z0:Landroid/content/res/ColorStateList;
 
-    sget v1, Lz5d;->TabLayout_tabIconTintMode:I
+    sget v1, Lefd;->TabLayout_tabIconTintMode:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -544,17 +544,17 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v3}, Lyqi;->f(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1, v3}, Lr5j;->f(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
-    sget v1, Lz5d;->TabLayout_tabRippleColor:I
+    sget v1, Lefd;->TabLayout_tabRippleColor:I
 
-    invoke-static {v0, p2, v1}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p2, v1}, Lw6j;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->A0:Landroid/content/res/ColorStateList;
 
-    sget v1, Lz5d;->TabLayout_tabIndicatorAnimationDuration:I
+    sget v1, Lefd;->TabLayout_tabIndicatorAnimationDuration:I
 
     const/16 v3, 0x12c
 
@@ -564,17 +564,17 @@
 
     iput v1, p0, Lcom/google/android/material/tabs/TabLayout;->M0:I
 
-    sget v1, Ldvc;->motionEasingEmphasizedInterpolator:I
+    sget v1, Lf4d;->motionEasingEmphasizedInterpolator:I
 
-    sget-object v3, Lrg;->b:Lyq5;
+    sget-object v3, Ltg;->b:Luu5;
 
-    invoke-static {v0, v1, v3}, Lexi;->d(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    invoke-static {v0, v1, v3}, Lwaj;->e(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->V0:Landroid/animation/TimeInterpolator;
 
-    sget v0, Lz5d;->TabLayout_tabMinWidth:I
+    sget v0, Lefd;->TabLayout_tabMinWidth:I
 
     invoke-virtual {p2, v0, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -582,7 +582,7 @@
 
     iput v0, p0, Lcom/google/android/material/tabs/TabLayout;->H0:I
 
-    sget v0, Lz5d;->TabLayout_tabMaxWidth:I
+    sget v0, Lefd;->TabLayout_tabMaxWidth:I
 
     invoke-virtual {p2, v0, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -590,7 +590,7 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->I0:I
 
-    sget p1, Lz5d;->TabLayout_tabBackground:I
+    sget p1, Lefd;->TabLayout_tabBackground:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -598,7 +598,7 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->F0:I
 
-    sget p1, Lz5d;->TabLayout_tabContentStart:I
+    sget p1, Lefd;->TabLayout_tabContentStart:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -606,7 +606,7 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->K0:I
 
-    sget p1, Lz5d;->TabLayout_tabMode:I
+    sget p1, Lefd;->TabLayout_tabMode:I
 
     invoke-virtual {p2, p1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -614,7 +614,7 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->O0:I
 
-    sget p1, Lz5d;->TabLayout_tabGravity:I
+    sget p1, Lefd;->TabLayout_tabGravity:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -622,7 +622,7 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->L0:I
 
-    sget p1, Lz5d;->TabLayout_tabInlineLabel:I
+    sget p1, Lefd;->TabLayout_tabInlineLabel:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -630,7 +630,7 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/tabs/TabLayout;->P0:Z
 
-    sget p1, Lz5d;->TabLayout_tabUnboundedRipple:I
+    sget p1, Lefd;->TabLayout_tabUnboundedRipple:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -644,7 +644,7 @@
 
     move-result-object p1
 
-    sget p2, Ldwc;->design_tab_text_size_2line:I
+    sget p2, Lf5d;->design_tab_text_size_2line:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -654,7 +654,7 @@
 
     iput p2, p0, Lcom/google/android/material/tabs/TabLayout;->E0:F
 
-    sget p2, Ldwc;->design_tab_scrollable_min_width:I
+    sget p2, Lf5d;->design_tab_scrollable_min_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -726,7 +726,7 @@
 
     move-result-object v3
 
-    check-cast v3, Liyf;
+    check-cast v3, Lz9g;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -775,7 +775,7 @@
 .method private getTabScrollRange()I
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -811,7 +811,7 @@
 .method private setSelectedTabView(I)V
     .locals 7
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -872,13 +872,13 @@
     :goto_2
     invoke-virtual {v4, v5}, Landroid/view/View;->setActivated(Z)V
 
-    instance-of v5, v4, Lkyf;
+    instance-of v5, v4, Lbag;
 
     if-eqz v5, :cond_7
 
-    check-cast v4, Lkyf;
+    check-cast v4, Lbag;
 
-    invoke-virtual {v4}, Lkyf;->f()V
+    invoke-virtual {v4}, Lbag;->f()V
 
     goto :goto_5
 
@@ -917,7 +917,7 @@
 
 
 # virtual methods
-.method public final a(Lfyf;)V
+.method public final a(Lw9g;)V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->X0:Ljava/util/ArrayList;
@@ -986,14 +986,14 @@
     throw p1
 .end method
 
-.method public final b(Liyf;IZ)V
+.method public final b(Lz9g;IZ)V
     .locals 7
 
-    iget-object v0, p1, Liyf;->c:Lcom/google/android/material/tabs/TabLayout;
+    iget-object v0, p1, Lz9g;->c:Lcom/google/android/material/tabs/TabLayout;
 
     if-ne v0, p0, :cond_4
 
-    iput p2, p1, Liyf;->a:I
+    iput p2, p1, Lz9g;->a:I
 
     iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b:Ljava/util/ArrayList;
 
@@ -1018,9 +1018,9 @@
 
     move-result-object v5
 
-    check-cast v5, Liyf;
+    check-cast v5, Lz9g;
 
-    iget v5, v5, Liyf;->a:I
+    iget v5, v5, Lz9g;->a:I
 
     iget v6, p0, Lcom/google/android/material/tabs/TabLayout;->a:I
 
@@ -1033,9 +1033,9 @@
 
     move-result-object v5
 
-    check-cast v5, Liyf;
+    check-cast v5, Lz9g;
 
-    iput p2, v5, Liyf;->a:I
+    iput p2, v5, Lz9g;->a:I
 
     add-int/lit8 p2, p2, 0x1
 
@@ -1044,15 +1044,15 @@
     :cond_1
     iput v4, p0, Lcom/google/android/material/tabs/TabLayout;->a:I
 
-    iget-object p2, p1, Liyf;->d:Lkyf;
+    iget-object p2, p1, Lz9g;->d:Lbag;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Lkyf;->setSelected(Z)V
+    invoke-virtual {p2, v0}, Lbag;->setSelected(Z)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setActivated(Z)V
 
-    iget v1, p1, Liyf;->a:I
+    iget v1, p1, Lz9g;->a:I
 
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -1084,13 +1084,13 @@
     iput v0, v4, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     :goto_1
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0, p2, v1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     if-eqz p3, :cond_3
 
-    invoke-virtual {p1}, Liyf;->a()V
+    invoke-virtual {p1}, Lz9g;->a()V
 
     :cond_3
     return-void
@@ -1121,7 +1121,7 @@
 
     if-eqz v0, :cond_5
 
-    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lash;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
 
@@ -1129,7 +1129,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -1185,7 +1185,7 @@
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
     :cond_3
-    iget-object v1, v0, Lhyf;->a:Landroid/animation/ValueAnimator;
+    iget-object v1, v0, Ly9g;->a:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_4
 
@@ -1195,13 +1195,13 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v1, v0, Lhyf;->b:Lcom/google/android/material/tabs/TabLayout;
+    iget-object v1, v0, Ly9g;->b:Lcom/google/android/material/tabs/TabLayout;
 
     iget v1, v1, Lcom/google/android/material/tabs/TabLayout;->a:I
 
     if-eq v1, p1, :cond_4
 
-    iget-object v1, v0, Lhyf;->a:Landroid/animation/ValueAnimator;
+    iget-object v1, v0, Ly9g;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -1210,7 +1210,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, p1, v1, v2}, Lhyf;->d(IIZ)V
+    invoke-virtual {v0, p1, v1, v2}, Ly9g;->d(IIZ)V
 
     return-void
 
@@ -1266,9 +1266,9 @@
     move-result v0
 
     :goto_1
-    sget-object v3, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v3, Lash;->a:Ljava/util/WeakHashMap;
 
-    iget-object v3, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v3, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v3, v0, v2, v2, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
@@ -1352,7 +1352,7 @@
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -1420,7 +1420,7 @@
 
     float-to-int p1, p1
 
-    sget-object p2, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object p2, Lash;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
 
@@ -1465,11 +1465,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->Z0:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lwk0;
+    new-instance v1, Lsl0;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, v2, p0}, Lwk0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lsl0;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1502,11 +1502,11 @@
 .method public getSelectedTabPosition()I
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Liyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Lz9g;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Liyf;->a:I
+    iget v0, v0, Lz9g;->a:I
 
     return v0
 
@@ -1600,7 +1600,7 @@
     return-object v0
 .end method
 
-.method public final h(I)Liyf;
+.method public final h(I)Lz9g;
     .locals 1
 
     if-ltz p1, :cond_1
@@ -1620,7 +1620,7 @@
 
     move-result-object p1
 
-    check-cast p1, Liyf;
+    check-cast p1, Lz9g;
 
     return-object p1
 
@@ -1631,41 +1631,41 @@
     return-object p1
 .end method
 
-.method public final i()Liyf;
+.method public final i()Lz9g;
     .locals 4
 
-    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->h1:Le6c;
+    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->h1:Ltdc;
 
-    invoke-virtual {v0}, Le6c;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Ltdc;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Liyf;
+    check-cast v0, Lz9g;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Liyf;
+    new-instance v0, Lz9g;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     const/4 v1, -0x1
 
-    iput v1, v0, Liyf;->a:I
+    iput v1, v0, Lz9g;->a:I
 
     :cond_0
-    iput-object p0, v0, Liyf;->c:Lcom/google/android/material/tabs/TabLayout;
+    iput-object p0, v0, Lz9g;->c:Lcom/google/android/material/tabs/TabLayout;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Ld6c;
+    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Lsdc;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Ld6c;->a()Ljava/lang/Object;
+    invoke-virtual {v2}, Lsdc;->a()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkyf;
+    check-cast v2, Lbag;
 
     goto :goto_0
 
@@ -1675,16 +1675,16 @@
     :goto_0
     if-nez v2, :cond_2
 
-    new-instance v2, Lkyf;
+    new-instance v2, Lbag;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v2, p0, v3}, Lkyf;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroid/content/Context;)V
+    invoke-direct {v2, p0, v3}, Lbag;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroid/content/Context;)V
 
     :cond_2
-    invoke-virtual {v2, v0}, Lkyf;->setTab(Liyf;)V
+    invoke-virtual {v2, v0}, Lbag;->setTab(Lz9g;)V
 
     const/4 v3, 0x1
 
@@ -1710,7 +1710,7 @@
     invoke-virtual {v2, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :goto_1
-    iput-object v2, v0, Liyf;->d:Lkyf;
+    iput-object v2, v0, Lz9g;->d:Lbag;
 
     return-object v0
 .end method
@@ -1718,7 +1718,7 @@
 .method public final j()V
     .locals 4
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -1755,33 +1755,33 @@
 
     move-result-object v1
 
-    check-cast v1, Liyf;
+    check-cast v1, Lz9g;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
-    iput-object v2, v1, Liyf;->c:Lcom/google/android/material/tabs/TabLayout;
+    iput-object v2, v1, Lz9g;->c:Lcom/google/android/material/tabs/TabLayout;
 
-    iput-object v2, v1, Liyf;->d:Lkyf;
+    iput-object v2, v1, Lz9g;->d:Lbag;
 
     const/4 v3, -0x1
 
-    iput v3, v1, Liyf;->a:I
+    iput v3, v1, Lz9g;->a:I
 
-    iput-object v2, v1, Liyf;->b:Landroid/view/View;
+    iput-object v2, v1, Lz9g;->b:Landroid/view/View;
 
-    sget-object v2, Lcom/google/android/material/tabs/TabLayout;->h1:Le6c;
+    sget-object v2, Lcom/google/android/material/tabs/TabLayout;->h1:Ltdc;
 
-    invoke-virtual {v2, v1}, Le6c;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v1}, Ltdc;->e(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_1
-    iput-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->c:Liyf;
+    iput-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->c:Lz9g;
 
     return-void
 .end method
 
-.method public final k(Lfyf;)V
+.method public final k(Lw9g;)V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->X0:Ljava/util/ArrayList;
@@ -1794,13 +1794,13 @@
 .method public final l(I)V
     .locals 9
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Liyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Lz9g;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Liyf;->a:I
+    iget v0, v0, Lz9g;->a:I
 
     goto :goto_0
 
@@ -1816,7 +1816,7 @@
 
     move-result-object v3
 
-    check-cast v3, Liyf;
+    check-cast v3, Lz9g;
 
     const/4 v4, -0x1
 
@@ -1824,17 +1824,17 @@
 
     if-eqz v3, :cond_1
 
-    iput-object v5, v3, Liyf;->c:Lcom/google/android/material/tabs/TabLayout;
+    iput-object v5, v3, Lz9g;->c:Lcom/google/android/material/tabs/TabLayout;
 
-    iput-object v5, v3, Liyf;->d:Lkyf;
+    iput-object v5, v3, Lz9g;->d:Lbag;
 
-    iput v4, v3, Liyf;->a:I
+    iput v4, v3, Lz9g;->a:I
 
-    iput-object v5, v3, Liyf;->b:Landroid/view/View;
+    iput-object v5, v3, Lz9g;->b:Landroid/view/View;
 
-    sget-object v6, Lcom/google/android/material/tabs/TabLayout;->h1:Le6c;
+    sget-object v6, Lcom/google/android/material/tabs/TabLayout;->h1:Ltdc;
 
-    invoke-virtual {v6, v3}, Le6c;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ltdc;->e(Ljava/lang/Object;)Z
 
     :cond_1
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1850,9 +1850,9 @@
 
     move-result-object v7
 
-    check-cast v7, Liyf;
+    check-cast v7, Lz9g;
 
-    iget v7, v7, Liyf;->a:I
+    iget v7, v7, Lz9g;->a:I
 
     iget v8, p0, Lcom/google/android/material/tabs/TabLayout;->a:I
 
@@ -1865,9 +1865,9 @@
 
     move-result-object v7
 
-    check-cast v7, Liyf;
+    check-cast v7, Lz9g;
 
-    iput v6, v7, Liyf;->a:I
+    iput v6, v7, Lz9g;->a:I
 
     add-int/lit8 v6, v6, 0x1
 
@@ -1901,10 +1901,10 @@
 
     move-object v5, p1
 
-    check-cast v5, Liyf;
+    check-cast v5, Lz9g;
 
     :goto_2
-    invoke-virtual {p0, v5, v3}, Lcom/google/android/material/tabs/TabLayout;->n(Liyf;Z)V
+    invoke-virtual {p0, v5, v3}, Lcom/google/android/material/tabs/TabLayout;->n(Lz9g;Z)V
 
     :cond_5
     return-void
@@ -1913,13 +1913,13 @@
 .method public final m(I)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    check-cast v1, Lkyf;
+    check-cast v1, Lbag;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
@@ -1927,15 +1927,15 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1}, Lkyf;->setTab(Liyf;)V
+    invoke-virtual {v1, p1}, Lbag;->setTab(Lz9g;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1}, Lkyf;->setSelected(Z)V
+    invoke-virtual {v1, p1}, Lbag;->setSelected(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Ld6c;
+    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->f1:Lsdc;
 
-    invoke-virtual {p1, v1}, Ld6c;->b(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Lsdc;->e(Ljava/lang/Object;)Z
 
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
@@ -1943,10 +1943,10 @@
     return-void
 .end method
 
-.method public final n(Liyf;Z)V
+.method public final n(Lz9g;Z)V
     .locals 10
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Liyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c:Lz9g;
 
     iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->X0:Ljava/util/ArrayList;
 
@@ -1967,7 +1967,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lfyf;
+    check-cast v0, Lw9g;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1976,7 +1976,7 @@
     goto :goto_0
 
     :cond_0
-    iget p1, p1, Liyf;->a:I
+    iget p1, p1, Lz9g;->a:I
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->c(I)V
 
@@ -1992,7 +1992,7 @@
 
     if-eqz p1, :cond_3
 
-    iget v3, p1, Liyf;->a:I
+    iget v3, p1, Lz9g;->a:I
 
     move v5, v3
 
@@ -2006,7 +2006,7 @@
 
     if-eqz v0, :cond_5
 
-    iget p2, v0, Liyf;->a:I
+    iget p2, v0, Lz9g;->a:I
 
     if-ne p2, v2, :cond_4
 
@@ -2050,11 +2050,11 @@
 
     :cond_7
     :goto_5
-    iput-object p1, v4, Lcom/google/android/material/tabs/TabLayout;->c:Liyf;
+    iput-object p1, v4, Lcom/google/android/material/tabs/TabLayout;->c:Lz9g;
 
     if-eqz v0, :cond_8
 
-    iget-object p2, v0, Liyf;->c:Lcom/google/android/material/tabs/TabLayout;
+    iget-object p2, v0, Lz9g;->c:Lcom/google/android/material/tabs/TabLayout;
 
     if-eqz p2, :cond_8
 
@@ -2071,7 +2071,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lfyf;
+    check-cast v0, Lw9g;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2095,9 +2095,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lfyf;
+    check-cast v0, Lw9g;
 
-    invoke-interface {v0, p1}, Lfyf;->a(Liyf;)V
+    invoke-interface {v0, p1}, Lw9g;->a(Lz9g;)V
 
     add-int/lit8 p2, p2, -0x1
 
@@ -2121,7 +2121,7 @@
 
     if-ltz v1, :cond_10
 
-    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2134,7 +2134,7 @@
     :cond_0
     if-eqz p4, :cond_2
 
-    iget-object p4, v2, Lhyf;->b:Lcom/google/android/material/tabs/TabLayout;
+    iget-object p4, v2, Ly9g;->b:Lcom/google/android/material/tabs/TabLayout;
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
@@ -2142,7 +2142,7 @@
 
     iput v0, p4, Lcom/google/android/material/tabs/TabLayout;->a:I
 
-    iget-object p4, v2, Lhyf;->a:Landroid/animation/ValueAnimator;
+    iget-object p4, v2, Ly9g;->a:Landroid/animation/ValueAnimator;
 
     if-eqz p4, :cond_1
 
@@ -2152,7 +2152,7 @@
 
     if-eqz p4, :cond_1
 
-    iget-object p4, v2, Lhyf;->a:Landroid/animation/ValueAnimator;
+    iget-object p4, v2, Ly9g;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p4}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -2167,7 +2167,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, p4, v0, p2}, Lhyf;->c(Landroid/view/View;Landroid/view/View;F)V
+    invoke-virtual {v2, p4, v0, p2}, Ly9g;->c(Landroid/view/View;Landroid/view/View;F)V
 
     :cond_2
     iget-object p4, p0, Lcom/google/android/material/tabs/TabLayout;->Z0:Landroid/animation/ValueAnimator;
@@ -2230,7 +2230,7 @@
     move v0, v2
 
     :goto_0
-    sget-object v4, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v4, Lash;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
 
@@ -2307,13 +2307,13 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lwq8;
+    instance-of v1, v0, Llv8;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lwq8;
+    check-cast v0, Llv8;
 
-    invoke-static {p0, v0}, Liti;->c(Landroid/view/View;Lwq8;)V
+    invoke-static {p0, v0}, Le7j;->g(Landroid/view/View;Llv8;)V
 
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->a1:Landroidx/viewpager/widget/ViewPager;
@@ -2365,7 +2365,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2377,13 +2377,13 @@
 
     move-result-object v1
 
-    instance-of v2, v1, Lkyf;
+    instance-of v2, v1, Lbag;
 
     if-eqz v2, :cond_0
 
-    check-cast v1, Lkyf;
+    check-cast v1, Lbag;
 
-    iget-object v2, v1, Lkyf;->v0:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v1, Lbag;->v0:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_0
 
@@ -2405,7 +2405,7 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v1, v1, Lkyf;->v0:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v1, Lbag;->v0:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -2431,11 +2431,11 @@
 
     move-result v1
 
-    invoke-static {v0, v1, v0}, Lk5;->a(III)Lk5;
+    invoke-static {v0, v1, v0}, Lh5;->c(III)Lh5;
 
     move-result-object v0
 
-    iget-object v0, v0, Lk5;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lh5;->a:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
@@ -2489,7 +2489,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lyqi;->b(Landroid/content/Context;I)F
+    invoke-static {v0, v1}, Lr5j;->a(Landroid/content/Context;I)F
 
     move-result v0
 
@@ -2580,7 +2580,7 @@
 
     const/16 v2, 0x38
 
-    invoke-static {v1, v2}, Lyqi;->b(Landroid/content/Context;I)F
+    invoke-static {v1, v2}, Lr5j;->a(Landroid/content/Context;I)F
 
     move-result v1
 
@@ -2727,7 +2727,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Ljyf;
+    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Laag;
 
     if-eqz v1, :cond_0
 
@@ -2738,7 +2738,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Leyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Lv9g;
 
     if-eqz v0, :cond_1
 
@@ -2751,39 +2751,39 @@
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lnd6;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lwh6;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->k(Lfyf;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->k(Lw9g;)V
 
-    iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lnd6;
+    iput-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lwh6;
 
     :cond_2
     if-eqz p1, :cond_7
 
     iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->a1:Landroidx/viewpager/widget/ViewPager;
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Ljyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Laag;
 
     if-nez v0, :cond_3
 
-    new-instance v0, Ljyf;
+    new-instance v0, Laag;
 
-    invoke-direct {v0, p0}, Ljyf;-><init>(Lcom/google/android/material/tabs/TabLayout;)V
+    invoke-direct {v0, p0}, Laag;-><init>(Lcom/google/android/material/tabs/TabLayout;)V
 
-    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Ljyf;
+    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Laag;
 
     :cond_3
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Ljyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->b1:Laag;
 
     const/4 v1, 0x0
 
-    iput v1, v0, Ljyf;->c:I
+    iput v1, v0, Laag;->c:I
 
-    iput v1, v0, Ljyf;->b:I
+    iput v1, v0, Laag;->b:I
 
     iget-object v1, p1, Landroidx/viewpager/widget/ViewPager;->Q0:Ljava/util/ArrayList;
 
@@ -2800,30 +2800,30 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lnd6;
+    new-instance v0, Lwh6;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1, p1}, Lnd6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lwh6;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lnd6;
+    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->Y0:Lwh6;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->a(Lfyf;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->a(Lw9g;)V
 
-    invoke-virtual {p1}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Lemb;
+    invoke-virtual {p1}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Lusb;
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Leyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Lv9g;
 
     if-nez v0, :cond_5
 
-    new-instance v0, Leyf;
+    new-instance v0, Lv9g;
 
-    invoke-direct {v0, p0}, Leyf;-><init>(Lcom/google/android/material/tabs/TabLayout;)V
+    invoke-direct {v0, p0}, Lv9g;-><init>(Lcom/google/android/material/tabs/TabLayout;)V
 
-    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Leyf;
+    iput-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Lv9g;
 
     :cond_5
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Leyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->c1:Lv9g;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2881,7 +2881,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2955,13 +2955,13 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lwq8;
+    instance-of v1, v0, Llv8;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lwq8;
+    check-cast v0, Llv8;
 
-    invoke-virtual {v0, p1}, Lwq8;->j(F)V
+    invoke-virtual {v0, p1}, Llv8;->j(F)V
 
     :cond_0
     return-void
@@ -2981,7 +2981,7 @@
     move v0, p1
 
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2993,13 +2993,13 @@
 
     move-result-object v1
 
-    instance-of v2, v1, Lkyf;
+    instance-of v2, v1, Lbag;
 
     if-eqz v2, :cond_2
 
-    check-cast v1, Lkyf;
+    check-cast v1, Lbag;
 
-    iget-object v2, v1, Lkyf;->x0:Lcom/google/android/material/tabs/TabLayout;
+    iget-object v2, v1, Lbag;->x0:Lcom/google/android/material/tabs/TabLayout;
 
     iget-boolean v2, v2, Lcom/google/android/material/tabs/TabLayout;->P0:Z
 
@@ -3009,30 +3009,30 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    iget-object v2, v1, Lkyf;->t0:Landroid/widget/TextView;
+    iget-object v2, v1, Lbag;->t0:Landroid/widget/TextView;
 
     if-nez v2, :cond_1
 
-    iget-object v4, v1, Lkyf;->u0:Landroid/widget/ImageView;
+    iget-object v4, v1, Lbag;->u0:Landroid/widget/ImageView;
 
     if-eqz v4, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object v2, v1, Lkyf;->b:Landroid/widget/TextView;
+    iget-object v2, v1, Lbag;->b:Landroid/widget/TextView;
 
-    iget-object v4, v1, Lkyf;->c:Landroid/widget/ImageView;
+    iget-object v4, v1, Lbag;->c:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v2, v4, v3}, Lkyf;->g(Landroid/widget/TextView;Landroid/widget/ImageView;Z)V
+    invoke-virtual {v1, v2, v4, v3}, Lbag;->g(Landroid/widget/TextView;Landroid/widget/ImageView;Z)V
 
     goto :goto_2
 
     :cond_1
     :goto_1
-    iget-object v3, v1, Lkyf;->u0:Landroid/widget/ImageView;
+    iget-object v3, v1, Lbag;->u0:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v2, v3, p1}, Lkyf;->g(Landroid/widget/TextView;Landroid/widget/ImageView;Z)V
+    invoke-virtual {v1, v2, v3, p1}, Lbag;->g(Landroid/widget/TextView;Landroid/widget/ImageView;Z)V
 
     :cond_2
     :goto_2
@@ -3063,39 +3063,39 @@
     return-void
 .end method
 
-.method public setOnTabSelectedListener(Lfyf;)V
+.method public setOnTabSelectedListener(Lw9g;)V
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->W0:Lfyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->W0:Lw9g;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->k(Lfyf;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/material/tabs/TabLayout;->k(Lw9g;)V
 
     .line 4
     :cond_0
-    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->W0:Lfyf;
+    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->W0:Lw9g;
 
     if-eqz p1, :cond_1
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->a(Lfyf;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->a(Lw9g;)V
 
     :cond_1
     return-void
 .end method
 
-.method public setOnTabSelectedListener(Lgyf;)V
+.method public setOnTabSelectedListener(Lx9g;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setOnTabSelectedListener(Lfyf;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setOnTabSelectedListener(Lw9g;)V
 
     return-void
 .end method
@@ -3122,7 +3122,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Leri;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lm4j;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -3164,7 +3164,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-static {p1, v0}, Lt35;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
 
     goto :goto_0
 
@@ -3172,7 +3172,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-static {p1, v0}, Lt35;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Ls75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 6
     :goto_0
@@ -3191,9 +3191,9 @@
 
     .line 8
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
-    invoke-virtual {v0, p1}, Lhyf;->b(I)V
+    invoke-virtual {v0, p1}, Ly9g;->b(I)V
 
     return-void
 .end method
@@ -3207,14 +3207,14 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {v0, p1}, Lt35;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, p1}, Ls75;->g(Landroid/graphics/drawable/Drawable;I)V
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lt35;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Ls75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :goto_0
     const/4 p1, 0x0
@@ -3233,9 +3233,9 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->N0:I
 
-    sget-object p1, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lash;->a:Ljava/util/WeakHashMap;
 
-    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
 
@@ -3250,9 +3250,9 @@
 
     iput p1, p0, Lcom/google/android/material/tabs/TabLayout;->R0:I
 
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
-    invoke-virtual {v0, p1}, Lhyf;->b(I)V
+    invoke-virtual {v0, p1}, Ly9g;->b(I)V
 
     return-void
 .end method
@@ -3296,13 +3296,13 @@
 
     move-result-object v2
 
-    check-cast v2, Liyf;
+    check-cast v2, Lz9g;
 
-    iget-object v2, v2, Liyf;->d:Lkyf;
+    iget-object v2, v2, Lz9g;->d:Lbag;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lkyf;->d()V
+    invoke-virtual {v2}, Lbag;->d()V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -3320,7 +3320,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lz7;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lx7;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -3344,13 +3344,13 @@
 
     if-ne p1, v0, :cond_0
 
-    new-instance p1, Ly95;
+    new-instance p1, Lxd5;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, v0}, Ly95;-><init>(I)V
+    invoke-direct {p1, v0}, Lxd5;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lcyf;
+    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lskf;
 
     return-void
 
@@ -3376,22 +3376,22 @@
     throw v0
 
     :cond_1
-    new-instance p1, Ly95;
+    new-instance p1, Lxd5;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0}, Ly95;-><init>(I)V
+    invoke-direct {p1, v0}, Lxd5;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lcyf;
+    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lskf;
 
     return-void
 
     :cond_2
-    new-instance p1, Lcyf;
+    new-instance p1, Lskf;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lcyf;
+    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->U0:Lskf;
 
     return-void
 .end method
@@ -3401,19 +3401,19 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/tabs/TabLayout;->Q0:Z
 
-    sget p1, Lhyf;->c:I
+    sget p1, Ly9g;->c:I
 
-    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
-    iget-object v0, p1, Lhyf;->b:Lcom/google/android/material/tabs/TabLayout;
+    iget-object v0, p1, Ly9g;->b:Lcom/google/android/material/tabs/TabLayout;
 
     invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lhyf;->a(I)V
+    invoke-virtual {p1, v0}, Ly9g;->a(I)V
 
-    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lash;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
 
@@ -3447,7 +3447,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -3459,19 +3459,19 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lkyf;
+    instance-of v1, v0, Lbag;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lkyf;
+    check-cast v0, Lbag;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lkyf;->y0:I
+    sget v2, Lbag;->y0:I
 
-    invoke-virtual {v0, v1}, Lkyf;->e(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lbag;->e(Landroid/content/Context;)V
 
     :cond_0
     add-int/lit8 p1, p1, 0x1
@@ -3489,7 +3489,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lz7;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lx7;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -3522,13 +3522,13 @@
 
     move-result-object v2
 
-    check-cast v2, Liyf;
+    check-cast v2, Lz9g;
 
-    iget-object v2, v2, Liyf;->d:Lkyf;
+    iget-object v2, v2, Lz9g;->d:Lbag;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lkyf;->d()V
+    invoke-virtual {v2}, Lbag;->d()V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -3539,7 +3539,7 @@
     return-void
 .end method
 
-.method public setTabsFromPagerAdapter(Lemb;)V
+.method public setTabsFromPagerAdapter(Lusb;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -3561,7 +3561,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Lhyf;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->d:Ly9g;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -3573,19 +3573,19 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lkyf;
+    instance-of v1, v0, Lbag;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lkyf;
+    check-cast v0, Lbag;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lkyf;->y0:I
+    sget v2, Lbag;->y0:I
 
-    invoke-virtual {v0, v1}, Lkyf;->e(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lbag;->e(Landroid/content/Context;)V
 
     :cond_0
     add-int/lit8 p1, p1, 0x1

@@ -3,41 +3,27 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ll27;
-
-
 # instance fields
-.field public final a:Lj27;
+.field public final a:Lp27;
 
-.field public final b:Lk27;
+.field public final b:Lr27;
+
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ll27;
-
-    sget-object v1, Lj27;->c:Lj27;
-
-    sget-object v2, Lk27;->a:Lk27;
-
-    invoke-direct {v0, v1, v2}, Ll27;-><init>(Lj27;Lk27;)V
-
-    sput-object v0, Ll27;->c:Ll27;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj27;Lk27;)V
-    .locals 0
+.method public constructor <init>(Lp27;Lr27;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll27;->a:Lj27;
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Ll27;->b:Lk27;
+    iput-boolean v0, p0, Ll27;->c:Z
+
+    iput-object p1, p0, Ll27;->a:Lp27;
+
+    iput-object p2, p0, Ll27;->b:Lr27;
 
     return-void
 .end method
@@ -45,51 +31,39 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "HexFormat(\n    upperCase = false,\n    bytes = BytesHexFormat(\n"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    iget-object v1, p0, Ll27;->a:Lp27;
 
-    iget-object v1, p0, Ll27;->a:Lj27;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, "        "
-
-    invoke-virtual {v1, v0, v2}, Lj27;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v3, "    ),"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v3, "    number = NumberHexFormat("
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Ll27;->b:Lk27;
-
-    invoke-virtual {v3, v0, v2}, Lk27;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v2, "    )"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
+    const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Ll27;->c:Z
+
+    if-nez v2, :cond_0
+
+    const-string v2, "+>"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "->"
+
+    :goto_0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll27;->b:Lr27;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

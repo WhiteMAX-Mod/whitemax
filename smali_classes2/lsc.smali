@@ -1,64 +1,29 @@
 .class public final Llsc;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Llsc;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:Lisc;
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(J)V
+    .locals 1
 
-    new-instance v0, Lwcb;
+    const/16 v0, 0x10
 
-    const/16 v1, 0x15
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lwcb;-><init>(I)V
-
-    sput-object v0, Llsc;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lisc;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llsc;->a:Lisc;
+    iput-wide p1, p0, Llsc;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -78,15 +43,13 @@
     :cond_1
     check-cast p1, Llsc;
 
-    iget-object v1, p0, Llsc;->a:Lisc;
+    iget-wide v3, p0, Llsc;->b:J
 
-    iget-object p1, p1, Llsc;->a:Lisc;
+    iget-wide v5, p1, Llsc;->b:J
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -95,11 +58,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Llsc;->a:Lisc;
+    iget-wide v0, p0, Llsc;->b:J
 
-    invoke-virtual {v0}, Lisc;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
@@ -107,61 +70,17 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "QualityParc(value="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Llsc;->a:Lisc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "InviteByLink(chatId="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Llsc;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lxfh;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-object p2, p0, Llsc;->a:Lisc;
-
-    iget-object v0, p2, Lisc;->a:Lgsc;
-
-    iget-object v0, v0, Lgsc;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget v0, p2, Lisc;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p2, Lisc;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p2, Lisc;->d:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-wide v0, p2, Lisc;->e:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-boolean p2, p2, Lisc;->f:Z
-
-    int-to-byte p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
-
-    return-void
 .end method

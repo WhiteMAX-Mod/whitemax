@@ -24,7 +24,7 @@
         "name",
         "<init>",
         "(Ljava/lang/String;)V",
-        "Lqqg;",
+        "Lv2h;",
         "logStatisticsIfNeeded",
         "()V",
         "",
@@ -185,7 +185,7 @@
 
     const-string v12, "TextureViewRenderer_pfs_"
 
-    invoke-static {v12, v7}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v7}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -209,7 +209,7 @@
 
     const-string v7, ", re-postponed: "
 
-    invoke-static {v12, v13, v0, v7}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v12, v13, v0, v7}, Lc12;->m(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -219,19 +219,19 @@
 
     const-string v12, " ("
 
-    invoke-static {v5, v6, v7, v12, v0}, Laz1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v5, v6, v7, v12, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v8, v9}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v5, "%), delivered: "
 
-    invoke-static {v1, v2, v5, v12, v0}, Laz1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v2, v5, v12, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, "%), rejected: "
 
-    invoke-static {v10, v11, v1, v12, v0}, Laz1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v10, v11, v1, v12, v0}, Lc12;->s(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     move-wide/from16 v8, v18
 
@@ -279,7 +279,7 @@
 
     mul-double/2addr p1, v0
 
-    invoke-static {p1, p2}, Lkti;->e(D)J
+    invoke-static {p1, p2}, Ln7j;->d(D)J
 
     move-result-wide p1
 

@@ -1,124 +1,83 @@
 .class public final Lxbj;
-.super Lr7j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final transient c:Lnji;
+.field public final a:Ljava/lang/String;
 
-.field public final transient d:[Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final transient o:I
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Lnnj;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/Boolean;
+
+.field public final h:Ljava/lang/Boolean;
+
+.field public final i:Ljava/lang/Boolean;
+
+.field public final j:Ljava/lang/Integer;
+
+.field public final k:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lnji;[Ljava/lang/Object;)V
-    .locals 0
+.method public synthetic constructor <init>(Lobj;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxbj;->c:Lnji;
+    iget-object v0, p1, Lobj;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lxbj;->d:[Ljava/lang/Object;
+    iput-object v0, p0, Lxbj;->a:Ljava/lang/String;
 
-    const/4 p1, 0x1
+    iget-object v0, p1, Lobj;->b:Ljava/lang/String;
 
-    iput p1, p0, Lxbj;->o:I
+    iput-object v0, p0, Lxbj;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lobj;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Lxbj;->c:Ljava/lang/String;
+
+    iget-object v0, p1, Lobj;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lxbj;->d:Ljava/lang/String;
+
+    iget-object v0, p1, Lobj;->k:Ljava/util/AbstractCollection;
+
+    check-cast v0, Lnnj;
+
+    iput-object v0, p0, Lxbj;->e:Lnnj;
+
+    iget-object v0, p1, Lobj;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lxbj;->f:Ljava/lang/String;
+
+    iget-object v0, p1, Lobj;->f:Ljava/lang/Boolean;
+
+    iput-object v0, p0, Lxbj;->g:Ljava/lang/Boolean;
+
+    iget-object v0, p1, Lobj;->g:Ljava/lang/Boolean;
+
+    iput-object v0, p0, Lxbj;->h:Ljava/lang/Boolean;
+
+    iget-object v0, p1, Lobj;->h:Ljava/lang/Boolean;
+
+    iput-object v0, p0, Lxbj;->i:Ljava/lang/Boolean;
+
+    iget-object v0, p1, Lobj;->i:Ljava/lang/Integer;
+
+    iput-object v0, p0, Lxbj;->j:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lobj;->j:Ljava/lang/Integer;
+
+    iput-object p1, p0, Lxbj;->k:Ljava/lang/Integer;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Lr7j;->b:Ln4j;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lwaj;
-
-    invoke-direct {v0, p0}, Lwaj;-><init>(Lxbj;)V
-
-    iput-object v0, p0, Lr7j;->b:Ln4j;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ln4j;->a([Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object v2, p0, Lxbj;->c:Lnji;
-
-    invoke-virtual {v2, v0}, Lnji;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    return v1
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
-
-    iget-object v0, p0, Lr7j;->b:Ln4j;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lwaj;
-
-    invoke-direct {v0, p0}, Lwaj;-><init>(Lxbj;)V
-
-    iput-object v0, p0, Lr7j;->b:Ln4j;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ln4j;->f(I)Lf2j;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lxbj;->o:I
-
-    return v0
 .end method

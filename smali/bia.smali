@@ -1,132 +1,80 @@
 .class public final Lbia;
-.super Lp0;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lqt7;
+.implements Lcr6;
 
 
-# static fields
-.field public static final a:Lbia;
+# instance fields
+.field public synthetic o:J
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p2}, Lbia;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbia;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lbia;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance v0, Lbia;
 
-    sget-object v1, Lwha;->w0:Lwha;
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lp0;-><init>(Lw74;)V
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sput-object v0, Lbia;->a:Lbia;
+    check-cast p1, Ljava/lang/Number;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lbia;->o:J
+
+    return-object v0
 .end method
 
-
-# virtual methods
-.method public final attachChild(La83;)Ly73;
-    .locals 0
-
-    sget-object p1, Liia;->a:Liia;
-
-    return-object p1
-.end method
-
-.method public final cancel(Ljava/util/concurrent/CancellationException;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getCancellationException()Ljava/util/concurrent/CancellationException;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v1, "This job is always active"
+    iget-wide v0, p0, Lbia;->o:J
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    throw v0
-.end method
+    move-result-object p1
 
-.method public final getChildren()Lzde;
-    .locals 1
+    const/4 v0, 0x0
 
-    sget-object v0, Lqd5;->a:Lqd5;
+    invoke-static {p1, v0}, Lcom/my/tracker/userlifecycle/MyTrackerUserLifecycle;->trackLoginEvent(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
-.end method
-
-.method public final invokeOnCompletion(Lem6;)Lsy4;
-    .locals 0
-
-    .line 1
-    sget-object p1, Liia;->a:Liia;
+    sget-object p1, Lv2h;->a:Lv2h;
 
     return-object p1
-.end method
-
-.method public final invokeOnCompletion(ZZLem6;)Lsy4;
-    .locals 0
-
-    .line 2
-    sget-object p1, Liia;->a:Liia;
-
-    return-object p1
-.end method
-
-.method public final isActive()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isCompleted()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "This job is always active"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final start()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "NonCancellable"
-
-    return-object v0
 .end method

@@ -4,127 +4,164 @@
 
 
 # instance fields
-.field public final a:Lpi0;
+.field public final a:Landroid/app/Application;
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:Lh6f;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final d:Ldzb;
+
+.field public final e:Ldzb;
+
+.field public final f:Ldi0;
 
 
 # direct methods
-.method public constructor <init>(Lpi0;Landroid/graphics/Matrix;)V
-    .locals 6
+.method public constructor <init>(Landroid/app/Application;Ljy0;Lbbg;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmi0;->a:Lpi0;
+    iput-object p1, p0, Lmi0;->a:Landroid/app/Application;
 
-    invoke-interface {p1}, Lpi0;->f()Landroid/graphics/Rect;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    const/4 v0, 0x7
 
-    if-eqz v0, :cond_0
-
-    if-eqz p2, :cond_0
-
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-direct {v1, v0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget v2, v1, Landroid/graphics/RectF;->left:F
-
-    float-to-int v2, v2
-
-    iget v3, v1, Landroid/graphics/RectF;->top:F
-
-    float-to-int v3, v3
-
-    iget v4, v1, Landroid/graphics/RectF;->right:F
-
-    float-to-int v4, v4
-
-    iget v1, v1, Landroid/graphics/RectF;->bottom:F
-
-    float-to-int v1, v1
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/graphics/Rect;->set(IIII)V
-
-    :cond_0
-    iput-object v0, p0, Lmi0;->b:Landroid/graphics/Rect;
-
-    invoke-interface {p1}, Lpi0;->l()[Landroid/graphics/Point;
+    invoke-static {p1, p1, v0}, Li6f;->b(III)Lh6f;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    iput-object p1, p0, Lmi0;->b:Lh6f;
 
-    if-eqz p2, :cond_2
+    check-cast p3, Lb9b;
 
-    array-length v0, p1
+    invoke-virtual {p3}, Lb9b;->c()Llq8;
 
-    add-int/2addr v0, v0
+    move-result-object p1
 
-    new-array v0, v0, [F
+    invoke-virtual {p1}, Llq8;->getImmediate()Llq8;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    move v2, v1
+    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    :goto_0
-    array-length v3, p1
+    move-result-object p1
 
-    if-ge v2, v3, :cond_1
+    iput-object p1, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    aget-object v3, p1, v2
+    new-instance p1, Ldzb;
 
-    iget v4, v3, Landroid/graphics/Point;->x:I
+    sget-object p3, Lezb;->f:[Ljava/lang/String;
 
-    int-to-float v4, v4
+    invoke-direct {p1, p3}, Ldzb;-><init>([Ljava/lang/String;)V
 
-    add-int v5, v2, v2
+    iput-object p1, p0, Lmi0;->d:Ldzb;
 
-    aput v4, v0, v5
+    new-instance p1, Ldzb;
 
-    add-int/lit8 v5, v5, 0x1
+    sget-object p3, Lezb;->l:[Ljava/lang/String;
 
-    iget v3, v3, Landroid/graphics/Point;->y:I
+    invoke-direct {p1, p3}, Ldzb;-><init>([Ljava/lang/String;)V
 
-    int-to-float v3, v3
+    iput-object p1, p0, Lmi0;->e:Ldzb;
 
-    aput v3, v0, v5
+    new-instance p1, Ldi0;
 
-    add-int/lit8 v2, v2, 0x1
+    const/4 p3, 0x0
 
-    goto :goto_0
+    invoke-direct {p1, p3, p0}, Ldi0;-><init>(ILjava/lang/Object;)V
 
-    :cond_1
-    invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
+    iput-object p1, p0, Lmi0;->f:Ldi0;
 
-    :goto_1
-    array-length p2, p1
+    invoke-virtual {p2, p0}, Ljy0;->d(Ljava/lang/Object;)V
 
-    if-ge v1, p2, :cond_2
+    return-void
+.end method
 
-    aget-object p2, p1, v1
 
-    add-int v2, v1, v1
+# virtual methods
+.method public final onEvent(Ldm8;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
 
-    aget v3, v0, v2
+    .line 1
+    new-instance p1, Lei0;
 
-    float-to-int v3, v3
+    const/4 v0, 0x0
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-direct {p1, p0, v0}, Lei0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
 
-    aget v2, v0, v2
+    const/4 v1, 0x3
 
-    float-to-int v2, v2
+    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p2, v3, v2}, Landroid/graphics/Point;->set(II)V
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    add-int/lit8 v1, v1, 0x1
+    return-void
+.end method
 
-    goto :goto_1
+.method public final onEvent(Lh5h;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
 
-    :cond_2
+    .line 4
+    new-instance p1, Lhi0;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lhi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lp1c;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
+
+    .line 2
+    new-instance p1, Lfi0;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lfi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lp64;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
+
+    .line 3
+    new-instance p1, Lgi0;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lgi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
     return-void
 .end method

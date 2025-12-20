@@ -1,73 +1,160 @@
-.class public final enum Lrp7;
-.super Ljava/lang/Enum;
+.class public final Lrp7;
+.super Lsp9;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lrp7;
+# instance fields
+.field public a:I
 
-.field public static final enum b:Lrp7;
-
-.field public static final synthetic c:[Lrp7;
+.field public b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lrp7;
+    invoke-direct {p0}, Lsp9;-><init>()V
 
-    const-string v1, "AUTH"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    iput v0, p0, Lrp7;->a:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v0, ""
 
-    sput-object v0, Lrp7;->a:Lrp7;
+    iput-object v0, p0, Lrp7;->b:Ljava/lang/String;
 
-    new-instance v1, Lrp7;
+    const/4 v0, -0x1
 
-    const-string v2, "SETTINGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrp7;->b:Lrp7;
-
-    filled-new-array {v0, v1}, [Lrp7;
-
-    move-result-object v0
-
-    sput-object v0, Lrp7;->c:[Lrp7;
+    iput v0, p0, Lsp9;->cachedSize:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrp7;
-    .locals 1
 
-    const-class v0, Lrp7;
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lrp7;->a:I
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Lrp7;
+    const/4 v1, 0x1
 
-    return-object p0
+    invoke-static {v1, v0}, Lmg3;->n(II)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lrp7;->b:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lrp7;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lmg3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_1
+    return v0
 .end method
 
-.method public static values()[Lrp7;
-    .locals 1
+.method public final mergeFrom(Llg3;)Lsp9;
+    .locals 2
 
-    sget-object v0, Lrp7;->c:[Lrp7;
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Llg3;->s()I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x12
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Llg3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Llg3;->r()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lrp7;
+    iput-object v0, p0, Lrp7;->b:Ljava/lang/String;
 
-    return-object v0
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Llg3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lrp7;->a:I
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lmg3;)V
+    .locals 2
+
+    iget v0, p0, Lrp7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lmg3;->G(II)V
+
+    :cond_0
+    iget-object v0, p0, Lrp7;->b:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lrp7;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lmg3;->E(ILjava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

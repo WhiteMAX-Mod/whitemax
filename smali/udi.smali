@@ -1,61 +1,71 @@
-.class public final Ludi;
-.super Lzci;
+.class public abstract synthetic Ludi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:Lwdi;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lwdi;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ludi;->c:Lwdi;
+    invoke-static {}, Landroid/text/Layout$Alignment;->values()[Landroid/text/Layout$Alignment;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ludi;->a:[I
+
+    :try_start_0
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ludi;->a:[I
+
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ludi;->a:[I
+
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic get(I)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Ludi;->c:Lwdi;
-
-    iget v1, v0, Lwdi;->o:I
-
-    invoke-static {p1, v1}, Lkvi;->c(II)V
-
-    iget-object v0, v0, Lwdi;->d:[Ljava/lang/Object;
-
-    add-int/2addr p1, p1
-
-    aget-object v1, v0, p1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 p1, p1, 0x1
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ludi;->c:Lwdi;
-
-    iget v0, v0, Lwdi;->o:I
-
-    return v0
 .end method

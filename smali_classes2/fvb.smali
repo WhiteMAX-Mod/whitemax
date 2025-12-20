@@ -1,50 +1,43 @@
-.class public final Lfvb;
-.super Ll0g;
+.class public abstract Lfvb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/lang/String;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "url"
+    new-instance v0, La9b;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v1, 0xb
 
-    move-result p2
+    invoke-direct {v0, v1}, La9b;-><init>(I)V
 
-    if-eqz p2, :cond_0
+    const/4 v1, 0x3
 
-    invoke-virtual {p1}, Ltm9;->w0()Ljava/lang/String;
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, p0, Lfvb;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ltm9;->v()V
+    sput-object v0, Lfvb;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static final a()Landroid/graphics/Paint;
+    .locals 1
 
-    iget-object v0, p0, Lfvb;->c:Ljava/lang/String;
+    sget-object v0, Lfvb;->a:Ljava/lang/Object;
 
-    const-string v1, "{url=\'"
-
-    const-string v2, "\'}"
-
-    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Landroid/graphics/Paint;
 
     return-object v0
 .end method

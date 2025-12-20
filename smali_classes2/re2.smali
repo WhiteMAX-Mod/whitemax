@@ -1,140 +1,138 @@
-.class public final synthetic Lre2;
-.super Ljava/lang/Object;
+.class public final Lre2;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Liu3;
 
 
 # instance fields
-.field public final synthetic a:Lve2;
+.field public c:Ljava/util/List;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic d:I
-
-.field public final synthetic e:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic f:Z
+.field public d:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lve2;JJILjava/util/concurrent/atomic/AtomicBoolean;Z)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
-    iput-object p1, p0, Lre2;->a:Lve2;
+    iget-object p1, p0, Lre2;->c:Ljava/util/List;
 
-    iput-wide p2, p0, Lre2;->b:J
+    if-nez p1, :cond_0
 
-    iput-wide p4, p0, Lre2;->c:J
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput p6, p0, Lre2;->d:I
+    iput-object p1, p0, Lre2;->c:Ljava/util/List;
 
-    iput-object p7, p0, Lre2;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-boolean p8, p0, Lre2;->f:Z
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 5
 
-    check-cast p1, Laf2;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lre2;->a:Lve2;
+    const-string v0, "commands"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Laf2;->c()Ljava/util/Map;
+    move-result v0
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    iget-wide v2, p0, Lre2;->b:J
+    if-nez v0, :cond_2
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v0, "contacts"
 
-    move-result-object v4
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p2
 
-    move-result-object v4
+    if-nez p2, :cond_0
 
-    check-cast v4, Ljava/lang/Long;
-
-    if-nez v4, :cond_0
+    invoke-virtual {p1}, Lgr9;->y()V
 
     return-void
 
     :cond_0
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+    new-instance p2, Ljava/util/HashMap;
 
-    move-result-wide v4
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    iget-wide v6, p0, Lre2;->c:J
+    iput-object p2, p0, Lre2;->d:Ljava/util/HashMap;
 
-    cmp-long v4, v4, v6
+    invoke-static {p1}, Lisi;->n(Lgr9;)I
 
-    const/4 v5, 0x0
+    move-result p2
 
-    const/4 v8, 0x1
+    :goto_0
+    if-ge v1, p2, :cond_1
 
-    if-eqz v4, :cond_1
+    invoke-virtual {p1}, Lgr9;->K0()J
 
-    move v4, v8
+    move-result-wide v2
+
+    invoke-static {p1}, Lx04;->g(Lgr9;)Lx04;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lre2;->d:Ljava/util/HashMap;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    move v4, v5
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-interface {v1, v9, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
     :cond_2
-    iget v1, p0, Lre2;->d:I
+    new-instance p2, Lqf3;
 
-    if-ltz v1, :cond_3
+    const/16 v0, 0xf
 
-    iput v1, p1, Laf2;->m:I
+    invoke-direct {p2, v0, v1}, Lqf3;-><init>(IB)V
 
-    :cond_3
-    iget-boolean p1, p0, Lre2;->f:Z
+    invoke-static {p1, p2}, Lisi;->s(Lgr9;Lhba;)Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_4
+    move-result-object p1
 
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v0}, Lve2;->U()J
-
-    move-result-wide v0
-
-    cmp-long p1, v2, v0
-
-    if-nez p1, :cond_4
-
-    move v5, v8
-
-    :cond_4
-    iget-object p1, p0, Lre2;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iput-object p1, p0, Lre2;->c:Ljava/util/List;
 
     return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lre2;->c:Ljava/util/List;
+
+    invoke-static {v0}, Lvki;->a(Ljava/util/Collection;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lre2;->d:Ljava/util/HashMap;
+
+    invoke-static {v1}, Lvki;->b(Ljava/util/Map;)I
+
+    move-result v1
+
+    const-string v2, ", contacts="
+
+    const-string v3, "}"
+
+    const-string v4, "{commands="
+
+    invoke-static {v4, v0, v2, v1, v3}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

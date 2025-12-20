@@ -2,59 +2,42 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final a:Lcgd;
 
-# static fields
-.field public static final a:Ljmi;
+.field public final b:J
+
+.field public final c:Le4e;
+
+.field public final d:Lf4e;
+
+.field public e:J
+
+.field public f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLf4e;Lcgd;)V
+    .locals 2
 
-    new-instance v0, Ljmi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Ljmi;->a:Ljmi;
+    iput-wide v0, p0, Ljmi;->e:J
 
-    new-instance v0, Ltci;
+    iput-wide v0, p0, Ljmi;->f:J
 
-    const/4 v1, 0x1
+    iput-wide p1, p0, Ljmi;->b:J
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    iget-object p1, p3, Lf4e;->b:Le4e;
 
-    const-class v1, Lhdi;
+    iput-object p1, p0, Ljmi;->c:Le4e;
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    iput-object p3, p0, Ljmi;->d:Lf4e;
 
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p4, p0, Ljmi;->a:Lcgd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

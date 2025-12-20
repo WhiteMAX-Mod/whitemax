@@ -3,288 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzy7;
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final a:Lex7;
+.field public static volatile c:Lex7;
 
-.field public static final b:Lj9c;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(I)V
+    .locals 3
 
-    new-instance v0, Lex7;
+    iput p1, p0, Lex7;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    sput-object v0, Lex7;->a:Lex7;
+    .line 3
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lh9c;->j:Lh9c;
+    .line 4
+    new-instance p1, Lx30;
 
-    const-string v1, "kotlinx.serialization.json.JsonLiteral"
+    const/4 v0, 0x3
 
-    invoke-static {v1}, Lvmf;->F(Ljava/lang/CharSequence;)Z
+    invoke-direct {p1, v0}, Lx30;-><init>(I)V
 
-    move-result v2
+    const/4 v0, 0x2
 
-    if-nez v2, :cond_2
+    .line 5
+    invoke-static {v0, p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
-    sget-object v2, Lk9c;->a:Lnn8;
+    move-result-object p1
 
-    invoke-virtual {v2}, Lnn8;->values()Ljava/util/Collection;
-
-    move-result-object v2
-
-    check-cast v2, Lpn8;
-
-    invoke-virtual {v2}, Lpn8;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    move-object v3, v2
-
-    check-cast v3, Lmn8;
-
-    invoke-virtual {v3}, Lmn8;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    move-object v3, v2
-
-    check-cast v3, Lkn8;
-
-    invoke-virtual {v3}, Lkn8;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzy7;
-
-    invoke-interface {v3}, Lzy7;->d()Lree;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lree;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "\n                The name of serial descriptor should uniquely identify associated serializer.\n                For serial name kotlinx.serialization.json.JsonLiteral there already exists "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lca3;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ".\n                Please refer to SerialDescriptor documentation for additional information.\n            "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lwmf;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v2, Lj9c;
-
-    invoke-direct {v2, v1, v0}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
-
-    sput-object v2, Lex7;->b:Lj9c;
+    iput-object p1, p0, Lex7;->b:Ljava/lang/Object;
 
     return-void
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    .line 6
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Blank serial names are prohibited"
+    new-instance p1, Lz7a;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    throw v0
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    .line 7
+    invoke-direct {p1, v0, v1, v2}, Lz7a;-><init>(Landroid/os/Looper;IZ)V
+
+    .line 8
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 9
+    iput-object p1, p0, Lex7;->b:Ljava/lang/Object;
+
+    return-void
+
+    .line 10
+    :pswitch_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lex7;->b:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lex7;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lex7;->b:Ljava/lang/Object;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
 
-    check-cast p2, Ldx7;
+    iget v0, p0, Lex7;->a:I
 
-    iget-object v0, p2, Ldx7;->b:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lioi;->a(Lkotlinx/serialization/json/internal/b;)V
+    iget-object v0, p0, Lex7;->b:Ljava/lang/Object;
 
-    iget-boolean p2, p2, Ldx7;->a:Z
+    check-cast v0, Lz7a;
 
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->r(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
-    :cond_0
-    invoke-static {v0}, Lcnf;->i(Ljava/lang/String;)Ljava/lang/Long;
+    :pswitch_0
+    iget-object v0, p0, Lex7;->b:Ljava/lang/Object;
 
-    move-result-object p2
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    if-eqz p2, :cond_1
+    new-instance v1, La7e;
 
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+    const/4 v2, 0x0
 
-    move-result-wide v0
+    invoke-direct {v1, p1, v2}, La7e;-><init>(Ljava/lang/Runnable;I)V
 
-    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->l(J)V
-
-    return-void
-
-    :cond_1
-    invoke-static {v0}, Llni;->d(Ljava/lang/String;)Lppg;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_2
-
-    iget-wide v0, p2, Lppg;->a:J
-
-    sget-object p2, Ltpg;->b:Lvl7;
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->i(Lree;)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->l(J)V
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
-    :cond_2
-    invoke-static {v0}, Lbnf;->f(Ljava/lang/String;)Ljava/lang/Double;
+    :pswitch_1
+    iget-object v0, p0, Lex7;->b:Ljava/lang/Object;
 
-    move-result-object p2
+    check-cast v0, Landroid/os/Handler;
 
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->f(D)V
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
-    :cond_3
-    invoke-static {v0}, Lvmf;->b0(Ljava/lang/String;)Ljava/lang/Boolean;
+    :pswitch_2
+    iget-object v0, p0, Lex7;->b:Ljava/lang/Object;
 
-    move-result-object p2
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->b(Z)V
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
-    :cond_4
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->r(Ljava/lang/String;)V
+    nop
 
-    return-void
-.end method
-
-.method public final b(Llh4;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lioi;->b(Llh4;)Lkotlinx/serialization/json/internal/a;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/a;->G()Lsw7;
-
-    move-result-object p1
-
-    instance-of v0, p1, Ldx7;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ldx7;
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unexpected JSON element, expected JsonLiteral, had "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lvid;->a(Ljava/lang/Class;)Lca3;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, p1, v1}, Lkoi;->b(Ljava/lang/String;Ljava/lang/CharSequence;I)Lkotlinx/serialization/json/internal/JsonDecodingException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public final d()Lree;
-    .locals 1
-
-    sget-object v0, Lex7;->b:Lj9c;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

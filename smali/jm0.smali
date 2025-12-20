@@ -1,413 +1,122 @@
 .class public final Ljm0;
-.super Lvt3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Leo;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic g:I
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lu5i;I)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Ljm0;->g:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lvt3;-><init>(Landroid/content/Context;Lu5i;)V
+    iput-object p1, p0, Ljm0;->a:Ljava/lang/String;
 
-    new-instance p1, Leo;
+    iput-object p4, p0, Ljm0;->b:Ljava/lang/String;
 
-    const/4 p2, 0x3
+    iput p2, p0, Ljm0;->c:I
 
-    invoke-direct {p1, p2, p0}, Leo;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Ljm0;->f:Leo;
+    iput p3, p0, Ljm0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Ljm0;->g:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lvt3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0}, Ljm0;->u()Landroid/content/IntentFilter;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
+    instance-of v1, p1, Ljm0;
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_3
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    const v4, -0x46671f94
-
-    if-eq v3, v4, :cond_2
-
-    const v4, -0x2b8fb65c
-
-    if-eq v3, v4, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const-string v3, "android.intent.action.DEVICE_STORAGE_OK"
+    check-cast p1, Ljm0;
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Ljm0;->c:I
 
-    move-result v0
+    iget v3, p1, Ljm0;->c:I
 
-    if-nez v0, :cond_4
+    if-ne v1, v3, :cond_2
 
-    goto :goto_0
+    iget v1, p0, Ljm0;->d:I
 
-    :cond_2
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
+    iget v3, p1, Ljm0;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_2
 
-    move-result v0
+    iget-object v1, p0, Ljm0;->a:Ljava/lang/String;
 
-    :cond_3
-    :goto_0
-    move v1, v2
+    iget-object v3, p1, Ljm0;->a:Ljava/lang/String;
 
-    :cond_4
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvt3;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_5
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v0
-
-    sget-object v1, Llm0;->a:Ljava/lang/String;
-
-    const-string v2, "getInitialState - null intent received"
-
-    invoke-virtual {v0, v1, v2}, Lcei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_3
-
-    :cond_5
-    const-string v1, "status"
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const-string v3, "level"
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    iget-object v1, p0, Ljm0;->b:Ljava/lang/String;
 
-    move-result v3
+    iget-object p1, p1, Ljm0;->b:Ljava/lang/String;
 
-    const-string v4, "scale"
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Ljm0;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Ljm0;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ljm0;->a:Ljava/lang/String;
+
+    iget-object v3, p0, Ljm0;->b:Ljava/lang/String;
+
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
-    int-to-float v2, v3
-
-    int-to-float v0, v0
-
-    div-float/2addr v2, v0
-
-    const/4 v0, 0x1
-
-    if-eq v1, v0, :cond_7
-
-    const v1, 0x3e19999a    # 0.15f
-
-    cmpl-float v1, v2, v1
-
-    if-lez v1, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    const/4 v0, 0x0
-
-    :cond_7
-    :goto_2
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    :goto_3
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
-
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvt3;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_8
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v0
-
-    sget-object v1, Lkm0;->a:Ljava/lang/String;
-
-    const-string v2, "getInitialState - null intent received"
-
-    invoke-virtual {v0, v1, v2}, Lcei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_6
-
-    :cond_8
-    const-string v1, "status"
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_a
-
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    const/4 v0, 0x0
-
-    goto :goto_5
-
-    :cond_a
-    :goto_4
-    const/4 v0, 0x1
-
-    :goto_5
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    :goto_6
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final r()V
-    .locals 4
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v0
-
-    sget-object v1, Lnt0;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ": registering receiver"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lvt3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Ljm0;->f:Leo;
-
-    invoke-virtual {p0}, Ljm0;->u()Landroid/content/IntentFilter;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method public final s()V
-    .locals 4
-
-    invoke-static {}, Lcei;->g()Lcei;
-
-    move-result-object v0
-
-    sget-object v1, Lnt0;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ": unregistering receiver"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lvt3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Ljm0;->f:Leo;
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    return-void
-.end method
-
-.method public final u()Landroid/content/IntentFilter;
-    .locals 2
-
-    iget v0, p0, Ljm0;->g:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.intent.action.DEVICE_STORAGE_OK"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.intent.action.BATTERY_OKAY"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.BATTERY_LOW"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.os.action.CHARGING"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.os.action.DISCHARGING"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

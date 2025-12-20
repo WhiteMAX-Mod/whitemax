@@ -1,44 +1,34 @@
-.class public final Lo9d;
+.class public abstract Lo9d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d61
 
+.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d62
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d63
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d64
 
-    iput-object p1, p0, Lo9d;->a:Landroid/content/Context;
+.field public static webapp_root_content_container:I = 0x7f0a0d65
 
-    return-void
-.end method
+.field public static webapp_root_error_container:I = 0x7f0a0d66
 
+.field public static webapp_root_frame:I = 0x7f0a0d67
 
-# virtual methods
-.method public final a()I
-    .locals 2
+.field public static webapp_root_progressbar:I = 0x7f0a0d68
 
-    iget-object v0, p0, Lo9d;->a:Landroid/content/Context;
+.field public static webapp_root_settings_header:I = 0x7f0a0d69
 
-    invoke-static {v0}, Lb9j;->b(Landroid/content/Context;)I
+.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d6a
 
-    move-result v0
+.field public static webapp_root_settings_switcher:I = 0x7f0a0d6b
 
-    const/16 v1, 0x168
+.field public static webapp_root_settings_toolbar:I = 0x7f0a0d6c
 
-    if-lt v0, v1, :cond_0
+.field public static webapp_root_settings_transition:I = 0x7f0a0d6d
 
-    const/16 v0, 0x20
+.field public static webapp_root_toolbar:I = 0x7f0a0d6e
 
-    return v0
-
-    :cond_0
-    const/16 v0, 0x1c
-
-    return v0
-.end method
+.field public static webapp_root_webview:I = 0x7f0a0d6f

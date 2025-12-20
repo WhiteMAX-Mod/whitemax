@@ -40,9 +40,9 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lorg/webrtc/Predicate$2;->this$0:Lorg/webrtc/Predicate;
-
     iput-object p2, p0, Lorg/webrtc/Predicate$2;->val$other:Lorg/webrtc/Predicate;
+
+    iput-object p1, p0, Lorg/webrtc/Predicate$2;->this$0:Lorg/webrtc/Predicate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

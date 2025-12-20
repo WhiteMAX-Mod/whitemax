@@ -1,90 +1,296 @@
 .class public final Lgya;
-.super Ljava/lang/Object;
+.super Lvm0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lw5;
+.field public final synthetic X:I
+
+.field public final Y:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lw5;)V
+.method public synthetic constructor <init>(Lc0b;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lgya;->X:I
 
-    iput-object p1, p0, Lgya;->a:Lw5;
+    invoke-direct {p0, p1}, Lvm0;-><init>(Lc0b;)V
+
+    iput-object p2, p0, Lgya;->Y:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)I
-    .locals 3
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    sget-object v0, La93;->s0:Lv1a;
+    iget v0, p0, Lgya;->X:I
 
-    const/16 v1, 0xc
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lgya;->a:Lw5;
+    iget-boolean v0, p0, Lvm0;->d:Z
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-virtual {v0, p1}, Lv1a;->x(Landroid/content/Context;)La93;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, La93;->k()Lyeb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lyeb;->a()Lsy2;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lsy2;->i()Lyt0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lyt0;->d:Lbu0;
-
-    iget p1, p1, Lbu0;->b:I
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v2, v1}, Lw5;->c(I)Ljava/lang/Object;
+    iget v0, p0, Lvm0;->o:I
+
+    iget-object v1, p0, Lvm0;->a:Lc0b;
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_0
+    iget-object v0, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v0, La4a;
+
+    invoke-virtual {v0, p1}, La4a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Landroid/content/Context;
+    const-string v0, "The mapper returned a null Optional"
 
-    invoke-virtual {v0, p1}, Lv1a;->x(Landroid/content/Context;)La93;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Optional;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, La93;->k()Lyeb;
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Lvm0;->a(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lvm0;->d:Z
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v0, p0, Lvm0;->o:I
+
+    iget-object v1, p0, Lvm0;->a:Lc0b;
+
+    if-eqz v0, :cond_4
+
+    const/4 p1, 0x0
+
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_1
+    iget-object v0, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ldr6;
+
+    invoke-interface {v0, p1}, Ldr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lyeb;->a()Lsy2;
+    const-string v0, "The mapper function returned a null value."
 
-    move-result-object p1
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-interface {p1}, Lsy2;->r()Lyt0;
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
 
-    move-result-object p1
+    goto :goto_1
 
-    iget-object p1, p1, Lyt0;->d:Lbu0;
+    :catchall_1
+    move-exception p1
 
-    iget p1, p1, Lbu0;->b:I
+    invoke-virtual {p0, p1}, Lvm0;->a(Ljava/lang/Throwable;)V
 
-    return p1
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget v0, p0, Lvm0;->o:I
+
+    iget-object v1, p0, Lvm0;->a:Lc0b;
+
+    if-nez v0, :cond_5
+
+    :try_start_2
+    iget-object v0, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ldfc;
+
+    invoke-interface {v0, p1}, Ldfc;->test(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Lvm0;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_5
+    const/4 p1, 0x0
+
+    invoke-interface {v1, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    :cond_6
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lgya;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :cond_0
+    iget-object v0, p0, Lvm0;->c:Lo1d;
+
+    invoke-interface {v0}, Llcf;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v1, La4a;
+
+    invoke-virtual {v1, v0}, La4a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The mapper returned a null Optional"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Optional;
+
+    invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lvm0;->c:Lo1d;
+
+    invoke-interface {v0}, Llcf;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ldr6;
+
+    invoke-interface {v1, v0}, Ldr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The mapper function returned a null value."
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    return-object v0
+
+    :cond_3
+    :pswitch_1
+    iget-object v0, p0, Lvm0;->c:Lo1d;
+
+    invoke-interface {v0}, Llcf;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v1, p0, Lgya;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ldfc;
+
+    invoke-interface {v1, v0}, Ldfc;->test(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :cond_4
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

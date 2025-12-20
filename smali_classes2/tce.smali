@@ -3,83 +3,127 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lvsb;
+# instance fields
+.field public final a:Lqa1;
+
+.field public final b:Lnkg;
+
+.field public final c:Ljava/util/LinkedHashMap;
+
+.field public final d:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lqa1;Lnkg;)V
+    .locals 0
 
-    new-instance v0, Limb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Ltce;->a:Lqa1;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p2, p0, Ltce;->b:Lnkg;
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object p1, p0, Ltce;->c:Ljava/util/LinkedHashMap;
+
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object p1, p0, Ltce;->d:Ljava/util/LinkedHashSet;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)V
+    .locals 4
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    sget-object v2, Lsce;->a:Lsce;
+    check-cast v1, Lx81;
 
-    invoke-direct {v0, v1, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v1, v1, Lx81;->a:Lrv1;
 
-    new-instance v1, Limb;
+    iget-object v2, v1, Lrv1;->a:Lwph;
 
-    const/4 v2, 0x1
+    sget-object v3, Lwph;->b:Lwph;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-ne v2, v3, :cond_0
 
-    move-result-object v2
+    iget-object v1, v1, Lrv1;->b:Lzk1;
 
-    sget-object v3, Lsce;->b:Lsce;
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v1, v2, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    goto :goto_0
 
-    new-instance v2, Limb;
+    :cond_1
+    iget-object p1, p0, Ltce;->c:Ljava/util/LinkedHashMap;
 
-    const/4 v3, 0x2
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p1
 
-    move-result-object v3
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    sget-object v4, Lsce;->c:Lsce;
+    move-result-object p1
 
-    invoke-direct {v2, v3, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v3, Limb;
+    move-result v1
 
-    const/4 v4, 0x3
+    if-eqz v1, :cond_3
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v1
 
-    sget-object v5, Lsce;->d:Lsce;
+    check-cast v1, Ljava/util/Map$Entry;
 
-    invoke-direct {v3, v4, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    new-instance v4, Limb;
+    move-result-object v1
 
-    const/4 v5, 0x4
+    check-cast v1, Lzk1;
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v5
+    move-result v2
 
-    sget-object v6, Lsce;->o:Lsce;
+    if-nez v2, :cond_2
 
-    invoke-direct {v4, v5, v6}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v2, p0, Ltce;->d:Ljava/util/LinkedHashSet;
 
-    filled-new-array {v0, v1, v2, v3, v4}, [Limb;
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
-    invoke-static {v0}, Lbbj;->b([Limb;)Lvsb;
+    goto :goto_1
 
-    move-result-object v0
-
-    sput-object v0, Ltce;->a:Lvsb;
-
+    :cond_3
     return-void
 .end method

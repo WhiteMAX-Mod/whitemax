@@ -1,23 +1,19 @@
 .class public final Lnld;
-.super Ljava/lang/Object;
+.super Lilj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lvgb;
-
-.field public final b:Landroid/view/Surface;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lvgb;Landroid/view/Surface;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnld;->a:Lvgb;
-
-    iput-object p2, p0, Lnld;->b:Landroid/view/Surface;
+    iput-object p1, p0, Lnld;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -25,46 +21,73 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
-    instance-of v0, p1, Lnld;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lnld;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lnld;
 
-    :goto_0
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
-    iget-object v0, p0, Lnld;->a:Lvgb;
+    check-cast p1, Lnld;
 
-    iget-object p1, p1, Lnld;->a:Lvgb;
+    iget-object v1, p0, Lnld;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lnld;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lnld;->a:Lvgb;
+    iget-object v0, p0, Lnld;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Avatar(avatarUrl="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lnld;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

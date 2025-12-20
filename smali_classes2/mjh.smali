@@ -1,97 +1,88 @@
 .class public final Lmjh;
-.super Lqze;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
+
+
+# instance fields
+.field public final synthetic X:Lojh;
+
+.field public final synthetic Y:Lthh;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lojh;Lthh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lmjh;->X:Lojh;
+
+    iput-object p2, p0, Lmjh;->Y:Lthh;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final build()Loze;
-    .locals 15
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lqze;->getSignalingStat()Lm0f;
+    check-cast p1, Lrlh;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v1, "Signaling statistics is required"
+    invoke-virtual {p0, p1, p2}, Lmjh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object p1
 
-    invoke-virtual {p0}, Lqze;->getExecutor()Ljava/util/concurrent/ExecutorService;
+    check-cast p1, Lmjh;
 
-    move-result-object v0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    const-string v1, "executor is required"
+    invoke-virtual {p1, p2}, Lmjh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    return-object p2
+.end method
 
-    invoke-virtual {p0}, Lqze;->getLog()Ly6d;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    move-result-object v0
+    new-instance v0, Lmjh;
 
-    const-string v1, "log is required"
+    iget-object v1, p0, Lmjh;->X:Lojh;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v2, p0, Lmjh;->Y:Lthh;
 
-    invoke-virtual {p0}, Lqze;->getLogConfiguration()Lz6d;
+    invoke-direct {v0, v1, v2, p2}, Lmjh;-><init>(Lojh;Lthh;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    iput-object p1, v0, Lmjh;->o:Ljava/lang/Object;
 
-    const-string v1, "log configuration is required"
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Lqze;->getEndpointParameters()Lag5;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lmjh;->o:Ljava/lang/Object;
 
-    const-string v1, "endpoing parameters are required"
+    check-cast p1, Lrlh;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v0, p0, Lmjh;->X:Lojh;
 
-    new-instance v2, Lnjh;
+    iget-object v1, p0, Lmjh;->Y:Lthh;
 
-    invoke-virtual {p0}, Lqze;->getTimeoutMS()J
+    invoke-static {v0, v1, p1}, Lojh;->q(Lojh;Lthh;Lrlh;)V
 
-    move-result-wide v3
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {p0}, Lqze;->getReconnectTimeoutAction()Ljava/lang/Runnable;
-
-    move-result-object v5
-
-    invoke-virtual {p0}, Lqze;->getSignalingStat()Lm0f;
-
-    move-result-object v6
-
-    invoke-virtual {p0}, Lqze;->getExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lqze;->getLog()Ly6d;
-
-    move-result-object v8
-
-    invoke-virtual {p0}, Lqze;->getLogConfiguration()Lz6d;
-
-    move-result-object v9
-
-    invoke-virtual {p0}, Lqze;->getServerPingTimeoutMs()J
-
-    move-result-wide v10
-
-    invoke-virtual {p0}, Lqze;->isFastRecoverEnabled()Z
-
-    move-result v12
-
-    invoke-virtual {p0}, Lqze;->getEndpointParameters()Lag5;
-
-    move-result-object v13
-
-    invoke-virtual {p0}, Lqze;->isReplaceParametersInEndpointEnabled()Z
-
-    move-result v14
-
-    invoke-direct/range {v2 .. v14}, Lnjh;-><init>(JLjava/lang/Runnable;Lm0f;Ljava/util/concurrent/ExecutorService;Ly6d;Lz6d;JZLag5;Z)V
-
-    invoke-virtual {v2}, Lq0f;->init()V
-
-    return-object v2
+    return-object p1
 .end method

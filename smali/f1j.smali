@@ -1,124 +1,90 @@
-.class public final synthetic Lf1j;
+.class public final Lf1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrpc;
+.implements Lwwa;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljig;
+# static fields
+.field public static final a:Lf1j;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljig;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lf1j;->a:I
+    new-instance v0, Lf1j;
 
-    iput-object p1, p0, Lf1j;->b:Ljig;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lf1j;->a:Lf1j;
+
+    new-instance v0, Ldqi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
+
+    const-class v1, Lrqi;
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 4
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lf1j;->a:I
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    new-instance v0, Lgf5;
-
-    const-string v1, "proto"
-
-    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Losf;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iget-object v2, p0, Lf1j;->b:Ljig;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lgf5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Lcwf;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iget-object v2, p0, Lf1j;->b:Ljig;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lgf5;
-
-    const-string v1, "proto"
-
-    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Ltha;->z0:Ltha;
-
-    iget-object v2, p0, Lf1j;->b:Ljig;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lgf5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Luha;->C0:Luha;
-
-    iget-object v2, p0, Lf1j;->b:Ljig;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

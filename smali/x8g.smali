@@ -1,375 +1,218 @@
 .class public final Lx8g;
-.super Ljava/lang/Object;
+.super Lb9g;
 .source "SourceFile"
 
 # interfaces
-.implements Lp29;
-.implements Ln29;
-
-
-# instance fields
-.field public final a:Lp29;
-
-.field public final b:J
-
-.field public c:Ln29;
-
-
-# direct methods
-.method public constructor <init>(Lp29;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx8g;->a:Lp29;
-
-    iput-wide p2, p0, Lx8g;->b:J
-
-    return-void
-.end method
+.implements Lza9;
 
 
 # virtual methods
-.method public final c(JLk9e;)J
-    .locals 3
-
-    iget-wide v0, p0, Lx8g;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object v2, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v2, p1, p2, p3}, Lp29;->c(JLk9e;)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v0
-
-    return-wide p1
-.end method
-
-.method public final d()J
-    .locals 5
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0}, Ljee;->d()J
-
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Lx8g;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final f()V
+.method public final m()Landroid/media/MediaRouter$RouteInfo;
     .locals 1
 
-    iget-object v0, p0, Lx8g;->a:Lp29;
+    iget-object v0, p0, Lb9g;->t0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lp29;->f()V
+    check-cast v0, Landroid/media/MediaRouter;
 
-    return-void
-.end method
-
-.method public final h(J)J
-    .locals 3
-
-    iget-wide v0, p0, Lx8g;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object v2, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v2, p1, p2}, Lp29;->h(J)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v0
-
-    return-wide p1
-.end method
-
-.method public final i(Lp29;)V
-    .locals 0
-
-    iget-object p1, p0, Lx8g;->c:Ln29;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Ln29;->i(Lp29;)V
-
-    return-void
-.end method
-
-.method public final j()Z
-    .locals 1
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0}, Ljee;->j()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final k()J
-    .locals 5
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0}, Lp29;->k()J
-
-    move-result-wide v0
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Lx8g;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final l()Lnfg;
-    .locals 1
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0}, Lp29;->l()Lnfg;
+    invoke-virtual {v0}, Landroid/media/MediaRouter;->getDefaultRoute()Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final m([Lbn5;[Z[Ljxd;[ZJ)J
-    .locals 11
+.method public final o(Lz8g;Ldii;)V
+    .locals 4
 
-    array-length v0, p3
+    iget-object v0, p2, Ldii;->b:Ljava/lang/Object;
 
-    new-array v4, v0, [Ljxd;
+    check-cast v0, Landroid/os/Bundle;
 
-    const/4 v0, 0x0
+    invoke-super {p0, p1, p2}, Lb9g;->o(Lz8g;Ldii;)V
 
-    move v1, v0
+    iget-object v1, p1, Lz8g;->a:Ljava/lang/Object;
 
-    :goto_0
-    array-length v2, p3
+    move-object v2, v1
 
-    const/4 v8, 0x0
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
 
-    if-ge v1, v2, :cond_1
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isEnabled()Z
 
-    aget-object v2, p3, v1
+    move-result v2
 
-    check-cast v2, Lw8g;
+    if-nez v2, :cond_0
 
-    if-eqz v2, :cond_0
+    const/4 v2, 0x0
 
-    iget-object v8, v2, Lw8g;->a:Ljxd;
+    const-string v3, "enabled"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_0
-    aput-object v8, v4, v1
+    iget-object v2, p1, Lz8g;->a:Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isConnecting()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x1
+
+    const-string v3, "connectionState"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_1
+    :try_start_0
+    check-cast v1, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v1}, Landroid/media/MediaRouter$RouteInfo;->getPresentationDisplay()Landroid/view/Display;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Lx8g;->a:Lp29;
+    :catch_0
+    move-exception v1
 
-    iget-wide v9, p0, Lx8g;->b:J
+    const-string v2, "MediaRouterJellybeanMr1"
 
-    sub-long v6, p5, v9
+    const-string v3, "Cannot get presentation display for the route."
 
-    move-object v2, p1
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    move-object v3, p2
+    const/4 v1, 0x0
 
-    move-object v5, p4
+    :goto_0
+    if-eqz v1, :cond_2
 
-    invoke-interface/range {v1 .. v7}, Lp29;->m([Lbn5;[Z[Ljxd;[ZJ)J
+    invoke-virtual {v1}, Landroid/view/Display;->getDisplayId()I
 
-    move-result-wide p1
+    move-result v1
 
-    :goto_1
-    array-length v1, p3
+    const-string v2, "presentationDisplayId"
 
-    if-ge v0, v1, :cond_5
-
-    aget-object v1, v4, v0
-
-    if-nez v1, :cond_2
-
-    aput-object v8, p3, v0
-
-    goto :goto_2
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     :cond_2
-    aget-object v2, p3, v0
+    iget-object v0, p1, Lz8g;->a:Ljava/lang/Object;
 
-    if-eqz v2, :cond_3
+    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
 
-    check-cast v2, Lw8g;
+    invoke-virtual {v0}, Landroid/media/MediaRouter$RouteInfo;->getDescription()Ljava/lang/CharSequence;
 
-    iget-object v2, v2, Lw8g;->a:Ljxd;
+    move-result-object v0
 
-    if-eq v2, v1, :cond_4
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p2, Ldii;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/Bundle;
+
+    const-string v2, "status"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
-    new-instance v2, Lw8g;
+    iget-object p1, p1, Lz8g;->a:Ljava/lang/Object;
 
-    invoke-direct {v2, v1, v9, v10}, Lw8g;-><init>(Ljxd;J)V
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
 
-    aput-object v2, p3, v0
-
-    :cond_4
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    add-long/2addr p1, v9
-
-    return-wide p1
-.end method
-
-.method public final n(Ln29;J)V
-    .locals 2
-
-    iput-object p1, p0, Lx8g;->c:Ln29;
-
-    iget-wide v0, p0, Lx8g;->b:J
-
-    sub-long/2addr p2, v0
-
-    iget-object p1, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {p1, p0, p2, p3}, Lp29;->n(Ln29;J)V
-
-    return-void
-.end method
-
-.method public final o()J
-    .locals 5
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0}, Ljee;->o()J
-
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Lx8g;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final p(J)V
-    .locals 2
-
-    iget-wide v0, p0, Lx8g;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0, p1, p2}, Ljee;->p(J)V
-
-    return-void
-.end method
-
-.method public final r(Loc8;)Z
-    .locals 5
-
-    new-instance v0, Lnc8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v1, p1, Loc8;->a:J
-
-    iget v3, p1, Loc8;->b:F
-
-    iput v3, v0, Lnc8;->b:F
-
-    iget-wide v3, p1, Loc8;->c:J
-
-    iput-wide v3, v0, Lnc8;->c:J
-
-    iget-wide v3, p0, Lx8g;->b:J
-
-    sub-long/2addr v1, v3
-
-    iput-wide v1, v0, Lnc8;->a:J
-
-    new-instance p1, Loc8;
-
-    invoke-direct {p1, v0}, Loc8;-><init>(Lnc8;)V
-
-    iget-object v0, p0, Lx8g;->a:Lp29;
-
-    invoke-interface {v0, p1}, Ljee;->r(Loc8;)Z
+    invoke-virtual {p1}, Landroid/media/MediaRouter$RouteInfo;->getDeviceType()I
 
     move-result p1
 
-    return p1
-.end method
+    iget-object p2, p2, Ldii;->b:Ljava/lang/Object;
 
-.method public final s(Ljee;)V
-    .locals 0
+    check-cast p2, Landroid/os/Bundle;
 
-    check-cast p1, Lp29;
+    const-string v0, "deviceType"
 
-    iget-object p1, p0, Lx8g;->c:Ln29;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lhee;->s(Ljee;)V
+    invoke-virtual {p2, v0, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public final t(JZ)V
+.method public final t(Ljava/lang/Object;)V
     .locals 2
 
-    iget-wide v0, p0, Lx8g;->b:J
+    iget-object v0, p0, Lb9g;->t0:Ljava/lang/Object;
 
-    sub-long/2addr p1, v0
+    check-cast v0, Landroid/media/MediaRouter;
 
-    iget-object v0, p0, Lx8g;->a:Lp29;
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
 
-    invoke-interface {v0, p1, p2, p3}, Lp29;->t(JZ)V
+    const v1, 0x800003
+
+    invoke-virtual {v0, v1, p1}, Landroid/media/MediaRouter;->selectRoute(ILandroid/media/MediaRouter$RouteInfo;)V
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 4
+
+    iget-boolean v0, p0, Lb9g;->z0:Z
+
+    iget-object v1, p0, Lb9g;->u0:Ljava/lang/Object;
+
+    iget-object v2, p0, Lb9g;->t0:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, v2
+
+    check-cast v0, Landroid/media/MediaRouter;
+
+    move-object v3, v1
+
+    check-cast v3, Landroid/media/MediaRouter$Callback;
+
+    invoke-virtual {v0, v3}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lb9g;->z0:Z
+
+    iget v0, p0, Lb9g;->x0:I
+
+    iget-boolean v3, p0, Lb9g;->y0:Z
+
+    or-int/lit8 v3, v3, 0x2
+
+    check-cast v2, Landroid/media/MediaRouter;
+
+    check-cast v1, Landroid/media/MediaRouter$Callback;
+
+    invoke-virtual {v2, v0, v1, v3}, Landroid/media/MediaRouter;->addCallback(ILandroid/media/MediaRouter$Callback;I)V
+
+    return-void
+.end method
+
+.method public final w(La9g;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lb9g;->w(La9g;)V
+
+    iget-object v0, p1, La9g;->b:Ljava/lang/Object;
+
+    iget-object p1, p1, La9g;->a:Lua9;
+
+    iget-object p1, p1, Lua9;->e:Ljava/lang/String;
+
+    check-cast v0, Landroid/media/MediaRouter$UserRouteInfo;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

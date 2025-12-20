@@ -3,88 +3,138 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvn4;
+.implements Lk08;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public final a:Lpai;
 
-.field public final b:Li08;
-
-.field public c:I
+.field public final b:Lz9i;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
-    .locals 3
+.method public constructor <init>(Lpai;Lz9i;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lj08;->a:Lpai;
 
-    iput v0, p0, Lj08;->c:I
-
-    iput-object p1, p0, Lj08;->a:Landroid/view/View;
-
-    new-instance v0, Li08;
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Lg6;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2, p1}, Lg6;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, p2, v1}, Li08;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lg6;)V
-
-    iput-object v0, p0, Lj08;->b:Li08;
+    iput-object p2, p0, Lj08;->b:Lz9i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPause(Lj48;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string p1, "j08"
+    const/4 v0, 0x1
 
-    const-string v0, "onPause: unregisterGlobalLayoutListener"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    return v0
 
-    iget-object p1, p0, Lj08;->a:Landroid/view/View;
+    :cond_0
+    instance-of v1, p1, Lj08;
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    iget-object v0, p0, Lj08;->b:Li08;
+    return v2
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    :cond_1
+    check-cast p1, Lj08;
 
-    return-void
+    iget-object v1, p0, Lj08;->a:Lpai;
+
+    iget-object v3, p1, Lj08;->a:Lpai;
+
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lj08;->b:Lz9i;
+
+    iget-object p1, p1, Lj08;->b:Lz9i;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final onResume(Lj48;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    const-string p1, "j08"
+    iget-object v0, p0, Lj08;->a:Lpai;
 
-    const-string v0, "onResume: registerGlobalLayoutListener"
+    invoke-virtual {v0}, Lpai;->hashCode()I
 
-    invoke-static {p1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v0
 
-    iget-object p1, p0, Lj08;->a:Landroid/view/View;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget-object v1, p0, Lj08;->b:Lz9i;
 
-    move-result-object p1
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lj08;->b:Li08;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    goto :goto_0
 
-    return-void
+    :cond_0
+    invoke-virtual {v1}, Lz9i;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RequestShare(data="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj08;->a:Lpai;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj08;->b:Lz9i;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,110 +1,35 @@
-.class public abstract Lug4;
+.class public interface abstract Lug4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Z
+# virtual methods
+.method public abstract b()V
+.end method
 
-.field public static final b:Lvn3;
+.method public abstract d(JLpje;)J
+.end method
 
-.field public static final synthetic c:Ltg4;
+.method public abstract e(Lhc3;ZLcg8;Ljo4;)Z
+.end method
 
+.method public abstract f(Lxg8;JLjava/util/List;Lcu0;)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public abstract g(Lhc3;)V
+.end method
 
-    new-instance v0, Ljava/lang/Exception;
+.method public abstract h(JLhc3;Ljava/util/List;)Z
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+.method public abstract i(Lah4;I)V
+.end method
 
-    const-class v1, La8i;
+.method public abstract j(Lwq5;)V
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+.method public abstract k(JLjava/util/List;)I
+.end method
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, La7j;->a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
-
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "yyyy/MM/dd HH:mm:ss"
-
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    new-instance v0, Lvn3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lvn3;-><init>(Z)V
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lug4;->a:Z
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    const-string v3, "kotlinx.coroutines.debug.internal.ByteBuddyDynamicAttach"
-
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
-
-    move-result-object v3
-
-    aget-object v1, v3, v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Luog;->d(ILjava/lang/Object;)V
-
-    check-cast v1, Lem6;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    new-instance v3, Lipd;
-
-    invoke-direct {v3, v1}, Lipd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v1, v3
-
-    :goto_0
-    nop
-
-    instance-of v3, v1, Lipd;
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move-object v2, v1
-
-    :goto_1
-    check-cast v2, Lem6;
-
-    new-instance v1, Lvn3;
-
-    invoke-direct {v1, v0}, Lvn3;-><init>(Z)V
-
-    sput-object v1, Lug4;->b:Lvn3;
-
-    new-instance v0, Ltg4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lug4;->c:Ltg4;
-
-    return-void
+.method public abstract release()V
 .end method

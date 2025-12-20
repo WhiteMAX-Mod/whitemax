@@ -1,85 +1,51 @@
-.class public abstract Lpdb;
-.super Ljava/lang/Object;
+.class public final Lpdb;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public final synthetic o:Lqdb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqdb;Ll84;)V
+    .locals 0
 
-    sget v0, Lh0d;->oneme_stickers_preview_action_favorite:I
+    iput-object p1, p0, Lpdb;->o:Lqdb;
 
-    sput v0, Lpdb;->a:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_action_forward:I
-
-    sput v0, Lpdb;->b:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_action_send:I
-
-    sput v0, Lpdb;->c:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_content_container:I
-
-    sput v0, Lpdb;->d:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_lottie_cell:I
-
-    sput v0, Lpdb;->e:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_static_cell:I
-
-    sput v0, Lpdb;->f:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_sticker_container:I
-
-    sput v0, Lpdb;->g:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_stickers_set_container:I
-
-    sput v0, Lpdb;->h:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_stickers_set_content:I
-
-    sput v0, Lpdb;->i:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_stickers_set_header:I
-
-    sput v0, Lpdb;->j:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_toolbar:I
-
-    sput v0, Lpdb;->k:I
-
-    sget v0, Lh0d;->oneme_stickers_preview_webm_cell:I
-
-    sput v0, Lpdb;->l:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iput-object p1, p0, Lpdb;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lpdb;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpdb;->X:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Lpdb;->o:Lqdb;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Lqdb;->a(J[JLl84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

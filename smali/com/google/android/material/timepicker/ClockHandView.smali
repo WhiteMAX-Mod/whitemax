@@ -35,7 +35,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
 
-    sget v0, Ldvc;->materialClockStyle:I
+    sget v0, Lf4d;->materialClockStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -67,27 +67,27 @@
 
     iput v2, p0, Lcom/google/android/material/timepicker/ClockHandView;->z0:I
 
-    sget-object v3, Lz5d;->ClockHandView:[I
+    sget-object v3, Lefd;->ClockHandView:[I
 
-    sget v4, Lm5d;->Widget_MaterialComponents_TimePicker_Clock:I
+    sget v4, Lred;->Widget_MaterialComponents_TimePicker_Clock:I
 
     invoke-virtual {p1, p2, v3, v0, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v0, Ldvc;->motionDurationLong2:I
+    sget v0, Lf4d;->motionDurationLong2:I
 
     const/16 v3, 0xc8
 
-    invoke-static {v0, v3, p1}, Lexi;->c(IILandroid/content/Context;)I
+    invoke-static {v0, v3, p1}, Lwaj;->d(IILandroid/content/Context;)I
 
-    sget v0, Ldvc;->motionEasingEmphasizedInterpolator:I
+    sget v0, Lf4d;->motionEasingEmphasizedInterpolator:I
 
-    sget-object v3, Lrg;->b:Lyq5;
+    sget-object v3, Ltg;->b:Luu5;
 
-    invoke-static {p1, v0, v3}, Lexi;->d(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    invoke-static {p1, v0, v3}, Lwaj;->e(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
-    sget v0, Lz5d;->ClockHandView_materialCircleRadius:I
+    sget v0, Lefd;->ClockHandView_materialCircleRadius:I
 
     const/4 v3, 0x0
 
@@ -97,7 +97,7 @@
 
     iput v0, p0, Lcom/google/android/material/timepicker/ClockHandView;->y0:I
 
-    sget v0, Lz5d;->ClockHandView_selectorSize:I
+    sget v0, Lefd;->ClockHandView_selectorSize:I
 
     invoke-virtual {p2, v0, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    sget v4, Ldwc;->material_clock_hand_stroke_width:I
+    sget v4, Lf5d;->material_clock_hand_stroke_width:I
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -117,7 +117,7 @@
 
     iput v4, p0, Lcom/google/android/material/timepicker/ClockHandView;->u0:I
 
-    sget v4, Ldwc;->material_clock_hand_center_dot_radius:I
+    sget v4, Lf5d;->material_clock_hand_center_dot_radius:I
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -127,7 +127,7 @@
 
     iput v0, p0, Lcom/google/android/material/timepicker/ClockHandView;->o:F
 
-    sget v0, Lz5d;->ClockHandView_clockHandColor:I
+    sget v0, Lefd;->ClockHandView_clockHandColor:I
 
     invoke-virtual {p2, v0, v3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -147,7 +147,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-    sget-object p1, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lash;->a:Ljava/util/WeakHashMap;
 
     const/4 p1, 0x2
 
@@ -297,7 +297,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lic3;
+    check-cast v1, Lof3;
 
     check-cast v1, Lcom/google/android/material/timepicker/ClockFaceView;
 
@@ -548,7 +548,7 @@
 
     const/16 v8, 0xc
 
-    invoke-static {v7, v8}, Lyqi;->b(Landroid/content/Context;I)F
+    invoke-static {v7, v8}, Lr5j;->a(Landroid/content/Context;I)F
 
     move-result v7
 

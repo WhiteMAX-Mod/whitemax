@@ -1,127 +1,89 @@
-.class public final Lq74;
+.class public abstract Lq74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/util/HashMap;
-
-.field public c:Ljava/util/Set;
-
-.field public d:Ljava/util/List;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p5, 0x4
 
-    new-instance v0, Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez p3, :cond_1
 
-    iput-object v0, p0, Lq74;->a:Ljava/lang/Object;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    iput-object v0, p0, Lq74;->b:Ljava/util/HashMap;
+    move-result-object p5
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lq74;->c:Ljava/util/Set;
+    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lq74;->d:Ljava/util/List;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object p3
 
+    invoke-static {p0, p3}, Lkp3;->b(Landroid/content/Context;Ljava/lang/String;)I
 
-# virtual methods
-.method public final a(Ld55;)I
-    .locals 2
+    move-result p5
 
-    iget-object v0, p0, Lq74;->a:Ljava/lang/Object;
+    if-nez p5, :cond_0
 
-    monitor-enter v0
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    :try_start_0
-    iget-object v1, p0, Lq74;->b:Ljava/util/HashMap;
+    move-result-object p0
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    return-object p0
 
-    move-result v1
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    if-eqz v1, :cond_0
+    const-string p1, "Permission "
 
-    iget-object v1, p0, Lq74;->b:Ljava/util/HashMap;
+    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p3, p2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    throw p0
 
-    move-result p1
+    :cond_1
+    and-int/lit8 v5, p5, 0x1
 
-    goto :goto_0
+    move-object v0, p0
 
-    :catchall_0
-    move-exception p1
+    move-object v1, p1
 
-    goto :goto_1
+    move-object v2, p2
 
-    :cond_0
-    const/4 p1, 0x0
+    move-object v3, p3
 
-    :goto_0
-    monitor-exit v0
+    move-object v4, p4
 
-    return p1
+    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p0
 
-    throw p1
+    return-object p0
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
+.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+    .locals 0
 
-    iget-object v0, p0, Lq74;->a:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    monitor-enter v0
+    move-result-object p0
 
-    :try_start_0
-    iget-object v1, p0, Lq74;->d:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-object p0
 .end method

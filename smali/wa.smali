@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llb;
+.implements Lob;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x79b8775a
+    const v0, 0x28f8c462
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "AdminDisableMeScreenRecord"
+    const-string v0, "AdminDisableMeCamera"
 
     return-object v0
 .end method

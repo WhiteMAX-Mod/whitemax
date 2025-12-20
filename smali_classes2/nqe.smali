@@ -1,204 +1,121 @@
 .class public final Lnqe;
-.super Ldtf;
+.super Llqe;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lere;
-
-.field public o:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lere;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lnqe;->Y:Lere;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const-class v0, Lnqe;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnqe;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final u()V
+    .locals 5
 
-    check-cast p1, Lio3;
+    invoke-virtual {p0}, Llqe;->q()Lkeg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lnqe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lkeg;->a:Lg35;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lg35;->get()Ljava/lang/Object;
 
-    check-cast p1, Lnqe;
+    move-result-object v0
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    check-cast v0, Lii4;
 
-    invoke-virtual {p1, p2}, Lnqe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lii4;->f:Lc2e;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lc2e;->a()Lpeg;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v2, v1, Lpeg;->a:Le1e;
 
-    new-instance v0, Lnqe;
+    new-instance v3, Lb1g;
 
-    iget-object v1, p0, Lnqe;->Y:Lere;
+    const/4 v4, 0x6
 
-    invoke-direct {v0, v1, p2}, Lnqe;-><init>(Lere;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v3, v1, v4}, Lb1g;-><init>(Lpeg;I)V
 
-    iput-object p1, v0, Lnqe;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    return-object v0
-.end method
+    const/4 v4, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-static {v2, v1, v4, v3}, Lykj;->d(Le1e;ZZLoq6;)Ljava/lang/Object;
 
-    iget v0, p0, Lnqe;->o:I
+    move-result-object v1
 
-    const/4 v1, 0x3
+    check-cast v1, Ljava/util/List;
 
-    const/4 v2, 0x2
+    invoke-virtual {v0, v1}, Lc2e;->b(Ljava/util/List;)Ljava/util/List;
 
-    const/4 v3, 0x1
+    move-result-object v0
 
-    iget-object v4, p0, Lnqe;->Y:Lere;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    if-eq v0, v3, :cond_2
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eq v0, v2, :cond_1
+    move-result v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    goto :goto_2
+    move-result-object v1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast v1, Lceg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v3, "mark processing task: "
 
-    throw p1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " as failed"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lnqe;->b:Ljava/lang/String;
+
+    invoke-static {v3, v2}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Llqe;->q()Lkeg;
+
+    move-result-object v2
+
+    iget-wide v3, v1, Lceg;->a:J
+
+    invoke-virtual {v2, v3, v4}, Lkeg;->c(J)V
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnqe;->X:Ljava/lang/Object;
-
-    check-cast p1, Lio3;
-
-    sget-object v0, Lgo3;->a:Lgo3;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    sget-object v5, Lg84;->a:Lg84;
-
-    if-eqz v0, :cond_4
-
-    iput v3, p0, Lnqe;->o:I
-
-    invoke-static {v4, p0}, Lere;->v(Lere;Ldtf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_8
-
-    goto :goto_1
-
-    :cond_4
-    sget-object v0, Leo3;->a:Leo3;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    iput v2, p0, Lnqe;->o:I
-
-    invoke-static {v4, p0}, Lere;->v(Lere;Ldtf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    :goto_0
-    sget-object p1, Lfme;->o:Lhme;
-
-    invoke-virtual {v4, p1}, Lere;->A(Lcda;)V
-
-    goto :goto_3
-
-    :cond_6
-    sget-object v0, Lfo3;->a:Lfo3;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_9
-
-    iput v1, p0, Lnqe;->o:I
-
-    invoke-static {v4, p0}, Lere;->v(Lere;Ldtf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_7
-
-    :goto_1
-    return-object v5
-
-    :cond_7
-    :goto_2
-    sget-object p1, Lfme;->n:Lhme;
-
-    invoke-virtual {v4, p1}, Lere;->A(Lcda;)V
-
-    :cond_8
-    :goto_3
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :cond_9
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    :cond_0
+    return-void
 .end method

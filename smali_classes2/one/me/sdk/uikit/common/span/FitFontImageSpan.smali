@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ligh;
-.implements Lu6g;
+.implements Lcth;
+.implements Ljig;
 
 
 # annotations
@@ -15,34 +15,34 @@
     d2 = {
         "Lone/me/sdk/uikit/common/span/FitFontImageSpan;",
         "Landroid/text/style/ImageSpan;",
-        "Ligh;",
-        "Lu6g;",
+        "Lcth;",
+        "Ljig;",
         "Landroid/graphics/drawable/Drawable;",
         "drawable",
-        "La16;",
+        "Li56;",
         "scaleType",
         "",
         "shouldInvalidateSpan",
         "usePaintAlpha",
         "<init>",
-        "(Landroid/graphics/drawable/Drawable;La16;ZZ)V",
+        "(Landroid/graphics/drawable/Drawable;Li56;ZZ)V",
         "Landroid/graphics/RectF;",
         "src",
         "dst",
         "Landroid/graphics/Rect;",
         "out",
-        "Lqqg;",
+        "Lv2h;",
         "scaleRect",
-        "(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;La16;)V",
+        "(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Li56;)V",
         "Landroid/view/View;",
         "view",
         "attach",
         "(Landroid/view/View;)V",
         "detach",
-        "Lyeb;",
+        "Lplb;",
         "newAttrs",
         "onThemeChanged",
-        "(Lyeb;)V",
+        "(Lplb;)V",
         "Landroid/graphics/Paint;",
         "paint",
         "",
@@ -66,16 +66,16 @@
         "newSize",
         "needScale",
         "updateDrawableSize",
-        "(ILa16;Z)V",
+        "(ILi56;Z)V",
         "",
         "other",
         "equals",
         "(Ljava/lang/Object;)Z",
         "hashCode",
         "()I",
-        "La16;",
+        "Li56;",
         "getScaleType",
-        "()La16;",
+        "()Li56;",
         "Z",
         "fontRect",
         "Landroid/graphics/RectF;",
@@ -87,9 +87,9 @@
         "Ljava/util/WeakHashMap;",
         "lastAttachedViews",
         "Ljava/util/WeakHashMap;",
-        "Le16;",
+        "Lm56;",
         "spanCallback",
-        "Le16;",
+        "Lm56;",
         "customHeight",
         "I",
         "customScaleType",
@@ -113,7 +113,7 @@
 # instance fields
 .field private customHeight:I
 
-.field private customScaleType:La16;
+.field private customScaleType:Li56;
 
 .field private final drawableRect:Landroid/graphics/Rect;
 
@@ -124,7 +124,7 @@
         value = {
             "Ljava/util/WeakHashMap<",
             "Landroid/view/View;",
-            "Lqqg;",
+            "Lv2h;",
             ">;"
         }
     .end annotation
@@ -132,11 +132,11 @@
 
 .field private needCustomScale:Z
 
-.field private final scaleType:La16;
+.field private final scaleType:Li56;
 
 .field private final shouldInvalidateSpan:Z
 
-.field private spanCallback:Le16;
+.field private spanCallback:Lm56;
 
 .field private final tempRect:Landroid/graphics/RectF;
 
@@ -144,14 +144,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;La16;ZZ)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Li56;ZZ)V
     .locals 0
 
     .line 3
     invoke-direct {p0, p1}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 4
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:La16;
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Li56;
 
     .line 5
     iput-boolean p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->shouldInvalidateSpan:Z
@@ -193,7 +193,7 @@
     iput p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customHeight:I
 
     .line 12
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:La16;
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Li56;
 
     const/4 p1, 0x1
 
@@ -203,7 +203,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;La16;ZZILtk4;)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Li56;ZZILro4;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x2
@@ -211,7 +211,7 @@
     if-eqz p6, :cond_0
 
     .line 1
-    sget-object p2, La16;->b:La16;
+    sget-object p2, Li56;->b:Li56;
 
     :cond_0
     and-int/lit8 p6, p5, 0x4
@@ -229,7 +229,7 @@
 
     .line 2
     :cond_2
-    invoke-direct {p0, p1, p2, p3, p4}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;La16;ZZ)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Li56;ZZ)V
 
     return-void
 .end method
@@ -242,7 +242,7 @@
     return p0
 .end method
 
-.method private final scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;La16;)V
+.method private final scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Li56;)V
     .locals 5
 
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
@@ -287,7 +287,7 @@
     move-result p1
 
     :goto_1
-    sget-object v1, Lf16;->$EnumSwitchMapping$0:[I
+    sget-object v1, Ln56;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p4}, Ljava/lang/Enum;->ordinal()I
 
@@ -679,7 +679,7 @@
 
     iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
 
-    sget-object v2, Lqqg;->a:Lqqg;
+    sget-object v2, Lv2h;->a:Lv2h;
 
     invoke-virtual {v1, p1, v2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -696,13 +696,13 @@
     goto :goto_5
 
     :cond_0
-    new-instance p1, Le16;
+    new-instance p1, Lm56;
 
     iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
 
-    invoke-direct {p1, p0, v1}, Le16;-><init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Ljava/util/WeakHashMap;)V
+    invoke-direct {p1, p0, v1}, Lm56;-><init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Ljava/util/WeakHashMap;)V
 
-    iput-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Le16;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Lm56;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -729,13 +729,13 @@
     invoke-interface {p1}, Landroid/graphics/drawable/Animatable;->start()V
 
     :cond_2
-    instance-of p1, v0, Lhgh;
+    instance-of p1, v0, Lbth;
 
     if-eqz p1, :cond_3
 
     move-object p1, v0
 
-    check-cast p1, Lhgh;
+    check-cast p1, Lbth;
 
     goto :goto_1
 
@@ -745,7 +745,7 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lhgh;->b()V
+    invoke-interface {p1}, Lbth;->b()V
 
     :cond_4
     instance-of p1, v0, Landroid/graphics/drawable/LayerDrawable;
@@ -778,11 +778,11 @@
 
     move-result-object v3
 
-    instance-of v4, v3, Lhgh;
+    instance-of v4, v3, Lbth;
 
     if-eqz v4, :cond_7
 
-    check-cast v3, Lhgh;
+    check-cast v3, Lbth;
 
     goto :goto_4
 
@@ -792,7 +792,7 @@
     :goto_4
     if-eqz v3, :cond_8
 
-    invoke-interface {v3}, Lhgh;->b()V
+    invoke-interface {v3}, Lbth;->b()V
 
     :cond_8
     add-int/lit8 v2, v2, 0x1
@@ -847,13 +847,13 @@
     invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
 
     :cond_2
-    instance-of v0, p1, Lhgh;
+    instance-of v0, p1, Lbth;
 
     if-eqz v0, :cond_3
 
     move-object v0, p1
 
-    check-cast v0, Lhgh;
+    check-cast v0, Lbth;
 
     goto :goto_1
 
@@ -863,7 +863,7 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    invoke-interface {v0}, Lhgh;->a()V
+    invoke-interface {v0}, Lbth;->a()V
 
     :cond_4
     instance-of v0, p1, Landroid/graphics/drawable/LayerDrawable;
@@ -908,11 +908,11 @@
     move-object v4, v1
 
     :goto_4
-    instance-of v5, v4, Lhgh;
+    instance-of v5, v4, Lbth;
 
     if-eqz v5, :cond_8
 
-    check-cast v4, Lhgh;
+    check-cast v4, Lbth;
 
     goto :goto_5
 
@@ -922,7 +922,7 @@
     :goto_5
     if-eqz v4, :cond_9
 
-    invoke-interface {v4}, Lhgh;->a()V
+    invoke-interface {v4}, Lbth;->a()V
 
     :cond_9
     add-int/lit8 v2, v2, 0x1
@@ -932,7 +932,7 @@
     :cond_a
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    iput-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Le16;
+    iput-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Lm56;
 
     return-void
 .end method
@@ -1063,11 +1063,11 @@
     return v2
 
     :cond_1
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:La16;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Li56;
 
     check-cast p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-    iget-object v3, p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:La16;
+    iget-object v3, p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Li56;
 
     if-eq v1, v3, :cond_2
 
@@ -1082,7 +1082,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1110,10 +1110,10 @@
     return v0
 .end method
 
-.method public final getScaleType()La16;
+.method public final getScaleType()Li56;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:La16;
+    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Li56;
 
     return-object v0
 .end method
@@ -1185,9 +1185,9 @@
 
     iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->drawableRect:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:La16;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Li56;
 
-    invoke-direct {p0, p3, p4, v0, v1}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;La16;)V
+    invoke-direct {p0, p3, p4, v0, v1}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Li56;)V
 
     iget-object p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->drawableRect:Landroid/graphics/Rect;
 
@@ -1236,7 +1236,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:La16;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Li56;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -1249,18 +1249,18 @@
     return v1
 .end method
 
-.method public onThemeChanged(Lyeb;)V
+.method public onThemeChanged(Lplb;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    instance-of v1, v0, Lu6g;
+    instance-of v1, v0, Ljig;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lu6g;
+    check-cast v0, Ljig;
 
     goto :goto_0
 
@@ -1270,7 +1270,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lu6g;->onThemeChanged(Lyeb;)V
+    invoke-interface {v0, p1}, Ljig;->onThemeChanged(Lplb;)V
 
     :cond_1
     return-void
@@ -1284,12 +1284,12 @@
     return-void
 .end method
 
-.method public final updateDrawableSize(ILa16;Z)V
+.method public final updateDrawableSize(ILi56;Z)V
     .locals 0
 
     iput p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customHeight:I
 
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:La16;
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Li56;
 
     iput-boolean p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->needCustomScale:Z
 

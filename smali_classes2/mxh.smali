@@ -1,57 +1,56 @@
 .class public final Lmxh;
-.super Lq44;
+.super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Luxh;
-
-.field public Y:Lcxh;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lpxh;
-
-.field public o:Lixh;
-
-.field public final synthetic s0:Lpxh;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Lpxh;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lmxh;->s0:Lpxh;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ll25;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final dispose()V
     .locals 1
 
-    iput-object p1, p0, Lmxh;->Z:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget p1, p0, Lmxh;->t0:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    check-cast v0, Ll25;
 
-    or-int/2addr p1, v0
+    if-eqz v0, :cond_0
 
-    iput p1, p0, Lmxh;->t0:I
+    invoke-interface {v0}, Ll25;->dispose()V
 
-    iget-object p1, p0, Lmxh;->s0:Lpxh;
+    :cond_0
+    return-void
+.end method
 
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll25;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ll25;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lpxh;->h(Ljava/lang/String;Lq44;)Ljava/lang/Object;
+    return v0
 
-    move-result-object p1
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    return-object p1
+    return v0
 .end method

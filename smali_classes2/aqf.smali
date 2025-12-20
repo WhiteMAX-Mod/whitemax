@@ -1,125 +1,125 @@
 .class public final Laqf;
-.super Landroid/text/style/ClickableSpan;
+.super Lwz;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Lu6g;
-
-
-# static fields
-.field public static final synthetic o:I
 
 
 # instance fields
-.field public final a:Lfqf;
+.field public final c:Lz7g;
 
-.field public final b:Lsm6;
+.field public final d:Lz7g;
 
-.field public c:I
+.field public final e:Ly16;
 
-.field public d:I
+.field public f:Lhy;
+
+.field public final g:Lzpf;
 
 
 # direct methods
-.method public constructor <init>(Lcm6;Lfqf;Lsm6;)V
+.method public constructor <init>(Lm20;Lz7g;Lz7g;Ly16;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0, p1}, Lwz;-><init>(Lm20;)V
 
-    iput-object p2, p0, Laqf;->a:Lfqf;
+    new-instance p1, Lzpf;
 
-    iput-object p3, p0, Laqf;->b:Lsm6;
+    invoke-direct {p1, p0}, Lzpf;-><init>(Laqf;)V
 
-    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
+    iput-object p1, p0, Laqf;->g:Lzpf;
 
-    move-result-object p2
+    iput-object p2, p0, Laqf;->c:Lz7g;
 
-    check-cast p2, Lyeb;
+    iput-object p3, p0, Laqf;->d:Lz7g;
 
-    invoke-interface {p2}, Lyeb;->e()Lw4;
-
-    move-result-object p2
-
-    iget p2, p2, Lw4;->c:I
-
-    iput p2, p0, Laqf;->c:I
-
-    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyeb;
-
-    invoke-interface {p1}, Lyeb;->e()Lw4;
-
-    move-result-object p1
-
-    iget p1, p1, Lw4;->c:I
-
-    iput p1, p0, Laqf;->d:I
+    iput-object p4, p0, Laqf;->e:Ly16;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final b()Lcxa;
+    .locals 4
 
-    iget-object v0, p0, Laqf;->b:Lsm6;
-
-    iget-object v1, p0, Laqf;->a:Lfqf;
-
-    invoke-interface {v0, p1, v1}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lyeb;)V
-    .locals 1
-
-    invoke-interface {p1}, Lyeb;->e()Lw4;
+    invoke-super {p0}, Lwz;->b()Lcxa;
 
     move-result-object v0
 
-    iget v0, v0, Lw4;->c:I
+    if-eqz v0, :cond_0
 
-    iput v0, p0, Laqf;->c:I
+    return-object v0
 
-    invoke-interface {p1}, Lyeb;->e()Lw4;
+    :cond_0
+    iget-object v0, p0, Laqf;->f:Lhy;
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    iget p1, p1, Lw4;->c:I
+    return-object v0
 
-    iput p1, p0, Laqf;->d:I
+    :cond_1
+    new-instance v0, Lhy;
 
-    return-void
-.end method
+    invoke-direct {v0}, Lhy;-><init>()V
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 2
+    iput-object v0, p0, Laqf;->f:Lhy;
 
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    iget-object v0, p0, Lwz;->a:Lm20;
 
-    iget v0, p0, Laqf;->c:I
+    iget-object v0, v0, Lm20;->f:Lh20;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    iget v1, v0, Lh20;->j:I
 
-    iget v0, p0, Laqf;->d:I
+    iget-object v2, v0, Lh20;->h:Ljava/lang/String;
 
-    const/16 v1, 0x50
+    const/4 v3, 0x4
 
-    invoke-static {v0, v1}, Lrf3;->i(II)I
+    if-ne v1, v3, :cond_2
 
-    move-result v0
+    iget-object v0, v0, Lh20;->l:Ljava/lang/String;
 
-    iput v0, p1, Landroid/text/TextPaint;->bgColor:I
+    const/4 v1, 0x1
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1, v1}, Lbja;->a(Ljava/lang/String;IZ)Lzia;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    move-result-object v0
 
-    return-void
+    iget-object v1, p0, Laqf;->g:Lzpf;
+
+    invoke-virtual {v0, v1}, Lzia;->e(Laja;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v2, v0, Lh20;->b:Ljava/lang/String;
+
+    :goto_0
+    iget-object v0, p0, Laqf;->d:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcj7;
+
+    new-instance v1, Llxd;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v1, v3, p0}, Llxd;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2, v1}, Lcj7;->a(Ljava/lang/String;Lbj7;)V
+
+    :goto_1
+    iget-object v0, p0, Laqf;->f:Lhy;
+
+    return-object v0
 .end method

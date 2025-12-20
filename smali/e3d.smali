@@ -1,72 +1,213 @@
-.class public abstract Le3d;
+.class public final Le3d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_chatmedia_viewer_all_media_download_complete:I = 0x7f130801
+# instance fields
+.field public final a:Z
 
-.field public static oneme_chatmedia_viewer_all_photo_download_complete:I = 0x7f130802
+.field public final b:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_all_video_download_complete:I = 0x7f130803
+.field public final c:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_close_reason_content_delete_text:I = 0x7f130804
 
-.field public static oneme_chatmedia_viewer_close_reason_photo_delete_text:I = 0x7f130805
+# direct methods
+.method public constructor <init>(ZLjava/util/HashSet;Ljava/util/HashSet;)V
+    .locals 0
 
-.field public static oneme_chatmedia_viewer_close_reason_video_delete_text:I = 0x7f130806
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_chatmedia_viewer_content_level_subtitle:I = 0x7f130807
+    iput-boolean p1, p0, Le3d;->a:Z
 
-.field public static oneme_chatmedia_viewer_content_level_title:I = 0x7f130808
+    if-nez p2, :cond_0
 
-.field public static oneme_chatmedia_viewer_load_photo_fail:I = 0x7f130809
+    sget-object p1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_load_video_fail:I = 0x7f13080a
+    goto :goto_0
 
-.field public static oneme_chatmedia_viewer_media_download_error:I = 0x7f13080b
+    :cond_0
+    new-instance p1, Ljava/util/HashSet;
 
-.field public static oneme_chatmedia_viewer_photo_download_complete:I = 0x7f13080c
+    invoke-direct {p1, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-.field public static oneme_chatmedia_viewer_photo_download_error:I = 0x7f13080d
+    :goto_0
+    iput-object p1, p0, Le3d;->b:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_save_all_medias:I = 0x7f13080e
+    if-nez p3, :cond_1
 
-.field public static oneme_chatmedia_viewer_save_all_photos:I = 0x7f13080f
+    sget-object p1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_save_all_videos:I = 0x7f130810
+    goto :goto_1
 
-.field public static oneme_chatmedia_viewer_save_single_photo:I = 0x7f130811
+    :cond_1
+    new-instance p1, Ljava/util/HashSet;
 
-.field public static oneme_chatmedia_viewer_save_single_video:I = 0x7f130812
+    invoke-direct {p1, p3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-.field public static oneme_chatmedia_viewer_seek_seconds:I = 0x7f130813
+    :goto_1
+    iput-object p1, p0, Le3d;->c:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_start_downloading_many_medias:I = 0x7f130814
+    return-void
+.end method
 
-.field public static oneme_chatmedia_viewer_start_downloading_many_photo:I = 0x7f130815
 
-.field public static oneme_chatmedia_viewer_start_downloading_many_video:I = 0x7f130816
+# virtual methods
+.method public final a(Ljava/lang/Class;Z)Z
+    .locals 1
 
-.field public static oneme_chatmedia_viewer_start_downloading_single_photo:I = 0x7f130817
+    iget-object v0, p0, Le3d;->b:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_start_downloading_single_video:I = 0x7f130818
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-.field public static oneme_chatmedia_viewer_toolbar_action_forward_photo:I = 0x7f130819
+    move-result v0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_forward_video:I = 0x7f13081a
+    if-eqz v0, :cond_0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f13081b
+    goto :goto_0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f13081c
+    :cond_0
+    iget-object v0, p0, Le3d;->c:Ljava/util/Set;
 
-.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f13081d
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-.field public static oneme_chatmedia_viewer_toolbar_countable_title:I = 0x7f13081e
+    move-result p1
 
-.field public static oneme_chatmedia_viewer_toolbar_photo_title:I = 0x7f13081f
+    if-eqz p1, :cond_1
 
-.field public static oneme_chatmedia_viewer_toolbar_video_title:I = 0x7f130820
+    goto :goto_1
 
-.field public static oneme_chatmedia_viewer_video_download_complete:I = 0x7f130821
+    :cond_1
+    iget-boolean p1, p0, Le3d;->a:Z
 
-.field public static oneme_chatmedia_viewer_video_download_error:I = 0x7f130822
+    if-eqz p1, :cond_2
+
+    if-eqz p2, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Le3d;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    check-cast p1, Le3d;
+
+    iget-boolean v2, p0, Le3d;->a:Z
+
+    iget-boolean v3, p1, Le3d;->a:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Le3d;->b:Ljava/util/Set;
+
+    iget-object v3, p1, Le3d;->b:Ljava/util/Set;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Le3d;->c:Ljava/util/Set;
+
+    iget-object p1, p1, Le3d;->c:Ljava/util/Set;
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Le3d;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iget-object v1, p0, Le3d;->b:Ljava/util/Set;
+
+    iget-object v2, p0, Le3d;->c:Ljava/util/Set;
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QuirkSettings{enabledWhenDeviceHasQuirk="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Le3d;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", forceEnabledQuirks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Le3d;->b:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", forceDisabledQuirks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Le3d;->c:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

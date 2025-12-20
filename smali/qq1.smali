@@ -1,52 +1,48 @@
-.class public final synthetic Lqq1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lem6;
+.class public final Lqq1;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic X:Lsx;
 
-.field public final synthetic b:Lvq1;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/util/List;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLvq1;Ljava/util/List;)V
+.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqq1;->X:Lsx;
 
-    iput-boolean p1, p0, Lqq1;->a:Z
-
-    iput-object p2, p0, Lqq1;->b:Lvq1;
-
-    iput-object p3, p0, Lqq1;->c:Ljava/util/List;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    iput-object p1, p0, Lqq1;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p0, Lqq1;->o:I
 
-    iget-boolean p1, p0, Lqq1;->a:Z
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Lqq1;->b:Lvq1;
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Lqq1;->c:Ljava/util/List;
+    iput p1, p0, Lqq1;->o:I
 
-    invoke-static {p1, v0, v1}, Lvq1;->x(ZLvq1;Ljava/util/List;)V
+    iget-object p1, p0, Lqq1;->X:Lsx;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method

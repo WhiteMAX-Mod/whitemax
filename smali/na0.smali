@@ -4,29 +4,29 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:Loa0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(ILoa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lna0;->a:Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    if-eqz p2, :cond_0
+    iput p1, p0, Lna0;->a:I
 
-    iput-object p2, p0, Lna0;->b:Ljava/lang/String;
+    iput-object p2, p0, Lna0;->b:Loa0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null version"
+    const-string p2, "Null type"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -36,55 +36,63 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lna0;
+    instance-of v0, p1, Lna0;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_2
 
     check-cast p1, Lna0;
 
-    iget-object v1, p0, Lna0;->a:Ljava/lang/String;
+    iget v0, p1, Lna0;->a:I
 
-    iget-object v3, p1, Lna0;->a:Ljava/lang/String;
+    iget-object p1, p1, Lna0;->b:Loa0;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lna0;->a:I
 
-    move-result v1
+    invoke-static {v1, v0}, Lc12;->d(II)Z
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    iget-object v1, p0, Lna0;->b:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    iget-object p1, p1, Lna0;->b:Ljava/lang/String;
+    iget-object v0, p0, Lna0;->b:Loa0;
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, p1}, Loa0;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    return v0
+    :goto_0
+    const/4 p1, 0x1
 
-    :cond_1
-    return v2
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lna0;->a:Ljava/lang/String;
+    iget v0, p0, Lna0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0}, Lc12;->w(I)I
 
     move-result v0
 
@@ -94,12 +102,20 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lna0;->b:Ljava/lang/String;
+    iget-object v1, p0, Lna0;->b:Loa0;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Loa0;->hashCode()I
 
     move-result v1
 
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
@@ -110,23 +126,75 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "LibraryVersion{libraryName="
+    const-string v1, "CameraState{type="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lna0;->a:Ljava/lang/String;
+    const/4 v1, 0x1
+
+    iget v2, p0, Lna0;->a:I
+
+    if-eq v2, v1, :cond_4
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x5
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "CLOSED"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "CLOSING"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "OPEN"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OPENING"
+
+    goto :goto_0
+
+    :cond_4
+    const-string v1, "PENDING_OPEN"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", error="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", version="
+    iget-object v1, p0, Lna0;->b:Loa0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lna0;->b:Ljava/lang/String;
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

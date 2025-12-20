@@ -1,146 +1,160 @@
 .class public final Lnya;
-.super Ldtf;
+.super Lh3;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Loya;
+.field public final synthetic b:I
 
-.field public o:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Loya;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lrza;Ljava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Lnya;->X:Loya;
+    iput p3, p0, Lnya;->b:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1}, Lh3;-><init>(Lrza;)V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lnya;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnya;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnya;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lnya;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lnya;
-
-    iget-object v0, p0, Lnya;->X:Loya;
-
-    invoke-direct {p1, v0, p2}, Lnya;-><init>(Loya;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Lc0b;)V
     .locals 4
 
-    iget-object v0, p0, Lnya;->X:Loya;
+    iget v0, p0, Lnya;->b:I
 
-    iget-object v1, v0, Loya;->b:Lk18;
+    const/4 v1, 0x3
 
-    iget v2, p0, Lnya;->o:I
+    iget-object v2, p0, Lh3;->a:Lrza;
 
-    const/4 v3, 0x1
+    iget-object v3, p0, Lnya;->c:Ljava/lang/Object;
 
-    if-eqz v2, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    if-ne v2, v3, :cond_0
+    :try_start_0
+    check-cast v3, Lsr6;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {v3}, Lsr6;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v3, Lwm5;->a:Lvm5;
+
+    check-cast v0, Ljava/util/Collection;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v3, Ldo3;
+
+    invoke-direct {v3, p1, v1, v0}, Ldo3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v2, v3}, Lrza;->a(Lc0b;)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v0}, Ldoj;->a(Ljava/lang/Throwable;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lxg5;->c(Ljava/lang/Throwable;Lc0b;)V
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvxf;
-
-    iput v3, p0, Lnya;->o:I
-
-    invoke-virtual {p1, p0}, Lvxf;->a(Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v2, Lg84;->a:Lg84;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
     :goto_0
-    const-string p1, "PushToken"
+    return-void
 
-    const-string v2, "Refresh current token succeed."
+    :pswitch_0
+    new-instance v0, Lexa;
 
-    invoke-static {p1, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v3, Ljeg;
 
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x4
 
-    move-result-object p1
+    invoke-direct {v0, p1, v3, v1}, Lexa;-><init>(Ljava/lang/Object;Ldfc;I)V
 
-    check-cast p1, Lvxf;
+    invoke-interface {v2, v0}, Lrza;->a(Lc0b;)V
 
-    new-instance v1, Lmya;
+    return-void
 
-    invoke-direct {v1, v0}, Lmya;-><init>(Loya;)V
+    :pswitch_1
+    new-instance v0, Lexa;
 
-    iget-object v0, p1, Lvxf;->u0:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast v3, Lyqd;
 
-    new-instance v2, Lnxf;
+    invoke-direct {v0, p1, v3, v1}, Lexa;-><init>(Ljava/lang/Object;Ldfc;I)V
 
-    const/4 v3, 0x0
+    invoke-interface {v2, v0}, Lrza;->a(Lc0b;)V
 
-    invoke-direct {v2, p1, v1, v3}, Lnxf;-><init>(Lvxf;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    const/4 p1, 0x3
+    :pswitch_2
+    new-instance v0, Lr62;
 
-    invoke-static {v0, v3, v3, v2, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    invoke-direct {v0, v1}, Lr62;-><init>(I)V
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
 
-    return-object p1
+    new-instance v1, Lnza;
+
+    check-cast v3, Lbrg;
+
+    invoke-direct {v1, p1, v3, v0, v2}, Lnza;-><init>(Lc0b;Lbrg;Lr62;Lrza;)V
+
+    invoke-virtual {v1}, Lnza;->a()V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lya3;
+
+    check-cast v3, Lov5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lya3;->c:Ljava/lang/Object;
+
+    iput-object v3, v0, Lya3;->d:Ljava/lang/Object;
+
+    new-instance v3, Lr62;
+
+    invoke-direct {v3, v1}, Lr62;-><init>(I)V
+
+    iput-object v3, v0, Lya3;->o:Ljava/lang/Object;
+
+    iget-object v1, v0, Lya3;->o:Ljava/lang/Object;
+
+    check-cast v1, Lr62;
+
+    invoke-interface {p1, v1}, Lc0b;->c(Ll25;)V
+
+    invoke-interface {v2, v0}, Lrza;->a(Lc0b;)V
+
+    return-void
+
+    :pswitch_4
+    new-instance v0, Lmya;
+
+    check-cast v3, Lrga;
+
+    invoke-direct {v0, p1, v3}, Lmya;-><init>(Lc0b;Lrga;)V
+
+    invoke-interface {v2, v0}, Lrza;->a(Lc0b;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

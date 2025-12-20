@@ -1,31 +1,53 @@
-.class public abstract Lt8b;
-.super Ljava/lang/Object;
+.class public final Lt8b;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:I
+.field public final synthetic Y:Ly8b;
 
-.field public static final c:I
+.field public Z:I
+
+.field public d:Ly8b;
+
+.field public o:Ldn9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ly8b;Ll84;)V
+    .locals 0
 
-    sget v0, Ls1d;->inactive_ttl:I
+    iput-object p1, p0, Lt8b;->Y:Ly8b;
 
-    sput v0, Lt8b;->a:I
-
-    sget v0, Ls1d;->inactive_ttl_item:I
-
-    sput v0, Lt8b;->b:I
-
-    sget v0, Ls1d;->profile_delete_dates_days_left:I
-
-    sput v0, Lt8b;->c:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lt8b;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lt8b;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lt8b;->Z:I
+
+    iget-object p1, p0, Lt8b;->Y:Ly8b;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ly8b;->e(Ldn9;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

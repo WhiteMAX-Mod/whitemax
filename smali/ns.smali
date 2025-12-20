@@ -1,45 +1,56 @@
 .class public final Lns;
-.super Lk2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lv75;
 
 
 # instance fields
-.field public final transient X:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqt5;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lqt5;I)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lwi3;->a(I)Lwi3;
+    iput-object p1, p0, Lns;->b:Lqt5;
 
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lk2;-><init>(Ljava/util/Map;)V
-
-    const-string v0, "expectedValuesPerKey"
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lu4j;->a(ILjava/lang/String;)V
-
-    iput v1, p0, Lns;->X:I
+    iput p2, p0, Lns;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Ljava/util/Collection;
+.method public final e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lns;->b:Lqt5;
 
-    iget v1, p0, Lns;->X:I
+    iget v1, p0, Lns;->a:I
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-virtual {v0, p1, v1}, Lqt5;->e(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final j()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    iget-object v0, p0, Lns;->b:Lqt5;
+
+    iget v1, p0, Lns;->a:I
+
+    invoke-virtual {v0, v1}, Lqt5;->c(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
 
     return-object v0
 .end method

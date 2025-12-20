@@ -1,192 +1,73 @@
-.class public abstract Lwti;
-.super Luai;
+.class public final Lwti;
+.super Lcm3;
 .source "SourceFile"
-
-# interfaces
-.implements Loci;
 
 
 # instance fields
-.field public final d:I
+.field public final synthetic X:I
+
+.field public final synthetic Y:Lem3;
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .locals 2
+.method public synthetic constructor <init>(Lem3;I)V
+    .locals 0
 
-    const-string v0, "com.google.android.gms.common.internal.ICertData"
+    iput p2, p0, Lwti;->X:I
 
-    const/4 v1, 0x4
+    iput-object p1, p0, Lwti;->Y:Lem3;
 
-    invoke-direct {p0, v0, v1}, Luai;-><init>(Ljava/lang/String;I)V
+    const/4 p2, 0x0
 
-    array-length v0, p1
-
-    const/16 v1, 0x19
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result p1
-
-    iput p1, p0, Lwti;->d:I
+    invoke-direct {p0, p1, p2}, Lcm3;-><init>(Lem3;B)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-.end method
-
-.method public static W(Ljava/lang/String;)[B
-    .locals 1
-
-    :try_start_0
-    const-string v0, "ISO-8859-1"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final T(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 1
+.method public final b(I)Ljava/lang/Object;
+    .locals 2
 
-    const/4 p2, 0x1
+    iget v0, p0, Lwti;->X:I
 
-    if-eq p1, p2, :cond_1
+    iget-object v1, p0, Lwti;->Y:Lem3;
 
-    const/4 v0, 0x2
+    packed-switch v0, :pswitch_data_0
 
-    if-eq p1, v0, :cond_0
+    sget-object v0, Lem3;->v0:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Lem3;->n()[Ljava/lang/Object;
 
-    return p1
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    aget-object p1, v0, p1
 
-    iget p1, p0, Lwti;->d:I
+    return-object p1
 
-    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
+    :pswitch_0
+    new-instance v0, Ltui;
 
-    return p2
+    invoke-direct {v0, v1, p1}, Ltui;-><init>(Lem3;I)V
 
-    :cond_1
-    invoke-virtual {p0}, Lwti;->X()[B
+    return-object v0
 
-    move-result-object p1
+    :pswitch_1
+    sget-object v0, Lem3;->v0:Ljava/lang/Object;
 
-    new-instance v0, Ltqa;
+    invoke-virtual {v1}, Lem3;->m()[Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Ltqa;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    aget-object p1, v0, p1
 
-    invoke-static {p3, v0}, Lwgi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    return-object p1
 
-    return p2
-.end method
+    nop
 
-.method public abstract X()[B
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    instance-of v1, p1, Loci;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    check-cast p1, Loci;
-
-    move-object v1, p1
-
-    check-cast v1, Lwti;
-
-    iget v1, v1, Lwti;->d:I
-
-    iget v2, p0, Lwti;->d:I
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwti;
-
-    invoke-virtual {p1}, Lwti;->X()[B
-
-    move-result-object p1
-
-    new-instance v1, Ltqa;
-
-    invoke-direct {v1, p1}, Ltqa;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {v1}, Ltqa;->X(Lkb7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [B
-
-    invoke-virtual {p0}, Lwti;->X()[B
-
-    move-result-object v1
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p1
-
-    :catch_0
-    move-exception p1
-
-    const-string v1, "GoogleCertificates"
-
-    const-string v2, "Failed to get Google certificates from remote"
-
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_2
-    :goto_0
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lwti;->d:I
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

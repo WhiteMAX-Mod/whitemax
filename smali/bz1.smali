@@ -1,256 +1,110 @@
 .class public final Lbz1;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:Ljava/lang/Object;
+.field public final synthetic o:Lbsc;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lbsc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbz1;->o:Lbsc;
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    const/4 p1, 0x2
 
-    iput-wide v0, p0, Lbz1;->a:J
-
-    iput-wide v0, p0, Lbz1;->b:J
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lbz1;->c:Ljava/lang/Object;
+    check-cast p1, Lac4;
 
-    check-cast v0, Ldz1;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ldz1;->c()Z
+    invoke-virtual {p0, p1, p2}, Lbz1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    check-cast p1, Lbz1;
 
-    const/16 v0, 0x2bc
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    return v0
+    invoke-virtual {p1, p2}, Lbz1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    move-result-object p1
 
-    move-result-wide v0
-
-    iget-wide v2, p0, Lbz1;->b:J
-
-    const-wide/16 v4, -0x1
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_1
-
-    iput-wide v0, p0, Lbz1;->b:J
-
-    :cond_1
-    iget-wide v2, p0, Lbz1;->b:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/32 v2, 0x1d4c0
-
-    cmp-long v2, v0, v2
-
-    if-gtz v2, :cond_2
-
-    const/16 v0, 0x3e8
-
-    return v0
-
-    :cond_2
-    const-wide/32 v2, 0x493e0
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_3
-
-    const/16 v0, 0x7d0
-
-    return v0
-
-    :cond_3
-    const/16 v0, 0xfa0
-
-    return v0
+    return-object p1
 .end method
 
-.method public b()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lbz1;
+
+    iget-object v0, p0, Lbz1;->o:Lbsc;
+
+    invoke-direct {p1, v0, p2}, Lbz1;-><init>(Lbsc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    iget-wide v0, p0, Lbz1;->a:J
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-object v2, p0, Lbz1;->c:Ljava/lang/Object;
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
-    check-cast v2, Ldz1;
+    move-result-object p1
 
-    invoke-virtual {v2}, Ldz1;->c()Z
+    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    move-result v2
+    move-result-object p1
 
-    const-wide/16 v3, 0x0
+    iget-object v0, p0, Lbz1;->o:Lbsc;
 
-    if-nez v2, :cond_1
+    iget-object v0, v0, Lbsc;->c:Ld68;
 
-    cmp-long v2, v0, v3
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    const/16 v3, 0x2710
+    move-result-object v0
 
-    if-lez v2, :cond_0
+    check-cast v0, Lo2b;
 
-    long-to-int v0, v0
+    new-instance v1, Lct1;
 
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v0}, Lo2b;->s()Lpfc;
 
-    move-result v0
+    move-result-object v2
 
-    return v0
+    iget-object v2, v2, Lpfc;->a:Ldj8;
 
-    :cond_0
-    return v3
+    invoke-virtual {v2}, Lcfe;->k()J
 
-    :cond_1
-    cmp-long v2, v0, v3
+    move-result-wide v2
 
-    const v3, 0x1b7740
+    const/4 v4, 0x0
 
-    if-lez v2, :cond_2
+    invoke-direct {v1, v2, v3, p1, v4}, Lct1;-><init>(JLjava/lang/String;I)V
 
-    long-to-int v0, v0
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
-
-    :cond_2
-    return v3
-.end method
-
-.method public c(Ljava/lang/Exception;)V
-    .locals 7
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-static {v0, v1}, Lo2b;->p(Lo2b;Lum;)J
 
     move-result-wide v0
 
-    iget-object v2, p0, Lbz1;->c:Ljava/lang/Object;
+    new-instance p1, Ljava/lang/Long;
 
-    check-cast v2, Ljava/lang/Exception;
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    if-nez v2, :cond_0
-
-    iput-object p1, p0, Lbz1;->c:Ljava/lang/Object;
-
-    :cond_0
-    iget-wide v2, p0, Lbz1;->a:J
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    sget-object v2, Lak4;->l0:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget v3, Lak4;->n0:I
-
-    if-lez v3, :cond_1
-
-    const/4 v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x0
-
-    :goto_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v3, :cond_2
-
-    const-wide/16 v2, 0xc8
-
-    add-long/2addr v2, v0
-
-    iput-wide v2, p0, Lbz1;->a:J
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :cond_2
-    :goto_1
-    iget-wide v2, p0, Lbz1;->a:J
-
-    cmp-long v6, v2, v4
-
-    if-eqz v6, :cond_4
-
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_4
-
-    iget-object v0, p0, Lbz1;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Exception;
-
-    if-eq v0, p1, :cond_3
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_3
-    iget-object p1, p0, Lbz1;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Exception;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lbz1;->c:Ljava/lang/Object;
-
-    iput-wide v4, p0, Lbz1;->a:J
-
-    iput-wide v4, p0, Lbz1;->b:J
-
-    throw p1
-
-    :cond_4
-    const-wide/16 v2, 0x32
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lbz1;->b:J
-
-    return-void
+    return-object p1
 .end method

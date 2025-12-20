@@ -1,59 +1,36 @@
-.class public final Loyf;
-.super Ljava/lang/Object;
+.class public abstract Loyf;
+.super Lnyf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+.method public static g(Ljava/lang/String;)Ljava/lang/Double;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput p2, p0, Loyf;->a:I
+    :try_start_0
+    sget-object v1, Lxbe;->a:Lisd;
 
-    iput p3, p0, Loyf;->b:I
+    invoke-virtual {v1, p0}, Lisd;->a(Ljava/lang/CharSequence;)Z
 
-    iput-object p1, p0, Loyf;->c:Ljava/lang/String;
+    move-result v1
 
-    iput-object p4, p0, Loyf;->d:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    return-void
-.end method
+    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
+    move-result-wide v1
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    check-cast p1, Loyf;
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget v0, p0, Loyf;->a:I
+    return-object p0
 
-    iget v1, p1, Loyf;->a:I
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Loyf;->b:I
-
-    iget p1, p1, Loyf;->b:I
-
-    sub-int/2addr v0, p1
-
+    :catch_0
     :cond_0
-    return v0
+    return-object v0
 .end method

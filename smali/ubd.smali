@@ -1,19 +1,14 @@
-.class public final Lubd;
+.class public abstract Lubd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxx0;
+# static fields
+.field public static call_busy:I = 0x7f120002
 
+.field public static call_connected:I = 0x7f120003
 
-# direct methods
-.method public constructor <init>(Lxx0;)V
-    .locals 0
+.field public static call_connecting:I = 0x7f120004
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_finished:I = 0x7f120005
 
-    iput-object p1, p0, Lubd;->a:Lxx0;
-
-    return-void
-.end method
+.field public static call_ringing:I = 0x7f120007

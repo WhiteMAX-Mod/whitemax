@@ -4,261 +4,106 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lirg;
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Landroid/util/SparseArray;
+
+.field public final e:Landroid/util/SparseArray;
+
+.field public final f:Ly82;
+
+.field public g:[B
+
+.field public h:I
+
+.field public i:I
+
+.field public j:J
+
+.field public k:Z
+
+.field public l:J
+
+.field public m:Lb47;
+
+.field public n:Lb47;
+
+.field public o:Z
+
+.field public p:J
+
+.field public q:J
+
+.field public r:Z
+
+.field public s:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    packed-switch p2, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ld47;->a:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p2, "_"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ld47;->a:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Ld47;->a:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a(Ljava/lang/StringBuilder;Ljava/util/Iterator;)V
-    .locals 2
-
-    :try_start_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    instance-of v1, v0, Ljava/lang/CharSequence;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    :goto_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Ld47;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    instance-of v1, v0, Ljava/lang/CharSequence;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_2
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Ljava/lang/AssertionError;
-
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p2
-.end method
-
-.method public b()Ljavax/crypto/Mac;
-    .locals 3
-
-    iget-object v0, p0, Ld47;->a:Ljava/lang/String;
-
-    :try_start_0
-    invoke-static {v0}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "could not create mac instance in hkdf"
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_1
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "defined mac algorithm was not found"
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public c(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 5
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->codePointAt(I)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Character;->isLetterOrDigit(I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-static {v3}, Ljava/lang/Character;->charCount(I)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ld47;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Invalid key: "
-
-    invoke-static {v1, v0}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public d(Ljava/util/List;)Ljava/lang/String;
+.method public constructor <init>(Lirg;ZZ)V
     .locals 1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Ld47;->a:Lirg;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-boolean p2, p0, Ld47;->b:Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iput-boolean p3, p0, Ld47;->c:Z
 
-    invoke-virtual {p0, v0, p1}, Ld47;->a(Ljava/lang/StringBuilder;Ljava/util/Iterator;)V
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Ld47;->d:Landroid/util/SparseArray;
 
-    return-object p1
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ld47;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Lb47;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld47;->m:Lb47;
+
+    new-instance p1, Lb47;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld47;->n:Lb47;
+
+    const/16 p1, 0x80
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Ld47;->g:[B
+
+    new-instance p2, Ly82;
+
+    const/4 p3, 0x5
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0, v0, p3, p1}, Ly82;-><init>(III[B)V
+
+    iput-object p2, p0, Ld47;->f:Ly82;
+
+    iput-boolean v0, p0, Ld47;->k:Z
+
+    iput-boolean v0, p0, Ld47;->o:Z
+
+    iget-object p1, p0, Ld47;->n:Lb47;
+
+    iput-boolean v0, p1, Lb47;->b:Z
+
+    iput-boolean v0, p1, Lb47;->a:Z
+
+    return-void
 .end method

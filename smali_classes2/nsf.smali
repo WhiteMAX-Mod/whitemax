@@ -1,72 +1,130 @@
-.class public final synthetic Lnsf;
+.class public final Lnsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ldm4;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lnsf;
 
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
+.field public static final b:Losf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lnsf;->a:I
+    new-instance v0, Lnsf;
 
-    iput-object p1, p0, Lnsf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnsf;->a:Lnsf;
+
+    sget-object v0, Losf;->b:Losf;
+
+    sput-object v0, Lnsf;->b:Losf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a()Lkm4;
     .locals 1
 
-    iget v0, p0, Lnsf;->a:I
+    sget-object v0, Lnsf;->b:Losf;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lnsf;->b:Lorg/webrtc/SurfaceTextureHelper;
+.method public final b(Ljava/lang/String;Lgm4;Landroid/os/Bundle;)Lnm4;
+    .locals 8
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    sget-object v0, Lnsf;->b:Losf;
 
-    return-void
+    iget-object v0, v0, Lkm4;->a:Ljava/util/LinkedHashSet;
 
-    :pswitch_0
-    iget-object v0, p0, Lnsf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
+    move-result v0
 
-    return-void
+    if-nez v0, :cond_0
 
-    :pswitch_1
-    iget-object v0, p0, Lnsf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    const/4 p1, 0x0
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
+    return-object p1
 
-    return-void
+    :cond_0
+    sget-object v0, Losf;->b:Losf;
 
-    :pswitch_2
-    iget-object v0, p0, Lnsf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
+    sget-object v0, Losf;->c:Lgm4;
 
-    return-void
+    invoke-virtual {p2, v0}, Lgm4;->equals(Ljava/lang/Object;)Z
 
-    nop
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_1
+
+    new-instance v6, Llm4;
+
+    new-instance v0, Lzze;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lzze;-><init>(I)V
+
+    new-instance v1, Lzze;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v2}, Lzze;-><init>(I)V
+
+    invoke-direct {v6, v0, v1}, Llm4;-><init>(Lmq6;Lmq6;)V
+
+    const-string v0, "sticker_id"
+
+    invoke-static {v0, p3}, Lulj;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    move-wide v2, v0
+
+    new-instance v1, Lnm4;
+
+    new-instance v7, Lzkc;
+
+    const/4 v0, 0x3
+
+    invoke-direct {v7, v2, v3, p3, v0}, Lzkc;-><init>(JLandroid/os/Parcelable;I)V
+
+    const/4 v5, 0x1
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v7}, Lnm4;-><init>(Ljava/lang/String;Lgm4;Landroid/os/Bundle;ILlm4;Lmm4;)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v3}, Lc12;->i(Ljava/lang/String;Lgm4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

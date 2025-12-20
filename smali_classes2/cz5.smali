@@ -1,47 +1,32 @@
-.class public final Lcz5;
-.super Lq44;
+.class public final synthetic Lcz5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lez5;
-
-
-# direct methods
-.method public constructor <init>(Lez5;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lcz5;->o:Lez5;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final load(Ljava/lang/String;)V
     .locals 1
 
-    iput-object p1, p0, Lcz5;->d:Ljava/lang/Object;
+    :try_start_0
+    const-string p1, "ffmpg"
 
-    iget p1, p0, Lcz5;->X:I
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/high16 v0, -0x80000000
+    return-void
 
-    or-int/2addr p1, v0
+    :catchall_0
+    move-exception p1
 
-    iput p1, p0, Lcz5;->X:I
+    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lyia;
 
-    iget-object p1, p0, Lcz5;->o:Lez5;
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lez5;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lyia;->r(Ljava/lang/Throwable;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

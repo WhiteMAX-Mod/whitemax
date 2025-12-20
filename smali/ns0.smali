@@ -2,186 +2,201 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Let5;
+
 
 # instance fields
-.field public final a:Lms8;
+.field public final synthetic a:I
 
-.field public final b:Lms8;
-
-.field public final c:Lms8;
-
-.field public final d:La71;
+.field public final b:Lzdf;
 
 
 # direct methods
-.method public constructor <init>(Lms8;Lms8;Lms8;La71;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 3
+
+    iput p1, p0, Lns0;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lns0;->a:Lms8;
+    new-instance p1, Lzdf;
 
-    iput-object p2, p0, Lns0;->b:Lms8;
+    const/4 v0, 0x2
 
-    iput-object p3, p0, Lns0;->c:Lms8;
+    const-string v1, "image/bmp"
 
-    iput-object p4, p0, Lns0;->d:La71;
+    const/16 v2, 0x424d
+
+    invoke-direct {p1, v2, v0, v1}, Lzdf;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lns0;->b:Lzdf;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lzdf;
+
+    const/4 v0, 0x2
+
+    const-string v1, "image/png"
+
+    const v2, 0x8950
+
+    invoke-direct {p1, v2, v0, v1}, Lzdf;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lns0;->b:Lzdf;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final E(Lit5;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lns0;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    :cond_0
-    instance-of v1, p1, Lns0;
+    invoke-virtual {v0, p1}, Lzdf;->E(Lit5;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    if-nez v1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    return v2
+    invoke-virtual {v0, p1}, Lzdf;->E(Lit5;)V
 
-    :cond_1
-    check-cast p1, Lns0;
+    return-void
 
-    iget-object v1, p0, Lns0;->a:Lms8;
+    nop
 
-    iget-object v3, p1, Lns0;->a:Lms8;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-eq v1, v3, :cond_2
+.method public final c0(Lgt5;Ll7;)I
+    .locals 1
 
-    return v2
+    iget v0, p0, Lns0;->a:I
 
-    :cond_2
-    iget-object v1, p0, Lns0;->b:Lms8;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v3, p1, Lns0;->b:Lms8;
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lns0;->c:Lms8;
-
-    iget-object v3, p1, Lns0;->c:Lms8;
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lns0;->d:La71;
-
-    iget-object p1, p1, Lns0;->d:La71;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2}, Lzdf;->c0(Lgt5;Ll7;)I
 
     move-result p1
 
-    if-nez p1, :cond_5
+    return p1
 
-    return v2
+    :pswitch_0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    :cond_5
-    return v0
+    invoke-virtual {v0, p1, p2}, Lzdf;->c0(Lgt5;Ll7;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final d(JJ)V
+    .locals 1
 
-    iget-object v0, p0, Lns0;->a:Lms8;
+    iget v0, p0, Lns0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, p1, p2, p3, p4}, Lzdf;->d(JJ)V
 
-    iget-object v1, p0, Lns0;->b:Lms8;
+    return-void
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    :pswitch_0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    move-result v1
+    invoke-virtual {v0, p1, p2, p3, p4}, Lzdf;->d(JJ)V
 
-    add-int/2addr v1, v0
+    return-void
 
-    mul-int/lit8 v1, v1, 0x1f
+    nop
 
-    iget-object v0, p0, Lns0;->c:Lms8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lns0;->d:La71;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final l(Lgt5;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lns0;->a:I
 
-    const-string v1, "BottomPanelState(isMicrophoneEnabled="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    iget-object v1, p0, Lns0;->a:Lms8;
+    invoke-virtual {v0, p1}, Lzdf;->l(Lgt5;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", isVideoEnabled="
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lns0;->b:Lzdf;
 
-    iget-object v1, p0, Lns0;->b:Lms8;
+    invoke-virtual {v0, p1}, Lzdf;->l(Lgt5;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", isRaiseHandEnabled="
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget-object v1, p0, Lns0;->c:Lms8;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final release()V
+    .locals 1
 
-    const-string v1, ", dynamicType="
+    iget v0, p0, Lns0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lns0;->d:La71;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

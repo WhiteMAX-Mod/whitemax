@@ -1,23 +1,55 @@
 .class public final Lqca;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkk4;
+# instance fields
+.field public X:Lee8;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyca;
+
+.field public d:Lyca;
+
+.field public o:Lee8;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lyca;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lkk4;
+    iput-object p1, p0, Lqca;->Z:Lyca;
 
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lkk4;-><init>(I)V
-
-    sput-object v0, Lqca;->a:Lkk4;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lqca;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lqca;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqca;->s0:I
+
+    iget-object p1, p0, Lqca;->Z:Lyca;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lyca;->e(Ljava/util/Set;Ll84;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

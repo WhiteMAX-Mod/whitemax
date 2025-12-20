@@ -103,13 +103,13 @@
     move-result-object p0
 
     .line 6
-    new-instance v1, Lehg;
+    new-instance v1, Lr6h;
 
-    const/16 v2, 0x18
+    const/16 v2, 0x14
 
-    invoke-direct {v1, v2, p1}, Lehg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Lr6h;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Llva;)Lybj;
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Lt1b;)Ljpj;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

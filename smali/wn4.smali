@@ -1,123 +1,55 @@
-.class public abstract synthetic Lwn4;
+.class public final synthetic Lwn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/AudioRouting$OnRoutingChangedListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Loii;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Loii;)V
+    .locals 0
 
-    invoke-static {}, Lk38;->values()[Lk38;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lwn4;->a:Loii;
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    :try_start_0
-    sget-object v1, Lk38;->ON_CREATE:Lk38;
+# virtual methods
+.method public final onRoutingChanged(Landroid/media/AudioRouting;)V
+    .locals 2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, Lwn4;->a:Loii;
 
-    move-result v1
+    iget-object v1, v0, Loii;->d:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    check-cast v1, Lwn4;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_0
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lk38;->ON_START:Lk38;
+    goto :goto_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    :cond_0
+    invoke-interface {p1}, Landroid/media/AudioRouting;->getRoutedDevice()Landroid/media/AudioDeviceInfo;
 
-    move-result v1
+    move-result-object p1
 
-    const/4 v2, 0x2
+    if-eqz p1, :cond_1
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object v0, v0, Loii;->c:Ljava/lang/Object;
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Lk38;->ON_RESUME:Lk38;
+    check-cast v0, Ln30;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, p1}, Ln30;->c(Landroid/media/AudioDeviceInfo;)V
 
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lk38;->ON_PAUSE:Lk38;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Lk38;->ON_STOP:Lk38;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v1, Lk38;->ON_DESTROY:Lk38;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Lk38;->ON_ANY:Lk38;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lwn4;->$EnumSwitchMapping$0:[I
-
+    :cond_1
+    :goto_0
     return-void
 .end method

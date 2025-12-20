@@ -1,83 +1,87 @@
-.class public abstract synthetic Lkk2;
+.class public final Lkk2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lh6f;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljy0;Lbbg;)V
+    .locals 2
 
-    invoke-static {}, Lo05;->values()[Lo05;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Li6f;->b(III)Lh6f;
 
     move-result-object v0
 
-    array-length v0, v0
+    iput-object v0, p0, Lkk2;->a:Lh6f;
 
-    new-array v0, v0, [I
+    check-cast p2, Lb9b;
 
-    const/4 v1, 0x1
+    invoke-virtual {p2}, Lb9b;->c()Llq8;
 
-    const/4 v2, 0x0
+    move-result-object p2
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p2}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    :catch_0
-    const/4 v2, 0x2
+    move-result-object p2
 
-    :try_start_1
-    aput v2, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-object p2, p0, Lkk2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :catch_1
-    const/4 v2, 0x3
+    invoke-virtual {p1, p0}, Ljy0;->d(Ljava/lang/Object;)V
 
-    const/4 v3, 0x4
+    return-void
+.end method
 
-    :try_start_2
-    aput v2, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    :catch_2
-    :try_start_3
-    aput v3, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+# virtual methods
+.method public final onEvent(Lhk2;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
 
-    :catch_3
-    const/4 v1, 0x5
+    .line 1
+    new-instance v0, Lik2;
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const/4 v1, 0x0
 
-    :catch_4
-    const/4 v2, 0x6
+    invoke-direct {v0, p0, p1, v1}, Lik2;-><init>(Lkk2;Lhk2;Lkotlin/coroutines/Continuation;)V
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    const/4 p1, 0x3
 
-    :catch_5
-    const/4 v1, 0x7
+    iget-object v2, p0, Lkk2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    :catch_6
-    sput-object v0, Lkk2;->$EnumSwitchMapping$0:[I
+    return-void
+.end method
+
+.method public final onEvent(Llk2;)V
+    .locals 3
+    .annotation runtime Ljzf;
+    .end annotation
+
+    .line 2
+    new-instance v0, Ljk2;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ljk2;-><init>(Lkk2;Llk2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lkk2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
     return-void
 .end method

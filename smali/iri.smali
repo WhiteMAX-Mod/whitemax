@@ -1,65 +1,59 @@
-.class public abstract Liri;
-.super Ljava/lang/Object;
+.class public final Liri;
+.super Ljqi;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:La1e;
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-.field public static b:Z
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 0
 
-    const-string v0, "TRuntime."
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p3, p0, Liri;->c:[Ljava/lang/Object;
 
-    move-result-object p0
+    iput p1, p0, Liri;->d:I
 
-    const/4 v0, 0x3
+    iput p2, p0, Liri;->o:I
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+# virtual methods
+.method public final get(I)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "TRuntime."
+    iget v0, p0, Liri;->o:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Leaj;->c(II)V
 
-    move-result-object p0
+    add-int/2addr p1, p1
 
-    const/4 v0, 0x6
+    iget v0, p0, Liri;->d:I
 
-    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    add-int/2addr p1, v0
 
-    move-result v0
+    iget-object v0, p0, Liri;->c:[Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    aget-object p1, v0, p1
 
-    invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    return-void
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Liri;->o:I
+
+    return v0
 .end method

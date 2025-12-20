@@ -2,232 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo04;
+
 
 # instance fields
-.field public final a:Lk18;
-
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
-
-.field public final e:Lk18;
+.field public final a:Lwea;
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Lk18;)V
+.method public constructor <init>(Lwea;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln04;->a:Lk18;
-
-    iput-object p2, p0, Ln04;->b:Lk18;
-
-    iput-object p3, p0, Ln04;->c:Lk18;
-
-    iput-object p4, p0, Ln04;->d:Lk18;
-
-    iput-object p5, p0, Ln04;->e:Lk18;
+    iput-object p1, p0, Ln04;->a:Lwea;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 14
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-wide v2, p1
+    const/4 v0, 0x1
 
-    const-class v0, Ln04;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    return v0
 
-    move-result-object v0
+    :cond_0
+    instance-of v1, p1, Ln04;
 
-    const-string v1, "remove, id = "
+    const/4 v2, 0x0
 
-    invoke-static {v2, v3, v1, v0}, Lwy1;->q(JLjava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    iget-object v0, p0, Ln04;->c:Lk18;
+    return v2
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ln04;
 
-    move-result-object v1
+    iget-object v1, p0, Ln04;->a:Lwea;
 
-    check-cast v1, Lh8c;
+    iget-object p1, p1, Ln04;->a:Lwea;
 
-    invoke-virtual {v1}, Lh8c;->c()Lf8c;
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p1
 
-    invoke-virtual {v1, v2, v3}, Lf8c;->a(J)Lb8c;
+    if-nez p1, :cond_2
 
-    move-result-object v1
+    return v2
 
-    iget v1, v1, Lb8c;->b:I
+    :cond_2
+    return v0
+.end method
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Ln04;->a:Lwea;
 
-    check-cast v0, Lh8c;
+    invoke-virtual {v0}, Lwea;->hashCode()I
 
-    new-instance v4, Lb8c;
+    move-result v0
 
-    const/4 v5, 0x0
+    return v0
+.end method
 
-    invoke-direct {v4, v5, v1}, Lb8c;-><init>(II)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v1, "Update(contactIds="
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, v4}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+    iget-object v1, p0, Ln04;->a:Lwea;
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lh8c;->i(Ljava/util/Map;)V
+    const-string v1, ")"
 
-    iget-object v10, p0, Ln04;->a:Lk18;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqv3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Li00;
-
-    const/16 v4, 0xf
-
-    sget-object v5, Lyv3;->b:Lyv3;
-
-    sget-object v6, Lxv3;->b:Lxv3;
-
-    invoke-direct {v1, v5, v4, v6}, Li00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2, v3, v1}, Lqv3;->c(JLgu3;)Lku3;
-
-    invoke-interface {v10}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lqv3;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v2, v3, v1}, Lqv3;->q(JZ)V
-
-    iget-object v0, p0, Ln04;->d:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v11, v0
-
-    check-cast v11, Lhwa;
-
-    new-instance v0, Ly04;
-
-    invoke-virtual {v11}, Lhwa;->t()Lz7c;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lz7c;->a:Lpe8;
-
-    invoke-virtual {v1}, Lw4e;->k()J
-
-    move-result-wide v4
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v1, 0x3
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-wide v12, v4
-
-    move-wide v4, v2
-
-    move-wide v2, v12
-
-    invoke-direct/range {v0 .. v9}, Ly04;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    move-wide v2, v4
-
-    invoke-static {v11, v0}, Lhwa;->r(Lhwa;Lsm;)J
-
-    iget-object v0, p0, Ln04;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljzf;
-
-    new-instance v1, Ljava/lang/Long;
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljzf;->f(Ljava/util/Collection;)V
-
-    invoke-interface {v10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lqv3;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lnv3;
-
-    const/4 v1, 0x0
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lnv3;-><init>(IJJLjava/lang/Object;)V
-
-    new-instance v1, Ldf3;
-
-    const/4 v4, 0x5
-
-    invoke-direct {v1, v4}, Ldf3;-><init>(I)V
-
-    iget-object v4, v6, Lqv3;->l:Lj0e;
-
-    invoke-static {v0, v1, v4}, Lbwd;->a(Lp6;Lgu3;Lj0e;)Lqu1;
-
-    iget-object v0, p0, Ln04;->e:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltw0;
-
-    new-instance v1, Lt24;
-
-    invoke-direct {v1, v2, v3}, Lt24;-><init>(J)V
-
-    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

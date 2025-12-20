@@ -1,67 +1,86 @@
-.class public interface abstract Li61;
+.class public final synthetic Li61;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lioe;
+.implements Lmq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj61;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lj61;I)V
+    .locals 0
+
+    iput p2, p0, Li61;->a:I
+
+    iput-object p1, p0, Li61;->b:Lj61;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Ls5g;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p0, Li61;->a:I
 
-    return-object v0
-.end method
+    iget-object v1, p0, Li61;->b:Lj61;
 
-.method public b()Lxne;
-    .locals 1
+    const-wide/16 v2, 0xfa
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    sget v0, Lj61;->C0:I
 
-.method public c()Ls5g;
-    .locals 1
+    new-instance v0, Lw81;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Lj61;->d()Z
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public d()Lfoe;
-    .locals 1
-
-    const/4 v0, 0x0
+    invoke-direct {v0, v2, v3, v1}, Lw81;-><init>(JZ)V
 
     return-object v0
-.end method
 
-.method public e()Lu18;
-    .locals 1
+    :pswitch_0
+    sget v0, Lj61;->C0:I
 
-    const/4 v0, 0x0
+    new-instance v0, Lns1;
 
-    return-object v0
-.end method
+    invoke-virtual {v1}, Lj61;->d()Z
 
-.method public abstract f()I
-.end method
+    move-result v1
 
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Lhoe;
-    .locals 1
-
-    sget-object v0, Lhoe;->b:Lhoe;
+    invoke-direct {v0, v2, v3, v1}, Lns1;-><init>(JZ)V
 
     return-object v0
+
+    :pswitch_1
+    sget v0, Lj61;->C0:I
+
+    new-instance v0, Lnn1;
+
+    invoke-virtual {v1}, Lj61;->d()Z
+
+    move-result v1
+
+    invoke-direct {v0, v2, v3, v1}, Lnn1;-><init>(JZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

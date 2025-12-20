@@ -1,34 +1,44 @@
-.class public abstract Lfp;
+.class public interface abstract Lfp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/TextView;)Landroid/view/textclassifier/TextClassifier;
-    .locals 1
+# virtual methods
+.method public abstract a()Z
+.end method
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+.method public abstract b()Landroid/graphics/drawable/Drawable;
+.end method
 
-    move-result-object p0
+.method public abstract c()I
+.end method
 
-    const-class v0, Landroid/view/textclassifier/TextClassificationManager;
+.method public abstract dismiss()V
+.end method
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+.method public abstract e(I)V
+.end method
 
-    move-result-object p0
+.method public abstract f()Ljava/lang/CharSequence;
+.end method
 
-    check-cast p0, Landroid/view/textclassifier/TextClassificationManager;
+.method public abstract h(Ljava/lang/CharSequence;)V
+.end method
 
-    if-eqz p0, :cond_0
+.method public abstract i(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    invoke-virtual {p0}, Landroid/view/textclassifier/TextClassificationManager;->getTextClassifier()Landroid/view/textclassifier/TextClassifier;
+.method public abstract k(I)V
+.end method
 
-    move-result-object p0
+.method public abstract l(I)V
+.end method
 
-    return-object p0
+.method public abstract n(II)V
+.end method
 
-    :cond_0
-    sget-object p0, Landroid/view/textclassifier/TextClassifier;->NO_OP:Landroid/view/textclassifier/TextClassifier;
+.method public abstract o()I
+.end method
 
-    return-object p0
+.method public abstract p(Landroid/widget/ListAdapter;)V
 .end method

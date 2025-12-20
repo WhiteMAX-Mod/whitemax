@@ -1,238 +1,76 @@
 .class public final Lqpd;
-.super Lr0;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public h:Lpe4;
+.field public final synthetic o:Lupd;
 
 
 # direct methods
-.method public static n(Lpe4;)V
+.method public constructor <init>(Lupd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    if-eqz p0, :cond_0
+    iput-object p1, p0, Lqpd;->o:Lupd;
 
-    invoke-interface {p0}, Lpe4;->close()Z
+    const/4 p1, 0x2
 
-    :cond_0
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    monitor-enter p0
+    check-cast p1, Lmce;
 
-    :try_start_0
-    invoke-super {p0}, Lr0;->close()Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lqpd;->h:Lpe4;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lqpd;->h:Lpe4;
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v0}, Lqpd;->n(Lpe4;)V
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized d()Ljava/lang/Object;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lqpd;->h:Lpe4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lpe4;->d()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized e()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lqpd;->h:Lpe4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lpe4;->e()Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final o(Lbrf;)V
-    .locals 3
-
-    invoke-virtual {p0}, Lr0;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lbrf;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lqpd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lpe4;
+    check-cast p1, Lqpd;
 
-    goto :goto_0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lqpd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    monitor-enter p0
+    return-object p2
+.end method
 
-    :try_start_0
-    invoke-virtual {p0}, Lr0;->f()Z
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result v0
+    new-instance p1, Lqpd;
 
-    if-eqz v0, :cond_2
+    iget-object v0, p0, Lqpd;->o:Lupd;
 
-    invoke-static {p1}, Lqpd;->n(Lpe4;)V
+    invoke-direct {p1, v0, p2}, Lqpd;-><init>(Lupd;Lkotlin/coroutines/Continuation;)V
 
-    monitor-exit p0
+    return-object p1
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :catchall_0
-    move-exception p1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    goto :goto_1
+    iget-object p1, p0, Lqpd;->o:Lupd;
 
-    :cond_2
-    iget-object v0, p0, Lqpd;->h:Lpe4;
+    iget-object p1, p1, Lupd;->t0:Lyl5;
 
-    iput-object p1, p0, Lqpd;->h:Lpe4;
+    sget-object v0, Loo1;->D:Loo1;
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_3
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    new-instance v1, Lnu5;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p0}, Lnu5;-><init>(ILjava/lang/Object;)V
-
-    sget-object v2, Lyu1;->a:Lyu1;
-
-    check-cast p1, Lr0;
-
-    invoke-virtual {p1, v1, v2}, Lr0;->l(Laf4;Ljava/util/concurrent/Executor;)V
-
-    :cond_3
-    invoke-static {v0}, Lqpd;->n(Lpe4;)V
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object p1
 .end method

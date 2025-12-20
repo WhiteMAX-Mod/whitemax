@@ -1,138 +1,51 @@
 .class public final Lo6g;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lp6g;
 
-.field public final b:I
+.field public Y:I
 
-.field public final c:I
+.field public d:Lyeh;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Lp6g;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo6g;->X:Lp6g;
 
-    iput p1, p0, Lo6g;->a:I
-
-    iput p2, p0, Lo6g;->b:I
-
-    iput p3, p0, Lo6g;->c:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lo6g;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lo6g;->Y:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lo6g;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lo6g;->Y:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lo6g;->X:Lp6g;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lo6g;
+    invoke-virtual {p1, v0, p0}, Lp6g;->e(Lyeh;Ll84;)Ljava/lang/Object;
 
-    iget v1, p0, Lo6g;->a:I
+    move-result-object p1
 
-    iget v3, p1, Lo6g;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lo6g;->b:I
-
-    iget v3, p1, Lo6g;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lo6g;->c:I
-
-    iget p1, p1, Lo6g;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lo6g;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lo6g;->b:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v1, p0, Lo6g;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", descriptionRes="
-
-    const-string v1, ", buttonRes="
-
-    const-string v2, "TextsUiModel(titleRes="
-
-    iget v3, p0, Lo6g;->a:I
-
-    iget v4, p0, Lo6g;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Lo6g;->c:I
-
-    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

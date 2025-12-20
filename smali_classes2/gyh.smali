@@ -1,19 +1,19 @@
 .class public final Lgyh;
-.super Ljyh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# virtual methods
+.method public final serializer()Lq38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
+    sget-object v0, Lfyh;->a:Lfyh;
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-boolean p1, p0, Lgyh;->a:Z
-
-    return-void
+    return-object v0
 .end method

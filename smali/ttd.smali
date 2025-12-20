@@ -1,52 +1,38 @@
 .class public final Lttd;
-.super Lstd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# instance fields
+.field public final synthetic a:Ljava/util/concurrent/Executor;
+
+.field public final synthetic b:Lbx5;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lbx5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lttd;->a:Ljava/util/concurrent/Executor;
+
+    iput-object p2, p0, Lttd;->b:Lbx5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 2
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-static {}, Lml6;->i()Lll6;
+    iget-object v0, p0, Lttd;->a:Ljava/util/concurrent/Executor;
 
-    iget-boolean v0, p0, Lstd;->b:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lstd;->c:Z
-
-    if-nez v0, :cond_1
-
-    iget v0, p0, Lstd;->d:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1}, Lstd;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lml6;->i()Lll6;
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lstd;->e()V
-
-    invoke-virtual {p0}, Lstd;->d()V
-
-    iget-object v0, p0, Lstd;->o:Landroid/graphics/Path;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    invoke-super {p0, p1}, Lstd;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lml6;->i()Lll6;
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -3,293 +3,331 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Z
+
+
 # direct methods
-.method public static a(Ljava/lang/Boolean;)V
-    .locals 0
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 6
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
-.end method
-
-.method public static b(Ljava/lang/String;Z)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    return-void
+    goto :goto_3
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    throw p1
-.end method
+    const/4 v2, 0x0
 
-.method public static varargs c(ZLjava/lang/String;[Ljava/lang/Object;)V
-    .locals 0
+    if-eq v0, v1, :cond_1
 
-    if-eqz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1, p2}, Ll5j;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static d(II)V
-    .locals 2
-
-    if-ltz p0, :cond_1
-
-    if-lt p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    goto :goto_2
 
     :cond_1
+    move v1, v2
+
     :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    if-ge v1, v0, :cond_4
 
-    const-string v1, "index"
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
-    if-ltz p0, :cond_3
+    move-result v3
 
-    if-ltz p1, :cond_2
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v4
 
-    move-result-object p0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {v1, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must be less than size (%s)"
-
-    invoke-static {p1, p0}, Ll5j;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
+    if-ne v3, v4, :cond_2
 
     goto :goto_1
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    or-int/lit8 v3, v3, 0x20
 
-    const-string v0, "negative size: "
+    add-int/lit8 v3, v3, -0x61
 
-    invoke-static {p1, v0}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+    int-to-char v3, v3
 
-    move-result-object p1
+    const/16 v5, 0x1a
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-ge v3, v5, :cond_3
 
-    throw p0
+    or-int/lit8 v4, v4, 0x20
 
-    :cond_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-int/lit8 v4, v4, -0x61
 
-    move-result-object p0
+    int-to-char v4, v4
 
-    filled-new-array {v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be negative"
-
-    invoke-static {p1, p0}, Ll5j;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
+    if-ne v3, v4, :cond_3
 
     :goto_1
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    add-int/lit8 v1, v1, 0x1
 
-    throw v0
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    return v2
+
+    :cond_4
+    :goto_3
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public static e(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
+.method public static final b(Landroid/view/View;)Ljava/lang/String;
+    .locals 2
 
-    if-eqz p0, :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lyyd;
+
+    invoke-direct {v1, v0}, Lyyd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_0
+    invoke-static {v0}, Lazd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object p1
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
-.end method
-
-.method public static f(Z)V
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p0
-.end method
-
-.method public static g(Landroidx/constraintlayout/widget/ConstraintLayout;)Lut3;
-    .locals 1
-
-    new-instance v0, Lut3;
-
-    invoke-direct {v0}, Lut3;-><init>()V
-
-    invoke-virtual {v0, p0}, Lut3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    :goto_1
+    check-cast v0, Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static varargs h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    .locals 6
+.method public static final c(Ler6;Landroid/view/View;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget v0, Lr9d;->oneme_theme_attach_listener:I
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    array-length v2, p1
+    instance-of v1, v0, Landroid/view/View$OnAttachStateChangeListener;
 
-    mul-int/lit8 v2, v2, 0x10
+    if-eqz v1, :cond_0
 
-    add-int/2addr v2, v1
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    array-length v3, p1
-
-    if-ge v1, v3, :cond_1
-
-    const-string v3, "%s"
-
-    invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
-
-    move-result v3
-
-    const/4 v4, -0x1
-
-    if-ne v3, v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v1, 0x1
-
-    aget-object v1, p1, v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v3, 0x2
-
-    move v5, v2
-
-    move v2, v1
-
-    move v1, v5
+    check-cast v0, Landroid/view/View$OnAttachStateChangeListener;
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Ll5j;->b(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    array-length p0, p1
+    const-string v0, "try to observe onThemeChanged more than once for "
 
-    if-ge v1, p0, :cond_3
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string p0, " ["
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    add-int/lit8 p0, v1, 0x1
+    move-result-object p0
 
-    aget-object v1, p1, v1
+    const-string p1, "ViewThemeUtils"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lm4j;->A(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_2
-    array-length v1, p1
+    return-void
 
-    if-ge p0, v1, :cond_2
+    :cond_1
+    new-instance v0, Lvh3;
 
-    const-string v1, ", "
+    invoke-direct {v0, p0, p1}, Lvh3;-><init>(Ler6;Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget p0, Lr9d;->oneme_theme_attach_listener:I
 
-    add-int/lit8 v1, p0, 0x1
+    invoke-virtual {p1, p0, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    aget-object p0, p1, p0
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p0
 
-    move p0, v1
+    if-eqz p0, :cond_2
 
-    goto :goto_2
+    invoke-virtual {v0, p1}, Lvh3;->onViewAttachedToWindow(Landroid/view/View;)V
 
     :cond_2
-    const/16 p0, 0x5d
+    invoke-virtual {p1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public static d(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0x41
+
+    if-lt v2, v3, :cond_2
+
+    const/16 v4, 0x5a
+
+    if-gt v2, v4, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p0
 
+    :goto_1
+    if-ge v1, v0, :cond_1
+
+    aget-char v2, p0, v1
+
+    if-lt v2, v3, :cond_0
+
+    if-gt v2, v4, :cond_0
+
+    xor-int/lit8 v2, v2, 0x20
+
+    int-to-char v2, v2
+
+    aput-char v2, p0, v1
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {p0}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-object p0
+.end method
+
+.method public static e(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0x61
+
+    if-lt v2, v3, :cond_2
+
+    const/16 v4, 0x7a
+
+    if-gt v2, v4, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object p0
+
+    :goto_1
+    if-ge v1, v0, :cond_1
+
+    aget-char v2, p0, v1
+
+    if-lt v2, v3, :cond_0
+
+    if-gt v2, v4, :cond_0
+
+    xor-int/lit8 v2, v2, 0x20
+
+    int-to-char v2, v2
+
+    aput-char v2, p0, v1
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {p0}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
     return-object p0
 .end method

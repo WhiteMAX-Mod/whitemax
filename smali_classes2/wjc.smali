@@ -1,77 +1,64 @@
 .class public final Lwjc;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lxjc;
 
 
-# instance fields
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lwjc;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lcda;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwjc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwjc;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lwjc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
     new-instance v0, Lwjc;
 
-    const/4 v1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lwjc;->a:Lwjc;
 
-    iput-object p1, v0, Lwjc;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lwjc;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lcda;
-
-    sget-object v0, Ljc3;->b:Ljc3;
-
-    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lrfc;->c:Lrfc;
-
-    invoke-virtual {p1}, Li3;->p0()Lii4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lii4;->d()Z
+    return v0
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    instance-of p1, p1, Lwjc;
 
-    return-object p1
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x46d4f907
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowProgress"
+
+    return-object v0
 .end method

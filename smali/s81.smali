@@ -3,48 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Low1;
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:Lkua;
+.field public final synthetic a:I
 
-.field public final b:Lbwf;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lkua;Lk18;Lk18;Lk18;Lk18;)V
-    .locals 9
+.method public synthetic constructor <init>(II)V
+    .locals 0
+
+    iput p2, p0, Ls81;->a:I
+
+    iput p1, p0, Ls81;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Ls81;->a:Lkua;
-
-    new-instance v0, Lp81;
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v8, p2
-
-    move-object v3, p3
-
-    move-object v4, p5
-
-    move-object v5, p6
-
-    move-object/from16 v6, p7
-
-    move-object/from16 v7, p8
-
-    invoke-direct/range {v0 .. v8}, Lp81;-><init>(Ls81;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
-
-    new-instance p1, Lbwf;
-
-    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p1, p0, Ls81;->b:Lbwf;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ls81;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lj61;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    iget v3, p0, Ls81;->b:I
+
+    invoke-direct {v0, v3, v2, v1}, Lj61;-><init>(IIZ)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lj61;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    iget v3, p0, Ls81;->b:I
+
+    invoke-direct {v0, v3, v2, v1}, Lj61;-><init>(IIZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

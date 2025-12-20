@@ -1,78 +1,63 @@
 .class public final Lze6;
-.super Ldtf;
+.super Ladf;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
 
+# virtual methods
+.method public final E()V
+    .locals 2
 
-# instance fields
-.field public final synthetic X:Lem6;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
 
-.field public synthetic o:Ljava/lang/Object;
+    check-cast v0, Le7b;
 
+    const/4 v1, 0x0
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lem6;)V
-    .locals 0
-
-    iput-object p2, p0, Lze6;->X:Lem6;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Le7b;->setFirstTrailingIconClickListener(Lmq6;)V
 
     return-void
 .end method
 
+.method public final F(Lse6;)V
+    .locals 5
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+
+    check-cast v0, Le7b;
+
+    iget-object v1, p1, Lse6;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Le7b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-wide v1, p1, Lse6;->d:J
+
+    iget-object v3, p1, Lse6;->o:Ljava/lang/CharSequence;
+
+    iget-object v4, p1, Lse6;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Le7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    sget v1, Lx4e;->z:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Le7b;->setFirstTrailingIcon(Ljava/lang/Integer;)V
+
+    iget-boolean p1, p1, Lse6;->X:Z
+
+    invoke-virtual {v0, p1}, Le7b;->setVerified(Z)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic z(Lie8;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lse6;
 
-    invoke-virtual {p0, p1, p2}, Lze6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Lze6;->F(Lse6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lze6;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lze6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lze6;
-
-    iget-object v1, p0, Lze6;->X:Lem6;
-
-    invoke-direct {v0, p2, v1}, Lze6;-><init>(Lkotlin/coroutines/Continuation;Lem6;)V
-
-    iput-object p1, v0, Lze6;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lze6;->o:Ljava/lang/Object;
-
-    check-cast p1, Lcda;
-
-    iget-object v0, p0, Lze6;->X:Lem6;
-
-    invoke-interface {v0, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

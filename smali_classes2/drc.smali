@@ -1,3 +1,3 @@
-.class public final Ldrc;
+.class public abstract Ldrc;
 .super Lerc;
 .source "SourceFile"

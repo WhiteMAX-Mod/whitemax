@@ -1,63 +1,57 @@
 .class public final Ldi2;
-.super Lq44;
+.super Lkm4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
+# static fields
+.field public static final b:Ldi2;
 
-.field public Y:Z
+.field public static final c:Lgm4;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lsi2;
-
-.field public o:Ljava/lang/Object;
-
-.field public final synthetic s0:Lsi2;
-
-.field public t0:I
+.field public static final d:Lgm4;
 
 
 # direct methods
-.method public constructor <init>(Lsi2;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Ldi2;->s0:Lsi2;
+    new-instance v0, Ldi2;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lkm4;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Ldi2;->b:Ldi2;
 
+    const-string v1, "id"
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const-string v2, "type"
 
-    iput-object p1, p0, Ldi2;->Z:Ljava/lang/Object;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    iget p1, p0, Ldi2;->t0:I
+    move-result-object v1
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ldi2;->t0:I
+    const-string v2, ":chats"
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const/16 v4, 0xe
 
-    iget-object v0, p0, Ldi2;->s0:Lsi2;
+    invoke-static {v0, v2, v1, v3, v4}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
 
-    const-wide/16 v1, 0x0
+    move-result-object v1
 
-    move-object v5, p0
+    sput-object v1, Ldi2;->c:Lgm4;
 
-    invoke-static/range {v0 .. v5}, Lsi2;->d(Lsi2;JZLsm6;Lq44;)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    new-array v1, v1, [Ljava/lang/String;
 
-    return-object p1
+    const-string v2, ":saved-messages"
+
+    invoke-static {v0, v2, v1, v3, v4}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
+
+    move-result-object v0
+
+    sput-object v0, Ldi2;->d:Lgm4;
+
+    return-void
 .end method

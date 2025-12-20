@@ -3,39 +3,39 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhy7;
+.implements Lpb4;
 
 
 # virtual methods
-.method public varargs abstract call([Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract attachChild(Leb3;)Lcb3;
 .end method
 
-.method public abstract callBy(Ljava/util/Map;)Ljava/lang/Object;
+.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
 .end method
 
-.method public abstract getName()Ljava/lang/String;
+.method public abstract getCancellationException()Ljava/util/concurrent/CancellationException;
 .end method
 
-.method public abstract getParameters()Ljava/util/List;
+.method public abstract getChildren()Leoe;
 .end method
 
-.method public abstract getReturnType()Lbz7;
+.method public abstract invokeOnCompletion(Loq6;)Lo25;
 .end method
 
-.method public abstract getTypeParameters()Ljava/util/List;
+.method public abstract invokeOnCompletion(ZZLoq6;)Lo25;
 .end method
 
-.method public abstract getVisibility()Lcz7;
+.method public abstract isActive()Z
 .end method
 
-.method public abstract isAbstract()Z
+.method public abstract isCancelled()Z
 .end method
 
-.method public abstract isFinal()Z
+.method public abstract isCompleted()Z
 .end method
 
-.method public abstract isOpen()Z
+.method public abstract join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 .end method
 
-.method public abstract isSuspend()Z
+.method public abstract start()Z
 .end method

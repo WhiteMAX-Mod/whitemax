@@ -1,3 +1,3 @@
 .class public abstract Ld9g;
-.super Ljava/lang/Object;
+.super Lla9;
 .source "SourceFile"

@@ -1,60 +1,41 @@
 .class public final Ld3j;
-.super Ljava/lang/Object;
+.super Leoi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final d:Lzz7;
 
-# static fields
-.field public static final a:Ld3j;
+.field public final e:Lydg;
+
+.field public final synthetic f:Le5j;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Le5j;Lydg;)V
     .locals 3
 
-    new-instance v0, Ld3j;
+    new-instance v0, Lzz7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "OnRequestInstallCallback"
 
-    sput-object v0, Ld3j;->a:Ld3j;
+    const/4 v2, 0x1
 
-    new-instance v0, Lmli;
+    invoke-direct {v0, v1, v2}, Lzz7;-><init>(Ljava/lang/String;I)V
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Ld3j;->f:Le5j;
 
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+    const/4 p1, 0x3
 
-    const-class v1, Lemi;
+    invoke-direct {p0, p1}, Leoi;-><init>(I)V
 
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+    const-string p1, "com.google.android.play.core.inappreview.protocol.IInAppReviewServiceCallback"
 
-    move-result-object v0
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    const/4 v2, 0x2
+    iput-object v0, p0, Ld3j;->d:Lzz7;
 
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p2, p0, Ld3j;->e:Lydg;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

@@ -3,164 +3,174 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lq25;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lc0b;
+.implements Ll25;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lc0b;
 
-.field public final b:J
+.field public final b:Lux3;
+
+.field public final c:Ln6;
+
+.field public d:Ll25;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwf4;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
-
-    sput-object v0, Lq25;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 6
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v2
+.method public constructor <init>(Lc0b;Lux3;Ln6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v4, 0x0
+    iput-object p1, p0, Lq25;->a:Lc0b;
 
-    cmp-long p1, v2, v4
+    iput-object p2, p0, Lq25;->b:Lux3;
 
-    if-gez p1, :cond_1
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    invoke-static {p1}, Lhsi;->b(Z)V
-
-    iput-wide v0, p0, Lq25;->a:J
-
-    iput-wide v2, p0, Lq25;->b:J
+    iput-object p3, p0, Lq25;->c:Ln6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    instance-of v0, p1, Lq25;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    check-cast p1, Lq25;
-
-    iget-wide v2, p0, Lq25;->a:J
-
-    iget-wide v4, p1, Lq25;->a:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_1
-
-    iget-wide v2, p0, Lq25;->b:J
-
-    iget-wide v4, p1, Lq25;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lq25;->a:J
-
-    long-to-int v0, v0
-
-    mul-int/lit16 v0, v0, 0x3c1
-
-    iget-wide v1, p0, Lq25;->b:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final b()V
     .locals 2
 
-    iget-wide v0, p0, Lq25;->a:J
+    iget-object v0, p0, Lq25;->d:Ll25;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    sget-object v1, Lp25;->a:Lp25;
 
-    iget-wide v0, p0, Lq25;->b:J
+    if-eq v0, v1, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    iput-object v1, p0, Lq25;->d:Ll25;
+
+    iget-object v0, p0, Lq25;->a:Lc0b;
+
+    invoke-interface {v0}, Lc0b;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Ll25;)V
+    .locals 2
+
+    iget-object v0, p0, Lq25;->a:Lc0b;
+
+    :try_start_0
+    iget-object v1, p0, Lq25;->b:Lux3;
+
+    invoke-interface {v1, p1}, Lux3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v1, p0, Lq25;->d:Ll25;
+
+    invoke-static {v1, p1}, Lp25;->j(Ll25;Ll25;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iput-object p1, p0, Lq25;->d:Ll25;
+
+    invoke-interface {v0, p0}, Lc0b;->c(Ll25;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Ldoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Ll25;->dispose()V
+
+    sget-object p1, Lp25;->a:Lp25;
+
+    iput-object p1, p0, Lq25;->d:Ll25;
+
+    invoke-static {v1, v0}, Lxg5;->c(Ljava/lang/Throwable;Lc0b;)V
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lq25;->a:Lc0b;
+
+    invoke-interface {v0, p1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 2
+
+    iget-object v0, p0, Lq25;->d:Ll25;
+
+    sget-object v1, Lp25;->a:Lp25;
+
+    if-eq v0, v1, :cond_0
+
+    iput-object v1, p0, Lq25;->d:Ll25;
+
+    :try_start_0
+    iget-object v1, p0, Lq25;->c:Ln6;
+
+    invoke-interface {v1}, Ln6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Ldoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lomj;->d(Ljava/lang/Throwable;)V
+
+    :goto_0
+    invoke-interface {v0}, Ll25;->dispose()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Lq25;->d:Ll25;
+
+    invoke-interface {v0}, Ll25;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Lq25;->d:Ll25;
+
+    sget-object v1, Lp25;->a:Lp25;
+
+    if-eq v0, v1, :cond_0
+
+    iput-object v1, p0, Lq25;->d:Ll25;
+
+    iget-object v0, p0, Lq25;->a:Lc0b;
+
+    invoke-interface {v0, p1}, Lc0b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lomj;->d(Ljava/lang/Throwable;)V
 
     return-void
 .end method

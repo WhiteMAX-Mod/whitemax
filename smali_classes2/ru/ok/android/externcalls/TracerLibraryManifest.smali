@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lseg;
+.implements Lhqg;
 
 
 # direct methods
@@ -60,7 +60,7 @@
 .method public versionName()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "125.1.0.73.1"
+    const-string v0, "138.1.0.0.4"
 
     return-object v0
 .end method

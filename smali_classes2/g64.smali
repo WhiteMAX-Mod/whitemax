@@ -1,60 +1,131 @@
-.class public final synthetic Lg64;
-.super Ljava/lang/Object;
+.class public final Lg64;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu3;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lh64;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+.field public final synthetic Y:Ljava/util/List;
+
+.field public final synthetic Z:Lpz3;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/StartCallParams;I)V
+.method public constructor <init>(Lh64;Ljava/util/List;Lpz3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lg64;->a:I
+    iput-object p1, p0, Lg64;->X:Lh64;
 
-    iput-object p1, p0, Lg64;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    iput-object p2, p0, Lg64;->Y:Ljava/util/List;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lg64;->Z:Lpz3;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lg64;->a:I
+    check-cast p1, Lac4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lg64;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    invoke-virtual {p0, p1, p2}, Lg64;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-result-object p1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->c(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Ljava/lang/Throwable;)V
+    check-cast p1, Lg64;
 
-    return-void
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :pswitch_0
-    iget-object v0, p0, Lg64;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    invoke-virtual {p1, p2}, Lg64;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    move-result-object p1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->i(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    return-object p1
+.end method
 
-    return-void
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    nop
+    new-instance p1, Lg64;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lg64;->Y:Ljava/util/List;
+
+    iget-object v1, p0, Lg64;->Z:Lpz3;
+
+    iget-object v2, p0, Lg64;->X:Lh64;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lg64;-><init>(Lh64;Ljava/util/List;Lpz3;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lg64;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    new-instance p1, Ljc1;
+
+    const/4 v0, 0x5
+
+    iget-object v2, p0, Lg64;->X:Lh64;
+
+    iget-object v3, p0, Lg64;->Y:Ljava/util/List;
+
+    iget-object v4, p0, Lg64;->Z:Lpz3;
+
+    invoke-direct {p1, v2, v3, v4, v0}, Ljc1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput v1, p0, Lg64;->o:I
+
+    sget-object v0, Lwg5;->a:Lwg5;
+
+    invoke-static {v0, p1, p0}, Ls0j;->e(Lrb4;Lmq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

@@ -1,78 +1,81 @@
-.class public final enum Lln6;
-.super Ljava/lang/Enum;
+.class public final Lln6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final enum a:Lln6;
+.field public b:Landroidx/fragment/app/a;
 
-.field public static final synthetic b:[Lln6;
+.field public c:Z
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Lc88;
+
+.field public i:Lc88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ILandroidx/fragment/app/a;)V
+    .locals 0
 
-    new-instance v0, Lln6;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    .line 2
+    iput p1, p0, Lln6;->a:I
 
-    const/4 v2, 0x0
+    .line 3
+    iput-object p2, p0, Lln6;->b:Landroidx/fragment/app/a;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 p1, 0x0
 
-    sput-object v0, Lln6;->a:Lln6;
+    .line 4
+    iput-boolean p1, p0, Lln6;->c:Z
 
-    filled-new-array {v0}, [Lln6;
+    .line 5
+    sget-object p1, Lc88;->o:Lc88;
 
-    move-result-object v0
+    iput-object p1, p0, Lln6;->h:Lc88;
 
-    sput-object v0, Lln6;->b:[Lln6;
+    .line 6
+    iput-object p1, p0, Lln6;->i:Lc88;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lln6;
-    .locals 1
-
-    const-class v0, Lln6;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lln6;
-
-    return-object p0
-.end method
-
-.method public static values()[Lln6;
-    .locals 1
-
-    sget-object v0, Lln6;->b:[Lln6;
-
-    invoke-virtual {v0}, [Lln6;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lln6;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public constructor <init>(ILandroidx/fragment/app/a;I)V
     .locals 0
 
-    check-cast p1, Ljava/lang/Comparable;
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    .line 8
+    iput p1, p0, Lln6;->a:I
 
-    move-result p1
+    .line 9
+    iput-object p2, p0, Lln6;->b:Landroidx/fragment/app/a;
 
-    return p1
+    const/4 p1, 0x1
+
+    .line 10
+    iput-boolean p1, p0, Lln6;->c:Z
+
+    .line 11
+    sget-object p1, Lc88;->o:Lc88;
+
+    iput-object p1, p0, Lln6;->h:Lc88;
+
+    .line 12
+    iput-object p1, p0, Lln6;->i:Lc88;
+
+    return-void
 .end method

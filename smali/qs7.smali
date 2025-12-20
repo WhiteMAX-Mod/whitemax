@@ -1,21 +1,25 @@
 .class public final Lqs7;
-.super Leha;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:J
+.field public final a:Lg3;
+
+.field public b:Lgt4;
+
+.field public c:Lcu0;
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
-    .locals 2
+.method public constructor <init>(Lg3;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Leha;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lqs7;->c:J
+    iput-object p1, p0, Lqs7;->a:Lg3;
 
     return-void
 .end method

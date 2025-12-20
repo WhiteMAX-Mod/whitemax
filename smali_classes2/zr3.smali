@@ -3,106 +3,69 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Lzr3;
-
-
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/lang/String;
 
-.field public final b:Z
+.field public final b:Lc4a;
 
-.field public final c:Z
+.field public final c:Ljava/util/Map;
 
-.field public final d:Z
+.field public final d:Lhah;
 
-.field public final e:Z
-
-.field public final f:Z
+.field public final e:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ljava/lang/String;Lc4a;Ljava/util/Map;Lhah;Ljava/util/Map;)V
+    .locals 0
 
-    new-instance v0, Lzr3;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v5, 0x0
+    .line 3
+    iput-object p1, p0, Lzr3;->a:Ljava/lang/String;
 
-    const/4 v6, 0x0
+    .line 4
+    iput-object p2, p0, Lzr3;->b:Lc4a;
+
+    .line 5
+    iput-object p3, p0, Lzr3;->c:Ljava/util/Map;
+
+    .line 6
+    iput-object p4, p0, Lzr3;->d:Lhah;
+
+    .line 7
+    iput-object p5, p0, Lzr3;->e:Ljava/util/Map;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lxs;Lhah;I)V
+    .locals 6
+
+    and-int/lit8 p3, p3, 0x4
+
+    if-eqz p3, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    move-object v3, p1
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    const/4 v5, 0x0
 
-    const/4 v4, 0x0
+    move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lzr3;-><init>(ZZZZZZ)V
+    move-object v4, p2
 
-    sput-object v0, Lzr3;->g:Lzr3;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lzr3;->a:Z
-
-    iput-boolean p2, p0, Lzr3;->b:Z
-
-    iput-boolean p3, p0, Lzr3;->c:Z
-
-    iput-boolean p4, p0, Lzr3;->d:Z
-
-    iput-boolean p5, p0, Lzr3;->e:Z
-
-    iput-boolean p6, p0, Lzr3;->f:Z
+    .line 1
+    invoke-direct/range {v0 .. v5}, Lzr3;-><init>(Ljava/lang/String;Lc4a;Ljava/util/Map;Lhah;Ljava/util/Map;)V
 
     return-void
-.end method
-
-.method public static a(Lzr3;ZI)Lzr3;
-    .locals 7
-
-    and-int/lit8 p2, p2, 0x2
-
-    if-eqz p2, :cond_0
-
-    iget-boolean p2, p0, Lzr3;->b:Z
-
-    :goto_0
-    move v2, p2
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p2, 0x1
-
-    goto :goto_0
-
-    :goto_1
-    iget-boolean v3, p0, Lzr3;->c:Z
-
-    iget-boolean v4, p0, Lzr3;->d:Z
-
-    iget-boolean v5, p0, Lzr3;->e:Z
-
-    iget-boolean v6, p0, Lzr3;->f:Z
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lzr3;
-
-    move v1, p1
-
-    invoke-direct/range {v0 .. v6}, Lzr3;-><init>(ZZZZZZ)V
-
-    return-object v0
 .end method
 
 
@@ -128,155 +91,313 @@
     :cond_1
     check-cast p1, Lzr3;
 
-    iget-boolean v1, p0, Lzr3;->a:Z
+    iget-object v1, p0, Lzr3;->a:Ljava/lang/String;
 
-    iget-boolean v3, p1, Lzr3;->a:Z
+    iget-object v3, p1, Lzr3;->a:Ljava/lang/String;
 
-    if-eq v1, v3, :cond_2
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-boolean v1, p0, Lzr3;->b:Z
+    iget-object v1, p0, Lzr3;->b:Lc4a;
 
-    iget-boolean v3, p1, Lzr3;->b:Z
+    iget-object v3, p1, Lzr3;->b:Lc4a;
 
-    if-eq v1, v3, :cond_3
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
-    iget-boolean v1, p0, Lzr3;->c:Z
+    iget-object v1, p0, Lzr3;->c:Ljava/util/Map;
 
-    iget-boolean v3, p1, Lzr3;->c:Z
+    iget-object v3, p1, Lzr3;->c:Ljava/util/Map;
 
-    if-eq v1, v3, :cond_4
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
 
     return v2
 
     :cond_4
-    iget-boolean v1, p0, Lzr3;->d:Z
+    iget-object v1, p0, Lzr3;->d:Lhah;
 
-    iget-boolean v3, p1, Lzr3;->d:Z
+    iget-object v3, p1, Lzr3;->d:Lhah;
 
-    if-eq v1, v3, :cond_5
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
 
     return v2
 
     :cond_5
-    iget-boolean v1, p0, Lzr3;->e:Z
+    iget-object v1, p0, Lzr3;->e:Ljava/util/Map;
 
-    iget-boolean v3, p1, Lzr3;->e:Z
+    iget-object p1, p1, Lzr3;->e:Ljava/util/Map;
 
-    if-eq v1, v3, :cond_6
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
 
     return v2
 
     :cond_6
-    iget-boolean v1, p0, Lzr3;->f:Z
-
-    iget-boolean p1, p1, Lzr3;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-boolean v0, p0, Lzr3;->a:Z
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v1, p0, Lzr3;->a:Ljava/lang/String;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    const/16 v1, 0x1f
+    move v1, v0
 
-    mul-int/2addr v0, v1
+    goto :goto_0
 
-    iget-boolean v2, p0, Lzr3;->b:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lzr3;->c:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lzr3;->d:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lzr3;->e:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lzr3;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lzr3;->b:Lc4a;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lzr3;->c:Ljava/util/Map;
+
+    if-nez v2, :cond_2
+
+    move v2, v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lzr3;->d:Lhah;
+
+    if-nez v2, :cond_3
+
+    move v2, v0
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v2}, Lhah;->hashCode()I
+
+    move-result v2
+
+    :goto_3
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lzr3;->e:Ljava/util/Map;
+
+    if-nez v2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_4
     add-int/2addr v1, v0
 
     return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 8
 
-    const-string v0, "|v="
+    const/4 v0, 0x0
 
-    const-string v1, "|m="
+    iget-object v1, p0, Lzr3;->c:Ljava/util/Map;
 
-    const-string v2, "Inet(c="
+    if-eqz v1, :cond_2
 
-    iget-boolean v3, p0, Lzr3;->a:Z
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    iget-boolean v4, p0, Lzr3;->b:Z
+    move-result v2
 
-    invoke-static {v2, v3, v0, v4, v1}, Lho7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/16 v3, 0x5b
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/Map$Entry;
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Number;
+
+    invoke-virtual {v5}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v5
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lv03;
+
+    const/16 v7, 0x23
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const/16 v5, 0x3a
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v3, 0x5d
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    move-object v2, v0
+
+    :goto_2
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string v1, "|r="
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "|t="
+    const-string v3, "Configuration: user="
 
-    iget-boolean v3, p0, Lzr3;->c:Z
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v4, p0, Lzr3;->d:Z
+    iget-object v3, p0, Lzr3;->d:Lhah;
 
-    invoke-static {v1, v2, v0, v3, v4}, Laz1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lzr3;->e:Z
+    const-string v3, ", hash="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "|vpn="
+    iget-object v3, p0, Lzr3;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lzr3;->f:Z
+    const-string v3, ", chatsCount="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", chats="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", server="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lzr3;->b:Lc4a;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " experiments="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lzr3;->e:Ljava/util/Map;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

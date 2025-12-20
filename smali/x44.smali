@@ -1,56 +1,117 @@
-.class public final synthetic Lx44;
+.class public final Lx44;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lztd;
-
 
 # instance fields
-.field public final synthetic a:Lc54;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Intent;
+.field public final b:Le10;
 
-.field public final synthetic c:I
+.field public final c:Lmy3;
 
-.field public final synthetic d:Landroid/os/Bundle;
+.field public final d:Loq6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc54;Landroid/content/Intent;ILandroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
+
+    iput p1, p0, Lx44;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx44;->a:Lc54;
+    new-instance p1, Le10;
 
-    iput-object p2, p0, Lx44;->b:Landroid/content/Intent;
+    const/16 v0, 0xd
 
-    iput p3, p0, Lx44;->c:I
+    invoke-direct {p1, v0}, Le10;-><init>(I)V
 
-    iput-object p4, p0, Lx44;->d:Landroid/os/Bundle;
+    iput-object p1, p0, Lx44;->b:Le10;
 
-    return-void
-.end method
+    new-instance p1, Li43;
 
+    const/16 v0, 0x11
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    invoke-direct {p1, v0}, Li43;-><init>(I)V
 
-    iget-object v0, p0, Lx44;->a:Lc54;
+    iput-object p1, p0, Lx44;->d:Loq6;
 
-    iget-object v1, v0, Lc54;->router:Lytd;
+    new-instance p1, Lmy3;
 
-    iget-object v0, v0, Lc54;->instanceId:Ljava/lang/String;
+    const/4 v0, 0x7
 
-    iget-object v2, p0, Lx44;->b:Landroid/content/Intent;
+    invoke-direct {p1, v0}, Lmy3;-><init>(I)V
 
-    iget v3, p0, Lx44;->c:I
-
-    iget-object v4, p0, Lx44;->d:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v0, v2, v3, v4}, Lytd;->W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    iput-object p1, p0, Lx44;->c:Lmy3;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Le10;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0}, Le10;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->b:Le10;
+
+    new-instance p1, Lk1a;
+
+    const/16 v0, 0xc
+
+    invoke-direct {p1, v0}, Lk1a;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->d:Loq6;
+
+    new-instance p1, Lmy3;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0}, Lmy3;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->c:Lmy3;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Le10;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0}, Le10;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->b:Le10;
+
+    new-instance p1, Li43;
+
+    const/16 v0, 0x16
+
+    invoke-direct {p1, v0}, Li43;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->d:Loq6;
+
+    new-instance p1, Lmy3;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0}, Lmy3;-><init>(I)V
+
+    iput-object p1, p0, Lx44;->c:Lmy3;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

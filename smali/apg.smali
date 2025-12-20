@@ -1,396 +1,519 @@
 .class public final Lapg;
-.super Landroid/text/style/ReplacementSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final X:Ljava/lang/Object;
+
+.field public static Y:Ljava/lang/Boolean;
+
+.field public static Z:Ljava/lang/Boolean;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint$FontMetricsInt;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lzog;
+.field public final b:Lzlh;
 
-.field public c:S
+.field public final c:Landroid/os/PowerManager$WakeLock;
 
-.field public d:F
+.field public final d:Lyog;
 
-.field public o:Landroid/text/TextPaint;
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lzog;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    new-instance v0, Landroid/graphics/Paint$FontMetricsInt;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
-
-    iput-object v0, p0, Lapg;->a:Landroid/graphics/Paint$FontMetricsInt;
-
-    const/4 v0, -0x1
-
-    iput-short v0, p0, Lapg;->c:S
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p0, Lapg;->d:F
-
-    const-string v0, "rasterizer cannot be null"
-
-    invoke-static {p1, v0}, Lz5j;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lapg;->b:Lzog;
+    sput-object v0, Lapg;->X:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Lyog;Landroid/content/Context;Lzlh;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lapg;->d:Lyog;
+
+    iput-object p2, p0, Lapg;->a:Landroid/content/Context;
+
+    iput-wide p4, p0, Lapg;->o:J
+
+    iput-object p3, p0, Lapg;->b:Lzlh;
+
+    const-string p1, "power"
+
+    invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/PowerManager;
+
+    const/4 p2, 0x1
+
+    const-string p3, "wake:com.google.firebase.messaging"
+
+    invoke-virtual {p1, p2, p3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lapg;->c:Landroid/os/PowerManager$WakeLock;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Z
+    .locals 3
+
+    sget-object v0, Lapg;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lapg;->Z:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const-string v2, "android.permission.ACCESS_NETWORK_STATE"
+
+    invoke-static {p0, v2, v1}, Lapg;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lapg;->Z:Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+    .locals 2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    if-nez p0, :cond_2
+
+    const/4 p2, 0x3
+
+    const-string v0, "FirebaseMessaging"
+
+    invoke-static {v0, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v1, "Missing Permission: "
+
+    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". This permission should normally be included by the manifest merger, but may needed to be manually added to your manifest"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return p0
+.end method
+
+.method public static c(Landroid/content/Context;)Z
+    .locals 3
+
+    sget-object v0, Lapg;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lapg;->Y:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const-string v2, "android.permission.WAKE_LOCK"
+
+    invoke-static {p0, v2, v1}, Lapg;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lapg;->Y:Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 18
+.method public final declared-synchronized d()Z
+    .locals 2
 
-    move-object/from16 v0, p0
+    monitor-enter p0
 
-    move-object/from16 v1, p2
+    :try_start_0
+    iget-object v0, p0, Lapg;->a:Landroid/content/Context;
 
-    move-object/from16 v2, p9
+    const-string v1, "connectivity"
 
-    instance-of v3, v1, Landroid/text/Spanned;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    if-eqz v3, :cond_4
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    check-cast v1, Landroid/text/Spanned;
+    if-eqz v0, :cond_0
 
-    const-class v3, Landroid/text/style/CharacterStyle;
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    move/from16 v5, p3
+    move-result-object v0
 
-    move/from16 v6, p4
+    goto :goto_0
 
-    invoke-interface {v1, v5, v6, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Landroid/text/style/CharacterStyle;
-
-    array-length v3, v1
-
-    if-eqz v3, :cond_3
-
-    array-length v3, v1
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_0
-
-    aget-object v3, v1, v5
-
-    if-ne v3, v0, :cond_0
+    :catchall_0
+    move-exception v0
 
     goto :goto_2
 
     :cond_0
-    iget-object v3, v0, Lapg;->o:Landroid/text/TextPaint;
-
-    if-nez v3, :cond_1
-
-    new-instance v3, Landroid/text/TextPaint;
-
-    invoke-direct {v3}, Landroid/text/TextPaint;-><init>()V
-
-    iput-object v3, v0, Lapg;->o:Landroid/text/TextPaint;
-
-    :cond_1
-    move-object v4, v3
-
-    invoke-virtual {v4, v2}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+    const/4 v0, 0x0
 
     :goto_0
-    array-length v3, v1
+    if-eqz v0, :cond_1
 
-    if-ge v5, v3, :cond_2
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
-    aget-object v3, v1, v5
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v3, v4}, Landroid/text/style/CharacterStyle;->updateDrawState(Landroid/text/TextPaint;)V
+    if-eqz v0, :cond_1
 
-    add-int/lit8 v5, v5, 0x1
+    const/4 v0, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_1
+    const/4 v0, 0x0
+
     :goto_1
-    move-object v10, v4
+    monitor-exit p0
 
-    goto :goto_3
+    return v0
 
-    :cond_3
     :goto_2
-    instance-of v1, v2, Landroid/text/TextPaint;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v1, :cond_2
-
-    move-object v4, v2
-
-    check-cast v4, Landroid/text/TextPaint;
-
-    goto :goto_1
-
-    :cond_4
-    instance-of v1, v2, Landroid/text/TextPaint;
-
-    if-eqz v1, :cond_2
-
-    move-object v4, v2
-
-    check-cast v4, Landroid/text/TextPaint;
-
-    goto :goto_1
-
-    :goto_3
-    if-eqz v10, :cond_5
-
-    iget v1, v10, Landroid/text/TextPaint;->bgColor:I
-
-    if-eqz v1, :cond_5
-
-    iget-short v1, v0, Lapg;->c:S
-
-    int-to-float v1, v1
-
-    add-float v8, p5, v1
-
-    move/from16 v1, p6
-
-    int-to-float v7, v1
-
-    move/from16 v1, p8
-
-    int-to-float v9, v1
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v1
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getStyle()Landroid/graphics/Paint$Style;
-
-    move-result-object v3
-
-    iget v4, v10, Landroid/text/TextPaint;->bgColor:I
-
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    move-object/from16 v5, p1
-
-    move/from16 v6, p5
-
-    invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {v10, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v10, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_5
-    invoke-static {}, Lta5;->a()Lta5;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move/from16 v1, p7
-
-    int-to-float v1, v1
-
-    if-eqz v10, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    move-object v10, v2
-
-    :goto_4
-    iget-object v2, v0, Lapg;->b:Lzog;
-
-    iget-object v3, v2, Lzog;->b:Lhz9;
-
-    iget-object v4, v3, Lhz9;->d:Landroid/graphics/Typeface;
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v5
-
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    iget v2, v2, Lzog;->a:I
-
-    mul-int/lit8 v13, v2, 0x2
-
-    iget-object v12, v3, Lhz9;->b:[C
-
-    const/4 v14, 0x2
-
-    move-object/from16 v11, p1
-
-    move/from16 v15, p5
-
-    move/from16 v16, v1
-
-    move-object/from16 v17, v10
-
-    invoke-virtual/range {v11 .. v17}, Landroid/graphics/Canvas;->drawText([CIIFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {v10, v5}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    return-void
+    throw v0
 .end method
 
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 4
+.method public final run()V
+    .locals 10
 
-    iget-object p2, p0, Lapg;->a:Landroid/graphics/Paint$FontMetricsInt;
+    const-string v0, "TopicsSyncTask\'s wakelock was already released due to timeout."
 
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
+    const-string v1, "FirebaseMessaging"
 
-    iget p1, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    iget-object v2, p0, Lapg;->d:Lyog;
 
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    const-string v3, "Failed to sync topics. Won\'t retry sync. "
 
-    sub-int/2addr p1, p3
+    iget-object v4, p0, Lapg;->a:Landroid/content/Context;
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
 
-    move-result p1
+    move-result v5
 
-    int-to-float p1, p1
+    iget-object v6, p0, Lapg;->c:Landroid/os/PowerManager$WakeLock;
 
-    const/high16 p3, 0x3f800000    # 1.0f
+    if-eqz v5, :cond_0
 
-    mul-float/2addr p1, p3
+    sget-wide v7, Lsw3;->a:J
 
-    iget-object p3, p0, Lapg;->b:Lzog;
-
-    invoke-virtual {p3}, Lzog;->b()Lzy9;
-
-    move-result-object p4
-
-    const/16 v0, 0xe
-
-    invoke-virtual {p4, v0}, Lmn8;->a(I)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-object v3, p4, Lmn8;->d:Ljava/lang/Object;
-
-    check-cast v3, Ljava/nio/ByteBuffer;
-
-    iget p4, p4, Lmn8;->a:I
-
-    add-int/2addr v1, p4
-
-    invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result p4
-
-    goto :goto_0
+    invoke-virtual {v6, v7, v8}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
     :cond_0
-    move p4, v2
+    const/4 v5, 0x1
 
-    :goto_0
-    int-to-float p4, p4
+    const/4 v7, 0x0
 
-    div-float/2addr p1, p4
+    :try_start_0
+    invoke-virtual {v2, v5}, Lyog;->d(Z)V
 
-    iput p1, p0, Lapg;->d:F
+    iget-object v5, p0, Lapg;->b:Lzlh;
 
-    invoke-virtual {p3}, Lzog;->b()Lzy9;
+    invoke-virtual {v5}, Lzlh;->h()Z
 
-    move-result-object p1
+    move-result v5
 
-    invoke-virtual {p1, v0}, Lmn8;->a(I)I
+    if-nez v5, :cond_1
 
-    move-result p4
+    invoke-virtual {v2, v7}, Lyog;->d(Z)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p4, :cond_1
-
-    iget-object v0, p1, Lmn8;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/nio/ByteBuffer;
-
-    iget p1, p1, Lmn8;->a:I
-
-    add-int/2addr p4, p1
-
-    invoke-virtual {v0, p4}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    :cond_1
-    invoke-virtual {p3}, Lzog;->b()Lzy9;
-
-    move-result-object p1
-
-    const/16 p3, 0xc
-
-    invoke-virtual {p1, p3}, Lmn8;->a(I)I
-
-    move-result p3
-
-    if-eqz p3, :cond_2
-
-    iget-object p4, p1, Lmn8;->d:Ljava/lang/Object;
-
-    check-cast p4, Ljava/nio/ByteBuffer;
-
-    iget p1, p1, Lmn8;->a:I
-
-    add-int/2addr p3, p1
-
-    invoke-virtual {p4, p3}, Ljava/nio/ByteBuffer;->getShort(I)S
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
 
     move-result v2
 
+    if-eqz v2, :cond_4
+
+    :try_start_1
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-void
+
+    :catch_0
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v5
+
+    goto :goto_1
+
+    :cond_1
+    :try_start_2
+    invoke-static {v4}, Lapg;->a(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {p0}, Lapg;->d()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    new-instance v5, Lzog;
+
+    invoke-direct {v5, p0, p0}, Lzog;-><init>(Lapg;Lapg;)V
+
+    invoke-virtual {v5}, Lzog;->a()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_3
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_3
+    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_2
+
+    return-void
+
+    :catch_2
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
     :cond_2
-    int-to-float p1, v2
+    :try_start_4
+    invoke-virtual {v2}, Lyog;->e()Z
 
-    iget p3, p0, Lapg;->d:F
+    move-result v5
 
-    mul-float/2addr p1, p3
+    if-eqz v5, :cond_3
 
-    float-to-int p1, p1
+    invoke-virtual {v2, v7}, Lyog;->d(Z)V
 
-    int-to-short p1, p1
-
-    iput-short p1, p0, Lapg;->c:S
-
-    if-eqz p5, :cond_3
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+    goto :goto_0
 
     :cond_3
-    return p1
+    iget-wide v8, p0, Lapg;->o:J
+
+    invoke-virtual {v2, v8, v9}, Lyog;->f(J)V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_0
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_5
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_3
+
+    return-void
+
+    :catch_3
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_6
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2, v7}, Lyog;->d(Z)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_7
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_7
+    .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_3
+
+    :cond_4
+    :goto_2
+    return-void
+
+    :goto_3
+    invoke-static {v4}, Lapg;->c(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    :try_start_8
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_8
+    .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_4
+
+    goto :goto_4
+
+    :catch_4
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    :goto_4
+    throw v2
 .end method

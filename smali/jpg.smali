@@ -1,84 +1,81 @@
-.class public final Ljpg;
+.class public final synthetic Ljpg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzy7;
+.implements Lr02;
 
 
-# static fields
-.field public static final a:Ljpg;
-
-.field public static final b:Lvl7;
+# instance fields
+.field public final synthetic a:Lkpg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lkpg;)V
+    .locals 0
 
-    new-instance v0, Ljpg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljpg;->a:Ljpg;
-
-    const-string v0, "kotlin.UByte"
-
-    sget-object v1, Ltx0;->a:Ltx0;
-
-    invoke-static {v1, v0}, Lyfi;->a(Lzy7;Ljava/lang/String;)Lvl7;
-
-    move-result-object v0
-
-    sput-object v0, Ljpg;->b:Lvl7;
+    iput-object p1, p0, Ljpg;->a:Lkpg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    .locals 3
 
-    check-cast p2, Lfpg;
+    iget-object v0, p0, Ljpg;->a:Lkpg;
 
-    iget-byte p2, p2, Lfpg;->a:B
+    iget-object v1, v0, Lkpg;->f:Lyw1;
 
-    sget-object v0, Ljpg;->b:Lvl7;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->i(Lree;)Lkotlinx/serialization/json/internal/b;
+    if-eqz v1, :cond_1
 
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->d(B)V
-
-    return-void
-.end method
-
-.method public final b(Llh4;)Ljava/lang/Object;
-    .locals 1
-
-    sget-object v0, Ljpg;->b:Lvl7;
-
-    invoke-interface {p1, v0}, Llh4;->o(Lree;)Llh4;
+    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object p1
 
-    invoke-interface {p1}, Llh4;->z()B
+    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    new-instance v0, Lfpg;
+    const/4 v1, 0x2
 
-    invoke-direct {v0, p1}, Lfpg;-><init>(B)V
+    if-ne p1, v1, :cond_0
 
-    return-object v0
-.end method
+    const/4 p1, 0x1
 
-.method public final d()Lree;
-    .locals 1
+    goto :goto_0
 
-    sget-object v0, Ljpg;->b:Lvl7;
+    :cond_0
+    move p1, v2
 
-    return-object v0
+    :goto_0
+    iget-boolean v1, v0, Lkpg;->g:Z
+
+    if-ne p1, v1, :cond_1
+
+    iget-object p1, v0, Lkpg;->f:Lyw1;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Lyw1;->b(Ljava/lang/Object;)Z
+
+    iput-object v1, v0, Lkpg;->f:Lyw1;
+
+    :cond_1
+    return v2
 .end method

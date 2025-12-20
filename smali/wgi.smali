@@ -1,84 +1,130 @@
-.class public abstract Lwgi;
-.super Ljava/lang/Object;
+.class public Lwgi;
+.super Lvgi;
 .source "SourceFile"
 
 
+# instance fields
+.field public n:Lts7;
+
+.field public o:Lts7;
+
+.field public p:Lts7;
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lwgi;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    return-void
-.end method
-
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/os/Parcel;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
-
-    move-result p0
-
-    if-gtz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
-
-    const-string v1, "Parcel data not fully consumed, unread size: "
-
-    invoke-static {p0, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+.method public constructor <init>(Lahi;Landroid/view/WindowInsets;)V
     .locals 0
 
-    if-nez p1, :cond_0
+    invoke-direct {p0, p1, p2}, Lvgi;-><init>(Lahi;Landroid/view/WindowInsets;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    iput-object p1, p0, Lwgi;->n:Lts7;
+
+    iput-object p1, p0, Lwgi;->o:Lts7;
+
+    iput-object p1, p0, Lwgi;->p:Lts7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public g()Lts7;
+    .locals 1
+
+    iget-object v0, p0, Lwgi;->o:Lts7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lruh;->q(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lts7;->c(Landroid/graphics/Insets;)Lts7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwgi;->o:Lts7;
 
     :cond_0
-    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    iget-object v0, p0, Lwgi;->o:Lts7;
+
+    return-object v0
+.end method
+
+.method public i()Lts7;
+    .locals 1
+
+    iget-object v0, p0, Lwgi;->n:Lts7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lruh;->u(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lts7;->c(Landroid/graphics/Insets;)Lts7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwgi;->n:Lts7;
+
+    :cond_0
+    iget-object v0, p0, Lwgi;->n:Lts7;
+
+    return-object v0
+.end method
+
+.method public k()Lts7;
+    .locals 1
+
+    iget-object v0, p0, Lwgi;->p:Lts7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lruh;->b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lts7;->c(Landroid/graphics/Insets;)Lts7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwgi;->p:Lts7;
+
+    :cond_0
+    iget-object v0, p0, Lwgi;->p:Lts7;
+
+    return-object v0
+.end method
+
+.method public l(IIII)Lahi;
+    .locals 1
+
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lruh;->i(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    const/4 p2, 0x0
+
+    invoke-static {p2, p1}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public r(Lts7;)V
+    .locals 0
 
     return-void
 .end method

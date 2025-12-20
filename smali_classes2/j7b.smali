@@ -1,295 +1,117 @@
-.class public abstract Lj7b;
-.super Ljava/lang/Object;
+.class public final Lj7b;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final synthetic X:Lk7b;
 
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lk7b;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lbzc;->chat_screen_message_send_error_delete_action:I
+    iput-object p1, p0, Lj7b;->X:Lk7b;
 
-    sput v0, Lj7b;->a:I
+    const/4 p1, 0x2
 
-    sget v0, Lbzc;->chat_screen_message_send_error_resend_action_multi:I
-
-    sput v0, Lj7b;->b:I
-
-    sget v0, Lbzc;->chat_screen_message_send_error_resend_action_solo:I
-
-    sput v0, Lj7b;->c:I
-
-    sget v0, Lbzc;->messages_list_chat_description_view_id:I
-
-    sput v0, Lj7b;->d:I
-
-    sget v0, Lbzc;->messages_list_chat_description_view_type:I
-
-    sput v0, Lj7b;->e:I
-
-    sget v0, Lbzc;->messages_list_confirm_cancel:I
-
-    sput v0, Lj7b;->f:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_extremism:I
-
-    sput v0, Lj7b;->g:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_fake:I
-
-    sput v0, Lj7b;->h:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_other:I
-
-    sput v0, Lj7b;->i:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_porno:I
-
-    sput v0, Lj7b;->j:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_spam:I
-
-    sput v0, Lj7b;->k:I
-
-    sget v0, Lbzc;->messages_list_confirm_complaint_threat:I
-
-    sput v0, Lj7b;->l:I
-
-    sget v0, Lbzc;->messages_list_confirm_delete:I
-
-    sput v0, Lj7b;->m:I
-
-    sget v0, Lbzc;->messages_list_confirm_delete_for_all:I
-
-    sput v0, Lj7b;->n:I
-
-    sget v0, Lbzc;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Lj7b;->o:I
-
-    sget v0, Lbzc;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Lj7b;->p:I
-
-    sget v0, Lbzc;->messages_list_context_action_copy:I
-
-    sput v0, Lj7b;->q:I
-
-    sget v0, Lbzc;->messages_list_context_action_copy_photo:I
-
-    sput v0, Lj7b;->r:I
-
-    sget v0, Lbzc;->messages_list_context_action_delete:I
-
-    sput v0, Lj7b;->s:I
-
-    sget v0, Lbzc;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Lj7b;->t:I
-
-    sget v0, Lbzc;->messages_list_context_action_edit:I
-
-    sput v0, Lj7b;->u:I
-
-    sget v0, Lbzc;->messages_list_context_action_forward:I
-
-    sput v0, Lj7b;->v:I
-
-    sget v0, Lbzc;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Lj7b;->w:I
-
-    sget v0, Lbzc;->messages_list_context_action_pin:I
-
-    sput v0, Lj7b;->x:I
-
-    sget v0, Lbzc;->messages_list_context_action_reply:I
-
-    sput v0, Lj7b;->y:I
-
-    sget v0, Lbzc;->messages_list_context_action_report:I
-
-    sput v0, Lj7b;->z:I
-
-    sget v0, Lbzc;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Lj7b;->A:I
-
-    sget v0, Lbzc;->messages_list_context_action_select:I
-
-    sput v0, Lj7b;->B:I
-
-    sget v0, Lbzc;->messages_list_context_action_unpin:I
-
-    sput v0, Lj7b;->C:I
-
-    sget v0, Lbzc;->messages_list_context_actions_view_type:I
-
-    sput v0, Lj7b;->D:I
-
-    sget v0, Lbzc;->messages_list_context_content_container:I
-
-    sput v0, Lj7b;->E:I
-
-    sget v0, Lbzc;->messages_list_context_member_view_type:I
-
-    sput v0, Lj7b;->F:I
-
-    sget v0, Lbzc;->messages_list_context_members_member_cell:I
-
-    sput v0, Lj7b;->G:I
-
-    sget v0, Lbzc;->messages_list_context_members_member_reaction:I
-
-    sput v0, Lj7b;->H:I
-
-    sget v0, Lbzc;->messages_list_context_reactions_container:I
-
-    sput v0, Lj7b;->I:I
-
-    sget v0, Lbzc;->messages_list_item_alias:I
-
-    sput v0, Lj7b;->J:I
-
-    sget v0, Lbzc;->messages_list_item_date:I
-
-    sput v0, Lj7b;->K:I
-
-    sget v0, Lbzc;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Lj7b;->L:I
-
-    sget v0, Lbzc;->messages_list_item_single_image:I
-
-    sput v0, Lj7b;->M:I
-
-    sget v0, Lbzc;->messages_list_item_text:I
-
-    sput v0, Lj7b;->N:I
-
-    sget v0, Lbzc;->messages_list_item_title:I
-
-    sput v0, Lj7b;->O:I
-
-    sget v0, Lbzc;->messages_list_item_video_duration:I
-
-    sput v0, Lj7b;->P:I
-
-    sget v0, Lbzc;->messages_list_recycler_view:I
-
-    sput v0, Lj7b;->Q:I
-
-    sget v0, Lbzc;->messages_list_scroll_btn:I
-
-    sput v0, Lj7b;->R:I
-
-    sget v0, Lbzc;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Lj7b;->S:I
-
-    sget v0, Lbzc;->messages_list_warning_link_subtitle:I
-
-    sput v0, Lj7b;->T:I
-
-    sget v0, Lbzc;->messages_list_warning_link_title:I
-
-    sput v0, Lj7b;->U:I
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj7b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj7b;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lj7b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lj7b;
+
+    iget-object v0, p0, Lj7b;->X:Lk7b;
+
+    invoke-direct {p1, v0, p2}, Lj7b;-><init>(Lk7b;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lj7b;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj7b;->X:Lk7b;
+
+    iget-object v0, p1, Lk7b;->c:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lca3;
+
+    iget-wide v2, p1, Lk7b;->b:J
+
+    iput v1, p0, Lj7b;->o:I
+
+    invoke-virtual {v0, v2, v3, p0}, Lca3;->v(JLl84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

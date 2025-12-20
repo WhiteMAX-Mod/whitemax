@@ -2,30 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo8i;
 
-# instance fields
-.field public final a:Lnz9;
 
-.field public final b:J
-
-.field public c:J
+# static fields
+.field public static final a:Lq8i;
 
 
 # direct methods
-.method public constructor <init>(JLnz9;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq8i;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v0
-
-    iput-wide v0, p0, Lq8i;->c:J
-
-    iput-object p3, p0, Lq8i;->a:Lnz9;
-
-    iput-wide p1, p0, Lq8i;->b:J
+    sput-object v0, Lq8i;->a:Lq8i;
 
     return-void
 .end method
@@ -33,55 +26,39 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_0
-    if-eqz p1, :cond_2
+    instance-of p1, p1, Lq8i;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_1
 
-    move-result-object v0
-
-    const-class v1, Lq8i;
-
-    if-eq v1, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lq8i;
-
-    iget-object v0, p0, Lq8i;->a:Lnz9;
-
-    iget-object p1, p1, Lq8i;->a:Lnz9;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
     const/4 p1, 0x0
 
     return p1
+
+    :cond_1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lq8i;->a:Lnz9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    const v0, 0x744d33a1
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowLoading"
+
+    return-object v0
 .end method

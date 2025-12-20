@@ -2,171 +2,162 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/ListIterator;
-
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final a:J
 
-.field public b:I
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lyd5;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lm74;->b:I
+    iget-wide v0, p1, Lyd5;->a:J
 
-    iput-object p2, p0, Lm74;->a:[Ljava/lang/Object;
+    iput-wide v0, p0, Lm74;->a:J
+
+    iget-object v0, p1, Lyd5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lm74;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lyd5;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lm74;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lyd5;->d:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lm74;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
+.method public final a()Z
+    .locals 3
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lm74;->c:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    if-eqz v0, :cond_1
 
-    throw p1
-.end method
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-.method public final hasNext()Z
-    .locals 2
+    move-result v1
 
-    iget v0, p0, Lm74;->b:I
+    if-nez v1, :cond_0
 
-    iget-object v1, p0, Lm74;->a:[Ljava/lang/Object;
-
-    array-length v1, v1
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const-string v1, "image/"
 
-    return v0
-.end method
+    const/4 v2, 0x1
 
-.method public final hasPrevious()Z
-    .locals 1
+    invoke-static {v0, v1, v2}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    iget v0, p0, Lm74;->b:I
+    move-result v1
 
-    if-lez v0, :cond_0
+    if-eqz v1, :cond_1
 
-    const/4 v0, 0x1
+    const-string v1, "djvu"
 
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lm74;->hasNext()Z
+    invoke-static {v0, v1, v2}, Liyf;->t(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    iget v0, p0, Lm74;->b:I
+    goto :goto_1
 
-    add-int/lit8 v1, v0, 0x1
+    :cond_1
+    :goto_0
+    const/4 v2, 0x0
 
-    iput v1, p0, Lm74;->b:I
+    :goto_1
+    return v2
+.end method
 
-    iget-object v1, p0, Lm74;->a:[Ljava/lang/Object;
+.method public final b()Z
+    .locals 3
 
-    aget-object v0, v1, v0
+    iget-object v0, p0, Lm74;->c:Ljava/lang/String;
 
-    return-object v0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    const-string v1, "video/"
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    const/4 v2, 0x1
 
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Lm74;->b:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lm74;->hasPrevious()Z
+    invoke-static {v0, v1, v2}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget v0, p0, Lm74;->b:I
+    goto :goto_1
 
-    add-int/lit8 v0, v0, -0x1
+    :cond_1
+    :goto_0
+    const/4 v2, 0x0
 
-    iput v0, p0, Lm74;->b:I
+    :goto_1
+    return v2
+.end method
 
-    iget-object v1, p0, Lm74;->a:[Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    aget-object v0, v1, v0
+    const-string v0, "ContentUriParams{contentLength="
+
+    const-string v1, ", contentName=\'"
+
+    iget-wide v2, p0, Lm74;->a:J
+
+    iget-object v4, p0, Lm74;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\', mimeType=\'"
+
+    const-string v2, "\', path=\'"
+
+    iget-object v3, p0, Lm74;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lm74;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lq3g;->w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "\'}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lm74;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

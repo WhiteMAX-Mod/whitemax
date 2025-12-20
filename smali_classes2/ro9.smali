@@ -1,169 +1,135 @@
-.class public final synthetic Lro9;
-.super Ljava/lang/Object;
+.class public final Lro9;
+.super Lgab;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:Luo9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+.method public constructor <init>(Landroid/content/Context;Luo9;)V
     .locals 0
 
-    iput p2, p0, Lro9;->a:I
+    iput-object p2, p0, Lro9;->b:Luo9;
 
-    iput-object p1, p0, Lro9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const/16 p2, 0xe
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lgab;-><init>(Landroid/content/Context;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final onSelectionChanged(II)V
+    .locals 1
 
-    iget p1, p0, Lro9;->a:I
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onSelectionChanged(II)V
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p1, p0, Lro9;->b:Luo9;
 
-    iget-object p1, p0, Lro9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget-object p2, p1, Luo9;->c:Lpo9;
 
-    iget-object v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->X:Lsd8;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lik9;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lik9;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lsd8;->f:Ldce;
-
-    iput-object v1, v0, Ldce;->j:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->I0()Lno9;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lno9;->y0:Lci5;
-
-    sget-object v0, Lyn9;->a:Lyn9;
-
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lro9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    iget v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:I
-
-    if-nez v0, :cond_0
+    if-nez p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->I0()Lno9;
+    invoke-virtual {p0}, Landroid/widget/TextView;->hasSelection()Z
 
-    move-result-object v1
+    move-result p2
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lik9;
+    const/4 v0, 0x1
 
-    move-result-object v2
+    if-eqz p2, :cond_2
 
-    invoke-virtual {v2}, Lik9;->getMessageState()Lmcf;
+    iget-object p1, p1, Luo9;->c:Lpo9;
 
-    move-result-object v2
+    if-eqz p1, :cond_3
 
-    invoke-interface {v2}, Lmcf;->getValue()Ljava/lang/Object;
+    check-cast p1, Lhg5;
 
-    move-result-object v2
+    iget-object p1, p1, Lhg5;->b:Ljava/lang/Object;
 
-    check-cast v2, Ljava/lang/CharSequence;
+    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lik9;
+    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lik9;->getMessagePosition()Lmcf;
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Lpp8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lmcf;->getValue()Ljava/lang/Object;
+    iget-object p2, p1, Lpp8;->X:Lhof;
 
-    move-result-object p1
+    invoke-virtual {p2}, Lhof;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Integer;
+    move-result-object p2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p2, Lqp8;
 
-    invoke-static {v0}, Laz1;->v(I)I
+    iget p2, p2, Lqp8;->b:I
 
-    move-result v0
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_3
-
-    const/4 v4, 0x1
-
-    if-eq v0, v4, :cond_2
-
-    const/4 p1, 0x2
-
-    if-ne v0, p1, :cond_1
-
-    iget-object p1, v1, Lno9;->y0:Lci5;
-
-    new-instance v0, Lxn9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    if-eq p2, v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    const/4 p2, 0x2
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-static {p1, p2}, Lpp8;->s(Lpp8;I)V
 
-    throw p1
+    return-void
 
     :cond_2
-    iget-object v0, v1, Lno9;->O0:Ltcf;
+    iget-object p1, p1, Luo9;->c:Lpo9;
 
-    new-instance v4, Lqn9;
+    if-eqz p1, :cond_3
 
-    invoke-direct {v4, v2, p1}, Lqn9;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
+    check-cast p1, Lhg5;
 
-    invoke-virtual {v0, v3, v4}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p1, Lhg5;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v3}, Lno9;->G(Ljava/lang/Long;)V
+    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Lp38;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Lpp8;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1, v0}, Lpp8;->s(Lpp8;I)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    const/16 p1, 0xe
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-static {v1, v3, v3, v3, p1}, Lno9;->F(Lno9;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
+    return p1
 
+    :cond_1
     :goto_0
-    return-void
+    const/4 p1, 0x1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

@@ -1,199 +1,61 @@
-.class public abstract Lgbb;
-.super Ljava/lang/Object;
+.class public final Lgbb;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public X:Ljava/io/Closeable;
 
-.field public static final B:I
+.field public Y:Ljava/io/BufferedWriter;
 
-.field public static final C:I
+.field public Z:Lzw0;
 
-.field public static final D:I
+.field public d:Lhbb;
 
-.field public static final E:I
+.field public o:Ljava/nio/file/Path;
 
-.field public static final a:I
+.field public s0:I
 
-.field public static final b:I
+.field public synthetic t0:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic u0:Lhbb;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhbb;Ll84;)V
+    .locals 0
 
-    sget v0, Lzzc;->oneme_settings_media_auto_play_video_always:I
+    iput-object p1, p0, Lgbb;->u0:Lhbb;
 
-    sput v0, Lgbb;->a:I
-
-    sget v0, Lzzc;->oneme_settings_media_auto_play_video_disable:I
-
-    sput v0, Lgbb;->b:I
-
-    sget v0, Lzzc;->oneme_settings_media_auto_play_video_wifi:I
-
-    sput v0, Lgbb;->c:I
-
-    sget v0, Lzzc;->oneme_settings_media_gif_always:I
-
-    sput v0, Lgbb;->d:I
-
-    sget v0, Lzzc;->oneme_settings_media_gif_dont_load:I
-
-    sput v0, Lgbb;->e:I
-
-    sget v0, Lzzc;->oneme_settings_media_gif_wifi:I
-
-    sput v0, Lgbb;->f:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_animoji_enabled:I
-
-    sput v0, Lgbb;->g:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_gif:I
-
-    sput v0, Lgbb;->h:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_gif_available:I
-
-    sput v0, Lgbb;->i:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_load_in_roaming:I
-
-    sput v0, Lgbb;->j:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_photo:I
-
-    sput v0, Lgbb;->k:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_playlist_enabled:I
-
-    sput v0, Lgbb;->l:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_video:I
-
-    sput v0, Lgbb;->m:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_video_caching:I
-
-    sput v0, Lgbb;->n:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_video_messages:I
-
-    sput v0, Lgbb;->o:I
-
-    sget v0, Lzzc;->oneme_settings_media_item_video_quality:I
-
-    sput v0, Lgbb;->p:I
-
-    sget v0, Lzzc;->oneme_settings_media_photo_always:I
-
-    sput v0, Lgbb;->q:I
-
-    sget v0, Lzzc;->oneme_settings_media_photo_dont_load:I
-
-    sput v0, Lgbb;->r:I
-
-    sget v0, Lzzc;->oneme_settings_media_photo_wifi:I
-
-    sput v0, Lgbb;->s:I
-
-    sget v0, Lzzc;->oneme_settings_media_quality_1080:I
-
-    sput v0, Lgbb;->t:I
-
-    sget v0, Lzzc;->oneme_settings_media_quality_480:I
-
-    sput v0, Lgbb;->u:I
-
-    sget v0, Lzzc;->oneme_settings_media_quality_720:I
-
-    sput v0, Lgbb;->v:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_autoplaying_section_header:I
-
-    sput v0, Lgbb;->w:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_datapressing_section_header:I
-
-    sput v0, Lgbb;->x:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_list:I
-
-    sput v0, Lgbb;->y:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_settings_header_vh:I
-
-    sput v0, Lgbb;->z:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_settings_item_vh:I
-
-    sput v0, Lgbb;->A:I
-
-    sget v0, Lzzc;->oneme_settings_media_screen_toolbar:I
-
-    sput v0, Lgbb;->B:I
-
-    sget v0, Lzzc;->oneme_settings_media_video_messages_always:I
-
-    sput v0, Lgbb;->C:I
-
-    sget v0, Lzzc;->oneme_settings_media_video_messages_dont_load:I
-
-    sput v0, Lgbb;->D:I
-
-    sget v0, Lzzc;->oneme_settings_media_video_messages_wifi:I
-
-    sput v0, Lgbb;->E:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lgbb;->t0:Ljava/lang/Object;
+
+    iget p1, p0, Lgbb;->v0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lgbb;->v0:I
+
+    iget-object p1, p0, Lgbb;->u0:Lhbb;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lhbb;->b(Lhbb;Ljava/nio/file/Path;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

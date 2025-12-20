@@ -1,34 +1,23 @@
 .class public final Lni6;
-.super Ljava/lang/Object;
+.super Lqe5;
 .source "SourceFile"
 
-# interfaces
-.implements Lvi6;
 
-
-# instance fields
-.field public final synthetic a:Landroidx/fragment/app/a;
+# static fields
+.field public static final d:Lg67;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg67;
 
-    iput-object p1, p0, Lni6;->a:Landroidx/fragment/app/a;
+    const/16 v1, 0x15
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lg67;-><init>(I)V
 
-
-# virtual methods
-.method public final a(Landroidx/fragment/app/a;)V
-    .locals 0
-
-    iget-object p1, p0, Lni6;->a:Landroidx/fragment/app/a;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v0, Lni6;->d:Lg67;
 
     return-void
 .end method

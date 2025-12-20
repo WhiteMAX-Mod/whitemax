@@ -1,132 +1,143 @@
-.class public final Luaa;
-.super Lj3;
+.class public abstract Luaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Luz4;
-
-
-# instance fields
-.field public X:Lpz4;
-
-.field public final d:Lzg;
-
-.field public o:Lpz4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;Lzg;)V
-    .locals 0
+.method public static a([B)Lvaa;
+    .locals 21
 
-    invoke-direct {p0, p1}, Lj3;-><init>(Landroid/content/Context;)V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
 
-    iput-object p3, p0, Luaa;->d:Lzg;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;-><init>()V
 
-    iput-object p2, p0, Lj3;->c:Ljava/lang/Object;
+    move-object/from16 v1, p0
 
-    invoke-virtual {p0}, Luaa;->i()V
-
-    invoke-virtual {p2, p0}, Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;->setTouchEventListener(Luz4;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final i()V
-    .locals 2
-
-    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v1, Lq0d;->double_tap_video_view_wrapper__arrows_view_left:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    :try_start_0
+    invoke-static {v0, v1}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
 
     move-result-object v0
 
-    check-cast v0, Lpz4;
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p0, Luaa;->o:Lpz4;
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldAttaches:Lru/ok/tamtam/nano/Protos$Attaches;
 
-    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v0, Landroid/view/View;
+    if-eqz v1, :cond_0
 
-    sget v1, Lq0d;->double_tap_video_view_wrapper__arrows_view_right:I
+    invoke-static {v1}, Lru/ok/tamtam/nano/a;->e(Lru/ok/tamtam/nano/Protos$Attaches;)Lcf9;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    iget-object v1, v1, Lcf9;->a:Ljava/lang/Object;
 
-    check-cast v0, Lpz4;
+    check-cast v1, Ljava/util/List;
 
-    iput-object v0, p0, Luaa;->X:Lpz4;
+    move-object/from16 v17, v1
 
-    iget-object v0, p0, Luaa;->o:Lpz4;
-
-    iget-object v1, p0, Luaa;->d:Lzg;
-
-    invoke-virtual {v0, v1}, Lpz4;->setAnimations(Lzg;)V
-
-    iget-object v0, p0, Luaa;->X:Lpz4;
-
-    invoke-virtual {v0, v1}, Lpz4;->setAnimations(Lzg;)V
-
-    return-void
-.end method
-
-.method public final z(Ltaa;)V
-    .locals 2
-
-    iget-boolean v0, p1, Ltaa;->c:Z
-
-    iget v1, p1, Ltaa;->a:I
-
-    if-nez v0, :cond_0
-
-    iget-object p1, p0, Luaa;->o:Lpz4;
-
-    invoke-virtual {p1}, Lpz4;->a()V
-
-    iget-object p1, p0, Luaa;->X:Lpz4;
-
-    invoke-virtual {p1}, Lpz4;->a()V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    iget-boolean p1, p1, Ltaa;->b:Z
+    move-object/from16 v17, v2
 
-    if-eqz p1, :cond_1
+    :goto_0
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
 
-    iget-object p1, p0, Luaa;->o:Lpz4;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1}, Lpz4;->a()V
+    iget-object v1, v1, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
 
-    iget-object p1, p0, Luaa;->X:Lpz4;
+    invoke-static {v1}, Lon9;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lpz4;->b()V
-
-    iget-object p1, p0, Luaa;->X:Lpz4;
-
-    invoke-virtual {p1, v1}, Lpz4;->c(I)V
-
-    return-void
+    move-result-object v2
 
     :cond_1
-    iget-object p1, p0, Luaa;->o:Lpz4;
+    move-object/from16 v18, v2
 
-    invoke-virtual {p1}, Lpz4;->b()V
+    new-instance v3, Lvaa;
 
-    iget-object p1, p0, Luaa;->o:Lpz4;
+    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->requestId:J
 
-    invoke-virtual {p1, v1}, Lpz4;->c(I)V
+    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatId:J
 
-    iget-object p1, p0, Luaa;->X:Lpz4;
+    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageId:J
 
-    invoke-virtual {p1}, Lpz4;->a()V
+    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatServerId:J
 
-    return-void
+    iget-wide v12, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageServerId:J
+
+    iget-object v14, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
+
+    iget-object v15, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
+
+    iget v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldStatus:I
+
+    invoke-static {}, Lwq9;->values()[Lwq9;
+
+    move-result-object v2
+
+    move-object/from16 p0, v3
+
+    array-length v3, v2
+
+    const/16 v16, 0x0
+
+    move-object/from16 v19, v2
+
+    move/from16 v2, v16
+
+    :goto_1
+    if-ge v2, v3, :cond_3
+
+    move/from16 v16, v2
+
+    aget-object v2, v19, v16
+
+    move/from16 v20, v3
+
+    iget v3, v2, Lwq9;->a:I
+
+    if-ne v3, v1, :cond_2
+
+    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->editAttaches:Z
+
+    move-object/from16 v3, p0
+
+    move/from16 v19, v0
+
+    move-object/from16 v16, v2
+
+    invoke-direct/range {v3 .. v19}, Lvaa;-><init>(JJJJJLjava/lang/String;Ljava/lang/String;Lwq9;Ljava/util/List;Ljava/util/List;Z)V
+
+    return-object v3
+
+    :cond_2
+    move-object/from16 v3, p0
+
+    add-int/lit8 v2, v16, 0x1
+
+    move/from16 v3, v20
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    const-string v1, "Array contains no element matching the predicate."
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

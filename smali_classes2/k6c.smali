@@ -1,26 +1,21 @@
 .class public final Lk6c;
-.super Ljava/lang/Object;
+.super Lzp;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# static fields
+.field public static final a:Lk6c;
 
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ll6c;
+    new-instance v0, Lk6c;
 
-    invoke-direct {v0, p1}, Ll6c;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0}, Lzp;-><init>()V
 
-    return-object v0
-.end method
+    sput-object v0, Lk6c;->a:Lk6c;
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Ll6c;
-
-    return-object p1
+    return-void
 .end method

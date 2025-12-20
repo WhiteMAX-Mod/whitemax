@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lmq6;
 
 
 # instance fields
@@ -44,7 +44,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->d(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->h(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->D(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/ArrayList;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/ArrayList;)Ljava/util/Map;
 
     move-result-object v0
 

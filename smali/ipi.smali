@@ -1,96 +1,81 @@
-.class public abstract Lipi;
-.super Ljava/lang/Object;
+.class public final Lipi;
+.super Li4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lipi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Lppi;
+
+
 # direct methods
-.method public static a(II)J
-    .locals 4
-
-    int-to-long v0, p0
-
-    const/16 p0, 0x20
-
-    shl-long/2addr v0, p0
-
-    int-to-long p0, p1
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr p0, v2
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public static b(ILcm6;)Lk18;
+.method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lqha;->G0:Lqha;
+    new-instance v0, Lioh;
 
-    sget-object v1, Lo18;->$EnumSwitchMapping$0:[I
+    const/16 v1, 0xf
 
-    invoke-static {p0}, Laz1;->v(I)I
+    invoke-direct {v0, v1}, Lioh;-><init>(I)V
 
-    move-result p0
+    sput-object v0, Lipi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    aget p0, v1, p0
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public constructor <init>(ILppi;)V
+    .locals 0
 
-    if-eq p0, v1, :cond_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lipi;->a:I
+
+    iput-object p2, p0, Lipi;->b:Lppi;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    const/16 v0, 0x4f45
+
+    invoke-static {p1, v0}, Lwmj;->k(Landroid/os/Parcel;I)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    invoke-static {p1, v2, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
+
+    iget v1, p0, Lipi;->a:I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v1, 0x2
 
-    if-eq p0, v1, :cond_1
+    iget-object v2, p0, Lipi;->b:Lppi;
 
-    const/4 v1, 0x3
+    invoke-static {p1, v1, v2, p2}, Lwmj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    if-ne p0, v1, :cond_0
+    invoke-static {p1, v0}, Lwmj;->l(Landroid/os/Parcel;I)V
 
-    new-instance p0, Ldsg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldsg;->a:Lcm6;
-
-    iput-object v0, p0, Ldsg;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Lxwd;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxwd;->a:Lcm6;
-
-    iput-object v0, p0, Lxwd;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Lbwf;
-
-    invoke-direct {p0, p1}, Lbwf;-><init>(Lcm6;)V
-
-    return-object p0
-.end method
-
-.method public static c(Lcm6;)Lbwf;
-    .locals 1
-
-    new-instance v0, Lbwf;
-
-    invoke-direct {v0, p0}, Lbwf;-><init>(Lcm6;)V
-
-    return-object v0
+    return-void
 .end method

@@ -1,279 +1,126 @@
-.class public final Lgn1;
+.class public final synthetic Lgn1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lgn1;
+# interfaces
+.implements Lmq6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Lzi1;
-
-.field public final e:Z
-
-.field public final f:Ljava/lang/CharSequence;
+.field public final synthetic b:Ljn1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lgn1;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lgn1;-><init>(ZZZLzi1;ZLjava/lang/CharSequence;)V
-
-    sput-object v0, Lgn1;->g:Lgn1;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZLzi1;ZLjava/lang/CharSequence;)V
+.method public synthetic constructor <init>(Ljn1;I)V
     .locals 0
 
+    iput p2, p0, Lgn1;->a:I
+
+    iput-object p1, p0, Lgn1;->b:Ljn1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lgn1;->a:Z
-
-    iput-boolean p2, p0, Lgn1;->b:Z
-
-    iput-boolean p3, p0, Lgn1;->c:Z
-
-    iput-object p4, p0, Lgn1;->d:Lzi1;
-
-    iput-boolean p5, p0, Lgn1;->e:Z
-
-    iput-object p6, p0, Lgn1;->f:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgn1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lgn1;->b:Ljn1;
 
-    :cond_0
-    instance-of v1, p1, Lgn1;
+    iget-object v0, v0, Ljn1;->e:Ld68;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgn1;
-
-    iget-boolean v1, p0, Lgn1;->a:Z
-
-    iget-boolean v3, p1, Lgn1;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lgn1;->b:Z
-
-    iget-boolean v3, p1, Lgn1;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lgn1;->c:Z
-
-    iget-boolean v3, p1, Lgn1;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lgn1;->d:Lzi1;
-
-    iget-object v3, p1, Lgn1;->d:Lzi1;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lgn1;->e:Z
-
-    iget-boolean v3, p1, Lgn1;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lgn1;->f:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lgn1;->f:Ljava/lang/CharSequence;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-boolean v0, p0, Lgn1;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lgn1;->b:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lgn1;->c:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lgn1;->d:Lzi1;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Lzi1;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v3, p0, Lgn1;->e:Z
-
-    invoke-static {v0, v1, v3}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lgn1;->f:Ljava/lang/CharSequence;
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", meIsAdmin="
-
-    const-string v1, ", isRecordStateEnabled="
-
-    const-string v2, "CallScreenRecordState(isMe="
-
-    iget-boolean v3, p0, Lgn1;->a:Z
-
-    iget-boolean v4, p0, Lgn1;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lho7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lgn1;->c:Z
+    check-cast v0, Lux5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast v0, Loy5;
 
-    const-string v1, ", recordScreenOpponentId="
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iget-object v1, p0, Lgn1;->d:Lzi1;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljfe;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
 
-    const-string v1, ", isAdminDisableScreenRecord="
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lgn1;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", userName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgn1;->f:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lgn1;->b:Ljn1;
+
+    iget-object v0, v0, Ljn1;->b:Ldqe;
+
+    check-cast v0, Lncc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lncc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lgn1;->b:Ljn1;
+
+    iget-object v0, v0, Ljn1;->a:Landroid/content/Context;
+
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lgn1;->b:Ljn1;
+
+    iget-object v0, v0, Ljn1;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

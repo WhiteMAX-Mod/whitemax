@@ -1,86 +1,67 @@
-.class public final synthetic Lx12;
+.class public final Lx12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lr02;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lyw1;
 
-.field public final synthetic b:Lxy1;
+.field public final b:Lbx1;
 
-.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
+.field public final c:Lw12;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxy1;Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 0
-
-    iput p3, p0, Lx12;->a:I
-
-    iput-object p1, p0, Lx12;->b:Lxy1;
-
-    iput-object p2, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
+.method public constructor <init>(Lw12;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lv3e;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1, p0}, Lv3e;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Loaj;->b(Lzw1;)Lbx1;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lx12;->b:Lbx1;
+
+    iput-object p1, p0, Lx12;->c:Lw12;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    .locals 1
 
-    iget v0, p0, Lx12;->a:I
+    iget-object v0, p0, Lx12;->c:Lw12;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lx12;->b:Lxy1;
+    invoke-interface {v0, p1}, Lw12;->a(Landroid/hardware/camera2/TotalCaptureResult;)Z
 
-    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    return p1
 
-    return-void
+    :cond_0
+    iget-object v0, p0, Lx12;->a:Lyw1;
 
-    :pswitch_0
-    iget-object v0, p0, Lx12;->b:Lxy1;
+    invoke-virtual {v0, p1}, Lyw1;->b(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
-
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lx12;->b:Lxy1;
-
-    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
-
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

@@ -1,104 +1,69 @@
-.class public final Ldwb;
-.super Ldtf;
+.class public final synthetic Ldwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lvx3;
 
 
 # instance fields
-.field public final synthetic o:Lgwb;
+.field public final synthetic a:Llwb;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method public constructor <init>(Lgwb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Llwb;ZLorg/webrtc/SessionDescription;)V
     .locals 0
 
-    iput-object p1, p0, Ldwb;->o:Lgwb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ldwb;->a:Llwb;
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Ldwb;->b:Z
+
+    iput-object p3, p0, Ldwb;->c:Lorg/webrtc/SessionDescription;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Lf84;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Ldwb;->a:Llwb;
 
-    invoke-virtual {p0, p1, p2}, Ldwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Llwb;->v:Landroid/os/Handler;
 
-    move-result-object p1
+    iget-boolean v1, p0, Ldwb;->b:Z
 
-    check-cast p1, Ldwb;
+    iget-object v2, p0, Ldwb;->c:Lorg/webrtc/SessionDescription;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p2}, Ldwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ldwb;
-
-    iget-object v0, p0, Ldwb;->o:Lgwb;
-
-    invoke-direct {p1, v0, p2}, Ldwb;-><init>(Lgwb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldwb;->o:Lgwb;
-
-    iget-object p1, p1, Lgwb;->Y:Ltcf;
-
-    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lyvb;
-
-    const/4 v8, 0x1
-
-    const/16 v9, 0x3f
-
-    const/4 v2, 0x0
+    new-instance v1, Lgwb;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-direct {v1, p1, v2, v3}, Lgwb;-><init>(Llwb;Lorg/webrtc/SessionDescription;I)V
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    const/4 v6, 0x0
+    return-void
 
-    const/4 v7, 0x0
+    :cond_0
+    new-instance v1, Lgwb;
 
-    invoke-static/range {v1 .. v9}, Lyvb;->a(Lyvb;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ln5g;Ljava/lang/String;ZI)Lyvb;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    invoke-direct {v1, p1, v2, v3}, Lgwb;-><init>(Llwb;Lorg/webrtc/SessionDescription;I)V
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {p1, v1, v0}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

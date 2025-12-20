@@ -2,95 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 
 # instance fields
-.field public final a:Lk18;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
-
-.field public final e:Lk18;
-
-.field public final f:Lk18;
+.field public final synthetic b:F
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
+.method public constructor <init>(Landroid/view/View;F)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lide;->a:Lk18;
+    iput-object p1, p0, Lide;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lide;->b:Lk18;
-
-    iput-object p3, p0, Lide;->c:Lk18;
-
-    iput-object p4, p0, Lide;->d:Lk18;
-
-    iput-object p5, p0, Lide;->e:Lk18;
-
-    iput-object p6, p0, Lide;->f:Lk18;
+    iput p2, p0, Lide;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/lang/CharSequence;Ljava/util/List;ZLjava/lang/Long;Lvf6;Ldtf;)Ljava/lang/Object;
-    .locals 11
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    iget-object v0, p0, Lide;->a:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Llzf;
+    check-cast v0, Ljava/lang/Float;
 
-    check-cast v0, Lq2b;
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v0}, Lq2b;->b()Lz74;
+    move-result v0
 
-    move-result-object v0
+    iget-object v1, p0, Lide;->a:Landroid/view/View;
 
-    new-instance v1, Lhde;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    const/4 v10, 0x0
+    iget v0, p0, Lide;->b:F
 
-    move-object v5, p0
+    const/4 v2, 0x0
 
-    move-wide v6, p1
+    cmpg-float v3, v0, v2
 
-    move-object v4, p3
+    if-nez v3, :cond_0
 
-    move-object v2, p4
-
-    move/from16 v3, p5
-
-    move-object/from16 v8, p6
-
-    move-object/from16 v9, p7
-
-    invoke-direct/range {v1 .. v10}, Lhde;-><init>(Ljava/util/List;ZLjava/lang/CharSequence;Lide;JLjava/lang/Long;Lvf6;Lkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p1, p8
-
-    invoke-static {v0, v1, p1}, Lsvi;->i(Lx74;Lsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    return-object p1
+    sub-float/2addr v2, v0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result v0
+
+    cmpl-float v0, v0, v2
+
+    if-ltz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    sub-float/2addr v0, p1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_1
+    return-void
 .end method

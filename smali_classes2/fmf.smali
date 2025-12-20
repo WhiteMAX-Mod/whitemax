@@ -1,164 +1,123 @@
-.class public final Lfmf;
+.class public final synthetic Lfmf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj14;
+
 
 # instance fields
-.field public final a:Lhmf;
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
+.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
 
 
 # direct methods
-.method public constructor <init>(Lhmf;ZZ)V
+.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
     .locals 0
 
+    iput p2, p0, Lfmf;->a:I
+
+    iput-object p1, p0, Lfmf;->b:Lone/me/startconversation/StartConversationScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfmf;->a:Lhmf;
-
-    iput-boolean p2, p0, Lfmf;->b:Z
-
-    iput-boolean p3, p0, Lfmf;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final c(I)Z
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lfmf;->a:I
 
-    goto :goto_1
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lfmf;->b:Lone/me/startconversation/StartConversationScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->y0:Lvci;
+
+    invoke-virtual {v0}, Lbe8;->j()I
+
+    move-result v0
+
+    iget-object v4, v3, Lone/me/startconversation/StartConversationScreen;->D0:Lbj0;
+
+    invoke-virtual {v4}, Lbe8;->j()I
+
+    move-result v4
+
+    add-int/2addr v4, v0
+
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->z0:Lbj0;
+
+    invoke-virtual {v0}, Lbe8;->j()I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    if-eq p1, v0, :cond_1
+
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->F0:Ljq3;
+
+    invoke-virtual {v0}, Ljq3;->j()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_0
+
+    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->z0()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lfmf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
+    move v1, v2
 
     :cond_1
-    check-cast p1, Lfmf;
+    :goto_0
+    return v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_0
+    sget-object p1, Lone/me/startconversation/StartConversationScreen;->I0:[Lp38;
 
-    iget-object v0, p0, Lfmf;->a:Lhmf;
+    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->z0()Ljava/lang/CharSequence;
 
-    iget-object v1, p1, Lfmf;->a:Lhmf;
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz p1, :cond_2
 
-    move-result v0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    if-nez v0, :cond_2
+    move-result p1
 
-    goto :goto_0
+    if-nez p1, :cond_3
 
     :cond_2
-    iget-boolean v0, p0, Lfmf;->b:Z
-
-    iget-boolean v1, p1, Lfmf;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
+    move v2, v1
 
     :cond_3
-    iget-boolean v0, p0, Lfmf;->c:Z
-
-    iget-boolean p1, p1, Lfmf;->c:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
+    xor-int/lit8 p1, v2, 0x1
 
     return p1
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lfmf;->a:Lhmf;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lfmf;->b:Z
-
-    invoke-static {v2, v1, v0}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lfmf;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StrictModeConfig(enabled=false, violationHandler="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfmf;->a:Lhmf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allowNetwork="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lfmf;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allowDisk="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lfmf;->c:Z
-
-    invoke-static {v0, v2, v1}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

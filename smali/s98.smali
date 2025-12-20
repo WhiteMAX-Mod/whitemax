@@ -1,340 +1,82 @@
 .class public final Ls98;
-.super Ljava/lang/Object;
+.super Lml0;
 .source "SourceFile"
-
-# interfaces
-.implements Lha8;
 
 
 # instance fields
-.field public X:Ltu1;
+.field public h:I
 
-.field public a:Ljava/util/ArrayList;
+.field public i:I
 
-.field public b:Ljava/util/ArrayList;
+.field public j:Z
 
-.field public final c:Z
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final o:Lwu1;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;ZLex4;)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ls98;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Ls98;->b:Ljava/util/ArrayList;
-
-    iput-boolean p2, p0, Ls98;->c:Z
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p2, p0, Ls98;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance p1, Liv6;
-
-    const/16 p2, 0x16
-
-    invoke-direct {p1, p2, p0}, Liv6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lixi;->a(Luu1;)Lwu1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ls98;->o:Lwu1;
-
-    new-instance p1, Lr98;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Lr98;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Layi;->a()Lex4;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Ls98;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object p1, p0, Ls98;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ls98;->X:Ltu1;
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    iget-object p3, p0, Ls98;->b:Ljava/util/ArrayList;
-
-    invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1, p2}, Ltu1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    move p2, p1
-
-    :goto_0
-    iget-object v0, p0, Ls98;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p2, v0, :cond_1
-
-    iget-object v0, p0, Ls98;->b:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p2, p0, Ls98;->a:Ljava/util/ArrayList;
-
-    :goto_1
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_2
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lha8;
-
-    new-instance v1, Lhp;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p0, p1, v0, v2}, Lhp;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-interface {v0, v1, p3}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
+.field public k:I
 
 
 # virtual methods
-.method public final cancel(Z)Z
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Ls98;->a:Ljava/util/ArrayList;
+    invoke-super {p0}, Lml0;->a()V
+
+    iget v0, p0, Ls98;->k:I
+
+    if-ltz v0, :cond_4
+
+    iget v0, p0, Ls98;->h:I
+
+    if-nez v0, :cond_3
+
+    iget v0, p0, Lml0;->b:I
+
+    if-lez v0, :cond_1
+
+    iget v0, p0, Lml0;->g:I
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lha8;
-
-    invoke-interface {v1, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Ls98;->o:Lwu1;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v0, p1}, Lwu1;->cancel(Z)Z
+    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
 
-    move-result p1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return p1
-.end method
+    throw v0
 
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
-
-    iget-object v0, p0, Ls98;->o:Lwu1;
-
-    iget-object v0, v0, Lwu1;->b:Lvu1;
-
-    invoke-virtual {v0, p1, p2}, Lk4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    return-void
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 3
-
-    .line 5
-    iget-object v0, p0, Ls98;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_2
-
-    .line 6
-    invoke-virtual {p0}, Ls98;->isDone()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 7
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lha8;
-
-    .line 8
     :cond_1
     :goto_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->isDone()Z
+    iget-object v0, p0, Lml0;->c:[I
 
-    move-result v2
+    array-length v0, v0
 
-    if-nez v2, :cond_0
+    const/4 v1, 0x3
 
-    .line 9
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    .line 10
-    :catchall_0
-    iget-boolean v2, p0, Ls98;->c:Z
-
-    if-eqz v2, :cond_1
+    if-lt v0, v1, :cond_2
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
-
-    .line 11
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    .line 12
-    throw v0
-
-    .line 13
     :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
     :goto_1
-    iget-object v0, p0, Ls98;->o:Lwu1;
+    return-void
 
-    .line 14
-    iget-object v0, v0, Lwu1;->b:Lvu1;
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 15
-    invoke-virtual {v0}, Lk4;->get()Ljava/lang/Object;
+    const-string v1, "Stop indicator size must be >= 0."
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 16
-    check-cast v0, Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ls98;->o:Lwu1;
-
-    .line 2
-    iget-object v0, v0, Lwu1;->b:Lvu1;
-
-    .line 3
-    invoke-virtual {v0, p1, p2, p3}, Lk4;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 4
-    check-cast p1, Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Ls98;->o:Lwu1;
-
-    invoke-virtual {v0}, Lwu1;->isCancelled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Ls98;->o:Lwu1;
-
-    iget-object v0, v0, Lwu1;->b:Lvu1;
-
-    invoke-virtual {v0}, Lk4;->isDone()Z
-
-    move-result v0
-
-    return v0
+    throw v0
 .end method

@@ -1,148 +1,227 @@
 .class public final Lkdg;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lldg;
+# static fields
+.field public static final d:Lkdg;
 
-.field public final synthetic b:Lldg;
+.field public static final e:Lkdg;
+
+.field public static final f:Lkdg;
+
+.field public static final g:Lkdg;
+
+.field public static final h:Lkdg;
+
+.field public static final i:Lkdg;
+
+
+# instance fields
+.field public final a:[F
+
+.field public final b:[F
+
+.field public final c:[F
 
 
 # direct methods
-.method public constructor <init>(Lldg;Lldg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    iput-object p1, p0, Lkdg;->b:Lldg;
+    new-instance v0, Lkdg;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {v0}, Lkdg;-><init>()V
 
-    iput-object p2, p0, Lkdg;->a:Lldg;
+    sput-object v0, Lkdg;->d:Lkdg;
+
+    iget-object v1, v0, Lkdg;->b:[F
+
+    const/4 v2, 0x0
+
+    const v3, 0x3f0ccccd    # 0.55f
+
+    aput v3, v1, v2
+
+    const/4 v4, 0x1
+
+    const v5, 0x3f3d70a4    # 0.74f
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    const v1, 0x3eb33333    # 0.35f
+
+    aput v1, v0, v2
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    aput v6, v0, v4
+
+    new-instance v0, Lkdg;
+
+    invoke-direct {v0}, Lkdg;-><init>()V
+
+    sput-object v0, Lkdg;->e:Lkdg;
+
+    iget-object v7, v0, Lkdg;->b:[F
+
+    const v8, 0x3e99999a    # 0.3f
+
+    aput v8, v7, v2
+
+    const/high16 v9, 0x3f000000    # 0.5f
+
+    aput v9, v7, v4
+
+    const/4 v10, 0x2
+
+    const v11, 0x3f333333    # 0.7f
+
+    aput v11, v7, v10
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lkdg;
+
+    invoke-direct {v0}, Lkdg;-><init>()V
+
+    sput-object v0, Lkdg;->f:Lkdg;
+
+    iget-object v7, v0, Lkdg;->b:[F
+
+    const v12, 0x3e851eb8    # 0.26f
+
+    aput v12, v7, v4
+
+    const v13, 0x3ee66666    # 0.45f
+
+    aput v13, v7, v10
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lkdg;
+
+    invoke-direct {v0}, Lkdg;-><init>()V
+
+    sput-object v0, Lkdg;->g:Lkdg;
+
+    iget-object v1, v0, Lkdg;->b:[F
+
+    aput v3, v1, v2
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    aput v8, v0, v4
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    aput v1, v0, v10
+
+    new-instance v0, Lkdg;
+
+    invoke-direct {v0}, Lkdg;-><init>()V
+
+    sput-object v0, Lkdg;->h:Lkdg;
+
+    iget-object v3, v0, Lkdg;->b:[F
+
+    aput v8, v3, v2
+
+    aput v9, v3, v4
+
+    aput v11, v3, v10
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
+
+    new-instance v0, Lkdg;
+
+    invoke-direct {v0}, Lkdg;-><init>()V
+
+    sput-object v0, Lkdg;->i:Lkdg;
+
+    iget-object v2, v0, Lkdg;->b:[F
+
+    aput v12, v2, v4
+
+    aput v13, v2, v10
+
+    iget-object v0, v0, Lkdg;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 9
 
-# virtual methods
-.method public final a()V
-    .locals 3
-
-    const/4 v0, 0x3
-
-    const-string v1, "FirebaseMessaging"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Connectivity change received registered"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lkdg;->b:Lldg;
-
-    iget-object v0, v0, Lldg;->a:Landroid/content/Context;
-
-    new-instance v1, Landroid/content/IntentFilter;
-
-    const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
-
-    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method public final declared-synchronized onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object p2, p0, Lkdg;->a:Lldg;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez p2, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {p2}, Lldg;->d()Z
-
-    move-result p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez p2, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_1
-    :try_start_2
-    const-string p2, "FirebaseMessaging"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
-    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    new-array v1, v0, [F
 
-    move-result p2
+    iput-object v1, p0, Lkdg;->a:[F
 
-    if-eqz p2, :cond_2
+    new-array v2, v0, [F
 
-    const-string p2, "FirebaseMessaging"
+    iput-object v2, p0, Lkdg;->b:[F
 
-    const-string v0, "Connectivity changed. Starting background sync."
+    new-array v0, v0, [F
 
-    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput-object v0, p0, Lkdg;->c:[F
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :catchall_0
-    move-exception p1
+    const/4 v4, 0x0
 
-    goto :goto_1
+    aput v4, v1, v3
 
-    :cond_2
-    :goto_0
-    iget-object p2, p0, Lkdg;->a:Lldg;
+    const/4 v5, 0x1
 
-    iget-object v0, p2, Lldg;->d:Ljdg;
+    const/high16 v6, 0x3f000000    # 0.5f
 
-    iget-object v0, v0, Ljdg;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    aput v6, v1, v5
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v7, 0x2
 
-    const-wide/16 v2, 0x0
+    const/high16 v8, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, p2, v2, v3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    aput v8, v1, v7
 
-    invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    aput v4, v2, v3
 
-    const/4 p1, 0x0
+    aput v6, v2, v5
 
-    iput-object p1, p0, Lkdg;->a:Lldg;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    aput v8, v2, v7
 
-    monitor-exit p0
+    const v1, 0x3e75c28f    # 0.24f
+
+    aput v1, v0, v3
+
+    const v2, 0x3f051eb8    # 0.52f
+
+    aput v2, v0, v5
+
+    aput v1, v0, v7
 
     return-void
-
-    :goto_1
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
 .end method

@@ -1,107 +1,59 @@
 .class public abstract Lr7j;
-.super Ljyi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Set;
 
+# direct methods
+.method public static a(Ljava/lang/String;Z)Lkg0;
+    .locals 1
 
-# instance fields
-.field public transient b:Ln4j;
+    if-eqz p1, :cond_0
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-eq p1, p0, :cond_3
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljava/util/Set;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    check-cast p1, Ljava/util/Set;
-
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_2
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez p1, :cond_1
-
-    return v2
-
-    :cond_1
-    return v0
-
-    :catch_0
-    :cond_2
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_0
-    move v3, v1
-
-    :goto_1
-    add-int/2addr v2, v3
+    const-string p1, "Dark"
 
     goto :goto_0
 
-    :cond_1
-    return v2
+    :cond_0
+    const-string p1, "Light"
+
+    :goto_0
+    new-instance v0, Lkg0;
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lkg0;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static final b(Lkii;)Lphi;
+    .locals 2
+
+    new-instance v0, Lphi;
+
+    iget-object v1, p0, Lkii;->a:Ljava/lang/String;
+
+    iget p0, p0, Lkii;->t:I
+
+    invoke-direct {v0, v1, p0}, Lphi;-><init>(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public static c(FFF)F
+    .locals 1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    sub-float/2addr v0, p2
+
+    mul-float/2addr v0, p0
+
+    mul-float/2addr p2, p1
+
+    add-float/2addr p2, v0
+
+    return p2
 .end method

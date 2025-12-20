@@ -3,68 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lfpi;
 
 
-# static fields
-.field public static final a:Lloi;
+# instance fields
+.field public final synthetic a:Landroid/os/Bundle;
+
+.field public final synthetic b:Lnk0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lnk0;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lloi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lloi;->b:Lnk0;
 
-    sput-object v0, Lloi;->a:Lloi;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lloi;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Lloi;->b:Lnk0;
+
+    iget-object v0, v0, Lnk0;->a:Ljava/lang/Object;
+
+    check-cast v0, Lp88;
+
+    iget-object v1, p0, Lloi;->a:Landroid/os/Bundle;
+
+    invoke-interface {v0, v1}, Lp88;->r(Landroid/os/Bundle;)V
+
+    return-void
 .end method

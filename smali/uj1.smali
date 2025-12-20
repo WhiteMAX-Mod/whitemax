@@ -1,174 +1,92 @@
 .class public final Luj1;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lt98;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ls5g;
-
-.field public final b:Ls5g;
-
-.field public final c:I
-
-.field public final d:J
+.field public final synthetic o:Lgk1;
 
 
 # direct methods
-.method public constructor <init>(Ln5g;Lr5g;)V
+.method public constructor <init>(Lgk1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luj1;->o:Lgk1;
 
-    iput-object p1, p0, Luj1;->a:Ls5g;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Luj1;->b:Ls5g;
-
-    sget p1, Lyza;->v:I
-
-    iput p1, p0, Luj1;->c:I
-
-    const-wide p1, 0x7fffffffffffffffL
-
-    iput-wide p1, p0, Luj1;->d:J
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lcub;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Luj1;
+    invoke-virtual {p0, p1, p2}, Luj1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Luj1;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-object v0, p0, Luj1;->a:Ls5g;
+    invoke-virtual {p1, p2}, Luj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p1, Luj1;->a:Ls5g;
-
-    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Luj1;->d:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Laz1;->v(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Luj1;->a:Ls5g;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :cond_0
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final m()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Luj1;->c:I
+    new-instance p1, Luj1;
 
-    return v0
+    iget-object v0, p0, Luj1;->o:Lgk1;
+
+    invoke-direct {p1, v0, p2}, Luj1;-><init>(Lgk1;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v1, "CallPresettingsChangeNameItem(sectionItemType="
+    iget-object p1, p0, Luj1;->o:Lgk1;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p1, Lgk1;->x0:Ljava/lang/String;
 
-    const/4 v1, 0x4
+    iget-object v1, p1, Lrsh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {v1}, Lctd;->v(I)Ljava/lang/String;
+    iget-object v2, p1, Lgk1;->o:Lbbg;
 
-    move-result-object v1
+    check-cast v2, Lb9b;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Lb9b;->f()Ltb4;
 
-    const-string v1, ", itemSection=0, errorMessage="
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v3, Lbk1;
 
-    iget-object v1, p0, Luj1;->a:Ls5g;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v3, p1, v0, v4}, Lbk1;-><init>(Lgk1;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, ", text="
+    const/4 p1, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v4, v3, p1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
 
-    iget-object v1, p0, Luj1;->b:Ls5g;
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

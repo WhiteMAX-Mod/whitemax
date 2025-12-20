@@ -1,445 +1,262 @@
 .class public final Ljg5;
-.super Landroid/graphics/drawable/Drawable;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lmzg;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+.field public final synthetic X:Ld68;
 
-.field public final b:Lig5;
+.field public final synthetic o:Lqg5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(Lqg5;Ld68;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Livd;->e1:I
+    iput-object p1, p0, Ljg5;->o:Lqg5;
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    iput-object p2, p0, Ljg5;->X:Ld68;
 
-    new-instance v1, Lsf;
+    const/4 p1, 0x2
 
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p0}, Lsf;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lxf;
-
-    invoke-direct {v2, p1}, Lxf;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v2, v0}, Lxf;->b(I)Lwf;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lwf;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    iput-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    iget-object v1, p1, Lwf;->b:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lwf;->c:Landroid/util/ArrayMap;
-
-    new-instance v2, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
-
-    invoke-static {v0, v2, v1, p1}, Llaj;->d(Lone/me/sdk/richvector/EnhancedVectorDrawable;Landroid/animation/AnimatorSet;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
-
-    new-instance p1, Lig5;
-
-    invoke-direct {p1, p0, v2}, Lig5;-><init>(Ljg5;Landroid/animation/AnimatorSet;)V
-
-    iput-object p1, p0, Ljg5;->b:Lig5;
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(F)V
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lac4;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1, v0, v1}, Ln7j;->b(FFF)F
-
-    move-result p1
-
-    iget-object v0, p0, Ljg5;->b:Lig5;
-
-    iget v1, v0, Lig5;->e:F
-
-    iget-object v2, v0, Lig5;->d:Lbwf;
-
-    iput p1, v0, Lig5;->e:F
-
-    iget-object v3, v0, Lig5;->c:Lbwf;
-
-    invoke-virtual {v3}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Number;
-
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    long-to-float v3, v3
-
-    mul-float/2addr v3, p1
-
-    float-to-long v3, v3
-
-    cmpg-float p1, p1, v1
-
-    if-gez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v2}, Lbwf;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ljg5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Ljg5;
 
-    invoke-static {p1}, Lue3;->V(Ljava/util/Collection;)Ljava/util/List;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Ljg5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    :goto_1
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_2
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/animation/ValueAnimator;
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getDuration()J
-
-    move-result-wide v5
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v2, v5, v7
-
-    if-lez v2, :cond_2
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getStartDelay()J
-
-    move-result-wide v5
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getDuration()J
-
-    move-result-wide v9
-
-    add-long/2addr v9, v5
-
-    cmp-long v2, v3, v5
-
-    if-gez v2, :cond_3
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getCurrentPlayTime()J
-
-    move-result-wide v5
-
-    cmp-long v2, v5, v7
-
-    if-lez v2, :cond_2
-
-    invoke-virtual {v1, v7, v8}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
-
-    goto :goto_2
-
-    :cond_3
-    cmp-long v2, v3, v9
-
-    if-ltz v2, :cond_4
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getCurrentPlayTime()J
-
-    move-result-wide v5
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getDuration()J
-
-    move-result-wide v7
-
-    cmp-long v2, v5, v7
-
-    if-gez v2, :cond_2
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getDuration()J
-
-    move-result-wide v5
-
-    invoke-virtual {v1, v5, v6}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
-
-    goto :goto_2
-
-    :cond_4
-    sub-long v5, v3, v5
-
-    invoke-virtual {v1, v5, v6}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
-
-    goto :goto_2
-
-    :cond_5
-    iget-object p1, v0, Lig5;->a:Ljg5;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
+    return-object p2
 .end method
 
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Ljg5;->b:Lig5;
+    new-instance p1, Ljg5;
 
-    iget-object v0, v0, Lig5;->a:Ljg5;
+    iget-object v0, p0, Ljg5;->o:Lqg5;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    iget-object v1, p0, Ljg5;->X:Ld68;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public final findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-    .locals 1
-
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-
-    move-result-object p1
+    invoke-direct {p1, v0, v1, p2}, Ljg5;-><init>(Lqg5;Ld68;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final getAlpha()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 26
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result v0
+    iget-object v1, v0, Ljg5;->o:Lqg5;
 
-    return v0
-.end method
+    iget-object v2, v1, Lqg5;->u0:Lhof;
 
-.method public final getColorFilter()Landroid/graphics/ColorFilter;
-    .locals 1
+    new-instance v3, Lng5;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object v4, v0, Ljg5;->X:Ld68;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v4
 
-    return-object v0
-.end method
+    check-cast v4, Lvj;
 
-.method public final getDirtyBounds()Landroid/graphics/Rect;
-    .locals 1
+    invoke-virtual {v4}, Lvj;->j()Ljava/util/List;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result-object v4
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getDirtyBounds()Landroid/graphics/Rect;
+    new-instance v5, Ljava/util/ArrayList;
 
-    move-result-object v0
+    const/16 v6, 0xa
 
-    return-object v0
-.end method
+    invoke-static {v4, v6}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
-.method public final getIntrinsicHeight()I
-    .locals 1
+    move-result v6
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->getIntrinsicHeight()I
+    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result v0
+    move-result-object v4
 
-    return v0
-.end method
+    const/4 v6, 0x0
 
-.method public final getIntrinsicWidth()I
-    .locals 1
+    move v9, v6
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->getIntrinsicWidth()I
+    move-result v7
 
-    move-result v0
+    const/4 v8, 0x0
 
-    return v0
-.end method
+    if-eqz v7, :cond_4
 
-.method public final getMinimumHeight()I
-    .locals 1
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result-object v7
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
+    add-int/lit8 v17, v9, 0x1
 
-    move-result v0
+    if-ltz v9, :cond_3
 
-    return v0
-.end method
+    check-cast v7, Lxh;
 
-.method public final getMinimumWidth()I
-    .locals 1
+    iget-object v8, v1, Lqg5;->c:Lsg5;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object v10, v7, Lxh;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
+    invoke-virtual {v8, v10}, Lsg5;->c(Ljava/lang/String;)Lujf;
 
-    move-result v0
+    move-result-object v23
 
-    return v0
-.end method
+    iget-object v8, v1, Lqg5;->b:Lui;
 
-.method public final getOpacity()I
-    .locals 1
+    iget-wide v10, v7, Lxh;->a:J
 
-    const/4 v0, -0x3
+    iget-object v12, v7, Lxh;->c:Ljava/lang/String;
 
-    return v0
-.end method
+    iget-object v13, v7, Lxh;->e:Ljava/lang/String;
 
-.method public final invalidatePath()V
-    .locals 0
+    const/16 v14, 0x28
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    int-to-float v14, v14
 
-    return-void
-.end method
+    invoke-static {}, Lr05;->d()Landroid/content/res/Resources;
 
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
+    move-result-object v15
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+    invoke-virtual {v15}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result-object v15
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    iget v15, v15, Landroid/util/DisplayMetrics;->density:F
 
-    return-void
-.end method
+    mul-float/2addr v14, v15
 
-.method public final onLevelChange(I)Z
-    .locals 1
+    invoke-static {v14}, Ln7j;->c(F)I
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result v24
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    const/16 v25, 0x1
 
-    move-result p1
+    move-object/from16 v18, v8
 
-    return p1
-.end method
+    move-wide/from16 v19, v10
 
-.method public final onStateChange([I)Z
-    .locals 1
+    move-object/from16 v21, v12
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-object/from16 v22, v13
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+    invoke-virtual/range {v18 .. v25}, Lui;->a(JLjava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;II)Lpk;
 
-    move-result p1
+    move-result-object v12
 
-    return p1
-.end method
+    iget-object v10, v7, Lxh;->b:Ljava/lang/String;
 
-.method public final setAlpha(I)V
-    .locals 1
+    iget-wide v13, v7, Lxh;->a:J
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object v8, v1, Lqg5;->X:Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->setAlpha(I)V
+    if-eqz v8, :cond_2
 
-    return-void
-.end method
+    invoke-interface {v8}, Ljava/util/Collection;->isEmpty()Z
 
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
+    move-result v11
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    if-eqz v11, :cond_0
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    goto :goto_1
 
-    return-void
-.end method
+    :cond_0
+    invoke-interface {v8}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-.method public final setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
+    move-result-object v8
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    :cond_1
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
+    move-result v11
 
-    return-void
-.end method
+    if-eqz v11, :cond_2
 
-.method public final setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result-object v11
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    check-cast v11, Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    iget-object v15, v7, Lxh;->b:Ljava/lang/String;
 
-.method public final setVisible(ZZ)Z
-    .locals 1
+    invoke-static {v11, v15}, Lqyf;->l(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    iget-object v0, p0, Ljg5;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    move-result v11
 
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+    if-eqz v11, :cond_1
 
-    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+    const/4 v7, 0x1
 
-    move-result p1
+    move v15, v7
 
-    return p1
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    move v15, v6
+
+    :goto_2
+    new-instance v7, Llf5;
+
+    const/4 v8, 0x1
+
+    const/4 v11, 0x0
+
+    const/16 v16, 0x8
+
+    invoke-direct/range {v7 .. v16}, Llf5;-><init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JZI)V
+
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move/from16 v9, v17
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {}, Lfi3;->m()V
+
+    throw v8
+
+    :cond_4
+    sget-object v1, Lch5;->a:Lch5;
+
+    invoke-direct {v3, v1, v5}, Lng5;-><init>(Ljava/util/List;Ljava/util/List;)V
+
+    invoke-virtual {v2, v8, v3}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lv2h;->a:Lv2h;
+
+    return-object v1
 .end method

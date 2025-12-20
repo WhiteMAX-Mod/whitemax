@@ -1,52 +1,129 @@
 .class public final Lm46;
-.super Lq44;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lbg0;
 
 
-# instance fields
-.field public final synthetic X:Ln46;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Lz26;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Ln46;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lm46;->X:Ln46;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    sput-object v0, Lm46;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Z)V
+    .locals 5
 
-    iput-object p1, p0, Lm46;->d:Ljava/lang/Object;
+    sget-object v0, Lo46;->j:Ljava/lang/Object;
 
-    iget p1, p0, Lm46;->o:I
+    monitor-enter v0
 
-    const/high16 v0, -0x80000000
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    or-int/2addr p1, v0
+    sget-object v2, Lo46;->k:Lxs;
 
-    iput p1, p0, Lm46;->o:I
+    invoke-virtual {v2}, Lxs;->values()Ljava/util/Collection;
 
-    iget-object p1, p0, Lm46;->X:Ln46;
+    move-result-object v2
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {p1, v0, p0}, Ln46;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo46;
+
+    iget-object v3, v2, Lo46;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "FirebaseApp"
+
+    const-string v4, "Notifying background state change listeners."
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, v2, Lo46;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll46;
+
+    iget-object v3, v3, Ll46;->a:Lo46;
+
+    if-nez p1, :cond_1
+
+    iget-object v3, v3, Lo46;->h:Lhyc;
+
+    invoke-interface {v3}, Lhyc;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lrq4;
+
+    invoke-virtual {v3}, Lrq4;->b()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

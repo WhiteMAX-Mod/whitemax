@@ -15,10 +15,10 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Lb27;",
+        "Lm67;",
         "heartbeatLogic",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lb27;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lm67;)V",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,230 +32,228 @@
 
 
 # instance fields
-.field public final a:Lb27;
+.field public final s0:Lm67;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lb27;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lm67;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Lb27;
+    iput-object p3, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->s0:Lm67;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 10
+.method public final g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 11
 
-    invoke-virtual {p0}, Lma8;->getId()Ljava/util/UUID;
+    iget-object p1, p0, Lbf8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object p1
+    iget-object v0, p1, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "c27"
+    const-string v1, "n67"
 
-    const-string v1, "work %s started"
+    const-string v2, "work %s started"
 
-    invoke-static {v0, v1, p1}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Lb27;
+    iget-object v0, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->s0:Lm67;
 
-    iget-object v1, p1, Lb27;->a:Ljava/lang/String;
+    iget-object v2, v0, Lm67;->a:Ljava/lang/String;
 
-    iget-object v2, p1, Lb27;->d:Lk18;
+    iget-object v3, v0, Lm67;->d:Ld68;
 
-    iget-object v3, p1, Lb27;->c:Lk18;
+    iget-object v4, v0, Lm67;->c:Ld68;
 
-    const-string v4, "onHeartbeat"
+    const-string v5, "onHeartbeat"
 
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v4, p1, Lb27;->b:Lk18;
+    iget-object v5, v0, Lm67;->b:Ld68;
 
-    invoke-interface {v4}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v5}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lfxa;
+    check-cast v5, Lm3b;
 
-    invoke-virtual {v4}, Lfxa;->b()Z
+    invoke-virtual {v5}, Lm3b;->b()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_1
+    if-eqz v5, :cond_1
 
-    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Llv4;
+    check-cast v5, Lgz4;
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
-    check-cast v6, Lz7c;
+    check-cast v7, Lpfc;
 
-    iget-object v6, v6, Lz7c;->a:Lpe8;
+    iget-object v7, v7, Lpfc;->a:Ldj8;
 
-    iget-object v7, v6, Lw4e;->D:Lfde;
+    iget-object v8, v7, Lcfe;->D:Lkqe;
 
-    sget-object v8, Lw4e;->m0:[Lyy7;
+    sget-object v9, Lcfe;->l0:[Lp38;
 
-    const/16 v9, 0x15
+    const/16 v10, 0x15
 
-    aget-object v8, v8, v9
+    aget-object v9, v9, v10
 
-    invoke-virtual {v7, v6, v8}, Lfde;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+    invoke-virtual {v8, v7, v9}, Lkqe;->D(Ljava/lang/Object;Lp38;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
-    check-cast v6, Ljava/lang/Number;
+    check-cast v7, Ljava/lang/Number;
 
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v7}, Ljava/lang/Number;->longValue()J
 
-    move-result-wide v6
+    move-result-wide v7
 
-    sub-long/2addr v4, v6
+    sub-long/2addr v5, v7
 
-    long-to-double v4, v4
+    long-to-double v5, v5
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v4
+    move-result-wide v5
 
-    const-wide v6, 0x417b774000000000L    # 2.88E7
+    const-wide v7, 0x417b774000000000L    # 2.88E7
 
-    cmpl-double v4, v4, v6
+    cmpl-double v5, v5, v7
 
-    if-lez v4, :cond_0
+    if-lez v5, :cond_0
 
-    const-string v4, "time since last successful request less than needed, force connection"
+    const-string v5, "time since last successful request less than needed, force connection"
 
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz7c;
-
-    iget-object v1, v1, Lz7c;->a:Lpe8;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Lw4e;->A(Z)V
-
-    iget-object v1, p1, Lb27;->e:Lk18;
-
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx2g;
-
-    invoke-virtual {v1}, Lx2g;->a()V
-
-    :cond_0
-    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llv4;
-
-    invoke-virtual {v1}, Llv4;->d()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p1, Lb27;->f:Lk18;
-
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llr3;
-
-    invoke-virtual {v1}, Llr3;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p1, Lb27;->g:Lk18;
-
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhwa;
-
-    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Llv4;
+    check-cast v2, Lpfc;
 
-    invoke-virtual {v2}, Llv4;->d()Z
+    iget-object v2, v2, Lpfc;->a:Ldj8;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Lcfe;->A(Z)V
+
+    iget-object v2, v0, Lm67;->e:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lheg;
+
+    invoke-virtual {v2}, Lheg;->a()V
+
+    :cond_0
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgz4;
+
+    invoke-virtual {v2}, Lgz4;->d()Z
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lhwa;->B(Z)J
+    if-nez v2, :cond_1
 
-    iget-object v1, p1, Lb27;->h:Lk18;
+    iget-object v2, v0, Lm67;->f:Ld68;
 
-    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lc6i;
+    check-cast v2, Lvu3;
 
-    invoke-static {v1}, Lshe;->v(Lc6i;)V
+    invoke-virtual {v2}, Lvu3;->f()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v0, Lm67;->g:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo2b;
+
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lgz4;
+
+    invoke-virtual {v3}, Lgz4;->d()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lo2b;->A(Z)J
+
+    iget-object v2, v0, Lm67;->h:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwii;
+
+    invoke-static {v2}, Lwre;->v(Lwii;)V
 
     :cond_1
-    iget-object p1, p1, Lb27;->i:Lk18;
+    iget-object v0, v0, Lm67;->i:Ld68;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lfg8;
+    check-cast v0, Lrk8;
 
-    const-string v1, "heartbeat"
+    const-string v2, "heartbeat"
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v1, v2}, Lfg8;->f(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v2, v3}, Lrk8;->f(Ljava/lang/String;Z)Z
 
-    invoke-virtual {p0}, Lma8;->getId()Ljava/util/UUID;
-
-    move-result-object p1
+    iget-object p1, p1, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
 
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v1, "work %s finished"
+    const-string v0, "work %s finished"
 
-    invoke-static {v0, v1, p1}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, p1}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lla8;->b()Lka8;
+    new-instance p1, Lze8;
 
-    move-result-object p1
+    invoke-direct {p1}, Lze8;-><init>()V
 
     return-object p1
 .end method

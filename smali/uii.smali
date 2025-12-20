@@ -2,69 +2,91 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Luii;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lpo5;
+
+.field public final d:Lkii;
+
+.field public final e:Ljava/util/Set;
+
+.field public final f:J
+
+.field public final g:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lpo5;Lkii;Ljava/util/Set;JI)V
+    .locals 0
 
-    new-instance v0, Luii;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-object p1, p0, Luii;->a:Ljava/lang/String;
 
-    sput-object v0, Luii;->a:Luii;
+    .line 3
+    iput-object p2, p0, Luii;->b:Ljava/lang/String;
 
-    new-instance v0, Ltci;
+    .line 4
+    iput-object p3, p0, Luii;->c:Lpo5;
 
-    const/4 v1, 0x1
+    .line 5
+    iput-object p4, p0, Luii;->d:Lkii;
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    .line 6
+    iput-object p5, p0, Luii;->e:Ljava/util/Set;
 
-    const-class v1, Lhdi;
+    .line 7
+    iput-wide p6, p0, Luii;->f:J
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    .line 8
+    iput p8, p0, Luii;->g:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Lpo5;Landroidx/work/WorkRequest;)V
+    .locals 10
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .line 9
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    throw p1
+    move-result-object v2
+
+    .line 10
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getWorkSpec()Lkii;
+
+    move-result-object v5
+
+    .line 11
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getTags()Ljava/util/Set;
+
+    move-result-object v6
+
+    .line 12
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v7
+
+    const/4 v9, 0x0
+
+    move-object v1, p0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    .line 13
+    invoke-direct/range {v1 .. v9}, Luii;-><init>(Ljava/lang/String;Ljava/lang/String;Lpo5;Lkii;Ljava/util/Set;JI)V
+
+    return-void
 .end method

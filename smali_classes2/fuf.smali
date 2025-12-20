@@ -1,49 +1,21 @@
 .class public final Lfuf;
-.super Ljava/lang/Object;
+.super Lzp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llrd;
-
-.field public final b:Lai;
-
-.field public final c:Lcrd;
-
-.field public final d:Lcrd;
+# static fields
+.field public static final a:Lfuf;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfuf;
 
-    iput-object p1, p0, Lfuf;->a:Llrd;
+    invoke-direct {v0}, Lzp;-><init>()V
 
-    new-instance v0, Lai;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, p1, v1}, Lai;-><init>(Llrd;I)V
-
-    iput-object v0, p0, Lfuf;->b:Lai;
-
-    new-instance v0, Lcrd;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, p1, v1}, Lcrd;-><init>(Llrd;I)V
-
-    iput-object v0, p0, Lfuf;->c:Lcrd;
-
-    new-instance v0, Lcrd;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, p1, v1}, Lcrd;-><init>(Llrd;I)V
-
-    iput-object v0, p0, Lfuf;->d:Lcrd;
+    sput-object v0, Lfuf;->a:Lfuf;
 
     return-void
 .end method

@@ -1,24 +1,23 @@
-.class public final Lwn5;
+.class public interface abstract Lwn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lco5;
 
+# virtual methods
+.method public abstract b()Ljava/util/concurrent/ExecutorService;
+.end method
 
-# static fields
-.field public static final a:Lwn5;
+.method public abstract d()Ljava/util/concurrent/ExecutorService;
+.end method
 
+.method public abstract i()Ljava/util/concurrent/ExecutorService;
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract j()Ljava/util/concurrent/ExecutorService;
+.end method
 
-    new-instance v0, Lwn5;
+.method public abstract r()Ljava/util/concurrent/ExecutorService;
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwn5;->a:Lwn5;
-
-    return-void
+.method public abstract t()Ljava/util/concurrent/ExecutorService;
 .end method

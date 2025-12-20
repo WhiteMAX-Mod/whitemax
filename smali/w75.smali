@@ -1,214 +1,284 @@
-.class public abstract Lw75;
+.class public final Lw75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfkg;
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/media/EncoderProfiles;)Ly90;
-    .locals 17
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getDefaultDurationSeconds()I
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    const/4 v0, -0x1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getRecommendedFileFormat()I
+    .line 6
+    iput v0, p0, Lw75;->a:I
 
-    move-result v1
+    .line 7
+    iput v0, p0, Lw75;->b:I
 
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getAudioProfiles()Ljava/util/List;
+    .line 8
+    iput v0, p0, Lw75;->c:I
 
-    move-result-object v2
+    return-void
+.end method
 
-    new-instance v3, Ljava/util/ArrayList;
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 1
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    mul-int/lit16 v0, p2, 0x100
 
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v2
+    iput v0, p0, Lw75;->a:I
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iput v0, p0, Lw75;->b:I
 
-    move-result v4
+    .line 2
+    iput p2, p0, Lw75;->c:I
 
-    if-eqz v4, :cond_0
+    .line 3
+    iput-boolean p3, p0, Lw75;->d:Z
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 4
+    iput-object p1, p0, Lw75;->e:Ljava/lang/Object;
 
-    move-result-object v4
+    return-void
+.end method
 
-    check-cast v4, Landroid/media/EncoderProfiles$AudioProfile;
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getCodec()I
+# virtual methods
+.method public a(III)Lckg;
+    .locals 5
 
-    move-result v6
+    iget v0, p0, Lw75;->c:I
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getMediaType()Ljava/lang/String;
+    iget-boolean v1, p0, Lw75;->d:Z
 
-    move-result-object v11
+    iget-object v2, p0, Lw75;->e:Ljava/lang/Object;
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getBitrate()I
+    check-cast v2, Ljava/lang/String;
 
-    move-result v7
+    sget-object v3, Lgkg;->a:Lz7g;
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getSampleRate()I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result v8
+    const-string v4, "https://tiles.api-maps.yandex.ru/v1/tiles/?lang=ru_RU&l=map&projection=web_mercator&maptype=future_map&"
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getChannels()I
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v9
+    const/4 v4, 0x1
 
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getProfile()I
+    if-eq v0, v4, :cond_0
 
-    move-result v10
+    const-string v4, "scale="
 
-    new-instance v5, Lx90;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v5 .. v11}, Lx90;-><init>(IIIIILjava/lang/String;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/16 v0, 0x26
 
-    goto :goto_0
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getVideoProfiles()Ljava/util/List;
+    if-nez v1, :cond_1
 
-    move-result-object v2
+    const-string v0, "theme=dark&"
 
-    new-instance v4, Ljava/util/ArrayList;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    :cond_1
+    const-string v0, "x="
 
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    const-string p1, "&y="
 
-    move-result v5
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v5, :cond_1
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string p1, "&z="
 
-    move-result-object v5
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v5, Landroid/media/EncoderProfiles$VideoProfile;
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getCodec()I
+    const-string p1, "&apikey="
 
-    move-result v7
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getMediaType()Ljava/lang/String;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitrate()I
+    move-result-object p1
 
-    move-result v9
+    :try_start_0
+    new-instance p2, Ljava/net/URL;
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getFrameRate()I
+    invoke-direct {p2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move-result v10
+    :try_start_1
+    new-instance p1, Lckg;
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getWidth()I
+    iget p3, p0, Lw75;->a:I
 
-    move-result v11
+    iget v0, p0, Lw75;->b:I
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHeight()I
+    invoke-virtual {p2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
-    move-result v12
+    move-result-object p2
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getProfile()I
+    invoke-virtual {p2}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
-    move-result v13
+    move-result-object p2
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitDepth()I
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
 
-    move-result v14
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getChromaSubsampling()I
+    const-string v2, "from must not be null."
 
-    move-result v15
+    invoke-static {p2, v2}, Lijj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHdrFormat()I
+    const/16 v2, 0x1000
 
-    move-result v16
+    new-array v2, v2, [B
 
-    new-instance v6, Lz90;
+    :goto_0
+    invoke-virtual {p2, v2}, Ljava/io/InputStream;->read([B)I
 
-    invoke-direct/range {v6 .. v16}, Lz90;-><init>(ILjava/lang/String;IIIIIIII)V
+    move-result v3
 
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v4, -0x1
+
+    if-ne v3, v4, :cond_2
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p2
+
+    invoke-direct {p1, p3, p2, v0}, Lckg;-><init>(I[BI)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
-    :cond_1
-    invoke-static {v0, v1, v3, v4}, Ly90;->e(IILjava/util/List;Ljava/util/List;)Ly90;
+    :cond_2
+    const/4 v4, 0x0
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v4, v3}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-object v0
+    goto :goto_0
+
+    :goto_1
+    throw p1
+
+    :catch_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catch_1
+    move-exception p1
+
+    new-instance p2, Ljava/lang/AssertionError;
+
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p2
 .end method
 
-.method public static b(Landroid/content/Context;Landroid/content/pm/PackageManager;)Landroid/content/pm/PackageInfo;
-    .locals 2
+.method public b(Landroid/graphics/drawable/Drawable;)V
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    move-result-object p0
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-
-    move-result-object v0
-
-    invoke-virtual {p1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Li12;)Lu75;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_RECOMMENDED_TEN_BIT_DYNAMIC_RANGE_PROFILE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {p0, v0}, Li12;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Long;
-
-    if-eqz p0, :cond_0
-
-    sget-object v0, Lv75;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lu75;
-
-    return-object p0
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    iget v0, p0, Lw75;->a:I
 
-    return-object p0
-.end method
+    const/4 v1, -0x1
 
-.method public static d(Landroid/content/pm/ShortcutInfo$Builder;)V
-    .locals 1
+    if-eq v0, v1, :cond_1
 
-    const/4 v0, 0x0
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    invoke-virtual {p0, v0}, Landroid/content/pm/ShortcutInfo$Builder;->setExcludedFromSurfaces(I)Landroid/content/pm/ShortcutInfo$Builder;
+    :cond_1
+    iget-boolean v0, p0, Lw75;->d:Z
 
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lw75;->e:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :cond_2
+    iget v0, p0, Lw75;->b:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_4
+
+    if-eqz v0, :cond_3
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v2
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+
+    :cond_4
+    iget v0, p0, Lw75;->c:I
+
+    if-eq v0, v1, :cond_6
+
+    if-eqz v0, :cond_5
+
+    move v2, v3
+
+    :cond_5
+    invoke-virtual {p1, v2}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
+
+    :cond_6
+    :goto_1
     return-void
 .end method

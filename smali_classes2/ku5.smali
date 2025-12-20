@@ -1,55 +1,54 @@
 .class public final Lku5;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfkg;
 
-# instance fields
-.field public X:Luid;
 
-.field public Y:J
+# static fields
+.field public static final a:Lku5;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lcb6;
-
-.field public o:Luid;
-
-.field public final synthetic s0:Lcb6;
-
-.field public t0:I
+.field public static final b:Lz7g;
 
 
 # direct methods
-.method public constructor <init>(Lcb6;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lku5;->s0:Lcb6;
+    new-instance v0, Lku5;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lku5;->a:Lku5;
+
+    new-instance v0, Lju5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lju5;-><init>(I)V
+
+    new-instance v1, Lz7g;
+
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
+
+    sput-object v1, Lku5;->b:Lz7g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(III)Lckg;
+    .locals 0
 
-    iput-object p1, p0, Lku5;->Z:Ljava/lang/Object;
+    sget-object p1, Lku5;->b:Lz7g;
 
-    iget p1, p0, Lku5;->t0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lku5;->t0:I
-
-    iget-object p1, p0, Lku5;->s0:Lcb6;
-
-    invoke-virtual {p1, p0}, Lcb6;->c(Lq44;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lz7g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
+
+    check-cast p1, Lckg;
 
     return-object p1
 .end method

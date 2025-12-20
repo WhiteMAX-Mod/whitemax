@@ -1,129 +1,134 @@
 .class public final Lemc;
-.super Llmc;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ls5g;
-
-.field public final b:Lem6;
+.field public final synthetic o:Limc;
 
 
 # direct methods
-.method public constructor <init>(Ls5g;Lem6;)V
+.method public constructor <init>(Limc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lemc;->o:Limc;
 
-    iput-object p1, p0, Lemc;->a:Ls5g;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lemc;->b:Lem6;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lac4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lemc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lemc;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lemc;
 
-    iget-object v1, p0, Lemc;->a:Ls5g;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-object v3, p1, Lemc;->a:Ls5g;
+    invoke-virtual {p1, p2}, Lemc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lemc;->b:Lem6;
-
-    iget-object p1, p1, Lemc;->b:Lem6;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lemc;->a:Ls5g;
+    new-instance p1, Lemc;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lemc;->o:Limc;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lemc;-><init>(Limc;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lemc;->b:Lem6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v1, "ShowAbortionSnackbar(titleRes="
+    iget-object p1, p0, Lemc;->o:Limc;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p1, Limc;->c:J
 
-    iget-object v1, p0, Lemc;->a:Ls5g;
+    sget-object v2, Limc;->F0:[Lp38;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Limc;->u()Lud2;
 
-    const-string v1, ", abortAction="
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lemc;->b:Lem6;
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0, v1}, Lud2;->f0(J)Z
 
-    const-string v1, ")"
+    move-result v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-ne v2, v4, :cond_0
 
-    move-result-object v0
+    move v3, v4
 
-    return-object v0
+    :cond_0
+    iget-object v2, p1, Limc;->v0:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lte3;
+
+    check-cast v2, Lcfe;
+
+    invoke-virtual {v2}, Lcfe;->s()J
+
+    move-result-wide v4
+
+    cmp-long v0, v4, v0
+
+    if-eqz v0, :cond_1
+
+    if-nez v3, :cond_1
+
+    iget-object p1, p1, Limc;->B0:Lyl5;
+
+    new-instance v0, Lrlc;
+
+    sget v1, Lhfb;->a1:I
+
+    new-instance v2, Lbhg;
+
+    invoke-direct {v2, v1}, Lbhg;-><init>(I)V
+
+    sget v1, Lh5e;->r1:I
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lrlc;-><init>(Lghg;Ljava/lang/Integer;)V
+
+    invoke-static {p1, v0}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    :cond_1
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

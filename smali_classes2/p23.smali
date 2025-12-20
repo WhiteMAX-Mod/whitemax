@@ -1,168 +1,70 @@
 .class public final Lp23;
-.super Ljava/lang/Object;
+.super Lxbg;
 .source "SourceFile"
-
-# interfaces
-.implements Lx26;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lsu1;
+.field public c:Lvd2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsu1;I)V
+.method public constructor <init>(Lgr9;)V
     .locals 0
 
-    iput p2, p0, Lp23;->a:I
-
-    iput-object p1, p0, Lp23;->b:Lsu1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lxbg;-><init>(Lgr9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 1
 
-    iget v0, p0, Lp23;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, "chat"
 
-    new-instance v0, Lyjf;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v1, 0x0
+    move-result p2
 
-    invoke-direct {v0, p1, v1}, Lyjf;-><init>(Lz26;I)V
+    if-nez p2, :cond_0
 
-    iget-object p1, p0, Lp23;->b:Lsu1;
+    invoke-virtual {p1}, Lgr9;->y()V
 
-    invoke-virtual {p1, v0, p2}, Lt92;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lh28;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lh28;-><init>(Lz26;I)V
-
-    iget-object p1, p0, Lp23;->b:Lsu1;
-
-    invoke-virtual {p1, v0, p2}, Lt92;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Lvd2;->a(Lgr9;)Lvd2;
 
     move-result-object p1
 
-    sget-object p2, Lg84;->a:Lg84;
+    iput-object p1, p0, Lp23;->c:Lvd2;
 
-    if-ne p1, p2, :cond_1
+    return-void
+.end method
 
-    goto :goto_1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
+    iget-object v0, p0, Lp23;->c:Lvd2;
 
-    :goto_1
-    return-object p1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    new-instance v0, La53;
+    const-string v2, "{chat="
 
-    const/16 v1, 0x1c
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p1, v1}, La53;-><init>(Lz26;I)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lp23;->b:Lsu1;
+    const-string v0, "}"
 
-    invoke-virtual {p1, v0, p2}, Lt92;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object p2, Lg84;->a:Lg84;
+    move-result-object v0
 
-    if-ne p1, p2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_2
-    return-object p1
-
-    :pswitch_2
-    new-instance v0, La53;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p1, v1}, La53;-><init>(Lz26;I)V
-
-    iget-object p1, p0, Lp23;->b:Lsu1;
-
-    invoke-virtual {p1, v0, p2}, Lt92;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_3
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Lto1;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, p1, v1}, Lto1;-><init>(Lz26;I)V
-
-    iget-object p1, p0, Lp23;->b:Lsu1;
-
-    invoke-virtual {p1, v0, p2}, Lt92;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_4
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,63 +1,48 @@
-.class public final Llo5;
-.super Lcda;
+.class public abstract Llo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Llo5;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Ljava/io/FileDescriptor;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-    new-instance v0, Llo5;
-
-    sget-object v1, Lqqg;->a:Lqqg;
-
-    invoke-direct {v0, v1}, Lcda;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Llo5;->b:Llo5;
+    invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
 
     return-void
 .end method
 
+.method public static b(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-static {p0}, Landroid/system/Os;->dup(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Llo5;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static c(Ljava/io/FileDescriptor;JI)J
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-    const v0, -0x13ae8fb3
+    invoke-static {p0, p1, p2, p3}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
 
-    return v0
-.end method
+    move-result-wide p0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Hide"
-
-    return-object v0
+    return-wide p0
 .end method

@@ -1,99 +1,104 @@
 .class public final Lmcb;
-.super Locb;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lmcb;",
-            ">;"
-        }
-    .end annotation
-.end field
 
-.field public static final b:Lmcb;
+# instance fields
+.field public final synthetic X:Ldl4;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ldl4;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lmcb;
+    iput-object p1, p0, Lmcb;->X:Ldl4;
 
-    const-wide/16 v1, 0xdac
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Locb;-><init>(J)V
-
-    sput-object v0, Lmcb;->b:Lmcb;
-
-    new-instance v0, Lpq8;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
-
-    sput-object v0, Lmcb;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lmcb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x16da368a
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Standard"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p2, 0x1
+    check-cast p1, Lac4;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lmcb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lmcb;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lmcb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object p1, Lbc4;->a:Lbc4;
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lmcb;
+
+    iget-object v0, p0, Lmcb;->X:Ldl4;
+
+    invoke-direct {p1, v0, p2}, Lmcb;-><init>(Ldl4;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lmcb;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-eq v0, v1, :cond_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    new-instance p1, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iput v1, p0, Lmcb;->o:I
+
+    iget-object p1, p0, Lmcb;->X:Ldl4;
+
+    invoke-static {p1, p0}, Ldl4;->a(Ldl4;Ll84;)V
+
+    sget-object p1, Lbc4;->a:Lbc4;
+
+    return-object p1
 .end method

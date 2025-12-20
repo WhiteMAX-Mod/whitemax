@@ -1,5 +1,5 @@
 .class public abstract Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-.super Llrd;
+.super Le1e;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;",
-        "Llrd;",
+        "Le1e;",
         "<init>",
         "()V",
         "tamtam-android-sdk_release"
@@ -26,99 +26,102 @@
 
 
 # static fields
-.field public static volatile m:Liqa;
+.field public static volatile l:Ls0b;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Llrd;-><init>()V
+    invoke-direct {p0}, Le1e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A()Lqs5;
+.method public abstract A()Lzp4;
 .end method
 
-.method public abstract B()Lvs5;
+.method public abstract B()Ll75;
 .end method
 
-.method public abstract C()Lmt5;
+.method public abstract C()Liw5;
 .end method
 
-.method public abstract D()Lgk7;
+.method public abstract D()Lsw5;
 .end method
 
-.method public abstract E()Lan9;
+.method public abstract E()Lxw5;
 .end method
 
-.method public abstract F()Llq9;
+.method public abstract F()Lpx5;
 .end method
 
-.method public abstract G()Lwna;
+.method public abstract G()Lmo7;
 .end method
 
-.method public abstract H()Lcoa;
+.method public abstract H()Lmr9;
 .end method
 
-.method public abstract I()Lwpa;
+.method public abstract I()Lmv9;
 .end method
 
-.method public abstract J()Lsub;
+.method public abstract J()Lcua;
 .end method
 
-.method public abstract K()Ljdc;
+.method public abstract K()Ljua;
 .end method
 
-.method public abstract L()Lkad;
+.method public abstract L()Lewa;
 .end method
 
-.method public abstract M()Locd;
+.method public abstract M()Lo1c;
 .end method
 
-.method public abstract N()Ldrd;
+.method public abstract N()Lykc;
 .end method
 
-.method public abstract O()Lzxd;
+.method public abstract O()Lqjd;
 .end method
 
-.method public abstract P()Lkce;
+.method public abstract P()Lyld;
 .end method
 
-.method public abstract Q()Lxdf;
+.method public abstract Q()Lq0e;
 .end method
 
-.method public abstract R()Ljgf;
+.method public abstract R()Lg8e;
 .end method
 
-.method public abstract S()Ltgf;
+.method public abstract S()Lpme;
 .end method
 
-.method public abstract T()Lfuf;
+.method public abstract T()Lkpf;
 .end method
 
-.method public abstract U()Ld3g;
+.method public abstract U()Lyrf;
 .end method
 
-.method public abstract V()Lewg;
+.method public abstract V()Ljsf;
 .end method
 
-.method public abstract W()Lo2h;
+.method public abstract W()Le6g;
 .end method
 
-.method public abstract X()Lqlh;
+.method public abstract X()Lpeg;
 .end method
 
-.method public abstract Y()Landroidx/work/impl/model/WorkersQueueDao;
+.method public abstract Y()Lu8h;
+.end method
+
+.method public abstract Z()Lbfh;
 .end method
 
 .method public final a()V
     .locals 7
 
-    sget-object v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->m:Liqa;
+    sget-object v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->l:Ls0b;
 
     if-nez v0, :cond_0
 
@@ -139,11 +142,11 @@
 
     if-ne v0, v1, :cond_3
 
-    invoke-virtual {p0}, Llrd;->j()Z
+    invoke-virtual {p0}, Le1e;->m()Z
 
     move-result v0
 
-    invoke-virtual {p0}, Llrd;->m()Z
+    invoke-virtual {p0}, Le1e;->p()Z
 
     move-result v1
 
@@ -191,55 +194,52 @@
 
     const-string v6, "NotMainThreadException(isOpenInternal="
 
-    invoke-static {v6, v1, v4, v0, v5}, Lho7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v1, v4, v0, v5}, Lqf7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, ")"
 
-    invoke-static {v0, v2, v1}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lqf7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v3, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lone/me/android/OneMeApplication;->s0:Lrwa;
+    sget-object v0, Lone/me/android/OneMeApplication;->s0:Ly2b;
 
-    sget-object v0, Lt1b;->a:Lt1b;
+    sget-object v0, Ld8b;->a:Ld8b;
 
-    invoke-virtual {v0}, Lt1b;->d()Lj94;
+    invoke-virtual {v0}, Ld8b;->d()Lxc4;
 
     move-result-object v0
 
     const-string v1, "ONEME-8045"
 
-    invoke-virtual {v0, v1, v3}, Lj94;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v3}, Lxc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
     :goto_2
     return-void
 .end method
 
-.method public abstract s()Lei;
+.method public abstract a0()Lkyh;
 .end method
 
-.method public abstract t()Lek;
+.method public abstract b0()Landroidx/work/impl/model/WorkersQueueDao;
 .end method
 
-.method public abstract u()Lm03;
+.method public abstract v()Ldi;
 .end method
 
-.method public abstract v()Lmj3;
+.method public abstract w()Ldk;
 .end method
 
-.method public abstract w()Lm14;
+.method public abstract x()Lj33;
 .end method
 
-.method public abstract x()Lcm4;
+.method public abstract y()Lvm3;
 .end method
 
-.method public abstract y()Lm35;
-.end method
-
-.method public abstract z()Lhs5;
+.method public abstract z()Lg54;
 .end method

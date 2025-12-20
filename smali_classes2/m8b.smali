@@ -1,55 +1,51 @@
-.class public abstract Lm8b;
-.super Ljava/lang/Object;
+.class public final Lm8b;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic X:Lp8b;
 
-.field public static final b:I
+.field public Y:I
 
-.field public static final c:I
+.field public d:Lvs8;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lp8b;Ll84;)V
+    .locals 0
 
-    sget v0, La4d;->audio_onboarding_intro:I
+    iput-object p1, p0, Lm8b;->X:Lp8b;
 
-    sput v0, Lm8b;->a:I
-
-    sget v0, La4d;->pinbars_group_call_bar_button_text:I
-
-    sput v0, Lm8b;->b:I
-
-    sget v0, La4d;->pinbars_group_call_bar_title:I
-
-    sput v0, Lm8b;->c:I
-
-    sget v0, La4d;->pinbars_snackbar_unpinned:I
-
-    sput v0, Lm8b;->d:I
-
-    sget v0, La4d;->unknown_contact_add_to_contact:I
-
-    sput v0, Lm8b;->e:I
-
-    sget v0, La4d;->unknown_contact_block_contact:I
-
-    sput v0, Lm8b;->f:I
-
-    sget v0, La4d;->unknown_contact_snackbar_add_contact:I
-
-    sput v0, Lm8b;->g:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lm8b;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lm8b;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lm8b;->Y:I
+
+    iget-object p1, p0, Lm8b;->X:Lp8b;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lp8b;->a(Lws8;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,94 +1,23 @@
-.class public final Ljn0;
+.class public abstract Ljn0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li9e;
 
-
-# instance fields
-.field public final X:J
-
-.field public final a:Lmn0;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final o:J
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmn0;JJJJJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljn0;->a:Lmn0;
-
-    iput-wide p2, p0, Ljn0;->b:J
-
-    iput-wide p4, p0, Ljn0;->c:J
-
-    iput-wide p6, p0, Ljn0;->d:J
-
-    iput-wide p8, p0, Ljn0;->o:J
-
-    iput-wide p10, p0, Ljn0;->X:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c()Z
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    const-string v0, "BatteryChrgTracker"
 
-    return v0
-.end method
+    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
 
-.method public final e(J)Lg9e;
-    .locals 13
+    move-result-object v0
 
-    iget-object v0, p0, Ljn0;->a:Lmn0;
+    sput-object v0, Ljn0;->a:Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Lmn0;->a(J)J
-
-    move-result-wide v1
-
-    iget-wide v9, p0, Ljn0;->o:J
-
-    iget-wide v11, p0, Ljn0;->X:J
-
-    const-wide/16 v3, 0x0
-
-    iget-wide v5, p0, Ljn0;->c:J
-
-    iget-wide v7, p0, Ljn0;->d:J
-
-    invoke-static/range {v1 .. v12}, Lkn0;->b(JJJJJJ)J
-
-    move-result-wide v0
-
-    new-instance v2, Lg9e;
-
-    new-instance v3, Lm9e;
-
-    invoke-direct {v3, p1, p2, v0, v1}, Lm9e;-><init>(JJ)V
-
-    invoke-direct {v2, v3, v3}, Lg9e;-><init>(Lm9e;Lm9e;)V
-
-    return-object v2
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Ljn0;->b:J
-
-    return-wide v0
+    return-void
 .end method

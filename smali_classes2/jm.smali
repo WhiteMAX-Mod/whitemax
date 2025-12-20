@@ -3,50 +3,57 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lim;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public getPriority()I
     .locals 1
 
-    new-instance v0, Lim;
+    const/16 v0, 0x10
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljm;->a:Lim;
-
-    return-void
+    return v0
 .end method
 
-
-# virtual methods
-.method public debugApiException(Lsl;Lhm;Lru/ok/android/api/core/ApiException;)V
-    .locals 0
-
-    return-void
+.method public abstract getScope()Lpm;
 .end method
 
-.method public debugApiRequest(Lsl;Lhm;Ltl;)V
-    .locals 0
-
-    return-void
+.method public abstract getUri()Landroid/net/Uri;
 .end method
 
-.method public debugApiResponseFail(Lsl;Lhm;Lxx7;)Lxx7;
-    .locals 0
+.method public shouldGzip()Z
+    .locals 1
 
-    return-object p3
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public debugApiResponseOk(Lsl;Lhm;Lxx7;)Lxx7;
-    .locals 0
+.method public shouldPost()Z
+    .locals 1
 
-    return-object p3
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public debugIoException(Lsl;Lhm;Ljava/io/IOException;)V
+.method public willWriteParams()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public willWriteSupplyParams()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract writeParams(Lx28;)V
+.end method
+
+.method public writeSupplyParams(Lx28;)V
     .locals 0
 
     return-void

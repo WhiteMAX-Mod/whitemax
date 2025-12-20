@@ -1,102 +1,39 @@
 .class public final Lfa3;
-.super Ljava/lang/Object;
+.super Lkm4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final b:Lfa3;
 
-.field public final b:Ljava/lang/reflect/Method;
+.field public static final c:Lgm4;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/reflect/Method;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfa3;
 
-    iput p1, p0, Lfa3;->a:I
+    invoke-direct {v0}, Lkm4;-><init>()V
 
-    iput-object p2, p0, Lfa3;->b:Ljava/lang/reflect/Method;
+    sput-object v0, Lfa3;->b:Lfa3;
 
-    const/4 p1, 0x1
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lfa3;
+    new-array v1, v1, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/16 v3, 0xe
 
-    return v2
+    const-string v4, ":chats-search"
 
-    :cond_1
-    check-cast p1, Lfa3;
+    invoke-static {v0, v4, v1, v2, v3}, Lkm4;->b(Lkm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgm4;
 
-    iget v1, p0, Lfa3;->a:I
+    move-result-object v0
 
-    iget v3, p1, Lfa3;->a:I
+    sput-object v0, Lfa3;->c:Lgm4;
 
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lfa3;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lfa3;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lfa3;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lfa3;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method

@@ -1,138 +1,125 @@
 .class public final Lrfa;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lum6;
 
 
 # instance fields
-.field public synthetic X:Lin;
+.field public final a:Lqfa;
 
-.field public synthetic Y:Lyeb;
-
-.field public final synthetic o:I
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lqfa;Z)V
     .locals 0
 
-    iput p3, p0, Lrfa;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrfa;->a:Lqfa;
+
+    iput-boolean p2, p0, Lrfa;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lrfa;->o:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lin;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lyeb;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lrfa;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lrfa;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lrfa;->X:Lin;
-
-    iput-object p2, v0, Lrfa;->Y:Lyeb;
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    invoke-virtual {v0, p1}, Lrfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lrfa;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lrfa;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lrfa;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lrfa;->X:Lin;
+    return v2
 
-    iput-object p2, v0, Lrfa;->Y:Lyeb;
+    :cond_1
+    check-cast p1, Lrfa;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    iget-object v1, p0, Lrfa;->a:Lqfa;
 
-    invoke-virtual {v0, p1}, Lrfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lrfa;->a:Lqfa;
 
-    return-object p1
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lrfa;->b:Z
+
+    iget-boolean p1, p1, Lrfa;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lrfa;->o:I
+    iget-object v0, p0, Lrfa;->a:Lqfa;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lrfa;->X:Lin;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lrfa;->Y:Lyeb;
+    iget-boolean v1, p0, Lrfa;->b:Z
 
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MuteState(muteEvent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrfa;->a:Lqfa;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isForAll="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lrfa;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Lbf0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrfa;->X:Lin;
-
-    iget-object v0, p0, Lrfa;->Y:Lyeb;
-
-    invoke-interface {v0}, Lyeb;->b()Lbf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lbf0;->l:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

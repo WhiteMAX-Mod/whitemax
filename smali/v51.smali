@@ -1,159 +1,133 @@
 .class public final Lv51;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lw51;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-.field public final b:Z
-
-.field public final c:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lv51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iput-wide p1, p0, Lv51;->a:J
+    const/4 p2, 0x2
 
-    iput-boolean p3, p0, Lv51;->b:Z
-
-    iput-boolean p4, p0, Lv51;->c:Z
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Lv51;->b:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
-.end method
+    invoke-virtual {p0, p1, p2}, Lv51;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.method public final b()Z
-    .locals 1
+    move-result-object p1
 
-    iget-boolean v0, p0, Lv51;->c:Z
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lv51;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lv51;
 
-    iget-wide v3, p0, Lv51;->a:J
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-wide v5, p1, Lv51;->a:J
+    invoke-virtual {p1, p2}, Lv51;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lv51;->b:Z
-
-    iget-boolean v3, p1, Lv51;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lv51;->c:Z
-
-    iget-boolean p1, p1, Lv51;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-wide v0, p0, Lv51;->a:J
+    new-instance v0, Lv51;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lv51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lv51;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lv51;->b:Z
-
-    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lv51;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "User(userId="
-
-    const-string v1, ", isVideoEnabled="
-
-    iget-wide v2, p0, Lv51;->a:J
-
-    iget-boolean v4, p0, Lv51;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", isAudioEnabled="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lv51;->c:Z
-
-    invoke-static {v0, v1, v3, v2}, Lvb9;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lv51;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lv51;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lv51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lp38;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lz41;
+
+    move-result-object v1
+
+    iget-object v2, v1, Lz41;->T0:Ldog;
+
+    iget-object v3, v1, Lz41;->K0:Lh3e;
+
+    sget p1, Lv6b;->k2:I
+
+    new-instance v4, Lbhg;
+
+    invoke-direct {v4, p1}, Lbhg;-><init>(I)V
+
+    sget p1, Lr6b;->Q:I
+
+    new-instance v5, Lu41;
+
+    const/4 v0, 0x2
+
+    invoke-direct {v5, v1, v0}, Lu41;-><init>(Lz41;I)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual/range {v1 .. v6}, Lz41;->z(Ldog;Lh3e;Lbhg;Lmq6;Ljava/lang/Integer;)Ldog;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lz41;->T0:Ldog;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lp38;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lz41;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lz41;->T0:Ldog;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ldog;->a()V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

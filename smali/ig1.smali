@@ -1,61 +1,120 @@
 .class public final Lig1;
-.super Ld2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq41;
+.implements Lmq6;
 
 
 # instance fields
-.field public final E0:Lr41;
+.field public final synthetic a:I
+
+.field public final synthetic b:[Lf76;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr41;)V
-    .locals 2
+.method public synthetic constructor <init>([Lf76;I)V
+    .locals 0
 
-    new-instance v0, Lroe;
+    iput p2, p0, Lig1;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lig1;->b:[Lf76;
 
-    invoke-direct {v0, p1, v1}, Lroe;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, v0}, Lmid;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Lig1;->E0:Lr41;
-
-    sget-object p1, Lnoe;->b:Lnoe;
-
-    invoke-virtual {v0, p1}, Lroe;->setThemeDepended(Lnoe;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final z(Lt98;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Ln01;
+    iget v0, p0, Lig1;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    iget-object v0, p0, Lig1;->b:[Lf76;
 
-    :cond_0
-    iget-object v0, p0, Lig1;->E0:Lr41;
+    array-length v0, v0
 
-    iget-object v0, v0, Lr41;->a:Ld9a;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ld9a;->a(Ljava/lang/Object;)V
+    return-object v0
 
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+    :pswitch_0
+    iget-object v0, p0, Lig1;->b:[Lf76;
 
-    check-cast v0, Lroe;
+    array-length v0, v0
 
-    check-cast p1, Lioe;
+    new-array v0, v0, [Lh5c;
 
-    invoke-virtual {v0, p1}, Lroe;->setModelItem(Lioe;)V
+    return-object v0
 
-    return-void
+    :pswitch_1
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljbb;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lyx3;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljava/util/List;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Loc6;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lig1;->b:[Lf76;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lyx3;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

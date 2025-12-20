@@ -56,7 +56,7 @@
 
     iget v3, p0, Lru/ok/tamtam/api/SessionSendLimitException;->b:I
 
-    invoke-static {v0, v2, v3, v1}, Lho7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lqf7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

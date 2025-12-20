@@ -1,59 +1,85 @@
 .class public final Ltt6;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvt6;
 
 
 # instance fields
-.field public final synthetic X:Lut6;
-
-.field public Y:I
-
-.field public d:Lut6;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lut6;Lq44;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Ltt6;->X:Lut6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Ltt6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object p1, p0, Ltt6;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ltt6;->Y:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Ltt6;
 
-    iput p1, p0, Ltt6;->Y:I
+    const/4 v2, 0x0
 
-    const-wide/16 v4, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v6, 0x0
+    return v2
 
-    iget-object v0, p0, Ltt6;->X:Lut6;
+    :cond_1
+    check-cast p1, Ltt6;
 
-    const-wide/16 v1, 0x0
+    iget v1, p0, Ltt6;->a:I
 
-    const/4 v3, 0x0
+    iget p1, p1, Ltt6;->a:I
 
-    move-object v7, p0
+    if-eq v1, p1, :cond_2
 
-    invoke-virtual/range {v0 .. v7}, Lut6;->a(JLbr2;JLjava/lang/String;Lq44;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p1
+    :cond_2
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ltt6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "UpdateCameraLayoutParams(size="
+
+    const-string v1, ")"
+
+    iget v2, p0, Ltt6;->a:I
+
+    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

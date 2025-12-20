@@ -1,87 +1,116 @@
-.class public final Ldxf;
-.super Lh6f;
+.class public final enum Ldxf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ldy7;
 
-# virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 0
 
-    const/4 p0, 0x0
+# static fields
+.field public static final synthetic b:[Ldxf;
 
-    throw p0
-.end method
 
-.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
-    .locals 1
+# instance fields
+.field public final a:I
 
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result p2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/4 p3, 0x3
+    new-instance v0, Ldxf;
 
-    sub-int/2addr p2, p3
+    const-string v1, "DUPLICATE_PROPERTIES"
 
-    invoke-virtual {p1, p3, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object p2
+    invoke-direct {v0, v1, v2}, Ldxf;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p2}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v1, Ldxf;
 
-    const/4 p1, 0x1
+    const-string v2, "SCALARS_AS_OBJECTS"
 
-    return p1
+    const/4 v3, 0x1
 
-    :catch_0
-    move-exception p2
+    invoke-direct {v1, v2, v3}, Ldxf;-><init>(Ljava/lang/String;I)V
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    new-instance v2, Ldxf;
 
-    const-string v0, "Error loading library: "
+    const-string v3, "UNTYPED_SCALARS"
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x2
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3, v4}, Ldxf;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p3, "SoLoader"
-
-    invoke-static {p3, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SystemLoadWrapperSoSource["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Lfwf;->getClassLoaderLdLoadLibrary()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v0, v1, v2}, [Ldxf;
 
     move-result-object v0
 
+    sput-object v0, Ldxf;->b:[Ldxf;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    shl-int/2addr p1, p2
+
+    iput p1, p0, Ldxf;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ldxf;
+    .locals 1
+
+    const-class v0, Ldxf;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ldxf;
+
+    return-object p0
+.end method
+
+.method public static values()[Ldxf;
+    .locals 1
+
+    sget-object v0, Ldxf;->b:[Ldxf;
+
+    invoke-virtual {v0}, [Ldxf;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ldxf;
+
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    iget v0, p0, Ldxf;->a:I
+
+    return v0
 .end method

@@ -534,8 +534,9 @@
 
     iput-object v5, p0, Lorg/webrtc/HardwareVideoEncoder;->codec:Lorg/webrtc/MediaCodecWrapper;
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_2
 
     iget-boolean v5, p0, Lorg/webrtc/HardwareVideoEncoder;->useSurfaceMode:Z
 
@@ -783,13 +784,11 @@
     iput-boolean v7, p0, Lorg/webrtc/HardwareVideoEncoder;->isEncodingStatisticsEnabled:Z
 
     :cond_b
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -877,21 +876,34 @@
     return-object v0
 
     :catch_2
-    iget-object v1, p0, Lorg/webrtc/HardwareVideoEncoder;->codecName:Ljava/lang/String;
+    move-exception v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    goto :goto_6
 
-    const-string v3, "Cannot create media encoder "
+    :catch_3
+    move-exception v1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_6
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_4
+    move-exception v1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_6
+    iget-object v2, p0, Lorg/webrtc/HardwareVideoEncoder;->codecName:Ljava/lang/String;
 
-    move-result-object v1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "Cannot create media encoder "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2, v1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     sget-object v0, Lorg/webrtc/VideoCodecStatus;->FALLBACK_SOFTWARE:Lorg/webrtc/VideoCodecStatus;
 
@@ -1148,7 +1160,7 @@
 .end method
 
 .method private updateInputFormat(Landroid/media/MediaFormat;)V
-    .locals 6
+    .locals 7
 
     iget v0, p0, Lorg/webrtc/HardwareVideoEncoder;->width:I
 
@@ -1220,89 +1232,87 @@
 
     if-eqz v0, :cond_2
 
-    iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->height:I
+    iget v0, p0, Lorg/webrtc/HardwareVideoEncoder;->height:I
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
+
+    div-int/lit8 v0, v0, 0x2
+
+    iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->sliceHeight:I
+
+    iget v2, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
+
+    mul-int/2addr v1, v2
+
+    mul-int/2addr v0, v2
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lorg/webrtc/HardwareVideoEncoder;->frameSizeBytes:I
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
+
+    add-int/lit8 v1, v0, 0x1
 
     div-int/lit8 v1, v1, 0x2
 
     iget v2, p0, Lorg/webrtc/HardwareVideoEncoder;->sliceHeight:I
 
-    iget v3, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
+    add-int/lit8 v3, v2, 0x1
 
-    mul-int/2addr v2, v3
+    div-int/lit8 v3, v3, 0x2
 
-    mul-int/2addr v1, v3
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lorg/webrtc/HardwareVideoEncoder;->frameSizeBytes:I
-
-    goto :goto_0
-
-    :cond_2
-    iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    div-int/lit8 v2, v2, 0x2
-
-    iget v3, p0, Lorg/webrtc/HardwareVideoEncoder;->sliceHeight:I
-
-    add-int/lit8 v4, v3, 0x1
-
-    div-int/lit8 v4, v4, 0x2
+    mul-int/2addr v2, v0
 
     mul-int/2addr v3, v1
 
-    mul-int/2addr v4, v2
+    mul-int/lit8 v3, v3, 0x2
 
-    mul-int/lit8 v4, v4, 0x2
+    add-int/2addr v3, v2
 
-    add-int/2addr v4, v3
-
-    iput v4, p0, Lorg/webrtc/HardwareVideoEncoder;->frameSizeBytes:I
+    iput v3, p0, Lorg/webrtc/HardwareVideoEncoder;->frameSizeBytes:I
 
     :goto_0
-    iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget v2, p0, Lorg/webrtc/HardwareVideoEncoder;->sliceHeight:I
+    move-result-object p1
+
+    iget v0, p0, Lorg/webrtc/HardwareVideoEncoder;->stride:I
+
+    iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->sliceHeight:I
+
+    iget-boolean v2, p0, Lorg/webrtc/HardwareVideoEncoder;->isSemiPlanar:Z
 
     iget v3, p0, Lorg/webrtc/HardwareVideoEncoder;->frameSizeBytes:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v4, " stride: "
 
-    const-string v5, "updateInputFormat format: "
+    const-string v5, " sliceHeight: "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v6, "updateInputFormat format: "
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v6, p1, v4, v5}, Ln0c;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, " stride: "
+    move-result-object p1
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, " isSemiPlanar: "
 
-    const-string p1, " sliceHeight: "
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, " frameSizeBytes: "
 
-    const-string p1, " isSemiPlanar: "
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, " frameSizeBytes: "
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1343,11 +1353,11 @@
 
     move-result v5
 
-    if-gez v5, :cond_0
+    if-gez v5, :cond_1
 
     const/4 v0, -0x3
 
-    if-ne v5, v0, :cond_2
+    if-ne v5, v0, :cond_0
 
     iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoder;->outputBuffersBusyCount:Lorg/webrtc/HardwareVideoEncoder$BusyCount;
 
@@ -1361,6 +1371,9 @@
     goto/16 :goto_4
 
     :cond_0
+    return-void
+
+    :cond_1
     iget-object v6, p0, Lorg/webrtc/HardwareVideoEncoder;->codec:Lorg/webrtc/MediaCodecWrapper;
 
     invoke-interface {v6, v5}, Lorg/webrtc/MediaCodecWrapper;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
@@ -1391,25 +1404,27 @@
 
     and-int/lit8 v7, v7, 0x2
 
-    if-eqz v7, :cond_3
+    const/4 v8, 0x0
+
+    if-eqz v7, :cond_4
 
     iget v0, v4, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     iget v2, v4, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, ". Size: "
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1417,19 +1432,19 @@
 
     iget v0, v4, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
     iget-object v2, p0, Lorg/webrtc/HardwareVideoEncoder;->codecType:Lorg/webrtc/VideoCodecMimeType;
 
     sget-object v3, Lorg/webrtc/VideoCodecMimeType;->H264:Lorg/webrtc/VideoCodecMimeType;
 
-    if-eq v2, v3, :cond_1
+    if-eq v2, v3, :cond_2
 
     sget-object v3, Lorg/webrtc/VideoCodecMimeType;->H265:Lorg/webrtc/VideoCodecMimeType;
 
-    if-ne v2, v3, :cond_2
+    if-ne v2, v3, :cond_3
 
-    :cond_1
+    :cond_2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -1438,10 +1453,14 @@
 
     invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    :cond_2
+    :cond_3
+    iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoder;->codec:Lorg/webrtc/MediaCodecWrapper;
+
+    invoke-interface {v0, v5, v8}, Lorg/webrtc/MediaCodecWrapper;->releaseOutputBuffer(IZ)V
+
     return-void
 
-    :cond_3
+    :cond_4
     iget-object v3, p0, Lorg/webrtc/HardwareVideoEncoder;->bitrateAdjuster:Lorg/webrtc/BitrateAdjuster;
 
     iget v7, v4, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -1456,39 +1475,37 @@
 
     move-result v7
 
-    if-eq v3, v7, :cond_4
+    if-eq v3, v7, :cond_5
 
     invoke-direct {p0}, Lorg/webrtc/HardwareVideoEncoder;->updateBitrate()Lorg/webrtc/VideoCodecStatus;
 
-    :cond_4
+    :cond_5
     iget v3, v4, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
     const/4 v7, 0x1
 
     and-int/2addr v3, v7
 
-    const/4 v8, 0x0
-
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     move v7, v8
 
     :goto_0
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_7
 
     const-string v3, "Sync frame generated"
 
     invoke-static {v1, v3}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_6
+    :cond_7
     iget-boolean v3, p0, Lorg/webrtc/HardwareVideoEncoder;->isEncodingStatisticsEnabled:Z
 
     const/4 v9, 0x0
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-object v3, p0, Lorg/webrtc/HardwareVideoEncoder;->codec:Lorg/webrtc/MediaCodecWrapper;
 
@@ -1496,13 +1513,13 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     invoke-virtual {v3, v0}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_7
+    if-eqz v10, :cond_8
 
     invoke-virtual {v3, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
@@ -1514,15 +1531,15 @@
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     move-object v0, v9
 
     :goto_1
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_9
 
     iget-object v3, p0, Lorg/webrtc/HardwareVideoEncoder;->configBuffer:Ljava/nio/ByteBuffer;
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     invoke-virtual {v3}, Ljava/nio/Buffer;->capacity()I
 
@@ -1596,7 +1613,7 @@
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -1605,20 +1622,20 @@
 
     invoke-virtual {v3}, Lorg/webrtc/HardwareVideoEncoder$BusyCount;->increment()V
 
-    new-instance v9, Ll30;
+    new-instance v9, Lb40;
 
     const/16 v3, 0xb
 
-    invoke-direct {v9, p0, v5, v3}, Ll30;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v9, p0, v5, v3}, Lb40;-><init>(Ljava/lang/Object;II)V
 
     :goto_2
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
     sget-object v3, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     sget-object v3, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameDelta:Lorg/webrtc/EncodedImage$FrameType;
 
     :goto_3
@@ -2085,7 +2102,7 @@
 .end method
 
 .method public initEncode(Lorg/webrtc/VideoEncoder$Settings;Lorg/webrtc/VideoEncoder$Callback;)Lorg/webrtc/VideoCodecStatus;
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoder;->encodeThreadChecker:Lorg/webrtc/ThreadUtils$ThreadChecker;
 
@@ -2140,6 +2157,10 @@
 
     iget-object v0, p0, Lorg/webrtc/HardwareVideoEncoder;->codecType:Lorg/webrtc/VideoCodecMimeType;
 
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
     iget v1, p0, Lorg/webrtc/HardwareVideoEncoder;->width:I
 
     iget v2, p0, Lorg/webrtc/HardwareVideoEncoder;->height:I
@@ -2150,39 +2171,31 @@
 
     iget-boolean v4, p0, Lorg/webrtc/HardwareVideoEncoder;->useSurfaceMode:Z
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v5, " type: "
 
-    const-string v6, "initEncode name: "
+    const-string v6, " width: "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v7, "initEncode name: "
 
-    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v7, p2, v5, v0, v6}, Lx02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p2, " type: "
+    move-result-object p2
 
-    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, " height: "
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v5, " framerate_fps: "
 
-    const-string p2, " width: "
+    invoke-static {p2, v1, v0, v2, v5}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, " bitrate_kbps: "
 
-    const-string p2, " height: "
+    const-string v1, " surface mode: "
 
-    const-string v0, " framerate_fps: "
+    invoke-static {p2, v3, v0, p1, v1}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {v5, v1, p2, v2, v0}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string p2, " bitrate_kbps: "
-
-    const-string v0, " surface mode: "
-
-    invoke-static {v5, v3, p2, p1, v0}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2280,7 +2293,7 @@
 
     const-string v1, "Unsupported colorFormat: "
 
-    invoke-static {p1, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lqf7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

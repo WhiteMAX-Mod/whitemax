@@ -1,61 +1,73 @@
 .class public final Lf5h;
-.super Lg5h;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lf5h;
+# instance fields
+.field public A0:I
+
+.field public X:Lwea;
+
+.field public Y:[J
+
+.field public Z:[J
+
+.field public d:Lg5h;
+
+.field public o:Loc6;
+
+.field public s0:Lwea;
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public x0:J
+
+.field public synthetic y0:Ljava/lang/Object;
+
+.field public final synthetic z0:Lg5h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lg5h;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lf5h;
+    iput-object p1, p0, Lf5h;->z0:Lg5h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lf5h;->a:Lf5h;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lf5h;->y0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lf5h;->A0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lf5h;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lf5h;->A0:I
 
     const/4 p1, 0x0
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v1, p0, Lf5h;->z0:Lg5h;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v1, p1, p1, v0, p0}, Lg5h;->A(Ljava/lang/String;Lwea;ZLl84;)Ljava/lang/Object;
 
-    const v0, 0x7123af6
+    move-result-object p1
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Recording"
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,31 +1,14 @@
-.class public final Lop;
-.super Lnp;
+.class public interface abstract Lop;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Landroidx/appcompat/widget/AppCompatTextView;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 0
-
-    iput-object p1, p0, Lop;->X:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {p0, p1}, Lnp;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-
-    return-void
+# virtual methods
+.method public abstract a(I)V
 .end method
 
+.method public abstract e(I)V
+.end method
 
-# virtual methods
-.method public final H(IF)V
-    .locals 1
-
-    iget-object v0, p0, Lop;->X:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
-
-    return-void
+.method public abstract f(IF)V
 .end method

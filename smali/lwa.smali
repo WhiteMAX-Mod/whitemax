@@ -4,124 +4,236 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:Ljava/lang/String;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
+.field public static final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Lw2d;->oneme_appearance_settings_dark_mode:I
+    const-wide/high16 v0, -0x8000000000000000L
 
-    sput v0, Llwa;->a:I
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    sget v0, Lw2d;->oneme_appearance_settings_font_size_reset:I
+    move-result-object v0
 
-    sput v0, Llwa;->b:I
+    const/4 v1, 0x1
 
-    sget v0, Lw2d;->oneme_appearance_settings_font_size_title:I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    sput v0, Llwa;->c:I
+    move-result-object v0
 
-    sget v0, Lw2d;->oneme_appearance_settings_light_mode:I
+    sput-object v0, Llwa;->a:Ljava/lang/String;
 
-    sput v0, Llwa;->d:I
+    const-wide v0, 0x7fffffffffffffffL
 
-    sget v0, Lw2d;->oneme_appearance_settings_message_incoming_first:I
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    sput v0, Llwa;->e:I
+    move-result-object v0
 
-    sget v0, Lw2d;->oneme_appearance_settings_message_incoming_second:I
-
-    sput v0, Llwa;->f:I
-
-    sget v0, Lw2d;->oneme_appearance_settings_message_outgoing_new:I
-
-    sput v0, Llwa;->g:I
-
-    sget v0, Lw2d;->oneme_appearance_settings_mode_title:I
-
-    sput v0, Llwa;->h:I
-
-    sget v0, Lw2d;->oneme_appearance_settings_system_mode:I
-
-    sput v0, Llwa;->i:I
-
-    sget v0, Lw2d;->oneme_appearance_settings_toolbar_title:I
-
-    sput v0, Llwa;->j:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_lebedev_name:I
-
-    sput v0, Llwa;->k:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_moscow_name:I
-
-    sput v0, Llwa;->l:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_nature_name:I
-
-    sput v0, Llwa;->m:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_neon_name:I
-
-    sput v0, Llwa;->n:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_ny_26_green:I
-
-    sput v0, Llwa;->o:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_ny_26_orange:I
-
-    sput v0, Llwa;->p:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_simple_name:I
-
-    sput v0, Llwa;->q:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_space_name:I
-
-    sput v0, Llwa;->r:I
-
-    sget v0, Lw2d;->oneme_appearance_theme_unknown_name:I
-
-    sput v0, Llwa;->s:I
+    sput-object v0, Llwa;->b:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public static a([CII)Ljava/math/BigDecimal;
+    .locals 1
+
+    :try_start_0
+    new-instance v0, Ljava/math/BigDecimal;
+
+    invoke-direct {v0, p0, p1, p2}, Ljava/math/BigDecimal;-><init>([CII)V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p0, p1, p2}, Ljava/lang/String;-><init>([CII)V
+
+    new-instance p0, Ljava/lang/NumberFormatException;
+
+    const-string p1, "Value \""
+
+    const-string p2, "\" can not be represented as BigDecimal"
+
+    invoke-static {p1, v0, p2}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static b([CII)I
+    .locals 2
+
+    add-int v0, p1, p2
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget-char v0, p0, v0
+
+    add-int/lit8 v0, v0, -0x30
+
+    packed-switch p2, :pswitch_data_0
+
+    return v0
+
+    :pswitch_0
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    const v1, 0x5f5e100
+
+    mul-int/2addr p1, v1
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_1
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    const v1, 0x989680
+
+    mul-int/2addr p1, v1
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_2
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    const v1, 0xf4240
+
+    mul-int/2addr p1, v1
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_3
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    const v1, 0x186a0
+
+    mul-int/2addr p1, v1
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_4
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    mul-int/lit16 p1, p1, 0x2710
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_5
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    mul-int/lit16 p1, p1, 0x3e8
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_6
+    add-int/lit8 p2, p1, 0x1
+
+    aget-char p1, p0, p1
+
+    add-int/lit8 p1, p1, -0x30
+
+    mul-int/lit8 p1, p1, 0x64
+
+    add-int/2addr v0, p1
+
+    move p1, p2
+
+    :pswitch_7
+    aget-char p0, p0, p1
+
+    add-int/lit8 p0, p0, -0x30
+
+    mul-int/lit8 p0, p0, 0xa
+
+    add-int/2addr p0, v0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static c([CII)J
+    .locals 5
+
+    const/16 v0, 0x9
+
+    sub-int/2addr p2, v0
+
+    invoke-static {p0, p1, p2}, Llwa;->b([CII)I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    const-wide/32 v3, 0x3b9aca00
+
+    mul-long/2addr v1, v3
+
+    add-int/2addr p1, p2
+
+    invoke-static {p0, p1, v0}, Llwa;->b([CII)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    add-long/2addr v1, p0
+
+    return-wide v1
 .end method

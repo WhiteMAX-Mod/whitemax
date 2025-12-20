@@ -1,96 +1,96 @@
 .class public final Lprc;
-.super Lcda;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final b:Lzyd;
+.field public final synthetic o:Lzrc;
 
 
 # direct methods
-.method public constructor <init>(Lzyd;)V
-    .locals 1
+.method public constructor <init>(Lzrc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    iput-object p1, p0, Lprc;->o:Lzrc;
 
-    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lprc;->b:Lzyd;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lac4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lprc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lprc;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lprc;
 
-    iget-object v1, p0, Lprc;->b:Lzyd;
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    iget-object p1, p1, Lprc;->b:Lzyd;
+    invoke-virtual {p1, p2}, Lprc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lprc;->b:Lzyd;
+    new-instance p1, Lprc;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lprc;->o:Lzrc;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lprc;-><init>(Lzrc;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const-string v1, "PopWithResult(result="
+    iget-object p1, p0, Lprc;->o:Lzrc;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lzrc;->X:Ld68;
 
-    iget-object v1, p0, Lprc;->b:Lzyd;
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ")"
+    check-cast p1, Ltib;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lhfb;->v1:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v1, Lbhg;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Lbhg;-><init>(I)V
 
-    return-object v0
+    invoke-virtual {p1, v1}, Ltib;->g(Lghg;)V
+
+    new-instance v0, Lhjb;
+
+    sget v1, Lx4e;->L:I
+
+    invoke-direct {v0, v1}, Lhjb;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Ltib;->e(Lljb;)V
+
+    invoke-virtual {p1}, Ltib;->i()Lsib;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

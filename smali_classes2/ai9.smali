@@ -3,142 +3,83 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le88;
+.implements Ldi9;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lai9;->a:I
-
-    iput-object p1, p0, Lai9;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lai9;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lai9;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcj9;)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lai9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lai9;
+
+    iget v1, p0, Lai9;->a:I
+
+    iget p1, p1, Lai9;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
 
     iget v0, p0, Lai9;->a:I
 
-    iget-object v1, p0, Lai9;->c:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v2, p0, Lai9;->b:Ljava/lang/Object;
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    check-cast v2, Ljr9;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, v2, Ljr9;->o:Lkv9;
+    const-string v0, "OnMemberListActionClicked(id="
 
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+    const-string v1, ")"
 
-    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
+    iget v2, p0, Lai9;->a:I
 
-    iget-object v0, v0, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lvu9;
+    invoke-static {v2, v0, v1}, Lx02;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, v1, v2}, Lvu9;->H(Lcj9;J)V
-
-    return-void
-
-    :pswitch_0
-    check-cast v2, Lsh9;
-
-    check-cast v1, Lbi9;
-
-    iget-wide v0, v1, Lbi9;->J0:J
-
-    check-cast v2, Lkv9;
-
-    iget-object v2, v2, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
-
-    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lvu9;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1, v0, v1}, Lvu9;->H(Lcj9;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
-    .locals 2
-
-    iget p3, p0, Lai9;->a:I
-
-    packed-switch p3, :pswitch_data_0
-
-    iget-object p3, p0, Lai9;->b:Ljava/lang/Object;
-
-    check-cast p3, Ljr9;
-
-    iget-object p3, p3, Ljr9;->o:Lkv9;
-
-    iget-object v0, p0, Lai9;->c:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v0, v0, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    iget-object p3, p3, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->y0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Li88;J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p3, p0, Lai9;->b:Ljava/lang/Object;
-
-    check-cast p3, Lsh9;
-
-    iget-object v0, p0, Lai9;->c:Ljava/lang/Object;
-
-    check-cast v0, Lbi9;
-
-    iget-wide v0, v0, Lbi9;->J0:J
-
-    check-cast p3, Lkv9;
-
-    iget-object p3, p3, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->y0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Li88;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,80 +1,124 @@
 .class public final Lawe;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:F
+.field public final synthetic X:Lcwe;
 
-.field public final synthetic b:Lbwe;
+.field public final synthetic Y:Leue;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JJLbwe;)V
+.method public constructor <init>(Lcwe;Leue;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lawe;->X:Lcwe;
 
-    iput-object p5, p0, Lawe;->b:Lbwe;
+    iput-object p2, p0, Lawe;->Y:Leue;
 
-    long-to-float p1, p1
+    const/4 p1, 0x2
 
-    long-to-float p2, p3
-
-    div-float/2addr p1, p2
-
-    iput p1, p0, Lawe;->a:F
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInterpolation(F)F
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lac4;
 
-    cmpg-float v1, p1, v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-gtz v1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lawe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
+
+    check-cast p1, Lawe;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lawe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lawe;
+
+    iget-object v0, p0, Lawe;->X:Lcwe;
+
+    iget-object v1, p0, Lawe;->Y:Leue;
+
+    invoke-direct {p1, v0, v1, p2}, Lawe;-><init>(Lcwe;Leue;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lawe;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    const/high16 v1, 0x3f800000    # 1.0f
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static {p1, v0, v1}, Ln7j;->b(FFF)F
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v0, p0, Lawe;->a:F
-
-    cmpg-float v2, p1, v0
-
-    iget-object v3, p0, Lawe;->b:Lbwe;
-
-    if-gez v2, :cond_1
-
-    div-float/2addr p1, v0
-
-    iget-object v0, v3, Lbwe;->p:Landroid/view/animation/Interpolator;
-
-    invoke-interface {v0, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
-
-    move-result p1
-
-    return p1
+    throw p1
 
     :cond_1
-    iget-object p1, v3, Lbwe;->p:Landroid/view/animation/Interpolator;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-interface {p1, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+    iget-object p1, p0, Lawe;->X:Lcwe;
 
-    move-result p1
+    iget-object p1, p1, Lcwe;->b:Lh6f;
 
-    return p1
+    new-instance v0, Lfwe;
+
+    iget-object v2, p0, Lawe;->Y:Leue;
+
+    invoke-direct {v0, v2}, Lfwe;-><init>(Leue;)V
+
+    iput v1, p0, Lawe;->o:I
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

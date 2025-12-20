@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcuc;
+.implements Ld3d;
 
 
 # static fields
-.field public static final a:Lvrf;
+.field public static final a:Lt3g;
 
-.field public static final b:Lvrf;
+.field public static final b:Lt3g;
 
 .field public static final c:Ljava/util/HashSet;
 
@@ -20,49 +20,49 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    new-instance v0, Lvrf;
+    new-instance v0, Lt3g;
 
-    invoke-direct {v0}, Lvrf;-><init>()V
+    invoke-direct {v0}, Lt3g;-><init>()V
 
     const/4 v1, 0x2
 
-    sget-object v2, Lwrf;->b:Lwrf;
+    sget-object v2, Lu3g;->b:Lu3g;
 
     const-wide/16 v3, 0x0
 
-    invoke-static {v1, v2, v3, v4, v0}, Lctd;->k(ILwrf;JLvrf;)V
+    invoke-static {v1, v2, v3, v4, v0}, Lq3g;->t(ILu3g;JLt3g;)V
 
     const/4 v5, 0x1
 
-    sget-object v6, Lwrf;->d:Lwrf;
+    sget-object v6, Lu3g;->d:Lu3g;
 
-    invoke-static {v5, v6, v3, v4, v0}, Lctd;->k(ILwrf;JLvrf;)V
+    invoke-static {v5, v6, v3, v4, v0}, Lq3g;->t(ILu3g;JLt3g;)V
 
-    sget-object v7, Lwrf;->Y:Lwrf;
+    sget-object v7, Lu3g;->Y:Lu3g;
 
-    invoke-static {v1, v7, v3, v4, v0}, Lctd;->k(ILwrf;JLvrf;)V
+    invoke-static {v1, v7, v3, v4, v0}, Lq3g;->t(ILu3g;JLt3g;)V
 
-    sput-object v0, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->a:Lvrf;
+    sput-object v0, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->a:Lt3g;
 
-    new-instance v0, Lvrf;
+    new-instance v0, Lt3g;
 
-    invoke-direct {v0}, Lvrf;-><init>()V
+    invoke-direct {v0}, Lt3g;-><init>()V
 
-    new-instance v8, Lqb0;
+    new-instance v8, Lrc0;
 
-    invoke-direct {v8, v5, v6, v3, v4}, Lqb0;-><init>(ILwrf;J)V
+    invoke-direct {v8, v5, v6, v3, v4}, Lrc0;-><init>(ILu3g;J)V
 
-    invoke-virtual {v0, v8}, Lvrf;->a(Lqb0;)V
+    invoke-virtual {v0, v8}, Lt3g;->a(Lrc0;)V
 
-    new-instance v6, Lqb0;
+    new-instance v6, Lrc0;
 
-    invoke-direct {v6, v5, v2, v3, v4}, Lqb0;-><init>(ILwrf;J)V
+    invoke-direct {v6, v5, v2, v3, v4}, Lrc0;-><init>(ILu3g;J)V
 
-    invoke-virtual {v0, v6}, Lvrf;->a(Lqb0;)V
+    invoke-virtual {v0, v6}, Lt3g;->a(Lrc0;)V
 
-    invoke-static {v1, v7, v3, v4, v0}, Lctd;->k(ILwrf;JLvrf;)V
+    invoke-static {v1, v7, v3, v4, v0}, Lq3g;->t(ILu3g;JLt3g;)V
 
-    sput-object v0, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->b:Lvrf;
+    sput-object v0, Landroidx/camera/camera2/internal/compat/quirk/ExtraSupportedSurfaceCombinationsQuirk;->b:Lt3g;
 
     new-instance v0, Ljava/util/HashSet;
 

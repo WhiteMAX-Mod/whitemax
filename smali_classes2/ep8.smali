@@ -1,29 +1,81 @@
-.class public interface abstract Lep8;
+.class public final Lep8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lg74;
+
+# instance fields
+.field public a:Ljava/util/Set;
 
 
 # virtual methods
-.method public a(Landroid/text/Spannable;II)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    const/16 v0, 0x21
+    iget-object v0, p0, Lep8;->a:Ljava/util/Set;
 
-    invoke-static {p1, p0, p2, p3, v0}, Lusi;->e(Landroid/text/Spannable;Lep8;III)V
+    if-nez v0, :cond_0
 
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldp8;
+
+    invoke-interface {v1}, Ldp8;->c()V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     return-void
 .end method
 
-.method public b()B
-    .locals 1
+.method public final b()V
+    .locals 2
 
-    const/16 v0, 0x7f
+    iget-object v0, p0, Lep8;->a:Ljava/util/Set;
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract getType()I
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldp8;
+
+    invoke-interface {v1}, Ldp8;->f()V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method

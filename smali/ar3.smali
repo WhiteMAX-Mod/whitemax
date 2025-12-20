@@ -1,328 +1,163 @@
-.class public final synthetic Lar3;
+.class public abstract Lar3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:Len5;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Len5;
 
-.field public final synthetic b:Lo79;
+.field public static final c:Ljava/lang/Object;
 
-.field public final synthetic c:Lu69;
+.field public static final d:Lz7g;
+
+.field public static final e:Lz7g;
+
+.field public static final f:Len5;
+
+.field public static final g:Lz7g;
+
+.field public static final h:Lz7g;
+
+.field public static final i:Lz7g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo79;Lu69;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput p3, p0, Lar3;->a:I
+    new-instance v0, Len5;
 
-    iput-object p1, p0, Lar3;->b:Lo79;
+    const/4 v8, 0x1
 
-    iput-object p2, p0, Lar3;->c:Lu69;
+    const/16 v9, 0x40
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "common"
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
+    const-wide/16 v3, 0x1388
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    const/4 v5, 0x1
 
-    iget v0, p0, Lar3;->a:I
+    const/4 v6, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v7, 0x0
 
-    iget-object v0, p0, Lar3;->b:Lo79;
+    invoke-direct/range {v0 .. v9}, Len5;-><init>(Ljava/lang/String;IJZZZZI)V
 
-    iget-object v0, v0, Lo79;->g:Lz89;
+    sput-object v0, Lar3;->a:Len5;
 
-    new-instance v1, Lzz8;
+    const/16 v1, 0x17f
 
-    const/16 v2, 0xe
+    invoke-static {v0, v1}, Len5;->a(Len5;I)Len5;
 
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+    move-result-object v0
 
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+    sput-object v0, Lar3;->b:Len5;
 
-    move-result-object v1
+    new-instance v0, Lrw2;
 
-    iget-object v2, p0, Lar3;->c:Lu69;
+    const/16 v1, 0x13
 
-    const/high16 v3, -0x80000000
+    invoke-direct {v0, v1}, Lrw2;-><init>(I)V
 
-    const/4 v4, 0x7
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+    invoke-static {v1, v0}, Lv2j;->c(ILmq6;)Ld68;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lar3;->b:Lo79;
+    sput-object v0, Lar3;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lo79;->g:Lz89;
+    new-instance v0, Lrw2;
 
-    new-instance v1, Lzz8;
+    const/16 v2, 0x14
 
-    const/16 v2, 0x12
+    invoke-direct {v0, v2}, Lrw2;-><init>(I)V
 
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+    new-instance v2, Lz7g;
 
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+    invoke-direct {v2, v0}, Lz7g;-><init>(Lmq6;)V
 
-    move-result-object v1
+    sput-object v2, Lar3;->d:Lz7g;
 
-    iget-object v2, p0, Lar3;->c:Lu69;
-
-    const/high16 v3, -0x80000000
-
-    const/16 v4, 0x9
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lar3;->b:Lo79;
-
-    iget-object v0, v0, Lo79;->g:Lz89;
-
-    new-instance v1, Lzz8;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
-
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lar3;->c:Lu69;
-
-    const/high16 v3, -0x80000000
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lar3;->b:Lo79;
-
-    iget-object v0, v0, Lo79;->g:Lz89;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ldq4;
+    new-instance v0, Lrw2;
 
     const/16 v2, 0x15
 
-    iget-object v3, p0, Lar3;->c:Lu69;
+    invoke-direct {v0, v2}, Lrw2;-><init>(I)V
 
-    invoke-direct {v1, v0, v2, v3}, Ldq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    new-instance v2, Lz7g;
 
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+    invoke-direct {v2, v0}, Lz7g;-><init>(Lmq6;)V
 
-    move-result-object v1
+    sput-object v2, Lar3;->e:Lz7g;
 
-    const/high16 v2, -0x80000000
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    const/4 v4, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, v3, v2, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    return-void
+    move-result v0
 
-    :pswitch_3
-    iget-object v0, p0, Lar3;->b:Lo79;
+    mul-int/2addr v0, v1
 
-    iget-object v0, v0, Lo79;->g:Lz89;
+    add-int/lit8 v3, v0, -0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Len5;
 
-    new-instance v1, Ldq4;
+    const/4 v9, 0x0
 
-    const/16 v2, 0x15
+    const/16 v10, 0x60
 
-    iget-object v3, p0, Lar3;->c:Lu69;
+    const-string v2, "computation"
 
-    invoke-direct {v1, v0, v2, v3}, Ldq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const-wide/16 v4, 0x1388
 
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+    const/4 v8, 0x0
 
-    move-result-object v1
+    invoke-direct/range {v1 .. v10}, Len5;-><init>(Ljava/lang/String;IJZZZZI)V
 
-    const/high16 v2, -0x80000000
+    sput-object v1, Lar3;->f:Len5;
 
-    const/4 v4, 0x1
+    new-instance v0, Lrw2;
 
-    invoke-virtual {v0, v3, v2, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+    const/16 v1, 0x16
 
-    return-void
+    invoke-direct {v0, v1}, Lrw2;-><init>(I)V
 
-    :pswitch_4
-    iget-object v0, p0, Lar3;->b:Lo79;
+    new-instance v1, Lz7g;
 
-    iget-object v0, v0, Lo79;->g:Lz89;
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
 
-    new-instance v1, Lzz8;
+    sput-object v1, Lar3;->g:Lz7g;
 
-    const/16 v2, 0x9
+    new-instance v0, Lrw2;
 
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+    const/16 v1, 0x17
 
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+    invoke-direct {v0, v1}, Lrw2;-><init>(I)V
 
-    move-result-object v1
+    new-instance v1, Lz7g;
 
-    iget-object v2, p0, Lar3;->c:Lu69;
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
 
-    const/high16 v3, -0x80000000
+    sput-object v1, Lar3;->h:Lz7g;
 
-    const/4 v4, 0x1
+    new-instance v0, Lrw2;
 
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+    const/16 v1, 0x18
 
-    return-void
+    invoke-direct {v0, v1}, Lrw2;-><init>(I)V
 
-    :pswitch_5
-    iget-object v0, p0, Lar3;->b:Lo79;
+    new-instance v1, Lz7g;
 
-    iget-object v0, v0, Lo79;->g:Lz89;
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
 
-    new-instance v1, Lzz8;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
-
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lar3;->c:Lu69;
-
-    const/high16 v3, -0x80000000
-
-    const/4 v4, 0x3
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+    sput-object v1, Lar3;->i:Lz7g;
 
     return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lar3;->b:Lo79;
-
-    iget-object v0, v0, Lo79;->g:Lz89;
-
-    new-instance v1, Lzz8;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
-
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lar3;->c:Lu69;
-
-    const/high16 v3, -0x80000000
-
-    const/16 v4, 0xb
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lar3;->b:Lo79;
-
-    iget-object v0, v0, Lo79;->g:Lz89;
-
-    new-instance v1, Lzz8;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
-
-    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lar3;->c:Lu69;
-
-    const/high16 v3, -0x80000000
-
-    const/16 v4, 0xc
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Lar3;->b:Lo79;
-
-    invoke-virtual {v0}, Lo79;->j()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v1, v0, Lo79;->A:Z
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lar3;->c:Lu69;
-
-    invoke-static {v1}, Lo79;->k(Lu69;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0, v1}, Lo79;->i(Lu69;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lo79;->A:Z
-
-    :cond_2
-    iget-object v0, v0, Lo79;->e:Lusd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,196 +1,152 @@
-.class public final Lumc;
-.super Ldtf;
+.class public final enum Lumc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lumc;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Lumc;
+
+.field public static final enum c:Lumc;
+
+.field public static final synthetic d:[Lumc;
+
+.field public static final synthetic o:Lwk5;
 
 
 # instance fields
-.field public final synthetic X:Lpnc;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpnc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lumc;->X:Lpnc;
+    new-instance v0, Lumc;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "local_chat"
+
+    const-string v3, "LOCAL_CHAT"
+
+    invoke-direct {v0, v3, v1, v2}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lumc;->b:Lumc;
+
+    new-instance v1, Lumc;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server_chat"
+
+    const-string v4, "SERVER_CHAT"
+
+    invoke-direct {v1, v4, v2, v3}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v2, Lumc;
+
+    const/4 v3, 0x2
+
+    const-string v4, "contact"
+
+    const-string v5, "CONTACT"
+
+    invoke-direct {v2, v5, v3, v4}, Lumc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lumc;->c:Lumc;
+
+    filled-new-array {v0, v1, v2}, [Lumc;
+
+    move-result-object v0
+
+    sput-object v0, Lumc;->d:[Lumc;
+
+    new-instance v1, Lwk5;
+
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lumc;->o:Lwk5;
+
+    new-instance v0, Lnjb;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lnjb;-><init>(I)V
+
+    sput-object v0, Lumc;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p1, Lmhc;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lumc;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lumc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lumc;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lumc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lumc;
+    .locals 1
 
-    new-instance v0, Lumc;
+    const-class v0, Lumc;
 
-    iget-object v1, p0, Lumc;->X:Lpnc;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, v1, p2}, Lumc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lumc;->o:Ljava/lang/Object;
+    check-cast p0, Lumc;
+
+    return-object p0
+.end method
+
+.method public static values()[Lumc;
+    .locals 1
+
+    sget-object v0, Lumc;->d:[Lumc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lumc;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
 
-    iget-object v0, p0, Lumc;->X:Lpnc;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    iget-object v1, v0, Lpnc;->E0:Lci5;
+    const/4 v0, 0x0
 
-    iget-object v2, v0, Lpnc;->T0:Lyac;
+    return v0
+.end method
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object p1, p0, Lumc;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    check-cast p1, Lmhc;
+    move-result-object p2
 
-    instance-of v3, p1, Ljhc;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_0
-
-    check-cast p1, Ljhc;
-
-    iget-object v3, p1, Ljhc;->a:Ljava/lang/Long;
-
-    iget-object p1, p1, Ljhc;->b:Ls5g;
-
-    invoke-virtual {v2}, Lyac;->g()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_1
-
-    iget-object v2, v0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {v0}, Lpnc;->x()Llzf;
-
-    move-result-object v3
-
-    check-cast v3, Lq2b;
-
-    invoke-virtual {v3}, Lq2b;->b()Lz74;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lpnc;->w()La84;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lp0;->plus(Lx74;)Lx74;
-
-    move-result-object v3
-
-    new-instance v4, Lcnc;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v0, v5}, Lcnc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {v2, v3, v5, v4, v0}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    new-instance v0, Lkmc;
-
-    sget v2, Lyud;->J:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-direct {v0, p1, v2}, Lkmc;-><init>(Ls5g;Ljava/lang/Integer;)V
-
-    invoke-static {v1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lkhc;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lkhc;
-
-    iget-object p1, p1, Lkhc;->a:Ljava/lang/Long;
-
-    invoke-virtual {v2}, Lyac;->g()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    cmp-long p1, v4, v2
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Lkmc;
-
-    sget v0, Ly9b;->m:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget v2, Lx8b;->c0:I
-
-    new-instance v3, Ln5g;
-
-    invoke-direct {v3, v2}, Ln5g;-><init>(I)V
-
-    invoke-direct {p1, v3, v0}, Lkmc;-><init>(Ls5g;Ljava/lang/Integer;)V
-
-    invoke-static {v1, p1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

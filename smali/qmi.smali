@@ -3,88 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lxmi;
 
 
 # static fields
-.field public static final a:Lqmi;
+.field public static final b:[F
+
+.field public static final c:[F
+
+
+# instance fields
+.field public final a:Lxmi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lqmi;
+    const/16 v0, 0x8
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v1, v0, [F
 
-    sput-object v0, Lqmi;->a:Lqmi;
+    fill-array-data v1, :array_0
 
-    new-instance v0, Ltci;
+    sput-object v1, Lqmi;->b:[F
 
-    const/4 v1, 0x1
+    new-array v0, v0, [F
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+    fill-array-data v0, :array_1
 
-    const-class v1, Lhdi;
+    sput-object v0, Lqmi;->c:[F
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    return-void
 
-    move-result-object v0
+    nop
 
-    const/4 v2, 0x2
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
 
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
 
-    move-result-object v0
+.method public constructor <init>(II)V
+    .locals 4
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/16 v0, 0x1f02
 
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    sget-object v1, Lqmi;->b:[F
+
+    sget-object v2, Lqmi;->c:[F
+
+    if-eqz v0, :cond_0
+
+    const-string v3, "3."
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lzkd;
+
+    invoke-direct {v0, p1, p2, v1, v2}, Lzkd;-><init>(II[F[F)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lblf;
+
+    invoke-direct {v0, p1, p2, v1, v2}, Lblf;-><init>(II[F[F)V
+
+    :goto_0
+    iput-object v0, p0, Lqmi;->a:Lxmi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lqmi;->a:Lxmi;
 
-    move-result-object p1
+    invoke-interface {v0}, Lxmi;->a()V
 
-    throw p1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lqmi;->a:Lxmi;
+
+    invoke-interface {v0}, Lxmi;->b()V
+
+    return-void
 .end method

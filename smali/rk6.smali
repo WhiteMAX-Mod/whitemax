@@ -1,33 +1,64 @@
 .class public final Lrk6;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsk6;
 
-# instance fields
-.field public final a:I
 
-.field public final b:Ljava/lang/Throwable;
+# static fields
+.field public static final a:Lrk6;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Throwable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    new-instance v0, Lrk6;
 
-    iput p1, p0, Lrk6;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrk6;->b:Ljava/lang/Throwable;
+    sput-object v0, Lrk6;->a:Lrk6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getCause()Ljava/lang/Throwable;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lrk6;->b:Ljava/lang/Throwable;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lrk6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x64e35cdf
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowAuthorVisibilityOnboarding"
 
     return-object v0
 .end method

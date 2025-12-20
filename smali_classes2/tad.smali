@@ -1,48 +1,48 @@
-.class public final Ltad;
-.super Lq44;
+.class public abstract Ltad;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic X:Lf0a;
+# static fields
+.field public static menu_attach_photo:I = 0x7f0f0000
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static menu_attach_video:I = 0x7f0f0001
 
-.field public o:I
+.field public static menu_calls_selected_actions:I = 0x7f0f0002
 
+.field public static menu_channel_profile:I = 0x7f0f0003
 
-# direct methods
-.method public constructor <init>(Lf0a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static menu_channel_settings:I = 0x7f0f0004
 
-    iput-object p1, p0, Ltad;->X:Lf0a;
+.field public static menu_chat:I = 0x7f0f0005
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public static menu_chat_profile:I = 0x7f0f0006
 
-    return-void
-.end method
+.field public static menu_chat_selected_actions:I = 0x7f0f0007
 
+.field public static menu_constructor:I = 0x7f0f0008
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public static menu_contact_profile:I = 0x7f0f0009
 
-    iput-object p1, p0, Ltad;->d:Ljava/lang/Object;
+.field public static menu_contacts_selected_actions:I = 0x7f0f000a
 
-    iget p1, p0, Ltad;->o:I
+.field public static menu_empty:I = 0x7f0f000b
 
-    const/high16 v0, -0x80000000
+.field public static menu_folder_page:I = 0x7f0f000c
 
-    or-int/2addr p1, v0
+.field public static menu_left_chat_profile:I = 0x7f0f000d
 
-    iput p1, p0, Ltad;->o:I
+.field public static menu_local_photo:I = 0x7f0f000e
 
-    iget-object p1, p0, Ltad;->X:Lf0a;
+.field public static menu_local_video:I = 0x7f0f000f
 
-    const/4 v0, 0x0
+.field public static menu_location:I = 0x7f0f0010
 
-    invoke-virtual {p1, v0, p0}, Lf0a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.field public static menu_location_layer:I = 0x7f0f0011
 
-    move-result-object p1
+.field public static menu_profile:I = 0x7f0f0012
 
-    return-object p1
-.end method
+.field public static menu_search:I = 0x7f0f0013
+
+.field public static menu_sticker_set:I = 0x7f0f0014
+
+.field public static menu_tam_crop_image:I = 0x7f0f0015

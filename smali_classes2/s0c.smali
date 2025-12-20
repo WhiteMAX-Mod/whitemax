@@ -1,137 +1,131 @@
 .class public final Ls0c;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lk18;
+.field public final synthetic X:Ly0c;
 
-.field public final b:Lk18;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
-
-.field public final e:Lbwf;
-
-.field public volatile f:Lpy4;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Lbwf;)V
+.method public constructor <init>(Ly0c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls0c;->X:Ly0c;
 
-    iput-object p1, p0, Ls0c;->a:Lk18;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ls0c;->b:Lk18;
-
-    iput-object p3, p0, Ls0c;->c:Lk18;
-
-    iput-object p4, p0, Ls0c;->d:Lk18;
-
-    iput-object p5, p0, Ls0c;->e:Lbwf;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "s0c"
+    check-cast p1, Ljava/lang/Number;
 
-    const-string v1, "schedulePing"
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result p1
 
-    iget-object v0, p0, Ls0c;->f:Lpy4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {v0}, Lpy4;->e()Z
+    move-result-object p1
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Ls0c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    iget-object v0, p0, Ls0c;->f:Lpy4;
+    check-cast p1, Ls0c;
 
-    if-eqz v0, :cond_0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-interface {v0}, Lpy4;->dispose()V
+    invoke-virtual {p1, p2}, Ls0c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    iget-object v0, p0, Ls0c;->e:Lbwf;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lj0e;
-
-    invoke-virtual {v0}, Lj0e;->a()Lh0e;
-
-    move-result-object v0
-
-    new-instance v1, Lawa;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2, p0}, Lawa;-><init>(ILjava/lang/Object;)V
-
-    const-wide/16 v2, 0x7148
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lh0e;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lpy4;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls0c;->f:Lpy4;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final b()V
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const-string v0, "s0c"
+    new-instance p1, Ls0c;
 
-    const-string v1, "startInteractivePings"
+    iget-object v0, p0, Ls0c;->X:Ly0c;
 
-    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v0, p2}, Ls0c;-><init>(Ly0c;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Ls0c;->c:Lk18;
+    return-object p1
+.end method
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result-object v0
+    iget v0, p0, Ls0c;->o:I
 
-    check-cast v0, Lfxa;
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v0}, Lfxa;->b()Z
+    const/4 v2, 0x1
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    if-eqz v0, :cond_0
+    if-ne v0, v2, :cond_0
 
-    iget-object v0, p0, Ls0c;->a:Lk18;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhwa;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lhwa;->B(Z)J
+    return-object v1
 
     :cond_0
-    invoke-virtual {p0}, Ls0c;->a()V
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iput v2, p0, Ls0c;->o:I
+
+    new-instance p1, Lt0c;
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Ls0c;->X:Ly0c;
+
+    invoke-direct {p1, v2, v0}, Lt0c;-><init>(Ly0c;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, p0}, Lmkj;->c(Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v1
 .end method

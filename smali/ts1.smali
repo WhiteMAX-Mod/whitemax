@@ -1,29 +1,28 @@
-.class public interface abstract Lts1;
+.class public final Lts1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lss1;
 
-# virtual methods
-.method public i(Lzi1;)V
-    .locals 0
 
-    return-void
-.end method
+# instance fields
+.field public final a:Ljava/util/LinkedHashSet;
 
-.method public j()V
-    .locals 0
+.field public b:Lkah;
 
-    return-void
-.end method
 
-.method public k(Lzi1;Landroid/graphics/Point;)V
-    .locals 0
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public l()V
-    .locals 0
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object v0, p0, Lts1;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method

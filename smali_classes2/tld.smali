@@ -1,80 +1,84 @@
-.class public final synthetic Ltld;
-.super Ljava/lang/Object;
+.class public final Ltld;
+.super Ladf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxo8;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lxo8;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Ltld;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltld;->b:Lxo8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lxo8;J)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x0
-
-    iput p2, p0, Ltld;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltld;->b:Lxo8;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final F(Lrld;)V
+    .locals 5
 
-    iget v0, p0, Ltld;->a:I
+    iget-boolean v0, p1, Lrld;->Y:Z
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lwrd;->a:Landroid/view/View;
 
-    iget-object v0, p0, Ltld;->b:Lxo8;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lxo8;->c:Ljava/lang/Object;
+    move-object v0, v1
 
-    check-cast v0, Lvgb;
+    check-cast v0, Lsld;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v2, Ls3b;->a:Ls3b;
 
-    iget-object v1, v0, Lrl0;->i:Loh6;
+    invoke-virtual {v0, v2}, Lsld;->setAvatarShape(Lt3b;)V
 
-    invoke-virtual {v1, v0}, Loh6;->r(Lghb;)V
+    :cond_0
+    iget-object v0, p1, Lrld;->c:Ljava/lang/String;
+
+    move-object v2, v1
+
+    check-cast v2, Lsld;
+
+    invoke-virtual {v2, v0}, Lsld;->setAvatar(Ljava/lang/String;)V
+
+    iget-object v0, p1, Lrld;->d:Ljava/lang/CharSequence;
+
+    move-object v2, v1
+
+    check-cast v2, Lsld;
+
+    iget-wide v3, p0, Lwrd;->o:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Ln7j;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lnd0;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lsld;->setAbbreviation(Lnd0;)V
+
+    iget-object v0, p1, Lrld;->b:Ljava/lang/CharSequence;
+
+    move-object v2, v1
+
+    check-cast v2, Lsld;
+
+    invoke-virtual {v2, v0}, Lsld;->setName(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, p1, Lrld;->X:Z
+
+    move-object v2, v1
+
+    check-cast v2, Lsld;
+
+    invoke-virtual {v2, v0}, Lsld;->setVerified(Z)V
+
+    iget-boolean p1, p1, Lrld;->o:Z
+
+    check-cast v1, Lsld;
+
+    invoke-virtual {v1, p1}, Lsld;->setOnline(Z)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ltld;->b:Lxo8;
+.method public final bridge synthetic z(Lie8;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lrld;
+
+    invoke-virtual {p0, p1}, Ltld;->F(Lrld;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

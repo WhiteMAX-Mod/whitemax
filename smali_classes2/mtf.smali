@@ -1,30 +1,32 @@
 .class public final Lmtf;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:Lytf;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lbug;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Z:Lntf;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lytf;Lbug;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Lntf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lmtf;->X:Lytf;
+    iput-object p1, p0, Lmtf;->Y:Ljava/lang/String;
 
-    iput-object p2, p0, Lmtf;->Y:Lbug;
+    iput-object p2, p0, Lmtf;->Z:Lntf;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +36,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lttg;
+    check-cast p1, Lac4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +46,7 @@
 
     check-cast p1, Lmtf;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lmtf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,222 +60,290 @@
 
     new-instance v0, Lmtf;
 
-    iget-object v1, p0, Lmtf;->X:Lytf;
+    iget-object v1, p0, Lmtf;->Y:Ljava/lang/String;
 
-    iget-object v2, p0, Lmtf;->Y:Lbug;
+    iget-object v2, p0, Lmtf;->Z:Lntf;
 
-    invoke-direct {v0, v1, v2, p2}, Lmtf;-><init>(Lytf;Lbug;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, p2}, Lmtf;-><init>(Ljava/lang/String;Lntf;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lmtf;->o:Ljava/lang/Object;
+    iput-object p1, v0, Lmtf;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    .locals 12
 
-    sget-object v0, Llg8;->d:Llg8;
+    sget-object v0, Lv2h;->a:Lv2h;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    sget-object v1, Lbc4;->a:Lbc4;
 
-    iget-object p1, p0, Lmtf;->o:Ljava/lang/Object;
+    iget v2, p0, Lmtf;->o:I
 
-    check-cast p1, Lttg;
+    const/4 v3, 0x0
 
-    invoke-virtual {p1}, Lttg;->a()Z
+    const/4 v4, 0x2
 
-    move-result v1
+    const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    if-eqz v2, :cond_1
 
-    if-eqz v1, :cond_2
+    if-ne v2, v5, :cond_0
 
-    iget-object v1, p0, Lmtf;->X:Lytf;
+    iget-object v1, p0, Lmtf;->X:Ljava/lang/Object;
 
-    iget-object v1, v1, Lytf;->a:Ltgg;
+    check-cast v1, Lac4;
 
-    iget-object v3, p0, Lmtf;->Y:Lbug;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    iget-object v3, v3, Lbug;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lkvg;->g:Lkvg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v4, 0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    new-instance v5, Limb;
-
-    const-string v6, "warm_upload"
-
-    invoke-direct {v5, v6, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3, v5}, Lyqb;->a(Ljava/lang/String;Limb;)V
-
-    iget-object v1, p0, Lmtf;->X:Lytf;
-
-    iget-object v1, v1, Lytf;->b:Ljava/lang/String;
-
-    sget-object v3, Lwqi;->a:Ll6b;
-
-    if-nez v3, :cond_0
+    move-object v11, p0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result v4
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eqz v4, :cond_1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v4, "No need for uploading due it already finished"
-
-    invoke-virtual {v3, v0, v1, v4, v2}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_1
-    :goto_0
-    new-instance v0, Lm11;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    const/16 v1, 0xd
+    iget-object p1, p0, Lmtf;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p1}, Lm11;-><init>(ILjava/lang/Object;)V
+    check-cast p1, Lac4;
 
-    return-object v0
+    iget-object v2, p0, Lmtf;->Y:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
 
     :cond_2
-    iget-object v1, p0, Lmtf;->X:Lytf;
+    move-object v11, p0
 
-    iget-object v1, v1, Lytf;->b:Ljava/lang/String;
+    goto/16 :goto_3
 
-    sget-object v3, Lwqi;->a:Ll6b;
+    :cond_3
+    iget-object v2, p0, Lmtf;->Z:Lntf;
 
-    if-nez v3, :cond_3
+    iget-object v2, v2, Lntf;->v0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    iget-object v6, p0, Lmtf;->Y:Ljava/lang/String;
+
+    new-instance v7, Lltf;
+
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v6, v8}, Lltf;-><init>(Ljava/lang/String;I)V
+
+    invoke-virtual {v2, v7}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    iget-object v2, p0, Lmtf;->Z:Lntf;
+
+    iget-object v2, v2, Lntf;->d:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v6, v2
+
+    check-cast v6, Lusf;
+
+    iget-object v7, p0, Lmtf;->Y:Ljava/lang/String;
+
+    iput-object p1, p0, Lmtf;->X:Ljava/lang/Object;
+
+    iput v5, p0, Lmtf;->o:I
+
+    const-wide/16 v8, 0x0
+
+    const/16 v10, 0x32
+
+    move-object v11, p0
+
+    invoke-virtual/range {v6 .. v11}, Lusf;->b(Ljava/lang/String;JILl84;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v2, v1, :cond_4
+
+    return-object v1
+
+    :cond_4
+    move-object v1, p1
+
+    move-object p1, v2
+
+    :goto_0
+    check-cast p1, Lpsf;
+
+    iget-object v2, v11, Lmtf;->Z:Lntf;
+
+    iget-object v2, v2, Lntf;->v0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v5, Ljtf;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v5, p1, v6}, Ljtf;-><init>(Lpsf;I)V
+
+    invoke-virtual {v2, v5}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-object v2, Lm4j;->a:Lvcb;
+
+    if-nez v2, :cond_5
 
     goto :goto_1
 
-    :cond_3
-    invoke-virtual {v3, v0}, Ll6b;->b(Llg8;)Z
+    :cond_5
+    sget-object v5, Lxk8;->d:Lxk8;
 
-    move-result v4
+    invoke-virtual {v2, v5}, Lvcb;->b(Lxk8;)Z
 
-    if-eqz v4, :cond_4
+    move-result v6
 
-    const-string v4, "Requested upload to server"
+    if-eqz v6, :cond_6
 
-    invoke-virtual {v3, v0, v1, v4, v2}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v6, p1, Lpsf;->a:Ljava/util/List;
 
-    :cond_4
+    invoke-interface {v6}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    iget-wide v7, p1, Lpsf;->b:J
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Stickers search. finish, size:"
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, "|marker:"
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v5, v1, v6, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_6
     :goto_1
-    iget-object v7, p0, Lmtf;->X:Lytf;
+    iget-object p1, p1, Lpsf;->a:Ljava/util/List;
 
-    new-instance v0, Lm11;
+    iget-object v1, v11, Lmtf;->Z:Lntf;
 
-    const/16 v1, 0xd
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1, p1}, Lm11;-><init>(ILjava/lang/Object;)V
+    const/16 v5, 0xa
 
-    new-instance p1, Luxb;
+    invoke-static {p1, v5}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
-    const/16 v1, 0x17
+    move-result v5
 
-    invoke-direct {p1, v0, v7, v1}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
+    invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v0, Luxb;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, p1, v7, v1}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
-
-    new-instance v5, Lir9;
-
-    const/4 v11, 0x0
-
-    const/16 v12, 0x10
-
-    const/4 v6, 0x2
-
-    const-class v8, Lytf;
-
-    const-string v9, "putInRepository"
-
-    const-string v10, "putInRepository(Lone/me/sdk/transfer/domain/Upload;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    invoke-direct/range {v5 .. v12}, Lir9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p1, Lg56;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, v5, v1}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    new-instance v0, Luxb;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, p1, v7, v1}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
-
-    new-instance v5, Lir9;
-
-    const/16 v12, 0x11
-
-    const-class v8, Lytf;
-
-    const-string v9, "putInRepository"
-
-    const-string v10, "putInRepository(Lone/me/sdk/transfer/domain/Upload;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    invoke-direct/range {v5 .. v12}, Lir9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p1, Lg56;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, v5, v1}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    new-instance v5, Lbzb;
-
-    const/4 v11, 0x4
-
-    const/16 v12, 0x19
-
-    const-class v8, Lytf;
-
-    const-string v9, "uploadFile"
-
-    const-string v10, "uploadFile(Lone/me/sdk/transfer/domain/Upload;)Lkotlinx/coroutines/flow/Flow;"
-
-    invoke-direct/range {v5 .. v12}, Lbzb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-static {p1, v5}, Lgw0;->s(Lx26;Lsm6;)Ld53;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    new-instance v0, Lxtf;
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v0, v7, v2}, Lxtf;-><init>(Lytf;Lkotlin/coroutines/Continuation;)V
+    move-result v5
 
-    new-instance v1, Lg56;
+    if-eqz v5, :cond_7
 
-    const/4 v2, 0x1
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
+    move-result-object v5
 
-    new-instance p1, Lhwd;
+    check-cast v5, Lwpf;
 
-    const/4 v0, 0x5
+    invoke-static {v1, v5}, Lntf;->s(Lntf;Lwpf;)Lrqf;
 
-    invoke-direct {p1, v0}, Lhwd;-><init>(I)V
+    move-result-object v5
 
-    invoke-static {v1, p1}, Lgw0;->l(Lx26;Lsm6;)Lyy4;
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    goto :goto_2
 
-    return-object p1
+    :cond_7
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    const/4 v4, 0x3
+
+    :cond_8
+    iget-object p1, v11, Lmtf;->Z:Lntf;
+
+    iget-object p1, p1, Lntf;->Y:Lhof;
+
+    new-instance v1, Lkhe;
+
+    invoke-direct {v1, v4, v2}, Lkhe;-><init>(ILjava/util/List;)V
+
+    invoke-virtual {p1, v3, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v0
+
+    :goto_3
+    iget-object p1, v11, Lmtf;->Z:Lntf;
+
+    iget-object p1, p1, Lntf;->v0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v1, Lvm2;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2}, Lvm2;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    iget-object p1, v11, Lmtf;->Z:Lntf;
+
+    iget-object p1, p1, Lntf;->Y:Lhof;
+
+    new-instance v1, Lkhe;
+
+    iget-object v2, v11, Lmtf;->Z:Lntf;
+
+    iget-object v2, v2, Lntf;->u0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    invoke-direct {v1, v4, v2}, Lkhe;-><init>(ILjava/util/List;)V
+
+    invoke-virtual {p1, v3, v1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v0
 .end method

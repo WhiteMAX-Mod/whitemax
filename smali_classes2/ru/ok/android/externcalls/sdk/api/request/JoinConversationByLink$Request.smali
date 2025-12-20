@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkm;
-.implements Lnua;
-.implements Lyl;
+.implements Lmm;
+.implements Lv0b;
+.implements Lzl;
 
 
 # annotations
@@ -21,9 +21,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkm;",
-        "Lnua;",
-        "Lyl;"
+        "Lmm;",
+        "Lv0b;",
+        "Lzl;"
     }
 .end annotation
 
@@ -33,9 +33,9 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;",
-        "Lkm;",
-        "Lnua;",
-        "Lyl;",
+        "Lmm;",
+        "Lv0b;",
+        "Lzl;",
         "Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;",
         "",
         "initialJoinLink",
@@ -54,23 +54,23 @@
         "shouldReport",
         "willWriteParams",
         "willWriteSupplyParams",
-        "Lgy7;",
+        "Lx28;",
         "writer",
-        "Lqqg;",
+        "Lv2h;",
         "writeParams",
-        "(Lgy7;)V",
+        "(Lx28;)V",
         "writeSupplyParams",
         "",
         "handleInterruptedIO",
         "()Ljava/lang/Object;",
-        "Lul;",
+        "Lvl;",
         "getConfigExtractor",
-        "()Lul;",
+        "()Lvl;",
         "configExtractor",
-        "Lox7;",
+        "Lf28;",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "getFailParser",
-        "()Lox7;",
+        "()Lf28;",
         "failParser",
         "getOkParser",
         "okParser",
@@ -78,13 +78,13 @@
         "getPriority",
         "()I",
         "priority",
-        "Lnm;",
+        "Lpm;",
         "getScope",
-        "()Lnm;",
+        "()Lpm;",
         "scope",
-        "Lom;",
+        "Lqm;",
         "getScopeAfter",
-        "()Lom;",
+        "()Lqm;",
         "scopeAfter",
         "Landroid/net/Uri;",
         "getUri",
@@ -103,10 +103,10 @@
 
 
 # instance fields
-.field private final synthetic $$delegate_0:Lul0;
+.field private final synthetic $$delegate_0:Ltm0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lul0;"
+            "Ltm0;"
         }
     .end annotation
 .end field
@@ -120,49 +120,61 @@
 
     const-string v0, "vchat.joinConversationByLink"
 
-    invoke-static {v0}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lym;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    new-instance v1, Lgm;
+    new-instance v1, Lim;
 
-    invoke-direct {v1}, Lgm;-><init>()V
+    invoke-direct {v1}, Lim;-><init>()V
 
-    new-instance v2, Lnmf;
+    new-instance v2, Layf;
 
     const-string v3, "joinLink"
 
-    invoke-direct {v2, v3, p1}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1}, Lgyf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, v2}, Lim;->a(Lhm;)V
 
     invoke-virtual {p5}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isVideo()Z
 
     move-result p1
 
-    new-instance v2, Lbr0;
+    new-instance v2, Lqs0;
 
     const-string v3, "isVideo"
 
-    invoke-direct {v2, v3, p1}, Lbr0;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v2, v3, p1}, Lqs0;-><init>(Ljava/lang/String;Z)V
 
-    invoke-virtual {v1, v2}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, v2}, Lim;->a(Lhm;)V
 
-    new-instance p1, Lwo7;
+    new-instance p1, Lpt7;
 
     const-string v2, "peerId"
 
-    invoke-direct {p1, v2, p3, p4}, Lwo7;-><init>(Ljava/lang/String;J)V
+    invoke-direct {p1, v2, p3, p4}, Lpt7;-><init>(Ljava/lang/String;J)V
 
-    invoke-virtual {v1, p1}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, p1}, Lim;->a(Lhm;)V
 
-    new-instance p1, Lnmf;
+    new-instance p1, Layf;
 
     const-string p3, "anonymToken"
 
-    invoke-direct {p1, p3, p2}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, p3, p2}, Lgyf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, p1}, Lim;->a(Lhm;)V
+
+    invoke-virtual {p5}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->getHexCapability()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Layf;
+
+    const-string p3, "capabilities"
+
+    invoke-direct {p2, p3, p1}, Lgyf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Lim;->a(Lhm;)V
 
     invoke-virtual {p5}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->getPayload()Ljava/lang/String;
 
@@ -174,13 +186,13 @@
 
     move-result-object p1
 
-    new-instance p2, Lx6c;
+    new-instance p2, Lmec;
 
     const-string p3, "payload"
 
-    invoke-direct {p2, p3, p1}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, p3, p1}, Lgyf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p2}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, p2}, Lim;->a(Lhm;)V
 
     :cond_0
     invoke-virtual {p5}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isMultipleDevicesEnabled()Z
@@ -189,7 +201,7 @@
 
     if-eqz p1, :cond_1
 
-    new-instance p1, Lwo7;
+    new-instance p1, Lpt7;
 
     const/4 p2, 0x6
 
@@ -197,20 +209,20 @@
 
     const-string p4, "protocolVersion"
 
-    invoke-direct {p1, p4, p2, p3}, Lwo7;-><init>(Ljava/lang/String;J)V
+    invoke-direct {p1, p4, p2, p3}, Lpt7;-><init>(Ljava/lang/String;J)V
 
-    invoke-virtual {v1, p1}, Lgm;->a(Lfm;)V
+    invoke-virtual {v1, p1}, Lim;->a(Lhm;)V
 
     :cond_1
-    sget-object p1, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lox7;
+    sget-object p1, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lf28;
 
-    new-instance p2, Lul0;
+    new-instance p2, Ltm0;
 
-    sget-object p3, Lnm;->c:Lnm;
+    sget-object p3, Lpm;->c:Lpm;
 
-    invoke-direct {p2, v0, p3, v1, p1}, Lul0;-><init>(Landroid/net/Uri;Lnm;Lgm;Lox7;)V
+    invoke-direct {p2, v0, p3, v1, p1}, Ltm0;-><init>(Landroid/net/Uri;Lpm;Lim;Lf28;)V
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     return-void
 .end method
@@ -220,63 +232,63 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->c:Lgm;
+    iget-object v0, v0, Ltm0;->c:Lim;
 
-    iget-boolean v0, v0, Lgm;->b:Z
+    iget-boolean v0, v0, Lim;->b:Z
 
     return v0
 .end method
 
-.method public getConfigExtractor()Lul;
+.method public getConfigExtractor()Lvl;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lul;"
+            "Lvl;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lul;->f:Lrha;
+    sget-object v0, Lvl;->f:Ly0j;
 
     return-object v0
 .end method
 
-.method public getFailParser()Lox7;
+.method public getFailParser()Lf28;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lox7;"
+            "Lf28;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Ltha;->c:Ltha;
+    sget-object v0, Lxna;->c:Lxna;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lox7;
+.method public getOkParser()Lf28;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lox7;"
+            "Lf28;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->d:Lox7;
+    iget-object v0, v0, Ltm0;->d:Lf28;
 
     return-object v0
 .end method
@@ -284,7 +296,7 @@
 .method public getPriority()I
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -293,24 +305,24 @@
     return v0
 .end method
 
-.method public getScope()Lnm;
+.method public getScope()Lpm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->b:Lnm;
+    iget-object v0, v0, Ltm0;->b:Lpm;
 
     return-object v0
 .end method
 
-.method public getScopeAfter()Lom;
+.method public getScopeAfter()Lqm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lom;->a:Lom;
+    sget-object v0, Lqm;->a:Lqm;
 
     return-object v0
 .end method
@@ -318,9 +330,9 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->a:Landroid/net/Uri;
+    iget-object v0, v0, Ltm0;->a:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -336,7 +348,7 @@
 
     const-string v1, ""
 
-    sget-object v2, Lhd5;->a:Lhd5;
+    sget-object v2, Lch5;->a:Lch5;
 
     const-string v4, ""
 
@@ -356,7 +368,7 @@
 .method public shouldGzip()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -368,11 +380,11 @@
 .method public shouldPost()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->c:Lgm;
+    iget-object v0, v0, Ltm0;->c:Lim;
 
-    iget-boolean v0, v0, Lgm;->c:Z
+    iget-boolean v0, v0, Lim;->c:Z
 
     return v0
 .end method
@@ -380,7 +392,7 @@
 .method public shouldReport()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -392,11 +404,11 @@
 .method public willWriteParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->c:Lgm;
+    iget-object v0, v0, Ltm0;->c:Lim;
 
-    iget-boolean v0, v0, Lgm;->d:Z
+    iget-boolean v0, v0, Lim;->d:Z
 
     return v0
 .end method
@@ -404,31 +416,31 @@
 .method public willWriteSupplyParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    iget-object v0, v0, Lul0;->c:Lgm;
+    iget-object v0, v0, Ltm0;->c:Lim;
 
-    iget-boolean v0, v0, Lgm;->e:Z
+    iget-boolean v0, v0, Lim;->e:Z
 
     return v0
 .end method
 
-.method public writeParams(Lgy7;)V
+.method public writeParams(Lx28;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    invoke-virtual {v0, p1}, Lul0;->writeParams(Lgy7;)V
+    invoke-virtual {v0, p1}, Ltm0;->writeParams(Lx28;)V
 
     return-void
 .end method
 
-.method public writeSupplyParams(Lgy7;)V
+.method public writeSupplyParams(Lx28;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Lul0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversationByLink$Request;->$$delegate_0:Ltm0;
 
-    invoke-virtual {v0, p1}, Lul0;->writeSupplyParams(Lgy7;)V
+    invoke-virtual {v0, p1}, Ltm0;->writeSupplyParams(Lx28;)V
 
     return-void
 .end method

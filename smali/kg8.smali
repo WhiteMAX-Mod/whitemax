@@ -1,23 +1,20 @@
-.class public final Lkg8;
+.class public interface abstract Lkg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# virtual methods
+.method public abstract n(Lng8;JJZ)V
+.end method
 
-.field public final b:Ljg8;
+.method public abstract p(Lng8;JJ)V
+.end method
 
-
-# direct methods
-.method public constructor <init>(JLjg8;)V
+.method public q(Lng8;JJI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lkg8;->a:J
-
-    iput-object p3, p0, Lkg8;->b:Ljg8;
-
     return-void
+.end method
+
+.method public abstract x(Lng8;JJLjava/io/IOException;I)Ln41;
 .end method

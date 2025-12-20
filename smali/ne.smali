@@ -1,85 +1,41 @@
 .class public final Lne;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Animatable2$AnimationCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/view/ViewGroup$MarginLayoutParams;
+# instance fields
+.field public final synthetic a:Loe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Loe;)V
+    .locals 0
 
-    new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    iput-object p1, p0, Lne;->a:Loe;
 
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    sput-object v0, Lne;->a:Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    invoke-direct {p0}, Landroid/graphics/drawable/Animatable2$AnimationCallback;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/view/View;)Z
-    .locals 5
 
-    instance-of v0, p0, Landroid/view/ViewGroup;
+# virtual methods
+.method public final onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lne;->a:Loe;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, p1}, Loe;->a(Landroid/graphics/drawable/Drawable;)V
 
-    check-cast p0, Landroid/view/ViewGroup;
+    return-void
+.end method
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
+.method public final onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lne;->a:Loe;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, p1}, Loe;->b(Landroid/graphics/drawable/Drawable;)V
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/animation/LayoutTransition;->isChangingLayout()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v0, :cond_2
-
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lne;->a(Landroid/view/View;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    return v2
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return v1
+    return-void
 .end method

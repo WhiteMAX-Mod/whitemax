@@ -1,102 +1,129 @@
-.class public abstract Lgk8;
-.super Ljava/lang/Object;
+.class public final Lgk8;
+.super Li4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/animation/Interpolator;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lgk8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:[F
+.field public final X:Z
 
-.field public final b:F
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>([F)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lgqi;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lgqi;-><init>(I)V
+
+    sput-object v0, Lgk8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZZZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgk8;->a:[F
+    iput-boolean p1, p0, Lgk8;->a:Z
 
-    array-length p1, p1
+    iput-boolean p2, p0, Lgk8;->b:Z
 
-    add-int/lit8 p1, p1, -0x1
+    iput-boolean p3, p0, Lgk8;->c:Z
 
-    int-to-float p1, p1
+    iput-boolean p4, p0, Lgk8;->d:Z
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iput-boolean p5, p0, Lgk8;->o:Z
 
-    div-float/2addr v0, p1
-
-    iput v0, p0, Lgk8;->b:F
+    iput-boolean p6, p0, Lgk8;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInterpolation(F)F
-    .locals 4
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/16 p2, 0x4f45
 
-    cmpl-float v1, p1, v0
+    invoke-static {p1, p2}, Lwmj;->k(Landroid/os/Parcel;I)I
 
-    if-ltz v1, :cond_0
+    move-result p2
 
-    return v0
+    const/4 v0, 0x1
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x4
 
-    cmpg-float v1, p1, v0
+    invoke-static {p1, v0, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    if-gtz v1, :cond_1
+    iget-boolean v0, p0, Lgk8;->a:Z
 
-    return v0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_1
-    iget-object v0, p0, Lgk8;->a:[F
+    const/4 v0, 0x2
 
-    array-length v1, v0
+    invoke-static {p1, v0, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    add-int/lit8 v1, v1, -0x1
+    iget-boolean v0, p0, Lgk8;->b:Z
 
-    int-to-float v1, v1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    mul-float/2addr v1, p1
+    const/4 v0, 0x3
 
-    float-to-int v1, v1
+    invoke-static {p1, v0, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    array-length v2, v0
+    iget-boolean v0, p0, Lgk8;->c:Z
 
-    add-int/lit8 v2, v2, -0x2
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+    invoke-static {p1, v1, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    move-result v1
+    iget-boolean v0, p0, Lgk8;->d:Z
 
-    int-to-float v2, v1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v3, p0, Lgk8;->b:F
+    const/4 v0, 0x5
 
-    mul-float/2addr v2, v3
+    invoke-static {p1, v0, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    sub-float/2addr p1, v2
+    iget-boolean v0, p0, Lgk8;->o:Z
 
-    div-float/2addr p1, v3
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    aget v2, v0, v1
+    const/4 v0, 0x6
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {p1, v0, v1}, Lwmj;->m(Landroid/os/Parcel;II)V
 
-    aget v0, v0, v1
+    iget-boolean v0, p0, Lgk8;->X:Z
 
-    invoke-static {v0, v2, p1, v2}, Lutb;->i(FFFF)F
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result p1
+    invoke-static {p1, p2}, Lwmj;->l(Landroid/os/Parcel;I)V
 
-    return p1
+    return-void
 .end method

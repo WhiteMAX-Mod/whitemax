@@ -1,140 +1,177 @@
 .class public final Lkhe;
-.super Lghe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lkhe;
+
+
 # instance fields
-.field public final t0:Ljava/lang/String;
+.field public final a:I
 
-.field public final u0:Lw10;
-
-.field public final v0:Z
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljhe;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0, p1}, Lghe;-><init>(Lfhe;)V
+    new-instance v0, Lkhe;
 
-    iget-object v0, p1, Ljhe;->h:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lkhe;->t0:Ljava/lang/String;
+    sget-object v2, Lch5;->a:Lch5;
 
-    iget-object v0, p1, Ljhe;->j:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lkhe;-><init>(ILjava/util/List;)V
 
-    check-cast v0, Lw10;
+    sput-object v0, Lkhe;->c:Lkhe;
 
-    iput-object v0, p0, Lkhe;->u0:Lw10;
+    return-void
+.end method
 
-    iget-boolean p1, p1, Ljhe;->i:Z
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 0
 
-    iput-boolean p1, p0, Lkhe;->v0:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lkhe;->a:I
+
+    iput-object p2, p0, Lkhe;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final v()Lri9;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-boolean v0, p0, Lkhe;->v0:Z
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lkhe;->u0:Lw10;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lw10;->i()Lx00;
-
-    move-result-object v0
-
-    sget-object v1, Lm10;->b:Lm10;
-
-    iput-object v1, v0, Lx00;->x:Lm10;
-
-    invoke-virtual {v0}, Lx00;->a()Lw10;
-
-    move-result-object v1
+    goto :goto_1
 
     :cond_0
-    new-instance v0, Lx10;
+    instance-of v0, p1, Lkhe;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez v0, :cond_1
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lx10;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Lx10;->c()Ljdc;
-
-    move-result-object v0
-
-    new-instance v1, Lri9;
-
-    invoke-direct {v1}, Lri9;-><init>()V
-
-    iput-object v0, v1, Lri9;->n:Ljdc;
-
-    iget-object v0, p0, Lkhe;->t0:Ljava/lang/String;
-
-    invoke-static {v0}, Ll8g;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    iput-object v0, v1, Lri9;->g:Ljava/lang/String;
+    goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Lkhe;
 
-    iput-object v0, v1, Lri9;->D:Ljava/util/List;
+    iget v0, p0, Lkhe;->a:I
 
-    return-object v1
+    iget v1, p1, Lkhe;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lkhe;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lkhe;->b:Ljava/util/List;
+
+    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final w(Lpb2;J)J
-    .locals 9
+.method public final hashCode()I
+    .locals 2
 
-    invoke-super {p0, p1, p2, p3}, Lghe;->w(Lpb2;J)J
+    iget v0, p0, Lkhe;->a:I
 
-    move-result-wide v0
+    invoke-static {v0}, Lc12;->w(I)I
 
-    iget-boolean p1, p0, Lkhe;->v0:Z
+    move-result v0
 
-    if-eqz p1, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p0}, Lhge;->a()Lhwa;
+    iget-object v1, p0, Lkhe;->b:Ljava/util/List;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v2, p0, Lkhe;->u0:Lw10;
+    move-result v1
 
-    iget-object v2, v2, Lw10;->g:Lo10;
+    add-int/2addr v1, v0
 
-    iget-object v6, v2, Lo10;->b:Ljava/lang/String;
+    return v1
+.end method
 
-    new-instance v3, Lv5a;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p1}, Lhwa;->t()Lz7c;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string v1, "SearchState(state="
 
-    iget-object v2, v2, Lz7c;->a:Lpe8;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lw4e;->k()J
+    const/4 v1, 0x1
 
-    move-result-wide v4
+    iget v2, p0, Lkhe;->a:I
 
-    move-wide v7, p2
+    if-eq v2, v1, :cond_2
 
-    invoke-direct/range {v3 .. v8}, Lv5a;-><init>(JLjava/lang/String;J)V
+    const/4 v1, 0x2
 
-    invoke-static {p1, v3}, Lhwa;->r(Lhwa;Lsm;)J
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
 
     :cond_0
-    return-wide v0
+    const-string v1, "EMPTY"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "CONTENT"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "LOADING"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", content="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkhe;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

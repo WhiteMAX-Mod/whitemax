@@ -1,68 +1,122 @@
 .class public abstract Lzzc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a0796
+# instance fields
+.field public final a:J
 
-.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a0797
+.field public final b:Ljava/lang/String;
 
-.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a0798
 
-.field public static oneme_settings_media_gif_always:I = 0x7f0a0799
+# direct methods
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a079a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_media_gif_wifi:I = 0x7f0a079b
+    iput-wide p1, p0, Lzzc;->a:J
 
-.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a079c
+    iput-object p3, p0, Lzzc;->b:Ljava/lang/String;
 
-.field public static oneme_settings_media_item_gif:I = 0x7f0a079d
+    return-void
+.end method
 
-.field public static oneme_settings_media_item_gif_available:I = 0x7f0a079e
 
-.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a079f
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_settings_media_item_photo:I = 0x7f0a07a0
+    const/4 v0, 0x1
 
-.field public static oneme_settings_media_item_playlist_enabled:I = 0x7f0a07a1
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_media_item_video:I = 0x7f0a07a2
+    return v0
 
-.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07a3
+    :cond_0
+    instance-of v1, p1, Lzzc;
 
-.field public static oneme_settings_media_item_video_messages:I = 0x7f0a07a4
+    const/4 v2, 0x0
 
-.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07a5
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_media_photo_always:I = 0x7f0a07a6
+    return v2
 
-.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07a7
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07a8
+    move-result-object v1
 
-.field public static oneme_settings_media_quality_1080:I = 0x7f0a07a9
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static oneme_settings_media_quality_480:I = 0x7f0a07aa
+    move-result-object v3
 
-.field public static oneme_settings_media_quality_720:I = 0x7f0a07ab
+    if-eq v1, v3, :cond_2
 
-.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07ac
+    return v2
 
-.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07ad
+    :cond_2
+    check-cast p1, Lzzc;
 
-.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07ae
+    iget-wide v3, p1, Lzzc;->a:J
 
-.field public static oneme_settings_media_screen_list:I = 0x7f0a07af
+    iget-wide v5, p0, Lzzc;->a:J
 
-.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07b0
+    cmp-long v1, v5, v3
 
-.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07b1
+    if-eqz v1, :cond_3
 
-.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07b2
+    return v2
 
-.field public static oneme_settings_media_video_messages_always:I = 0x7f0a07b3
+    :cond_3
+    iget-object v1, p0, Lzzc;->b:Ljava/lang/String;
 
-.field public static oneme_settings_media_video_messages_dont_load:I = 0x7f0a07b4
+    iget-object p1, p1, Lzzc;->b:Ljava/lang/String;
 
-.field public static oneme_settings_media_video_messages_wifi:I = 0x7f0a07b5
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lgd3;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lzzc;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Lxfh;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lzzc;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method

@@ -1,100 +1,113 @@
 .class public final Lrcb;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lucb;
+.implements Lcr6;
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lrcb;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final synthetic X:Lvcb;
 
-.field public static final a:Lrcb;
+.field public synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvcb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lrcb;
+    iput-object p1, p0, Lrcb;->X:Lvcb;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lrcb;->a:Lrcb;
-
-    new-instance v0, Lpq8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
-
-    sput-object v0, Lrcb;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/lang/Boolean;
 
-    return v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lrcb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lrcb;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lrcb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lrcb;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lrcb;->X:Lvcb;
 
-    return v0
+    invoke-direct {v0, v1, p2}, Lrcb;-><init>(Lvcb;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of p1, p1, Lrcb;
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-nez p1, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 p1, 0x0
+    move-result p1
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x788b7a19
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Empty"
+    iput-boolean p1, v0, Lrcb;->o:Z
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 p2, 0x1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-boolean p1, p0, Lrcb;->o:Z
 
-    return-void
+    iget-object v0, p0, Lrcb;->X:Lvcb;
+
+    iget-object v0, v0, Lvcb;->b:Ljava/lang/String;
+
+    sget-object v1, Lm4j;->a:Lvcb;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lxk8;->o:Lxk8;
+
+    invoke-virtual {v1, v2}, Lvcb;->b(Lxk8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "allowSensitive="
+
+    invoke-static {v3, p1}, Lgg9;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lvcb;->c(Lxk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

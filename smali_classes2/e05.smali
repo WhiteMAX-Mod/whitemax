@@ -2,239 +2,142 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbtf;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final b:Ljy0;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Lca3;
+
+.field public final d:Lh6f;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Ljava/lang/Object;I)V
+.method public constructor <init>(JLjy0;Lbbg;Lca3;)V
     .locals 0
 
-    iput p3, p0, Le05;->a:I
-
-    iput-object p1, p0, Le05;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput-object p2, p0, Le05;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Le05;->a:J
+
+    iput-object p3, p0, Le05;->b:Ljy0;
+
+    iput-object p5, p0, Le05;->c:Lca3;
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Li6f;->b(III)Lh6f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Le05;->d:Lh6f;
+
+    check-cast p4, Lb9b;
+
+    invoke-virtual {p4}, Lb9b;->c()Llq8;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Llq8;->getImmediate()Llq8;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmkj;->a(Lrb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Le05;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p3, p0}, Ljy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Le05;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(FJJLq44;)Ljava/lang/Object;
-    .locals 1
-
-    iget p2, p0, Le05;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    new-instance p2, Ljava/lang/Float;
-
-    invoke-direct {p2, p1}, Ljava/lang/Float;-><init>(F)V
-
-    iget-object p1, p0, Le05;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object p3, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p4, p0, Le05;->c:Ljava/lang/Object;
-
-    check-cast p4, Lw10;
-
-    iget-object p4, p4, Lw10;->d:Lv10;
-
-    iget-wide p4, p4, Lv10;->a:J
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, p4, p5}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p3, v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p6}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Ljava/lang/Float;
-
-    invoke-direct {p2, p1}, Ljava/lang/Float;-><init>(F)V
-
-    iget-object p1, p0, Le05;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object p3, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p4, p0, Le05;->c:Ljava/lang/Object;
-
-    check-cast p4, Lf10;
-
-    iget-wide p4, p4, Lf10;->a:J
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, p4, p5}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p3, v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p6}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_1
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f(Ljava/io/File;Lq44;)Ljava/lang/Object;
+.method public final onEvent(Lra3;)V
     .locals 4
+    .annotation runtime Ljzf;
+    .end annotation
 
-    iget p1, p0, Le05;->a:I
+    iget-object p1, p1, Lra3;->b:Ljava/util/Collection;
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Le05;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v1, p0, Le05;->c:Ljava/lang/Object;
-
-    check-cast v1, Lw10;
-
-    iget-object v1, v1, Lw10;->d:Lv10;
-
-    iget-wide v1, v1, Lv10;->a:J
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    new-instance v1, Ljava/lang/Float;
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    invoke-direct {v1, v2}, Ljava/lang/Float;-><init>(F)V
-
-    invoke-virtual {v0, v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    sget-object p2, Lg84;->a:Lg84;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    if-ne p1, p2, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Le05;->c:Lca3;
+
+    invoke-virtual {v2, v0, v1}, Lca3;->k(J)Lpkd;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lpkd;->a:Laof;
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lud2;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Lud2;->o()Lyx3;
 
-    :goto_0
-    return-object p1
+    move-result-object v0
 
-    :pswitch_0
-    iget-object p1, p0, Le05;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    if-nez v0, :cond_1
 
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->D0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v1, p0, Le05;->c:Ljava/lang/Object;
-
-    check-cast v1, Lf10;
-
-    iget-wide v1, v1, Lf10;->a:J
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    new-instance v1, Ljava/lang/Float;
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    invoke-direct {v1, v2}, Ljava/lang/Float;-><init>(F)V
-
-    invoke-virtual {v0, v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Lyx3;->p()J
 
-    :goto_1
-    return-object p1
+    move-result-wide v0
 
-    nop
+    iget-wide v2, p0, Le05;->a:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_2
+
+    new-instance p1, Ld05;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Ld05;-><init>(Le05;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Le05;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ly8j;->e(Lac4;Lrb4;Ldc4;Lcr6;I)Lglf;
+
+    :cond_2
+    return-void
 .end method

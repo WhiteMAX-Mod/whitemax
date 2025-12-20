@@ -276,23 +276,17 @@
 .method private static convertScalingTypeToVisibleFraction(Lorg/webrtc/RendererCommon$ScalingType;)F
     .locals 1
 
-    sget-object v0, Lorg/webrtc/RendererCommon$1;->$SwitchMap$org$webrtc$RendererCommon$ScalingType:[I
-
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
 
-    aget p0, v0, p0
+    if-eqz p0, :cond_2
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
     if-eq p0, v0, :cond_1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x2
 
     if-ne p0, v0, :cond_0
 

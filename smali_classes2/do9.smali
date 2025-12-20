@@ -1,59 +1,33 @@
-.class public final Ldo9;
-.super Lq44;
+.class public abstract Ldo9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Z
+# static fields
+.field public static final a:J
 
-.field public Y:I
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Lsi9;
-
-.field public final synthetic s0:Lno9;
-
-.field public t0:I
+.field public static final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lno9;Lq44;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Ldo9;->s0:Lno9;
+    const/4 v0, -0x1
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    int-to-long v0, v0
+
+    const/16 v2, 0x20
+
+    shl-long v2, v0, v2
+
+    const-wide v4, 0xffffffffL
+
+    and-long/2addr v0, v4
+
+    or-long/2addr v0, v2
+
+    sput-wide v0, Ldo9;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Ldo9;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Ldo9;->t0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ldo9;->t0:I
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Ldo9;->s0:Lno9;
-
-    invoke-virtual {v1, p1, v0, p0}, Lno9;->A(Ljava/lang/Long;ZLq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

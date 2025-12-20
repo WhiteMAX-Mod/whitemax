@@ -2,303 +2,838 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
+
 
 # instance fields
-.field public final a:Lgx6;
-
-.field public final b:Lhx6;
-
-.field public final c:Lix6;
-
-.field public final d:Ljx6;
-
-.field public final e:Lkx6;
-
-.field public final f:Llx6;
-
-.field public final g:Lmx6;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lgx6;Lhx6;Lix6;Ljx6;Lkx6;Llx6;Lmx6;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Lfx6;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfx6;->a:Lgx6;
+    return-void
+.end method
 
-    iput-object p2, p0, Lfx6;->b:Lhx6;
+.method public constructor <init>(Lywe;)V
+    .locals 0
 
-    iput-object p3, p0, Lfx6;->c:Lix6;
+    const/16 p1, 0x19
 
-    iput-object p4, p0, Lfx6;->d:Ljx6;
+    iput p1, p0, Lfx6;->a:I
 
-    iput-object p5, p0, Lfx6;->e:Lkx6;
-
-    iput-object p6, p0, Lfx6;->f:Llx6;
-
-    iput-object p7, p0, Lfx6;->g:Lmx6;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lfx6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Lfag;
 
-    :cond_0
-    instance-of v1, p1, Lfx6;
+    iget-object p1, p1, Lfag;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    check-cast p2, Lfag;
 
-    if-nez v1, :cond_1
+    iget-object p2, p2, Lfag;->a:Ljava/lang/String;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lfx6;
-
-    iget-object v1, p0, Lfx6;->a:Lgx6;
-
-    iget-object v3, p1, Lfx6;->a:Lgx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lfx6;->b:Lhx6;
-
-    iget-object v3, p1, Lfx6;->b:Lhx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lfx6;->c:Lix6;
-
-    iget-object v3, p1, Lfx6;->c:Lix6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lfx6;->d:Ljx6;
-
-    iget-object v3, p1, Lfx6;->d:Ljx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lfx6;->e:Lkx6;
-
-    iget-object v3, p1, Lfx6;->e:Lkx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lfx6;->f:Llx6;
-
-    iget-object v3, p1, Lfx6;->f:Llx6;
-
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lfx6;->g:Lmx6;
-
-    iget-object p1, p1, Lfx6;->g:Lmx6;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p1
 
-    if-nez p1, :cond_8
+    return p1
 
-    return v2
+    :pswitch_0
+    check-cast p1, Ldag;
 
-    :cond_8
-    return v0
-.end method
+    iget-object p1, p1, Ldag;->a:Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 2
+    check-cast p2, Ldag;
 
-    iget-object v0, p0, Lfx6;->a:Lgx6;
+    iget-object p2, p2, Ldag;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lgx6;->hashCode()I
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
-    move-result v0
+    move-result p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    return p1
 
-    iget-object v1, p0, Lfx6;->b:Lhx6;
+    :pswitch_1
+    check-cast p1, Lrrf;
 
-    invoke-virtual {v1}, Lhx6;->hashCode()I
+    iget-boolean p1, p1, Lrrf;->Z:Z
 
-    move-result v1
+    xor-int/lit8 p1, p1, 0x1
 
-    add-int/2addr v1, v0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    mul-int/lit8 v1, v1, 0x1f
+    move-result-object p1
 
-    iget-object v0, p0, Lfx6;->c:Lix6;
+    check-cast p2, Lrrf;
 
-    invoke-virtual {v0}, Lix6;->hashCode()I
+    iget-boolean p2, p2, Lrrf;->Z:Z
 
-    move-result v0
+    xor-int/lit8 p2, p2, 0x1
 
-    add-int/2addr v0, v1
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p2
 
-    iget-object v1, p0, Lfx6;->d:Ljx6;
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
-    invoke-virtual {v1}, Ljx6;->hashCode()I
+    move-result p1
 
-    move-result v1
+    return p1
 
-    add-int/2addr v1, v0
+    :pswitch_2
+    check-cast p2, Lf01;
 
-    mul-int/lit8 v1, v1, 0x1f
+    iget-wide v0, p2, Lf01;->b:J
 
-    iget-object v0, p0, Lfx6;->e:Lkx6;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0}, Lkx6;->hashCode()I
+    move-result-object p2
 
-    move-result v0
+    check-cast p1, Lf01;
 
-    add-int/2addr v0, v1
+    iget-wide v0, p1, Lf01;->b:J
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Lfx6;->f:Llx6;
+    move-result-object p1
 
-    invoke-virtual {v1}, Llx6;->hashCode()I
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
-    move-result v1
+    move-result p1
 
-    add-int/2addr v1, v0
+    return p1
 
-    mul-int/lit8 v1, v1, 0x1f
+    :pswitch_3
+    check-cast p1, Ljava/io/File;
 
-    iget-object v0, p0, Lfx6;->g:Lmx6;
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lmx6;->hashCode()I
+    move-result-object p1
 
-    move-result v0
+    const/4 v0, 0x0
 
-    add-int/2addr v0, v1
+    new-array v1, v0, [Ljava/lang/String;
 
-    return v0
-.end method
+    invoke-static {p1, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-array v1, v0, [Ljava/nio/file/LinkOption;
 
-    const-string v1, "GradientsLoadingIconColors(contrast="
+    const-class v2, Ljava/nio/file/attribute/BasicFileAttributes;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, v2, v1}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
 
-    iget-object v1, p0, Lfx6;->a:Lgx6;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
 
-    const-string v1, ", contrastStatic="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/nio/file/attribute/FileTime;->toMillis()J
 
-    iget-object v1, p0, Lfx6;->b:Lhx6;
+    move-result-wide v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v1, ", negative="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Ljava/io/File;
 
-    iget-object v1, p0, Lfx6;->c:Lix6;
+    invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    const-string v1, ", neutralThemed="
+    new-array v1, v0, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p2, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
-    iget-object v1, p0, Lfx6;->d:Ljx6;
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-array v0, v0, [Ljava/nio/file/LinkOption;
 
-    const-string v1, ", primary="
+    invoke-static {p2, v2, v0}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    iget-object v1, p0, Lfx6;->e:Lkx6;
+    invoke-interface {p2}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    const-string v1, ", primaryStatic="
+    invoke-virtual {p2}, Ljava/nio/file/attribute/FileTime;->toMillis()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    iget-object v1, p0, Lfx6;->f:Llx6;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    const-string v1, ", themed="
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    iget-object v1, p0, Lfx6;->g:Lmx6;
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_4
+    check-cast p2, Lud2;
 
-    const-string v1, ")"
+    invoke-virtual {p2}, Lud2;->p()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lud2;
+
+    invoke-virtual {p1}, Lud2;->p()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_5
+    check-cast p2, Lzge;
+
+    iget-object p2, p2, Lzge;->d:Lud2;
+
+    const/4 v0, 0x0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lud2;->p()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_0
+    move-object p2, v0
+
+    :goto_0
+    check-cast p1, Lzge;
+
+    iget-object p1, p1, Lzge;->d:Lud2;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lud2;->p()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    :cond_1
+    invoke-static {p2, v0}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_6
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    check-cast p2, Ljava/util/Map$Entry;
+
+    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_7
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    check-cast p2, Ljava/util/Map$Entry;
+
+    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_8
+    check-cast p1, Lnhf;
+
+    check-cast p2, Lnhf;
+
+    iget p1, p1, Lnhf;->b:I
+
+    iget p2, p2, Lnhf;->b:I
+
+    sub-int/2addr p1, p2
+
+    return p1
+
+    :pswitch_9
+    check-cast p2, Lo14;
+
+    iget-boolean p2, p2, Lo14;->Z:Z
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    check-cast p1, Lo14;
+
+    iget-boolean p1, p1, Lo14;->Z:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_a
+    check-cast p1, Lfxb;
+
+    iget p1, p1, Lfxb;->c:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lfxb;
+
+    iget p2, p2, Lfxb;->c:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_b
+    check-cast p1, Lowb;
+
+    iget p1, p1, Lowb;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lowb;
+
+    iget p2, p2, Lowb;->b:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_c
+    check-cast p1, Lowb;
+
+    iget p1, p1, Lowb;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lowb;
+
+    iget p2, p2, Lowb;->b:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_d
+    check-cast p1, Lgt7;
+
+    check-cast p2, Lgt7;
+
+    iget-wide v0, p1, Lgt7;->a:J
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    long-to-int p1, v0
+
+    iget-wide v0, p2, Lgt7;->a:J
+
+    and-long/2addr v0, v2
+
+    long-to-int p2, v0
+
+    invoke-static {p1, p2}, Ly5f;->c(II)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_e
+    check-cast p2, Lgt7;
+
+    iget-wide v0, p2, Lgt7;->a:J
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    long-to-int p2, v0
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    check-cast p1, Lgt7;
+
+    iget-wide v0, p1, Lgt7;->a:J
+
+    and-long/2addr v0, v2
+
+    long-to-int p1, v0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_f
+    check-cast p1, Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p2, Ljava/io/File;
+
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_10
+    check-cast p2, Ljava/io/File;
+
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    check-cast p1, Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_11
+    check-cast p1, Lax8;
+
+    iget-wide v0, p1, Lax8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lax8;
+
+    iget-wide v0, p2, Lax8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_12
+    check-cast p1, Lox5;
+
+    iget-wide v0, p1, Lox5;->g:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lox5;
+
+    iget-wide v0, p2, Lox5;->g:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_13
+    check-cast p2, Lsu2;
+
+    iget-wide v0, p2, Lsu2;->m:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lsu2;
+
+    iget-wide v0, p1, Lsu2;->m:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_14
+    check-cast p1, Lsk8;
+
+    iget-wide v0, p1, Lsk8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lsk8;
+
+    iget-wide v0, p2, Lsk8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_15
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1}, Lg4j;->c(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Ljava/util/Map$Entry;
+
+    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-static {p2}, Lg4j;->c(Ljava/lang/String;)I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_16
+    check-cast p2, Lep7;
+
+    iget-byte p2, p2, Lep7;->e:B
+
+    invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p2
+
+    check-cast p1, Lep7;
+
+    iget-byte p1, p1, Lep7;->e:B
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_17
+    check-cast p2, Lji8;
+
+    iget-wide v0, p2, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lji8;
+
+    iget-wide v0, p1, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_18
+    check-cast p2, Lji8;
+
+    iget-wide v0, p2, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lji8;
+
+    iget-wide v0, p1, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_19
+    check-cast p2, Lji8;
+
+    iget-wide v0, p2, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lji8;
+
+    iget-wide v0, p1, Lji8;->o:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1a
+    check-cast p1, Lbyf;
+
+    iget-object p1, p1, Lbyf;->a:Ljava/lang/String;
+
+    check-cast p2, Lbyf;
+
+    iget-object p2, p2, Lbyf;->a:Ljava/lang/String;
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1b
+    check-cast p1, Lql9;
+
+    invoke-virtual {p1}, Lql9;->getTime()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lql9;
+
+    invoke-virtual {p2}, Lql9;->getTime()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1c
+    check-cast p1, Lql9;
+
+    invoke-virtual {p1}, Lql9;->getTime()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lql9;
+
+    invoke-virtual {p2}, Lql9;->getTime()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

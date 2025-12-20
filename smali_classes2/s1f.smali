@@ -1,156 +1,110 @@
 .class public final Ls1f;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic X:Ld2f;
 
-.field public final synthetic b:Lz1f;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Ljava/lang/Integer;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lz1f;ILjava/lang/Integer;)V
+.method public constructor <init>(Ld2f;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls1f;->X:Ld2f;
 
-    iput-object p1, p0, Ls1f;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ls1f;->b:Lz1f;
-
-    iput p3, p0, Ls1f;->c:I
-
-    iput-object p4, p0, Ls1f;->d:Ljava/lang/Integer;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lac4;
 
-    const-string v1, "Playback("
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Ls1f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Ls1f;->a:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Ls1f;
 
-    const-string v3, ") | player prepared"
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ls1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    const-string v3, "SimpleRingtonePlayer"
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-static {v3, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance p1, Ls1f;
 
-    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
+    iget-object v0, p0, Ls1f;->X:Ld2f;
 
-    iget-object p1, p0, Ls1f;->b:Lz1f;
+    invoke-direct {p1, v0, p2}, Ls1f;-><init>(Ld2f;Lkotlin/coroutines/Continuation;)V
 
-    iget v0, p1, Lz1f;->s0:F
+    return-object p1
+.end method
 
-    invoke-virtual {p1}, Lz1f;->d()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result v4
+    iget v0, p0, Ls1f;->o:I
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    const/4 v1, 0x1
 
-    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, v1, :cond_0
 
-    const-string v1, ") | requesting audio focus after player start, volume:"
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, " isPlaying:"
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lz1f;->h()Lrt5;
-
-    move-result-object v0
-
-    check-cast v0, Lgu5;
-
-    invoke-virtual {v0}, Lgu5;->p()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x2
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p1, Lz1f;->o:Lr30;
-
-    iget-object v1, p0, Ls1f;->d:Ljava/lang/Integer;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lz1f;->h()Lrt5;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iput v1, p0, Ls1f;->o:I
+
+    iget-object p1, p0, Ls1f;->X:Ld2f;
+
+    invoke-static {p1, p0}, Ld2f;->u(Ld2f;Lb5g;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lgu5;
+    sget-object v0, Lbc4;->a:Lbc4;
 
-    invoke-virtual {p1}, Lgu5;->p()J
+    if-ne p1, v0, :cond_2
 
-    move-result-wide v1
-
-    const-wide/16 v3, 0x1
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x2
-
-    :goto_0
-    iget v1, p0, Ls1f;->c:I
-
-    invoke-virtual {v0, v1, p1}, Lr30;->r(II)V
+    return-object v0
 
     :cond_2
-    return-void
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

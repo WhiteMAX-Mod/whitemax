@@ -1,81 +1,75 @@
-.class public final enum Lcz7;
-.super Ljava/lang/Enum;
+.class public final Lcz7;
+.super Lp62;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[Lcz7;
+# instance fields
+.field public final X:Lkz7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lkz7;Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    new-instance v0, Lcz7;
+    const/4 v0, 0x1
 
-    const-string v1, "PUBLIC"
+    invoke-direct {p0, v0, p2}, Lp62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lcz7;
-
-    const-string v2, "PROTECTED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lcz7;
-
-    const-string v3, "INTERNAL"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lcz7;
-
-    const-string v4, "PRIVATE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lcz7;
-
-    move-result-object v0
-
-    sput-object v0, Lcz7;->a:[Lcz7;
+    iput-object p1, p0, Lcz7;->X:Lkz7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcz7;
-    .locals 1
 
-    const-class v0, Lcz7;
+# virtual methods
+.method public final l(Lkz7;)Ljava/lang/Throwable;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lcz7;->X:Lkz7;
 
-    move-result-object p0
-
-    check-cast p0, Lcz7;
-
-    return-object p0
-.end method
-
-.method public static values()[Lcz7;
-    .locals 1
-
-    sget-object v0, Lcz7;->a:[Lcz7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lkz7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcz7;
+    instance-of v1, v0, Lez7;
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lez7;
+
+    invoke-virtual {v1}, Lez7;->c()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    return-object v1
+
+    :cond_0
+    instance-of v1, v0, Ljo3;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Ljo3;
+
+    iget-object p1, v0, Ljo3;->a:Ljava/lang/Throwable;
+
+    return-object p1
+
+    :cond_1
+    invoke-interface {p1}, Liy7;->getCancellationException()Ljava/util/concurrent/CancellationException;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final u()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "AwaitContinuation"
 
     return-object v0
 .end method

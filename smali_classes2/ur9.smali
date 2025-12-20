@@ -1,22 +1,19 @@
 .class public final Lur9;
-.super Ljava/lang/Object;
+.super Lwr9;
 .source "SourceFile"
-
-# interfaces
-.implements Lxr9;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lio9;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lio9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lur9;->a:I
+    iput-object p1, p0, Lur9;->a:Lio9;
 
     return-void
 .end method
@@ -44,9 +41,9 @@
     :cond_1
     check-cast p1, Lur9;
 
-    iget v1, p0, Lur9;->a:I
+    iget-object v1, p0, Lur9;->a:Lio9;
 
-    iget p1, p1, Lur9;->a:I
+    iget-object p1, p1, Lur9;->a:Lio9;
 
     if-eq v1, p1, :cond_2
 
@@ -59,9 +56,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lur9;->a:I
+    iget-object v0, p0, Lur9;->a:Lio9;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -69,15 +66,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "ProcessClickMultiSelect(actionId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NewInputState(expandableState="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lur9;->a:Lio9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget v2, p0, Lur9;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v1}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

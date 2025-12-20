@@ -1,202 +1,82 @@
-.class public Ld5c;
+.class public final synthetic Ld5c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Iterable;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
+    .locals 0
+
+    iput p2, p0, Ld5c;->a:I
+
+    iput-object p1, p0, Ld5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v0, p1}, Laf3;->v(Ljava/util/Collection;Ljava/lang/Iterable;)V
-
-    iput-object v0, p0, Ld5c;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Luch;
-    .locals 2
-
-    iget-object v0, p0, Ld5c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Luch;
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    instance-of v0, p1, Ld5c;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Ld5c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    check-cast p1, Ld5c;
-
-    iget-object v3, p1, Ld5c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v2, :cond_4
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    iget-object v5, p1, Ld5c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    :goto_1
-    return v1
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Ld5c;->a:Ljava/util/ArrayList;
+    iget v0, p0, Ld5c;->a:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Ld5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x0
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lp38;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Landroidx/viewpager2/widget/ViewPager2;
 
-    move-result v2
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
 
-    move-result-object v2
+    sget v1, Ls7b;->d:I
 
-    check-cast v2, Luch;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-virtual {v2}, Luch;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-object v0, p0, Ld5c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    new-instance v4, Ldga;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v4, v1}, Ldga;-><init>(I)V
-
-    const/16 v5, 0x18
-
-    const-string v1, ", "
-
-    const-string v2, " ["
-
-    const-string v3, "]"
-
-    invoke-static/range {v0 .. v5}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Playlist size: "
-
-    invoke-static {v6, v1, v0}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {v0}, Lw4j;->e(Landroidx/viewpager2/widget/ViewPager2;)V
 
     return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lp38;
+
+    new-instance v0, Lelb;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lelb;-><init>(Landroid/content/Context;I)V
+
+    sget v1, Ls7b;->e:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {v0, v2}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

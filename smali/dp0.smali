@@ -1,166 +1,57 @@
-.class public final Ldp0;
+.class public abstract Ldp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lhl4;
-
-
-# instance fields
-.field public final a:Ljava/util/LinkedList;
-
-.field public b:J
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a(Landroid/hardware/biometrics/BiometricManager;)I
+    .locals 0
 
-    new-instance v0, Lhl4;
+    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricManager;->canAuthenticate()I
 
-    const-string v1, ""
+    move-result p0
 
-    const/4 v2, 0x1
-
-    const-string v3, "StreamingFormatChecker"
-
-    invoke-direct {v0, v3, v1, v2}, Lhl4;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ldp0;->c:Lhl4;
-
-    return-void
+    return p0
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public static b(Landroid/content/Context;)Landroid/hardware/biometrics/BiometricManager;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Landroid/hardware/biometrics/BiometricManager;
 
-    new-instance v0, Ljava/util/LinkedList;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    move-result-object p0
 
-    iput-object v0, p0, Ldp0;->a:Ljava/util/LinkedList;
+    check-cast p0, Landroid/hardware/biometrics/BiometricManager;
 
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Ldp0;->b:J
-
-    return-void
+    return-object p0
 .end method
 
+.method public static c()Ljava/lang/reflect/Method;
+    .locals 3
 
-# virtual methods
-.method public final a(Lnm7;)V
-    .locals 8
+    :try_start_0
+    const-class v0, Landroid/hardware/biometrics/BiometricManager;
 
-    iget p1, p1, Lnm7;->f:I
+    const-string v1, "canAuthenticate"
 
-    const/4 v0, -0x1
+    const-class v2, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
 
-    if-eq p1, v0, :cond_0
+    filled-new-array {v2}, [Ljava/lang/Class;
 
-    goto :goto_0
+    move-result-object v2
 
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-wide v0
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object v0
 
-    move-result-object p1
+    :catch_0
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Ldp0;->a:Ljava/util/LinkedList;
-
-    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
-
-    move-result p1
-
-    const/4 v3, 0x5
-
-    if-le p1, v3, :cond_1
-
-    invoke-virtual {v2}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
-
-    move-result p1
-
-    if-ne p1, v3, :cond_3
-
-    invoke-virtual {v2}, Ljava/util/LinkedList;->peekFirst()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-static {p1}, Ls5j;->g(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    sub-long v4, v0, v4
-
-    const-wide/16 v6, 0x1388
-
-    cmp-long p1, v4, v6
-
-    if-gez p1, :cond_3
-
-    iget-wide v4, p0, Ldp0;->b:J
-
-    const-wide/16 v6, -0x1
-
-    cmp-long p1, v4, v6
-
-    if-eqz p1, :cond_2
-
-    sub-long v4, v0, v4
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v6, 0x5
-
-    invoke-virtual {p1, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v6
-
-    cmp-long p1, v4, v6
-
-    if-gez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iput-wide v0, p0, Ldp0;->b:J
-
-    sget-object p1, Ldp0;->c:Lhl4;
-
-    iget-object v0, p1, Lhl4;->b:Ljava/lang/String;
-
-    invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "ML Kit has detected that you seem to pass camera frames to the detector as a Bitmap object. This is inefficient. Please use YUV_420_888 format for camera2 API or NV21 format for (legacy) camera API and directly pass down the byte array to ML Kit."
-
-    invoke-virtual {p1, v0}, Lhl4;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "StreamingFormatChecker"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    :goto_0
-    return-void
+    return-object v0
 .end method

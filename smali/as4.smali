@@ -1,24 +1,24 @@
-.class public final Las4;
+.class public final synthetic Las4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrn6;
+.implements Lr2g;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ltu1;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltu1;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Las4;->a:I
+    iput p1, p0, Las4;->a:I
 
-    iput-object p1, p0, Las4;->b:Ltu1;
+    iput-object p2, p0, Las4;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,87 +27,108 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Las4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Las4;->b:Ltu1;
-
-    :try_start_0
-    invoke-virtual {v0, p1}, Ltu1;->b(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {v0, p1}, Ltu1;->d(Ljava/lang/Throwable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iget-object p1, p0, Las4;->b:Ltu1;
-
-    invoke-virtual {p1, v0}, Ltu1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onFailure(Ljava/lang/Throwable;)V
+.method public final get()Ljava/lang/Object;
     .locals 2
 
     iget v0, p0, Las4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Las4;->b:Ltu1;
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ltu1;->d(Ljava/lang/Throwable;)Z
+    check-cast v0, Lgnb;
 
-    return-void
+    return-object v0
 
     :pswitch_0
-    instance-of v0, p1, Ljava/util/concurrent/TimeoutException;
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Las4;->b:Ltu1;
+    check-cast v0, Lxu4;
 
-    if-eqz v0, :cond_0
+    return-object v0
 
-    invoke-virtual {v1, p1}, Ltu1;->d(Ljava/lang/Throwable;)Z
+    :pswitch_1
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lzf8;
 
-    :cond_0
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    return-object v0
 
-    invoke-virtual {v1, p1}, Ltu1;->b(Ljava/lang/Object;)Z
+    :pswitch_2
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
 
-    :goto_0
-    return-void
+    check-cast v0, Lkne;
 
-    nop
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwu4;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljvd;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lld9;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwr4;
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Las4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lld9;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

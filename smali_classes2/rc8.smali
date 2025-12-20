@@ -1,51 +1,105 @@
-.class public abstract synthetic Lrc8;
-.super Ljava/lang/Object;
+.class public final Lrc8;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
+# interfaces
+.implements Ltt8;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public final c:Ljava/lang/String;
+
+.field public d:Lqc8;
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
 
-    invoke-static {}, Lpf2;->values()[Lpf2;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    move-result-object v0
+    iput p2, p0, Lrc8;->a:I
 
-    array-length v0, v0
+    iput-boolean p3, p0, Lrc8;->b:Z
 
-    new-array v0, v0, [I
+    invoke-static {p1}, Liyf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    :catch_0
-    const/4 v1, 0x2
+    iput-object p1, p0, Lrc8;->c:Ljava/lang/String;
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/4 p1, 0x6
 
-    :catch_1
-    const/4 v1, 0x3
+    iput p1, p0, Lrc8;->o:I
 
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    return-void
+.end method
 
-    :catch_2
-    sput-object v0, Lrc8;->$EnumSwitchMapping$0:[I
+
+# virtual methods
+.method public final copy()Lab4;
+    .locals 4
+
+    new-instance v0, Lrc8;
+
+    iget v1, p0, Lrc8;->a:I
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lrc8;->c:Ljava/lang/String;
+
+    invoke-direct {v0, v3, v1, v2}, Lrc8;-><init>(Ljava/lang/String;IZ)V
+
+    return-object v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lrc8;->o:I
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    iget-object v0, p0, Lrc8;->d:Lqc8;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lrc8;->c:Ljava/lang/String;
+
+    invoke-interface {v0, p1, v1}, Lqc8;->b(Landroid/view/View;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lrc8;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v0, p0, Lrc8;->a:I
+
+    iput v0, p1, Landroid/text/TextPaint;->linkColor:I
+
+    iget-boolean v0, p0, Lrc8;->b:Z
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
     return-void
 .end method

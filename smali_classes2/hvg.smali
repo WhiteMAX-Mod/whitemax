@@ -1,35 +1,67 @@
 .class public final Lhvg;
-.super Ljava/lang/Object;
+.super Lcaa;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:F
+.field public final j:J
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
+.field public final k:J
 
 
 # direct methods
-.method public constructor <init>(FJLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;IIIJJZ)V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-wide/from16 v7, p5
 
-    iput p1, p0, Lhvg;->a:F
+    move-wide/from16 v9, p7
 
-    iput-wide p2, p0, Lhvg;->b:J
+    new-instance v0, Laaa;
 
-    iput-object p4, p0, Lhvg;->c:Ljava/lang/String;
+    invoke-direct {v0, p2, p1, p3, p4}, Laaa;-><init>(ILjava/lang/String;II)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const-wide/16 v1, 0x0
+
+    sub-long v3, v9, v7
+
+    move-object v0, p0
+
+    move/from16 v6, p9
+
+    invoke-direct/range {v0 .. v6}, Lcaa;-><init>(JJLjava/util/List;Z)V
+
+    iput-wide v7, p0, Lhvg;->j:J
+
+    iput-wide v9, p0, Lhvg;->k:J
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Lhvg;->j:J
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Lhvg;->k:J
+
+    return-wide v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 6
 
     const/4 v0, 0x1
 
@@ -38,125 +70,90 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lhvg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhvg;
-
-    iget v1, p0, Lhvg;->a:F
-
-    iget v3, p1, Lhvg;->a:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lhvg;->b:J
-
-    iget-wide v5, p1, Lhvg;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhvg;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lhvg;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lhvg;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lhvg;->b:J
-
-    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lhvg;->c:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
     const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Lhvg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    :cond_1
+    invoke-super {p0, p1}, Lcaa;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Lhvg;
+
+    iget-wide v2, p0, Lhvg;->j:J
+
+    iget-wide v4, p1, Lhvg;->j:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-wide v2, p0, Lhvg;->k:J
+
+    iget-wide v4, p1, Lhvg;->k:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_4
+
+    return v0
+
+    :cond_4
     :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    invoke-super {p0}, Lcaa;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lhvg;->j:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lhvg;->k:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
     add-int/2addr v0, v1
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UploadState(progress="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lhvg;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lhvg;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uploadToken="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lhvg;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lctd;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,50 +1,70 @@
-.class public final Lz2j;
+.class public abstract Lz2j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
-
-
-# static fields
-.field public static final a:Lz2j;
+.implements Ltja;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Lz2j;
+    invoke-static {p0}, Lz2j;->b(Ljava/lang/String;)Z
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    sput-object v0, Lz2j;->a:Lz2j;
+    if-eqz v0, :cond_0
 
-    new-instance v0, Lmli;
+    const-string v0, "mailto:"
 
-    const/4 v1, 0x1
+    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+    move-result-object p0
 
-    const-class v1, Lemi;
+    return-object p0
 
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+    :cond_0
+    invoke-static {p0}, Lz2j;->c(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    if-eqz v0, :cond_1
 
-    return-void
+    const-string v0, "tel:"
+
+    invoke-static {p0, v0}, Liyf;->N(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_1
+    return-object p0
 .end method
 
+.method public static final b(Ljava/lang/String;)Z
+    .locals 2
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    const-string v0, "mailto:"
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-static {p0, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    throw p1
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final c(Ljava/lang/String;)Z
+    .locals 2
+
+    const-string v0, "tel:"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lqyf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    return p0
 .end method

@@ -2,147 +2,69 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
 
 # static fields
-.field public static final b:Lbei;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final a:La8j;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    const-string v0, "com.google.android.gms.vision.barcode"
+    new-instance v0, La8j;
 
-    const-string v1, "optional-module-barcode"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
+    sput-object v0, La8j;->a:La8j;
+
+    new-instance v0, Lyyi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
+
+    const-class v1, Lqzi;
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x2
 
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Lbei;->a(I[Ljava/lang/Object;Llk6;)Lbei;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
     move-result-object v0
 
-    sput-object v0, La8j;->b:Lbei;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lsve;)V
-    .locals 4
 
-    const-string v0, "common"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    invoke-static {p1}, Lri3;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    const-class v1, Lr8j;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v2, Lr8j;->b:Lr8j;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Lr8j;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3}, Lr8j;-><init>(I)V
-
-    sput-object v2, Lr8j;->b:Lr8j;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    iput-object v0, p0, La8j;->a:Ljava/lang/String;
-
-    invoke-static {}, Lh08;->J()Lh08;
-
-    move-result-object v1
-
-    new-instance v2, Lbm4;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v2, v3, p0}, Lbm4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v2}, Lh08;->P(Ljava/util/concurrent/Callable;)Lybj;
-
-    invoke-static {}, Lh08;->J()Lh08;
-
-    move-result-object v1
-
-    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v2, Ly0j;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p2, v3}, Ly0j;-><init>(Lsve;I)V
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v2}, Lh08;->P(Ljava/util/concurrent/Callable;)Lybj;
-
-    sget-object p2, La8j;->b:Lbei;
-
-    invoke-virtual {p2, v0}, Lbei;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p2, v0}, Lbei;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, p2, v0}, Ld85;->d(Landroid/content/Context;Ljava/lang/String;Z)I
-
-    :cond_1
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object p1
 
     throw p1
 .end method

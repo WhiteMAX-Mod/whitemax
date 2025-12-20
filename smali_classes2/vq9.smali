@@ -1,151 +1,122 @@
-.class public final synthetic Lvq9;
+.class public final Lvq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput p4, p0, Lvq9;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvq9;->c:Ljava/lang/Object;
+    iput p1, p0, Lvq9;->a:I
 
     iput p2, p0, Lvq9;->b:I
-
-    iput-object p3, p0, Lvq9;->d:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Lgr9;)Lvq9;
+    .locals 6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    invoke-static {p0}, Lisi;->n(Lgr9;)I
 
-    iget v0, p0, Lvq9;->a:I
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lvq9;->c:Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    check-cast v0, Lone/me/sdk/arch/Widget;
+    return-object p0
 
-    iget v1, p0, Lvq9;->b:I
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Lvq9;->d:Ljava/lang/Object;
+    move v2, v1
 
-    check-cast v2, Lem6;
+    move v3, v2
 
-    check-cast p1, Lytd;
+    :goto_0
+    if-ge v1, v0, :cond_3
 
-    invoke-static {v0, v1, v2, p1}, Lone/me/sdk/arch/Widget;->o0(Lone/me/sdk/arch/Widget;ILem6;Lytd;)Lytd;
+    invoke-virtual {p0}, Lgr9;->N0()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v4
 
-    return-object p1
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_0
-    iget-object v0, p0, Lvq9;->c:Ljava/lang/Object;
+    const-string v5, "views"
 
-    check-cast v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Lvq9;->b:I
+    move-result v5
 
-    iget-object v2, p0, Lvq9;->d:Ljava/lang/Object;
+    if-nez v5, :cond_2
 
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
+    const-string v5, "forwards"
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result v4
 
-    move-result p1
+    if-nez v4, :cond_1
 
-    iget-object v3, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->F:Ljava/lang/String;
-
-    sget-object v4, Lwqi;->a:Ll6b;
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_0
+    invoke-virtual {p0}, Lgr9;->y()V
 
     goto :goto_1
 
-    :cond_0
-    sget-object v6, Llg8;->d:Llg8;
+    :cond_1
+    invoke-virtual {p0}, Lgr9;->J0()I
 
-    invoke-virtual {v4, v6}, Ll6b;->b(Llg8;)Z
+    move-result v3
 
-    move-result v7
+    goto :goto_1
 
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lphd;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Lphd;->j()I
+    :cond_2
+    invoke-virtual {p0}, Lgr9;->J0()I
 
     move-result v2
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
-    move-object v2, v5
+    :cond_3
+    new-instance p0, Lvq9;
 
-    :goto_0
-    const-string v7, ", target:"
+    invoke-direct {p0, v2, v3}, Lvq9;-><init>(II)V
 
-    const-string v8, ", curSize:"
+    return-object p0
+.end method
 
-    const-string v9, "LM smooth scroll finished by pos:"
 
-    invoke-static {v9, v1, v7, p1, v8}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    move-result-object p1
+    const-string v0, ", forwards="
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, "}"
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "{views="
 
-    move-result-object p1
+    iget v3, p0, Lvq9;->a:I
 
-    invoke-virtual {v4, v6, v3, p1, v5}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v4, p0, Lvq9;->b:I
 
-    :cond_2
-    :goto_1
-    iput-object v5, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lwq9;
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    move-result-object v0
 
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

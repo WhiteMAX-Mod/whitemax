@@ -1,203 +1,68 @@
 .class public final Lzra;
-.super Lwl0;
+.super Lhsa;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:I
+.field public e:[I
 
-.field public final Y:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lvta;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Lzra;->X:I
-
-    invoke-direct {p0, p1}, Lwl0;-><init>(Lvta;)V
-
-    iput-object p2, p0, Lzra;->Y:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
 
 # virtual methods
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+.method public final b(Lwrg;)V
+    .locals 4
 
-    iget v0, p0, Lzra;->X:I
+    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    iget-boolean v0, p0, Lwl0;->d:Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x22
 
-    goto :goto_0
+    if-lt v0, v1, :cond_0
 
-    :cond_0
-    iget v0, p0, Lwl0;->o:I
+    invoke-static {}, Lhra;->a()Landroid/app/Notification$MediaStyle;
 
-    iget-object v1, p0, Lwl0;->a:Lvta;
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x0
 
-    const/4 p1, 0x0
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
+    const/4 v3, 0x0
 
-    goto :goto_0
+    invoke-static {v0, v3, v1, v3, v2}, Lnra;->a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
 
-    :cond_1
-    :try_start_0
-    iget-object v0, p0, Lzra;->Y:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ltm6;
+    iget-object v1, p0, Lzra;->e:[I
 
-    invoke-interface {v0, p1}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Lzra;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    move-result-object p1
+    invoke-static {v0, v1, v2}, Lhra;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
 
-    const-string v0, "The mapper function returned a null value."
+    move-result-object v0
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0}, Lhra;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
 
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lwl0;->b:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lwl0;->onError(Ljava/lang/Throwable;)V
-
-    :goto_0
     return-void
 
-    :pswitch_0
-    iget v0, p0, Lwl0;->o:I
-
-    iget-object v1, p0, Lwl0;->a:Lvta;
-
-    if-nez v0, :cond_2
-
-    :try_start_1
-    iget-object v0, p0, Lzra;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lm7c;
-
-    invoke-interface {v0, p1}, Lm7c;->test(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lwl0;->b:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lwl0;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lzra;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lwl0;->c:Losc;
-
-    invoke-interface {v0}, Lo1f;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lzra;->Y:Ljava/lang/Object;
-
-    check-cast v1, Ltm6;
-
-    invoke-interface {v1, v0}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "The mapper function returned a null value."
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    goto :goto_0
-
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    :pswitch_0
-    iget-object v0, p0, Lwl0;->c:Losc;
-
-    invoke-interface {v0}, Lo1f;->poll()Ljava/lang/Object;
+    invoke-static {}, Lhra;->a()Landroid/app/Notification$MediaStyle;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lzra;->e:[I
 
-    iget-object v1, p0, Lzra;->Y:Ljava/lang/Object;
+    iget-object v2, p0, Lzra;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    check-cast v1, Lm7c;
+    invoke-static {v0, v1, v2}, Lhra;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
 
-    invoke-interface {v1, v0}, Lm7c;->test(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v1
+    invoke-static {p1, v0}, Lhra;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
 
-    if-eqz v1, :cond_1
-
-    :cond_2
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

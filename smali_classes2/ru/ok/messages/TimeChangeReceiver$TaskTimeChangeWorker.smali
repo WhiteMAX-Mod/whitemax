@@ -24,16 +24,16 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Lc7c;",
+        "Lrec;",
         "preProcessDataCache",
-        "Lve2;",
+        "Lch2;",
         "chatController",
-        "Ltw0;",
+        "Ljy0;",
         "uiBus",
-        "Lr1g;",
+        "Lcdg;",
         "themeController",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lc7c;Lve2;Ltw0;Lr1g;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lrec;Lch2;Ljy0;Lcdg;)V",
         "tamtam-app_release"
     }
     k = 0x1
@@ -47,35 +47,35 @@
 
 
 # instance fields
-.field public final b:Lc7c;
+.field public final X:Lrec;
 
-.field public final c:Lve2;
+.field public final Y:Lch2;
 
-.field public final d:Ltw0;
+.field public final Z:Ljy0;
 
-.field public final o:Lr1g;
+.field public final s0:Lcdg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lc7c;Lve2;Ltw0;Lr1g;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lrec;Lch2;Ljy0;Lcdg;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/work/Worker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->b:Lc7c;
+    iput-object p3, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->X:Lrec;
 
-    iput-object p4, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->c:Lve2;
+    iput-object p4, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->Y:Lch2;
 
-    iput-object p5, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->d:Ltw0;
+    iput-object p5, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->Z:Ljy0;
 
-    iput-object p6, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->o:Lr1g;
+    iput-object p6, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->s0:Lcdg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lla8;
+.method public final g()Laf8;
     .locals 4
 
     sget v0, Lru/ok/messages/TimeChangeReceiver;->a:I
@@ -84,85 +84,85 @@
 
     const-string v1, "work %s started"
 
-    invoke-virtual {p0}, Lma8;->getId()Ljava/util/UUID;
+    iget-object v2, p0, Lbf8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object v2
+    iget-object v2, v2, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
 
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget-object v0, Lml6;->c:Ljava/lang/Object;
+    sget-object v0, Lkp6;->d:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
     :try_start_0
-    sput-object v1, Lml6;->b:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->c:Ljava/text/SimpleDateFormat;
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_9
 
-    sget-object v2, Lml6;->e:Ljava/lang/Object;
+    sget-object v2, Lkp6;->f:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_1
-    sput-object v1, Lml6;->d:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->e:Ljava/text/SimpleDateFormat;
 
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_8
 
-    sget-object v0, Lml6;->g:Ljava/lang/Object;
+    sget-object v0, Lkp6;->h:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_2
-    sput-object v1, Lml6;->f:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->g:Ljava/text/SimpleDateFormat;
 
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_7
 
-    sget-object v2, Lml6;->i:Ljava/lang/Object;
+    sget-object v2, Lkp6;->j:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_3
-    sput-object v1, Lml6;->h:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->i:Ljava/text/SimpleDateFormat;
 
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_6
 
-    sget-object v0, Lml6;->k:Ljava/lang/Object;
+    sget-object v0, Lkp6;->l:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_4
-    sput-object v1, Lml6;->j:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->k:Ljava/text/SimpleDateFormat;
 
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
-    sget-object v2, Lml6;->m:Ljava/lang/Object;
+    sget-object v2, Lkp6;->n:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_5
-    sput-object v1, Lml6;->l:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->m:Ljava/text/SimpleDateFormat;
 
     monitor-exit v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    sget-object v0, Lml6;->n:Ljava/lang/Object;
+    sget-object v0, Lkp6;->o:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -171,7 +171,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    sget-object v2, Lml6;->o:Ljava/lang/Object;
+    sget-object v2, Lkp6;->p:Ljava/lang/Object;
 
     monitor-enter v2
 
@@ -180,39 +180,39 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    sget-object v0, Lml6;->u:Ljava/lang/Object;
+    sget-object v0, Lkp6;->v:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_8
-    sput-object v1, Lml6;->t:Ljava/text/SimpleDateFormat;
+    sput-object v1, Lkp6;->u:Ljava/text/SimpleDateFormat;
 
     monitor-exit v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    sget-object v2, Lml6;->s:Ljava/lang/Object;
+    sget-object v2, Lkp6;->t:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_9
-    sput-object v1, Lml6;->r:Ljava/lang/Boolean;
+    sput-object v1, Lkp6;->s:Ljava/lang/Boolean;
 
     monitor-exit v2
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->b:Lc7c;
+    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->X:Lrec;
 
-    invoke-virtual {v0}, Lc7c;->a()V
+    invoke-virtual {v0}, Lrec;->a()V
 
-    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->c:Lve2;
+    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->Y:Lch2;
 
-    iget-boolean v2, v0, Lve2;->k:Z
+    iget-boolean v2, v0, Lch2;->k:Z
 
     if-eqz v2, :cond_1
 
-    iget-object v2, v0, Lve2;->h:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v2, v0, Lch2;->h:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
 
@@ -233,47 +233,45 @@
 
     move-result-object v3
 
-    check-cast v3, Lpb2;
+    check-cast v3, Lud2;
 
-    iput-object v1, v3, Lpb2;->y0:Ljava/lang/String;
+    iput-object v1, v3, Lud2;->y0:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, v0, Lve2;->n:Ltw0;
+    iget-object v0, v0, Lch2;->n:Ljy0;
 
-    new-instance v1, Ln73;
+    new-instance v1, Lra3;
 
     sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3}, Ln73;-><init>(Ljava/util/List;Z)V
+    invoke-direct {v1, v2, v3}, Lra3;-><init>(Ljava/util/List;Z)V
 
-    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljy0;->c(Ljava/lang/Object;)V
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->d:Ltw0;
+    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->Z:Ljy0;
 
-    new-instance v1, Luu;
+    new-instance v1, Lxu;
 
     const/16 v2, 0xa
 
-    invoke-direct {v1, v2}, Luu;-><init>(I)V
+    invoke-direct {v1, v2}, Lxu;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljy0;->c(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->o:Lr1g;
+    iget-object v0, p0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;->s0:Lcdg;
 
-    invoke-virtual {v0}, Lr1g;->e()V
+    invoke-virtual {v0}, Lcdg;->e()V
 
     new-instance v0, Lru/ok/messages/TimeChangeReceiver;
 
     invoke-direct {v0}, Lru/ok/messages/TimeChangeReceiver;-><init>()V
 
-    invoke-virtual {p0}, Lma8;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
+    iget-object v0, p0, Lbf8;->a:Landroid/content/Context;
 
     invoke-static {v0}, Lru/ok/messages/TimeChangeReceiver;->a(Landroid/content/Context;)V
 
@@ -281,19 +279,19 @@
 
     const-string v1, "work %s finished"
 
-    invoke-virtual {p0}, Lma8;->getId()Ljava/util/UUID;
+    iget-object v2, p0, Lbf8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object v2
+    iget-object v2, v2, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
 
     filled-new-array {v2}, [Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lm4j;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lla8;->b()Lka8;
+    new-instance v0, Lze8;
 
-    move-result-object v0
+    invoke-direct {v0}, Lze8;-><init>()V
 
     return-object v0
 

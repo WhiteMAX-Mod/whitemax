@@ -1,74 +1,136 @@
-.class public final synthetic Leq3;
-.super Ljava/lang/Object;
+.class public final Leq3;
+.super Loae;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lge8;
 
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+.field public final b:Ljp3;
+
+.field public final c:Lge8;
+
+.field public final d:Lgq3;
+
+.field public volatile o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;I)V
-    .locals 0
-
-    iput p2, p0, Leq3;->a:I
-
-    iput-object p1, p0, Leq3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+.method public constructor <init>(Lgq3;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leq3;->d:Lgq3;
+
+    new-instance p1, Lge8;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leq3;->a:Lge8;
+
+    new-instance v0, Ljp3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Leq3;->b:Ljp3;
+
+    new-instance v1, Lge8;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, p0, Leq3;->c:Lge8;
+
+    invoke-virtual {v1, p1}, Lge8;->a(Ll25;)Z
+
+    invoke-virtual {v1, v0}, Lge8;->a(Ll25;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final b(Ljava/lang/Runnable;)Ll25;
+    .locals 6
 
-    iget p1, p0, Leq3;->a:I
+    iget-boolean v0, p0, Leq3;->o:Z
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Leq3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+    sget-object p1, Lxg5;->a:Lxg5;
 
-    packed-switch p1, :pswitch_data_0
+    return-object p1
 
-    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->D0:I
+    :cond_0
+    iget-object v0, p0, Leq3;->d:Lgq3;
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    return-void
+    iget-object v5, p0, Leq3;->a:Lge8;
 
-    :pswitch_0
-    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->D0:I
+    const-wide/16 v2, 0x0
 
-    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:Lk18;
+    move-object v1, p1
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v5}, Lina;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lm25;)Lu9e;
 
     move-result-object p1
 
-    check-cast p1, Lfq3;
+    return-object p1
+.end method
 
-    iget-object v2, p1, Lfq3;->d:Lks1;
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ll25;
+    .locals 6
 
-    iget-object p1, p1, Lfq3;->b:Lzi1;
+    iget-boolean v0, p0, Leq3;->o:Z
 
-    invoke-virtual {v2, p1}, Lks1;->g(Lzi1;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+    sget-object p1, Lxg5;->a:Lxg5;
 
+    return-object p1
+
+    :cond_0
+    iget-object v0, p0, Leq3;->d:Lgq3;
+
+    iget-object v5, p0, Leq3;->b:Ljp3;
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    move-object v4, p4
+
+    invoke-virtual/range {v0 .. v5}, Lina;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lm25;)Lu9e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget-boolean v0, p0, Leq3;->o:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Leq3;->o:Z
+
+    iget-object v0, p0, Leq3;->c:Lge8;
+
+    invoke-virtual {v0}, Lge8;->dispose()V
+
+    :cond_0
     return-void
+.end method
 
-    nop
+.method public final f()Z
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v0, p0, Leq3;->o:Z
+
+    return v0
 .end method

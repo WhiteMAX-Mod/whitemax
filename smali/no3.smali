@@ -1,118 +1,98 @@
-.class public final Lno3;
+.class public final synthetic Lno3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final c:Ljava/io/Serializable;
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 1
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lno3;->a:I
 
-    iput v0, p0, Lno3;->a:I
+    iput-object p1, p0, Lno3;->b:Landroidx/fragment/app/b;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lno3;->c:Ljava/io/Serializable;
-
-    iput-boolean p2, p0, Lno3;->b:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lno3;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lno3;->b:Z
-
-    .line 3
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lno3;->c:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public final run()V
     .locals 3
 
     iget v0, p0, Lno3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/Thread;
+    iget-object v0, p0, Lno3;->b:Landroidx/fragment/app/b;
 
-    iget-object v1, p0, Lno3;->c:Ljava/io/Serializable;
+    :try_start_0
+    invoke-static {v0}, Lxo3;->r(Landroidx/fragment/app/b;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v1, Ljava/lang/String;
+    goto :goto_0
 
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    :catch_0
+    move-exception v0
 
-    iget-boolean p1, p0, Lno3;->b:Z
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
+    move-result-object v1
 
-    return-object v0
+    const-string v2, "Attempt to invoke virtual method \'android.os.Handler android.app.FragmentHostCallback.getHandler()\' on a null object reference"
 
-    :pswitch_0
-    iget-boolean v0, p0, Lno3;->b:Z
+    invoke-static {v1, v2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    const-string v0, "WM.task-"
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "androidx.work-"
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Can not perform this action after onSaveInstanceState"
+
+    invoke-static {v1, v2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :goto_0
-    new-instance v1, Ljava/lang/Thread;
+    return-void
 
-    invoke-static {v0}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    throw v0
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lno3;->b:Landroidx/fragment/app/b;
 
-    iget-object v2, p0, Lno3;->c:Ljava/io/Serializable;
+    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
+    return-void
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,22 +1,37 @@
-.class public final Lgfb;
+.class public abstract Lgfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmfb;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Lem6;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lem6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lvad;->inactive_ttl:I
 
-    iput-object p1, p0, Lgfb;->a:Lem6;
+    sput v0, Lgfb;->a:I
+
+    sget v0, Lvad;->inactive_ttl_item:I
+
+    sput v0, Lgfb;->b:I
+
+    sget v0, Lvad;->profile_delete_dates_days_left:I
+
+    sput v0, Lgfb;->c:I
+
+    sget v0, Lvad;->profile_edit_reactions_settings_slider_current_value:I
+
+    sput v0, Lgfb;->d:I
 
     return-void
 .end method

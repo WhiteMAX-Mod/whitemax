@@ -1,154 +1,95 @@
-.class public final Lgra;
-.super Lk3;
+.class public abstract Lgra;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final c:Ltm6;
-
-.field public final d:I
-
-.field public final o:I
-
-
 # direct methods
-.method public constructor <init>(Lvqa;Ltm6;III)V
+.method public static a(Landroid/app/RemoteInput;)Z
     .locals 0
 
-    iput p5, p0, Lgra;->b:I
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
-    packed-switch p5, :pswitch_data_0
+    move-result p0
 
-    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
-
-    iput-object p2, p0, Lgra;->c:Ltm6;
-
-    iput p4, p0, Lgra;->o:I
-
-    const/16 p1, 0x8
-
-    invoke-static {p1, p3}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p0, Lgra;->d:I
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
-
-    iput-object p2, p0, Lgra;->c:Ltm6;
-
-    iput p3, p0, Lgra;->d:I
-
-    iput p4, p0, Lgra;->o:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
+.method public static b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
+    .locals 0
 
-# virtual methods
-.method public final o(Lvta;)V
-    .locals 7
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
 
-    iget v0, p0, Lgra;->b:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lk3;->a:Llta;
+.method public static c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    .locals 0
 
-    iget-object v1, p0, Lgra;->c:Ltm6;
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
-    invoke-static {v0, p1, v1}, Lczi;->b(Llta;Lvta;Ltm6;)Z
+    move-result-object p0
 
-    move-result v2
+    return-object p0
+.end method
 
-    if-eqz v2, :cond_0
+.method public static d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
+    .locals 0
 
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
 
-    :cond_0
-    new-instance v2, Lbsa;
+    move-result-object p0
 
-    iget v3, p0, Lgra;->d:I
+    return-object p0
+.end method
 
-    iget v4, p0, Lgra;->o:I
+.method public static e(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    invoke-direct {v2, p1, v1, v3, v4}, Lbsa;-><init>(Lvta;Ltm6;II)V
+    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
 
-    invoke-interface {v0, v2}, Llta;->a(Lvta;)V
+    move-result-object p0
 
-    :goto_0
-    return-void
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lk3;->a:Llta;
+.method public static f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget-object v1, p0, Lgra;->c:Ltm6;
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
 
-    invoke-static {v0, p1, v1}, Lczi;->b(Llta;Lvta;Ltm6;)Z
+    move-result-object p0
 
-    move-result v2
+    return-object p0
+.end method
 
-    if-eqz v2, :cond_1
+.method public static g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
+    .locals 0
 
-    goto :goto_2
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
 
-    :cond_1
-    const/4 v2, 0x1
+    move-result-object p0
 
-    iget v3, p0, Lgra;->d:I
+    return-object p0
+.end method
 
-    iget v4, p0, Lgra;->o:I
+.method public static h(Landroid/app/RemoteInput;)Ljava/lang/String;
+    .locals 0
 
-    if-ne v4, v2, :cond_2
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
 
-    new-instance v2, Lyee;
+    move-result-object p0
 
-    invoke-direct {v2, p1}, Lyee;-><init>(Lvta;)V
+    return-object p0
+.end method
 
-    new-instance p1, Lfra;
+.method public static i(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    invoke-direct {p1, v2, v1, v3}, Lfra;-><init>(Lyee;Ltm6;I)V
+    invoke-virtual {p0}, Landroid/app/Notification;->getSortKey()Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Llta;->a(Lvta;)V
+    move-result-object p0
 
-    goto :goto_2
-
-    :cond_2
-    new-instance v5, Lera;
-
-    const/4 v6, 0x3
-
-    if-ne v4, v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-direct {v5, p1, v1, v3, v2}, Lera;-><init>(Lvta;Ltm6;IZ)V
-
-    invoke-interface {v0, v5}, Llta;->a(Lvta;)V
-
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

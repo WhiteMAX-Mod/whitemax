@@ -1,63 +1,52 @@
-.class public final synthetic Lp14;
+.class public final Lp14;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La8;
+.implements Lr14;
 
 
-# virtual methods
-.method public final a(Lytd;)V
+# instance fields
+.field public final b:Lhof;
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 3
 
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.INSERT"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "vnd.android.cursor.dir/raw_contact"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "finishActivityOnSaveCompleted"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    :try_start_0
-    invoke-virtual {p1}, Lytd;->d()Landroid/app/Activity;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/16 v1, 0x66
-
-    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    return-void
-
-    :cond_0
-    const-string p1, "Required value was null."
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const-string p1, "createContact: failed, no activity found"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    const-string v1, "ContactsDeepLinkFactory"
+    const/4 v1, 0x7
 
-    invoke-static {v1, p1, v0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sget-object v2, Le14;->d:Le14;
+
+    invoke-static {v2, v0, v1}, Le14;->a(Le14;Ljava/util/ArrayList;I)Le14;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liof;->a(Ljava/lang/Object;)Lhof;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lp14;->b:Lhof;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b()Laof;
+    .locals 1
+
+    iget-object v0, p0, Lp14;->b:Lhof;
+
+    return-object v0
 .end method

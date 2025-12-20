@@ -1,34 +1,49 @@
 .class public final Lkmg;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lnmg;
 
 
 # instance fields
-.field public final a:Ln5g;
+.field public final synthetic X:Lmmg;
 
-.field public final b:Ln5g;
+.field public Y:I
 
-.field public final c:Ljava/util/List;
+.field public d:Lmmg;
 
-.field public final d:Lf1e;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ln5g;Ln5g;Ljava/util/List;Lf1e;)V
+.method public constructor <init>(Lmmg;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkmg;->X:Lmmg;
 
-    iput-object p1, p0, Lkmg;->a:Ln5g;
-
-    iput-object p2, p0, Lkmg;->b:Ln5g;
-
-    iput-object p3, p0, Lkmg;->c:Ljava/util/List;
-
-    iput-object p4, p0, Lkmg;->d:Lf1e;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lkmg;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lkmg;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkmg;->Y:I
+
+    iget-object p1, p0, Lkmg;->X:Lmmg;
+
+    invoke-virtual {p1, p0}, Lmmg;->o(Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

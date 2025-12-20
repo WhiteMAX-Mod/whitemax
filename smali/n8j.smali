@@ -4,265 +4,335 @@
 
 
 # direct methods
-.method public static final a(Lhk3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public static final a(ILjava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ll42;
+    if-ltz p0, :cond_0
 
-    invoke-static {p1}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Ll42;->o()V
-
-    new-instance p1, Lulc;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, v1, v0}, Lulc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lhk3;->f(Lrk3;)V
-
-    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lg84;->a:Lg84;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
+    return-void
 
     :cond_0
-    sget-object p0, Lqqg;->a:Lqqg;
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    return-object p0
-.end method
+    const-string v0, "Unable to locate \'"
 
-.method public static final b(Le2f;Lq44;)Ljava/lang/Object;
-    .locals 2
+    const-string v1, "\' in program"
 
-    new-instance v0, Ll42;
-
-    invoke-static {p1}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p1, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, p1}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Ll42;->o()V
-
-    new-instance p1, Luvd;
-
-    invoke-direct {p1, v0}, Luvd;-><init>(Ll42;)V
-
-    invoke-virtual {p0, p1}, Le2f;->k(Lv2f;)V
-
-    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    throw p0
 .end method
 
-.method public static final c(Lvqa;Lq44;)Ljava/lang/Object;
-    .locals 2
+.method public static final b(Ljava/lang/String;)V
+    .locals 7
 
-    new-instance v0, Ll42;
+    invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
-    invoke-static {p1}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Ll42;->o()V
-
-    new-instance p1, Ldl6;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p1, Ldl6;->d:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Lvqa;->a(Lvta;)V
-
-    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/content/Context;)Lde6;
-    .locals 8
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lxl4;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lkk4;-><init>(I)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance v0, Lkk4;
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    const/16 v1, 0x12
+    const/16 v2, 0x10
 
-    invoke-direct {v0, v1}, Lkk4;-><init>(I)V
+    invoke-static {v2}, Lucj;->a(I)V
 
-    :goto_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    int-to-long v3, v0
+
+    const-wide v5, 0xffffffffL
+
+    and-long/2addr v3, v5
+
+    invoke-static {v2, v3, v4}, Li2j;->d(IJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, ": glError 0x"
+
+    invoke-static {p0, v2, v0}, Lzy4;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static final c(ILjava/lang/String;)I
+    .locals 10
+
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "glCreateShader type="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "Package manager required to locate emoji font provider"
+    invoke-static {v1}, Ln8j;->b(Ljava/lang/String;)V
 
-    invoke-static {v1, v2}, Lz5j;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    new-instance v2, Landroid/content/Intent;
+    const-string p1, "glShaderSource"
 
-    const-string v3, "androidx.content.action.LOAD_EMOJI_FONT"
+    invoke-static {p1}, Ln8j;->b(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
-    const/4 v3, 0x0
+    const-string p1, "glCompileShader"
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->queryIntentContentProviders(Landroid/content/Intent;I)Ljava/util/List;
+    invoke-static {p1}, Ln8j;->b(Ljava/lang/String;)V
 
-    move-result-object v2
+    const/4 p1, 0x1
 
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    filled-new-array {p1}, [I
 
-    move-result-object v2
+    move-result-object p1
+
+    const v1, 0x8b81
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, p1, v2}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+
+    aget p1, p1, v2
+
+    if-nez p1, :cond_2
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "Could not compile shader "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ": "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v3, Lm4j;->a:Lvcb;
+
+    if-eqz v3, :cond_1
+
+    sget-object v4, Lxk8;->Y:Lxk8;
+
+    if-nez p0, :cond_0
+
+    const-string p0, ""
+
+    :cond_0
+    move-object v6, p0
+
+    const/4 v8, 0x0
+
+    const/16 v9, 0x8
+
+    const-string v5, "j"
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v3 .. v9}, Lvcb;->f(Lvcb;Lxk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
     :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    move-result v4
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
-
-    if-eqz v4, :cond_1
-
-    iget-object v6, v4, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    if-eqz v6, :cond_1
-
-    iget v6, v6, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    const/4 v7, 0x1
-
-    and-int/2addr v6, v7
-
-    if-ne v6, v7, :cond_1
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    move-object v4, v5
+    return v0
+.end method
 
-    :goto_1
-    if-nez v4, :cond_3
+.method public static d(Landroid/content/Context;)I
+    .locals 7
 
-    :goto_2
-    move-object v1, v5
+    const-string v0, "window"
 
-    goto :goto_4
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    :cond_3
+    move-result-object p0
+
+    check-cast p0, Landroid/view/WindowManager;
+
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
+
+    :cond_0
+    iget p0, v0, Landroid/graphics/Point;->x:I
+
+    iget v0, v0, Landroid/graphics/Point;->y:I
+
+    int-to-double v1, p0
+
+    const-wide/high16 v3, 0x4000000000000000L    # 2.0
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    int-to-double v5, v0
+
+    invoke-static {v5, v6, v3, v4}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v3
+
+    add-double/2addr v3, v1
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    double-to-int p0, v0
+
+    new-instance v0, Landroid/graphics/Canvas;
+
+    invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
+
+    invoke-virtual {v0}, Landroid/graphics/Canvas;->getMaximumBitmapWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/graphics/Canvas;->getMaximumBitmapHeight()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    :cond_1
     :try_start_0
-    iget-object v2, v4, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+    invoke-static {}, Lonj;->b()I
 
-    iget-object v4, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v4}, Lkk4;->x(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v6, v0
-
-    :goto_3
-    if-ge v3, v6, :cond_4
-
-    aget-object v7, v0, v3
-
-    invoke-virtual {v7}, Landroid/content/pm/Signature;->toByteArray()[B
-
-    move-result-object v7
-
-    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Lqt6;
-
-    const-string v3, "emojicompat-emoji-font"
-
-    invoke-direct {v1, v2, v4, v3, v0}, Lqt6;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    move-result v0
     :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_4
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    const-string v1, "emoji2.text.DefaultEmojiConfig"
+    const-string v1, "EglUtils"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
+    const-string v2, "getMaxTextureSize: "
 
-    goto :goto_2
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_4
-    if-nez v1, :cond_5
+    const/4 v0, 0x0
 
-    goto :goto_5
+    :goto_0
+    if-lez v0, :cond_2
 
-    :cond_5
-    new-instance v5, Lde6;
+    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
 
-    new-instance v0, Lce6;
+    move-result p0
 
-    invoke-direct {v0, p0, v1}, Lce6;-><init>(Landroid/content/Context;Lqt6;)V
+    :cond_2
+    const-string v0, "BitmapLoadUtils"
 
-    invoke-direct {v5, v0}, Lde6;-><init>(Lsa5;)V
+    const-string v1, "maxBitmapSize: "
 
-    :goto_5
-    return-object v5
+    invoke-static {p0, v1, v0}, Lzy4;->o(ILjava/lang/String;Ljava/lang/String;)V
+
+    return p0
+.end method
+
+.method public static e(Ljava/io/Closeable;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    return-void
+.end method
+
+.method public static f(Ljava/util/ArrayList;)[Lrj6;
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    new-array v1, v0, [Lrj6;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ly39;
+
+    iget-object v3, v3, Ly39;->a:Lrj6;
+
+    if-eqz v3, :cond_0
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return-object v1
 .end method

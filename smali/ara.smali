@@ -1,355 +1,219 @@
-.class public final Lara;
+.class public abstract Lara;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvta;
-.implements Lpy4;
-
-
-# instance fields
-.field public final X:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final b:Lycd;
-
-.field public final c:Ljava/lang/Object;
-
-.field public d:Lpy4;
-
-.field public o:Z
-
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Lycd;I)V
+.method public static a(Landroid/app/NotificationChannel;)Z
     .locals 0
 
-    iput p4, p0, Lara;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBypassDnd()Z
 
-    iput-object p1, p0, Lara;->X:Ljava/lang/Object;
+    move-result p0
 
-    iput-object p3, p0, Lara;->b:Lycd;
-
-    iput-object p2, p0, Lara;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/app/NotificationChannel;)Z
+    .locals 0
 
-# virtual methods
-.method public final b()V
-    .locals 2
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canShowBadge()Z
 
-    iget v0, p0, Lara;->a:I
+    move-result p0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lara;->o:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lara;->o:Z
-
-    iget-object v0, p0, Lara;->X:Ljava/lang/Object;
-
-    check-cast v0, Lv2f;
-
-    iget-object v1, p0, Lara;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lv2f;->a(Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lara;->X:Ljava/lang/Object;
-
-    check-cast v0, Lvta;
-
-    iget-boolean v1, p0, Lara;->o:Z
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lara;->o:Z
-
-    iget-object v1, p0, Lara;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lvta;->f(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lvta;->b()V
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public final c(Lpy4;)V
+.method public static c(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/app/NotificationChannel;
     .locals 1
 
-    iget v0, p0, Lara;->a:I
+    new-instance v0, Landroid/app/NotificationChannel;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lara;->d:Lpy4;
-
-    iget-object p1, p0, Lara;->X:Ljava/lang/Object;
-
-    check-cast p1, Lv2f;
-
-    invoke-interface {p1, p0}, Lv2f;->c(Lpy4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lara;->d:Lpy4;
-
-    iget-object p1, p0, Lara;->X:Ljava/lang/Object;
-
-    check-cast p1, Lvta;
-
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final dispose()V
-    .locals 1
+.method public static d(Landroid/app/NotificationChannel;Z)V
+    .locals 0
 
-    iget v0, p0, Lara;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final e()Z
-    .locals 1
+.method public static e(Landroid/app/NotificationChannel;Z)V
+    .locals 0
 
-    iget v0, p0, Lara;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableVibration(Z)V
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+.method public static f(Landroid/app/NotificationChannel;)Landroid/media/AudioAttributes;
+    .locals 0
 
-    iget v0, p0, Lara;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getAudioAttributes()Landroid/media/AudioAttributes;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-boolean v0, p0, Lara;->o:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lara;->b:Lycd;
-
-    iget-object v1, p0, Lara;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1, p1}, Lycd;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lara;->onError(Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lara;->o:Z
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_1
-    iget-object v0, p0, Lara;->b:Lycd;
-
-    iget-object v1, p0, Lara;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1, p1}, Lycd;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lara;->d:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lara;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public static g(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    iget v0, p0, Lara;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getDescription()Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-boolean v0, p0, Lara;->o:Z
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_0
+.method public static h(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    const/4 v0, 0x1
+    return-object p0
+.end method
 
-    iput-boolean v0, p0, Lara;->o:Z
+.method public static i(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lara;->X:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
 
-    check-cast v0, Lv2f;
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Lv2f;->onError(Ljava/lang/Throwable;)V
+    return-object p0
+.end method
 
-    :goto_0
+.method public static j(Landroid/app/NotificationChannel;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getImportance()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static k(Landroid/app/NotificationChannel;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLightColor()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static l(Landroid/app/NotificationChannel;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static m(Landroid/app/NotificationChannel;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n(Landroid/app/NotificationChannel;)Landroid/net/Uri;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getSound()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static o(Landroid/app/NotificationChannel;)[J
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getVibrationPattern()[J
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static p(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
+
     return-void
+.end method
 
-    :pswitch_0
-    iget-boolean v0, p0, Lara;->o:Z
+.method public static q(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lara;->o:Z
-
-    iget-object v0, p0, Lara;->X:Ljava/lang/Object;
-
-    check-cast v0, Lvta;
-
-    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
     return-void
+.end method
 
-    nop
+.method public static r(Landroid/app/NotificationChannel;I)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setLightColor(I)V
+
+    return-void
+.end method
+
+.method public static s(Landroid/app/NotificationChannel;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
+
+    return-void
+.end method
+
+.method public static t(Landroid/app/NotificationChannel;Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+
+    return-void
+.end method
+
+.method public static u(Landroid/app/NotificationChannel;[J)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setVibrationPattern([J)V
+
+    return-void
+.end method
+
+.method public static v(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldShowLights()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static w(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldVibrate()Z
+
+    move-result p0
+
+    return p0
 .end method

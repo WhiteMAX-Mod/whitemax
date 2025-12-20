@@ -1,101 +1,48 @@
 .class public final Lp04;
-.super Ll0g;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final synthetic X:Lr00;
 
-.field public d:I
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
-# virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 3
+# direct methods
+.method public constructor <init>(Lr00;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lp04;->X:Lr00;
 
-    const-string v0, "result"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "total"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ltm9;->v()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ltm9;->s0()I
-
-    move-result p1
-
-    iput p1, p0, Lp04;->d:I
-
-    return-void
-
-    :cond_1
-    sget p2, Lsz;->a:I
-
-    invoke-static {p1}, Lefi;->f(Ltm9;)I
-
-    move-result p2
-
-    new-instance v0, Lsz;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_2
-
-    invoke-static {p1}, Lr04;->a(Ltm9;)Lr04;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput-object v0, p0, Lp04;->c:Ljava/util/List;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
 
-    iget-object v0, p0, Lp04;->c:Ljava/util/List;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v0}, Lzdi;->a(Ljava/util/Collection;)I
+    iput-object p1, p0, Lp04;->d:Ljava/lang/Object;
 
-    move-result v0
+    iget p1, p0, Lp04;->o:I
 
-    iget v1, p0, Lp04;->d:I
+    const/high16 v0, -0x80000000
 
-    const-string v2, ", total="
+    or-int/2addr p1, v0
 
-    const-string v3, "}"
+    iput p1, p0, Lp04;->o:I
 
-    const-string v4, "{contacts="
+    iget-object p1, p0, Lp04;->X:Lr00;
 
-    invoke-static {v4, v0, v2, v1, v3}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p0}, Lr00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

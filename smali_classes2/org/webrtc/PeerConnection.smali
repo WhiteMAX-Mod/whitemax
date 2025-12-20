@@ -13,6 +13,7 @@
         Lorg/webrtc/PeerConnection$IceGatheringState;,
         Lorg/webrtc/PeerConnection$Observer;,
         Lorg/webrtc/PeerConnection$VpnPreference;,
+        Lorg/webrtc/PeerConnection$PortAllocatorFlags;,
         Lorg/webrtc/PeerConnection$SdpSemantics;,
         Lorg/webrtc/PeerConnection$PortPrunePolicy;,
         Lorg/webrtc/PeerConnection$ContinualGatheringPolicy;,
@@ -27,6 +28,10 @@
         Lorg/webrtc/PeerConnection$TlsCertPolicy;
     }
 .end annotation
+
+
+# static fields
+.field public static final PORTALLOCATOR_ENABLE_ANY_ADDRESS_PORTS:I = 0x8000
 
 
 # instance fields

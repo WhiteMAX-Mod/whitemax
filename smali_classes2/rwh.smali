@@ -1,117 +1,104 @@
-.class public final Lrwh;
+.class public final synthetic Lrwh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lqwh;
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/view/WarningLinkBottomSheet;I)V
+    .locals 0
 
-    new-instance v0, Lqwh;
+    iput p2, p0, Lrwh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lrwh;->Companion:Lqwh;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IZ)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v1, v0, :cond_0
+    iput-object p1, p0, Lrwh;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lrwh;->a:Z
-
     return-void
-
-    :cond_0
-    sget-object p2, Lpwh;->a:Lpwh;
-
-    invoke-virtual {p2}, Lpwh;->d()Lree;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lg5j;->c(IILree;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget p1, p0, Lrwh;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x0
 
-    return v0
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lrwh;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
+
+    packed-switch p1, :pswitch_data_0
+
+    sget-object p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->I0:[Lp38;
+
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->E0:Ld68;
+
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lswh;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {p1, v1, v3}, Lswh;->a(II)V
+
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:Z
+
+    invoke-virtual {v2, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->C0:Ljava/lang/String;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lrwh;
+    iget-object v3, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->D0:Ld68;
 
-    const/4 v2, 0x0
+    invoke-interface {v3}, Ld68;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v3
 
-    return v2
+    check-cast v3, Luz9;
 
-    :cond_1
-    check-cast p1, Lrwh;
+    sget-object v4, Luz9;->U1:[Lp38;
 
-    iget-boolean v1, p0, Lrwh;->a:Z
+    invoke-virtual {v3, p1, v0}, Luz9;->F(Ljava/lang/String;Z)V
 
-    iget-boolean p1, p1, Lrwh;->a:Z
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->E0:Ld68;
 
-    if-eq v1, p1, :cond_2
+    invoke-interface {p1}, Ld68;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object p1
 
-    :cond_2
-    return v0
-.end method
+    check-cast p1, Lswh;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {p1, v1, v1}, Lswh;->a(II)V
 
-    iget-boolean v0, p0, Lrwh;->a:Z
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:Z
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v2, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
 
-    move-result v0
+    :goto_0
+    return-void
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "WebAppSetupBackButtonRequest(isVisible="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lrwh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lxrf;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

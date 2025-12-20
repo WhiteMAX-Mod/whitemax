@@ -11,11 +11,11 @@
     d2 = {
         "Landroidx/work/impl/model/WorkersQueueDao;",
         "",
-        "La6i;",
+        "Luii;",
         "item",
-        "Lqqg;",
+        "Lv2h;",
         "insertOrIgnore",
-        "(La6i;)V",
+        "(Luii;)V",
         "insertOrReplace",
         "",
         "state",
@@ -74,7 +74,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Lwe3;->q(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
     move-result v2
 
@@ -95,20 +95,32 @@
 
     move-result-object v2
 
-    check-cast v2, La6i;
+    check-cast v2, Luii;
 
-    iget-object v2, v2, La6i;->a:Ljava/lang/String;
+    iget-object v2, v2, Luii;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lue3;->b0(Ljava/util/ArrayList;)Ljava/util/HashSet;
+    new-instance v0, Ljava/util/HashSet;
 
-    move-result-object v0
+    const/16 v2, 0xc
 
-    invoke-static {p1}, Lue3;->h0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1, v2}, Lgi3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-static {v2}, Lit8;->d(I)I
+
+    move-result v2
+
+    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(I)V
+
+    invoke-static {v1, v0}, Lei3;->X(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
+
+    invoke-static {p1}, Lei3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -139,7 +151,7 @@
         value = {
             "(I)",
             "Ljava/util/List<",
-            "La6i;",
+            "Luii;",
             ">;"
         }
     .end annotation
@@ -154,7 +166,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p1, v1}, Lwe3;->q(Ljava/lang/Iterable;I)I
+    invoke-static {p1, v1}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
     move-result v1
 
@@ -175,9 +187,9 @@
 
     move-result-object v2
 
-    check-cast v2, La6i;
+    check-cast v2, Luii;
 
-    iget-object v2, v2, La6i;->a:Ljava/lang/String;
+    iget-object v2, v2, Luii;->a:Ljava/lang/String;
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -191,12 +203,12 @@
     return-object p1
 .end method
 
-.method public insert(La6i;)V
+.method public insert(Luii;)V
     .locals 2
 
-    iget-object v0, p1, La6i;->c:Luk5;
+    iget-object v0, p1, Luii;->c:Lpo5;
 
-    sget-object v1, Lf6i;->$EnumSwitchMapping$0:[I
+    sget-object v1, Lzii;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -208,20 +220,20 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrIgnore(La6i;)V
+    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrIgnore(Luii;)V
 
     return-void
 
     :cond_0
-    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrReplace(La6i;)V
+    invoke-interface {p0, p1}, Landroidx/work/impl/model/WorkersQueueDao;->insertOrReplace(Luii;)V
 
     return-void
 .end method
 
-.method public abstract insertOrIgnore(La6i;)V
+.method public abstract insertOrIgnore(Luii;)V
 .end method
 
-.method public abstract insertOrReplace(La6i;)V
+.method public abstract insertOrReplace(Luii;)V
 .end method
 
 .method public abstract select(I)Ljava/util/List;
@@ -229,7 +241,7 @@
         value = {
             "(I)",
             "Ljava/util/List<",
-            "La6i;",
+            "Luii;",
             ">;"
         }
     .end annotation
@@ -240,7 +252,7 @@
         value = {
             "(II)",
             "Ljava/util/List<",
-            "La6i;",
+            "Luii;",
             ">;"
         }
     .end annotation

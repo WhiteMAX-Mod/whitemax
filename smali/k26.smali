@@ -1,61 +1,40 @@
 .class public final Lk26;
-.super Le9c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Leoe;
 
 
 # instance fields
-.field public a:[F
+.field public final a:Ljava/io/File;
 
-.field public b:I
+.field public final b:I
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 0
 
-    iget-object v0, p0, Lk26;->a:[F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v1, p0, Lk26;->b:I
+    iput-object p1, p0, Lk26;->a:Ljava/io/File;
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
+    const/4 p1, 0x2
 
-    move-result-object v0
+    iput p1, p0, Lk26;->b:I
 
-    return-object v0
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lk26;->a:[F
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object p1
-
-    iput-object p1, p0, Lk26;->a:[F
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    iget v0, p0, Lk26;->b:I
+    new-instance v0, Li26;
 
-    return v0
+    invoke-direct {v0, p0}, Li26;-><init>(Lk26;)V
+
+    return-object v0
 .end method

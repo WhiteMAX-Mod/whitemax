@@ -1,165 +1,130 @@
 .class public final Lit4;
-.super Li1f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljof;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field public final n:Ltof;
+.field public final synthetic a:Lyif;
+
+.field public final synthetic b:Landroid/view/ViewGroup;
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Ljt4;
 
 
 # direct methods
-.method public constructor <init>(Ltof;)V
-    .locals 5
+.method public constructor <init>(Lyif;Landroid/view/ViewGroup;Landroid/view/View;Ljt4;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [Loof;
+    iput-object p1, p0, Lit4;->a:Lyif;
 
-    new-array v0, v0, [La72;
+    iput-object p2, p0, Lit4;->b:Landroid/view/ViewGroup;
 
-    invoke-direct {p0, v1, v0}, Li1f;-><init>([Lph4;[Lqh4;)V
+    iput-object p3, p0, Lit4;->c:Landroid/view/View;
 
-    iget v0, p0, Li1f;->g:I
-
-    iget-object v1, p0, Li1f;->e:[Lph4;
-
-    array-length v2, v1
-
-    const/4 v3, 0x0
-
-    if-ne v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v3
-
-    :goto_0
-    invoke-static {v0}, Lhsi;->g(Z)V
-
-    array-length v0, v1
-
-    :goto_1
-    if-ge v3, v0, :cond_1
-
-    aget-object v2, v1, v3
-
-    const/16 v4, 0x400
-
-    invoke-virtual {v2, v4}, Lph4;->y(I)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    iput-object p1, p0, Lit4;->n:Ltof;
+    iput-object p4, p0, Lit4;->d:Ljt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 4
+
+    new-instance p1, Lbj;
+
+    const/16 v0, 0x13
+
+    iget-object v1, p0, Lit4;->b:Landroid/view/ViewGroup;
+
+    iget-object v2, p0, Lit4;->c:Landroid/view/View;
+
+    iget-object v3, p0, Lit4;->d:Ljt4;
+
+    invoke-direct {p1, v1, v2, v3, v0}, Lbj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Animation from operation "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lit4;->a:Lyif;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has ended."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final f()Lph4;
-    .locals 2
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 1
 
-    new-instance v0, Loof;
+    const/4 p1, 0x2
 
-    const/4 v1, 0x1
+    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
 
-    invoke-direct {v0, v1}, Lph4;-><init>(I)V
+    move-result p1
 
-    return-object v0
-.end method
+    if-eqz p1, :cond_0
 
-.method public final g()Lqh4;
-    .locals 2
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    new-instance v0, La72;
+    const-string v0, "Animation from operation "
 
-    const/4 v1, 0x2
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0, v1}, La72;-><init>(Ljof;I)V
+    iget-object v0, p0, Lit4;->a:Lyif;
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final h(Ljava/lang/Throwable;)Landroidx/media3/decoder/DecoderException;
-    .locals 2
+    const-string v0, " has reached onAnimationStart."
 
-    new-instance v0, Landroidx/media3/extractor/text/SubtitleDecoderException;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "Unexpected decode error"
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p1
 
-    return-object v0
-.end method
+    const-string v0, "FragmentManager"
 
-.method public final i(Lph4;Lqh4;Z)Landroidx/media3/decoder/DecoderException;
-    .locals 6
-
-    check-cast p1, Loof;
-
-    move-object v0, p2
-
-    check-cast v0, La72;
-
-    :try_start_0
-    iget-object p2, p1, Lph4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
-
-    move-result p2
-
-    iget-object v2, p0, Lit4;->n:Ltof;
-
-    if-eqz p3, :cond_0
-
-    invoke-interface {v2}, Ltof;->reset()V
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 p3, 0x0
-
-    invoke-interface {v2, p3, v1, p2}, Ltof;->o(I[BI)Lhof;
-
-    move-result-object v3
-
-    iget-wide v1, p1, Lph4;->Y:J
-
-    iget-wide v4, p1, Loof;->t0:J
-
-    invoke-virtual/range {v0 .. v5}, La72;->y(JLhof;J)V
-
-    iput-boolean p3, v0, Lqh4;->d:Z
-    :try_end_0
-    .catch Landroidx/media3/extractor/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    return-object p1
+    return-void
 .end method

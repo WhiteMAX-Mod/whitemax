@@ -1,11 +1,18 @@
-.class public interface abstract Ln8e;
+.class public final Ln8e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxsh;
+
 
 # virtual methods
-.method public abstract b(Ly9g;Ljp5;Lmjg;)V
-.end method
+.method public final b(Ljava/lang/Class;Lmea;)Lssh;
+    .locals 0
 
-.method public abstract d(Lqyg;)V
+    new-instance p1, Landroidx/lifecycle/SavedStateHandlesVM;
+
+    invoke-direct {p1}, Landroidx/lifecycle/SavedStateHandlesVM;-><init>()V
+
+    return-object p1
 .end method

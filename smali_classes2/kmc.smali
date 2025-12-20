@@ -1,137 +1,138 @@
 .class public final Lkmc;
-.super Llmc;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Ler6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Integer;
+.field public synthetic X:Lpmb;
 
-.field public final b:Ls5g;
+.field public synthetic Y:Lplb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ls5g;Ljava/lang/Integer;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lkmc;->o:I
 
-    iput-object p2, p0, Lkmc;->a:Ljava/lang/Integer;
-
-    iput-object p1, p0, Lkmc;->b:Ls5g;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lkmc;->o:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lpmb;
 
-    return v0
+    check-cast p2, Lplb;
 
-    :cond_0
-    instance-of v1, p1, Lkmc;
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lkmc;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lkmc;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkmc;->X:Lpmb;
+
+    iput-object p2, v0, Lkmc;->Y:Lplb;
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    invoke-virtual {v0, p1}, Lkmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lkmc;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p3, v2}, Lkmc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-object p1, v0, Lkmc;->X:Lpmb;
 
-    :cond_1
-    check-cast p1, Lkmc;
+    iput-object p2, v0, Lkmc;->Y:Lplb;
 
-    iget-object v1, p0, Lkmc;->a:Ljava/lang/Integer;
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    iget-object v3, p1, Lkmc;->a:Ljava/lang/Integer;
+    invoke-virtual {v0, p1}, Lkmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result v1
+    nop
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lkmc;->b:Ls5g;
-
-    iget-object p1, p1, Lkmc;->b:Ls5g;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lkmc;->a:Ljava/lang/Integer;
+    iget v0, p0, Lkmc;->o:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lkmc;->X:Lpmb;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lkmc;->Y:Lplb;
 
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lkmc;->b:Ls5g;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSuccessSnackbar(iconRes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkmc;->a:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSource="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkmc;->b:Ls5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lplb;->b()Lxf0;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lxf0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkmc;->X:Lpmb;
+
+    iget-object v0, p0, Lkmc;->Y:Lplb;
+
+    invoke-interface {v0}, Lplb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

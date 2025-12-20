@@ -1,99 +1,56 @@
-.class public final Ls84;
-.super Ldtf;
+.class public final synthetic Ls84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lx3e;
 
 
 # instance fields
-.field public final synthetic X:Ll42;
+.field public final synthetic a:Lx84;
 
-.field public final synthetic o:Ljava/util/concurrent/Callable;
+.field public final synthetic b:Landroid/content/Intent;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Ll42;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lx84;Landroid/content/Intent;ILandroid/os/Bundle;)V
     .locals 0
 
-    iput-object p1, p0, Ls84;->o:Ljava/util/concurrent/Callable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ls84;->X:Ll42;
+    iput-object p1, p0, Ls84;->a:Lx84;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ls84;->b:Landroid/content/Intent;
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Ls84;->c:I
+
+    iput-object p4, p0, Ls84;->d:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 5
 
-    check-cast p1, Lf84;
+    iget-object v0, p0, Ls84;->a:Lx84;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lx84;->router:Lw3e;
 
-    invoke-virtual {p0, p1, p2}, Ls84;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lx84;->instanceId:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v2, p0, Ls84;->b:Landroid/content/Intent;
 
-    check-cast p1, Ls84;
+    iget v3, p0, Ls84;->c:I
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iget-object v4, p0, Ls84;->d:Landroid/os/Bundle;
 
-    invoke-virtual {p1, p2}, Ls84;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2, v3, v4}, Lw3e;->W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ls84;
-
-    iget-object v0, p0, Ls84;->o:Ljava/util/concurrent/Callable;
-
-    iget-object v1, p0, Ls84;->X:Ll42;
-
-    invoke-direct {p1, v0, v1, p2}, Ls84;-><init>(Ljava/util/concurrent/Callable;Ll42;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Ls84;->X:Ll42;
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object p1, p0, Ls84;->o:Ljava/util/concurrent/Callable;
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ll42;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v1, Lipd;
-
-    invoke-direct {v1, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
-
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

@@ -1,133 +1,80 @@
-.class public abstract Lqbj;
+.class public final Lqbj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lqbj;
+
 
 # direct methods
-.method public static a(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;FZLandroid/text/TextUtils$TruncateAt;IILw3g;)Landroid/text/StaticLayout;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lqbj;
 
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/text/StaticLayout$Builder;->obtain(Ljava/lang/CharSequence;IILandroid/text/TextPaint;I)Landroid/text/StaticLayout$Builder;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    sput-object v0, Lqbj;->a:Lqbj;
 
-    invoke-virtual {p0, p5}, Landroid/text/StaticLayout$Builder;->setAlignment(Landroid/text/Layout$Alignment;)Landroid/text/StaticLayout$Builder;
+    new-instance v0, Lyyi;
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    invoke-virtual {p0, p6, p1}, Landroid/text/StaticLayout$Builder;->setLineSpacing(FF)Landroid/text/StaticLayout$Builder;
+    const-class v1, Lqzi;
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, p7}, Landroid/text/StaticLayout$Builder;->setIncludePad(Z)Landroid/text/StaticLayout$Builder;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, p8}, Landroid/text/StaticLayout$Builder;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)Landroid/text/StaticLayout$Builder;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p9}, Landroid/text/StaticLayout$Builder;->setEllipsizedWidth(I)Landroid/text/StaticLayout$Builder;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p10}, Landroid/text/StaticLayout$Builder;->setMaxLines(I)Landroid/text/StaticLayout$Builder;
+    const/4 v2, 0x3
 
-    move-result-object p0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    sget-object p1, Ly3g;->a:Lw3g;
+    move-result-object v0
 
-    if-ne p11, p1, :cond_0
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+    move-result-object v0
 
-    goto :goto_0
+    const/4 v2, 0x4
 
-    :cond_0
-    sget-object p1, Ly3g;->b:Lw3g;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    if-ne p11, p1, :cond_1
+    move-result-object v0
 
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_1
-    sget-object p1, Ly3g;->c:Lw3g;
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    if-ne p11, p1, :cond_2
+    return-void
+.end method
 
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
-    goto :goto_0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :cond_2
-    sget-object p1, Ly3g;->d:Lw3g;
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-ne p11, p1, :cond_3
+    move-result-object p1
 
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
-
-    goto :goto_0
-
-    :cond_3
-    sget-object p1, Ly3g;->e:Lw3g;
-
-    if-ne p11, p1, :cond_4
-
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
-
-    goto :goto_0
-
-    :cond_4
-    sget-object p1, Lx3g;->c:Lx3g;
-
-    if-ne p11, p1, :cond_5
-
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
-
-    goto :goto_0
-
-    :cond_5
-    sget-object p1, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setBreakStrategy(I)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setHyphenationFrequency(I)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p2, p2}, Landroid/text/StaticLayout$Builder;->setIndents([I[I)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setJustificationMode(I)Landroid/text/StaticLayout$Builder;
-
-    const/16 p1, 0x1c
-
-    if-lt v0, p1, :cond_6
-
-    invoke-static {p0}, Li7c;->r(Landroid/text/StaticLayout$Builder;)V
-
-    :cond_6
-    invoke-virtual {p0}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
-
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

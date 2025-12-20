@@ -1,53 +1,31 @@
-.class public final Lm7b;
-.super Lq44;
+.class public abstract Lm7b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lq7b;
+.field public static final b:I
 
-.field public Z:I
-
-.field public d:Lq7b;
-
-.field public o:Lpb2;
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lq7b;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lm7b;->Y:Lq7b;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lm7b;->X:Ljava/lang/Object;
+    sget v0, Ln5d;->fast_forward_24:I
 
-    iget p1, p0, Lm7b;->Z:I
+    sput v0, Lm7b;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Ln5d;->fast_rewind_24:I
 
-    or-int/2addr p1, v0
+    sput v0, Lm7b;->b:I
 
-    iput p1, p0, Lm7b;->Z:I
+    sget v0, Ln5d;->save_to_gallery_24:I
 
-    iget-object p1, p0, Lm7b;->Y:Lq7b;
+    sput v0, Lm7b;->c:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lq7b;->b(Lpb2;Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

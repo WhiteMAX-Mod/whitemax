@@ -1,286 +1,122 @@
-.class public final Ljq;
+.class public final synthetic Ljq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:Llk4;
-
-.field public final c:Lk18;
-
-.field public final d:Lk18;
-
-.field public final e:Lk18;
-
-.field public final f:Lk18;
-
-.field public final g:Lk18;
-
-.field public final h:Lk18;
-
-.field public final i:Lkw9;
-
-.field public final j:Lbwf;
-
-.field public final k:Lbwf;
-
-.field public final l:Lk18;
-
-.field public final m:Lk18;
-
-.field public final n:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
-
-.field public final p:Ljava/lang/Object;
-
-.field public final q:Ljava/lang/Object;
+.field public final synthetic b:Llq;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lk18;Lk18;Lg5i;Llk4;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
+.method public synthetic constructor <init>(Llq;I)V
     .locals 0
+
+    .line 1
+    iput p2, p0, Ljq;->a:I
+
+    iput-object p1, p0, Ljq;->b:Llq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljq;->a:Landroid/content/Context;
+    return-void
+.end method
 
-    iput-object p5, p0, Ljq;->b:Llk4;
+.method public synthetic constructor <init>(Llq;Lko4;Landroid/content/Context;)V
+    .locals 0
 
-    iput-object p3, p0, Ljq;->c:Lk18;
+    .line 2
+    const/4 p2, 0x0
 
-    iput-object p8, p0, Ljq;->d:Lk18;
+    iput p2, p0, Ljq;->a:I
 
-    iput-object p7, p0, Ljq;->e:Lk18;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p9, p0, Ljq;->f:Lk18;
-
-    invoke-interface {p10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lkw9;
-
-    iget-object p3, p3, Lkw9;->a:Lk18;
-
-    iput-object p3, p0, Ljq;->g:Lk18;
-
-    invoke-interface {p10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lkw9;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lkw9;
-
-    iget-object p3, p3, Lkw9;->b:Lk18;
-
-    iput-object p3, p0, Ljq;->h:Lk18;
-
-    invoke-interface {p10}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lkw9;
-
-    iput-object p3, p0, Ljq;->i:Lkw9;
-
-    new-instance p3, Lhq;
-
-    const/4 p6, 0x2
-
-    invoke-direct {p3, p0, p6}, Lhq;-><init>(Ljq;I)V
-
-    new-instance p6, Lbwf;
-
-    invoke-direct {p6, p3}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p6, p0, Ljq;->j:Lbwf;
-
-    new-instance p3, Lhq;
-
-    const/4 p6, 0x3
-
-    invoke-direct {p3, p0, p6}, Lhq;-><init>(Ljq;I)V
-
-    new-instance p6, Lbwf;
-
-    invoke-direct {p6, p3}, Lbwf;-><init>(Lcm6;)V
-
-    iput-object p6, p0, Ljq;->k:Lbwf;
-
-    iput-object p11, p0, Ljq;->l:Lk18;
-
-    iput-object p2, p0, Ljq;->m:Lk18;
-
-    new-instance p7, Lfq;
-
-    move-object p9, p0
-
-    move-object p8, p1
-
-    move-object p11, p4
-
-    move-object p10, p5
-
-    invoke-direct/range {p7 .. p12}, Lfq;-><init>(Landroid/content/Context;Ljq;Llk4;Lg5i;Lk18;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p1, p7}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p2
-
-    iput-object p2, p9, Ljq;->n:Ljava/lang/Object;
-
-    new-instance p2, Lgq;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p8, p0, p10, p3}, Lgq;-><init>(Landroid/content/Context;Ljq;Llk4;I)V
-
-    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p2
-
-    iput-object p2, p9, Ljq;->o:Ljava/lang/Object;
-
-    new-instance p2, Lgq;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p8, p0, p10, p3}, Lgq;-><init>(Landroid/content/Context;Ljq;Llk4;I)V
-
-    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p2
-
-    iput-object p2, p9, Ljq;->p:Ljava/lang/Object;
-
-    new-instance p2, Lgq;
-
-    invoke-direct {p2, p0, p10, p8}, Lgq;-><init>(Ljq;Llk4;Landroid/content/Context;)V
-
-    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
-
-    move-result-object p2
-
-    iput-object p2, p9, Ljq;->q:Ljava/lang/Object;
-
-    new-instance p2, Lhq;
-
-    invoke-direct {p2, p0, p10, p8}, Lhq;-><init>(Ljq;Llk4;Landroid/content/Context;)V
-
-    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
+    iput-object p1, p0, Ljq;->b:Llq;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lx7b;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Ljq;->e:Lk18;
+    iget v0, p0, Ljq;->a:I
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance v0, Lz06;
 
-    check-cast v0, Lx7b;
+    iget-object v1, p0, Ljq;->b:Llq;
+
+    iget-object v2, v1, Llq;->a:Landroid/content/Context;
+
+    invoke-virtual {v1}, Llq;->a()Ljeb;
+
+    move-result-object v3
+
+    iget-object v4, v1, Llq;->c:Ld68;
+
+    invoke-interface {v4}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Laeb;
+
+    iget-object v1, v1, Llq;->b:Lko4;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lz06;-><init>(Landroid/content/Context;Ljeb;Laeb;Lko4;)V
 
     return-object v0
-.end method
 
-.method public final b()Z
-    .locals 8
+    :pswitch_0
+    iget-object v0, p0, Ljq;->b:Llq;
 
-    invoke-virtual {p0}, Ljq;->a()Lx7b;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lx7b;->i(Z)Lbna;
+    invoke-virtual {v0}, Llq;->a()Ljeb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lbna;->b:Landroid/app/NotificationManager;
+    return-object v0
 
-    invoke-static {v0}, Lvma;->a(Landroid/app/NotificationManager;)Z
+    :pswitch_1
+    new-instance v0, Lole;
 
-    move-result v0
+    iget-object v1, p0, Ljq;->b:Llq;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Llq;->a()Ljeb;
 
-    goto :goto_0
+    iget-object v2, v1, Llq;->c:Ld68;
 
-    :cond_0
-    sget v0, Ls65;->d:I
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x7
+    move-result-object v2
 
-    sget-object v2, Ly65;->Y:Ly65;
+    check-cast v2, Laeb;
 
-    invoke-static {v0, v2}, Lv9j;->h(ILy65;)J
+    iget-object v1, v1, Llq;->j:Ld68;
 
-    move-result-wide v2
+    invoke-interface {v1}, Ld68;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Ljq;->m:Lk18;
+    move-result-object v1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    check-cast v1, Lobg;
 
-    move-result-object v0
+    const/16 v1, 0x17
 
-    check-cast v0, Lz7c;
+    invoke-direct {v0, v1}, Lole;-><init>(I)V
 
-    iget-object v0, v0, Lz7c;->a:Lpe8;
+    return-object v0
 
-    iget-object v4, v0, Lpe8;->y0:Lfde;
+    nop
 
-    sget-object v5, Lpe8;->U0:[Lyy7;
-
-    const/16 v6, 0xc
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v4, v0, v5}, Lfde;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    sub-long/2addr v6, v4
-
-    invoke-static {v2, v3}, Ls65;->g(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v6, v2
-
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    :goto_0
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

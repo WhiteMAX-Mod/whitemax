@@ -1,111 +1,99 @@
-.class public final synthetic Lx03;
+.class public abstract synthetic Lx03;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/ObjLongConsumer;
 
-
-# instance fields
-.field public final synthetic a:Lusd;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lusd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lw03;->values()[Lw03;
 
-    iput-object p1, p0, Lx03;->a:Lusd;
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;J)V
-    .locals 10
+    const/4 v1, 0x1
 
-    move-object v4, p1
+    const/4 v2, 0x4
 
-    check-cast v4, Landroid/view/View;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p1, p0, Lx03;->a:Lusd;
+    :catch_0
+    const/4 v3, 0x2
 
-    iget-object p1, p1, Lusd;->b:Ljava/lang/Object;
+    const/4 v4, 0x6
 
-    move-object v1, p1
+    :try_start_1
+    aput v3, v0, v4
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    check-cast v1, Lone/me/chats/list/ChatsListWidget;
+    :catch_1
+    const/4 v5, 0x3
 
-    iget-object p1, v1, Lone/me/chats/list/ChatsListWidget;->G0:Lt9f;
+    const/4 v6, 0x7
 
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->L0:[Lyy7;
+    :try_start_2
+    aput v5, v0, v6
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v0, v1, Lone/me/chats/list/ChatsListWidget;->c:Lhs;
+    :catch_2
+    :try_start_3
+    aput v2, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    sget-object v6, Lone/me/chats/list/ChatsListWidget;->L0:[Lyy7;
+    :catch_3
+    const/4 v2, 0x5
 
+    const/16 v5, 0x8
+
+    :try_start_4
+    aput v2, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    aput v4, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
     const/4 v2, 0x0
 
-    aget-object v2, v6, v2
+    :try_start_6
+    aput v6, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    :catch_6
+    :try_start_7
+    aput v5, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    move-result-object v0
+    :catch_7
+    const/16 v1, 0x9
 
-    check-cast v0, Ljava/lang/Long;
+    :try_start_8
+    aput v1, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    if-nez v0, :cond_1
+    :catch_8
+    sput-object v0, Lx03;->$EnumSwitchMapping$0:[I
 
-    const/4 v7, 0x4
-
-    aget-object v0, v6, v7
-
-    invoke-virtual {p1, v1, v0}, Lt9f;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqt7;
-
-    const/4 v8, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lqt7;->isActive()Z
-
-    move-result v0
-
-    if-ne v0, v8, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
-
-    move-result-object v9
-
-    new-instance v0, Lx53;
-
-    const/4 v5, 0x0
-
-    move-wide v2, p2
-
-    invoke-direct/range {v0 .. v5}, Lx53;-><init>(Lone/me/chats/list/ChatsListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x0
-
-    sget-object p3, Li84;->b:Li84;
-
-    invoke-static {v9, p2, p3, v0, v8}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    move-result-object p2
-
-    aget-object p3, v6, v7
-
-    invoke-virtual {p1, v1, p3, p2}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method

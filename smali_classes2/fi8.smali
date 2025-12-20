@@ -1,129 +1,145 @@
-.class public final enum Lfi8;
-.super Ljava/lang/Enum;
+.class public final Lfi8;
+.super Lb5g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lfi8;
-
-.field public static final enum b:Lfi8;
-
-.field public static final enum c:Lfi8;
-
-.field public static final enum d:Lfi8;
-
-.field public static final enum o:Lfi8;
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lgi8;
+
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lfi8;
-
-    const-string v1, "LOGIN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v1}, Lfi8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lfi8;->b:Lfi8;
-
-    new-instance v1, Lfi8;
-
-    const-string v2, "RECOVERY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v2}, Lfi8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lfi8;->c:Lfi8;
-
-    new-instance v2, Lfi8;
-
-    const-string v3, "PHONE_BINDING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lfi8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lfi8;->d:Lfi8;
-
-    new-instance v3, Lfi8;
-
-    const-string v4, "PHONE_CONFIRM"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lfi8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lfi8;->o:Lfi8;
-
-    filled-new-array {v0, v1, v2, v3}, [Lfi8;
-
-    move-result-object v0
-
-    sput-object v0, Lfi8;->X:[Lfi8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lgi8;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lfi8;->X:Lgi8;
 
-    iput-object p3, p0, Lfi8;->a:Ljava/lang/String;
+    iput-object p2, p0, Lfi8;->Y:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lfi8;
-    .locals 1
-
-    const-class v0, Lfi8;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lfi8;
-
-    return-object p0
-.end method
-
-.method public static values()[Lfi8;
-    .locals 1
-
-    sget-object v0, Lfi8;->X:[Lfi8;
-
-    invoke-virtual {v0}, [Lfi8;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lfi8;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "{value=\'"
+    check-cast p1, Lac4;
 
-    const-string v1, "\'}"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lfi8;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lfi8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lfi8;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lfi8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lfi8;
+
+    iget-object v0, p0, Lfi8;->X:Lgi8;
+
+    iget-object v1, p0, Lfi8;->Y:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Lfi8;-><init>(Lgi8;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lfi8;->o:I
+
+    sget-object v1, Lv2h;->a:Lv2h;
+
+    iget-object v2, p0, Lfi8;->Y:Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lfi8;->X:Lgi8;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v3, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, v4, Lgi8;->g:Ljava/lang/Object;
+
+    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lft6;
+
+    if-nez p1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    iget-object v0, v4, Lgi8;->c:Lri8;
+
+    iput v3, p0, Lfi8;->o:I
+
+    const/16 v3, 0x28
+
+    check-cast v0, Lfn7;
+
+    invoke-virtual {v0, p1, v3, p0}, Lfn7;->c(Lft6;ILb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_3
 
     return-object v0
+
+    :cond_3
+    :goto_0
+    iget-object p1, v4, Lgi8;->a:Ljy0;
+
+    new-instance v0, Lhi8;
+
+    invoke-direct {v0, v2}, Lhi8;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljy0;->c(Ljava/lang/Object;)V
+
+    return-object v1
 .end method

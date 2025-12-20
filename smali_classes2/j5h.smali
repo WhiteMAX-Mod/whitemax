@@ -3,89 +3,82 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Ljava/util/List;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ld68;
 
-.field public final b:I
+.field public final b:Ld68;
 
-.field public final c:I
+.field public final c:Ld68;
 
-.field public final d:Ljava/util/concurrent/Executor;
+.field public final d:Ld68;
 
-.field public final e:La8h;
+.field public final e:Ld68;
 
-.field public final f:Lbba;
+.field public final f:Ld68;
+
+.field public final g:Ld68;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;Ld68;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p1, p0, Lj5h;->a:Ld68;
 
-    move-result-object v0
+    iput-object p2, p0, Lj5h;->b:Ld68;
 
-    const/4 v1, 0x2
+    iput-object p3, p0, Lj5h;->c:Ld68;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p4, p0, Lj5h;->d:Ld68;
 
-    move-result-object v1
+    iput-object p5, p0, Lj5h;->e:Ld68;
 
-    const/4 v2, 0x3
+    iput-object p6, p0, Lj5h;->f:Ld68;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x7
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lj5h;->g:Ljava/util/List;
+    iput-object p7, p0, Lj5h;->g:Ld68;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;La8h;Lbba;)V
-    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final a(ZLw1f;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lj5h;->g:Ljava/util/List;
+    iget-object v0, p0, Lj5h;->c:Ld68;
 
-    const/4 v1, 0x3
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lrmb;->b(ILjava/util/Collection;)V
+    move-result-object v0
 
-    iput v1, p0, Lj5h;->a:I
+    check-cast v0, Lbbg;
 
-    const/4 v0, 0x1
+    check-cast v0, Lb9b;
 
-    iput v0, p0, Lj5h;->b:I
+    invoke-virtual {v0}, Lb9b;->b()Ltb4;
 
-    iput v0, p0, Lj5h;->c:I
+    move-result-object v0
 
-    iput-object p1, p0, Lj5h;->d:Ljava/util/concurrent/Executor;
+    new-instance v1, Li5h;
 
-    iput-object p2, p0, Lj5h;->e:La8h;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lj5h;->f:Lbba;
+    invoke-direct {v1, p0, p1, v2}, Li5h;-><init>(Lj5h;ZLkotlin/coroutines/Continuation;)V
 
-    return-void
+    invoke-static {v0, v1, p2}, Ly8j;->h(Lrb4;Lcr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lbc4;->a:Lbc4;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

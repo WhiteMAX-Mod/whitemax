@@ -1,68 +1,174 @@
-.class public interface abstract Ln22;
-.super Ljava/lang/Object;
+.class public final Ln22;
+.super Lm22;
 .source "SourceFile"
 
-# interfaces
-.implements Lh02;
-.implements Ltwg;
+
+# instance fields
+.field public final a:Ljava/util/ArrayList;
 
 
-# virtual methods
-.method public a()Ll22;
-    .locals 1
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 2
 
-    invoke-interface {p0}, Ln22;->n()Ll22;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ln22;->a:Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Lm22;
 
-.method public c(Ll12;)V
-    .locals 0
+    instance-of v1, v0, Lo22;
 
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Ln22;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
-.method public abstract e()Lwqa;
-.end method
 
-.method public abstract f()Ls12;
-.end method
+# virtual methods
+.method public final a(I)V
+    .locals 2
 
-.method public g()Lj12;
-    .locals 1
+    iget-object v0, p0, Ln22;->a:Ljava/util/ArrayList;
 
-    sget-object v0, Lm12;->a:Ll12;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public i(Z)V
-    .locals 0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm22;
+
+    invoke-virtual {v1, p1}, Lm22;->a(I)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
-.method public abstract j(Ljava/util/ArrayList;)V
-.end method
+.method public final b(ILt22;)V
+    .locals 2
 
-.method public abstract k(Ljava/util/ArrayList;)V
-.end method
+    iget-object v0, p0, Ln22;->a:Ljava/util/ArrayList;
 
-.method public l()Z
-    .locals 1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    return v0
-.end method
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.method public m(Z)V
-    .locals 0
+    move-result v1
 
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm22;
+
+    invoke-virtual {v1, p1, p2}, Lm22;->b(ILt22;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
-.method public abstract n()Ll22;
+.method public final c(ILqf3;)V
+    .locals 2
+
+    iget-object v0, p0, Ln22;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm22;
+
+    invoke-virtual {v1, p1, p2}, Lm22;->c(ILqf3;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(I)V
+    .locals 2
+
+    iget-object v0, p0, Ln22;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm22;
+
+    invoke-virtual {v1, p1}, Lm22;->d(I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

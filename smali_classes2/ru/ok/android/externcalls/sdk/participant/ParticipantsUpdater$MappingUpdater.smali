@@ -20,7 +20,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;",
         "",
-        "Lqqg;",
+        "Lv2h;",
         "triggerMapUpdate",
         "()V",
         "reportIfApplicable",

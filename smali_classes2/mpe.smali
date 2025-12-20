@@ -2,121 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldi4;
 
+# instance fields
+.field public a:Z
 
-# static fields
-.field public static final a:Lmpe;
+.field public b:I
 
-.field public static final b:Lnpe;
+.field public c:I
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lmpe;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmpe;->a:Lmpe;
-
-    sget-object v0, Lnpe;->b:Lnpe;
-
-    sput-object v0, Lmpe;->b:Lnpe;
-
-    return-void
-.end method
+.field public d:I
 
 
 # virtual methods
-.method public final a()Lki4;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lmpe;->b:Lnpe;
+    iget-boolean v0, p0, Lmpe;->a:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "ss"
 
     return-object v0
-.end method
-
-.method public final b(Ljava/lang/String;Lgi4;Landroid/os/Bundle;)Lni4;
-    .locals 10
-
-    sget-object v0, Lmpe;->b:Lnpe;
-
-    iget-object v0, v0, Lki4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
 
     :cond_0
-    sget-object v0, Lnpe;->b:Lnpe;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "sz="
 
-    sget-object v0, Lnpe;->c:Lgi4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lgi4;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lmpe;->b:I
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    const-string v1, "x"
 
-    new-instance v8, Lg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x1c
+    iget v1, p0, Lmpe;->c:I
 
-    invoke-direct {v8, v0}, Lg;-><init>(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lni4;
+    const-string v1, ":fit="
 
-    const/16 v9, 0x18
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x0
+    iget v1, p0, Lmpe;->d:I
 
-    const/4 v7, 0x0
+    invoke-static {v1}, La3e;->b(I)Ljava/lang/String;
 
-    move-object v3, p1
+    move-result-object v1
 
-    move-object v4, p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v5, p3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct/range {v2 .. v9}, Lni4;-><init>(Ljava/lang/String;Lgi4;Landroid/os/Bundle;ILli4;Lmi4;I)V
+    move-result-object v0
 
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Lmpe;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lho7;->h(Ljava/lang/String;Lgi4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lho7;->h(Ljava/lang/String;Lgi4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-object v0
 .end method

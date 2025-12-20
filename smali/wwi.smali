@@ -1,107 +1,60 @@
-.class public abstract Lwwi;
+.class public final Lwwi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Lwwi;
+
 
 # direct methods
-.method public static a(Ljava/util/ArrayList;)Ljava/lang/String;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    new-instance v0, Lwwi;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    sput-object v0, Lwwi;->a:Lwwi;
 
-    const/4 v1, 0x0
+    new-instance v0, Ldqi;
 
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v1, 0x1
 
-    move-result v2
+    invoke-direct {v0, v1}, Ldqi;-><init>(I)V
 
-    if-eqz v2, :cond_4
+    const-class v1, Lrqi;
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Lufg;
+    const/4 v2, 0x2
 
-    iget-object v2, v2, Lufg;->a:Lefg;
+    invoke-static {v0, v2}, Lxfh;->j(Ljava/util/HashMap;I)Ldqi;
 
-    iget-object v2, v2, Lefg;->g:Lhf6;
+    move-result-object v0
 
-    iget-object v2, v2, Lhf6;->n:Ljava/lang/String;
+    invoke-static {v1, v0}, Lxfh;->g(Ljava/lang/Class;Ldqi;)Ljava/util/HashMap;
 
-    invoke-static {v2}, Lxz9;->m(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v3
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
-    if-eqz v3, :cond_1
+    return-void
+.end method
 
-    const-string p0, "video/mp4"
 
-    return-object p0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :cond_1
-    invoke-static {v2}, Lxz9;->i(Ljava/lang/String;)Z
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result v3
+    move-result-object p1
 
-    if-eqz v3, :cond_2
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {v2}, Lxz9;->k(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "image/heic"
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    const-string v1, "image/heif"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v3, "image/avif"
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    move-object v1, v3
-
-    goto :goto_0
-
-    :cond_4
-    if-eqz v0, :cond_5
-
-    const-string p0, "audio/mp4"
-
-    return-object p0
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    return-object v1
-
-    :cond_6
-    const-string p0, "application/mp4"
-
-    return-object p0
+    throw p1
 .end method

@@ -1,28 +1,26 @@
 .class public final Ly1f;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:F
+.field public final synthetic X:Ld2f;
 
-.field public final synthetic o:Lz1f;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lz1f;FLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ld2f;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ly1f;->o:Lz1f;
-
-    iput p2, p0, Ly1f;->X:F
+    iput-object p1, p0, Ly1f;->X:Ld2f;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf84;
+    check-cast p1, Lac4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,44 +40,109 @@
 
     check-cast p1, Ly1f;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Ly1f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
     new-instance p1, Ly1f;
 
-    iget-object v0, p0, Ly1f;->o:Lz1f;
+    iget-object v0, p0, Ly1f;->X:Ld2f;
 
-    iget v1, p0, Ly1f;->X:F
-
-    invoke-direct {p1, v0, v1, p2}, Ly1f;-><init>(Lz1f;FLkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Ly1f;-><init>(Ld2f;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 5
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget v0, p0, Ly1f;->o:I
 
-    iget-object p1, p0, Ly1f;->o:Lz1f;
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Lz1f;->d:Landroid/media/MediaPlayer;
+    if-eqz v0, :cond_1
 
-    if-eqz p1, :cond_0
+    if-ne v0, v1, :cond_0
 
-    iget v0, p0, Ly1f;->X:F
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0, v0}, Landroid/media/MediaPlayer;->setVolume(FF)V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly1f;->X:Ld2f;
+
+    iget-object v0, p1, Ld2f;->w0:Ld68;
+
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkyh;
+
+    invoke-virtual {p1}, Ld2f;->x()Lte3;
+
+    move-result-object p1
+
+    check-cast p1, Lcfe;
+
+    invoke-virtual {p1}, Lcfe;->s()J
+
+    move-result-wide v2
+
+    iput v1, p0, Ly1f;->o:I
+
+    iget-object p1, v0, Lkyh;->a:Le1e;
+
+    new-instance v0, Liyh;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v2, v3, v4}, Liyh;-><init>(JI)V
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, p1, p0, v1, v2}, Lykj;->f(Loq6;Le1e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    xor-int/2addr p1, v1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
 .end method

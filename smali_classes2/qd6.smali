@@ -1,27 +1,52 @@
 .class public final Lqd6;
-.super Ll0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lie8;
 
 
 # instance fields
-.field public final c:Ldh2;
+.field public final a:Lghg;
 
-.field public final d:J
+.field public final b:Z
 
-.field public final o:Lw8a;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ldh2;JLw8a;)V
+.method public constructor <init>(ILghg;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqd6;->c:Ldh2;
+    .line 2
+    iput-object p2, p0, Lqd6;->a:Lghg;
 
-    iput-wide p2, p0, Lqd6;->d:J
+    .line 3
+    iput-boolean p3, p0, Lqd6;->b:Z
 
-    iput-object p4, p0, Lqd6;->o:Lw8a;
+    .line 4
+    iput p1, p0, Lqd6;->c:I
+
+    const/4 p1, 0x1
+
+    .line 5
+    iput p1, p0, Lqd6;->d:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lfhg;Z)V
+    .locals 1
+
+    const/16 v0, 0x14
+
+    .line 6
+    invoke-direct {p0, v0, p1, p2}, Lqd6;-><init>(ILghg;Z)V
 
     return-void
 .end method
@@ -29,7 +54,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -49,11 +74,11 @@
     :cond_1
     check-cast p1, Lqd6;
 
-    iget-object v1, p0, Lqd6;->c:Ldh2;
+    iget-object v1, p0, Lqd6;->a:Lghg;
 
-    iget-object v3, p1, Lqd6;->c:Ldh2;
+    iget-object v3, p1, Lqd6;->a:Lghg;
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -62,26 +87,20 @@
     return v2
 
     :cond_2
-    iget-wide v3, p0, Lqd6;->d:J
+    iget-boolean v1, p0, Lqd6;->b:Z
 
-    iget-wide v5, p1, Lqd6;->d:J
+    iget-boolean v3, p1, Lqd6;->b:Z
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Lqd6;->o:Lw8a;
+    iget v1, p0, Lqd6;->c:I
 
-    iget-object p1, p1, Lqd6;->o:Lw8a;
+    iget p1, p1, Lqd6;->c:I
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
+    if-eq v1, p1, :cond_4
 
     return v2
 
@@ -89,28 +108,44 @@
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
-    .locals 4
+    .locals 3
 
-    iget-object v0, p0, Lqd6;->c:Ldh2;
+    iget-object v0, p0, Lqd6;->a:Lghg;
 
-    invoke-virtual {v0}, Ldh2;->hashCode()I
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
+    :goto_0
     const/16 v1, 0x1f
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lqd6;->d:J
+    iget-boolean v2, p0, Lqd6;->b:Z
 
-    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
 
     move-result v0
 
-    iget-object v1, p0, Lqd6;->o:Lw8a;
+    iget v1, p0, Lqd6;->c:I
 
-    invoke-virtual {v1}, Lw8a;->hashCode()I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -119,40 +154,44 @@
     return v1
 .end method
 
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lqd6;->d:I
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Response(folder="
+    const-string v1, "FolderEditNameInputItem(defaultValue="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqd6;->c:Ldh2;
+    iget-object v1, p0, Lqd6;->a:Lghg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", folderSync="
+    const-string v1, ", isEnabled="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lqd6;->d:J
+    iget-boolean v1, p0, Lqd6;->b:Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", foldersOrder="
+    const-string v1, ", nameLengthLimit="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqd6;->o:Lw8a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lqd6;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lqf7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

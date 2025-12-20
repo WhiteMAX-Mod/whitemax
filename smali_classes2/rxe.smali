@@ -1,19 +1,36 @@
 .class public final Lrxe;
-.super Le13;
+.super Ladf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public E0:Ldye;
 
 
-# direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 0
+# virtual methods
+.method public final z(Lie8;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Ldye;
 
-    iput-object p1, p0, Lrxe;->a:Landroid/net/Uri;
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    move-object v0, p1
+
+    check-cast v0, Ldye;
+
+    iput-object v0, p0, Lrxe;->E0:Ldye;
+
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+
+    check-cast v0, Lpze;
+
+    check-cast p1, Lfze;
+
+    invoke-virtual {v0, p1}, Lpze;->setModelItem(Lfze;)V
 
     return-void
 .end method

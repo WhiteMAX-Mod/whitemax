@@ -1,126 +1,68 @@
-.class public final synthetic Lyr4;
+.class public final Lyr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luu1;
+.implements Lm69;
+
+
+# static fields
+.field public static final f:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Lzr4;
+.field public final b:I
+
+.field public final c:Landroid/app/NotificationManager;
+
+.field public d:Lyd;
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzr4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lyr4;->a:I
+    sget v0, Lbdd;->default_notification_channel_name:I
 
-    iput-object p1, p0, Lyr4;->b:Lzr4;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lyr4;->f:I
 
     return-void
 .end method
 
+.method public constructor <init>(Lfu0;)V
+    .locals 1
 
-# virtual methods
-.method public final m(Ltu1;)Ljava/lang/String;
-    .locals 2
+    iget-object v0, p1, Lfu0;->d:Ljava/lang/Object;
 
-    iget v0, p0, Lyr4;->a:I
+    check-cast v0, Landroid/content/Context;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p1, Lfu0;->b:I
 
-    iget-object v0, p0, Lyr4;->b:Lzr4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, v0, Lzr4;->a:Ljava/lang/Object;
+    iput-object v0, p0, Lyr4;->a:Landroid/content/Context;
 
-    monitor-enter v1
+    iput p1, p0, Lyr4;->b:I
 
-    :try_start_0
-    iput-object p1, v0, Lzr4;->f:Ltu1;
+    const-string p1, "notification"
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeferrableSurface-close("
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Landroid/app/NotificationManager;
 
-    :catchall_0
-    move-exception p1
+    invoke-static {p1}, Lp5j;->h(Ljava/lang/Object;)V
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-object p1, p0, Lyr4;->c:Landroid/app/NotificationManager;
 
-    throw p1
+    sget p1, Lk6d;->media3_notification_small_icon:I
 
-    :pswitch_0
-    iget-object v0, p0, Lyr4;->b:Lzr4;
+    iput p1, p0, Lyr4;->e:I
 
-    iget-object v1, v0, Lzr4;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_2
-    iput-object p1, v0, Lzr4;->d:Ltu1;
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeferrableSurface-termination("
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

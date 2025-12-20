@@ -1,436 +1,237 @@
 .class public final Lqzg;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lio7;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
     .locals 0
 
-    iput p1, p0, Lqzg;->a:I
+    iput-object p2, p0, Lqzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lw5;)Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqzg;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object p1, Lv0i;->a:Lv0i;
-
-    return-object p1
-
-    :pswitch_0
-    const/16 v0, 0x24b
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lew7;
-
-    sget-object v1, Lq8;->s0:Lq8;
-
-    invoke-static {v0, v1}, Lmoi;->a(Lew7;Lem6;)Lbx7;
-
-    move-result-object v0
-
-    new-instance v1, Lrzh;
-
-    const/16 v2, 0x9e
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
+    invoke-virtual {p0, p1, p2}, Lqzg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {v1, v0, p1}, Lrzh;-><init>(Lbx7;Lk18;)V
+    check-cast p1, Lqzg;
 
-    return-object v1
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :pswitch_1
-    new-instance v0, Laoh;
+    invoke-virtual {p1, p2}, Lqzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v1, 0x24b
+    return-object p2
+.end method
 
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Lqzg;
 
-    check-cast v1, Lew7;
+    iget-object v1, p0, Lqzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    const/16 v2, 0x9e
+    invoke-direct {v0, p2, v1}, Lqzg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
 
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
+    iput-object p1, v0, Lqzg;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lqzg;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljxg;
+
+    sget v2, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->X:I
+
+    instance-of v2, v1, Lhxg;
+
+    iget-object v3, v0, Lqzg;->X:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Ltib;
+
+    invoke-direct {v2, v3}, Ltib;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast v1, Lhxg;
+
+    iget-object v3, v1, Lhxg;->a:Lghg;
+
+    invoke-virtual {v2, v3}, Ltib;->g(Lghg;)V
+
+    new-instance v3, Lhjb;
+
+    iget v1, v1, Lhxg;->b:I
+
+    invoke-direct {v3, v1}, Lhjb;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Ltib;->e(Lljb;)V
+
+    invoke-virtual {v2}, Ltib;->i()Lsib;
+
+    goto/16 :goto_2
+
+    :cond_0
+    instance-of v2, v1, Lixg;
+
+    if-eqz v2, :cond_5
+
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lp38;
+
+    check-cast v1, Lixg;
+
+    iget-object v2, v1, Lixg;->a:Lbhg;
+
+    sget-object v4, Lmbe;->T1:Lmbe;
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    invoke-static {v2, v6, v4, v5}, Ltij;->a(Lghg;Landroid/os/Bundle;Lmbe;I)Lyt3;
+
+    move-result-object v9
+
+    iget-object v2, v1, Lixg;->b:Lbhg;
+
+    invoke-virtual {v9, v2}, Lyt3;->f(Lghg;)V
+
+    iget-object v1, v1, Lixg;->c:Ljava/util/List;
+
+    new-instance v7, Lht2;
+
+    const/16 v13, 0x8
+
+    const/16 v14, 0x11
+
+    const/4 v8, 0x1
+
+    const-class v10, Lyt3;
+
+    const-string v11, "addButton"
+
+    const-string v12, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
+
+    invoke-direct/range {v7 .. v14}, Lht2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lj4;
+
+    const/16 v4, 0x19
+
+    invoke-direct {v2, v4, v7}, Lj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v9}, Lyt3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v3}, Lone/me/sdk/arch/Widget;->setTargetController(Lx84;)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v1}, Lx84;->getParentController()Lx84;
 
     move-result-object v2
 
-    const/16 v3, 0x24d
+    if-eqz v2, :cond_1
 
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object v3
-
-    const/16 v4, 0x4d
-
-    invoke-virtual {p1, v4}, Lw5;->d(I)Lbwf;
-
-    move-result-object v4
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3, v4}, Laoh;-><init>(Lew7;Lk18;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Luoh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v1}, Lx84;->getParentController()Lx84;
 
     move-result-object v1
 
-    check-cast v1, Lew7;
+    goto :goto_0
 
-    const/16 v2, 0x9e
+    :cond_1
+    instance-of v2, v1, Lc4e;
 
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
+    if-eqz v2, :cond_2
 
-    move-result-object v2
+    check-cast v1, Lc4e;
 
-    const/16 v3, 0x24d
+    goto :goto_1
 
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
+    :cond_2
+    move-object v1, v6
 
-    move-result-object p1
+    :goto_1
+    if-eqz v1, :cond_3
 
-    invoke-direct {v0, v1, v2, p1}, Luoh;-><init>(Lew7;Lk18;Lk18;)V
+    check-cast v1, Lone/me/android/root/RootController;
 
-    return-object v0
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->F0()Lw3e;
 
-    :pswitch_3
-    new-instance v0, Leqh;
+    move-result-object v6
 
-    const/16 v1, 0x24b
+    :cond_3
+    invoke-virtual {v11, v3}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->O0(Lone/me/sdk/arch/Widget;)V
 
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
+    if-eqz v6, :cond_4
 
-    move-result-object v1
+    new-instance v10, Lz3e;
 
-    check-cast v1, Lew7;
+    const/4 v15, 0x0
 
-    const/16 v2, 0x9e
+    const/16 v16, -0x1
 
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
+    const/4 v12, 0x0
 
-    move-result-object v2
+    const/4 v13, 0x0
 
-    const/16 v3, 0x24d
+    const/4 v14, 0x0
 
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Leqh;-><init>(Lew7;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lazh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x9e
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object v2
-
-    const/16 v3, 0x24d
-
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, v2, p1}, Lazh;-><init>(Lew7;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lhsh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x9e
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object v2
-
-    const/16 v3, 0x24d
-
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, v2, p1}, Lhsh;-><init>(Lew7;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lpzh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x9e
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object v2
-
-    const/16 v3, 0x24d
-
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, v2, p1}, Lpzh;-><init>(Lew7;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lith;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x9e
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object v2
-
-    const/16 v3, 0x24d
-
-    invoke-virtual {p1, v3}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, v2, p1}, Lith;-><init>(Lew7;Lk18;Lk18;)V
-
-    return-object v0
-
-    :pswitch_8
-    const/16 v0, 0x2e
-
-    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    new-instance v0, Led8;
-
-    new-instance v1, Lr5g;
-
-    const-string v2, "\u041f\u043e\u043b\u043d\u043e\u044d\u043a\u0440\u0430\u043d\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0432\u0435\u0431-\u0430\u043f\u043f\u043e\u0432"
-
-    invoke-direct {v1, v2}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Ltv;
-
-    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v7, v3
-
-    check-cast v7, Lpb3;
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xa
-
-    const-class v6, Lpb3;
-
-    const-string v8, "isWebAppFullscreen"
-
-    const-string v9, "isWebAppFullscreen()Z"
-
-    move-object v3, v2
-
-    invoke-direct/range {v3 .. v9}, Ltv;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v3, Ld31;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, p1, v4}, Ld31;-><init>(Lk18;I)V
-
-    sget v4, Lyud;->P1:I
-
-    const/16 v5, 0x10
-
-    invoke-direct/range {v0 .. v5}, Led8;-><init>(Ls5g;Lcm6;Lem6;II)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lbfc;
-
-    const/16 v1, 0x2e
-
-    invoke-virtual {p1, v1}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lbfc;-><init>(Lk18;I)V
-
-    return-object v0
-
-    :pswitch_a
-    new-instance p1, Lefe;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->webview-cache-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct/range {v10 .. v16}, Lz3e;-><init>(Lx84;Ljava/lang/String;Lc94;Lc94;ZI)V
 
     const/4 v1, 0x0
 
-    const-string v2, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043a\u044d\u0448\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 WebView"
+    const/4 v2, 0x1
 
-    invoke-direct {p1, v2, v0, v1}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    const-string v3, "BottomSheetWidget"
 
-    return-object p1
+    invoke-static {v1, v10, v2, v3}, Lc12;->v(ZLz3e;ZLjava/lang/String;)V
 
-    :pswitch_b
-    new-instance v0, Ljph;
+    invoke-virtual {v6, v10}, Lw3e;->H(Lz3e;)V
 
-    const/16 v1, 0x24b
+    :cond_4
+    :goto_2
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
+    return-object v1
 
-    move-result-object v1
+    :cond_5
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    check-cast v1, Lew7;
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    const/16 v2, 0x24d
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Ljph;-><init>(Lew7;Lk18;)V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Lyrh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x24d
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Lyrh;-><init>(Lew7;Lk18;)V
-
-    return-object v0
-
-    :pswitch_d
-    new-instance v0, Lpxh;
-
-    const/16 v1, 0x24b
-
-    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lew7;
-
-    const/16 v2, 0x24d
-
-    invoke-virtual {p1, v2}, Lw5;->d(I)Lbwf;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Lpxh;-><init>(Lew7;Lk18;)V
-
-    return-object v0
-
-    :pswitch_e
-    const/16 v0, 0x4a
-
-    invoke-virtual {p1, v0}, Lw5;->c(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lui8;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v1
 .end method

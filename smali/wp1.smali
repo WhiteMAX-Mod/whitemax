@@ -1,64 +1,84 @@
 .class public final Lwp1;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lzp1;
+.implements Lcr6;
 
 
-# static fields
-.field public static final a:Lwp1;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lwp1;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwp1;->a:Lwp1;
-
-    return-void
-.end method
+# instance fields
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/util/Collection;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lwp1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lwp1;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lwp1;
 
-    const/4 p1, 0x0
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    return p1
+    invoke-virtual {p1, p2}, Lwp1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x42bf222b
+    new-instance v0, Lwp1;
 
-    return v0
-.end method
+    const/4 v1, 0x2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, v1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-string v0, "Hide"
+    iput-object p1, v0, Lwp1;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwp1;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Collection;
+
+    sget-object v0, Lf71;->a:Lf71;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu5;
+
+    move-result-object v0
+
+    const/16 v1, 0x19
+
+    invoke-virtual {v0, v1}, Lu5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lk25;
+
+    iget-object v0, v0, Lk25;->d:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnfa;
+
+    invoke-interface {v0, p1}, Lnfa;->h(Ljava/lang/Object;)Z
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

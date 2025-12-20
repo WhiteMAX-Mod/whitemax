@@ -4,162 +4,121 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A:Ljava/lang/String;
 
-.field public b:F
+.field public a:Li20;
 
-.field public c:F
+.field public b:La20;
 
-.field public d:F
+.field public c:Lt10;
 
-.field public e:F
+.field public d:Ll20;
 
+.field public e:Lm10;
 
-# direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.field public f:Lh20;
 
-    .line 1
-    const/4 v0, 0x1
+.field public g:Le20;
 
-    iput v0, p0, Ln10;->a:I
+.field public h:Lk10;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public i:Lf20;
 
-    return-void
-.end method
+.field public j:J
 
-.method public synthetic constructor <init>(FFFFI)V
-    .locals 0
+.field public k:F
 
-    .line 2
-    iput p5, p0, Ln10;->a:I
+.field public l:Ljava/lang/String;
 
-    iput p1, p0, Ln10;->b:F
+.field public m:Ljava/lang/String;
 
-    iput p2, p0, Ln10;->c:F
+.field public n:Z
 
-    iput p3, p0, Ln10;->d:F
+.field public o:J
 
-    iput p4, p0, Ln10;->e:F
+.field public p:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public q:Lp10;
 
-    return-void
-.end method
+.field public r:Lv10;
+
+.field public s:Lq10;
+
+.field public t:Lb20;
+
+.field public u:J
+
+.field public v:Lx10;
+
+.field public w:Lkfi;
+
+.field public x:Lc20;
+
+.field public y:Z
+
+.field public z:Z
 
 
 # virtual methods
-.method public a()Ljava/util/HashMap;
-    .locals 3
+.method public final a()Lm20;
+    .locals 1
 
-    new-instance v0, Ljava/util/HashMap;
+    iget-object v0, p0, Ln10;->a:Li20;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    if-nez v0, :cond_0
 
-    iget v1, p0, Ln10;->b:F
+    sget-object v0, Li20;->a:Li20;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iput-object v0, p0, Ln10;->a:Li20;
 
-    move-result-object v1
+    :cond_0
+    iget-object v0, p0, Ln10;->i:Lf20;
 
-    const-string v2, "x1"
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Lf20;->a:Lf20;
 
-    iget v1, p0, Ln10;->c:F
+    iput-object v0, p0, Ln10;->i:Lf20;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :cond_1
+    iget-object v0, p0, Ln10;->x:Lc20;
 
-    move-result-object v1
+    if-nez v0, :cond_2
 
-    const-string v2, "y1"
+    sget-object v0, Lc20;->a:Lc20;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p0, Ln10;->x:Lc20;
 
-    iget v1, p0, Ln10;->d:F
+    :cond_2
+    new-instance v0, Lm20;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    const-string v2, "x2"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget v1, p0, Ln10;->e:F
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    const-string v2, "y2"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lm20;-><init>(Ln10;)V
 
     return-object v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 6
+.method public final b()Lv10;
+    .locals 1
 
-    iget v0, p0, Ln10;->a:I
+    iget-object v0, p0, Ln10;->r:Lv10;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-object v0, Lv10;->f:Lv10;
 
-    move-result-object v0
-
+    :cond_0
     return-object v0
+.end method
 
-    :pswitch_0
-    iget v0, p0, Ln10;->b:F
+.method public final c()Ll20;
+    .locals 1
 
-    iget v1, p0, Ln10;->c:F
+    iget-object v0, p0, Ln10;->d:Ll20;
 
-    iget v2, p0, Ln10;->d:F
+    if-nez v0, :cond_0
 
-    iget v3, p0, Ln10;->e:F
+    sget-object v0, Ll20;->s:Ll20;
 
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "{x1="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y1="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", x2="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y2="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
+    :cond_0
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method

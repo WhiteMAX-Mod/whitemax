@@ -1,258 +1,75 @@
 .class public final Lbt6;
-.super Ll0g;
+.super Ldt6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final a:Lbt6;
 
-.field public d:Ljava/util/ArrayList;
+.field public static final b:Ljava/util/List;
+
+.field public static final c:Lts6;
 
 
 # direct methods
-.method public constructor <init>(Ltm9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lbt6;->c:I
+    new-instance v0, Lbt6;
 
-    packed-switch p2, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
+    sput-object v0, Lbt6;->a:Lbt6;
+
+    sget-object v0, Lvs6;->e:Lvs6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lbt6;->b:Ljava/util/List;
+
+    new-instance v0, Lts6;
+
+    sget v1, Lygb;->c:I
+
+    invoke-direct {v0, v1}, Lts6;-><init>(I)V
+
+    sput-object v0, Lbt6;->c:Lts6;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
-
-    iget-object p1, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 3
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lbt6;->c:I
+    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
 
-    const/4 v1, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "members"
-
-    invoke-static {p2, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    invoke-static {p1}, Lefi;->f(Ltm9;)I
-
-    move-result p2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    invoke-static {v1, p2}, Ln7j;->h(II)Lto7;
-
-    move-result-object p2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {p2, v1}, Lwe3;->q(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {p2}, Lro7;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    move-object v1, p2
-
-    check-cast v1, Lso7;
-
-    iget-boolean v1, v1, Lso7;->c:Z
-
-    if-eqz v1, :cond_0
-
-    move-object v1, p2
-
-    check-cast v1, Lso7;
-
-    invoke-virtual {v1}, Lso7;->nextInt()I
-
-    invoke-static {p1}, Lar2;->a(Ltm9;)Lar2;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    :cond_1
-    invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Ltm9;->v()V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "calls"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    invoke-virtual {p1}, Ltm9;->v()V
-
-    goto :goto_3
-
-    :cond_3
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p2, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    invoke-static {p1}, Lefi;->f(Ltm9;)I
-
-    move-result p2
-
-    :goto_2
-    if-ge v1, p2, :cond_4
-
-    iget-object v0, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    invoke-static {p1}, Lh1h;->a(Ltm9;)Lh1h;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 7
+.method public final c()Li4;
+    .locals 1
 
-    iget v0, p0, Lbt6;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lbt6;->d:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    move-object v1, v0
-
-    new-instance v5, Lu7g;
-
-    const/4 v0, 0x5
-
-    invoke-direct {v5, v0}, Lu7g;-><init>(I)V
-
-    const/16 v6, 0x1f
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v1 .. v6}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "{members : ["
-
-    const-string v2, "]}"
-
-    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lbt6;->c:Lts6;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lbt6;->d:Ljava/util/ArrayList;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Response{calls="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lbt6;->b:Ljava/util/List;
 
     return-object v0
+.end method
 
-    nop
+.method public final f()Lts6;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object v0, Lbt6;->c:Lts6;
+
+    return-object v0
 .end method

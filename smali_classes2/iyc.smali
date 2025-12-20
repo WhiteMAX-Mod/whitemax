@@ -1,86 +1,68 @@
-.class public abstract Liyc;
+.class public final synthetic Liyc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
-# static fields
-.field public static chat__audio_record:I = 0x7f0a023e
+# instance fields
+.field public final synthetic a:I
 
-.field public static chat__background:I = 0x7f0a023f
+.field public final synthetic b:Lmyc;
 
-.field public static chat__bottom_container:I = 0x7f0a0240
 
-.field public static chat__bottom_container_chat_status_button:I = 0x7f0a0241
+# direct methods
+.method public synthetic constructor <init>(Lmyc;I)V
+    .locals 0
 
-.field public static chat__bottom_container_search:I = 0x7f0a0242
+    iput p2, p0, Liyc;->a:I
 
-.field public static chat__bottom_container_search_down_button:I = 0x7f0a0243
+    iput-object p1, p0, Liyc;->b:Lmyc;
 
-.field public static chat__bottom_container_search_separator:I = 0x7f0a0244
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static chat__bottom_container_search_up_button:I = 0x7f0a0245
+    return-void
+.end method
 
-.field public static chat__main_container:I = 0x7f0a0246
 
-.field public static chat__media_bar_container:I = 0x7f0a0247
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-.field public static chat__media_keyboard:I = 0x7f0a0248
+    iget v0, p0, Liyc;->a:I
 
-.field public static chat__messages_container:I = 0x7f0a0249
+    packed-switch v0, :pswitch_data_0
 
-.field public static chat__pinbars_container:I = 0x7f0a024a
+    new-instance v0, Lkyc;
 
-.field public static chat__root_container:I = 0x7f0a024b
+    iget-object v1, p0, Liyc;->b:Lmyc;
 
-.field public static chat__search_view:I = 0x7f0a024c
+    invoke-direct {v0, v1}, Lkyc;-><init>(Lmyc;)V
 
-.field public static chat__suggestion_container:I = 0x7f0a024d
+    return-object v0
 
-.field public static chat__toolbar:I = 0x7f0a024e
+    :pswitch_0
+    iget-object v0, p0, Liyc;->b:Lmyc;
 
-.field public static chat__video_msg_container:I = 0x7f0a024f
+    iget-object v0, v0, Lmyc;->a:Lz7g;
 
-.field public static chat_screen__action_cancel:I = 0x7f0a0270
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
 
-.field public static chat_screen__error_restricted_send_message_action:I = 0x7f0a0271
+    move-result-object v0
 
-.field public static chat_screen__error_restricted_send_message_cancel:I = 0x7f0a0272
+    check-cast v0, Landroid/hardware/SensorManager;
 
-.field public static chat_screen__leave_chat_confirm:I = 0x7f0a0273
+    const/16 v1, 0x8
 
-.field public static chat_screen__remove_chat_confirm:I = 0x7f0a0274
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
-.field public static chat_screen__video_msg_placeholder:I = 0x7f0a0275
+    move-result-object v0
 
-.field public static chat_screen__video_msg_preview:I = 0x7f0a0276
+    return-object v0
 
-.field public static chat_screen__video_msg_progress:I = 0x7f0a0277
-
-.field public static chat_screen__video_msg_root_container:I = 0x7f0a0278
-
-.field public static chat_screen__video_msg_switch_camera_btn:I = 0x7f0a0279
-
-.field public static chat_screen__video_msg_timer:I = 0x7f0a027a
-
-.field public static chat_screen__video_msg_torch_btn:I = 0x7f0a027b
-
-.field public static chat_screen__video_msg_video_view:I = 0x7f0a027c
-
-.field public static media_bar__album_chooser:I = 0x7f0a0487
-
-.field public static media_bar__bottom_container:I = 0x7f0a0488
-
-.field public static media_bar__draggable_container:I = 0x7f0a0489
-
-.field public static media_bar__emoji_keyboard_container:I = 0x7f0a048a
-
-.field public static media_bar__media_type_picker_button:I = 0x7f0a048b
-
-.field public static media_bar__message_container:I = 0x7f0a048c
-
-.field public static media_bar__partial_media_access_container:I = 0x7f0a048d
-
-.field public static media_bar__popup_layout:I = 0x7f0a048e
-
-.field public static media_bar__primary_container:I = 0x7f0a048f
-
-.field public static media_bar__select_album_container:I = 0x7f0a0490
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

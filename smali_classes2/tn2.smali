@@ -1,144 +1,141 @@
-.class public final Ltn2;
-.super Ldtf;
+.class public final synthetic Ltn2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lmq6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljo2;
-
-.field public final synthetic Z:Ljava/lang/String;
-
-.field public o:I
+.field public final synthetic b:Lone/me/profile/screens/media/ChatMediaListWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljo2;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/media/ChatMediaListWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Ltn2;->Y:Ljo2;
+    iput p2, p0, Ltn2;->a:I
 
-    iput-object p2, p0, Ltn2;->Z:Ljava/lang/String;
+    iput-object p1, p0, Ltn2;->b:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Lf84;
+    iget v0, p0, Ltn2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x2
 
-    invoke-virtual {p0, p1, p2}, Ltn2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Ltn2;->b:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ltn2;
+    sget-object v0, Lone/me/profile/screens/media/ChatMediaListWidget;->u0:[Lp38;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    invoke-virtual {v2}, Lx84;->getRouter()Lw3e;
 
-    invoke-virtual {p1, p2}, Ltn2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Ltn2;
-
-    iget-object v1, p0, Ltn2;->Y:Ljo2;
-
-    iget-object v2, p0, Ltn2;->Z:Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, p2}, Ltn2;-><init>(Ljo2;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ltn2;->X:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/media/ChatMediaListWidget;->u0:[Lp38;
 
-    iget v0, p0, Ltn2;->o:I
+    new-instance v0, Ljn2;
 
-    const/4 v1, 0x1
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    move-result-object v3
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v0, v3}, Ljn2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    sget v3, Lkfb;->q0:I
+
+    invoke-virtual {v0, v3}, Ljn2;->setTitle(I)V
+
+    invoke-virtual {v2}, Lone/me/profile/screens/media/ChatMediaListWidget;->A0()Ljp2;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-ne v2, v1, :cond_0
+
+    sget v1, Lmgb;->x:I
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw v0
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    sget v1, Lmgb;->v:I
 
-    iget-object p1, p0, Ltn2;->X:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast p1, Lf84;
+    :cond_2
+    sget v1, Lmgb;->i:I
 
-    iget-object v0, p0, Ltn2;->Y:Ljo2;
+    goto :goto_0
 
-    iget-object v2, v0, Ljo2;->D0:Lk18;
+    :cond_3
+    sget v1, Lmgb;->w:I
 
-    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ls78;
-
-    iget-object v3, p0, Ltn2;->Z:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ls78;->f(Ljava/lang/String;)Lx26;
-
-    move-result-object v2
-
-    new-instance v4, La40;
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v3, p1, v5}, La40;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput v1, p0, Ltn2;->o:I
-
-    invoke-interface {v2, v4, p0}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
+    :goto_0
+    invoke-virtual {v0, v1}, Ljn2;->setIcon(I)V
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
+    :pswitch_1
+    sget-object v0, Lone/me/profile/screens/media/ChatMediaListWidget;->u0:[Lp38;
 
-    return-object p1
+    new-instance v0, Lpl1;
+
+    new-instance v3, Ltn2;
+
+    invoke-direct {v3, v2, v1}, Ltn2;-><init>(Lone/me/profile/screens/media/ChatMediaListWidget;I)V
+
+    new-instance v1, Lz7g;
+
+    invoke-direct {v1, v3}, Lz7g;-><init>(Lmq6;)V
+
+    new-instance v3, Lmfi;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v2, v4}, Lmfi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-direct {v0, v1, v3}, Lpl1;-><init>(Lz7g;Lmfi;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

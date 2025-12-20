@@ -2,183 +2,88 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq7i;
-
 
 # instance fields
-.field public final a:F
+.field public final a:I
 
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:F
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
+.method public constructor <init>(IJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lka0;->a:F
+    if-eqz p1, :cond_0
 
-    iput p2, p0, Lka0;->b:F
+    iput p1, p0, Lka0;->a:I
 
-    iput p3, p0, Lka0;->c:F
-
-    iput p4, p0, Lka0;->d:F
+    iput-wide p2, p0, Lka0;->b:J
 
     return-void
-.end method
 
-.method public static e(Lq7i;)Lka0;
-    .locals 4
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    new-instance v0, Lka0;
+    const-string p2, "Null status"
 
-    invoke-interface {p0}, Lq7i;->c()F
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    move-result v1
-
-    invoke-interface {p0}, Lq7i;->a()F
-
-    move-result v2
-
-    invoke-interface {p0}, Lq7i;->b()F
-
-    move-result v3
-
-    invoke-interface {p0}, Lq7i;->d()F
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Lka0;-><init>(FFFF)V
-
-    return-object v0
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 1
-
-    iget v0, p0, Lka0;->b:F
-
-    return v0
-.end method
-
-.method public final b()F
-    .locals 1
-
-    iget v0, p0, Lka0;->c:F
-
-    return v0
-.end method
-
-.method public final c()F
-    .locals 1
-
-    iget v0, p0, Lka0;->a:F
-
-    return v0
-.end method
-
-.method public final d()F
-    .locals 1
-
-    iget v0, p0, Lka0;->d:F
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x1
-
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lka0;
+    instance-of v0, p1, Lka0;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Lka0;
 
-    iget v1, p0, Lka0;->a:F
+    iget v0, p0, Lka0;->a:I
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget v1, p1, Lka0;->a:I
 
-    move-result v1
+    invoke-static {v0, v1}, Lc12;->d(II)Z
 
-    iget v3, p1, Lka0;->a:F
+    move-result v0
 
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-eqz v0, :cond_1
 
-    move-result v3
+    iget-wide v0, p0, Lka0;->b:J
 
-    if-ne v1, v3, :cond_1
+    iget-wide v2, p1, Lka0;->b:J
 
-    iget v1, p0, Lka0;->b:F
+    cmp-long p1, v0, v2
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-nez p1, :cond_1
 
-    move-result v1
+    :goto_0
+    const/4 p1, 0x1
 
-    iget v3, p1, Lka0;->b:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lka0;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lka0;->c:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lka0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget p1, p1, Lka0;->d:F
-
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p1
-
-    if-ne v1, p1, :cond_1
-
-    return v0
+    return p1
 
     :cond_1
-    return v2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 6
 
-    iget v0, p0, Lka0;->a:F
+    iget v0, p0, Lka0;->a:I
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-static {v0}, Lc12;->w(I)I
 
     move-result v0
 
@@ -188,31 +93,15 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lka0;->b:F
+    const/16 v1, 0x20
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v2, p0, Lka0;->b:J
 
-    move-result v2
+    ushr-long v4, v2, v1
 
-    xor-int/2addr v0, v2
+    xor-long v1, v4, v2
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lka0;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lka0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
+    long-to-int v1, v1
 
     xor-int/2addr v0, v1
 
@@ -220,47 +109,66 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableZoomState{zoomRatio="
+    const-string v1, "BackendResponse{status="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lka0;->a:F
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iget v2, p0, Lka0;->a:I
 
-    const-string v1, ", maxZoomRatio="
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INVALID_PAYLOAD"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "FATAL_ERROR"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "TRANSIENT_ERROR"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nextRequestWaitMillis="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lka0;->b:F
+    iget-wide v1, p0, Lka0;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    const-string v3, "}"
 
-    const-string v1, ", minZoomRatio="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lka0;->c:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", linearZoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lka0;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lqf7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

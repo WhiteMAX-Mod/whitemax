@@ -1,68 +1,49 @@
 .class public final Li8h;
-.super Ldtf;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lsm6;
 
 
 # instance fields
-.field public synthetic o:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lj8h;
+
+.field public Z:I
+
+.field public d:Lj8h;
+
+.field public o:Lvfa;
+
+
+# direct methods
+.method public constructor <init>(Lj8h;Ll84;)V
+    .locals 0
+
+    iput-object p1, p0, Li8h;->Y:Lj8h;
+
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Li8h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Li8h;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Li8h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Li8h;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Li8h;->o:Z
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Li8h;->X:Ljava/lang/Object;
 
-    iget-boolean p1, p0, Li8h;->o:Z
+    iget p1, p0, Li8h;->Z:I
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Li8h;->Z:I
+
+    iget-object p1, p0, Li8h;->Y:Lj8h;
+
+    invoke-virtual {p1, p0}, Lj8h;->j(Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 

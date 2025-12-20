@@ -1,53 +1,144 @@
 .class public final Lc7i;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lu7i;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Le7i;
+.field public final b:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Le7i;Lq44;)V
+.method public constructor <init>(I[Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lc7i;->o:Le7i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lc7i;->a:I
+
+    iput-object p2, p0, Lc7i;->b:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Lc7i;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lc7i;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    if-eqz p1, :cond_1
 
-    iput p1, p0, Lc7i;->X:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-wide/16 v1, 0x0
+    move-result-object v1
 
-    const-wide/16 v3, 0x0
+    goto :goto_0
 
-    iget-object v0, p0, Lc7i;->o:Le7i;
+    :cond_1
+    const/4 v1, 0x0
 
-    move-object v5, p0
+    :goto_0
+    const-class v2, Lc7i;
 
-    invoke-static/range {v0 .. v5}, Le7i;->d(Le7i;DDLq44;)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v1
 
-    return-object p1
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    check-cast p1, Lc7i;
+
+    iget v1, p0, Lc7i;->a:I
+
+    iget v3, p1, Lc7i;->a:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lc7i;->b:[Ljava/lang/String;
+
+    iget-object p1, p1, Lc7i;->b:[Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lc7i;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lc7i;->b:[Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lc7i;->b:[Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "OpenGallery(mode="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lc7i;->a:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mimeTypes="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

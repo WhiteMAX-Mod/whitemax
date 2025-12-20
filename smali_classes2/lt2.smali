@@ -1,430 +1,98 @@
-.class public final Llt2;
+.class public final synthetic Llt2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+.implements Loq6;
 
 
 # instance fields
-.field public final a:Ly6d;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly6d;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Llt2;->a:Ly6d;
+    iput p2, p0, Llt2;->a:I
+
+    iput-object p1, p0, Llt2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Lti1;Lorg/json/JSONObject;)Lvi1;
-    .locals 8
-
-    const-string v0, "participantState"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p1
-
-    new-instance v0, Lvi1;
-
-    invoke-direct {v0, p0}, Lvi1;-><init>(Lti1;)V
-
-    iget-object p0, v0, Lvi1;->a:Ljava/util/HashMap;
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lui1;
-
-    const-string v1, "0"
-
-    const-wide/16 v2, 0x0
-
-    invoke-direct {p1, v1, v2, v3}, Lui1;-><init>(Ljava/lang/String;J)V
-
-    const-string v1, "hand"
-
-    invoke-virtual {p0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    const-string v1, "state"
-
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v2, "stateUpdateTs"
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_2
-    invoke-virtual {v1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Lorg/json/JSONObject;->length()I
-
-    move-result v4
-
-    invoke-direct {v3, v4}, Ljava/util/HashMap;-><init>(I)V
-
-    :cond_3
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    invoke-virtual {v1, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    goto :goto_1
-
-    :cond_4
-    sget-object v3, Lid5;->a:Lid5;
-
-    :goto_1
-    invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    :cond_5
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    if-eqz v4, :cond_6
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
-
-    move-result-wide v5
-
-    new-instance v7, Lui1;
-
-    invoke-direct {v7, v4, v5, v6}, Lui1;-><init>(Ljava/lang/String;J)V
-
-    invoke-virtual {p0, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_6
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    :cond_7
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public b(Lorg/json/JSONArray;)Ljava/util/List;
-    .locals 7
-
-    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    :try_start_0
-    invoke-virtual {p1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v3
-
-    const-string v4, "id"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lti1;->a(Ljava/lang/String;)Lti1;
-
-    move-result-object v4
-
-    invoke-static {v4, v3}, Llt2;->a(Lti1;Lorg/json/JSONObject;)Lvi1;
-
-    move-result-object v3
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Can\'t parse one state with index="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v5, " from participantList="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "ParticipantStateParser"
-
-    iget-object v6, p0, Llt2;->a:Ly6d;
-
-    invoke-interface {v6, v5, v4, v3}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 v3, 0x0
-
-    :goto_1
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1}, Lue3;->E(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public c(Lorg/json/JSONObject;)Ljava/util/List;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    :try_start_0
-    const-string v0, "participants"
+    iget v0, p0, Llt2;->a:I
 
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    move-result-object v0
+    iget-object v2, p0, Llt2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    invoke-virtual {p0, v0}, Llt2;->b(Lorg/json/JSONArray;)Ljava/util/List;
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()Lei9;
 
     move-result-object p1
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object p1, p1, Lei9;->Y:Lhof;
+
+    const/4 v0, 0x0
+
+    sget-object v2, Lmh5;->a:Lmh5;
+
+    invoke-virtual {p1, v0, v2}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lyt2;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v1}, Lyt2;->t(J)Ljava/util/List;
+
+    move-result-object p1
 
     return-object p1
 
-    :catch_0
-    move-exception v0
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lp38;
 
-    const-string v2, "Can\'t parse state from participantList "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lx84;->getRouter()Lw3e;
 
     move-result-object p1
 
-    const-string v1, "ParticipantStateParser"
+    invoke-virtual {p1}, Lw3e;->C()Z
 
-    iget-object v2, p0, Llt2;->a:Ly6d;
+    return-object v1
 
-    invoke-interface {v2, v1, p1, v0}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    nop
 
-    sget-object p1, Lhd5;->a:Lhd5;
-
-    return-object p1
-.end method
-
-.method public d(Lorg/json/JSONObject;)Lvi1;
-    .locals 5
-
-    :try_start_0
-    invoke-static {p1}, Lpaj;->v(Lorg/json/JSONObject;)Lti1;
-
-    move-result-object v0
-
-    iget-wide v1, v0, Lti1;->a:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_0
-
-    invoke-static {p1}, Lpaj;->w(Lorg/json/JSONObject;)Lti1;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-static {v0, p1}, Llt2;->a(Lti1;Lorg/json/JSONObject;)Lvi1;
-
-    move-result-object p1
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :goto_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Can\'t parse state from "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "ParticipantStateParser"
-
-    iget-object v2, p0, Llt2;->a:Ly6d;
-
-    invoke-interface {v2, v1, p1, v0}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public onCameraClosed()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onCameraDisconnected()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onCameraError(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Camera error: "
-
-    invoke-static {v1, p1}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v1, "onCameraError(): "
-
-    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "OKRTCSvcFactory"
-
-    iget-object v1, p0, Llt2;->a:Ly6d;
-
-    invoke-interface {v1, p2, p1, v0}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public onCameraFreezed(Ljava/lang/String;)V
-    .locals 3
-
-    const-string v0, "onCameraFreezed(): "
-
-    const-string v1, "OKRTCSvcFactory"
-
-    iget-object v2, p0, Llt2;->a:Ly6d;
-
-    invoke-static {v0, p1, v2, v1}, La9h;->o(Ljava/lang/String;Ljava/lang/String;Ly6d;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onCameraOpening(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onFirstFrameAvailable()V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

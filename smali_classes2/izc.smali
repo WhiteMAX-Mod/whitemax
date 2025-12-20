@@ -1,22 +1,49 @@
-.class public abstract Lizc;
-.super Ljava/lang/Object;
+.class public final Lizc;
+.super Ll84;
+.source "SourceFile"
 
 
-# static fields
-.field public static qrscanner_allow_permission:I = 0x7f0a09ea
+# instance fields
+.field public X:I
 
-.field public static qrscanner_blackout_view:I = 0x7f0a09eb
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static qrscanner_camera_preview:I = 0x7f0a09ec
+.field public final synthetic o:Llzc;
 
-.field public static qrscanner_gallery_button_image:I = 0x7f0a09ed
 
-.field public static qrscanner_hint_view:I = 0x7f0a09ee
+# direct methods
+.method public constructor <init>(Llzc;Ll84;)V
+    .locals 0
 
-.field public static qrscanner_not_allow_permission:I = 0x7f0a09ef
+    iput-object p1, p0, Lizc;->o:Llzc;
 
-.field public static qrscanner_overlay_view:I = 0x7f0a09f0
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static qrscanner_toolbar:I = 0x7f0a09f1
+    return-void
+.end method
 
-.field public static qrscanner_torch_button_image:I = 0x7f0a09f2
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lizc;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lizc;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lizc;->X:I
+
+    iget-object p1, p0, Lizc;->o:Llzc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Llzc;->c(Lox5;Lyw5;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

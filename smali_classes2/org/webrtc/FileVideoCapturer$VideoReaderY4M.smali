@@ -232,7 +232,7 @@
 
     const-string v2, "frame dim: ("
 
-    invoke-static {v2, v4, p1, v5, v1}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v4, p1, v5, v1}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -261,7 +261,7 @@
 
     const-string v1, "Found end of file before end of header for file: "
 
-    invoke-static {v1, p1}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lx02;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -330,12 +330,6 @@
     invoke-virtual {v3}, Lorg/webrtc/JavaI420Buffer;->getDataV()Ljava/nio/ByteBuffer;
 
     move-result-object v6
-
-    invoke-virtual {v3}, Lorg/webrtc/JavaI420Buffer;->getStrideY()I
-
-    invoke-virtual {v3}, Lorg/webrtc/JavaI420Buffer;->getStrideU()I
-
-    invoke-virtual {v3}, Lorg/webrtc/JavaI420Buffer;->getStrideV()I
 
     :try_start_0
     sget v7, Lorg/webrtc/FileVideoCapturer$VideoReaderY4M;->FRAME_DELIMETER_LENGTH:I

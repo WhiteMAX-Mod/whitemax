@@ -1,5 +1,5 @@
-.class public abstract Lsp;
-.super Ljava/lang/Object;
+.class public Lsp;
+.super Lup;
 .source "SourceFile"
 
 
@@ -7,32 +7,27 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lup;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
-.end method
-
-.method public b(Landroid/widget/TextView;)Z
+.method public a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
     .locals 2
 
-    const-string v0, "getHorizontallyScrolling"
+    const-string v0, "getTextDirectionHeuristic"
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v1, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
-    invoke-static {p1, v0, v1}, Ltp;->e(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2, v0, v1}, Lvp;->e(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p2
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p2, Landroid/text/TextDirectionHeuristic;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

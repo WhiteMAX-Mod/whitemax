@@ -1,205 +1,217 @@
 .class public abstract Lbvi;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final a:[Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Ljava/io/File;)Z
-    .locals 6
-
-    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object p0
+.method static constructor <clinit>()V
+    .locals 1
 
     const/4 v0, 0x0
 
-    if-nez p0, :cond_0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    return v0
-
-    :cond_0
-    array-length v2, p0
-
-    move v3, v0
-
-    move v4, v1
-
-    :goto_0
-    if-ge v3, v2, :cond_2
-
-    aget-object v5, p0, v3
-
-    invoke-static {v5}, Lbvi;->a(Ljava/io/File;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    if-eqz v4, :cond_1
-
-    move v4, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v4, v0
-
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return v4
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
-
-    return v1
-.end method
-
-.method public static final b(Lesg;)V
-    .locals 2
-
-    new-instance v0, La28;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, La28;-><init>(I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+    sput-object v0, Lbvi;->a:[Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static c(Ljava/util/Set;)I
-    .locals 3
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+# virtual methods
+.method public abstract a(I[Ljava/lang/Object;)I
+.end method
 
-    move-result-object p0
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public b()I
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public d()[Ljava/lang/Object;
+    .locals 1
 
     const/4 v0, 0x0
 
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    goto :goto_1
-
-    :cond_0
-    move v2, v0
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    return v1
+    return-object v0
 .end method
 
-.method public static d(Lfke;Ljava/util/Collection;)Z
-    .locals 3
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    instance-of v0, p1, Ljava/util/Set;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    const/4 v1, 0x0
+    throw p1
+.end method
 
-    if-eqz v0, :cond_2
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result v0
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    throw p1
+.end method
 
-    move-result v2
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
 
-    if-le v0, v2, :cond_2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    move-result-object p0
+    throw p1
+.end method
 
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+.method public final spliterator()Ljava/util/Spliterator;
+    .locals 1
 
-    move-result v0
+    const/16 v0, 0x510
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lbvi;->a:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Lbvi;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 4
+
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    array-length v1, p1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->remove()V
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    if-ge v1, v0, :cond_2
 
-    goto :goto_0
+    .line 4
+    invoke-virtual {p0}, Lbvi;->d()[Ljava/lang/Object;
 
-    :cond_1
-    return v1
+    move-result-object v3
 
-    :cond_2
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    if-nez v3, :cond_1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p1
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    .line 5
+    :cond_0
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 6
+    :cond_1
+    invoke-virtual {p0}, Lbvi;->c()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    invoke-virtual {p0}, Lbvi;->b()I
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p0, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    .line 7
+    invoke-static {v3, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
 
-    or-int/2addr v1, v0
+    move-result-object p1
 
-    goto :goto_1
+    return-object p1
 
+    :cond_2
+    if-le v1, v0, :cond_3
+
+    const/4 v1, 0x0
+
+    .line 8
+    aput-object v1, p1, v0
+
+    .line 9
     :cond_3
-    return v1
+    :goto_0
+    invoke-virtual {p0, v2, p1}, Lbvi;->a(I[Ljava/lang/Object;)I
+
+    return-object p1
 .end method

@@ -3,21 +3,17 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# virtual methods
+.method public final serializer()Lq38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
-.field public final b:Lk18;
+    sget-object v0, Lal5;->a:Lal5;
 
-
-# direct methods
-.method public constructor <init>(Lk18;Landroid/content/Context;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lbl5;->a:Landroid/content/Context;
-
-    iput-object p1, p0, Lbl5;->b:Lk18;
-
-    return-void
+    return-object v0
 .end method

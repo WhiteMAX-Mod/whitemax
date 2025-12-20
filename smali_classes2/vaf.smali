@@ -1,173 +1,97 @@
-.class public final synthetic Lvaf;
+.class public final Lvaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Lwaf;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
-
-.field public final synthetic c:Landroidx/recyclerview/widget/RecyclerView;
+.field public final a:Lqaf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;Landroidx/recyclerview/widget/RecyclerView;I)V
+.method public constructor <init>(Lqaf;)V
     .locals 0
 
-    iput p3, p0, Lvaf;->a:I
-
-    iput-object p1, p0, Lvaf;->b:Lone/me/startconversation/StartConversationScreen;
-
-    iput-object p2, p0, Lvaf;->c:Landroidx/recyclerview/widget/RecyclerView;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvaf;->a:Lqaf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lvaf;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lvaf;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v3, p0, Lvaf;->b:Lone/me/startconversation/StartConversationScreen;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->H0:[Lyy7;
-
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->y0()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
+    return v0
 
     :cond_0
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->E0:Lzm3;
+    instance-of v1, p1, Lvaf;
 
-    invoke-virtual {v0, p1}, Lzm3;->l(I)I
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvaf;
+
+    iget-object v1, p0, Lvaf;->a:Lqaf;
+
+    iget-object p1, p1, Lvaf;->a:Lqaf;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    sget v0, Lu1b;->u:I
+    if-nez p1, :cond_2
 
-    if-ne p1, v0, :cond_1
+    return v2
 
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    :cond_2
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    sget v0, Lodb;->w:I
+    iget-object v0, p0, Lvaf;->a:Lqaf;
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_1
-    return-object v1
-
-    :pswitch_0
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->H0:[Lyy7;
-
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->y0()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    return v0
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_2
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->E0:Lzm3;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lzm3;->l(I)I
+    const-string v1, "Replace(command="
 
-    move-result p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v0, Lu1b;->o:I
+    iget-object v1, p0, Lvaf;->a:Lqaf;
 
-    if-ne p1, v0, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    const-string v1, ")"
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Lavd;->B0:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_3
-    sget v0, Lu1b;->r:I
-
-    if-ne p1, v0, :cond_4
-
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lavd;->D0:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_4
-    sget v0, Lu1b;->u:I
-
-    if-ne p1, v0, :cond_5
-
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lavd;->E0:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_5
-    :goto_0
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

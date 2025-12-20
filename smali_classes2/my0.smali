@@ -1,41 +1,121 @@
-.class public final Lmy0;
-.super Ljava/lang/Object;
+.class public final enum Lmy0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final X:[Lmy0;
+
+.field public static final synthetic Y:[Lmy0;
+
+.field public static final enum b:Lmy0;
+
+.field public static final enum c:Lmy0;
+
+.field public static final enum d:Lmy0;
+
+.field public static final enum o:Lmy0;
+
+
 # instance fields
-.field public final a:Ljava/io/File;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Lzy0;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lzy0;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmy0;
 
-    iput-object p1, p0, Lmy0;->a:Ljava/io/File;
+    const-string v1, "DEFAULT"
 
-    invoke-virtual {p1}, Ljava/io/File;->length()J
+    const/4 v2, 0x0
 
-    move-result-wide v0
+    invoke-direct {v0, v1, v2, v1}, Lmy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-wide v0, p0, Lmy0;->b:J
+    sput-object v0, Lmy0;->b:Lmy0;
 
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+    new-instance v1, Lmy0;
 
-    move-result-wide v0
+    const-string v2, "POSITIVE"
 
-    iput-wide v0, p0, Lmy0;->c:J
+    const/4 v3, 0x1
 
-    iput-object p2, p0, Lmy0;->d:Lzy0;
+    invoke-direct {v1, v2, v3, v2}, Lmy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lmy0;->c:Lmy0;
+
+    new-instance v2, Lmy0;
+
+    const-string v3, "NEGATIVE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lmy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lmy0;->d:Lmy0;
+
+    new-instance v3, Lmy0;
+
+    const-string v4, "UNKNOWN"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lmy0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lmy0;->o:Lmy0;
+
+    filled-new-array {v0, v1, v2, v3}, [Lmy0;
+
+    move-result-object v0
+
+    sput-object v0, Lmy0;->Y:[Lmy0;
+
+    invoke-static {}, Lmy0;->values()[Lmy0;
+
+    move-result-object v0
+
+    sput-object v0, Lmy0;->X:[Lmy0;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lmy0;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lmy0;
+    .locals 1
+
+    const-class v0, Lmy0;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lmy0;
+
+    return-object p0
+.end method
+
+.method public static values()[Lmy0;
+    .locals 1
+
+    sget-object v0, Lmy0;->Y:[Lmy0;
+
+    invoke-virtual {v0}, [Lmy0;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmy0;
+
+    return-object v0
 .end method
 
 
@@ -43,45 +123,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "{value=\'"
 
-    const-string v1, "CacheEntry{file="
+    const-string v1, "\'}"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lmy0;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lmy0;->a:Ljava/io/File;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", length="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmy0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lastModified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmy0;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cacheType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmy0;->d:Lzy0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

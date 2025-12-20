@@ -1,137 +1,144 @@
-.class public final synthetic Lt0a;
-.super Ljava/lang/Object;
+.class public final Lt0a;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
 
-.field public final synthetic b:Lds4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lds4;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lt0a;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lt0a;->b:Lds4;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lf84;Lds4;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
     .locals 0
 
-    .line 1
-    const/4 p1, 0x1
+    iput-object p2, p0, Lt0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iput p1, p0, Lt0a;->a:I
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lt0a;->b:Lds4;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lt0a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lt0a;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lt0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lt0a;->a:I
+    new-instance v0, Lt0a;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lt0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-object v0, p0, Lt0a;->b:Lds4;
+    invoke-direct {v0, p2, v1}, Lt0a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    :try_start_0
-    invoke-virtual {v0}, Lds4;->n()Lvy;
+    iput-object p1, v0, Lt0a;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    iget-object v1, v0, Lvy;->c:Ljava/io/File;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    move-result v1
+    iget-object p1, p0, Lt0a;->o:Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    check-cast p1, Lsb5;
 
-    iget-object v1, v0, Lvy;->d:Ljava/io/File;
+    iget-object v0, p0, Lt0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->J0:Lf4h;
 
-    move-result v1
+    if-eqz v1, :cond_2
 
-    if-eqz v1, :cond_0
+    iput-object p1, v1, Lf4h;->Y:Lsb5;
 
-    iget-object v0, v0, Lvy;->e:Ljava/io/File;
+    iget-object v2, v1, Lf4h;->X:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    const/4 v3, 0x0
 
-    move-result v0
+    if-eqz v2, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 v4, 0x0
 
-    const/4 v0, 0x1
+    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move-object v2, v3
 
     :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    instance-of v4, v2, Landroid/widget/TextView;
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v4, :cond_1
 
-    goto :goto_1
+    move-object v3, v2
 
-    :catchall_0
-    move-exception v0
+    check-cast v3, Landroid/widget/TextView;
 
-    new-instance v1, Lipd;
+    :cond_1
+    if-eqz v3, :cond_2
 
-    invoke-direct {v1, v0}, Lipd;-><init>(Ljava/lang/Throwable;)V
+    sget-object v2, Ll23;->h:Lhhg;
 
-    move-object v0, v1
+    iget-object v1, v1, Lf4h;->Y:Lsb5;
 
-    :goto_1
-    new-instance v1, Lkpd;
+    invoke-virtual {v2, v3, v1}, Lhhg;->b(Landroid/widget/TextView;Lsb5;)V
 
-    invoke-direct {v1, v0}, Lkpd;-><init>(Ljava/lang/Object;)V
+    :cond_2
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Lykc;
 
-    return-object v1
+    if-eqz v1, :cond_3
 
-    :pswitch_0
-    iget-object v0, p0, Lt0a;->b:Lds4;
+    iput-object p1, v1, Lykc;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_3
+    iget-object p1, v0, Lone/me/messages/list/ui/MessagesListWidget;->L0:Lawf;
 
-    move-result-object v0
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Lawf;->j()V
 
-    move-result-object v0
+    :cond_4
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    return-object v0
+    move-result-object p1
 
-    nop
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

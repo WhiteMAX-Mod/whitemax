@@ -1,97 +1,98 @@
-.class public final synthetic Llj6;
-.super Ljava/lang/Object;
+.class public final Llj6;
+.super Ljava/util/concurrent/ForkJoinTask;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lw22;
 
-.field public final synthetic b:Lmj6;
+.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public volatile d:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmj6;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lw22;)V
+    .locals 1
 
-    iput p2, p0, Llj6;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/ForkJoinTask;-><init>()V
 
-    iput-object p1, p0, Llj6;->b:Lmj6;
+    iput-object p2, p0, Llj6;->a:Lw22;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p2, p0, Llj6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Llj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final exec()Z
     .locals 3
 
-    iget v0, p0, Llj6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Llj6;->b:Lmj6;
+    iget-object v0, p0, Llj6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lmj6;->s0:Z
+    const/4 v2, 0x1
 
-    iget-object v2, v0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    if-eqz v2, :cond_0
+    move-result v0
 
-    iget-object v2, v0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+    :try_start_0
+    iget-object v0, p0, Llj6;->a:Lw22;
+
+    invoke-virtual {v0}, Lw22;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return v2
+
+    :catchall_0
+    move-exception v0
+
+    iput-object v0, p0, Llj6;->d:Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_0
-    const/4 v2, 0x0
+    return v1
+.end method
 
-    iput-object v2, v0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
+.method public final getRawResult()Ljava/lang/Object;
+    .locals 1
 
-    iput-boolean v1, v0, Lmj6;->t0:Z
+    iget-object v0, p0, Llj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v1, v0, Lmj6;->o:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    move-result-object v0
 
-    iget-object v1, v0, Lmj6;->o:Lorg/webrtc/SurfaceTextureHelper;
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
+.method public final setRawResult(Ljava/lang/Object;)V
+    .locals 1
 
-    :cond_1
-    iput-object v2, v0, Lmj6;->o:Lorg/webrtc/SurfaceTextureHelper;
+    iget-object v0, p0, Llj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Llj6;->b:Lmj6;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lmj6;->s0:Z
-
-    iget-object v2, v0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, v0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-
-    :cond_2
-    iput-boolean v1, v0, Lmj6;->t0:Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,77 +1,170 @@
 .class public final Lph8;
-.super Lsj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldz4;
 
 
 # instance fields
-.field public final b:Z
+.field public final a:Lghg;
 
-.field public final c:Z
+.field public final b:Lsw1;
 
-.field public final d:Z
+.field public final c:Loq6;
 
-.field public final o:Ln8a;
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:Lhof;
+
+.field public final g:Lpkd;
 
 
 # direct methods
-.method public constructor <init>(JZZZLn8a;)V
+.method public constructor <init>(Lghg;Lmq6;Loq6;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lsj0;-><init>(J)V
+    and-int/lit8 p5, p5, 0x8
 
-    iput-boolean p3, p0, Lph8;->b:Z
+    if-eqz p5, :cond_0
 
-    iput-boolean p4, p0, Lph8;->c:Z
+    const/4 p4, 0x0
 
-    iput-boolean p5, p0, Lph8;->d:Z
+    :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p6, p0, Lph8;->o:Ln8a;
+    iput-object p1, p0, Lph8;->a:Lghg;
+
+    check-cast p2, Lsw1;
+
+    iput-object p2, p0, Lph8;->b:Lsw1;
+
+    iput-object p3, p0, Lph8;->c:Loq6;
+
+    iput p4, p0, Lph8;->d:I
+
+    sget-object p1, Ljy4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lph8;->e:J
+
+    invoke-virtual {p0}, Lph8;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Liof;->a(Ljava/lang/Object;)Lhof;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lph8;->f:Lhof;
+
+    new-instance p2, Lpkd;
+
+    invoke-direct {p2, p1}, Lpkd;-><init>(Lofa;)V
+
+    iput-object p2, p0, Lph8;->g:Lpkd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final a()Laof;
+    .locals 1
 
-    iget-object v0, p0, Lph8;->o:Ln8a;
+    iget-object v0, p0, Lph8;->g:Lpkd;
 
-    iget v0, v0, Ln8a;->d:I
+    return-object v0
+.end method
 
-    const-string v1, "LoginEvent(requestId="
+.method public final d(Lyk4;)V
+    .locals 4
 
-    const-string v2, ", isFirstLogin="
+    iget-wide v0, p1, Lyk4;->a:J
 
-    iget-wide v3, p0, Lsj0;->a:J
+    iget-wide v2, p0, Lph8;->e:J
 
-    iget-boolean v5, p0, Lph8;->b:Z
+    invoke-static {v0, v1, v2, v3}, Ljy4;->a(JJ)Z
 
-    invoke-static {v3, v4, v1, v2, v5}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lph8;->b:Lsw1;
+
+    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lph8;->c:Loq6;
+
+    invoke-interface {v0, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lph8;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lph8;->f:Lhof;
+
+    invoke-virtual {v1, v0, p1}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 8
+
+    new-instance v0, Lyk4;
+
+    new-instance v6, Lxk4;
+
+    iget-object v1, p0, Lph8;->b:Lsw1;
+
+    invoke-interface {v1}, Lmq6;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    const-string v2, ", hasNewMessages="
+    check-cast v1, Ljava/lang/Boolean;
 
-    const-string v3, ", videoChatHistory="
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-boolean v4, p0, Lph8;->c:Z
+    move-result v1
 
-    iget-boolean v5, p0, Lph8;->d:Z
+    invoke-direct {v6, v1}, Lxk4;-><init>(Z)V
 
-    invoke-static {v2, v3, v1, v4, v5}, Lhf3;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    const/16 v7, 0x8
 
-    const-string v2, ", chats="
+    iget-wide v1, p0, Lph8;->e:J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lph8;->a:Lghg;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v4, p0, Lph8;->d:I
 
-    const-string v0, ")"
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v0 .. v7}, Lyk4;-><init>(JLghg;ILghg;Lqlj;I)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 

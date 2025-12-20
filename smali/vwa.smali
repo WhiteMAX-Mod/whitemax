@@ -1,126 +1,31 @@
-.class public final Lvwa;
-.super Lzc5;
+.class public abstract Lvwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public final synthetic b:Lone/me/android/OneMeApplication;
-
-
 # direct methods
-.method public constructor <init>(Lone/me/android/OneMeApplication;)V
-    .locals 0
+.method public static a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(TT;",
+            "Landroid/util/Property<",
+            "TT;TV;>;",
+            "Landroid/graphics/Path;",
+            ")",
+            "Landroid/animation/ObjectAnimator;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lvwa;->b:Lone/me/android/OneMeApplication;
+    invoke-static {p0, p1, v0, p2}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeConverter;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
 
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    move-result-object p0
 
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Lvwa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    sget-object p2, Lone/me/android/OneMeApplication;->s0:Lrwa;
-
-    invoke-static {p1}, Lrwa;->a(Landroid/app/Activity;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvwa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 2
-
-    new-instance v0, Luq;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Luq;-><init>(Landroid/app/Activity;I)V
-
-    new-instance p1, La6;
-
-    const/16 v1, 0x8
-
-    invoke-direct {p1, v1, v0}, La6;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lvwa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->removeIf(Ljava/util/function/Predicate;)Z
-
-    return-void
-.end method
-
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 2
-
-    sget-object v0, Lone/me/android/OneMeApplication;->s0:Lrwa;
-
-    invoke-static {p1}, Lrwa;->a(Landroid/app/Activity;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, La93;->s0:Lv1a;
-
-    iget-object v0, p0, Lvwa;->b:Lone/me/android/OneMeApplication;
-
-    invoke-virtual {p1, v0}, Lv1a;->x(Landroid/content/Context;)La93;
-
-    move-result-object p1
-
-    iget-object p1, p1, La93;->X:Ljava/lang/Object;
-
-    check-cast p1, Ltcf;
-
-    :cond_0
-    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :cond_1
-    return-void
+    return-object p0
 .end method

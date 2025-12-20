@@ -2,151 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmi4;
-
 
 # instance fields
-.field public final synthetic X:Z
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Z
-
-.field public final synthetic o:Z
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZZZZ)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll61;->a:Ljava/lang/String;
+    iput-object p1, p0, Ll61;->a:Landroid/content/Context;
 
-    iput-boolean p2, p0, Ll61;->b:Z
+    new-instance p1, Lg6;
 
-    iput-boolean p3, p0, Ll61;->c:Z
+    const/16 v0, 0x14
 
-    iput-boolean p4, p0, Ll61;->d:Z
+    invoke-direct {p1, v0, p0}, Lg6;-><init>(ILjava/lang/Object;)V
 
-    iput-boolean p5, p0, Ll61;->o:Z
+    const/4 v0, 0x3
 
-    iput-boolean p6, p0, Ll61;->X:Z
+    invoke-static {v0, p1}, Lv2j;->c(ILmq6;)Ld68;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll61;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 10
+.method public final a(Lk61;)Le71;
+    .locals 6
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
+    iget-object v1, p1, Lk61;->a:Ljava/lang/Long;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p1, Lk61;->f:Ljava/lang/Long;
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+    iget-object v2, p1, Lk61;->g:Ljava/lang/CharSequence;
 
-    new-instance v1, Limb;
+    const/4 v3, 0x0
 
-    const-string v2, "type"
+    if-eqz v0, :cond_0
 
-    const-string v3, "LINK"
+    if-eqz v2, :cond_0
 
-    invoke-direct {v1, v2, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    new-instance v2, Limb;
+    move-result-wide v4
 
-    const-string v3, "link"
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v4, p0, Ll61;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-direct {v2, v3, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, Ln7j;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lnd0;
 
-    iget-boolean v3, p0, Ll61;->b:Z
+    move-result-object v0
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    goto :goto_0
 
-    move-result-object v3
+    :cond_0
+    move-object v0, v3
+
+    :goto_0
+    iget-object v2, p1, Lk61;->e:Ljava/lang/String;
 
     move-object v4, v3
 
-    new-instance v3, Limb;
+    new-instance v3, Lve0;
 
-    const-string v5, "is_video_call"
+    invoke-direct {v3, v0, v2}, Lve0;-><init>(Lnd0;Ljava/lang/String;)V
 
-    invoke-direct {v3, v5, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v2, p1, Lk61;->c:Ljava/lang/CharSequence;
 
-    iget-boolean v4, p0, Ll61;->c:Z
+    iget-boolean v0, p1, Lk61;->h:Z
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
-    move-result-object v4
+    iget-object v0, p0, Ll61;->b:Ljava/lang/Object;
 
-    move-object v5, v4
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-    new-instance v4, Limb;
+    move-result-object v0
 
-    const-string v6, "video_enabled"
+    check-cast v0, Lxe0;
 
-    invoke-direct {v4, v6, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object v4, v0
 
-    iget-boolean v5, p0, Ll61;->d:Z
+    :cond_1
+    iget-boolean v5, p1, Lk61;->h:Z
 
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    new-instance v0, Le71;
 
-    move-result-object v5
-
-    move-object v6, v5
-
-    new-instance v5, Limb;
-
-    const-string v7, "microphone_enabled"
-
-    invoke-direct {v5, v7, v6}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v6, p0, Ll61;->o:Z
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    move-object v7, v6
-
-    new-instance v6, Limb;
-
-    const-string v8, "front_camera_enabled"
-
-    invoke-direct {v6, v8, v7}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v7, p0, Ll61;->X:Z
-
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
-
-    move-object v8, v7
-
-    new-instance v7, Limb;
-
-    const-string v9, "is_new"
-
-    invoke-direct {v7, v9, v8}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v1 .. v7}, [Limb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+    invoke-direct/range {v0 .. v5}, Le71;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lve0;Lxe0;Z)V
 
     return-object v0
 .end method

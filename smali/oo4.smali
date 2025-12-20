@@ -1,118 +1,176 @@
 .class public final Loo4;
-.super Ljava/lang/Object;
+.super Lag3;
 .source "SourceFile"
-
-# interfaces
-.implements Lh9e;
-
-
-# instance fields
-.field public final synthetic a:Lqo4;
-
-
-# direct methods
-.method public constructor <init>(Lqo4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loo4;->a:Lqo4;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final c()Z
+.method public final bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Loo4;->l()Lag3;
 
-    return v0
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final e(J)Lf9e;
-    .locals 11
+.method public final finalize()V
+    .locals 5
 
-    iget-object v0, p0, Loo4;->a:Lqo4;
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    iget-object v1, v0, Lqo4;->w0:Ljava/lang/Object;
+    :try_start_1
+    iget-boolean v0, p0, Lag3;->a:Z
 
-    check-cast v1, Lulf;
+    if-eqz v0, :cond_0
 
-    iget v1, v1, Lulf;->f:I
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    int-to-long v1, v1
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    mul-long/2addr v1, p1
+    return-void
 
-    const-wide/32 v3, 0xf4240
+    :catchall_0
+    move-exception v0
 
-    div-long/2addr v1, v3
+    goto :goto_2
 
-    iget-wide v5, v0, Lqo4;->b:J
+    :cond_0
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-wide v3, v0, Lqo4;->c:J
+    :try_start_3
+    iget-object v0, p0, Lag3;->b:Lt6f;
 
-    sub-long v7, v3, v5
+    invoke-virtual {v0}, Lt6f;->a()Ljava/lang/Object;
 
-    mul-long/2addr v7, v1
+    move-result-object v0
 
-    iget-wide v0, v0, Lqo4;->o:J
+    const-string v1, "DefaultCloseableReference"
 
-    div-long/2addr v7, v0
+    const-string v2, "Finalized without closing: %x %x (type = %s)"
 
-    add-long/2addr v7, v5
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    const-wide/16 v0, 0x7530
+    move-result v3
 
-    sub-long/2addr v7, v0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-wide/16 v0, 0x1
+    move-result-object v3
 
-    sub-long/2addr v3, v0
+    iget-object v4, p0, Lag3;->b:Lt6f;
 
-    move-wide v9, v7
+    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    move-wide v7, v3
+    move-result v4
 
-    move-wide v3, v9
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static/range {v3 .. v8}, Lxxg;->j(JJJ)J
+    move-result-object v4
 
-    move-result-wide v0
+    if-nez v0, :cond_1
 
-    new-instance v2, Lf9e;
+    const/4 v0, 0x0
 
-    new-instance v3, Ll9e;
+    goto :goto_0
 
-    invoke-direct {v3, p1, p2, v0, v1}, Ll9e;-><init>(JJ)V
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v2, v3, v3}, Lf9e;-><init>(Ll9e;Ll9e;)V
+    move-result-object v0
 
-    return-object v2
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v2, v0}, Lkt5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lag3;->c:Lzf3;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lag3;->b:Lt6f;
+
+    iget-object v2, p0, Lag3;->d:Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1, v2}, Lzf3;->x(Lt6f;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p0}, Lag3;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+
+    :goto_2
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :goto_3
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    throw v0
 .end method
 
-.method public final f()J
-    .locals 6
+.method public final l()Lag3;
+    .locals 4
 
-    iget-object v0, p0, Loo4;->a:Lqo4;
+    invoke-virtual {p0}, Lag3;->y0()Z
 
-    iget-object v1, v0, Lqo4;->w0:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v1, Lulf;
+    invoke-static {v0}, Lhjj;->f(Z)V
 
-    iget-wide v2, v0, Lqo4;->o:J
+    new-instance v0, Loo4;
 
-    const-wide/32 v4, 0xf4240
+    iget-object v1, p0, Lag3;->d:Ljava/lang/Throwable;
 
-    mul-long/2addr v2, v4
+    if-eqz v1, :cond_0
 
-    iget v0, v1, Lulf;->f:I
+    new-instance v1, Ljava/lang/Throwable;
 
-    int-to-long v0, v0
+    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
-    div-long/2addr v2, v0
+    goto :goto_0
 
-    return-wide v2
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lag3;->b:Lt6f;
+
+    iget-object v3, p0, Lag3;->c:Lzf3;
+
+    invoke-direct {v0, v2, v3, v1}, Lag3;-><init>(Lt6f;Lzf3;Ljava/lang/Throwable;)V
+
+    return-object v0
 .end method

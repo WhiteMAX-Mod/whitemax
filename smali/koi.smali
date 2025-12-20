@@ -4,761 +4,695 @@
 
 
 # static fields
-.field public static final a:Lqt5;
+.field public static final a:Lwbf;
 
-.field public static final b:[Lqt5;
+.field public static b:Ljava/util/Locale;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lqt5;
+    new-instance v0, Lwbf;
 
-    const-string v1, "moduleinstall"
+    const/4 v1, 0x0
 
-    const-wide/16 v2, 0x7
+    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lqt5;-><init>(Ljava/lang/String;J)V
-
-    sput-object v0, Lkoi;->a:Lqt5;
-
-    filled-new-array {v0}, [Lqt5;
-
-    move-result-object v0
-
-    sput-object v0, Lkoi;->b:[Lqt5;
+    sput-object v0, Lkoi;->a:Lwbf;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Number;Ljava/lang/String;)Lkotlinx/serialization/json/internal/JsonEncodingException;
-    .locals 3
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
 
-    new-instance v0, Lkotlinx/serialization/json/internal/JsonEncodingException;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v2, "Unexpected special floating-point value "
+    :try_start_0
+    invoke-static {p0}, Lgji;->a(Landroid/content/Context;)Lyc4;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, v1, Lyc4;->a:Landroid/content/Context;
 
-    const-string p0, ". By default, non-finite floating point values are prohibited because they do not conform JSON specification. It is possible to deserialize them using \'JsonBuilder.allowSpecialFloatingPointValues = true\'\nCurrent output: "
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const/4 p0, -0x1
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-static {p0, p1}, Lkoi;->f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v0, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static final b(Ljava/lang/String;Ljava/lang/CharSequence;I)Lkotlinx/serialization/json/internal/JsonDecodingException;
-    .locals 2
-
-    const-string v0, "\nJSON input: "
-
-    invoke-static {p0, v0}, Lho7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-static {p2, p1}, Lkoi;->f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lkotlinx/serialization/json/internal/JsonDecodingException;
-
-    if-ltz p2, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unexpected JSON token at offset "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p2, ": "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_0
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static c(Ljava/lang/String;)[I
-    .locals 9
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [I
+    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->name:Ljava/lang/String;
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    const/4 v2, 0x0
-
-    const/4 v3, -0x1
-
     if-eqz v1, :cond_0
-
-    aput v3, v0, v2
 
     return-object v0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    return-object p0
+.end method
 
-    move-result v1
+.method public static b(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 1
 
-    const/16 v4, 0x23
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
+    move-result-object p0
 
-    move-result v4
+    const/4 v0, 0x1
 
-    if-ne v4, v3, :cond_1
+    if-eq p1, v0, :cond_2
 
-    goto :goto_0
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_0
+
+    const p1, 0x104000a
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    sget p1, Lled;->common_google_play_services_enable_button:I
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_1
-    move v1, v4
+    sget p1, Lled;->common_google_play_services_update_button:I
 
-    :goto_0
-    const/16 v4, 0x3f
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
+    move-result-object p0
 
-    move-result v4
-
-    if-eq v4, v3, :cond_2
-
-    if-le v4, v1, :cond_3
+    return-object p0
 
     :cond_2
-    move v4, v1
+    sget p1, Lled;->common_google_play_services_install_button:I
 
-    :cond_3
-    const/16 v5, 0x2f
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v5}, Ljava/lang/String;->indexOf(I)I
+    move-result-object p0
 
-    move-result v6
+    return-object p0
+.end method
 
-    if-eq v6, v3, :cond_4
+.method public static c(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 3
 
-    if-le v6, v4, :cond_5
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    :cond_4
-    move v6, v4
+    move-result-object v0
 
-    :cond_5
-    const/16 v7, 0x3a
+    invoke-static {p0}, Lkoi;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    invoke-virtual {p0, v7}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v7
-
-    if-le v7, v6, :cond_6
-
-    move v7, v3
-
-    :cond_6
-    add-int/lit8 v6, v7, 0x2
-
-    if-ge v6, v4, :cond_8
-
-    add-int/lit8 v8, v7, 0x1
-
-    invoke-virtual {p0, v8}, Ljava/lang/String;->charAt(I)C
-
-    move-result v8
-
-    if-ne v8, v5, :cond_8
-
-    invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
-
-    move-result v6
-
-    if-ne v6, v5, :cond_8
-
-    add-int/lit8 v6, v7, 0x3
-
-    invoke-virtual {p0, v5, v6}, Ljava/lang/String;->indexOf(II)I
-
-    move-result p0
-
-    if-eq p0, v3, :cond_7
-
-    if-le p0, v4, :cond_9
-
-    :cond_7
-    move p0, v4
-
-    goto :goto_1
-
-    :cond_8
-    add-int/lit8 p0, v7, 0x1
-
-    :cond_9
-    :goto_1
-    aput v7, v0, v2
+    move-result-object v1
 
     const/4 v2, 0x1
 
-    aput p0, v0, v2
+    if-eq p1, v2, :cond_7
 
-    const/4 p0, 0x2
+    const/4 v2, 0x2
 
-    aput v4, v0, p0
+    if-eq p1, v2, :cond_5
 
-    const/4 p0, 0x3
+    const/4 v2, 0x3
 
-    aput v1, v0, p0
+    if-eq p1, v2, :cond_4
 
-    return-object v0
+    const/4 v2, 0x5
+
+    if-eq p1, v2, :cond_3
+
+    const/4 v2, 0x7
+
+    if-eq p1, v2, :cond_2
+
+    const/16 v2, 0x9
+
+    if-eq p1, v2, :cond_1
+
+    const/16 v2, 0x14
+
+    if-eq p1, v2, :cond_0
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p0, Lmed;->common_google_play_services_unknown_issue:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    sget p0, Lled;->common_google_play_services_updating_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    const-string p1, "common_google_play_services_sign_in_failed_text"
+
+    invoke-static {p0, p1, v1}, Lkoi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    const-string p1, "common_google_play_services_api_unavailable_text"
+
+    invoke-static {p0, p1, v1}, Lkoi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p1, "common_google_play_services_restricted_profile_text"
+
+    invoke-static {p0, p1, v1}, Lkoi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    sget p0, Lled;->common_google_play_services_unsupported_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    const-string p1, "common_google_play_services_network_error_text"
+
+    invoke-static {p0, p1, v1}, Lkoi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    const-string p1, "common_google_play_services_invalid_account_text"
+
+    invoke-static {p0, p1, v1}, Lkoi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    sget p0, Lled;->common_google_play_services_enable_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    invoke-static {p0}, Lmmj;->a(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    sget p0, Lled;->common_google_play_services_wear_update_text:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_6
+    sget p0, Lled;->common_google_play_services_update_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_7
+    sget p0, Lled;->common_google_play_services_install_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x10
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static final d(Lggg;Ljava/lang/String;)V
-    .locals 2
+.method public static d(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 3
 
-    const-string v0, "Trailing comma before the end of JSON "
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "GoogleApiAvailability"
+
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v0, "Unexpected error code "
+
+    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_1
+    const-string p1, "The current user profile is restricted and could not use authenticated features."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_restricted_profile_title"
+
+    invoke-static {p0, p1}, Lkoi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    const-string p1, "The specified account could not be signed in."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_sign_in_failed_title"
+
+    invoke-static {p0, p1}, Lkoi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "One of the API components you attempted to connect to is not available."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_4
+    const-string p0, "The application is not licensed to the user."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_5
+    const-string p0, "Developer error occurred. Please see logs for detailed information"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_6
+    const-string p0, "Google Play services is invalid. Cannot recover."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_7
+    const-string p0, "Internal error occurred. Please see logs for detailed information"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_8
+    const-string p1, "Network error occurred. Please retry request later."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_network_error_title"
+
+    invoke-static {p0, p1}, Lkoi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_9
+    const-string p1, "An invalid account was specified when connecting. Please provide a valid account."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_invalid_account_title"
+
+    invoke-static {p0, p1}, Lkoi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_a
+    return-object v1
+
+    :pswitch_b
+    sget p0, Lled;->common_google_play_services_enable_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_c
+    sget p0, Lled;->common_google_play_services_update_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_d
+    sget p0, Lled;->common_google_play_services_install_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_a
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_a
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lkoi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    sget p0, Lmed;->common_google_play_services_unknown_issue:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-static {p1, p0, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
+
+    const-string v0, "Got empty resource: "
+
+    const-string v1, "Missing resource: "
+
+    sget-object v2, Lkoi;->a:Lwbf;
+
+    monitor-enter v2
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lds3;->a(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
+
+    move-result-object v3
+
+    new-instance v4, Lkj8;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
+
+    move-result-object v3
+
+    sget-object v4, Lkoi;->b:Ljava/util/Locale;
+
+    invoke-virtual {v3, v4}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v2}, Lwbf;->clear()V
+
+    sput-object v3, Lkoi;->b:Ljava/util/Locale;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_3
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v2, p1}, Lwbf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    if-eqz v3, :cond_1
+
+    monitor-exit v2
+
+    return-object v3
+
+    :cond_1
+    sget v3, Lx07;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v3, 0x0
+
+    :try_start_1
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const-string v4, "com.google.android.gms"
+
+    invoke-virtual {p0, v4}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
+
+    move-result-object p0
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :catch_0
+    move-object p0, v3
+
+    :goto_1
+    if-nez p0, :cond_2
+
+    :try_start_2
+    monitor-exit v2
+
+    goto :goto_2
+
+    :cond_2
+    const-string v4, "string"
+
+    const-string v5, "com.google.android.gms"
+
+    invoke-virtual {p0, p1, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    const-string p0, "GoogleApiAvailability"
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v2
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string p0, "GoogleApiAvailability"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iget v0, p0, Lggg;->b:I
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    add-int/lit8 v0, v0, -0x1
-
-    const-string v1, "Trailing commas are non-complaint JSON and not allowed by default. Use \'allowTrailingCommas = true\' in \'Json {}\' builder to support them."
-
-    invoke-virtual {p0, v0, p1, v1}, Lggg;->F(ILjava/lang/String;Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic e(Lggg;)V
-    .locals 1
-
-    const-string v0, "object"
-
-    invoke-static {p0, v0}, Lkoi;->d(Lggg;Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static final f(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 5
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    const/16 v1, 0xc8
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    const-string v1, "....."
-
-    if-ne p0, v0, :cond_2
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p0
-
-    add-int/lit8 p0, p0, -0x3c
-
-    if-gtz p0, :cond_1
-
-    :goto_0
-    return-object p1
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    invoke-interface {p1, p0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    add-int/lit8 v0, p0, -0x1e
-
-    add-int/lit8 p0, p0, 0x1e
-
-    const-string v2, ""
-
-    if-gtz v0, :cond_3
-
-    move-object v3, v2
-
-    goto :goto_1
-
-    :cond_3
-    move-object v3, v1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-lt p0, v4, :cond_4
-
-    move-object v1, v2
-
-    :cond_4
-    invoke-static {v3}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    if-gez v0, :cond_5
-
-    const/4 v0, 0x0
-
-    :cond_5
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    if-le p0, v3, :cond_6
-
-    move p0, v3
-
-    :cond_6
-    invoke-interface {p1, v0, p0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-    .locals 7
-
-    if-lt p0, p1, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v0
-
-    const/16 v1, 0x2f
-
-    if-ne v0, v1, :cond_1
-
-    add-int/lit8 p0, p0, 0x1
-
-    :cond_1
-    move v0, p0
-
-    move v2, v0
-
-    :goto_0
-    if-gt v0, p1, :cond_7
-
-    if-ne v0, p1, :cond_2
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v3
-
-    if-ne v3, v1, :cond_6
-
-    add-int/lit8 v3, v0, 0x1
-
-    :goto_1
-    add-int/lit8 v4, v2, 0x1
-
-    const/16 v5, 0x2e
-
-    if-ne v0, v4, :cond_3
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v6
-
-    if-ne v6, v5, :cond_3
-
-    invoke-virtual {p2, v2, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
-
-    sub-int/2addr v3, v2
-
-    sub-int/2addr p1, v3
-
-    goto :goto_4
-
-    :cond_3
-    add-int/lit8 v6, v2, 0x2
-
-    if-ne v0, v6, :cond_5
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v6
-
-    if-ne v6, v5, :cond_5
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v4
-
-    if-ne v4, v5, :cond_5
-
-    const-string v0, "/"
-
-    add-int/lit8 v2, v2, -0x2
-
-    invoke-virtual {p2, v0, v2}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;I)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    if-le v0, p0, :cond_4
-
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_4
-    move v2, p0
+    monitor-exit v2
 
     :goto_2
-    invoke-virtual {p2, v2, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
-
-    sub-int/2addr v3, v2
-
-    sub-int/2addr p1, v3
-
-    :goto_3
-    move v2, v0
-
-    goto :goto_4
-
-    :cond_5
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    :goto_4
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_6
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 10
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    if-nez p0, :cond_0
-
-    move-object p0, v1
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    move-object p1, v1
-
-    :cond_1
-    invoke-static {p1}, Lkoi;->c(Ljava/lang/String;)[I
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aget v3, v1, v2
-
-    const/4 v4, -0x1
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    if-eq v3, v4, :cond_2
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget p0, v1, v6
-
-    aget p1, v1, v5
-
-    invoke-static {p0, p1, v0}, Lkoi;->g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    invoke-static {p0}, Lkoi;->c(Ljava/lang/String;)[I
-
-    move-result-object v3
-
-    const/4 v7, 0x3
-
-    aget v8, v1, v7
-
-    if-nez v8, :cond_3
-
-    aget v1, v3, v7
-
-    invoke-virtual {v0, p0, v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    aget v7, v1, v5
-
-    if-nez v7, :cond_4
-
-    aget v1, v3, v5
-
-    invoke-virtual {v0, p0, v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v3
 
     :cond_4
-    aget v7, v1, v6
+    sget-object v0, Lkoi;->a:Lwbf;
 
-    if-eqz v7, :cond_5
+    invoke-virtual {v0, p1, p0}, Lwbf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    aget v3, v3, v2
-
-    add-int/2addr v3, v6
-
-    invoke-virtual {v0, p0, v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget p0, v1, v6
-
-    add-int/2addr p0, v3
-
-    aget p1, v1, v5
-
-    add-int/2addr v3, p1
-
-    invoke-static {p0, v3, v0}, Lkoi;->g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
+    monitor-exit v2
 
     return-object p0
 
-    :cond_5
-    invoke-virtual {p1, v7}, Ljava/lang/String;->charAt(I)C
+    :goto_3
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result v7
-
-    const/16 v8, 0x2f
-
-    if-ne v7, v8, :cond_6
-
-    aget v4, v3, v6
-
-    invoke-virtual {v0, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget p0, v3, v6
-
-    aget p1, v1, v5
-
-    add-int/2addr p1, p0
-
-    invoke-static {p0, p1, v0}, Lkoi;->g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_6
-    aget v7, v3, v2
-
-    add-int/2addr v7, v5
-
-    aget v9, v3, v6
-
-    if-ge v7, v9, :cond_7
-
-    aget v7, v3, v5
-
-    if-ne v9, v7, :cond_7
-
-    invoke-virtual {v0, p0, v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget p0, v3, v6
-
-    aget p1, v1, v5
-
-    add-int/2addr p1, p0
-
-    add-int/2addr p1, v6
-
-    invoke-static {p0, p1, v0}, Lkoi;->g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_7
-    aget v7, v3, v5
-
-    sub-int/2addr v7, v6
-
-    invoke-virtual {p0, v8, v7}, Ljava/lang/String;->lastIndexOf(II)I
-
-    move-result v7
-
-    if-ne v7, v4, :cond_8
-
-    aget v4, v3, v6
-
-    goto :goto_0
-
-    :cond_8
-    add-int/lit8 v4, v7, 0x1
-
-    :goto_0
-    invoke-virtual {v0, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget p0, v3, v6
-
-    aget p1, v1, v5
-
-    add-int/2addr v4, p1
-
-    invoke-static {p0, v4, v0}, Lkoi;->g(IILjava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-    .locals 0
-
-    invoke-static {p0, p1}, Lkoi;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
+    throw p0
 .end method

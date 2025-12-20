@@ -203,6 +203,14 @@
         <item quantity="few">Удалим ваш профиль через %d дня</item>
         <item quantity="many">Удалим ваш профиль через %d дней</item>
     </plurals>
+    <plurals name="profile_edit_reactions_settings_slider_current_value">
+        <item quantity="other">%d реакций</item>
+        <item quantity="zero">%d реакций</item>
+        <item quantity="one">%d реакция</item>
+        <item quantity="two">%d реакции</item>
+        <item quantity="few">%d реакции</item>
+        <item quantity="many">%d реакций</item>
+    </plurals>
     <plurals name="profile_members_list_delete_from_channel_snackbar">
         <item quantity="other">Вы удалили подписчиков</item>
         <item quantity="one">Вы удалили подписчика</item>

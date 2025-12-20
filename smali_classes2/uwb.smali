@@ -1,129 +1,147 @@
-.class public final synthetic Luwb;
-.super Ljava/lang/Object;
+.class public final enum Luwb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
+
+# static fields
+.field public static final enum X:Luwb;
+
+.field public static final enum Y:Luwb;
+
+.field public static final synthetic Z:[Luwb;
+
+.field public static final enum b:Luwb;
+
+.field public static final enum c:Luwb;
+
+.field public static final enum d:Luwb;
+
+.field public static final enum o:Luwb;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput p2, p0, Luwb;->a:I
+    new-instance v0, Luwb;
 
-    iput-object p1, p0, Luwb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "app_init"
+
+    const-string v3, "APP_INIT"
+
+    invoke-direct {v0, v3, v1, v2}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Luwb;->b:Luwb;
+
+    new-instance v1, Luwb;
+
+    const/4 v2, 0x1
+
+    const-string v3, "open_chats_to_render"
+
+    const-string v4, "EVENT_OPEN_CHATS"
+
+    invoke-direct {v1, v4, v2, v3}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Luwb;->c:Luwb;
+
+    new-instance v2, Luwb;
+
+    const/4 v3, 0x2
+
+    const-string v4, "open_chat_to_render"
+
+    const-string v5, "EVENT_OPEN_CHAT"
+
+    invoke-direct {v2, v5, v3, v4}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Luwb;->d:Luwb;
+
+    new-instance v3, Luwb;
+
+    const/4 v4, 0x3
+
+    const-string v5, "call_init"
+
+    const-string v6, "EVENT_CALL_INIT"
+
+    invoke-direct {v3, v6, v4, v5}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Luwb;->o:Luwb;
+
+    new-instance v4, Luwb;
+
+    const/4 v5, 0x4
+
+    const-string v6, "open_call_screen_to_render"
+
+    const-string v7, "EVENT_OPEN_CALL_SCREEN"
+
+    invoke-direct {v4, v7, v5, v6}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Luwb;->X:Luwb;
+
+    new-instance v5, Luwb;
+
+    const/4 v6, 0x5
+
+    const-string v7, "incoming_call_processing_init"
+
+    const-string v8, "EVENT_INCOMING_CALL_PROCESSING_INIT"
+
+    invoke-direct {v5, v8, v6, v7}, Luwb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Luwb;->Y:Luwb;
+
+    filled-new-array/range {v0 .. v5}, [Luwb;
+
+    move-result-object v0
+
+    sput-object v0, Luwb;->Z:[Luwb;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Luwb;->a:I
+    iput-object p3, p0, Luwb;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Luwb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public static valueOf(Ljava/lang/String;)Luwb;
+    .locals 1
 
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lyy7;
+    const-class v0, Luwb;
 
-    sget v0, Lxz7;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget v0, Lxz7;->c:I
+    move-result-object p0
 
-    invoke-static {v0}, Lxz7;->b(I)Z
+    check-cast p0, Luwb;
 
-    move-result v0
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_0
+.method public static values()[Luwb;
+    .locals 1
 
-    invoke-static {v1}, Lapi;->c(Lc54;)V
+    sget-object v0, Luwb;->Z:[Luwb;
 
-    :cond_0
-    sget-object v0, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
 
-    :pswitch_0
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lyy7;
-
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v1, Lndb;->l:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Ljza;->c:Ljza;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ljza;)V
-
-    sget-object v1, Lgza;->d:Lgza;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lgza;)V
-
-    sget-object v1, Liza;->a:Liza;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Liza;)V
-
-    sget v1, Lk1b;->N:I
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0xc
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lkti;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2, v2, v2, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    check-cast v0, [Luwb;
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

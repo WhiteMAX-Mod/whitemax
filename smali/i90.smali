@@ -2,116 +2,53 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
 
-# instance fields
-.field public final a:I
 
-.field public final b:J
+# static fields
+.field public static final a:Li90;
+
+.field public static final b:Lez5;
 
 
 # direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Li90;
 
-    iput p1, p0, Li90;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Li90;->b:J
+    sput-object v0, Li90;->a:Li90;
+
+    const-string v0, "logRequest"
+
+    invoke-static {v0}, Lez5;->c(Ljava/lang/String;)Lez5;
+
+    move-result-object v0
+
+    sput-object v0, Li90;->b:Lez5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Lfn0;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lxwa;
 
-    return v0
+    check-cast p1, Lla0;
 
-    :cond_0
-    instance-of v1, p1, Li90;
+    iget-object p1, p1, Lla0;->a:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    sget-object v0, Li90;->b:Lez5;
 
-    if-eqz v1, :cond_1
+    invoke-interface {p2, v0, p1}, Lxwa;->a(Lez5;Ljava/lang/Object;)Lxwa;
 
-    check-cast p1, Li90;
-
-    iget v1, p0, Li90;->a:I
-
-    iget v3, p1, Li90;->a:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-wide v3, p0, Li90;->b:J
-
-    iget-wide v5, p1, Li90;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 6
-
-    iget v0, p0, Li90;->a:I
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    const/16 v1, 0x20
-
-    iget-wide v2, p0, Li90;->b:J
-
-    ushr-long v4, v2, v1
-
-    xor-long v1, v4, v2
-
-    long-to-int v1, v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PacketInfo{sizeInBytes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Li90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timestampNs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Li90;->b:J
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

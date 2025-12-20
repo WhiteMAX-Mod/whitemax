@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgu3;
+.implements Lux3;
 .implements Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;
 
 
@@ -31,12 +31,12 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->O(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->m(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public grantRoles(Lti1;Z[Lwi1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+.method public grantRoles(Lzk1;Z[Lcl1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 6
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
@@ -51,7 +51,7 @@
 
     move-object v5, p5
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->q(Lru/ok/android/externcalls/sdk/ConversationImpl;Lti1;Z[Lwi1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;Lzk1;Z[Lcl1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method

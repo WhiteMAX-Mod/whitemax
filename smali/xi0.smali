@@ -1,256 +1,111 @@
-.class public abstract Lxi0;
-.super Ljava/lang/Object;
+.class public final Lxi0;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Ll50;
+.implements Lcr6;
 
 
 # instance fields
-.field public b:Li50;
-
-.field public c:Li50;
-
-.field public d:Li50;
-
-.field public e:Li50;
-
-.field public f:Ljava/nio/ByteBuffer;
-
-.field public g:Ljava/nio/ByteBuffer;
-
-.field public h:Z
+.field public final synthetic o:Lx44;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lx44;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxi0;->o:Lx44;
 
-    sget-object v0, Ll50;->a:Ljava/nio/ByteBuffer;
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
-
-    iput-object v0, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v0, Li50;->e:Li50;
-
-    iput-object v0, p0, Lxi0;->d:Li50;
-
-    iput-object v0, p0, Lxi0;->e:Li50;
-
-    iput-object v0, p0, Lxi0;->b:Li50;
-
-    iput-object v0, p0, Lxi0;->c:Li50;
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
-    .locals 2
-
-    iget-boolean v0, p0, Lxi0;->h:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Ll50;->a:Ljava/nio/ByteBuffer;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b()Ljava/nio/ByteBuffer;
-    .locals 2
-
-    iget-object v0, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Ll50;->a:Ljava/nio/ByteBuffer;
-
-    iput-object v1, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
-
-    return-object v0
-.end method
-
-.method public final d()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lxi0;->h:Z
-
-    invoke-virtual {p0}, Lxi0;->i()V
-
-    return-void
-.end method
-
-.method public final e(Li50;)Li50;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iput-object p1, p0, Lxi0;->d:Li50;
+    check-cast p1, Lac4;
 
-    invoke-virtual {p0, p1}, Lxi0;->g(Li50;)Li50;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lxi0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lxi0;->e:Li50;
+    check-cast p1, Lxi0;
 
-    invoke-virtual {p0}, Lxi0;->isActive()Z
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lxi0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lxi0;->e:Li50;
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Li50;->e:Li50;
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final flush()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Ll50;->a:Ljava/nio/ByteBuffer;
+    new-instance p1, Lxi0;
 
-    iput-object v0, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lxi0;->o:Lx44;
 
-    const/4 v0, 0x0
+    invoke-direct {p1, v0, p2}, Lxi0;-><init>(Lx44;Lkotlin/coroutines/Continuation;)V
 
-    iput-boolean v0, p0, Lxi0;->h:Z
-
-    iget-object v0, p0, Lxi0;->d:Li50;
-
-    iput-object v0, p0, Lxi0;->b:Li50;
-
-    iget-object v0, p0, Lxi0;->e:Li50;
-
-    iput-object v0, p0, Lxi0;->c:Li50;
-
-    invoke-virtual {p0}, Lxi0;->h()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public abstract g(Li50;)Li50;
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public isActive()Z
-    .locals 2
-
-    iget-object v0, p0, Lxi0;->e:Li50;
-
-    sget-object v1, Li50;->e:Li50;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public j()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final k(I)Ljava/nio/ByteBuffer;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    iget-object p1, p0, Lxi0;->o:Lx44;
 
-    move-result v0
+    iget v0, p1, Lx44;->a:I
 
-    if-ge v0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
+    iget-object p1, p1, Lx44;->c:Lmy3;
 
     goto :goto_0
 
-    :cond_0
-    iget-object p1, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
+    :pswitch_0
+    iget-object p1, p1, Lx44;->c:Lmy3;
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    goto :goto_0
+
+    :pswitch_1
+    iget-object p1, p1, Lx44;->c:Lmy3;
 
     :goto_0
-    iget-object p1, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
+    invoke-interface {p1}, Lmq6;->invoke()Ljava/lang/Object;
 
-    iput-object p1, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
-.end method
 
-.method public final reset()V
-    .locals 2
+    nop
 
-    sget-object v0, Ll50;->a:Ljava/nio/ByteBuffer;
-
-    iput-object v0, p0, Lxi0;->g:Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lxi0;->h:Z
-
-    iput-object v0, p0, Lxi0;->f:Ljava/nio/ByteBuffer;
-
-    sget-object v0, Li50;->e:Li50;
-
-    iput-object v0, p0, Lxi0;->d:Li50;
-
-    iput-object v0, p0, Lxi0;->e:Li50;
-
-    iput-object v0, p0, Lxi0;->b:Li50;
-
-    iput-object v0, p0, Lxi0;->c:Li50;
-
-    invoke-virtual {p0}, Lxi0;->j()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

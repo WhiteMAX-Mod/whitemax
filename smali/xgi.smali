@@ -1,85 +1,79 @@
-.class public abstract Lxgi;
-.super Ljava/lang/Object;
+.class public final Lxgi;
+.super Lwgi;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final q:Lahi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-class v0, Lxgi;
+    invoke-static {}, Lqgi;->d()Landroid/view/WindowInsets;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lahi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lahi;
+
+    move-result-object v0
+
+    sput-object v0, Lxgi;->q:Lahi;
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 1
+.method public constructor <init>(Lahi;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/os/Parcel;)V
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
-
-    move-result p0
-
-    if-gtz p0, :cond_0
+    invoke-direct {p0, p1, p2}, Lwgi;-><init>(Lahi;Landroid/view/WindowInsets;)V
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+# virtual methods
+.method public final d(Landroid/view/View;)V
+    .locals 0
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+.method public f(I)Lts7;
+    .locals 1
 
-    move-result v1
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lzgi;->a(I)I
 
-    add-int/lit8 v1, v1, 0x2d
+    move-result p1
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-static {v0, p1}, Lqgi;->c(Landroid/view/WindowInsets;I)Landroid/graphics/Insets;
 
-    const-string v1, "Parcel data not fully consumed, unread size: "
+    move-result-object p1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lts7;->c(Landroid/graphics/Insets;)Lts7;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public o(I)Z
+    .locals 1
 
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Ltgi;->c:Landroid/view/WindowInsets;
 
-    throw v0
+    invoke-static {p1}, Lzgi;->a(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lqgi;->h(Landroid/view/WindowInsets;I)Z
+
+    move-result p1
+
+    return p1
 .end method

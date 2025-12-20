@@ -1,49 +1,78 @@
-.class public final Lcbg;
-.super Lq44;
+.class public Lcbg;
+.super Lhk0;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Lebg;
+.field public final b:Ljava/lang/String;
 
-.field public Y:I
+.field public final c:Ljava/lang/String;
 
-.field public d:Lebg;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lebg;Lq44;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcbg;->X:Lebg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lcbg;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lcbg;->c:Ljava/lang/String;
+
+    iput-object p3, p0, Lcbg;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 4
 
-    iput-object p1, p0, Lcbg;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p1, p0, Lcbg;->Y:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lcbg;->Y:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcbg;->X:Lebg;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1, p0}, Lebg;->a(Lq44;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v0, "{error=\'"
 
-    return-object p1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcbg;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', message=\'"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcbg;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', localizedMessage=\'"
+
+    const-string v2, "\'}"
+
+    iget-object v3, p0, Lcbg;->d:Ljava/lang/String;
+
+    invoke-static {v1, v0, v3, v2}, La3e;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

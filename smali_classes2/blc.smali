@@ -1,79 +1,68 @@
-.class public final Lblc;
-.super Lq44;
+.class public final synthetic Lblc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmm4;
 
 
 # instance fields
-.field public X:Lpb2;
+.field public final synthetic a:I
 
-.field public Y:Lfec;
+.field public final synthetic b:J
 
-.field public Z:Lhec;
-
-.field public d:Lelc;
-
-.field public o:Lku3;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Ljava/util/List;
-
-.field public u0:Ljava/lang/Object;
-
-.field public v0:Ljava/lang/Object;
-
-.field public w0:Ljava/lang/Object;
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Lelc;
-
-.field public z0:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lelc;Lq44;)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput-object p1, p0, Lblc;->y0:Lelc;
+    iput p1, p0, Lblc;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lblc;->b:J
+
+    iput-boolean p4, p0, Lblc;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lblc;->x0:Ljava/lang/Object;
+    iget v0, p0, Lblc;->a:I
 
-    iget p1, p0, Lblc;->z0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
-    or-int/2addr p1, v0
+    iget-wide v1, p0, Lblc;->b:J
 
-    iput p1, p0, Lblc;->z0:I
+    iget-boolean v3, p0, Lblc;->c:Z
 
-    const/4 v4, 0x0
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
 
-    const/4 v5, 0x0
+    return-object v0
 
-    iget-object v0, p0, Lblc;->y0:Lelc;
+    :pswitch_0
+    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-    const/4 v1, 0x0
+    iget-wide v1, p0, Lblc;->b:J
 
-    const/4 v2, 0x0
+    iget-boolean v3, p0, Lblc;->c:Z
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
 
-    move-object v6, p0
+    return-object v0
 
-    invoke-virtual/range {v0 .. v6}, Lelc;->g(Lku3;Lpb2;Lfec;Lhec;Ljava/lang/Long;Lq44;)Ljava/io/Serializable;
+    nop
 
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

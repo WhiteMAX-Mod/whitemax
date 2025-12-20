@@ -4,20 +4,40 @@
 
 
 # instance fields
-.field public final a:Lxbe;
+.field public final a:I
 
-.field public final b:Li2c;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
 
 
 # direct methods
-.method public constructor <init>(Lxbe;Li2c;)V
+.method public constructor <init>(IIIIZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lybe;->a:Lxbe;
+    iput p1, p0, Lybe;->a:I
 
-    iput-object p2, p0, Lybe;->b:Li2c;
+    iput p2, p0, Lybe;->b:I
+
+    iput p3, p0, Lybe;->c:I
+
+    iput p4, p0, Lybe;->d:I
+
+    iput-boolean p5, p0, Lybe;->e:Z
+
+    iput-boolean p6, p0, Lybe;->f:Z
+
+    iput-boolean p7, p0, Lybe;->g:Z
 
     return-void
 .end method
@@ -45,57 +65,118 @@
     :cond_1
     check-cast p1, Lybe;
 
-    iget-object v1, p0, Lybe;->a:Lxbe;
+    iget v1, p0, Lybe;->a:I
 
-    iget-object v3, p1, Lybe;->a:Lxbe;
+    iget v3, p1, Lybe;->a:I
 
-    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lybe;->b:Li2c;
+    iget v1, p0, Lybe;->b:I
 
-    iget-object p1, p1, Lybe;->b:Li2c;
+    iget v3, p1, Lybe;->b:I
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
+    iget v1, p0, Lybe;->c:I
+
+    iget v3, p1, Lybe;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lybe;->d:I
+
+    iget v3, p1, Lybe;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lybe;->e:Z
+
+    iget-boolean v3, p1, Lybe;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lybe;->f:Z
+
+    iget-boolean v3, p1, Lybe;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lybe;->g:Z
+
+    iget-boolean p1, p1, Lybe;->g:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lybe;->a:Lxbe;
+    iget v0, p0, Lybe;->a:I
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lybe;->b:Li2c;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iget v2, p0, Lybe;->b:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Lybe;->c:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Lybe;->d:I
+
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lybe;->e:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lybe;->f:Z
+
+    invoke-static {v0, v1, v2}, Lxfh;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lybe;->g:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -105,31 +186,47 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", realWidth="
 
-    const-string v1, "SelectedAvatarInfo(avatar="
+    const-string v1, ", topInset="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "ScreenInfo(realHeight="
 
-    iget-object v1, p0, Lybe;->a:Lxbe;
+    iget v3, p0, Lybe;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lybe;->b:I
 
-    const-string v1, ", placeholder="
+    invoke-static {v2, v3, v0, v4, v1}, Lx02;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v1, p0, Lybe;->b:Li2c;
+    const-string v1, ", bottomInset="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", isWeakDevice="
+
+    iget v3, p0, Lybe;->c:I
+
+    iget v4, p0, Lybe;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqi3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", isLong="
+
+    const-string v2, ", isWide="
+
+    iget-boolean v3, p0, Lybe;->e:Z
+
+    iget-boolean v4, p0, Lybe;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lc12;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Lybe;->g:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lc12;->l(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -2,33 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz26;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lkia;
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lkia;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkia;->a:Lkia;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
+    iput p2, p0, Lkia;->a:I
+
+    iput-boolean p3, p0, Lkia;->b:Z
+
+    return-void
 .end method

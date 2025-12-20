@@ -1,77 +1,64 @@
 .class public final Luaf;
-.super Li3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwaf;
 
 
 # static fields
-.field public static final c:Luaf;
+.field public static final a:Luaf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Luaf;
 
-    const/16 v1, 0xb
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Li3;-><init>(I)V
-
-    sput-object v0, Luaf;->c:Luaf;
+    sput-object v0, Luaf;->a:Luaf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L0(J)Lei4;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const-string v0, ":chats?id="
+    const/4 v0, 0x1
 
-    const-string v1, "&type=local"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1, p2, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Luaf;
 
-    new-instance p2, Lei4;
+    if-nez p1, :cond_1
 
-    invoke-direct {p2, p1}, Lei4;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    return-object p2
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final M0()V
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0}, Li3;->p0()Lii4;
+    const v0, 0x79e8661
 
-    move-result-object v0
-
-    const-string v1, ":chat-list"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return v0
 .end method
 
-.method public final N0(Lem6;)V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0}, Li3;->p0()Lii4;
+    const-string v0, "Reject"
 
-    move-result-object v0
-
-    new-instance v1, Lw2e;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p1}, Lw2e;-><init>(ILem6;)V
-
-    invoke-virtual {v0, v1}, Lii4;->e(Lcm6;)V
-
-    return-void
+    return-object v0
 .end method

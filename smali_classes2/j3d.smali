@@ -1,70 +1,145 @@
-.class public abstract Lj3d;
+.class public final Lj3d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static app_host:I = 0x7f130065
+# instance fields
+.field public final a:Lghg;
 
-.field public static app_host_1:I = 0x7f130066
+.field public final b:Ljava/lang/String;
 
-.field public static app_host_2:I = 0x7f130067
 
-.field public static app_host_3:I = 0x7f130068
+# direct methods
+.method public constructor <init>(Lghg;Ljava/lang/String;)V
+    .locals 0
 
-.field public static app_host_prod:I = 0x7f130069
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static app_host_prod_port:I = 0x7f13006a
+    iput-object p1, p0, Lj3d;->a:Lghg;
 
-.field public static app_host_redirects:I = 0x7f13006b
+    iput-object p2, p0, Lj3d;->b:Ljava/lang/String;
 
-.field public static app_scheme:I = 0x7f13006f
+    return-void
+.end method
 
-.field public static folder_path:I = 0x7f130548
 
-.field public static link_call_join_path:I = 0x7f1305c2
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static link_chat_join_path:I = 0x7f1305c3
+    const/4 v0, 0x1
 
-.field public static link_chat_path:I = 0x7f1305c4
+    if-ne p0, p1, :cond_0
 
-.field public static link_host_api:I = 0x7f1305cf
+    return v0
 
-.field public static link_private_channel_path:I = 0x7f1305d7
+    :cond_0
+    instance-of v1, p1, Lj3d;
 
-.field public static link_private_contact_path:I = 0x7f1305d8
+    const/4 v2, 0x0
 
-.field public static link_startwebapp_path:I = 0x7f1305db
+    if-nez v1, :cond_1
 
-.field public static link_stickerset_path:I = 0x7f1305dc
+    return v2
 
-.field public static oneme_settings_app_version:I = 0x7f130984
+    :cond_1
+    check-cast p1, Lj3d;
 
-.field public static oneme_settings_check_updates:I = 0x7f13098e
+    iget-object v1, p0, Lj3d;->a:Lghg;
 
-.field public static oneme_settings_dump_heap:I = 0x7f130990
+    iget-object v3, p1, Lj3d;->a:Lghg;
 
-.field public static oneme_settings_dump_threads:I = 0x7f130991
+    invoke-static {v1, v3}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_iar_market_build_condition:I = 0x7f130992
+    move-result v1
 
-.field public static oneme_settings_iar_time_condition:I = 0x7f130993
+    if-nez v1, :cond_2
 
-.field public static oneme_settings_new_messages_screen:I = 0x7f1309b0
+    return v2
 
-.field public static oneme_settings_old_dev_menu:I = 0x7f1309b1
+    :cond_2
+    iget-object v1, p0, Lj3d;->b:Ljava/lang/String;
 
-.field public static oneme_settings_old_logs_menu:I = 0x7f1309b2
+    iget-object p1, p1, Lj3d;->b:Ljava/lang/String;
 
-.field public static oneme_settings_send_logs:I = 0x7f130a00
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_thread_state_count:I = 0x7f130a1c
+    move-result p1
 
-.field public static oneme_settings_thread_tracer:I = 0x7f130a1d
+    if-nez p1, :cond_3
 
-.field public static oneme_settings_thread_viewer_state:I = 0x7f130a1e
+    return v2
 
-.field public static oneme_settings_user_id:I = 0x7f130a51
+    :cond_3
+    return v0
+.end method
 
-.field public static oneme_settings_web_app_ssl:I = 0x7f130a52
+.method public final hashCode()I
+    .locals 3
 
-.field public static web_scheme:I = 0x7f130ea4
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lj3d;->a:Lghg;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lj3d;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QuoteContent(body="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj3d;->a:Lghg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj3d;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

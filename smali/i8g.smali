@@ -1,176 +1,72 @@
 .class public final Li8g;
-.super Lg8d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Z
+.field public final synthetic a:I
 
-.field public final c:Z
+.field public final synthetic b:Landroid/app/Notification;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroidx/work/impl/foreground/SystemForegroundService;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroidx/work/impl/foreground/SystemForegroundService;ILandroid/app/Notification;I)V
+    .locals 0
 
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Li8g;->d:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Li8g;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Li8g;->d:Landroidx/work/impl/foreground/SystemForegroundService;
 
-    .line 2
-    iput-boolean v0, p0, Li8g;->b:Z
+    iput p2, p0, Li8g;->a:I
 
-    .line 3
-    iput-boolean v0, p0, Li8g;->c:Z
+    iput-object p3, p0, Li8g;->b:Landroid/app/Notification;
 
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    .line 5
-    iput-boolean v0, p0, Li8g;->b:Z
-
-    .line 6
-    iput-boolean p1, p0, Li8g;->c:Z
+    iput p4, p0, Li8g;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    iget-boolean v0, p0, Li8g;->b:Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
-.end method
+    const/16 v1, 0x1f
 
-.method public final c()Landroid/os/Bundle;
-    .locals 3
+    iget v2, p0, Li8g;->c:I
 
-    new-instance v0, Landroid/os/Bundle;
+    iget-object v3, p0, Li8g;->b:Landroid/app/Notification;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    iget v4, p0, Li8g;->a:I
 
-    sget-object v1, Lg8d;->a:Ljava/lang/String;
+    iget-object v5, p0, Li8g;->d:Landroidx/work/impl/foreground/SystemForegroundService;
 
-    const/4 v2, 0x3
+    if-lt v0, v1, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-static {v5, v4, v3, v2}, Lk8g;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
-    sget-object v1, Li8g;->d:Ljava/lang/String;
-
-    iget-boolean v2, p0, Li8g;->b:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    sget-object v1, Li8g;->e:Ljava/lang/String;
-
-    iget-boolean v2, p0, Li8g;->c:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Li8g;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    check-cast p1, Li8g;
+    const/16 v1, 0x1d
 
-    iget-boolean v0, p0, Li8g;->c:Z
+    if-lt v0, v1, :cond_1
 
-    iget-boolean v1, p1, Li8g;->c:Z
+    invoke-static {v5, v4, v3, v2}, Lj8g;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
-    if-ne v0, v1, :cond_1
-
-    iget-boolean v0, p0, Li8g;->b:Z
-
-    iget-boolean p1, p1, Li8g;->b:Z
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v5, v4, v3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Li8g;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Li8g;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

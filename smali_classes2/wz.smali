@@ -1,178 +1,67 @@
-.class public final Lwz;
-.super Lxz;
+.class public abstract Lwz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lm20;
 
-.field public final b:F
-
-.field public final c:Lr5g;
+.field public volatile b:Z
 
 
 # direct methods
-.method public constructor <init>(JFLr5g;)V
+.method public constructor <init>(Lm20;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lwz;->a:J
-
-    iput p3, p0, Lwz;->b:F
-
-    iput-object p4, p0, Lwz;->c:Lr5g;
+    iput-object p1, p0, Lwz;->a:Lm20;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final a(Lhy;Ljava/lang/Throwable;)V
+    .locals 0
 
-    iget-wide v0, p0, Lwz;->a:J
+    if-eqz p1, :cond_0
 
-    return-wide v0
-.end method
-
-.method public final b()Ls5g;
-    .locals 1
-
-    iget-object v0, p0, Lwz;->c:Lr5g;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
+    invoke-virtual {p1, p2}, Lhy;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
-    instance-of v0, p1, Lwz;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwz;
-
-    iget-wide v0, p0, Lwz;->a:J
-
-    iget-wide v2, p1, Lwz;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lwz;->b:F
-
-    iget v1, p1, Lwz;->b:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lwz;->c:Lr5g;
-
-    iget-object p1, p1, Lwz;->c:Lr5g;
-
-    invoke-virtual {v0, p1}, Lr5g;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Lwz;->b:Z
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public b()Lcxa;
+    .locals 2
 
-    iget-wide v0, p0, Lwz;->a:J
+    iget-object v0, p0, Lwz;->a:Lm20;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, v0, Lm20;->s:Ljava/lang/String;
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lwz;->b:F
-
-    invoke-static {v0, v2, v1}, Lhf3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v1, p0, Lwz;->c:Lr5g;
-
-    invoke-virtual {v1}, Lr5g;->hashCode()I
+    invoke-static {v0}, Lzoj;->c(Ljava/lang/String;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
-.end method
+    new-instance v1, Ljava/io/File;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Uploading(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lwz;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lwz;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwz;->c:Lr5g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcxa;->k(Ljava/lang/Object;)Lxya;
 
     move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

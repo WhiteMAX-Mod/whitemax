@@ -1,48 +1,61 @@
 .class public final Lvo1;
-.super Lq44;
+.super Ljp1;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lto1;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final D:Lvo1;
 
 
 # direct methods
-.method public constructor <init>(Lto1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lvo1;->X:Lto1;
+    new-instance v0, Lvo1;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljp1;-><init>()V
+
+    sput-object v0, Lvo1;->D:Lvo1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lvo1;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lvo1;->o:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lvo1;
 
-    iput p1, p0, Lvo1;->o:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lvo1;->X:Lto1;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lto1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, -0x3c04238b
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenCallProfile"
+
+    return-object v0
 .end method

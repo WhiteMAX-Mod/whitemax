@@ -1,20 +1,25 @@
-.class public final Lokb;
+.class public abstract Lokb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnkb;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
 
 
-# instance fields
-.field public a:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
+    sget v0, Ln9d;->oneme_stickers_showcase_sets_list:I
 
-# virtual methods
-.method public final setDependOnOutsideView(Z)V
-    .locals 0
+    sput v0, Lokb;->a:I
 
-    iput-boolean p1, p0, Lokb;->a:Z
+    sget v0, Ln9d;->oneme_stickers_showcase_toolbar:I
+
+    sput v0, Lokb;->b:I
 
     return-void
 .end method

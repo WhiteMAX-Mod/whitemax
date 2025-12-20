@@ -46,7 +46,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lyg5;
+.field private static final synthetic $ENTRIES:Lvk5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;
 
@@ -127,11 +127,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;->$VALUES:[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;
 
-    new-instance v1, Lzg5;
+    new-instance v1, Lwk5;
 
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lwk5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;->$ENTRIES:Lyg5;
+    sput-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;->$ENTRIES:Lvk5;
 
     return-void
 .end method
@@ -149,16 +149,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lyg5;
+.method public static getEntries()Lvk5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lyg5;"
+            "Lvk5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;->$ENTRIES:Lyg5;
+    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;->$ENTRIES:Lvk5;
 
     return-object v0
 .end method

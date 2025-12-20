@@ -1,77 +1,67 @@
-.class public final Le0i;
+.class public abstract synthetic Le0i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyzh;
 
-
-# instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Le0i;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lxzh;)V
-    .locals 2
-
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->o:[Lyy7;
-
-    iget-object v0, p0, Le0i;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-static {}, Ld0i;->values()[Ld0i;
 
     move-result-object v0
 
-    check-cast v0, Lh0i;
+    array-length v0, v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-array v0, v0, [I
 
-    instance-of v1, p1, Lvzh;
+    const/4 v1, 0x1
 
-    if-nez v1, :cond_2
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    instance-of v1, p1, Luzh;
+    :catch_0
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x2
 
-    return-void
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_0
-    instance-of v1, p1, Lwzh;
+    :catch_1
+    const/4 v1, 0x3
 
-    if-eqz v1, :cond_1
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v0, v0, Lh0i;->Y:Lci5;
+    :catch_2
+    const/4 v2, 0x4
 
-    check-cast p1, Lwzh;
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object p1, p1, Lwzh;->b:Lei4;
+    :catch_3
+    const/4 v1, 0x5
 
-    invoke-static {v0, p1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    return-void
+    :catch_4
+    sput-object v0, Le0i;->$EnumSwitchMapping$0:[I
 
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
     return-void
 .end method

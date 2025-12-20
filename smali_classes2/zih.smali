@@ -1,29 +1,49 @@
 .class public final Lzih;
-.super Lru/ok/android/externcalls/sdk/AudioLevelListener;
+.super Ll84;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lbjh;
+
+
 # direct methods
-.method public constructor <init>(Lxtd;)V
-    .locals 3
+.method public constructor <init>(Lbjh;Ll84;)V
+    .locals 0
 
-    new-instance v0, Landroid/os/Handler;
+    iput-object p1, p0, Lzih;->o:Lbjh;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v1, Lm1h;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2, p1}, Lm1h;-><init>(ILjava/lang/Object;)V
-
-    const/16 p1, 0x1f4
-
-    invoke-direct {p0, p1, v0, v1}, Lru/ok/android/externcalls/sdk/AudioLevelListener;-><init>(SLandroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lzih;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lzih;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzih;->X:I
+
+    iget-object p1, p0, Lzih;->o:Lbjh;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lbjh;->d(Li83;Ll84;)Ljava/lang/Enum;
+
+    move-result-object p1
+
+    return-object p1
 .end method

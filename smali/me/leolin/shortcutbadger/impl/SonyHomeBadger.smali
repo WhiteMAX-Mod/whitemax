@@ -163,7 +163,7 @@
 
     if-nez p3, :cond_1
 
-    new-instance p3, Lr6f;
+    new-instance p3, Lshf;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 

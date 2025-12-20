@@ -1,124 +1,152 @@
-.class public final Lhji;
-.super Ldii;
+.class public abstract Lhji;
+.super Lsp3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final transient c:Lnji;
-
-.field public final transient d:[Ljava/lang/Object;
-
-.field public final transient o:I
+.field public final k:Lxk0;
 
 
 # direct methods
-.method public constructor <init>(Lnji;[Ljava/lang/Object;)V
+.method public constructor <init>(Lxk0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-direct {p0}, Lsp3;-><init>()V
 
-    iput-object p1, p0, Lhji;->c:Lnji;
-
-    iput-object p2, p0, Lhji;->d:[Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lhji;->o:I
+    iput-object p1, p0, Lhji;->k:Lxk0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[Ljava/lang/Object;)I
-    .locals 1
+.method public A(Lnd9;)Lnd9;
+    .locals 0
 
-    iget-object v0, p0, Ldii;->b:Lzhi;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lfji;
-
-    invoke-direct {v0, p0}, Lfji;-><init>(Lhji;)V
-
-    iput-object v0, p0, Ldii;->b:Lzhi;
-
-    :cond_0
-    invoke-virtual {v0, p1, p2}, Lzhi;->a(I[Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object v2, p0, Lhji;->c:Lnji;
-
-    invoke-virtual {v2, v0}, Lnji;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    return v1
+.method public abstract B(Lglg;)V
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
+.method public final C()V
     .locals 2
 
-    iget-object v0, p0, Ldii;->b:Lzhi;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lhji;->k:Lxk0;
 
-    new-instance v0, Lfji;
+    invoke-virtual {p0, v0, v1}, Lsp3;->z(Ljava/lang/Object;Lxk0;)V
 
-    invoke-direct {v0, p0}, Lfji;-><init>(Lhji;)V
+    return-void
+.end method
 
-    iput-object v0, p0, Ldii;->b:Lzhi;
+.method public D()V
+    .locals 0
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Lhji;->C()V
 
-    invoke-virtual {v0, v1}, Lzhi;->f(I)Lvhi;
+    return-void
+.end method
+
+.method public final h()Lglg;
+    .locals 1
+
+    iget-object v0, p0, Lhji;->k:Lxk0;
+
+    invoke-virtual {v0}, Lxk0;->h()Lglg;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final size()I
+.method public final i()Lz49;
     .locals 1
 
-    iget v0, p0, Lhji;->o:I
+    iget-object v0, p0, Lhji;->k:Lxk0;
+
+    invoke-virtual {v0}, Lxk0;->i()Lz49;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    iget-object v0, p0, Lhji;->k:Lxk0;
+
+    invoke-virtual {v0}, Lxk0;->j()Z
+
+    move-result v0
 
     return v0
+.end method
+
+.method public final m(Lqsg;)V
+    .locals 0
+
+    iput-object p1, p0, Lsp3;->j:Lqsg;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Lqah;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsp3;->i:Landroid/os/Handler;
+
+    invoke-virtual {p0}, Lhji;->D()V
+
+    return-void
+.end method
+
+.method public t(Lz49;)V
+    .locals 1
+
+    iget-object v0, p0, Lhji;->k:Lxk0;
+
+    invoke-virtual {v0, p1}, Lxk0;->t(Lz49;)V
+
+    return-void
+.end method
+
+.method public final v(Ljava/lang/Object;Lnd9;)Lnd9;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Void;
+
+    invoke-virtual {p0, p2}, Lhji;->A(Lnd9;)Lnd9;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final w(Ljava/lang/Object;JLnd9;)J
+    .locals 0
+
+    check-cast p1, Ljava/lang/Void;
+
+    return-wide p2
+.end method
+
+.method public final x(ILjava/lang/Object;)I
+    .locals 0
+
+    check-cast p2, Ljava/lang/Void;
+
+    return p1
+.end method
+
+.method public final y(Ljava/lang/Object;Lxk0;Lglg;)V
+    .locals 0
+
+    check-cast p1, Ljava/lang/Void;
+
+    invoke-virtual {p0, p3}, Lhji;->B(Lglg;)V
+
+    return-void
 .end method

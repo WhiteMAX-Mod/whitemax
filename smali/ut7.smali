@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Landroid/os/IBinder;
-.end method
-
-.method public abstract b()Lwt7;
+.method public abstract a(Lzkd;)Leyd;
 .end method

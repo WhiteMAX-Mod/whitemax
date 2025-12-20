@@ -1,186 +1,179 @@
 .class public final Lcy4;
-.super Ljava/lang/Object;
+.super Lmoc;
 .source "SourceFile"
 
 
-# static fields
-.field public static j:Ljava/util/ArrayList;
-
-.field public static k:Lcy4;
-
-.field public static final l:Ljava/util/ArrayList;
-
-.field public static final m:Lo6;
-
-
 # instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:Landroid/util/SparseIntArray;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lue;
+.field public final E0:Llfa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sput-object v0, Lcy4;->l:Ljava/util/ArrayList;
-
-    new-instance v0, Lo6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lo6;-><init>(I)V
-
-    sput-object v0, Lcy4;->m:Lo6;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lcy4;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Lcy4;->b:Landroid/util/SparseIntArray;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lcy4;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Lue;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lue;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lcy4;->i:Lue;
-
-    iput p1, p0, Lcy4;->d:I
-
-    sget-object p1, Lby4;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
-
-    move-result p1
-
-    iput p1, p0, Lcy4;->f:I
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Runnable;Z)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    invoke-static {}, Lie;->b()Z
+    new-instance v0, Lay4;
 
-    move-result v0
+    invoke-direct {v0, p1}, Lay4;-><init>(Landroid/content/Context;)V
 
-    if-nez v0, :cond_0
+    invoke-direct {p0, v0}, Lwrd;-><init>(Landroid/view/View;)V
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lrca;
+    sget-object p1, Lm9e;->a:[J
 
-    move-result-object p0
+    new-instance p1, Llfa;
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    invoke-direct {p1}, Llfa;-><init>()V
 
-    const-string v0, "wrong thread"
+    iput-object p1, p0, Lcy4;->E0:Llfa;
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-interface {p0, p1}, Lrca;->d(Ljava/lang/Throwable;)V
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {p1, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance p1, Lby4;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1}, Lby4;-><init>(I)V
+
+    iget-object v0, v0, Lay4;->s0:Lgab;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final E()V
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcy4;->E0:Llfa;
+
+    iget-object v2, v1, Llfa;->b:[Ljava/lang/Object;
+
+    iget-object v3, v1, Llfa;->c:[Ljava/lang/Object;
+
+    iget-object v4, v1, Llfa;->a:[J
+
+    array-length v5, v4
+
+    add-int/lit8 v5, v5, -0x2
+
+    if-ltz v5, :cond_3
+
+    const/4 v6, 0x0
+
+    move v7, v6
+
+    :goto_0
+    aget-wide v8, v4, v7
+
+    not-long v10, v8
+
+    const/4 v12, 0x7
+
+    shl-long/2addr v10, v12
+
+    and-long/2addr v10, v8
+
+    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v10, v12
+
+    cmp-long v10, v10, v12
+
+    if-eqz v10, :cond_2
+
+    sub-int v10, v7, v5
+
+    not-int v10, v10
+
+    ushr-int/lit8 v10, v10, 0x1f
+
+    const/16 v11, 0x8
+
+    rsub-int/lit8 v10, v10, 0x8
+
+    move v12, v6
+
+    :goto_1
+    if-ge v12, v10, :cond_1
+
+    const-wide/16 v13, 0xff
+
+    and-long/2addr v13, v8
+
+    const-wide/16 v15, 0x80
+
+    cmp-long v13, v13, v15
+
+    if-gez v13, :cond_0
+
+    shl-int/lit8 v13, v7, 0x3
+
+    add-int/2addr v13, v12
+
+    aget-object v14, v2, v13
+
+    aget-object v13, v3, v13
+
+    check-cast v13, Lyx4;
+
+    check-cast v14, Ljava/lang/String;
+
+    invoke-virtual {v13}, Lyx4;->a()V
 
     :cond_0
-    sget-object v0, Lcy4;->j:Ljava/util/ArrayList;
+    shr-long/2addr v8, v11
 
-    sget-object v1, Lcy4;->m:Lo6;
+    add-int/lit8 v12, v12, 0x1
 
-    if-nez v0, :cond_2
+    goto :goto_1
 
-    sget-object v0, Lcy4;->l:Ljava/util/ArrayList;
+    :cond_1
+    if-ne v10, v11, :cond_3
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    :cond_2
+    if-eq v7, v5, :cond_3
 
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    sput-object v0, Lcy4;->j:Ljava/util/ArrayList;
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0x64
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    sput-object v0, Lcy4;->j:Ljava/util/ArrayList;
-
-    :goto_0
-    if-nez p1, :cond_2
-
-    invoke-static {v1}, Lie;->d(Ljava/lang/Runnable;)V
-
-    :cond_2
-    sget-object v0, Lcy4;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz p1, :cond_3
-
-    sget-object p0, Lie;->a:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Lo6;->run()V
-
     :cond_3
+    invoke-virtual {v1}, Llfa;->a()V
+
+    return-void
+.end method
+
+.method public final z(Lie8;)V
+    .locals 2
+
+    check-cast p1, Lxx4;
+
+    iget-object v0, p0, Lwrd;->a:Landroid/view/View;
+
+    check-cast v0, Lay4;
+
+    iget v1, p1, Lxx4;->c:I
+
+    invoke-virtual {v0, v1}, Lay4;->setMaxCount(I)V
+
+    iget-object v1, p1, Lxx4;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lay4;->setText(Ljava/lang/String;)V
+
+    iget-object p1, p1, Lxx4;->b:Lbhg;
+
+    invoke-virtual {v0, p1}, Lay4;->setHint(Lghg;)V
+
     return-void
 .end method

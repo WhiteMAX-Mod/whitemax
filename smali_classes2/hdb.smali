@@ -1,73 +1,73 @@
-.class public final synthetic Lhdb;
+.class public abstract Lhdb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcm6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lkdb;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkdb;I)V
-    .locals 0
-
-    iput p2, p0, Lhdb;->a:I
-
-    iput-object p1, p0, Lhdb;->b:Lkdb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lhdb;->a:I
+    sget v0, Lycd;->media_picker_default_toolbar_title:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lhdb;->a:I
 
-    iget-object v0, p0, Lhdb;->b:Lkdb;
+    sget v0, Lycd;->media_picker_default_toolbar_title_only_photo:I
 
-    iget-object v0, v0, Lkdb;->u0:Lidb;
+    sput v0, Lhdb;->b:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lycd;->media_picker_empty_media_data:I
 
-    check-cast v0, Lxt4;
+    sput v0, Lhdb;->c:I
 
-    iget-object v0, v0, Lxt4;->b:Ljava/lang/Object;
+    sget v0, Lycd;->media_type_picker__permissions_dialog__button:I
 
-    check-cast v0, Ldz6;
+    sput v0, Lhdb;->d:I
 
-    iget-object v0, v0, Ldz6;->F0:Lqqd;
+    sget v0, Lycd;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
 
-    invoke-virtual {v0}, Lqqd;->stop()V
+    sput v0, Lhdb;->e:I
 
-    :cond_0
-    sget-object v0, Lqqg;->a:Lqqg;
+    sget v0, Lycd;->media_type_picker__permissions_dialog__gallery_camera_title:I
 
-    return-object v0
+    sput v0, Lhdb;->f:I
 
-    :pswitch_0
-    iget-object v0, p0, Lhdb;->b:Lkdb;
+    sget v0, Lycd;->media_type_picker__permissions_dialog__gallery_subtitle:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sput v0, Lhdb;->g:I
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    sget v0, Lycd;->media_type_picker__permissions_dialog__gallery_title:I
 
-    return-object v0
+    sput v0, Lhdb;->h:I
 
-    nop
+    sget v0, Lycd;->media_type_picker__permissions_dialog__subtitle:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sput v0, Lhdb;->i:I
+
+    sget v0, Lycd;->media_type_picker__permissions_dialog__title:I
+
+    sput v0, Lhdb;->j:I
+
+    return-void
 .end method

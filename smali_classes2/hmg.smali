@@ -1,103 +1,57 @@
 .class public final Lhmg;
-.super Lki4;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lhmg;
+# instance fields
+.field public X:J
 
-.field public static final c:Lgi4;
+.field public Y:I
 
-.field public static final d:Lgi4;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public static final e:Lgi4;
+.field public d:Lmmg;
 
-.field public static final f:Lgi4;
+.field public o:Ln0b;
 
-.field public static final g:Lgi4;
+.field public final synthetic s0:Lmmg;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lmmg;Ll84;)V
+    .locals 0
 
-    new-instance v0, Lhmg;
+    iput-object p1, p0, Lhmg;->s0:Lmmg;
 
-    invoke-direct {v0}, Lki4;-><init>()V
-
-    sput-object v0, Lhmg;->b:Lhmg;
-
-    const-string v1, "state"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":settings/privacy/onboarding-twofa"
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0xe
-
-    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Lhmg;->c:Lgi4;
-
-    const-string v1, "src"
-
-    const-string v2, "track_id"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v5, ":settings/privacy/creation-twofa"
-
-    invoke-static {v0, v5, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Lhmg;->d:Lgi4;
-
-    const/4 v1, 0x0
-
-    new-array v5, v1, [Ljava/lang/String;
-
-    const-string v6, ":settings/privacy/profile-deletion"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v5
-
-    sput-object v5, Lhmg;->e:Lgi4;
-
-    const-string v5, ":twofa/password/check"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v5, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v1
-
-    sput-object v1, Lhmg;->f:Lgi4;
-
-    const-string v1, "phone"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    const-string v4, ":twofa/auth/password/check"
-
-    invoke-static {v0, v4, v1, v3, v2}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
-
-    move-result-object v0
-
-    sput-object v0, Lhmg;->g:Lgi4;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lhmg;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lhmg;->t0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lhmg;->t0:I
+
+    iget-object p1, p0, Lhmg;->s0:Lmmg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lmmg;->l(Ln0b;Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

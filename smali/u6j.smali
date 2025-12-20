@@ -1,768 +1,237 @@
-.class public final enum Lu6j;
-.super Ljava/lang/Enum;
+.class public abstract Lu6j;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lami;
-
-
-# static fields
-.field public static final enum X:Lu6j;
-
-.field public static final synthetic Y:[Lu6j;
-
-.field public static final enum b:Lu6j;
-
-.field public static final enum c:Lu6j;
-
-.field public static final enum d:Lu6j;
-
-.field public static final enum o:Lu6j;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 57
+.method public static a(II)I
+    .locals 1
 
-    new-instance v1, Lu6j;
+    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
-    const-string v0, "NO_ERROR"
+    move-result v0
 
-    const/4 v2, 0x0
+    mul-int/2addr v0, p1
 
-    invoke-direct {v1, v0, v2, v2}, Lu6j;-><init>(Ljava/lang/String;II)V
+    div-int/lit16 v0, v0, 0xff
 
-    sput-object v1, Lu6j;->b:Lu6j;
+    invoke-static {p0, v0}, Laj3;->i(II)I
 
-    new-instance v2, Lu6j;
+    move-result p0
 
-    const-string v0, "INCOMPATIBLE_INPUT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3, v3}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Lu6j;
-
-    const-string v0, "INCOMPATIBLE_OUTPUT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v0, v4, v4}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lu6j;
-
-    const-string v0, "INCOMPATIBLE_TFLITE_VERSION"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v5, v5}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v5, Lu6j;
-
-    const-string v0, "MISSING_OP"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v0, v6, v6}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lu6j;
-
-    const-string v0, "DATA_TYPE_ERROR"
-
-    const/4 v7, 0x5
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v0, v7, v8}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const-string v9, "TFLITE_INTERNAL_ERROR"
-
-    const/4 v10, 0x7
-
-    invoke-direct {v0, v9, v8, v10}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lu6j;
-
-    const-string v9, "TFLITE_UNKNOWN_ERROR"
-
-    const/16 v11, 0x8
-
-    invoke-direct {v8, v9, v10, v11}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lu6j;
-
-    const-string v10, "MEDIAPIPE_ERROR"
-
-    const/16 v12, 0x9
-
-    invoke-direct {v9, v10, v11, v12}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v10, Lu6j;
-
-    const-string v11, "TIME_OUT_FETCHING_MODEL_METADATA"
-
-    invoke-direct {v10, v11, v12, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v11, Lu6j;
-
-    const/16 v7, 0xa
-
-    const/16 v12, 0x64
-
-    const-string v13, "MODEL_NOT_DOWNLOADED"
-
-    invoke-direct {v11, v13, v7, v12}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v11, Lu6j;->c:Lu6j;
-
-    new-instance v12, Lu6j;
-
-    const/16 v7, 0xb
-
-    const/16 v13, 0x65
-
-    const-string v14, "URI_EXPIRED"
-
-    invoke-direct {v12, v14, v7, v13}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v13, Lu6j;
-
-    const/16 v7, 0xc
-
-    const/16 v14, 0x66
-
-    const-string v15, "NO_NETWORK_CONNECTION"
-
-    invoke-direct {v13, v15, v7, v14}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v14, Lu6j;
-
-    const/16 v7, 0xd
-
-    const/16 v15, 0x67
-
-    move-object/from16 v16, v0
-
-    const-string v0, "METERED_NETWORK"
-
-    invoke-direct {v14, v0, v7, v15}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v15, Lu6j;
-
-    const/16 v0, 0xe
-
-    const/16 v7, 0x68
-
-    move-object/from16 v17, v1
-
-    const-string v1, "DOWNLOAD_FAILED"
-
-    invoke-direct {v15, v1, v0, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v1, 0xf
-
-    const/16 v7, 0x69
-
-    move-object/from16 v18, v2
-
-    const-string v2, "MODEL_INFO_DOWNLOAD_UNSUCCESSFUL_HTTP_STATUS"
-
-    invoke-direct {v0, v2, v1, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x10
-
-    const/16 v7, 0x6a
-
-    move-object/from16 v19, v0
-
-    const-string v0, "MODEL_INFO_DOWNLOAD_NO_HASH"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x11
-
-    const/16 v7, 0x6b
-
-    move-object/from16 v20, v1
-
-    const-string v1, "MODEL_INFO_DOWNLOAD_CONNECTION_FAILED"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x12
-
-    const/16 v7, 0x6c
-
-    move-object/from16 v21, v0
-
-    const-string v0, "NO_VALID_MODEL"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x13
-
-    const/16 v7, 0x6d
-
-    move-object/from16 v22, v1
-
-    const-string v1, "LOCAL_MODEL_INVALID"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x14
-
-    const/16 v7, 0x6e
-
-    move-object/from16 v23, v0
-
-    const-string v0, "REMOTE_MODEL_INVALID"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x15
-
-    const/16 v7, 0x6f
-
-    move-object/from16 v24, v1
-
-    const-string v1, "REMOTE_MODEL_LOADER_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x16
-
-    const/16 v7, 0x70
-
-    move-object/from16 v25, v0
-
-    const-string v0, "REMOTE_MODEL_LOADER_LOADS_NO_MODEL"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x17
-
-    const/16 v7, 0x71
-
-    move-object/from16 v26, v1
-
-    const-string v1, "SMART_REPLY_LANG_ID_DETECTAION_FAILURE"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x18
-
-    const/16 v7, 0x72
-
-    move-object/from16 v27, v0
-
-    const-string v0, "MODEL_NOT_REGISTERED"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x19
-
-    const/16 v7, 0x73
-
-    move-object/from16 v28, v1
-
-    const-string v1, "MODEL_TYPE_MISUSE"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x1a
-
-    const/16 v7, 0x74
-
-    move-object/from16 v29, v0
-
-    const-string v0, "MODEL_HASH_MISMATCH"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x1b
-
-    const/16 v7, 0xc9
-
-    move-object/from16 v30, v1
-
-    const-string v1, "OPTIONAL_MODULE_NOT_AVAILABLE"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lu6j;->d:Lu6j;
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x1c
-
-    const/16 v7, 0xca
-
-    move-object/from16 v31, v0
-
-    const-string v0, "OPTIONAL_MODULE_INIT_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lu6j;->o:Lu6j;
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x1d
-
-    const/16 v7, 0xcb
-
-    move-object/from16 v32, v1
-
-    const-string v1, "OPTIONAL_MODULE_INFERENCE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x1e
-
-    const/16 v7, 0xcc
-
-    move-object/from16 v33, v0
-
-    const-string v0, "OPTIONAL_MODULE_RELEASE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x1f
-
-    const/16 v7, 0xcd
-
-    move-object/from16 v34, v1
-
-    const-string v1, "OPTIONAL_TFLITE_MODULE_INIT_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x20
-
-    const/16 v7, 0xce
-
-    move-object/from16 v35, v0
-
-    const-string v0, "NATIVE_LIBRARY_LOAD_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x21
-
-    const/16 v7, 0xcf
-
-    move-object/from16 v36, v1
-
-    const-string v1, "OPTIONAL_MODULE_CREATE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x22
-
-    const/16 v7, 0x12d
-
-    move-object/from16 v37, v0
-
-    const-string v0, "CAMERAX_SOURCE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x23
-
-    const/16 v7, 0x12e
-
-    move-object/from16 v38, v1
-
-    const-string v1, "CAMERA1_SOURCE_CANT_START_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x24
-
-    const/16 v7, 0x12f
-
-    move-object/from16 v39, v0
-
-    const-string v0, "CAMERA1_SOURCE_NO_SUITABLE_SIZE_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x25
-
-    const/16 v7, 0x130
-
-    move-object/from16 v40, v1
-
-    const-string v1, "CAMERA1_SOURCE_NO_SUITABLE_FPS_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x26
-
-    const/16 v7, 0x131
-
-    move-object/from16 v41, v0
-
-    const-string v0, "CAMERA1_SOURCE_NO_BYTE_SOURCE_FOUND_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x27
-
-    const/16 v7, 0x190
-
-    move-object/from16 v42, v1
-
-    const-string v1, "CODE_SCANNER_UNAVAILABLE"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x28
-
-    const/16 v7, 0x191
-
-    move-object/from16 v43, v0
-
-    const-string v0, "CODE_SCANNER_CANCELLED"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x29
-
-    const/16 v7, 0x192
-
-    move-object/from16 v44, v1
-
-    const-string v1, "CODE_SCANNER_CAMERA_PERMISSION_NOT_GRANTED"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x2a
-
-    const/16 v7, 0x193
-
-    move-object/from16 v45, v0
-
-    const-string v0, "CODE_SCANNER_APP_NAME_UNAVAILABLE"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x2b
-
-    const/16 v7, 0x194
-
-    move-object/from16 v46, v1
-
-    const-string v1, "CODE_SCANNER_TASK_IN_PROGRESS"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x2c
-
-    const/16 v7, 0x195
-
-    move-object/from16 v47, v0
-
-    const-string v0, "CODE_SCANNER_PIPELINE_INITIALIZATION_ERROR"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x2d
-
-    const/16 v7, 0x196
-
-    move-object/from16 v48, v1
-
-    const-string v1, "CODE_SCANNER_PIPELINE_INFERENCE_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x2e
-
-    const/16 v7, 0x197
-
-    move-object/from16 v49, v0
-
-    const-string v0, "CODE_SCANNER_GOOGLE_PLAY_SERVICES_VERSION_TOO_OLD"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x2f
-
-    const/16 v7, 0x1f4
-
-    move-object/from16 v50, v1
-
-    const-string v1, "LOW_LIGHT_AUTO_EXPOSURE_COMPUTATION_FAILURE"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x30
-
-    const/16 v7, 0x1f5
-
-    move-object/from16 v51, v0
-
-    const-string v0, "LOW_LIGHT_IMAGE_CAPTURE_PROCESSING_FAILURE"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x31
-
-    const/16 v7, 0x258
-
-    move-object/from16 v52, v1
-
-    const-string v1, "PERMISSION_DENIED"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x32
-
-    const/16 v7, 0x259
-
-    move-object/from16 v53, v0
-
-    const-string v0, "CANCELLED"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x33
-
-    const/16 v7, 0x25a
-
-    move-object/from16 v54, v1
-
-    const-string v1, "GOOGLE_PLAY_SERVICES_VERSION_TOO_OLD"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lu6j;
-
-    const/16 v2, 0x34
-
-    const/16 v7, 0x25b
-
-    move-object/from16 v55, v0
-
-    const-string v0, "LOW_MEMORY"
-
-    invoke-direct {v1, v0, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Lu6j;
-
-    const/16 v2, 0x35
-
-    const/16 v7, 0x270f
-
-    move-object/from16 v56, v1
-
-    const-string v1, "UNKNOWN_ERROR"
-
-    invoke-direct {v0, v1, v2, v7}, Lu6j;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lu6j;->X:Lu6j;
-
-    move-object/from16 v7, v16
-
-    move-object/from16 v1, v17
-
-    move-object/from16 v2, v18
-
-    move-object/from16 v16, v19
-
-    move-object/from16 v17, v20
-
-    move-object/from16 v18, v21
-
-    move-object/from16 v19, v22
-
-    move-object/from16 v20, v23
-
-    move-object/from16 v21, v24
-
-    move-object/from16 v22, v25
-
-    move-object/from16 v23, v26
-
-    move-object/from16 v24, v27
-
-    move-object/from16 v25, v28
-
-    move-object/from16 v26, v29
-
-    move-object/from16 v27, v30
-
-    move-object/from16 v28, v31
-
-    move-object/from16 v29, v32
-
-    move-object/from16 v30, v33
-
-    move-object/from16 v31, v34
-
-    move-object/from16 v32, v35
-
-    move-object/from16 v33, v36
-
-    move-object/from16 v34, v37
-
-    move-object/from16 v35, v38
-
-    move-object/from16 v36, v39
-
-    move-object/from16 v37, v40
-
-    move-object/from16 v38, v41
-
-    move-object/from16 v39, v42
-
-    move-object/from16 v40, v43
-
-    move-object/from16 v41, v44
-
-    move-object/from16 v42, v45
-
-    move-object/from16 v43, v46
-
-    move-object/from16 v44, v47
-
-    move-object/from16 v45, v48
-
-    move-object/from16 v46, v49
-
-    move-object/from16 v47, v50
-
-    move-object/from16 v48, v51
-
-    move-object/from16 v49, v52
-
-    move-object/from16 v50, v53
-
-    move-object/from16 v51, v54
-
-    move-object/from16 v52, v55
-
-    move-object/from16 v53, v56
-
-    move-object/from16 v54, v0
-
-    filled-new-array/range {v1 .. v54}, [Lu6j;
-
-    move-result-object v0
-
-    sput-object v0, Lu6j;->Y:[Lu6j;
-
-    return-void
+    return p0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public static b(IILandroid/content/Context;)I
+    .locals 1
+
+    invoke-static {p2, p0}, Ls6j;->c(Landroid/content/Context;I)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    iget v0, p0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p2, v0}, Lo74;->a(Landroid/content/Context;I)I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    return p0
+
+    :cond_2
+    return p1
+.end method
+
+.method public static c(ILandroid/content/Context;Ljava/lang/String;)I
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {p0, p1, p2}, Ls6j;->e(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
 
-    iput p3, p0, Lu6j;->a:I
+    move-result-object p0
 
-    return-void
+    iget p2, p0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p1, p2}, Lo74;->a(Landroid/content/Context;I)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    return p0
 .end method
 
-.method public static values()[Lu6j;
-    .locals 1
+.method public static d(Landroid/view/View;I)I
+    .locals 2
 
-    sget-object v0, Lu6j;->Y:[Lu6j;
-
-    invoke-virtual {v0}, [Lu6j;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, [Lu6j;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, v1, p0}, Ls6j;->e(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    iget p1, p0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v0, p1}, Lo74;->a(Landroid/content/Context;I)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    return p0
 .end method
 
+.method public static e(I)Z
+    .locals 4
 
-# virtual methods
-.method public final d()I
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Laj3;->e(I)D
+
+    move-result-wide v0
+
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+
+    cmpl-double p0, v0, v2
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static f(I)Z
     .locals 1
 
-    iget v0, p0, Lu6j;->a:I
+    const v0, 0x8000
 
-    return v0
+    and-int/2addr p0, v0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static g(IFI)I
+    .locals 1
+
+    invoke-static {p2}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    invoke-static {p2, p1}, Laj3;->i(II)I
+
+    move-result p1
+
+    invoke-static {p1, p0}, Laj3;->g(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static h(Landroid/view/Window;Z)V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0, p1}, Lcgi;->a(Landroid/view/Window;Z)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
+
+    move-result v0
+
+    if-eqz p1, :cond_1
+
+    and-int/lit16 p1, v0, -0x701
+
+    goto :goto_0
+
+    :cond_1
+    or-int/lit16 p1, v0, 0x700
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    return-void
 .end method

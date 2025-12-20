@@ -1,70 +1,64 @@
-.class public final synthetic Lg91;
+.class public final Lg91;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Ll91;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Li91;
+# static fields
+.field public static final a:Lg91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li91;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lg91;->a:I
+    new-instance v0, Lg91;
 
-    iput-object p1, p0, Lg91;->b:Li91;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lg91;->a:Lg91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lg91;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lg91;->b:Li91;
+    return v0
 
-    iget-object v0, v0, Li91;->M0:Landroidx/recyclerview/widget/b;
+    :cond_0
+    instance-of p1, p1, Lg91;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x7c56e03f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Finished"
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lg91;->b:Li91;
-
-    iget-object v0, v0, Li91;->O0:Lx4h;
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lny6;
-
-    iget-object v1, p0, Lg91;->b:Li91;
-
-    iget-object v2, v1, Li91;->I0:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v1, v1, Li91;->J0:Lry6;
-
-    invoke-direct {v0, v2, v1}, Lny6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lry6;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,180 +1,133 @@
-.class public final Lhmd;
-.super Ljava/util/ArrayList;
+.class public abstract Lhmd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/Collection;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static a(Lcmd;J)Lzld;
+    .locals 4
 
-    sget-object v0, Lhd5;->a:Lhd5;
+    new-instance v0, Lzld;
 
-    invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lhmd;->a:Ljava/util/Collection;
+    iget-object v1, p0, Lcmd;->a:Lpmd;
 
-    return-void
-.end method
+    iput-object v1, v0, Lzld;->b:Lpmd;
 
+    iget-wide v2, p0, Lcmd;->b:J
 
-# virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+    iput-wide v2, v0, Lzld;->d:J
 
-    instance-of v0, p1, Lfmd;
+    iput-wide p1, v0, Lzld;->c:J
 
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Lfmd;
-
-    invoke-super {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    return p1
-.end method
+    const/4 p2, 0x1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    if-eq p1, p2, :cond_3
 
-    const/4 v0, 0x1
+    const/4 p2, 0x2
 
-    if-ne p0, p1, :cond_0
+    if-eq p1, p2, :cond_2
 
-    return v0
+    const/4 p2, 0x3
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x4
+
+    if-ne p1, p2, :cond_0
+
+    return-object v0
 
     :cond_0
-    instance-of v1, p1, Lhmd;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    iget-object p0, p0, Lcmd;->a:Lpmd;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "Unexpected value: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    check-cast p0, Lry6;
+
+    iget-object p0, p0, Lry6;->c:La20;
+
+    invoke-static {p0}, Lru/ok/tamtam/nano/a;->o(La20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lsp9;->toByteArray(Lsp9;)[B
+
+    move-result-object p1
+
+    new-instance p2, Ly52;
+
+    const/16 v1, 0x9
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {p2, v1, v2}, Ly52;-><init>(IZ)V
 
-    return v2
+    iput-object p1, p2, Ly52;->c:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lhmd;
+    iget-wide p0, p0, La20;->Z:J
 
-    iget-object v1, p0, Lhmd;->a:Ljava/util/Collection;
+    iput-wide p0, p2, Ly52;->b:J
 
-    iget-object p1, p1, Lhmd;->a:Ljava/util/Collection;
+    iput-object p2, v0, Lzld;->g:Ly52;
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
+    return-object v0
 
     :cond_2
-    return v0
-.end method
+    check-cast p0, Lbrf;
 
-.method public final hashCode()I
-    .locals 1
+    new-instance p1, Ll7;
 
-    iget-object v0, p0, Lhmd;->a:Ljava/util/Collection;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-wide v1, p0, Lbrf;->c:J
 
-    move-result v0
+    iput-wide v1, p1, Ll7;->a:J
 
-    return v0
-.end method
+    iput-object p1, v0, Lzld;->e:Ll7;
 
-.method public final bridge indexOf(Ljava/lang/Object;)I
-    .locals 1
+    return-object v0
 
-    instance-of v0, p1, Lfmd;
+    :cond_3
+    check-cast p0, Lqf5;
 
-    if-nez v0, :cond_0
+    new-instance p1, Lc35;
 
-    const/4 p1, -0x1
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    return p1
+    iget-object p0, p0, Lqf5;->c:Ljava/lang/String;
 
-    :cond_0
-    check-cast p1, Lfmd;
+    iput-object p0, p1, Lc35;->a:Ljava/lang/String;
 
-    invoke-super {p0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge lastIndexOf(Ljava/lang/Object;)I
-    .locals 1
-
-    instance-of v0, p1, Lfmd;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_0
-    check-cast p1, Lfmd;
-
-    invoke-super {p0, p1}, Ljava/util/ArrayList;->lastIndexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lfmd;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Lfmd;
-
-    invoke-super {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReplyButtonRow(buttons="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhmd;->a:Ljava/util/Collection;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lzld;->f:Lc35;
 
     return-object v0
 .end method

@@ -1,48 +1,31 @@
 .class public final Lbb5;
-.super Landroid/text/Editable$Factory;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+# instance fields
+.field public final a:I
 
-.field public static volatile b:Lbb5;
+.field public final b:Z
 
-.field public static c:Ljava/lang/Class;
+.field public final c:[B
+
+.field public final d:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IZ[B[B)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lbb5;->a:I
 
-    sput-object v0, Lbb5;->a:Ljava/lang/Object;
+    iput-boolean p2, p0, Lbb5;->b:Z
+
+    iput-object p3, p0, Lbb5;->c:[B
+
+    iput-object p4, p0, Lbb5;->d:[B
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 2
-
-    sget-object v0, Lbb5;->c:Ljava/lang/Class;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ll7f;
-
-    invoke-direct {v1, v0, p1}, Ll7f;-><init>(Ljava/lang/Class;Ljava/lang/CharSequence;)V
-
-    return-object v1
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

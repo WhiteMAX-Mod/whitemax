@@ -1,62 +1,29 @@
 .class public final Lwe1;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
-# interfaces
-.implements Lxe1;
 
-
-# static fields
-.field public static final a:Lwe1;
-
-.field public static final b:J
-
-.field public static final c:Ln5g;
-
-.field public static final d:Liza;
+# instance fields
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    new-instance v0, Lwe1;
+    const/4 v0, 0x2
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    sput-object v0, Lwe1;->a:Lwe1;
-
-    sget-wide v0, Lzza;->c:J
-
-    sput-wide v0, Lwe1;->b:J
-
-    sget v0, Lb0b;->m:I
-
-    new-instance v1, Ln5g;
-
-    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
-
-    sput-object v1, Lwe1;->c:Ln5g;
-
-    sget-object v0, Liza;->b:Liza;
-
-    sput-object v0, Lwe1;->d:Liza;
+    iput-object p1, p0, Lwe1;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Liza;
-    .locals 1
-
-    sget-object v0, Lwe1;->d:Liza;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -65,46 +32,65 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lwe1;
+    instance-of v1, p1, Lwe1;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lwe1;
+
+    iget-object v1, p0, Lwe1;->b:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lwe1;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lwe1;->b:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Ln5g;
-    .locals 1
-
-    sget-object v0, Lwe1;->c:Ln5g;
-
-    return-object v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x1dcefff1
+    iget-object v0, p0, Lwe1;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "TryLoadLinkAgain"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SendToChatLink(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lwe1;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

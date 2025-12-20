@@ -1,136 +1,63 @@
-.class public final Lja2;
-.super Lxi0;
+.class public Lja2;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Lb94;
 
 
 # instance fields
-.field public final i:Landroid/util/SparseArray;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lxi0;-><init>()V
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Lja2;->i:Landroid/util/SparseArray;
-
-    return-void
-.end method
+.field public a:I
 
 
 # virtual methods
-.method public final c(Ljava/nio/ByteBuffer;)V
-    .locals 8
+.method public final a(Lx84;Lx84;Z)V
+    .locals 0
 
-    iget-object v0, p0, Lxi0;->b:Li50;
+    iget p1, p0, Lja2;->a:I
 
-    iget v0, v0, Li50;->b:I
+    add-int/lit8 p1, p1, 0x1
 
-    iget-object v1, p0, Lja2;->i:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lka2;
-
-    invoke-static {v5}, Lhsi;->h(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    iget-object v1, p0, Lxi0;->b:Li50;
-
-    iget v1, v1, Li50;->d:I
-
-    div-int v6, v0, v1
-
-    iget-object v0, p0, Lxi0;->c:Li50;
-
-    iget v0, v0, Li50;->d:I
-
-    mul-int/2addr v0, v6
-
-    invoke-virtual {p0, v0}, Lxi0;->k(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    iget-object v2, p0, Lxi0;->b:Li50;
-
-    iget-object v4, p0, Lxi0;->c:Li50;
-
-    const/4 v7, 0x0
-
-    move-object v1, p1
-
-    invoke-static/range {v1 .. v7}, Lwsi;->d(Ljava/nio/ByteBuffer;Li50;Ljava/nio/ByteBuffer;Li50;Lka2;IZ)V
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    iput p1, p0, Lja2;->a:I
 
     return-void
 .end method
 
-.method public final g(Li50;)Li50;
-    .locals 3
+.method public final b(Lx84;Lx84;Z)V
+    .locals 0
 
-    iget v0, p1, Li50;->c:I
+    iget p1, p0, Lja2;->a:I
 
-    const/4 v1, 0x2
+    add-int/lit8 p1, p1, -0x1
 
-    if-ne v0, v1, :cond_2
+    iput p1, p0, Lja2;->a:I
 
-    iget-object v0, p0, Lja2;->i:Landroid/util/SparseArray;
+    return-void
+.end method
 
-    iget v2, p1, Li50;->b:I
+.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    iget v0, p0, Lja2;->a:I
 
-    move-result-object v0
+    if-gtz v0, :cond_1
 
-    check-cast v0, Lka2;
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
-    if-eqz v0, :cond_1
+    move-result p1
 
-    iget-boolean v2, v0, Lka2;->e:Z
+    if-eqz p1, :cond_0
 
-    if-eqz v2, :cond_0
-
-    sget-object p1, Li50;->e:Li50;
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance v2, Li50;
+    const/4 p1, 0x0
 
-    iget p1, p1, Li50;->a:I
-
-    iget v0, v0, Lka2;->b:I
-
-    invoke-direct {v2, p1, v0, v1}, Li50;-><init>(III)V
-
-    return-object v2
+    return p1
 
     :cond_1
-    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+    :goto_0
+    const/4 p1, 0x1
 
-    const-string v1, "No mixing matrix for input channel count"
-
-    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Li50;)V
-
-    throw v0
-
-    :cond_2
-    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
-
-    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Li50;)V
-
-    throw v0
+    return p1
 .end method

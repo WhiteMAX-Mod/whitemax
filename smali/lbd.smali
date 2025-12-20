@@ -1,19 +1,6 @@
-.class public final Llbd;
-.super Ljava/lang/ref/WeakReference;
-.source "SourceFile"
+.class public abstract Llbd;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lmbd;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Llbd;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+# static fields
+.field public static mtrl_badge_content_description:I = 0x7f110020

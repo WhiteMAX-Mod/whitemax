@@ -1,28 +1,45 @@
-.class public interface abstract Luw8;
-.super Ljava/lang/Object;
+.class public final Luw8;
+.super Lz2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final O:Lzb8;
+# instance fields
+.field public final b:Lux3;
+
+.field public final c:Lux3;
+
+.field public final d:Ln6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ldw8;Lux3;Lux3;Ln6;)V
+    .locals 0
 
-    new-instance v0, Lzb8;
+    invoke-direct {p0, p1}, Lz2;-><init>(Ldw8;)V
 
-    const/16 v1, 0x13
+    iput-object p2, p0, Luw8;->b:Lux3;
 
-    invoke-direct {v0, v1}, Lzb8;-><init>(I)V
+    iput-object p3, p0, Luw8;->c:Lux3;
 
-    sput-object v0, Luw8;->O:Lzb8;
+    iput-object p4, p0, Luw8;->d:Ln6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract d(Ljava/lang/String;ZZ)Ljava/util/List;
+.method public final f(Lqw8;)V
+    .locals 2
+
+    new-instance v0, Ldo3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p1, v1, p0}, Ldo3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lz2;->a:Ldw8;
+
+    invoke-virtual {p1, v0}, Ldw8;->e(Lqw8;)V
+
+    return-void
 .end method

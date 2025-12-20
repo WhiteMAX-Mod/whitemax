@@ -1,68 +1,63 @@
 .class public final Lvh2;
-.super Ll0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lqb2;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/List;
+
+.field public final d:J
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Ltm9;)V
-    .locals 0
+.method public constructor <init>(Lr7;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iget-object v0, p1, Lr7;->c:Ljava/lang/Object;
 
+    check-cast v0, Ljava/lang/String;
 
-# virtual methods
-.method public final d(Ltm9;Ljava/lang/String;)V
-    .locals 1
+    iput-object v0, p0, Lvh2;->a:Ljava/lang/String;
 
-    const-string v0, "chat"
+    iget-object v0, p1, Lr7;->d:Ljava/io/Serializable;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v0, Ljava/lang/String;
 
-    move-result p2
+    iput-object v0, p0, Lvh2;->b:Ljava/lang/String;
 
-    if-eqz p2, :cond_0
+    iget-object v0, p1, Lr7;->e:Ljava/lang/Object;
 
-    invoke-static {p1}, Lqb2;->a(Ltm9;)Lqb2;
+    check-cast v0, Ljava/util/ArrayList;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lvh2;->c:Lqb2;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ltm9;->v()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lvh2;->c:Lqb2;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{chat="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_0
+    iput-object v0, p0, Lvh2;->c:Ljava/util/List;
+
+    iget-wide v0, p1, Lr7;->a:J
+
+    iput-wide v0, p0, Lvh2;->d:J
+
+    iget-boolean p1, p1, Lr7;->b:Z
+
+    iput-boolean p1, p0, Lvh2;->e:Z
+
+    return-void
 .end method

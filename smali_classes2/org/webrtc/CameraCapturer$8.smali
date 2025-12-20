@@ -32,9 +32,9 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lorg/webrtc/CameraCapturer$8;->this$0:Lorg/webrtc/CameraCapturer;
-
     iput-object p2, p0, Lorg/webrtc/CameraCapturer$8;->val$oldSession:Lorg/webrtc/CameraSession;
+
+    iput-object p1, p0, Lorg/webrtc/CameraCapturer$8;->this$0:Lorg/webrtc/CameraCapturer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

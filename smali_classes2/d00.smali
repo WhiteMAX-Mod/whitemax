@@ -1,186 +1,103 @@
-.class public final Ld00;
+.class public abstract synthetic Ld00;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx26;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lx26;
-
-.field public final synthetic c:J
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx26;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p4, p0, Ld00;->a:I
+    invoke-static {}, Lf20;->values()[Lf20;
 
-    iput-object p1, p0, Ld00;->b:Lx26;
+    move-result-object v0
 
-    iput-wide p2, p0, Ld00;->c:J
+    array-length v0, v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
+    const/4 v2, 0x4
 
-# virtual methods
-.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget v0, p0, Ld00;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ld00;->b:Lx26;
-
-    check-cast v0, Ld53;
-
-    new-instance v1, Lb00;
-
-    iget-wide v2, p0, Ld00;->c:J
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, p1, v2, v3, v4}, Lb00;-><init>(Lz26;JI)V
-
-    invoke-virtual {v0, v1, p2}, Ld53;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lb00;
-
-    iget-wide v1, p0, Ld00;->c:J
-
-    const/4 v3, 0x4
-
-    invoke-direct {v0, p1, v1, v2, v3}, Lb00;-><init>(Lz26;JI)V
-
-    iget-object p1, p0, Ld00;->b:Lx26;
-
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_1
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lb00;
-
-    iget-wide v1, p0, Ld00;->c:J
-
-    const/4 v3, 0x3
-
-    invoke-direct {v0, p1, v1, v2, v3}, Lb00;-><init>(Lz26;JI)V
-
-    iget-object p1, p0, Ld00;->b:Lx26;
-
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lg84;->a:Lg84;
-
-    if-ne p1, p2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_2
-    return-object p1
-
-    :pswitch_2
-    new-instance v0, Lb00;
-
-    iget-wide v1, p0, Ld00;->c:J
-
+    :catch_0
     const/4 v3, 0x2
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lb00;-><init>(Lz26;JI)V
+    :try_start_1
+    aput v3, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p0, Ld00;->b:Lx26;
+    :catch_1
+    const/4 v4, 0x0
 
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v5, 0x3
 
-    move-result-object p1
+    :try_start_2
+    aput v5, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    sget-object p2, Lg84;->a:Lg84;
+    :catch_2
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    if-ne p1, p2, :cond_3
+    :catch_3
+    const/4 v6, 0x5
 
-    goto :goto_3
+    :try_start_4
+    aput v6, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    :cond_3
-    sget-object p1, Lqqg;->a:Lqqg;
+    :catch_4
+    sput-object v0, Ld00;->$EnumSwitchMapping$0:[I
 
-    :goto_3
-    return-object p1
+    invoke-static {v2}, Lc12;->z(I)[I
 
-    :pswitch_3
-    new-instance v0, Lb00;
+    move-result-object v0
 
-    iget-wide v1, p0, Ld00;->c:J
+    array-length v0, v0
 
-    const/4 v3, 0x1
+    new-array v0, v0, [I
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lb00;-><init>(Lz26;JI)V
+    :try_start_5
+    aput v1, v0, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-object p1, p0, Ld00;->b:Lx26;
+    :catch_5
+    :try_start_6
+    aput v3, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-interface {p1, v0, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :catch_6
+    :try_start_7
+    aput v5, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    move-result-object p1
+    :catch_7
+    :try_start_8
+    aput v2, v0, v5
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    sget-object p2, Lg84;->a:Lg84;
+    :catch_8
+    sput-object v0, Ld00;->$EnumSwitchMapping$1:[I
 
-    if-ne p1, p2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    :goto_4
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

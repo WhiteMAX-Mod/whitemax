@@ -1,25 +1,18 @@
-.class public final Lvtb;
-.super Lrj0;
+.class public final synthetic Lvtb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
 
-# static fields
-.field public static final c:Lpzf;
 
+# virtual methods
+.method public final apply(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->a(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
 
-    new-instance v0, Lpzf;
+    move-result-object p1
 
-    const-string v1, "error.phone.binding.required"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v0, Lvtb;->c:Lpzf;
-
-    return-void
+    return-object p1
 .end method

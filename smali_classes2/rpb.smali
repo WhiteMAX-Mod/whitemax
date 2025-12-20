@@ -1,172 +1,110 @@
-.class public final synthetic Lrpb;
+.class public final Lrpb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final b:Lrpb;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lwpb;
-
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwpb;Lorg/webrtc/SessionDescription;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lrpb;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lrpb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+
+    sput-object v0, Lrpb;->b:Lrpb;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
     .locals 0
 
-    iput p3, p0, Lrpb;->a:I
-
-    iput-object p1, p0, Lrpb;->b:Lwpb;
-
-    iput-object p2, p0, Lrpb;->c:Lorg/webrtc/SessionDescription;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrpb;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lrpb;->a:I
+    instance-of v0, p1, Lrpb;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lrpb;->b:Lwpb;
+    check-cast p1, Lrpb;
 
-    iget-object v1, v0, Lwpb;->J:Ld06;
+    if-eq p1, p0, :cond_0
 
-    iget-object v2, p0, Lrpb;->c:Lorg/webrtc/SessionDescription;
+    if-eqz p1, :cond_1
 
-    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
 
-    iget-boolean v4, v1, Ld06;->c:Z
+    iget-object p1, p1, Lrpb;->a:Ljava/lang/Object;
 
-    const-wide/16 v5, 0x0
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v4, :cond_0
+    move-result p1
 
-    goto :goto_0
+    if-eqz p1, :cond_1
 
     :cond_0
-    iput-wide v5, v1, Ld06;->b:J
+    const/4 p1, 0x1
 
-    iput-wide v5, v1, Ld06;->a:J
-
-    const/4 v4, 0x0
-
-    iput-boolean v4, v1, Ld06;->c:Z
-
-    :goto_0
-    invoke-static {v3}, Ld06;->a(Ljava/lang/String;)J
-
-    move-result-wide v3
-
-    iput-wide v3, v1, Ld06;->a:J
-
-    iget-wide v7, v1, Ld06;->b:J
-
-    cmp-long v9, v7, v5
-
-    if-eqz v9, :cond_1
-
-    cmp-long v5, v3, v5
-
-    if-eqz v5, :cond_1
-
-    xor-long/2addr v3, v7
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v1, Ld06;->c:Z
-
-    iget-object v1, v1, Ld06;->d:Lc06;
-
-    invoke-interface {v1, v3, v4}, Lc06;->c(J)V
+    return p1
 
     :cond_1
-    iget-object v1, v0, Lwpb;->S:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    if-eqz v1, :cond_2
+    return p1
+.end method
 
-    invoke-interface {v1, v0, v2}, Lvpb;->a(Lwpb;Lorg/webrtc/SessionDescription;)V
+.method public final hashCode()I
+    .locals 1
 
-    :cond_2
-    return-void
+    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lrpb;->b:Lwpb;
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
-    iget-object v1, v0, Lwpb;->J:Ld06;
+    move-result v0
 
-    iget-object v2, p0, Lrpb;->c:Lorg/webrtc/SessionDescription;
+    return v0
+.end method
 
-    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-boolean v4, v1, Ld06;->c:Z
+    iget-object v0, p0, Lrpb;->a:Ljava/lang/Object;
 
-    const-wide/16 v5, 0x0
+    if-eqz v0, :cond_0
 
-    if-nez v4, :cond_3
+    const-string v1, "Optional[%s]"
 
-    goto :goto_1
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    :cond_3
-    iput-wide v5, v1, Ld06;->b:J
+    move-result-object v0
 
-    iput-wide v5, v1, Ld06;->a:J
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    iput-boolean v4, v1, Ld06;->c:Z
+    return-object v0
 
-    :goto_1
-    invoke-static {v3}, Ld06;->a(Ljava/lang/String;)J
+    :cond_0
+    const-string v0, "Optional.empty"
 
-    move-result-wide v3
-
-    iput-wide v3, v1, Ld06;->b:J
-
-    cmp-long v7, v3, v5
-
-    if-eqz v7, :cond_4
-
-    iget-wide v7, v1, Ld06;->a:J
-
-    cmp-long v5, v7, v5
-
-    if-eqz v5, :cond_4
-
-    xor-long/2addr v3, v7
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v1, Ld06;->c:Z
-
-    iget-object v1, v1, Ld06;->d:Lc06;
-
-    invoke-interface {v1, v3, v4}, Lc06;->c(J)V
-
-    :cond_4
-    iget-object v1, v0, Lwpb;->S:Ljava/lang/Object;
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v1, v0, v2}, Lvpb;->k(Lwpb;Lorg/webrtc/SessionDescription;)V
-
-    :cond_5
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

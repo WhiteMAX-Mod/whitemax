@@ -2,47 +2,191 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvoe;
+
+
+# static fields
+.field public static final b:Lc28;
+
+.field public static final c:Ljava/lang/String;
+
+
+# instance fields
+.field public final synthetic a:Lid8;
+
 
 # direct methods
-.method public static a(Ljava/util/Date;)Ljava/lang/String;
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lc28;
+
+    invoke-direct {v0}, Lc28;-><init>()V
+
+    sput-object v0, Lc28;->b:Lc28;
+
+    const-string v0, "kotlinx.serialization.json.JsonObject"
+
+    sput-object v0, Lc28;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 4
 
-    sget-object v0, Lml6;->u:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    monitor-enter v0
+    sget-object v0, Leyf;->a:Leyf;
 
-    :try_start_0
-    sget-object v1, Lml6;->t:Ljava/text/SimpleDateFormat;
+    sget-object v0, Lm18;->a:Lm18;
 
-    if-nez v1, :cond_0
+    new-instance v1, Lid8;
 
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    sget-object v2, Leyf;->b:Lzgc;
 
-    const-string v2, "yyyyMMdd_HHmmss_SSS"
+    invoke-virtual {v0}, Lm18;->d()Lvoe;
 
-    sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    move-result-object v0
 
-    invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    const-string v3, "kotlin.collections.LinkedHashMap"
 
-    sput-object v1, Lml6;->t:Ljava/text/SimpleDateFormat;
+    invoke-direct {v1, v3, v2, v0}, Lid8;-><init>(Ljava/lang/String;Lvoe;Lvoe;)V
 
-    :cond_0
-    sget-object v1, Lml6;->t:Ljava/text/SimpleDateFormat;
+    iput-object v1, p0, Lc28;->a:Lid8;
 
-    invoke-virtual {v1, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p0
 
-    monitor-exit v0
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    return-object p0
+    sget-object v0, Lc28;->c:Ljava/lang/String;
 
-    :catchall_0
-    move-exception p0
+    return-object v0
+.end method
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final c()Z
+    .locals 1
 
-    throw p0
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final d(Ljava/lang/String;)I
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0, p1}, Lid8;->d(Ljava/lang/String;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final e()Lrnj;
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lbzf;->d:Lbzf;
+
+    return-object v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x2
+
+    return v0
+.end method
+
+.method public final g(I)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getAnnotations()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lch5;->a:Lch5;
+
+    return-object v0
+.end method
+
+.method public final h(I)Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0, p1}, Lid8;->h(I)Ljava/util/List;
+
+    sget-object p1, Lch5;->a:Lch5;
+
+    return-object p1
+.end method
+
+.method public final i(I)Lvoe;
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0, p1}, Lid8;->i(I)Lvoe;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isInline()Z
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j(I)Z
+    .locals 1
+
+    iget-object v0, p0, Lc28;->a:Lid8;
+
+    invoke-virtual {v0, p1}, Lid8;->j(I)Z
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

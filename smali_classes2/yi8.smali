@@ -1,21 +1,8 @@
-.class public final Lyi8;
-.super Lxp;
+.class public interface abstract Lyi8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyi8;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lyi8;
-
-    invoke-direct {v0}, Lxp;-><init>()V
-
-    sput-object v0, Lyi8;->a:Lyi8;
-
-    return-void
+# virtual methods
+.method public abstract a(II)V
 .end method

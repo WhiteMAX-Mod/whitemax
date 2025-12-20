@@ -1,236 +1,119 @@
 .class public final Let7;
-.super Lrrg;
+.super Lwgc;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public b:I
-
-.field public c:Ljava/lang/Object;
-
-.field public final synthetic d:I
-
-.field public final o:Ljava/util/Iterator;
+# static fields
+.field public static final c:Let7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Let7;
 
-    .line 1
-    invoke-direct {p0, v0}, Lrrg;-><init>(I)V
+    sget-object v1, Lnt7;->a:Lnt7;
 
-    const/4 v0, 0x2
+    invoke-direct {v0, v1}, Lwgc;-><init>(Lq38;)V
 
-    .line 2
-    iput v0, p0, Let7;->b:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcke;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Let7;->d:I
-
-    .line 4
-    iput-object p1, p0, Let7;->X:Ljava/lang/Object;
-
-    invoke-direct {p0}, Let7;-><init>()V
-
-    .line 5
-    iget-object p1, p1, Lcke;->a:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Let7;->o:Ljava/util/Iterator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/Iterator;Ll7c;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Let7;->d:I
-
-    .line 3
-    iput-object p1, p0, Let7;->o:Ljava/util/Iterator;
-
-    iput-object p2, p0, Let7;->X:Ljava/lang/Object;
-
-    invoke-direct {p0}, Let7;-><init>()V
+    sput-object v0, Let7;->c:Let7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 4
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    iget v0, p0, Let7;->b:I
+    check-cast p1, [I
 
-    const/4 v1, 0x4
+    array-length p1, p1
 
-    if-eq v0, v1, :cond_6
+    return p1
+.end method
 
-    invoke-static {v0}, Laz1;->v(I)I
+.method public final j(Lip3;ILjava/lang/Object;)V
+    .locals 2
 
-    move-result v0
+    check-cast p3, Ldt7;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lwgc;->b:Lvgc;
 
-    if-eqz v0, :cond_5
+    invoke-interface {p1, v0, p2}, Lip3;->u(Lvgc;I)I
 
-    const/4 v3, 0x2
+    move-result p1
 
-    if-eq v0, v3, :cond_4
+    invoke-static {p3}, Lugc;->c(Lugc;)V
 
-    iput v1, p0, Let7;->b:I
+    iget-object p2, p3, Ldt7;->a:[I
 
-    iget v0, p0, Let7;->d:I
+    iget v0, p3, Ldt7;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    add-int/lit8 v1, v0, 0x1
 
-    :cond_0
-    iget-object v0, p0, Let7;->o:Ljava/util/Iterator;
+    iput v1, p3, Ldt7;->b:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    aput p1, p2, v0
 
-    move-result v1
+    return-void
+.end method
 
-    if-eqz v1, :cond_1
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast p1, [I
 
-    move-result-object v0
+    new-instance v0, Ldt7;
 
-    iget-object v1, p0, Let7;->X:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v1, Lcke;
+    iput-object p1, v0, Ldt7;->a:[I
 
-    iget-object v1, v1, Lcke;->b:Ljava/util/Set;
+    array-length p1, p1
 
-    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    iput p1, v0, Ldt7;->b:I
 
-    move-result v1
+    const/16 p1, 0xa
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p1}, Ldt7;->b(I)V
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_1
-    const/4 v0, 0x3
+.method public final n()Ljava/lang/Object;
+    .locals 1
 
-    iput v0, p0, Let7;->b:I
-
-    :goto_0
     const/4 v0, 0x0
 
-    goto :goto_1
+    new-array v0, v0, [I
 
-    :cond_2
-    :pswitch_0
-    iget-object v0, p0, Let7;->o:Ljava/util/Iterator;
+    return-object v0
+.end method
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 3
 
-    move-result v1
+    check-cast p2, [I
 
-    if-eqz v1, :cond_3
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-    move-result-object v0
+    aget v1, p2, v0
 
-    iget-object v1, p0, Let7;->X:Ljava/lang/Object;
+    iget-object v2, p0, Lwgc;->b:Lvgc;
 
-    check-cast v1, Ll7c;
+    invoke-virtual {p1, v2, v0}, Lkotlinx/serialization/json/internal/b;->g(Lvoe;I)V
 
-    invoke-interface {v1, v0}, Ll7c;->apply(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Lkotlinx/serialization/json/internal/b;->k(I)V
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v0, 0x3
-
-    iput v0, p0, Let7;->b:I
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :goto_1
-    iput-object v0, p0, Let7;->c:Ljava/lang/Object;
-
-    iget v0, p0, Let7;->b:I
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_4
-
-    iput v2, p0, Let7;->b:I
-
-    return v2
-
-    :cond_4
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_5
-    return v2
-
-    :cond_6
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Let7;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Let7;->b:I
-
-    iget-object v0, p0, Let7;->c:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Let7;->c:Ljava/lang/Object;
-
-    return-object v0
-
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return-void
 .end method

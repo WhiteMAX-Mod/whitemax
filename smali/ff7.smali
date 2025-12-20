@@ -2,450 +2,859 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhf7;
+
 
 # instance fields
-.field public final a:Lik4;
+.field public c:Landroid/os/IBinder;
 
-.field public final b:Luha;
 
-.field public final c:Lq85;
+# virtual methods
+.method public final C(Lbf7;I)V
+    .locals 3
 
-.field public final d:Lkk4;
-
-.field public final e:Landroid/content/Context;
-
-.field public final f:Lv25;
-
-.field public final g:Lux4;
-
-.field public final h:Lfm4;
-
-.field public final i:Lbk5;
-
-.field public final j:Lbe7;
-
-.field public final k:Lwe4;
-
-.field public final l:Lnx4;
-
-.field public final m:Lvha;
-
-.field public final n:Lvui;
-
-.field public final o:Lv5c;
-
-.field public final p:Lkme;
-
-.field public final q:Ljava/util/Set;
-
-.field public final r:Lrd5;
-
-.field public final s:Lrd5;
-
-.field public final t:Z
-
-.field public final u:Lnx4;
-
-.field public final v:Lk34;
-
-.field public final w:Lpea;
-
-.field public final x:Z
-
-.field public final y:Lrha;
-
-.field public final z:Lq85;
-
-
-# direct methods
-.method public constructor <init>(Lef7;)V
-    .locals 7
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lml6;->i()Lll6;
-
-    iget-object v0, p1, Lef7;->l:Llk6;
-
-    new-instance v1, Lpea;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iget v2, v0, Llk6;->b:I
-
-    iput v2, v1, Lpea;->a:I
-
-    new-instance v2, Llcj;
-
-    const/16 v3, 0x15
-
-    invoke-direct {v2, v3}, Llcj;-><init>(I)V
-
-    iput-object v2, v1, Lpea;->c:Ljava/lang/Object;
-
-    iget-object v2, v0, Llk6;->c:Ljava/lang/Object;
-
-    check-cast v2, Llx4;
-
-    iput-object v2, v1, Lpea;->d:Ljava/lang/Object;
-
-    iget-object v0, v0, Llk6;->d:Ljava/lang/Object;
-
-    check-cast v0, Lr8j;
-
-    iput-object v0, v1, Lpea;->b:Ljava/lang/Object;
-
-    iput-object v1, p0, Lff7;->w:Lpea;
-
-    new-instance v0, Lik4;
-
-    iget-object v1, p1, Lef7;->b:Landroid/content/Context;
-
-    const-string v2, "activity"
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_a
-
-    check-cast v1, Landroid/app/ActivityManager;
-
-    invoke-direct {v0, v1}, Lik4;-><init>(Landroid/app/ActivityManager;)V
-
-    iput-object v0, p0, Lff7;->a:Lik4;
-
-    new-instance v0, Luha;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Luha;-><init>(I)V
-
-    iput-object v0, p0, Lff7;->b:Luha;
-
-    new-instance v0, Lq85;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lq85;-><init>(I)V
-
-    iput-object v0, p0, Lff7;->c:Lq85;
-
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    iget-object v0, p1, Lef7;->a:Ldzf;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lkk4;->t()Lkk4;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    :cond_0
-    iput-object v0, p0, Lff7;->d:Lkk4;
-
-    iget-object v0, p1, Lef7;->b:Landroid/content/Context;
-
-    if-eqz v0, :cond_9
-
-    iput-object v0, p0, Lff7;->e:Landroid/content/Context;
-
-    iget-object v0, p1, Lef7;->c:Lv25;
-
-    iput-object v0, p0, Lff7;->f:Lv25;
-
-    new-instance v0, Lfm4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lff7;->h:Lfm4;
-
-    iget-object v0, p1, Lef7;->e:Ls7c;
-
-    if-nez v0, :cond_2
-
-    const-class v1, Luha;
-
-    monitor-enter v1
-
     :try_start_0
-    sget-object v0, Luha;->b:Luha;
+    const-string v1, "androidx.media3.session.IMediaSession"
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    new-instance v0, Luha;
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {v0, v2}, Luha;-><init>(I)V
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
 
-    sput-object v0, Luha;->b:Luha;
+    const/4 p2, 0x0
 
-    goto :goto_0
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbdc
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
 
     :catchall_0
     move-exception p1
 
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    sget-object v0, Luha;->b:Luha;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1
+.end method
 
-    :cond_2
-    :goto_2
-    iput-object v0, p0, Lff7;->j:Lbe7;
+.method public final E(Lbf7;IJ)V
+    .locals 2
 
-    sget-object v0, Lhni;->a:Lwe4;
-
-    iput-object v0, p0, Lff7;->k:Lwe4;
-
-    iget-object v0, p1, Lef7;->f:Lnx4;
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p1, Lef7;->b:Landroid/content/Context;
-
-    invoke-static {}, Lml6;->i()Lll6;
-
-    new-instance v1, Lmx4;
-
-    invoke-direct {v1, v0}, Lmx4;-><init>(Landroid/content/Context;)V
-
-    new-instance v0, Lnx4;
-
-    invoke-direct {v0, v1}, Lnx4;-><init>(Lmx4;)V
-
-    :cond_3
-    iput-object v0, p0, Lff7;->l:Lnx4;
-
-    invoke-static {}, Lvha;->b()Lvha;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lff7;->m:Lvha;
-
-    invoke-static {}, Lml6;->i()Lll6;
-
-    iget-object v1, p1, Lef7;->g:Lh0g;
-
-    if-nez v1, :cond_4
-
-    new-instance v1, Lka7;
-
-    invoke-direct {v1}, Lka7;-><init>()V
-
-    :cond_4
-    iput-object v1, p0, Lff7;->n:Lvui;
-
-    iget-object v1, p1, Lef7;->h:Lv5c;
-
-    if-nez v1, :cond_5
-
-    new-instance v1, Lv5c;
-
-    new-instance v2, Lfa6;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v3, Luy5;
-
-    invoke-direct {v3, v2}, Luy5;-><init>(Lfa6;)V
-
-    invoke-direct {v1, v3}, Lv5c;-><init>(Luy5;)V
-
-    :cond_5
-    iput-object v1, p0, Lff7;->o:Lv5c;
-
-    new-instance v2, Lkme;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Lkme;-><init>(I)V
-
-    iput-object v2, p0, Lff7;->p:Lkme;
-
-    iget-object v2, p1, Lef7;->i:Ljava/util/Set;
-
-    if-nez v2, :cond_6
-
-    sget-object v2, Lrd5;->a:Lrd5;
-
-    :cond_6
-    iput-object v2, p0, Lff7;->q:Ljava/util/Set;
-
-    sget-object v2, Lrd5;->a:Lrd5;
-
-    iput-object v2, p0, Lff7;->r:Lrd5;
-
-    iput-object v2, p0, Lff7;->s:Lrd5;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lff7;->t:Z
-
-    iget-object v3, p1, Lef7;->j:Lnx4;
-
-    if-nez v3, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    move-object v0, v3
-
-    :goto_3
-    iput-object v0, p0, Lff7;->u:Lnx4;
-
-    iget-object v0, p1, Lef7;->k:Lk34;
-
-    iput-object v0, p0, Lff7;->v:Lk34;
-
-    iget-object v0, v1, Lv5c;->a:Luy5;
-
-    iget-object v0, v0, Luy5;->d:Ljava/lang/Object;
-
-    check-cast v0, Lw5c;
-
-    iget v0, v0, Lw5c;->d:I
-
-    iget-object v1, p1, Lef7;->d:Lzva;
-
-    if-nez v1, :cond_8
-
-    new-instance v1, Lb4;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v3, Lpc4;
-
-    const-string v4, "FrescoIoBoundExecutor"
-
-    const/4 v5, 0x1
-
-    invoke-direct {v3, v4, v5}, Lpc4;-><init>(Ljava/lang/String;I)V
-
-    const/4 v4, 0x2
-
-    invoke-static {v4, v3}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lb4;->a:Ljava/lang/Object;
-
-    new-instance v3, Lpc4;
-
-    const-string v4, "FrescoDecodeExecutor"
-
-    invoke-direct {v3, v4, v5}, Lpc4;-><init>(Ljava/lang/String;I)V
-
-    invoke-static {v0, v3}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lb4;->b:Ljava/lang/Object;
-
-    new-instance v3, Lpc4;
-
-    const-string v4, "FrescoBackgroundExecutor"
-
-    invoke-direct {v3, v4, v5}, Lpc4;-><init>(Ljava/lang/String;I)V
-
-    invoke-static {v0, v3}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lb4;->c:Ljava/lang/Object;
-
-    new-instance v3, Lpc4;
-
-    const-string v5, "FrescoLightWeightBackgroundExecutor"
-
-    const/4 v6, 0x1
-
-    invoke-direct {v3, v5, v6}, Lpc4;-><init>(Ljava/lang/String;I)V
-
-    const/4 v5, 0x1
-
-    invoke-static {v5, v3}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lb4;->d:Ljava/lang/Object;
-
-    new-instance v3, Lpc4;
-
-    invoke-direct {v3, v4, v5}, Lpc4;-><init>(Ljava/lang/String;I)V
-
-    invoke-static {v0, v3}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    iput-object v0, v1, Lb4;->o:Ljava/lang/Object;
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
 
-    :cond_8
-    iput-object v1, p0, Lff7;->i:Lbk5;
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    iput-boolean v2, p0, Lff7;->x:Z
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
 
-    iget-object p1, p1, Lef7;->m:Lrha;
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iput-object p1, p0, Lff7;->y:Lrha;
+    invoke-virtual {v0, p3, p4}, Landroid/os/Parcel;->writeLong(J)V
 
-    new-instance p1, Lq85;
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
 
-    const/16 v0, 0x11
+    const/4 p2, 0x0
 
-    invoke-direct {p1, v0}, Lq85;-><init>(I)V
+    const/4 p3, 0x1
 
-    iput-object p1, p0, Lff7;->z:Lq85;
+    const/16 p4, 0xbde
 
-    new-instance p1, Lux4;
+    invoke-interface {p1, p4, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v0, Lv17;
-
-    const/16 v1, 0x13
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lv17;-><init>(IB)V
-
-    invoke-direct {p1, v0, p0}, Lux4;-><init>(Lv17;Lff7;)V
-
-    iput-object p1, p0, Lff7;->g:Lux4;
-
-    invoke-static {}, Lml6;->i()Lll6;
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
-    :cond_9
-    const-string p1, "Required value was null."
+    :catchall_0
+    move-exception p1
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    throw p1
+.end method
 
-    throw v0
+.method public final F(Lbf7;I)V
+    .locals 3
 
-    :cond_a
-    const-string p1, "Required value was null."
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
 
-    throw v0
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbd2
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final G(Lbf7;ILandroid/os/Bundle;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbbf
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final H(Lbf7;I)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbdb
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final L(Lbf7;ILandroid/os/Bundle;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbc7
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final M(Lbf7;ILandroid/os/Bundle;Z)V
+    .locals 1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object p4
+
+    :try_start_0
+    const-string v0, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {p4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {p4, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {p4, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p4, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p4, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/16 p3, 0xbc1
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p3, p4, v0, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p4}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p4}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final N(Lbf7;)V
+    .locals 4
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0xbe5
+
+    invoke-interface {p1, v3, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final Q(Lbf7;ILandroid/os/Bundle;Landroid/os/Bundle;)V
+    .locals 2
+
+    sget-object p4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-static {v0, p4}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 p4, 0xbc8
+
+    invoke-interface {p1, p4, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final S(Lbf7;I)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbda
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final a(Lbf7;ILandroid/os/Bundle;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbc6
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lff7;->c:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
+.method public final d(Lbf7;ILandroid/os/Bundle;Z)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 p4, 0xbf1
+
+    invoke-interface {p1, p4, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final e(Lbf7;I)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbd1
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final h(Lbf7;ILandroid/os/Bundle;J)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {v0, p3}, Lnsi;->b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, p4, p5}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 p4, 0xbc0
+
+    invoke-interface {p1, p4, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final m(Lbf7;I)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xbd0
+
+    invoke-interface {p1, v2, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final q(Lbf7;ILandroid/os/IBinder;IJ)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p5, p6}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 p4, 0xbc4
+
+    invoke-interface {p1, p4, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final s(Lbf7;IF)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbd4
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final t(Lbf7;IF)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbba
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final y(Lbf7;ILandroid/os/IBinder;Z)V
+    .locals 1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object p4
+
+    :try_start_0
+    const-string v0, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {p4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {p4, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {p4, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p4, p3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p4, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/16 p3, 0xbc3
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p3, p4, v0, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p4}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p4}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+.end method
+
+.method public final z(Lbf7;II)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "androidx.media3.session.IMediaSession"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p1, p0, Lff7;->c:Landroid/os/IBinder;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/16 v1, 0xbcb
+
+    invoke-interface {p1, v1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
 .end method

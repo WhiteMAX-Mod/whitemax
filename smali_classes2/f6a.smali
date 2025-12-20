@@ -1,55 +1,48 @@
 .class public final Lf6a;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ll84;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lv0a;
 
-.field public final b:Ljava/util/Set;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Ljava/util/List;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Lv0a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lf6a;->X:Lv0a;
 
-    and-int/2addr p1, v0
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 5
-    :cond_0
-    sget-object p1, Lrd5;->a:Lrd5;
-
-    .line 6
-    sget-object v1, Lhd5;->a:Lhd5;
-
-    .line 7
-    invoke-direct {p0, v0, p1, v1}, Lf6a;-><init>(ZLjava/util/Set;Ljava/util/List;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ZLjava/util/Set;Ljava/util/List;)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    iput-boolean p1, p0, Lf6a;->a:Z
+    iput-object p1, p0, Lf6a;->d:Ljava/lang/Object;
 
-    .line 3
-    iput-object p2, p0, Lf6a;->b:Ljava/util/Set;
+    iget p1, p0, Lf6a;->o:I
 
-    .line 4
-    iput-object p3, p0, Lf6a;->c:Ljava/util/List;
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lf6a;->o:I
+
+    iget-object p1, p0, Lf6a;->X:Lv0a;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lv0a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

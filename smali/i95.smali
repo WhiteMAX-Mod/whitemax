@@ -1,31 +1,52 @@
-.class public final Li95;
+.class public interface abstract Li95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
+
+# static fields
+.field public static final a:Lf95;
 
 
-# instance fields
-.field public a:Landroid/media/metrics/EditingSession;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public b:Z
+    new-instance v0, Lf95;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Li95;->a:Lf95;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public abstract a(Lb95;Lrj6;)Lx85;
+.end method
 
-    iget-object v0, p0, Li95;->a:Landroid/media/metrics/EditingSession;
+.method public b(Lb95;Lrj6;)Lg95;
+    .locals 0
 
-    if-eqz v0, :cond_0
+    sget-object p1, Lg95;->p:Lwp4;
 
-    invoke-static {v0}, Le5;->w(Landroid/media/metrics/EditingSession;)V
+    return-object p1
+.end method
 
-    const/4 v0, 0x0
+.method public abstract c(Landroid/os/Looper;Lpbc;)V
+.end method
 
-    iput-object v0, p0, Li95;->a:Landroid/media/metrics/EditingSession;
+.method public abstract d(Lrj6;)I
+.end method
 
-    :cond_0
+.method public prepare()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public release()V
+    .locals 0
+
     return-void
 .end method

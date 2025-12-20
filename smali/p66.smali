@@ -1,132 +1,130 @@
 .class public final Lp66;
-.super Li66;
+.super Lhrd;
 .source "SourceFile"
+
+# interfaces
+.implements Lm66;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lp66;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic b:I
+.field public X:F
 
-.field public final c:Ljava/lang/Object;
+.field public Y:I
 
-.field public final d:Ltm6;
+.field public Z:F
+
+.field public o:F
+
+.field public s0:I
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ltm6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lp66;->b:I
+    new-instance v0, Lwj4;
 
-    iput-object p1, p0, Lp66;->c:Ljava/lang/Object;
+    const/16 v1, 0xc
 
-    iput-object p2, p0, Lp66;->d:Ltm6;
+    invoke-direct {v0, v1}, Lwj4;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lp66;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lq76;)V
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    iget v0, p0, Lp66;->b:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    :try_start_0
-    iget-object v0, p0, Lp66;->d:Ltm6;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    check-cast v0, Lb1g;
+    iget p2, p0, Lp66;->o:F
 
-    iget-object v1, p0, Lp66;->c:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-virtual {v0, v1}, Lb1g;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p2, p0, Lp66;->X:F
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    check-cast v0, Lmqc;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    iget p2, p0, Lp66;->Y:I
 
-    instance-of v1, v0, Ldrf;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz v1, :cond_1
+    iget p2, p0, Lp66;->Z:F
 
-    :try_start_1
-    check-cast v0, Ldrf;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-interface {v0}, Ldrf;->get()Ljava/lang/Object;
+    iget p2, p0, Lp66;->s0:I
 
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-nez v0, :cond_0
+    iget p2, p0, Lp66;->t0:I
 
-    sget-object v0, Lxd5;->a:Lxd5;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-interface {p1, v0}, Laof;->d(Lcof;)V
+    iget p2, p0, Lp66;->u0:I
 
-    invoke-interface {p1}, Laof;->b()V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    goto :goto_0
+    iget p2, p0, Lp66;->v0:I
 
-    :cond_0
-    new-instance v1, Lnyd;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {v1, p1, v0}, Lnyd;-><init>(Laof;Ljava/lang/Object;)V
+    iget-boolean p2, p0, Lp66;->w0:Z
 
-    invoke-interface {p1, v1}, Laof;->d(Lcof;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    goto :goto_0
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    invoke-static {v0, p1}, Lxd5;->a(Ljava/lang/Throwable;Laof;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    goto :goto_0
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    :cond_1
-    check-cast v0, Li66;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p1}, Li66;->e(Laof;)V
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :catchall_1
-    move-exception v0
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {v0, p1}, Lxd5;->a(Ljava/lang/Throwable;Laof;)V
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lp66;->c:Ljava/lang/Object;
-
-    check-cast v0, Lr66;
-
-    new-instance v1, Lo66;
-
-    iget-object v2, p0, Lp66;->d:Ltm6;
-
-    check-cast v2, Lfgf;
-
-    invoke-direct {v1, p1, v2}, Lo66;-><init>(Laof;Lfgf;)V
-
-    invoke-virtual {v0, v1}, Li66;->c(Lq76;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

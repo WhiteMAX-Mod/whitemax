@@ -1,9 +1,24 @@
 .class public final Lye1;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
-# interfaces
-.implements Lbf1;
+
+# instance fields
+.field public final b:Lbhg;
+
+
+# direct methods
+.method public constructor <init>(Lbhg;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+
+    iput-object p1, p0, Lye1;->b:Lbhg;
+
+    return-void
+.end method
 
 
 # virtual methods
@@ -24,11 +39,11 @@
     :cond_1
     check-cast p1, Lye1;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lye1;->b:Lbhg;
 
-    sget-object p1, Ls5g;->b:Lr5g;
+    iget-object p1, p1, Lye1;->b:Lbhg;
 
-    invoke-virtual {p1, p1}, Lr5g;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -46,20 +61,14 @@
     return p1
 .end method
 
-.method public final getText()Ls5g;
-    .locals 1
-
-    sget-object v0, Ls5g;->b:Lr5g;
-
-    return-object v0
-.end method
-
 .method public final hashCode()I
     .locals 1
 
-    sget-object v0, Ls5g;->b:Lr5g;
+    iget-object v0, p0, Lye1;->b:Lbhg;
 
-    invoke-virtual {v0}, Lr5g;->hashCode()I
+    iget v0, v0, Lbhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -71,11 +80,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Error(text="
+    const-string v1, "ShowSnackbar(message="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Ls5g;->b:Lr5g;
+    iget-object v1, p0, Lye1;->b:Lbhg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

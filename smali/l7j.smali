@@ -3,51 +3,57 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
+
+
 # direct methods
-.method public static final a(Llrd;)Lz74;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 5
 
-    iget-object v0, p0, Llrd;->k:Ljava/util/Map;
+    new-instance v0, Ljava/util/HashSet;
 
-    const-string v1, "QueryDispatcher"
+    const-string v1, "unity"
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "native"
 
-    move-result-object v2
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    if-nez v2, :cond_1
+    move-result-object v1
 
-    iget-object p0, p0, Llrd;->b:Ljava/util/concurrent/Executor;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-nez p0, :cond_0
+    move-result-object v1
 
-    const/4 p0, 0x0
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    :cond_0
-    invoke-static {p0}, Ltaj;->b(Ljava/util/concurrent/Executor;)Lz74;
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object v2
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v0, Ll7j;->a:Ljava/util/HashMap;
 
-    :cond_1
-    check-cast v2, Lz74;
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    return-object v2
-.end method
+    move-result v0
 
-.method public static final b(Lesg;)V
-    .locals 2
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    new-instance v0, Lbya;
+    move-result v1
 
-    const/16 v1, 0xe
+    const-string v2, "]  PID: ["
 
-    invoke-direct {v0, v1}, Lbya;-><init>(I)V
+    const-string v3, "] "
 
-    const/4 v1, 0x1
+    const-string v4, "UID: ["
 
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+    invoke-static {v4, v0, v2, v1, v3}, Lx02;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PlayCoreVersion"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 .end method

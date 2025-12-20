@@ -1,234 +1,138 @@
-.class public final Lhl2;
+.class public final synthetic Lhl2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljve;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic c:Lil2;
 
 
 # direct methods
-.method public constructor <init>(JLtw0;Llzf;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lil2;I)V
     .locals 0
 
+    iput p3, p0, Lhl2;->a:I
+
+    iput-object p1, p0, Lhl2;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Lhl2;->c:Lil2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lhl2;->a:J
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Lkve;->b(III)Ljve;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhl2;->b:Ljve;
-
-    check-cast p4, Lq2b;
-
-    invoke-virtual {p4}, Lq2b;->a()Lz74;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhl2;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p3, p0}, Ltw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfl2;)V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Lgl2;
+    iget v0, p0, Lhl2;->a:I
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lgl2;-><init>(Lhl2;Lfl2;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lhl2;->c:Lil2;
 
-    const/4 p1, 0x3
+    iget-object v3, p0, Lhl2;->b:Landroid/content/Context;
 
-    iget-object v2, p0, Lhl2;->c:Lkotlinx/coroutines/internal/ContextScope;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+    new-instance v0, Lzfb;
 
-    return-void
-.end method
+    invoke-direct {v0, v3}, Lzfb;-><init>(Landroid/content/Context;)V
 
-.method public final onEvent(Lgj7;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
+    sget v3, Ly4e;->h:I
 
-    .line 6
-    iget-wide v0, p1, Lgj7;->b:J
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
 
-    .line 7
-    iget-wide v2, p0, Lhl2;->a:J
+    new-instance v3, Lxe;
 
-    cmp-long v0, v0, v2
+    const/4 v4, 0x7
 
-    if-nez v0, :cond_1
+    invoke-direct {v3, v4, v0, v0}, Lxe;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
 
-    iget-boolean v0, p1, Lgj7;->X:Z
+    invoke-static {v0, v3}, Lcnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lcnb;
 
-    if-eqz v0, :cond_0
+    sget-object v3, Lvfb;->a:Lvfb;
 
-    goto :goto_0
+    invoke-virtual {v0, v3}, Lzfb;->setSize(Lxfb;)V
 
-    .line 8
-    :cond_0
-    new-instance v0, Lal2;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 9
-    iget-wide v1, p1, Lgj7;->c:J
+    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 10
-    invoke-direct {v0, v1, v2}, Lal2;-><init>(J)V
+    return-object v0
 
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
+    :pswitch_0
+    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    const/4 v4, 0x0
 
-.method public final onEvent(Litg;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
+    invoke-direct {v0, v3, v4}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1
-    iget-wide v0, p1, Litg;->b:J
+    sget v3, Lifb;->M:I
 
-    .line 2
-    iget-wide v2, p0, Lhl2;->a:J
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
 
-    cmp-long v0, v0, v2
+    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
 
-    if-eqz v0, :cond_0
+    const/4 v4, -0x2
 
-    return-void
+    invoke-direct {v3, v1, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 3
-    :cond_0
-    new-instance v0, Lel2;
+    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 4
-    iget-wide v1, p1, Litg;->c:J
+    const/4 v1, 0x2
 
-    .line 5
-    invoke-direct {v0, v1, v2}, Lel2;-><init>(J)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
 
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-.method public final onEvent(Lp05;)V
-    .locals 3
-    .annotation runtime Lvnf;
-    .end annotation
+    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
-    .line 16
-    new-instance v0, Lbl2;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    iget-wide v1, p1, Lp05;->o:J
+    const/16 v1, 0x8
 
-    iget-object p1, p1, Lp05;->d:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {v0, v1, v2, p1}, Lbl2;-><init>(JLjava/lang/String;)V
+    sget-object v1, Ll23;->a:Lhhg;
 
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
+    sget-object v1, Lj1h;->f:Lhhg;
 
-    return-void
-.end method
+    invoke-static {v1, v0}, Lhhg;->d(Lhhg;Landroid/widget/TextView;)V
 
-.method public final onEvent(Lq4a;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
+    sget-object v1, Ldc3;->s0:Lole;
 
-    .line 18
-    iget-wide v0, p1, Lq4a;->b:J
+    invoke-virtual {v1, v0}, Lole;->n(Landroid/view/View;)Lplb;
 
-    iget-wide v2, p0, Lhl2;->a:J
+    move-result-object v1
 
-    cmp-long v0, v0, v2
+    invoke-interface {v1}, Lplb;->getText()Lifg;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    return-void
+    iget v1, v1, Lifg;->e:I
 
-    .line 19
-    :cond_0
-    new-instance v0, Ldl2;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object p1, p1, Lq4a;->o:Ljava/util/List;
+    invoke-static {v0, v2}, Lq4j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    invoke-direct {v0, p1}, Ldl2;-><init>(Ljava/util/List;)V
+    return-object v0
 
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
+    nop
 
-    return-void
-.end method
-
-.method public final onEvent(Lr05;)V
-    .locals 3
-    .annotation runtime Lvnf;
-    .end annotation
-
-    .line 17
-    new-instance v0, Lcl2;
-
-    iget-wide v1, p1, Lr05;->d:J
-
-    invoke-direct {v0, v1, v2}, Lcl2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lxjb;)V
-    .locals 4
-    .annotation runtime Lvnf;
-    .end annotation
-
-    .line 11
-    iget-wide v0, p1, Lxjb;->b:J
-
-    .line 12
-    iget-wide v2, p0, Lhl2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 13
-    :cond_0
-    new-instance v0, Lal2;
-
-    .line 14
-    iget-wide v1, p1, Lxjb;->d:J
-
-    .line 15
-    invoke-direct {v0, v1, v2}, Lal2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lhl2;->a(Lfl2;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

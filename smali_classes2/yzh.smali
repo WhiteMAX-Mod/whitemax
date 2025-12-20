@@ -1,14 +1,19 @@
-.class public interface abstract Lyzh;
+.class public final Lyzh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Lxzh;)V
-.end method
+.method public final serializer()Lq38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq38;"
+        }
+    .end annotation
 
-.method public b(Lvzh;Z)V
-    .locals 0
+    sget-object v0, Lxzh;->a:Lxzh;
 
-    return-void
+    return-object v0
 .end method

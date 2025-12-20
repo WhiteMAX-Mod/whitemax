@@ -1,87 +1,125 @@
-.class public final Lze2;
+.class public abstract synthetic Lze2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:I
-
-.field public final c:J
-
-.field public final d:Ljava/lang/String;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lye2;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x7
 
-    iget-wide v0, p1, Lye2;->b:J
+    invoke-static {v0}, Lc12;->z(I)[I
 
-    iput-wide v0, p0, Lze2;->a:J
+    move-result-object v1
 
-    iget v0, p1, Lye2;->a:I
+    array-length v1, v1
 
-    iput v0, p0, Lze2;->b:I
+    new-array v1, v1, [I
 
-    iget-wide v0, p1, Lye2;->c:J
+    const/4 v2, 0x1
 
-    iput-wide v0, p0, Lze2;->c:J
+    const/4 v3, 0x2
 
-    iget-object p1, p1, Lye2;->d:Ljava/io/Serializable;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast p1, Ljava/lang/String;
+    :catch_0
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iput-object p1, p0, Lze2;->d:Ljava/lang/String;
+    :catch_1
+    const/4 v4, 0x3
 
-    return-void
-.end method
+    :try_start_2
+    aput v4, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    :catch_2
+    const/4 v5, 0x4
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :try_start_3
+    aput v5, v1, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :catch_3
+    const/4 v6, 0x0
 
-    const-string v1, "AdminParticipant{id="
+    const/4 v7, 0x5
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_4
+    aput v7, v1, v6
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    iget-wide v1, p0, Lze2;->a:J
+    :catch_4
+    const/4 v8, 0x6
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :try_start_5
+    aput v8, v1, v7
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    const-string v1, ", permissions="
+    :catch_5
+    :try_start_6
+    aput v0, v1, v8
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_6
+    sput-object v1, Lze2;->$EnumSwitchMapping$0:[I
 
-    iget v1, p0, Lze2;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inviterId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lze2;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", alias=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lze2;->d:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Lye2;->values()[Lye2;
 
     move-result-object v0
 
-    return-object v0
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_7
+    aput v2, v0, v6
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    aput v3, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    :try_start_9
+    aput v4, v0, v4
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    :try_start_a
+    aput v5, v0, v5
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    :try_start_b
+    aput v7, v0, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    sput-object v0, Lze2;->$EnumSwitchMapping$1:[I
+
+    return-void
 .end method

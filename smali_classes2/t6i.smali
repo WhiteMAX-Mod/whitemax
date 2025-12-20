@@ -1,140 +1,189 @@
 .class public final Lt6i;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-.field public final b:I
-
-.field public final c:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lt6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    iput p1, p0, Lt6i;->a:I
+    const/4 p2, 0x2
 
-    iput p2, p0, Lt6i;->b:I
-
-    iput p3, p0, Lt6i;->c:I
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lt6i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lt6i;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lt6i;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lt6i;
 
-    goto :goto_1
+    iget-object v1, p0, Lt6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+    invoke-direct {v0, p2, v1}, Lt6i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+
+    iput-object p1, v0, Lt6i;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lt6i;->o:Ljava/lang/Object;
+
+    check-cast p1, Lg9e;
+
+    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0:[Lp38;
+
+    iget-object v0, p0, Lt6i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+    invoke-virtual {v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Ln8i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lb9e;->a:Lb9e;
+
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object p1, v0, Ln8i;->k1:Ls1i;
+
+    if-eqz p1, :cond_4
+
+    sget-object v1, Lt1i;->c:Lt1i;
+
+    invoke-virtual {p1, v1}, Lh08;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lt6i;
+    sget-object v1, Lc9e;->a:Lc9e;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p1, v0, Ln8i;->k1:Ls1i;
+
+    if-eqz p1, :cond_4
+
+    sget-object v1, Lu1i;->c:Lu1i;
+
+    invoke-virtual {p1, v1}, Lh08;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lt6i;
+    sget-object v1, Ld9e;->a:Ld9e;
 
-    iget v0, p0, Lt6i;->a:I
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p1, Lt6i;->a:I
+    move-result v1
 
-    if-eq v0, v1, :cond_2
+    if-eqz v1, :cond_2
+
+    iget-object p1, v0, Ln8i;->k1:Ls1i;
+
+    if-eqz p1, :cond_4
+
+    sget-object v1, Lv1i;->c:Lv1i;
+
+    invoke-virtual {p1, v1}, Lh08;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lt6i;->b:I
+    sget-object v1, Lf9e;->a:Lf9e;
 
-    iget v1, p1, Lt6i;->b:I
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eq v0, v1, :cond_3
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object p1, v0, Ln8i;->k1:Ls1i;
+
+    if-eqz p1, :cond_4
+
+    sget-object v1, Lw1i;->c:Lw1i;
+
+    invoke-virtual {p1, v1}, Lh08;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lt6i;->c:I
+    instance-of v1, p1, Le9e;
 
-    iget p1, p1, Lt6i;->c:I
+    if-eqz v1, :cond_5
 
-    if-eq v0, p1, :cond_4
+    iget-object v1, v0, Ln8i;->k1:Ls1i;
 
-    :goto_0
-    const/4 p1, 0x0
+    if-eqz v1, :cond_4
 
-    return p1
+    check-cast p1, Le9e;
+
+    iget-object p1, p1, Le9e;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Lh08;->a(Ljava/lang/Object;)V
 
     :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    :goto_0
+    iget-object p1, v0, Ln8i;->e1:Lhof;
 
-    return p1
-.end method
+    const/4 v0, 0x0
 
-.method public final hashCode()I
-    .locals 3
+    invoke-virtual {p1, v0}, Lhof;->setValue(Ljava/lang/Object;)V
 
-    iget v0, p0, Lt6i;->a:I
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    return-object p1
 
-    move-result v0
+    :cond_5
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    const/16 v1, 0x1f
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lt6i;->b:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v1, p0, Lt6i;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", input="
-
-    const-string v1, ", themed="
-
-    const-string v2, "WritebarStrokeColors(areaSeparator="
-
-    iget v3, p0, Lt6i;->a:I
-
-    iget v4, p0, Lt6i;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Lt6i;->c:I
-
-    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

@@ -1,117 +1,76 @@
-.class public final Ls8d;
-.super Lu8d;
-.source "SourceFile"
+.class public abstract Ls8d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static check_button:I = 0x7f0a02a0
 
-.field public final b:J
+.field public static check_button_parent:I = 0x7f0a02a1
 
+.field public static check_button_view_stub:I = 0x7f0a02a2
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.field public static media_bar_view__iv_constructor:I = 0x7f0a048b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static media_bar_view__iv_contact:I = 0x7f0a048c
 
-    iput-wide p1, p0, Ls8d;->a:J
+.field public static media_bar_view__iv_drawing:I = 0x7f0a048d
 
-    iput-wide p3, p0, Ls8d;->b:J
+.field public static media_bar_view__iv_file:I = 0x7f0a048e
 
-    return-void
-.end method
+.field public static media_bar_view__iv_gallery:I = 0x7f0a048f
 
+.field public static media_bar_view__iv_location:I = 0x7f0a0491
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static media_bar_view__iv_photo:I = 0x7f0a0492
 
-    const/4 v0, 0x1
+.field public static media_bar_view__iv_video:I = 0x7f0a0494
 
-    if-ne p0, p1, :cond_0
+.field public static media_bar_view__ll_constructor:I = 0x7f0a0495
 
-    return v0
+.field public static media_bar_view__ll_contact:I = 0x7f0a0496
 
-    :cond_0
-    instance-of v1, p1, Ls8d;
+.field public static media_bar_view__ll_drawing:I = 0x7f0a0497
 
-    const/4 v2, 0x0
+.field public static media_bar_view__ll_file:I = 0x7f0a0498
 
-    if-nez v1, :cond_1
+.field public static media_bar_view__ll_gallery:I = 0x7f0a0499
 
-    return v2
+.field public static media_bar_view__ll_layout_create:I = 0x7f0a049a
 
-    :cond_1
-    check-cast p1, Ls8d;
+.field public static media_bar_view__ll_location:I = 0x7f0a049b
 
-    iget-wide v3, p0, Ls8d;->a:J
+.field public static media_bar_view__ll_photo:I = 0x7f0a049c
 
-    iget-wide v5, p1, Ls8d;->a:J
+.field public static media_bar_view__ll_video:I = 0x7f0a049d
 
-    cmp-long v1, v3, v5
+.field public static media_bar_view__tv_constructor:I = 0x7f0a049e
 
-    if-eqz v1, :cond_2
+.field public static media_bar_view__tv_contact:I = 0x7f0a049f
 
-    return v2
+.field public static media_bar_view__tv_drawing:I = 0x7f0a04a0
 
-    :cond_2
-    iget-wide v3, p0, Ls8d;->b:J
+.field public static media_bar_view__tv_file:I = 0x7f0a04a1
 
-    iget-wide v5, p1, Ls8d;->b:J
+.field public static media_bar_view__tv_gallery:I = 0x7f0a04a2
 
-    cmp-long p1, v3, v5
+.field public static media_bar_view__tv_location:I = 0x7f0a04a4
 
-    if-eqz p1, :cond_3
+.field public static media_bar_view__tv_photo:I = 0x7f0a04a5
 
-    return v2
+.field public static media_bar_view__tv_video:I = 0x7f0a04a7
 
-    :cond_3
-    return v0
-.end method
+.field public static media_permissions_view_button:I = 0x7f0a04b1
 
-.method public final hashCode()I
-    .locals 3
+.field public static media_permissions_view_title:I = 0x7f0a04b2
 
-    iget-wide v0, p0, Ls8d;->a:J
+.field public static quick_camera_view__cv_camera:I = 0x7f0a0a13
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.field public static row_media_bar_actions__icon:I = 0x7f0a0a9f
 
-    move-result v0
+.field public static row_media_bar_actions__title:I = 0x7f0a0aa0
 
-    mul-int/lit8 v0, v0, 0x1f
+.field public static select_album_content_container:I = 0x7f0a0b46
 
-    iget-wide v1, p0, Ls8d;->b:J
+.field public static simple_drawee_view:I = 0x7f0a0bcd
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Success(messageId="
-
-    const-string v1, ", totalBytes="
-
-    iget-wide v2, p0, Ls8d;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ls8d;->b:J
-
-    invoke-static {v0, v2, v3, v1}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static video_info:I = 0x7f0a0c74

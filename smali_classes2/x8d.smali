@@ -1,160 +1,46 @@
-.class public final Lx8d;
+.class public abstract Lx8d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-.implements Ljava/lang/CharSequence;
-.implements Ljava/io/Serializable;
 
+# static fields
+.field public static oneme_section_avatar:I = 0x7f0a0781
 
-# instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public static oneme_section_description:I = 0x7f0a0782
 
+.field public static oneme_section_end_arrow:I = 0x7f0a0783
 
-# direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
-    .locals 0
+.field public static oneme_section_end_checkbox:I = 0x7f0a0784
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_section_end_container:I = 0x7f0a0785
 
-    iput-object p1, p0, Lx8d;->a:Ljava/lang/CharSequence;
+.field public static oneme_section_end_custom_icon:I = 0x7f0a0786
 
-    return-void
-.end method
+.field public static oneme_section_end_text:I = 0x7f0a0787
 
+.field public static oneme_section_name_viewtype:I = 0x7f0a0788
 
-# virtual methods
-.method public final charAt(I)C
-    .locals 1
+.field public static oneme_section_start_icon:I = 0x7f0a0789
 
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
+.field public static oneme_section_title:I = 0x7f0a078a
 
-    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
+.field public static oneme_section_upper_text:I = 0x7f0a078b
 
-    move-result p1
+.field public static oneme_settings_itemcontent_container:I = 0x7f0a0794
 
-    return p1
-.end method
+.field public static oneme_settings_itemcontent_counter:I = 0x7f0a0795
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a0796
 
-    check-cast p1, Lx8d;
+.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0797
 
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
+.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0798
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a0799
 
-    move-result-object v0
+.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a079a
 
-    iget-object p1, p1, Lx8d;->a:Ljava/lang/CharSequence;
+.field public static oneme_settings_sectionname_iconview:I = 0x7f0a0809
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+.field public static oneme_settings_sectionname_textview:I = 0x7f0a080a
 
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Lx8d;
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast p1, Lx8d;
-
-    iget-object p1, p1, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const-class v0, Lx8d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iget-object v1, p0, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final length()I
-    .locals 1
-
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final subSequence(II)Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lx8d;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_settingslist_rv:I = 0x7f0a085a

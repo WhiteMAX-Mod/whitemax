@@ -1,136 +1,171 @@
-.class public final Ltpi;
-.super Lu1a;
+.class public abstract Ltpi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lni0;
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-# instance fields
-.field public final X:Z
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Loi0;Lfyi;Ljava/util/concurrent/Executor;Lfcj;)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 13
 
-    invoke-direct {p0, p2, p3}, Lu1a;-><init>(Lfyi;Ljava/util/concurrent/Executor;)V
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-static {}, Lzei;->c()Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    move-result p2
+    sput-object v0, Ltpi;->a:Ljava/util/HashMap;
 
-    iput-boolean p2, p0, Ltpi;->X:Z
+    new-instance v1, Ljava/util/HashMap;
 
-    new-instance p3, Lhk4;
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+    sput-object v1, Ltpi;->b:Ljava/util/HashMap;
 
-    invoke-static {p1}, Lzei;->a(Loi0;)Lsbj;
+    const/4 v2, -0x2
 
-    move-result-object p1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, p3, Lhk4;->b:Ljava/lang/Object;
+    move-result-object v2
 
-    new-instance p1, Lh7j;
+    const-string v3, "An unknown error occurred."
 
-    invoke-direct {p1, p3}, Lh7j;-><init>(Lhk4;)V
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p3, Lra3;
+    const/4 v3, -0x3
 
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz p2, :cond_0
+    move-result-object v3
 
-    sget-object p2, Lt6j;->c:Lt6j;
+    const-string v4, "The API is not available on this device."
 
-    goto :goto_0
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p2, Lt6j;->b:Lt6j;
+    const/4 v4, -0x4
 
-    :goto_0
-    iput-object p2, p3, Lra3;->c:Ljava/lang/Object;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, p3, Lra3;->d:Ljava/lang/Object;
+    move-result-object v4
 
-    new-instance v3, Llk6;
+    const-string v5, "The request that was sent by the app is malformed."
 
-    const/4 p1, 0x1
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v3, p3, p1}, Llk6;-><init>(Lra3;I)V
+    const/4 v5, -0x5
 
-    sget-object v4, Lv6j;->v0:Lv6j;
-
-    invoke-virtual {p4}, Lfcj;->c()Ljava/lang/String;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    new-instance v0, Lb6i;
+    const-string v6, "The install is unavailable to this user or device."
 
-    const/16 v1, 0x9
+    invoke-virtual {v0, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    const/4 v6, -0x6
 
-    move-object v2, p4
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct/range {v0 .. v6}, Lb6i;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+    move-result-object v6
 
-    sget-object p1, Lspi;->a:Lspi;
+    const-string v7, "The download/install is not allowed, due to the current device state (e.g. low battery, low disk space, ...)."
 
-    invoke-virtual {p1, v0}, Lspi;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v7, -0x7
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const-string v8, "The install/update has not been (fully) downloaded yet."
+
+    invoke-virtual {v0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v8, -0x8
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const-string v9, "The install is already in progress and there is no UI flow to resume."
+
+    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v9, -0x9
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const-string v10, "The Play Store app is either not installed or not the official version."
+
+    invoke-virtual {v0, v9, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v10, -0xa
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const-string v11, "The app is not owned by any user on this device. An app is \"owned\" if it has been acquired from Play."
+
+    invoke-virtual {v0, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v11, -0x64
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    const-string v12, "An internal error happened in the Play Store."
+
+    invoke-virtual {v0, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_UNKNOWN"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_API_NOT_AVAILABLE"
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INVALID_REQUEST"
+
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_UNAVAILABLE"
+
+    invoke-virtual {v1, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_NOT_ALLOWED"
+
+    invoke-virtual {v1, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_DOWNLOAD_NOT_PRESENT"
+
+    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_IN_PROGRESS"
+
+    invoke-virtual {v1, v8, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INTERNAL_ERROR"
+
+    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "ERROR_PLAY_STORE_NOT_FOUND"
+
+    invoke-virtual {v1, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "ERROR_APP_NOT_OWNED"
+
+    invoke-virtual {v1, v10, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final declared-synchronized close()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-super {p0}, Lu1a;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final l()[Lqt5;
-    .locals 3
-
-    iget-boolean v0, p0, Ltpi;->X:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcjb;->a:[Lqt5;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lqt5;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lcjb;->b:Lqt5;
-
-    aput-object v2, v0, v1
-
-    return-object v0
 .end method

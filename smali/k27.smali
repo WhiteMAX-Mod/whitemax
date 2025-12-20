@@ -1,104 +1,71 @@
 .class public final Lk27;
-.super Ljava/lang/Object;
+.super Lo27;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lk27;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lk27;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-string v1, ""
-
-    invoke-static {v1}, Lcei;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-static {v1}, Lcei;->a(Ljava/lang/String;)Z
-
-    :cond_0
-    sput-object v0, Lk27;->a:Lk27;
-
-    return-void
-.end method
+# instance fields
+.field public d:I
 
 
 # virtual methods
-.method public final a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-    .locals 4
+.method public final a(Lt27;Landroid/view/View;Lz7f;IZ)I
+    .locals 1
 
-    const-string v0, "prefix = \""
+    const/4 v0, 0x0
 
-    const-string v1, ""
+    invoke-super/range {p0 .. p5}, Lo27;->a(Lt27;Landroid/view/View;Lz7f;IZ)I
 
-    const-string v2, "\","
+    move-result p1
 
-    invoke-static {p1, p2, v0, v1, v2}, Lho7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    const/16 v0, 0xa
+    move-result p1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final b(II)V
+    .locals 1
 
-    const-string v3, "suffix = \""
+    invoke-super {p0, p1, p2}, Lo27;->b(II)V
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lk27;->d:I
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr p1, p2
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "removeLeadingZeros = "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iput p1, p0, Lk27;->d:I
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final c()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0}, Lo27;->c()V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/high16 v0, -0x80000000
 
-    const-string v1, "NumberHexFormat(\n"
+    iput v0, p0, Lk27;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "    "
+.method public final d(Z)I
+    .locals 1
 
-    invoke-virtual {p0, v0, v1}, Lk27;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-super {p0, p1}, Lo27;->d(Z)I
 
-    const/16 v1, 0xa
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget v0, p0, Lk27;->d:I
 
-    const-string v1, ")"
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

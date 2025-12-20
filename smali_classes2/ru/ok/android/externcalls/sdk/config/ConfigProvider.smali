@@ -21,9 +21,9 @@
         "Lru/ok/android/externcalls/sdk/config/ConfigProvider;",
         "",
         "T",
-        "Le2f;",
+        "Lbdf;",
         "getConfig",
-        "()Le2f;",
+        "()Lbdf;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -37,11 +37,11 @@
 
 
 # virtual methods
-.method public abstract getConfig()Le2f;
+.method public abstract getConfig()Lbdf;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Le2f;"
+            "Lbdf;"
         }
     .end annotation
 .end method

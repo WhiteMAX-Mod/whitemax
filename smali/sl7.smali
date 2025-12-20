@@ -3,51 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk18;
-.implements Ljava/io/Serializable;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsl7;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+.implements Lxfa;
 
 
 # virtual methods
-.method public final e()Z
+.method public final b(I)Lltd;
     .locals 1
 
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    sget-object p1, Lx9a;->Y:Lltd;
+
+    return-object p1
+
+    :cond_0
     const/4 v0, 0x1
 
-    return v0
+    if-ne p1, v0, :cond_1
+
+    sget-object p1, Lx9a;->Z:Lltd;
+
+    return-object p1
+
+    :cond_1
+    sget-object p1, Lal7;->b:Lcc6;
+
+    sget-object p1, Lltd;->o:Lltd;
+
+    return-object p1
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+.method public final e(Ljava/lang/String;)Laga;
+    .locals 2
 
-    iget-object v0, p0, Lsl7;->a:Ljava/lang/Object;
+    :try_start_0
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p1, Lx9a;
+
+    invoke-direct {p1, v0}, Lx9a;-><init>(Ljava/io/FileOutputStream;)V
+
+    new-instance v0, Ltl7;
+
+    invoke-direct {v0, p1}, Ltl7;-><init>(Lx9a;)V
 
     return-object v0
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :catch_0
+    move-exception p1
 
-    iget-object v0, p0, Lsl7;->a:Ljava/lang/Object;
+    new-instance v0, Landroidx/media3/muxer/MuxerException;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "Error creating file output stream"
 
-    move-result-object v0
+    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v0
+    throw v0
 .end method

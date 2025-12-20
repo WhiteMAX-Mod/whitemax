@@ -1,380 +1,440 @@
 .class public final Ln49;
-.super Lz59;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Ln49;
+
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+
 # instance fields
-.field public final f:Ljava/lang/String;
+.field public final a:J
 
-.field public final g:Landroid/media/MediaRouter2$RoutingController;
+.field public final b:J
 
-.field public final h:Landroid/os/Messenger;
+.field public final c:J
 
-.field public final i:Landroid/os/Messenger;
+.field public final d:F
 
-.field public final j:Landroid/util/SparseArray;
-
-.field public final k:Landroid/os/Handler;
-
-.field public final l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final m:Lgq5;
-
-.field public n:I
-
-.field public o:Lh59;
-
-.field public final synthetic p:Lr49;
+.field public final e:F
 
 
 # direct methods
-.method public constructor <init>(Lr49;Landroid/media/MediaRouter2$RoutingController;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ln49;->p:Lr49;
+    new-instance v0, Ll49;
 
-    invoke-direct {p0}, Lz59;-><init>()V
+    invoke-direct {v0}, Ll49;-><init>()V
 
-    new-instance p1, Landroid/util/SparseArray;
+    new-instance v1, Ln49;
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    invoke-direct {v1, v0}, Ln49;-><init>(Ll49;)V
 
-    iput-object p1, p0, Ln49;->j:Landroid/util/SparseArray;
+    sput-object v1, Ln49;->f:Ln49;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v0, Lqah;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ln49;->g:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    iput-object p1, p0, Ln49;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object v0
 
-    new-instance p1, Lgq5;
+    sput-object v0, Ln49;->h:Ljava/lang/String;
 
-    const/16 v0, 0x11
+    const/4 v0, 0x2
 
-    invoke-direct {p1, v0, p0}, Lgq5;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    iput-object p1, p0, Ln49;->m:Lgq5;
+    move-result-object v0
 
-    const/4 p1, -0x1
+    sput-object v0, Ln49;->i:Ljava/lang/String;
 
-    iput p1, p0, Ln49;->n:I
+    const/4 v0, 0x3
 
-    iput-object p2, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    iput-object p3, p0, Ln49;->f:Ljava/lang/String;
+    move-result-object v0
 
-    sget p1, Lr49;->B0:I
+    sput-object v0, Ln49;->j:Ljava/lang/String;
 
-    invoke-static {p2}, Lf5;->l(Landroid/media/MediaRouter2$RoutingController;)Landroid/os/Bundle;
+    const/4 v0, 0x4
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    const/4 p2, 0x0
+    move-result-object v0
 
-    if-nez p1, :cond_0
-
-    move-object p1, p2
-
-    goto :goto_0
-
-    :cond_0
-    const-string p3, "androidx.mediarouter.media.KEY_MESSENGER"
-
-    invoke-virtual {p1, p3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Messenger;
-
-    :goto_0
-    iput-object p1, p0, Ln49;->h:Landroid/os/Messenger;
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p2, Landroid/os/Messenger;
-
-    new-instance p1, Ley;
-
-    invoke-direct {p1, p0}, Ley;-><init>(Ln49;)V
-
-    invoke-direct {p2, p1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
-
-    :goto_1
-    iput-object p2, p0, Ln49;->i:Landroid/os/Messenger;
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Ln49;->k:Landroid/os/Handler;
+    sput-object v0, Ln49;->k:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public constructor <init>(Ll49;)V
+    .locals 7
+
+    iget-wide v0, p1, Ll49;->a:J
+
+    iget-wide v2, p1, Ll49;->b:J
+
+    iget-wide v4, p1, Ll49;->c:J
+
+    iget v6, p1, Ll49;->d:F
+
+    iget p1, p1, Ll49;->e:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide v0, p0, Ln49;->a:J
+
+    iput-wide v2, p0, Ln49;->b:J
+
+    iput-wide v4, p0, Ln49;->c:J
+
+    iput v6, p0, Ln49;->d:F
+
+    iput p1, p0, Ln49;->e:F
+
+    return-void
+.end method
+
+.method public static b(Landroid/os/Bundle;)Ln49;
+    .locals 5
+
+    new-instance v0, Ll49;
+
+    invoke-direct {v0}, Ll49;-><init>()V
+
+    sget-object v1, Ln49;->f:Ln49;
+
+    iget-wide v2, v1, Ln49;->a:J
+
+    sget-object v4, Ln49;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v4, v2, v3}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Ll49;->a:J
+
+    sget-object v2, Ln49;->h:Ljava/lang/String;
+
+    iget-wide v3, v1, Ln49;->b:J
+
+    invoke-virtual {p0, v2, v3, v4}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Ll49;->b:J
+
+    sget-object v2, Ln49;->i:Ljava/lang/String;
+
+    iget-wide v3, v1, Ln49;->c:J
+
+    invoke-virtual {p0, v2, v3, v4}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Ll49;->c:J
+
+    sget-object v2, Ln49;->j:Ljava/lang/String;
+
+    iget v3, v1, Ln49;->d:F
+
+    invoke-virtual {p0, v2, v3}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
+
+    move-result v2
+
+    iput v2, v0, Ll49;->d:F
+
+    sget-object v2, Ln49;->k:Ljava/lang/String;
+
+    iget v1, v1, Ln49;->e:F
+
+    invoke-virtual {p0, v2, v1}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
+
+    move-result p0
+
+    iput p0, v0, Ll49;->e:F
+
+    new-instance p0, Ln49;
+
+    invoke-direct {p0, v0}, Ln49;-><init>(Ll49;)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
-
-    invoke-static {v0}, Ll49;->m(Landroid/media/MediaRouter2$RoutingController;)V
-
-    return-void
-.end method
-
-.method public final f(I)V
+.method public final a()Ll49;
     .locals 3
 
-    iget-object v0, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    new-instance v0, Ll49;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    iget-wide v1, p0, Ln49;->a:J
 
-    :cond_0
-    invoke-static {v0, p1}, Ll49;->n(Landroid/media/MediaRouter2$RoutingController;I)V
+    iput-wide v1, v0, Ll49;->a:J
 
-    iput p1, p0, Ln49;->n:I
+    iget-wide v1, p0, Ln49;->b:J
 
-    iget-object p1, p0, Ln49;->k:Landroid/os/Handler;
+    iput-wide v1, v0, Ll49;->b:J
 
-    iget-object v0, p0, Ln49;->m:Lgq5;
+    iget-wide v1, p0, Ln49;->c:J
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    iput-wide v1, v0, Ll49;->c:J
 
-    const-wide/16 v1, 0x3e8
+    iget v1, p0, Ln49;->d:F
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    iput v1, v0, Ll49;->d:F
 
-    return-void
+    iget v1, p0, Ln49;->e:F
+
+    iput v1, v0, Ll49;->e:F
+
+    return-object v0
 .end method
 
-.method public final i(I)V
-    .locals 3
+.method public final c()Landroid/os/Bundle;
+    .locals 6
 
-    iget-object v0, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    new-instance v0, Landroid/os/Bundle;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    return-void
+    sget-object v1, Ln49;->f:Ln49;
+
+    iget-wide v2, v1, Ln49;->a:J
+
+    iget-wide v4, p0, Ln49;->a:J
+
+    cmp-long v2, v4, v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Ln49;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
     :cond_0
-    iget v1, p0, Ln49;->n:I
+    iget-wide v2, v1, Ln49;->b:J
 
-    if-gez v1, :cond_1
+    iget-wide v4, p0, Ln49;->b:J
 
-    invoke-static {v0}, Ll49;->b(Landroid/media/MediaRouter2$RoutingController;)I
+    cmp-long v2, v4, v2
 
-    move-result v1
+    if-eqz v2, :cond_1
+
+    sget-object v2, Ln49;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
     :cond_1
-    add-int/2addr v1, p1
+    iget-wide v2, v1, Ln49;->c:J
 
-    iget-object p1, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    iget-wide v4, p0, Ln49;->c:J
 
-    invoke-static {p1}, Ll49;->x(Landroid/media/MediaRouter2$RoutingController;)I
+    cmp-long v2, v4, v2
 
-    move-result p1
+    if-eqz v2, :cond_2
 
-    invoke-static {v1, p1}, Ljava/lang/Math;->min(II)I
+    sget-object v2, Ln49;->i:Ljava/lang/String;
 
-    move-result p1
+    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
-    const/4 v0, 0x0
+    :cond_2
+    iget v2, v1, Ln49;->d:F
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+    iget v3, p0, Ln49;->d:F
 
-    move-result p1
+    cmpl-float v2, v3, v2
 
-    iput p1, p0, Ln49;->n:I
+    if-eqz v2, :cond_3
 
-    iget-object v0, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    sget-object v2, Ln49;->j:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Ll49;->n(Landroid/media/MediaRouter2$RoutingController;I)V
+    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    iget-object p1, p0, Ln49;->k:Landroid/os/Handler;
+    :cond_3
+    iget v1, v1, Ln49;->e:F
 
-    iget-object v0, p0, Ln49;->m:Lgq5;
+    iget v2, p0, Ln49;->e:F
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    cmpl-float v1, v2, v1
 
-    const-wide/16 v1, 0x3e8
+    if-eqz v1, :cond_4
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    sget-object v1, Ln49;->k:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+
+    :cond_4
+    return-object v0
 .end method
 
-.method public final m(Ljava/lang/String;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const-string v0, "MR2Provider"
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_2
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v1, p0, Ln49;->p:Lr49;
+    instance-of v1, p1, Ln49;
 
-    invoke-virtual {v1, p1}, Lr49;->i(Ljava/lang/String;)Landroid/media/MediaRoute2Info;
-
-    move-result-object v1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    const-string v1, "onAddMemberRoute: Specified route not found. routeId="
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    return v2
 
     :cond_1
-    iget-object p1, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    check-cast p1, Ln49;
 
-    invoke-static {p1, v1}, Ll49;->A(Landroid/media/MediaRouter2$RoutingController;Landroid/media/MediaRoute2Info;)V
+    iget-wide v3, p0, Ln49;->a:J
 
-    return-void
+    iget-wide v5, p1, Ln49;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Ln49;->b:J
+
+    iget-wide v5, p1, Ln49;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Ln49;->c:J
+
+    iget-wide v5, p1, Ln49;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Ln49;->d:F
+
+    iget v3, p1, Ln49;->d:F
+
+    cmpl-float v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Ln49;->e:F
+
+    iget p1, p1, Ln49;->e:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    return v0
 
     :cond_2
-    :goto_0
-    const-string p1, "onAddMemberRoute: Ignoring null or empty routeId."
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    return v2
 .end method
 
-.method public final n(Ljava/lang/String;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 7
 
-    const-string v0, "MR2Provider"
+    iget-wide v0, p0, Ln49;->a:J
 
-    if-eqz p1, :cond_2
+    const/16 v2, 0x20
 
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Ln49;->b:J
+
+    ushr-long v5, v3, v2
+
+    xor-long/2addr v3, v5
+
+    long-to-int v1, v3
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Ln49;->c:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ln49;->d:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v3, v1, v2
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
-
-    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Ln49;->p:Lr49;
+    move v1, v4
 
-    invoke-virtual {v1, p1}, Lr49;->i(Ljava/lang/String;)Landroid/media/MediaRoute2Info;
+    :goto_0
+    add-int/2addr v0, v1
 
-    move-result-object v1
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-nez v1, :cond_1
+    iget v1, p0, Ln49;->e:F
 
-    const-string v1, "onRemoveMemberRoute: Specified route not found. routeId="
+    cmpl-float v2, v1, v2
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_1
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    move-result v4
 
     :cond_1
-    iget-object p1, p0, Ln49;->g:Landroid/media/MediaRouter2$RoutingController;
+    add-int/2addr v0, v4
 
-    invoke-static {p1, v1}, Ll49;->o(Landroid/media/MediaRouter2$RoutingController;Landroid/media/MediaRoute2Info;)V
-
-    return-void
-
-    :cond_2
-    :goto_0
-    const-string p1, "onRemoveMemberRoute: Ignoring null or empty routeId."
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public final o(Ljava/util/List;)V
-    .locals 3
-
-    const-string v0, "MR2Provider"
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v1, p0, Ln49;->p:Lr49;
-
-    invoke-virtual {v1, p1}, Lr49;->i(Ljava/lang/String;)Landroid/media/MediaRoute2Info;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onUpdateMemberRoutes: Specified route not found. routeId="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_1
-    iget-object p1, v1, Lr49;->s0:Landroid/media/MediaRouter2;
-
-    invoke-static {p1, v2}, Lf5;->z(Landroid/media/MediaRouter2;Landroid/media/MediaRoute2Info;)V
-
-    return-void
-
-    :cond_2
-    :goto_0
-    const-string p1, "onUpdateMemberRoutes: Ignoring null or empty routeIds."
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    return v0
 .end method

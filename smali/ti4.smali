@@ -3,42 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpa8;
+.implements Lr2g;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lid;
-
-.field public final synthetic c:Ljava/lang/String;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lid;Ljava/lang/String;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lti4;->a:I
-
-    iput-object p1, p0, Lti4;->b:Lid;
-
-    iput-object p2, p0, Lti4;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lid;Ljava/lang/String;JJI)V
-    .locals 0
-
-    .line 2
-    iput p7, p0, Lti4;->a:I
-
-    iput-object p1, p0, Lti4;->b:Lid;
-
-    iput-object p2, p0, Lti4;->c:Ljava/lang/String;
+    iput p1, p0, Lti4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,64 +23,126 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 9
 
     iget v0, p0, Lti4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lti4;->c:Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    check-cast p1, Ljd;
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    iget-object v1, p0, Lti4;->b:Lid;
-
-    invoke-interface {p1, v1, v0}, Ljd;->z(Lid;Ljava/lang/String;)V
-
-    return-void
+    throw v0
 
     :pswitch_0
-    check-cast p1, Ljd;
+    sget-object v0, Lmac;->a:Lr2g;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
 
-    iget-object v0, p0, Lti4;->b:Lid;
-
-    iget-object v1, p0, Lti4;->c:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1}, Ljd;->K0(Lid;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lti4;->c:Ljava/lang/String;
+    new-instance v1, Lwr4;
 
-    check-cast p1, Ljd;
+    new-instance v2, Lqm4;
 
-    iget-object v1, p0, Lti4;->b:Lid;
+    invoke-direct {v2}, Lqm4;-><init>()V
 
-    invoke-interface {p1, v1, v0}, Ljd;->o0(Lid;Ljava/lang/String;)V
+    const/16 v5, 0x9c4
 
-    return-void
+    const/16 v6, 0x1388
+
+    const v3, 0xc350
+
+    const v4, 0xc350
+
+    invoke-direct/range {v1 .. v6}, Lwr4;-><init>(Lqm4;IIII)V
+
+    return-object v1
 
     :pswitch_2
-    check-cast p1, Ljd;
+    new-instance v2, Lxr4;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v3, Lrm4;
 
-    iget-object v0, p0, Lti4;->b:Lid;
+    invoke-direct {v3}, Lrm4;-><init>()V
 
-    iget-object v1, p0, Lti4;->c:Ljava/lang/String;
+    const/16 v7, 0x7d0
 
-    invoke-interface {p1, v0, v1}, Ljd;->E(Lid;Ljava/lang/String;)V
+    const/4 v8, 0x0
 
-    return-void
+    const v4, 0xc350
 
-    nop
+    const v5, 0xc350
+
+    const/16 v6, 0x3e8
+
+    invoke-direct/range {v2 .. v8}, Lxr4;-><init>(Lrm4;IIIIZ)V
+
+    return-object v2
+
+    :pswitch_3
+    const/16 v0, 0xc
+
+    new-array v0, v0, [B
+
+    sget-object v1, Lqs4;->i:Ljava/util/Random;
+
+    invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lkf8;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lkf8;
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lm8a;
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-direct {v1, v0}, Lm8a;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
+
+    :goto_0
+    move-object v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Lj8a;
+
+    invoke-direct {v1, v0}, Lj8a;-><init>(Ljava/util/concurrent/ExecutorService;)V
+
+    goto :goto_0
+
+    :goto_1
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

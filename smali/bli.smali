@@ -1,60 +1,118 @@
-.class public final Lbli;
+.class public final synthetic Lbli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqa;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static final a:Lbli;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/core/a;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
+    .locals 0
 
-    new-instance v0, Lbli;
+    iput p7, p0, Lbli;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbli;->b:Lcom/my/tracker/core/a;
 
-    sput-object v0, Lbli;->a:Lbli;
+    iput-object p2, p0, Lbli;->e:Ljava/lang/Object;
 
-    new-instance v0, Ltci;
+    iput-wide p3, p0, Lbli;->c:J
 
-    const/4 v1, 0x1
+    iput-wide p5, p0, Lbli;->d:J
 
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 8
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lbli;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    throw p1
+    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-wide v5, p0, Lbli;->d:J
+
+    move-object v7, p1
+
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+
+    iget-wide v3, p0, Lbli;->c:J
+
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->g(Lcom/my/tracker/core/a;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Lcom/my/tracker/core/UserInfoState;
+
+    iget-wide v5, p0, Lbli;->d:J
+
+    move-object v7, p1
+
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+
+    iget-wide v3, p0, Lbli;->c:J
+
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->f(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJLcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lbli;->e:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    iget-wide v5, p0, Lbli;->d:J
+
+    move-object v7, p1
+
+    check-cast v7, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v1, p0, Lbli;->b:Lcom/my/tracker/core/a;
+
+    iget-wide v3, p0, Lbli;->c:J
+
+    invoke-static/range {v1 .. v7}, Lcom/my/tracker/core/a;->c(Lcom/my/tracker/core/a;Ljava/lang/Boolean;JJLcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

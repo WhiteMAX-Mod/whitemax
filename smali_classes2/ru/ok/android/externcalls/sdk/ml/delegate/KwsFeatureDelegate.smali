@@ -17,7 +17,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;",
         "Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;",
-        "Lil8;",
+        "Lwp8;",
         "mlFeaturesInfoDataSource",
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;",
         "mlFeaturesConfigProvider",
@@ -27,10 +27,10 @@
         "mlDownloadStat",
         "Landroid/content/Context;",
         "context",
-        "Ly6d;",
+        "Lcgd;",
         "logger",
         "<init>",
-        "(Lil8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Ly6d;)V",
+        "(Lwp8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Lcgd;)V",
         "Ljava/io/File;",
         "modelDir",
         "",
@@ -67,14 +67,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate$Companion;-><init>(Ltk4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate$Companion;-><init>(Lro4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;->Companion:Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lil8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Ly6d;)V
+.method public constructor <init>(Lwp8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Lcgd;)V
     .locals 9
 
     sget-object v5, Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;->WS:Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;
@@ -95,7 +95,7 @@
 
     move-object v7, p6
 
-    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;-><init>(Lil8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Ly6d;Landroid/content/Context;)V
+    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;-><init>(Lwp8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Lcgd;Landroid/content/Context;)V
 
     return-void
 .end method
@@ -144,7 +144,7 @@
 
     aget-object v3, p1, v1
 
-    invoke-static {v3}, Ljz5;->c(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {v3}, Lq36;->c(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -163,7 +163,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p1}, Lbt;->E([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
 

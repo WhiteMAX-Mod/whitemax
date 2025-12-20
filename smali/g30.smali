@@ -1,153 +1,297 @@
-.class public final synthetic Lg30;
+.class public abstract synthetic Lg30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Runnable;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
+.method public static bridge synthetic A(Landroid/view/WindowInsets;)Landroid/view/RoundedCorner;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getRoundedCorner(I)Landroid/view/RoundedCorner;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic B(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    const-string v0, "android.media.feature.hdr.hdr10"
+
+    invoke-virtual {p0, v0}, Landroid/media/ApplicationMediaCapabilities$Builder;->addSupportedHdrType(Ljava/lang/String;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic C(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    const-string v0, "android.media.feature.hdr.hdr10_plus"
+
+    invoke-virtual {p0, v0}, Landroid/media/ApplicationMediaCapabilities$Builder;->addSupportedHdrType(Ljava/lang/String;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic D(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    const-string v0, "android.media.feature.hdr.hlg"
+
+    invoke-virtual {p0, v0}, Landroid/media/ApplicationMediaCapabilities$Builder;->addSupportedHdrType(Ljava/lang/String;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic a(Landroid/media/AudioProfile;)I
     .locals 0
 
-    iput p2, p0, Lg30;->a:I
+    invoke-virtual {p0}, Landroid/media/AudioProfile;->getEncapsulationType()I
 
-    iput-object p1, p0, Lg30;->b:Ljava/lang/Runnable;
+    move-result p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return p0
+.end method
+
+.method public static bridge synthetic b(Landroid/view/RoundedCorner;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/RoundedCorner;->getRadius()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic c()Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    new-instance v0, Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    invoke-direct {v0}, Landroid/media/ApplicationMediaCapabilities$Builder;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic d(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    const-string v0, "video/hevc"
+
+    invoke-virtual {p0, v0}, Landroid/media/ApplicationMediaCapabilities$Builder;->addSupportedVideoMimeType(Ljava/lang/String;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic e(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/ApplicationMediaCapabilities$Builder;->build()Landroid/media/ApplicationMediaCapabilities;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic f(Landroid/media/AudioManager;)Landroid/media/AudioDeviceInfo;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/AudioManager;->getCommunicationDevice()Landroid/media/AudioDeviceInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic g(Ljava/lang/Object;)Landroid/media/AudioProfile;
+    .locals 0
+
+    check-cast p0, Landroid/media/AudioProfile;
+
+    return-object p0
+.end method
+
+.method public static synthetic h(Landroid/content/Context;)Landroid/media/MediaRecorder;
+    .locals 1
+
+    new-instance v0, Landroid/media/MediaRecorder;
+
+    invoke-direct {v0, p0}, Landroid/media/MediaRecorder;-><init>(Landroid/content/Context;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic i(Landroid/content/ClipData;I)Landroid/view/ContentInfo$Builder;
+    .locals 1
+
+    new-instance v0, Landroid/view/ContentInfo$Builder;
+
+    invoke-direct {v0, p0, p1}, Landroid/view/ContentInfo$Builder;-><init>(Landroid/content/ClipData;I)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic j(Landroid/view/ContentInfo$Builder;)Landroid/view/ContentInfo;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/ContentInfo$Builder;->build()Landroid/view/ContentInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic k(Ljava/lang/Object;)Landroid/view/ContentInfo;
+    .locals 0
+
+    check-cast p0, Landroid/view/ContentInfo;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic l(Landroid/view/WindowInsets;)Landroid/view/RoundedCorner;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getRoundedCorner(I)Landroid/view/RoundedCorner;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Landroid/os/Build;->SOC_MODEL:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic n(Landroid/media/AudioManager;)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/AudioManager;->getAvailableCommunicationDevices()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic o()V
+    .locals 1
+
+    new-instance v0, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
 
     return-void
 .end method
 
+.method public static bridge synthetic p(Landroid/media/AudioManager;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 4
-
-    iget v0, p0, Lg30;->a:I
-
-    const-string v1, "failed to execute fresco task"
-
-    const-string v2, "Fresco"
-
-    iget-object v3, p0, Lg30;->b:Ljava/lang/Runnable;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {v3}, Lcom/my/tracker/core/o/g;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {p0}, Landroid/media/AudioManager;->clearCommunicationDevice()V
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-static {v3}, Lafg;->a(Ljava/lang/Runnable;)V
+.method public static bridge synthetic q(Landroid/media/AudioManager;Lkx1;Landroid/media/AudioManager$OnCommunicationDeviceChangedListener;)V
+    .locals 0
 
-    return-void
-
-    :pswitch_1
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
-
-    invoke-static {v3}, Lie;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1, p2}, Landroid/media/AudioManager;->addOnCommunicationDeviceChangedListener(Ljava/util/concurrent/Executor;Landroid/media/AudioManager$OnCommunicationDeviceChangedListener;)V
 
     return-void
+.end method
 
-    :pswitch_2
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+.method public static bridge synthetic r(Landroid/media/AudioManager;Landroid/media/AudioDeviceInfo;)V
+    .locals 0
 
-    invoke-static {v3}, Lie;->d(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_3
-    :try_start_0
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :catch_1
-    move-exception v0
-
-    throw v0
-
-    :pswitch_4
-    :try_start_1
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    :catch_3
-    move-exception v0
-
-    throw v0
-
-    :pswitch_5
-    :try_start_2
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_5
-    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_4
-
-    goto :goto_2
-
-    :catch_4
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-
-    :catch_5
-    move-exception v0
-
-    throw v0
-
-    :pswitch_6
-    const/16 v0, -0x10
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->setCommunicationDevice(Landroid/media/AudioDeviceInfo;)Z
 
     return-void
+.end method
 
-    nop
+.method public static bridge synthetic s(Landroid/media/AudioManager;Landroid/media/AudioManager$OnCommunicationDeviceChangedListener;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->removeOnCommunicationDeviceChangedListener(Landroid/media/AudioManager$OnCommunicationDeviceChangedListener;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic t(Landroid/view/ContentInfo$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setFlags(I)Landroid/view/ContentInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Landroid/view/ContentInfo$Builder;Landroid/net/Uri;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setLinkUri(Landroid/net/Uri;)Landroid/view/ContentInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic v(Landroid/view/ContentInfo$Builder;Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setExtras(Landroid/os/Bundle;)Landroid/view/ContentInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic w(Landroid/media/AudioManager;Landroid/media/AudioDeviceInfo;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->setCommunicationDevice(Landroid/media/AudioDeviceInfo;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic x(Landroid/media/AudioProfile;)[I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/AudioProfile;->getChannelMasks()[I
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic y(Landroid/media/AudioProfile;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/AudioProfile;->getFormat()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic z(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+    .locals 1
+
+    const-string v0, "android.media.feature.hdr.dolby_vision"
+
+    invoke-virtual {p0, v0}, Landroid/media/ApplicationMediaCapabilities$Builder;->addSupportedHdrType(Ljava/lang/String;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

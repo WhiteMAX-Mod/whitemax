@@ -1,115 +1,104 @@
-.class public abstract synthetic Ln07;
+.class public final synthetic Ln07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt1b;
+.implements Lv1b;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lc4a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lc4a;)V
+    .locals 0
 
-    invoke-static {}, Lm07;->values()[Lm07;
+    iput-object p1, p0, Ln07;->a:Lc4a;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    const/4 v1, 0x1
+# virtual methods
+.method public k(Lcom/google/android/gms/tasks/Task;)V
+    .locals 11
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Ln07;->a:Lc4a;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Lc4a;->b:Ljava/lang/Object;
 
-    :catch_0
-    const/4 v2, 0x2
+    check-cast v0, Lzj8;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
 
-    :catch_1
-    const/4 v1, 0x3
+    move-result v1
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    if-eqz v1, :cond_0
 
-    :catch_2
-    const/4 v2, 0x4
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    move-result-object v1
 
-    :catch_3
-    const/4 v1, 0x5
+    if-eqz v1, :cond_0
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
 
-    :catch_4
-    const/4 v2, 0x6
+    move-result-object p1
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    check-cast p1, Landroid/location/Location;
 
-    :catch_5
-    const/4 v1, 0x7
+    new-instance v1, Lpj8;
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    :catch_6
-    const/16 v2, 0x8
+    move-result-wide v2
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    :catch_7
-    const/16 v1, 0x9
+    move-result-wide v4
 
-    :try_start_8
-    aput v1, v0, v2
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
-    :catch_8
-    const/16 v2, 0xa
+    move-result-wide v6
 
-    :try_start_9
-    aput v2, v0, v2
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+    invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
 
-    :catch_9
-    const/16 v2, 0xb
+    move-result v8
 
-    :try_start_a
-    aput v2, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+    invoke-virtual {p1}, Landroid/location/Location;->getBearing()F
 
-    :catch_a
-    sput-object v0, Ln07;->$EnumSwitchMapping$0:[I
+    move-result v9
+
+    invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
+
+    move-result v10
+
+    invoke-direct/range {v1 .. v10}, Lpj8;-><init>(DDDFFF)V
+
+    invoke-interface {v0, v1}, Lzj8;->P(Lpj8;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Lzj8;->F()V
+
+    return-void
+.end method
+
+.method public onFailure(Ljava/lang/Exception;)V
+    .locals 0
+
+    iget-object p1, p0, Ln07;->a:Lc4a;
+
+    iget-object p1, p1, Lc4a;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzj8;
+
+    invoke-interface {p1}, Lzj8;->F()V
 
     return-void
 .end method

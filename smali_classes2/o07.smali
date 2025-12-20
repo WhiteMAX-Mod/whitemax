@@ -1,128 +1,35 @@
-.class public final enum Lo07;
-.super Ljava/lang/Enum;
+.class public final Lo07;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lr07;
-
-
-# static fields
-.field public static final enum b:Lo07;
-
-.field public static final synthetic c:[Lo07;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Llpi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    new-instance v0, Lo07;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 v2, 0x7
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-string v3, "KEYBOARD_RELEASE"
+    sget v0, Lck8;->a:I
 
-    invoke-direct {v0, v3, v1, v2}, Lo07;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Llpi;
 
-    new-instance v1, Lo07;
+    sget-object v1, Llpi;->m:Lcii;
 
-    const/4 v2, 0x1
+    sget-object v2, Lfl;->e:Lel;
 
-    const/16 v3, 0x8
+    sget-object v3, Le07;->c:Le07;
 
-    const-string v4, "VIRTUAL_KEY_RELEASE"
+    invoke-direct {v0, p1, v1, v2, v3}, Lf07;-><init>(Landroid/content/Context;Lcii;Lfl;Le07;)V
 
-    invoke-direct {v1, v4, v2, v3}, Lo07;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lo07;
-
-    const-string v3, "CLOCK_TICK"
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x4
-
-    invoke-direct {v2, v3, v4, v5}, Lo07;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lo07;->b:Lo07;
-
-    new-instance v3, Lo07;
-
-    const/4 v4, 0x3
-
-    const/16 v6, 0x9
-
-    const-string v7, "TEXT_HANDLE_MOVE"
-
-    invoke-direct {v3, v7, v4, v6}, Lo07;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lo07;
-
-    const-string v6, "GESTURE_END"
-
-    const/16 v7, 0xd
-
-    invoke-direct {v4, v6, v5, v7}, Lo07;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lo07;
-
-    move-result-object v0
-
-    sput-object v0, Lo07;->c:[Lo07;
+    iput-object v0, p0, Lo07;->a:Llpi;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lo07;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lo07;
-    .locals 1
-
-    const-class v0, Lo07;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lo07;
-
-    return-object p0
-.end method
-
-.method public static values()[Lo07;
-    .locals 1
-
-    sget-object v0, Lo07;->c:[Lo07;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lo07;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lo07;->a:I
-
-    return v0
 .end method

@@ -1,103 +1,139 @@
-.class public abstract Ltm5;
+.class public final Ltm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lub4;
 
-# static fields
-.field public static final a:Ljava/util/HashSet;
 
-.field public static b:Ljava/lang/String;
+# instance fields
+.field public final synthetic a:Lsm5;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Ljava/util/HashSet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    sget-object v0, Lsm5;->a:Lsm5;
 
-    sput-object v0, Ltm5;->a:Ljava/util/HashSet;
-
-    const-string v0, "goog.exo.core"
-
-    sput-object v0, Ltm5;->b:Ljava/lang/String;
+    iput-object v0, p0, Ltm5;->a:Lsm5;
 
     return-void
 .end method
 
-.method public static declared-synchronized a(Ljava/lang/String;)V
-    .locals 4
 
-    const-class v0, Ltm5;
+# virtual methods
+.method public final B(Lrb4;Ljava/lang/Throwable;)V
+    .locals 0
 
-    monitor-enter v0
+    iget-object p1, p0, Ltm5;->a:Lsm5;
 
-    :try_start_0
-    sget-object v1, Ltm5;->a:Ljava/util/HashSet;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    sget-object p1, Lsm5;->b:Ljava/lang/Object;
 
-    move-result v1
+    monitor-enter p1
 
-    if-eqz v1, :cond_0
+    monitor-exit p1
 
-    sget-object v1, Ltm5;->b:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-object v2
+    instance-of v0, p1, Ltm5;
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    if-nez v0, :cond_1
 
-    move-result v2
+    instance-of p1, p1, Lsm5;
 
-    add-int/lit8 v2, v2, 0x2
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    sput-object p0, Ltm5;->b:Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
     :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
     :goto_0
-    monitor-exit v0
+    const/4 p1, 0x1
 
-    return-void
+    return p1
+.end method
 
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public final fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+    .locals 1
 
-    throw p0
+    iget-object v0, p0, Ltm5;->a:Lsm5;
+
+    invoke-interface {v0, p1, p2}, Lrb4;->fold(Ljava/lang/Object;Lcr6;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(Lqb4;)Lpb4;
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->a:Lsm5;
+
+    invoke-interface {v0, p1}, Lrb4;->get(Lqb4;)Lpb4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getKey()Lqb4;
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->a:Lsm5;
+
+    invoke-virtual {v0}, Ln0;->getKey()Lqb4;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    sget-object v0, Lsm5;->a:Lsm5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final minusKey(Lqb4;)Lrb4;
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->a:Lsm5;
+
+    invoke-interface {v0, p1}, Lrb4;->minusKey(Lqb4;)Lrb4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final plus(Lrb4;)Lrb4;
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->a:Lsm5;
+
+    invoke-interface {v0, p1}, Lrb4;->plus(Lrb4;)Lrb4;
+
+    move-result-object p1
+
+    return-object p1
 .end method

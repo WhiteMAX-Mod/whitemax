@@ -1,119 +1,101 @@
-.class public abstract Lfm1;
-.super Ljava/lang/Object;
+.class public final Lfm1;
+.super Lb5g;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static final a:Lk18;
+
+# instance fields
+.field public final synthetic X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
+    .locals 0
 
-    sget-object v0, Lgm1;->a:Lgm1;
+    iput-object p2, p0, Lfm1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    const/4 p2, 0x2
 
-    move-result-object v0
-
-    const/16 v1, 0x6d
-
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
-
-    sput-object v0, Lfm1;->a:Lk18;
+    invoke-direct {p0, p2, p1}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()Lk18;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfm1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfm1;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lfm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget-object v0, Lgm1;->a:Lgm1;
+    new-instance v0, Lfm1;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    iget-object v1, p0, Lfm1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lfm1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
 
-    const/16 v1, 0x1d4
-
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
+    iput-object p1, v0, Lfm1;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public static b()Lk18;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Lgm1;->a:Lgm1;
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    iget-object p1, p0, Lfm1;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljja;
 
-    const/16 v1, 0x1fd
+    instance-of v0, p1, Lpf3;
 
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget-object p1, p0, Lfm1;->X:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    return-object v0
-.end method
-
-.method public static c()Lk18;
-    .locals 2
-
-    sget-object v0, Lgm1;->a:Lgm1;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {p1}, Lx84;->getRouter()Lw3e;
 
     move-result-object v0
 
-    const/16 v1, 0x9c
+    invoke-virtual {v0, p1}, Lw3e;->B(Lx84;)Z
 
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Lem4;
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_1
 
-.method public static d()Lk18;
-    .locals 2
+    sget-object v0, Lic1;->c:Lic1;
 
-    sget-object v0, Lgm1;->a:Lgm1;
+    check-cast p1, Lem4;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+    invoke-virtual {v0, p1}, Lf3;->s0(Lem4;)V
 
-    move-result-object v0
+    :cond_1
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
 
-    const/16 v1, 0x30
-
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static e()Lk18;
-    .locals 2
-
-    sget-object v0, Lgm1;->a:Lgm1;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

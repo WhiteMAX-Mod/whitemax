@@ -1,118 +1,46 @@
-.class public final synthetic Lm51;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lem6;
+.class public final Lm51;
+.super Ll84;
 
 
 # instance fields
-.field public final synthetic X:Ljx0;
+.field public final synthetic X:Lsx;
 
-.field public final synthetic a:Lorg/json/JSONObject;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Lnaf;
-
-.field public final synthetic d:Lp51;
-
-.field public final synthetic o:Luv1;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/json/JSONObject;JLnaf;Lp51;Luv1;Ljx0;)V
+.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm51;->X:Lsx;
 
-    iput-object p1, p0, Lm51;->a:Lorg/json/JSONObject;
-
-    iput-wide p2, p0, Lm51;->b:J
-
-    iput-object p4, p0, Lm51;->c:Lnaf;
-
-    iput-object p5, p0, Lm51;->d:Lp51;
-
-    iput-object p6, p0, Lm51;->o:Luv1;
-
-    iput-object p7, p0, Lm51;->X:Ljx0;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    iput-object p1, p0, Lm51;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lm51;->a:Lorg/json/JSONObject;
+    iget p1, p0, Lm51;->o:I
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    iput p1, p0, Lm51;->o:I
 
-    move-result-object p1
+    iget-object p1, p0, Lm51;->X:Lsx;
 
-    iget-wide v0, p0, Lm51;->b:J
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Lknb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lm51;->c:Lnaf;
-
-    iget-boolean v0, v0, Lnaf;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lm51;->d:Lp51;
-
-    iget-object v0, v0, Lp51;->b:Lk18;
-
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lax1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lm51;->o:Luv1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lem6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lm51;->X:Ljx0;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lem6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

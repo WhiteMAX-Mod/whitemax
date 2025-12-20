@@ -1,106 +1,178 @@
 .class public final Lej3;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lu1j;
+.field public final synthetic X:[Lf76;
 
-.field public final b:Ljava/util/HashMap;
+.field public final synthetic Y:I
 
-.field public final c:Ljava/util/HashMap;
+.field public final synthetic Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final d:Ljava/util/HashMap;
+.field public o:I
 
-.field public final e:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic s0:Lfx0;
 
 
 # direct methods
-.method public constructor <init>(Lu1j;)V
-    .locals 1
+.method public constructor <init>([Lf76;ILjava/util/concurrent/atomic/AtomicInteger;Lfx0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lej3;->X:[Lf76;
 
-    iput-object p1, p0, Lej3;->a:Lu1j;
+    iput p2, p0, Lej3;->Y:I
 
-    new-instance p1, Ljava/util/HashMap;
+    iput-object p3, p0, Lej3;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    iput-object p4, p0, Lej3;->s0:Lfx0;
 
-    iput-object p1, p0, Lej3;->b:Ljava/util/HashMap;
+    const/4 p1, 0x2
 
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lej3;->c:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lej3;->d:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lej3;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0, p1, p5}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lej3;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+    check-cast p1, Lac4;
 
-    const/4 v1, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    invoke-virtual {p0, p1, p2}, Lej3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lej3;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lej3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Lej3;
+
+    iget-object v3, p0, Lej3;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v4, p0, Lej3;->s0:Lfx0;
+
+    iget-object v1, p0, Lej3;->X:[Lf76;
+
+    iget v2, p0, Lej3;->Y:I
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lej3;-><init>([Lf76;ILjava/util/concurrent/atomic/AtomicInteger;Lfx0;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lej3;->o:I
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lej3;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v3, p0, Lej3;->s0:Lfx0;
+
+    const/4 v4, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v4, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    :try_start_1
+    iget-object p1, p0, Lej3;->X:[Lf76;
+
+    iget v0, p0, Lej3;->Y:I
+
+    aget-object p1, p1, v0
+
+    new-instance v5, Ldj3;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v3, v0, v6}, Ldj3;-><init>(Ljava/lang/Object;II)V
+
+    iput v4, p0, Lej3;->o:I
+
+    invoke-interface {p1, v5, p0}, Lf76;->e(Lh76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v3, v1}, Lfx0;->l(Ljava/lang/Throwable;)Z
+
+    :cond_3
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+
+    :goto_1
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_4
 
-    iget-object v0, p0, Lej3;->a:Lu1j;
+    invoke-virtual {v3, v1}, Lfx0;->l(Ljava/lang/Throwable;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Lu1j;->a(Lej3;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(ILjava/lang/String;)V
-    .locals 1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lej3;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final c(ILjava/lang/String;)V
-    .locals 1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lej3;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    :cond_4
+    throw p1
 .end method

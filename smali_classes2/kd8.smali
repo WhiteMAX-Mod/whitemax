@@ -1,53 +1,60 @@
-.class public final Lkd8;
-.super Lq44;
+.class public final synthetic Lkd8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lmd8;
-
-.field public Z:I
-
-.field public d:Lmd8;
-
-.field public o:I
+.field public final synthetic b:Ljava/util/Collection;
 
 
 # direct methods
-.method public constructor <init>(Lmd8;Lq44;)V
+.method public synthetic constructor <init>(ILjava/util/Collection;)V
     .locals 0
 
-    iput-object p1, p0, Lkd8;->Y:Lmd8;
+    iput p1, p0, Lkd8;->a:I
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lkd8;->b:Ljava/util/Collection;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lkd8;->X:Ljava/lang/Object;
+    iget v0, p0, Lkd8;->a:I
 
-    iget p1, p0, Lkd8;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lkd8;->b:Ljava/util/Collection;
 
-    or-int/2addr p1, v0
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->c(Ljava/util/Collection;Ljava/lang/Object;)Z
 
-    iput p1, p0, Lkd8;->Z:I
+    move-result p1
 
-    iget-object p1, p0, Lkd8;->Y:Lmd8;
+    return p1
 
-    const-wide/16 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lkd8;->b:Ljava/util/Collection;
 
-    invoke-virtual {p1, v0, v1, p0}, Lmd8;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->a(Ljava/util/Collection;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result p1
 
-    return-object p1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,148 +1,152 @@
 .class public final Lu66;
-.super La1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lb1g;
-
-.field public final d:I
-
-.field public final o:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Li66;Lb1g;II)V
+.method public synthetic constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1}, La1;-><init>(Li66;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lu66;->c:Lb1g;
-
-    iput p3, p0, Lu66;->d:I
-
-    iput p4, p0, Lu66;->o:I
+    iput-wide p1, p0, Lu66;->a:J
 
     return-void
 .end method
 
+.method public static a(FF)J
+    .locals 4
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result p0
+
+    int-to-long v0, p0
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr p0, v2
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+.end method
+
+.method public static b(J)Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v1, 0x20
+
+    shr-long v1, p0, v1
+
+    long-to-int v1, v1
+
+    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-wide v1, 0xffffffffL
+
+    and-long/2addr p0, v1
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x29
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final g(Lq76;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, La1;->b:Li66;
-
-    instance-of v1, v0, Ldrf;
-
-    iget-object v2, p0, Lu66;->c:Lb1g;
-
-    if-eqz v1, :cond_3
-
-    :try_start_0
-    check-cast v0, Ldrf;
-
-    invoke-interface {v0}, Ldrf;->get()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    sget-object v1, Lxd5;->a:Lxd5;
+    instance-of v0, p1, Lu66;
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1, v1}, Laof;->d(Lcof;)V
-
-    invoke-interface {p1}, Laof;->b()V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    :try_start_1
-    invoke-virtual {v2, v0}, Lb1g;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lu66;
 
-    move-result-object v0
+    iget-wide v0, p1, Lu66;->a:J
 
-    check-cast v0, Lmqc;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    iget-wide v2, p0, Lu66;->a:J
 
-    instance-of v2, v0, Ldrf;
+    cmp-long p1, v2, v0
 
-    if-eqz v2, :cond_2
-
-    :try_start_2
-    check-cast v0, Ldrf;
-
-    invoke-interface {v0}, Ldrf;->get()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1, v1}, Laof;->d(Lcof;)V
-
-    invoke-interface {p1}, Laof;->b()V
-
-    return-void
-
-    :cond_1
-    new-instance v1, Lnyd;
-
-    invoke-direct {v1, p1, v0}, Lnyd;-><init>(Laof;Ljava/lang/Object;)V
-
-    invoke-interface {p1, v1}, Laof;->d(Lcof;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lxd5;->a(Ljava/lang/Throwable;Laof;)V
-
-    goto :goto_0
-
-    :cond_2
-    check-cast v0, Li66;
-
-    invoke-virtual {v0, p1}, Li66;->e(Laof;)V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lxd5;->a(Ljava/lang/Throwable;Laof;)V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lxd5;->a(Ljava/lang/Throwable;Laof;)V
+    if-eqz p1, :cond_1
 
     :goto_0
-    return-void
+    const/4 p1, 0x0
 
-    :cond_3
-    new-instance v1, Lt66;
+    return p1
 
-    iget v3, p0, Lu66;->d:I
+    :cond_1
+    const/4 p1, 0x1
 
-    iget v4, p0, Lu66;->o:I
+    return p1
+.end method
 
-    invoke-direct {v1, p1, v2, v3, v4}, Lt66;-><init>(Laof;Lb1g;II)V
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v0, v1}, Li66;->c(Lq76;)V
+    iget-wide v0, p0, Lu66;->a:J
 
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-wide v0, p0, Lu66;->a:J
+
+    invoke-static {v0, v1}, Lu66;->b(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,77 +1,95 @@
 .class public final Lks3;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ltcf;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Llzf;Loje;)V
-    .locals 9
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x7
 
-    check-cast p1, Lq2b;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-virtual {p1}, Lq2b;->a()Lz74;
+    iput-object p1, p0, Lks3;->b:Ljava/lang/String;
 
-    move-result-object p1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    const-string v1, "conn-events"
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Lz74;->limitedParallelism(ILjava/lang/String;)Lz74;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lks3;
 
-    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    iget v0, p2, Loje;->k:I
+    return v2
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :cond_1
+    check-cast p1, Lks3;
+
+    iget-object v1, p0, Lks3;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lks3;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lks3;->b:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "GoToStartScreen(phone="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lks3;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lks3;->a:Ltcf;
-
-    iget-object p2, p2, Loje;->g:Lnm0;
-
-    invoke-static {p2}, Ls8j;->a(Llta;)Lsu1;
-
-    move-result-object p2
-
-    new-instance v1, Lrw;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x10
-
-    const/4 v2, 0x2
-
-    const-class v4, Lf9a;
-
-    const-string v5, "emit"
-
-    const-string v6, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    invoke-direct/range {v1 .. v8}, Lrw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v0, Lg56;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p2, v1, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
-
-    invoke-static {v0, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
-
-    return-void
+    return-object v0
 .end method

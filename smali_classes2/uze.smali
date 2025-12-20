@@ -1,72 +1,21 @@
 .class public final Luze;
-.super Ljava/lang/Object;
+.super Lzp;
 .source "SourceFile"
 
-# interfaces
-.implements Ltze;
 
-
-# instance fields
-.field public final a:Lcs0;
+# static fields
+.field public static final a:Luze;
 
 
 # direct methods
-.method public constructor <init>(Lcs0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Luze;
 
-    iput-object p1, p0, Luze;->a:Lcs0;
+    invoke-direct {v0}, Lzp;-><init>()V
+
+    sput-object v0, Luze;->a:Luze;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lorg/json/JSONObject;
-    .locals 5
-
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v1, "command"
-
-    const-string v2, "update-media-modifiers"
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    iget-object v1, p0, Luze;->a:Lcs0;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    :try_start_0
-    const-string v3, "denoise"
-
-    iget-boolean v4, v1, Lcs0;->a:Z
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    const-string v3, "denoiseAnn"
-
-    iget-boolean v1, v1, Lcs0;->b:Z
-
-    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const-string v1, "mediaModifiers"
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    return-object v0
 .end method

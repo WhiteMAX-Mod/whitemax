@@ -1,115 +1,43 @@
 .class public final Lx9c;
-.super Ljava/lang/Object;
+.super Lq3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lw9c;
+# virtual methods
+.method public final e(J)J
+    .locals 1
 
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-# direct methods
-.method public constructor <init>(Lw9c;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(J)J
 
-    iput-object p1, p0, Lx9c;->a:Lw9c;
+    move-result-wide p1
 
-    return-void
+    return-wide p1
 .end method
 
+.method public final f(JJ)J
+    .locals 1
 
-# virtual methods
-.method public final varargs a([Luwg;)V
-    .locals 3
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    iget-object v0, p0, Lx9c;->a:Lw9c;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(JJ)J
 
-    const-string v1, "CX:unbind"
+    move-result-wide p1
 
-    invoke-static {v1}, Lkfi;->h(Ljava/lang/String;)Ljava/lang/String;
+    return-wide p1
+.end method
 
-    move-result-object v1
+.method public final g()Ljava/util/Random;
+    .locals 1
 
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    :try_start_0
-    invoke-static {}, Ljei;->b()V
+    move-result-object v0
 
-    iget-object v1, v0, Lw9c;->d:Lq32;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v1, Lq32;->f:Lwm2;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lwm2;->c:Ljava/lang/Object;
-
-    check-cast v1, Lggg;
-
-    iget v1, v1, Lggg;->b:I
-
-    :goto_0
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_1
-
-    iget-object v0, v0, Lw9c;->c:Lhk4;
-
-    array-length v1, p1
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lhk4;->o(Ljava/util/List;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Unbind usecase is not supported in concurrent camera mode, call unbindAll() first."
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "CameraX not initialized yet."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_1
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    throw p1
+    return-object v0
 .end method

@@ -2,303 +2,164 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgp0;
-
-
-# static fields
-.field public static final o:Lcrf;
-
 
 # instance fields
-.field public final a:Lva8;
+.field public a:Ljava/lang/CharSequence;
 
-.field public final b:Lbl4;
+.field public b:Landroid/graphics/Bitmap;
 
-.field public final c:Landroid/graphics/BitmapFactory$Options;
+.field public c:Landroid/text/Layout$Alignment;
 
-.field public final d:I
+.field public d:Landroid/text/Layout$Alignment;
+
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:F
+
+.field public m:F
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:F
+
+.field public r:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
-    new-instance v0, Lte4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lte4;-><init>(I)V
-
-    invoke-static {v0}, Lml6;->k(Lcrf;)Lcrf;
-
-    move-result-object v0
-
-    sput-object v0, Lue4;->o:Lcrf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
-
-    .line 1
-    sget-object v0, Lue4;->o:Lcrf;
-
-    invoke-interface {v0}, Lcrf;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lva8;
-
-    invoke-static {v0}, Lhsi;->h(Ljava/lang/Object;)V
-
-    new-instance v1, Lbl4;
-
-    invoke-direct {v1, p1}, Lbl4;-><init>(Landroid/content/Context;)V
-
-    const/4 p1, 0x0
-
-    const/4 v2, -0x1
-
-    .line 2
-    invoke-direct {p0, v0, v1, p1, v2}, Lue4;-><init>(Lva8;Lbl4;Landroid/graphics/BitmapFactory$Options;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lva8;Lbl4;Landroid/graphics/BitmapFactory$Options;I)V
-    .locals 0
-
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    iput-object p1, p0, Lue4;->a:Lva8;
+    const/4 v0, 0x0
 
-    .line 5
-    iput-object p2, p0, Lue4;->b:Lbl4;
+    iput-object v0, p0, Lue4;->a:Ljava/lang/CharSequence;
 
-    .line 6
-    iput-object p3, p0, Lue4;->c:Landroid/graphics/BitmapFactory$Options;
+    iput-object v0, p0, Lue4;->b:Landroid/graphics/Bitmap;
 
-    .line 7
-    iput p4, p0, Lue4;->d:I
+    iput-object v0, p0, Lue4;->c:Landroid/text/Layout$Alignment;
+
+    iput-object v0, p0, Lue4;->d:Landroid/text/Layout$Alignment;
+
+    const v0, -0x800001
+
+    iput v0, p0, Lue4;->e:F
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lue4;->f:I
+
+    iput v1, p0, Lue4;->g:I
+
+    iput v0, p0, Lue4;->h:F
+
+    iput v1, p0, Lue4;->i:I
+
+    iput v1, p0, Lue4;->j:I
+
+    iput v0, p0, Lue4;->k:F
+
+    iput v0, p0, Lue4;->l:F
+
+    iput v0, p0, Lue4;->m:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lue4;->n:Z
+
+    const/high16 v0, -0x1000000
+
+    iput v0, p0, Lue4;->o:I
+
+    iput v1, p0, Lue4;->p:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Landroid/net/Uri;)Lha8;
-    .locals 2
+.method public final a()Lwe4;
+    .locals 21
 
-    new-instance v0, Lu64;
+    move-object/from16 v0, p0
 
-    const/4 v1, 0x2
+    new-instance v1, Lwe4;
 
-    invoke-direct {v0, p0, v1, p1}, Lu64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v2, v0, Lue4;->a:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lue4;->a:Lva8;
+    iget-object v3, v0, Lue4;->c:Landroid/text/Layout$Alignment;
 
-    check-cast p1, Li2a;
+    iget-object v4, v0, Lue4;->d:Landroid/text/Layout$Alignment;
 
-    invoke-virtual {p1, v0}, Li2a;->a(Ljava/util/concurrent/Callable;)Lha8;
+    iget-object v5, v0, Lue4;->b:Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    iget v6, v0, Lue4;->e:F
 
-    return-object p1
-.end method
+    iget v7, v0, Lue4;->f:I
 
-.method public final l(Ljava/lang/String;)Z
-    .locals 4
+    iget v8, v0, Lue4;->g:I
 
-    sget-object v0, Lzxg;->a:Ljava/lang/String;
+    iget v9, v0, Lue4;->h:F
 
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+    iget v10, v0, Lue4;->i:I
 
-    move-result v0
+    iget v11, v0, Lue4;->j:I
 
-    const/4 v1, 0x0
+    iget v12, v0, Lue4;->k:F
 
-    const/4 v2, 0x1
+    iget v13, v0, Lue4;->l:F
 
-    const/4 v3, -0x1
+    iget v14, v0, Lue4;->m:F
 
-    sparse-switch v0, :sswitch_data_0
+    iget-boolean v15, v0, Lue4;->n:Z
 
-    goto :goto_0
+    move-object/from16 v16, v1
 
-    :sswitch_0
-    const-string v0, "image/png"
+    iget v1, v0, Lue4;->o:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move/from16 v17, v1
 
-    move-result p1
+    iget v1, v0, Lue4;->p:I
 
-    if-nez p1, :cond_0
+    move/from16 v18, v1
 
-    goto :goto_0
+    iget v1, v0, Lue4;->q:F
 
-    :cond_0
-    const/4 v3, 0x6
+    move/from16 v19, v1
 
-    goto :goto_0
+    iget v1, v0, Lue4;->r:I
 
-    :sswitch_1
-    const-string v0, "image/bmp"
+    move/from16 v20, v19
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move/from16 v19, v1
 
-    move-result p1
+    move-object/from16 v1, v16
 
-    if-nez p1, :cond_1
+    move/from16 v16, v17
 
-    goto :goto_0
+    move/from16 v17, v18
 
-    :cond_1
-    const/4 v3, 0x5
+    move/from16 v18, v20
 
-    goto :goto_0
+    invoke-direct/range {v1 .. v19}, Lwe4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
 
-    :sswitch_2
-    const-string v0, "image/webp"
+    move-object/from16 v16, v1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x4
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "image/jpeg"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v3, 0x3
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "image/heif"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v3, 0x2
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v0, "image/heic"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move v3, v2
-
-    goto :goto_0
-
-    :sswitch_6
-    const-string v0, "image/avif"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    move v3, v1
-
-    :goto_0
-    packed-switch v3, :pswitch_data_0
-
-    goto :goto_1
-
-    :pswitch_0
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x22
-
-    if-lt p1, v0, :cond_7
-
-    :pswitch_1
-    return v2
-
-    :cond_7
-    :goto_1
-    return v1
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x58abd7ba -> :sswitch_6
-        -0x58a8e8f5 -> :sswitch_5
-        -0x58a8e8f2 -> :sswitch_4
-        -0x58a7d764 -> :sswitch_3
-        -0x58a21830 -> :sswitch_2
-        -0x3468a12f -> :sswitch_1
-        -0x34686c8b -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final q([B)Lha8;
-    .locals 2
-
-    new-instance v0, Lu64;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1, p1}, Lu64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lue4;->a:Lva8;
-
-    check-cast p1, Li2a;
-
-    invoke-virtual {p1, v0}, Li2a;->a(Ljava/util/concurrent/Callable;)Lha8;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v16
 .end method

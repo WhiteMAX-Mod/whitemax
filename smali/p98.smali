@@ -2,592 +2,227 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfe0;
-
 
 # instance fields
-.field public final a:Lwg7;
+.field public a:Z
 
-.field public final b:I
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:Ljava/util/List;
+
+.field public l:Z
 
 
-# direct methods
-.method public constructor <init>(ILzjd;)V
-    .locals 0
+# virtual methods
+.method public final a(Landroid/view/View;)V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lp98;->k:Ljava/util/List;
 
-    iput p1, p0, Lp98;->b:I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iput-object p2, p0, Lp98;->a:Lwg7;
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const v2, 0x7fffffff
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v0, :cond_4
+
+    iget-object v4, p0, Lp98;->k:Ljava/util/List;
+
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwrd;
+
+    iget-object v4, v4, Lwrd;->a:Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Lhrd;
+
+    if-eq v4, p1, :cond_3
+
+    iget-object v6, v5, Lhrd;->a:Lwrd;
+
+    invoke-virtual {v6}, Lwrd;->q()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v5, v5, Lhrd;->a:Lwrd;
+
+    invoke-virtual {v5}, Lwrd;->h()I
+
+    move-result v5
+
+    iget v6, p0, Lp98;->d:I
+
+    sub-int/2addr v5, v6
+
+    iget v6, p0, Lp98;->e:I
+
+    mul-int/2addr v5, v6
+
+    if-gez v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    if-ge v5, v2, :cond_3
+
+    move-object v1, v4
+
+    if-nez v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v5
+
+    :cond_3
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    :goto_2
+    if-nez v1, :cond_5
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lp98;->d:I
+
+    return-void
+
+    :cond_5
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Lhrd;
+
+    iget-object p1, p1, Lhrd;->a:Lwrd;
+
+    invoke-virtual {p1}, Lwrd;->h()I
+
+    move-result p1
+
+    iput p1, p0, Lp98;->d:I
 
     return-void
 .end method
 
-.method public static b(ILumb;)Lp98;
-    .locals 18
+.method public final b(Lnrd;)Landroid/view/View;
+    .locals 4
 
-    move-object/from16 v0, p1
+    iget-object v0, p0, Lp98;->k:Ljava/util/List;
 
-    const-string v1, "initialCapacity"
+    if-eqz v0, :cond_3
 
-    const/4 v2, 0x4
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-static {v2, v1}, Lu4j;->a(ILjava/lang/String;)V
+    move-result p1
 
-    new-array v1, v2, [Ljava/lang/Object;
-
-    iget v3, v0, Lumb;->c:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, -0x2
-
-    move v6, v4
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v0}, Lumb;->a()I
+    if-ge v0, p1, :cond_2
 
-    move-result v7
+    iget-object v1, p0, Lp98;->k:Ljava/util/List;
 
-    const/16 v8, 0x8
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-le v7, v8, :cond_10
+    move-result-object v1
 
-    invoke-virtual {v0}, Lumb;->l()I
+    check-cast v1, Lwrd;
 
-    move-result v7
+    iget-object v1, v1, Lwrd;->a:Landroid/view/View;
 
-    invoke-virtual {v0}, Lumb;->l()I
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result v9
+    move-result-object v2
 
-    iget v10, v0, Lumb;->b:I
+    check-cast v2, Lhrd;
 
-    add-int/2addr v10, v9
+    iget-object v3, v2, Lhrd;->a:Lwrd;
 
-    invoke-virtual {v0, v10}, Lumb;->I(I)V
+    invoke-virtual {v3}, Lwrd;->q()Z
 
-    const v9, 0x5453494c
+    move-result v3
 
-    if-ne v7, v9, :cond_0
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v7
-
-    invoke-static {v7, v0}, Lp98;->b(ILumb;)Lp98;
-
-    move-result-object v7
-
-    goto/16 :goto_5
-
-    :cond_0
-    const/16 v9, 0xc
-
-    const/4 v11, 0x0
-
-    sparse-switch v7, :sswitch_data_0
-
-    :goto_1
-    move-object v7, v11
-
-    goto/16 :goto_5
-
-    :sswitch_0
-    new-instance v7, Lmlf;
-
-    invoke-virtual {v0}, Lumb;->a()I
-
-    move-result v8
-
-    sget-object v9, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0, v8, v9}, Lumb;->v(ILjava/nio/charset/Charset;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v7, v8}, Lmlf;-><init>(Ljava/lang/String;)V
-
-    goto/16 :goto_5
-
-    :sswitch_1
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v12
-
-    invoke-virtual {v0, v9}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v13
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v14
-
-    invoke-virtual {v0, v2}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v15
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v16
-
-    invoke-virtual {v0, v2}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v17
-
-    new-instance v11, Lje0;
-
-    invoke-direct/range {v11 .. v17}, Lje0;-><init>(IIIIII)V
+    if-eqz v3, :cond_0
 
     goto :goto_1
 
-    :sswitch_2
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v7
-
-    invoke-virtual {v0, v8}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v8
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v11
-
-    invoke-virtual {v0, v2}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    invoke-virtual {v0, v9}, Lumb;->K(I)V
-
-    new-instance v9, Lie0;
-
-    invoke-direct {v9, v7, v8, v11}, Lie0;-><init>(III)V
-
-    move-object v7, v9
-
-    goto/16 :goto_5
-
-    :sswitch_3
-    const/4 v7, 0x2
-
-    const-string v8, "StreamFormatChunk"
-
-    if-ne v5, v7, :cond_2
-
-    invoke-virtual {v0, v2}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v7
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v9
-
-    invoke-virtual {v0, v2}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v12
-
-    sparse-switch v12, :sswitch_data_1
-
-    move-object v13, v11
-
-    goto :goto_2
-
-    :sswitch_4
-    const-string v13, "video/mjpeg"
-
-    goto :goto_2
-
-    :sswitch_5
-    const-string v13, "video/mp43"
-
-    goto :goto_2
-
-    :sswitch_6
-    const-string v13, "video/mp42"
-
-    goto :goto_2
-
-    :sswitch_7
-    const-string v13, "video/avc"
-
-    goto :goto_2
-
-    :sswitch_8
-    const-string v13, "video/mp4v-es"
-
-    :goto_2
-    if-nez v13, :cond_1
-
-    const-string v7, "Ignoring track with unsupported compression "
-
-    invoke-static {v12, v7, v8}, Lwy1;->p(ILjava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :cond_1
-    new-instance v8, Lff6;
-
-    invoke-direct {v8}, Lff6;-><init>()V
-
-    iput v7, v8, Lff6;->t:I
-
-    iput v9, v8, Lff6;->u:I
-
-    invoke-static {v13}, Lxz9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    iput-object v7, v8, Lff6;->m:Ljava/lang/String;
-
-    new-instance v7, Lclf;
-
-    new-instance v9, Lhf6;
-
-    invoke-direct {v9, v8}, Lhf6;-><init>(Lff6;)V
-
-    invoke-direct {v7, v9}, Lclf;-><init>(Lhf6;)V
-
-    goto/16 :goto_5
-
-    :cond_2
-    const/4 v7, 0x1
-
-    if-ne v5, v7, :cond_c
-
-    invoke-virtual {v0}, Lumb;->q()I
-
-    move-result v9
-
-    const-string v12, "audio/raw"
-
-    const-string v13, "audio/mp4a-latm"
-
-    if-eq v9, v7, :cond_7
-
-    const/16 v7, 0x55
-
-    if-eq v9, v7, :cond_6
-
-    const/16 v7, 0xff
-
-    if-eq v9, v7, :cond_5
-
-    const/16 v7, 0x2000
-
-    if-eq v9, v7, :cond_4
-
-    const/16 v7, 0x2001
-
-    if-eq v9, v7, :cond_3
-
-    move-object v7, v11
-
-    goto :goto_3
-
-    :cond_3
-    const-string v7, "audio/vnd.dts"
-
-    goto :goto_3
-
-    :cond_4
-    const-string v7, "audio/ac3"
-
-    goto :goto_3
-
-    :cond_5
-    move-object v7, v13
-
-    goto :goto_3
-
-    :cond_6
-    const-string v7, "audio/mpeg"
-
-    goto :goto_3
-
-    :cond_7
-    move-object v7, v12
-
-    :goto_3
-    if-nez v7, :cond_8
-
-    const-string v7, "Ignoring track with unsupported format tag "
-
-    invoke-static {v9, v7, v8}, Lwy1;->p(ILjava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :cond_8
-    invoke-virtual {v0}, Lumb;->q()I
-
-    move-result v8
-
-    invoke-virtual {v0}, Lumb;->l()I
-
-    move-result v9
-
-    const/4 v11, 0x6
-
-    invoke-virtual {v0, v11}, Lumb;->K(I)V
-
-    invoke-virtual {v0}, Lumb;->q()I
-
-    move-result v11
-
-    sget-object v14, Lzxg;->a:Ljava/lang/String;
-
-    sget-object v14, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-static {v11, v14}, Lzxg;->F(ILjava/nio/ByteOrder;)I
-
-    move-result v11
-
-    invoke-virtual {v0}, Lumb;->a()I
-
-    move-result v14
-
-    if-lez v14, :cond_9
-
-    invoke-virtual {v0}, Lumb;->q()I
-
-    move-result v14
-
-    goto :goto_4
-
-    :cond_9
-    move v14, v4
-
-    :goto_4
-    new-instance v15, Lff6;
-
-    invoke-direct {v15}, Lff6;-><init>()V
-
-    invoke-static {v7}, Lxz9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v15, Lff6;->m:Ljava/lang/String;
-
-    iput v8, v15, Lff6;->E:I
-
-    iput v9, v15, Lff6;->F:I
-
-    invoke-virtual {v7, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    if-eqz v11, :cond_a
-
-    iput v11, v15, Lff6;->G:I
-
-    :cond_a
-    invoke-virtual {v7, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    if-lez v14, :cond_b
-
-    new-array v2, v14, [B
-
-    invoke-virtual {v0, v4, v2, v14}, Lumb;->h(I[BI)V
-
-    invoke-static {v2}, Lwg7;->m(Ljava/lang/Object;)Lzjd;
-
-    move-result-object v2
-
-    iput-object v2, v15, Lff6;->p:Ljava/util/List;
-
-    :cond_b
-    new-instance v2, Lclf;
-
-    new-instance v7, Lhf6;
-
-    invoke-direct {v7, v15}, Lhf6;-><init>(Lff6;)V
-
-    invoke-direct {v2, v7}, Lclf;-><init>(Lhf6;)V
-
-    move-object v7, v2
-
-    goto :goto_5
-
-    :cond_c
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v7, "Ignoring strf box for unsupported track type: "
-
-    invoke-direct {v2, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v5}, Lzxg;->I(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v8, v2}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :goto_5
-    if-eqz v7, :cond_f
-
-    invoke-interface {v7}, Lfe0;->getType()I
-
-    move-result v2
-
-    const v8, 0x68727473
-
-    if-ne v2, v8, :cond_d
-
-    move-object v2, v7
-
-    check-cast v2, Lje0;
-
-    invoke-virtual {v2}, Lje0;->a()I
-
-    move-result v5
-
-    :cond_d
-    array-length v2, v1
-
-    add-int/lit8 v8, v6, 0x1
-
-    invoke-static {v2, v8}, Lmg7;->h(II)I
-
-    move-result v2
-
-    array-length v9, v1
-
-    if-gt v2, v9, :cond_e
-
-    goto :goto_6
-
-    :cond_e
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    :goto_6
-    aput-object v7, v1, v6
-
-    move v6, v8
-
-    :cond_f
-    invoke-virtual {v0, v10}, Lumb;->J(I)V
-
-    invoke-virtual {v0, v3}, Lumb;->I(I)V
-
-    const/4 v2, 0x4
-
-    goto/16 :goto_0
-
-    :cond_10
-    new-instance v0, Lp98;
-
-    invoke-static {v6, v1}, Lwg7;->h(I[Ljava/lang/Object;)Lzjd;
-
-    move-result-object v1
-
-    move/from16 v2, p0
-
-    invoke-direct {v0, v2, v1}, Lp98;-><init>(ILzjd;)V
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x66727473 -> :sswitch_3
-        0x68697661 -> :sswitch_2
-        0x68727473 -> :sswitch_1
-        0x6e727473 -> :sswitch_0
-    .end sparse-switch
-
-    :sswitch_data_1
-    .sparse-switch
-        0x30355844 -> :sswitch_8
-        0x31435641 -> :sswitch_7
-        0x31637661 -> :sswitch_7
-        0x3234504d -> :sswitch_6
-        0x3334504d -> :sswitch_5
-        0x34363248 -> :sswitch_7
-        0x34504d46 -> :sswitch_8
-        0x44495633 -> :sswitch_8
-        0x44495658 -> :sswitch_8
-        0x47504a4d -> :sswitch_4
-        0x58564944 -> :sswitch_8
-        0x64697678 -> :sswitch_8
-        0x67706a6d -> :sswitch_4
-        0x78766964 -> :sswitch_8
-    .end sparse-switch
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Class;)Lfe0;
-    .locals 3
-
-    iget-object v0, p0, Lp98;->a:Lwg7;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lwg7;->l(I)Lt76;
-
-    move-result-object v0
-
     :cond_0
-    invoke-virtual {v0}, Lb2;->hasNext()Z
+    iget v3, p0, Lp98;->d:I
 
-    move-result v1
+    iget-object v2, v2, Lhrd;->a:Lwrd;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v2}, Lwrd;->h()I
 
-    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
+    move-result v2
 
-    move-result-object v1
+    if-ne v3, v2, :cond_1
 
-    check-cast v1, Lfe0;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-ne v2, p1, :cond_0
+    invoke-virtual {p0, v1}, Lp98;->a(Landroid/view/View;)V
 
     return-object v1
 
     :cond_1
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
     const/4 p1, 0x0
 
     return-object p1
-.end method
 
-.method public final getType()I
-    .locals 1
+    :cond_3
+    iget v0, p0, Lp98;->d:I
 
-    iget v0, p0, Lp98;->b:I
+    invoke-virtual {p1, v0}, Lnrd;->d(I)Landroid/view/View;
 
-    return v0
+    move-result-object p1
+
+    iget v0, p0, Lp98;->d:I
+
+    iget v1, p0, Lp98;->e:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lp98;->d:I
+
+    return-object p1
 .end method

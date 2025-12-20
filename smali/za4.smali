@@ -1,121 +1,141 @@
 .class public final Lza4;
-.super Ljava/lang/Object;
+.super Ld0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lza4;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public a:Ljava/lang/Object;
-
-.field public b:Ljava/lang/Object;
-
-.field public c:I
-
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public final i:Ljava/lang/Object;
-
-.field public j:Ljava/lang/Object;
+.field public c:Landroid/util/SparseArray;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
     .locals 2
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Lc0;
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x3
 
-    .line 8
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo;
+    invoke-direct {v0, v1}, Lc0;-><init>(I)V
 
-    invoke-direct {p1}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
+    sput-object v0, Lza4;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput-object p1, p0, Lza4;->i:Ljava/lang/Object;
+    return-void
+.end method
 
-    .line 9
-    sget v0, Lxxg;->a:I
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 5
 
-    const/16 v1, 0x18
+    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    if-lt v0, v1, :cond_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    new-instance v0, Lxo8;
+    move-result v0
 
-    invoke-direct {v0, p1}, Lxo8;-><init>(Landroid/media/MediaCodec$CryptoInfo;)V
+    new-array v1, v0, [I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    new-instance p2, Landroid/util/SparseArray;
+
+    invoke-direct {p2, v0}, Landroid/util/SparseArray;-><init>(I)V
+
+    iput-object p2, p0, Lza4;->c:Landroid/util/SparseArray;
+
+    const/4 p2, 0x0
+
+    :goto_0
+    if-ge p2, v0, :cond_0
+
+    iget-object v2, p0, Lza4;->c:Landroid/util/SparseArray;
+
+    aget v3, v1, p2
+
+    aget-object v4, p1, p2
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-object v0, p0, Lza4;->j:Ljava/lang/Object;
-
     return-void
-
-    .line 10
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo;
-
-    invoke-direct {p1}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
-
-    iput-object p1, p0, Lza4;->i:Ljava/lang/Object;
-
-    .line 12
-    new-instance v0, Lpy0;
-
-    invoke-direct {v0, p1}, Lpy0;-><init>(Landroid/media/MediaCodec$CryptoInfo;)V
-
-    iput-object v0, p0, Lza4;->j:Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public constructor <init>(Lrve;Landroid/content/Context;Lsi1;Ly6d;)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 5
 
-    .line 2
-    iput-object p1, p0, Lza4;->a:Ljava/lang/Object;
+    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 3
-    iput-object p2, p0, Lza4;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lza4;->c:Landroid/util/SparseArray;
 
-    .line 4
-    iput-object p3, p0, Lza4;->d:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    .line 5
-    iput-object p4, p0, Lza4;->e:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    .line 6
-    new-instance p1, Lznd;
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    const/4 p2, 0x7
+    move-result v0
 
-    invoke-direct {p1, p2}, Lznd;-><init>(I)V
+    goto :goto_0
 
-    iput-object p1, p0, Lza4;->i:Ljava/lang/Object;
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    new-array v2, v0, [I
+
+    new-array v3, v0, [Landroid/os/Parcelable;
+
+    :goto_1
+    if-ge v1, v0, :cond_1
+
+    iget-object v4, p0, Lza4;->c:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v1}, Landroid/util/SparseArray;->keyAt(I)I
+
+    move-result v4
+
+    aput v4, v2, v1
+
+    iget-object v4, p0, Lza4;->c:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/os/Parcelable;
+
+    aput-object v4, v3, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-virtual {p1, v3, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
     return-void
 .end method

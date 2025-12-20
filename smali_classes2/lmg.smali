@@ -1,53 +1,49 @@
 .class public final Llmg;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lnmg;
 
 
 # instance fields
-.field public final a:Ls5g;
+.field public final synthetic X:Lmmg;
 
-.field public final b:I
+.field public Y:I
 
-.field public final c:Z
+.field public d:Lmmg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILs5g;)V
+.method public constructor <init>(Lmmg;Ll84;)V
     .locals 0
 
-    and-int/lit8 p2, p2, 0x2
+    iput-object p1, p0, Llmg;->X:Lmmg;
 
-    if-eqz p2, :cond_0
-
-    .line 5
-    sget p1, Livd;->a1:I
-
-    :cond_0
-    const/4 p2, 0x1
-
-    .line 6
-    invoke-direct {p0, p1, p3, p2}, Llmg;-><init>(ILs5g;Z)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILs5g;Z)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    iput-object p2, p0, Llmg;->a:Ls5g;
+    iput-object p1, p0, Llmg;->o:Ljava/lang/Object;
 
-    .line 3
-    iput p1, p0, Llmg;->b:I
+    iget p1, p0, Llmg;->Y:I
 
-    .line 4
-    iput-boolean p3, p0, Llmg;->c:Z
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Llmg;->Y:I
+
+    iget-object p1, p0, Llmg;->X:Lmmg;
+
+    invoke-virtual {p1, p0}, Lmmg;->p(Ll84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

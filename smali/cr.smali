@@ -1,98 +1,257 @@
-.class public final synthetic Lcr;
+.class public final Lcr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lem6;
+.implements Lie8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lar;
 
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final b:Ljava/lang/Boolean;
+
+.field public final c:Lbhg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+.method public constructor <init>(Lar;Ljava/lang/Boolean;Lbhg;)V
     .locals 0
 
-    iput p2, p0, Lcr;->a:I
-
-    iput-object p1, p0, Lcr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcr;->a:Lar;
+
+    iput-object p2, p0, Lcr;->b:Ljava/lang/Boolean;
+
+    iput-object p3, p0, Lcr;->c:Lbhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget v0, p0, Lcr;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lcr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v0, p1, Lcr;
 
-    check-cast p1, Ljava/lang/Integer;
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lcr;
+
+    iget-object v0, p0, Lcr;->a:Lar;
+
+    iget-object v1, p1, Lcr;->a:Lar;
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcr;->b:Ljava/lang/Boolean;
+
+    iget-object v1, p1, Lcr;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcr;->c:Lbhg;
+
+    iget-object p1, p1, Lcr;->c:Lbhg;
+
+    invoke-virtual {v0, p1}, Lbhg;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lb0i;
+    if-nez p1, :cond_4
 
-    invoke-virtual {v0}, Lb0i;->j()I
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-object v0, p0, Lcr;->a:Lar;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lie8;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Lcr;->getItemId()J
+
+    move-result-wide v0
+
+    invoke-interface {p1}, Lie8;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lcr;->a:Lar;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcr;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    if-gtz v1, :cond_0
+    add-int/2addr v1, v0
 
-    const/4 p1, 0x0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lcr;->c:Lbhg;
+
+    iget v0, v0, Lbhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final k(Lie8;)Ljava/lang/Object;
+    .locals 2
+
+    instance-of v0, p1, Lcr;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcr;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Ll98;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt98;
-
-    check-cast p1, Lf7g;
-
-    iget-boolean p1, p1, Lf7g;->a:Z
+    move-object p1, v1
 
     :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez p1, :cond_1
 
-    move-result-object p1
+    goto :goto_1
 
-    return-object p1
+    :cond_1
+    iget-object p1, p1, Lcr;->b:Ljava/lang/Boolean;
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-object v0, p0, Lcr;->b:Ljava/lang/Boolean;
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lyy7;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->y0()Lxr;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_2
 
-    iget-object p1, p1, Lxr;->E0:Lci5;
+    new-instance v0, Lbr;
 
-    sget-object v0, Ljc3;->b:Ljc3;
+    invoke-direct {v0, p1}, Lbr;-><init>(Ljava/lang/Boolean;)V
 
-    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    return-object v0
 
-    sget-object p1, Lqqg;->a:Lqqg;
+    :cond_2
+    :goto_1
+    return-object v1
+.end method
 
-    return-object p1
+.method public final m()I
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AppearanceModeItem(mode="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcr;->a:Lar;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcr;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcr;->c:Lbhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

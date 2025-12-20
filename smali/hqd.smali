@@ -1,76 +1,36 @@
 .class public final Lhqd;
-.super Lc2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liqd;
 
 
 # instance fields
-.field public c:I
-
-.field public d:I
-
-.field public final synthetic o:Liqd;
+.field public final synthetic a:Lhc0;
 
 
 # direct methods
-.method public constructor <init>(Liqd;)V
-    .locals 1
+.method public constructor <init>(Lhc0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhqd;->o:Liqd;
-
-    iget v0, p1, Liqd;->d:I
-
-    iput v0, p0, Lhqd;->c:I
-
-    iget p1, p1, Liqd;->c:I
-
-    iput p1, p0, Lhqd;->d:I
+    iput-object p1, p0, Lhqd;->a:Lhc0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(Lga0;Ljava/util/concurrent/Executor;)Ls60;
+    .locals 2
 
-    iget v0, p0, Lhqd;->c:I
+    new-instance v0, Ls60;
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x2
+    invoke-direct {v0, p1, p2, v1}, Ls60;-><init>(Lga0;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
 
-    iput v0, p0, Lc2;->a:I
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lhqd;->o:Liqd;
-
-    iget-object v2, v1, Liqd;->a:[Ljava/lang/Object;
-
-    iget v3, p0, Lhqd;->d:I
-
-    aget-object v2, v2, v3
-
-    iput-object v2, p0, Lc2;->b:Ljava/lang/Object;
-
-    const/4 v2, 0x1
-
-    iput v2, p0, Lc2;->a:I
-
-    add-int/2addr v3, v2
-
-    iget v1, v1, Liqd;->b:I
-
-    rem-int/2addr v3, v1
-
-    iput v3, p0, Lhqd;->d:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lhqd;->c:I
-
-    return-void
+    return-object v0
 .end method

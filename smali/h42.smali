@@ -1,59 +1,30 @@
-.class public final Lh42;
-.super Lh2f;
+.class public interface abstract Lh42;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Landroid/graphics/Typeface;
-
-.field public final d:Lg42;
-
-.field public e:Z
+# static fields
+.field public static final a:Lib0;
 
 
 # direct methods
-.method public constructor <init>(Lg42;Landroid/graphics/Typeface;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lh42;->c:Landroid/graphics/Typeface;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh42;->d:Lg42;
+    new-instance v1, Lib0;
+
+    invoke-direct {v1, v0}, Lib0;-><init>(Ljava/lang/Object;)V
+
+    sput-object v1, Lh42;->a:Lib0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)V
-    .locals 1
-
-    iget-boolean p1, p0, Lh42;->e:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lh42;->d:Lg42;
-
-    iget-object v0, p0, Lh42;->c:Landroid/graphics/Typeface;
-
-    invoke-interface {p1, v0}, Lg42;->o(Landroid/graphics/Typeface;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Landroid/graphics/Typeface;Z)V
-    .locals 0
-
-    iget-boolean p2, p0, Lh42;->e:Z
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lh42;->d:Lg42;
-
-    invoke-interface {p2, p1}, Lg42;->o(Landroid/graphics/Typeface;)V
-
-    :cond_0
-    return-void
+.method public abstract a(Ljava/util/List;)Ljava/util/List;
 .end method

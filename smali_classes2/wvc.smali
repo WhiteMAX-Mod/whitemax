@@ -1,62 +1,129 @@
-.class public abstract Lwvc;
-.super Ljava/lang/Object;
+.class public final Lwvc;
+.super Lb5g;
+.source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
-# static fields
-.field public static activity_horizontal_margin:I = 0x7f070051
+# instance fields
+.field public final synthetic X:Lcwc;
 
-.field public static activity_vertical_margin:I = 0x7f070052
+.field public o:I
 
-.field public static avatar_large:I = 0x7f070057
 
-.field public static avatar_medium:I = 0x7f070058
+# direct methods
+.method public constructor <init>(Lcwc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static avatar_small:I = 0x7f070059
+    iput-object p1, p0, Lwvc;->X:Lcwc;
 
-.field public static folder_filter_item_height:I = 0x7f0700fd
+    const/4 p1, 0x2
 
-.field public static font_large:I = 0x7f0700ff
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static font_larger:I = 0x7f070100
+    return-void
+.end method
 
-.field public static font_medium:I = 0x7f070101
 
-.field public static font_normal:I = 0x7f070102
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static font_normal_subtitle:I = 0x7f070103
+    check-cast p1, Lac4;
 
-.field public static font_only_emoji:I = 0x7f070104
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static font_small:I = 0x7f070105
+    invoke-virtual {p0, p1, p2}, Lwvc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static font_smaller:I = 0x7f070106
+    move-result-object p1
 
-.field public static font_subtitle:I = 0x7f070107
+    check-cast p1, Lwvc;
 
-.field public static font_toolbar_subtitle:I = 0x7f070108
+    sget-object p2, Lv2h;->a:Lv2h;
 
-.field public static font_toolbar_title:I = 0x7f070109
+    invoke-virtual {p1, p2}, Lwvc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static font_very_small:I = 0x7f07010a
+    move-result-object p1
 
-.field public static huge_horizontal_margin:I = 0x7f070143
+    return-object p1
+.end method
 
-.field public static match_parent:I = 0x7f070320
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static progress_bar_medium:I = 0x7f070464
+    new-instance p1, Lwvc;
 
-.field public static progress_bar_small:I = 0x7f070465
+    iget-object v0, p0, Lwvc;->X:Lcwc;
 
-.field public static rounded_button_margin:I = 0x7f07046c
+    invoke-direct {p1, v0, p2}, Lwvc;-><init>(Lcwc;Lkotlin/coroutines/Continuation;)V
 
-.field public static small_vertical_margin:I = 0x7f070476
+    return-object p1
+.end method
 
-.field public static spacing_normal:I = 0x7f070477
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-.field public static spacing_small:I = 0x7f070481
+    iget v0, p0, Lwvc;->o:I
 
-.field public static spacing_tiny:I = 0x7f070482
+    iget-object v1, p0, Lwvc;->X:Lcwc;
 
-.field public static tiny_vertical_margin:I = 0x7f0704bb
+    const/4 v2, 0x1
 
-.field public static wrap_content:I = 0x7f0704c6
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lcwc;->U0:Loic;
+
+    iput v2, p0, Lwvc;->o:I
+
+    invoke-virtual {p1, p0}, Loic;->n(Lb5g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lud2;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v1, Lcwc;->G0:Lyl5;
+
+    new-instance v1, Lnsc;
+
+    iget-wide v2, p1, Lud2;->a:J
+
+    sget-object p1, Lelc;->b:Lelc;
+
+    invoke-direct {v1, v2, v3, p1}, Lnsc;-><init>(JLelc;)V
+
+    invoke-static {v0, v1}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    :cond_3
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
+.end method

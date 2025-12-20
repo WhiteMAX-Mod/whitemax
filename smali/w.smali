@@ -1,26 +1,28 @@
 .class public final Lw;
-.super Ldtf;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic X:La0;
+.field public X:I
 
-.field public o:I
+.field public final synthetic Y:Ly;
+
+.field public o:Lud2;
 
 
 # direct methods
-.method public constructor <init>(La0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ly;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lw;->X:La0;
+    iput-object p1, p0, Lw;->Y:Ly;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +32,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf84;
+    check-cast p1, Lac4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +42,7 @@
 
     check-cast p1, Lw;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    sget-object p2, Lv2h;->a:Lv2h;
 
     invoke-virtual {p1, p2}, Lw;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -54,31 +56,33 @@
 
     new-instance p1, Lw;
 
-    iget-object v0, p0, Lw;->X:La0;
+    iget-object v0, p0, Lw;->Y:Ly;
 
-    invoke-direct {p1, v0, p2}, Lw;-><init>(La0;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lw;-><init>(Ly;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 7
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    iget v0, p0, Lw;->X:I
 
-    sget-object v1, Lg84;->a:Lg84;
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    iget v2, p0, Lw;->o:I
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    iget-object v3, p0, Lw;->Y:Ly;
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_1
 
-    if-ne v2, v3, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lw;->o:Lud2;
 
-    goto :goto_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -90,46 +94,58 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-    sget-object p1, Lwqi;->a:Ll6b;
+    iget-object p1, v3, Ly;->c:Lca3;
 
-    if-eqz p1, :cond_2
+    iget-object v0, v3, Ly;->b:Ldqe;
 
-    goto :goto_0
+    check-cast v0, Lncc;
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    if-nez p1, :cond_3
+    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->user-debug-report:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    return-object v0
+    const-wide/16 v5, 0x0
 
-    :cond_3
-    iput v3, p0, Lw;->o:I
+    invoke-virtual {v0, v4, v5, v6}, Lncc;->m(Ljava/lang/Enum;J)J
 
-    invoke-virtual {p1, p0}, Ll6b;->a(Lq44;)Ljava/lang/Comparable;
+    move-result-wide v4
 
-    move-result-object p1
+    invoke-virtual {p1, v4, v5}, Lca3;->o(J)Lud2;
 
-    if-ne p1, v1, :cond_4
+    move-result-object v0
+
+    if-nez v0, :cond_2
 
     return-object v1
 
-    :cond_4
-    :goto_1
-    check-cast p1, Ljava/nio/file/Path;
+    :cond_2
+    iput-object v0, p0, Lw;->o:Lud2;
 
-    iget-object v1, p0, Lw;->X:La0;
+    iput v2, p0, Lw;->X:I
 
-    iget-object v1, v1, La0;->X:Lci5;
+    invoke-static {v3, v0, p0}, Ly;->s(Ly;Lud2;Ll84;)Ljava/lang/Object;
 
-    new-instance v2, Lv;
+    move-result-object p1
 
-    invoke-direct {v2, p1}, Lv;-><init>(Ljava/nio/file/Path;)V
+    sget-object v2, Lbc4;->a:Lbc4;
 
-    invoke-static {v1, v2}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    if-ne p1, v2, :cond_3
 
-    return-object v0
+    return-object v2
+
+    :cond_3
+    :goto_0
+    iget-object p1, v3, Ly;->X:Lyl5;
+
+    new-instance v2, Lr;
+
+    iget-wide v3, v0, Lud2;->a:J
+
+    invoke-direct {v2, v3, v4}, Lr;-><init>(J)V
+
+    invoke-static {p1, v2}, Lrsh;->q(Lyl5;Ljava/lang/Object;)V
+
+    return-object v1
 .end method

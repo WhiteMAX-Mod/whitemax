@@ -1,19 +1,49 @@
-.class public abstract Ldab;
-.super Ljava/lang/Object;
+.class public final Ldab;
+.super Ll84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lfab;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lfab;Ll84;)V
+    .locals 0
 
-    sget v0, Lpzc;->oneme_emoji_view_type_emoji:I
+    iput-object p1, p0, Ldab;->o:Lfab;
 
-    sput v0, Ldab;->a:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ldab;->d:Ljava/lang/Object;
+
+    iget p1, p0, Ldab;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ldab;->X:I
+
+    iget-object p1, p0, Ldab;->o:Lfab;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lfab;->a(Landroid/content/Context;Lsx9;Ll84;)V
+
+    sget-object p1, Lbc4;->a:Lbc4;
+
+    return-object p1
 .end method

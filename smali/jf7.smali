@@ -3,24 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/AutoCloseable;
+.implements Landroid/os/IInterface;
 
 
 # virtual methods
-.method public abstract V()Landroid/media/Image;
-.end method
-
-.method public abstract getFormat()I
-.end method
-
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getImageInfo()Lqe7;
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract s()[Lh08;
+.method public abstract I(Lbf7;Landroid/os/Bundle;)V
 .end method

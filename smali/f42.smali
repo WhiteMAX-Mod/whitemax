@@ -1,103 +1,73 @@
-.class public final Lf42;
-.super Lre0;
+.class public final synthetic Lf42;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/RejectedExecutionHandler;
 
 
 # instance fields
-.field public final synthetic c:Lc5i;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lc5i;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lf42;->c:Lc5i;
+    iput p1, p0, Lf42;->a:I
 
-    iput-object p2, p0, Lf42;->d:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lf42;->o:Z
-
-    invoke-direct {p0}, Lre0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 1
 
-    iget-object v0, p0, Lf42;->c:Lc5i;
+    iget v0, p0, Lf42;->a:I
 
-    iget-object v1, v0, Lc5i;->c:Landroidx/work/impl/WorkDatabase;
-
-    invoke-virtual {v1}, Llrd;->c()V
+    packed-switch v0, :pswitch_data_0
 
     :try_start_0
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Ls5i;
+    invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
 
-    move-result-object v2
+    move-result-object p2
 
-    iget-object v3, p0, Lf42;->d:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ls5i;->o(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v0, v3}, Lre0;->b(Lc5i;Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :catch_0
+    move-exception p1
 
-    goto :goto_1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    :cond_0
-    invoke-virtual {v1}, Llrd;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p2
 
-    invoke-virtual {v1}, Llrd;->k()V
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
 
-    iget-boolean v1, p0, Lf42;->o:Z
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lc5i;->b:Lqo3;
-
-    iget-object v2, v0, Lc5i;->c:Landroidx/work/impl/WorkDatabase;
-
-    iget-object v0, v0, Lc5i;->e:Ljava/util/List;
-
-    invoke-static {v1, v2, v0}, Lv0e;->a(Lqo3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
-
-    :cond_1
+    :goto_0
     return-void
 
-    :goto_1
-    invoke-virtual {v1}, Llrd;->k()V
+    :pswitch_0
+    const-string p1, "CameraExecutor"
 
-    throw v0
+    const-string p2, "A rejected execution occurred in CameraExecutor!"
+
+    invoke-static {p1, p2}, Lw4j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

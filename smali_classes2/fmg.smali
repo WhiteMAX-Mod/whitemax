@@ -1,100 +1,49 @@
-.class public final synthetic Lfmg;
-.super Ljava/lang/Object;
+.class public final Lfmg;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lmi4;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic X:Lmmg;
 
-.field public final synthetic Y:I
+.field public Y:I
 
-.field public final synthetic a:Ljava/lang/String;
+.field public d:Lmmg;
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+.method public constructor <init>(Lmmg;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfmg;->X:Lmmg;
 
-    iput-object p1, p0, Lfmg;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lfmg;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lfmg;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lfmg;->d:Ljava/lang/String;
-
-    iput p5, p0, Lfmg;->o:I
-
-    iput p6, p0, Lfmg;->X:I
-
-    iput p7, p0, Lfmg;->Y:I
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    iput-object p1, p0, Lfmg;->o:Ljava/lang/Object;
 
-    new-instance v1, Lup7;
+    iget p1, p0, Lfmg;->Y:I
 
-    new-instance v2, Ltp7;
+    const/high16 v0, -0x80000000
 
-    const-wide/16 v5, 0x0
+    or-int/2addr p1, v0
 
-    const/16 v4, 0xe
+    iput p1, p0, Lfmg;->Y:I
 
-    const/4 v3, 0x0
+    iget-object p1, p0, Lfmg;->X:Lmmg;
 
-    iget-object v7, p0, Lfmg;->c:Ljava/lang/String;
+    invoke-virtual {p1, p0}, Lmmg;->i(Ll84;)Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    move-result-object p1
 
-    invoke-direct/range {v2 .. v8}, Ltp7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v6, Lzkg;
-
-    iget v3, p0, Lfmg;->o:I
-
-    iget v4, p0, Lfmg;->X:I
-
-    iget v5, p0, Lfmg;->Y:I
-
-    invoke-direct {v6, v3, v4, v5}, Lzkg;-><init>(III)V
-
-    const/4 v7, 0x1
-
-    move-object v4, v2
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lfmg;->b:Ljava/lang/String;
-
-    iget-object v5, p0, Lfmg;->d:Ljava/lang/String;
-
-    invoke-direct/range {v1 .. v7}, Lup7;-><init>(Ljava/lang/String;Ljava/lang/String;Ltp7;Ljava/lang/String;Lzkg;I)V
-
-    const-string v2, "AUTH"
-
-    iget-object v3, p0, Lfmg;->a:Ljava/lang/String;
-
-    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lup7;)V
-
-    return-object v0
+    return-object p1
 .end method

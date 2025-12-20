@@ -1,56 +1,63 @@
 .class public final Lwf5;
-.super Lbid;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lsf5;
-
-.field public b:I
-
-.field public c:Lvf5;
-
-.field public final synthetic d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lsf5;)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Lwf5;->a:I
+
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput p3, p0, Lwf5;->a:I
 
-    iput-object p1, p0, Lwf5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    iput-object p2, p0, Lwf5;->a:Lsf5;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lwf5;->b:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
-    iget-object p1, p0, Lwf5;->c:Lvf5;
+    iget v0, p0, Lwf5;->a:I
 
-    iget-object v0, p0, Lwf5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p1, :cond_0
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    move-result-object v0
 
-    :cond_0
-    new-instance p1, Lvf5;
+    return-object v0
 
-    invoke-direct {p1, p0, p2, p3}, Lvf5;-><init>(Lwf5;II)V
+    :pswitch_0
+    monitor-enter p0
 
-    iput-object p1, p0, Lwf5;->c:Lvf5;
+    monitor-exit p0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    return-object p0
 
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

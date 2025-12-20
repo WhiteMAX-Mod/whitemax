@@ -1,63 +1,41 @@
 .class public final Lzfc;
-.super Lid0;
+.super Lmz;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lzfc;
+# instance fields
+.field public final X:Ljava/lang/Long;
+
+.field public final Y:Ljava/lang/Long;
+
+.field public final Z:I
+
+.field public final d:Ljava/lang/Long;
+
+.field public final o:Ljava/lang/Long;
+
+.field public final s0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/String;ZZ)V
+    .locals 1
 
-    new-instance v0, Lzfc;
+    sget-object v0, Li10;->w0:Li10;
 
-    const/16 v1, 0xe
+    invoke-direct {p0, v0, p7, p8}, Lmz;-><init>(Li10;ZZ)V
 
-    invoke-direct {v0, v1}, Lid0;-><init>(I)V
+    iput-object p1, p0, Lzfc;->d:Ljava/lang/Long;
 
-    sput-object v0, Lzfc;->b:Lzfc;
+    iput-object p2, p0, Lzfc;->o:Ljava/lang/Long;
+
+    iput-object p3, p0, Lzfc;->X:Ljava/lang/Long;
+
+    iput-object p4, p0, Lzfc;->Y:Ljava/lang/Long;
+
+    iput p5, p0, Lzfc;->Z:I
+
+    iput-object p6, p0, Lzfc;->s0:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lzfc;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x5c26daea
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Save"
-
-    return-object v0
 .end method

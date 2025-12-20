@@ -3,92 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmf8;
+.implements Lot6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic b:Ll42;
+.field public final a:Lft6;
 
 
 # direct methods
-.method public constructor <init>(Ll42;)V
-    .locals 1
+.method public constructor <init>(Lft6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmt6;->b:Ll42;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lmt6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, Lmt6;->a:Lft6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lmt6;->b:Ll42;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ll42;->r()Z
+    if-ne p0, p1, :cond_0
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lmt6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lmt6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lmt6;
+
+    iget-object v1, p0, Lmt6;->a:Lft6;
+
+    iget-object p1, p1, Lmt6;->a:Lft6;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final P(Lcf8;)V
-    .locals 4
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Lmt6;->b:Ll42;
+    iget-object v0, p0, Lmt6;->a:Lft6;
 
-    invoke-virtual {v0}, Ll42;->r()Z
+    invoke-virtual {v0}, Lft6;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    return v0
+.end method
 
-    const/4 v1, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v2, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lmt6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v1, "OnSelectAlbum(album="
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v1
+    iget-object v1, p0, Lmt6;->a:Lft6;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+    const-string v1, ")"
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,42 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Lmq6;
 
 
 # instance fields
-.field public final synthetic X:Lk18;
-
-.field public final synthetic Y:Lk18;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:Lk18;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public final synthetic c:Lk18;
-
-.field public final synthetic d:Lk18;
-
-.field public final synthetic o:Lk18;
+.field public final synthetic c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;I)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lone/me/sdk/uikit/common/button/OneMeButton;I)V
     .locals 0
 
-    iput p7, p0, Lo5b;->a:I
+    iput p3, p0, Lo5b;->a:I
 
-    iput-object p1, p0, Lo5b;->b:Lk18;
+    iput-object p1, p0, Lo5b;->b:Landroid/content/Context;
 
-    iput-object p2, p0, Lo5b;->c:Lk18;
-
-    iput-object p3, p0, Lo5b;->d:Lk18;
-
-    iput-object p4, p0, Lo5b;->o:Lk18;
-
-    iput-object p5, p0, Lo5b;->X:Lk18;
-
-    iput-object p6, p0, Lo5b;->Y:Lk18;
+    iput-object p2, p0, Lo5b;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,66 +32,72 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 9
+    .locals 4
 
     iget v0, p0, Lo5b;->a:I
 
+    iget-object v1, p0, Lo5b;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-object v2, p0, Lo5b;->b:Landroid/content/Context;
+
     packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lel1;
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->B0:[Lp38;
 
-    iget-object v0, p0, Lo5b;->b:Lk18;
+    new-instance v0, Li9b;
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, v2}, Li9b;-><init>(Landroid/content/Context;)V
 
-    move-result-object v0
+    sget v2, Ly4e;->f:I
 
-    move-object v2, v0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    check-cast v2, Landroid/content/Context;
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->b(I)I
 
-    iget-object v0, p0, Lo5b;->c:Lk18;
+    move-result v2
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Lage;
-
-    iget-object v4, p0, Lo5b;->d:Lk18;
-
-    iget-object v5, p0, Lo5b;->o:Lk18;
-
-    iget-object v6, p0, Lo5b;->X:Lk18;
-
-    iget-object v7, p0, Lo5b;->Y:Lk18;
-
-    invoke-direct/range {v1 .. v7}, Lel1;-><init>(Landroid/content/Context;Lage;Lk18;Lk18;Lk18;Lk18;)V
-
-    return-object v1
+    return-object v0
 
     :pswitch_0
-    new-instance v2, Lc0a;
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->B0:[Lp38;
 
-    iget-object v3, p0, Lo5b;->b:Lk18;
+    new-instance v0, Lzfb;
 
-    iget-object v4, p0, Lo5b;->c:Lk18;
+    invoke-direct {v0, v2}, Lzfb;-><init>(Landroid/content/Context;)V
 
-    iget-object v5, p0, Lo5b;->d:Lk18;
+    sget v2, Ly4e;->h:I
 
-    iget-object v6, p0, Lo5b;->o:Lk18;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    iget-object v7, p0, Lo5b;->X:Lk18;
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v8, p0, Lo5b;->Y:Lk18;
+    const/4 v3, -0x2
 
-    invoke-direct/range {v2 .. v8}, Lc0a;-><init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
+    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    return-object v2
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    nop
+    new-instance v2, Lof8;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v2, v3, v0, v1}, Lof8;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
+
+    invoke-static {v0, v2}, Lcnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lcnb;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lo4j;->b(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

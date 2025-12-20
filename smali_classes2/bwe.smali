@@ -1,105 +1,126 @@
 .class public final Lbwe;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
+
+# interfaces
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:[F
+.field public final synthetic X:Lcwe;
 
-.field public final b:[I
+.field public final synthetic Y:Ljk0;
 
-.field public final c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public final g:F
-
-.field public final h:F
-
-.field public final i:Z
-
-.field public j:Z
-
-.field public k:Landroid/graphics/PorterDuff$Mode;
-
-.field public l:I
-
-.field public m:I
-
-.field public n:J
-
-.field public o:J
-
-.field public p:Landroid/view/animation/Interpolator;
-
-.field public q:Landroid/animation/ValueAnimator;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lcwe;Ljk0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbwe;->X:Lcwe;
 
-    const/4 v0, 0x5
+    iput-object p2, p0, Lbwe;->Y:Ljk0;
 
-    new-array v1, v0, [F
+    const/4 p1, 0x2
 
-    iput-object v1, p0, Lbwe;->a:[F
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lbwe;->b:[I
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lbwe;->c:I
-
-    const/4 v1, -0x1
-
-    iput v1, p0, Lbwe;->d:I
-
-    const v2, -0x777778
-
-    iput v2, p0, Lbwe;->e:I
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    iput v2, p0, Lbwe;->g:F
-
-    iput v2, p0, Lbwe;->h:F
-
-    iput-boolean v0, p0, Lbwe;->i:Z
-
-    iput-boolean v0, p0, Lbwe;->j:Z
-
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v2, p0, Lbwe;->k:Landroid/graphics/PorterDuff$Mode;
-
-    iput v1, p0, Lbwe;->l:I
-
-    iput v0, p0, Lbwe;->m:I
-
-    const-wide/16 v0, 0x4b0
-
-    iput-wide v0, p0, Lbwe;->n:J
-
-    iput-wide v0, p0, Lbwe;->o:J
-
-    new-instance v0, Lyq5;
-
-    invoke-direct {v0}, Lyq5;-><init>()V
-
-    iput-object v0, p0, Lbwe;->p:Landroid/view/animation/Interpolator;
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lac4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbwe;
+
+    sget-object p2, Lv2h;->a:Lv2h;
+
+    invoke-virtual {p1, p2}, Lbwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lbwe;
+
+    iget-object v0, p0, Lbwe;->X:Lcwe;
+
+    iget-object v1, p0, Lbwe;->Y:Ljk0;
+
+    invoke-direct {p1, v0, v1, p2}, Lbwe;-><init>(Lcwe;Ljk0;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lbwe;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbwe;->X:Lcwe;
+
+    iget-object p1, p1, Lcwe;->b:Lh6f;
+
+    new-instance v0, Lewe;
+
+    iget-object v2, p0, Lbwe;->Y:Ljk0;
+
+    iget-wide v2, v2, Lkk0;->a:J
+
+    invoke-direct {v0, v2, v3}, Lewe;-><init>(J)V
+
+    iput v1, p0, Lbwe;->o:I
+
+    invoke-virtual {p1, v0, p0}, Lh6f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

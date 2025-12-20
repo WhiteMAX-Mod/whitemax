@@ -1,206 +1,155 @@
 .class public final Lrra;
-.super Ljava/lang/Object;
+.super Lhsa;
 .source "SourceFile"
-
-# interfaces
-.implements Lvta;
-.implements Lpy4;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic e:I
 
-.field public final a:Lvta;
-
-.field public final b:Lgu3;
-
-.field public final c:Lgu3;
-
-.field public final d:Lp6;
-
-.field public o:Lpy4;
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lvta;Lgu3;Lgu3;Lp6;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lrra;->e:I
 
-    iput-object p1, p0, Lrra;->a:Lvta;
-
-    iput-object p2, p0, Lrra;->b:Lgu3;
-
-    iput-object p3, p0, Lrra;->c:Lgu3;
-
-    iput-object p4, p0, Lrra;->d:Lp6;
+    invoke-direct {p0}, Lhsa;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-boolean v0, p0, Lrra;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lrra;->d:Lp6;
-
-    invoke-interface {v0}, Lp6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrra;->X:Z
-
-    iget-object v0, p0, Lrra;->a:Lvta;
-
-    invoke-interface {v0}, Lvta;->b()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v0}, Lrra;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final c(Lpy4;)V
-    .locals 1
-
-    iget-object v0, p0, Lrra;->o:Lpy4;
-
-    invoke-static {v0, p1}, Lty4;->i(Lpy4;Lpy4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lrra;->o:Lpy4;
-
-    iget-object p1, p0, Lrra;->a:Lvta;
-
-    invoke-interface {p1, p0}, Lvta;->c(Lpy4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget-object v0, p0, Lrra;->o:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lrra;->o:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->e()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lrra;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lrra;->b:Lgu3;
-
-    invoke-interface {v0, p1}, Lgu3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lrra;->a:Lvta;
-
-    invoke-interface {v0, p1}, Lvta;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lrra;->o:Lpy4;
-
-    invoke-interface {v0}, Lpy4;->dispose()V
-
-    invoke-virtual {p0, p1}, Lrra;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
+.method public final b(Lwrg;)V
     .locals 2
 
-    iget-boolean v0, p0, Lrra;->X:Z
+    iget v0, p0, Lrra;->e:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    :cond_0
-    const/4 v0, 0x1
+    new-instance v0, Landroid/app/Notification$InboxStyle;
 
-    iput-boolean v0, p0, Lrra;->X:Z
+    invoke-direct {v0, p1}, Landroid/app/Notification$InboxStyle;-><init>(Landroid/app/Notification$Builder;)V
 
-    :try_start_0
-    iget-object v0, p0, Lrra;->c:Lgu3;
+    iget-object p1, p0, Lhsa;->c:Ljava/lang/Object;
 
-    invoke-interface {v0, p1}, Lgu3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Ljava/lang/CharSequence;
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
-
-    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+    invoke-virtual {v0, p1}, Landroid/app/Notification$InboxStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    iget-boolean v0, p0, Lhsa;->a:Z
 
-    move-object p1, v1
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lhsa;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
+
+    :cond_0
+    iget-object v0, p0, Lrra;->f:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     :goto_0
-    iget-object v0, p0, Lrra;->a:Lvta;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+    move-result v1
 
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v1}, Landroid/app/Notification$InboxStyle;->addLine(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
+
+    goto :goto_0
+
+    :cond_1
     return-void
+
+    :pswitch_0
+    iget-object p1, p1, Lwrg;->o:Ljava/lang/Object;
+
+    check-cast p1, Landroid/app/Notification$Builder;
+
+    new-instance v0, Landroid/app/Notification$BigTextStyle;
+
+    invoke-direct {v0, p1}, Landroid/app/Notification$BigTextStyle;-><init>(Landroid/app/Notification$Builder;)V
+
+    iget-object p1, p0, Lhsa;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p1}, Landroid/app/Notification$BigTextStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lrra;->f:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Lhsa;->a:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lhsa;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lrra;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "androidx.core.app.NotificationCompat$InboxStyle"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "androidx.core.app.NotificationCompat$BigTextStyle"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,177 +1,148 @@
 .class public final Lhl4;
-.super Ljava/lang/Object;
+.super Lil0;
 .source "SourceFile"
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    iput p3, p0, Lhl4;->a:I
+    iput p1, p0, Lhl4;->a:I
 
-    packed-switch p3, :pswitch_data_0
+    iput-object p2, p0, Lhl4;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhl4;->b:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Lhl4;->c:Ljava/lang/String;
+.method private final e()V
+    .locals 0
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p3
-
-    const/16 v0, 0x17
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {p1, v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-gt p3, v0, :cond_0
-
-    const/4 p3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p3, 0x0
-
-    :goto_0
-    if-eqz p3, :cond_3
-
-    iput-object p1, p0, Lhl4;->b:Ljava/lang/String;
-
-    const/4 p1, 0x0
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p3
-
-    if-gtz p3, :cond_2
-
-    :cond_1
-    move-object p2, p1
-
-    :cond_2
-    iput-object p2, p0, Lhl4;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "tag \"%s\" is longer than the %d character maximum"
-
-    invoke-static {p2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+.method public final a()V
     .locals 2
-
-    const/4 v0, 0x6
-
-    iget-object v1, p0, Lhl4;->b:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p2}, Lhl4;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lhl4;->c:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
 
     iget v0, p0, Lhl4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Loec;
 
-    return-object v0
+    invoke-virtual {v0}, Loec;->n()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lqw4;->b:Lzj0;
+
+    invoke-virtual {v0}, Lzj0;->c()V
+
+    :cond_0
+    return-void
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast v0, Lqh8;
 
-    iget-object v1, p0, Lhl4;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Lpof;->a()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "("
+    :pswitch_1
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lej8;
 
-    iget-object v1, p0, Lhl4;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Lpof;->a()V
 
-    const-string v2, ")"
+    return-void
 
-    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_2
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lqh8;
 
-    return-object v0
+    invoke-virtual {v0}, Lpof;->a()V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnh8;
+
+    invoke-virtual {v0}, Lpof;->a()V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :pswitch_5
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b()V
+    .locals 2
+
+    iget v0, p0, Lhl4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhl4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lil4;
+
+    iget-object v1, v0, Lil4;->c:Ldic;
+
+    check-cast v1, Lhl0;
+
+    invoke-virtual {v1}, Lhl0;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lil4;->g:Lyy7;
+
+    invoke-virtual {v0}, Lyy7;->c()V
+
+    :cond_0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

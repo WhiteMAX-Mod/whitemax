@@ -6,8 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lorg/webrtc/Logging$Severity;,
-        Lorg/webrtc/Logging$TraceLevel;
+        Lorg/webrtc/Logging$Severity;
     }
 .end annotation
 
@@ -182,24 +181,6 @@
     throw p0
 .end method
 
-.method public static enableTracing(Ljava/lang/String;Ljava/util/EnumSet;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/EnumSet<",
-            "Lorg/webrtc/Logging$TraceLevel;",
-            ">;)V"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    return-void
-.end method
-
 .method private static getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 2
 
@@ -286,13 +267,9 @@
     return-void
 
     :cond_2
-    sget-object v0, Lorg/webrtc/Logging$1;->$SwitchMap$org$webrtc$Logging$Severity:[I
-
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
-
-    aget p0, v0, p0
 
     const/4 v0, 0x1
 
@@ -311,7 +288,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object p0, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+    sget-object p0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
     goto :goto_0
 
@@ -321,7 +298,7 @@
     goto :goto_0
 
     :cond_5
-    sget-object p0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+    sget-object p0, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
     :goto_0
     sget-object v0, Lorg/webrtc/Logging;->fallbackLogger:Ljava/util/logging/Logger;

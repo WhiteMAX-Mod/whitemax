@@ -1,61 +1,102 @@
 .class public final Lk73;
-.super Ljava/lang/Object;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Lcbb;
+.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:Lyfb;
+.field public final synthetic X:Lpa8;
+
+.field public final synthetic o:Lp83;
 
 
 # direct methods
-.method public constructor <init>(Lyfb;)V
+.method public constructor <init>(Lp83;Lpa8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk73;->o:Lp83;
 
-    iput-object p1, p0, Lk73;->a:Lyfb;
+    iput-object p2, p0, Lk73;->X:Lpa8;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lk73;->a:Lyfb;
+    check-cast p1, Lac4;
 
-    invoke-virtual {v0}, Lyfb;->getSearchView()Lfbb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lk73;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    const/4 v1, 0x0
+    check-cast p1, Lk73;
 
-    invoke-virtual {v0, v1}, Lfbb;->setExpandable(Z)V
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    :cond_0
-    return-void
+    invoke-virtual {p1, p2}, Lk73;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final e()V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, La63;->c:La63;
+    new-instance p1, Lk73;
 
-    invoke-virtual {v0}, Li3;->p0()Lii4;
+    iget-object v0, p0, Lk73;->o:Lp83;
 
-    move-result-object v0
+    iget-object v1, p0, Lk73;->X:Lpa8;
 
-    const-string v1, ":chats-search"
+    invoke-direct {p1, v0, v1, p2}, Lk73;-><init>(Lp83;Lpa8;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v2, 0x0
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    return-void
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk73;->o:Lp83;
+
+    iget-object v0, p1, Lp83;->d:Lpl1;
+
+    iget-object v1, p0, Lk73;->X:Lpa8;
+
+    move-object v2, v1
+
+    check-cast v2, Lna8;
+
+    iget-object v2, v2, Lna8;->a:Ljava/lang/String;
+
+    new-instance v5, Lmp2;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v5, p1, v3, v1}, Lmp2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    move-object v1, v2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Lpl1;->k(Ljava/lang/String;ZZZLmq6;)V
+
+    sget-object p1, Lv2h;->a:Lv2h;
+
+    return-object p1
 .end method

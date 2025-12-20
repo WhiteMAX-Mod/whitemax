@@ -1,562 +1,254 @@
 .class public final Lkt1;
-.super Lzg1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Lw31;
 
-.field public final c:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final b:Lz7g;
 
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final c:Lqee;
 
-.field public final e:Ldq0;
+.field public final d:Lw7a;
 
-.field public final f:Ls7c;
+.field public final e:Lpme;
 
-.field public g:Lah1;
+.field public final f:Lrb9;
 
-.field public final h:Ljava/lang/Object;
+.field public final g:Lkqe;
 
-.field public i:Landroid/view/Surface;
+.field public final h:Lkne;
 
-.field public final j:Ljava/lang/String;
+.field public final i:Lgt1;
 
-.field public k:Lorg/webrtc/RendererCommon$GlDrawer;
+.field public final j:Lgo4;
 
-.field public final l:Llt1;
+.field public final k:Lra1;
+
+.field public final l:Lhw3;
+
+.field public final m:Lo41;
+
+.field public final n:Lp7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lw31;Lnkg;Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;Lcgd;Lzyc;Lka4;Lyk1;)V
+    .locals 11
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Lkt1;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 3
+    move-object/from16 v6, p6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
+    iput-object p2, p0, Lkt1;->a:Lw31;
 
-    iput-object v0, p0, Lzg1;->a:Landroid/opengl/EGLSurface;
+    new-instance v0, Lj2;
 
-    iput-object p1, p0, Lkt1;->b:Ljava/lang/String;
+    const/16 v1, 0xf
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0, v1, p0}, Lj2;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    new-instance v1, Lz7g;
 
-    iput-object v0, p0, Lkt1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v1, v0}, Lz7g;-><init>(Lmq6;)V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object v1, p0, Lkt1;->b:Lz7g;
 
-    const/4 v1, 0x0
+    new-instance v7, Lqee;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    const/4 v0, 0x6
 
-    iput-object v0, p0, Lkt1;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    move-object/from16 v1, p7
 
-    new-instance v0, Ldq0;
+    invoke-direct {v7, v0, v1}, Lqee;-><init>(ILjava/lang/Object;)V
 
-    const/4 v1, 0x2
+    iput-object v7, p0, Lkt1;->c:Lqee;
 
-    invoke-direct {v0, v1}, Ldq0;-><init>(I)V
+    new-instance v8, Lw7a;
 
-    iput-object v0, p0, Lkt1;->e:Ldq0;
+    const/16 v0, 0x11
 
-    new-instance v0, Ls7c;
+    invoke-direct {v8, v0}, Lw7a;-><init>(I)V
 
-    const/4 v1, 0x7
+    iput-object v8, p0, Lkt1;->d:Lw7a;
 
-    invoke-direct {v0, v1}, Ls7c;-><init>(I)V
+    new-instance v9, Lpme;
 
-    iput-object v0, p0, Lkt1;->f:Ls7c;
+    const/16 v0, 0xc
 
-    new-instance v0, Ljava/lang/Object;
+    move-object/from16 v1, p8
+
+    invoke-direct {v9, v0, v1}, Lpme;-><init>(ILjava/lang/Object;)V
+
+    iput-object v9, p0, Lkt1;->e:Lpme;
+
+    new-instance v10, Lrb9;
+
+    const/16 v0, 0x17
+
+    invoke-direct {v10, p4, v0, v6}, Lrb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object v10, p0, Lkt1;->f:Lrb9;
+
+    new-instance v0, Lkqe;
+
+    const/4 v5, 0x4
+
+    move-object v1, p2
+
+    move-object v2, p4
+
+    move-object/from16 v3, p5
+
+    move-object v4, v6
+
+    invoke-direct/range {v0 .. v5}, Lkqe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput-object v0, p0, Lkt1;->g:Lkqe;
+
+    new-instance v0, Lkne;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lkt1;->h:Ljava/lang/Object;
+    iput-object p2, v0, Lkne;->a:Ljava/lang/Object;
 
-    const-string v0, "CallOpenGL_drawer_"
+    iput-object p4, v0, Lkne;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iput-object v3, v0, Lkne;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    new-instance p4, Lkif;
 
-    iput-object v0, p0, Lkt1;->j:Ljava/lang/String;
+    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Llt1;
+    iput-object p4, v0, Lkne;->d:Ljava/lang/Object;
 
-    new-instance v1, Lm2;
+    iput-object v0, p0, Lkt1;->h:Lkne;
 
-    const/16 v2, 0x11
+    new-instance v0, Lgt1;
 
-    invoke-direct {v1, v2, p0}, Lm2;-><init>(ILjava/lang/Object;)V
+    move-object/from16 v2, p6
 
-    invoke-direct {v0, p1, v1}, Llt1;-><init>(Ljava/lang/String;Lm2;)V
+    move-object v3, v7
 
-    iput-object v0, p0, Lkt1;->l:Llt1;
+    move-object v4, v8
 
-    return-void
-.end method
+    move-object v5, v9
 
+    move-object v6, v10
 
-# virtual methods
-.method public final a()Llt1;
-    .locals 1
+    move-object v7, p3
 
-    iget-object v0, p0, Lkt1;->l:Llt1;
+    invoke-direct/range {v0 .. v7}, Lgt1;-><init>(Lw31;Lcgd;Lqee;Lw7a;Lpme;Lrb9;Lnkg;)V
 
-    return-object v0
-.end method
+    move-object v4, v5
 
-.method public final b(Ljava/lang/Object;)V
-    .locals 3
+    iput-object v0, p0, Lkt1;->i:Lgt1;
 
-    check-cast p1, Lorg/webrtc/RendererCommon$GlDrawer;
+    new-instance v0, Lgo4;
 
-    iput-object p1, p0, Lkt1;->k:Lorg/webrtc/RendererCommon$GlDrawer;
+    const/4 v1, 0x3
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    const/4 v2, 0x0
 
-    move-result-wide v0
+    invoke-direct {v0, v1, v2}, Lgo4;-><init>(IZ)V
 
-    iget-object p1, p0, Lkt1;->l:Llt1;
+    iput-object v0, p0, Lkt1;->j:Lgo4;
 
-    iput-wide v0, p1, Llt1;->g:J
+    new-instance v0, Lra1;
 
-    const/4 v0, 0x0
+    iget-object v1, p2, Lw31;->e:Ljava/lang/Object;
 
-    iput v0, p1, Llt1;->f:I
+    check-cast v1, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
 
-    const-wide/16 v1, 0x0
+    move-object/from16 v2, p9
 
-    iput-wide v1, p1, Llt1;->h:J
+    iget-object v8, v2, Lyk1;->z:Lwk1;
 
-    iput-wide v1, p1, Llt1;->i:J
+    iget-boolean v2, v8, Lwk1;->F:Z
 
-    iget-object v1, p1, Llt1;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    if-nez v2, :cond_1
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    iget-boolean v2, v8, Lwk1;->R:Z
 
-    iget-object p1, p1, Llt1;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    iget-object p1, p0, Lkt1;->g:Lah1;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lah1;->a:Ly6d;
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lkt1;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Instance "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lkt1;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " initialized. Total count is "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkt1;->j:Ljava/lang/String;
-
-    invoke-interface {p1, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Lru/ok/android/webrtc/opengl/CallVideoFrameDrawer$CallVideoFrameDrawerError;
-
-    const-string v0, "Render is missing inside onInitialize() callback"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final c(Lyg1;)V
-    .locals 5
-
-    iget-object p1, p0, Lkt1;->h:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iput-object v0, p0, Lkt1;->i:Landroid/view/Surface;
-
-    iget-object v1, p0, Lkt1;->g:Lah1;
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, v1, Lah1;->a:Ly6d;
-
-    if-nez v1, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iput-object v0, p0, Lkt1;->g:Lah1;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lkt1;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    :goto_0
+    move v7, v2
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v5, v6
 
-    move-result-object v2
+    move-object v2, p3
 
-    check-cast v2, Lorg/webrtc/VideoFrame;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Lorg/webrtc/VideoFrame;->release()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
+    move-object/from16 v6, p6
 
     goto :goto_2
 
     :cond_1
-    :goto_0
-    monitor-exit p1
-
-    iget-object p1, p0, Lkt1;->k:Lorg/webrtc/RendererCommon$GlDrawer;
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lorg/webrtc/RendererCommon$GlDrawer;->release()V
-
-    :cond_2
-    iput-object v0, p0, Lkt1;->k:Lorg/webrtc/RendererCommon$GlDrawer;
-
-    sget-object p1, Lkt1;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result p1
-
-    iget-object v0, p0, Lkt1;->j:Ljava/lang/String;
-
-    iget-object v2, p0, Lkt1;->b:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Instance "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " released. Remaining count is "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v1, v0, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_3
     :goto_1
-    monitor-exit p1
-
-    return-void
-
-    :goto_2
-    monitor-exit p1
-
-    throw v0
-.end method
-
-.method public final d(Lah1;Lyg1;)V
-    .locals 9
-
-    iget-object v0, p0, Lkt1;->d:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoFrame;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lkt1;->e:Ldq0;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-wide v2, v1, Ldq0;->c:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-gtz v4, :cond_1
-
-    monitor-exit v1
+    const/4 v2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    const-wide v4, 0x7fffffffffffffffL
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    monitor-exit v1
-
-    goto/16 :goto_4
-
-    :cond_2
-    :try_start_1
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v2
-
-    iget-wide v4, v1, Ldq0;->b:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    cmp-long v6, v2, v4
-
-    if-gez v6, :cond_3
-
-    monitor-exit v1
-
-    goto/16 :goto_4
-
-    :cond_3
-    :try_start_2
-    iget-wide v6, v1, Ldq0;->c:J
-
-    add-long/2addr v4, v6
-
-    iput-wide v4, v1, Ldq0;->b:J
-
-    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Ldq0;->b:J
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    monitor-exit v1
-
-    :goto_0
-    :try_start_3
-    invoke-virtual {v0}, Lorg/webrtc/VideoFrame;->getRotatedWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Lorg/webrtc/VideoFrame;->getRotatedHeight()I
-
-    move-result v2
-
-    int-to-float v3, v1
-
-    int-to-float v4, v2
-
-    div-float/2addr v3, v4
-
-    iget-object v4, p0, Lkt1;->f:Ls7c;
-
-    iget-object v5, v4, Ls7c;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Float;
-
-    const/4 v6, 0x1
-
-    if-eqz v5, :cond_4
-
-    invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    cmpl-float v7, v7, v8
-
-    if-nez v7, :cond_4
-
-    move v7, v6
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v7, 0x0
-
-    :goto_1
-    if-eqz v7, :cond_5
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v5
-
-    :cond_5
-    invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
-
-    move-result v7
-
-    cmpl-float v7, v3, v7
-
-    const/high16 v8, 0x3f800000    # 1.0f
-
-    if-lez v7, :cond_6
-
-    invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
-
-    move-result v5
-
-    div-float/2addr v5, v3
-
-    move v3, v8
-
-    move v8, v5
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
-
-    move-result v5
-
-    div-float/2addr v3, v5
-
     :goto_2
-    new-instance v5, Lal1;
+    invoke-direct/range {v0 .. v7}, Lra1;-><init>(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lnkg;Lqee;Lpme;Lrb9;Lcgd;Z)V
 
-    iget-object v4, v4, Ls7c;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lkt1;->k:Lra1;
 
-    check-cast v4, Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v1, Lhw3;
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    new-instance v2, Lgw3;
 
-    move-result v4
+    iget-boolean v3, v8, Lwk1;->o:Z
 
-    invoke-direct {v5, v8, v3, v4}, Lal1;-><init>(FFZ)V
+    iget-object v4, v8, Lwk1;->p:Ljava/lang/Double;
 
-    invoke-virtual {p1, p2, p0, v0, v5}, Lah1;->b(Lyg1;Lkt1;Lorg/webrtc/VideoFrame;Lal1;)V
+    iget-object v5, v8, Lwk1;->q:Ljava/lang/Double;
 
-    iget-object p1, p0, Lkt1;->l:Llt1;
+    invoke-direct {v2, v3, v4, v5}, Lgw3;-><init>(ZLjava/lang/Double;Ljava/lang/Double;)V
 
-    iget p2, p1, Llt1;->f:I
+    invoke-direct {v1, p2, v6, v2}, Lhw3;-><init>(Lw31;Lcgd;Lgw3;)V
 
-    add-int/2addr p2, v6
+    iput-object v1, p0, Lkt1;->l:Lhw3;
 
-    iput p2, p1, Llt1;->f:I
+    iget-object p2, p2, Lw31;->e:Ljava/lang/Object;
 
-    iget-object p1, p0, Lkt1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast p2, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    new-instance p4, Lw07;
 
-    move-result-object p1
+    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iput-object p1, p4, Lw07;->a:Ljava/lang/Object;
 
-    move-result p2
+    iput-object v6, p4, Lw07;->b:Ljava/lang/Object;
 
-    if-eqz p2, :cond_7
+    iput-object p3, p4, Lw07;->c:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance p1, Lgo;
 
-    move-result-object p2
+    const/4 v1, 0x4
 
-    check-cast p2, Ljt1;
+    invoke-direct {p1, v1, p4}, Lgo;-><init>(ILjava/lang/Object;)V
 
-    check-cast p2, Lbjh;
+    iput-object p1, p4, Lw07;->e:Ljava/lang/Object;
 
-    iget-object p2, p2, Lbjh;->a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+    new-instance p1, Lo41;
 
-    invoke-static {p2, v1, v2}, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->a(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;II)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p1, p2, p4, p3}, Lo41;-><init>(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lw07;Lnkg;)V
 
-    goto :goto_3
+    iput-object p1, p0, Lkt1;->m:Lo41;
 
-    :catchall_0
-    move-exception p1
+    new-instance p1, Lp7;
 
-    goto :goto_5
+    invoke-direct {p1, v0, p3}, Lp7;-><init>(Lra1;Lnkg;)V
 
-    :cond_7
-    :goto_4
-    invoke-virtual {v0}, Lorg/webrtc/VideoFrame;->release()V
+    iput-object p1, p0, Lkt1;->n:Lp7;
 
     return-void
-
-    :goto_5
-    invoke-virtual {v0}, Lorg/webrtc/VideoFrame;->release()V
-
-    throw p1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_4
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw p1
 .end method

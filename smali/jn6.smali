@@ -2,21 +2,24 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp6;
+
+# static fields
+.field public static final a:Ljn6;
 
 
-# virtual methods
-.method public final run()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljn6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    sput-object v0, Ljn6;->a:Ljn6;
 
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "EmptyAction"
-
-    return-object v0
 .end method

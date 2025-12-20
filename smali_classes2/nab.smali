@@ -1,133 +1,94 @@
-.class public abstract Lnab;
+.class public final synthetic Lnab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmq6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final synthetic b:Lpab;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lpab;I)V
+    .locals 0
 
-    sget v0, Lh4d;->audio_record_active_call_error_snackbar_title:I
+    iput p2, p0, Lnab;->a:I
 
-    sput v0, Lnab;->a:I
+    iput-object p1, p0, Lnab;->b:Lpab;
 
-    sget v0, Lh4d;->audio_record_confirm_exit_accept:I
-
-    sput v0, Lnab;->b:I
-
-    sget v0, Lh4d;->audio_record_confirm_exit_description:I
-
-    sput v0, Lnab;->c:I
-
-    sget v0, Lh4d;->audio_record_confirm_exit_title:I
-
-    sput v0, Lnab;->d:I
-
-    sget v0, Lh4d;->audio_record_error_common:I
-
-    sput v0, Lnab;->e:I
-
-    sget v0, Lh4d;->audio_record_error_limit:I
-
-    sput v0, Lnab;->f:I
-
-    sget v0, Lh4d;->audio_record_hold_to_start:I
-
-    sput v0, Lnab;->g:I
-
-    sget v0, Lh4d;->channel_input_hint:I
-
-    sput v0, Lnab;->h:I
-
-    sget v0, Lh4d;->chat_input_hint:I
-
-    sput v0, Lnab;->i:I
-
-    sget v0, Lh4d;->messagewrite_edit_quote_title:I
-
-    sput v0, Lnab;->j:I
-
-    sget v0, Lh4d;->reply_quote_self:I
-
-    sput v0, Lnab;->k:I
-
-    sget v0, Lh4d;->reply_quote_to_somebody:I
-
-    sput v0, Lnab;->l:I
-
-    sget v0, Lh4d;->video_message_record_error_common:I
-
-    sput v0, Lnab;->m:I
-
-    sget v0, Lh4d;->video_message_record_error_no_camera:I
-
-    sput v0, Lnab;->n:I
-
-    sget v0, Lh4d;->video_record_active_call_error_snackbar_title:I
-
-    sput v0, Lnab;->o:I
-
-    sget v0, Lh4d;->writebar__add_link_button:I
-
-    sput v0, Lnab;->p:I
-
-    sget v0, Lh4d;->writebar__add_link_title:I
-
-    sput v0, Lnab;->q:I
-
-    sget v0, Lh4d;->writebar_commands_not_found:I
-
-    sput v0, Lnab;->r:I
-
-    sget v0, Lh4d;->writebar_mentions_not_found:I
-
-    sput v0, Lnab;->s:I
-
-    sget v0, Lh4d;->writebar_mentions_title:I
-
-    sput v0, Lnab;->t:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lnab;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnab;->b:Lpab;
+
+    invoke-virtual {v0}, Lpab;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lnab;->b:Lpab;
+
+    new-instance v1, Lkne;
+
+    iget-object v2, v0, Lpab;->c:Lzq3;
+
+    iget-object v3, v0, Lpab;->d:Lsxf;
+
+    new-instance v4, Lnab;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, v5}, Lnab;-><init>(Lpab;I)V
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v1, Lkne;->a:Ljava/lang/Object;
+
+    iput-object v3, v1, Lkne;->b:Ljava/lang/Object;
+
+    iput-object v4, v1, Lkne;->c:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, v1, Lkne;->d:Ljava/lang/Object;
+
+    new-instance v0, Llab;
+
+    invoke-direct {v0, v1}, Llab;-><init>(Lkne;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lnab;->b:Lpab;
+
+    iget-object v0, v0, Lpab;->b:Lje;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

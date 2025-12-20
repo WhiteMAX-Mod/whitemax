@@ -1,53 +1,55 @@
 .class public final Lwb8;
-.super Ljava/lang/Object;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lk18;
+.field public X:Lod8;
 
-.field public final b:Lk18;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljc8;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Lhic;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lk18;Lk18;)V
+.method public constructor <init>(Ljc8;Ll84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwb8;->Z:Ljc8;
 
-    iput-object p1, p0, Lwb8;->a:Lk18;
-
-    iput-object p2, p0, Lwb8;->b:Lk18;
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Lwb8;Landroid/content/Context;Lof0;Ldtf;)Ljava/lang/Object;
-    .locals 3
 
-    iget-object v0, p0, Lwb8;->a:Lk18;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+    iput-object p1, p0, Lwb8;->Y:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lwb8;->s0:I
 
-    check-cast v0, Llzf;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lq2b;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Lq2b;->b()Lz74;
+    iput p1, p0, Lwb8;->s0:I
 
-    move-result-object v0
+    iget-object p1, p0, Lwb8;->Z:Ljc8;
 
-    new-instance v1, Lvb8;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0, v0, p0}, Ljc8;->i(Lhic;Lod8;Ll84;)Ljava/lang/Object;
 
-    invoke-direct {v1, p0, p2, p1, v2}, Lvb8;-><init>(Lwb8;Lof0;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    invoke-static {v0, v1, p3}, Lsvi;->i(Lx74;Lsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

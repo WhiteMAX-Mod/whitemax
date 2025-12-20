@@ -1,190 +1,81 @@
-.class public final enum Los3;
-.super Ljava/lang/Enum;
+.class public final synthetic Los3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# static fields
-.field public static final enum X:Los3;
-
-.field public static final synthetic Y:[Los3;
-
-.field public static final synthetic Z:Lzg5;
-
-.field public static final enum b:Los3;
-
-.field public static final enum c:Los3;
-
-.field public static final enum d:Los3;
-
-.field public static final enum o:Los3;
+.implements Loq6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Los3;
-
-    const-string v1, "TYPE_UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Los3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Los3;->b:Los3;
-
-    new-instance v1, Los3;
-
-    const-string v2, "TYPE_WIFI"
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Los3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Los3;->c:Los3;
-
-    new-instance v2, Los3;
-
-    const-string v3, "TYPE_MOBILE_SLOW"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v2, v3, v4, v5}, Los3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Los3;->d:Los3;
-
-    new-instance v3, Los3;
-
-    const-string v4, "TYPE_MOBILE_NORMAL"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v3, v4, v5, v6}, Los3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Los3;->o:Los3;
-
-    new-instance v4, Los3;
-
-    const-string v5, "TYPE_MOBILE_FAST"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v4, v5, v6, v7}, Los3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Los3;->X:Los3;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Los3;
-
-    move-result-object v0
-
-    sput-object v0, Los3;->Y:[Los3;
-
-    new-instance v1, Lzg5;
-
-    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Los3;->Z:Lzg5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Los3;->a:I
 
-    iput p3, p0, Los3;->a:I
+    iput-object p1, p0, Los3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Los3;
-    .locals 1
-
-    const-class v0, Los3;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Los3;
-
-    return-object p0
-.end method
-
-.method public static values()[Los3;
-    .locals 1
-
-    sget-object v0, Los3;->Y:[Los3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Los3;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lns3;->$EnumSwitchMapping$0:[I
+    iget v0, p0, Los3;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    sget-object v1, Lv2h;->a:Lv2h;
 
-    move-result v1
+    iget-object v2, p0, Los3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    aget v0, v0, v1
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x1
+    check-cast p1, Ltt3;
 
-    if-eq v0, v1, :cond_3
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lp38;
 
-    const/4 v1, 0x2
+    sget-object v0, Ltt3;->b:Ltt3;
 
-    if-eq v0, v1, :cond_2
+    if-ne p1, v0, :cond_0
 
-    const/4 v1, 0x3
+    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->E0()Let3;
 
-    if-eq v0, v1, :cond_1
+    move-result-object p1
 
-    const/4 v1, 0x4
+    iget-object p1, p1, Let3;->A0:Lhof;
 
-    if-eq v0, v1, :cond_0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const-string v0, "UNKNOWN"
+    const/4 v2, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v2, v0}, Lhof;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_0
-    const-string v0, "4G"
+    return-object v1
 
-    return-object v0
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    :cond_1
-    const-string v0, "3G"
+    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lp38;
 
-    return-object v0
+    invoke-virtual {v2}, Lx84;->getRouter()Lw3e;
 
-    :cond_2
-    const-string v0, "2G"
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p1}, Lw3e;->C()Z
 
-    :cond_3
-    const-string v0, "WIFI"
+    return-object v1
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

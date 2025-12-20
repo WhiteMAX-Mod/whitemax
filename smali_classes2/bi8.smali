@@ -1,174 +1,327 @@
-.class public final enum Lbi8;
-.super Ljava/lang/Enum;
+.class public final Lbi8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llqb;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final enum X:Lbi8;
-
-.field public static final enum Y:Lbi8;
-
-.field public static final enum Z:Lbi8;
-
-.field public static final enum b:Lbi8;
-
-.field public static final enum c:Lbi8;
-
-.field public static final enum d:Lbi8;
-
-.field public static final enum o:Lbi8;
-
-.field public static final synthetic s0:[Lbi8;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbi8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:I
+.field public final X:Ljava/lang/String;
+
+.field public final Y:I
+
+.field public final Z:Landroid/graphics/Rect;
+
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:I
+
+.field public final o:Ljava/lang/String;
+
+.field public final s0:[F
+
+.field public final t0:Z
+
+.field public final u0:I
+
+.field public final v0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 2
 
-    new-instance v0, Lbi8;
+    new-instance v0, Ly58;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Ly58;-><init>(I)V
+
+    sput-object v0, Lbi8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 3
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x64
-
-    const-string v3, "SOCKET_CLOSED"
-
-    invoke-direct {v0, v3, v1, v2}, Lbi8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lbi8;->b:Lbi8;
-
-    new-instance v1, Lbi8;
-
     const/4 v2, 0x1
 
-    const/16 v3, 0x6e
+    if-eqz v0, :cond_0
 
-    const-string v4, "SESSION_FORCE_UPDATE"
+    move v0, v2
 
-    invoke-direct {v1, v4, v2, v3}, Lbi8;-><init>(Ljava/lang/String;II)V
+    goto :goto_0
 
-    sput-object v1, Lbi8;->c:Lbi8;
+    :cond_0
+    move v0, v1
 
-    new-instance v2, Lbi8;
+    :goto_0
+    iput-boolean v0, p0, Lbi8;->a:Z
 
-    const/4 v3, 0x2
+    .line 16
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    const/16 v4, 0x6f
+    move-result v0
 
-    const-string v5, "SESSION_RESTART"
+    if-eqz v0, :cond_1
 
-    invoke-direct {v2, v5, v3, v4}, Lbi8;-><init>(Ljava/lang/String;II)V
+    move v0, v2
 
-    sput-object v2, Lbi8;->d:Lbi8;
+    goto :goto_1
 
-    new-instance v3, Lbi8;
+    :cond_1
+    move v0, v1
 
-    const/4 v4, 0x3
+    :goto_1
+    iput-boolean v0, p0, Lbi8;->b:Z
 
-    const/16 v5, 0x78
+    .line 17
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    const-string v6, "LOGIN_DROP_CACHE"
+    move-result v0
 
-    invoke-direct {v3, v6, v4, v5}, Lbi8;-><init>(Ljava/lang/String;II)V
+    if-eqz v0, :cond_2
 
-    sput-object v3, Lbi8;->o:Lbi8;
+    move v0, v2
 
-    new-instance v4, Lbi8;
+    goto :goto_2
 
-    const/4 v5, 0x4
+    :cond_2
+    move v0, v1
 
-    const/16 v6, 0x79
+    :goto_2
+    iput-boolean v0, p0, Lbi8;->c:Z
 
-    const-string v7, "LOGIN_BACK_BLOCKED"
+    .line 18
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    invoke-direct {v4, v7, v5, v6}, Lbi8;-><init>(Ljava/lang/String;II)V
+    move-result v0
 
-    sput-object v4, Lbi8;->X:Lbi8;
+    iput v0, p0, Lbi8;->d:I
 
-    new-instance v5, Lbi8;
-
-    const/4 v6, 0x5
-
-    const/16 v7, 0x7a
-
-    const-string v8, "LOGIN_RESTART"
-
-    invoke-direct {v5, v8, v6, v7}, Lbi8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lbi8;->Y:Lbi8;
-
-    new-instance v6, Lbi8;
-
-    const/4 v7, 0x6
-
-    const/16 v8, 0x7b
-
-    const-string v9, "LOGIN_UNKNOWN"
-
-    invoke-direct {v6, v9, v7, v8}, Lbi8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lbi8;->Z:Lbi8;
-
-    filled-new-array/range {v0 .. v6}, [Lbi8;
+    .line 19
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lbi8;->s0:[Lbi8;
+    iput-object v0, p0, Lbi8;->o:Ljava/lang/String;
+
+    .line 20
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbi8;->X:Ljava/lang/String;
+
+    .line 21
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lbi8;->Y:I
+
+    .line 22
+    const-class v0, Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    iput-object v0, p0, Lbi8;->Z:Landroid/graphics/Rect;
+
+    .line 23
+    invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbi8;->s0:[F
+
+    .line 24
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    iput-boolean v1, p0, Lbi8;->t0:Z
+
+    .line 25
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lbi8;->u0:I
+
+    .line 26
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Lbi8;->v0:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public constructor <init>(Lfu0;)V
+    .locals 3
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lbi8;->a:I
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Lbi8;->a:Z
+
+    .line 3
+    iget-boolean v1, p1, Lfu0;->c:Z
+
+    iput-boolean v1, p0, Lbi8;->b:Z
+
+    .line 4
+    iput-boolean v0, p0, Lbi8;->c:Z
+
+    const/4 v1, 0x0
+
+    .line 5
+    iput v1, p0, Lbi8;->d:I
+
+    .line 6
+    iget-object v2, p1, Lfu0;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    iput-object v2, p0, Lbi8;->o:Ljava/lang/String;
+
+    .line 7
+    iget-object v2, p1, Lfu0;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    iput-object v2, p0, Lbi8;->X:Ljava/lang/String;
+
+    .line 8
+    iget p1, p1, Lfu0;->b:I
+
+    iput p1, p0, Lbi8;->Y:I
+
+    const/4 p1, 0x0
+
+    .line 9
+    iput-object p1, p0, Lbi8;->Z:Landroid/graphics/Rect;
+
+    .line 10
+    iput-object p1, p0, Lbi8;->s0:[F
+
+    .line 11
+    iput-boolean v0, p0, Lbi8;->t0:Z
+
+    .line 12
+    iput v1, p0, Lbi8;->u0:I
+
+    .line 13
+    iput v1, p0, Lbi8;->v0:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lbi8;
-    .locals 1
-
-    const-class v0, Lbi8;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbi8;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbi8;
-    .locals 1
-
-    sget-object v0, Lbi8;->s0:[Lbi8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbi8;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lbi8;->a:I
+    const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-boolean v0, p0, Lbi8;->a:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p0, Lbi8;->b:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p0, Lbi8;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget v0, p0, Lbi8;->d:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Lbi8;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lbi8;->X:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget v0, p0, Lbi8;->Y:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Lbi8;->Z:Landroid/graphics/Rect;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, Lbi8;->s0:[F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
+
+    iget-boolean p2, p0, Lbi8;->t0:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget p2, p0, Lbi8;->u0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lbi8;->v0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

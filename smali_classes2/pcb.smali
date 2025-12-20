@@ -1,160 +1,60 @@
-.class public final Lpcb;
-.super Ljava/lang/Object;
+.class public final synthetic Lpcb;
+.super Lw8;
 .source "SourceFile"
 
 # interfaces
-.implements Lucb;
+.implements Ler6;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lpcb;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
+.field public static final Z:Lpcb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lpq8;
+    new-instance v0, Lpcb;
 
-    const/16 v1, 0x18
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
+    const/4 v2, 0x4
 
-    sput-object v0, Lpcb;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v3, 0x3
 
-    return-void
-.end method
+    const-class v4, Lysb;
 
-.method public constructor <init>(II)V
-    .locals 0
+    invoke-direct {v0, v3, v4, v1, v2}, Lw8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lpcb;->a:I
-
-    iput p2, p0, Lpcb;->b:I
+    sput-object v0, Lpcb;->Z:Lpcb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/lang/Number;
 
-    return v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    move-result p1
 
-    const/4 v0, 0x1
+    check-cast p2, Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lpcb;
+    new-instance p3, Lysb;
 
-    const/4 v2, 0x0
+    new-instance v0, Ljava/lang/Integer;
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
 
-    return v2
+    invoke-direct {p3, v0, p2}, Lysb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_1
-    check-cast p1, Lpcb;
-
-    iget v1, p0, Lpcb;->a:I
-
-    iget v3, p1, Lpcb;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lpcb;->b:I
-
-    iget p1, p1, Lpcb;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lpcb;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lpcb;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", tintColor="
-
-    const-string v1, ")"
-
-    const-string v2, "ColoredIcon(iconRes="
-
-    iget v3, p0, Lpcb;->a:I
-
-    iget v4, p0, Lpcb;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lpcb;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lpcb;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p3
 .end method

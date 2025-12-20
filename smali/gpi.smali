@@ -1,179 +1,155 @@
-.class public abstract Lgpi;
-.super Ljava/lang/Object;
+.class public final Lgpi;
+.super Ljoi;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lydg;
+
+
 # direct methods
-.method public static final d(Landroid/text/Layout;)I
+.method public constructor <init>(Lcf8;Lydg;)V
     .locals 0
 
-    if-eqz p0, :cond_0
+    const/4 p1, 0x4
 
-    invoke-virtual {p0}, Landroid/text/Layout;->getHeight()I
+    invoke-direct {p0, p1}, Ljpi;-><init>(I)V
 
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final e(Landroid/text/Layout;)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/text/Layout;->getLineCount()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/text/Layout;->getEllipsisCount(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/text/Layout;->getLineMax(I)F
-
-    move-result p0
-
-    float-to-int p0, p0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/text/Layout;->getEllipsizedWidth()I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public static final h(Lesg;)V
-    .locals 2
-
-    new-instance v0, Lsdf;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lsdf;-><init>(I)V
-
-    const/16 v1, 0x48
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lsdf;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lsdf;-><init>(I)V
-
-    const/16 v1, 0x49
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lsdf;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Lsdf;-><init>(I)V
-
-    const/16 v1, 0x4a
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lqzg;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqzg;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0xd
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0x4b
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0x4c
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0x23
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0x4d
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
-
-    new-instance v0, Lrzg;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lrzg;-><init>(I)V
-
-    const/16 v1, 0x4e
-
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    iput-object p2, p0, Lgpi;->b:Lydg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lk4;Lg4;Lg4;)Z
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+
+    iget-object p1, p0, Lgpi;->b:Lydg;
+
+    invoke-virtual {p1, v0}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
 .end method
 
-.method public abstract b(Lk4;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Lgpi;->b:Lydg;
+
+    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
 .end method
 
-.method public abstract c(Lk4;Lj4;Lj4;)Z
+.method public final c(Lgoi;)V
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lgpi;->h(Lgoi;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    iget-object v0, p0, Lgpi;->b:Lydg;
+
+    invoke-virtual {v0, p1}, Lydg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+
+    :catch_1
+    move-exception p1
+
+    invoke-static {p1}, Ljpi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lgpi;->a(Lcom/google/android/gms/common/api/Status;)V
+
+    return-void
+
+    :catch_2
+    move-exception p1
+
+    invoke-static {p1}, Ljpi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lgpi;->a(Lcom/google/android/gms/common/api/Status;)V
+
+    throw p1
 .end method
 
-.method public abstract f(Lj4;Lj4;)V
+.method public final bridge synthetic d(Lx1d;Z)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract g(Lj4;Ljava/lang/Thread;)V
+.method public final f(Lgoi;)Z
+    .locals 1
+
+    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqoi;
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g(Lgoi;)[Ltx5;
+    .locals 1
+
+    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqoi;
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final h(Lgoi;)V
+    .locals 1
+
+    iget-object p1, p1, Lgoi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqoi;
+
+    iget-object p1, p0, Lgpi;->b:Lydg;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, v0}, Lydg;->d(Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -2,50 +2,98 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llx8;
+
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
-.field public final c:I
+.field public final c:Lsh7;
 
-.field public final d:I
+.field public final d:Lpkd;
 
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(IIIIIII)V
+.method public constructor <init>(JLjava/lang/String;Lsh7;Lpkd;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lkdf;->a:I
+    iput-wide p1, p0, Lkdf;->a:J
 
-    iput p2, p0, Lkdf;->b:I
+    iput-object p3, p0, Lkdf;->b:Ljava/lang/String;
 
-    iput p3, p0, Lkdf;->c:I
+    iput-object p4, p0, Lkdf;->c:Lsh7;
 
-    iput p4, p0, Lkdf;->d:I
+    iput-object p5, p0, Lkdf;->d:Lpkd;
 
-    iput p5, p0, Lkdf;->e:I
-
-    iput p6, p0, Lkdf;->f:I
-
-    iput p7, p0, Lkdf;->g:I
+    iput-boolean p6, p0, Lkdf;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lkdf;->e:Z
+
+    return v0
+.end method
+
+.method public final e()Z
     .locals 2
+
+    iget-object v0, p0, Lkdf;->d:Lpkd;
+
+    iget-object v0, v0, Lpkd;->a:Laof;
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v1, v1, Li00;
+
+    if-nez v1, :cond_1
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lm00;
+
+    if-nez v1, :cond_1
+
+    invoke-interface {v0}, Laof;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lk00;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     if-ne p0, p1, :cond_0
 
@@ -61,72 +109,68 @@
     :cond_1
     check-cast p1, Lkdf;
 
-    iget v0, p0, Lkdf;->a:I
+    iget-wide v0, p0, Lkdf;->a:J
 
-    iget v1, p1, Lkdf;->a:I
+    iget-wide v2, p1, Lkdf;->a:J
 
-    if-eq v0, v1, :cond_2
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lkdf;->b:I
+    iget-object v0, p0, Lkdf;->b:Ljava/lang/String;
 
-    iget v1, p1, Lkdf;->b:I
+    iget-object v1, p1, Lkdf;->b:Ljava/lang/String;
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
 
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lkdf;->c:I
+    iget-object v0, p0, Lkdf;->c:Lsh7;
 
-    iget v1, p1, Lkdf;->c:I
+    iget-object v1, p1, Lkdf;->c:Lsh7;
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v0, v1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
 
     goto :goto_0
 
     :cond_4
-    iget v0, p0, Lkdf;->d:I
+    iget-object v0, p0, Lkdf;->d:Lpkd;
 
-    iget v1, p1, Lkdf;->d:I
+    iget-object v1, p1, Lkdf;->d:Lpkd;
 
-    if-eq v0, v1, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
 
     goto :goto_0
 
     :cond_5
-    iget v0, p0, Lkdf;->e:I
+    iget-boolean v0, p0, Lkdf;->e:Z
 
-    iget v1, p1, Lkdf;->e:I
+    iget-boolean p1, p1, Lkdf;->e:Z
 
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lkdf;->f:I
-
-    iget v1, p1, Lkdf;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lkdf;->g:I
-
-    iget p1, p1, Lkdf;->g:I
-
-    if-eq v0, p1, :cond_8
+    if-eq v0, p1, :cond_6
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_8
+    :cond_6
     :goto_1
     const/4 p1, 0x1
 
@@ -136,9 +180,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lkdf;->a:I
+    iget-wide v0, p0, Lkdf;->a:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
@@ -146,39 +190,35 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lkdf;->b:I
+    iget-object v2, p0, Lkdf;->b:Ljava/lang/String;
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
-
-    move-result v0
-
-    iget v2, p0, Lkdf;->c:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    invoke-static {v0, v1, v2}, Lzy4;->e(IILjava/lang/String;)I
 
     move-result v0
 
-    iget v2, p0, Lkdf;->d:I
+    iget-object v2, p0, Lkdf;->c:Lsh7;
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    invoke-virtual {v2}, Lsh7;->hashCode()I
 
-    move-result v0
+    move-result v2
 
-    iget v2, p0, Lkdf;->e:I
+    add-int/2addr v2, v0
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    mul-int/2addr v2, v1
 
-    move-result v0
+    iget-object v0, p0, Lkdf;->d:Lpkd;
 
-    iget v2, p0, Lkdf;->f:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget v1, p0, Lkdf;->g:I
+    add-int/2addr v0, v2
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lkdf;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -190,45 +230,41 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", contrastStatic="
+    const-string v0, "SingleImageAttach(messageId="
 
-    const-string v1, ", negative="
+    const-string v1, ", attachId="
 
-    const-string v2, "StatesTextDisabledColors(contrast="
+    iget-wide v2, p0, Lkdf;->a:J
 
-    iget v3, p0, Lkdf;->a:I
+    iget-object v4, p0, Lkdf;->b:Ljava/lang/String;
 
-    iget v4, p0, Lkdf;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v1, v4}, Lqf7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", neutralThemed="
+    const-string v1, ", imageAttach="
 
-    const-string v2, ", primary="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lkdf;->c:I
+    iget-object v1, p0, Lkdf;->c:Lsh7;
 
-    iget v4, p0, Lkdf;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    const-string v1, ", progressState="
 
-    const-string v1, ", primaryStatic="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", themed="
+    iget-object v1, p0, Lkdf;->d:Lpkd;
 
-    iget v3, p0, Lkdf;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lkdf;->f:I
+    const-string v1, ", isMediaOrderedFirst="
 
-    invoke-static {v0, v3, v1, v4, v2}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    const-string v2, ")"
 
-    const-string v1, ")"
+    iget-boolean v3, p0, Lkdf;->e:Z
 
-    iget v2, p0, Lkdf;->g:I
-
-    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v3, v2}, Lgg9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

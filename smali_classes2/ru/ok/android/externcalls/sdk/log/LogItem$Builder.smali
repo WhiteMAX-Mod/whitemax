@@ -45,10 +45,10 @@
         "(J)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
         "uid",
         "setUid",
-        "Lhcf;",
+        "Lunf;",
         "operation",
         "setOperation",
-        "(Lhcf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
+        "(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;",
         "Lru/ok/android/onelog/OneLogItem;",
         "toOneLogItem$calls_sdk_release",
         "()Lru/ok/android/onelog/OneLogItem;",
@@ -160,13 +160,22 @@
     return-object p0
 .end method
 
-.method public final setOperation(Lhcf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+.method public final setOperation(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;->operation:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final setOperation(Lunf;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object p1, p1, Lhcf;->a:Ljava/lang/String;
+    iget-object p1, p1, Lunf;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -174,15 +183,6 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;->operation:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final setOperation(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/log/LogItem$Builder;
-    .locals 0
-
-    .line 2
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/LogItem$Builder;->operation:Ljava/lang/String;
 
     return-object p0

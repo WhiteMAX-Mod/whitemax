@@ -1,145 +1,356 @@
 .class public final Lujf;
-.super Ldtf;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# static fields
+.field public static final d:Landroid/graphics/Paint;
 
 
 # instance fields
-.field public final synthetic X:Lhkf;
+.field public final a:Lvjf;
 
-.field public o:I
+.field public final b:Landroid/graphics/Rect;
+
+.field public final c:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Lhkf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lujf;->X:Lhkf;
+    new-instance v0, Landroid/graphics/Paint;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    sput-object v0, Lujf;->d:Landroid/graphics/Paint;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lig5;ILke5;)V
+    .locals 4
+
+    .line 8
+    new-instance v0, Lvjf;
+
+    .line 9
+    new-instance v1, Lkf5;
+
+    .line 10
+    iget v2, p1, Lig5;->b:I
+
+    .line 11
+    iget v3, p1, Lig5;->c:I
+
+    .line 12
+    iget p1, p1, Lig5;->d:I
+
+    .line 13
+    invoke-direct {v1, v2, v3, p1}, Lkf5;-><init>(III)V
+
+    .line 14
+    invoke-direct {v0, v1, p2, p3}, Lvjf;-><init>(Lkf5;ILke5;)V
+
+    .line 15
+    invoke-direct {p0, v0}, Lujf;-><init>(Lvjf;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lvjf;)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lujf;->a:Lvjf;
+
+    .line 3
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lujf;->b:Landroid/graphics/Rect;
+
+    .line 4
+    new-instance v0, Landroid/graphics/Paint;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lujf;->c:Landroid/graphics/Paint;
+
+    const/4 v0, 0x0
+
+    .line 5
+    iget p1, p1, Lvjf;->b:I
+
+    .line 6
+    invoke-virtual {p0, v0, v0, p1, p1}, Lujf;->setBounds(IIII)V
+
+    .line 7
+    invoke-virtual {p0}, Lujf;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lujf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lujf;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Lujf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lujf;
-
-    iget-object v0, p0, Lujf;->X:Lhkf;
-
-    invoke-direct {p1, v0, p2}, Lujf;-><init>(Lhkf;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 5
 
-    iget v0, p0, Lujf;->o:I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lujf;->X:Lhkf;
+    move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
-    if-eqz v0, :cond_1
+    move-result v0
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v1}, Landroid/graphics/Rect;->centerY()I
+
+    move-result v1
+
+    iget-object v2, p0, Lujf;->a:Lvjf;
+
+    iget v2, v2, Lvjf;->b:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    sub-int v3, v0, v2
+
+    sub-int v4, v1, v2
+
+    add-int/2addr v0, v2
+
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lujf;->b:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    iget-object v0, p0, Lujf;->a:Lvjf;
+
+    iget-object v1, v0, Lvjf;->c:Lke5;
+
+    iget-object v0, v0, Lvjf;->a:Lkf5;
+
+    invoke-virtual {v1, v0}, Lke5;->n(Lkf5;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lujf;->b:Landroid/graphics/Rect;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lujf;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v2, Lag5;->c:Landroid/graphics/Rect;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget-object v2, Lag5;->c:Landroid/graphics/Rect;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v3, p0, Lujf;->c:Landroid/graphics/Paint;
 
-    throw p1
+    invoke-virtual {p1, v0, v2, v1, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lujf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lujf;
 
-    iget-object p1, v1, Lhkf;->X:Lk18;
+    iget-object v1, p0, Lujf;->a:Lvjf;
 
-    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lujf;->a:Lvjf;
 
-    move-result-object p1
-
-    check-cast p1, Lkdd;
-
-    iput v2, p0, Lujf;->o:I
-
-    invoke-virtual {p1, p0}, Lkdd;->a(Lq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    sget-object v0, Lqqg;->a:Lqqg;
+    if-nez p1, :cond_2
 
-    if-nez p1, :cond_3
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    .locals 1
+
+    iget-object v0, p0, Lujf;->a:Lvjf;
 
     return-object v0
+.end method
 
-    :cond_3
-    iget-object p1, v1, Lhkf;->y0:Lci5;
+.method public final getIntrinsicHeight()I
+    .locals 1
 
-    new-instance v1, Lqne;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    sget v2, Lyud;->x:I
+    move-result-object v0
 
-    sget v3, Lvdb;->C:I
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
-    new-instance v4, Ln5g;
+    move-result v0
 
-    invoke-direct {v4, v3}, Ln5g;-><init>(I)V
+    return v0
+.end method
 
-    invoke-direct {v1, v2, v4}, Lqne;-><init>(ILs5g;)V
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    invoke-static {p1, v1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getMinimumHeight()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getMinimumWidth()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x2
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lujf;->a:Lvjf;
+
+    invoke-virtual {v0}, Lvjf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setBounds(IIII)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object p1, p0, Lujf;->a:Lvjf;
+
+    iput p4, p1, Lvjf;->b:I
+
+    invoke-virtual {p0}, Lujf;->a()V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Lujf;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SpriteEmojiDrawable(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lujf;->a:Lvjf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

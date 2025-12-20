@@ -1,29 +1,35 @@
 .class public final Li6a;
-.super Lq44;
+.super Ll84;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lo98;
+.field public X:Ljava/util/Collection;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:Ljava/util/Iterator;
 
-.field public final synthetic Z:Lp6a;
+.field public Z:Lku2;
 
-.field public d:Lp6a;
+.field public d:Lj6a;
 
-.field public o:Lo98;
+.field public o:Ljava/util/List;
 
-.field public s0:I
+.field public s0:[B
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lj6a;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>(Lp6a;Lq44;)V
+.method public constructor <init>(Lj6a;Ll84;)V
     .locals 0
 
-    iput-object p1, p0, Li6a;->Z:Lp6a;
+    iput-object p1, p0, Li6a;->u0:Lj6a;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -33,21 +39,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Li6a;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Li6a;->t0:Ljava/lang/Object;
 
-    iget p1, p0, Li6a;->s0:I
+    iget p1, p0, Li6a;->v0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Li6a;->s0:I
+    iput p1, p0, Li6a;->v0:I
 
-    iget-object p1, p0, Li6a;->Z:Lp6a;
+    iget-object p1, p0, Li6a;->u0:Lj6a;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lp6a;->f(Lone/me/messages/list/loader/MessageModel;Lq44;)Ljava/io/Serializable;
+    invoke-static {p1, v0, p0}, Lj6a;->a(Lj6a;Ljava/util/List;Ll84;)Ljava/lang/Object;
 
     move-result-object p1
 

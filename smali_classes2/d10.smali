@@ -1,125 +1,230 @@
-.class public final Ld10;
+.class public final synthetic Ld10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic p:I
+# interfaces
+.implements Ltw8;
+.implements Ldr6;
+.implements Lux3;
 
 
 # instance fields
-.field public final a:Lc10;
-
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ln10;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic a:Lf10;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lf10;)V
+    .locals 0
 
-    new-instance v0, Lb10;
+    iput-object p1, p0, Ld10;->a:Lf10;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lb10;->a()Ld10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lb10;)V
+
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v0, p1, Lb10;->a:Lc10;
+    const-string v0, "AttachPreviewDiskCache"
 
-    iput-object v0, p0, Ld10;->a:Lc10;
+    const-string v1, "onError"
 
-    iget-wide v0, p1, Lb10;->b:J
+    invoke-static {v0, v1, p1}, Lm4j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-wide v0, p0, Ld10;->b:J
+    iget-object v0, p0, Ld10;->a:Lf10;
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, v0, Lf10;->a:Lum5;
 
-    iget-object v1, p1, Lb10;->c:Ljava/util/List;
+    check-cast v0, Liab;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v0, p1}, Liab;->a(Ljava/lang/Throwable;)V
 
-    iput-object v0, p0, Ld10;->c:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    iget-object v0, p1, Lb10;->d:Ljava/lang/String;
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iput-object v0, p0, Ld10;->d:Ljava/lang/String;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v0, p1, Lb10;->e:Ljava/lang/String;
+    iget-object v0, p0, Ld10;->a:Lf10;
 
-    iput-object v0, p0, Ld10;->e:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p1, Lb10;->f:Ljava/lang/String;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Ld10;->f:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iget-object v0, p1, Lb10;->g:Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iput-object v0, p0, Ld10;->g:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v0, p1, Lb10;->h:Ln10;
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iput-object v0, p0, Ld10;->h:Ln10;
+    move-result v1
 
-    iget-object v0, p1, Lb10;->i:Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    iput-object v0, p0, Ld10;->i:Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, p1, Lb10;->j:Ljava/lang/String;
+    move-result-object v1
 
-    iput-object v0, p0, Ld10;->j:Ljava/lang/String;
+    check-cast v1, Ljava/io/File;
 
-    iget-boolean v0, p1, Lb10;->k:Z
+    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    iput-boolean v0, p0, Ld10;->k:Z
+    move-result-object v2
 
-    iget v0, p1, Lb10;->l:I
+    const-string v3, ".png"
 
-    iput v0, p0, Ld10;->l:I
+    invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    iget-wide v0, p1, Lb10;->m:J
+    move-result v3
 
-    iput-wide v0, p0, Ld10;->m:J
+    if-nez v3, :cond_1
 
-    iget-wide v0, p1, Lb10;->n:J
+    const/4 v2, 0x0
 
-    iput-wide v0, p0, Ld10;->n:J
+    goto :goto_1
 
-    iget-object p1, p1, Lb10;->o:Ljava/lang/String;
+    :cond_1
+    const-string v3, "_"
 
-    iput-object p1, p0, Ld10;->o:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    :goto_1
+    invoke-static {v2}, Ltri;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public c(Lgw8;)V
+    .locals 4
+
+    iget-object v0, p0, Ld10;->a:Lf10;
+
+    iget-object v0, v0, Lf10;->b:Ly16;
+
+    check-cast v0, Lp36;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v0, Lp36;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Lp36;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "previewVideoCache"
+
+    invoke-static {v0, v1}, Lp36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lzoj;->b(Ljava/io/File;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lgw8;->f()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lgw8;->b()V
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    array-length v1, v0
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Le10;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Le10;-><init>(I)V
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    array-length v3, v0
+
+    if-ge v2, v3, :cond_2
+
+    const/16 v3, 0xc8
+
+    if-ge v2, v3, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lgw8;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p1, v1}, Lgw8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_3
+    :goto_1
+    invoke-virtual {p1}, Lgw8;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p1}, Lgw8;->b()V
+
+    :cond_4
     return-void
 .end method

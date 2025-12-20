@@ -11,6 +11,7 @@
     value = {
         Lorg/webrtc/EglRenderer$EglSurfaceCreation;,
         Lorg/webrtc/EglRenderer$FrameListener;,
+        Lorg/webrtc/EglRenderer$RenderListener;,
         Lorg/webrtc/EglRenderer$ErrorCallback;,
         Lorg/webrtc/EglRenderer$FrameListenerAndParams;
     }
@@ -18,6 +19,8 @@
 
 
 # static fields
+.field private static final EMPTY_UUID:Ljava/util/UUID;
+
 .field private static final LOG_INTERVAL_SEC:J = 0x4L
 
 .field private static final TAG:Ljava/lang/String; = "EglRenderer"
@@ -62,6 +65,8 @@
 
 .field private framesRendered:I
 
+.field private id:Ljava/util/UUID;
+
 .field private layoutAspectRatio:F
 
 .field private final layoutLock:Ljava/lang/Object;
@@ -80,6 +85,16 @@
 
 .field private pendingFrame:Lorg/webrtc/VideoFrame;
 
+.field private final renderListeners:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lorg/webrtc/EglRenderer$RenderListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private renderSwapBufferTimeNs:J
 
 .field private renderTimeNs:J
@@ -94,6 +109,20 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ljava/util/UUID;
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+
+    sput-object v0, Lorg/webrtc/EglRenderer;->EMPTY_UUID:Ljava/util/UUID;
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
@@ -114,62 +143,74 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
+    sget-object v0, Lorg/webrtc/EglRenderer;->EMPTY_UUID:Ljava/util/UUID;
+
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->id:Ljava/util/UUID;
+
+    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->threadLock:Ljava/lang/Object;
 
-    .line 4
+    .line 5
     new-instance v0, Lorg/webrtc/EglRenderer$1;
 
     invoke-direct {v0, p0}, Lorg/webrtc/EglRenderer$1;-><init>(Lorg/webrtc/EglRenderer;)V
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->eglExceptionCallback:Ljava/lang/Runnable;
 
-    .line 5
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
 
-    .line 6
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->fpsReductionLock:Ljava/lang/Object;
-
     .line 7
-    new-instance v0, Landroid/graphics/Matrix;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->drawMatrix:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->renderListeners:Ljava/util/ArrayList;
 
     .line 8
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->frameLock:Ljava/lang/Object;
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->fpsReductionLock:Ljava/lang/Object;
 
     .line 9
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Landroid/graphics/Matrix;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->layoutLock:Ljava/lang/Object;
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->drawMatrix:Landroid/graphics/Matrix;
 
     .line 10
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->statisticsLock:Ljava/lang/Object;
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->frameLock:Ljava/lang/Object;
 
     .line 11
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->layoutLock:Ljava/lang/Object;
+
+    .line 12
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->statisticsLock:Ljava/lang/Object;
+
+    .line 13
     new-instance v0, Lorg/webrtc/GlTextureFrameBuffer;
 
     const/16 v1, 0x1908
@@ -178,14 +219,14 @@
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->bitmapTextureFramebuffer:Lorg/webrtc/GlTextureFrameBuffer;
 
-    .line 12
+    .line 14
     new-instance v0, Lorg/webrtc/EglRenderer$2;
 
     invoke-direct {v0, p0}, Lorg/webrtc/EglRenderer$2;-><init>(Lorg/webrtc/EglRenderer;)V
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->logStatisticsRunnable:Ljava/lang/Runnable;
 
-    .line 13
+    .line 15
     new-instance v0, Lorg/webrtc/EglRenderer$EglSurfaceCreation;
 
     const/4 v1, 0x0
@@ -194,19 +235,19 @@
 
     iput-object v0, p0, Lorg/webrtc/EglRenderer;->eglSurfaceCreationRunnable:Lorg/webrtc/EglRenderer$EglSurfaceCreation;
 
-    .line 14
+    .line 16
     iput-object p1, p0, Lorg/webrtc/EglRenderer;->name:Ljava/lang/String;
 
-    .line 15
+    .line 17
     iput-object p2, p0, Lorg/webrtc/EglRenderer;->frameDrawer:Lorg/webrtc/VideoFrameDrawer;
 
     return-void
 .end method
 
-.method public static synthetic a(Lorg/webrtc/EglRenderer;FFFF)V
+.method public static synthetic a(Lorg/webrtc/EglRenderer;Ljava/lang/Runnable;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->lambda$clearImage$4(FFFF)V
+    invoke-direct {p0, p1}, Lorg/webrtc/EglRenderer;->lambda$releaseEglSurface$4(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -248,18 +289,18 @@
     return-object p1
 .end method
 
-.method public static synthetic b(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
+.method public static synthetic b(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$RenderListener;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->lambda$swapBuffersOnRenderThread$5(Lorg/webrtc/VideoFrame;JZ)V
+    invoke-direct {p0, p1, p2}, Lorg/webrtc/EglRenderer;->lambda$removeRenderListener$3(Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$RenderListener;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;)V
+.method public static synthetic c(Lorg/webrtc/EglRenderer;FFFF)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lorg/webrtc/EglRenderer;->lambda$release$0(Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->lambda$clearImage$5(FFFF)V
 
     return-void
 .end method
@@ -313,7 +354,15 @@
     return-void
 .end method
 
-.method public static synthetic d(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
+.method public static synthetic d(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lorg/webrtc/EglRenderer;->lambda$release$0(Ljava/util/concurrent/CountDownLatch;)V
+
+    return-void
+.end method
+
+.method public static synthetic e(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->lambda$addFrameListener$1(Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
@@ -321,7 +370,7 @@
     return-void
 .end method
 
-.method public static synthetic e(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
+.method public static synthetic f(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lorg/webrtc/EglRenderer;->lambda$removeFrameListener$2(Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
@@ -329,7 +378,15 @@
     return-void
 .end method
 
-.method public static synthetic f(Lorg/webrtc/EglRenderer;)V
+.method public static synthetic g(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->lambda$swapBuffersOnRenderThread$6(Lorg/webrtc/VideoFrame;JZ)V
+
+    return-void
+.end method
+
+.method public static synthetic h(Lorg/webrtc/EglRenderer;)V
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/EglRenderer;->renderFrameOnRenderThread()V
@@ -337,15 +394,7 @@
     return-void
 .end method
 
-.method public static synthetic g(Lorg/webrtc/EglRenderer;Ljava/lang/Runnable;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lorg/webrtc/EglRenderer;->lambda$releaseEglSurface$3(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic h(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
+.method public static bridge synthetic i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglBase;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
@@ -353,7 +402,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic i(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglThread;
+.method public static bridge synthetic j(Lorg/webrtc/EglRenderer;)Lorg/webrtc/EglThread;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
@@ -361,7 +410,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic j(Lorg/webrtc/EglRenderer;)Ljava/lang/Runnable;
+.method public static bridge synthetic k(Lorg/webrtc/EglRenderer;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/EglRenderer;->logStatisticsRunnable:Ljava/lang/Runnable;
@@ -369,22 +418,12 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic k(Lorg/webrtc/EglRenderer;)Ljava/lang/Object;
+.method public static bridge synthetic l(Lorg/webrtc/EglRenderer;)Ljava/lang/Object;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/EglRenderer;->threadLock:Ljava/lang/Object;
 
     return-object p0
-.end method
-
-.method public static bridge synthetic l(Lorg/webrtc/EglRenderer;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
-
-    return-void
 .end method
 
 .method private synthetic lambda$addFrameListener$1(Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
@@ -406,7 +445,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$clearImage$4(FFFF)V
+.method private synthetic lambda$clearImage$5(FFFF)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/webrtc/EglRenderer;->clearSurfaceOnRenderThread(FFFF)V
@@ -468,6 +507,10 @@
     iput-object v1, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
 
     :cond_1
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->renderListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->frameListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -487,7 +530,7 @@
     throw p1
 .end method
 
-.method private synthetic lambda$releaseEglSurface$3(Ljava/lang/Runnable;)V
+.method private synthetic lambda$releaseEglSurface$4(Ljava/lang/Runnable;)V
     .locals 1
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
@@ -543,7 +586,40 @@
     return-void
 .end method
 
-.method private synthetic lambda$swapBuffersOnRenderThread$5(Lorg/webrtc/VideoFrame;JZ)V
+.method private synthetic lambda$removeRenderListener$3(Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$RenderListener;)V
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->renderListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method private synthetic lambda$swapBuffersOnRenderThread$6(Lorg/webrtc/VideoFrame;JZ)V
     .locals 4
 
     if-nez p4, :cond_2
@@ -593,6 +669,34 @@
     invoke-interface {p1}, Lorg/webrtc/EglBase;->swapBuffers()V
 
     :goto_2
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->renderListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p4
+
+    if-eqz p4, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lorg/webrtc/EglRenderer$RenderListener;
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    invoke-interface {p4, v0, v1}, Lorg/webrtc/EglRenderer$RenderListener;->onRender(J)V
+
+    goto :goto_3
+
+    :cond_4
     iget-object p1, p0, Lorg/webrtc/EglRenderer;->statisticsLock:Ljava/lang/Object;
 
     monitor-enter p1
@@ -873,6 +977,16 @@
 .end method
 
 .method public static bridge synthetic m(Lorg/webrtc/EglRenderer;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+
+    return-void
+.end method
+
+.method public static bridge synthetic n(Lorg/webrtc/EglRenderer;)V
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/EglRenderer;->logStatistics()V
@@ -1206,15 +1320,18 @@
     goto/16 :goto_a
 
     :cond_1
+    :try_start_1
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->eglBase:Lorg/webrtc/EglBase;
 
     invoke-interface {v0}, Lorg/webrtc/EglBase;->makeCurrent()V
+    :try_end_1
+    .catch Landroid/opengl/GLException; {:try_start_1 .. :try_end_1} :catch_1
 
     iget-object v1, p0, Lorg/webrtc/EglRenderer;->fpsReductionLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    :try_start_1
+    :try_start_2
     iget-wide v4, p0, Lorg/webrtc/EglRenderer;->minRenderPeriodNs:J
 
     const-wide v6, 0x7fffffffffffffffL
@@ -1283,8 +1400,8 @@
 
     :goto_2
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -1308,7 +1425,7 @@
 
     monitor-enter v2
 
-    :try_start_2
+    :try_start_3
     iget v4, p0, Lorg/webrtc/EglRenderer;->layoutAspectRatio:F
 
     const/4 v5, 0x0
@@ -1324,8 +1441,8 @@
 
     :goto_3
     monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     cmpl-float v2, v1, v4
 
@@ -1392,7 +1509,7 @@
 
     if-eqz v0, :cond_9
 
-    :try_start_3
+    :try_start_4
     invoke-static {v5, v5, v5, v5}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v1, 0x4000
@@ -1432,11 +1549,11 @@
     iget-object v4, p0, Lorg/webrtc/EglRenderer;->statisticsLock:Ljava/lang/Object;
 
     monitor-enter v4
-    :try_end_3
-    .catch Lorg/webrtc/GlUtil$GlOutOfMemoryException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    :try_end_4
+    .catch Lorg/webrtc/GlUtil$GlOutOfMemoryException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    :try_start_4
+    :try_start_5
     iget v5, p0, Lorg/webrtc/EglRenderer;->framesRendered:I
 
     add-int/2addr v5, v10
@@ -1459,10 +1576,10 @@
     move-exception v0
 
     monitor-exit v4
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    :try_start_5
+    :try_start_6
     throw v0
 
     :catchall_3
@@ -1478,16 +1595,16 @@
     :cond_9
     :goto_6
     invoke-direct {p0, v3, v0}, Lorg/webrtc/EglRenderer;->notifyCallbacks(Lorg/webrtc/VideoFrame;Z)V
-    :try_end_5
-    .catch Lorg/webrtc/GlUtil$GlOutOfMemoryException; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+    :try_end_6
+    .catch Lorg/webrtc/GlUtil$GlOutOfMemoryException; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
     invoke-virtual {v3}, Lorg/webrtc/VideoFrame;->release()V
 
     return-void
 
     :goto_7
-    :try_start_6
+    :try_start_7
     const-string v1, "Error while drawing frame"
 
     invoke-direct {p0, v1, v0}, Lorg/webrtc/EglRenderer;->logE(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -1510,8 +1627,8 @@
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->bitmapTextureFramebuffer:Lorg/webrtc/GlTextureFrameBuffer;
 
     invoke-virtual {v0}, Lorg/webrtc/GlTextureFrameBuffer;->release()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
     invoke-virtual {v3}, Lorg/webrtc/VideoFrame;->release()V
 
@@ -1525,20 +1642,31 @@
     :catchall_4
     move-exception v0
 
-    :try_start_7
+    :try_start_8
     monitor-exit v2
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
 
     throw v0
 
     :goto_9
-    :try_start_8
+    :try_start_9
     monitor-exit v1
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
     throw v0
+
+    :catch_1
+    move-exception v0
+
+    const-string v1, "Error while eglMakeCurrent"
+
+    invoke-direct {p0, v1, v0}, Lorg/webrtc/EglRenderer;->logE(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lorg/webrtc/VideoFrame;->release()V
+
+    return-void
 
     :cond_b
     :goto_a
@@ -1551,10 +1679,10 @@
     return-void
 
     :goto_b
-    :try_start_9
+    :try_start_a
     monitor-exit v1
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
 
     throw v0
 .end method
@@ -1598,7 +1726,7 @@
 .end method
 
 .method private swapBuffersOnRenderThread(Lorg/webrtc/VideoFrame;J)V
-    .locals 3
+    .locals 2
 
     iget-object v0, p0, Lorg/webrtc/EglRenderer;->threadLock:Ljava/lang/Object;
 
@@ -1607,15 +1735,11 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
-    new-instance v2, Lw95;
+    monitor-exit v0
 
-    invoke-direct {v2, p0, p1, p2, p3}, Lw95;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
-
-    invoke-virtual {v1, v2}, Lorg/webrtc/EglThread;->scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
-
-    goto :goto_0
+    return-void
 
     :catchall_0
     move-exception p1
@@ -1623,6 +1747,33 @@
     goto :goto_1
 
     :cond_0
+    new-instance v1, Lvd5;
+
+    invoke-direct {v1, p0, p1, p2, p3}, Lvd5;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
+
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->id:Ljava/util/UUID;
+
+    sget-object p2, Lorg/webrtc/EglRenderer;->EMPTY_UUID:Ljava/util/UUID;
+
+    invoke-virtual {p1, p2}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+
+    invoke-virtual {p1, v1}, Lorg/webrtc/EglThread;->scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+
+    iget-object p2, p0, Lorg/webrtc/EglRenderer;->id:Ljava/util/UUID;
+
+    invoke-virtual {p1, p2, v1}, Lorg/webrtc/EglThread;->scheduleRenderUpdate(Ljava/util/UUID;Lorg/webrtc/EglThread$RenderUpdate;)V
+
     :goto_0
     monitor-exit v0
 
@@ -1666,7 +1817,7 @@
     .locals 6
 
     .line 3
-    new-instance v0, Lu95;
+    new-instance v0, Ltd5;
 
     move-object v1, p0
 
@@ -1678,9 +1829,19 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lu95;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
+    invoke-direct/range {v0 .. v5}, Ltd5;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
     invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public addRenderListener(Lorg/webrtc/EglRenderer$RenderListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lorg/webrtc/EglRenderer;->renderListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -1728,7 +1889,7 @@
 
     move-result-object v0
 
-    new-instance v2, Lv95;
+    new-instance v2, Lud5;
 
     move-object v3, p0
 
@@ -1740,7 +1901,7 @@
 
     move v7, p4
 
-    invoke-direct/range {v2 .. v7}, Lv95;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
+    invoke-direct/range {v2 .. v7}, Lud5;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -1790,7 +1951,7 @@
 
     const/4 v0, 0x0
 
-    .line 20
+    .line 22
     invoke-virtual {p0, p1, p2, p3, v0}, Lorg/webrtc/EglRenderer;->init(Lorg/webrtc/EglBase$Context;[ILorg/webrtc/RendererCommon$GlDrawer;Z)V
 
     return-void
@@ -1801,12 +1962,12 @@
 
     const/4 v0, 0x0
 
-    .line 18
+    .line 20
     invoke-static {v0, p1, p2}, Lorg/webrtc/EglThread;->create(Lorg/webrtc/EglThread$ReleaseMonitor;Lorg/webrtc/EglBase$Context;[I)Lorg/webrtc/EglThread;
 
     move-result-object p1
 
-    .line 19
+    .line 21
     invoke-virtual {p0, p1, p3, p4}, Lorg/webrtc/EglRenderer;->init(Lorg/webrtc/EglThread;Lorg/webrtc/RendererCommon$GlDrawer;Z)V
 
     return-void
@@ -1931,6 +2092,25 @@
     throw p1
 .end method
 
+.method public init(Lorg/webrtc/EglThread;Lorg/webrtc/RendererCommon$GlDrawer;ZZ)V
+    .locals 0
+
+    if-eqz p4, :cond_0
+
+    .line 18
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object p4
+
+    iput-object p4, p0, Lorg/webrtc/EglRenderer;->id:Ljava/util/UUID;
+
+    .line 19
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3}, Lorg/webrtc/EglRenderer;->init(Lorg/webrtc/EglThread;Lorg/webrtc/RendererCommon$GlDrawer;Z)V
+
+    return-void
+.end method
+
 .method public onFrame(Lorg/webrtc/VideoFrame;)V
     .locals 6
 
@@ -2016,11 +2196,11 @@
 
     move-result-object p1
 
-    new-instance v3, Lqj4;
+    new-instance v3, Lop4;
 
-    const/16 v5, 0x12
+    const/16 v5, 0x10
 
-    invoke-direct {v3, v5, p0}, Lqj4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v5, p0}, Lop4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2236,11 +2416,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lkr4;
+    new-instance v3, Lhv4;
 
-    const/16 v4, 0xd
+    const/16 v4, 0xb
 
-    invoke-direct {v3, p0, v4, v0}, Lkr4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, p0, v4, v0}, Lhv4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2339,11 +2519,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lkr4;
+    new-instance v2, Lhv4;
 
-    const/16 v3, 0xc
+    const/16 v3, 0xa
 
-    invoke-direct {v2, p0, v3, p1}, Lkr4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, p1}, Lhv4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2422,11 +2602,11 @@
 
     if-eq v2, v3, :cond_1
 
-    new-instance v2, Lcj;
+    new-instance v2, Lbj;
 
     const/16 v3, 0x1c
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lcj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, p1, v3}, Lbj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-direct {p0, v2}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
 
@@ -2443,6 +2623,88 @@
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string v0, "removeFrameListener must not be called on the render thread."
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :goto_0
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public removeRenderListener(Lorg/webrtc/EglRenderer$RenderListener;)V
+    .locals 4
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iget-object v1, p0, Lorg/webrtc/EglRenderer;->threadLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+
+    if-nez v2, :cond_0
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lorg/webrtc/EglRenderer;->eglThread:Lorg/webrtc/EglThread;
+
+    invoke-virtual {v3}, Lorg/webrtc/EglThread;->getHandler()Landroid/os/Handler;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    new-instance v2, Lbj;
+
+    const/16 v3, 0x1d
+
+    invoke-direct {v2, p0, v0, p1, v3}, Lbj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-direct {p0, v2}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v0}, Lorg/webrtc/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;)V
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "removeRenderListener must not be called on the render thread."
 
     invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 

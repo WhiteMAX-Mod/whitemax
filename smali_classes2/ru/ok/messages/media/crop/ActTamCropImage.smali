@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/media/crop/ActTamCropImage;
-.super Ld6;
+.super Lb6;
 .source "SourceFile"
 
 
@@ -8,14 +8,14 @@
 
 
 # instance fields
-.field public S0:Lfa9;
+.field public S0:Lpe9;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ld6;-><init>()V
+    invoke-direct {p0}, Lb6;-><init>()V
 
     return-void
 .end method
@@ -30,19 +30,19 @@
     return-object v0
 .end method
 
-.method public final f()Lq1g;
+.method public final g()Lbdg;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lfa9;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lpe9;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lfa9;->e0:Lfa9;
+    sget-object v0, Lpe9;->e0:Lpe9;
 
-    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lfa9;
+    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lpe9;
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lfa9;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lpe9;
 
     return-object v0
 .end method
@@ -50,49 +50,49 @@
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 8
 
-    invoke-super {p0, p1}, Ld6;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lb6;->onCreate(Landroid/os/Bundle;)V
 
-    sget v0, Ln1d;->act_tam_crop_image:I
+    sget v0, Lqad;->act_tam_crop_image:I
 
-    invoke-virtual {p0, v0}, Ld6;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lb6;->setContentView(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lfa9;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lpe9;
 
-    iget v0, v0, Lq1g;->L:I
+    iget v0, v0, Lbdg;->L:I
 
-    invoke-virtual {p0, v0}, Ld6;->K(I)V
+    invoke-virtual {p0, v0}, Lb6;->K(I)V
 
-    sget v0, Lq0d;->act_tam_crop_image__root:I
+    sget v0, Lt9d;->act_tam_crop_image__root:I
 
-    invoke-virtual {p0, v0}, Lln;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lnn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->f()Lq1g;
+    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->g()Lbdg;
 
     move-result-object v1
 
-    iget v1, v1, Lq1g;->m:I
+    iget v1, v1, Lbdg;->m:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget v0, Lq0d;->act_tam_crop_image__root:I
+    sget v0, Lt9d;->act_tam_crop_image__root:I
 
-    invoke-virtual {p0, v0}, Lln;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lnn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Luy0;
+    new-instance v1, Li01;
 
     const/16 v2, 0xa
 
-    invoke-direct {v1, v2}, Luy0;-><init>(I)V
+    invoke-direct {v1, v2}, Li01;-><init>(I)V
 
-    sget-object v2, Lhfh;->a:Ljava/util/WeakHashMap;
+    sget-object v2, Lash;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {v0, v1}, Lveh;->u(Landroid/view/View;Lzua;)V
+    invoke-static {v0, v1}, Lorh;->u(Landroid/view/View;Lh1b;)V
 
-    invoke-static {v0}, Lteh;->c(Landroid/view/View;)V
+    invoke-static {v0}, Lmrh;->c(Landroid/view/View;)V
 
     if-nez p1, :cond_0
 
@@ -130,7 +130,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lda4;
+    check-cast v3, Lsd4;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -162,15 +162,15 @@
 
     invoke-virtual {p1, v6}, Landroidx/fragment/app/a;->n0(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->z()Lti6;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->z()Len6;
 
     move-result-object v0
 
-    sget v1, Lq0d;->act_tam_crop_image__container:I
+    sget v1, Lt9d;->act_tam_crop_image__container:I
 
     const-string v2, "ru.ok.messages.media.crop.FrgTamCropImage"
 
-    invoke-static {v0, v1, p1, v2}, Lcn8;->a(Lti6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1, v2}, Lrr8;->a(Len6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
 
     :cond_0
     return-void

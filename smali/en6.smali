@@ -1,8 +1,3 @@
-.class public interface abstract Len6;
-.super Ljava/lang/Object;
+.class public final Len6;
+.super Landroidx/fragment/app/c;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract getFunctionDelegate()Lxm6;
-.end method

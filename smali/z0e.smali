@@ -1,50 +1,31 @@
 .class public final Lz0e;
-.super Lu08;
+.super Lc1e;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:La1e;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Z
+.field public final synthetic a:Lteb;
 
 
 # direct methods
-.method public constructor <init>(La1e;IZ)V
+.method public constructor <init>(Lteb;)V
     .locals 0
 
-    iput-object p1, p0, Lz0e;->a:La1e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lz0e;->b:I
-
-    iput-boolean p3, p0, Lz0e;->c:Z
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    iput-object p1, p0, Lz0e;->a:Lteb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a(Lf3g;)V
+    .locals 1
 
-    iget v0, p0, Lz0e;->b:I
+    iget-object v0, p0, Lz0e;->a:Lteb;
 
-    iget-boolean v1, p0, Lz0e;->c:Z
+    invoke-virtual {v0, p1}, Lteb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lz0e;->a:La1e;
-
-    invoke-virtual {v2, v0, v1}, La1e;->c(IZ)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

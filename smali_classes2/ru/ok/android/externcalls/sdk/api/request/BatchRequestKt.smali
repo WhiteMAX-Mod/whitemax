@@ -10,15 +10,15 @@
     }
     d2 = {
         "",
-        "Lyl;",
-        "Ldm0;",
+        "Lzl;",
+        "Lcn0;",
         "toBatchRequest",
-        "(Ljava/util/List;)Lyl;",
+        "(Ljava/util/List;)Lzl;",
         "R",
         "T",
         "requests",
         "parseBatchResponse",
-        "(Ldm0;Ljava/util/List;)Ljava/util/List;",
+        "(Lcn0;Ljava/util/List;)Ljava/util/List;",
         "calls-sdk_release"
     }
     k = 0x2
@@ -32,16 +32,16 @@
 
 
 # direct methods
-.method public static final parseBatchResponse(Ldm0;Ljava/util/List;)Ljava/util/List;
+.method public static final parseBatchResponse(Lcn0;Ljava/util/List;)Ljava/util/List;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R::",
-            "Lyl;",
+            "Lzl;",
             "T:",
             "Ljava/lang/Object;",
             ">(",
-            "Ldm0;",
+            "Lcn0;",
             "Ljava/util/List<",
             "+TR;>;)",
             "Ljava/util/List<",
@@ -53,7 +53,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p1, v1}, Lwe3;->q(Ljava/lang/Iterable;I)I
+    invoke-static {p1, v1}, Lgi3;->n(Ljava/lang/Iterable;I)I
 
     move-result v1
 
@@ -74,9 +74,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lyl;
+    check-cast v1, Lzl;
 
-    iget-object v2, p0, Ldm0;->a:[Lsa9;
+    iget-object v2, p0, Lcn0;->a:[Lhj8;
 
     array-length v3, v2
 
@@ -87,13 +87,13 @@
 
     aget-object v5, v2, v4
 
-    iget-object v6, v5, Lsa9;->b:Ljava/lang/Object;
+    iget-object v6, v5, Lhj8;->c:Ljava/lang/Object;
 
     if-ne v6, v1, :cond_1
 
-    iget-object v1, v5, Lsa9;->a:Ljava/lang/Object;
+    iget-object v1, v5, Lhj8;->b:Ljava/lang/Object;
 
-    instance-of v2, v1, Lmm;
+    instance-of v2, v1, Lom;
 
     if-nez v2, :cond_0
 
@@ -125,20 +125,20 @@
     return-object v0
 .end method
 
-.method public static final toBatchRequest(Ljava/util/List;)Lyl;
+.method public static final toBatchRequest(Ljava/util/List;)Lzl;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lyl;",
+            "Lzl;",
             ">;)",
-            "Lyl;"
+            "Lzl;"
         }
     .end annotation
 
-    sget-object v0, Lcm0;->c:Landroid/net/Uri;
+    sget-object v0, Lbn0;->c:Landroid/net/Uri;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -159,30 +159,30 @@
 
     move-result-object v1
 
-    check-cast v1, Lyl;
+    check-cast v1, Lzl;
 
-    new-instance v2, Llm;
+    new-instance v2, Lnm;
 
-    invoke-direct {v2, v1, v1}, Llm;-><init>(Lyl;Lyl;)V
+    invoke-direct {v2, v1, v1}, Lnm;-><init>(Lzl;Lzl;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lcm0;
+    new-instance p0, Lbn0;
 
     const/4 v1, 0x0
 
-    new-array v1, v1, [Llm;
+    new-array v1, v1, [Lnm;
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Llm;
+    check-cast v0, [Lnm;
 
-    invoke-direct {p0, v0}, Lcm0;-><init>([Llm;)V
+    invoke-direct {p0, v0}, Lbn0;-><init>([Lnm;)V
 
     return-object p0
 .end method

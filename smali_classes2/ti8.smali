@@ -2,116 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqfc;
 
+# instance fields
+.field public a:Lorg/webrtc/PeerConnectionFactory;
 
-# static fields
-.field public static final a:Lti8;
+.field public b:La94;
 
+.field public c:Ljava/util/concurrent/Executor;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public d:Landroid/content/Context;
 
-    new-instance v0, Lti8;
+.field public e:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public f:Ljava/lang/String;
 
-    sput-object v0, Lti8;->a:Lti8;
+.field public g:Ljava/lang/String;
 
-    return-void
-.end method
+.field public h:Lcgd;
 
+.field public i:Lorg/webrtc/EglBase$Context;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public j:Lvi8;
 
-    const/4 v0, 0x1
+.field public k:Z
 
-    if-ne p0, p1, :cond_0
+.field public l:Z
 
-    return v0
+.field public m:Lz2e;
 
-    :cond_0
-    instance-of p1, p1, Lti8;
+.field public n:Lnkg;
 
-    if-nez p1, :cond_1
+.field public o:Z
 
-    const/4 p1, 0x0
+.field public p:Z
 
-    return p1
+.field public q:Lki8;
 
-    :cond_1
-    return v0
-.end method
+.field public r:Llxd;
 
-.method public final getItemId()J
-    .locals 2
+.field public s:Ljava/lang/Integer;
 
-    const/16 v0, 0x200
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final h(Lt98;)Z
-    .locals 4
-
-    const/16 v0, 0x200
-
-    int-to-long v0, v0
-
-    invoke-interface {p1}, Lt98;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5adaf6c
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0x200
-
-    return v0
-.end method
-
-.method public final q(Lt98;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lti8;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "LogoutItem"
-
-    return-object v0
-.end method
+.field public t:Z

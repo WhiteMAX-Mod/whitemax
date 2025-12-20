@@ -2,63 +2,120 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Callable;
+.field public a:Ljava/lang/String;
 
-.field public final b:Ltj5;
+.field public b:Ljava/lang/String;
 
-.field public final c:Luj5;
+.field public c:Ljava/lang/String;
 
+.field public d:I
 
-# direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Ltj5;Luj5;)V
-    .locals 0
+.field public e:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public f:Ljava/lang/String;
 
-    iput-object p1, p0, Lxj5;->a:Ljava/util/concurrent/Callable;
+.field public g:Ljava/lang/Long;
 
-    iput-object p2, p0, Lxj5;->b:Ltj5;
+.field public h:Ljava/lang/String;
 
-    iput-object p3, p0, Lxj5;->c:Luj5;
+.field public i:I
 
-    return-void
-.end method
+.field public j:Ljava/lang/String;
+
+.field public k:Ljava/lang/Integer;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Ljava/lang/String;
+
+.field public o:Ljava/util/Locale;
+
+.field public p:Ljava/lang/String;
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final a()Lyj5;
+    .locals 20
 
-    iget-object v0, p0, Lxj5;->c:Luj5;
+    move-object/from16 v0, p0
 
-    iget-object v1, p0, Lxj5;->b:Ltj5;
+    iget-object v1, v0, Lxj5;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ltj5;->a()J
+    const-string v2, "conversation id must not be null"
 
-    move-result-wide v1
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v3, p0, Lxj5;->a:Ljava/util/concurrent/Callable;
+    iget-object v1, v0, Lxj5;->e:Ljava/lang/String;
 
-    invoke-interface {v3}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    const-string v2, "endpointBaseUrl must not be null"
 
-    move-result-object v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Luj5;->a(J)V
+    iget-object v1, v0, Lxj5;->f:Ljava/lang/String;
+
+    const-string v2, "appVersion must not be null"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v1, v0, Lxj5;->h:Ljava/lang/String;
+
+    const-string v2, "clientType must not be null"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v1, v0, Lxj5;->j:Ljava/lang/String;
+
+    const-string v2, "capabilities must not be null"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v3, Lyj5;
+
+    iget-object v4, v0, Lxj5;->a:Ljava/lang/String;
+
+    iget-object v5, v0, Lxj5;->b:Ljava/lang/String;
+
+    iget-object v6, v0, Lxj5;->c:Ljava/lang/String;
+
+    iget v7, v0, Lxj5;->d:I
+
+    iget-object v8, v0, Lxj5;->e:Ljava/lang/String;
+
+    iget-object v9, v0, Lxj5;->f:Ljava/lang/String;
+
+    iget-object v10, v0, Lxj5;->g:Ljava/lang/Long;
+
+    iget-object v11, v0, Lxj5;->h:Ljava/lang/String;
+
+    iget v12, v0, Lxj5;->i:I
+
+    iget-object v13, v0, Lxj5;->j:Ljava/lang/String;
+
+    iget-object v14, v0, Lxj5;->k:Ljava/lang/Integer;
+
+    iget-object v15, v0, Lxj5;->l:Ljava/lang/String;
+
+    iget-object v1, v0, Lxj5;->m:Ljava/lang/String;
+
+    iget-object v2, v0, Lxj5;->n:Ljava/lang/String;
+
+    move-object/from16 v16, v1
+
+    iget-object v1, v0, Lxj5;->o:Ljava/util/Locale;
+
+    move-object/from16 v18, v1
+
+    iget-object v1, v0, Lxj5;->p:Ljava/lang/String;
+
+    move-object/from16 v19, v1
+
+    move-object/from16 v17, v2
+
+    invoke-direct/range {v3 .. v19}, Lyj5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;)V
 
     return-object v3
-
-    :catchall_0
-    move-exception v3
-
-    invoke-virtual {v0, v1, v2}, Luj5;->a(J)V
-
-    throw v3
 .end method

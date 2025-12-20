@@ -1,120 +1,123 @@
 .class public final Lyz;
-.super Ldtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsm6;
+
+# static fields
+.field public static final synthetic h:[Lp38;
 
 
 # instance fields
-.field public final synthetic X:Lzz;
+.field public final a:Lg35;
 
-.field public final synthetic Y:Lu8d;
+.field public final b:Lg35;
 
-.field public o:I
+.field public final c:Lg35;
+
+.field public final d:Lg35;
+
+.field public final e:Lg35;
+
+.field public final f:Lg35;
+
+.field public final g:Lg35;
 
 
 # direct methods
-.method public constructor <init>(Lzz;Lu8d;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput-object p1, p0, Lyz;->X:Lzz;
+    new-instance v0, Lgxc;
 
-    iput-object p2, p0, Lyz;->Y:Lu8d;
+    const-class v1, Lyz;
 
-    const/4 p1, 0x2
+    const-string v2, "api"
 
-    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v3, "getApi()Lru/ok/tamtam/api/Api;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lfsd;->a:Lgsd;
+
+    const-string v3, "clientPrefs"
+
+    const-string v5, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lqf7;->d(Lgsd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lgxc;
+
+    move-result-object v2
+
+    new-instance v3, Lgxc;
+
+    const-string v5, "fileAttachDownloader"
+
+    const-string v6, "getFileAttachDownloader()Lru/ok/tamtam/FileAttachDownloader;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lgxc;
+
+    const-string v6, "uiBus"
+
+    const-string v7, "getUiBus()Lcom/squareup/otto/Bus;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Lgxc;
+
+    const-string v7, "fileSystem"
+
+    const-string v8, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Lgxc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Lp38;
+
+    aput-object v0, v1, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    sput-object v1, Lyz;->h:[Lp38;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lg35;Lg35;Lg35;Lg35;Lg35;Lg35;Lg35;)V
     .locals 0
 
-    check-cast p1, Lf84;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p6, p0, Lyz;->a:Lg35;
 
-    invoke-virtual {p0, p1, p2}, Lyz;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p7, p0, Lyz;->b:Lg35;
 
-    move-result-object p1
+    iput-object p1, p0, Lyz;->c:Lg35;
 
-    check-cast p1, Lyz;
+    iput-object p2, p0, Lyz;->d:Lg35;
 
-    sget-object p2, Lqqg;->a:Lqqg;
+    iput-object p3, p0, Lyz;->e:Lg35;
 
-    invoke-virtual {p1, p2}, Lyz;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p4, p0, Lyz;->f:Lg35;
 
-    move-result-object p1
+    iput-object p5, p0, Lyz;->g:Lg35;
 
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lyz;
-
-    iget-object v0, p0, Lyz;->X:Lzz;
-
-    iget-object v1, p0, Lyz;->Y:Lu8d;
-
-    invoke-direct {p1, v0, v1, p2}, Lyz;-><init>(Lzz;Lu8d;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lyz;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyz;->X:Lzz;
-
-    iget-object p1, p1, Lzz;->b:Ljve;
-
-    iput v1, p0, Lyz;->o:I
-
-    iget-object v0, p0, Lyz;->Y:Lu8d;
-
-    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lg84;->a:Lg84;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lqqg;->a:Lqqg;
-
-    return-object p1
+    return-void
 .end method

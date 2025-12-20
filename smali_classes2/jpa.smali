@@ -1,57 +1,60 @@
 .class public final Ljpa;
-.super Lq44;
+.super Lxbg;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lqpa;
-
-.field public Z:I
-
-.field public d:J
-
-.field public o:J
+.field public c:Lvd2;
 
 
-# direct methods
-.method public constructor <init>(Lqpa;Lq44;)V
-    .locals 0
+# virtual methods
+.method public final d(Lgr9;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Ljpa;->Y:Lqpa;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v0, "chat"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lgr9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lvd2;->a(Lgr9;)Lvd2;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljpa;->c:Lvd2;
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iget-object v0, p0, Ljpa;->c:Lvd2;
 
-    iput-object p1, p0, Ljpa;->X:Ljava/lang/Object;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Ljpa;->Z:I
+    const-string v2, "{chat="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Ljpa;->Z:I
+    const-string v0, "}"
 
-    const-wide/16 v1, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v3, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Ljpa;->Y:Lqpa;
+    move-result-object v0
 
-    move-object v5, p0
-
-    invoke-static/range {v0 .. v5}, Lqpa;->b(Lqpa;JJLq44;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

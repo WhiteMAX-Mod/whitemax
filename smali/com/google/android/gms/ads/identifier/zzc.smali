@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnva;
+.implements Lv1b;
 
 
 # instance fields

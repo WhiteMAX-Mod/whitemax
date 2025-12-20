@@ -1,235 +1,361 @@
 .class public final Llk7;
-.super Ldtf;
+.super Lx1;
 .source "SourceFile"
 
 # interfaces
-.implements Lsm6;
+.implements Lwk7;
+
+
+# static fields
+.field public static final b:Ljava/math/BigInteger;
+
+.field public static final c:Ljava/math/BigInteger;
+
+.field public static final d:Ljava/math/BigInteger;
+
+.field public static final o:Ljava/math/BigInteger;
 
 
 # instance fields
-.field public final synthetic X:Lqk7;
-
-.field public o:I
+.field public final a:Ljava/math/BigInteger;
 
 
 # direct methods
-.method public constructor <init>(Lqk7;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-wide/16 v0, -0x80
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x7f
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, -0x8000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x7fff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/32 v0, -0x80000000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Llk7;->b:Ljava/math/BigInteger;
+
+    const-wide/32 v0, 0x7fffffff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Llk7;->c:Ljava/math/BigInteger;
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Llk7;->d:Ljava/math/BigInteger;
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Llk7;->o:Ljava/math/BigInteger;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/math/BigInteger;)V
     .locals 0
 
-    iput-object p1, p0, Llk7;->X:Lqk7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llk7;->a:Ljava/math/BigInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf84;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Llk7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llk7;
-
-    sget-object p2, Lqqg;->a:Lqqg;
-
-    invoke-virtual {p1, p2}, Llk7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    new-instance p1, Llk7;
+    iget-object v0, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    iget-object v0, p0, Llk7;->X:Lqk7;
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
-    invoke-direct {p1, v0, p2}, Llk7;-><init>(Lqk7;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 16
+.method public final b()I
+    .locals 1
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x3
 
-    iget v1, v0, Llk7;->o:I
+    return v0
+.end method
 
-    const/4 v2, 0x2
+.method public final c()J
+    .locals 2
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    sget-object v4, Lqqg;->a:Lqqg;
+    invoke-virtual {v0}, Ljava/math/BigInteger;->longValue()J
 
-    iget-object v5, v0, Llk7;->X:Lqk7;
+    move-result-wide v0
 
-    sget-object v6, Lg84;->a:Lg84;
+    return-wide v0
+.end method
 
-    if-eqz v1, :cond_2
+.method public final e()I
+    .locals 2
 
-    if-eq v1, v3, :cond_1
+    sget-object v0, Llk7;->b:Ljava/math/BigInteger;
 
-    if-ne v1, v2, :cond_0
+    iget-object v1, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    return-object v4
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    sget-object v0, Llk7;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->intValue()I
+
+    move-result v0
+
+    return v0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    throw v0
+.end method
 
-    throw v1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lcbh;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+    check-cast p1, Lcbh;
 
-    move-object/from16 v1, p1
+    check-cast p1, Lx1;
 
-    goto :goto_1
+    invoke-interface {p1}, Lcbh;->b()I
+
+    move-result v0
+
+    const/4 v2, 0x3
+
+    if-ne v0, v2, :cond_2
+
+    invoke-interface {p1}, Lcbh;->f()Lwk7;
+
+    move-result-object p1
+
+    iget-object v0, p0, Llk7;->a:Ljava/math/BigInteger;
+
+    invoke-interface {p1}, Lowa;->h()Ljava/math/BigInteger;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 
     :cond_2
-    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+    return v1
+.end method
 
-    iget-object v1, v5, Lqk7;->k:Lhbd;
+.method public final f()Lwk7;
+    .locals 0
 
-    iget-object v1, v1, Lhbd;->a:Lmcf;
+    return-object p0
+.end method
 
-    invoke-interface {v1}, Lmcf;->getValue()Ljava/lang/Object;
+.method public final h()Ljava/math/BigInteger;
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    instance-of v7, v1, Lxk7;
+    return-object v0
+.end method
 
-    const/4 v8, 0x0
+.method public final hashCode()I
+    .locals 4
 
-    if-eqz v7, :cond_3
+    sget-object v0, Llk7;->b:Ljava/math/BigInteger;
 
-    check-cast v1, Lxk7;
+    iget-object v1, p0, Llk7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    sget-object v0, Llk7;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    :goto_0
+    long-to-int v0, v0
+
+    return v0
+
+    :cond_0
+    sget-object v0, Llk7;->d:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    sget-object v0, Llk7;->o:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    const/16 v2, 0x20
+
+    ushr-long v2, v0, v2
+
+    xor-long/2addr v0, v2
 
     goto :goto_0
 
-    :cond_3
-    move-object v1, v8
+    :cond_1
+    invoke-virtual {v1}, Ljava/math/BigInteger;->hashCode()I
 
-    :goto_0
-    if-eqz v1, :cond_8
+    move-result v0
 
-    iget-object v1, v1, Lxk7;->a:Ljava/lang/String;
+    return v0
+.end method
 
-    if-nez v1, :cond_4
+.method public final i()J
+    .locals 2
 
-    goto :goto_3
+    invoke-virtual {p0}, Llk7;->j()Z
 
-    :cond_4
-    iget-object v7, v5, Lqk7;->j:Ltcf;
+    move-result v0
 
-    sget-object v9, Lyk7;->a:Lyk7;
+    iget-object v1, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    invoke-virtual {v7, v8, v9}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
-    iget-object v7, v5, Lqk7;->b:Lgk7;
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
 
-    iput v3, v0, Llk7;->o:I
+    move-result-wide v0
 
-    invoke-virtual {v7, v1, v0}, Lgk7;->a(Ljava/lang/String;Ldtf;)Ljava/lang/Object;
+    return-wide v0
 
-    move-result-object v1
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
 
-    if-ne v1, v6, :cond_5
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
 
-    goto :goto_2
+    throw v0
+.end method
 
-    :cond_5
-    :goto_1
-    move-object v7, v1
+.method public final j()Z
+    .locals 2
 
-    check-cast v7, Lvk7;
+    sget-object v0, Llk7;->d:Ljava/math/BigInteger;
 
-    if-nez v7, :cond_6
+    iget-object v1, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    goto :goto_3
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    :cond_6
-    iget-object v1, v7, Lvk7;->j:Luk7;
+    move-result v0
 
-    instance-of v3, v1, Lsk7;
+    if-ltz v0, :cond_0
 
-    if-nez v3, :cond_7
+    sget-object v0, Llk7;->o:Ljava/math/BigInteger;
 
-    iget-object v3, v5, Lqk7;->f:Lk18;
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v3
+    if-gtz v0, :cond_0
 
-    check-cast v3, Lal7;
+    const/4 v0, 0x1
 
-    iget-object v8, v7, Lvk7;->a:Ljava/lang/String;
+    return v0
 
-    iget-byte v1, v1, Luk7;->a:B
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v9, "informer_use"
+    return v0
+.end method
 
-    invoke-virtual {v3, v9, v8, v1}, Lal7;->a(Ljava/lang/String;Ljava/lang/String;B)V
+.method public final k()Lwk7;
+    .locals 0
 
-    :cond_7
-    iget-object v1, v5, Lqk7;->b:Lgk7;
+    return-object p0
+.end method
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-wide v8
+    iget-object v0, p0, Llk7;->a:Ljava/math/BigInteger;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
-    move-result-wide v12
+    move-result-object v0
 
-    const/4 v14, 0x0
-
-    const/16 v15, 0x2bff
-
-    const-wide/16 v10, 0x0
-
-    invoke-static/range {v7 .. v15}, Lvk7;->a(Lvk7;JJJII)Lvk7;
-
-    move-result-object v3
-
-    iput v2, v0, Llk7;->o:I
-
-    iget-object v2, v1, Lgk7;->a:Llrd;
-
-    new-instance v5, Lci;
-
-    const/16 v7, 0x12
-
-    invoke-direct {v5, v1, v7, v3}, Lci;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v5, v0}, Lk7j;->b(Llrd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v6, :cond_8
-
-    :goto_2
-    return-object v6
-
-    :cond_8
-    :goto_3
-    return-object v4
+    return-object v0
 .end method

@@ -1,70 +1,37 @@
-.class public final Lmhi;
+.class public abstract Lmhi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
-
 
 # static fields
-.field public static final a:Lmhi;
+.field public static final a:Ljava/lang/String;
+
+.field public static final b:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lmhi;
+    const-string v0, "WrkDbPathHelper"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmhi;->a:Lmhi;
-
-    new-instance v0, Ltci;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltci;-><init>(I)V
-
-    const-class v1, Lhdi;
-
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    invoke-static {v0}, Lwki;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    sput-object v0, Lmhi;->a:Ljava/lang/String;
 
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+    const-string v0, "-shm"
 
-    move-result-object v0
+    const-string v1, "-wal"
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+    const-string v2, "-journal"
 
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    sput-object v0, Lmhi;->b:[Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

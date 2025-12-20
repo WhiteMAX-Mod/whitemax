@@ -1,417 +1,218 @@
 .class public final Lxk5;
-.super Lwk5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lq38;
 
 
 # instance fields
-.field public final O0:Ljdc;
+.field public final a:[Ljava/lang/Enum;
 
-.field public final P0:I
+.field public b:Luk5;
 
-.field public final Q0:Ljava/util/ArrayList;
-
-.field public final R0:Landroid/media/metrics/LogSessionId;
-
-.field public S0:I
+.field public final c:Lz7g;
 
 
 # direct methods
-.method public constructor <init>(Ljdc;ILv32;Lzt;Landroid/media/metrics/LogSessionId;)V
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/Enum;)V
     .locals 1
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p3, p4}, Lwk5;-><init>(ILv32;Lzt;)V
+    iput-object p2, p0, Lxk5;->a:[Ljava/lang/Enum;
 
-    iput-object p1, p0, Lxk5;->O0:Ljdc;
+    new-instance p2, Lmp2;
 
-    iput p2, p0, Lxk5;->P0:I
+    const/16 v0, 0xb
 
-    iput-object p5, p0, Lxk5;->R0:Landroid/media/metrics/LogSessionId;
+    invoke-direct {p2, p0, v0, p1}, Lmp2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance p1, Lz7g;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p1, p2}, Lz7g;-><init>(Lmq6;)V
 
-    iput-object p1, p0, Lxk5;->Q0:Ljava/util/ArrayList;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lxk5;->S0:I
+    iput-object p1, p0, Lxk5;->c:Lz7g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()Z
-    .locals 11
-
-    iget-object v0, p0, Lwk5;->E0:Lsk4;
-
-    invoke-virtual {v0}, Lsk4;->e()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lwk5;->D0:Lzwd;
-
-    invoke-interface {v0}, Lzwd;->f()V
-
-    iput-boolean v1, p0, Lwk5;->F0:Z
-
-    return v2
-
-    :cond_0
-    iget-object v0, p0, Lwk5;->E0:Lsk4;
-
-    invoke-virtual {v0, v2}, Lsk4;->g(Z)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v0, v0, Lsk4;->a:Landroid/media/MediaCodec$BufferInfo;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget-wide v3, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    iget-wide v5, p0, Lwk5;->C0:J
-
-    sub-long v5, v3, v5
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v0, v5, v7
-
-    if-ltz v0, :cond_7
-
-    iget-object v0, p0, Lxk5;->Q0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v7
-
-    move v8, v2
-
-    :goto_1
-    if-ge v8, v7, :cond_4
-
-    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/lang/Long;
-
-    invoke-virtual {v9}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v9
-
-    cmp-long v9, v9, v3
-
-    if-nez v9, :cond_3
-
-    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_3
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v0, p0, Lwk5;->D0:Lzwd;
-
-    invoke-interface {v0}, Lzwd;->c()I
-
-    move-result v0
-
-    iget v3, p0, Lxk5;->S0:I
-
-    if-ne v0, v3, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    iget-object v0, p0, Lwk5;->D0:Lzwd;
-
-    invoke-interface {v0, v5, v6}, Lzwd;->h(J)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    :goto_2
-    return v2
-
-    :cond_6
-    iget-object v0, p0, Lwk5;->E0:Lsk4;
-
-    invoke-virtual {v0, v5, v6, v1}, Lsk4;->k(JZ)V
-
-    return v1
-
-    :cond_7
-    :goto_3
-    iget-object v0, p0, Lwk5;->E0:Lsk4;
-
-    invoke-virtual {v0}, Lsk4;->j()V
-
-    return v1
-.end method
-
-.method public final D(Lhf6;)V
-    .locals 4
-
-    iget-object v0, p0, Lwk5;->D0:Lzwd;
-
-    invoke-static {v0}, Lhsi;->h(Ljava/lang/Object;)V
-
-    iget-object v0, p1, Lhf6;->D:Lgf3;
-
-    invoke-static {v0}, Lgf3;->h(Lgf3;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lxk5;->P0:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v0, p0, Lwk5;->D0:Lzwd;
-
-    invoke-interface {v0}, Lzwd;->b()Landroid/view/Surface;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v2, p0, Lxk5;->R0:Landroid/media/metrics/LogSessionId;
-
-    iget-object v3, p0, Lxk5;->O0:Ljdc;
-
-    invoke-virtual {v3, p1, v0, v1, v2}, Ljdc;->a(Lhf6;Landroid/view/Surface;ZLandroid/media/metrics/LogSessionId;)Lsk4;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwk5;->E0:Lsk4;
-
-    iget p1, p1, Lsk4;->f:I
-
-    iput p1, p0, Lxk5;->S0:I
-
-    return-void
-.end method
-
-.method public final E(Lph4;)V
-    .locals 4
-
-    iget-wide v0, p1, Lph4;->Y:J
-
-    iget-wide v2, p0, Ltk0;->v0:J
-
-    cmp-long p1, v0, v2
-
-    if-gez p1, :cond_0
-
-    iget-object p1, p0, Lxk5;->Q0:Ljava/util/ArrayList;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final F(Lhf6;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final G(Lhf6;)Lhf6;
-    .locals 2
-
-    iget v0, p0, Lxk5;->P0:I
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p1, Lhf6;->D:Lgf3;
-
-    invoke-static {v0}, Lgf3;->h(Lgf3;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lhf6;->a()Lff6;
-
-    move-result-object p1
-
-    sget-object v0, Lgf3;->h:Lgf3;
-
-    iput-object v0, p1, Lff6;->C:Lgf3;
-
-    new-instance v0, Lhf6;
-
-    invoke-direct {v0, p1}, Lhf6;-><init>(Lff6;)V
-
-    return-object v0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final H(Lhf6;)Lhf6;
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
     .locals 3
 
-    iget-object v0, p1, Lhf6;->D:Lgf3;
+    check-cast p2, Ljava/lang/Enum;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lxk5;->a:[Ljava/lang/Enum;
 
-    invoke-virtual {v0}, Lgf3;->f()Z
+    invoke-static {v0, p2}, Lbt;->x([Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v1
 
-    if-nez v1, :cond_1
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {p0}, Lxk5;->d()Lvoe;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p2, v1}, Lvoe;->g(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->r(Ljava/lang/String;)V
+
+    return-void
 
     :cond_0
-    sget-object v0, Lgf3;->h:Lgf3;
+    new-instance p1, Lkotlinx/serialization/SerializationException;
 
-    :cond_1
-    iget v1, p0, Lxk5;->P0:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-ne v1, v2, :cond_2
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lgf3;->h(Lgf3;)Z
+    const-string p2, " is not a valid enum "
 
-    move-result v1
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p0}, Lxk5;->d()Lvoe;
 
-    sget-object v0, Lgf3;->h:Lgf3;
+    move-result-object p2
 
-    :cond_2
-    invoke-virtual {p1}, Lhf6;->a()Lff6;
+    invoke-interface {p2}, Lvoe;->a()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, ", must be one of "
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final b(Lll4;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-virtual {p0}, Lxk5;->d()Lvoe;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lll4;->s(Lvoe;)I
+
+    move-result p1
+
+    iget-object v0, p0, Lxk5;->a:[Ljava/lang/Enum;
+
+    if-ltz p1, :cond_0
+
+    array-length v1, v0
+
+    if-ge p1, v1, :cond_0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :cond_0
+    new-instance v1, Lkotlinx/serialization/SerializationException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not among valid "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lxk5;->d()Lvoe;
 
     move-result-object p1
 
-    iput-object v0, p1, Lff6;->C:Lgf3;
+    invoke-interface {p1}, Lvoe;->a()Ljava/lang/String;
 
-    new-instance v0, Lhf6;
+    move-result-object p1
 
-    invoke-direct {v0, p1}, Lhf6;-><init>(Lff6;)V
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " enum values, values size is "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    array-length p1, v0
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final d()Lvoe;
+    .locals 1
+
+    iget-object v0, p0, Lxk5;->c:Lz7g;
+
+    invoke-virtual {v0}, Lz7g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvoe;
 
     return-object v0
 .end method
 
-.method public final L(Lph4;)Z
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Loy;->j(I)Z
+    const-string v1, "kotlinx.serialization.internal.EnumSerializer<"
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Lxk5;->d()Lvoe;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    goto :goto_0
+    invoke-interface {v1}, Lvoe;->a()Ljava/lang/String;
 
-    :cond_0
-    iget-object v0, p1, Lph4;->o:Ljava/nio/ByteBuffer;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lwk5;->E0:Lsk4;
+    const/16 v1, 0x3e
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p1, Lph4;->Y:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-wide v4, p0, Lwk5;->C0:J
-
-    sub-long/2addr v2, v4
-
-    iput-wide v2, p1, Lph4;->Y:J
-
-    :cond_1
-    :goto_0
-    return v1
-.end method
-
-.method public final f(JJ)J
-    .locals 0
-
-    iget p1, p0, Ltk0;->Z:I
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    const-wide/32 p1, 0xf4240
-
-    return-wide p1
-
-    :cond_0
-    iget p1, p0, Lxk5;->S0:I
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_1
-
-    const-wide/16 p1, 0x2710
-
-    return-wide p1
-
-    :cond_1
-    int-to-long p1, p1
-
-    const-wide/16 p3, 0x7d0
-
-    mul-long/2addr p1, p3
-
-    return-wide p1
-.end method
-
-.method public final h()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ExoAssetLoaderVideoRenderer"
+    move-result-object v0
 
     return-object v0
 .end method

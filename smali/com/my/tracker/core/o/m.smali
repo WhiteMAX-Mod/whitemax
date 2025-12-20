@@ -213,7 +213,7 @@
 
     .line 19
     :cond_1
-    invoke-static {v0}, Li7c;->e(Landroid/content/pm/PackageInfo;)J
+    invoke-static {v0}, Lzec;->e(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v4
 

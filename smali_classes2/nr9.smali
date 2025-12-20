@@ -1,113 +1,93 @@
-.class public interface abstract Lnr9;
+.class public final Lnr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()Ljava/util/List;
-.end method
+# instance fields
+.field public a:Ldgb;
 
-.method public e(J)Lone/me/messages/list/loader/MessageModel;
+
+# virtual methods
+.method public final a()Llw8;
     .locals 4
 
-    invoke-interface {p0}, Lnr9;->b()Ljava/util/List;
+    invoke-virtual {p0}, Lnr9;->b()Ljdf;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    new-instance v1, Led9;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v2}, Led9;-><init>(I)V
+
+    new-instance v2, Llw8;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v1, v3}, Llw8;-><init>(Ljava/lang/Object;Ldr6;I)V
+
+    new-instance v0, Lsrf;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lsrf;-><init>(I)V
+
+    new-instance v1, Lkw8;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v0, v3}, Lkw8;-><init>(Ljava/lang/Object;Ldr6;I)V
+
+    new-instance v0, Led9;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Led9;-><init>(I)V
+
+    new-instance v2, Lvxa;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v1, v0, v3}, Lvxa;-><init>(Lcxa;Ldr6;I)V
+
+    invoke-virtual {v2}, Lcxa;->r()Lgxa;
 
     move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v1, Led9;
 
-    move-result v1
+    const/16 v2, 0x9
 
-    if-eqz v1, :cond_1
+    invoke-direct {v1, v2}, Led9;-><init>(I)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v2, Llw8;
 
-    move-result-object v1
+    const/4 v3, 0x1
 
-    move-object v2, v1
+    invoke-direct {v2, v0, v1, v3}, Llw8;-><init>(Ljava/lang/Object;Ldr6;I)V
 
-    check-cast v2, Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v2, v2, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    cmp-long v2, v2, p1
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
-
-    return-object v1
+    return-object v2
 .end method
 
-.method public f(J)I
-    .locals 6
+.method public final b()Ljdf;
+    .locals 3
 
-    invoke-interface {p0}, Lnr9;->b()Ljava/util/List;
+    iget-object v0, p0, Lnr9;->a:Ldgb;
+
+    invoke-virtual {v0}, Ldgb;->B()Lgo3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    new-instance v1, Led9;
 
-    move-result v1
+    const/16 v2, 0xc
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-direct {v1, v2}, Led9;-><init>(I)V
 
-    move-result v2
+    invoke-virtual {v0, v1}, Lbdf;->h(Ldr6;)Ljdf;
 
-    invoke-static {v2, v1}, Lve3;->n(II)V
+    move-result-object v0
 
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-gt v2, v1, :cond_1
-
-    add-int v3, v2, v1
-
-    ushr-int/lit8 v3, v3, 0x1
-
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v4, v4, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    invoke-static {v4, v5, p1, p2}, Lfni;->c(JJ)I
-
-    move-result v4
-
-    if-gez v4, :cond_0
-
-    add-int/lit8 v2, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-lez v4, :cond_2
-
-    add-int/lit8 v1, v3, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    neg-int v3, v2
-
-    :cond_2
-    return v3
+    return-object v0
 .end method

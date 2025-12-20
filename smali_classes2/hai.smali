@@ -1,116 +1,59 @@
 .class public final Lhai;
-.super Lu08;
+.super Ll84;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljai;
 
-.field public final synthetic b:Llqa;
+.field public Y:I
+
+.field public d:Ljai;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llqa;I)V
+.method public constructor <init>(Ljai;Ll84;)V
     .locals 0
 
-    iput p2, p0, Lhai;->a:I
+    iput-object p1, p0, Lhai;->X:Ljai;
 
-    iput-object p1, p0, Lhai;->b:Llqa;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lu08;-><init>(I)V
+    invoke-direct {p0, p2}, Ll84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lhai;->a:I
+    iput-object p1, p0, Lhai;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lhai;->Y:I
 
-    :try_start_0
-    new-instance v0, Lorg/webrtc/SoftwareVideoDecoderFactory;
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0}, Lorg/webrtc/SoftwareVideoDecoderFactory;-><init>()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lhai;->Y:I
 
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lkqa;
-
-    iget-object v2, p0, Lhai;->b:Llqa;
-
-    iget-object v2, v2, Llqa;->b:Ly6d;
-
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    const-string v4, "Can\'t create SoftwareVideoDecoder"
-
-    invoke-direct {v3, v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-direct {v1, v2, v3}, Lkqa;-><init>(Ly6d;Ljava/lang/IllegalStateException;)V
-
-    move-object v0, v1
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lhai;->b:Llqa;
-
-    :try_start_1
-    new-instance v1, Ljqa;
-
-    iget-object v2, v0, Llqa;->a:Lorg/webrtc/EglBase$Context;
-
-    new-instance v3, Liqa;
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Liqa;-><init>(I)V
+    iget-object v0, p0, Lhai;->X:Ljai;
 
-    invoke-direct {v1, v2, v3}, Lorg/webrtc/HardwareVideoDecoderFactory;-><init>(Lorg/webrtc/EglBase$Context;Lorg/webrtc/Predicate;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    const/4 v1, 0x0
 
-    goto :goto_1
+    const/4 v2, 0x0
 
-    :catchall_1
-    move-exception v1
+    move-object v5, p0
 
-    new-instance v2, Lkqa;
+    invoke-virtual/range {v0 .. v5}, Ljai;->i(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ll84;)Ljava/lang/Object;
 
-    iget-object v0, v0, Llqa;->b:Ly6d;
+    move-result-object p1
 
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    const-string v4, "Can\'t create HardwareVideoDecoder"
-
-    invoke-direct {v3, v4, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-direct {v2, v0, v3}, Lkqa;-><init>(Ly6d;Ljava/lang/IllegalStateException;)V
-
-    move-object v1, v2
-
-    :goto_1
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

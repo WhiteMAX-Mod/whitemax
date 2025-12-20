@@ -1,53 +1,72 @@
 .class public final Ltna;
-.super Lq44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lwna;
-
-.field public Z:I
-
-.field public d:Lwna;
-
-.field public o:Ljava/util/List;
-
-
-# direct methods
-.method public constructor <init>(Lwna;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ltna;->Y:Lwna;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lbbh;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(ILjava/lang/String;)Lbhg;
+    .locals 3
 
-    iput-object p1, p0, Ltna;->X:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    iget p1, p0, Ltna;->Z:I
+    move-result v0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ltna;->Z:I
-
-    iget-object p1, p0, Ltna;->Y:Lwna;
+    if-lez v0, :cond_2
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0, p0}, Lwna;->a(Lwna;Ljava/util/List;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v1
+
+    const/16 v2, 0x2d
+
+    if-eq v1, v2, :cond_0
+
+    const/16 v2, 0x20
+
+    if-ne v1, v2, :cond_2
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const-class p2, Ltna;
+
+    invoke-static {p2}, Lfsd;->a(Ljava/lang/Class;)Lgd3;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lo3j;->a(ILgd3;)Ljava/lang/Integer;
 
     move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    new-instance p2, Lbhg;
+
+    invoke-direct {p2, p1}, Lbhg;-><init>(I)V
+
+    return-object p2
+
+    :cond_2
+    const/4 p1, 0x0
 
     return-object p1
 .end method

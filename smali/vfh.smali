@@ -1,85 +1,80 @@
-.class public final enum Lvfh;
-.super Ljava/lang/Enum;
+.class public final synthetic Lvfh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzw1;
 
-# static fields
-.field public static final enum a:Lvfh;
 
-.field public static final enum b:Lvfh;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lvfh;
-
-.field public static final synthetic d:[Lvfh;
+.field public final synthetic b:Lp35;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lp35;I)V
+    .locals 0
 
-    new-instance v0, Lvfh;
+    iput p2, p0, Lvfh;->a:I
 
-    const-string v1, "SPEAKER"
+    iput-object p1, p0, Lvfh;->b:Lp35;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lvfh;->a:Lvfh;
-
-    new-instance v1, Lvfh;
-
-    const-string v2, "SHARING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lvfh;->b:Lvfh;
-
-    new-instance v2, Lvfh;
-
-    const-string v3, "GRID"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lvfh;->c:Lvfh;
-
-    filled-new-array {v0, v1, v2}, [Lvfh;
-
-    move-result-object v0
-
-    sput-object v0, Lvfh;->d:[Lvfh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lvfh;
-    .locals 1
 
-    const-class v0, Lvfh;
+# virtual methods
+.method public final r(Lyw1;)Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lvfh;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lvfh;
+    iget-object v0, p0, Lvfh;->b:Lp35;
 
-    return-object p0
-.end method
+    iput-object p1, v0, Lp35;->n:Ljava/lang/Object;
 
-.method public static values()[Lvfh;
-    .locals 1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    sget-object v0, Lvfh;->d:[Lvfh;
+    const-string v1, "ReadyToReleaseFuture "
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, [Lvfh;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lvfh;->b:Lp35;
+
+    iput-object p1, v0, Lp35;->l:Ljava/lang/Object;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReleasedFuture "
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,60 +1,61 @@
 .class public final Lxwi;
-.super Ljava/lang/Object;
+.super Lkvi;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqa;
 
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lxwi;
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lxwi;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lxwi;->c:[Ljava/lang/Object;
 
-    sput-object v0, Lxwi;->a:Lxwi;
+    iput p1, p0, Lxwi;->d:I
 
-    new-instance v0, Lmli;
+    const/4 p1, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lmli;-><init>(I)V
-
-    const-class v1, Lemi;
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+    iput p1, p0, Lxwi;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lxwi;->o:I
 
-    move-result-object p1
+    invoke-static {p1, v0}, Le9j;->c(II)V
 
-    throw p1
+    add-int/2addr p1, p1
+
+    iget v0, p0, Lxwi;->d:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lxwi;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lxwi;->o:I
+
+    return v0
 .end method

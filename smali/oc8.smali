@@ -1,118 +1,160 @@
 .class public final Loc8;
-.super Ljava/lang/Object;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:F
-
-.field public final c:J
-
-
-# direct methods
-.method public constructor <init>(Lnc8;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Lnc8;->a:J
-
-    iput-wide v0, p0, Loc8;->a:J
-
-    iget v0, p1, Lnc8;->b:F
-
-    iput v0, p0, Loc8;->b:F
-
-    iget-wide v0, p1, Lnc8;->c:J
-
-    iput-wide v0, p0, Loc8;->c:J
-
-    return-void
-.end method
+# static fields
+.field public static a:Loc8;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Loc8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Loc8;
-
-    iget-wide v3, p0, Loc8;->a:J
-
-    iget-wide v5, p1, Loc8;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Loc8;->b:F
-
-    iget v3, p1, Loc8;->b:F
-
-    cmpl-float v1, v1, v3
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Loc8;->c:J
-
-    iget-wide v5, p1, Loc8;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
     .locals 4
 
-    iget-wide v0, p0, Loc8;->a:J
+    sget v0, Lpx0;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x22
+
+    if-lt v0, v1, :cond_1
+
+    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    const-string v1, "REL"
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget v1, p0, Loc8;->b:F
+    const-string v2, "VanillaIceCream"
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {v2, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-wide v2, p0, Loc8;->c:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0
 
-    return v0
+    if-ltz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_2
+
+    if-nez v0, :cond_4
+
+    :cond_2
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
+
+    move-result v2
+
+    sub-int/2addr v0, v2
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v1
+
+    if-ltz v0, :cond_5
+
+    invoke-virtual {v1}, Landroid/text/Layout;->getHeight()I
+
+    move-result v3
+
+    if-le v0, v3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v0
+
+    int-to-float v2, v2
+
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineLeft(I)F
+
+    move-result v3
+
+    cmpg-float v3, v2, v3
+
+    if-ltz v3, :cond_5
+
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineRight(I)F
+
+    move-result v0
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    :goto_2
+    invoke-static {p2}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
+
+    invoke-static {p1, p2, p3}, Landroid/text/method/Touch;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

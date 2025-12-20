@@ -1,78 +1,86 @@
-.class public final synthetic Luvb;
+.class public final Luvb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/location/map/pick/PickLocationScreen;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/location/map/pick/PickLocationScreen;I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Luvb;->a:I
-
-    iput-object p1, p0, Luvb;->b:Lone/me/location/map/pick/PickLocationScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luvb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
-
-    iget p1, p0, Luvb;->a:I
-
-    iget-object v0, p0, Luvb;->b:Lone/me/location/map/pick/PickLocationScreen;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->v0:[Lyy7;
-
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->A0()Lgwb;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lewb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lewb;-><init>(Lgwb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v2, v2, v1, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->v0:[Lyy7;
-
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->A0()Lgwb;
-
-    move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0, v0}, Lgwb;->t(ZZ)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    nop
+    :cond_0
+    instance-of v1, p1, Luvb;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Luvb;
+
+    iget-object v1, p0, Luvb;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Luvb;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Luvb;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Peer(id="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Luvb;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lqf7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

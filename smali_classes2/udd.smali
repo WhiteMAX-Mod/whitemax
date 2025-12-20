@@ -1,64 +1,28 @@
-.class public final Ludd;
+.class public abstract Ludd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lxdd;
 
 
 # static fields
-.field public static final a:Ludd;
+.field public static oneme_settings_ringtone_custom_section_add:I = 0x7f1309fc
 
+.field public static oneme_settings_ringtone_custom_section_bottom:I = 0x7f1309fd
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_settings_ringtone_custom_section_bottom_full:I = 0x7f1309fe
 
-    new-instance v0, Ludd;
+.field public static oneme_settings_ringtone_custom_section_header:I = 0x7f1309ff
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_ringtone_custom_section_wrong_duration:I = 0x7f130a00
 
-    sput-object v0, Ludd;->a:Ludd;
+.field public static oneme_settings_ringtone_custom_section_wrong_format:I = 0x7f130a01
 
-    return-void
-.end method
+.field public static oneme_settings_ringtone_custom_section_wrong_size:I = 0x7f130a02
 
+.field public static oneme_settings_ringtone_default_section:I = 0x7f130a03
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_settings_ringtone_low_volume_level:I = 0x7f130a04
 
-    const/4 v0, 0x1
+.field public static oneme_settings_ringtone_system_section:I = 0x7f130a05
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_settings_ringtone_system_title:I = 0x7f130a06
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ludd;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x1297a4a1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CloseLockedControls"
-
-    return-object v0
-.end method
+.field public static oneme_settings_ringtone_title:I = 0x7f130a07

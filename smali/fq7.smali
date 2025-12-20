@@ -1,13 +1,11 @@
-.class public final Lfq7;
-.super Lapd;
+.class public interface abstract Lfq7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract a()Ljava/util/List;
+.end method
 
-    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
-
-    return-object p1
+.method public abstract b(Landroid/content/Context;)Ljava/lang/Object;
 .end method

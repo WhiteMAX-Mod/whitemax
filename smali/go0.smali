@@ -1,107 +1,99 @@
 .class public final Lgo0;
-.super Ljava/lang/Object;
+.super Lsg7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/security/Signature;
-
-.field public final b:Ljavax/crypto/Cipher;
-
-.field public final c:Ljavax/crypto/Mac;
-
-.field public final d:Landroid/security/identity/IdentityCredential;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/security/identity/IdentityCredential;)V
-    .locals 1
-
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 17
-    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
-
-    .line 18
-    iput-object v0, p0, Lgo0;->b:Ljavax/crypto/Cipher;
-
-    .line 19
-    iput-object v0, p0, Lgo0;->c:Ljavax/crypto/Mac;
-
-    .line 20
-    iput-object p1, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/security/Signature;)V
+.method public constructor <init>(Ljava/lang/String;[B)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lsg7;-><init>(Ljava/lang/String;)V
 
-    .line 2
-    iput-object p1, p0, Lgo0;->a:Ljava/security/Signature;
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput-object p1, p0, Lgo0;->b:Ljavax/crypto/Cipher;
-
-    .line 4
-    iput-object p1, p0, Lgo0;->c:Ljavax/crypto/Mac;
-
-    .line 5
-    iput-object p1, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
+    iput-object p2, p0, Lgo0;->b:[B
 
     return-void
 .end method
 
-.method public constructor <init>(Ljavax/crypto/Cipher;)V
-    .locals 1
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 7
-    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
+    if-ne p0, p1, :cond_0
 
-    .line 8
-    iput-object p1, p0, Lgo0;->b:Ljavax/crypto/Cipher;
+    return v0
 
-    .line 9
-    iput-object v0, p0, Lgo0;->c:Ljavax/crypto/Mac;
+    :cond_0
+    const/4 v1, 0x0
 
-    .line 10
-    iput-object v0, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
+    if-eqz p1, :cond_2
 
-    return-void
+    const-class v2, Lgo0;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lgo0;
+
+    iget-object v2, p0, Lsg7;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lsg7;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lgo0;->b:[B
+
+    iget-object p1, p1, Lgo0;->b:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public constructor <init>(Ljavax/crypto/Mac;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lsg7;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    const/16 v1, 0x1f
 
-    .line 12
-    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
+    const/16 v2, 0x20f
 
-    .line 13
-    iput-object v0, p0, Lgo0;->b:Ljavax/crypto/Cipher;
+    invoke-static {v2, v1, v0}, Lzy4;->e(IILjava/lang/String;)I
 
-    .line 14
-    iput-object p1, p0, Lgo0;->c:Ljavax/crypto/Mac;
+    move-result v0
 
-    .line 15
-    iput-object v0, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
+    iget-object v1, p0, Lgo0;->b:[B
 
-    return-void
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

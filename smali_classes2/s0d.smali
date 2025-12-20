@@ -1,60 +1,185 @@
-.class public abstract Ls0d;
+.class public final synthetic Ls0d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmq6;
 
 
-# static fields
-.field public static back:I = 0x7f0a00e9
+# instance fields
+.field public final synthetic a:I
 
-.field public static copy:I = 0x7f0a02de
+.field public final synthetic b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static cut:I = 0x7f0a02e7
 
-.field public static edit_menu_item:I = 0x7f0a0323
+# direct methods
+.method public synthetic constructor <init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    .locals 0
 
-.field public static extendedMenu:I = 0x7f0a036a
+    iput p2, p0, Ls0d;->a:I
 
-.field public static markdown_badge_count_view:I = 0x7f0a045c
+    iput-object p1, p0, Ls0d;->b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static markdown_bold:I = 0x7f0a045d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static markdown_group:I = 0x7f0a045e
+    return-void
+.end method
 
-.field public static markdown_heading:I = 0x7f0a045f
 
-.field public static markdown_italic:I = 0x7f0a0460
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-.field public static markdown_link:I = 0x7f0a0461
+    iget v0, p0, Ls0d;->a:I
 
-.field public static markdown_menu_container:I = 0x7f0a0462
+    const/4 v1, 0x1
 
-.field public static markdown_message_bubble_view:I = 0x7f0a0463
+    iget-object v2, p0, Ls0d;->b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static markdown_mono:I = 0x7f0a0464
+    packed-switch v0, :pswitch_data_0
 
-.field public static markdown_original:I = 0x7f0a0465
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
 
-.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0466
+    sget v0, Lh5e;->v:I
 
-.field public static markdown_preview_send_button:I = 0x7f0a0467
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static markdown_preview_send_button_guideline:I = 0x7f0a0468
+    move-result-object v1
 
-.field public static markdown_quote:I = 0x7f0a0469
+    invoke-static {v1, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static markdown_regular:I = 0x7f0a046a
+    move-result-object v0
 
-.field public static markdown_strikethrough:I = 0x7f0a046b
+    return-object v0
 
-.field public static markdown_underline:I = 0x7f0a046c
+    :pswitch_0
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
 
-.field public static menu:I = 0x7f0a04c7
+    sget v0, Lh5e;->w:I
 
-.field public static menu_list:I = 0x7f0a04f5
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static paste:I = 0x7f0a08dd
+    move-result-object v1
 
-.field public static rect:I = 0x7f0a09fe
+    invoke-static {v1, v0}, Ln74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static root:I = 0x7f0a0a10
+    move-result-object v0
 
-.field public static select_all:I = 0x7f0a0b2e
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, v2, Lone/me/qrscanner/QrScannerWidget;->b:Lks;
+
+    sget-object v3, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->z0()Ll0d;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    if-ne v3, v1, :cond_0
+
+    sget-object v0, Lgtb;->g:Lgtb;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    sget-object v3, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
+
+    aget-object v4, v3, v1
+
+    invoke-virtual {v0, v2}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Long;
+
+    if-eqz v4, :cond_2
+
+    new-instance v5, Lgtb;
+
+    aget-object v1, v3, v1
+
+    invoke-virtual {v0, v2}, Lks;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v9, v0
+
+    check-cast v9, Ljava/lang/Long;
+
+    const/16 v12, 0x33
+
+    const/4 v7, 0x0
+
+    const/4 v6, 0x0
+
+    sget-object v8, Lfif;->X:Lfif;
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    invoke-direct/range {v5 .. v12}, Lgtb;-><init>(Lb9c;ILfif;Ljava/lang/Long;Ljava/lang/Long;Lxs;I)V
+
+    move-object v0, v5
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v0, Lgtb;->g:Lgtb;
+
+    :goto_0
+    return-object v0
+
+    :pswitch_2
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->F0:[Lp38;
+
+    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->z0()Ll0d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    if-ne v0, v1, :cond_3
+
+    sget-object v0, Lmbe;->J1:Lmbe;
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_4
+    sget-object v0, Lmbe;->O1:Lmbe;
+
+    :goto_1
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

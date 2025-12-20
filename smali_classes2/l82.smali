@@ -1,61 +1,68 @@
 .class public final Ll82;
-.super Ln82;
+.super Llrd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ll82;
+# instance fields
+.field public final a:Lvbf;
+
+.field public final b:Lrr6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lvbf;Loq6;)V
+    .locals 0
 
-    new-instance v0, Ll82;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll82;->a:Lvbf;
 
-    sput-object v0, Ll82;->a:Ll82;
+    check-cast p2, Lrr6;
+
+    iput-object p2, p0, Ll82;->b:Lrr6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lmlj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Ll82;
+    iget-object p2, p0, Ll82;->a:Lvbf;
 
-    if-nez p1, :cond_1
+    iget-object p2, p2, Lbe8;->d:Lfv;
 
-    const/4 p1, 0x0
+    iget-object p2, p2, Lfv;->f:Ljava/util/List;
 
-    return p1
+    invoke-static {p1, p2}, Lei3;->G(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lie8;
+
+    iget-object p2, p0, Ll82;->b:Lrr6;
+
+    invoke-interface {p2, p1}, Loq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x744623c0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ServiceUnavailable"
-
-    return-object v0
+    :goto_0
+    return-void
 .end method

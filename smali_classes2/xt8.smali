@@ -3,95 +3,184 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lau8;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic a:I
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lxt8;->a:I
 
-    iput-object p1, p0, Lxt8;->a:Landroid/net/Uri;
+    iput-wide p1, p0, Lxt8;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 8
 
-    const/4 v0, 0x1
+    iget v0, p0, Lxt8;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p2, Lvwh;
 
-    :cond_0
-    instance-of v1, p1, Lxt8;
+    iget-wide v0, p0, Lxt8;->b:J
 
-    const/4 v2, 0x0
+    invoke-virtual {p2, v0, v1}, Lvwh;->b(J)J
 
-    if-nez v1, :cond_1
+    move-result-wide v2
 
-    return v2
+    new-instance p2, Lqa5;
 
-    :cond_1
-    check-cast p1, Lxt8;
+    invoke-direct {p2, v2, v3}, Lqa5;-><init>(J)V
 
-    iget-object v1, p0, Lxt8;->a:Landroid/net/Uri;
+    check-cast p1, Lvwh;
 
-    iget-object p1, p1, Lxt8;->a:Landroid/net/Uri;
+    invoke-virtual {p1, v0, v1}, Lvwh;->b(J)J
 
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-wide v0
+
+    new-instance p1, Lqa5;
+
+    invoke-direct {p1, v0, v1}, Lqa5;-><init>(J)V
+
+    invoke-static {p2, p1}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p1
 
-    if-nez p1, :cond_2
+    return p1
 
-    return v2
+    :pswitch_0
+    const-wide v0, 0x7fffffffffffffffL
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lxt8;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SendFile(uri="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxt8;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    check-cast p2, Lzge;
+
+    iget-object v1, p2, Lzge;->d:Lud2;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lxt8;->b:J
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lud2;->b:Lzh2;
+
+    invoke-virtual {v1, v4, v5}, Lzh2;->e(J)Z
+
+    move-result v1
+
+    if-ne v1, v3, :cond_0
+
+    move-object p2, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p2, p2, Lzge;->d:Lud2;
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Lud2;->p()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_1
+    move-object p2, v2
+
+    :goto_0
+    check-cast p1, Lzge;
+
+    iget-object v1, p1, Lzge;->d:Lud2;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Lud2;->b:Lzh2;
+
+    invoke-virtual {v1, v4, v5}, Lzh2;->e(J)Z
+
+    move-result v1
+
+    if-ne v1, v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p1, p1, Lzge;->d:Lud2;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Lud2;->p()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_3
+    move-object v0, v2
+
+    :goto_1
+    invoke-static {p2, v0}, Llij;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lzt8;
+
+    check-cast p2, Lzt8;
+
+    iget-wide p1, p1, Lzt8;->c:J
+
+    iget-wide v0, p0, Lxt8;->b:J
+
+    cmp-long p1, p1, v0
+
+    if-nez p1, :cond_4
+
+    const/4 p1, -0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

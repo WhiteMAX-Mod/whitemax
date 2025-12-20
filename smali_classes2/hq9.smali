@@ -1,213 +1,171 @@
 .class public final Lhq9;
-.super Lj3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final a:Ljava/util/ArrayList;
+
+.field public final b:I
+
+.field public final c:Ldq9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llrd;I)V
+.method public constructor <init>(Ljava/util/ArrayList;ILdq9;)V
     .locals 0
 
-    iput p2, p0, Lhq9;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lj3;-><init>(Llrd;)V
+    iput-object p1, p0, Lhq9;->a:Ljava/util/ArrayList;
+
+    iput p2, p0, Lhq9;->b:I
+
+    iput-object p3, p0, Lhq9;->c:Ldq9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lhq9;->d:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    const-string v0, "DELETE FROM folder_and_chats WHERE folderId = ?"
+    :cond_0
+    instance-of v0, p1, Lhq9;
 
-    return-object v0
+    if-nez v0, :cond_1
 
-    :pswitch_0
-    const-string v0, "DELETE FROM chat_folder"
+    goto :goto_0
 
-    return-object v0
+    :cond_1
+    check-cast p1, Lhq9;
 
-    :pswitch_1
-    const-string v0, "DELETE FROM recent"
+    iget-object v0, p0, Lhq9;->a:Ljava/util/ArrayList;
 
-    return-object v0
+    iget-object v1, p1, Lhq9;->a:Ljava/util/ArrayList;
 
-    :pswitch_2
-    const-string v0, "DELETE FROM reactions_section"
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v0
 
-    :pswitch_3
-    const-string v0, "DELETE FROM profile"
+    if-nez v0, :cond_2
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_4
-    const-string v0, "DELETE FROM phones WHERE id = ?"
+    :cond_2
+    iget v0, p0, Lhq9;->b:I
 
-    return-object v0
+    iget v1, p1, Lhq9;->b:I
 
-    :pswitch_5
-    const-string v0, "DELETE FROM phones"
+    if-eq v0, v1, :cond_3
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_6
-    const-string v0, "UPDATE phones SET server_phone = ?, type = ? WHERE phone = ?"
+    :cond_3
+    iget-object v0, p0, Lhq9;->c:Ldq9;
 
-    return-object v0
+    iget-object p1, p1, Lhq9;->c:Ldq9;
 
-    :pswitch_7
-    const-string v0, "DELETE FROM notifications_tracker_messages"
+    invoke-static {v0, p1}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p1
 
-    :pswitch_8
-    const-string v0, "DELETE FROM notifications_tracker_messages WHERE time<=?"
+    if-nez p1, :cond_4
 
-    return-object v0
+    :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_9
-    const-string v0, "DELETE FROM notifications_read_marks"
+    return p1
 
-    return-object v0
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    :pswitch_a
-    const-string v0, "DELETE FROM fcm_notifications WHERE chat_id = ?"
+    return p1
+.end method
 
-    return-object v0
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_b
-    const-string v0, "DELETE FROM fcm_notifications"
+    iget-object v0, p0, Lhq9;->a:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_c
-    const-string v0, "DELETE FROM fcm_notifications WHERE chat_id = ? AND message_id = ?"
+    move-result v0
 
-    return-object v0
+    const/16 v1, 0x1f
 
-    :pswitch_d
-    const-string v0, "DELETE FROM fcm_notifications WHERE time <= ? AND chat_id = ?"
+    mul-int/2addr v0, v1
 
-    return-object v0
+    iget v2, p0, Lhq9;->b:I
 
-    :pswitch_e
-    const-string v0, "DELETE FROM fcm_notifications WHERE time <= ?"
+    invoke-static {v2, v0, v1}, Lq3g;->k(III)I
 
-    return-object v0
+    move-result v0
 
-    :pswitch_f
-    const-string v0, "UPDATE messages SET chat_id = ? WHERE id = ?"
+    iget-object v1, p0, Lhq9;->c:Ldq9;
 
-    return-object v0
+    if-nez v1, :cond_0
 
-    :pswitch_10
-    const-string v0, "UPDATE messages  SET delivery_status = ? WHERE chat_id = ? AND sender = ? AND time <= ? AND delivery_status = ? AND inserted_from_msg_link = 0 AND status <> ?"
+    const/4 v1, 0x0
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_11
-    const-string v0, "DELETE FROM messages WHERE media_type = ?"
+    :cond_0
+    invoke-virtual {v1}, Ldq9;->hashCode()I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_12
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND server_id = 0 AND time_local >= ? AND time_local <= ?"
+    :goto_0
+    add-int/2addr v0, v1
 
-    return-object v0
+    return v0
+.end method
 
-    :pswitch_13
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL"
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-object v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_14
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND time <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL"
+    const-string v1, "MessageReactionInfo(counters="
 
-    return-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_15
-    const-string v0, "DELETE FROM messages"
+    iget-object v1, p0, Lhq9;->a:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_16
-    const-string v0, "DELETE FROM messages WHERE chat_id = ?"
+    const-string v1, ", totalCount="
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_17
-    const-string v0, "UPDATE messages SET delayed_attrs_time_to_fire = ? AND delayed_attrs_notify_sender = ? WHERE id = ?"
+    iget v1, p0, Lhq9;->b:I
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_18
-    const-string v0, "UPDATE messages SET reactions = ?, reactions_update_time = ? WHERE server_id = ?"
+    const-string v1, ", yourReaction="
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_19
-    const-string v0, "UPDATE messages SET channel_views = ?, channel_forwards = ? WHERE server_id = ?"
+    iget-object v1, p0, Lhq9;->c:Ldq9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_1a
-    const-string v0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time >= ? AND time <= ?"
-
-    return-object v0
-
-    :pswitch_1b
-    const-string v0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time <= ?"
-
-    return-object v0
-
-    :pswitch_1c
-    const-string v0, "UPDATE messages SET update_time = ? WHERE id = ?"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

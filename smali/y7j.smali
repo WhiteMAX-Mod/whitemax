@@ -1,151 +1,70 @@
-.class public abstract Ly7j;
+.class public final Ly7j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwwa;
+
+
+# static fields
+.field public static final a:Ly7j;
+
 
 # direct methods
-.method public static final a(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-nez p1, :cond_0
+    new-instance v0, Ly7j;
 
-    if-eqz p3, :cond_4
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p3}, Ljava/lang/Runnable;->run()V
+    sput-object v0, Ly7j;->a:Ly7j;
 
-    return-void
+    new-instance v0, Lyyi;
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lyyi;-><init>(I)V
 
-    const v1, 0xf00d
+    const-class v1, Lqzi;
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
+    const/4 v2, 0x2
 
-    :cond_1
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_2
+    const/4 v2, 0x3
 
-    goto :goto_0
+    invoke-static {v0, v2}, Lxfh;->k(Ljava/util/HashMap;I)Lyyi;
 
-    :cond_2
-    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lxfh;->h(Ljava/lang/Class;Lyyi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lxfh;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_3
-    :goto_0
-    const/4 v0, 0x5
 
-    if-ne p0, v0, :cond_5
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz p3, :cond_4
-
-    invoke-interface {p3}, Ljava/lang/Runnable;->run()V
-
-    :cond_4
-    return-void
-
-    :cond_5
-    new-instance v2, Lqe5;
-
-    const/4 v7, 0x4
-
-    move v4, p0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v2 .. v7}, Lqe5;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v3}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p0
-
-    invoke-static {p0, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
-
-    move-result-object p0
-
-    iput v1, p0, Landroid/os/Message;->what:I
-
-    iput-object v5, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v3}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    invoke-static {p1}, Lc12;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
-
-    return-void
-
-    :cond_6
-    invoke-virtual {v3, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public static b(Lqe4;)V
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    :try_start_0
-    invoke-interface {p0}, Lqe4;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    return-void
-.end method
-
-.method public static c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 0
-
-    and-int/lit8 p0, p0, 0x4
-
-    if-eqz p0, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    invoke-static {p0, p1, p2, p3}, Ly7j;->a(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    return-void
+    throw p1
 .end method

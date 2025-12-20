@@ -1,297 +1,562 @@
 .class public final Lmj6;
-.super Landroid/media/projection/MediaProjection$Callback;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/CapturerObserver;
-.implements Lke8;
+.implements Ljava/util/Collection;
+.implements Ld38;
 
 
 # instance fields
-.field public volatile X:Lorg/webrtc/ScreenCapturerAndroid;
+.field public final synthetic a:I
 
-.field public Y:Lorg/webrtc/VideoSink;
-
-.field public final Z:Lg9g;
-
-.field public final a:Lorg/webrtc/EglBase$Context;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Ly6d;
-
-.field public final d:Lu44;
-
-.field public volatile o:Lorg/webrtc/SurfaceTextureHelper;
-
-.field public s0:Z
-
-.field public t0:Z
-
-.field public final u0:Lawd;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/EglBase$Context;Landroid/content/Context;Lawd;Ly6d;)V
-    .locals 0
+.method public constructor <init>(Llfa;)V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lmj6;->a:Lorg/webrtc/EglBase$Context;
+    iput v0, p0, Lmj6;->a:I
 
-    iput-object p2, p0, Lmj6;->b:Landroid/content/Context;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lmj6;->c:Ly6d;
+    .line 5
+    iput-object p1, p0, Lmj6;->b:Ljava/lang/Object;
 
-    iput-object p3, p0, Lmj6;->u0:Lawd;
+    return-void
+.end method
 
-    new-instance p1, Lu44;
+.method public constructor <init>(Lnj6;)V
+    .locals 1
 
-    const-string p2, "SSFrameCapturer"
+    const/4 v0, 0x0
 
-    invoke-direct {p1, p2}, Lu44;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Lmj6;->a:I
 
-    iput-object p1, p0, Lmj6;->d:Lu44;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lg9g;
+    .line 2
+    iget-object p1, p1, Lnj6;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
 
-    invoke-direct {p1}, Lg9g;-><init>()V
-
-    iput-object p1, p0, Lmj6;->Z:Lg9g;
+    .line 3
+    iput-object p1, p0, Lmj6;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lvu0;
+    iget p1, p0, Lmj6;->a:I
 
-    const/4 v1, 0x1
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lvu0;-><init>(Ljava/lang/Object;III)V
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object p1, p0, Lmj6;->d:Lu44;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {p1, v0}, Lu44;->c(Ljava/lang/Runnable;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b(Lorg/webrtc/Size;I)V
-    .locals 6
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    const-string v0, "Error starting screen capture"
+    iget p1, p0, Lmj6;->a:I
 
-    const-string v1, "FrameCapturerImpl"
+    packed-switch p1, :pswitch_data_0
 
-    iget-boolean v2, p0, Lmj6;->s0:Z
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    if-eqz v2, :cond_1
+    const-string v0, "Operation is not supported for read-only collection"
 
-    iget-boolean v2, p0, Lmj6;->t0:Z
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-nez v2, :cond_1
+    throw p1
 
-    :try_start_0
-    iget-object v2, p0, Lmj6;->X:Lorg/webrtc/ScreenCapturerAndroid;
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget v3, p1, Lorg/webrtc/Size;->width:I
+    const-string v0, "Operation is not supported for read-only collection"
 
-    iget v4, p1, Lorg/webrtc/Size;->height:I
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    throw p1
 
-    invoke-virtual {v2, v3, v4, v5}, Lorg/webrtc/ScreenCapturerAndroid;->startCapture(III)V
+    nop
 
-    const/4 v2, 0x1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iput-boolean v2, p0, Lmj6;->t0:Z
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final clear()V
+    .locals 2
 
-    return-void
+    iget v0, p0, Lmj6;->a:I
 
-    :catch_0
-    move-exception p1
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Llfa;
+
+    invoke-virtual {v0, p1}, Llfa;->c(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Lax8;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :catch_1
-    move-exception v2
+    :cond_0
+    check-cast p1, Lax8;
 
-    goto :goto_1
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentSkipListSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
 
     :goto_0
-    iget-object p2, p0, Lmj6;->c:Ly6d;
+    return p1
 
-    invoke-interface {p2, v1, v0, p1}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    nop
 
-    iget-object p1, p0, Lmj6;->d:Lu44;
-
-    new-instance p2, Llj6;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p0, v0}, Llj6;-><init>(Lmj6;I)V
-
-    invoke-virtual {p1, p2}, Lu44;->c(Ljava/lang/Runnable;)V
-
-    goto :goto_2
-
-    :goto_1
-    iget-object v3, p0, Lmj6;->c:Ly6d;
-
-    invoke-interface {v3, v1, v0, v2}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/16 v0, 0xa
-
-    if-le p2, v0, :cond_0
-
-    iget-object p1, p0, Lmj6;->c:Ly6d;
-
-    const-string v0, "Error: "
-
-    const-string v3, "times of restart screen capture did fail"
-
-    invoke-static {p2, v0, v3}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-interface {p1, v1, p2, v2}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lmj6;->d:Lu44;
-
-    new-instance p2, Llj6;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p0, v0}, Llj6;-><init>(Lmj6;I)V
-
-    invoke-virtual {p1, p2}, Lu44;->c(Ljava/lang/Runnable;)V
-
-    goto :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lmj6;->d:Lu44;
-
-    new-instance v1, Lmn1;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lmn1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    iget-object p1, v0, Lu44;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/os/Handler;
-
-    const-wide/16 v2, 0x190
-
-    invoke-virtual {p1, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_1
-    :goto_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onCapturerStarted(Z)V
+.method public final containsAll(Ljava/util/Collection;)Z
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lmj6;->a:I
 
-    const-string v1, "Screen capture did start success="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast v0, Llfa;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Llfa;->c(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v2, 0x0
+
+    :cond_2
+    :goto_0
+    return v2
+
+    :pswitch_0
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Llfa;
+
+    invoke-virtual {v0}, Llfa;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lk9e;
+
+    iget-object v1, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v1, Llfa;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lk9e;-><init>(Llfa;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Lqoe;->b(Lcr6;)Lioe;
 
     move-result-object v0
 
-    const-string v1, "FrameCapturerImpl"
+    return-object v0
 
-    iget-object v2, p0, Lmj6;->c:Ly6d;
+    :pswitch_0
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
 
-    invoke-interface {v2, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->iterator()Ljava/util/Iterator;
 
-    iget-object p1, p0, Lmj6;->u0:Lawd;
+    move-result-object v0
 
-    if-eqz p1, :cond_0
+    return-object v0
 
-    iget-object p1, p1, Lawd;->b:Ljava/lang/Object;
+    nop
 
-    check-cast p1, Lk01;
-
-    iget-object p1, p1, Lk01;->P:Ly6d;
-
-    const-string v0, "Screen capture has started, fast=false"
-
-    const-string v1, "OKRTCCall"
-
-    invoke-interface {p1, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onCapturerStopped()V
-    .locals 3
-
-    const-string v0, "FrameCapturerImpl"
-
-    const-string v1, "Screen capture did stop"
-
-    iget-object v2, p0, Lmj6;->c:Ly6d;
-
-    invoke-interface {v2, v0, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lmj6;->u0:Lawd;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lawd;->a(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onFrameCaptured(Lorg/webrtc/VideoFrame;)V
+.method public final remove(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lmj6;->Z:Lg9g;
+    iget p1, p0, Lmj6;->a:I
 
-    invoke-virtual {v0}, Lg9g;->a()V
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lmj6;->Y:Lorg/webrtc/VideoSink;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    if-eqz v0, :cond_0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-interface {v0, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    return-void
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onStop()V
-    .locals 2
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    new-instance v0, Llj6;
+    iget p1, p0, Lmj6;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1}, Llj6;-><init>(Lmj6;I)V
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v1, p0, Lmj6;->d:Lu44;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v1, v0}, Lu44;->c(Ljava/lang/Runnable;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final removeIf(Ljava/util/function/Predicate;)Z
+    .locals 1
+
+    iget p1, p0, Lmj6;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget p1, p0, Lmj6;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Llfa;
+
+    iget v0, v0, Llfa;->e:I
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lmj6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->size()I
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1
+    invoke-static {p0}, Lei4;->c(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 2
+    :pswitch_0
+    invoke-static {p0}, Lei4;->c(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lmj6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    invoke-static {p0, p1}, Lei4;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4
+    :pswitch_0
+    invoke-static {p0, p1}, Lei4;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

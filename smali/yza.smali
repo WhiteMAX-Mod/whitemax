@@ -1,169 +1,154 @@
-.class public abstract Lyza;
-.super Ljava/lang/Object;
+.class public final Lyza;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Ll25;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lbyc;->call_history_info_copy_link:I
+    iput p1, p0, Lyza;->a:I
 
-    sput v0, Lyza;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sget v0, Lbyc;->call_history_info_open_chat_call:I
-
-    sput v0, Lyza;->b:I
-
-    sget v0, Lbyc;->call_history_info_recreate:I
-
-    sput v0, Lyza;->c:I
-
-    sget v0, Lbyc;->call_history_info_send_to_chat:I
-
-    sput v0, Lyza;->d:I
-
-    sget v0, Lbyc;->call_history_info_share_link:I
-
-    sput v0, Lyza;->e:I
-
-    sget v0, Lbyc;->call_history_info_start_call:I
-
-    sput v0, Lyza;->f:I
-
-    sget v0, Lbyc;->call_history_screen_banner:I
-
-    sput v0, Lyza;->g:I
-
-    sget v0, Lbyc;->call_history_screen_contact_call:I
-
-    sput v0, Lyza;->h:I
-
-    sget v0, Lbyc;->call_history_screen_container:I
-
-    sput v0, Lyza;->i:I
-
-    sget v0, Lbyc;->call_history_screen_group_call:I
-
-    sput v0, Lyza;->j:I
-
-    sget v0, Lbyc;->call_history_screen_toolbar:I
-
-    sput v0, Lyza;->k:I
-
-    sget v0, Lbyc;->call_info_action_list:I
-
-    sput v0, Lyza;->l:I
-
-    sget v0, Lbyc;->call_info_action_vh:I
-
-    sput v0, Lyza;->m:I
-
-    sget v0, Lbyc;->call_info_appbarlayout:I
-
-    sput v0, Lyza;->n:I
-
-    sget v0, Lbyc;->call_info_button:I
-
-    sput v0, Lyza;->o:I
-
-    sget v0, Lbyc;->call_info_collapsiblecontainerlinearlayout:I
-
-    sput v0, Lyza;->p:I
-
-    sget v0, Lbyc;->call_info_coordinator_layout:I
-
-    sput v0, Lyza;->q:I
-
-    sget v0, Lbyc;->call_info_icon:I
-
-    sput v0, Lyza;->r:I
-
-    sget v0, Lbyc;->call_info_link_state:I
-
-    sput v0, Lyza;->s:I
-
-    sget v0, Lbyc;->call_info_onemetoolbar:I
-
-    sput v0, Lyza;->t:I
-
-    sget v0, Lbyc;->call_info_presettings_action_list:I
-
-    sput v0, Lyza;->u:I
-
-    sget v0, Lbyc;->call_info_presettings_change_name_vh:I
-
-    sput v0, Lyza;->v:I
-
-    sget v0, Lbyc;->call_info_presettings_item_vh:I
-
-    sput v0, Lyza;->w:I
-
-    sget v0, Lbyc;->call_info_presettings_toolbar:I
-
-    sput v0, Lyza;->x:I
-
-    sget v0, Lbyc;->call_info_title:I
-
-    sput v0, Lyza;->y:I
-
-    sget v0, Lbyc;->call_presettings_call_save_changes:I
-
-    sput v0, Lyza;->z:I
+    iput-object p2, p0, Lyza;->b:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lyza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lp25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 2
+
+    iget v0, p0, Lyza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll25;
+
+    invoke-static {v0}, Lp25;->c(Ll25;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lp25;->a:Lp25;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lyza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyza;->b:Ljava/lang/Object;
+
+    check-cast v0, Ludf;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ludf;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyza;->b:Ljava/lang/Object;
+
+    check-cast v0, Lc0b;
+
+    invoke-virtual {p0}, Lyza;->f()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lc0b;->d(Ljava/lang/Object;)V
+
+    sget-object v1, Lxg5;->a:Lxg5;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lc0b;->b()V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

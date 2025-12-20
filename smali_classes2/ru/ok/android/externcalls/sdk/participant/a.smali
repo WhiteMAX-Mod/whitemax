@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmze;
+.implements Ljaf;
 
 
 # instance fields

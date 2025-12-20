@@ -1,112 +1,77 @@
-.class public final synthetic Lse;
+.class public final Lse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcm6;
+.implements Landroid/animation/TimeInterpolator;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/view/animation/PathInterpolator;
 
-.field public final synthetic b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public final b:Landroid/view/animation/PathInterpolator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+.method public constructor <init>(Landroid/view/animation/PathInterpolator;Landroid/view/animation/PathInterpolator;)V
     .locals 0
 
-    iput p2, p0, Lse;->a:I
-
-    iput-object p1, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lse;->a:Landroid/view/animation/PathInterpolator;
+
+    iput-object p2, p0, Lse;->b:Landroid/view/animation/PathInterpolator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final getInterpolation(F)F
+    .locals 3
 
-    iget v0, p0, Lse;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-static {p1, v0, v1}, Lelj;->c(FFF)F
 
-    const-string v1, "circleR"
+    move-result p1
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    const v0, 0x3ea1cac1    # 0.316f
 
-    move-result-object v0
+    cmpg-float v1, p1, v0
 
-    return-object v0
+    if-gez v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iget-object v1, p0, Lse;->a:Landroid/view/animation/PathInterpolator;
 
-    const-string v1, "circleM"
+    div-float/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    invoke-virtual {v1, p1}, Landroid/view/animation/PathInterpolator;->getInterpolation(F)F
 
-    move-result-object v0
+    move-result p1
 
-    return-object v0
+    mul-float/2addr p1, v0
 
-    :pswitch_1
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    return p1
 
-    const-string v1, "circleL"
+    :cond_0
+    sub-float/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    const v1, 0x3f2f1aa0    # 0.684f
 
-    move-result-object v0
+    div-float/2addr p1, v1
 
-    return-object v0
+    iget-object v2, p0, Lse;->b:Landroid/view/animation/PathInterpolator;
 
-    :pswitch_2
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-virtual {v2, p1}, Landroid/view/animation/PathInterpolator;->getInterpolation(F)F
 
-    const-string v1, "minutes"
+    move-result p1
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    mul-float/2addr p1, v1
 
-    move-result-object v0
+    add-float/2addr p1, v0
 
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    const-string v1, "hours"
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lse;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    const-string v1, "circle"
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

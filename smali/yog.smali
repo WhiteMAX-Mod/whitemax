@@ -1,477 +1,747 @@
 .class public final Lyog;
-.super Li3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final i:J
+
+.field public static final synthetic j:I
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lzlh;
+
+.field public final c:Lk5a;
+
+.field public final d:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+.field public final e:Lxs;
+
+.field public final f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+.field public g:Z
+
+.field public final h:Lwog;
+
+
 # direct methods
-.method public static L0(Landroid/graphics/fonts/FontFamily;I)Landroid/graphics/fonts/Font;
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Landroid/graphics/fonts/FontStyle;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    and-int/lit8 v1, p1, 0x1
+    const-wide/16 v1, 0x8
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lyog;->i:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lzlh;Lwog;Lk5a;Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lxs;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lwbf;-><init>(I)V
+
+    iput-object v0, p0, Lyog;->e:Lxs;
+
+    iput-boolean v1, p0, Lyog;->g:Z
+
+    iput-object p1, p0, Lyog;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    iput-object p2, p0, Lyog;->b:Lzlh;
+
+    iput-object p3, p0, Lyog;->h:Lwog;
+
+    iput-object p4, p0, Lyog;->c:Lk5a;
+
+    iput-object p5, p0, Lyog;->a:Landroid/content/Context;
+
+    iput-object p6, p0, Lyog;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    return-void
+.end method
+
+.method public static a(Ljpj;)V
+    .locals 2
+
+    :try_start_0
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v0, 0x1e
+
+    invoke-static {p0, v0, v1}, Lwki;->b(Lcom/google/android/gms/tasks/Task;J)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "SERVICE_NOT_AVAILABLE"
+
+    invoke-direct {v0, v1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Ljava/io/IOException;
+
+    if-nez v1, :cond_1
+
+    instance-of v1, v0, Ljava/lang/RuntimeException;
 
     if-eqz v1, :cond_0
 
-    const/16 v1, 0x2bc
+    check-cast v0, Ljava/lang/RuntimeException;
 
-    goto :goto_0
+    throw v0
 
     :cond_0
-    const/16 v1, 0x190
+    new-instance v0, Ljava/io/IOException;
 
-    :goto_0
-    and-int/lit8 p1, p1, 0x2
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz p1, :cond_1
-
-    move p1, v3
-
-    goto :goto_1
+    throw v0
 
     :cond_1
-    move p1, v2
+    check-cast v0, Ljava/io/IOException;
 
-    :goto_1
-    invoke-direct {v0, v1, p1}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
-
-    invoke-virtual {p0, v2}, Landroid/graphics/fonts/FontFamily;->getFont(I)Landroid/graphics/fonts/Font;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lyog;->M0(Landroid/graphics/fonts/FontStyle;Landroid/graphics/fonts/FontStyle;)I
-
-    move-result v1
-
-    :goto_2
-    invoke-virtual {p0}, Landroid/graphics/fonts/FontFamily;->getSize()I
-
-    move-result v2
-
-    if-ge v3, v2, :cond_3
-
-    invoke-virtual {p0, v3}, Landroid/graphics/fonts/FontFamily;->getFont(I)Landroid/graphics/fonts/Font;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Lyog;->M0(Landroid/graphics/fonts/FontStyle;Landroid/graphics/fonts/FontStyle;)I
-
-    move-result v4
-
-    if-ge v4, v1, :cond_2
-
-    move-object p1, v2
-
-    move v1, v4
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    return-object p1
-.end method
-
-.method public static M0(Landroid/graphics/fonts/FontStyle;Landroid/graphics/fonts/FontStyle;)I
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/graphics/fonts/FontStyle;->getWeight()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/graphics/fonts/FontStyle;->getWeight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x64
-
-    invoke-virtual {p0}, Landroid/graphics/fonts/FontStyle;->getSlant()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Landroid/graphics/fonts/FontStyle;->getSlant()I
-
-    move-result p1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x2
-
-    :goto_0
-    add-int/2addr v0, p0
-
-    return v0
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final e0(Landroid/content/Context;Lje6;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
-    .locals 6
+.method public final b(Ljava/lang/String;)V
+    .locals 5
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lyog;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    :try_start_0
-    iget-object p2, p2, Lje6;->a:[Lke6;
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->a()Ljava/lang/String;
 
-    array-length v0, p2
+    move-result-object v0
 
-    const/4 v1, 0x0
+    new-instance v1, Landroid/os/Bundle;
 
-    move-object v2, p1
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    aget-object v3, p2, v1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    const-string v3, "/topics/"
 
-    :try_start_1
-    new-instance v4, Landroid/graphics/fonts/Font$Builder;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v5, v3, Lke6;->f:I
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, p3, v5}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget v5, v3, Lke6;->b:I
+    move-result-object v2
 
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
+    const-string v4, "gcm.topic"
 
-    move-result-object v4
+    invoke-virtual {v1, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-boolean v5, v3, Lke6;->c:Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v4
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v3, Lke6;->e:I
-
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v4
-
-    iget-object v3, v3, Lke6;->d:Ljava/lang/String;
-
-    invoke-virtual {v4, v3}, Landroid/graphics/fonts/Font$Builder;->setFontVariationSettings(Ljava/lang/String;)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
-
-    move-result-object v3
-
-    if-nez v2, :cond_0
-
-    new-instance v4, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {v4, v3}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    move-object v2, v4
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v2, v3}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    :try_start_2
-    invoke-virtual {v2}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
-
-    move-result-object p2
-
-    new-instance p3, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-direct {p3, p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
-
-    invoke-static {p2, p4}, Lyog;->L0(Landroid/graphics/fonts/FontFamily;I)Landroid/graphics/fonts/Font;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    :catch_1
-    :goto_2
-    return-object p1
+    iget-object v2, p0, Lyog;->c:Lk5a;
+
+    invoke-virtual {v2, v0, p1, v1}, Lk5a;->w(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljpj;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lk5a;->g(Ljpj;)Ljpj;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lyog;->a(Ljpj;)V
+
+    return-void
 .end method
 
-.method public final f0(Landroid/content/Context;[Lme6;I)Landroid/graphics/Typeface;
-    .locals 8
+.method public final c(Ljava/lang/String;)V
+    .locals 5
 
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    iget-object v0, p0, Lyog;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "/topics/"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v4, "gcm.topic"
+
+    invoke-virtual {v1, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "delete"
+
+    const-string v4, "1"
+
+    invoke-virtual {v1, v2, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Lyog;->c:Lk5a;
+
+    invoke-virtual {v2, v0, p1, v1}, Lk5a;->w(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljpj;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lk5a;->g(Ljpj;)Ljpj;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lyog;->a(Ljpj;)V
+
+    return-void
+.end method
+
+.method public final declared-synchronized d(Z)V
+    .locals 0
+
+    monitor-enter p0
 
     :try_start_0
-    array-length v1, p2
-
-    const/4 v2, 0x0
-
-    move-object v3, v0
-
-    :goto_0
-    if-ge v2, v1, :cond_3
-
-    aget-object v4, p2, v2
+    iput-boolean p1, p0, Lyog;->g:Z
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
 
     :try_start_1
-    iget-object v5, v4, Lme6;->a:Landroid/net/Uri;
-
-    const-string v6, "r"
-
-    invoke-virtual {p1, v5, v6, v0}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v5
-
-    if-nez v5, :cond_0
-
-    if-eqz v5, :cond_2
-
-    :goto_1
-    invoke-virtual {v5}, Landroid/os/ParcelFileDescriptor;->close()V
+    monitor-exit p0
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_4
+    throw p1
+.end method
 
-    :cond_0
-    :try_start_2
-    new-instance v6, Landroid/graphics/fonts/Font$Builder;
+.method public final e()Z
+    .locals 13
 
-    invoke-direct {v6, v5}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/os/ParcelFileDescriptor;)V
+    :goto_0
+    monitor-enter p0
 
-    iget v7, v4, Lme6;->c:I
+    :try_start_0
+    iget-object v0, p0, Lyog;->h:Lwog;
 
-    invoke-virtual {v6, v7}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v0}, Lwog;->a()Lvog;
 
-    move-result-object v6
+    move-result-object v0
 
-    iget-boolean v7, v4, Lme6;->d:Z
+    const/4 v1, 0x3
 
-    invoke-virtual {v6, v7}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
+    const/4 v2, 0x1
 
-    move-result-object v6
+    if-nez v0, :cond_1
 
-    iget v4, v4, Lme6;->b:I
+    const-string v0, "FirebaseMessaging"
 
-    invoke-virtual {v6, v4}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    move-result-object v4
+    move-result v0
 
-    invoke-virtual {v4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+    if-eqz v0, :cond_0
 
-    move-result-object v4
+    const-string v0, "FirebaseMessaging"
 
-    if-nez v3, :cond_1
+    const-string v1, "topic sync succeeded"
 
-    new-instance v6, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {v6, v4}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    move-object v3, v6
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
     :catchall_0
-    move-exception v4
+    move-exception v0
+
+    goto/16 :goto_9
+
+    :cond_0
+    :goto_1
+    monitor-exit p0
+
+    return v2
+
+    :cond_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-string v3, " succeeded."
+
+    const-string v4, "FirebaseMessaging"
+
+    const-string v5, "Unknown topic operation"
+
+    const-string v6, "Subscribe to topic: "
+
+    const-string v7, "Unsubscribe from topic: "
+
+    const/4 v8, 0x0
+
+    :try_start_1
+    iget-object v9, v0, Lvog;->b:Ljava/lang/String;
+
+    iget-object v10, v0, Lvog;->a:Ljava/lang/String;
+
+    invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
+
+    move-result v11
+
+    const/16 v12, 0x53
+
+    if-eq v11, v12, :cond_3
+
+    const/16 v12, 0x55
+
+    if-eq v11, v12, :cond_2
 
     goto :goto_2
 
-    :cond_1
-    invoke-virtual {v3, v4}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :cond_2
+    const-string v11, "U"
 
-    goto :goto_1
+    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :goto_2
-    :try_start_3
-    invoke-virtual {v5}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    move-result v9
+
+    if-eqz v9, :cond_4
+
+    move v9, v2
 
     goto :goto_3
 
-    :catchall_1
-    move-exception v5
-
-    :try_start_4
-    invoke-virtual {v4, v5}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_3
-    throw v4
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-
     :catch_0
-    :cond_2
-    :goto_4
-    add-int/lit8 v2, v2, 0x1
+    move-exception v0
 
-    goto :goto_0
+    goto/16 :goto_6
 
     :cond_3
-    if-nez v3, :cond_4
+    const-string v11, "S"
+
+    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_4
+
+    move v9, v8
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    const/4 v9, -0x1
+
+    :goto_3
+    if-eqz v9, :cond_6
+
+    if-eq v9, v2, :cond_5
+
+    const-string v2, "FirebaseMessaging"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {p0, v10}, Lyog;->c(Ljava/lang/String;)V
+
+    const-string v2, "FirebaseMessaging"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {p0, v10}, Lyog;->b(Ljava/lang/String;)V
+
+    const-string v2, "FirebaseMessaging"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :cond_7
+    :goto_4
+    iget-object v1, p0, Lyog;->h:Lwog;
+
+    monitor-enter v1
+
+    :try_start_2
+    iget-object v2, v1, Lwog;->a:Lw07;
+
+    iget-object v3, v0, Lvog;->c:Ljava/lang/String;
+
+    iget-object v4, v2, Lw07;->d:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/ArrayDeque;
+
+    monitor-enter v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+
+    :try_start_3
+    iget-object v5, v2, Lw07;->d:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v5, v3}, Ljava/util/ArrayDeque;->remove(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    iget-object v3, v2, Lw07;->e:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    new-instance v5, Lnoe;
+
+    const/4 v6, 0x3
+
+    invoke-direct {v5, v6, v2}, Lnoe;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v3, v5}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_8
+    monitor-exit v4
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    monitor-exit v1
+
+    iget-object v2, p0, Lyog;->e:Lxs;
+
+    monitor-enter v2
+
+    :try_start_4
+    iget-object v0, v0, Lvog;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lyog;->e:Lxs;
+
+    invoke-virtual {v1, v0}, Lwbf;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    monitor-exit v2
+
+    goto/16 :goto_0
+
+    :catchall_1
+    move-exception v0
 
     goto :goto_5
 
-    :cond_4
-    :try_start_5
-    invoke-virtual {v3}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    :cond_9
+    iget-object v1, p0, Lyog;->e:Lxs;
 
-    move-result-object p1
+    invoke-virtual {v1, v0}, Lwbf;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
+    move-result-object v1
 
-    invoke-direct {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
+    check-cast v1, Ljava/util/ArrayDeque;
 
-    invoke-static {p1, p3}, Lyog;->L0(Landroid/graphics/fonts/FontFamily;I)Landroid/graphics/fonts/Font;
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-virtual {p1}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
+    check-cast v3, Lydg;
 
-    move-result-object p1
+    if-eqz v3, :cond_a
 
-    invoke-virtual {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
+    const/4 v4, 0x0
 
-    move-result-object p1
+    invoke-virtual {v3, v4}, Lydg;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
+    :cond_a
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    move-result-object p1
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
+    move-result v1
 
-    return-object p1
+    if-eqz v1, :cond_b
 
-    :catch_1
+    iget-object v1, p0, Lyog;->e:Lxs;
+
+    invoke-virtual {v1, v0}, Lwbf;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_b
+    monitor-exit v2
+
+    goto/16 :goto_0
+
     :goto_5
-    return-object v0
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_5
+    monitor-exit v4
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :try_start_6
+    throw v0
+
+    :catchall_3
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    throw v0
+
+    :goto_6
+    const-string v1, "SERVICE_NOT_AVAILABLE"
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    const-string v1, "INTERNAL_SERVER_ERROR"
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    const-string v1, "TOO_MANY_SUBSCRIBERS"
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    goto :goto_7
+
+    :cond_c
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_d
+
+    const-string v0, "Topic operation failed without exception message. Will retry Topic operation."
+
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_8
+
+    :cond_d
+    throw v0
+
+    :cond_e
+    :goto_7
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Topic operation failed: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". Will retry Topic operation."
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_8
+    return v8
+
+    :goto_9
+    :try_start_7
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    throw v0
 .end method
 
-.method public final g0(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
-    .locals 0
+.method public final f(J)V
+    .locals 10
 
-    :try_start_0
-    new-instance p1, Landroid/graphics/fonts/Font$Builder;
+    const-wide/16 v0, 0x2
 
-    invoke-direct {p1, p2, p3}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
+    mul-long/2addr v0, p1
 
-    invoke-virtual {p1}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+    const-wide/16 v2, 0x1e
 
-    move-result-object p1
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
-    new-instance p2, Landroid/graphics/fonts/FontFamily$Builder;
+    move-result-wide v0
 
-    invoke-direct {p2, p1}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
+    sget-wide v2, Lyog;->i:J
 
-    invoke-virtual {p2}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
-    move-result-object p2
+    move-result-wide v8
 
-    new-instance p3, Landroid/graphics/Typeface$CustomFallbackBuilder;
+    new-instance v4, Lapg;
 
-    invoke-direct {p3, p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
+    iget-object v6, p0, Lyog;->a:Landroid/content/Context;
 
-    invoke-virtual {p1}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
+    iget-object v7, p0, Lyog;->b:Lzlh;
 
-    move-result-object p1
+    move-object v5, p0
 
-    invoke-virtual {p3, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
+    invoke-direct/range {v4 .. v9}, Lapg;-><init>(Lyog;Landroid/content/Context;Lzlh;J)V
 
-    move-result-object p1
+    iget-object v0, v5, Lyog;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v4, p1, p2, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    return-object p1
+    const/4 p1, 0x1
 
-    :catch_0
-    const/4 p1, 0x0
+    invoke-virtual {p0, p1}, Lyog;->d(Z)V
 
-    return-object p1
-.end method
-
-.method public final h0(Landroid/content/Context;Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    invoke-static {p2, p3, p1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j0([Lme6;I)Lme6;
-    .locals 0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "Do not use this function in API 29 or later."
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

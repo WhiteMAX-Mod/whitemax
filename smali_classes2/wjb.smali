@@ -1,230 +1,126 @@
 .class public final Lwjb;
-.super Ljava/lang/Object;
+.super Lf3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic c:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lsz;
-
-.field public final d:Lyjb;
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Ljava/util/List;
-
-.field public final h:Lss4;
+.field public final synthetic d:Lxjb;
 
 
 # direct methods
-.method public constructor <init>(Lvjb;)V
-    .locals 2
+.method public constructor <init>(Lxjb;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lwjb;->c:I
 
-    iget-wide v0, p1, Lvjb;->a:J
+    iput-object p1, p0, Lwjb;->d:Lxjb;
 
-    iput-wide v0, p0, Lwjb;->a:J
+    const/16 p1, 0xb
 
-    iget-object v0, p1, Lvjb;->b:Ljava/lang/String;
+    packed-switch p2, :pswitch_data_0
 
-    iput-object v0, p0, Lwjb;->b:Ljava/lang/String;
+    sget-object p2, Lijb;->a:Lijb;
 
-    iget-object v0, p1, Lvjb;->c:Lsz;
-
-    iput-object v0, p0, Lwjb;->c:Lsz;
-
-    iget-object v0, p1, Lvjb;->d:Lyjb;
-
-    iput-object v0, p0, Lwjb;->d:Lyjb;
-
-    iget-boolean v0, p1, Lvjb;->e:Z
-
-    iput-boolean v0, p0, Lwjb;->e:Z
-
-    iget-boolean v0, p1, Lvjb;->f:Z
-
-    iput-boolean v0, p0, Lwjb;->f:Z
-
-    iget-object v0, p1, Lvjb;->g:Ljava/util/List;
-
-    iput-object v0, p0, Lwjb;->g:Ljava/util/List;
-
-    iget-object p1, p1, Lvjb;->h:Lss4;
-
-    iput-object p1, p0, Lwjb;->h:Lss4;
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lsjb;->a:Lsjb;
+
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p2, Lpjb;->a:Lpjb;
+
+    invoke-direct {p0, p1, p2}, Lf3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a()Lus;
-    .locals 3
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    new-instance v0, Lus;
+    iget v0, p0, Lwjb;->c:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Lz0f;-><init>(I)V
-
-    iget-wide v1, p0, Lwjb;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "cid"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lwjb;->b:Ljava/lang/String;
-
-    invoke-static {v1}, Ll8g;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "text"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    iget-boolean v1, p0, Lwjb;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const-string v2, "detectShare"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lwjb;->c:Lsz;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    const-string v2, "attaches"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object v1, p0, Lwjb;->d:Lyjb;
-
-    if-eqz v1, :cond_2
-
-    const-string v2, "link"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    iget-boolean v1, p0, Lwjb;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const-string v2, "isLive"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lwjb;->g:Ljava/util/List;
-
-    if-eqz v1, :cond_3
-
-    const-string v2, "elements"
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget-object v1, p0, Lwjb;->h:Lss4;
-
-    if-eqz v1, :cond_4
-
-    const-string v2, "delayedAttributes"
-
-    invoke-virtual {v1}, Lss4;->a()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lwjb;->g:Ljava/util/List;
-
-    invoke-static {v0}, Lzdi;->a(Ljava/util/Collection;)I
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    const-string v1, "OutgoingMessage{cid="
+    if-nez v0, :cond_0
 
-    const-string v2, ", text="
+    check-cast p2, Lsjb;
 
-    iget-wide v3, p0, Lwjb;->a:J
+    check-cast p1, Lsjb;
 
-    const-string v5, "***"
+    iget-object p1, p0, Lwjb;->d:Lxjb;
 
-    invoke-static {v1, v3, v4, v2, v5}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2}, Lxjb;->y(Lxjb;Lsjb;)V
 
-    move-result-object v1
+    invoke-virtual {p1}, Lxjb;->z()V
 
-    const-string v2, ", attaches="
+    :cond_0
+    return-void
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lwjb;->c:Lsz;
+    move-result v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v2, ", link="
+    check-cast p2, Lrjb;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lrjb;
 
-    iget-object v2, p0, Lwjb;->d:Lyjb;
+    iget-object p1, p0, Lwjb;->d:Lxjb;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2}, Lxjb;->x(Lxjb;Lrjb;)V
 
-    const-string v2, ", detectShare="
+    invoke-virtual {p1}, Lxjb;->z()V
 
-    const-string v3, ", live=\'"
+    :cond_1
+    return-void
 
-    iget-boolean v4, p0, Lwjb;->e:Z
+    :pswitch_1
+    invoke-static {p1, p2}, Ly5f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v5, p0, Lwjb;->f:Z
+    move-result v0
 
-    invoke-static {v2, v3, v1, v4, v5}, Lhf3;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    if-nez v0, :cond_2
 
-    const-string v2, "\', elements="
+    check-cast p2, Lljb;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lljb;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lwjb;->d:Lxjb;
 
-    const-string v0, "}"
+    invoke-static {p1, p2}, Lxjb;->w(Lxjb;Lljb;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lxjb;->z()V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    return-void
 
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

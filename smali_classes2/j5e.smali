@@ -1,48 +1,31 @@
-.class public final Lj5e;
-.super Lq44;
+.class public abstract Lj5e;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lhv7;
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lhv7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lj5e;->X:Lhv7;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lj5e;->d:Ljava/lang/Object;
+    sget v0, Lbbd;->max_attach_count_error:I
 
-    iget p1, p0, Lj5e;->o:I
+    sput v0, Lj5e;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lbbd;->to_chats:I
 
-    or-int/2addr p1, v0
+    sput v0, Lj5e;->b:I
 
-    iput p1, p0, Lj5e;->o:I
+    sget v0, Lbbd;->you_sent_messages:I
 
-    iget-object p1, p0, Lj5e;->X:Lhv7;
+    sput v0, Lj5e;->c:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lhv7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

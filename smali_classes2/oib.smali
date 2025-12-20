@@ -1,96 +1,112 @@
-.class public final Loib;
-.super Lid0;
+.class public final synthetic Loib;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Landroid/net/Uri;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqib;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
+.method public synthetic constructor <init>(Lqib;I)V
+    .locals 0
 
-    const/16 v0, 0xd
+    iput p2, p0, Loib;->a:I
 
-    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+    iput-object p1, p0, Loib;->b:Lqib;
 
-    iput-object p1, p0, Loib;->b:Landroid/net/Uri;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Loib;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Loib;->b:Lqib;
+
+    iget-object v1, v0, Lqib;->B0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lpib;
+
+    iget-object v3, v0, Lqib;->c:Loff;
+
+    iget v3, v3, Loff;->d:F
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v4}, Lpib;->a(FZ)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Loib;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget-object v0, p0, Loib;->b:Lqib;
 
-    if-nez v1, :cond_1
+    iget-object v1, v0, Lqib;->B0:Ljava/util/ArrayList;
 
-    return v2
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lpib;
+
+    iget-object v3, v0, Lqib;->c:Loff;
+
+    iget v3, v3, Loff;->d:F
+
+    const/4 v4, 0x1
+
+    invoke-interface {v2, v3, v4}, Lpib;->a(FZ)V
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Loib;
+    return-void
 
-    iget-object v1, p0, Loib;->b:Landroid/net/Uri;
+    nop
 
-    iget-object p1, p1, Loib;->b:Landroid/net/Uri;
-
-    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Loib;->b:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenExternalLink(url="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Loib;->b:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

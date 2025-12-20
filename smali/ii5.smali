@@ -1,7 +1,3 @@
-.class public final Lii5;
-.super Lkotlinx/coroutines/internal/ThreadSafeHeap;
+.class public interface abstract Lii5;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# instance fields
-.field public b:J

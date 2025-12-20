@@ -1,200 +1,106 @@
-.class public abstract Ltvc;
-.super Ljava/lang/Object;
+.class public final Ltvc;
+.super Lb5g;
+.source "SourceFile"
 
+# interfaces
+.implements Lcr6;
 
-# static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public static attach_drawable:I = 0x7f070055
+# instance fields
+.field public final synthetic X:Landroid/graphics/RectF;
 
-.field public static audio_record_static_circle_size:I = 0x7f070056
+.field public final synthetic o:Lcwc;
 
-.field public static big_success_button_corner_radius:I = 0x7f07005a
 
-.field public static bottom_bar_height:I = 0x7f07005b
+# direct methods
+.method public constructor <init>(Lcwc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static bottom_picker_height:I = 0x7f07005c
+    iput-object p1, p0, Ltvc;->o:Lcwc;
 
-.field public static call_button_max_width:I = 0x7f070060
+    iput-object p2, p0, Ltvc;->X:Landroid/graphics/RectF;
 
-.field public static call_button_size:I = 0x7f070061
+    const/4 p1, 0x2
 
-.field public static call_finished_controls_buttons_height:I = 0x7f070062
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static call_finished_controls_buttons_text_size:I = 0x7f070063
+    return-void
+.end method
 
-.field public static call_finished_controls_margin_bottom:I = 0x7f070064
 
-.field public static call_pip_margin_bottom:I = 0x7f070065
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static call_rate_details__rate_margin:I = 0x7f070066
+    check-cast p1, Lac4;
 
-.field public static call_rate_details__title_margin:I = 0x7f070067
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static call_rate_details__title_textsize:I = 0x7f070068
+    invoke-virtual {p0, p1, p2}, Ltvc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static call_rate_item__padding_top:I = 0x7f070069
+    move-result-object p1
 
-.field public static call_title_padding:I = 0x7f07006a
+    check-cast p1, Ltvc;
 
-.field public static change_profile_big_padding:I = 0x7f07006f
+    sget-object p2, Lv2h;->a:Lv2h;
 
-.field public static change_profile_small_padding:I = 0x7f070070
+    invoke-virtual {p1, p2}, Ltvc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static chat_bottom_panel_height:I = 0x7f070071
+    return-object p2
+.end method
 
-.field public static chat_control_message_spacing:I = 0x7f070072
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static chat_folder_item_height:I = 0x7f070073
+    new-instance p1, Ltvc;
 
-.field public static chat_folders_container_height:I = 0x7f070074
+    iget-object v0, p0, Ltvc;->o:Lcwc;
 
-.field public static chat_folders_container_horizontal_padding:I = 0x7f070075
+    iget-object v1, p0, Ltvc;->X:Landroid/graphics/RectF;
 
-.field public static chat_folders_item_horizontal_offset:I = 0x7f070076
+    invoke-direct {p1, v0, v1, p2}, Ltvc;-><init>(Lcwc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-.field public static chat_folders_item_vertical_offset:I = 0x7f070077
+    return-object p1
+.end method
 
-.field public static chat_messages_padding_bottom:I = 0x7f070078
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.field public static chat_series_spacing:I = 0x7f070079
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
 
-.field public static chat_top_panel_height:I = 0x7f07007a
+    sget-object p1, Lcwc;->Y0:[Lp38;
 
-.field public static chat_top_panel_horizontal_padding:I = 0x7f07007b
+    iget-object p1, p0, Ltvc;->o:Lcwc;
 
-.field public static compose_view_item_height:I = 0x7f070084
+    iget-object v0, p1, Lcwc;->y0:Ld68;
 
-.field public static contact_picker_selected_height:I = 0x7f070085
+    invoke-interface {v0}, Ld68;->getValue()Ljava/lang/Object;
 
-.field public static context_dialog_item_height:I = 0x7f070086
+    move-result-object v0
 
-.field public static control_with_action_big_margin:I = 0x7f070087
+    check-cast v0, Lp36;
 
-.field public static control_with_action_normal_margin:I = 0x7f070088
+    iget-object v1, p1, Lcwc;->V0:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static design_bottom_navigation_height:I = 0x7f070097
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static design_fab_size_mini:I = 0x7f0700a5
+    move-result-object v1
 
-.field public static divider_item_collage:I = 0x7f0700c4
+    check-cast v1, Ljava/lang/String;
 
-.field public static expansion_area__audio_controls:I = 0x7f0700e8
+    invoke-virtual {v0, v1}, Lp36;->p(Ljava/lang/String;)Ljava/io/File;
 
-.field public static expansion_area__audio_controls_container:I = 0x7f0700e9
+    move-result-object v0
 
-.field public static fast_chat_actions_button_size:I = 0x7f0700ea
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-.field public static fast_chat_actions_space:I = 0x7f0700eb
+    move-result-object v0
 
-.field public static flash_close_button_height:I = 0x7f0700f8
+    iget-object v1, p0, Ltvc;->X:Landroid/graphics/RectF;
 
-.field public static flash_close_button_width:I = 0x7f0700f9
+    invoke-virtual {p1, v0, v1}, Lcwc;->z(Ljava/lang/String;Landroid/graphics/RectF;)V
 
-.field public static flash_close_wrapper_height:I = 0x7f0700fa
+    sget-object p1, Lv2h;->a:Lv2h;
 
-.field public static flash_close_wrapper_width:I = 0x7f0700fb
-
-.field public static folder_context_menu_margin:I = 0x7f0700fc
-
-.field public static folder_grabberview_height:I = 0x7f0700fe
-
-.field public static frg_auth_button_spacing:I = 0x7f07012f
-
-.field public static frg_auth_button_spacing_2х:I = 0x7f070130
-
-.field public static frg_auth_ok_content_bottom_margin:I = 0x7f070131
-
-.field public static frg_call__center_layout_bottom_margin:I = 0x7f070132
-
-.field public static frg_call__incoming_buttons_bottom_margin:I = 0x7f070133
-
-.field public static frg_call__incoming_buttons_top_margin:I = 0x7f070134
-
-.field public static frg_location_map_contact_markers_panel_height:I = 0x7f070135
-
-.field public static frg_location_map_current_contact_panel_height:I = 0x7f070136
-
-.field public static frg_location_map_panel_height:I = 0x7f070137
-
-.field public static full_screen_mode_button_height:I = 0x7f070138
-
-.field public static full_screen_mode_button_width:I = 0x7f070139
-
-.field public static gallery_album_cover_size:I = 0x7f07013a
-
-.field public static message_max_attach_width:I = 0x7f07034a
-
-.field public static message_min_attach_height:I = 0x7f07034b
-
-.field public static message_min_width:I = 0x7f07034c
-
-.field public static message_min_width_contact_content:I = 0x7f07034d
-
-.field public static music_player_cover_size:I = 0x7f070423
-
-.field public static music_player_top_margin:I = 0x7f070424
-
-.field public static music_player_waves_height:I = 0x7f070425
-
-.field public static notif_large_icon_width:I = 0x7f070426
-
-.field public static phone_permissions_promo_margin_top:I = 0x7f07044e
-
-.field public static popup_notification__height:I = 0x7f070457
-
-.field public static profile_ava_frame_size:I = 0x7f070460
-
-.field public static profile_ava_top_space:I = 0x7f070461
-
-.field public static profile_button_elevation:I = 0x7f070462
-
-.field public static profile_top_padding:I = 0x7f070463
-
-.field public static quick_camera_button_margin:I = 0x7f070466
-
-.field public static quick_camera_button_margin_bottom:I = 0x7f070467
-
-.field public static quick_camera_chronometer_text_size:I = 0x7f070468
-
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f070469
-
-.field public static quick_camera_wrapper_height:I = 0x7f07046a
-
-.field public static quick_camera_wrapper_width:I = 0x7f07046b
-
-.field public static rounded_button_margin:I = 0x7f07046c
-
-.field public static row_chat_height:I = 0x7f07046d
-
-.field public static row_profile_icon_size:I = 0x7f07046e
-
-.field public static row_profile_with_icon__space_between_icon_and_text:I = 0x7f07046f
-
-.field public static row_profile_with_icon__start_padding:I = 0x7f070470
-
-.field public static secret_button_layout_height:I = 0x7f070471
-
-.field public static secret_button_layout_height_no_bottom_shadow:I = 0x7f070472
-
-.field public static settings_start_padding:I = 0x7f070473
-
-.field public static stickers_puller_height:I = 0x7f07048a
-
-.field public static stickers_puller_height_chat:I = 0x7f07048b
-
-.field public static stickers_puller_shadow_height_chat:I = 0x7f07048c
-
-.field public static suggest_name_picker_item_height:I = 0x7f07048d
-
-.field public static suggests_header_height:I = 0x7f07048e
-
-.field public static suggests_max_height_with_header:I = 0x7f07048f
-
-.field public static suggests_max_height_without_header:I = 0x7f070490
-
-.field public static suggests_row_height:I = 0x7f070491
-
-.field public static toolbar_main_screen_subtitle_margin_top:I = 0x7f0704bc
-
-.field public static view_call_controls__hangup_top_margin:I = 0x7f0704c5
+    return-object p1
+.end method

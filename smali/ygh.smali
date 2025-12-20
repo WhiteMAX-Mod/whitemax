@@ -1,48 +1,18 @@
-.class public final Lygh;
-.super Lgf4;
+.class public abstract Lygh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:Landroidx/viewpager2/widget/ViewPager2;
+.field public a:J
 
+.field public b:J
 
-# direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
-    .locals 0
+.field public c:D
 
-    iput-object p1, p0, Lygh;->g:Landroidx/viewpager2/widget/ViewPager2;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lgf4;-><init>(I)V
-
-    return-void
-.end method
+.field public d:Landroid/util/Range;
 
 
 # virtual methods
-.method public final g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lygh;->g:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->A0:Lfq5;
-
-    iget-object v0, v0, Lfq5;->b:Lh3e;
-
-    iget-boolean v0, v0, Lh3e;->m:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    invoke-super {p0, p1}, Lgf4;->g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract a()V
 .end method

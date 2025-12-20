@@ -4,176 +4,283 @@
 
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
+.method public static a(Lnn;)Landroid/content/Intent;
+    .locals 3
 
-    const-string v1, "getDataColumn: _data - ["
+    invoke-virtual {p0}, Landroid/app/Activity;->getParentActivityIntent()Landroid/content/Intent;
 
-    const-string v0, "_data"
+    move-result-object v0
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v4
+    return-object v0
 
-    const/4 v8, 0x0
-
+    :cond_0
     :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
 
-    move-result-object v2
+    move-result-object v0
 
-    const/4 v7, 0x0
+    invoke-static {p0, v0}, Lmbj;->c(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
-    move-object v3, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
+    move-result-object v0
     :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    if-eqz p0, :cond_0
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return-object v1
+
+    :cond_1
+    new-instance v2, Landroid/content/ComponentName;
+
+    invoke-direct {v2, p0, v0}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-static {p0, v2}, Lmbj;->c(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
-    move-result p1
+    move-result-object p0
 
-    if-eqz p1, :cond_0
+    if-nez p0, :cond_2
 
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-static {v2}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    move-result p1
+    move-result-object p0
 
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    return-object p0
 
-    move-result-object p1
+    :cond_2
+    new-instance p0, Landroid/content/Intent;
+
+    invoke-direct {p0}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object p0
     :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object v8, p0
-
-    goto :goto_1
+    return-object p0
 
     :catch_0
-    move-exception v0
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    move-object p1, v0
+    const-string v2, "getParentActivityIntent: bad parentActivityName \'"
+
+    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\' in manifest"
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "NavUtils"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :catch_1
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static b(Lnn;Landroid/content/ComponentName;)Landroid/content/Intent;
+    .locals 2
+
+    invoke-static {p0, p1}, Lmbj;->c(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    new-instance v1, Landroid/content/ComponentName;
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {p0, v1}, Lmbj;->c(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_1
+
+    invoke-static {v1}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Landroid/content/Intent;
+
+    invoke-direct {p0}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1d
+
+    if-lt v1, v2, :cond_0
+
+    const v1, 0x100c0280
 
     goto :goto_0
 
     :cond_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object v8
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object p0, v8
+    const v1, 0xc0280
 
     :goto_0
-    :try_start_2
-    const-string p2, "FileUtils"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object p1
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    iget-object v0, p1, Landroid/content/pm/ActivityInfo;->parentActivityName:Ljava/lang/String;
 
-    invoke-direct {p3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "]"
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    return-object v0
 
     :cond_1
-    return-object v8
+    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    :goto_1
-    if-eqz v8, :cond_2
+    const/4 v0, 0x0
 
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+    if-nez p1, :cond_2
+
+    return-object v0
 
     :cond_2
-    throw p1
+    const-string v1, "android.support.PARENT_ACTIVITY"
+
+    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    return-object v0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    const/16 v1, 0x2e
+
+    if-ne v0, v1, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    return-object p1
 .end method
 
-.method public static final b(Lesg;)V
-    .locals 2
+.method public static d(Lm22;Ljava/util/ArrayList;)V
+    .locals 1
 
-    new-instance v0, La4e;
+    instance-of v0, p0, Ln22;
 
-    const/16 v1, 0x12
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, v1}, La4e;-><init>(I)V
+    check-cast p0, Ln22;
 
-    const/4 v1, 0x1
+    iget-object p0, p0, Ln22;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    new-instance v0, Lb4e;
+    move-result-object p0
 
-    const/16 v1, 0xf
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v0, v1}, Lb4e;-><init>(I)V
+    move-result v0
 
-    const/16 v1, 0x248
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v0, Lb4e;
+    move-result-object v0
 
-    const/16 v1, 0x10
+    check-cast v0, Lm22;
 
-    invoke-direct {v0, v1}, Lb4e;-><init>(I)V
+    invoke-static {v0, p1}, Lmbj;->d(Lm22;Ljava/util/ArrayList;)V
 
-    const/16 v1, 0x249
+    goto :goto_0
 
-    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+    :cond_0
+    return-void
+
+    :cond_1
+    instance-of v0, p0, Ll72;
+
+    if-eqz v0, :cond_2
+
+    check-cast p0, Ll72;
+
+    iget-object p0, p0, Ll72;->a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_2
+    new-instance v0, Lk12;
+
+    invoke-direct {v0, p0}, Lk12;-><init>(Lm22;)V
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

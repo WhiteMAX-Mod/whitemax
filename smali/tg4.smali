@@ -1,35 +1,32 @@
-.class public final synthetic Ltg4;
+.class public interface abstract Ltg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
-# instance fields
-.field private volatile synthetic installations$volatile:I
-
-.field private volatile synthetic sequenceNumber$volatile:J
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "installations$volatile"
-
-    const-class v1, Ltg4;
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Ltg4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const-string v0, "sequenceNumber$volatile"
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+# virtual methods
+.method public b(Z)V
+    .locals 0
 
     return-void
+.end method
+
+.method public d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e(Lfca;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract h(Lsg8;Lah4;Lr8g;I[ILwq5;IJZLjava/util/ArrayList;Lkbc;Lqsg;Lpbc;)Lug4;
+.end method
+
+.method public j(Lrj6;)Lrj6;
+    .locals 0
+
+    return-object p1
 .end method

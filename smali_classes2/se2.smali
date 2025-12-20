@@ -1,123 +1,83 @@
-.class public final synthetic Lse2;
-.super Ljava/lang/Object;
+.class public final Lse2;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/BiConsumer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final c:Ljava/util/List;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final d:Ljava/util/Map;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(JJLjava/util/List;Ljava/util/Map;)V
     .locals 0
 
-    iput p2, p0, Lse2;->a:I
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    iput-object p1, p0, Lse2;->c:Ljava/lang/Object;
+    iput-wide p3, p0, Lse2;->b:J
 
-    iput-object p3, p0, Lse2;->b:Ljava/lang/Object;
+    iput-object p5, p0, Lse2;->c:Ljava/util/List;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p6, p0, Lse2;->d:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lse2;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "ChatBotCommandsEvent{chatId="
 
-    iget-object v0, p0, Lse2;->c:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/util/Collection;
+    iget-wide v1, p0, Lse2;->b:J
 
-    iget-object v1, p0, Lse2;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast v1, Lus;
+    const-string v1, ", botCommands count="
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p2, Lku3;
+    iget-object v1, p0, Lse2;->c:Ljava/util/List;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1, p2}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", botsInfoMap count="
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lse2;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lse2;->d:Ljava/util/Map;
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
-    iget-object v1, p0, Lse2;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/lang/Long;
+    const-string v1, "} "
 
-    check-cast p2, Lpb2;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v1
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    iget-object v0, p0, Lse2;->c:Ljava/lang/Object;
-
-    check-cast v0, Ln8a;
-
-    iget-object v1, p0, Lse2;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    check-cast p1, Ljava/lang/Long;
-
-    check-cast p2, Lpb2;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Ln8a;->d(J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,225 +1,175 @@
-.class public final Lxg5;
-.super Lj5c;
+.class public final enum Lxg5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Lo1d;
 
-# instance fields
-.field public final l:Lwee;
 
-.field public final m:Lbwf;
+# static fields
+.field public static final enum a:Lxg5;
+
+.field public static final synthetic b:[Lxg5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, 0x0
+    new-instance v0, Lxg5;
 
-    invoke-direct {p0, p1, v0, p2}, Lj5c;-><init>(Ljava/lang/String;Lar6;I)V
+    const-string v1, "INSTANCE"
 
-    sget-object v0, Lwee;->c:Lwee;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lxg5;->l:Lwee;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v0, Lwg5;
+    sput-object v0, Lxg5;->a:Lxg5;
 
-    invoke-direct {v0, p2, p1, p0}, Lwg5;-><init>(ILjava/lang/String;Lxg5;)V
+    new-instance v1, Lxg5;
 
-    new-instance p1, Lbwf;
+    const-string v2, "NEVER"
 
-    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
+    const/4 v3, 0x1
 
-    iput-object p1, p0, Lxg5;->m:Lbwf;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1}, [Lxg5;
+
+    move-result-object v0
+
+    sput-object v0, Lxg5;->b:[Lxg5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final e()Ls9j;
+.method public static a(Lc0b;)V
     .locals 1
 
-    iget-object v0, p0, Lxg5;->l:Lwee;
+    sget-object v0, Lxg5;->a:Lxg5;
+
+    invoke-interface {p0, v0}, Lc0b;->c(Ll25;)V
+
+    invoke-interface {p0}, Lc0b;->b()V
+
+    return-void
+.end method
+
+.method public static c(Ljava/lang/Throwable;Lc0b;)V
+    .locals 1
+
+    sget-object v0, Lxg5;->a:Lxg5;
+
+    invoke-interface {p1, v0}, Lc0b;->c(Ll25;)V
+
+    invoke-interface {p1, p0}, Lc0b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static d(Ljava/lang/Throwable;Ludf;)V
+    .locals 1
+
+    sget-object v0, Lxg5;->a:Lxg5;
+
+    invoke-interface {p1, v0}, Ludf;->c(Ll25;)V
+
+    invoke-interface {p1, p0}, Ludf;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lxg5;
+    .locals 1
+
+    const-class v0, Lxg5;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lxg5;
+
+    return-object p0
+.end method
+
+.method public static values()[Lxg5;
+    .locals 1
+
+    sget-object v0, Lxg5;->b:[Lxg5;
+
+    invoke-virtual {v0}, [Lxg5;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxg5;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
 
-    if-ne p0, p1, :cond_0
+# virtual methods
+.method public final clear()V
+    .locals 0
 
-    goto :goto_1
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lree;
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    check-cast p1, Lree;
-
-    invoke-interface {p1}, Lree;->e()Ls9j;
-
-    move-result-object v0
-
-    sget-object v1, Lwee;->c:Lwee;
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lj5c;->a:Ljava/lang/String;
-
-    invoke-interface {p1}, Lree;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p0}, Lofi;->a(Lree;)Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lofi;->a(Lree;)Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final dispose()V
+    .locals 0
 
-    iget-object v0, p0, Lj5c;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+.method public final f()Z
+    .locals 1
 
-    move-result v0
+    sget-object v0, Lxg5;->a:Lxg5;
 
-    new-instance v1, Lf2;
+    if-ne p0, v0, :cond_0
 
-    invoke-direct {v1, p0}, Lf2;-><init>(Lxg5;)V
+    const/4 v0, 0x1
 
-    const/4 v2, 0x1
-
-    :goto_0
-    invoke-virtual {v1}, Lf2;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    check-cast v3, Ljava/lang/String;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    const/4 v3, 0x0
-
-    :goto_1
-    add-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    mul-int/lit8 v0, v0, 0x1f
-
-    add-int/2addr v0, v2
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final i(I)Lree;
+.method public final isEmpty()Z
     .locals 1
 
-    iget-object v0, p0, Lxg5;->m:Lbwf;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lree;
-
-    aget-object p1, v0, p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lzs;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x4
+    const-string v0, "Should not be called!"
 
-    invoke-direct {v0, v1, p0}, Lzs;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    throw p1
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method public final poll()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v2, p0, Lj5c;->a:Ljava/lang/String;
-
-    const/16 v3, 0x28
-
-    invoke-static {v1, v2, v3}, Lu45;->l(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x38
-
-    const-string v1, ", "
-
-    const-string v3, ")"
-
-    invoke-static/range {v0 .. v5}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public final q(I)I
+    .locals 0
+
+    const/4 p1, 0x2
+
+    return p1
 .end method

@@ -1,127 +1,188 @@
 .class public final Ll7g;
-.super Landroid/text/style/CharacterStyle;
+.super Lb5g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Lu6g;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Lem6;
+.field public X:Li06;
 
-.field public b:I
+.field public Y:I
+
+.field public final synthetic Z:Lo7g;
+
+.field public o:Lo7g;
+
+.field public final synthetic s0:Li06;
 
 
 # direct methods
-.method public constructor <init>(Lyeb;Lem6;)V
+.method public constructor <init>(Lo7g;Li06;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    iput-object p1, p0, Ll7g;->Z:Lo7g;
 
-    iput-object p2, p0, Ll7g;->a:Lem6;
+    iput-object p2, p0, Ll7g;->s0:Li06;
 
-    invoke-interface {p2, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, p0, Ll7g;->b:I
+    invoke-direct {p0, p1, p3}, Lb5g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lac4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ll7g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    iget v1, p0, Ll7g;->b:I
-
-    check-cast p1, Ll7g;
-
-    iget p1, p1, Ll7g;->b:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const-class v0, Ll7g;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iget v1, p0, Ll7g;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final onThemeChanged(Lyeb;)V
-    .locals 1
-
-    iget-object v0, p0, Ll7g;->a:Lem6;
-
-    invoke-interface {v0, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ll7g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast p1, Ll7g;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    sget-object p2, Lv2h;->a:Lv2h;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Ll7g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput p1, p0, Ll7g;->b:I
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-eqz p1, :cond_0
+    new-instance p1, Ll7g;
 
-    iget v0, p0, Ll7g;->b:I
+    iget-object v0, p0, Ll7g;->Z:Lo7g;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object v1, p0, Ll7g;->s0:Li06;
+
+    invoke-direct {p1, v0, v1, p2}, Ll7g;-><init>(Lo7g;Li06;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ll7g;->Y:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Ll7g;->X:Li06;
+
+    iget-object v1, p0, Ll7g;->o:Lo7g;
+
+    :try_start_0
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lulj;->k(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ll7g;->Z:Lo7g;
+
+    iget-object v0, p0, Ll7g;->s0:Li06;
+
+    :try_start_1
+    iget-object v2, p1, Lo7g;->c:Ld68;
+
+    invoke-interface {v2}, Ld68;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo2b;
+
+    iput-object p1, p0, Ll7g;->o:Lo7g;
+
+    iput-object v0, p0, Ll7g;->X:Li06;
+
+    iput v1, p0, Ll7g;->Y:I
+
+    invoke-virtual {v2, v0, p0}, Lo2b;->E(Lk2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    sget-object v0, Lbc4;->a:Lbc4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
+
+    :catchall_1
+    move-exception v1
+
+    move-object v3, v1
+
+    move-object v1, p1
+
+    move-object p1, v3
+
+    :goto_0
+    iget-object v1, v1, Lo7g;->g:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " fail"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lm4j;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_1
+    throw p1
 .end method

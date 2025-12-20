@@ -1,32 +1,63 @@
-.class public final Lure;
-.super Ld2f;
+.class public abstract Lure;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final E()V
-    .locals 0
+# direct methods
+.method public static a([B)Lvre;
+    .locals 7
 
-    return-void
-.end method
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
 
-.method public final z(Lt98;)V
-    .locals 1
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
 
-    instance-of v0, p1, Lx8e;
+    :try_start_0
+    invoke-static {v0, p0}, Lsp9;->mergeFrom(Lsp9;[B)Lsp9;
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+    new-instance v0, Lvre;
 
-    check-cast v0, Lroe;
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
 
-    check-cast p1, Lioe;
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
 
-    invoke-virtual {v0, p1}, Lroe;->setModelItem(Lioe;)V
+    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
 
-    return-void
+    sget-object v6, Llw4;->d:Lxna;
+
+    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {v6, p0}, Lxna;->l(Lxna;Ljava/lang/Integer;)Llw4;
+
+    move-result-object v6
+
+    invoke-direct/range {v0 .. v6}, Lvre;-><init>(JJILlw4;)V
+
+    iget-object p0, v0, Lvre;->X:Ljava/lang/String;
+
+    const-string v1, "parseFrom"
+
+    invoke-static {p0, v1}, Lm4j;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

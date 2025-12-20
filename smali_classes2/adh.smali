@@ -1,33 +1,51 @@
-.class public Ladh;
-.super Ln2;
+.class public final Ladh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ladh;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ladh;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/high16 v0, 0x29000000
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Ln2;->c:Ljava/lang/Object;
-
-    check-cast v0, Lxy8;
-
-    check-cast v0, Lv3h;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "VideoTrack(format: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
 
     return-object v0
 .end method

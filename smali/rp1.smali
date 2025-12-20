@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lmq6;
 
 
 # instance fields
@@ -27,65 +27,33 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lrp1;->a:I
+    iget v0, p0, Lrp1;->a:I
+
+    packed-switch v0, :pswitch_data_0
 
     iget-object v0, p0, Lrp1;->b:Ltp1;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0}, Ltp1;->x(Ltp1;)I
 
-    iget-object p1, v0, Ltp1;->F0:Lsp1;
+    move-result v0
 
-    if-eqz p1, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-boolean v0, v0, Ltp1;->G0:Z
+    move-result-object v0
 
-    xor-int/lit8 v0, v0, 0x1
-
-    check-cast p1, Lam1;
-
-    iget-object p1, p1, Lam1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lwo1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lwo1;->c:Lqv1;
-
-    iget-object p1, p1, Lqv1;->h:Lg1e;
-
-    invoke-virtual {p1, v0}, Lg1e;->a(Z)V
-
-    :cond_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object p1, v0, Ltp1;->F0:Lsp1;
+    iget-object v0, p0, Lrp1;->b:Ltp1;
 
-    if-eqz p1, :cond_1
+    invoke-static {v0}, Ltp1;->v(Ltp1;)Lzh1;
 
-    check-cast p1, Lam1;
+    move-result-object v0
 
-    iget-object p1, p1, Lam1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lwo1;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Lwo1;->B(ZLandroid/content/Intent;)V
-
-    :cond_1
-    return-void
+    return-object v0
 
     nop
 

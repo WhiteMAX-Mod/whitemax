@@ -1,1009 +1,614 @@
-.class public abstract Lj0b;
+.class public final Lj0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:Z
 
-.field public static final A0:I
+.field public final b:Z
 
-.field public static final A1:I
+.field public final c:Z
 
-.field public static final B:I
+.field public final d:Z
 
-.field public static final B0:I
+.field public final e:Z
 
-.field public static final B1:I
+.field public final f:I
 
-.field public static final C:I
+.field public final g:I
 
-.field public static final C0:I
+.field public final h:I
 
-.field public static final C1:I
+.field public final i:I
 
-.field public static final D:I
+.field public final j:Z
 
-.field public static final D0:I
+.field public final k:I
 
-.field public static final D1:I
+.field public final l:Z
 
-.field public static final E:I
+.field public final m:Z
 
-.field public static final E0:I
+.field public final n:Z
 
-.field public static final E1:I
+.field public final o:Z
 
-.field public static final F:I
+.field public final p:Z
 
-.field public static final F0:I
+.field public final q:I
 
-.field public static final F1:I
+.field public final r:B
 
-.field public static final G:I
+.field public final s:B
 
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final O1:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final P1:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final Q1:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final R1:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final S1:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final T1:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final U1:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final V1:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final W1:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final X1:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Y1:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final Z1:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final a2:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final b2:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final c2:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final d2:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final e2:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final f2:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final g2:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final h2:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final i2:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final j2:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public final t:B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Li0b;)V
+    .locals 12
 
-    sget v0, Leyc;->call_admin_settings_camera_in_call:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lj0b;->a:I
+    iget v0, p1, Li0b;->a:I
 
-    sget v0, Leyc;->call_admin_settings_disable_all_cameras_once:I
+    iget-object p1, p1, Li0b;->b:Ljava/nio/ByteBuffer;
 
-    sput v0, Lj0b;->b:I
+    const/4 v1, 0x0
 
-    sget v0, Leyc;->call_admin_settings_disable_all_hands_once:I
+    const/4 v2, 0x1
 
-    sput v0, Lj0b;->c:I
+    if-ne v0, v2, :cond_0
 
-    sget v0, Leyc;->call_admin_settings_disable_all_mic_once:I
+    move v0, v2
 
-    sput v0, Lj0b;->d:I
+    goto :goto_0
 
-    sget v0, Leyc;->call_admin_settings_header_bottom_vh:I
+    :cond_0
+    move v0, v1
 
-    sput v0, Lj0b;->e:I
+    :goto_0
+    invoke-static {v0}, Lp5j;->b(Z)V
 
-    sget v0, Leyc;->call_admin_settings_header_vh:I
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    sput v0, Lj0b;->f:I
+    move-result v0
 
-    sget v0, Leyc;->call_admin_settings_item_vh:I
+    new-array v3, v0, [B
 
-    sput v0, Lj0b;->g:I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
-    sget v0, Leyc;->call_admin_settings_mic_in_call:I
+    move-result-object p1
 
-    sput v0, Lj0b;->h:I
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    sget v0, Leyc;->call_admin_settings_screen_record_in_call:I
+    new-instance p1, Ly82;
 
-    sput v0, Lj0b;->i:I
+    const/4 v4, 0x3
 
-    sget v0, Leyc;->call_admin_settings_screen_sharing_in_call:I
+    const/4 v5, 0x0
 
-    sput v0, Lj0b;->j:I
+    invoke-direct {p1, v3, v0, v4, v5}, Ly82;-><init>([BIIB)V
 
-    sget v0, Leyc;->call_admins_settings_waiting_room:I
+    const/4 v0, 0x3
 
-    sput v0, Lj0b;->k:I
+    invoke-virtual {p1, v0}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_animation_background_fade:I
+    move-result v3
 
-    sput v0, Lj0b;->l:I
+    iput v3, p0, Lj0b;->g:I
 
-    sget v0, Leyc;->call_animation_fade:I
+    invoke-virtual {p1}, Ly82;->s()V
 
-    sput v0, Lj0b;->m:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_animation_indicator_show_tag:I
+    move-result v3
 
-    sput v0, Lj0b;->n:I
+    iput-boolean v3, p0, Lj0b;->a:Z
 
-    sget v0, Leyc;->call_bottom_control_container:I
+    const/4 v4, 0x5
 
-    sput v0, Lj0b;->o:I
+    const/4 v5, 0x4
 
-    sget v0, Leyc;->call_context_action_chat:I
+    if-eqz v3, :cond_1
 
-    sput v0, Lj0b;->p:I
+    invoke-virtual {p1, v4}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_context_action_debug_menu:I
+    move-result v3
 
-    sput v0, Lj0b;->q:I
+    iput-boolean v1, p0, Lj0b;->b:Z
 
-    sget v0, Leyc;->call_context_action_open_profile:I
+    iput-boolean v1, p0, Lj0b;->j:Z
 
-    sput v0, Lj0b;->r:I
+    move v8, v1
 
-    sget v0, Leyc;->call_context_action_record_screen:I
+    move v9, v8
 
-    sput v0, Lj0b;->s:I
+    goto/16 :goto_7
 
-    sget v0, Leyc;->call_context_action_record_screen_unavailable:I
+    :cond_1
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->t:I
+    move-result v3
 
-    sget v0, Leyc;->call_context_action_settings:I
+    if-eqz v3, :cond_4
 
-    sput v0, Lj0b;->u:I
+    const/16 v3, 0x40
 
-    sget v0, Leyc;->call_context_action_share_screen:I
+    invoke-virtual {p1, v3}, Ly82;->t(I)V
 
-    sput v0, Lj0b;->v:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_context_action_share_screen_unavailable:I
+    move-result v3
 
-    sput v0, Lj0b;->w:I
+    if-eqz v3, :cond_3
 
-    sget v0, Leyc;->call_context_action_user_camera_rotate:I
+    move v3, v1
 
-    sput v0, Lj0b;->x:I
+    :goto_1
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_context_action_user_low_hand:I
+    move-result v6
 
-    sput v0, Lj0b;->y:I
+    if-eqz v6, :cond_2
 
-    sget v0, Leyc;->call_context_action_user_pin:I
+    const/16 v6, 0x20
 
-    sput v0, Lj0b;->z:I
+    if-ge v3, v6, :cond_3
 
-    sget v0, Leyc;->call_context_action_user_unpin:I
+    invoke-virtual {p1, v3}, Ly82;->t(I)V
 
-    sput v0, Lj0b;->A:I
+    goto :goto_2
 
-    sget v0, Leyc;->call_context_action_user_write_chat:I
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
 
-    sput v0, Lj0b;->B:I
+    goto :goto_1
 
-    sget v0, Leyc;->call_context_action_write_chat:I
+    :cond_3
+    :goto_2
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->C:I
+    move-result v3
 
-    sget v0, Leyc;->call_context_dialog_invite_user_to_p2p:I
+    iput-boolean v3, p0, Lj0b;->b:Z
 
-    sput v0, Lj0b;->D:I
+    if-eqz v3, :cond_5
 
-    sget v0, Leyc;->call_debug_menu_settings_action_list:I
+    const/16 v3, 0x2f
 
-    sput v0, Lj0b;->E:I
+    invoke-virtual {p1, v3}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_debug_menu_settings_header_vh:I
+    goto :goto_3
 
-    sput v0, Lj0b;->F:I
+    :cond_4
+    iput-boolean v1, p0, Lj0b;->b:Z
 
-    sget v0, Leyc;->call_debug_menu_settings_item_vh:I
+    :cond_5
+    :goto_3
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->G:I
+    move-result v3
 
-    sget v0, Leyc;->call_debug_menu_settings_toolbar:I
+    iput-boolean v3, p0, Lj0b;->j:Z
 
-    sput v0, Lj0b;->H:I
+    invoke-virtual {p1, v4}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_dynamic_type_bluetooth:I
+    move-result v3
 
-    sput v0, Lj0b;->I:I
+    move v6, v1
 
-    sget v0, Leyc;->call_dynamic_type_earpiece:I
+    move v7, v6
 
-    sput v0, Lj0b;->J:I
+    move v8, v7
 
-    sget v0, Leyc;->call_dynamic_type_speakerphone:I
+    move v9, v8
 
-    sput v0, Lj0b;->K:I
+    :goto_4
+    if-gt v7, v3, :cond_b
 
-    sget v0, Leyc;->call_dynamic_type_unknown:I
+    const/16 v10, 0xc
 
-    sput v0, Lj0b;->L:I
+    invoke-virtual {p1, v10}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_dynamic_type_wired_headset:I
+    const/4 v10, 0x7
 
-    sput v0, Lj0b;->M:I
+    if-nez v7, :cond_6
 
-    sget v0, Leyc;->call_events_recyclerview:I
+    invoke-virtual {p1, v4}, Ly82;->i(I)I
 
-    sput v0, Lj0b;->N:I
+    move-result v6
 
-    sget v0, Leyc;->call_ic_share_view:I
+    if-le v6, v10, :cond_7
 
-    sput v0, Lj0b;->O:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_incoming_avatar_preview_small:I
+    move-result v8
 
-    sput v0, Lj0b;->P:I
+    goto :goto_5
 
-    sget v0, Leyc;->call_incoming_camera_preview:I
+    :cond_6
+    invoke-virtual {p1, v4}, Ly82;->i(I)I
 
-    sput v0, Lj0b;->Q:I
+    move-result v11
 
-    sget v0, Leyc;->call_indicator_panel:I
+    if-le v11, v10, :cond_7
 
-    sput v0, Lj0b;->R:I
+    invoke-virtual {p1}, Ly82;->s()V
 
-    sget v0, Leyc;->call_indicator_panel_container:I
+    :cond_7
+    :goto_5
+    iget-boolean v10, p0, Lj0b;->b:Z
 
-    sput v0, Lj0b;->S:I
+    if-eqz v10, :cond_8
 
-    sget v0, Leyc;->call_indicator_panel_fake:I
+    invoke-virtual {p1}, Ly82;->s()V
 
-    sput v0, Lj0b;->T:I
+    :cond_8
+    iget-boolean v10, p0, Lj0b;->j:Z
 
-    sget v0, Leyc;->call_indicator_time:I
+    if-eqz v10, :cond_a
 
-    sput v0, Lj0b;->U:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_indicator_title:I
+    move-result v10
 
-    sput v0, Lj0b;->V:I
+    if-eqz v10, :cond_a
 
-    sget v0, Leyc;->call_info_admin_setting_action_list:I
+    if-nez v7, :cond_9
 
-    sput v0, Lj0b;->W:I
+    invoke-virtual {p1, v5}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_info_admin_setting_toolbar:I
+    move-result v9
 
-    sput v0, Lj0b;->X:I
+    goto :goto_6
 
-    sget v0, Leyc;->call_invite_banner_close_btn:I
+    :cond_9
+    invoke-virtual {p1, v5}, Ly82;->t(I)V
 
-    sput v0, Lj0b;->Y:I
+    :cond_a
+    :goto_6
+    add-int/lit8 v7, v7, 0x1
 
-    sget v0, Leyc;->call_invite_banner_copy_btn:I
+    goto :goto_4
 
-    sput v0, Lj0b;->Z:I
+    :cond_b
+    move v3, v6
 
-    sget v0, Leyc;->call_invite_banner_send_btn:I
+    :goto_7
+    invoke-virtual {p1, v5}, Ly82;->i(I)I
 
-    sput v0, Lj0b;->a0:I
+    move-result v4
 
-    sget v0, Leyc;->call_invite_banner_share_btn:I
+    invoke-virtual {p1, v5}, Ly82;->i(I)I
 
-    sput v0, Lj0b;->b0:I
+    move-result v6
 
-    sget v0, Leyc;->call_invite_banner_title_btn:I
+    add-int/2addr v4, v2
 
-    sput v0, Lj0b;->c0:I
+    invoke-virtual {p1, v4}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_join_link_cancel:I
+    add-int/2addr v6, v2
 
-    sput v0, Lj0b;->d0:I
+    invoke-virtual {p1, v6}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_join_link_stack_avatar:I
+    iget-boolean v4, p0, Lj0b;->a:Z
 
-    sput v0, Lj0b;->e0:I
+    if-nez v4, :cond_c
 
-    sget v0, Leyc;->call_join_link_title:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->f0:I
+    move-result v4
 
-    sget v0, Leyc;->call_join_link_with_ask_device_microphone_switch:I
+    iput-boolean v4, p0, Lj0b;->c:Z
 
-    sput v0, Lj0b;->g0:I
+    goto :goto_8
 
-    sget v0, Leyc;->call_join_link_with_ask_device_preview:I
+    :cond_c
+    iput-boolean v1, p0, Lj0b;->c:Z
 
-    sput v0, Lj0b;->h0:I
+    :goto_8
+    iget-boolean v4, p0, Lj0b;->c:Z
 
-    sget v0, Leyc;->call_join_link_with_ask_device_preview_container:I
+    if-eqz v4, :cond_d
 
-    sput v0, Lj0b;->i0:I
+    invoke-virtual {p1, v5}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_join_link_with_ask_device_video_switch:I
+    invoke-virtual {p1, v0}, Ly82;->t(I)V
 
-    sput v0, Lj0b;->j0:I
+    :cond_d
+    invoke-virtual {p1, v0}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_loading:I
+    iget-boolean v4, p0, Lj0b;->a:Z
 
-    sput v0, Lj0b;->k0:I
+    const/4 v6, 0x2
 
-    sget v0, Leyc;->call_menu_record:I
+    if-eqz v4, :cond_e
 
-    sput v0, Lj0b;->l0:I
+    iput-boolean v2, p0, Lj0b;->e:Z
 
-    sget v0, Leyc;->call_more:I
+    iput-boolean v2, p0, Lj0b;->d:Z
 
-    sput v0, Lj0b;->m0:I
+    iput v1, p0, Lj0b;->f:I
 
-    sget v0, Leyc;->call_more_action_call_chat_vh:I
+    goto :goto_b
 
-    sput v0, Lj0b;->n0:I
+    :cond_e
+    invoke-virtual {p1, v5}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_more_action_record_vh:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->o0:I
+    move-result v4
 
-    sget v0, Leyc;->call_more_actions_list:I
+    if-eqz v4, :cond_f
 
-    sput v0, Lj0b;->p0:I
+    invoke-virtual {p1, v6}, Ly82;->t(I)V
 
-    sget v0, Leyc;->call_more_actions_vh:I
+    :cond_f
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->q0:I
+    move-result v5
 
-    sget v0, Leyc;->call_more_popup_drag_layout:I
+    if-eqz v5, :cond_10
 
-    sput v0, Lj0b;->r0:I
+    iput-boolean v2, p0, Lj0b;->d:Z
 
-    sget v0, Leyc;->call_name_layout:I
+    goto :goto_9
 
-    sput v0, Lj0b;->s0:I
+    :cond_10
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_opponent_info_buttons:I
+    move-result v5
 
-    sput v0, Lj0b;->t0:I
+    iput-boolean v5, p0, Lj0b;->d:Z
 
-    sget v0, Leyc;->call_pip_camera_preview:I
+    :goto_9
+    iget-boolean v5, p0, Lj0b;->d:Z
 
-    sput v0, Lj0b;->u0:I
+    if-eqz v5, :cond_12
 
-    sget v0, Leyc;->call_pip_container_id:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->v0:I
+    move-result v5
 
-    sget v0, Leyc;->call_pip_video:I
+    if-eqz v5, :cond_11
 
-    sput v0, Lj0b;->w0:I
+    iput-boolean v2, p0, Lj0b;->e:Z
 
-    sget v0, Leyc;->call_raise_hand:I
+    goto :goto_a
 
-    sput v0, Lj0b;->x0:I
+    :cond_11
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_raise_hand_status:I
+    move-result v5
 
-    sput v0, Lj0b;->y0:I
+    iput-boolean v5, p0, Lj0b;->e:Z
 
-    sget v0, Leyc;->call_rate_button_group:I
+    goto :goto_a
 
-    sput v0, Lj0b;->z0:I
+    :cond_12
+    iput-boolean v2, p0, Lj0b;->e:Z
 
-    sget v0, Leyc;->call_rate_chip_group:I
+    :goto_a
+    if-eqz v4, :cond_13
 
-    sput v0, Lj0b;->A0:I
+    invoke-virtual {p1, v0}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_rate_negative_button:I
+    move-result v4
 
-    sput v0, Lj0b;->B0:I
+    add-int/2addr v4, v2
 
-    sget v0, Leyc;->call_rate_positive_button:I
+    iput v4, p0, Lj0b;->f:I
 
-    sput v0, Lj0b;->C0:I
+    goto :goto_b
 
-    sget v0, Leyc;->call_rate_send_button:I
+    :cond_13
+    iput v1, p0, Lj0b;->f:I
 
-    sput v0, Lj0b;->D0:I
+    :goto_b
+    iput v3, p0, Lj0b;->h:I
 
-    sget v0, Leyc;->call_rate_toolbar:I
+    iput v8, p0, Lj0b;->i:I
 
-    sput v0, Lj0b;->E0:I
+    iput v9, p0, Lj0b;->k:I
 
-    sget v0, Leyc;->call_round_btn_counter:I
+    invoke-virtual {p1, v0}, Ly82;->t(I)V
 
-    sput v0, Lj0b;->F0:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_round_btn_icon:I
+    move-result v0
 
-    sput v0, Lj0b;->G0:I
+    iput-boolean v0, p0, Lj0b;->l:Z
 
-    sget v0, Leyc;->call_round_btn_title:I
+    iget v3, p0, Lj0b;->g:I
 
-    sput v0, Lj0b;->H0:I
+    if-ne v3, v6, :cond_14
 
-    sget v0, Leyc;->call_screen_admin_confirm_add_users_check:I
+    if-eqz v0, :cond_14
 
-    sput v0, Lj0b;->I0:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_screen_admin_confirm_add_users_neutral:I
+    move-result v0
 
-    sput v0, Lj0b;->J0:I
+    iput-boolean v0, p0, Lj0b;->m:Z
 
-    sget v0, Leyc;->call_screen_admin_confirm_add_users_positive:I
+    goto :goto_c
 
-    sput v0, Lj0b;->K0:I
+    :cond_14
+    iput-boolean v1, p0, Lj0b;->m:Z
 
-    sget v0, Leyc;->call_screen_admin_confirm_add_users_subtitle:I
+    :goto_c
+    iget v0, p0, Lj0b;->g:I
 
-    sput v0, Lj0b;->L0:I
+    if-eq v0, v2, :cond_15
 
-    sget v0, Leyc;->call_screen_admin_confirm_add_users_title:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sput v0, Lj0b;->M0:I
+    move-result v0
 
-    sget v0, Leyc;->call_screen_admin_confirm_remove_user_neutral:I
+    iput-boolean v0, p0, Lj0b;->n:Z
 
-    sput v0, Lj0b;->N0:I
+    goto :goto_d
 
-    sget v0, Leyc;->call_screen_admin_confirm_remove_user_positive:I
+    :cond_15
+    iput-boolean v1, p0, Lj0b;->n:Z
 
-    sput v0, Lj0b;->O0:I
+    :goto_d
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_screen_admin_confirm_remove_user_subtitle:I
+    move-result v0
 
-    sput v0, Lj0b;->P0:I
+    if-eqz v0, :cond_16
 
-    sget v0, Leyc;->call_screen_admin_confirm_remove_user_title:I
+    const/16 v0, 0x8
 
-    sput v0, Lj0b;->Q0:I
+    invoke-virtual {p1, v0}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_apply_all:I
+    move-result v3
 
-    sput v0, Lj0b;->R0:I
+    int-to-byte v3, v3
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_empty:I
+    iput-byte v3, p0, Lj0b;->r:B
 
-    sput v0, Lj0b;->S0:I
+    invoke-virtual {p1, v0}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_list:I
+    move-result v3
 
-    sput v0, Lj0b;->T0:I
+    int-to-byte v3, v3
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_more_vh:I
+    iput-byte v3, p0, Lj0b;->s:B
 
-    sput v0, Lj0b;->U0:I
+    invoke-virtual {p1, v0}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_reject_all:I
+    move-result v0
 
-    sput v0, Lj0b;->V0:I
+    int-to-byte v0, v0
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_title:I
+    iput-byte v0, p0, Lj0b;->t:B
 
-    sput v0, Lj0b;->W0:I
+    goto :goto_e
 
-    sget v0, Leyc;->call_screen_admin_user_in_wait_room_vh:I
+    :cond_16
+    iput-byte v1, p0, Lj0b;->r:B
 
-    sput v0, Lj0b;->X0:I
+    iput-byte v1, p0, Lj0b;->s:B
 
-    sget v0, Leyc;->call_screen_camera_admin_remove_user:I
+    iput-byte v1, p0, Lj0b;->t:B
 
-    sput v0, Lj0b;->Y0:I
+    :goto_e
+    iget-boolean v0, p0, Lj0b;->n:Z
 
-    sget v0, Leyc;->call_screen_camera_admin_stop_camera_user:I
+    if-eqz v0, :cond_17
 
-    sput v0, Lj0b;->Z0:I
+    invoke-virtual {p1}, Ly82;->s()V
 
-    sget v0, Leyc;->call_screen_camera_admin_stop_mic_user:I
+    iput-boolean v1, p0, Lj0b;->o:Z
 
-    sput v0, Lj0b;->a1:I
+    iput-boolean v1, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_camera_admin_stop_sharing_user:I
+    iput v1, p0, Lj0b;->q:I
 
-    sput v0, Lj0b;->b1:I
+    goto :goto_10
 
-    sget v0, Leyc;->call_screen_container_id:I
+    :cond_17
+    iget-byte v0, p0, Lj0b;->r:B
 
-    sput v0, Lj0b;->c1:I
+    if-ne v0, v2, :cond_18
 
-    sget v0, Leyc;->call_screen_incoming_container_id:I
+    iget-byte v0, p0, Lj0b;->s:B
 
-    sput v0, Lj0b;->d1:I
+    const/16 v3, 0xd
 
-    sget v0, Leyc;->call_screen_menu_grid_mode:I
+    if-ne v0, v3, :cond_18
 
-    sput v0, Lj0b;->e1:I
+    iget-byte v0, p0, Lj0b;->t:B
 
-    sget v0, Leyc;->call_screen_menu_speaker_mode:I
+    if-nez v0, :cond_18
 
-    sput v0, Lj0b;->f1:I
+    iput-boolean v1, p0, Lj0b;->o:Z
 
-    sget v0, Leyc;->call_screen_opponents_list_add_users:I
+    iput-boolean v1, p0, Lj0b;->p:Z
 
-    sput v0, Lj0b;->g1:I
+    iput v1, p0, Lj0b;->q:I
 
-    sget v0, Leyc;->call_screen_opponents_list_invite_users:I
+    goto :goto_10
 
-    sput v0, Lj0b;->h1:I
+    :cond_18
+    invoke-virtual {p1}, Ly82;->s()V
 
-    sget v0, Leyc;->call_screen_opponents_list_link:I
+    iget v0, p0, Lj0b;->g:I
 
-    sput v0, Lj0b;->i1:I
+    if-nez v0, :cond_19
 
-    sget v0, Leyc;->call_screen_raisehand_manage_negative_btn:I
+    iput-boolean v2, p0, Lj0b;->o:Z
 
-    sput v0, Lj0b;->j1:I
+    iput-boolean v2, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_raisehand_manage_positive_btn:I
+    goto :goto_f
 
-    sput v0, Lj0b;->k1:I
+    :cond_19
+    if-ne v0, v2, :cond_1a
 
-    sget v0, Leyc;->call_screen_raisehand_manage_subtitle:I
+    iput-boolean v1, p0, Lj0b;->o:Z
 
-    sput v0, Lj0b;->l1:I
+    iput-boolean v1, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_raisehand_manage_title:I
+    goto :goto_f
 
-    sput v0, Lj0b;->m1:I
+    :cond_1a
+    iget-boolean v0, p0, Lj0b;->m:Z
 
-    sget v0, Leyc;->call_screen_record_admin_skip_record:I
+    if-eqz v0, :cond_1c
 
-    sput v0, Lj0b;->n1:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_screen_record_admin_stop_record:I
+    move-result v0
 
-    sput v0, Lj0b;->o1:I
+    iput-boolean v0, p0, Lj0b;->o:Z
 
-    sget v0, Leyc;->call_screen_record_manage_negative_btn:I
+    if-eqz v0, :cond_1b
 
-    sput v0, Lj0b;->p1:I
+    invoke-virtual {p1}, Ly82;->h()Z
 
-    sget v0, Leyc;->call_screen_record_manage_positive_btn:I
+    move-result v0
 
-    sput v0, Lj0b;->q1:I
+    iput-boolean v0, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_record_manage_record_info:I
+    goto :goto_f
 
-    sput v0, Lj0b;->r1:I
+    :cond_1b
+    iput-boolean v1, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_record_manage_record_need_remove:I
+    goto :goto_f
 
-    sput v0, Lj0b;->s1:I
+    :cond_1c
+    iput-boolean v2, p0, Lj0b;->o:Z
 
-    sget v0, Leyc;->call_screen_record_manage_subtitle:I
+    iput-boolean v1, p0, Lj0b;->p:Z
 
-    sput v0, Lj0b;->t1:I
+    :goto_f
+    iget-boolean v0, p0, Lj0b;->o:Z
 
-    sget v0, Leyc;->call_screen_record_manage_title:I
+    if-eqz v0, :cond_1d
 
-    sput v0, Lj0b;->u1:I
+    iget-boolean v0, p0, Lj0b;->p:Z
 
-    sget v0, Leyc;->call_screen_record_me_owner_exit_negative:I
+    if-eqz v0, :cond_1d
 
-    sput v0, Lj0b;->v1:I
+    invoke-virtual {p1, v6}, Ly82;->i(I)I
 
-    sget v0, Leyc;->call_screen_record_me_owner_exit_positive:I
+    move-result v0
 
-    sput v0, Lj0b;->w1:I
+    iput v0, p0, Lj0b;->q:I
 
-    sget v0, Leyc;->call_screen_record_start_name:I
+    goto :goto_10
 
-    sput v0, Lj0b;->x1:I
+    :cond_1d
+    iput v1, p0, Lj0b;->q:I
 
-    sget v0, Leyc;->call_screen_record_start_target_chat:I
-
-    sput v0, Lj0b;->y1:I
-
-    sget v0, Leyc;->call_screen_record_start_target_start_btn:I
-
-    sput v0, Lj0b;->z1:I
-
-    sget v0, Leyc;->call_screen_record_start_title:I
-
-    sput v0, Lj0b;->A1:I
-
-    sget v0, Leyc;->call_settings:I
-
-    sput v0, Lj0b;->B1:I
-
-    sget v0, Leyc;->call_share_screen_stop_share_btn:I
-
-    sput v0, Lj0b;->C1:I
-
-    sget v0, Leyc;->call_share_screen_subtitle_view:I
-
-    sput v0, Lj0b;->D1:I
-
-    sget v0, Leyc;->call_share_screen_title_view:I
-
-    sput v0, Lj0b;->E1:I
-
-    sget v0, Leyc;->call_share_sound_switch:I
-
-    sput v0, Lj0b;->F1:I
-
-    sget v0, Leyc;->call_top_control_container:I
-
-    sput v0, Lj0b;->G1:I
-
-    sget v0, Leyc;->call_user_full_avatar:I
-
-    sput v0, Lj0b;->H1:I
-
-    sget v0, Leyc;->call_user_full_name:I
-
-    sput v0, Lj0b;->I1:I
-
-    sget v0, Leyc;->call_user_full_status:I
-
-    sput v0, Lj0b;->J1:I
-
-    sget v0, Leyc;->call_user_small_avatar:I
-
-    sput v0, Lj0b;->K1:I
-
-    sget v0, Leyc;->call_user_top_spacer:I
-
-    sput v0, Lj0b;->L1:I
-
-    sget v0, Leyc;->call_users_action_negative:I
-
-    sput v0, Lj0b;->M1:I
-
-    sget v0, Leyc;->call_users_action_one_positive:I
-
-    sput v0, Lj0b;->N1:I
-
-    sget v0, Leyc;->call_users_action_two_positive:I
-
-    sput v0, Lj0b;->O1:I
-
-    sget v0, Leyc;->call_users_blocked_label:I
-
-    sput v0, Lj0b;->P1:I
-
-    sget v0, Leyc;->call_users_large_label_view:I
-
-    sput v0, Lj0b;->Q1:I
-
-    sget v0, Leyc;->call_users_large_video_view:I
-
-    sput v0, Lj0b;->R1:I
-
-    sget v0, Leyc;->call_users_speakers_pip_view:I
-
-    sput v0, Lj0b;->S1:I
-
-    sget v0, Leyc;->call_users_speakers_scroll_start:I
-
-    sput v0, Lj0b;->T1:I
-
-    sget v0, Leyc;->call_users_speakers_view_pager:I
-
-    sput v0, Lj0b;->U1:I
-
-    sget v0, Leyc;->call_waiting_room_events_container:I
-
-    sput v0, Lj0b;->V1:I
-
-    sget v0, Leyc;->call_waiting_room_events_multi_view:I
-
-    sput v0, Lj0b;->W1:I
-
-    sget v0, Leyc;->call_waiting_room_events_multi_view_avatar:I
-
-    sput v0, Lj0b;->X1:I
-
-    sget v0, Leyc;->call_waiting_room_events_multi_view_chevron:I
-
-    sput v0, Lj0b;->Y1:I
-
-    sget v0, Leyc;->call_waiting_room_events_multi_view_subtitle:I
-
-    sput v0, Lj0b;->Z1:I
-
-    sget v0, Leyc;->call_waiting_room_events_multi_view_title:I
-
-    sput v0, Lj0b;->a2:I
-
-    sget v0, Leyc;->call_waiting_room_events_router:I
-
-    sput v0, Lj0b;->b2:I
-
-    sget v0, Leyc;->call_waiting_room_events_view:I
-
-    sput v0, Lj0b;->c2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_add_contact_button:I
-
-    sput v0, Lj0b;->d2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_block_button:I
-
-    sput v0, Lj0b;->e2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_button_group:I
-
-    sput v0, Lj0b;->f2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_close_button:I
-
-    sput v0, Lj0b;->g2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_ok_button:I
-
-    sput v0, Lj0b;->h2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_subtitle:I
-
-    sput v0, Lj0b;->i2:I
-
-    sget v0, Leyc;->unknown_call_bottom_sheet_title:I
-
-    sput v0, Lj0b;->j2:I
+    :goto_10
+    invoke-virtual {p1}, Ly82;->s()V
 
     return-void
 .end method

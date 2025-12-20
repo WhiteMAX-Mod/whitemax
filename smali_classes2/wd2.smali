@@ -1,255 +1,327 @@
-.class public final Lwd2;
-.super Lsm;
+.class public final enum Lwd2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lj1g;
-.implements Ltsb;
 
+# static fields
+.field public static final enum A0:Lwd2;
 
-# instance fields
-.field public final X:Ljava/lang/String;
+.field public static final enum B0:Lwd2;
 
-.field public final d:J
+.field public static final enum C0:Lwd2;
 
-.field public final o:Lsj3;
+.field public static final enum D0:Lwd2;
+
+.field public static final synthetic E0:[Lwd2;
+
+.field public static final enum X:Lwd2;
+
+.field public static final enum Y:Lwd2;
+
+.field public static final enum Z:Lwd2;
+
+.field public static final enum a:Lwd2;
+
+.field public static final enum b:Lwd2;
+
+.field public static final enum c:Lwd2;
+
+.field public static final enum d:Lwd2;
+
+.field public static final enum o:Lwd2;
+
+.field public static final enum s0:Lwd2;
+
+.field public static final enum t0:Lwd2;
+
+.field public static final enum u0:Lwd2;
+
+.field public static final enum v0:Lwd2;
+
+.field public static final enum w0:Lwd2;
+
+.field public static final enum x0:Lwd2;
+
+.field public static final enum y0:Lwd2;
+
+.field public static final enum z0:Lwd2;
 
 
 # direct methods
-.method public constructor <init>(JJLsj3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 23
 
-    invoke-direct {p0, p1, p2}, Lsm;-><init>(J)V
+    new-instance v1, Lwd2;
 
-    iput-wide p3, p0, Lwd2;->d:J
+    const-string v0, "ADD_TO_FOLDER"
 
-    iput-object p5, p0, Lwd2;->o:Lsj3;
+    const/4 v2, 0x0
 
-    const-class p1, Lwd2;
+    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sput-object v1, Lwd2;->a:Lwd2;
 
-    move-result-object p1
+    new-instance v2, Lwd2;
 
-    iput-object p1, p0, Lwd2;->X:Ljava/lang/String;
+    const-string v0, "REMOVE_FROM_FOLDER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lwd2;
+
+    const-string v0, "ADD_FAVORITE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lwd2;->b:Lwd2;
+
+    new-instance v4, Lwd2;
+
+    const-string v0, "REMOVE_FAVORITE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lwd2;->c:Lwd2;
+
+    new-instance v5, Lwd2;
+
+    const-string v0, "MARK_AS_UNREAD"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lwd2;->d:Lwd2;
+
+    new-instance v6, Lwd2;
+
+    const-string v0, "MARK_AS_READ"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lwd2;->o:Lwd2;
+
+    new-instance v7, Lwd2;
+
+    const-string v0, "MUTE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lwd2;->X:Lwd2;
+
+    new-instance v8, Lwd2;
+
+    const-string v0, "UNMUTE"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lwd2;->Y:Lwd2;
+
+    new-instance v9, Lwd2;
+
+    const-string v0, "LEAVE_CHAT"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lwd2;->Z:Lwd2;
+
+    new-instance v10, Lwd2;
+
+    const-string v0, "LEAVE_CHANNEL"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lwd2;->s0:Lwd2;
+
+    new-instance v11, Lwd2;
+
+    const-string v0, "UNSUBSCRIBE_CHANNEL"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Lwd2;->t0:Lwd2;
+
+    new-instance v12, Lwd2;
+
+    const-string v0, "DELETE_CHANNEL"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Lwd2;->u0:Lwd2;
+
+    new-instance v13, Lwd2;
+
+    const-string v0, "DELETE_FOR_ALL"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v13, Lwd2;->v0:Lwd2;
+
+    new-instance v14, Lwd2;
+
+    const-string v0, "DELETE_CHAT"
+
+    const/16 v15, 0xd
+
+    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v14, Lwd2;->w0:Lwd2;
+
+    new-instance v15, Lwd2;
+
+    const-string v0, "BLOCK"
+
+    move-object/from16 v16, v1
+
+    const/16 v1, 0xe
+
+    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v15, Lwd2;->x0:Lwd2;
+
+    new-instance v0, Lwd2;
+
+    const-string v1, "SELECT"
+
+    move-object/from16 v17, v2
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lwd2;->y0:Lwd2;
+
+    new-instance v1, Lwd2;
+
+    const-string v2, "REPORT"
+
+    move-object/from16 v18, v0
+
+    const/16 v0, 0x10
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lwd2;->z0:Lwd2;
+
+    new-instance v0, Lwd2;
+
+    const-string v2, "CLEAR_HISTORY"
+
+    move-object/from16 v19, v1
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lwd2;->A0:Lwd2;
+
+    new-instance v1, Lwd2;
+
+    const-string v2, "SUSPEND_BOT"
+
+    move-object/from16 v20, v0
+
+    const/16 v0, 0x12
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lwd2;->B0:Lwd2;
+
+    new-instance v0, Lwd2;
+
+    const-string v2, "SUSPEND_AND_DELETE_BOT"
+
+    move-object/from16 v21, v1
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lwd2;->C0:Lwd2;
+
+    new-instance v1, Lwd2;
+
+    const-string v2, "CLEAR_SAVED_MESSAGES"
+
+    move-object/from16 v22, v0
+
+    const/16 v0, 0x14
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lwd2;->D0:Lwd2;
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v17, v19
+
+    move-object/from16 v19, v21
+
+    move-object/from16 v21, v1
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v16, v18
+
+    move-object/from16 v18, v20
+
+    move-object/from16 v20, v22
+
+    filled-new-array/range {v1 .. v21}, [Lwd2;
+
+    move-result-object v0
+
+    sput-object v0, Lwd2;->E0:[Lwd2;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c()I
-    .locals 3
-
-    invoke-virtual {p0}, Lsm;->l()Lve2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lwd2;->d:J
-
-    invoke-virtual {v0, v1, v2}, Lve2;->M(J)Lpb2;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lpb2;->b:Lrf2;
-
-    iget-object v0, v0, Lrf2;->c:Lof2;
-
-    sget-object v1, Lof2;->d:Lof2;
-
-    if-eq v0, v1, :cond_1
-
-    sget-object v1, Lof2;->o:Lof2;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
-.method public final d(Ll0g;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lsm;->k()Ltw0;
-
-    move-result-object p1
-
-    new-instance v0, Lxd2;
-
-    iget-wide v1, p0, Lsm;->a:J
-
-    iget-wide v3, p0, Lwd2;->d:J
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lxd2;-><init>(JJ)V
-
-    invoke-virtual {p1, v0}, Ltw0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final e(Lpzf;)V
-    .locals 2
-
-    iget-object v0, p1, Lpzf;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lqaj;->c(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lwd2;->f()V
-
-    invoke-virtual {p0}, Lsm;->k()Ltw0;
-
-    move-result-object v0
-
-    new-instance v1, Lrj0;
-
-    invoke-direct {v1, p1}, Lrj0;-><init>(Lpzf;)V
-
-    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    invoke-virtual {p0}, Lsm;->r()La3g;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lsm;->a:J
-
-    invoke-virtual {v0, v1, v2}, La3g;->d(J)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatComplain;-><init>()V
-
-    iget-wide v1, p0, Lsm;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->requestId:J
-
-    iget-wide v1, p0, Lwd2;->d:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->chatId:J
-
-    iget-object v1, p0, Lwd2;->o:Lsj3;
-
-    if-nez v1, :cond_0
-
-    const-string v1, ""
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v1, Lsj3;->a:Ljava/lang/String;
-
-    :goto_0
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->complaint:Ljava/lang/String;
-
-    invoke-static {v0}, Lfl9;->toByteArray(Lfl9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lsm;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lusb;
+.method public static valueOf(Ljava/lang/String;)Lwd2;
     .locals 1
 
-    sget-object v0, Lusb;->I0:Lusb;
+    const-class v0, Lwd2;
 
-    return-object v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lwd2;
+
+    return-object p0
 .end method
 
-.method public final h()I
+.method public static values()[Lwd2;
     .locals 1
 
-    const v0, 0xf4240
+    sget-object v0, Lwd2;->E0:[Lwd2;
 
-    return v0
-.end method
-
-.method public final i()Ln2;
-    .locals 5
-
-    invoke-virtual {p0}, Lsm;->l()Lve2;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lwd2;->d:J
+    check-cast v0, [Lwd2;
 
-    invoke-virtual {v0, v1, v2}, Lve2;->M(J)Lpb2;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lwd2;->X:Ljava/lang/String;
-
-    const-string v2, "chat is null"
-
-    invoke-static {v0, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance v2, Lwua;
-
-    iget-object v0, v0, Lpb2;->b:Lrf2;
-
-    iget-wide v3, v0, Lrf2;->a:J
-
-    const/16 v0, 0x1b
-
-    invoke-direct {v2, v1, v0}, Lwua;-><init>(Lxhb;I)V
-
-    const-string v0, "chatId"
-
-    invoke-virtual {v2, v3, v4, v0}, Ln2;->t(JLjava/lang/String;)V
-
-    iget-object v0, p0, Lwd2;->o:Lsj3;
-
-    if-eqz v0, :cond_1
-
-    const-string v1, "complaint"
-
-    iget-object v0, v0, Lsj3;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v1, v0}, Ln2;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return-object v2
+    return-object v0
 .end method

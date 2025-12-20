@@ -1,65 +1,76 @@
 .class public final Lsv8;
-.super Lrv8;
+.super Landroidx/appcompat/widget/AppCompatTextView;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic g:Lk89;
-
-
-# direct methods
-.method public constructor <init>(Lk89;)V
-    .locals 0
-
-    iput-object p1, p0, Lsv8;->g:Lk89;
-
-    invoke-direct {p0, p1}, Lrv8;-><init>(Lk89;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final m()Lb89;
-    .locals 2
+.method public final setTextAppearance(Landroid/content/Context;I)V
+    .locals 5
 
-    iget-object v0, p0, Lsv8;->g:Lk89;
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    iget-object v1, v0, Lk89;->X:Lpv8;
+    sget v0, Lf4d;->textAppearanceLineHeightEnabled:I
 
-    if-eqz v1, :cond_1
+    const/4 v1, 0x1
 
-    iget-object v0, v0, Lk89;->c:Lpv8;
+    invoke-static {v0, p1, v1}, Ls6j;->d(ILandroid/content/Context;Z)Z
 
-    if-ne v1, v0, :cond_0
+    move-result v0
 
-    new-instance v0, Lb89;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lds4;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
-    check-cast v1, Lqv8;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lefd;->MaterialTextAppearance:[I
 
-    invoke-static {v1}, Lb5;->h(Lqv8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lb89;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object v0
+    move-result-object p2
+
+    sget v0, Lefd;->MaterialTextAppearance_android_lineHeight:I
+
+    sget v1, Lefd;->MaterialTextAppearance_lineHeight:I
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x0
+
+    move v3, v1
+
+    :goto_0
+    const/4 v4, 0x2
+
+    if-ge v2, v4, :cond_0
+
+    if-gez v3, :cond_0
+
+    aget v3, v0, v2
+
+    invoke-static {p2, p1, v3, v1}, Lw6j;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, v1, Lpv8;->d:Lb89;
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    return-object v0
+    if-ltz v3, :cond_1
+
+    invoke-virtual {p0, v3}, Landroidx/appcompat/widget/AppCompatTextView;->setLineHeight(I)V
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

@@ -1,141 +1,64 @@
-.class public final synthetic Lws0;
-.super Ljava/lang/Object;
+.class public final Lws0;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+.field public final b:I
+
+.field public c:Lsc8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BottomSheetWidget;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput p2, p0, Lws0;->a:I
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p1, p0, Lws0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+    iput-object p1, p0, Lws0;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lws0;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget v0, p0, Lws0;->a:I
-
-    sget-object v1, Lqqg;->a:Lqqg;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lws0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
+    iget-object v0, p0, Lws0;->c:Lsc8;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
+    iget-object v1, v0, Lsc8;->a:Lxc8;
 
-    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:Lhs;
+    iget-object v0, v0, Lsc8;->b:Ljava/lang/Object;
 
-    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+    sget-object v2, Lyc8;->c:Lyc8;
 
-    aget-object v2, v6, v2
+    check-cast v0, Landroid/text/style/ClickableSpan;
 
-    invoke-virtual {v5, v4}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    iget-object v3, p0, Lws0;->a:Ljava/lang/String;
 
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v0}, Lapi;->f(Landroid/view/View;)V
+    invoke-virtual {v1, p1, v3, v2, v0}, Lxc8;->b(Landroid/view/View;Ljava/lang/String;Lyc8;Landroid/text/style/ClickableSpan;)V
 
     :cond_0
-    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
+    return-void
+.end method
 
-    return-object v1
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+    iget v0, p0, Lws0;->b:I
 
-    invoke-virtual {v4}, Lc54;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_2
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    sget v3, Lxz7;->a:I
-
-    sget v3, Lxz7;->c:I
-
-    invoke-static {v3}, Lxz7;->b(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->M0()Z
-
-    move-result v3
-
-    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:Lhs;
-
-    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
-
-    aget-object v2, v6, v2
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v4, v2}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lapi;->e(Landroid/view/View;)V
-
-    :cond_1
-    move-object v3, v0
-
-    :cond_2
-    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Landroid/view/View;
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,53 +1,91 @@
-.class public final Lo7b;
-.super Lq44;
+.class public abstract Lo7b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lq7b;
+.field public static final b:I
 
-.field public Z:I
+.field public static final c:I
 
-.field public d:Lq7b;
+.field public static final d:I
 
-.field public o:Lku3;
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Lq7b;Lq44;)V
-    .locals 0
-
-    iput-object p1, p0, Lo7b;->Y:Lq7b;
-
-    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lo7b;->X:Ljava/lang/Object;
+    sget v0, Lhcd;->oneme_chatmedia_viewer_close_reason_content_delete_text:I
 
-    iget p1, p0, Lo7b;->Z:I
+    sput v0, Lo7b;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lhcd;->oneme_chatmedia_viewer_close_reason_photo_delete_text:I
 
-    or-int/2addr p1, v0
+    sput v0, Lo7b;->b:I
 
-    iput p1, p0, Lo7b;->Z:I
+    sget v0, Lhcd;->oneme_chatmedia_viewer_close_reason_video_delete_text:I
 
-    iget-object p1, p0, Lo7b;->Y:Lq7b;
+    sput v0, Lo7b;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lhcd;->oneme_chatmedia_viewer_content_level_subtitle:I
 
-    invoke-virtual {p1, v0, p0}, Lq7b;->c(Lku3;Lq44;)Ljava/lang/Object;
+    sput v0, Lo7b;->d:I
 
-    move-result-object p1
+    sget v0, Lhcd;->oneme_chatmedia_viewer_content_level_title:I
 
-    return-object p1
+    sput v0, Lo7b;->e:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_seek_seconds:I
+
+    sput v0, Lo7b;->f:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_action_forward_photo:I
+
+    sput v0, Lo7b;->g:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_action_forward_video:I
+
+    sput v0, Lo7b;->h:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
+
+    sput v0, Lo7b;->i:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_action_share:I
+
+    sput v0, Lo7b;->j:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_countable_title:I
+
+    sput v0, Lo7b;->k:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_photo_title:I
+
+    sput v0, Lo7b;->l:I
+
+    sget v0, Lhcd;->oneme_chatmedia_viewer_toolbar_video_title:I
+
+    sput v0, Lo7b;->m:I
+
+    return-void
 .end method

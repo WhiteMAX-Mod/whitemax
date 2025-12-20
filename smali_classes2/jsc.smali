@@ -1,31 +1,25 @@
 .class public final Ljsc;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final b:J
 
-.field public b:I
-
-.field public final c:I
-
-.field public final d:J
+.field public final c:Lelc;
 
 
 # direct methods
-.method public constructor <init>(JIII)V
-    .locals 0
+.method public constructor <init>(JLelc;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x10
 
-    iput p3, p0, Ljsc;->a:I
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    iput p4, p0, Ljsc;->b:I
+    iput-wide p1, p0, Ljsc;->b:J
 
-    iput p5, p0, Ljsc;->c:I
-
-    iput-wide p1, p0, Ljsc;->d:J
+    iput-object p3, p0, Ljsc;->c:Lelc;
 
     return-void
 .end method
@@ -53,75 +47,43 @@
     :cond_1
     check-cast p1, Ljsc;
 
-    iget v1, p0, Ljsc;->a:I
+    iget-wide v3, p0, Ljsc;->b:J
 
-    iget v3, p1, Ljsc;->a:I
+    iget-wide v5, p1, Ljsc;->b:J
 
-    if-eq v1, v3, :cond_2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Ljsc;->b:I
+    iget-object v1, p0, Ljsc;->c:Lelc;
 
-    iget v3, p1, Ljsc;->b:I
+    iget-object p1, p1, Ljsc;->c:Lelc;
 
-    if-eq v1, v3, :cond_3
+    if-eq v1, p1, :cond_3
 
     return v2
 
     :cond_3
-    iget v1, p0, Ljsc;->c:I
-
-    iget v3, p1, Ljsc;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-wide v3, p0, Ljsc;->d:J
-
-    iget-wide v5, p1, Ljsc;->d:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_5
-
-    return v2
-
-    :cond_5
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Ljsc;->a:I
+    iget-wide v0, p0, Ljsc;->b:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ljsc;->b:I
-
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    iget v2, p0, Ljsc;->c:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+    iget-object v1, p0, Ljsc;->c:Lelc;
 
-    move-result v0
-
-    iget-wide v1, p0, Ljsc;->d:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -131,41 +93,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoParams(|"
+    const-string v1, "EditProfile(id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Ljsc;->a:I
+    iget-wide v1, p0, Ljsc;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x78
+    const-string v1, ", type="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Ljsc;->b:I
+    iget-object v1, p0, Ljsc;->c:Lelc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x7c
+    const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Ljsc;->c:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ljsc;->d:J
-
-    const-string v3, "B)"
-
-    invoke-static {v0, v1, v2, v3}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
