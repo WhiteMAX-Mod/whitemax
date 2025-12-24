@@ -1119,7 +1119,7 @@
 
     const/high16 v8, 0x4000000
 
-    invoke-static {v0, v10, v12, v8}, Landroid/app/PendingIntent;->getForegroundService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v0, v10, v12, v8}, LFixPendingIntent;->getForegroundService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 

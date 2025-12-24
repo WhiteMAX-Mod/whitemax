@@ -399,7 +399,7 @@
 
     new-instance v3, Ld5;
 
-    sget-object v4, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_MOVE_WINDOW:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    const/4 v4, 0x0
 
     const-class v8, Lo5;
 

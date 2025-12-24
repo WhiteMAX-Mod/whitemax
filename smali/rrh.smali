@@ -138,7 +138,7 @@
 .method public static n(Landroid/view/View;Z)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
+    invoke-static {p0, p1}, LFixView;->setKeyboardNavigationCluster(Landroid/view/View;Z)V
 
     return-void
 .end method
@@ -154,7 +154,7 @@
 .method public static p(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, LFixView;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
