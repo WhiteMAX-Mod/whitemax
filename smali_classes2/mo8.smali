@@ -1342,7 +1342,7 @@
 
     mul-long v4, v4, v21
 
-    invoke-static {v13, v14, v4, v5}, Ljava/lang/Long;->compareUnsigned(JJ)I
+    invoke-static {v13, v14, v4, v5}, LFixLong;->compareUnsigned(JJ)I
 
     move-result v1
 

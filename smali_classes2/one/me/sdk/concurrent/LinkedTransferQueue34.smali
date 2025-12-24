@@ -34,13 +34,14 @@
 # static fields
 .field private static final ASYNC:I = 0x1
 
-.field private static final HEAD:Ljava/lang/invoke/VarHandle;
-
-.field static final ITEM:Ljava/lang/invoke/VarHandle;
+# REMOVED VarHandle fields
+# .field private static final HEAD:Ljava/lang/invoke/VarHandle;
+# static final ITEM:Ljava/lang/invoke/VarHandle;
+# static final NEXT:Ljava/lang/invoke/VarHandle;
+# private static final TAIL:Ljava/lang/invoke/VarHandle;
+# static final WAITER:Ljava/lang/invoke/VarHandle;
 
 .field private static final MAX_HOPS:I = 0x8
-
-.field static final NEXT:Ljava/lang/invoke/VarHandle;
 
 .field private static final NOW:I = 0x0
 
@@ -50,11 +51,7 @@
 
 .field private static final SYNC:I = 0x2
 
-.field private static final TAIL:Ljava/lang/invoke/VarHandle;
-
 .field private static final TIMED:I = 0x3
-
-.field static final WAITER:Ljava/lang/invoke/VarHandle;
 
 .field private static final serialVersionUID:J = -0x2cbacc91e0a3c166L
 
@@ -69,55 +66,10 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 0
 
-    :try_start_0
-    invoke-static {}, Ljava/lang/invoke/MethodHandles;->lookup()Ljava/lang/invoke/MethodHandles$Lookup;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lone/me/sdk/concurrent/a;->a(Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/invoke/VarHandle;
-
-    move-result-object v1
-
-    sput-object v1, Lone/me/sdk/concurrent/LinkedTransferQueue34;->HEAD:Ljava/lang/invoke/VarHandle;
-
-    invoke-static {v0}, Lone/me/sdk/concurrent/a;->b(Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/invoke/VarHandle;
-
-    move-result-object v1
-
-    sput-object v1, Lone/me/sdk/concurrent/LinkedTransferQueue34;->TAIL:Ljava/lang/invoke/VarHandle;
-
-    invoke-static {v0}, Lone/me/sdk/concurrent/a;->c(Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/invoke/VarHandle;
-
-    move-result-object v1
-
-    sput-object v1, Lone/me/sdk/concurrent/LinkedTransferQueue34;->ITEM:Ljava/lang/invoke/VarHandle;
-
-    invoke-static {v0}, Lone/me/sdk/concurrent/a;->d(Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/invoke/VarHandle;
-
-    move-result-object v1
-
-    sput-object v1, Lone/me/sdk/concurrent/LinkedTransferQueue34;->NEXT:Ljava/lang/invoke/VarHandle;
-
-    invoke-static {v0}, Lone/me/sdk/concurrent/a;->e(Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/invoke/VarHandle;
-
-    move-result-object v0
-
-    sput-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->WAITER:Ljava/lang/invoke/VarHandle;
-    :try_end_0
-    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
-
+    # FIX: Removed VarHandle initialization logic to prevent crashes on API 24
     return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/ExceptionInInitializerError;
-
-    invoke-direct {v1, v0}, Ljava/lang/ExceptionInInitializerError;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
 .end method
 
 .method public constructor <init>()V
@@ -396,16 +348,15 @@
     :goto_2
     if-ne v12, v14, :cond_d
 
-    sget-object v2, Lone/me/sdk/concurrent/LinkedTransferQueue34;->WAITER:Ljava/lang/invoke/VarHandle;
-
-    invoke-polymorphic {v2, v1, v15}, Ljava/lang/invoke/VarHandle;->set([Ljava/lang/Object;)V, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Ljava/lang/Void;)V
+    # FIX: Replaced VarHandle.set(WAITER) with direct field access
+    const/4 v15, 0x0
+    iput-object v15, v1, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->waiter:Ljava/lang/Thread;
 
     :cond_d
     if-nez v4, :cond_e
 
-    sget-object v2, Lone/me/sdk/concurrent/LinkedTransferQueue34;->ITEM:Ljava/lang/invoke/VarHandle;
-
-    invoke-polymorphic {v2, v1, v1}, Ljava/lang/invoke/VarHandle;->set([Ljava/lang/Object;)V, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)V
+    # FIX: Replaced VarHandle.set(ITEM) with direct field access
+    iput-object v1, v1, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->item:Ljava/lang/Object;
 
     :cond_e
     return-object v13
@@ -563,24 +514,30 @@
 .method private casHead(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
     .locals 1
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->HEAD:Ljava/lang/invoke/VarHandle;
+    # FIX: Removed VarHandle.compareAndSet(HEAD), using direct access
+    iget-object v0, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    if-eq v0, p1, :cond_0
+    const/4 p1, 0x0
+    return p1
 
-    invoke-polymorphic {v0, p0, p1, p2}, Ljava/lang/invoke/VarHandle;->compareAndSet([Ljava/lang/Object;)Z, (Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
-
-    move-result p1
-
+    :cond_0
+    iput-object p2, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    const/4 p1, 0x1
     return p1
 .end method
 
 .method private casTail(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
     .locals 1
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->TAIL:Ljava/lang/invoke/VarHandle;
+    # FIX: Removed VarHandle.compareAndSet(TAIL), using direct access
+    iget-object v0, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tail:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    if-eq v0, p1, :cond_0
+    const/4 p1, 0x0
+    return p1
 
-    invoke-polymorphic {v0, p0, p1, p2}, Ljava/lang/invoke/VarHandle;->compareAndSet([Ljava/lang/Object;)Z, (Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
-
-    move-result p1
-
+    :cond_0
+    iput-object p2, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tail:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    const/4 p1, 0x1
     return p1
 .end method
 
@@ -2042,11 +1999,11 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lkd8;
+    new-instance v0, Ljd8;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lkd8;-><init>(ILjava/util/Collection;)V
+    invoke-direct {v0, v1, p1}, Ljd8;-><init>(ILjava/util/Collection;)V
 
     invoke-direct {p0, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->bulkRemove(Ljava/util/function/Predicate;)Z
 
@@ -2086,11 +2043,11 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lkd8;
+    new-instance v0, Ljd8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lkd8;-><init>(ILjava/util/Collection;)V
+    invoke-direct {v0, v1, p1}, Ljd8;-><init>(ILjava/util/Collection;)V
 
     invoke-direct {p0, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->bulkRemove(Ljava/util/function/Predicate;)Z
 

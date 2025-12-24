@@ -191,7 +191,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v7, v8, v9, v10}, Ljava/lang/Long;->compareUnsigned(JJ)I
+    invoke-static {v7, v8, v9, v10}, LFixLong;->compareUnsigned(JJ)I
 
     move-result v12
 
@@ -207,7 +207,7 @@
 
     move-result-wide v9
 
-    invoke-static {v7, v8, v9, v10}, Ljava/lang/Long;->compareUnsigned(JJ)I
+    invoke-static {v7, v8, v9, v10}, LFixLong;->compareUnsigned(JJ)I
 
     move-result v12
 
@@ -226,7 +226,7 @@
 
     add-long/2addr v11, v7
 
-    invoke-static {v11, v12, v7, v8}, Ljava/lang/Long;->compareUnsigned(JJ)I
+    invoke-static {v11, v12, v7, v8}, LFixLong;->compareUnsigned(JJ)I
 
     move-result v7
 

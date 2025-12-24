@@ -577,40 +577,8 @@
     iput v4, v7, Landroid/content/res/Configuration;->screenLayout:I
 
     :cond_18
-    iget v4, v3, Landroid/content/res/Configuration;->colorMode:I
 
-    and-int/lit8 v4, v4, 0x3
 
-    iget v8, v6, Landroid/content/res/Configuration;->colorMode:I
-
-    and-int/lit8 v8, v8, 0x3
-
-    if-eq v4, v8, :cond_19
-
-    iget v4, v7, Landroid/content/res/Configuration;->colorMode:I
-
-    or-int/2addr v4, v8
-
-    iput v4, v7, Landroid/content/res/Configuration;->colorMode:I
-
-    :cond_19
-    iget v4, v3, Landroid/content/res/Configuration;->colorMode:I
-
-    and-int/lit8 v4, v4, 0xc
-
-    iget v8, v6, Landroid/content/res/Configuration;->colorMode:I
-
-    and-int/lit8 v8, v8, 0xc
-
-    if-eq v4, v8, :cond_1a
-
-    iget v4, v7, Landroid/content/res/Configuration;->colorMode:I
-
-    or-int/2addr v4, v8
-
-    iput v4, v7, Landroid/content/res/Configuration;->colorMode:I
-
-    :cond_1a
     iget v4, v3, Landroid/content/res/Configuration;->uiMode:I
 
     and-int/lit8 v4, v4, 0xf

@@ -684,7 +684,7 @@
 
     mul-long/2addr v7, v14
 
-    invoke-static {v2, v3, v7, v8}, Ljava/lang/Long;->compareUnsigned(JJ)I
+    invoke-static {v2, v3, v7, v8}, LFixLong;->compareUnsigned(JJ)I
 
     move-result v1
 

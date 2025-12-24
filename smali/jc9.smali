@@ -301,7 +301,7 @@
     :cond_6
     const/4 p2, 0x4
 
-    invoke-virtual {v4, v0, v7, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+    invoke-static {v4, v0, v7, p2}, LFixContext;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
     :goto_3
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
