@@ -52,7 +52,7 @@
         value = 0x1a
     .end annotation
 
-    sget-object v0, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     if-ne p1, v0, :cond_0
 

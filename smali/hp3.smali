@@ -75,7 +75,7 @@
 
     iget-boolean v0, p0, Lhp3;->c:Z
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->toUnsignedString(J)Ljava/lang/String;
+    invoke-static {p1, p2}, LFixLong;->toUnsignedString(J)Ljava/lang/String;
 
     move-result-object p1
 

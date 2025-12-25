@@ -39,7 +39,7 @@
 
     iget-object v1, p0, Lc77;->b:Landroid/graphics/Path;
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipOutPath(Landroid/graphics/Path;)Z
+    invoke-static {p1, v1}, LFixCanvas;->clipOutPath(Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
 
     :cond_0
     invoke-super {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->draw(Landroid/graphics/Canvas;)V

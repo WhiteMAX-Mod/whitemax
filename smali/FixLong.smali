@@ -9,6 +9,15 @@
     return-void
 .end method
 
+.method public static toUnsignedString(J)Ljava/lang/String;
+    .locals 1
+    
+    invoke-static {p0, p1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    move-result-object v0
+    
+    return-object v0
+.end method
+
 .method public static compareUnsigned(JJ)I
     .locals 4
 

@@ -231,7 +231,7 @@
 
     check-cast v7, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {v7}, Landroid/content/pm/ShortcutManager;->getMaxShortcutCountPerActivity()I
+    invoke-static {v7}, LFixShortcutManager;->getMaxShortcutCountPerActivity(Landroid/content/pm/ShortcutManager;)I
 
     move-result v7
 

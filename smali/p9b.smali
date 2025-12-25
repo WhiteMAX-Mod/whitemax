@@ -109,7 +109,7 @@
 
     check-cast p1, Landroid/app/NotificationManager;
 
-    invoke-virtual {p1, v0}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+    invoke-static {p1, v0}, LFixNotify;->createNotificationChannelGroup(Landroid/app/NotificationManager;Landroid/app/NotificationChannelGroup;)V
 
     return-void
 .end method

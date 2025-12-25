@@ -314,7 +314,7 @@
     :cond_0
     const-string p0, " | "
 
-    invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+    invoke-static {p0, v0}, LFixString;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
 

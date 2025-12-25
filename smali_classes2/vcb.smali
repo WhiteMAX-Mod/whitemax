@@ -248,7 +248,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {p1}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object p1
 

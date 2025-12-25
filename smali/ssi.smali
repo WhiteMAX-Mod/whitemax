@@ -387,7 +387,7 @@
 
     move-result-object v1
 
-    sget-object v3, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
+    sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     if-ne v1, v3, :cond_6
 

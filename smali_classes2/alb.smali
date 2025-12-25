@@ -1670,13 +1670,13 @@
     move-result-object v1
 
     :cond_3
-    invoke-virtual {p1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {p1}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object p1
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {v1}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object p2
 

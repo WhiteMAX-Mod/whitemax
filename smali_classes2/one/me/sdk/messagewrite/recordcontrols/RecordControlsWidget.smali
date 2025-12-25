@@ -993,6 +993,7 @@
 
     if-eqz v0, :cond_0
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_0
@@ -1000,6 +1001,7 @@
 
     if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
@@ -1014,6 +1016,7 @@
 
     if-eqz v0, :cond_3
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_3
@@ -1021,6 +1024,7 @@
 
     if-eqz v0, :cond_4
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_4
@@ -1415,6 +1419,7 @@
 
     if-eqz v2, :cond_1
 
+    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
@@ -2041,6 +2046,7 @@
 
     if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
@@ -2225,6 +2231,7 @@
 
     if-eqz v1, :cond_1
 
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
@@ -3024,6 +3031,7 @@
 
     if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1

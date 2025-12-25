@@ -352,13 +352,13 @@
     move-result-object p1
 
     :try_start_1
-    invoke-virtual {p1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {p1}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object p1
 
     iget-object v1, p0, Lwjh;->v0:Ljava/io/File;
 
-    invoke-virtual {v1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {v1}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object v1
 

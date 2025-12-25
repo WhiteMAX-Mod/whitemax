@@ -109,7 +109,7 @@
 
     aget-object v4, v0, v3
 
-    invoke-virtual {v4}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {v4}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object v4
 

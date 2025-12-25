@@ -106,7 +106,7 @@
 
     :catch_5
     :try_start_6
-    sget-object v1, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

@@ -137,7 +137,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     invoke-virtual {v0, v1}, Le78;->setFallbackLineSpace(Z)V
 
@@ -196,7 +196,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     invoke-virtual {v0, v1}, Le78;->setFallbackLineSpace(Z)V
 
@@ -257,7 +257,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     invoke-virtual {v0, v1}, Lwma;->setFallbackLineSpace(Z)V
 
@@ -460,7 +460,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     invoke-virtual {v0, v1}, Lwma;->setFallbackLineSpace(Z)V
 

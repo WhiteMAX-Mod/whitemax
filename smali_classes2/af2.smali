@@ -103,7 +103,7 @@
 
     invoke-direct {v0, p1}, La4b;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     const/16 v2, 0x38
 
@@ -159,7 +159,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    invoke-virtual {v2, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v2, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v2, p0, Laf2;->b:Landroid/widget/TextView;
 
@@ -235,7 +235,7 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v4, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v4, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v4, p0, Laf2;->t0:Landroid/widget/TextView;
 
@@ -243,7 +243,7 @@
 
     invoke-direct {v6, p1}, Lota;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v6, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v6, p0, Laf2;->u0:Lota;
 
@@ -391,7 +391,7 @@
 
     invoke-virtual {v7, v8}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v7, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v7, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v7, p0, Laf2;->H0:Landroid/view/View;
 
@@ -427,7 +427,7 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v8, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v8, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v8, p0, Laf2;->I0:Landroid/view/View;
 
@@ -443,7 +443,7 @@
 
     invoke-virtual {v3, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v3, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v3, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v3, p0, Laf2;->J0:Landroid/view/View;
 
