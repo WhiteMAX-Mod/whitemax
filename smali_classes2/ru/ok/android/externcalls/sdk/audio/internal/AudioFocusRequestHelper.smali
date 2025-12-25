@@ -739,7 +739,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->audioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+    invoke-static {v1, v0}, LFixAudio;->abandonAudioFocusRequest(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -847,7 +847,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->audioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
+    invoke-static {v1, v0}, LFixAudio;->requestAudioFocus(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     move-result v1
 

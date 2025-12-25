@@ -226,7 +226,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v12, v1}, Landroid/view/View;->setAutofillHints([Ljava/lang/String;)V
+    invoke-static {v12, v1}, LFixView;->setAutofillHints(Landroid/view/View;[Ljava/lang/String;)V
 
     invoke-virtual {v12, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -274,7 +274,7 @@
 
     invoke-virtual {v12, v1}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
-    invoke-virtual {v12, v4}, Landroid/view/View;->setImportantForAutofill(I)V
+    invoke-static {v12, v4}, LFixView;->setImportantForAutofill(Landroid/view/View;I)V
 
     const/4 v1, 0x3
 
@@ -761,7 +761,7 @@
 
     iget-object v1, p0, Lweb;->v0:Landroid/widget/EditText;
 
-    invoke-virtual {v1, p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     :try_start_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I

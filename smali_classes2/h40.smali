@@ -1187,7 +1187,7 @@
 
     check-cast v1, Landroid/media/AudioManager;
 
-    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+    invoke-static {v1, v0}, LFixAudio;->abandonAudioFocusRequest(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     return-void
 .end method
@@ -1308,7 +1308,7 @@
 
     check-cast p2, Landroid/media/AudioManager;
 
-    invoke-virtual {p2, p1}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
+    invoke-static {p2, p1}, LFixAudio;->requestAudioFocus(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     return-void
 

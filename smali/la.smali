@@ -1120,7 +1120,6 @@
     :goto_9
     new-instance v7, Landroid/graphics/drawable/LayerDrawable;
 
-    new-instance v8, Landroid/graphics/drawable/InsetDrawable;
 
     iget-object v0, v0, Ltl2;->v:Lz7g;
 
@@ -1130,7 +1129,9 @@
 
     check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v8, v0, v6}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;F)V
+    invoke-static {v0, v6}, LFixDrawable;->createInsetDrawable(Landroid/graphics/drawable/Drawable;F)Landroid/graphics/drawable/InsetDrawable;
+
+    move-result-object v8
 
     new-array v0, v2, [Landroid/graphics/drawable/Drawable;
 
@@ -1819,6 +1820,8 @@
     sget-object v0, Lv2h;->a:Lv2h;
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -5,21 +5,17 @@
 
 # direct methods
 .method public static a(Landroid/view/ViewConfiguration;)F
-    .locals 0
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHorizontalScrollFactor()F
+    const/high16 v0, 0x42800000 
 
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public static b(Landroid/view/ViewConfiguration;)F
-    .locals 0
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledVerticalScrollFactor()F
+    const/high16 v0, 0x42800000 
 
-    move-result p0
-
-    return p0
+    return v0
 .end method

@@ -541,7 +541,7 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-    invoke-virtual {v2}, Landroid/app/NotificationManager;->getNotificationChannelGroups()Ljava/util/List;
+    invoke-static {v2}, LFixNotify;->getNotificationChannelGroups(Landroid/app/NotificationManager;)Ljava/util/List;
 
     move-result-object v2
 
@@ -622,7 +622,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/NotificationManager;->getNotificationChannels()Ljava/util/List;
+    invoke-static {v1}, LFixNotify;->getNotificationChannels(Landroid/app/NotificationManager;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1006,7 +1006,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/NotificationManager;->getNotificationChannels()Ljava/util/List;
+    invoke-static {v0}, LFixNotify;->getNotificationChannels(Landroid/app/NotificationManager;)Ljava/util/List;
 
     move-result-object v0
 

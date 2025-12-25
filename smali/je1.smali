@@ -209,7 +209,7 @@
 
     invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutPath(Landroid/graphics/Path;)Z
+    invoke-static {p1, v0}, LFixCanvas;->clipOutPath(Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -223,7 +223,7 @@
 
     invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutPath(Landroid/graphics/Path;)Z
+    invoke-static {p1, v0}, LFixCanvas;->clipOutPath(Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
 
     iget v0, v1, Log;->a:I
 

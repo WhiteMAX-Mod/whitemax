@@ -717,7 +717,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {v0}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object v0
 
@@ -742,7 +742,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    invoke-static {v0}, LFixPath;->toPath(Ljava/io/File;)Ljava/nio/file/Path;
 
     move-result-object v0
 

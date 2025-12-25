@@ -216,7 +216,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setJustificationMode(I)Landroid/text/StaticLayout$Builder;
+    invoke-static {p0, p1}, LFixText;->setJustificationMode(Landroid/text/StaticLayout$Builder;I)Landroid/text/StaticLayout$Builder;
 
     const/16 p1, 0x1c
 

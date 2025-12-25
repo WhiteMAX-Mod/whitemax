@@ -62,7 +62,7 @@
 
     invoke-static {v0, v2}, Lzri;->i(Landroid/widget/TextView;Z)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v2}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     const/16 v3, 0x8
 

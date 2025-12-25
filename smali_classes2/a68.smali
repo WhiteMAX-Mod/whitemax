@@ -57,7 +57,7 @@
 
     invoke-direct {p1, p2}, Ljk;-><init>(I)V
 
-    invoke-static {p1}, Ljava/lang/ThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
+    invoke-static {p1}, LFixThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
 
     move-result-object p1
 

@@ -326,7 +326,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setImportantForAutofill(I)V
+    invoke-static {v1, v0}, LFixView;->setImportantForAutofill(Landroid/view/View;I)V
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setSingleLine(Z)V
 

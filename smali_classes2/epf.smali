@@ -794,7 +794,7 @@
 
     move-result-wide v5
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->toUnsignedString(J)Ljava/lang/String;
+    invoke-static {v5, v6}, LFixLong;->toUnsignedString(J)Ljava/lang/String;
 
     move-result-object v3
 

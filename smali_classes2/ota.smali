@@ -90,7 +90,7 @@
 
     invoke-virtual {v2, v3}, Lnt8;->setIcon(I)V
 
-    invoke-virtual {v2, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v2, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v2, p0, Lota;->u0:Lnt8;
 
@@ -106,7 +106,7 @@
 
     invoke-virtual {v3, v4}, Lnt8;->setIcon(I)V
 
-    invoke-virtual {v3, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v3, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     new-instance v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
@@ -160,7 +160,7 @@
 
     invoke-virtual {v4, p1}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v4, v1}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v4, v1}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v4, p0, Lota;->w0:Li9b;
 

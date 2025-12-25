@@ -301,7 +301,7 @@
     :cond_6
     const/4 p2, 0x4
 
-    invoke-virtual {v4, v0, v7, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+    invoke-static {v4, v0, v7, p2}, LFixContext;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
     :goto_3
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -331,7 +331,7 @@
 
     sget p2, Ljc9;->x:I
 
-    invoke-static {v4, v5, v8, p2}, Landroid/app/PendingIntent;->getForegroundService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v4, v5, v8, p2}, LFixPendingIntent;->getForegroundService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p2
 

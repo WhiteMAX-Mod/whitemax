@@ -373,7 +373,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
+    invoke-static {p0, v0}, LFixView;->setKeyboardNavigationCluster(Landroid/view/View;Z)V
 
     :cond_9
     sget v0, Lefd;->AppBarLayout_android_touchscreenBlocksFocus:I

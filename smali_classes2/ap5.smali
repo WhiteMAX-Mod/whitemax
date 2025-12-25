@@ -570,7 +570,7 @@
     :cond_0
     check-cast v2, Landroid/media/AudioManager;
 
-    invoke-virtual {v2, v0}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
+    invoke-static {v2, v0}, LFixAudio;->requestAudioFocus(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     :cond_1
     return-void

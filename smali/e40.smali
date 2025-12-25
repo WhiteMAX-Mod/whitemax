@@ -92,7 +92,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+    invoke-static {v0, v1}, LFixAudio;->abandonAudioFocusRequest(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     :cond_1
     :goto_0
@@ -307,7 +307,7 @@
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
+    invoke-static {p1, p2}, LFixAudio;->requestAudioFocus(Landroid/media/AudioManager;Landroid/media/AudioFocusRequest;)I
 
     move-result p1
 

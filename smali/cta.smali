@@ -15,7 +15,7 @@
 .method public static b(Landroid/app/NotificationManager;Landroid/app/NotificationChannelGroup;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+    invoke-static {p0, p1}, LFixNotify;->createNotificationChannelGroup(Landroid/app/NotificationManager;Landroid/app/NotificationChannelGroup;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getNotificationChannelGroups()Ljava/util/List;
+    invoke-static {p0}, LFixNotify;->getNotificationChannelGroups(Landroid/app/NotificationManager;)Ljava/util/List;
 
     move-result-object p0
 
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getNotificationChannels()Ljava/util/List;
+    invoke-static {p0}, LFixNotify;->getNotificationChannels(Landroid/app/NotificationManager;)Ljava/util/List;
 
     move-result-object p0
 

@@ -56,9 +56,8 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->ITEM:Ljava/lang/invoke/VarHandle;
-
-    invoke-polymorphic {v0, p0, p1}, Ljava/lang/invoke/VarHandle;->set([Ljava/lang/Object;)V, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Ljava/lang/Object;)V
+    # FIX: Removed VarHandle.set, using direct assignment
+    iput-object p1, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->item:Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
@@ -79,12 +78,10 @@
 
 # virtual methods
 .method public final appendRelaxed(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)V
-    .locals 1
+    .locals 0
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->NEXT:Ljava/lang/invoke/VarHandle;
-
-    invoke-polymorphic {v0, p0, p1}, Ljava/lang/invoke/VarHandle;->setOpaque([Ljava/lang/Object;)V, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)V
-
+    # FIX: Removed VarHandle.setOpaque, using direct assignment
+    iput-object p1, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->next:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
     return-void
 .end method
 
@@ -142,24 +139,40 @@
 .method public final casItem(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->ITEM:Ljava/lang/invoke/VarHandle;
+    # FIX: Manual Compare-And-Set implementation instead of VarHandle
+    # Load current item
+    iget-object v0, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->item:Ljava/lang/Object;
 
-    invoke-polymorphic {v0, p0, p1, p2}, Ljava/lang/invoke/VarHandle;->compareAndSet([Ljava/lang/Object;)Z, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Ljava/lang/Object;Ljava/lang/Object;)Z
+    # Compare current (v0) with expected (p1)
+    if-eq v0, p1, :cond_0
 
-    move-result p1
+    const/4 p1, 0x0
+    return p1
 
+    :cond_0
+    # If equal, set new value (p2)
+    iput-object p2, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->item:Ljava/lang/Object;
+    const/4 p1, 0x1
     return p1
 .end method
 
 .method public final casNext(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
     .locals 1
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->NEXT:Ljava/lang/invoke/VarHandle;
+    # FIX: Manual Compare-And-Set implementation instead of VarHandle
+    # Load current next
+    iget-object v0, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->next:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
-    invoke-polymorphic {v0, p0, p1, p2}, Ljava/lang/invoke/VarHandle;->compareAndSet([Ljava/lang/Object;)Z, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    # Compare current (v0) with expected (p1)
+    if-eq v0, p1, :cond_0
 
-    move-result p1
+    const/4 p1, 0x0
+    return p1
 
+    :cond_0
+    # If equal, set new value (p2)
+    iput-object p2, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->next:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    const/4 p1, 0x1
     return p1
 .end method
 
@@ -236,12 +249,10 @@
 .end method
 
 .method public final selfLink()V
-    .locals 1
+    .locals 0
 
-    sget-object v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->NEXT:Ljava/lang/invoke/VarHandle;
-
-    invoke-polymorphic {v0, p0, p0}, Ljava/lang/invoke/VarHandle;->setRelease([Ljava/lang/Object;)V, (Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)V
-
+    # FIX: Removed VarHandle.setRelease, using direct assignment to self
+    iput-object p0, p0, Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;->next:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
     return-void
 .end method
 

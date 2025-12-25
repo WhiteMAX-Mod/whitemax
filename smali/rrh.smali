@@ -34,7 +34,7 @@
 .method public static c(Landroid/view/View;)I
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getImportantForAutofill()I
+    invoke-static {p0}, LFixView;->getImportantForAutofill(Landroid/view/View;)I
 
     move-result p0
 
@@ -114,7 +114,7 @@
 .method public static varargs k(Landroid/view/View;[Ljava/lang/String;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAutofillHints([Ljava/lang/String;)V
+    invoke-static {p0, p1}, LFixView;->setAutofillHints(Landroid/view/View;[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 .method public static m(Landroid/view/View;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAutofill(I)V
+    invoke-static {p0, p1}, LFixView;->setImportantForAutofill(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -138,7 +138,7 @@
 .method public static n(Landroid/view/View;Z)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
+    invoke-static {p0, p1}, LFixView;->setKeyboardNavigationCluster(Landroid/view/View;Z)V
 
     return-void
 .end method
@@ -154,7 +154,7 @@
 .method public static p(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, LFixView;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     return-void
 .end method

@@ -378,7 +378,7 @@
     :cond_6
     const/4 v0, 0x0
 
-    invoke-virtual {v12, v8, v15, v13, v0}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    invoke-static {v12, v8, v15, v13, v0}, LFixContentResolver;->query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object v3
 

@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v0, v2}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     iput-object v0, p0, Lo3d;->a:Landroid/widget/TextView;
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    invoke-virtual {v4, v2}, Landroid/view/View;->setFocusable(I)V
+    invoke-static {v4, v2}, LFixView;->setFocusable(Landroid/view/View;I)V
 
     invoke-static {v4}, Ldth;->a(Landroid/widget/TextView;)Leth;
 

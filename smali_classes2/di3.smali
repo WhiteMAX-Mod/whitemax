@@ -17,7 +17,7 @@
 
     invoke-direct {v0, v1}, Ljk;-><init>(I)V
 
-    invoke-static {v0}, Ljava/lang/ThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
+    invoke-static {v0}, LFixThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
 
     return-void
 .end method

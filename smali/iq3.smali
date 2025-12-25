@@ -126,7 +126,7 @@
 
     if-eqz v2, :cond_2
 
-    iput-object v2, v9, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
+    # iput-object v2, v9, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
 
     :cond_2
     const/4 v2, 0x2

@@ -340,7 +340,7 @@
 
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    sget-object v2, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
+    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/4 v3, 0x0
 
@@ -4728,7 +4728,7 @@
     move-result-object p3
 
     :cond_2
-    iput-object p3, p2, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
+    # iput-object p3, p2, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
 
     invoke-interface {v1}, Lrdc;->a()Ljava/lang/Object;
 

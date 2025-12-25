@@ -276,7 +276,7 @@
 
     if-eqz v2, :cond_9
 
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -346,7 +346,7 @@
 
     if-eqz v2, :cond_c
 
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -416,7 +416,7 @@
 
     if-eqz v2, :cond_e
 
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -547,7 +547,7 @@
 
     if-eqz v2, :cond_1a
 
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -592,7 +592,7 @@
 
     :cond_14
     :goto_7
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -610,7 +610,7 @@
 
     :cond_15
     :goto_8
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -628,7 +628,7 @@
 
     :cond_16
     :goto_9
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -646,7 +646,7 @@
 
     :cond_17
     :goto_a
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -664,7 +664,7 @@
 
     :cond_18
     :goto_b
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -672,7 +672,7 @@
 
     :cond_19
     :goto_c
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, LFixBundle;->getString(Landroid/os/BaseBundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
