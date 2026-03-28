@@ -1,3 +1,1 @@
-# ОСУЩЕСТВЛЯЕТСЯ ПЕРЕНОС ПРОЕКТА.
-
-### Теперь проект доступен на странице https://github.com/WhiteMAX-Mod/whitemaxmod. Данный репозиторий вскоре будет удалён.
+https://github.com/WhiteMAX-Mod/whitemaxmod
